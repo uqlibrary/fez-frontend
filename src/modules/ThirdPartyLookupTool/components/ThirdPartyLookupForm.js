@@ -41,8 +41,8 @@ export class ThirdPartyLookupForm extends PureComponent {
         });
     };
 
-    _handleSubmitLookup = (event) => {
-        if (event && event.key && (event.key !== 'Enter')) return;
+    _handleSubmitLookup = event => {
+        if (event && event.key && event.key !== 'Enter') return;
 
         const apiType = this.props.localeform.apiType;
         const primaryValue = this.state.primaryValue;
@@ -50,8 +50,12 @@ export class ThirdPartyLookupForm extends PureComponent {
         const formDisplay = {
             lookupLabel: this.props.localeform.lookupLabel,
             primaryFieldHeading: this.props.localeform.primaryField.heading,
-            secondaryFieldHeading: !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.heading ? this.props.localeform.secondaryField.heading : 'undefined',
-            reportSecondaryFieldInOutput: !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.reportInOutput,
+            secondaryFieldHeading:
+                !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.heading
+                    ? this.props.localeform.secondaryField.heading
+                    : 'undefined',
+            reportSecondaryFieldInOutput:
+                !!this.props.localeform.secondaryField && !!this.props.localeform.secondaryField.reportInOutput,
         };
 
         if (this.state.primaryValue !== '' && this.props.actions && this.props.actions.loadThirdPartyResults) {
@@ -61,17 +65,26 @@ export class ThirdPartyLookupForm extends PureComponent {
     };
 
     // update state for the form fields on input
-    _onChange = (event) => {
+    _onChange = event => {
         this.setState({ [event.target.name]: event.target.value });
     };
 
     render() {
-        const lookupLabel = !!this.props.localeform && !!this.props.localeform.lookupLabel ? this.props.localeform.lookupLabel : 'this form';
+        const lookupLabel =
+            !!this.props.localeform && !!this.props.localeform.lookupLabel
+                ? this.props.localeform.lookupLabel
+                : 'this form';
         const txt = {
             title: this.props.locale && this.props.locale.title ? this.props.locale.title : '',
             thisForm: this.props.localeform,
-            labelShow: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.show ? `${this.props.locale.tooltip.show} ${lookupLabel}` : `Show form for ${lookupLabel}`,
-            labelHide: !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.hide ? `${this.props.locale.tooltip.hide} ${lookupLabel}` : `Hide form for ${lookupLabel}`,
+            labelShow:
+                !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.show
+                    ? `${this.props.locale.tooltip.show} ${lookupLabel}`
+                    : `Show form for ${lookupLabel}`,
+            labelHide:
+                !!this.props.locale && !!this.props.locale.tooltip && !!this.props.locale.tooltip.hide
+                    ? `${this.props.locale.tooltip.hide} ${lookupLabel}`
+                    : `Hide form for ${lookupLabel}`,
         };
         const { primaryValue, secondaryValue } = this.state;
         return (
@@ -85,19 +98,14 @@ export class ThirdPartyLookupForm extends PureComponent {
                             <Grid item>
                                 <IconButton
                                     onClick={this._toggleMinimise}
-                                    tooltip={!!this.state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`
-                                    }>
-                                    {
-                                        !!this.state.isMinimised
-                                            ? <KeyboardArrowDown/>
-                                            : <KeyboardArrowUp/>
-                                    }
+                                    tooltip={!!this.state.isMinimised ? `${txt.labelShow}` : `${txt.labelHide}`}
+                                >
+                                    {!!this.state.isMinimised ? <KeyboardArrowDown /> : <KeyboardArrowUp />}
                                 </IconButton>
                             </Grid>
                         </Grid>
 
-                        {
-                            !this.state.isMinimised &&
+                        {!this.state.isMinimised && (
                             <form>
                                 <p>{txt.thisForm.tip ? txt.thisForm.tip : ''}</p>
                                 <div>
@@ -106,41 +114,61 @@ export class ThirdPartyLookupForm extends PureComponent {
                                     <TextField
                                         fullWidth
                                         name={'primaryValue'}
-                                        placeholder={txt.thisForm.primaryField.inputPlaceholder ? txt.thisForm.primaryField.inputPlaceholder : ''}
-                                        aria-label={txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''}
+                                        placeholder={
+                                            txt.thisForm.primaryField.inputPlaceholder
+                                                ? txt.thisForm.primaryField.inputPlaceholder
+                                                : ''
+                                        }
+                                        aria-label={
+                                            txt.thisForm.primaryField.fromAria ? txt.thisForm.primaryField.fromAria : ''
+                                        }
                                         value={primaryValue}
                                         onChange={this._onChange}
                                         required
                                         className={'primaryValue'}
                                     />
                                 </div>
-                                {
-                                    // not all forms will have a second field
-                                    !!txt.thisForm.secondaryField &&
+                                {// not all forms will have a second field
+                                    !!txt.thisForm.secondaryField && (
                                         <div>
                                             <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                            <p>{txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''}</p>
+                                            {/* prettier-ignore */}
+                                            <p>{
+                                                txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''
+                                            }</p>
                                             <TextField
                                                 fullWidth
                                                 name={'secondaryValue'}
-                                                placeholder={txt.thisForm.secondaryField.inputPlaceholder ? txt.thisForm.secondaryField.inputPlaceholder : ''}
-                                                aria-label={txt.thisForm.secondaryField.fromAria ? txt.thisForm.secondaryField.fromAria : ''}
+                                                placeholder={
+                                                    txt.thisForm.secondaryField.inputPlaceholder
+                                                        ? txt.thisForm.secondaryField.inputPlaceholder
+                                                        : ''
+                                                }
+                                                aria-label={
+                                                    txt.thisForm.secondaryField.fromAria
+                                                        ? txt.thisForm.secondaryField.fromAria
+                                                        : ''
+                                                }
                                                 value={secondaryValue}
                                                 onChange={this._onChange}
                                                 className={'secondaryValue'}
                                             />
                                         </div>
-                                }
-                                <p>{txt.thisForm.bottomTip ?  txt.thisForm.bottomTip : ''}</p>
+                                    )}
+                                <p>{txt.thisForm.bottomTip ? txt.thisForm.bottomTip : ''}</p>
                                 <Button
-                                    children= {txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
+                                    children={
+                                        txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'
+                                    }
                                     variant="contained"
-                                    aria-label={txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'}
+                                    aria-label={
+                                        txt.thisForm.submitButtonLabel ? txt.thisForm.submitButtonLabel : 'Submit'
+                                    }
                                     color={'primary'}
                                     onClick={() => this._handleSubmitLookup()}
                                 />
                             </form>
-                        }
+                        )}
                     </StandardCard>
                 </Grid>
             </Grid>

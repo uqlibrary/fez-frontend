@@ -4,20 +4,32 @@ import { initialState } from './viewRecord';
 
 describe('viewRecord reducer', () => {
     const mockRecord = {
-        'rek_pid': 'UQ:123456',
-        'rek_title': 'This is a title',
-        'rek_description': 'This is a description.',
+        rek_pid: 'UQ:123456',
+        rek_title: 'This is a title',
+        rek_description: 'This is a description.',
     };
 
     it('should return loading in progress', () => {
         const testState = viewRecordReducer(initialState, { type: actions.VIEW_RECORD_LOADING });
-        const expectedState = { loadingRecordToView: true, recordToView: null, recordToViewError: null, hideCulturalSensitivityStatement: false };
+        const expectedState = {
+            loadingRecordToView: true,
+            recordToView: null,
+            recordToViewError: null,
+            hideCulturalSensitivityStatement: false,
+        };
         expect(testState).toEqual(expectedState);
     });
 
     it('should set cultural message to hide', () => {
-        const testState = viewRecordReducer(initialState, { type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE });
-        const expectedState = { loadingRecordToView: true, recordToView: null, recordToViewError: null, hideCulturalSensitivityStatement: true };
+        const testState = viewRecordReducer(initialState, {
+            type: actions.VIEW_RECORD_CULTURAL_SENSITIVITY_STATEMENT_HIDE,
+        });
+        const expectedState = {
+            loadingRecordToView: true,
+            recordToView: null,
+            recordToViewError: null,
+            hideCulturalSensitivityStatement: true,
+        };
         expect(testState).toEqual(expectedState);
     });
 
@@ -29,8 +41,11 @@ describe('viewRecord reducer', () => {
         expect(test.recordToViewError).toBeNull();
     });
 
-    it('should return a record to be viewed and keep hidden cultural statemet if it\'s hidden', () => {
-        const test = viewRecordReducer({ ...initialState, hideCulturalSensitivityStatement: true }, { type: actions.VIEW_RECORD_LOADED, payload: mockRecord });
+    it("should return a record to be viewed and keep hidden cultural statemet if it's hidden", () => {
+        const test = viewRecordReducer(
+            { ...initialState, hideCulturalSensitivityStatement: true },
+            { type: actions.VIEW_RECORD_LOADED, payload: mockRecord }
+        );
         expect(test.loadingRecordToView).toBeFalsy();
         expect(test.hideCulturalSensitivityStatement).toEqual(true);
         expect(test.recordToView).toEqual(mockRecord);

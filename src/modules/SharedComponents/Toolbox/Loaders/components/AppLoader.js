@@ -38,15 +38,24 @@ export class AppLoader extends React.Component {
     render() {
         const { classes, title, logoImage, logoText } = this.props;
         return (
-            <Grid container spacing={0} direction="column" justify="center" alignItems="center" className={classes.appLoader}>
-                <Grid item  className={classes.spaceBetween}>
-                    <CircularProgress size={80} thickness={1} className={classes.white}/>
-                </Grid>
-                <Grid item  className={classes.spaceBetween}>
-                    {logoImage && <div className={`${logoImage} ${classes.logo}`} alt={logoText}/>}
+            <Grid
+                container
+                spacing={0}
+                direction="column"
+                justify="center"
+                alignItems="center"
+                className={classes.appLoader}
+            >
+                <Grid item className={classes.spaceBetween}>
+                    <CircularProgress size={80} thickness={1} className={classes.white} />
                 </Grid>
                 <Grid item className={classes.spaceBetween}>
-                    <Typography variant={'h6'} className={classes.white}>{title}</Typography>
+                    {logoImage && <div className={`${logoImage} ${classes.logo}`} alt={logoText} />}
+                </Grid>
+                <Grid item className={classes.spaceBetween}>
+                    <Typography variant={'h6'} className={classes.white}>
+                        {title}
+                    </Typography>
                 </Grid>
             </Grid>
         );
@@ -54,4 +63,3 @@ export class AppLoader extends React.Component {
 }
 
 export default withStyles(styles, { withTheme: true })(AppLoader);
-

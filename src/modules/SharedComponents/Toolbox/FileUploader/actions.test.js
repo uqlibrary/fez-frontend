@@ -1,4 +1,11 @@
-import { FILE_UPLOAD_PROGRESS, FILE_UPLOAD_CLEARED, FILE_UPLOADED_FAILED, notifyFileUploadProgress, clearFileUpload, notifyUploadFailed } from './actions';
+import {
+    FILE_UPLOAD_PROGRESS,
+    FILE_UPLOAD_CLEARED,
+    FILE_UPLOADED_FAILED,
+    notifyFileUploadProgress,
+    clearFileUpload,
+    notifyUploadFailed,
+} from './actions';
 
 describe('FileUploader actions ', () => {
     it('notifies progress for uploading file from an event data', () => {

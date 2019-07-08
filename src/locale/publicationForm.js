@@ -12,7 +12,16 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{ fontWeight: 700 }} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
+                <p>
+                    For more information about each type, click{' '}
+                    <a
+                        style={{ fontWeight: 700 }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                    >
+                        here
+                    </a>
                 </p>
             ),
             buttonLabel: 'CLOSE',
@@ -26,7 +35,19 @@ export default {
     contentIndicators: {
         help: {
             title: 'Content indicators',
-            text: <p>For more information about content indicators, click <a style={{ fontWeight: 700 }} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
+            text: (
+                <p>
+                    For more information about content indicators, click{' '}
+                    <a
+                        style={{ fontWeight: 700 }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                    >
+                        here
+                    </a>
+                </p>
+            ),
             buttonLabel: 'CLOSE',
         },
         title: 'Content indicators',
@@ -86,7 +107,6 @@ export default {
                     placeholder: 'Enter URL for this work',
                 },
             },
-
         },
     },
     journalArticle: {
@@ -345,13 +365,14 @@ export default {
                 title: 'Audio document information',
                 text: (
                     <React.Fragment>
-                        <p><b>Place of publication:</b> Provide the geographical location for the
-                            publisher
-                            or producer of the work, i.e. city, country</p>
-                        <p><b>Publication date:</b> Provide the date recorded on the work, where
-                            available.
-                            For online recordings or broadcasts, provide the date first publicly presented or
-                            released. </p>
+                        <p>
+                            <b>Place of publication:</b> Provide the geographical location for the publisher or producer
+                            of the work, i.e. city, country
+                        </p>
+                        <p>
+                            <b>Publication date:</b> Provide the date recorded on the work, where available. For online
+                            recordings or broadcasts, provide the date first publicly presented or released.{' '}
+                        </p>
                     </React.Fragment>
                 ),
                 buttonLabel: 'CLOSE',
@@ -545,7 +566,8 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'CLOSE'
             // },
-            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
+            description:
+                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
         },
         optional: {
             title: 'Optional information',
@@ -631,7 +653,8 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'OK'
             // },
-            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
+            description:
+                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
         },
         optional: {
             title: 'Optional information',
@@ -773,13 +796,14 @@ export default {
                 title: 'Video information',
                 text: (
                     <div>
-                        <p><b>Place of publication:</b> Type the geographical location for the
-                            publisher
-                            or producer of the work, i.e. city, country</p>
-                        <p><b>Publication date:</b> Type the date recorded on the work, where
-                            available.
-                            For online recordings or broadcasts, enter the date first publicly presented or
-                            released. </p>
+                        <p>
+                            <b>Place of publication:</b> Type the geographical location for the publisher or producer of
+                            the work, i.e. city, country
+                        </p>
+                        <p>
+                            <b>Publication date:</b> Type the date recorded on the work, where available. For online
+                            recordings or broadcasts, enter the date first publicly presented or released.{' '}
+                        </p>
                     </div>
                 ),
                 buttonLabel: 'CLOSE',
@@ -1212,7 +1236,8 @@ export default {
     errorAlert: {
         type: 'error_outline',
         title: 'Error',
-        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
+        message: message =>
+            `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
     },
     progressAlert: {
         type: 'info_outline',
@@ -1229,7 +1254,13 @@ export default {
         hdrTitle: 'Higher degree by research thesis deposit',
         sbsTitle: 'Professional doctorate deposit',
         text: (
-            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+            <span>
+                Required fields are marked with{' '}
+                <span className="requiredField">
+                    <label>&nbsp;</label>
+                </span>
+            </span>
+        ),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1240,17 +1271,24 @@ export default {
             failedAlertLocale: {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
-                message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
+                message:
+                    'There was an issue uploading your thesis files. You will need to resubmit your thesis ' +
+                    "by clicking on the 'Resubmit your thesis' button.",
                 actionButtonLabel: 'RESUBMIT YOUR THESIS',
             },
             locale: {
                 instructions: '',
-                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                accessTermsAndConditions:
+                    'I understand that the files indicated above as open access will be submitted as open access ' +
+                    'and will be made publicly available immediately or will be made available on the indicated ' +
+                    'embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                    ['tooManyFiles']:
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
+                        'File(s) ([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -1259,33 +1297,34 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student
-                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
-                        Document name could be thesis, abstract, and etc.
-                        For example:
+                        Maximum file size is 8GB. <br />
+                        PDF files must be saved using the following naming structure{' '}
+                        <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
+                        be thesis, abstract, and etc. For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
                             <li>s1234567_phd_abstract.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br/>
-                        Supplementary video files are to be in WMV or AVI format. <br/>
+                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
-                fileUploadInstruction: (
-                    <p>Click here to select files, or drag files into this area to upload</p>
-                ),
+                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
             text: (
                 <div>
-                    <span className="requiredField"><label>&nbsp;</label></span>
+                    <span className="requiredField">
+                        <label>&nbsp;</label>
+                    </span>
                 </div>
             ),
         },
-        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        cancelLink:
+            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
-        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmitLink:
+            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
         afterFailedSubmit: 'Resubmit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
@@ -1294,22 +1333,33 @@ export default {
         afterFailureText: 'There was an issue uploading your thesis files. You will need to resubmit your thesis.',
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
-            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            confirmationMessage:
+                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
             cancelButtonLabel: 'No, continue editing',
             confirmButtonLabel: 'Yes, deposit thesis',
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            confirmationMessage:
+                'Your session has expired and you will now be redirected to the ' +
+                'login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.'),
+        depositFailedMessage: () =>
+            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
+            'and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     sbsSubmission: {
         sbsTitle: 'Professional doctorate deposit',
         text: (
-            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+            <span>
+                Required fields are marked with{' '}
+                <span className="requiredField">
+                    <label>&nbsp;</label>
+                </span>
+            </span>
+        ),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1323,7 +1373,9 @@ export default {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                    ['tooManyFiles']:
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
+                        'File(s) ([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -1332,26 +1384,25 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student
-                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
-                        Document name could be thesis, abstract, and etc.
-                        For example:
+                        Maximum file size is 8GB. <br />
+                        PDF files must be saved using the following naming structure{' '}
+                        <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
+                        be thesis, abstract, and etc. For example:
                         <ul>
                             <li>s1234567_pd_abstract.pdf</li>
                             <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br/>
-                        Supplementary video files are to be in WMV or AVI format. <br/>
+                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
-                fileUploadInstruction: (
-                    <p>Click here to select files, or drag files into this area to upload</p>
-                ),
+                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
             text: (
                 <div>
-                    <span className="requiredField"><label>&nbsp;</label></span>
+                    <span className="requiredField">
+                        <label>&nbsp;</label>
+                    </span>
                 </div>
             ),
         },
@@ -1359,21 +1410,26 @@ export default {
         submit: 'Deposit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
         afterSubmitText: (
-            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email
-                soon.</p>),
+            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.</p>
+        ),
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
-            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            confirmationMessage:
+                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
             cancelButtonLabel: 'No, continue editing',
             confirmButtonLabel: 'Yes, deposit thesis',
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            confirmationMessage:
+                'Your session has expired and you will now be redirected to the ' +
+                'login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.'),
+        depositFailedMessage: () =>
+            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
+            'and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     addDataset: {
         pageTitle: 'Add data collection',
@@ -1382,15 +1438,21 @@ export default {
                 title: 'Deposit agreement',
                 text: (
                     <div>
-                        <p>1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or
-                            describe it;</p>
+                        <p>
+                            1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or
+                            describe it;
+                        </p>
                         <p>2. I have permission to include any third-party content contained in the dataset;</p>
                         <p>3. The dataset is original;</p>
                         <p>4. The dataset does not infringe the legal rights of any third-party;</p>
-                        <p>5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual
-                            non-exclusive licence to reproduce it and make it available in any format or language;</p>
-                        <p>6. The dataset's creator(s) moral rights to be associated with the dataset will be respected
-                            by UQeSpace.</p>
+                        <p>
+                            5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual
+                            non-exclusive licence to reproduce it and make it available in any format or language;
+                        </p>
+                        <p>
+                            6. The dataset's creator(s) moral rights to be associated with the dataset will be respected
+                            by UQeSpace.
+                        </p>
                     </div>
                 ),
             },
@@ -1403,7 +1465,7 @@ export default {
                     },
                     description: {
                         label: 'Dataset description',
-                        placeholder: 'Describe the dataset\'s topic(s) and theme(s)',
+                        placeholder: "Describe the dataset's topic(s) and theme(s)",
                     },
                     contactName: {
                         label: 'Contact name',
@@ -1456,10 +1518,19 @@ export default {
                                 <li>Meditated Access</li>
                             </ul>
                             <h3>Licensing and terms of access</h3>
-                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons
-                                Licenses</a> and <a
-                                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
-                                target="_blank">UQ Terms & Conditions</a></p>
+                            <p>
+                                View{' '}
+                                <a href="https://creativecommons.org/licenses/" target="_blank">
+                                    Creative Commons Licenses
+                                </a>{' '}
+                                and{' '}
+                                <a
+                                    href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                                    target="_blank"
+                                >
+                                    UQ Terms & Conditions
+                                </a>
+                            </p>
                         </p>
                     ),
                 },
@@ -1489,7 +1560,8 @@ export default {
                     },
                     fundingBody: {
                         label: 'Funding body',
-                        placeholder: 'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC',
+                        placeholder:
+                            'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC',
                     },
                     grantId: {
                         label: 'Grant IDs',
@@ -1581,7 +1653,9 @@ export default {
                 placeholder: 'Type a description of this collection.',
             },
             keywords: {
-                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.',
+                description:
+                    'Add up to 10 individual keywords, or a comma separated list, ' +
+                    'that describe the content of the collection.',
                 field: {
                     form: {
                         locale: {
@@ -1626,7 +1700,10 @@ export default {
         afterSubmitText: 'Your new collection was created successfully.',
         afterSubmitButton: 'Return to the homepage',
         reloadFormButton: 'Add another collection',
-        addFailedMessage: (error) => (`Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`),
+        addFailedMessage: error =>
+            `Your attempt to add this collection has failed (Error: ${
+                error.message
+            }). Please try again later or contact the eSpace team.`,
     },
     addACommunity: {
         title: 'Add a missing community',
@@ -1645,7 +1722,9 @@ export default {
                 placeholder: 'Type a description of this community.',
             },
             keywords: {
-                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
+                description:
+                    'Add up to 10 individual keywords, or a comma separated list, ' +
+                    'that describe the content of the community.',
                 field: {
                     form: {
                         locale: {
@@ -1690,6 +1769,9 @@ export default {
         afterSubmitText: 'Your new community was created successfully.',
         afterSubmitButton: 'Return to the homepage',
         AddAnotherButton: 'Add another community',
-        addFailedMessage: (error) => (`Your attempt to add this community has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`),
+        addFailedMessage: error =>
+            `Your attempt to add this community has failed (Error: ${
+                error.message
+            }). Please try again later or contact the eSpace team.`,
     },
 };

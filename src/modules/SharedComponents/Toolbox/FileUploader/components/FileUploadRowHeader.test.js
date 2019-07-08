@@ -48,16 +48,20 @@ describe('Component FileUploadRowHeader', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render without access condition even if requireAccessCondition true but default access condition is provided', () => {
-        const props = {
-            requireOpenAccessStatus: true,
-            onDeleteAll: jest.fn(),
-            locale: locale,
-        };
+    it(
+        'should render without access condition even if requireAccessCondition ' +
+            'true but default access condition is provided',
+        () => {
+            const props = {
+                requireOpenAccessStatus: true,
+                onDeleteAll: jest.fn(),
+                locale: locale,
+            };
 
-        const wrapper = setup({ ...props });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            const wrapper = setup({ ...props });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
     it('should render confirmation on delete all', () => {
         const props = {

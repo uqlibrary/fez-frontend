@@ -1,6 +1,7 @@
 import { routes } from 'config';
 
-const prefixFileName = (prefix, fileName, extension) => `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
+const prefixFileName = (prefix, fileName, extension) =>
+    `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
 
 export const viewRecordsConfig = {
     genericDataEmail: 'data@library.uq.edu.au',
@@ -61,12 +62,12 @@ export const viewRecordsConfig = {
         'rek_project_start_date',
     ],
     dateFieldFormat: {
-        'rek_date_available': 'YYYY',
-        'rek_date_photo_taken': 'YYYY',
+        rek_date_available: 'YYYY',
+        rek_date_photo_taken: 'YYYY',
     },
     // some display types have different publication date format
     publicationDateFormat: {
-        'Book': 'YYYY',
+        Book: 'YYYY',
         'Book Chapter': 'YYYY',
         'Conference Paper': 'YYYY',
         'Data Collection': 'YYYY',
@@ -74,12 +75,14 @@ export const viewRecordsConfig = {
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
-            descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections|staffdata)',
+            descriptionKeywordsRegex:
+                '(ERA |HERDC|not publicly available|corrected thesis|restricted|' +
+                'lodgement|submission|corrections|staffdata)',
             collections: ['UQ:413806', 'UQ:357493', 'UQ:211157', 'UQ:342107'],
         },
-        thumbnailFileName: (fileName) => prefixFileName('thumbnail', fileName, 'jpg'),
-        previewFileName: (fileName) => prefixFileName('preview', fileName, 'jpg'),
-        webFileName: (fileName) => prefixFileName('web', fileName, 'jpg'),
+        thumbnailFileName: fileName => prefixFileName('thumbnail', fileName, 'jpg'),
+        previewFileName: fileName => prefixFileName('preview', fileName, 'jpg'),
+        webFileName: fileName => prefixFileName('web', fileName, 'jpg'),
     },
     metaTags: [
         {
@@ -91,7 +94,7 @@ export const viewRecordsConfig = {
                     isMultiple: false,
                 },
             ],
-            url: (pid) => routes.pathConfig.records.view(pid, true),
+            url: pid => routes.pathConfig.records.view(pid, true),
         },
         {
             searchKey: 'fez_record_search_key_subject',

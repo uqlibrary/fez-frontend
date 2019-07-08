@@ -50,18 +50,24 @@ export class HelpDrawer extends Component {
             });
         }
         return (
-            <Drawer
-                classes={{ paper: classes.paper }}
-                open={open}
-                anchor="right"
-                onClose={hide}>
+            <Drawer classes={{ paper: classes.paper }} open={open} anchor="right" onClose={hide}>
                 <Grid container spacing={40}>
                     <Grid item xs={12}>
-                        <Typography key={'title'} component={'span'} variant={'h6'} className={classes.title}>{title}</Typography>
-                        <Typography key={'text'} component={'span'} variant="body2">{indexedText || text}</Typography>
+                        <Typography key={'title'} component={'span'} variant={'h6'} className={classes.title}>
+                            {title}
+                        </Typography>
+                        <Typography key={'text'} component={'span'} variant="body2">
+                            {indexedText || text}
+                        </Typography>
                     </Grid>
                     <Grid item xs={12}>
-                        <Button variant="contained" color="primary" className={classes.button} children={buttonLabel} onClick={hide} />
+                        <Button
+                            variant="contained"
+                            color="primary"
+                            className={classes.button}
+                            children={buttonLabel}
+                            onClick={hide}
+                        />
                     </Grid>
                 </Grid>
             </Drawer>

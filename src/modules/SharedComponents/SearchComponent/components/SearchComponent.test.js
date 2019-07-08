@@ -40,11 +40,15 @@ describe('SearchComponent', () => {
     });
 
     it('should set default prop method as expected', () => {
-        const wrapper = getElement(SearchComponent, {
-            history: {
-                push: jest.fn(),
+        const wrapper = getElement(
+            SearchComponent,
+            {
+                history: {
+                    push: jest.fn(),
+                },
             },
-        }, true);
+            true
+        );
         expect(wrapper.instance().props.updateFacetExcludesFromSearchFields()).toBeUndefined();
     });
 
@@ -153,7 +157,6 @@ describe('SearchComponent', () => {
         });
     });
 
-
     it('should submit search for given search query params for unpublished buffer', () => {
         const testMethod = jest.fn();
         const testHistoryPushMehtod = jest.fn();
@@ -201,10 +204,7 @@ describe('SearchComponent', () => {
         wrapper.setState({
             isAdvancedSearch: true,
         });
-        expect(
-            wrapper.find('WithStyles(AdvancedSearchComponent)')
-                .props().showUnpublishedFields
-        ).toBe(true);
+        expect(wrapper.find('WithStyles(AdvancedSearchComponent)').props().showUnpublishedFields).toBe(true);
     });
 
     it('should not search is searchQuery is empty', () => {
@@ -254,20 +254,23 @@ describe('SearchComponent', () => {
 
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            'pathname': '/records/search',
-            'search': 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-            'state': {
-                'activeFacets': { 'filters': {}, 'ranges': {} },
-                'page': 1,
-                'pageSize': 20,
-                'searchMode': 'advanced',
-                'searchQueryParams': {
-                    'all': { 'value': 'i feel lucky', 'label': '' },
-                    'rek_display_type': [],
-                    'rek_title': { 'value': 'global warming', 'label': '' },
+            pathname: '/records/search',
+            search:
+                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=' +
+                'i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
+                'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
+            state: {
+                activeFacets: { filters: {}, ranges: {} },
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: { value: 'i feel lucky', label: '' },
+                    rek_display_type: [],
+                    rek_title: { value: 'global warming', label: '' },
                 },
-                'sortBy': 'score',
-                'sortDirection': 'Desc',
+                sortBy: 'score',
+                sortDirection: 'Desc',
             },
         });
 
@@ -287,116 +290,134 @@ describe('SearchComponent', () => {
 
         expect(testMethod).toHaveBeenCalled();
         expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            'pathname': '/records/search',
-            'search': 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
-            'state': {
-                'activeFacets': { 'filters': {}, 'ranges': {} },
-                'page': 1,
-                'pageSize': 20,
-                'searchMode': 'advanced',
-                'searchQueryParams': {
-                    'all': { 'value': 'i feel lucky', 'label': '' },
-                    'rek_display_type': [],
-                    'rek_title': { 'value': 'global warming', 'label': '' },
+            pathname: '/records/search',
+            search:
+                'page=1&pageSize=20&sortBy=score&sortDirection=Desc&searchQueryParams%5Ball%5D%5Bvalue%5D=' +
+                'i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5B' +
+                'value%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchMode=advanced',
+            state: {
+                activeFacets: { filters: {}, ranges: {} },
+                page: 1,
+                pageSize: 20,
+                searchMode: 'advanced',
+                searchQueryParams: {
+                    all: { value: 'i feel lucky', label: '' },
+                    rek_display_type: [],
+                    rek_title: { value: 'global warming', label: '' },
                 },
-                'sortBy': 'score',
-                'sortDirection': 'Desc',
+                sortBy: 'score',
+                sortDirection: 'Desc',
             },
         });
     });
 
+    it(
+        'should handle advanced search with year range, rek_status, rek_created_date ' +
+            'and rek_updated_date key set for an admin',
+        () => {
+            const testMethod = jest.fn();
+            const testHistoryPushMehtod = jest.fn();
+            const wrapper = setup({
+                actions: { searchEspacePublications: testMethod },
+                history: { push: testHistoryPushMehtod },
+                isAdmin: true,
+            });
 
-    it('should handle advanced search with year range, rek_status, rek_created_date and rek_updated_date key set for an admin', () => {
-        const testMethod = jest.fn();
-        const testHistoryPushMehtod = jest.fn();
-        const wrapper = setup({
-            actions: { searchEspacePublications: testMethod },
-            history: { push: testHistoryPushMehtod },
-            isAdmin: true,
-        });
-
-        wrapper.setState({
-            advancedSearch: {
-                fieldRows: [
-                    {
-                        searchField: 'all',
-                        value: 'i feel lucky',
-                        label: '',
-                    },
-                    {
-                        searchField: 'rek_title',
-                        value: 'global warming',
-                        label: '',
-                    },
-                    {
-                        searchField: 'rek_status',
-                        value: 'Retracted',
-                    },
-                    {
-                        searchField: 'rek_created_date',
-                        value: {
-                            from: moment('10/10/1982', 'DD/MM/YYYY'),
-                            to: moment('10/10/1985', 'DD/MM/YYYY'),
+            wrapper.setState({
+                advancedSearch: {
+                    fieldRows: [
+                        {
+                            searchField: 'all',
+                            value: 'i feel lucky',
+                            label: '',
                         },
-                    },
-                    {
-                        searchField: 'rek_updated_date',
-                        value: {
-                            from: moment('10/10/1980', 'DD/MM/YYYY'),
-                            to: moment('10/10/1982', 'DD/MM/YYYY'),
+                        {
+                            searchField: 'rek_title',
+                            value: 'global warming',
+                            label: '',
                         },
-                    },
-                ],
-                isOpenAccess: false,
-                docTypes: [],
-                yearFilter: {
-                    from: 2000,
-                    to: 2008,
-                    invalid: false,
-                },
-            },
-        });
-
-        wrapper.instance()._handleAdvancedSearch();
-
-        expect(testMethod).toHaveBeenCalled();
-        expect(testHistoryPushMehtod).toHaveBeenCalledWith({
-            'pathname': '/records/search',
-            'search': 'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced',
-            'state': {
-                'activeFacets': {
-                    'filters': {},
-                    'ranges': {
-                        'Created date': '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
-                        'Updated date': '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
-                        'Year published': {
-                            'from': 2000,
-                            'to': 2008,
+                        {
+                            searchField: 'rek_status',
+                            value: 'Retracted',
                         },
+                        {
+                            searchField: 'rek_created_date',
+                            value: {
+                                from: moment('10/10/1982', 'DD/MM/YYYY'),
+                                to: moment('10/10/1985', 'DD/MM/YYYY'),
+                            },
+                        },
+                        {
+                            searchField: 'rek_updated_date',
+                            value: {
+                                from: moment('10/10/1980', 'DD/MM/YYYY'),
+                                to: moment('10/10/1982', 'DD/MM/YYYY'),
+                            },
+                        },
+                    ],
+                    isOpenAccess: false,
+                    docTypes: [],
+                    yearFilter: {
+                        from: 2000,
+                        to: 2008,
+                        invalid: false,
                     },
                 },
-                'page': 1,
-                'pageSize': 20,
-                'searchMode': 'advanced',
-                'searchQueryParams': {
-                    'all': { 'value': 'i feel lucky', 'label': '' },
-                    'rek_display_type': [],
-                    'rek_title': { 'value': 'global warming', 'label': '' },
-                    'rek_status': { 'value': 7 },
-                    'rek_created_date': {
-                        'label': '[09/10/1982 to 10/10/1985]',
-                        'value': '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
+            });
+
+            wrapper.instance()._handleAdvancedSearch();
+
+            expect(testMethod).toHaveBeenCalled();
+            expect(testHistoryPushMehtod).toHaveBeenCalledWith({
+                pathname: '/records/search',
+                search:
+                    'page=1&pageSize=20&sortBy=score&sortDirection=Desc&activeFacets%5Branges%5D%5BCreated+' +
+                    'date%5D=%5B1982-10-09T14%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&activeFacets%5Branges' +
+                    '%5D%5BUpdated+date%5D=%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&' +
+                    'activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2000&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bto%5D=2008&searchQueryParams%5Ball%5D%5Bvalue%5D=i+feel+lucky&' +
+                    'searchQueryParams%5Ball%5D%5Blabel%5D=&searchQueryParams%5Brek_title%5D%5Bvalue%5D=' +
+                    'global+warming&searchQueryParams%5Brek_title%5D%5Blabel%5D=&searchQueryParams%5Brek_status' +
+                    '%5D%5Bvalue%5D=7&searchQueryParams%5Brek_created_date%5D%5Bvalue%5D=%5B1982-10-09T14' +
+                    '%3A00%3A00Z+TO+1985-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_created_date%5D%5Blabel%5D=' +
+                    '%5B09%2F10%2F1982+to+10%2F10%2F1985%5D&searchQueryParams%5Brek_updated_date%5D%5Bvalue%5D=' +
+                    '%5B1980-10-09T14%3A00%3A00Z+TO+1982-10-10T13%3A59%3A59Z%5D&searchQueryParams%5Brek_updated_date' +
+                    '%5D%5Blabel%5D=%5B09%2F10%2F1980+to+10%2F10%2F1982%5D&searchMode=advanced',
+                state: {
+                    activeFacets: {
+                        filters: {},
+                        ranges: {
+                            'Created date': '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
+                            'Updated date': '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
+                            'Year published': {
+                                from: 2000,
+                                to: 2008,
+                            },
+                        },
                     },
-                    'rek_updated_date': {
-                        'label': '[09/10/1980 to 10/10/1982]',
-                        'value': '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
+                    page: 1,
+                    pageSize: 20,
+                    searchMode: 'advanced',
+                    searchQueryParams: {
+                        all: { value: 'i feel lucky', label: '' },
+                        rek_display_type: [],
+                        rek_title: { value: 'global warming', label: '' },
+                        rek_status: { value: 7 },
+                        rek_created_date: {
+                            label: '[09/10/1982 to 10/10/1985]',
+                            value: '[1982-10-09T14:00:00Z TO 1985-10-10T13:59:59Z]',
+                        },
+                        rek_updated_date: {
+                            label: '[09/10/1980 to 10/10/1982]',
+                            value: '[1980-10-09T14:00:00Z TO 1982-10-10T13:59:59Z]',
+                        },
                     },
+                    sortBy: 'score',
+                    sortDirection: 'Desc',
                 },
-                'sortBy': 'score',
-                'sortDirection': 'Desc',
-            },
-        });
-    });
+            });
+        }
+    );
 
     it('should handle simple search', () => {
         const testMethod = jest.fn();
@@ -443,11 +464,13 @@ describe('SearchComponent', () => {
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
-            fieldRows: [{
-                searchField: '0',
-                value: '',
-                label: '',
-            }],
+            fieldRows: [
+                {
+                    searchField: '0',
+                    value: '',
+                    label: '',
+                },
+            ],
             isOpenAccess: false,
             isMinimised: false,
             yearFilter: {},
@@ -460,11 +483,13 @@ describe('SearchComponent', () => {
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
-            fieldRows: [{
-                searchField: '0',
-                value: '',
-                label: '',
-            }],
+            fieldRows: [
+                {
+                    searchField: '0',
+                    value: '',
+                    label: '',
+                },
+            ],
             isOpenAccess: false,
             isMinimised: true,
             yearFilter: {},
@@ -488,11 +513,13 @@ describe('SearchComponent', () => {
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
-            fieldRows: [{
-                searchField: '0',
-                value: '',
-                label: '',
-            }],
+            fieldRows: [
+                {
+                    searchField: '0',
+                    value: '',
+                    label: '',
+                },
+            ],
             isOpenAccess: false,
             isMinimised: false,
             yearFilter: {},
@@ -505,11 +532,13 @@ describe('SearchComponent', () => {
 
         expect(wrapper.state().advancedSearch).toEqual({
             docTypes: [],
-            fieldRows: [{
-                searchField: '0',
-                value: '',
-                label: '',
-            }],
+            fieldRows: [
+                {
+                    searchField: '0',
+                    value: '',
+                    label: '',
+                },
+            ],
             isOpenAccess: true,
             isMinimised: false,
             yearFilter: {},
@@ -547,11 +576,11 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            'docTypes': [],
-            'fieldRows': [{ 'label': '', 'searchField': 'all', 'value': 'i feel lucky' }],
-            'isMinimised': false,
-            'isOpenAccess': false,
-            'yearFilter': {},
+            docTypes: [],
+            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {},
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -591,15 +620,19 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            'docTypes': [],
-            'fieldRows': [{ 'label': '', 'searchField': 'all', 'value': 'i feel lucky' }, {
-                'label': '',
-                'searchField': 'rek_title',
-                'value': 'remove rek title field',
-            }, { 'label': '', 'searchField': 'docTypes', 'value': [] }],
-            'isMinimised': false,
-            'isOpenAccess': false,
-            'yearFilter': {},
+            docTypes: [],
+            fieldRows: [
+                { label: '', searchField: 'all', value: 'i feel lucky' },
+                {
+                    label: '',
+                    searchField: 'rek_title',
+                    value: 'remove rek title field',
+                },
+                { label: '', searchField: 'docTypes', value: [] },
+            ],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {},
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -638,11 +671,11 @@ describe('SearchComponent', () => {
         });
 
         expect(wrapper.state().advancedSearch).toEqual({
-            'docTypes': [],
-            'fieldRows': [{ 'label': '', 'searchField': 'all', 'value': 'i feel lucky' }],
-            'isMinimised': false,
-            'isOpenAccess': false,
-            'yearFilter': {},
+            docTypes: [],
+            fieldRows: [{ label: '', searchField: 'all', value: 'i feel lucky' }],
+            isMinimised: false,
+            isOpenAccess: false,
+            yearFilter: {},
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -707,10 +740,10 @@ describe('SearchComponent', () => {
         wrapper.update();
 
         expect(wrapper.state().advancedSearch).toEqual({
-            'docTypes': [],
-            'fieldRows': [{ 'searchField': '0', 'value': '' }],
-            'isOpenAccess': false,
-            'yearFilter': { 'from': 0, 'to': 0 },
+            docTypes: [],
+            fieldRows: [{ searchField: '0', value: '' }],
+            isOpenAccess: false,
+            yearFilter: { from: 0, to: 0 },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -722,7 +755,9 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(AdvancedSearchComponent)').props()
+        wrapper
+            .find('WithStyles(AdvancedSearchComponent)')
+            .props()
             .updateDocTypeValues([317, 123]);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(setState).toHaveBeenCalledWith({
@@ -748,7 +783,9 @@ describe('SearchComponent', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(AdvancedSearchComponent)').props()
+        wrapper
+            .find('WithStyles(AdvancedSearchComponent)')
+            .props()
             .updateYearRangeFilter({
                 from: '2000',
                 to: '2003',
@@ -776,14 +813,15 @@ describe('SearchComponent', () => {
         });
     });
 
-
     it('should update date range filter', () => {
         const wrapper = setup({ isAdvancedSearch: true });
         const setState = jest.spyOn(wrapper.instance(), 'setState');
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(AdvancedSearchComponent)').props()
+        wrapper
+            .find('WithStyles(AdvancedSearchComponent)')
+            .props()
             .updateDateRange('rek_created_date', '[2000 - 2001]');
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(setState).toHaveBeenCalledWith({
@@ -807,7 +845,9 @@ describe('SearchComponent', () => {
             },
         });
 
-        wrapper.find('WithStyles(AdvancedSearchComponent)').props()
+        wrapper
+            .find('WithStyles(AdvancedSearchComponent)')
+            .props()
             .updateDateRange('rek_created_date', '[2000 - 2005]');
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(setState).toHaveBeenCalledWith({
@@ -1018,9 +1058,11 @@ describe('SearchComponent', () => {
                     isOpenAccess: true,
                 },
             });
-            expect(wrapper.instance().getSearchQuery({
-                all: 'i feel lucky',
-            })).toMatchSnapshot();
+            expect(
+                wrapper.instance().getSearchQuery({
+                    all: 'i feel lucky',
+                })
+            ).toMatchSnapshot();
         });
     });
 });

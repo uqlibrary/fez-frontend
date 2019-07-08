@@ -36,12 +36,12 @@ export default class NewRecord extends PureComponent {
     _navigateToMyResearch = () => {
         this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.mine);
-    }
+    };
 
     render() {
         // wait for author to load before rendering
         if (!this.props.author) {
-            return (<span />);
+            return <span />;
         }
 
         const txt = locale.pages.addRecord;
@@ -51,8 +51,8 @@ export default class NewRecord extends PureComponent {
         const initialValues = {
             currentAuthor: [
                 {
-                    'nameAsPublished': this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
-                    'authorId': this.props.author.aut_id ? this.props.author.aut_id : '',
+                    nameAsPublished: this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
+                    authorId: this.props.author.aut_id ? this.props.author.aut_id : '',
                 },
             ],
             rek_title: rawSearchQuery || '',
@@ -63,7 +63,9 @@ export default class NewRecord extends PureComponent {
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
-                    {this.props.newRecordFileUploadingOrIssueError && <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />}
+                    {this.props.newRecordFileUploadingOrIssueError && (
+                        <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
+                    )}
                     {saveConfirmationLocale.recordSuccessConfirmationMessage}
                 </Grid>
             </Grid>

@@ -49,7 +49,8 @@ export class FileUploader extends PureComponent {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        if (this.props.onChange) this.props.onChange({ queue: nextState.filesInQueue, isValid: this.isFileUploadValid(nextState) });
+        this.props.onChange &&
+            this.props.onChange({ queue: nextState.filesInQueue, isValid: this.isFileUploadValid(nextState) });
     }
 
     componentWillUnmount() {
@@ -64,10 +65,7 @@ export class FileUploader extends PureComponent {
      * @private
      */
     _deleteFile = (file, index) => {
-        const filesInQueue = [
-            ...this.state.filesInQueue.slice(0, index),
-            ...this.state.filesInQueue.slice(index + 1),
-        ];
+        const filesInQueue = [...this.state.filesInQueue.slice(0, index), ...this.state.filesInQueue.slice(index + 1)];
 
         this.setState({
             filesInQueue: filesInQueue,
@@ -85,7 +83,8 @@ export class FileUploader extends PureComponent {
         this.setState({
             filesInQueue: [],
             errorMessage: '',
-            isTermsAndConditionsAccepted: false });
+            isTermsAndConditionsAccepted: false,
+        });
     };
 
     /**
@@ -133,7 +132,7 @@ export class FileUploader extends PureComponent {
      * @param value
      * @private
      */
-    _acceptTermsAndConditions = (value) => {
+    _acceptTermsAndConditions = value => {
         this.setState({ isTermsAndConditionsAccepted: value });
     };
 
@@ -202,11 +201,14 @@ export class FileUploader extends PureComponent {
      * @param files
      * @returns {boolean}
      */
-    isAnyOpenAccess = (files) => {
-        return files
-            .filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION) &&
-                (file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID))
-            .length > 0;
+    isAnyOpenAccess = files => {
+        return (
+            files.filter(
+                file =>
+                    file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION) &&
+                    file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID
+            ).length > 0
+        );
     };
 
     /**
@@ -217,11 +219,13 @@ export class FileUploader extends PureComponent {
      * @returns {boolean}
      */
     isFileUploadValid = ({ filesInQueue, isTermsAndConditionsAccepted }) => {
-        return !this.props.requireOpenAccessStatus ||
-            (
-                filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length === filesInQueue.length &&
-                (this.isAnyOpenAccess(filesInQueue) && isTermsAndConditionsAccepted || !this.isAnyOpenAccess(filesInQueue))
-            );
+        return (
+            !this.props.requireOpenAccessStatus ||
+            (filesInQueue.filter(file => file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION)).length ===
+                filesInQueue.length &&
+                ((this.isAnyOpenAccess(filesInQueue) && isTermsAndConditionsAccepted) ||
+                    !this.isAnyOpenAccess(filesInQueue)))
+        );
     };
 
     /**
@@ -229,7 +233,7 @@ export class FileUploader extends PureComponent {
      *
      * @private
      */
-    getErrorMessage = (errors) => {
+    getErrorMessage = errors => {
         const { validation } = this.props.locale;
         const errorMessages = [];
 
@@ -281,11 +285,14 @@ export class FileUploader extends PureComponent {
 
         return (
             <Fragment>
-                <Typography variant="body2" gutterBottom>{instructionsDisplay}</Typography>
-                {
-                    this.props.isNtro &&
-                    <Typography variant="body2" gutterBottom>{ntroSpecificInstructions}</Typography>
-                }
+                <Typography variant="body2" gutterBottom>
+                    {instructionsDisplay}
+                </Typography>
+                {this.props.isNtro && (
+                    <Typography variant="body2" gutterBottom>
+                        {ntroSpecificInstructions}
+                    </Typography>
+                )}
                 <FileUploadDropzone
                     locale={this.props.locale}
                     maxSize={this.calculateMaxFileSize()}
@@ -295,17 +302,15 @@ export class FileUploader extends PureComponent {
                     fileUploadLimit={fileUploadLimit}
                     onDrop={this._handleDroppedFiles}
                 />
-                {
-                    filesInQueue.length > 0 &&
-                    <Alert title={successTitle} message={successMessage.replace('[numberOfFiles]', filesInQueue.length)} type="done" />
-
-                }
-                {
-                    errorMessage.length > 0 &&
-                    <Alert title={errorTitle} message={errorMessage} type="error" />
-                }
-                {
-                    filesInQueue.length > 0 &&
+                {filesInQueue.length > 0 && (
+                    <Alert
+                        title={successTitle}
+                        message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
+                        type="done"
+                    />
+                )}
+                {errorMessage.length > 0 && <Alert title={errorTitle} message={errorMessage} type="error" />}
+                {filesInQueue.length > 0 && (
                     <div style={{ flexGrow: 1, padding: 8 }}>
                         <Grid container display="column" spacing={16}>
                             <Grid item xs={12}>
@@ -318,8 +323,7 @@ export class FileUploader extends PureComponent {
                             <Grid item xs={12}>
                                 {filesInQueueRow}
                             </Grid>
-                            {
-                                requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) &&
+                            {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (
                                 <Grid item xs={12}>
                                     <FileUploadTermsAndConditions
                                         onAcceptTermsAndConditions={this._acceptTermsAndConditions}
@@ -328,10 +332,10 @@ export class FileUploader extends PureComponent {
                                         disabled={disabled}
                                     />
                                 </Grid>
-                            }
+                            )}
                         </Grid>
                     </div>
-                }
+                )}
             </Fragment>
         );
     }
@@ -341,10 +345,13 @@ const mapStateToProps = () => {
     return {};
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        clearFileUpload: () => (dispatch(clearFileUpload())),
+        clearFileUpload: () => dispatch(clearFileUpload()),
     };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(FileUploader);
+export default connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(FileUploader);

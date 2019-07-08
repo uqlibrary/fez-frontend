@@ -52,7 +52,8 @@ function setup(testProps, isShallow = true) {
         author: testProps.author || { aut_id: 410 },
 
         handleSubmit: testProps.handleSubmit || jest.fn(),
-        initialValues: testProps.initialValues ||
+        initialValues:
+            testProps.initialValues ||
             Immutable.Map({
                 publication: Immutable.Map(testProps.recordToFix || mockRecordToFix),
                 author: Immutable.Map(testProps.author || { aut_id: 410 }),
@@ -142,7 +143,12 @@ describe('Component FixRecord', () => {
 
     it('should load record if record is not loaded', () => {
         const actionFunction = jest.fn();
-        const wrapper = setup({ loadingRecordToFix: false, recordToFix: null, actions: { loadRecordToFix: actionFunction }, match: { params: { pid: 'UQ:1001' } } });
+        const wrapper = setup({
+            loadingRecordToFix: false,
+            recordToFix: null,
+            actions: { loadRecordToFix: actionFunction },
+            match: { params: { pid: 'UQ:1001' } },
+        });
         wrapper.update;
         wrapper.instance().componentDidMount();
         expect(actionFunction).toHaveBeenCalledWith('UQ:1001');
@@ -183,7 +189,11 @@ describe('Component FixRecord', () => {
     });
 
     it('componentWillReceiveProps()', () => {
-        const wrapper = setup({ submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false });
+        const wrapper = setup({
+            submitSucceeded: true,
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false,
+        });
         const nextProps = { submitSucceeded: true };
         wrapper.instance().componentWillReceiveProps(nextProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -191,7 +201,12 @@ describe('Component FixRecord', () => {
 
     it('componentWillUnmount()', () => {
         const testFN = jest.fn();
-        const wrapper = setup({ actions: { clearFixRecord: testFN }, submitSucceeded: true, recordToFix: mockRecordToFix, publicationToFixFileUploadingError: false });
+        const wrapper = setup({
+            actions: { clearFixRecord: testFN },
+            submitSucceeded: true,
+            recordToFix: mockRecordToFix,
+            publicationToFixFileUploadingError: false,
+        });
         wrapper.instance().componentWillUnmount();
         expect(testFN).toHaveBeenCalled();
     });

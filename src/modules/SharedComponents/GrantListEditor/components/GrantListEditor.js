@@ -46,7 +46,7 @@ export class GrantListEditor extends PureComponent {
         }
     }
 
-    getGrantsFromProps = (props) => {
+    getGrantsFromProps = props => {
         if (props.input && props.input.name && props.input.value) {
             return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
         }
@@ -54,12 +54,12 @@ export class GrantListEditor extends PureComponent {
         return [];
     };
 
-    addGrant = (grant) => {
+    addGrant = grant => {
         this.setState({
-            grants: [ ...this.state.grants, grant],
+            grants: [...this.state.grants, grant],
             errorMessage: '',
         });
-    }
+    };
 
     moveUpGrant = (grant, index) => {
         if (index === 0) return;
@@ -71,36 +71,35 @@ export class GrantListEditor extends PureComponent {
         this.setState({
             grants: [
                 ...this.state.grants.slice(0, index - 1),
-                grant, previousGrant,
-                ...this.state.grants.slice(index + 1)],
+                grant,
+                previousGrant,
+                ...this.state.grants.slice(index + 1),
+            ],
         });
-    }
+    };
 
     moveDownGrant = (grant, index) => {
-        if (index === (this.state.grants.length - 1)) return;
+        if (index === this.state.grants.length - 1) return;
         const nextGrant = this.state.grants[index + 1];
         this.setState({
-            grants: [
-                ...this.state.grants.slice(0, index),
-                nextGrant, grant,
-                ...this.state.grants.slice(index + 2)],
+            grants: [...this.state.grants.slice(0, index), nextGrant, grant, ...this.state.grants.slice(index + 2)],
         });
-    }
+    };
 
     deleteGrant = (grant, index) => {
         this.setState({
             grants: this.state.grants.filter((_, i) => i !== index),
         });
-    }
+    };
 
     deleteAllGrants = () => {
         this.setState({
             grants: [],
             errorMessage: '',
         });
-    }
+    };
 
-    isFormPopulated = (value) => {
+    isFormPopulated = value => {
         this.setState({
             grantFormPopulated: !!value,
         });
@@ -114,7 +113,7 @@ export class GrantListEditor extends PureComponent {
             <GrantListEditorRow
                 key={`GrantListRow_${index}`}
                 index={index}
-                disabled={disabled || grant && grant.disabled}
+                disabled={disabled || (grant && grant.disabled)}
                 grant={grant}
                 canMoveDown={index !== grants.length - 1}
                 canMoveUp={index !== 0}
@@ -126,25 +125,21 @@ export class GrantListEditor extends PureComponent {
 
         let error = null;
         if (this.props.meta && this.props.meta.error) {
-            error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
-                if (child.type) {
-                    return React.cloneElement(child, {
-                        key: index,
-                    });
-                } else {
-                    return child;
-                }
-            });
+            error =
+                !!this.props.meta.error.props &&
+                React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                    if (child.type) {
+                        return React.cloneElement(child, {
+                            key: index,
+                        });
+                    } else {
+                        return child;
+                    }
+                });
         }
         return (
             <div>
-                {
-                    errorMessage &&
-                    <Alert
-                        title={this.props.locale.errorTitle}
-                        message={errorMessage}
-                        type="warning" />
-                }
+                {errorMessage && <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />}
                 <GrantListEditorForm
                     onAdd={this.addGrant}
                     isPopulated={this.isFormPopulated}
@@ -153,8 +148,7 @@ export class GrantListEditor extends PureComponent {
                     hideType={this.props.hideType}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                 />
-                {
-                    grants.length > 0 &&
+                {grants.length > 0 && (
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
                             <List>
@@ -171,20 +165,16 @@ export class GrantListEditor extends PureComponent {
                             </List>
                         </Grid>
                     </Grid>
-                }
-                {
-                    this.props.meta && this.props.meta.error &&
+                )}
+                {this.props.meta && this.props.meta.error && (
                     <Typography color="error" variant="caption">
-                        {
-                            error || this.props.meta.error
-                        }
+                        {error || this.props.meta.error}
                     </Typography>
-                }
+                )}
             </div>
         );
     }
 }
-
 
 export const styles = () => ({
     list: {
@@ -197,6 +187,4 @@ export const styles = () => ({
     },
 });
 
-export default compose(
-    withStyles(styles)
-)(GrantListEditor);
+export default compose(withStyles(styles))(GrantListEditor);

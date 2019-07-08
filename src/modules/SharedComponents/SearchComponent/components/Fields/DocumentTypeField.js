@@ -38,7 +38,7 @@ export class DocumentTypeField extends PureComponent {
         this.publicationTypes = publicationTypes();
     }
 
-    _handleDocTypeChange = (event) => {
+    _handleDocTypeChange = event => {
         this.props.updateDocTypeValues(event.target.value);
     };
 
@@ -46,13 +46,19 @@ export class DocumentTypeField extends PureComponent {
         const { classes } = this.props;
         const txt = locale.components.searchComponent;
         const docTypeItems = [
-            <MenuItem key={0} disabled>{txt.advancedSearch.fieldTypes.rek_display_type.hint}</MenuItem>,
+            <MenuItem key={0} disabled>
+                {txt.advancedSearch.fieldTypes.rek_display_type.hint}
+            </MenuItem>,
             ...this.publicationTypes.map((item, index) => {
                 return (
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
-                        checked={this.props.docTypes && this.props.docTypes.length > 0 && this.props.docTypes.indexOf(item.id) > -1}
+                        checked={
+                            this.props.docTypes &&
+                            this.props.docTypes.length > 0 &&
+                            this.props.docTypes.indexOf(item.id) > -1
+                        }
                         value={item.id}
                         children={item.name}
                         key={index + 1}
@@ -71,10 +77,10 @@ export class DocumentTypeField extends PureComponent {
                     multiple
                     fullWidth
                     disabled={this.props.disabled}
-                    children={docTypeItems} />
+                    children={docTypeItems}
+                />
             </FormControl>
         );
     }
 }
 export default withStyles(styles, { withTheme: true })(DocumentTypeField);
-

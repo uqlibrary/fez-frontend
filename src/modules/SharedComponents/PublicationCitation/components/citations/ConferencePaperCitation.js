@@ -17,21 +17,26 @@ export default class ConferencePaperCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             name: this.props.publication.fez_record_search_key_conference_name
-                ? this.props.publication.fez_record_search_key_conference_name.rek_conference_name : null,
+                ? this.props.publication.fez_record_search_key_conference_name.rek_conference_name
+                : null,
             location: this.props.publication.fez_record_search_key_conference_location
-                ? this.props.publication.fez_record_search_key_conference_location.rek_conference_location : null,
+                ? this.props.publication.fez_record_search_key_conference_location.rek_conference_location
+                : null,
             dates: this.props.publication.fez_record_search_key_conference_dates
-                ? this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates : null,
+                ? this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates
+                : null,
             placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication
-                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
+                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication
+                : null,
             publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
+                : null,
             doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for conference paper
-        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Conference Name| |,}{Conference Location| |,}{Conference Date| |.}{Place of Publication| |:}{Publisher| |.} {doi| doi:||}
         return (
             <div className="citationContent citationConferencePaper">
                 {/* {Author}*/}
@@ -53,13 +58,17 @@ export default class ConferencePaperCitation extends Component {
                 <Partials.CitationView className="citationConferenceDates" value={record.dates} />
 
                 {/* {Place of Publication| |:} */}
-                <Partials.CitationView className="citationPlaceOfPublication" value={record.placeOfPublication} suffix=":" />
+                <Partials.CitationView
+                    className="citationPlaceOfPublication"
+                    value={record.placeOfPublication}
+                    suffix=":"
+                />
 
                 {/* {Publisher| |.} */}
                 <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
                 {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
             </div>
         );
     }

@@ -24,7 +24,6 @@ function setup(testProps, isShallow = true) {
     return getElement(Meta, props, isShallow);
 }
 
-
 describe('Meta Component ', () => {
     it('should render component with journal', () => {
         const wrapper = setup({ publication: records.journal });
@@ -132,49 +131,57 @@ describe('Meta Component ', () => {
     });
 
     it('should render component with coverage period data mapped to DC.Subject tag', () => {
-        const wrapper = setup({ publication: {
-            rek_title: 'Record with coverage period',
-            fez_record_search_key_coverage_period: [
-                {
-                    rek_coverage_period_id: 1,
-                    rek_coverage_period_pid: 'UQ:719166',
-                    rek_coverage_period_xsdmf_id: 17292,
-                    rek_coverage_period_order: 1,
-                    rek_coverage_period: 'Original records were on paper (Photo, heat sensitive, 35mm) then digital',
-                },
-            ],
-        } });
+        const wrapper = setup({
+            publication: {
+                rek_title: 'Record with coverage period',
+                fez_record_search_key_coverage_period: [
+                    {
+                        rek_coverage_period_id: 1,
+                        rek_coverage_period_pid: 'UQ:719166',
+                        rek_coverage_period_xsdmf_id: 17292,
+                        rek_coverage_period_order: 1,
+                        rek_coverage_period:
+                            'Original records were on paper (Photo, heat sensitive, 35mm) then digital',
+                    },
+                ],
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with coverage period data mapped to multiple DC.Subject tag', () => {
-        const wrapper = setup({ publication: {
-            rek_title: 'Record with coverage period',
-            fez_record_search_key_coverage_period: [
-                {
-                    rek_coverage_period_id: 1,
-                    rek_coverage_period_pid: 'UQ:719166',
-                    rek_coverage_period_xsdmf_id: 17292,
-                    rek_coverage_period_order: 1,
-                    rek_coverage_period: 'Original records were on paper (Photo, heat sensitive, 35mm) then digital',
-                },
-                {
-                    rek_coverage_period_id: 2,
-                    rek_coverage_period_pid: 'UQ:719166',
-                    rek_coverage_period_xsdmf_id: 17292,
-                    rek_coverage_period_order: 2,
-                    rek_coverage_period: 'Original records were on paper then digital',
-                },
-            ],
-        } });
+        const wrapper = setup({
+            publication: {
+                rek_title: 'Record with coverage period',
+                fez_record_search_key_coverage_period: [
+                    {
+                        rek_coverage_period_id: 1,
+                        rek_coverage_period_pid: 'UQ:719166',
+                        rek_coverage_period_xsdmf_id: 17292,
+                        rek_coverage_period_order: 1,
+                        rek_coverage_period:
+                            'Original records were on paper (Photo, heat sensitive, 35mm) then digital',
+                    },
+                    {
+                        rek_coverage_period_id: 2,
+                        rek_coverage_period_pid: 'UQ:719166',
+                        rek_coverage_period_xsdmf_id: 17292,
+                        rek_coverage_period_order: 2,
+                        rek_coverage_period: 'Original records were on paper then digital',
+                    },
+                ],
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with rek_date year mapped to citation_date exactly as it is', () => {
-        const wrapper = setup({ publication: {
-            rek_title: 'Record with only year in rek_date',
-            rek_date: '1999',
-        } });
+        const wrapper = setup({
+            publication: {
+                rek_title: 'Record with only year in rek_date',
+                rek_date: '1999',
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -236,7 +243,10 @@ describe('Meta Component ', () => {
         const wrapper = setup({ publication });
         expect(wrapper.instance().getMetaTags(publication)).toEqual([
             { name: 'DC.Title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;' },
-            { name: 'citation_title', content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;' },
+            {
+                name: 'citation_title',
+                content: '&lt;p&gt;This is some title in &lt;strong&gt;HTML&lt;/strong&gt;&lt;/p&gt;',
+            },
             { name: 'DC.Description', content: 'This is test description' },
             { name: 'citation_abstract', content: 'This is test description' },
         ]);

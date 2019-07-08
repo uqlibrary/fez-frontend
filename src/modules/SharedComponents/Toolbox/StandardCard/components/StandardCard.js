@@ -51,15 +51,18 @@ export class Cards extends Component {
     };
     render() {
         const { classes, title, help, children, primaryHeader, accentHeader } = this.props;
-        const customBG = !!this.props.customBackgroundColor ? { backgroundColor: this.props.customBackgroundColor } : null;
-        const customTitleBG = !!this.props.customTitleBgColor ? { backgroundColor: this.props.customTitleBgColor } : null;
+        const customBG = !!this.props.customBackgroundColor
+            ? { backgroundColor: this.props.customBackgroundColor }
+            : null;
+        const customTitleBG = !!this.props.customTitleBgColor
+            ? { backgroundColor: this.props.customTitleBgColor }
+            : null;
         const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
         const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
         const squareTop = !!this.props.squareTop ? { borderTopLeftRadius: 0, borderTopRightRadius: 0 } : null;
         return (
             <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
-                {
-                    !this.props.noHeader &&
+                {!this.props.noHeader && (
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
                         title={title}
@@ -68,16 +71,15 @@ export class Cards extends Component {
                             component: 'h3',
                             color: 'inherit',
                         }}
-                        action={
-                            !!help && !!help.text &&
-                            <HelpIcon {...help} />
-                        }
+                        action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
-                            root: primaryHeader && classes.cardHeaderPrimary || accentHeader && classes.cardHeaderAccent,
+                            root:
+                                (primaryHeader && classes.cardHeaderPrimary) ||
+                                (accentHeader && classes.cardHeaderAccent),
                         }}
                     />
-                }
-                <CardContent className={this.props.noPadding && classes.cardContentNoPadding || ''}>
+                )}
+                <CardContent className={(this.props.noPadding && classes.cardContentNoPadding) || ''}>
                     {children}
                 </CardContent>
             </Card>
@@ -86,5 +88,5 @@ export class Cards extends Component {
 }
 
 const StyledCard = withStyles(styles, { withTheme: true })(Cards);
-export const StandardCard = (props) => <StyledCard {...props}/>;
+export const StandardCard = props => <StyledCard {...props} />;
 export default StandardCard;

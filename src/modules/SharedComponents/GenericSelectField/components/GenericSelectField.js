@@ -70,13 +70,13 @@ export class GenericSelectFieldClass extends Component {
         }
     }
 
-    _itemSelected = (event) => {
+    _itemSelected = event => {
         let value = event.target.value;
         if (value[0] === -1) {
-            if(value.length === 1) {
+            if (value.length === 1) {
                 value = '';
             }
-            if(value.length > 1) {
+            if (value.length > 1) {
                 value.shift();
             }
         }
@@ -84,53 +84,51 @@ export class GenericSelectFieldClass extends Component {
     };
 
     newValue = () => {
-        if(this.props.multiple) {
-            if(this.props.hideLabel) {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
+        if (this.props.multiple) {
+            if (this.props.hideLabel) {
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || [
+                        -1,
+                    ]
+                );
             } else {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || []
+                );
             }
         } else {
-            if(this.props.hideLabel) {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
-            } else{
+            if (this.props.hideLabel) {
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) ||
+                    '-1'
+                );
+            } else {
                 return this.props.selectedValue || '';
             }
         }
     };
 
-    loadingIndicationText = () => this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
+    loadingIndicationText = () => (this.props.itemsLoading ? this.props.loadingHint : this.props.hintText);
 
     renderMenuItems = () => {
         const { classes } = this.props;
         return [
-            this.props.hideLabel &&
-            <MenuItem
-                value={-1}
-                key={0}
-                style={{ display: 'block' }}
-                disabled
-            >
-                {this.loadingIndicationText()}
-            </MenuItem>,
+            this.props.hideLabel && (
+                <MenuItem value={-1} key={0} style={{ display: 'block' }} disabled>
+                    {this.loadingIndicationText()}
+                </MenuItem>
+            ),
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
                         classes={{ selected: classes.selectedMenuItem }}
                         style={{ display: 'block' }}
                         selected={
-                            this.props.multiple &&
-                            this.props.selectedValue.includes(item.value || item) ||
-                            undefined
+                            (this.props.multiple && this.props.selectedValue.includes(item.value || item)) || undefined
                         }
                         value={item.value || item}
                         key={index + 1}
-                        disabled={
-                            item && (
-                                !item.value ||
-                                !!item.disabled
-                            )
-                        }
+                        disabled={item && (!item.value || !!item.disabled)}
                         aria-label={item.text || item.value || item}
                     >
                         {item.text || item.value || item}
@@ -138,12 +136,14 @@ export class GenericSelectFieldClass extends Component {
                 );
             }),
         ];
-    }
+    };
 
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>{this.props.label}</InputLabel>
+                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>
+                    {this.props.label}
+                </InputLabel>
                 <Select
                     style={this.props.style}
                     value={this.newValue()}
@@ -160,15 +160,14 @@ export class GenericSelectFieldClass extends Component {
                 >
                     {this.renderMenuItems()}
                 </Select>
-                {
-                    !!this.props.error &&
+                {!!this.props.error && (
                     <FormHelperText error={!!this.props.error}>{this.props.errorText}</FormHelperText>
-                }
+                )}
             </FormControl>
         );
     }
 }
 
 const StyledGenericSelectField = withStyles(styles, { withTheme: true })(GenericSelectFieldClass);
-const GenericSelectField = (props) => <StyledGenericSelectField {...props}/>;
+const GenericSelectField = props => <StyledGenericSelectField {...props} />;
 export default GenericSelectField;

@@ -59,13 +59,15 @@ export function searchPossiblyYourPublications({
             type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING,
             payload: activeFacets,
         });
-        return get(POSSIBLE_RECORDS_API({
-            facets: activeFacets,
-            page: page,
-            pageSize: pageSize,
-            sortBy: sortBy,
-            sortDirection: sortDirection,
-        }))
+        return get(
+            POSSIBLE_RECORDS_API({
+                facets: activeFacets,
+                page: page,
+                pageSize: pageSize,
+                sortBy: sortBy,
+                sortDirection: sortDirection,
+            })
+        )
             .then(response => {
                 dispatch({
                     type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
@@ -214,7 +216,9 @@ export function claimPublication(data) {
                 type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
                 payload: 'Current author has already been assigned to this publication.',
             });
-            return Promise.reject(new Error('Current author has already been assigned to this publication as an author or contributor.'));
+            return Promise.reject(
+                new Error('Current author has already been assigned to this publication as an author or contributor.')
+            );
         };
     }
 
@@ -232,11 +236,7 @@ export function claimPublication(data) {
             );
         }
 
-        if (
-            data.contributorLinking &&
-            data.contributorLinking.valid &&
-            data.contributorLinking.authors
-        ) {
+        if (data.contributorLinking && data.contributorLinking.valid && data.contributorLinking.authors) {
             recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(
                 data.contributorLinking.authors,
                 data.author.aut_id
@@ -244,32 +244,38 @@ export function claimPublication(data) {
         }
 
         // claim record from external source
-        const createRecordRequest = !data.publication.rek_pid ? {
-            ...data.publication,
-            ...NEW_RECORD_DEFAULT_VALUES,
-            ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordFileAttachmentSearchKey(
-                data.files ? data.files.queue : [],
-                data.publication
-            ),
-            ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
-            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
-            ...recordAuthorsIdSearchKeys,
-            ...recordContributorsIdSearchKeys,
-        } : null;
+        const createRecordRequest = !data.publication.rek_pid
+            ? {
+                ...data.publication,
+                ...NEW_RECORD_DEFAULT_VALUES,
+                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getRecordFileAttachmentSearchKey(
+                    data.files ? data.files.queue : [],
+                    data.publication
+                ),
+                ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
+                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
+                ...recordAuthorsIdSearchKeys,
+                ...recordContributorsIdSearchKeys,
+            }
+            : null;
 
         // update record with author/contributor id, link, content indicators
-        const patchRecordRequest = data.publication.rek_pid ? {
-            ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
-            ...recordAuthorsIdSearchKeys,
-            ...recordContributorsIdSearchKeys,
-        } : null;
+        const patchRecordRequest = data.publication.rek_pid
+            ? {
+                ...transformers.getRecordLinkSearchKey(data),
+                ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
+                ...recordAuthorsIdSearchKeys,
+                ...recordContributorsIdSearchKeys,
+            }
+            : null;
 
         // update record with files
-        const patchFilesRecordRequest = hasFilesToUpload ? {
-            ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
-        } : null;
+        const patchFilesRecordRequest = hasFilesToUpload
+            ? {
+                ...transformers.getRecordFileAttachmentSearchKey(data.files.queue, data.publication),
+            }
+            : null;
 
         // track success of either save or patch request
         let claimRecordRequestSuccess = false;
@@ -277,83 +283,74 @@ export function claimPublication(data) {
         // create request for issue notification
         const createIssueRequest = transformers.getClaimIssueRequest(data);
 
-        return Promise.resolve([])
-            // save a new record if claiming from external source
-            .then(() => !data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null)
-            // update pid of newly saved record
-            .then((newRecord) => {
-                if ((newRecord || {}).data && !data.publication.rek_pid) {
-                    data.publication.rek_pid = newRecord.data.rek_pid;
-                }
-                return null;
-            })
-            // claim record if claiming from internal source
-            .then(() => !createRecordRequest
-                ? patch(
-                    EXISTING_RECORD_API({ pid: data.publication.rek_pid }),
-                    patchRecordRequest
+        return (
+            Promise.resolve([])
+                // save a new record if claiming from external source
+                .then(() => (!data.publication.rek_pid ? post(NEW_RECORD_API(), createRecordRequest) : null))
+                // update pid of newly saved record
+                .then(newRecord => {
+                    if ((newRecord || {}).data && !data.publication.rek_pid) {
+                        data.publication.rek_pid = newRecord.data.rek_pid;
+                    }
+                    return null;
+                })
+                // claim record if claiming from internal source
+                .then(() =>
+                    !createRecordRequest
+                        ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
+                        : null
                 )
-                : null
-            )
-            // set save/claim record status if either is a success
-            .then(() => {
-                claimRecordRequestSuccess = true;
-                return null;
-            })
-            // try to upload files
-            .then(() => hasFilesToUpload
-                ? putUploadFiles(
-                    data.publication.rek_pid,
-                    data.files.queue,
-                    dispatch
+                // set save/claim record status if either is a success
+                .then(() => {
+                    claimRecordRequestSuccess = true;
+                    return null;
+                })
+                // try to upload files
+                .then(() =>
+                    hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null
                 )
-                : null
-            )
-            // patch record with files if file upload has succeeded
-            .then(() => hasFilesToUpload
-                ? patch(
-                    EXISTING_RECORD_API({ pid: data.publication.rek_pid }),
-                    patchFilesRecordRequest
+                // patch record with files if file upload has succeeded
+                .then(() =>
+                    hasFilesToUpload
+                        ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchFilesRecordRequest)
+                        : null
                 )
-                : null
-            )
-            // send comments or content indicator changes as an issue request
-            .then(() => createIssueRequest.issue.length
-                ? post(
-                    RECORDS_ISSUES_API({ pid: data.publication.rek_pid }),
-                    createIssueRequest
+                // send comments or content indicator changes as an issue request
+                .then(() =>
+                    createIssueRequest.issue.length
+                        ? post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest)
+                        : null
                 )
-                : null
-            )
-            // finish claim record action
-            .then(() => {
-                dispatch({
-                    type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
-                    payload: { pid: data.publication.rek_pid },
-                    fileUploadOrIssueFailed: false,
-                });
-                return Promise.resolve(data.publication);
-            })
-            .catch(error => {
-                // new record was created or author claim request was saved, but file upload failed
-                if (claimRecordRequestSuccess) {
+                // finish claim record action
+                .then(() => {
                     dispatch({
                         type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
-                        payload: {
-                            pid: data.publication.rek_pid,
-                            fileUploadOrIssueFailed: true,
-                        },
+                        payload: { pid: data.publication.rek_pid },
+                        fileUploadOrIssueFailed: false,
                     });
-
                     return Promise.resolve(data.publication);
-                }
+                })
+                .catch(error => {
+                    // new record was created or author claim request was saved, but file upload failed
+                    if (claimRecordRequestSuccess) {
+                        dispatch({
+                            type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
+                            payload: {
+                                pid: data.publication.rek_pid,
+                                fileUploadOrIssueFailed: true,
+                            },
+                        });
 
-                // failed to create a claim/new record request
-                dispatch({
-                    type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
-                    payload: error.message,
-                });
-                return Promise.reject(error);
-            });
+                        return Promise.resolve(data.publication);
+                    }
+
+                    // failed to create a claim/new record request
+                    dispatch({
+                        type: actions.CLAIM_PUBLICATION_CREATE_FAILED,
+                        payload: error.message,
+                    });
+                    return Promise.reject(error);
+                })
+        );
     };
 }

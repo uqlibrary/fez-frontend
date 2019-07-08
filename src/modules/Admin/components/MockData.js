@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 export const PIDtitle = 'UQ:12345 Title of Journal Article';
 export const collectionItems = [
     { value: 'UQ:120743', label: '16th Australasian Fluid Mechanics Conference' },

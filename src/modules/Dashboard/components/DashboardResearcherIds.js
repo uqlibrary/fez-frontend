@@ -7,7 +7,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme =>({
+const styles = theme => ({
     researcherIDlink: {
         '&:hover': {
             cursor: 'pointer',
@@ -53,54 +53,86 @@ export class DashboardResearcherIdsClass extends React.Component {
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
         return (
             <Grid container spacing={8} alignItems={'center'} style={{ marginTop: 12 }}>
-                {values && Object.keys(values).map((item, index) => (
-                    <Grid item key={index}>
-                        {/* external URL's */}
-                        {((values[item] && link.linkedUrl[item].indexOf('http') !== -1) || (!values[item] && link.notLinkedUrl[item].indexOf('http') !== -1)) &&
-                        <ExternalLink id={item} openInNewIcon={false} className={classes.researcherIDlink}
-                            href={values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item]}
-                            title={values[item] ? txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item]) : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
-                            <div
-                                title={!!values[item] ? (txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item])) : (txt.researcherIsNotLinked.replace('[resource]', txt.titles[item]))}
-                                className={'fez-icon ' + item + (values[item] && authenticated[item] ? ' ok' : ' error')}
-                                style={{ width: 32, height: 32, borderRadius: 32 }}
-                            />
-                        </ExternalLink>
-                        }
+                {values &&
+                    Object.keys(values).map((item, index) => (
+                        <Grid item key={index}>
+                            {/* external URL's */}
+                            {((values[item] && link.linkedUrl[item].indexOf('http') !== -1) ||
+                                (!values[item] && link.notLinkedUrl[item].indexOf('http') !== -1)) && (
+                                <ExternalLink
+                                    id={item}
+                                    openInNewIcon={false}
+                                    className={classes.researcherIDlink}
+                                    href={values[item] ? link.linkedUrl[item] + values[item] : link.notLinkedUrl[item]}
+                                    title={
+                                        values[item]
+                                            ? txt.researcherIsLinked
+                                                .replace('[resource]', txt.titles[item])
+                                                .replace('[id]', values[item])
+                                            : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])
+                                    }
+                                >
+                                    <div
+                                        title={
+                                            !!values[item]
+                                                ? txt.researcherIsLinked
+                                                    .replace('[resource]', txt.titles[item])
+                                                    .replace('[id]', values[item])
+                                                : txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])
+                                        }
+                                        className={
+                                            'fez-icon ' +
+                                            item +
+                                            (values[item] && authenticated[item] ? ' ok' : ' error')
+                                        }
+                                        style={{ width: 32, height: 32, borderRadius: 32 }}
+                                    />
+                                </ExternalLink>
+                            )}
 
-                        {/* Internal URL's - will be non-linked ID's only */}
-                        {!values[item] && link.notLinkedUrl[item].indexOf('http') === -1 &&
+                            {/* Internal URL's - will be non-linked ID's only */}
+                            {!values[item] && link.notLinkedUrl[item].indexOf('http') === -1 && (
+                                <a
+                                    id={item}
+                                    tabIndex="0"
+                                    onClick={event => this.navigateToRoute(event, item)}
+                                    className={classes.researcherIDlink}
+                                    onKeyPress={event => this.navigateToRoute(event, item)}
+                                    title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
+                                >
+                                    <div
+                                        title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
+                                        className={`fez-icon ${item} dashboard ${
+                                            authenticated[item] ? ' ok' : ' error'
+                                        }`}
+                                    />
+                                </a>
+                            )}
+                        </Grid>
+                    ))}
+
+                {values.orcid && (
+                    <Grid item>
                         <a
-                            id={item}
+                            href={txt.orcidUrlPrefix + values.orcid}
+                            id={'orcid'}
+                            target="_blank"
+                            aria-label={txt.orcidlinkLabel}
+                            title={txt.orcidlinkLabel}
                             tabIndex="0"
-                            onClick={(event) => this.navigateToRoute(event, item)}
-                            className={classes.researcherIDlink}
-                            onKeyPress={(event) => this.navigateToRoute(event, item)}
-                            title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}>
-                            <div title={txt.researcherIsNotLinked.replace('[resource]', txt.titles[item])}
-                                className={`fez-icon ${item} dashboard ${authenticated[item] ? ' ok' : ' error'}`}/>
+                        >
+                            <Typography variant={'caption'} className={classes.orcidLink}>
+                                {txt.orcidLinkPrefix}
+                                {values.orcid}
+                            </Typography>
                         </a>
-                        }
-                    </Grid>)
+                    </Grid>
                 )}
-
-                {values.orcid &&
-                <Grid item>
-                    <a href={txt.orcidUrlPrefix + values.orcid}
-                        id={'orcid'}
-                        target="_blank"
-                        aria-label={txt.orcidlinkLabel}
-                        title={txt.orcidlinkLabel}
-                        tabIndex="0" >
-                        <Typography variant={'caption'} className={classes.orcidLink} >{txt.orcidLinkPrefix}{values.orcid}</Typography>
-                    </a>
-                </Grid>
-                }
             </Grid>
         );
     }
 }
 
 const StyledDashboardResearcherIds = withStyles(styles, { withTheme: true })(DashboardResearcherIdsClass);
-const DashboardResearcherIds = (props) => <StyledDashboardResearcherIds {...props}/>;
+const DashboardResearcherIds = props => <StyledDashboardResearcherIds {...props} />;
 export default DashboardResearcherIds;

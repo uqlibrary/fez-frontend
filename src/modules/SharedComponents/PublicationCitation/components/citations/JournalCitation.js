@@ -16,13 +16,14 @@ export default class JournalCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             volumeNumber: this.props.publication.fez_record_search_key_volume_number
-                ? this.props.publication.fez_record_search_key_volume_number.rek_volume_number : null,
+                ? this.props.publication.fez_record_search_key_volume_number.rek_volume_number
+                : null,
             issueNumber: this.props.publication.fez_record_search_key_issue_number
-                ? this.props.publication.fez_record_search_key_issue_number.rek_issue_number : null,
+                ? this.props.publication.fez_record_search_key_issue_number.rek_issue_number
+                : null,
         };
 
         // eSpace citation view for Journal
-        // {Title of journal}{Publication Year| (|).}{Volume number| |}{Issue number| (|)}.
         return (
             <div className="citationContent citationJournal">
                 {/* {Title of journal} */}
@@ -32,10 +33,15 @@ export default class JournalCitation extends Component {
                 <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* {Volume number| |}*/}
-                <Partials.CitationView className="citationVolumeNumber" value={record.volumeNumber} suffix=" "/>
+                <Partials.CitationView className="citationVolumeNumber" value={record.volumeNumber} suffix=" " />
 
                 {/* {Issue number| (|)}*/}
-                <Partials.CitationView className="citationIssueNumber" value={record.issueNumber} prefix="(" suffix=")."/>
+                <Partials.CitationView
+                    className="citationIssueNumber"
+                    value={record.issueNumber}
+                    prefix="("
+                    suffix=")."
+                />
             </div>
         );
     }

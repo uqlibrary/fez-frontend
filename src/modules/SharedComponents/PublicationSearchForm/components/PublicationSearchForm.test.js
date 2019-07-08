@@ -45,7 +45,10 @@ function setup(testProps, isShallow = true) {
         submitAsSideEffect: false,
         locale: {
             title: 'Search for your publication',
-            text: 'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the title of the publication. This will allow us to check whether the record is already in eSpace or is available from another source.',
+            text:
+                'Enter either the publication DOI (e.g. 10.1163/9789004326828), Pubmed Id (e.g. 28131963) or the ' +
+                'title of the publication. This will allow us to check whether the record is already in eSpace or ' +
+                'is available from another source.',
             fieldLabels: { search: 'Enter DOI, Pubmed Id or Title' },
             submit: 'Search',
             skip: 'Skip search',

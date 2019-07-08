@@ -18,9 +18,9 @@ describe('claimPublication reducer', () => {
     };
 
     const publicationData = {
-        'rek_pid': 'UQ:12345',
-        'rek_title': 'This is a title',
-        'rek_description': 'This is a description.',
+        rek_pid: 'UQ:12345',
+        rek_title: 'This is a title',
+        rek_description: 'This is a description.',
     };
 
     const mockRecord = {
@@ -66,7 +66,10 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns the records which are possibly yours', () => {
-        const test = claimPublicationReducer(initialState, { type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED, payload: mockRecord });
+        const test = claimPublicationReducer(initialState, {
+            type: actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+            payload: mockRecord,
+        });
         expect(test).toEqual({
             ...initialState,
             loadingPossiblePublicationsList: false,
@@ -85,11 +88,28 @@ describe('claimPublication reducer', () => {
 
     it('returns the facets for the possible records', () => {
         const facetData = {
-            'Scopus document type': { 'doc_count_error_upper_bound': 0, 'sum_other_doc_count': 0, 'buckets': [] },
-            'Display type': { 'doc_count_error_upper_bound': 0, 'sum_other_doc_count': 0, 'buckets': [{ 'key': 130, 'doc_count': 10 }] },
-            'Keywords': { 'doc_count_error_upper_bound': 0, 'sum_other_doc_count': 8, 'buckets': [{ 'key': 'CARDIAC & CARDIOVASCULAR SYSTEMS', 'doc_count': 2 }, { 'key': 'Cardiac & Cardiovascular Systems', 'doc_count': 2 }, { 'key': 'Cardiovascular System & Cardiology', 'doc_count': 2 }, { 'key': 'Respiratory System', 'doc_count': 2 }, { 'key': 'ENDOCRINOLOGY & METABOLISM', 'doc_count': 1 }] },
+            'Scopus document type': { doc_count_error_upper_bound: 0, sum_other_doc_count: 0, buckets: [] },
+            'Display type': {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 0,
+                buckets: [{ key: 130, doc_count: 10 }],
+            },
+            Keywords: {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 8,
+                buckets: [
+                    { key: 'CARDIAC & CARDIOVASCULAR SYSTEMS', doc_count: 2 },
+                    { key: 'Cardiac & Cardiovascular Systems', doc_count: 2 },
+                    { key: 'Cardiovascular System & Cardiology', doc_count: 2 },
+                    { key: 'Respiratory System', doc_count: 2 },
+                    { key: 'ENDOCRINOLOGY & METABOLISM', doc_count: 1 },
+                ],
+            },
         };
-        const test = claimPublicationReducer(initialState, { type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED, payload: facetData });
+        const test = claimPublicationReducer(initialState, {
+            type: actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED,
+            payload: facetData,
+        });
         expect(test).toEqual({
             ...initialState,
             possiblePublicationsFacets: facetData,
@@ -127,7 +147,10 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns that the record count has loaded with the data', () => {
-        const test = claimPublicationReducer(initialState, { type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED, payload: mockRecord });
+        const test = claimPublicationReducer(initialState, {
+            type: actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADED,
+            payload: mockRecord,
+        });
         expect(test).toEqual({
             ...initialState,
             loadingPossibleCounts: false,
@@ -136,7 +159,10 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns list of publications hidden/unclaimed', () => {
-        const test = claimPublicationReducer(initialState, { type: actions.HIDE_PUBLICATIONS_LOADED, payload: mockRecord });
+        const test = claimPublicationReducer(initialState, {
+            type: actions.HIDE_PUBLICATIONS_LOADED,
+            payload: mockRecord,
+        });
         expect(test).toEqual({
             ...initialState,
             publicationsClaimedInProgress: [...initialState.publicationsClaimedInProgress, mockRecord.pid],
@@ -144,7 +170,10 @@ describe('claimPublication reducer', () => {
     });
 
     it('returns list of publications currently in claiming progress and if there was an error uploading files', () => {
-        const test = claimPublicationReducer(initialState, { type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED, payload: mockRecord });
+        const test = claimPublicationReducer(initialState, {
+            type: actions.CLAIM_PUBLICATION_CREATE_COMPLETED,
+            payload: mockRecord,
+        });
         expect(test).toEqual({
             ...initialState,
             publicationToClaimFileUploadingError: !!mockRecord.fileUploadFailed,
@@ -156,7 +185,7 @@ describe('claimPublication reducer', () => {
         const testMessage = 'Test message';
         const test = claimPublicationReducer(initialState, {
             type: 'HIDE_PUBLICATIONS_FAILED',
-            'payload': testMessage,
+            payload: testMessage,
         });
         expect(test.hidePublicationLoading).toBe(false);
         expect(test.hidePublicationFailed).toBe(true);
@@ -191,63 +220,69 @@ describe('claimPublication reducer', () => {
     it('returns the that the publication is loading', () => {
         const test = claimPublicationReducer(initialState, { type: 'PUBLICATION_TO_CLAIM_LOADING' });
         expect(test).toEqual({
-            'fullPublicationToClaim': null,
-            'fullPublicationToClaimLoading': true,
-            'fullPublicationToClaimLoadingFailed': false,
-            'hidePublicationFailed': false,
-            'hidePublicationFailedErrorMessage': null,
-            'hidePublicationLoading': true,
-            'loadingPossibleCounts': true,
-            'loadingPossiblePublicationsList': true,
-            'possibleCounts': 0,
-            'possiblePublicationsFacets': {},
-            'possiblePublicationsList': [],
-            'possiblePublicationsPagingData': {},
-            'publicationToClaim': null,
-            'publicationToClaimFileUploadingError': false,
-            'publicationsClaimedInProgress': [],
+            fullPublicationToClaim: null,
+            fullPublicationToClaimLoading: true,
+            fullPublicationToClaimLoadingFailed: false,
+            hidePublicationFailed: false,
+            hidePublicationFailedErrorMessage: null,
+            hidePublicationLoading: true,
+            loadingPossibleCounts: true,
+            loadingPossiblePublicationsList: true,
+            possibleCounts: 0,
+            possiblePublicationsFacets: {},
+            possiblePublicationsList: [],
+            possiblePublicationsPagingData: {},
+            publicationToClaim: null,
+            publicationToClaimFileUploadingError: false,
+            publicationsClaimedInProgress: [],
         });
     });
 
     it('returns the full publication when loaded', () => {
-        const test = claimPublicationReducer(initialState, { type: 'PUBLICATION_TO_CLAIM_LOADED', payload: publicationData });
+        const test = claimPublicationReducer(initialState, {
+            type: 'PUBLICATION_TO_CLAIM_LOADED',
+            payload: publicationData,
+        });
         expect(test).toEqual({
-            'fullPublicationToClaim': publicationData,
-            'fullPublicationToClaimLoading': false,
-            'fullPublicationToClaimLoadingFailed': false,
-            'hidePublicationFailed': false,
-            'hidePublicationFailedErrorMessage': null,
-            'hidePublicationLoading': true,
-            'loadingPossibleCounts': true,
-            'loadingPossiblePublicationsList': true,
-            'possibleCounts': 0,
-            'possiblePublicationsFacets': {},
-            'possiblePublicationsList': [],
-            'possiblePublicationsPagingData': {},
-            'publicationToClaim': null,
-            'publicationToClaimFileUploadingError': false,
-            'publicationsClaimedInProgress': [],
+            fullPublicationToClaim: publicationData,
+            fullPublicationToClaimLoading: false,
+            fullPublicationToClaimLoadingFailed: false,
+            hidePublicationFailed: false,
+            hidePublicationFailedErrorMessage: null,
+            hidePublicationLoading: true,
+            loadingPossibleCounts: true,
+            loadingPossiblePublicationsList: true,
+            possibleCounts: 0,
+            possiblePublicationsFacets: {},
+            possiblePublicationsList: [],
+            possiblePublicationsPagingData: {},
+            publicationToClaim: null,
+            publicationToClaimFileUploadingError: false,
+            publicationsClaimedInProgress: [],
         });
     });
 
     it('returns the expected values when fails', () => {
-        const test = claimPublicationReducer(initialState, { type: 'PUBLICATION_TO_CLAIM_FAILED', payload: 'There was an error' });
+        const test = claimPublicationReducer(initialState, {
+            type: 'PUBLICATION_TO_CLAIM_FAILED',
+            payload: 'There was an error',
+        });
         expect(test).toEqual({
-            'fullPublicationToClaim': null,
-            'fullPublicationToClaimLoading': false,
-            'fullPublicationToClaimLoadingFailed': 'There was an error',
-            'hidePublicationFailed': false,
-            'hidePublicationFailedErrorMessage': null,
-            'hidePublicationLoading': true,
-            'loadingPossibleCounts': true,
-            'loadingPossiblePublicationsList': true,
-            'possibleCounts': 0,
-            'possiblePublicationsFacets': {},
-            'possiblePublicationsList': [],
-            'possiblePublicationsPagingData': {},
-            'publicationToClaim': null,
-            'publicationToClaimFileUploadingError': false,
-            'publicationsClaimedInProgress': [],
+            fullPublicationToClaim: null,
+            fullPublicationToClaimLoading: false,
+            fullPublicationToClaimLoadingFailed: 'There was an error',
+            hidePublicationFailed: false,
+            hidePublicationFailedErrorMessage: null,
+            hidePublicationLoading: true,
+            loadingPossibleCounts: true,
+            loadingPossiblePublicationsList: true,
+            possibleCounts: 0,
+            possiblePublicationsFacets: {},
+            possiblePublicationsList: [],
+            possiblePublicationsPagingData: {},
+            publicationToClaim: null,
+            publicationToClaimFileUploadingError: false,
+            publicationsClaimedInProgress: [],
         });
     });
 });

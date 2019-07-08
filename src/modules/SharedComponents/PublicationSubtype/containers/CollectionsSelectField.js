@@ -4,9 +4,11 @@ import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField'
 import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
-    const translatedItemList = state.get('collectionsReducer') && state.get('collectionsReducer').itemsList.map((item, index) => {
-        return { text: item.rek_title, value: item.rek_pid, index };
-    });
+    const translatedItemList =
+        state.get('collectionsReducer') &&
+        state.get('collectionsReducer').itemsList.map((item, index) => {
+            return { text: item.rek_title, value: item.rek_pid, index };
+        });
 
     return {
         selectedValue: props.value || [],
@@ -24,8 +26,11 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const CollectionsList = connect(mapStateToProps, mapDispatchToProps)(GenericSelectField);
+const CollectionsList = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(GenericSelectField);
 
 export default function CollectionsSelectField(fieldProps) {
-    return (<CollectionsList { ...fieldProps } />);
+    return <CollectionsList {...fieldProps} />;
 }

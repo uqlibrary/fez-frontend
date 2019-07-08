@@ -2,7 +2,9 @@ import React from 'react';
 
 export default {
     validationErrors: {
-        publicationSearch: 'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        publicationSearch:
+            'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) ' +
+            'or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
         ismn: 'ISMN value is not valid',
@@ -21,8 +23,18 @@ export default {
         maxWords: 'Must be [max] words or less',
         authorLinking: 'Please select and confirm an author',
         contributorLinking: 'Please select and confirm a contributor',
-        authorRequired: (<span>Please <b>provide a list of authors/creators</b> of the work and <b>select an author/creator or editor/contributor</b> as you</span>),
-        editorRequired: (<span>Please <b>provide a list of editors/contributors</b> of the work and <b>select an editor/contributor or author/creator</b> as you</span>),
+        authorRequired: (
+            <span>
+                Please <b>provide a list of authors/creators</b> of the work and{' '}
+                <b>select an author/creator or editor/contributor</b> as you
+            </span>
+        ),
+        editorRequired: (
+            <span>
+                Please <b>provide a list of editors/contributors</b> of the work and{' '}
+                <b>select an editor/contributor or author/creator</b> as you
+            </span>
+        ),
         supervisorRequired: 'Please provide a list of supervisors',
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',

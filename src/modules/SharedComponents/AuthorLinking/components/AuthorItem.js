@@ -9,7 +9,7 @@ import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
 import Link from '@material-ui/icons/Link';
 
-export const styles = (theme) => ({
+export const styles = theme => ({
     authorLinkIcon: {
         marginRight: theme.spacing.unit,
     },
@@ -63,7 +63,7 @@ export class AuthorItem extends PureComponent {
         } else if (linked) {
             return <Link className={this.props.classes.authorLinkIcon} />;
         } else {
-            return <RadioButtonChecked className={this.props.classes.authorLinkIcon} color="primary"/>;
+            return <RadioButtonChecked className={this.props.classes.authorLinkIcon} color="primary" />;
         }
     };
 
@@ -79,7 +79,7 @@ export class AuthorItem extends PureComponent {
                 <Grid container>
                     <Grid item xs={12}>
                         <Button
-                            onClick={(!linked && !selected) ? this._selectAuthor : undefined}
+                            onClick={!linked && !selected ? this._selectAuthor : undefined}
                             fullWidth
                             disabled={disabled}
                             className={this.props.classes.buttonBase}
@@ -89,7 +89,9 @@ export class AuthorItem extends PureComponent {
                         </Button>
                     </Grid>
                     <Grid item xs={12}>
-                        <Typography variant="caption" className={this.props.classes.authorOrder}>{authorOrder}</Typography>
+                        <Typography variant="caption" className={this.props.classes.authorOrder}>
+                            {authorOrder}
+                        </Typography>
                     </Grid>
                 </Grid>
             </Grid>

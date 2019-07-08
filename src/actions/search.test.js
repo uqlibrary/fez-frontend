@@ -25,20 +25,52 @@ describe('Search action creators', () => {
 
     it('should dispatch series of search actions for search publications', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).options
+            )
             .reply(200, mockData.internalTitleSearchList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleSearchResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleScopusResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).options
+            )
             .reply(200, mockData.externalDoiSearchResultList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalPubMedSearchResultsList);
 
         const expectedActions = [
@@ -63,22 +95,53 @@ describe('Search action creators', () => {
 
     it('should dispatch series of search actions for search publications with one failure', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).options
+            )
             .reply(200, mockData.internalTitleSearchList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleSearchResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleScopusResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).options
+            )
             .reply(200, mockData.externalDoiSearchResultList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(500, {});
-
 
         const expectedActions = [
             actions.SEARCH_LOADING,
@@ -103,22 +166,53 @@ describe('Search action creators', () => {
 
     it('should dispatch series of search actions for search publications with all failure', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).options
+            )
             .reply(500, {})
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(500, {})
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(500, {})
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).options
+            )
             .reply(500, {})
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(500, {});
-
 
         const expectedActions = [
             actions.SEARCH_LOADING,
@@ -147,22 +241,53 @@ describe('Search action creators', () => {
 
     it('should dispatch series of search actions for search publications with crossref returns no data', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API({ searchQuery: testTitleSearchParam, pageSize: 5, sortBy: 'score', sortDirection: 'desc' }).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API({
+                    searchQuery: testTitleSearchParam,
+                    pageSize: 5,
+                    sortBy: 'score',
+                    sortDirection: 'desc',
+                }).options
+            )
             .reply(200, mockData.internalTitleSearchList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleSearchResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalTitleScopusResultsList)
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'crossref', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
+                    source: 'crossref',
+                    searchQuery: testTitleSearchParam,
+                }).options
+            )
             .reply(200, {})
-            .onGet(repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).apiUrl,
-                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam }).options)
+            .onGet(
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .apiUrl,
+                repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
+                    .options
+            )
             .reply(200, mockData.externalPubMedSearchResultsList);
-
 
         const expectedActions = [
             actions.SEARCH_LOADING,
@@ -185,8 +310,7 @@ describe('Search action creators', () => {
     });
 
     it('should dispatch series of actions for anon user', async() => {
-        mockApi.onAny()
-            .reply(403);
+        mockApi.onAny().reply(403);
 
         const expectedActions = [
             actions.SEARCH_LOADING,
@@ -215,8 +339,10 @@ describe('Search action creators', () => {
 
     it('should dispatch events for successful search key lookup api call', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).apiUrl,
-                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).options)
+            .onGet(
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).apiUrl,
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).options
+            )
             .reply(200, { data: [] });
 
         const expectedActions = [
@@ -229,9 +355,7 @@ describe('Search action creators', () => {
     });
 
     it('should dispatch events on error for search key lookup api call', async() => {
-        mockApi
-            .onAny()
-            .reply(404, {});
+        mockApi.onAny().reply(404, {});
 
         const expectedActions = [
             `${actions.SEARCH_KEY_LOOKUP_LOADING}@series`,
@@ -244,8 +368,10 @@ describe('Search action creators', () => {
 
     it('should dispatch events for successful author lookup up api call', async() => {
         mockApi
-            .onGet(repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).apiUrl,
-                repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).options)
+            .onGet(
+                repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).apiUrl,
+                repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).options
+            )
             .reply(200, { data: [] });
 
         const expectedActions = [
@@ -261,15 +387,13 @@ describe('Search action creators', () => {
         const searchParams = { title: 'abc' };
         const params = { searchQueryParams: searchParams, sortBy: 'score2' };
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options
+            )
             .reply(200, mockData.internalTitleSearchList);
 
-        const expectedActions = [
-            actions.SET_SEARCH_QUERY,
-            actions.SEARCH_LOADING,
-            actions.SEARCH_LOADED,
-        ];
+        const expectedActions = [actions.SET_SEARCH_QUERY, actions.SEARCH_LOADING, actions.SEARCH_LOADED];
 
         await mockActionsStore.dispatch(searchActions.searchEspacePublications(params));
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
@@ -279,8 +403,10 @@ describe('Search action creators', () => {
         const searchParams = { title: 'abc' };
         const params = { searchParams: searchParams, sortBy: 'score' };
         mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options)
+            .onGet(
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options
+            )
             .reply(500, mockData.internalTitleSearchList);
 
         const expectedActions = [
@@ -298,9 +424,7 @@ describe('Search action creators', () => {
         const searchQuery = 'test';
         const searchKey = 'publications';
         const params = { searchQueryParams: { all: searchQuery } };
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl)
-            .reply(200, { data: [] });
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl).reply(200, { data: [] });
 
         const expectedActions = [
             `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
@@ -315,9 +439,7 @@ describe('Search action creators', () => {
         const searchQuery = 'test';
         const searchKey = 'publications';
         const params = { searchQueryParams: { all: searchQuery } };
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl)
-            .reply(404, { data: [] });
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl).reply(404, { data: [] });
 
         const expectedActions = [
             `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
@@ -329,65 +451,43 @@ describe('Search action creators', () => {
     });
 
     it('should dispatch series of actions on clearing search', () => {
-        const expectedActions = [
-            actions.CLEAR_SEARCH_QUERY,
-        ];
+        const expectedActions = [actions.CLEAR_SEARCH_QUERY];
 
         mockActionsStore.dispatch(searchActions.clearSearchQuery());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of actions on collection list', async() => {
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
-            .reply(200, { data: [1, 2, 3] });
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(200, { data: [1, 2, 3] });
 
-        const expectedActions = [
-            actions.SEARCH_COLLECTION_LOADING,
-            actions.SEARCH_COLLECTION_LOADED,
-        ];
+        const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_LOADED];
 
         await mockActionsStore.dispatch(searchActions.collectionsList());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of actions on collection list fetch error', async() => {
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
-            .reply(404, {});
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(404, {});
 
-        const expectedActions = [
-            actions.SEARCH_COLLECTION_LOADING,
-            actions.SEARCH_COLLECTION_FAILED,
-        ];
+        const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_FAILED];
 
         await mockActionsStore.dispatch(searchActions.collectionsList());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of actions on community list', async() => {
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
-            .reply(200, { data: [1, 2, 3] });
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(200, { data: [1, 2, 3] });
 
-        const expectedActions = [
-            actions.SEARCH_COMMUNITIES_LOADING,
-            actions.SEARCH_COMMUNITIES_LOADED,
-        ];
+        const expectedActions = [actions.SEARCH_COMMUNITIES_LOADING, actions.SEARCH_COMMUNITIES_LOADED];
 
         await mockActionsStore.dispatch(searchActions.communitiesList());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);
     });
 
     it('should dispatch series of actions on community list fetch error', async() => {
-        mockApi
-            .onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl)
-            .reply(404, {});
+        mockApi.onGet(repositories.routes.SEARCH_INTERNAL_RECORDS_API({}).apiUrl).reply(404, {});
 
-        const expectedActions = [
-            actions.SEARCH_COMMUNITIES_LOADING,
-            actions.SEARCH_COMMUNITIES_FAILED,
-        ];
+        const expectedActions = [actions.SEARCH_COMMUNITIES_LOADING, actions.SEARCH_COMMUNITIES_FAILED];
 
         await mockActionsStore.dispatch(searchActions.communitiesList());
         expect(mockActionsStore.getActions()).toHaveAnyOrderDispatchedActions(expectedActions);

@@ -93,88 +93,108 @@ describe('SearchRecords page', () => {
         expect(testFn).not.toBeCalled();
     });
 
-    it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results)', () => {
-        const wrapper = setup({
-            publicationsListFacets: {
-                'Some facet': 1,
-                'Another facet': 2,
-            },
-            searchQuery: {
-                title: 'this is test',
-            },
-            publicationsList: [],
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should show available filters or selected filters if publicationsListFacets returned (even if there are no results) and should exclude facets from advanced search field', () => {
-        const wrapper = setup({
-            publicationsListFacets: {
-                'Some facet': 1,
-                'Another facet': 2,
-            },
-            searchQuery: {
-                title: 'this is test',
-            },
-            publicationsList: [],
-        });
-
-        wrapper.setState({
-            advancedSearchFields: ['Author'],
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should show available filters or selected filters if activeFacets OA selected (even if there are no results)', () => {
-        const wrapper = setup({
-            searchQuery: {
-                title: 'this is test',
-                activeFacets: {
-                    showOpenAccessOnly: true,
+    it(
+        'should show available filters or selected filters if publicationsListFacets ' +
+            'returned (even if there are no results)',
+        () => {
+            const wrapper = setup({
+                publicationsListFacets: {
+                    'Some facet': 1,
+                    'Another facet': 2,
                 },
-            },
-            publicationsList: [],
-        });
+                searchQuery: {
+                    title: 'this is test',
+                },
+                publicationsList: [],
+            });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
-    it('should show available filters or selected filters if activeFacets filter selected (even if there are no results)', () => {
-        const wrapper = setup({
-            searchQuery: {
-                title: 'this is test',
-                activeFacets: {
-                    filters: {
-                        'Display type': 179,
+    it(
+        'should show available filters or selected filters if publicationsListFacets ' +
+            'returned (even if there are no results) and should exclude facets from advanced search field',
+        () => {
+            const wrapper = setup({
+                publicationsListFacets: {
+                    'Some facet': 1,
+                    'Another facet': 2,
+                },
+                searchQuery: {
+                    title: 'this is test',
+                },
+                publicationsList: [],
+            });
+
+            wrapper.setState({
+                advancedSearchFields: ['Author'],
+            });
+
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
+
+    it(
+        'should show available filters or selected filters if activeFacets OA selected ' +
+            '(even if there are no results)',
+        () => {
+            const wrapper = setup({
+                searchQuery: {
+                    title: 'this is test',
+                    activeFacets: {
+                        showOpenAccessOnly: true,
                     },
                 },
-            },
-            publicationsList: [],
-        });
+                publicationsList: [],
+            });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
-    it('should show available filters or selected filters if activeFacets range selected (even if there are no results)', () => {
-        const wrapper = setup({
-            searchQuery: {
-                title: 'this is test',
-                activeFacets: {
-                    ranges: {
-                        'Year published': {
-                            from: 2015,
-                            to: 2018,
+    it(
+        'should show available filters or selected filters if activeFacets filter selected ' +
+            '(even if there are no results)',
+        () => {
+            const wrapper = setup({
+                searchQuery: {
+                    title: 'this is test',
+                    activeFacets: {
+                        filters: {
+                            'Display type': 179,
                         },
                     },
                 },
-            },
-            publicationsList: [],
-        });
+                publicationsList: [],
+            });
 
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
+
+    it(
+        'should show available filters or selected filters if activeFacets range selected ' +
+            '(even if there are no results)',
+        () => {
+            const wrapper = setup({
+                searchQuery: {
+                    title: 'this is test',
+                    activeFacets: {
+                        ranges: {
+                            'Year published': {
+                                from: 2015,
+                                to: 2018,
+                            },
+                        },
+                    },
+                },
+                publicationsList: [],
+            });
+
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
     it('should get publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
@@ -191,7 +211,10 @@ describe('SearchRecords page', () => {
     it('should get publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
         const wrapper = setup({ actions: { searchEspacePublications: testAction } });
-        wrapper.instance().componentWillReceiveProps({ history: { action: 'POP' }, location: { pathname: routes.pathConfig.records.search, state: null } });
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'POP' },
+            location: { pathname: routes.pathConfig.records.search, state: null },
+        });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().page).toEqual(1);
     });
@@ -273,7 +296,10 @@ describe('SearchRecords page', () => {
 
         wrapper.instance().facetsChanged({ filters: {}, ranges: { 'Publication year': { from: 2015, to: 2018 } } });
         wrapper.update();
-        expect(wrapper.instance().state.activeFacets).toEqual({ filters: {}, ranges: { 'Publication year': { from: 2015, to: 2018 } } });
+        expect(wrapper.instance().state.activeFacets).toEqual({
+            filters: {},
+            ranges: { 'Publication year': { from: 2015, to: 2018 } },
+        });
         expect(testAction).toHaveBeenCalled();
         expect(testPushFn).toHaveBeenCalled();
     });
@@ -281,7 +307,7 @@ describe('SearchRecords page', () => {
     it('should set history to unpublished path if pathname matches it', () => {
         const wrapper = setup({
             history: {
-                push: jest.fn((history) => {
+                push: jest.fn(history => {
                     expect(history.pathname).toBe(routes.pathConfig.admin.unpublished);
                 }),
             },
@@ -311,7 +337,11 @@ describe('SearchRecords page', () => {
     it('should correctly parse search query string from location search (default filters + title', () => {
         const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata');
+        const result = wrapper
+            .instance()
+            .parseSearchQueryStringFromUrl(
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata'
+            );
 
         expect(result).toEqual({
             page: '1',
@@ -334,56 +364,83 @@ describe('SearchRecords page', () => {
         expect(test).toMatchSnapshot();
     });
 
-    it('should correctly parse search query string from location search (default filters + publication type facet + title', () => {
-        const wrapper = setup({});
+    it(
+        'should correctly parse search query string from location search ' +
+            '(default filters + publication type facet + title',
+        () => {
+            const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+            const result = wrapper
+                .instance()
+                .parseSearchQueryStringFromUrl(
+                    'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters' +
+                        '%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&' +
+                        'searchQueryParams%5Btitle%5D=some+test+data'
+                );
 
-        expect(result).toEqual({
-            page: '1',
-            pageSize: 20,
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-            searchQueryParams: {
-                title: 'some test data',
-            },
-            activeFacets: {
-                filters: {
-                    'Display type': '130',
+            expect(result).toEqual({
+                page: '1',
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                searchQueryParams: {
+                    title: 'some test data',
                 },
-                ranges: {},
-                showOpenAccessOnly: false,
-            },
-        });
-    });
-
-    it('should correctly parse search query string from location search (changed filters + publication type + open access)', () => {
-        const wrapper = setup({});
-
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5Btitle%5D=some+test+data');
-
-        expect(result).toEqual({
-            page: '2',
-            pageSize: 50,
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-            searchQueryParams: {
-                title: 'some test data',
-            },
-            activeFacets: {
-                filters: {
-                    'Display type': '130',
+                activeFacets: {
+                    filters: {
+                        'Display type': '130',
+                    },
+                    ranges: {},
+                    showOpenAccessOnly: false,
                 },
-                ranges: {},
-                showOpenAccessOnly: true,
-            },
-        });
-    });
+            });
+        }
+    );
+
+    it(
+        'should correctly parse search query string from location search ' +
+            '(changed filters + publication type + open access)',
+        () => {
+            const wrapper = setup({});
+
+            const result = wrapper
+                .instance()
+                .parseSearchQueryStringFromUrl(
+                    'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters' +
+                        '%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&' +
+                        'searchQueryParams%5Btitle%5D=some+test+data'
+                );
+
+            expect(result).toEqual({
+                page: '2',
+                pageSize: 50,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                searchQueryParams: {
+                    title: 'some test data',
+                },
+                activeFacets: {
+                    filters: {
+                        'Display type': '130',
+                    },
+                    ranges: {},
+                    showOpenAccessOnly: true,
+                },
+            });
+        }
+    );
 
     it('should correctly parse search query string from location search (published year)', () => {
         const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+        const result = wrapper
+            .instance()
+            .parseSearchQueryStringFromUrl(
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
+                    'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false' +
+                    '&searchQueryParams%5Btitle%5D=some+test+data'
+            );
 
         expect(result).toEqual({
             page: '1',
@@ -406,83 +463,116 @@ describe('SearchRecords page', () => {
         });
     });
 
-    it('should correctly parse search query string from location search and reset pageSize if not in valid values (20, 50, 100)', () => {
-        const wrapper = setup({});
+    it(
+        'should correctly parse search query string from location search and ' +
+            'reset pageSize if not in valid values (20, 50, 100)',
+        () => {
+            const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+            const result = wrapper
+                .instance()
+                .parseSearchQueryStringFromUrl(
+                    'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges' +
+                        '%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published' +
+                        '%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5' +
+                        'Btitle%5D=some+test+data'
+                );
 
-        expect(result).toEqual({
-            page: '1',
-            pageSize: 20,
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-            searchQueryParams: {
-                title: 'some test data',
-            },
-            activeFacets: {
-                filters: {},
-                ranges: {
-                    'Year published': {
-                        from: '2008',
-                        to: '2023',
-                    },
+            expect(result).toEqual({
+                page: '1',
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                searchQueryParams: {
+                    title: 'some test data',
                 },
-                showOpenAccessOnly: false,
-            },
-        });
-    });
-
-    it('should correctly parse search query string from location search and reset sortDirection if not in valid values (Desc, Asc)', () => {
-        const wrapper = setup({});
-
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
-
-        expect(result).toEqual({
-            page: '1',
-            pageSize: 20,
-            sortBy: 'published_date',
-            sortDirection: 'Desc',
-            searchQueryParams: {
-                title: 'some test data',
-            },
-            activeFacets: {
-                filters: {},
-                ranges: {
-                    'Year published': {
-                        from: '2008',
-                        to: '2023',
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        'Year published': {
+                            from: '2008',
+                            to: '2023',
+                        },
                     },
+                    showOpenAccessOnly: false,
                 },
-                showOpenAccessOnly: false,
-            },
-        });
-    });
+            });
+        }
+    );
 
-    it('should correctly parse search query string from location search and reset sortBy if not in valid values', () => {
-        const wrapper = setup({});
+    it(
+        'should correctly parse search query string from location search and ' +
+            'reset sortDirection if not in valid values (Desc, Asc)',
+        () => {
+            const wrapper = setup({});
 
-        const result = wrapper.instance().parseSearchQueryStringFromUrl('page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data');
+            const result = wrapper
+                .instance()
+                .parseSearchQueryStringFromUrl(
+                    'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
+                        'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto' +
+                        '%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle' +
+                        '%5D=some+test+data'
+                );
 
-        expect(result).toEqual({
-            page: '1',
-            pageSize: 100,
-            sortBy: 'published_date',
-            sortDirection: 'Asc',
-            searchQueryParams: {
-                title: 'some test data',
-            },
-            activeFacets: {
-                filters: {},
-                ranges: {
-                    'Year published': {
-                        from: '2008',
-                        to: '2023',
+            expect(result).toEqual({
+                page: '1',
+                pageSize: 20,
+                sortBy: 'published_date',
+                sortDirection: 'Desc',
+                searchQueryParams: {
+                    title: 'some test data',
+                },
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        'Year published': {
+                            from: '2008',
+                            to: '2023',
+                        },
                     },
+                    showOpenAccessOnly: false,
                 },
-                showOpenAccessOnly: false,
-            },
-        });
-    });
+            });
+        }
+    );
+
+    it(
+        'should correctly parse search query string from location search and ' +
+            'reset sortBy if not in the valid values',
+        () => {
+            const wrapper = setup({});
+
+            const result = wrapper
+                .instance()
+                .parseSearchQueryStringFromUrl(
+                    'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges' +
+                        '%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published' +
+                        '%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams' +
+                        '%5Btitle%5D=some+test+data'
+                );
+
+            expect(result).toEqual({
+                page: '1',
+                pageSize: 100,
+                sortBy: 'published_date',
+                sortDirection: 'Asc',
+                searchQueryParams: {
+                    title: 'some test data',
+                },
+                activeFacets: {
+                    filters: {},
+                    ranges: {
+                        'Year published': {
+                            from: '2008',
+                            to: '2023',
+                        },
+                    },
+                    showOpenAccessOnly: false,
+                },
+            });
+        }
+    );
 
     it('renders loading screen while export publications loading', () => {
         const wrapper = setup({ exportPublicationsLoading: true });
@@ -534,7 +624,10 @@ describe('SearchRecords page', () => {
 
     it('should handle set excluded facets correctly from searchfields sent from searchComponent', () => {
         const wrapper = setup();
-        const test = [{ 'searchField': 'rek_title', 'value': 'Test', 'label': '' }, { 'searchField': 'rek_author', 'value': 'Ky Lane', 'label': '' }];
+        const test = [
+            { searchField: 'rek_title', value: 'Test', label: '' },
+            { searchField: 'rek_author', value: 'Ky Lane', label: '' },
+        ];
         const result = ['Scopus document type', 'Genre', 'Year published', 'Published year range', 'Title', 'Author'];
         wrapper.instance().handleFacetExcludesFromSearchFields(test);
         expect(wrapper.instance().state.advancedSearchFields).toEqual(result);
@@ -550,9 +643,7 @@ describe('SearchRecords page', () => {
         wrapper.instance().handleFacetExcludesFromSearchFields({
             test: {},
         });
-        expect(
-            wrapper.instance().state.advancedSearchFields.length
-        ).toBe(
+        expect(wrapper.instance().state.advancedSearchFields.length).toBe(
             locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
         );
 
@@ -562,24 +653,21 @@ describe('SearchRecords page', () => {
                 searchField: '0',
             },
         });
-        expect(
-            wrapper.instance().state.advancedSearchFields.length
-        ).toBe(
+        expect(wrapper.instance().state.advancedSearchFields.length).toBe(
             locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
         );
     });
 
-
     it('should handle empty search query string and should not fail to WSoD', () => {
         const wrapper = setup();
         const expected = {
-            'activeFacets': {
-                'filters': {},
-                'ranges': {},
+            activeFacets: {
+                filters: {},
+                ranges: {},
             },
-            'pageSize': 20,
-            'sortBy': 'score',
-            'sortDirection': 'Desc',
+            pageSize: 20,
+            sortBy: 'score',
+            sortDirection: 'Desc',
         };
         const result = wrapper.instance().parseSearchQueryStringFromUrl('');
         expect(result).toEqual(expected);

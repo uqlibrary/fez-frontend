@@ -82,48 +82,50 @@ export class ContributorRowHeader extends PureComponent {
                     onAction={onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                {
-                    showContributorAssignment &&
+                {showContributorAssignment && (
                     <Fragment>
-                        <br/>
+                        <br />
                         {descriptionStep2}
                     </Fragment>
-                }
+                )}
                 <ListItem classes={{ root: classes.header }}>
                     <Hidden xsDown>
                         <ListItemIcon>
-                            <People/>
+                            <People />
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
-                    {
-                        showIdentifierLookup &&
+                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
+                    {showIdentifierLookup && (
                         <Hidden xsDown>
-                            <ListItemText secondary={'Affiliation %'} secondaryTypographyProps={{ variant: 'caption' }}/>
-                            <ListItemText secondary={identifierColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
+                            <ListItemText
+                                secondary={'Affiliation %'}
+                                secondaryTypographyProps={{ variant: 'caption' }}
+                            />
+                            <ListItemText
+                                secondary={identifierColumn}
+                                secondaryTypographyProps={{ variant: 'caption' }}
+                            />
                         </Hidden>
-                    }
-                    {
-                        showRoleInput &&
+                    )}
+                    {showRoleInput && (
                         <Hidden xsDown>
-                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{ variant: 'caption' }}/>
+                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{ variant: 'caption' }} />
                         </Hidden>
-                    }
+                    )}
                     <Hidden xsDown>
                         <ListItemText
                             secondary={reorderColumn}
                             secondaryTypographyProps={{ variant: 'caption' }}
                             classes={{
                                 secondary: `${classes.right} ${
-                                    isInfinite
-                                        ? classes.paddingRight36
-                                        : classes.paddingRight24
+                                    isInfinite ? classes.paddingRight36 : classes.paddingRight24
                                 }`,
                             }}
                         />
                     </Hidden>
                     <ListItemSecondaryAction classes={{ root: isInfinite ? classes.paddingRight14 : '' }}>
-                        <Tooltip title={deleteAll}
+                        <Tooltip
+                            title={deleteAll}
                             disableFocusListener={disabled || hideDelete}
                             disableHoverListener={disabled || hideDelete}
                             disableTouchListener={disabled || hideDelete}

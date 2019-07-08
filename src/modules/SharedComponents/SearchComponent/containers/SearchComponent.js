@@ -7,23 +7,25 @@ import deparam from 'can-deparam';
 
 const mapStateToProps = (state, ownProps) => {
     const searchQuery = deparam(ownProps.location.search.substr(1)) || {};
-    const { publicationsList } = !!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer') || {};
-    const isAdvancedSearch = !!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced' || ownProps.isAdvancedSearch;
+    const { publicationsList } =
+        (!!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer')) || {};
+    const isAdvancedSearch =
+        (!!searchQuery && !!searchQuery.searchMode && searchQuery.searchMode === 'advanced') ||
+        ownProps.isAdvancedSearch;
     const isAdvancedSearchMinimised = isAdvancedSearch && publicationsList.length > 0;
 
     return {
-        searchQueryParams: !!searchQuery && searchQuery.searchQueryParams || {},
+        searchQueryParams: (!!searchQuery && searchQuery.searchQueryParams) || {},
         isAdvancedSearch: isAdvancedSearch,
         isAdvancedSearchMinimised: isAdvancedSearchMinimised,
         isAdmin: ownProps.isAdmin || false,
         isUnpublishedBufferPage: ownProps.isUnpublishedBufferPage || false,
-        isOpenAccessInAdvancedMode: (
+        isOpenAccessInAdvancedMode:
             isAdvancedSearch &&
             !!searchQuery &&
             !!searchQuery.activeFacets &&
             !!searchQuery.activeFacets.showOpenAccessOnly &&
-            searchQuery.activeFacets.showOpenAccessOnly === 'true'
-        ),
+            searchQuery.activeFacets.showOpenAccessOnly === 'true',
     };
 };
 
@@ -33,6 +35,9 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let SearchComponentContainer = connect(mapStateToProps, mapDispatchToProps)(SearchComponent);
+let SearchComponentContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SearchComponent);
 SearchComponentContainer = withRouter(SearchComponentContainer);
 export default SearchComponentContainer;

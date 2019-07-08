@@ -12,7 +12,7 @@ export default class FindRecords extends PureComponent {
         history: PropTypes.object.isRequired,
     };
 
-    _performSearch = (values) => {
+    _performSearch = values => {
         this.props.actions.searchPublications(values.get('searchQuery'));
         this.props.history.push(pathConfig.records.add.results);
     };
@@ -24,7 +24,11 @@ export default class FindRecords extends PureComponent {
     render() {
         const txt = locale.pages.addRecord;
         return (
-            <PublicationSearchForm locale={txt.step1} onSubmit={this._performSearch} onSkipSearch={this._handleSkipSearch}/>
+            <PublicationSearchForm
+                locale={txt.step1}
+                onSubmit={this._performSearch}
+                onSkipSearch={this._handleSkipSearch}
+            />
         );
     }
 }

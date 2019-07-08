@@ -206,7 +206,14 @@ describe('Component PublicationForm', () => {
             error: 'There is an error',
             formErrors: ['error'],
         });
-        // export const getErrorAlertProps = ({dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}}) => {
+        // const getErrorAlertProps = ({
+        //     dirty = false,
+        //     submitting = false,
+        //     error,
+        //     formErrors,
+        //     submitSucceeded = false,
+        //     alertLocale = {},
+        // }) => {};
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({ formComponent: () => 'test' });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -217,52 +224,56 @@ describe('Component PublicationForm', () => {
     it('should call componentWillReceiveProps when props change', () => {
         const changeDisplayType = jest.fn();
         const changeFormType = jest.fn();
-        const wrapper = setup({ initialValues: {}, changeDisplayType: changeDisplayType, changeFormType: changeFormType });
+        const wrapper = setup({
+            initialValues: {},
+            changeDisplayType: changeDisplayType,
+            changeFormType: changeFormType,
+        });
         const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
         wrapper.setProps({
-            'submitSucceeded': true,
-            'hasSubtypes': false,
-            'subtypes': null,
-            'formComponent': null,
-            'isNtro': false,
-            'hasDefaultDocTypeSubType': false,
-            'docTypeSubTypeCombo': null,
+            submitSucceeded: true,
+            hasSubtypes: false,
+            subtypes: null,
+            formComponent: null,
+            isNtro: false,
+            hasDefaultDocTypeSubType: false,
+            docTypeSubTypeCombo: null,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
         // Testing conditional paths
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({
-            'submitSucceeded': true,
-            'hasSubtypes': true,
-            'subtypes': null,
-            'formComponent': null,
-            'isNtro': false,
-            'hasDefaultDocTypeSubType': false,
-            'docTypeSubTypeCombo': null,
+            submitSucceeded: true,
+            hasSubtypes: true,
+            subtypes: null,
+            formComponent: null,
+            isNtro: false,
+            hasDefaultDocTypeSubType: false,
+            docTypeSubTypeCombo: null,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
-            'submitSucceeded': true,
-            'hasSubtypes': true,
-            'subtypes': ['test', 'test2'],
-            'formComponent': null,
-            'isNtro': false,
-            'hasDefaultDocTypeSubType': false,
-            'docTypeSubTypeCombo': null,
+            submitSucceeded: true,
+            hasSubtypes: true,
+            subtypes: ['test', 'test2'],
+            formComponent: null,
+            isNtro: false,
+            hasDefaultDocTypeSubType: false,
+            docTypeSubTypeCombo: null,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({
-            'submitSucceeded': true,
-            'hasSubtypes': true,
-            'subtypes': ['test', 'test2'],
-            'formComponent': null,
-            'isNtro': true,
-            'hasDefaultDocTypeSubType': true,
-            'docTypeSubTypeCombo': null,
+            submitSucceeded: true,
+            hasSubtypes: true,
+            subtypes: ['test', 'test2'],
+            formComponent: null,
+            isNtro: true,
+            hasDefaultDocTypeSubType: true,
+            docTypeSubTypeCombo: null,
         });
         expect(componentWillReceiveProps).toHaveBeenCalled();
         expect(changeDisplayType).toHaveBeenCalled();
@@ -275,9 +286,7 @@ describe('Component PublicationForm', () => {
             formComponent: JournalArticleForm,
             isNtro: true,
         });
-        expect(
-            wrapper.find({ name: 'files' }).props().validate
-        ).toEqual([
+        expect(wrapper.find({ name: 'files' }).props().validate).toEqual([
             validation.fileUploadRequired,
             validation.validFileUpload,
         ]);

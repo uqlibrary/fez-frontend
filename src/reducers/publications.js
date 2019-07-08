@@ -8,9 +8,9 @@ export const initialState = {
 };
 
 export const getInitialState = () => ({
-    'mine': initialState,
-    'incomplete': initialState,
-    'datasets': initialState,
+    mine: initialState,
+    incomplete: initialState,
+    datasets: initialState,
 });
 
 const handlers = {
@@ -39,8 +39,12 @@ const handlers = {
                     to: action.payload.to,
                     per_page: action.payload.per_page,
                 },
-                publicationsListFacets: action.payload.hasOwnProperty('filters') && action.payload.filters.hasOwnProperty('facets') &&
-                    action.payload.filters.facets ? action.payload.filters.facets : {},
+                publicationsListFacets:
+                    action.payload.hasOwnProperty('filters') &&
+                    action.payload.filters.hasOwnProperty('facets') &&
+                    action.payload.filters.facets
+                        ? action.payload.filters.facets
+                        : {},
                 loadingPublicationsList: false,
             },
         };

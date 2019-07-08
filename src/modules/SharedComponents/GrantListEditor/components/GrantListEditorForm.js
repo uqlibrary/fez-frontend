@@ -41,8 +41,14 @@ export class GrantListEditorFormClass extends PureComponent {
             grantAgencyType: 'Funder/Sponsor type',
             grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
-            description: 'Add the Funder/Sponsor\'s name, grant ID and type - then click the ADD GRANT button to add each to the list',
-            remindToAdd: (<span>&nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.</span>),
+            description:
+                "Add the Funder/Sponsor's name, grant ID and type - " +
+                'then click the ADD GRANT button to add each to the list',
+            remindToAdd: (
+                <span>
+                    &nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.
+                </span>
+            ),
         },
         hideType: false,
         isPopulated: false,
@@ -58,17 +64,20 @@ export class GrantListEditorFormClass extends PureComponent {
         };
     }
 
-    _addGrant = (event) => {
-        if(
+    _addGrant = event => {
+        if (
             this.props.disabled ||
-            (event && event.key && (
-                event.key !== 'Enter' ||
-                this.state.grantAgencyName.length === 0
-            ))
-        ) return;
+            (event && event.key && (event.key !== 'Enter' || this.state.grantAgencyName.length === 0))
+        ) {
+            return;
+        }
 
         // pass on the selected grant
-        this.props.onAdd({ grantAgencyName: this.state.grantAgencyName, grantId: this.state.grantId, grantAgencyType: this.state.grantAgencyType });
+        this.props.onAdd({
+            grantAgencyName: this.state.grantAgencyName,
+            grantId: this.state.grantId,
+            grantAgencyType: this.state.grantAgencyType,
+        });
 
         // reset internal state
         this.setState({
@@ -81,27 +90,33 @@ export class GrantListEditorFormClass extends PureComponent {
         }
     };
 
-    _onNameChanged = (event) => {
-        this.setState({
-            grantAgencyName: event.target.value,
-        }, ()=> {
-            if(this.props.isPopulated) {
-                this.props.isPopulated(!!(this.state.grantAgencyName.trim().length > 0));
+    _onNameChanged = event => {
+        this.setState(
+            {
+                grantAgencyName: event.target.value,
+            },
+            () => {
+                if (this.props.isPopulated) {
+                    this.props.isPopulated(!!(this.state.grantAgencyName.trim().length > 0));
+                }
             }
-        });
+        );
     };
 
-    _onIDChanged = (event) => {
-        this.setState({
-            grantId: event.target.value,
-        }, () => {
-            if(this.props.isPopulated) {
-                this.props.isPopulated(!!(this.state.grantId.trim().length > 0));
+    _onIDChanged = event => {
+        this.setState(
+            {
+                grantId: event.target.value,
+            },
+            () => {
+                if (this.props.isPopulated) {
+                    this.props.isPopulated(!!(this.state.grantId.trim().length > 0));
+                }
             }
-        });
+        );
     };
 
-    _onTypeChanged = (event) => {
+    _onTypeChanged = event => {
         this.setState({
             grantAgencyType: event.target.value,
         });
@@ -109,7 +124,10 @@ export class GrantListEditorFormClass extends PureComponent {
 
     render() {
         const { disabled } = this.props;
-        // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 || this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
+        // const remindToAdd =
+        //     this.state.grantAgencyName.trim().length > 0 || this.state.grantId.trim().length > 0
+        //         ? this.props.locale.remindToAdd
+        //         : null;
         return (
             <React.Fragment>
                 {this.props.locale.description}
@@ -126,10 +144,12 @@ export class GrantListEditorFormClass extends PureComponent {
                             required={this.props.required}
                             autoComplete="off"
                             error={this.props.required && !this.state.grantAgencyName}
-                            errorText={this.props.required && !this.state.grantAgencyName && locale.validationErrors.required}
+                            errorText={
+                                this.props.required && !this.state.grantAgencyName && locale.validationErrors.required
+                            }
                         />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={!this.props.hideType ? 3 : 4} >
+                    <Grid item xs={12} sm={12} md={!this.props.hideType ? 3 : 4}>
                         <TextField
                             fullWidth
                             id="grantId"
@@ -141,13 +161,15 @@ export class GrantListEditorFormClass extends PureComponent {
                             required={this.props.required}
                         />
                     </Grid>
-                    {
-                        !this.props.hideType &&
+                    {!this.props.hideType && (
                         <Grid item xs={12} sm={12} md={3}>
                             <FormControl
                                 fullWidth
                                 required={this.props.required || this.state.grantAgencyName.trim().length > 0}
-                                error={this.state.grantAgencyName.trim().length > 0 && this.state.grantAgencyType.trim().length === 0}
+                                error={
+                                    this.state.grantAgencyName.trim().length > 0 &&
+                                    this.state.grantAgencyType.trim().length === 0
+                                }
                             >
                                 <InputLabel>{this.props.locale.grantAgencyType}</InputLabel>
                                 <Select
@@ -160,28 +182,35 @@ export class GrantListEditorFormClass extends PureComponent {
                                     onChange={this._onTypeChanged}
                                     disabled={disabled || this.state.grantAgencyName.trim().length === 0}
                                 >
-                                    <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
-                                    {
-                                        ORG_AFFILIATION_TYPES.map((item, index) => {
-                                            return item.value !== '454045'
-                                                ? <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
-                                        })
-                                    }
+                                    <MenuItem value={''} disabled>
+                                        {this.props.locale.grantAgencyTypeHint}
+                                    </MenuItem>
+                                    {ORG_AFFILIATION_TYPES.map((item, index) => {
+                                        return item.value !== '454045' ? (
+                                            <MenuItem value={item.value} key={index}>
+                                                {item.text}
+                                            </MenuItem>
+                                        ) : null;
+                                    })}
                                 </Select>
-                                {
-                                    this.state.grantAgencyName.trim().length > 0 && this.state.grantAgencyType.trim().length === 0 &&
+                                {this.state.grantAgencyName.trim().length > 0 &&
+                                    this.state.grantAgencyType.trim().length === 0 && (
                                     <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
-                                }
+                                )}
                             </FormControl>
                         </Grid>
-                    }
+                    )}
                     <Grid item xs={12}>
                         <Button
                             id="grantAddButton"
                             variant="contained"
                             fullWidth
                             color="primary"
-                            disabled={disabled || this.state.grantAgencyName.trim().length === 0 || (!this.props.hideType && this.state.grantAgencyType.trim().length === 0)}
+                            disabled={
+                                disabled ||
+                                this.state.grantAgencyName.trim().length === 0 ||
+                                (!this.props.hideType && this.state.grantAgencyType.trim().length === 0)
+                            }
                             onClick={this._addGrant}
                         >
                             {this.props.locale.addButton}
@@ -194,5 +223,5 @@ export class GrantListEditorFormClass extends PureComponent {
 }
 
 const StyledGrantListEditorFormClass = withStyles(styles, { withTheme: true })(GrantListEditorFormClass);
-const GrantListEditorForm = (props) => <StyledGrantListEditorFormClass {...props}/>;
+const GrantListEditorForm = props => <StyledGrantListEditorFormClass {...props} />;
 export default GrantListEditorForm;

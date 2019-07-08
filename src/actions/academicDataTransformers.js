@@ -9,12 +9,13 @@ import { trendingPublicationsConfig } from 'config';
  */
 export function getPublicationsPerType(data, keepPublicationTypes) {
     const rawData = [...data];
-    const values = rawData.reduce((a, b) => { return a.concat(b.stats_display_type_i_lookup_exact.buckets); }, []);
-    const publicationTypesCountObject = values
-        .reduce((a, b) => {
-            a[b.key] = (a[b.key] >= 0) ? (a[b.key] + b.doc_count) : b.doc_count;
-            return a;
-        }, {});
+    const values = rawData.reduce((a, b) => {
+        return a.concat(b.stats_display_type_i_lookup_exact.buckets);
+    }, []);
+    const publicationTypesCountObject = values.reduce((a, b) => {
+        a[b.key] = a[b.key] >= 0 ? a[b.key] + b.doc_count : b.doc_count;
+        return a;
+    }, {});
 
     // transform object to array and sort in descending order
     const publicationTypesCount = Object.keys(publicationTypesCountObject)
@@ -26,12 +27,12 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
     } else {
         // get top publications, create 'Other' publication type
         const topCounts = publicationTypesCount.slice(0, keepPublicationTypes);
-        const otherCounts = publicationTypesCount
+        const otherCounts = publicationTypesCount.slice(keepPublicationTypes).reduce((init, item) => {
+            return init + item[1];
+        }, 0);
+        const legendToDisplay = publicationTypesCount
             .slice(keepPublicationTypes)
-            .reduce((init, item) => {
-                return init + item[1];
-            }, 0);
-        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0])
+            .map(item => item[0])
             .join(', ');
         topCounts.push(['Other', otherCounts, legendToDisplay]);
         return topCounts;
@@ -47,15 +48,20 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
 export function getPublicationsPerYearCategories(data) {
     const rawData = [...data];
     // extract years and parse year value into int
-    const categories = rawData.map((yearData) => { return parseInt(yearData.key, 10); });
+    const categories = rawData.map(yearData => {
+        return parseInt(yearData.key, 10);
+    });
 
     // sort years in ascending order
-    categories.sort((yearFirst, yearNext) => { return yearFirst - yearNext; });
+    categories.sort((yearFirst, yearNext) => {
+        return yearFirst - yearNext;
+    });
     return categories;
 }
 
 /**
- * getSeries - transforms raw academic publication years data into series formatted data, eg publication type and publications count per year
+ * getSeries - transforms raw academic publication years data into series
+ * formatted data, eg publication type and publications count per year
  * eg [{ 'name': 'Journal Article', 'data': [1, 1, 3]}]
  * @param {object} data - raw data
  * @param {Array} topPublicationTypes - output of getPublicationsPerType()
@@ -72,11 +78,13 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
     }, {});
 
     // sort all data by year
-    rawData.sort((yearFirst, yearNext) => { return parseInt(yearFirst.key, 10) - parseInt(yearNext.key, 10); });
+    rawData.sort((yearFirst, yearNext) => {
+        return parseInt(yearFirst.key, 10) - parseInt(yearNext.key, 10);
+    });
 
     // for each year/publication type - extract publication type count
     rawData.map((yearData, yearIndex) => {
-        yearData.stats_display_type_i_lookup_exact.buckets.map((publicationType) => {
+        yearData.stats_display_type_i_lookup_exact.buckets.map(publicationType => {
             if (fields[publicationType.key]) {
                 fields[publicationType.key][yearIndex] = publicationType.doc_count;
             } else {
@@ -92,7 +100,7 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
         series.push({
             name: publicationType,
             data: fields[publicationType],
-            ...(!!topPublicationTypes[index][2] && { extraInfoForLegend: topPublicationTypes[index][2] } || {}),
+            ...((!!topPublicationTypes[index][2] && { extraInfoForLegend: topPublicationTypes[index][2] }) || {}),
         });
     });
 
@@ -120,9 +128,9 @@ export function getPublicationsStats(years, data) {
 
 export function getAuthorArticleCount(total, data) {
     return {
-        articleCount: !!total && total || null,
-        articleFirstYear: !!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string || null,
-        articleLastYear: !!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string || null,
+        articleCount: (!!total && total) || null,
+        articleFirstYear: (!!data && !!data.min_date_year_t && data.min_date_year_t.value_as_string) || null,
+        articleLastYear: (!!data && !!data.max_date_year_t && data.max_date_year_t.value_as_string) || null,
     };
 }
 
@@ -136,25 +144,27 @@ export const transformTrendingPublicationsMetricsData = ({ data }, recordsToDisp
     const sources = trendingPublicationsConfig.sources;
 
     const trendingPublications = Object.entries(sources).map(([key, config]) => {
-        const values = data.map(publication => {
-            const count = getData(publication, config.metricDataPath.count);
-            const difference = getData(publication, config.metricDataPath.difference);
-            if (count && difference) {
-                const metricData = {
-                    source: key,
-                    count: count,
-                    difference: getData(publication, config.metricDataPath.difference),
-                    citation_url: getData(publication, config.metricDataPath.citation_url),
-                };
+        const values = data
+            .map(publication => {
+                const count = getData(publication, config.metricDataPath.count);
+                const difference = getData(publication, config.metricDataPath.difference);
+                if (count && difference) {
+                    const metricData = {
+                        source: key,
+                        count: count,
+                        difference: getData(publication, config.metricDataPath.difference),
+                        citation_url: getData(publication, config.metricDataPath.citation_url),
+                    };
 
-                return {
-                    ...publication,
-                    metricData,
-                };
-            } else {
-                return null;
-            }
-        }).filter(value => value);
+                    return {
+                        ...publication,
+                        metricData,
+                    };
+                } else {
+                    return null;
+                }
+            })
+            .filter(value => value);
 
         // Sort top publications for each source in descening order and return asking number of records
         const recordsToDisplay = values
@@ -169,5 +179,7 @@ export const transformTrendingPublicationsMetricsData = ({ data }, recordsToDisp
     });
 
     // filter out sources which doesn't have trending publications
-    return trendingPublications.filter(trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0);
+    return trendingPublications.filter(
+        trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0
+    );
 };

@@ -33,7 +33,9 @@ const styles = theme => {
         header: {
             backgroundColor: theme.palette.primary.main,
             height: '70px',
-            boxShadow: '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
+            boxShadow:
+                '0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), ' +
+                '0px 1px 10px 0px rgba(0, 0, 0, 0.12)',
             textAlign: 'center',
             '& img': {
                 maxHeight: '45px',
@@ -46,8 +48,12 @@ const styles = theme => {
             zIndex: 998,
             left: '-2000px',
             outline: 'none',
-            background: 'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
-            filter: 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", endColorstr="#00ffffff",GradientType=0 )',
+            background:
+                'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,' +
+                'rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
+            filter:
+                'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", ' +
+                'endColorstr="#00ffffff",GradientType=0 )',
             '&:focus': {
                 left: 0,
             },
@@ -107,23 +113,25 @@ export class MenuDrawer extends Component {
     };
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.logoImage !== this.props.logoImage ||
-        nextProps.logoText !== this.props.logoText ||
-        nextProps.drawerOpen !== this.props.drawerOpen ||
-        JSON.stringify(nextProps.locale) !== JSON.stringify(this.props.locale) ||
-        JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems) ||
-        nextProps.docked !== this.props.docked;
+        return (
+            nextProps.logoImage !== this.props.logoImage ||
+            nextProps.logoText !== this.props.logoText ||
+            nextProps.drawerOpen !== this.props.drawerOpen ||
+            JSON.stringify(nextProps.locale) !== JSON.stringify(this.props.locale) ||
+            JSON.stringify(nextProps.menuItems) !== JSON.stringify(this.props.menuItems) ||
+            nextProps.docked !== this.props.docked
+        );
     }
 
-    focusOnElementId = (elementId) => {
+    focusOnElementId = elementId => {
         if (document.getElementById(elementId)) {
             document.getElementById(elementId).focus();
         }
-    }
+    };
 
     skipMenuItems = () => {
         this.focusOnElementId('afterMenuDrawer');
-    }
+    };
 
     navigateToLink = (url, target = '_blank') => {
         if (!!url) {
@@ -139,25 +147,27 @@ export class MenuDrawer extends Component {
         if (!this.props.docked) {
             this.props.onToggleDrawer();
         }
-    }
+    };
 
-    renderMenuItems = items => (
-        items.map((menuItem, index) => (
-            menuItem.divider
-                ? <Divider key={`menu_item_${index}`}/>
-                : <span className="menu-item-container" key={`menu_item_${index}`}>
-                    <ListItem
-                        button
-                        onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)} >
-                        <ListItemText classes={{
-                            primary: this.props.classes.ListItemTextPrimary,
-                            secondary: this.props.classes.ListItemTextSecondary,
-                        }}
-                        primary={menuItem.primaryText}
-                        secondary={menuItem.secondaryText}/>
+    renderMenuItems = items =>
+        items.map((menuItem, index) =>
+            menuItem.divider ? (
+                <Divider key={`menu_item_${index}`} />
+            ) : (
+                <span className="menu-item-container" key={`menu_item_${index}`}>
+                    <ListItem button onClick={this.navigateToLink.bind(this, menuItem.linkTo, menuItem.target)}>
+                        <ListItemText
+                            classes={{
+                                primary: this.props.classes.ListItemTextPrimary,
+                                secondary: this.props.classes.ListItemTextSecondary,
+                            }}
+                            primary={menuItem.primaryText}
+                            secondary={menuItem.secondaryText}
+                        />
                     </ListItem>
                 </span>
-        )));
+            )
+        );
 
     render() {
         const { classes } = this.props;
@@ -177,64 +187,76 @@ export class MenuDrawer extends Component {
                 variant={docked ? 'permanent' : 'temporary'}
                 open={drawerOpen}
                 anchor="left"
-                onClose={onToggleDrawer}>
-                {
-                    drawerOpen &&
+                onClose={onToggleDrawer}
+            >
+                {drawerOpen && (
                     <Fragment>
                         <List component="nav" id="mainMenu" className={classes.mainMenu} tabIndex={-1}>
-                            <Grid container spacing={0} wrap={'nowrap'} alignContent={'center'} alignItems={'center'} classes={{ container: classes.header }}>
+                            <Grid
+                                container
+                                spacing={0}
+                                wrap={'nowrap'}
+                                alignContent={'center'}
+                                alignItems={'center'}
+                                classes={{ container: classes.header }}
+                            >
                                 <Grid item xs={10} sm={12} zeroMinWidth>
-                                    {logoImage && logoLink && logoText &&
-                                    <ExternalLink
-                                        href={logoLink}
-                                        title={logoText}
-                                        openInNewIcon={false}
-                                        className="noHover"
-                                    >
-                                        <div className={logoImage} style={{ height: 50, width: 160, margin: '8px auto' }} >
-                                            {logoText}
-                                        </div>
-                                    </ExternalLink>
-                                    }
+                                    {logoImage && logoLink && logoText && (
+                                        <ExternalLink
+                                            href={logoLink}
+                                            title={logoText}
+                                            openInNewIcon={false}
+                                            className="noHover"
+                                        >
+                                            <div
+                                                className={logoImage}
+                                                style={{ height: 50, width: 160, margin: '8px auto' }}
+                                            >
+                                                {logoText}
+                                            </div>
+                                        </ExternalLink>
+                                    )}
                                 </Grid>
                                 <Hidden smUp>
                                     <Grid item xs={2}>
                                         <IconButton onClick={onToggleDrawer} aria-label={locale.closeMenuLabel}>
-                                            <KeyboardArrowLeft className={classes.iconButton}/>
+                                            <KeyboardArrowLeft className={classes.iconButton} />
                                         </IconButton>
                                     </Grid>
                                 </Hidden>
                             </Grid>
-                            {
-                                // Skip nav section
-                                docked &&
-                                <div
-                                    type="button"
-                                    className={classes.skipNav}
-                                    id="skipNav"
-                                    onClick={this.skipMenuItems}
-                                    onKeyPress={this.skipMenuItems}
-                                    tabIndex={1}
-                                    aria-label={locale.skipNavAriaLabel}>
-                                    <Button
-                                        variant="contained"
-                                        color="primary"
+                            {// Skip nav section
+                                docked && (
+                                    <div
+                                        type="button"
+                                        className={classes.skipNav}
+                                        id="skipNav"
                                         onClick={this.skipMenuItems}
-                                        className="skipNavButton"
-                                        children={locale.skipNavTitle}
-                                        tabIndex={-1}/>
-                                </div>
-                            }
-                            {
-                                this.renderMenuItems(menuItems)
-                            }
+                                        onKeyPress={this.skipMenuItems}
+                                        tabIndex={1}
+                                        aria-label={locale.skipNavAriaLabel}
+                                    >
+                                        <Button
+                                            variant="contained"
+                                            color="primary"
+                                            onClick={this.skipMenuItems}
+                                            className="skipNavButton"
+                                            children={locale.skipNavTitle}
+                                            tabIndex={-1}
+                                        />
+                                    </div>
+                                )}
+                            {this.renderMenuItems(menuItems)}
                         </List>
-                        <div id="afterMenuDrawer" tabIndex={-1}/>
+                        <div id="afterMenuDrawer" tabIndex={-1} />
                         <div className={classes.mainMenuFooter}>
-                            {txt.cricos.prefix}<ExternalLink href={txt.cricos.link} title={txt.cricos.prefix} openInNewIcon={false} >{txt.cricos.number}</ExternalLink>
+                            {txt.cricos.prefix}
+                            <ExternalLink href={txt.cricos.link} title={txt.cricos.prefix} openInNewIcon={false}>
+                                {txt.cricos.number}
+                            </ExternalLink>
                         </div>
                     </Fragment>
-                }
+                )}
             </Drawer>
         );
     }

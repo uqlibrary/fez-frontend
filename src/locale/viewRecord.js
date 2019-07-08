@@ -6,7 +6,7 @@ export default {
             message: 'Please RIGHT CLICK then select link SAVE AS option to save and play video files',
         },
         linkTexts: {
-            journalOpenAccessPolicyLink: 'Check publisher\'s open access policy',
+            journalOpenAccessPolicyLink: "Check publisher's open access policy",
             eraJournalListed: '(ERA [year] Journal(s) Listed)',
         },
         sections: {
@@ -28,7 +28,9 @@ export default {
                 description: 'Description',
                 embargoDate: 'Open access after [embargoDate]',
                 size: 'Size',
-                culturalSensitivityStatement: 'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+                culturalSensitivityStatement:
+                    'Cultural Sensitivity Statement - Be advised that some files may contain content which is ' +
+                    'of a sensitive nature to some cultures or tastes.',
                 linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
                 preview: {
                     videoTitle: 'Video preview',
@@ -61,16 +63,18 @@ export default {
             },
             abstract: {
                 default: 'Abstract',
-                'Journal': 'Summary/Description',
+                Journal: 'Summary/Description',
                 'Data Collection': 'Dataset description',
-                'Design': 'Abstract/Description',
+                Design: 'Abstract/Description',
             },
             ntro: {
                 title: 'Non-traditional research output metadata',
                 fields: {
                     abstract: {
                         label: 'Abstract/Description (for public view)',
-                        description: 'Enter a statement (800 characters or less, approximately 100 words) that summarises the work',
+                        description:
+                            'Enter a statement (800 characters or less, approximately 100 words) ' +
+                            'that summarises the work',
                     },
                     series: {
                         floatingLabelText: 'Series',
@@ -236,7 +240,7 @@ export default {
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_license: 'License',
             },
-            'Book': {
+            Book: {
                 rek_date: 'Publication year',
             },
             'Book Chapter': {
@@ -273,7 +277,7 @@ export default {
                 fez_record_search_key_subject: 'ANZSRC Field of Research (FoR) Code',
             },
             'Department Technical Report': {},
-            'Design': {
+            Design: {
                 rek_date: 'Date',
                 rek_description: 'Abstract/Description',
                 fez_record_search_key_date_available: 'Year available',
@@ -289,17 +293,17 @@ export default {
                 rek_date: 'Date',
                 fez_record_search_key_subject: 'Research fields, Courses and Disciplines',
             },
-            'Image': {
+            Image: {
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_contributor: 'Contributor',
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
             },
-            'Journal': {
+            Journal: {
                 rek_title: 'Title of journal',
                 rek_description: 'Summary/Description',
             },
-            'Manuscript': {
+            Manuscript: {
                 rek_date: 'Date',
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_contributor: 'Contributor',
@@ -315,7 +319,7 @@ export default {
                 rek_title: 'Title of report',
                 fez_record_search_key_translated_title: 'Translated title of report',
             },
-            'Patent': {
+            Patent: {
                 rek_title: 'Patent title',
                 rek_date: 'Date of issue',
                 fez_record_search_key_author: 'Creator',
@@ -323,13 +327,13 @@ export default {
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_translated_title: 'Translated title of patent',
             },
-            'Preprint': {
+            Preprint: {
                 rek_date: 'Date',
             },
             'Seminar Paper': {
                 fez_record_search_key_series: 'Seminar series',
             },
-            'Thesis': {
+            Thesis: {
                 rek_title: 'Thesis title',
                 rek_genre_type: 'Thesis type',
                 fez_record_search_key_org_unit_name: 'School, Centre or Institute',
@@ -341,7 +345,7 @@ export default {
                 fez_record_search_key_rights: 'Rights',
             },
             'Working Paper': {},
-            'NTRO': {
+            NTRO: {
                 significance: 'Scale/Significance of work',
                 impactStatement: 'Creator research statement',
                 ntroAbstract: 'Abstract/Description',
@@ -482,7 +486,7 @@ export default {
                     order: 29,
                 },
             ],
-            'Book': [
+            Book: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -1264,7 +1268,7 @@ export default {
                     order: 17,
                 },
             ],
-            'Design': [
+            Design: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -1522,7 +1526,7 @@ export default {
                     order: 9,
                 },
             ],
-            'Image': [
+            Image: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -1612,7 +1616,7 @@ export default {
                     order: 21,
                 },
             ],
-            'Journal': [
+            Journal: [
                 {
                     field: 'rek_title',
                     order: 1,
@@ -1796,7 +1800,7 @@ export default {
                     order: 24,
                 },
             ],
-            'Manuscript': [
+            Manuscript: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -2124,7 +2128,7 @@ export default {
                     order: 20,
                 },
             ],
-            'Patent': [
+            Patent: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,
@@ -2182,7 +2186,7 @@ export default {
                     order: 13,
                 },
             ],
-            'Preprint': [
+            Preprint: [
                 {
                     field: 'rek_title',
                     order: 1,
@@ -2306,7 +2310,7 @@ export default {
                     order: 16,
                 },
             ],
-            'Thesis': [
+            Thesis: [
                 {
                     field: 'fez_record_search_key_author',
                     order: 1,

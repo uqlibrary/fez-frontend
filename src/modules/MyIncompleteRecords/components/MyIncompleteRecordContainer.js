@@ -47,22 +47,18 @@ export default class MyIncompleteRecordContainer extends React.Component {
     }
 
     componentDidMount() {
-        if (
-            !this.props.recordToFix &&
-            !!this.props.actions.loadRecordToFix
-        ) {
+        if (!this.props.recordToFix && !!this.props.actions.loadRecordToFix) {
             this.props.actions.loadRecordToFix(this.props.match.params.pid);
         }
     }
 
     componentWillReceiveProps(nextProps) {
         const { recordToFix, author } = nextProps;
-        (nextProps.recordToFix !== this.props.recordToFix) &&
+        nextProps.recordToFix !== this.props.recordToFix &&
             this.setState({
                 ntroFieldProps: this.getNtroFieldFlags(recordToFix, author),
                 initialValues: this.getInitialValues(recordToFix, author),
-                isNtro: !!recordToFix.rek_subtype &&
-                    !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype),
+                isNtro: !!recordToFix.rek_subtype && !!NTRO_SUBTYPES.includes(recordToFix.rek_subtype),
                 isAuthorLinked: this.isAuthorLinked(recordToFix, author),
                 hasAnyFiles: recordToFix.fez_datastream_info.filter(this.isFileValid).length > 0,
             });
@@ -74,14 +70,13 @@ export default class MyIncompleteRecordContainer extends React.Component {
     }
 
     isLoggedInUserLinked = (author, recordToFix, searchKey, subkey) => {
-        return !!author &&
+        return (
+            !!author &&
             !!recordToFix &&
             recordToFix[searchKey] &&
             recordToFix[searchKey].length > 0 &&
-            recordToFix[searchKey].some(authorId => (
-                authorId[subkey] === author.aut_id
-            ))
-        ;
+            recordToFix[searchKey].some(authorId => authorId[subkey] === author.aut_id)
+        );
     };
 
     isAuthorLinked = (recordToFix, author) => {
@@ -102,18 +97,24 @@ export default class MyIncompleteRecordContainer extends React.Component {
     };
 
     getInitialValues = (recordToFix, author) => {
-        const { account: { canMasquerade } } = this.props;
+        const {
+            account: { canMasquerade },
+        } = this.props;
 
         const grants = recordToFix.fez_record_search_key_grant_agency.map((grantAgency, index) => ({
             grantAgencyName: grantAgency.rek_grant_agency,
-            grantId: recordToFix.fez_record_search_key_grant_id &&
-                recordToFix.fez_record_search_key_grant_id.length > 0 &&
-                recordToFix.fez_record_search_key_grant_id[index] &&
-                recordToFix.fez_record_search_key_grant_id[index].rek_grant_id || '',
-            grantAgencyType: recordToFix.fez_record_search_key_grant_agency_type &&
-                recordToFix.fez_record_search_key_grant_agency_type.length > 0 &&
-                recordToFix.fez_record_search_key_grant_agency_type[index] &&
-                recordToFix.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type || ORG_TYPE_NOT_SET,
+            grantId:
+                (recordToFix.fez_record_search_key_grant_id &&
+                    recordToFix.fez_record_search_key_grant_id.length > 0 &&
+                    recordToFix.fez_record_search_key_grant_id[index] &&
+                    recordToFix.fez_record_search_key_grant_id[index].rek_grant_id) ||
+                '',
+            grantAgencyType:
+                (recordToFix.fez_record_search_key_grant_agency_type &&
+                    recordToFix.fez_record_search_key_grant_agency_type.length > 0 &&
+                    recordToFix.fez_record_search_key_grant_agency_type[index] &&
+                    recordToFix.fez_record_search_key_grant_agency_type[index].rek_grant_agency_type) ||
+                ORG_TYPE_NOT_SET,
             disabled: this.props.disableInitialGrants,
         }));
 
@@ -133,34 +134,35 @@ export default class MyIncompleteRecordContainer extends React.Component {
         ];
 
         const authors = affiliationDataMap
-            .reduce((authors, affiliationData) => leftJoin(
-                authors,
-                affiliationData.infoArray,
-                'rek_author_id_order',
-                affiliationData.key
-            ), recordToFix.fez_record_search_key_author_id)
-            .map((authorAffiliation) => ({
+            .reduce(
+                (authors, affiliationData) =>
+                    leftJoin(authors, affiliationData.infoArray, 'rek_author_id_order', affiliationData.key),
+                recordToFix.fez_record_search_key_author_id
+            )
+            .map(authorAffiliation => ({
                 affiliation: authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle ? 'UQ' : 'NotUQ',
                 creatorRole: '',
                 nameAsPublished: authorAffiliation.rek_author,
                 orgaff: authorAffiliation.rek_author_affiliation_name || '',
-                orgtype: (authorAffiliation.rek_author_affiliation_type && String(authorAffiliation.rek_author_affiliation_type)) || '',
+                orgtype:
+                    (authorAffiliation.rek_author_affiliation_type &&
+                        String(authorAffiliation.rek_author_affiliation_type)) ||
+                    '',
                 uqIdentifier: String(authorAffiliation.rek_author_id),
                 disabled: authorAffiliation.rek_author_id && authorAffiliation.rek_author_id !== author.aut_id,
             }))
             .map(authorAffiliation => ({
                 ...authorAffiliation,
-                required: authorAffiliationRequired(authorAffiliation, author) }
-            ));
+                required: authorAffiliationRequired(authorAffiliation, author),
+            }));
 
-        const initialContributionStatements = canMasquerade && recordToFix.fez_record_search_key_creator_contribution_statement || [];
-        const initialSignificance = canMasquerade && recordToFix.fez_record_search_key_significance || [];
+        const initialContributionStatements =
+            (canMasquerade && recordToFix.fez_record_search_key_creator_contribution_statement) || [];
+        const initialSignificance = (canMasquerade && recordToFix.fez_record_search_key_significance) || [];
 
-        const languages = (
-            recordToFix &&
+        const languages = (recordToFix &&
             (recordToFix.fez_record_search_key_language || []).length > 0 &&
-            recordToFix.fez_record_search_key_language.map(lang => lang.rek_language)
-        ) || ['eng'];
+            recordToFix.fez_record_search_key_language.map(lang => lang.rek_language)) || ['eng'];
 
         return {
             grants,
@@ -169,10 +171,12 @@ export default class MyIncompleteRecordContainer extends React.Component {
             initialContributionStatements,
             initialSignificance,
         };
-    }
+    };
 
     getCurrentAuthorOrder = (recordToFix, author) => {
-        const currentAuthor = recordToFix && recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id);
+        const currentAuthor =
+            recordToFix &&
+            recordToFix.fez_record_search_key_author_id.filter(authorId => authorId.rek_author_id === author.aut_id);
         return currentAuthor.length > 0 && currentAuthor[0].rek_author_id_order;
     };
 
@@ -183,40 +187,40 @@ export default class MyIncompleteRecordContainer extends React.Component {
             hideAbstract: !!recordToFix.rek_formatted_abstract || !!recordToFix.rek_description,
             hideLanguage: (recordToFix.fez_record_search_key_language || []).length !== 0,
             hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
-            hideExtent: (
-                [ DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE ].includes(recordToFix.rek_display_type_lookup) ||
-                !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages
-            ),
-            hideAudienceSize: (
-                ![ ...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES ].includes(recordToFix.rek_subtype) ||
-                !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size
-            ),
-            showSignificance: (
+            hideExtent:
+                [DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE].includes(
+                    recordToFix.rek_display_type_lookup
+                ) || !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages,
+            hideAudienceSize:
+                ![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(recordToFix.rek_subtype) ||
+                !!(recordToFix.fez_record_search_key_audience_size || {}).rek_audience_size,
+            showSignificance:
                 (recordToFix.fez_record_search_key_significance || []).length === 0 ||
-                recordToFix.fez_record_search_key_significance.filter(item => (
-                    item.rek_significance_order === currentAuthorOrder &&
-                    !item.rek_significance
-                )).length > 0
-            ),
-            showContributionStatement: (
+                recordToFix.fez_record_search_key_significance.filter(
+                    item => item.rek_significance_order === currentAuthorOrder && !item.rek_significance
+                ).length > 0,
+            showContributionStatement:
                 (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
-                recordToFix.fez_record_search_key_creator_contribution_statement.filter(item => (
-                    item.rek_creator_contribution_statement_order === currentAuthorOrder &&
-                    (
-                        !item.rek_creator_contribution_statement ||
-                        item.rek_creator_contribution_statement === '' ||
-                        item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder
-                    )
-                )).length > 0
-            ),
+                recordToFix.fez_record_search_key_creator_contribution_statement.filter(
+                    item =>
+                        item.rek_creator_contribution_statement_order === currentAuthorOrder &&
+                        (!item.rek_creator_contribution_statement ||
+                            item.rek_creator_contribution_statement === '' ||
+                            item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
+                ).length > 0,
         };
     };
 
-    isFileValid = (dataStream) => {
-        const { files: { blacklist } } = incompleteRecord;
-        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-            (!dataStream.dsi_label || !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A';
+    isFileValid = dataStream => {
+        const {
+            files: { blacklist },
+        } = incompleteRecord;
+        return (
+            !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
+            (!dataStream.dsi_label ||
+                !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
+            dataStream.dsi_state === 'A'
+        );
     };
 
     render() {
@@ -224,10 +228,8 @@ export default class MyIncompleteRecordContainer extends React.Component {
         const { accountAuthorLoading, loadingRecordToFix } = this.props;
 
         // display loading spinner
-        if (accountAuthorLoading || loadingRecordToFix) return (<InlineLoader message={txt.loadingMessage} />);
+        if (accountAuthorLoading || loadingRecordToFix) return <InlineLoader message={txt.loadingMessage} />;
 
-        return (
-            <MyIncompleteRecordForm {...this.state} {...this.props} />
-        );
+        return <MyIncompleteRecordForm {...this.state} {...this.props} />;
     }
 }

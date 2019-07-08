@@ -22,10 +22,11 @@ function confirmDiscardFormChanges(WrappedComponent) {
             window.onbeforeunload = null;
         }
 
-        getDiscardFormChangesConfirmationLocale = () => locale.global.discardFormChangesConfirmation.confirmationMessage;
+        getDiscardFormChangesConfirmationLocale = () =>
+            locale.global.discardFormChangesConfirmation.confirmationMessage;
 
         promptDiscardFormChanges(isDirty = false) {
-            window.onbeforeunload = isDirty && (this.getDiscardFormChangesConfirmationLocale);
+            window.onbeforeunload = isDirty && this.getDiscardFormChangesConfirmationLocale;
         }
 
         render() {

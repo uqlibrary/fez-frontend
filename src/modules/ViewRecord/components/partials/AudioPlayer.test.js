@@ -5,7 +5,8 @@ function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         pid: testProps.pid || journalArticle.rek_pid,
-        fileName: testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+        fileName:
+            testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: testProps.mimeType || 'audio/mp3',
     };
     return getElement(AudioPlayer, props, isShallow);
@@ -54,9 +55,15 @@ describe('Audio Player Component ', () => {
     });
 
     it('should pause audio', () => {
-        const wrapper = getElement(AudioPlayer, { pid: journalArticle.rek_pid,
-            fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
-            mimeType: 'audio/mp3' }, false);
+        const wrapper = getElement(
+            AudioPlayer,
+            {
+                pid: journalArticle.rek_pid,
+                fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+                mimeType: 'audio/mp3',
+            },
+            false
+        );
         wrapper.setState({ isPlaying: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();

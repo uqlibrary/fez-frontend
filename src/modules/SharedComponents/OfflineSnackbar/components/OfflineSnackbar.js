@@ -47,14 +47,16 @@ export class OfflineSnackbar extends PureComponent {
         return (
             <Grid container alignItems={'center'} justify={'center'} alignContent={'center'}>
                 <Grid item xs />
-                <Grid item style={{ marginRight: 24 }}>{icon}</Grid>
+                <Grid item style={{ marginRight: 24 }}>
+                    {icon}
+                </Grid>
                 <Grid item>{message}</Grid>
                 <Grid item xs />
             </Grid>
         );
     };
 
-    handleRequestClose = (reason) => {
+    handleRequestClose = reason => {
         // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
         if (reason !== 'clickaway') {
             this.setState({ open: false });
@@ -65,10 +67,13 @@ export class OfflineSnackbar extends PureComponent {
         const { classes } = this.props;
         const txt = locale.global.offlineSnackbar;
         const snackbarProps = this.state.online
-            ? { ...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success}/>) }
-            : { ...txt.offline, message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error}/>) };
+            ? { ...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success} />) }
+            : {
+                ...txt.offline,
+                message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error} />),
+            };
 
-        return  (
+        return (
             <div className="offlineSnackbar">
                 <Snackbar
                     anchorOrigin={{

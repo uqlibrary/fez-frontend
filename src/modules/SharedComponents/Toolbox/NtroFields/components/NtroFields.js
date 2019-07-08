@@ -66,12 +66,23 @@ export default class NtroFields extends React.PureComponent {
                 title: 'Author/Creator research statement',
                 fields: {
                     scaleOfWork: {
-                        label: (<span>Scale/Significance of work* <span style={{ fontWeight: 700 }}>(not for public view)</span></span>),
+                        label: (
+                            <span>
+                                Scale/Significance of work*{' '}
+                                <span style={{ fontWeight: 700 }}>(not for public view)</span>
+                            </span>
+                        ),
                         description: 'Select the option that best describes the significance of the work.',
                     },
                     impactStatement: {
-                        label: (<span>Creator research statement*. Include Background, Contribution and Significance <span style={{ fontWeight: 700 }}>(not for public view)</span></span>),
-                        placeholder: 'Remember to include substantiation of your major or minor scale/significance claim above.',
+                        label: (
+                            <span>
+                                Creator research statement*. Include Background, Contribution and Significance{' '}
+                                <span style={{ fontWeight: 700 }}>(not for public view)</span>
+                            </span>
+                        ),
+                        placeholder:
+                            'Remember to include substantiation of your major or minor scale/significance claim above.',
                     },
                 },
                 help: {
@@ -79,7 +90,18 @@ export default class NtroFields extends React.PureComponent {
                     text: (
                         <React.Fragment>
                             <h3>Creator research statement</h3>
-                            <p>For more information about the research statement, click  <b><a style={{ fontWeight: 700 }} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548">here</a></b></p>
+                            <p>
+                                For more information about the research statement, click{' '}
+                                <b>
+                                    <a
+                                        style={{ fontWeight: 700 }}
+                                        target="_blank"
+                                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
+                                    >
+                                        here
+                                    </a>
+                                </b>
+                            </p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'CLOSE',
@@ -89,7 +111,11 @@ export default class NtroFields extends React.PureComponent {
                 title: 'NTRO data',
                 fields: {
                     abstract: {
-                        label: (<span>Abstract/Description* <span style={{ fontWeight: 700 }}>(for public view)</span></span>),
+                        label: (
+                            <span>
+                                Abstract/Description* <span style={{ fontWeight: 700 }}>(for public view)</span>
+                            </span>
+                        ),
                         placeholder: 'Enter a brief description of the work',
                     },
                     series: {
@@ -144,19 +170,30 @@ export default class NtroFields extends React.PureComponent {
     }
 
     componentWillReceiveProps(nextProps) {
-        this.row3Width = this.getWidth([nextProps.hideVolume, nextProps.hideIssue, nextProps.hideStartPage, nextProps.hideEndPage]);
+        this.row3Width = this.getWidth([
+            nextProps.hideVolume,
+            nextProps.hideIssue,
+            nextProps.hideStartPage,
+            nextProps.hideEndPage,
+        ]);
         this.row4Width = this.getWidth([nextProps.hideExtent, nextProps.hideOriginalFormat]);
-        this.row5Width = this.getWidth([nextProps.hideAudienceSize, nextProps.hidePeerReviewActivity, nextProps.hideLanguage]);
+        this.row5Width = this.getWidth([
+            nextProps.hideAudienceSize,
+            nextProps.hidePeerReviewActivity,
+            nextProps.hideLanguage,
+        ]);
     }
 
-    getWidth = (fields) => {
+    getWidth = fields => {
         const numberOfFieldsToDisplay = fields.filter(field => field === false).length;
-        return numberOfFieldsToDisplay > 0 && (12 / numberOfFieldsToDisplay) || 12;
+        return (numberOfFieldsToDisplay > 0 && 12 / numberOfFieldsToDisplay) || 12;
     };
 
     normalizeIsrc = value => {
         const normalizedValue = value.replace(/([A-Z]{2})?-?(\w{3})?-?(\d{2})?-?(\d{5})?/g, (m, ...groups) => {
-            return groups.slice(0, 4).filter(token => !!token)
+            return groups
+                .slice(0, 4)
+                .filter(token => !!token)
                 .join('-');
         });
         return normalizedValue.toUpperCase();
@@ -176,37 +213,38 @@ export default class NtroFields extends React.PureComponent {
         const { contributionStatement, metadata, grantEditor } = this.props.locale;
         return (
             <React.Fragment>
-                {
-                    (this.props.showContributionStatement || this.props.showSignificance) &&
+                {(this.props.showContributionStatement || this.props.showSignificance) && (
                     <Grid item xs={12}>
                         <StandardCard title={contributionStatement.title} help={contributionStatement.help}>
                             <Grid container spacing={8}>
-                                {
-                                    // in theory, we should show them separately. In practice, they are always incomplete together
-                                    (this.props.showContributionStatement || this.props.showSignificance) &&
-                                    <Grid item xs={12}>
-                                        <Typography>{contributionStatement.fields.scaleOfWork.description}</Typography>
-                                        <Field
-                                            component={SelectField}
-                                            disabled={this.props.submitting}
-                                            name="significance"
-                                            label={contributionStatement.fields.scaleOfWork.label}
-                                            required
-                                            validate={[validation.required]}
-                                            SelectDisplayProps={{
-                                                id: 'significance',
-                                            }}
-                                        >
-                                            {
-                                                SIGNIFICANCE.map(item => (
-                                                    <MenuItem key={item.value} value={item.value}>{item.text}</MenuItem>
-                                                ))
-                                            }
-                                        </Field>
-                                    </Grid>
-                                }
-                                {
-                                    this.props.showContributionStatement &&
+                                {// in theory, we should show them separately.
+                                // In practice, they are always incomplete together
+                                    (this.props.showContributionStatement || this.props.showSignificance) && (
+                                        <Grid item xs={12}>
+                                            {/* prettier-ignore */}
+                                            <Typography>
+                                                {contributionStatement.fields.scaleOfWork.description}
+                                            </Typography>
+                                            <Field
+                                                component={SelectField}
+                                                disabled={this.props.submitting}
+                                                name="significance"
+                                                label={contributionStatement.fields.scaleOfWork.label}
+                                                required
+                                                validate={[validation.required]}
+                                                SelectDisplayProps={{
+                                                    id: 'significance',
+                                                }}
+                                            >
+                                                {SIGNIFICANCE.map(item => (
+                                                    <MenuItem key={item.value} value={item.value}>
+                                                        {item.text}
+                                                    </MenuItem>
+                                                ))}
+                                            </Field>
+                                        </Grid>
+                                    )}
+                                {this.props.showContributionStatement && (
                                     <Grid item xs={12} style={{ marginTop: 24 }}>
                                         <Field
                                             component={RichEditorField}
@@ -220,33 +258,29 @@ export default class NtroFields extends React.PureComponent {
                                             validate={[validation.required, validation.maxListEditorTextLength2000]}
                                         />
                                     </Grid>
-                                }
+                                )}
                             </Grid>
                         </StandardCard>
                     </Grid>
-                }
-                {
-                    (
-                        !this.props.hideAbstract ||
-                        !this.props.hidePeerReviewActivity ||
-                        !this.props.hideLanguage ||
-                        !this.props.hideAudienceSize ||
-                        !this.props.hideOriginalFormat ||
-                        !this.props.hideExtent ||
-                        !this.props.hideEndPage ||
-                        !this.props.hideStartPage ||
-                        !this.props.hideIssue ||
-                        !this.props.hideVolume ||
-                        !this.props.hideSeries ||
-                        !this.props.hideIsrc ||
-                        !this.props.hideIsmn
-                    ) &&
+                )}
+                {(!this.props.hideAbstract ||
+                    !this.props.hidePeerReviewActivity ||
+                    !this.props.hideLanguage ||
+                    !this.props.hideAudienceSize ||
+                    !this.props.hideOriginalFormat ||
+                    !this.props.hideExtent ||
+                    !this.props.hideEndPage ||
+                    !this.props.hideStartPage ||
+                    !this.props.hideIssue ||
+                    !this.props.hideVolume ||
+                    !this.props.hideSeries ||
+                    !this.props.hideIsrc ||
+                    !this.props.hideIsmn) && (
                     <Grid item xs={12}>
                         <StandardCard title={metadata.title} help={componentLocale.components.ntroFields.metadata.help}>
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
-                                    {
-                                        !this.props.hideAbstract &&
+                                    {!this.props.hideAbstract && (
                                         <Field
                                             component={RichEditorField}
                                             name="ntroAbstract"
@@ -257,10 +291,9 @@ export default class NtroFields extends React.PureComponent {
                                             disabled={this.props.submitting}
                                             validate={[validation.required, validation.maxListEditorTextLength800]}
                                         />
-                                    }
+                                    )}
                                 </Grid>
-                                {
-                                    !this.props.hideIsmn &&
+                                {!this.props.hideIsmn && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
@@ -274,9 +307,8 @@ export default class NtroFields extends React.PureComponent {
                                             transformFunction={this.transformIsmn}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideIsrc &&
+                                )}
+                                {!this.props.hideIsrc && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={ListEditorField}
@@ -291,9 +323,8 @@ export default class NtroFields extends React.PureComponent {
                                             transformFunction={this.transformIsrc}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideSeries &&
+                                )}
+                                {!this.props.hideSeries && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={SeriesField}
@@ -301,11 +332,9 @@ export default class NtroFields extends React.PureComponent {
                                             name="fez_record_search_key_series.rek_series"
                                             {...metadata.fields.series}
                                         />
-
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideVolume &&
+                                )}
+                                {!this.props.hideVolume && (
                                     <Grid item xs={12} sm={this.row3Width}>
                                         <Field
                                             component={TextField}
@@ -316,9 +345,8 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.volume.label}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideIssue &&
+                                )}
+                                {!this.props.hideIssue && (
                                     <Grid item xs={12} sm={this.row3Width}>
                                         <Field
                                             component={TextField}
@@ -329,9 +357,8 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.issue.label}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideStartPage &&
+                                )}
+                                {!this.props.hideStartPage && (
                                     <Grid item xs={12} sm={this.row3Width}>
                                         <Field
                                             component={TextField}
@@ -342,9 +369,8 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.startPage.label}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideEndPage &&
+                                )}
+                                {!this.props.hideEndPage && (
                                     <Grid item xs={12} sm={this.row3Width}>
                                         <Field
                                             component={TextField}
@@ -355,9 +381,8 @@ export default class NtroFields extends React.PureComponent {
                                             label={metadata.fields.endPage.label}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideExtent &&
+                                )}
+                                {!this.props.hideExtent && (
                                     <Grid item xs={12} sm={this.row4Width}>
                                         <Field
                                             component={TextField}
@@ -372,9 +397,8 @@ export default class NtroFields extends React.PureComponent {
                                             validate={[validation.required]}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideOriginalFormat &&
+                                )}
+                                {!this.props.hideOriginalFormat && (
                                     <Grid item xs={12} sm={this.row4Width}>
                                         <Field
                                             component={TextField}
@@ -385,9 +409,8 @@ export default class NtroFields extends React.PureComponent {
                                             {...metadata.fields.physicalDescription}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideAudienceSize &&
+                                )}
+                                {!this.props.hideAudienceSize && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
                                             component={SelectField}
@@ -400,16 +423,15 @@ export default class NtroFields extends React.PureComponent {
                                                 id: 'rek-audience-size',
                                             }}
                                         >
-                                            {
-                                                AUDIENCE_SIZE.map(item => (
-                                                    <MenuItem key={item.value} value={item.value}>{item.text}</MenuItem>
-                                                ))
-                                            }
+                                            {AUDIENCE_SIZE.map(item => (
+                                                <MenuItem key={item.value} value={item.value}>
+                                                    {item.text}
+                                                </MenuItem>
+                                            ))}
                                         </Field>
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hideLanguage &&
+                                )}
+                                {!this.props.hideLanguage && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
                                             component={LanguageField}
@@ -420,9 +442,8 @@ export default class NtroFields extends React.PureComponent {
                                             validate={[validation.requiredList]}
                                         />
                                     </Grid>
-                                }
-                                {
-                                    !this.props.hidePeerReviewActivity &&
+                                )}
+                                {!this.props.hidePeerReviewActivity && (
                                     <Grid item xs={12} sm={this.row5Width}>
                                         <Field
                                             component={QualityIndicatorField}
@@ -436,13 +457,12 @@ export default class NtroFields extends React.PureComponent {
                                             validate={[validation.requiredList]}
                                         />
                                     </Grid>
-                                }
+                                )}
                             </Grid>
                         </StandardCard>
                     </Grid>
-                }
-                {
-                    !this.props.hideGrants &&
+                )}
+                {!this.props.hideGrants && (
                     <Grid item xs={12}>
                         <StandardCard title={grantEditor.title}>
                             <Field
@@ -454,7 +474,7 @@ export default class NtroFields extends React.PureComponent {
                             />
                         </StandardCard>
                     </Grid>
-                }
+                )}
             </React.Fragment>
         );
     }

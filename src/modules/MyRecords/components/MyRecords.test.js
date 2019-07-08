@@ -64,19 +64,21 @@ describe('MyRecords test', () => {
     it('renders list of publications no facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { 'total': 147, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 20 },
+            publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
     it('renders list of publications with custom actions', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3],
-            publicationsListPagingData: { 'total': 147, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 20 },
-            publicationsListCustomActions: [{
-                label: 'Test',
-                handleAction: () => {},
-                primary: false,
-            }],
+            publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
+            publicationsListCustomActions: [
+                {
+                    label: 'Test',
+                    handleAction: () => {},
+                    primary: false,
+                },
+            ],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -84,26 +86,38 @@ describe('MyRecords test', () => {
     it('renders list of publications with facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { 'total': 147, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 20 },
+            publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
             publicationsListFacets: {
                 'Display type': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 3,
-                    'buckets': [{ 'key': 179, 'doc_count': 95 }, { 'key': 130, 'doc_count': 34 }, {
-                        'key': 177,
-                        'doc_count': 2,
-                    }, { 'key': 183, 'doc_count': 2 }, { 'key': 174, 'doc_count': 1 }],
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 3,
+                    buckets: [
+                        { key: 179, doc_count: 95 },
+                        { key: 130, doc_count: 34 },
+                        {
+                            key: 177,
+                            doc_count: 2,
+                        },
+                        { key: 183, doc_count: 2 },
+                        { key: 174, doc_count: 1 },
+                    ],
                 },
-                'Keywords': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 641,
-                    'buckets': [{ 'key': 'Brca1', 'doc_count': 15 }, {
-                        'key': 'Oncology',
-                        'doc_count': 15,
-                    }, { 'key': 'Breast cancer', 'doc_count': 13 }, {
-                        'key': 'Genetics & Heredity',
-                        'doc_count': 12,
-                    }, { 'key': 'Biochemistry & Molecular Biology', 'doc_count': 10 }],
+                Keywords: {
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 641,
+                    buckets: [
+                        { key: 'Brca1', doc_count: 15 },
+                        {
+                            key: 'Oncology',
+                            doc_count: 15,
+                        },
+                        { key: 'Breast cancer', doc_count: 13 },
+                        {
+                            key: 'Genetics & Heredity',
+                            doc_count: 12,
+                        },
+                        { key: 'Biochemistry & Molecular Biology', doc_count: 10 },
+                    ],
                 },
             },
         });
@@ -111,7 +125,9 @@ describe('MyRecords test', () => {
     });
 
     it('renders active filters', () => {
-        const wrapper = setup({ location: { state: { activeFacets: { filters: {}, ranges: { Year: { from: 2000, to: 2010 } } } } } });
+        const wrapper = setup({
+            location: { state: { activeFacets: { filters: {}, ranges: { Year: { from: 2000, to: 2010 } } } } },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -133,8 +149,8 @@ describe('MyRecords test', () => {
         expect(wrapper.state().sortDirection).toEqual('bar');
         expect(testAction).toHaveBeenCalled();
 
-        wrapper.instance().facetsChanged({ filters: { 'foo': 'bar' }, ranges: {} });
-        expect(wrapper.state().activeFacets).toEqual({ filters: { 'foo': 'bar' }, ranges: {} });
+        wrapper.instance().facetsChanged({ filters: { foo: 'bar' }, ranges: {} });
+        expect(wrapper.state().activeFacets).toEqual({ filters: { foo: 'bar' }, ranges: {} });
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
     });
@@ -149,13 +165,24 @@ describe('MyRecords test', () => {
         const wrapper = setup({ loadingPublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({ loadingPublicationsList: false, publicationsList: [1, 2, 3], history: {}, location: {} });
+        wrapper
+            .instance()
+            .componentWillReceiveProps({
+                loadingPublicationsList: false,
+                publicationsList: [1, 2, 3],
+                history: {},
+                location: {},
+            });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction }, thisUrl: routes.pathConfig.records.mine });
+        const wrapper = setup({
+            accountLoading: true,
+            actions: { loadAuthorPublications: testAction },
+            thisUrl: routes.pathConfig.records.mine,
+        });
 
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'POP' },
@@ -168,7 +195,11 @@ describe('MyRecords test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction }, thisUrl: routes.pathConfig.records.mine });
+        const wrapper = setup({
+            accountLoading: true,
+            actions: { loadAuthorPublications: testAction },
+            thisUrl: routes.pathConfig.records.mine,
+        });
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.records.mine, state: null },
@@ -179,7 +210,7 @@ describe('MyRecords test', () => {
         expect(wrapper.state().page).toEqual(1);
     });
 
-    it('doesn\'t retrieve data from history if user navigates to next page', () => {
+    it("doesn't retrieve data from history if user navigates to next page", () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
@@ -202,32 +233,46 @@ describe('MyRecords test', () => {
                 loadAuthorPublications: jest.fn(),
             },
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { 'total': 147, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 20 },
+            publicationsListPagingData: { total: 147, per_page: 20, current_page: 1, from: 1, to: 20 },
             publicationsListFacets: {
                 'Display type': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 3,
-                    'buckets': [{ 'key': 179, 'doc_count': 95 }, { 'key': 130, 'doc_count': 34 }, {
-                        'key': 177,
-                        'doc_count': 2,
-                    }, { 'key': 183, 'doc_count': 2 }, { 'key': 174, 'doc_count': 1 }],
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 3,
+                    buckets: [
+                        { key: 179, doc_count: 95 },
+                        { key: 130, doc_count: 34 },
+                        {
+                            key: 177,
+                            doc_count: 2,
+                        },
+                        { key: 183, doc_count: 2 },
+                        { key: 174, doc_count: 1 },
+                    ],
                 },
-                'Keywords': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 641,
-                    'buckets': [{ 'key': 'Brca1', 'doc_count': 15 }, {
-                        'key': 'Oncology',
-                        'doc_count': 15,
-                    }, { 'key': 'Breast cancer', 'doc_count': 13 }, {
-                        'key': 'Genetics & Heredity',
-                        'doc_count': 12,
-                    }, { 'key': 'Biochemistry & Molecular Biology', 'doc_count': 10 }],
+                Keywords: {
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 641,
+                    buckets: [
+                        { key: 'Brca1', doc_count: 15 },
+                        {
+                            key: 'Oncology',
+                            doc_count: 15,
+                        },
+                        { key: 'Breast cancer', doc_count: 13 },
+                        {
+                            key: 'Genetics & Heredity',
+                            doc_count: 12,
+                        },
+                        { key: 'Biochemistry & Molecular Biology', doc_count: 10 },
+                    ],
                 },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(PublicationsListSorting)').props()
+        wrapper
+            .find('WithStyles(PublicationsListSorting)')
+            .props()
             .onExportPublications({ exportFormat: 'csv' });
         expect(exportAuthorPublicationsFn).toHaveBeenCalled();
     });
@@ -236,9 +281,11 @@ describe('MyRecords test', () => {
         const testAction = jest.fn();
         const wrapper = setup({ actions: { loadAuthorPublications: testAction } });
 
-        wrapper.instance().facetsChanged({ 'filters': { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK } });
+        wrapper.instance().facetsChanged({ filters: { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK } });
 
-        expect(wrapper.state().activeFacets).toEqual({ 'filters': { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK } });
+        expect(wrapper.state().activeFacets).toEqual({
+            filters: { 'Display type': general.PUBLICATION_TYPE_CREATIVE_WORK },
+        });
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -43,37 +43,34 @@ export default class ThesisSubmission extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.isSessionValid &&
-            !nextProps.submitting
-        ) {
+        if (nextProps.isSessionValid && !nextProps.submitting) {
             this.openDepositConfirmation();
         }
     }
 
     deposit = () => {
         this.props.actions.checkSession();
-    }
+    };
 
     cancelSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.cancelLink);
-    }
+    };
 
     afterSubmit = () => {
         window.location.assign(formLocale.thesisSubmission.afterSubmitLink);
-    }
+    };
 
     afterFailedSubmit = () => {
         // Clears the current state completely and reloads the form
         window.location.reload();
-    }
+    };
 
     openDepositConfirmation = () => {
         this.depositConfirmationBox.showConfirmation();
         this.props.actions.clearSessionExpiredFlag();
     };
 
-    setDepositConfirmation = (ref) => {
+    setDepositConfirmation = ref => {
         this.depositConfirmationBox = ref;
     };
 
@@ -84,36 +81,43 @@ export default class ThesisSubmission extends Component {
 
         if (this.props.submitSucceeded) {
             return (
-                <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+                <StandardPage
+                    title={
+                        this.props.isHdrThesis
+                            ? formLocale.thesisSubmission.hdrTitle
+                            : formLocale.thesisSubmission.sbsTitle
+                    }
+                >
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            {
-                                this.props.newRecordFileUploadingOrIssueError
-                                    ? <Grid item xs={12}>
-                                        <Alert
-                                            {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
-                                            action={this.afterFailedSubmit}
-                                        />
-                                    </Grid>
-                                    :                                    <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
-                                        <Grid container spacing={24}>
-                                            <Grid item xs={12}>
-                                                <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
-                                            </Grid>
+                            {this.props.newRecordFileUploadingOrIssueError ? (
+                                <Grid item xs={12}>
+                                    <Alert
+                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                        action={this.afterFailedSubmit}
+                                    />
+                                </Grid>
+                            ) : (
+                                <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
+                                    <Grid container spacing={24}>
+                                        <Grid item xs={12}>
+                                            <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
                                         </Grid>
-                                    </StandardCard>
-                            }
+                                    </Grid>
+                                </StandardCard>
+                            )}
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
-                        <Grid item xs/>
+                        <Grid item xs />
                         <Grid item>
                             <Button
                                 variant={'contained'}
                                 color={!this.props.newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
                                 fullWidth
                                 children={formLocale.thesisSubmission.afterSubmit}
-                                onClick={this.afterSubmit}/>
+                                onClick={this.afterSubmit}
+                            />
                         </Grid>
                     </Grid>
                 </StandardPage>
@@ -130,13 +134,19 @@ export default class ThesisSubmission extends Component {
                     ...formLocale.errorAlert,
                     message: formLocale.thesisSubmission.depositFailedMessage,
                 },
-            } });
+            },
+        });
         return (
-            <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
+            <StandardPage
+                title={
+                    this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle
+                }
+            >
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={formLocale.cancelWorkflowConfirmation}/>
+                        txt={formLocale.cancelWorkflowConfirmation}
+                    />
 
                     <ConfirmDialogBox
                         onRef={this.setDepositConfirmation}
@@ -154,7 +164,8 @@ export default class ThesisSubmission extends Component {
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
                                             disabled={this.props.submitting}
                                             height={50}
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
@@ -166,7 +177,8 @@ export default class ThesisSubmission extends Component {
                                             rows={1}
                                             {...txt.information.fieldLabels.author}
                                             required
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                     <Grid item xs={12} sm={6}>
                                         <Field
@@ -196,7 +208,8 @@ export default class ThesisSubmission extends Component {
                                             disabled={this.props.submitting}
                                             title={txt.optional.fieldLabels.abstract.label}
                                             name="thesisAbstract"
-                                            validate={[validation.required]}/>
+                                            validate={[validation.required]}
+                                        />
                                     </Grid>
                                 </Grid>
                             </StandardCard>
@@ -225,7 +238,8 @@ export default class ThesisSubmission extends Component {
                                     distinctOnly
                                     maxCount={3}
                                     disabled={this.props.submitting}
-                                    locale={txtFoR.field}/>
+                                    locale={txtFoR.field}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
@@ -240,27 +254,31 @@ export default class ThesisSubmission extends Component {
                                     maxInputLength={111}
                                     searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                     locale={locale.components.keywordsForm.field}
-                                    disabled={this.props.submitting}/>
+                                    disabled={this.props.submitting}
+                                />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={formLocale.thesisSubmission.fileUpload.title} help={formLocale.thesisSubmission.fileUpload.help}>
+                            <StandardCard
+                                title={formLocale.thesisSubmission.fileUpload.title}
+                                help={formLocale.thesisSubmission.fileUpload.help}
+                            >
                                 <Field
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
                                     locale={formLocale.thesisSubmission.fileUpload.locale}
                                     defaultQuickTemplateId={this.props.fileAccessId}
-                                    validate={[validation.fileUploadRequired]}/>
+                                    validate={[validation.fileUploadRequired]}
+                                />
                             </StandardCard>
                         </Grid>
 
-                        {
-                            alertProps &&
+                        {alertProps && (
                             <Grid item xs={12}>
                                 <Alert {...alertProps} />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                     <Grid container spacing={16}>
                         <Grid item xs={false} sm />
@@ -270,7 +288,8 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 children={formLocale.thesisSubmission.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this.cancelSubmit}/>
+                                onClick={this.cancelSubmit}
+                            />
                         </Grid>
                         <Grid item xs={12} sm="auto">
                             <Button
@@ -280,7 +299,8 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
-                                disabled={this.props.submitting || this.props.disableSubmit}/>
+                                disabled={this.props.submitting || this.props.disableSubmit}
+                            />
                         </Grid>
                     </Grid>
                 </form>

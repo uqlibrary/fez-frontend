@@ -16,7 +16,8 @@ export default class PatentCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             patentNumber: this.props.publication.fez_record_search_key_patent_number
-                ? this.props.publication.fez_record_search_key_patent_number.rek_patent_number : null,
+                ? this.props.publication.fez_record_search_key_patent_number.rek_patent_number
+                : null,
         };
 
         // eSpace citation view for Patent
@@ -33,7 +34,12 @@ export default class PatentCitation extends Component {
                 <Partials.CitationTitleView className="citationTitle" value={record.title} prefix=" " suffix="." />
 
                 {/* {Patent number| |.}*/}
-                <Partials.CitationView className="citationPatentNumber" value={record.patentNumber} prefix=" " suffix="."/>
+                <Partials.CitationView
+                    className="citationPatentNumber"
+                    value={record.patentNumber}
+                    prefix=" "
+                    suffix="."
+                />
             </div>
         );
     }

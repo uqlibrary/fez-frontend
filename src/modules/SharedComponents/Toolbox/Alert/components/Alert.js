@@ -206,7 +206,16 @@ export class Alert extends PureComponent {
     static propTypes = {
         message: PropTypes.any.isRequired,
         title: PropTypes.string,
-        type: PropTypes.oneOf(['error', 'error_outline', 'warning', 'info', 'info_outline', 'help', 'help_outline', 'done']),
+        type: PropTypes.oneOf([
+            'error',
+            'error_outline',
+            'warning',
+            'info',
+            'info_outline',
+            'help',
+            'help_outline',
+            'done',
+        ]),
         action: PropTypes.func,
         actionButtonLabel: PropTypes.string,
         allowDismiss: PropTypes.bool,
@@ -229,8 +238,8 @@ export class Alert extends PureComponent {
         super(props);
     }
 
-    renderIcon = (type) => {
-        switch(type) {
+    renderIcon = type => {
+        switch (type) {
             case 'error':
                 return <Error className={'icon'} />;
             case 'error_outline':
@@ -256,50 +265,79 @@ export class Alert extends PureComponent {
         const { classes } = this.props;
         return (
             <div style={{ padding: 12 }} className="Alert">
-                <Grid container spacing={24} className={classNames(classes[this.props.type], classes.common)} justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
+                <Grid
+                    container
+                    spacing={24}
+                    className={classNames(classes[this.props.type], classes.common)}
+                    justify={'center'}
+                    alignItems={'flex-start'}
+                    alignContent={'center'}
+                >
                     <Grid item xs={12} sm className={this.props.action && classes.linked}>
                         <Grid container justify={'center'} alignItems={'flex-start'} alignContent={'center'}>
-                            <Grid item className={`${classes.icon} alert-icon`} onClick={this.props.action} onKeyDown={this.props.action}>
-                                {this.props.showLoader ? <CircularProgress className={'spinner'} size={38} thickness={3} /> : this.renderIcon(this.props.type)}
+                            <Grid
+                                item
+                                className={`${classes.icon} alert-icon`}
+                                onClick={this.props.action}
+                                onKeyDown={this.props.action}
+                            >
+                                {this.props.showLoader ? (
+                                    <CircularProgress className={'spinner'} size={38} thickness={3} />
+                                ) : (
+                                    this.renderIcon(this.props.type)
+                                )}
                             </Grid>
-                            <Grid item xs className={`${classes.text} alert-text`} onClick={this.props.action} onKeyDown={this.props.action}>
-                                <b>{this.props.title && `${this.props.title} - `}</b>{this.props.message}
+                            <Grid
+                                item
+                                xs
+                                className={`${classes.text} alert-text`}
+                                onClick={this.props.action}
+                                onKeyDown={this.props.action}
+                            >
+                                <b>{this.props.title && `${this.props.title} - `}</b>
+                                {this.props.message}
                             </Grid>
-                            {
-                                this.props.allowDismiss && this.props.dismissAction &&
+                            {this.props.allowDismiss && this.props.dismissAction && (
                                 <Hidden smUp>
                                     <Grid item className={classes.dismissButton}>
-                                        <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle}
-                                            aria-label={this.props.dismissTitle} id={'dismiss'}>
-                                            <Close className="dismiss"/>
+                                        <IconButton
+                                            onClick={this.props.dismissAction}
+                                            title={this.props.dismissTitle}
+                                            aria-label={this.props.dismissTitle}
+                                            id={'dismiss'}
+                                        >
+                                            <Close className="dismiss" />
                                         </IconButton>
                                     </Grid>
                                 </Hidden>
-                            }
+                            )}
                         </Grid>
                     </Grid>
-                    {
-                        this.props.action && this.props.actionButtonLabel &&
+                    {this.props.action && this.props.actionButtonLabel && (
                         <Grid item xs sm={'auto'} className={classes.actionButton}>
                             <Button
                                 variant={'text'}
                                 children={this.props.actionButtonLabel}
                                 onClick={this.props.action}
                                 fullWidth
-                                className="action alert-button"/>
+                                className="action alert-button"
+                            />
                         </Grid>
-                    }
-                    {
-                        this.props.allowDismiss && this.props.dismissAction &&
+                    )}
+                    {this.props.allowDismiss && this.props.dismissAction && (
                         <Hidden xsDown>
                             <Grid item className={classes.dismissButton}>
-                                <IconButton onClick={this.props.dismissAction} title={this.props.dismissTitle}
-                                    aria-label={this.props.dismissTitle} id={'dismiss'}>
-                                    <Close className="dismiss"/>
+                                <IconButton
+                                    onClick={this.props.dismissAction}
+                                    title={this.props.dismissTitle}
+                                    aria-label={this.props.dismissTitle}
+                                    id={'dismiss'}
+                                >
+                                    <Close className="dismiss" />
                                 </IconButton>
                             </Grid>
                         </Hidden>
-                    }
+                    )}
                 </Grid>
             </div>
         );

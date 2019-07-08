@@ -38,9 +38,11 @@ export class DashboardAuthorDetails extends PureComponent {
             return false;
         }
 
-        return positions.filter((position) => {
-            return this.isCasualPosition(position);
-        }).length === positions.length;
+        return (
+            positions.filter(position => {
+                return this.isCasualPosition(position);
+            }).length === positions.length
+        );
     }
 
     render() {
@@ -55,17 +57,25 @@ export class DashboardAuthorDetails extends PureComponent {
                 </Grid>
                 {/* Author Name/Positions/OrgUnits */}
                 <Grid item xs={12}>
-                    {
-                        this.props.positions && this.props.positions.length > 0 && this.props.positions.map((item, index) => (
-                            ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) &&
-                            <Typography key={index} variant={'caption'} component={'span'} className={classes.authorDetails}>
-                                <b>{item}</b>
-                                {
-                                    this.props.orgUnits && this.props.orgUnits.length > 0 && this.props.orgUnits[index] &&
-                                    `, ${this.props.orgUnits[index]}`
-                                }
-                            </Typography>))
-                    }
+                    {this.props.positions &&
+                        this.props.positions.length > 0 &&
+                        this.props.positions.map(
+                            (item, index) =>
+                                ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) && (
+                                    <Typography
+                                        key={index}
+                                        variant={'caption'}
+                                        component={'span'}
+                                        className={classes.authorDetails}
+                                    >
+                                        <b>{item}</b>
+                                        {this.props.orgUnits &&
+                                            this.props.orgUnits.length > 0 &&
+                                            this.props.orgUnits[index] &&
+                                            `, ${this.props.orgUnits[index]}`}
+                                    </Typography>
+                                )
+                        )}
                 </Grid>
             </Grid>
         );

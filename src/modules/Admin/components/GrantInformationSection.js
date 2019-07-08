@@ -14,9 +14,9 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 /* istanbul ignore next */
-const handleGrantEditButton = () => { };
+const handleGrantEditButton = () => {};
 /* istanbul ignore next */
-const handleGrantEditButtonSubmit = () => { };
+const handleGrantEditButtonSubmit = () => {};
 
 const grantColumns = [
     {
@@ -65,8 +65,27 @@ const grantColumns = [
 ];
 
 const grantData = [
-    ['National Breast Cancer Foundation of Australia', 'NBCF: 2007003445', '1234', 'NBCF', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ligula nec nulla sodales laoreet.', <IconButton onClick={handleGrantEditButton}><Edit /></IconButton>],
-    ['Australian Research Council', 'ARC: DP0985025', '1234', 'NBCF', 'Gravida lectus quis, fermentum dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec quis interdum leo.', <IconButton onClick={handleGrantEditButton}><Edit /></IconButton>],
+    [
+        'National Breast Cancer Foundation of Australia',
+        'NBCF: 2007003445',
+        '1234',
+        'NBCF',
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nec ligula nec nulla sodales laoreet.',
+        <IconButton onClick={handleGrantEditButton}>
+            <Edit />
+        </IconButton>,
+    ],
+    [
+        'Australian Research Council',
+        'ARC: DP0985025',
+        '1234',
+        'NBCF',
+        'Gravida lectus quis, fermentum dolor. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices ' +
+            'posuere cubilia Curae; Donec quis interdum leo.',
+        <IconButton onClick={handleGrantEditButton}>
+            <Edit />
+        </IconButton>,
+    ],
 ];
 
 const grantOptions = {
@@ -84,7 +103,8 @@ export const GrantInformationSection = ({ disabled }) => {
                     disabled={disabled}
                     fullWidth
                     label="Grant agency"
-                    placeholder="" />
+                    placeholder=""
+                />
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
@@ -93,7 +113,8 @@ export const GrantInformationSection = ({ disabled }) => {
                     disabled={disabled}
                     fullWidth
                     label="Grant agency ID"
-                    placeholder="" />
+                    placeholder=""
+                />
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
@@ -102,7 +123,8 @@ export const GrantInformationSection = ({ disabled }) => {
                     name="grantid"
                     fullWidth
                     label="Grant ID"
-                    placeholder="" />
+                    placeholder=""
+                />
             </Grid>
             <Grid item xs={12} sm={6}>
                 <Field
@@ -111,24 +133,26 @@ export const GrantInformationSection = ({ disabled }) => {
                     name="grantacronym"
                     fullWidth
                     label="Grant acronym"
-                    placeholder="" />
+                    placeholder=""
+                />
             </Grid>
             <Grid item xs={12}>
-                <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Grant text</Typography>
+                <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>
+                    Grant text
+                </Typography>
                 <Field
                     component={RichEditorField}
                     disabled={disabled}
                     name="granttext"
                     format={value => Immutable.Map(value)}
-                    height={100} />
+                    height={100}
+                />
             </Grid>
             <Grid item xs={12} style={{ padding: 4 }}>
                 <Grid container spacing={8}>
                     <Grid item xs />
                     <Grid item xs="auto">
-                        <Button color="secondary">
-                            Clear
-                        </Button>
+                        <Button color="secondary">Clear</Button>
                     </Grid>
                     <Grid item xs="auto">
                         <Button variant="contained" color="primary" onClick={handleGrantEditButtonSubmit}>
@@ -138,12 +162,7 @@ export const GrantInformationSection = ({ disabled }) => {
                 </Grid>
             </Grid>
             <Grid item xs={12}>
-                <MUIDataTable
-                    title="Grant list"
-                    data={grantData}
-                    columns={grantColumns}
-                    options={grantOptions}
-                />
+                <MUIDataTable title="Grant list" data={grantData} columns={grantColumns} options={grantOptions} />
             </Grid>
         </Grid>
     );

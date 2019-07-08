@@ -20,7 +20,11 @@ describe('Snapshot tests for StandardPage component', () => {
     });
 
     it('renders StandardPage with help', () => {
-        const wrapper = setup({ title: 'Test', children: 'Test', help: { title: 'Test', text: 'Test', buttonLabel: 'Test' } });
+        const wrapper = setup({
+            title: 'Test',
+            children: 'Test',
+            help: { title: 'Test', text: 'Test', buttonLabel: 'Test' },
+        });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -33,8 +37,10 @@ function setup2(testProps, isShallow = false) {
 
 describe('Snapshot tests for full mount StandardPage component', () => {
     it('renders StandardPage with title and  help and content', () => {
-        const wrapper = setup2({ title: 'Test', children: 'Test', help: { title: 'Test', text: 'Test', buttonLabel: 'Test' } }, false);
+        const wrapper = setup2(
+            { title: 'Test', children: 'Test', help: { title: 'Test', text: 'Test', buttonLabel: 'Test' } },
+            false
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
-

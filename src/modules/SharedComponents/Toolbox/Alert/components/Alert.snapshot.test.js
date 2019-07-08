@@ -30,12 +30,23 @@ describe('Alert snapshots test', () => {
     });
 
     it('renders Alert of error type should render dismiss icon button and action button', () => {
-        const wrapper = setup({ action: jest.fn(), actionButtonLabel: 'Do something', allowDismiss: true, dismissAction: jest.fn() });
+        const wrapper = setup({
+            action: jest.fn(),
+            actionButtonLabel: 'Do something',
+            allowDismiss: true,
+            dismissAction: jest.fn(),
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders Alert of error type should render dismiss icon button and action button and spinner', () => {
-        const wrapper = setup({ showLoader: true, action: jest.fn(), actionButtonLabel: 'Do something', allowDismiss: true, dismissAction: jest.fn() });
+        const wrapper = setup({
+            showLoader: true,
+            action: jest.fn(),
+            actionButtonLabel: 'Do something',
+            allowDismiss: true,
+            dismissAction: jest.fn(),
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

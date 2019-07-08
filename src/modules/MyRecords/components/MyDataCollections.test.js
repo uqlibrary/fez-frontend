@@ -53,7 +53,7 @@ describe('myDatasets test', () => {
     it('renders list of publications no facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { 'total': 2, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 2 },
+            publicationsListPagingData: { total: 2, per_page: 20, current_page: 1, from: 1, to: 2 },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -61,26 +61,38 @@ describe('myDatasets test', () => {
     it('renders list of publications with facets', () => {
         const wrapper = setup({
             publicationsList: [1, 2, 3], // myRecordsList.data,
-            publicationsListPagingData: { 'total': 2, 'per_page': 20, 'current_page': 1, 'from': 1, 'to': 2 },
+            publicationsListPagingData: { total: 2, per_page: 20, current_page: 1, from: 1, to: 2 },
             publicationsListFacets: {
                 'Display type': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 3,
-                    'buckets': [{ 'key': 179, 'doc_count': 95 }, { 'key': 130, 'doc_count': 34 }, {
-                        'key': 177,
-                        'doc_count': 2,
-                    }, { 'key': 183, 'doc_count': 2 }, { 'key': 174, 'doc_count': 1 }],
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 3,
+                    buckets: [
+                        { key: 179, doc_count: 95 },
+                        { key: 130, doc_count: 34 },
+                        {
+                            key: 177,
+                            doc_count: 2,
+                        },
+                        { key: 183, doc_count: 2 },
+                        { key: 174, doc_count: 1 },
+                    ],
                 },
-                'Keywords': {
-                    'doc_count_error_upper_bound': 0,
-                    'sum_other_doc_count': 641,
-                    'buckets': [{ 'key': 'Brca1', 'doc_count': 15 }, {
-                        'key': 'Oncology',
-                        'doc_count': 15,
-                    }, { 'key': 'Breast cancer', 'doc_count': 13 }, {
-                        'key': 'Genetics & Heredity',
-                        'doc_count': 12,
-                    }, { 'key': 'Biochemistry & Molecular Biology', 'doc_count': 10 }],
+                Keywords: {
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 641,
+                    buckets: [
+                        { key: 'Brca1', doc_count: 15 },
+                        {
+                            key: 'Oncology',
+                            doc_count: 15,
+                        },
+                        { key: 'Breast cancer', doc_count: 13 },
+                        {
+                            key: 'Genetics & Heredity',
+                            doc_count: 12,
+                        },
+                        { key: 'Biochemistry & Molecular Biology', doc_count: 10 },
+                    ],
                 },
             },
         });
@@ -91,7 +103,6 @@ describe('myDatasets test', () => {
         const wrapper = setup({ state: { activeFacets: { filters: {}, ranges: { Year: { from: 2000, to: 2010 } } } } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 
     it('state is updated by sub components', () => {
         const testAction = jest.fn();
@@ -111,8 +122,8 @@ describe('myDatasets test', () => {
         expect(wrapper.state().sortDirection).toEqual('bar');
         expect(testAction).toHaveBeenCalled();
 
-        wrapper.instance().facetsChanged({ filters: { 'foo': 'bar' }, ranges: {} });
-        expect(wrapper.state().activeFacets).toEqual({ filters: { 'foo': 'bar' }, ranges: {} });
+        wrapper.instance().facetsChanged({ filters: { foo: 'bar' }, ranges: {} });
+        expect(wrapper.state().activeFacets).toEqual({ filters: { foo: 'bar' }, ranges: {} });
         expect(wrapper.state().page).toEqual(1);
         expect(testAction).toHaveBeenCalled();
     });
@@ -127,13 +138,24 @@ describe('myDatasets test', () => {
         const wrapper = setup({ loadingPublicationsList: true, publicationsList: [] });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({ loadingPublicationsList: false, publicationsList: [1, 2, 3], history: {}, location: {} });
+        wrapper
+            .instance()
+            .componentWillReceiveProps({
+                loadingPublicationsList: false,
+                publicationsList: [1, 2, 3],
+                history: {},
+                location: {},
+            });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
     it('gets publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction }, thisUrl: routes.pathConfig.dataset.mine });
+        const wrapper = setup({
+            accountLoading: true,
+            actions: { loadAuthorPublications: testAction },
+            thisUrl: routes.pathConfig.dataset.mine,
+        });
 
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'POP' },
@@ -150,7 +172,11 @@ describe('myDatasets test', () => {
 
     it('gets publications when user clicks back and state is not set', () => {
         const testAction = jest.fn();
-        const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction }, thisUrl: routes.pathConfig.dataset.mine });
+        const wrapper = setup({
+            accountLoading: true,
+            actions: { loadAuthorPublications: testAction },
+            thisUrl: routes.pathConfig.dataset.mine,
+        });
         wrapper.instance().componentWillReceiveProps({
             history: { action: 'POP' },
             location: { pathname: routes.pathConfig.dataset.mine, state: null },
@@ -163,11 +189,17 @@ describe('myDatasets test', () => {
         expect(wrapper.state().page).toEqual(1);
     });
 
-    it('doesn\'t retrieve data from history if user navigates to next page', () => {
+    it("doesn't retrieve data from history if user navigates to next page", () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper.instance().componentWillReceiveProps({ history: { action: 'PUSH' }, location: { pathname: routes.pathConfig.dataset.mine }, mine: {} });
+        wrapper
+            .instance()
+            .componentWillReceiveProps({
+                history: { action: 'PUSH' },
+                location: { pathname: routes.pathConfig.dataset.mine },
+                mine: {},
+            });
         expect(testAction).not.toHaveBeenCalled();
     });
 });

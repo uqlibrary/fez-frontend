@@ -25,7 +25,12 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({ requireOpenAccessStatus: true, onAccessConditionChange: testFunction, uploadedFile: file, index: 0 });
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            onAccessConditionChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
 
         wrapper.instance()._updateAccessCondition(8);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 8);
@@ -35,7 +40,12 @@ describe('FileUploadRow', () => {
         const testFunction = jest.fn();
         const file = new File([''], 'a.txt');
         file.date = '2017-01-01';
-        const wrapper = setup({ requireOpenAccessStatus: true, onAccessConditionChange: testFunction, uploadedFile: file, index: 0 });
+        const wrapper = setup({
+            requireOpenAccessStatus: true,
+            onAccessConditionChange: testFunction,
+            uploadedFile: file,
+            index: 0,
+        });
 
         wrapper.instance()._updateAccessCondition(9);
         expect(testFunction).toHaveBeenCalledWith(file, 0, 9);
@@ -60,20 +70,28 @@ describe('FileUploadRow', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('WithStyles(FileUploadRowMobileView)').props()
+        wrapper
+            .find('WithStyles(FileUploadRowMobileView)')
+            .props()
             .onDelete();
         expect(showConfirmationFn).not.toBeCalled();
 
-        wrapper.find('ConfirmDialogBox').props()
+        wrapper
+            .find('ConfirmDialogBox')
+            .props()
             .onRef({
                 showConfirmation: showConfirmationFn,
             });
 
-        wrapper.find('WithStyles(FileUploadRowMobileView)').props()
+        wrapper
+            .find('WithStyles(FileUploadRowMobileView)')
+            .props()
             .onDelete();
         expect(showConfirmationFn).toHaveBeenCalled();
 
-        wrapper.find('ConfirmDialogBox').props()
+        wrapper
+            .find('ConfirmDialogBox')
+            .props()
             .onAction();
         expect(onDeleteFn).toHaveBeenCalled();
     });

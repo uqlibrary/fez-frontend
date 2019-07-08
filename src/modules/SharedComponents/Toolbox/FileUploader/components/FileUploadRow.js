@@ -44,20 +44,19 @@ export class FileUploadRow extends PureComponent {
     };
 
     _deleteFile = () => {
-        !!this.props.onDelete &&
-        this.props.onDelete(this.props.uploadedFile, this.props.index);
+        !!this.props.onDelete && this.props.onDelete(this.props.uploadedFile, this.props.index);
     };
 
-    calculateFilesizeToDisplay = (size) => {
+    calculateFilesizeToDisplay = size => {
         const exponent = Math.floor(Math.log(size) / Math.log(config.SIZE_BASE));
         return `${(size / Math.pow(config.SIZE_BASE, exponent)).toFixed(1)}${config.SIZE_UNITS[exponent]}`;
     };
 
-    _updateAccessCondition = (newValue) => {
+    _updateAccessCondition = newValue => {
         this.props.onAccessConditionChange(this.props.uploadedFile, this.props.index, newValue);
     };
 
-    _updateEmbargoDate = (newValue) => {
+    _updateEmbargoDate = newValue => {
         this.props.onEmbargoDateChange(this.props.uploadedFile, this.props.index, newValue);
     };
 
@@ -69,7 +68,8 @@ export class FileUploadRow extends PureComponent {
         const embargoDate = uploadedFile[config.FILE_META_KEY_EMBARGO_DATE];
 
         const FileUploadRowView = this.props.width === 'xs' ? FileUploadRowMobileView : FileUploadRowDefaultView;
-        const fileUploadRowLocale = this.props.width === 'xs' ? this.props.locale.mobileView : this.props.locale.defaultView;
+        const fileUploadRowLocale =
+            this.props.width === 'xs' ? this.props.locale.mobileView : this.props.locale.defaultView;
 
         return (
             <Fragment>

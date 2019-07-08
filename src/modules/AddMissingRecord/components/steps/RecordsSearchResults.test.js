@@ -155,6 +155,7 @@ describe('Search record results', () => {
                     rek_updated_date: '2018-03-07T23:30:00Z',
                     rek_file_downloads: 0,
                     rek_citation:
+                        // eslint-disable-next-line max-len
                         ' <i><a class="citation_title" title="Click to view Book: Early Onset Scoliosis" href="/view/UQ:795469">Early Onset Scoliosis</a></i>. Edited by <span class="citation_contributor"><span class="citation_contributor">El-Hawary, Ron</span> and <span class="citation_contributor">Eberson, Craig P.</span></span>  <span class="citation_place_of_publication">Cham</span>: <span class="citation_publisher">Springer International Publishing</span>, <span class="citation_date">2018</span>. doi:<span class="citation_doi">10.1007/978-3-319-71580-3</span>',
                     rek_genre_xsdmf_id: null,
                     rek_genre: null,

@@ -42,13 +42,7 @@ describe('SimpleSearchComponent', () => {
             },
         });
         wrapper.setState({ showMobile: true });
-        expect(
-            toJson(
-                wrapper.find(
-                    '.mobileHeaderTest Hidden'
-                )
-            )
-        ).toMatchSnapshot();
+        expect(toJson(wrapper.find('.mobileHeaderTest Hidden'))).toMatchSnapshot();
     });
 
     it('should show prefix icon when in header', () => {
@@ -60,14 +54,7 @@ describe('SimpleSearchComponent', () => {
                 searchIconPrefix: 'searchIconPrefix',
             },
         });
-        expect(
-            toJson(
-                wrapper.find(
-                    'WithStyles(Grid).headerClass WithStyles(Grid)'
-                )
-                    .first()
-            )
-        ).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(Grid).headerClass WithStyles(Grid)').first())).toMatchSnapshot();
     });
 
     it('should render show prefix icon in the search box', () => {
@@ -80,7 +67,9 @@ describe('SimpleSearchComponent', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         const preventDefaultFn = jest.fn();
-        wrapper.find('form').props()
+        wrapper
+            .find('form')
+            .props()
             .onSubmit({ preventDefault: preventDefaultFn });
         expect(preventDefaultFn).toHaveBeenCalled();
     });
@@ -99,7 +88,7 @@ describe('SimpleSearchComponent', () => {
         expect(testFn).toHaveBeenCalledWith('new search value');
     });
 
-    it('should not submit search if ENTER wasn\'t pressed', () => {
+    it("should not submit search if ENTER wasn't pressed", () => {
         const testMethod = jest.fn();
         const wrapper = setup({ onSearch: testMethod });
 
@@ -162,7 +151,9 @@ describe('SimpleSearchComponent', () => {
         wrapper.setState({ searchText: 'this is way too long' });
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
-        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual('Must be 5 characters or less');
+        expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(
+            'Must be 5 characters or less'
+        );
     });
 
     it('searchTextValidationMessage() should return false for being fine', () => {
@@ -194,11 +185,7 @@ describe('SimpleSearchComponent', () => {
         const wrapper = getElement(SimpleSearchComponent, {
             onSearchTextChange: () => {},
         });
-        const defaultPropMethodNames = [
-            'onSearch',
-            'onToggleSearchMode',
-            'onInvalidSearch',
-        ];
+        const defaultPropMethodNames = ['onSearch', 'onToggleSearchMode', 'onInvalidSearch'];
         defaultPropMethodNames.forEach(methodName => {
             expect(wrapper.instance().props[methodName]()).toBeUndefined();
         });

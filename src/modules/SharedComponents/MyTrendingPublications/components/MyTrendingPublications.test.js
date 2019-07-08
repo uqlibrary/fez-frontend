@@ -17,12 +17,16 @@ function setup(testProps, isShallow = true) {
 
 describe('Component MyTrendingPublications', () => {
     it('should render trending publications', () => {
-        const wrapper = setup({ trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications) });
+        const wrapper = setup({
+            trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not render trending publications when there are no matching source counts in the api response', () => {
-        const wrapper = setup({ trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources) });
+        const wrapper = setup({
+            trendingPublicationsList: transformTrendingPublicationsMetricsData(trendingPublicationsWithNoSources),
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

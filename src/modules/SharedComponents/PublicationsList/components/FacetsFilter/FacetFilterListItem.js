@@ -9,7 +9,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
 
-const styles = (theme) => ({
+const styles = theme => ({
     listItemGutters: {
         paddingLeft: theme.spacing.unit,
         paddingRight: theme.spacing.unit,
@@ -39,11 +39,7 @@ export function FacetsFilterListItem({ facetTitle, classes, open, key, children,
                 {open ? <ExpandLess /> : <ExpandMore />}
             </ListItem>
             {
-                <Collapse
-                    in={open}
-                    timeout="auto"
-                    unmountOnExit
-                >
+                <Collapse in={open} timeout="auto" unmountOnExit>
                     {children}
                 </Collapse>
             }
@@ -62,7 +58,11 @@ FacetsFilterListItem.propTypes = {
 };
 
 function isOpenOrDisabled(prevProps, nextProps) {
-    return prevProps.open === nextProps.open && prevProps.disabled === nextProps.disabled && prevProps.children === nextProps.children;
+    return (
+        prevProps.open === nextProps.open &&
+        prevProps.disabled === nextProps.disabled &&
+        prevProps.children === nextProps.children
+    );
 }
 
 export default React.memo(withStyles(styles)(FacetsFilterListItem), isOpenOrDisabled);
