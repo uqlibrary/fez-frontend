@@ -1,18 +1,17 @@
-import {StandardCard, Cards} from './StandardCard';
+import { StandardCard, Cards } from './StandardCard';
 
 function setup(testProps, isShallow = true) {
     const props = {
         title: 'card title',
         classes: {
-            card: 'testClass'
+            card: 'testClass',
         },
-        ...testProps
+        ...testProps,
     };
     return getElement(Cards, props, isShallow);
 }
 
 describe('Cards component', () => {
-
     it('renders with title and no help icon', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -23,8 +22,8 @@ describe('Cards component', () => {
             help: {
                 title: 'help',
                 text: 'help text',
-                buttonLabel: 'OK'
-            }
+                buttonLabel: 'OK',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -63,7 +62,7 @@ describe('StandardCard component', () => {
     it('should render StyledCard with same props', () => {
         const wrapper = getElement(StandardCard, {
             test1: 'test1value',
-            test2: 'test2value'
+            test2: 'test2value',
         }, true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });

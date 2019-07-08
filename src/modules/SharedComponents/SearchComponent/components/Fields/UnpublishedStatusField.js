@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
-import {UNPUBLISHED_STATUS} from 'config/general';
+import { connect } from 'react-redux';
+import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { UNPUBLISHED_STATUS } from 'config/general';
 
 export const mapStateToProps = (state, props) => {
     return {
@@ -13,7 +13,7 @@ export const mapStateToProps = (state, props) => {
         placeholder: props.placeholder,
         required: props.required,
         errorText: !!props.meta && props.meta.error || props.error && !!props.errorText || '',
-        error: !!props.meta && !!props.meta.error || props.error || false
+        error: !!props.meta && !!props.meta.error || props.error || false,
     };
 };
 

@@ -9,7 +9,7 @@ import propFilter from '../../helpers/_filterProps';
 import InputLabel from '@material-ui/core/InputLabel';
 
 const SelectFieldWrapper = props => {
-    const filteredProps = propFilter({...props, forceError: true}, Select.propTypes);
+    const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
     filteredProps.onChange = (event) => props.input.onChange(event.target.value);
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
@@ -17,11 +17,11 @@ const SelectFieldWrapper = props => {
     delete filteredProps.errorText;
     return (
         <React.Fragment>
-            <FormControl error={error} style={{width: '100%'}} required={filteredProps.required}>
+            <FormControl error={error} style={{ width: '100%' }} required={filteredProps.required}>
                 <InputLabel id={`${filteredProps.label}-label`}>{filteredProps.label}</InputLabel>
                 <Select
                     id={`${filteredProps.label}`}
-                    inputProps={{'aria-labelledby': `${filteredProps.label}-label`, id: filteredProps.label}}
+                    inputProps={{ 'aria-labelledby': `${filteredProps.label}-label`, id: filteredProps.label }}
                     {...filteredProps}
                     autoWidth
                 />
@@ -39,8 +39,8 @@ SelectFieldWrapper.propTypes = {
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,
-        buttonLabel: PropTypes.string
-    })
+        buttonLabel: PropTypes.string,
+    }),
 };
 
 export default SelectFieldWrapper;

@@ -130,7 +130,7 @@ export const AdminSection = ({ disabled }) => (
 );
 
 AdminSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(AdminSection);

@@ -1,19 +1,19 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
-import {PubmedCentralLink} from 'modules/SharedComponents/PubmedCentralLink';
+import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 
 import locale from 'locale/viewRecord';
-import {openAccessConfig} from 'config';
+import { openAccessConfig } from 'config';
 
 const styles = (theme) => ({
     header: {
@@ -22,20 +22,20 @@ const styles = (theme) => ({
     },
     description: {
         whiteSpace: 'nowrap',
-        textOverflow: 'ellipsis'
+        textOverflow: 'ellipsis',
     },
     body2: {
-        ...theme.typography.body2
-    }
+        ...theme.typography.body2,
+    },
 });
 
 export class LinksClass extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
-    LinkRow = ({link, description, openAccessStatus}) => (
+    LinkRow = ({ link, description, openAccessStatus }) => (
         <Grid container spacing={32} className={this.props.classes.header} alignItems={'center'} alignContent={'center'} justify={'center'}>
             <Grid item xs={12} sm={6}>
                 <Typography variant={'body2'}>{link}</Typography>
@@ -52,7 +52,7 @@ export class LinksClass extends PureComponent {
             index: 'doi',
             link: (<DoiCitationView doi={doi} />),
             description: locale.viewRecord.sections.links.doiDescription,
-            openAccessStatus: openAccessStatus
+            openAccessStatus: openAccessStatus,
         };
     };
 
@@ -61,7 +61,7 @@ export class LinksClass extends PureComponent {
             index: 'pmc',
             link: <PubmedCentralLink pubmedCentralId={pubmedCentralId}/>,
             description: locale.viewRecord.sections.links.pubmedCentralLinkDescription,
-            openAccessStatus: openAccessStatus
+            openAccessStatus: openAccessStatus,
         };
     };
 
@@ -76,15 +76,15 @@ export class LinksClass extends PureComponent {
                 </ExternalLink>
             ),
             description: locale.viewRecord.sections.links.googleScholar.linkDescription,
-            openAccessStatus: openAccessStatus
+            openAccessStatus: openAccessStatus,
         };
     };
 
     getPublicationLink = (link, index, openAccessStatus = {}) => {
-        const linkDescription = this.props.publication.fez_record_search_key_link_description
-            && this.props.publication.fez_record_search_key_link_description[index]
-            && this.props.publication.fez_record_search_key_link_description[index].rek_link_description
-            || locale.viewRecord.sections.links.linkMissingDescriptionTitle;
+        const linkDescription = this.props.publication.fez_record_search_key_link_description &&
+            this.props.publication.fez_record_search_key_link_description[index] &&
+            this.props.publication.fez_record_search_key_link_description[index].rek_link_description ||
+            locale.viewRecord.sections.links.linkMissingDescriptionTitle;
         return {
             index: index,
             link: (
@@ -93,40 +93,40 @@ export class LinksClass extends PureComponent {
                 </ExternalLink>
             ),
             description: linkDescription,
-            openAccessStatus: openAccessStatus
+            openAccessStatus: openAccessStatus,
         };
     };
 
     render() {
         const record = this.props.publication;
 
-        if (!(record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0
-            || record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id
-            || record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi
-            || record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI)) {
+        if (!(record.fez_record_search_key_link && record.fez_record_search_key_link.length > 0 ||
+            record.fez_record_search_key_pubmed_central_id && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id ||
+            record.fez_record_search_key_doi && record.fez_record_search_key_doi.rek_doi ||
+            record.fez_record_search_key_oa_status && record.fez_record_search_key_oa_status.rek_oa_status === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI)) {
             return null;
         }
 
         const txt = locale.viewRecord.sections.links;
-        const pubmedCentralId = record.fez_record_search_key_pubmed_central_id
-            && record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
-        const doi = record.fez_record_search_key_doi
-            && record.fez_record_search_key_doi.rek_doi;
-        const openAccessStatusId = record.fez_record_search_key_oa_status
-            && record.fez_record_search_key_oa_status.rek_oa_status;
-        const hasLinks = record.fez_record_search_key_link
-            && record.fez_record_search_key_link.length > 0;
+        const pubmedCentralId = record.fez_record_search_key_pubmed_central_id &&
+            record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id;
+        const doi = record.fez_record_search_key_doi &&
+            record.fez_record_search_key_doi.rek_doi;
+        const openAccessStatusId = record.fez_record_search_key_oa_status &&
+            record.fez_record_search_key_oa_status.rek_oa_status;
+        const hasLinks = record.fez_record_search_key_link &&
+            record.fez_record_search_key_link.length > 0;
 
         const pmcOpenAccessStatus = {
             isOpenAccess: true,
             embargoDate: null,
-            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC,
         };
 
         const gcOpenAccessStatus = {
             isOpenAccess: true,
             embargoDate: null,
-            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_PMC,
         };
 
         const doiOpenAccessStatus = record.calculateOpenAccess && openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI
@@ -176,6 +176,6 @@ export class LinksClass extends PureComponent {
     }
 }
 
-const StyledLinksClass = withStyles(styles, {withTheme: true})(LinksClass);
+const StyledLinksClass = withStyles(styles, { withTheme: true })(LinksClass);
 const Links = (props) => <StyledLinksClass {...props}/>;
 export default Links;

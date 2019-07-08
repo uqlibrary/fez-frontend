@@ -28,7 +28,7 @@ const onSubmit = (values, dispatch) => {
 
 let PrototypeContainer = reduxForm({
     form: FORM_NAME,
-    onSubmit
+    onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state) => {
@@ -58,9 +58,9 @@ const mapStateToProps = (state) => {
                                 dataStreams: recordToView.fez_datastream_info.filter(isFileValid),
                             }
                             : {}
-                    )
-                }
-            }
+                    ),
+                },
+            },
         };
     }
     return {
@@ -74,7 +74,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-    actions: bindActionCreators(actions, dispatch)
+    actions: bindActionCreators(actions, dispatch),
 });
 
 PrototypeContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);

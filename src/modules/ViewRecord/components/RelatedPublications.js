@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {pathConfig} from 'config/routes';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Link} from 'react-router-dom';
+import { pathConfig } from 'config/routes';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = () => ({
     list: {
-        margin: 0
+        margin: 0,
     },
 });
 
@@ -21,7 +21,7 @@ export class RelatedPublicationsClass extends PureComponent {
         parentSearchKey: PropTypes.object,
         childrenSearchKey: PropTypes.object.isRequired,
         showPublicationTitle: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -30,9 +30,9 @@ export class RelatedPublicationsClass extends PureComponent {
             key: 'fez_record_search_key_has_related_datasets',
             pid: 'rek_has_related_datasets',
             title: 'rek_has_related_datasets_lookup',
-            order: 'rek_has_related_datasets_order'
+            order: 'rek_has_related_datasets_order',
         },
-        showPublicationTitle: false
+        showPublicationTitle: false,
     };
 
     renderList = (publication, parentSearchKey, childrenSearchKey, showPublicationTitle) => {
@@ -66,17 +66,18 @@ export class RelatedPublicationsClass extends PureComponent {
                     item[searchKey.title] && item[searchKey.title].trim().length > 0
                 )).sort((item1, item2) => (
                     item1[searchKey.order] - item2[searchKey.order]
-                )).map((item, index) => {
-                    return (
-                        <li key={`${searchKey.key}-${index}`}>
-                            <Typography variant="body2">
-                                {
-                                    this.renderTitle(item, searchKey)
-                                }
-                            </Typography>
-                        </li>
-                    );
-                })
+                ))
+                    .map((item, index) => {
+                        return (
+                            <li key={`${searchKey.key}-${index}`}>
+                                <Typography variant="body2">
+                                    {
+                                        this.renderTitle(item, searchKey)
+                                    }
+                                </Typography>
+                            </li>
+                        );
+                    })
             );
         } else {
             return null;
@@ -91,7 +92,7 @@ export class RelatedPublicationsClass extends PureComponent {
     }
 
     render() {
-        const {publication, parentSearchKey, childrenSearchKey, title, showPublicationTitle} = this.props;
+        const { publication, parentSearchKey, childrenSearchKey, title, showPublicationTitle } = this.props;
 
         if ((!parentSearchKey || !publication[parentSearchKey.key] || publication[parentSearchKey.key].length === 0) &&
             (!publication[childrenSearchKey.key] || publication[childrenSearchKey.key].length === 0)) {
@@ -111,6 +112,6 @@ export class RelatedPublicationsClass extends PureComponent {
 }
 
 
-const StyledRelatedPublicationsClass = withStyles(styles, {withTheme: true})(RelatedPublicationsClass);
+const StyledRelatedPublicationsClass = withStyles(styles, { withTheme: true })(RelatedPublicationsClass);
 const RelatedPublications = (props) => <StyledRelatedPublicationsClass {...props}/>;
 export default RelatedPublications;

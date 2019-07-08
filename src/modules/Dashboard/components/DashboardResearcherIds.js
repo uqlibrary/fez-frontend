@@ -1,25 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import locale from 'locale/pages';
 // import {pathConfig} from 'config/routes';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme =>({
     researcherIDlink: {
         '&:hover': {
-            cursor: 'pointer'
+            cursor: 'pointer',
         },
         '& .error': {
             '-webkit-filter': 'grayscale(1)',
-            filter: 'grayscale(1)'
-        }
+            filter: 'grayscale(1)',
+        },
     },
     orcidLink: {
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class DashboardResearcherIdsClass extends React.Component {
@@ -29,17 +29,17 @@ export class DashboardResearcherIdsClass extends React.Component {
             researcher: PropTypes.string,
             scopus: PropTypes.string,
             google_scholar: PropTypes.string,
-            orcid: PropTypes.string
+            orcid: PropTypes.string,
         }),
         authenticated: PropTypes.shape({
             publons: PropTypes.bool,
             researcher: PropTypes.bool,
             scopus: PropTypes.bool,
             google_scholar: PropTypes.bool,
-            orcid: PropTypes.bool
+            orcid: PropTypes.bool,
         }),
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     navigateToRoute = (event, item) => {
@@ -48,11 +48,11 @@ export class DashboardResearcherIdsClass extends React.Component {
     };
 
     render() {
-        const {values, authenticated, classes} = this.props;
+        const { values, authenticated, classes } = this.props;
         const txt = locale.pages.dashboard.header.dashboardResearcherIds;
         const link = locale.pages.dashboard.header.dashboardResearcherIds.links;
         return (
-            <Grid container spacing={8} alignItems={'center'} style={{marginTop: 12}}>
+            <Grid container spacing={8} alignItems={'center'} style={{ marginTop: 12 }}>
                 {values && Object.keys(values).map((item, index) => (
                     <Grid item key={index}>
                         {/* external URL's */}
@@ -63,7 +63,7 @@ export class DashboardResearcherIdsClass extends React.Component {
                             <div
                                 title={!!values[item] ? (txt.researcherIsLinked.replace('[resource]', txt.titles[item]).replace('[id]', values[item])) : (txt.researcherIsNotLinked.replace('[resource]', txt.titles[item]))}
                                 className={'fez-icon ' + item + (values[item] && authenticated[item] ? ' ok' : ' error')}
-                                style={{width: 32, height: 32, borderRadius: 32}}
+                                style={{ width: 32, height: 32, borderRadius: 32 }}
                             />
                         </ExternalLink>
                         }
@@ -101,6 +101,6 @@ export class DashboardResearcherIdsClass extends React.Component {
     }
 }
 
-const StyledDashboardResearcherIds = withStyles(styles, {withTheme: true})(DashboardResearcherIdsClass);
+const StyledDashboardResearcherIds = withStyles(styles, { withTheme: true })(DashboardResearcherIdsClass);
 const DashboardResearcherIds = (props) => <StyledDashboardResearcherIds {...props}/>;
 export default DashboardResearcherIds;

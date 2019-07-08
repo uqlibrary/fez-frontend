@@ -1,7 +1,7 @@
 import FileSaver from 'file-saver';
 import locale from 'locale/components';
 import moment from 'moment';
-import {EXPORT_FORMAT_TO_EXTENSION} from 'config/general';
+import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
 export const getExceptionMessage = (format) => `Export format ${format} is not supported.`;
 
@@ -12,7 +12,8 @@ export const getExceptionMessage = (format) => `Export format ${format} is not s
  * @return {string}
  */
 export const getFileName = (extension) =>
-    `${locale.components.export.filename.prefix}_${moment().clone().format(locale.components.export.filename.dateFormat)}.${extension}`;
+    `${locale.components.export.filename.prefix}_${moment().clone()
+        .format(locale.components.export.filename.dateFormat)}.${extension}`;
 
 /**
  * For a given response data that should be treated as binary, trigger a file download dialog

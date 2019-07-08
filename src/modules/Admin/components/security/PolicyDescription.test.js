@@ -3,7 +3,7 @@ import { PolicyDescription } from './PolicyDescription';
 describe('PolicyDescription helper', () => {
     it('should render properly', () => {
         const wrapper = getElement(PolicyDescription, {
-            selectedPolicyKey: 1
+            selectedPolicyKey: 1,
         }, true);
         expect(toJson(wrapper)).toEqual('Administrators (1)');
     });
@@ -19,10 +19,10 @@ describe('PolicyDescription helper', () => {
             {
                 selectedPolicyKey: 2,
                 policyArray: [
-                    { id: 1, value: 1, name: 'name 1'},
-                    { id: 2, value: 2, name: 'name 2'},
-                    { id: 3, value: 3, name: 'name 3'}
-                ]
+                    { id: 1, value: 1, name: 'name 1' },
+                    { id: 2, value: 2, name: 'name 2' },
+                    { id: 3, value: 3, name: 'name 3' },
+                ],
             },
             true
         );

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class ConferenceProceedingsCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -16,18 +16,18 @@ export default class ConferenceProceedingsCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            conferenceName: this.props.publication.fez_record_search_key_conference_name ?
-                this.props.publication.fez_record_search_key_conference_name.rek_conference_name : null,
-            conferenceLocation: this.props.publication.fez_record_search_key_conference_location ?
-                this.props.publication.fez_record_search_key_conference_location.rek_conference_location : null,
-            conferenceDate: this.props.publication.fez_record_search_key_conference_dates ?
-                this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates : null,
-            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication ?
-                this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
-            publisher: this.props.publication.fez_record_search_key_publisher ?
-                this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null
+            conferenceName: this.props.publication.fez_record_search_key_conference_name
+                ? this.props.publication.fez_record_search_key_conference_name.rek_conference_name : null,
+            conferenceLocation: this.props.publication.fez_record_search_key_conference_location
+                ? this.props.publication.fez_record_search_key_conference_location.rek_conference_location : null,
+            conferenceDate: this.props.publication.fez_record_search_key_conference_dates
+                ? this.props.publication.fez_record_search_key_conference_dates.rek_conference_dates : null,
+            placeOfPublication: this.props.publication.fez_record_search_key_place_of_publication
+                ? this.props.publication.fez_record_search_key_place_of_publication.rek_place_of_publication : null,
+            publisher: this.props.publication.fez_record_search_key_publisher
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for Conference Proceedings

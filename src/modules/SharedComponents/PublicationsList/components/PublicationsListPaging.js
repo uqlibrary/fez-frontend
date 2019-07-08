@@ -1,27 +1,27 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
+import { locale } from 'locale';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ChevronRight from '@material-ui/icons/ChevronRight';
 import ChevronLeft from '@material-ui/icons/ChevronLeft';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 
 const styles = theme => ({
     pageButton: {
-        width: 32, height: 32, minWidth: 32, minHeight: 32, margin: '0 2px'
+        width: 32, height: 32, minWidth: 32, minHeight: 32, margin: '0 2px',
     },
     nextPrevButtons: {
-        height: 32, minHeight: 32, maxHeight: 32, overflow: 'hidden'
+        height: 32, minHeight: 32, maxHeight: 32, overflow: 'hidden',
     },
     nextPrevIcons: {
-        fontSize: '1rem'
+        fontSize: '1rem',
     },
     fakeDisabled: {
-        backgroundColor: theme.palette.primary.main
-    }
+        backgroundColor: theme.palette.primary.main,
+    },
 });
 
 export class PublicationsListPaging extends Component {
@@ -34,20 +34,20 @@ export class PublicationsListPaging extends Component {
             to: PropTypes.number,
             total: PropTypes.number,
             per_page: PropTypes.number,
-            current_page: PropTypes.number
-        })
+            current_page: PropTypes.number,
+        }),
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            ...this.props.pagingData
+            ...this.props.pagingData,
         };
     }
 
     componentWillReceiveProps(nextProps) {
         if (!nextProps.disabled && JSON.stringify(nextProps.pagingData) !== JSON.stringify(this.state)) {
-            this.setState({...nextProps.pagingData});
+            this.setState({ ...nextProps.pagingData });
         }
     }
 
@@ -66,7 +66,7 @@ export class PublicationsListPaging extends Component {
                 key={key}
                 size={'small'}
                 className={`${classNames(this.props.classes.pageButton, isCurrentPage && this.props.classes.pageButton)} paging-button`}
-                onClick={() => {this.pageChanged(key);}}
+                onClick={() => { this.pageChanged(key); }}
                 disabled={this.props.disabled || isCurrentPage}
                 color={isCurrentPage ? 'primary' : 'default'}
                 aria-label={locale.components.paging.pageButtonAriaLabel
@@ -84,13 +84,14 @@ export class PublicationsListPaging extends Component {
         const startPage = (currentPage - pageBracket < 1) ? 1 : currentPage - pageBracket;
         const endPage = (currentPage + pageBracket > totalPages) ? totalPages : (currentPage + pageBracket);
         const totalToRender = endPage - startPage + 1;
-        return Array(totalToRender).fill().map((page, index) => {
-            return this.renderButton(index + startPage);
-        });
+        return Array(totalToRender).fill()
+            .map((page, index) => {
+                return this.renderButton(index + startPage);
+            });
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.paging;
         const totalPages = this.state.total && this.state.per_page ? Math.ceil(this.state.total / this.state.per_page) : 0;
         const currentPage = this.state.current_page;
@@ -106,7 +107,7 @@ export class PublicationsListPaging extends Component {
                             currentPage >= 1 &&
                                 <Grid item>
                                     <Button
-                                        style={{paddingLeft: 4}}
+                                        style={{ paddingLeft: 4 }}
                                         variant={'text'}
                                         className={`${classes.nextPrevButtons} paging-previous`}
                                         onClick={() => {
@@ -118,7 +119,7 @@ export class PublicationsListPaging extends Component {
                                     </Button>
                                 </Grid>
                         }
-                        <Grid item style={{flexGrow: 1}}/>
+                        <Grid item style={{ flexGrow: 1 }}/>
                         <Hidden xsDown>
                             <Grid item>
                                 {(currentPage - (txt.pagingBracket + 1) >= 1) && this.renderButton(1)}
@@ -129,9 +130,9 @@ export class PublicationsListPaging extends Component {
                             </Grid>
                         </Hidden>
                         <Hidden smUp>
-                            <Grid item style={{flexGrow: 1}}>
+                            <Grid item style={{ flexGrow: 1 }}>
                                 <Button
-                                    style={{margin: '0 auto'}}
+                                    style={{ margin: '0 auto' }}
                                     variant={'text'}
                                     className={classes.nextPrevButtons}
                                     children={txt.pageOf
@@ -140,7 +141,7 @@ export class PublicationsListPaging extends Component {
                                     }/>
                             </Grid>
                         </Hidden>
-                        <Grid item style={{flexGrow: 1}}/>
+                        <Grid item style={{ flexGrow: 1 }}/>
                         {
                             currentPage <= totalPages &&
                             <Grid item>
@@ -164,4 +165,4 @@ export class PublicationsListPaging extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(PublicationsListPaging);
+export default withStyles(styles, { withTheme: true })(PublicationsListPaging);

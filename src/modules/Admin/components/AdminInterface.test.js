@@ -6,33 +6,33 @@ import { useTabbedContext, useRecordContext } from 'context';
 jest.mock('redux-form/immutable');
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
-    set: jest.fn()
+    set: jest.fn(),
 }));
 
 jest.mock('query-string', () => ({
     parse: jest.fn(() => ({
-        tab: 'files'
-    }))
+        tab: 'files',
+    })),
 }));
 import queryString from 'query-string';
 
 function setup(testProps = {}, isShallow = true) {
     const props = {
         classes: {
-            tabIndicator: 'tabindicator'
+            tabIndicator: 'tabindicator',
         },
         submitting: false,
         handleSubmit: jest.fn(),
         location: {
-            search: ''
+            search: '',
         },
         tabs: {
             security: {
                 activated: true,
-                component: () => '<p>Security component</p>'
-            }
+                component: () => '<p>Security component</p>',
+            },
         },
-        ...testProps
+        ...testProps,
     };
 
     return getElement(AdminInterface, props, isShallow);
@@ -43,8 +43,8 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
@@ -53,13 +53,13 @@ describe('AdminInterface component', () => {
             tabs: {
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
-                }
-            }
+                    component: () => 'FilesSectionComponent',
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -68,8 +68,8 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
@@ -78,13 +78,13 @@ describe('AdminInterface component', () => {
             tabs: {
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
-                }
-            }
+                    component: () => 'FilesSectionComponent',
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -93,8 +93,8 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
@@ -103,21 +103,21 @@ describe('AdminInterface component', () => {
             tabs: {
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
+                    component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
                     activated: false,
-                    component: () => 'IdentifiersSectionComponent'
+                    component: () => 'IdentifiersSectionComponent',
                 },
                 admin: {
                     activated: false,
-                    component: () => 'AdminSectionComponent'
-                }
-            }
+                    component: () => 'AdminSectionComponent',
+                },
+            },
         });
 
         expect(wrapper.find('WithStyles(Tab)')).toHaveLength(2);
@@ -128,8 +128,8 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
@@ -138,21 +138,21 @@ describe('AdminInterface component', () => {
             tabs: {
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
+                    component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
                     activated: false,
-                    component: () => 'IdentifiersSectionComponent'
+                    component: () => 'IdentifiersSectionComponent',
                 },
                 admin: {
                     activated: false,
-                    component: () => 'AdminSectionComponent'
-                }
-            }
+                    component: () => 'AdminSectionComponent',
+                },
+            },
         });
 
         expect(wrapper.find('WithStyles(Tab)')).toHaveLength(0);
@@ -161,14 +161,14 @@ describe('AdminInterface component', () => {
 
     it('should render security tab from query string params by default', () => {
         queryString.parse = jest.fn(() => ({
-            tab: 'security'
+            tab: 'security',
         }));
 
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
@@ -177,21 +177,21 @@ describe('AdminInterface component', () => {
             tabs: {
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
+                    component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
                     activated: true,
-                    component: () => 'IdentifiersSectionComponent'
+                    component: () => 'IdentifiersSectionComponent',
                 },
                 admin: {
                     activated: true,
-                    component: () => 'AdminSectionComponent'
+                    component: () => 'AdminSectionComponent',
                 },
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
-            }
+            },
         });
 
         expect(wrapper.find('WithStyles(Tab)')).toHaveLength(4);
@@ -202,8 +202,8 @@ describe('AdminInterface component', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_title: 'This is test record'
-            }
+                rek_title: 'This is test record',
+            },
         }));
 
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
@@ -212,26 +212,27 @@ describe('AdminInterface component', () => {
             tabs: {
                 files: {
                     activated: true,
-                    component: () => 'FilesSectionComponent'
+                    component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
                     activated: true,
-                    component: () => 'IdentifiersSectionComponent'
+                    component: () => 'IdentifiersSectionComponent',
                 },
                 admin: {
                     activated: true,
-                    component: () => 'AdminSectionComponent'
+                    component: () => 'AdminSectionComponent',
                 },
                 security: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent'
+                    component: () => 'SecuritySectionComponent',
                 },
-            }
+            },
         });
 
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
 
-        wrapper.find('WithStyles(Tabs)').props().onChange({}, 'files');
+        wrapper.find('WithStyles(Tabs)').props()
+            .onChange({}, 'files');
 
         expect(wrapper.find('TabContainer').props().currentTab).toBe('files');
     });
@@ -245,12 +246,13 @@ describe('AdminInterface component', () => {
         const wrapper = setup({
             submitSucceeded: true,
             history: {
-                go: jest.fn()
-            }
+                go: jest.fn(),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('ConfirmDialogBox').props().onAction();
+        wrapper.find('ConfirmDialogBox').props()
+            .onAction();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

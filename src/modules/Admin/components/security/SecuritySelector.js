@@ -42,7 +42,7 @@ SecuritySelector.propTypes = {
     fieldName: PropTypes.string,
     text: PropTypes.object,
     recordType: PropTypes.string,
-    securityPolicy: PropTypes.number
+    securityPolicy: PropTypes.number,
 };
 
 export default React.memo(SecuritySelector);

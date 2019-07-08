@@ -1,6 +1,6 @@
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
-import {default as formLocale} from 'locale/publicationForm';
+import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -53,7 +53,7 @@ function setup(testProps, isShallow = true) {
         actions: {
             logout: jest.fn(),
             checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn()
+            clearSessionExpiredFlag: jest.fn(),
         },
         ...testProps,
     };
@@ -83,36 +83,36 @@ describe('Collection form test', () => {
     });
 
     it('should render the full form', () => {
-        const wrapper = setup({formValues: {get: () => {return [1, 2, 3]}}});
+        const wrapper = setup({ formValues: { get: () => { return [1, 2, 3]; } } });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
     });
 
     it('should render success panel', () => {
-        const wrapper = setup({submitSucceeded: true, newRecord: {rek_pid: 'UQ:12345'}});
+        const wrapper = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({submitFailed: true});
+        const wrapper = setup({ submitFailed: true });
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
         wrapper.find('WithStyles(Button)').forEach(field => {
             if (field.props().label == formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
-        })
+        });
     });
 
     it('should ask when redirecting from form with data (even if submit failed)', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({dirty: true, submitSucceeded: false});
+        const wrapper = setup({ dirty: true, submitSucceeded: false });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should not ask when redirecting from form with data after successful submit', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({dirty: true, submitSucceeded: true});
+        const wrapper = setup({ dirty: true, submitSucceeded: true });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
@@ -125,19 +125,22 @@ describe('Collection form test', () => {
 
     it('should redirect to cancel page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().cancelSubmit();
+        const wrapper = setup({}).instance()
+            .cancelSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().afterSubmit();
+        const wrapper = setup({}).instance()
+            .afterSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should reload the page', () => {
         jest.spyOn(window.location, 'reload');
-        const wrapper = setup({}).instance().reloadForm();
+        const wrapper = setup({}).instance()
+            .reloadForm();
         expect(window.location.reload).toBeCalled();
     });
 });

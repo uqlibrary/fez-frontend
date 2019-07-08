@@ -13,7 +13,7 @@ export const FILE_UPLOAD_STARTED = 'FILE_UPLOAD_STARTED';
 export const notifyProgress = (name, progress) => {
     return {
         type: `${FILE_UPLOAD_PROGRESS}@${name}`,
-        complete: progress
+        complete: progress,
     };
 };
 
@@ -30,7 +30,7 @@ export const notifyFileUploadProgress = (name, dispatch) => (event) => {
  */
 export const notifyUploadFailed = (name) => {
     return {
-        type: `${FILE_UPLOADED_FAILED}@${name}`
+        type: `${FILE_UPLOADED_FAILED}@${name}`,
     };
 };
 
@@ -41,7 +41,7 @@ export const notifyUploadFailed = (name) => {
  */
 export const clearFileUpload = () => {
     return {
-        type: FILE_UPLOAD_CLEARED
+        type: FILE_UPLOAD_CLEARED,
     };
 };
 
@@ -52,7 +52,7 @@ export const clearFileUpload = () => {
  */
 export const startFileUpload = () => {
     return {
-        type: FILE_UPLOAD_STARTED
+        type: FILE_UPLOAD_STARTED,
     };
 };
 

@@ -1,5 +1,5 @@
 import ManuscriptCitation from './ManuscriptCitation';
-import {manuscript} from 'mock/data/testing/records';
+import { manuscript } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

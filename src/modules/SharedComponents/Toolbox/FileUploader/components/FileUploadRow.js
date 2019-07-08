@@ -1,9 +1,9 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import withWidth from '@material-ui/core/withWidth';
 
 import * as config from '../config';
-import {ConfirmDialogBox} from '../../ConfirmDialogBox';
+import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 
 import FileUploadRowDefaultView from './FileUploadRowDefaultView';
 import FileUploadRowMobileView from './FileUploadRowMobileView';
@@ -19,7 +19,7 @@ export class FileUploadRow extends PureComponent {
         onDelete: PropTypes.func.isRequired,
         onAccessConditionChange: PropTypes.func,
         onEmbargoDateChange: PropTypes.func,
-        width: PropTypes.string
+        width: PropTypes.string,
     };
 
     static defaultProps = {
@@ -29,14 +29,14 @@ export class FileUploadRow extends PureComponent {
                 confirmationTitle: 'Delete file',
                 confirmationMessage: 'Are you sure you want to remove this file from the uploaded queue?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
             filenameColumn: 'File name',
             fileAccessColumn: 'File access',
             embargoDateColumn: 'Embargo date',
             embargoDateClosedAccess: 'No date required',
-            uploadInProgressText: 'Uploading...'
-        }
+            uploadInProgressText: 'Uploading...',
+        },
     };
 
     _showConfirmation = () => {
@@ -62,8 +62,8 @@ export class FileUploadRow extends PureComponent {
     };
 
     render() {
-        const {deleteRecordConfirmation} = this.props.locale;
-        const {requireOpenAccessStatus, disabled, uploadedFile, index, focusOnIndex} = this.props;
+        const { deleteRecordConfirmation } = this.props.locale;
+        const { requireOpenAccessStatus, disabled, uploadedFile, index, focusOnIndex } = this.props;
 
         const accessConditionId = uploadedFile[config.FILE_META_KEY_ACCESS_CONDITION];
         const embargoDate = uploadedFile[config.FILE_META_KEY_EMBARGO_DATE];

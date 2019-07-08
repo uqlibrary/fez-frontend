@@ -1,19 +1,19 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import Card from '@material-ui/core/Card';
 import CardContent from '@material-ui/core/CardContent';
 import CardHeader from '@material-ui/core/CardHeader';
-import {HelpIcon} from '../../HelpDrawer';
-import {withStyles} from '@material-ui/core/styles';
+import { HelpIcon } from '../../HelpDrawer';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
     card: {
         overflow: 'unset',
-        fontWeight: theme.typography.fontWeightRegular
+        fontWeight: theme.typography.fontWeightRegular,
     },
     cardContentNoPadding: {
-        padding: 0
+        padding: 0,
     },
     cardHeaderPrimary: {
         color: theme.palette.white.main,
@@ -29,8 +29,8 @@ export const styles = theme => ({
     },
     fullHeight: {
         border: '10px solid red',
-        height: '100%'
-    }
+        height: '100%',
+    },
 });
 
 export class Cards extends Component {
@@ -47,33 +47,33 @@ export class Cards extends Component {
         customBackgroundColor: PropTypes.any,
         customTitleColor: PropTypes.any,
         customTitleBgColor: PropTypes.any,
-        squareTop: PropTypes.bool
+        squareTop: PropTypes.bool,
     };
     render() {
-        const {classes, title, help, children, primaryHeader, accentHeader} = this.props;
-        const customBG = !!this.props.customBackgroundColor ? {backgroundColor: this.props.customBackgroundColor} : null;
-        const customTitleBG = !!this.props.customTitleBgColor ? {backgroundColor: this.props.customTitleBgColor} : null;
-        const customTitle = !!this.props.customTitleColor ? {color: this.props.customTitleColor} : null;
-        const fullHeight = !!this.props.fullHeight ? {height: '100%'} : null;
-        const squareTop = !!this.props.squareTop ? {borderTopLeftRadius: 0, borderTopRightRadius: 0} : null;
+        const { classes, title, help, children, primaryHeader, accentHeader } = this.props;
+        const customBG = !!this.props.customBackgroundColor ? { backgroundColor: this.props.customBackgroundColor } : null;
+        const customTitleBG = !!this.props.customTitleBgColor ? { backgroundColor: this.props.customTitleBgColor } : null;
+        const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
+        const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
+        const squareTop = !!this.props.squareTop ? { borderTopLeftRadius: 0, borderTopRightRadius: 0 } : null;
         return (
-            <Card className={`${classes.card} StandardCard`} style={{...customBG, ...customTitle, ...fullHeight}}>
+            <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
                 {
                     !this.props.noHeader &&
                     <CardHeader
-                        style={{...squareTop, ...customTitleBG}}
+                        style={{ ...squareTop, ...customTitleBG }}
                         title={title}
                         titleTypographyProps={{
                             variant: 'h5',
                             component: 'h3',
-                            color: 'inherit'
+                            color: 'inherit',
                         }}
                         action={
                             !!help && !!help.text &&
                             <HelpIcon {...help} />
                         }
                         classes={{
-                            root: primaryHeader && classes.cardHeaderPrimary || accentHeader && classes.cardHeaderAccent
+                            root: primaryHeader && classes.cardHeaderPrimary || accentHeader && classes.cardHeaderAccent,
                         }}
                     />
                 }
@@ -85,6 +85,6 @@ export class Cards extends Component {
     }
 }
 
-const StyledCard = withStyles(styles, {withTheme: true})(Cards);
+const StyledCard = withStyles(styles, { withTheme: true })(Cards);
 export const StandardCard = (props) => <StyledCard {...props}/>;
 export default StandardCard;

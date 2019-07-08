@@ -1,17 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     selectedMenuItem: {
         backgroundColor: `${theme.palette.accent.main} !important`,
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class GenericSelectFieldClass extends Component {
@@ -49,13 +49,13 @@ export class GenericSelectFieldClass extends Component {
         itemsList: [],
         locale: {
             label: 'Select item',
-            loading: 'loading...'
+            loading: 'loading...',
         },
         menuItemClassName: '',
         fullWidth: false,
         autoWidth: false,
         hintText: null,
-        multiple: false
+        multiple: false,
     };
 
     componentDidMount() {
@@ -102,13 +102,13 @@ export class GenericSelectFieldClass extends Component {
     loadingIndicationText = () => this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
 
     renderMenuItems = () => {
-        const {classes} = this.props;
+        const { classes } = this.props;
         return [
             this.props.hideLabel &&
             <MenuItem
                 value={-1}
                 key={0}
-                style={{display: 'block'}}
+                style={{ display: 'block' }}
                 disabled
             >
                 {this.loadingIndicationText()}
@@ -116,8 +116,8 @@ export class GenericSelectFieldClass extends Component {
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
-                        classes={{selected: classes.selectedMenuItem}}
-                        style={{display: 'block'}}
+                        classes={{ selected: classes.selectedMenuItem }}
+                        style={{ display: 'block' }}
                         selected={
                             this.props.multiple &&
                             this.props.selectedValue.includes(item.value || item) ||
@@ -136,7 +136,7 @@ export class GenericSelectFieldClass extends Component {
                         {item.text || item.value || item}
                     </MenuItem>
                 );
-            })
+            }),
         ];
     }
 
@@ -150,12 +150,12 @@ export class GenericSelectFieldClass extends Component {
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
-                    inputProps={{'aria-labelledby': `${this.props.locale.label}-label`}}
+                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
-                    inputProps={{style: {border: '1px solid red'}}}
+                    inputProps={{ style: { border: '1px solid red' } }}
                     SelectDisplayProps={{
-                        id: this.props.id
+                        id: this.props.id,
                     }}
                 >
                     {this.renderMenuItems()}
@@ -169,6 +169,6 @@ export class GenericSelectFieldClass extends Component {
     }
 }
 
-const StyledGenericSelectField = withStyles(styles, {withTheme: true})(GenericSelectFieldClass);
+const StyledGenericSelectField = withStyles(styles, { withTheme: true })(GenericSelectFieldClass);
 const GenericSelectField = (props) => <StyledGenericSelectField {...props}/>;
 export default GenericSelectField;

@@ -3,9 +3,9 @@ import GeoCoordinatesField from './GeoCoordinatesField';
 function setup(testProps = {}, isShallow = true) {
     const props = {
         input: {
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
-        ...testProps
+        ...testProps,
     };
 
     return getElement(GeoCoordinatesField, props, isShallow);

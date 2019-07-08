@@ -1,13 +1,13 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import DeleteForever from '@material-ui/icons/DeleteForever';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
 import Grid from '@material-ui/core/Grid/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -19,7 +19,7 @@ export class GrantListEditorHeader extends PureComponent {
         disabled: PropTypes.bool,
         classes: PropTypes.object,
         width: PropTypes.string,
-        hideType: PropTypes.bool
+        hideType: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -33,10 +33,10 @@ export class GrantListEditorHeader extends PureComponent {
                 confirmationTitle: 'Delete all',
                 confirmationMessage: 'Are you sure you want to delete all entries?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
         },
-        hideType: false
+        hideType: false,
     };
 
     constructor(props) {
@@ -50,8 +50,8 @@ export class GrantListEditorHeader extends PureComponent {
     handleConfirmationBoxRef = (ref) => (this.confirmationBox = ref);
 
     render() {
-        const {GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn} = this.props.locale;
-        const {classes} = this.props;
+        const { GrantAgencyName, GrantID, GrantAgencyType, deleteAll, deleteAllConfirmation, reorderColumn } = this.props.locale;
+        const { classes } = this.props;
         return (
             <Fragment>
                 <ConfirmDialogBox
@@ -59,21 +59,21 @@ export class GrantListEditorHeader extends PureComponent {
                     onAction={this.props.onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
-                <ListItem classes={{root: classes.header}}>
+                <ListItem classes={{ root: classes.header }}>
                     <Grid container spacing={0}>
                         <Grid item xs={this.props.width === 'xs' ? 11 : 9}>
                             <Grid container spacing={0} alignItems={'center'} alignContent={'center'}>
                                 <Grid item xs={this.props.width === 'xs' ? 12 : 5}>
-                                    <ListItemText secondary={GrantAgencyName} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
+                                    <ListItemText secondary={GrantAgencyName} secondaryTypographyProps={{ variant: 'caption' }} style={{ padding: 0 }}/>
                                 </Grid>
                                 <Hidden xsDown>
                                     <Grid item xs={this.props.width === 'xs' ? 5 : 4}>
-                                        <ListItemText secondary={GrantID} secondaryTypographyProps={{variant: 'caption'}}  style={{padding: 0}}/>
+                                        <ListItemText secondary={GrantID} secondaryTypographyProps={{ variant: 'caption' }}  style={{ padding: 0 }}/>
                                     </Grid>
                                     {
                                         !this.props.hideType &&
                                         <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
-                                            <ListItemText secondary={GrantAgencyType} secondaryTypographyProps={{variant: 'caption'}} style={{padding: 0}}/>
+                                            <ListItemText secondary={GrantAgencyType} secondaryTypographyProps={{ variant: 'caption' }} style={{ padding: 0 }}/>
                                         </Grid>
                                     }
                                 </Hidden>
@@ -85,21 +85,21 @@ export class GrantListEditorHeader extends PureComponent {
                                     <Grid item xs={8}>
                                         <ListItemText
                                             secondary={reorderColumn}
-                                            secondaryTypographyProps={{variant: 'caption'}}
-                                            style={{padding: 0}}
-                                            classes={{root: classes.right}}
+                                            secondaryTypographyProps={{ variant: 'caption' }}
+                                            style={{ padding: 0 }}
+                                            classes={{ root: classes.right }}
                                         />
                                     </Grid>
                                 </Hidden>
-                                <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{textAlign: 'right'}}>
-                                    <ListItemSecondaryAction style={{smarginTop: -4}}>
+                                <Grid item xs={this.props.width === 'xs' || this.props.width === 'sm' ? 12 : 4} style={{ textAlign: 'right' }}>
+                                    <ListItemSecondaryAction style={{ smarginTop: -4 }}>
                                         <Tooltip
                                             title={deleteAll}
                                             disableFocusListener={this.props.disabled}
                                             disableHoverListener={this.props.disabled}
                                             disableTouchListener={this.props.disabled}
                                         >
-                                            <div style={{display: 'inline'}}>
+                                            <div style={{ display: 'inline' }}>
                                                 <IconButton
                                                     onClick={this._showConfirmation}
                                                     disabled={this.props.disabled}
@@ -121,23 +121,23 @@ export class GrantListEditorHeader extends PureComponent {
 
 export const styles = () => ({
     right: {
-        textAlign: 'right'
+        textAlign: 'right',
     },
     header: {
         borderBottom: '1px solid rgba(0, 0, 0, 0.2)',
         marginTop: 8,
         padding: 0,
-        paddingBottom: 6
+        paddingBottom: 6,
     },
     paddingRight24: {
-        paddingRight: 24
+        paddingRight: 24,
     },
     paddingRight36: {
-        paddingRight: 36
+        paddingRight: 36,
     },
     paddingRight14: {
-        paddingRight: 14
-    }
+        paddingRight: 14,
+    },
 });
 
 export default withStyles(styles)(withWidth()(GrantListEditorHeader));

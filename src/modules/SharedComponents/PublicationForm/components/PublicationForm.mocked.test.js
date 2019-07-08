@@ -5,8 +5,8 @@ jest.mock('config/general', () => ({
     NEW_DOCTYPES_OPTIONS: [1, 2, 3],
     DOCTYPE_SUBTYPE_MAPPING: {
         1: { name: 'test1Name' },
-        2: { name: 'test2Name' }
-    }
+        2: { name: 'test2Name' },
+    },
 }));
 
 function setup(testProps, isShallow = true) {
@@ -24,7 +24,7 @@ function setup(testProps, isShallow = true) {
         destroy: jest.fn(),
         dirty: true,
         dispatch: jest.fn(),
-        form: "form",
+        form: 'form',
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         handleSubmit: jest.fn(),
         initialize: jest.fn(),
@@ -44,7 +44,7 @@ function setup(testProps, isShallow = true) {
         untouch: jest.fn(),
         valid: true,
         submitAsSideEffect: false,
-        ...testProps
+        ...testProps,
     };
     return getElement(PublicationForm, props, isShallow);
 }

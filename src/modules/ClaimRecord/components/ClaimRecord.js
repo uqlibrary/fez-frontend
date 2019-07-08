@@ -18,11 +18,11 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import {
     AuthorLinkingField,
-    ContributorLinkingField
+    ContributorLinkingField,
 } from 'modules/SharedComponents/AuthorLinking';
 import {
     ContentIndicatorsField,
-    showContentIndicatorsField
+    showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { validation, routes, claimRecordConfig } from 'config';
 import locale from 'locale/forms';
@@ -40,7 +40,7 @@ export default class ClaimRecord extends PureComponent {
         publicationFailedToClaim: PropTypes.string,
         redirectPath: PropTypes.string,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
     };
 
     componentWillMount() {
@@ -129,7 +129,7 @@ export default class ClaimRecord extends PureComponent {
                 this.props.initialValues.get('publication') &&
                 this.props.initialValues.get('publication').toJS(0)
             ),
-            ...this.props.fullPublicationToClaim
+            ...this.props.fullPublicationToClaim,
         };
 
         const author = this.props.initialValues.get('author')
@@ -210,7 +210,7 @@ export default class ClaimRecord extends PureComponent {
                 ...this.props,
                 dirty: true,
                 error: txt.errorAlert.incompleteData,
-                alertLocale: txt
+                alertLocale: txt,
             });
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
             alertProps = { ...txt.alreadyClaimedAlert };
@@ -218,7 +218,7 @@ export default class ClaimRecord extends PureComponent {
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
                 dirty: true,
-                alertLocale: txt
+                alertLocale: txt,
             });
         }
 
@@ -248,8 +248,8 @@ export default class ClaimRecord extends PureComponent {
                                 />
                                 {
                                     publication.fez_record_search_key_author &&
-                                    publication.fez_record_search_key_author.length > 0
-                                    && !authorLinked &&
+                                    publication.fez_record_search_key_author.length > 0 &&
+                                    !authorLinked &&
                                     <Grid item xs={12}>
                                         <StandardCard
                                             title={txt.authorLinking.title}

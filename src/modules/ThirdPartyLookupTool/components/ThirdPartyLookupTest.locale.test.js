@@ -1,7 +1,7 @@
-import {ThirdPartyLookupTool} from './ThirdPartyLookupTool';
-import {routes} from "../../../../config";
-import {locale} from 'locale';
-import React from "react";
+import { ThirdPartyLookupTool } from './ThirdPartyLookupTool';
+import { routes } from '../../../../config';
+import { locale } from 'locale';
+import React from 'react';
 jest.mock('locale', () => ({
     locale: {
         components: {
@@ -11,13 +11,13 @@ jest.mock('locale', () => ({
                     loadingMessage: 'Loading',
                     tooltip: {
                         show: 'Show form for',
-                        hide: 'Hide form for'
+                        hide: 'Hide form for',
                     },
                     resultsLabel: 'Results',
                     noResultsFound: {
-                        text: 'No results found'
+                        text: 'No results found',
                     },
-                    clearButtonLabel: 'New Search'
+                    clearButtonLabel: 'New Search',
                 },
                 forms: [
                     {
@@ -38,12 +38,12 @@ jest.mock('locale', () => ({
                         },
                         bottomTip: '',
                         submitButtonLabel: 'Submit to Incites',
-                        isMinimised: false // set this to false when we have more than one form
-                    }
+                        isMinimised: false, // set this to false when we have more than one form
+                    },
                 ],
-            }
-        }
-    }
+            },
+        },
+    },
 }));
 
 function setup(testProps, isShallow = true) {
@@ -62,19 +62,19 @@ describe('Component ThirdPartyLookupTool', () => {
     });
 
     it('should set state with submitted data', () => {
-        const wrapper = setup({actions: {}});
+        const wrapper = setup({ actions: {} });
         expect(wrapper.state().primaryValue).toEqual('');
         expect(wrapper.state().secondaryValue).toEqual('');
         expect(wrapper.state().formDisplay).toEqual({});
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.instance().recordInputs('a value', 'another value', {test: '123'});
+        wrapper.instance().recordInputs('a value', 'another value', { test: '123' });
         wrapper.update();
 
         expect(wrapper.state().primaryValue).toEqual('a value');
         expect(wrapper.state().secondaryValue).toEqual('another value');
-        expect(wrapper.state().formDisplay).toEqual({test: '123'});
+        expect(wrapper.state().formDisplay).toEqual({ test: '123' });
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -86,7 +86,7 @@ describe('Component ThirdPartyLookupTool', () => {
 
     it('renders a results screen', () => {
         const testprops = {
-            lookupResults: ['blah blah blah']
+            lookupResults: ['blah blah blah'],
         };
         const wrapper = setup(testprops);
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -3,7 +3,7 @@ import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescripti
 const setup = (testProps, isShallow = true) => {
     const props = {
         title: 'test',
-        ...testProps
+        ...testProps,
     };
     return getElement(SelectedSecurityPolicyDescription, props, isShallow);
 };
@@ -11,7 +11,7 @@ const setup = (testProps, isShallow = true) => {
 describe('SelectedSecurityPolicyDescription component', () => {
     it('should render properly', () => {
         const wrapper = setup({
-            selectedPolicyKey: 2
+            selectedPolicyKey: 2,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

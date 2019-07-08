@@ -35,7 +35,7 @@ export const UnpublishedBufferCitationView = ({ publication }) => {
 };
 
 UnpublishedBufferCitationView.propTypes = {
-    publication: PropTypes.object
+    publication: PropTypes.object,
 };
 
 export default React.memo(UnpublishedBufferCitationView);

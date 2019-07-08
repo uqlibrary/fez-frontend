@@ -3,7 +3,7 @@ import myTrendingPublicationsReducer from './myTrendingPublications';
 
 const initialState = {
     trendingPublicationsList: [],
-    loadingTrendingPublications: true
+    loadingTrendingPublications: true,
 };
 
 const trendingPubsPayload = [
@@ -20,7 +20,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:242578',
                 'rek_date': '2011-05-01 00:00:00',
                 'title': 'SNORD-host RNA Zfas1 is a regulator of mammary development and a potential marker for breast cancer',
-                'authors': '...Vargas, Ana C.;Campbell, Ian G.;Brown, Melissa A.'
+                'authors': '...Vargas, Ana C.;Campbell, Ian G.;Brown, Melissa A.',
             },
             {
                 'id': '82067',
@@ -32,7 +32,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:678947',
                 'rek_date': '2017-08-03 00:00:00',
                 'title': 'Long noncoding RNAs CUPID1 and CUPID2 mediate breast cancer risk at 11q13 by modulating the response to DNA damage',
-                'authors': '...Cloonan, Nicole;Pearson,John;Brown, Melissa A....'
+                'authors': '...Cloonan, Nicole;Pearson,John;Brown, Melissa A....',
             },
             {
                 'id': '2100',
@@ -44,9 +44,9 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:282686',
                 'rek_date': '2012-08-01 00:00:00',
                 'title': 'BRCA1 R1699Q variant displaying ambiguous functional abrogation confers intermediate breast and ovarian cancer risk',
-                'authors': '...Feng, Bingjian;Healey, Sue;Brown, Melissa A....'
-            }
-        ]
+                'authors': '...Feng, Bingjian;Healey, Sue;Brown, Melissa A....',
+            },
+        ],
     },
     {
         'key': 'thomson',
@@ -61,7 +61,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:396321',
                 'rek_date': '2016-07-04 00:00:00',
                 'title': 'Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer',
-                'authors': '...Clark, Susan J.;Lakhani, Sunil R.;Brown, Melissa A.'
+                'authors': '...Clark, Susan J.;Lakhani, Sunil R.;Brown, Melissa A.',
             },
             {
                 'id': '21720066',
@@ -73,7 +73,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:348436',
                 'rek_date': '2015-01-08 00:00:00',
                 'title': 'Fine-scale mapping of the 5q11.2 breast cancer locus reveals at least three independent risk variants regulating MAP3K1',
-                'authors': '...Ahmed, Shahana;Healey, Catherine S.;Brown, Melissa A....'
+                'authors': '...Ahmed, Shahana;Healey, Catherine S.;Brown, Melissa A....',
             },
             {
                 'id': '21581479',
@@ -85,9 +85,9 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:345184',
                 'rek_date': '2014-09-01 00:00:00',
                 'title': 'Evidence that breast cancer risk at the 2q35 locus is mediated through IGFBP5 regulation',
-                'authors': '...Carroll, Jason;Caldas, Carlos;Brown, Melissa A....'
-            }
-        ]
+                'authors': '...Carroll, Jason;Caldas, Carlos;Brown, Melissa A....',
+            },
+        ],
     },
     {
         'key': 'scopus',
@@ -102,7 +102,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:384236',
                 'rek_date': '2016-04-04 00:00:00',
                 'title': 'MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates epithelial and stromal cell compartments of the mouse mammary gland',
-                'authors': '...Edwards, S. L.;French, J. D.;Brown, M. A.'
+                'authors': '...Edwards, S. L.;French, J. D.;Brown, M. A.',
             },
             {
                 'id': '15777783',
@@ -114,7 +114,7 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:328887',
                 'rek_date': '2013-01-01 00:00:00',
                 'title': 'Consequences of germline variation disrupting the constitutional translational initiation codon start sites of MLH1 and BRCA2: Use of potential alternative start sites and implications for predicting variant pathogenicity',
-                'authors': '...Hopper, John L.;Jenkins, Mark A.;Brown, Melissa A....'
+                'authors': '...Hopper, John L.;Jenkins, Mark A.;Brown, Melissa A....',
             },
             {
                 'id': '15743381',
@@ -126,15 +126,15 @@ const trendingPubsPayload = [
                 'rek_pid': 'UQ:286101',
                 'rek_date': '2012-01-01 00:00:00',
                 'title': 'A guide for functional analysis of BRCA1 variants of uncertain significance',
-                'authors': '...Caputo, Sandrine M.;Vreeswijk, Maaike P. G.;Brown, Melissa A....'
-            }
-        ]
-    }
+                'authors': '...Caputo, Sandrine M.;Vreeswijk, Maaike P. G.;Brown, Melissa A....',
+            },
+        ],
+    },
 ];
 
 describe('Trending publications reducer', () => {
     it('returns the correct state while trending publications are loading', () => {
-        const test = myTrendingPublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_LOADING});
+        const test = myTrendingPublicationsReducer(initialState, { type: actions.TRENDING_PUBLICATIONS_LOADING });
         expect(test.trendingPublicationsList).toEqual([]);
         expect(test.loadingTrendingPublications).toBeTruthy();
     });
@@ -143,10 +143,10 @@ describe('Trending publications reducer', () => {
         const altmetricPubs = trendingPubsPayload[0].values;
         const test = myTrendingPublicationsReducer(initialState, {
             type: `${actions.TRENDING_PUBLICATIONS_LOADED}@altmetric`,
-            payload: {data: altmetricPubs}
+            payload: { data: altmetricPubs },
         });
 
-        expect(test.trendingPublicationsList).toEqual([{key: 'altmetric', values: altmetricPubs}]);
+        expect(test.trendingPublicationsList).toEqual([{ key: 'altmetric', values: altmetricPubs }]);
         expect(test.loadingTrendingPublications).toBeFalsy();
     });
 
@@ -157,29 +157,29 @@ describe('Trending publications reducer', () => {
         const test = myTrendingPublicationsReducer(
             {
                 ...initialState,
-                trendingPublicationsList: [{key: 'altmetric', values: altmetricPubs}]
+                trendingPublicationsList: [{ key: 'altmetric', values: altmetricPubs }],
             },
             {
                 type: `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
-                payload: {data: scopusPubs}
+                payload: { data: scopusPubs },
             }
         );
 
-        expect(test.trendingPublicationsList).toEqual([{key: 'altmetric', values: altmetricPubs}, {key: 'scopus', values: scopusPubs}]);
+        expect(test.trendingPublicationsList).toEqual([{ key: 'altmetric', values: altmetricPubs }, { key: 'scopus', values: scopusPubs }]);
         expect(test.loadingTrendingPublications).toBeFalsy();
     });
 
     it('returns the correct state when trending publications are loaded but 0 publications found', () => {
         const test = myTrendingPublicationsReducer(initialState, {
             type: actions.TRENDING_PUBLICATIONS_LOADED,
-            payload: {data: []}
+            payload: { data: [] },
         });
         expect(test.trendingPublicationsList.length).toEqual(0);
         expect(test.loadingTrendingPublications).toBeFalsy();
     });
 
     it('returns the correct state when trending publications fail to load', () => {
-        const test = myTrendingPublicationsReducer(initialState, {type: actions.TRENDING_PUBLICATIONS_FAILED});
+        const test = myTrendingPublicationsReducer(initialState, { type: actions.TRENDING_PUBLICATIONS_FAILED });
         expect(test.trendingPublicationsList).toEqual([]);
         expect(test.loadingTrendingPublications).toBeFalsy();
     });

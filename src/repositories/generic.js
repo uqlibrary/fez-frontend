@@ -1,4 +1,4 @@
-import {api} from 'config';
+import { api } from 'config';
 
 /**
  * Send a put request
@@ -8,8 +8,8 @@ import {api} from 'config';
  * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function put({apiUrl, options = {}}, data, config = {}) {
-    return api.put(apiUrl, data, {...config, ...options});
+export function put({ apiUrl, options = {} }, data, config = {}) {
+    return api.put(apiUrl, data, { ...config, ...options });
 }
 
 /**
@@ -20,8 +20,8 @@ export function put({apiUrl, options = {}}, data, config = {}) {
  * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function post({apiUrl, options = {}}, data, config = {}) {
-    return api.post(apiUrl, data, {...config, ...options});
+export function post({ apiUrl, options = {} }, data, config = {}) {
+    return api.post(apiUrl, data, { ...config, ...options });
 }
 
 /**
@@ -32,8 +32,8 @@ export function post({apiUrl, options = {}}, data, config = {}) {
  * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function patch({apiUrl, options = {}}, data, config = {}) {
-    return api.patch(apiUrl, data, {...config, ...options});
+export function patch({ apiUrl, options = {} }, data, config = {}) {
+    return api.patch(apiUrl, data, { ...config, ...options });
 }
 
 /**
@@ -43,6 +43,6 @@ export function patch({apiUrl, options = {}}, data, config = {}) {
  * @param {object} any additional options (headers, responseType, etc)
  * @returns {Promise}
  */
-export function get({apiUrl, options = {}}, config = {}) {
-    return api.get(apiUrl, {...config, ...options});
+export function get({ apiUrl, options = {} }, config = {}) {
+    return api.get(apiUrl, { ...config, ...options });
 }

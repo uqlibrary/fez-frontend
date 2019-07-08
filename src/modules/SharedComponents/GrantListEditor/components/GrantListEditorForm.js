@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
 import Grid from '@material-ui/core/Grid';
@@ -8,16 +8,16 @@ import Button from '@material-ui/core/Button';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
 import FormHelperText from '@material-ui/core/FormHelperText';
-import {ORG_AFFILIATION_TYPES} from 'config/general';
+import { ORG_AFFILIATION_TYPES } from 'config/general';
 import locale from 'locale/validationErrors';
-import {withStyles} from '@material-ui/core';
+import { withStyles } from '@material-ui/core';
 
 const styles = () => ({
     reminderMessage: {
         marginTop: 8,
         borderTop: '1px solid red',
-        paddingTop: 4
-    }
+        paddingTop: 4,
+    },
 });
 
 export class GrantListEditorFormClass extends PureComponent {
@@ -29,7 +29,7 @@ export class GrantListEditorFormClass extends PureComponent {
         required: PropTypes.bool,
         hideType: PropTypes.bool,
         classes: PropTypes.object,
-        isPopulated: PropTypes.any
+        isPopulated: PropTypes.any,
     };
 
     static defaultProps = {
@@ -42,10 +42,10 @@ export class GrantListEditorFormClass extends PureComponent {
             grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
             description: 'Add the Funder/Sponsor\'s name, grant ID and type - then click the ADD GRANT button to add each to the list',
-            remindToAdd: (<span>&nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.</span>)
+            remindToAdd: (<span>&nbsp;<b>* REMINDER:</b> Click ADD GRANT to add this item to your list or it will not be included.</span>),
         },
         hideType: false,
-        isPopulated: false
+        isPopulated: false,
     };
 
     constructor(props) {
@@ -54,7 +54,7 @@ export class GrantListEditorFormClass extends PureComponent {
         this.state = {
             grantAgencyName: '',
             grantId: '',
-            grantAgencyType: ''
+            grantAgencyType: '',
         };
     }
 
@@ -68,13 +68,13 @@ export class GrantListEditorFormClass extends PureComponent {
         ) return;
 
         // pass on the selected grant
-        this.props.onAdd({grantAgencyName: this.state.grantAgencyName, grantId: this.state.grantId, grantAgencyType: this.state.grantAgencyType});
+        this.props.onAdd({ grantAgencyName: this.state.grantAgencyName, grantId: this.state.grantId, grantAgencyType: this.state.grantAgencyType });
 
         // reset internal state
         this.setState({
             grantAgencyName: '',
             grantId: '',
-            grantAgencyType: ''
+            grantAgencyType: '',
         });
         if (this.props.isPopulated) {
             this.props.isPopulated(false);
@@ -108,12 +108,12 @@ export class GrantListEditorFormClass extends PureComponent {
     };
 
     render() {
-        const {disabled} = this.props;
+        const { disabled } = this.props;
         // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 || this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
         return (
             <React.Fragment>
                 {this.props.locale.description}
-                <Grid container spacing={8} style={{marginTop: 8}}>
+                <Grid container spacing={8} style={{ marginTop: 8 }}>
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
@@ -152,7 +152,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                 <InputLabel>{this.props.locale.grantAgencyType}</InputLabel>
                                 <Select
                                     SelectDisplayProps={{
-                                        id: 'grantType'
+                                        id: 'grantType',
                                     }}
                                     label={this.props.locale.grantAgencyType}
                                     placeholder={this.props.locale.grantAgencyTypeHint}
@@ -163,8 +163,8 @@ export class GrantListEditorFormClass extends PureComponent {
                                     <MenuItem value={''} disabled>{this.props.locale.grantAgencyTypeHint}</MenuItem>
                                     {
                                         ORG_AFFILIATION_TYPES.map((item, index) => {
-                                            return item.value !== '454045' ?
-                                                <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
+                                            return item.value !== '454045'
+                                                ? <MenuItem value={item.value} key={index}>{item.text}</MenuItem> : null;
                                         })
                                     }
                                 </Select>
@@ -193,6 +193,6 @@ export class GrantListEditorFormClass extends PureComponent {
     }
 }
 
-const StyledGrantListEditorFormClass = withStyles(styles, {withTheme: true})(GrantListEditorFormClass);
+const StyledGrantListEditorFormClass = withStyles(styles, { withTheme: true })(GrantListEditorFormClass);
 const GrantListEditorForm = (props) => <StyledGrantListEditorFormClass {...props}/>;
 export default GrantListEditorForm;

@@ -1,25 +1,25 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {numberToWords} from 'config';
+import { numberToWords } from 'config';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import RadioButtonUnchecked from '@material-ui/icons/RadioButtonUnchecked';
 import RadioButtonChecked from '@material-ui/icons/RadioButtonChecked';
 import Link from '@material-ui/icons/Link';
 
 export const styles = (theme) => ({
     authorLinkIcon: {
-        marginRight: theme.spacing.unit
+        marginRight: theme.spacing.unit,
     },
     buttonBase: {
-        justifyContent: 'flex-start'
+        justifyContent: 'flex-start',
     },
     authorOrder: {
         marginLeft: theme.spacing.unit * 6,
-        marginBottom: theme.spacing.unit * 2
-    }
+        marginBottom: theme.spacing.unit * 2,
+    },
 });
 
 export class AuthorItem extends PureComponent {
@@ -32,13 +32,13 @@ export class AuthorItem extends PureComponent {
         onAuthorSelected: PropTypes.func,
         locale: PropTypes.object,
         index: PropTypes.number,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         locale: {
-            suffix: ' listed [type]'
-        }
+            suffix: ' listed [type]',
+        },
     };
 
     /**
@@ -68,8 +68,8 @@ export class AuthorItem extends PureComponent {
     };
 
     render() {
-        const {linked, author, selected, index} = this.props;
-        const {suffix} = this.props.locale;
+        const { linked, author, selected, index } = this.props;
+        const { suffix } = this.props.locale;
         const authorOrder = `${numberToWords(index + 1)} ${suffix.replace('[type]', this.props.type)}`;
         const icon = this.getAuthorItemStatusIcon(linked, selected);
         const disabled = this.props.disabled || linked;

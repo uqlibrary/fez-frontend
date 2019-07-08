@@ -1,6 +1,6 @@
-import {GrantListEditorRow, styles} from './GrantListEditorRow';
+import { GrantListEditorRow, styles } from './GrantListEditorRow';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         index: 0,
         grant: {},
@@ -25,7 +25,7 @@ describe('GrantListEditorRow', () => {
     });
 
     it('should render default mobile view', () => {
-        const wrapper = setup({width: 'xs'});
+        const wrapper = setup({ width: 'xs' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -36,14 +36,14 @@ describe('GrantListEditorRow', () => {
                 moveUpHint: 'Move up',
                 moveDownHint: 'Move down',
                 deleteHint: 'Delete hint',
-                selectHint: 'Select hint [name]'
+                selectHint: 'Select hint [name]',
             },
             grant: {
-                nameAsPublished: 'testing'
+                nameAsPublished: 'testing',
             },
             classes: {
-                selected: 'selected-grant'
-            }
+                selected: 'selected-grant',
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -56,17 +56,17 @@ describe('GrantListEditorRow', () => {
                 moveUpHint: 'Move up',
                 moveDownHint: 'Move down',
                 deleteHint: 'Delete hint',
-                selectHint: 'Select hint [name]'
+                selectHint: 'Select hint [name]',
             },
             grant: {
                 grantAgencyName: 'testing',
                 grantId: '1234',
                 grantAgencyType: '453985',
-                selected: true
+                selected: true,
             },
             classes: {
-                selected: 'selected-grant'
-            }
+                selected: 'selected-grant',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -81,7 +81,7 @@ describe('GrantListEditorRow', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({});
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -92,21 +92,21 @@ describe('GrantListEditorRow', () => {
 
     it('should delete grant', () => {
         const onDeleteFn = jest.fn();
-        const wrapper = setup({onDelete: onDeleteFn});
+        const wrapper = setup({ onDelete: onDeleteFn });
         wrapper.instance()._deleteRecord();
         expect(onDeleteFn).toHaveBeenCalled();
     });
 
     it('should move grant up', () => {
         const onMoveUpFn = jest.fn();
-        const wrapper = setup({onMoveUp: onMoveUpFn});
+        const wrapper = setup({ onMoveUp: onMoveUpFn });
         wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
         expect(onMoveUpFn).toHaveBeenCalled();
     });
 
     it('should move grant down', () => {
         const onMoveDownFn = jest.fn();
-        const wrapper = setup({onMoveDown: onMoveDownFn});
+        const wrapper = setup({ onMoveDown: onMoveDownFn });
         wrapper.find('WithStyles(IconButton)').get(1).props.onClick();
         expect(onMoveDownFn).toHaveBeenCalled();
     });
@@ -115,18 +115,18 @@ describe('GrantListEditorRow', () => {
         const theme = {
             palette: {
                 accent: {
-                    light: 'test1'
-                }
+                    light: 'test1',
+                },
             },
             typography: {
                 fontWeightMedium: 'test2',
                 body2: {
-                    fontSize: 'test3'
+                    fontSize: 'test3',
                 },
                 caption: {
-                    fontSize: 'test4'
-                }
-            }
+                    fontSize: 'test4',
+                },
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
 

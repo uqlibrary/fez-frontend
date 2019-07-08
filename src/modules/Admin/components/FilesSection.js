@@ -29,7 +29,7 @@ export const FilesSection = ({ disabled = false }) => (
 );
 
 FilesSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(FilesSection);

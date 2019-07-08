@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true) {
             confirmationTitle: 'Confirmation',
             confirmationMessage: 'Are you sure?',
             cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes'
+            confirmButtonLabel: 'Yes',
         },
         onAction: jest.fn(),
         onCancelAction: jest.fn(),
@@ -26,17 +26,17 @@ describe('ConfirmDialogBox snapshots tests', () => {
     });
 
     it('renders component with yes', () => {
-        const wrapper = setup({hideCancelButton: true});
+        const wrapper = setup({ hideCancelButton: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
     it('renders component with customised locale', () => {
-        const wrapper = setup({locale: {
+        const wrapper = setup({ locale: {
             confirmationTitle: 'ENG: Confirmation',
             confirmationMessage: 'ENG: Are you sure?',
             cancelButtonLabel: 'ENG: No',
-            confirmButtonLabel: 'ENG: Yes'
-        }});
+            confirmButtonLabel: 'ENG: Yes',
+        } });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -44,7 +44,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
     it('should call componentWillUnmount and set ref to null', () => {
         const onRefFn = jest.fn();
         const wrapper = setup({
-            onRef: onRefFn
+            onRef: onRefFn,
         });
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();
@@ -66,7 +66,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
     it('should call callback function on confirming positive on dialog', () => {
         const onActionFn = jest.fn();
         const wrapper = setup({
-            onAction: onActionFn
+            onAction: onActionFn,
         });
         wrapper.find('WithStyles(Button)').get(0).props.onClick();
 
@@ -77,7 +77,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
     it('should call callback function on confirming negative on dialog', () => {
         const onCancelActionFn = jest.fn();
         const wrapper = setup({
-            onCancelAction: onCancelActionFn
+            onCancelAction: onCancelActionFn,
         });
         wrapper.find('WithStyles(Button)').get(1).props.onClick();
 

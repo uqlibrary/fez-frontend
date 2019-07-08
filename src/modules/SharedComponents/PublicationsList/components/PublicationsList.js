@@ -27,7 +27,7 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: false,
         showMetrics: false,
         showUnpublishedBufferFields: false,
-        hideCountDiff: false
+        hideCountDiff: false,
     };
 
     renderPublicationCitation(index, publication) {

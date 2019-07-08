@@ -7,24 +7,24 @@ export const initialState = {
     accountLoading: true,
     accountAuthorLoading: true,
     accountAuthorDetailsLoading: true,
-    isSessionExpired: null
+    isSessionExpired: null,
 };
 
 export const initSavingState = {
     accountAuthorSaving: false,
-    accountAuthorError: null
+    accountAuthorError: null,
 };
 
 const handlers = {
     [actions.CURRENT_ACCOUNT_LOADING]: () => ({
         ...initialState,
-        ...initSavingState
+        ...initSavingState,
     }),
 
     [actions.CURRENT_ACCOUNT_LOADED]: (state, action) => ({
         ...state,
         accountLoading: false,
-        account: action.payload
+        account: action.payload,
     }),
 
     [actions.CURRENT_ACCOUNT_ANONYMOUS]: () => ({
@@ -32,82 +32,82 @@ const handlers = {
         ...initSavingState,
         accountLoading: false,
         accountAuthorLoading: false,
-        accountAuthorDetailsLoading: false
+        accountAuthorDetailsLoading: false,
     }),
 
     [actions.CURRENT_AUTHOR_FAILED]: (state) => ({
         ...state,
         author: null,
-        accountAuthorLoading: false
+        accountAuthorLoading: false,
     }),
 
     [actions.CURRENT_AUTHOR_LOADED]: (state, action) => ({
         ...state,
         author: action.payload,
-        accountAuthorLoading: false
+        accountAuthorLoading: false,
     }),
 
     [actions.CURRENT_AUTHOR_LOADING]: (state) => ({
         ...state,
         author: null,
-        accountAuthorLoading: true
+        accountAuthorLoading: true,
     }),
 
     [actions.CURRENT_AUTHOR_SAVING]: (state) => ({
         ...state,
         accountAuthorSaving: true,
-        accountAuthorError: null
+        accountAuthorError: null,
     }),
 
     [actions.CURRENT_AUTHOR_SAVE_FAILED]: (state, action) => ({
         ...state,
         accountAuthorSaving: false,
-        accountAuthorError: action.payload
+        accountAuthorError: action.payload,
     }),
 
     [actions.CURRENT_AUTHOR_SAVE_RESET]: (state) => ({
         ...state,
-        ...initSavingState
+        ...initSavingState,
     }),
 
     [actions.CURRENT_AUTHOR_SAVED]: (state, action) => ({
         ...state,
         author: action.payload,
         accountAuthorSaving: false,
-        accountAuthorError: null
+        accountAuthorError: null,
     }),
 
     [actions.CURRENT_AUTHOR_DETAILS_FAILED]: (state) => ({
         ...state,
         authorDetails: null,
-        accountAuthorDetailsLoading: false
+        accountAuthorDetailsLoading: false,
     }),
 
     [actions.CURRENT_AUTHOR_DETAILS_LOADED]: (state, action) => ({
         ...state,
         authorDetails: action.payload,
-        accountAuthorDetailsLoading: false
+        accountAuthorDetailsLoading: false,
     }),
 
     [actions.CURRENT_AUTHOR_DETAILS_LOADING]: (state) => ({
         ...state,
         authorDetails: null,
-        accountAuthorDetailsLoading: true
+        accountAuthorDetailsLoading: true,
     }),
 
     [actions.CURRENT_ACCOUNT_SESSION_EXPIRED]: (state) => ({
         ...state,
-        isSessionExpired: true
+        isSessionExpired: true,
     }),
 
     [actions.CURRENT_ACCOUNT_SESSION_VALID]: (state) => ({
         ...state,
-        isSessionExpired: false
+        isSessionExpired: false,
     }),
 
     [actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG]: (state) => ({
         ...state,
-        isSessionExpired: null
+        isSessionExpired: null,
     }),
 };
 

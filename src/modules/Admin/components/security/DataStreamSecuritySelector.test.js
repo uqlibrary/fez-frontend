@@ -4,7 +4,7 @@ import {
     rtlRender,
     fireEvent,
     cleanup,
-    waitForElement
+    waitForElement,
 } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -12,33 +12,33 @@ function setup(testProps = {}) {
         disabled: false,
         classes: {
             dataStreamFileBlock: 'dataStreamFileBlock',
-            dataStreamFileName: 'dataStreamFileName'
+            dataStreamFileName: 'dataStreamFileName',
         },
         input: {
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
         meta: {
             initial: {
-                toJS: () => ([])
-            }
+                toJS: () => ([]),
+            },
         },
         text: {
-            overridePrompt: 'Override datastream security policy'
+            overridePrompt: 'Override datastream security policy',
         },
         collections: [{
             parent: {
-                rek_datastream_policy: 3
-            }
+                rek_datastream_policy: 3,
+            },
         }, {
             parent: {
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }, {
             parent: {
-                rek_datastream_policy: 1
-            }
+                rek_datastream_policy: 1,
+            },
         }],
-        ...testProps
+        ...testProps,
     };
     return rtlRender(<DataStreamSecuritySelector {...props} />);
 }
@@ -52,10 +52,10 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => ([{
                         dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1
-                    }])
-                }
-            }
+                        dsi_security_policy: 1,
+                    }]),
+                },
+            },
         });
         expect(asFragment()).toMatchSnapshot();
         expect(getByText(/test.txt/)).toHaveAttribute('title', 'test.txt');
@@ -63,16 +63,16 @@ describe('DataStreamSecuritySelector component', () => {
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
-    it('should change security value for the file', async () => {
+    it('should change security value for the file', async() => {
         const { asFragment, getByText, getByTestId } = setup({
             meta: {
                 initial: {
                     toJS: () => ([{
                         dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1
-                    }])
-                }
-            }
+                        dsi_security_policy: 1,
+                    }]),
+                },
+            },
         });
 
         let fragment = asFragment();
@@ -92,17 +92,17 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => ([{
                         dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1
-                    }])
-                }
+                        dsi_security_policy: 1,
+                    }]),
+                },
             },
             collections: [{
                 parent: {
-                    rek_datastream_policy: 1
-                }
+                    rek_datastream_policy: 1,
+                },
             }, {
-                rek_pid: 'UQ:111111'
-            }]
+                rek_pid: 'UQ:111111',
+            }],
         });
 
         let fragment = asFragment();

@@ -16,7 +16,7 @@ const moment = require('moment');
 const styles = theme => ({
     fakeTitle: {
         color: theme.palette.secondary.main,
-        marginTop: -32
+        marginTop: -32,
     },
     hideLabel: {
         position: 'absolute',
@@ -24,8 +24,8 @@ const styles = theme => ({
         top: 'auto',
         width: 1,
         height: 1,
-        overflow: 'hidden'
-    }
+        overflow: 'hidden',
+    },
 });
 
 export class PartialDateForm extends Component {
@@ -41,7 +41,7 @@ export class PartialDateForm extends Component {
         floatingTitleRequired: PropTypes.bool,
         classes: PropTypes.object,
         required: PropTypes.bool,
-        hasError: PropTypes.string
+        hasError: PropTypes.string,
     };
 
     static defaultProps = {
@@ -52,17 +52,17 @@ export class PartialDateForm extends Component {
             validationMessage: {
                 day: 'Invalid day',
                 month: 'Invalid month',
-                year: 'Invalid year'
+                year: 'Invalid year',
             },
             minNumberCharCode: 48,
-            maxNumberCharCode: 57
+            maxNumberCharCode: 57,
         },
         months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
         dateFormat: 'YYYY-MM-DD',
         allowPartial: false,
         floatingTitle: 'Enter a date',
         floatingTitleRequired: false,
-        className: ''
+        className: '',
     };
 
     constructor(props) {
@@ -70,7 +70,7 @@ export class PartialDateForm extends Component {
         this.state = {
             day: null,
             month: null,
-            year: null
+            year: null,
         };
         this.errors = { day: '', month: '', year: '' };
     }
@@ -131,7 +131,7 @@ export class PartialDateForm extends Component {
     _onDateChanged = (key) => {
         return (event, index, value) => {
             this.setState({
-                [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10)
+                [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
             });
         };
     };

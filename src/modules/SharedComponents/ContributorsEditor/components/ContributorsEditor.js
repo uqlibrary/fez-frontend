@@ -38,7 +38,7 @@ export class ContributorsEditor extends PureComponent {
         isNtro: false,
         locale: {
             errorTitle: 'Error',
-            errorMessage: 'Unable to add an item with the same identifier.'
+            errorMessage: 'Unable to add an item with the same identifier.',
         },
         showContributorAssignment: false,
         showIdentifierLookup: false,
@@ -53,7 +53,7 @@ export class ContributorsEditor extends PureComponent {
             errorMessage: '',
             isCurrentAuthorSelected: false,
             showIdentifierLookup: false,
-            contributorIndexSelectedToEdit: null
+            contributorIndexSelectedToEdit: null,
         };
     }
 
@@ -82,7 +82,7 @@ export class ContributorsEditor extends PureComponent {
             return !!contributor.aut_id && item.aut_id === contributor.aut_id;
         }).length > 0) {
             this.setState({
-                errorMessage: this.props.locale.errorMessage
+                errorMessage: this.props.locale.errorMessage,
             });
         } else {
             contributor.disabled = !!contributor.uqIdentifier;
@@ -93,7 +93,7 @@ export class ContributorsEditor extends PureComponent {
                 isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || (
                     this.props.author &&
                     contributor.uqIdentifier === `${this.props.author.aut_id}`
-                )
+                ),
             }, () => {
                 // try to automatically select contributor if they are a current author
                 if (
@@ -112,9 +112,9 @@ export class ContributorsEditor extends PureComponent {
             contributors: [
                 ...this.state.contributors.slice(0, index),
                 { ...contributor, selected: false, required: false },
-                ...this.state.contributors.slice(index + 1)
+                ...this.state.contributors.slice(index + 1),
             ],
-            contributorIndexSelectedToEdit: null
+            contributorIndexSelectedToEdit: null,
         });
     };
 
@@ -125,7 +125,7 @@ export class ContributorsEditor extends PureComponent {
             contributors: [
                 ...this.state.contributors.slice(0, index - 1),
                 contributor, nextContributor,
-                ...this.state.contributors.slice(index + 1)]
+                ...this.state.contributors.slice(index + 1)],
         });
     };
 
@@ -136,7 +136,7 @@ export class ContributorsEditor extends PureComponent {
             contributors: [
                 ...this.state.contributors.slice(0, index),
                 nextContributor, contributor,
-                ...this.state.contributors.slice(index + 2)]
+                ...this.state.contributors.slice(index + 2)],
         });
     };
 
@@ -146,14 +146,14 @@ export class ContributorsEditor extends PureComponent {
             isCurrentAuthorSelected: this.state.isCurrentAuthorSelected && (
                 this.props.author &&
                 contributor.aut_id !== this.props.author.aut_id
-            )
+            ),
         });
     };
 
     deleteAllContributors = () => {
         this.setState({
             contributors: [],
-            isCurrentAuthorSelected: false
+            isCurrentAuthorSelected: false,
         });
     };
 
@@ -167,10 +167,10 @@ export class ContributorsEditor extends PureComponent {
             authorId: (
                 index === itemIndex &&
                 this.props.author
-            ) ? this.props.author.aut_id : null
+            ) ? this.props.author.aut_id : null,
         }));
         this.setState({
-            contributors: newContributors
+            contributors: newContributors,
         });
     }
 
@@ -178,9 +178,9 @@ export class ContributorsEditor extends PureComponent {
         this.setState((prevState) => ({
             contributors: prevState.contributors.map((contributor, itemIndex) => ({
                 ...contributor,
-                selected: index === itemIndex
+                selected: index === itemIndex,
             })),
-            contributorIndexSelectedToEdit: index
+            contributorIndexSelectedToEdit: index,
         }));
     };
 
@@ -254,7 +254,7 @@ export class ContributorsEditor extends PureComponent {
         const {
             contributors,
             errorMessage,
-            contributorIndexSelectedToEdit
+            contributorIndexSelectedToEdit,
         } = this.state;
 
         let error = null;
@@ -291,7 +291,7 @@ export class ContributorsEditor extends PureComponent {
                     contributors.length > 0 &&
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
-                            <List style={{marginBottom: 0}}>
+                            <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader
                                     {...(this.props.locale.header || {})}
                                     disabled={disabled}
@@ -305,7 +305,7 @@ export class ContributorsEditor extends PureComponent {
                                 />
                             </List>
                             <List classes={{
-                                root: `${classes.list} ${(contributors.length > 3) ? classes.scroll : ''}`
+                                root: `${classes.list} ${(contributors.length > 3) ? classes.scroll : ''}`,
                             }}>
                                 {this.renderContributorRows()}
                             </List>
@@ -336,7 +336,7 @@ export const mapStateToProps = (state) => {
     return {
         author: state && state.get('accountReducer')
             ? state.get('accountReducer').author
-            : null
+            : null,
     };
 };
 
@@ -346,11 +346,11 @@ export const styles = () => ({
         margin: '0',
         maxHeight: 225,
         overflow: 'hidden',
-        marginBottom: 16
+        marginBottom: 16,
     },
     scroll: {
-        overflowY: 'scroll'
-    }
+        overflowY: 'scroll',
+    },
 });
 
 export default withStyles(styles)(connect(mapStateToProps)(ContributorsEditor));

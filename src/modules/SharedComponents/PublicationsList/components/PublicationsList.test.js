@@ -1,12 +1,12 @@
 import PublicationsList from './PublicationsList';
-import {myRecordsList} from 'mock/data';
+import { myRecordsList } from 'mock/data';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         publicationsList: testProps.publicationsList || [], // : PropTypes.array,
         customActions: testProps.customActions || [], // : PropTypes.array,
         showDefaultActions: testProps.showDefaultActions || false, // : PropTypes.bool
-        ...testProps
+        ...testProps,
     };
     return getElement(PublicationsList, props, isShallow);
 }
@@ -18,7 +18,7 @@ describe('PublicationsList', () => {
     });
 
     it('renders component with items', () => {
-        const wrapper = setup({publicationsList: myRecordsList.data});
+        const wrapper = setup({ publicationsList: myRecordsList.data });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -26,13 +26,13 @@ describe('PublicationsList', () => {
         const test = [];
         const wrapper = setup({
             publicationsListSubset: [
-                'test'
+                'test',
             ],
-            subsetCustomActions: test
+            subsetCustomActions: test,
         });
         expect(
             wrapper.instance().renderPublicationCitation(0, {
-                rek_pid: 'test'
+                rek_pid: 'test',
             }).props.customActions
         ).toBe(test);
     });

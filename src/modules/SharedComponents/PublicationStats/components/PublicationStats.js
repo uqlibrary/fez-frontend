@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
-import {locale} from 'locale';
-import {withStyles} from '@material-ui/core/styles';
+import { locale } from 'locale';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     header: {
@@ -14,23 +14,23 @@ const styles = theme => ({
         '& p': {
             [theme.breakpoints.up('sm')]: {
                 fontSize: '1.1rem',
-                fontWeight: theme.typography.fontWeightRegular
-            }
+                fontWeight: theme.typography.fontWeightRegular,
+            },
         },
-        borderRadius: '4px 4px 0px 0px'
+        borderRadius: '4px 4px 0px 0px',
     },
     data: {
         padding: '24px',
-    }
+    },
 });
 
 export class PublicationStats extends Component {
     static propTypes = {
         publicationsStats: PropTypes.object,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     }
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.publicationStats;
         const pubStats = this.props.publicationsStats;
         if (!pubStats) return (<span className="publicationsStats empty"/>);
@@ -41,10 +41,10 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography  variant={'body2'}  color={'inherit'} gutterBottom>{txt.publicationStatsTitle1}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography  variant={'body2'}  color={'inherit'} gutterBottom>{txt.publicationStatsTitle2}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography  variant={'body2'}  color={'inherit'} gutterBottom>{txt.publicationStatsTitle3}</Typography>
                     </Grid>
                 </Grid>
@@ -55,10 +55,10 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography  variant={'body2'}>{txt.publicationStatsRowTitle4}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography variant={'body2'}>{pubStats.thomson_citation_count_i.count}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography  variant={'body2'} >{pubStats.scopus_citation_count_i.count}</Typography>
                     </Grid>
                 </Grid>
@@ -70,10 +70,10 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography variant={'body2'} >{txt.publicationStatsRowTitle5}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography variant={'body2'} >{pubStats.thomson_citation_count_i.years}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography variant={'body2'}  >{pubStats.scopus_citation_count_i.years}</Typography>
                     </Grid>
                 </Grid>
@@ -85,21 +85,21 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography variant={'body2'} >{txt.publicationStatsRowTitle1}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography variant={'body2'} >
                             {
-                                !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === ''
-                                || pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
+                                !pubStats.thomson_citation_count_i.hindex || pubStats.thomson_citation_count_i.hindex === '' ||
+                                pubStats.thomson_citation_count_i.hindex.toFixed(0) === '0' || pubStats.thomson_citation_count_i.hindex === '0'
                                     ? txt.publicationStatsNA
                                     : pubStats.thomson_citation_count_i.hindex.toFixed(0)
                             }
                         </Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography variant={'body2'}  >
                             {
-                                !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === ''
-                                || pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
+                                !pubStats.scopus_citation_count_i.hindex || pubStats.scopus_citation_count_i.hindex === '' ||
+                                pubStats.scopus_citation_count_i.hindex.toFixed(0) === '0' || pubStats.scopus_citation_count_i.hindex === '0'
                                     ? txt.publicationStatsNA
                                     : pubStats.scopus_citation_count_i.hindex.toFixed(0)
                             }
@@ -114,10 +114,10 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography variant={'body2'} >{txt.publicationStatsRowTitle2}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography variant={'body2'} >{pubStats.thomson_citation_count_i.avg && pubStats.thomson_citation_count_i.avg.toFixed(1)}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography variant={'body2'}  >{pubStats.scopus_citation_count_i.avg && pubStats.scopus_citation_count_i.avg.toFixed(1)}</Typography>
                     </Grid>
                 </Grid>
@@ -129,10 +129,10 @@ export class PublicationStats extends Component {
                     <Grid item xs={6}>
                         <Typography variant={'body2'} >{txt.publicationStatsRowTitle3}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'center'}}>
+                    <Grid item xs={3} style={{ textAlign: 'center' }}>
                         <Typography variant={'body2'} >{pubStats.thomson_citation_count_i.sum}</Typography>
                     </Grid>
-                    <Grid item xs={3} style={{textAlign: 'right'}}>
+                    <Grid item xs={3} style={{ textAlign: 'right' }}>
                         <Typography variant={'body2'}  >{pubStats.scopus_citation_count_i.sum}</Typography>
                     </Grid>
                 </Grid>

@@ -1,4 +1,4 @@
-import {UnpublishedBufferCitationView} from './UnpublishedBufferCitationView';
+import { UnpublishedBufferCitationView } from './UnpublishedBufferCitationView';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component

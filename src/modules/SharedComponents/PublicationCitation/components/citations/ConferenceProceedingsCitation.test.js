@@ -1,5 +1,5 @@
 import ConferenceProceedingsCitation from './ConferenceProceedingsCitation';
-import {conferenceProceedings} from 'mock/data/testing/records';
+import { conferenceProceedings } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -16,12 +16,12 @@ describe('ConferenceProceedingsCitation renders ', () => {
     });
 
     it('component with a mock espace record', () => {
-        const wrapper = setup({publication: conferenceProceedings});
+        const wrapper = setup({ publication: conferenceProceedings });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with an empty doi view ', () => {
-        const wrapper = setup({ publication: {...conferenceProceedings, fez_record_search_key_doi: {rek_doi: null}} });
+        const wrapper = setup({ publication: { ...conferenceProceedings, fez_record_search_key_doi: { rek_doi: null } } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

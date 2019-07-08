@@ -1,5 +1,5 @@
 import React from 'react';
-import {OPEN_ACCESS_ID, CLOSED_ACCESS_ID} from './config';
+import { OPEN_ACCESS_ID, CLOSED_ACCESS_ID } from './config';
 
 export default {
     instructions: 'You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)',
@@ -13,7 +13,7 @@ export default {
         ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
         ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
         ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
-        ['sameFileNameWithDifferentExt']: 'File(s) ([fileNames]) have same name that match with other files with different extension'
+        ['sameFileNameWithDifferentExt']: 'File(s) ([fileNames]) have same name that match with other files with different extension',
     },
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
@@ -40,7 +40,7 @@ export default {
             confirmationTitle: 'Delete file',
             confirmationMessage: 'Are you sure you want to remove this file from the uploaded queue?',
             cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes'
+            confirmButtonLabel: 'Yes',
         },
         filenameColumn: 'File name',
         fileAccessColumn: 'File access',
@@ -48,21 +48,21 @@ export default {
         embargoDateClosedAccess: 'No date required',
         uploadInProgressText: 'Uploading...',
         defaultView: {
-            embargoDateClosedAccess: 'No date required'
+            embargoDateClosedAccess: 'No date required',
         },
         mobileView: {
             filenameColumn: 'File name',
             fileAccessColumn: 'File access',
             embargoDateColumn: 'Embargo date',
-            embargoDateClosedAccess: 'No date required'
+            embargoDateClosedAccess: 'No date required',
         },
         fileUploadRowAccessSelector: {
             initialValue: 'Select access conditions',
             accessSelectOptionsText: {
                 [OPEN_ACCESS_ID]: 'Open Access',
-                [CLOSED_ACCESS_ID]: 'Closed Access'
+                [CLOSED_ACCESS_ID]: 'Closed Access',
             },
-            errorMessage: 'This field is required'
-        }
-    }
+            errorMessage: 'This field is required',
+        },
+    },
 };

@@ -1,1 +1,1 @@
-export {default as DownshiftMultiChipSelectField} from './DownshiftMultiChipSelectField';
+export { default as DownshiftMultiChipSelectField } from './DownshiftMultiChipSelectField';

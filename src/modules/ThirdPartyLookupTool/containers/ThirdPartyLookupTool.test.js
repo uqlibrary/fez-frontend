@@ -2,7 +2,7 @@ import ThirdPartyLookupTool from './ThirdPartyLookupTool';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(ThirdPartyLookupTool, props, isShallow);

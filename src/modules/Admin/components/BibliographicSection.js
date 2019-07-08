@@ -17,7 +17,7 @@ import { FormValuesContext } from 'context';
 
 import { validation } from 'config';
 import {
-    subjects, subtypes, languages
+    subjects, subtypes, languages,
 } from './MockData';
 
 /* istanbul ignore next */
@@ -293,9 +293,9 @@ export const BibliographicSection = ({ disabled = false }) => (
                         locale: {
                             inputFieldLabel: 'Keywords',
                             inputFieldHint: 'Type keywords',
-                            addButtonLabel: 'Add'
-                        }
-                    }
+                            addButtonLabel: 'Add',
+                        },
+                    },
                 }} />
         </Grid>
         <Grid item xs={12}>
@@ -312,7 +312,7 @@ export const BibliographicSection = ({ disabled = false }) => (
 );
 
 BibliographicSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(BibliographicSection);

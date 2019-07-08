@@ -1,4 +1,4 @@
-import {actionTypes} from 'redux-form';
+import { actionTypes } from 'redux-form';
 
 export const resetValue = (state, action) => {
     switch (action.type) {

@@ -1,26 +1,26 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgUnitNameField, FilteredFieldOfResearchListField, OrgNameField} from 'modules/SharedComponents/LookupFields';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { OrgUnitNameField, FilteredFieldOfResearchListField, OrgNameField } from 'modules/SharedComponents/LookupFields';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 
-import {validation} from 'config';
+import { validation } from 'config';
 import locale from 'locale/components';
-import {default as formLocale} from 'locale/publicationForm';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {THESIS_SUBMISSION_SUBTYPES} from 'config/general';
+import { default as formLocale } from 'locale/publicationForm';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { THESIS_SUBMISSION_SUBTYPES } from 'config/general';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -37,11 +37,11 @@ export default class SbsSubmission extends Component {
         history: PropTypes.object,
         isSessionValid: PropTypes.bool,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
-        newRecord: PropTypes.object
+        newRecord: PropTypes.object,
     };
 
     static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        selectFieldMobileOverrides: PropTypes.object,
     };
 
     componentWillReceiveProps(nextProps) {
@@ -89,15 +89,14 @@ export default class SbsSubmission extends Component {
                 <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                     <Grid container spacing={24}>
                         {
-                            this.props.newRecordFileUploadingOrIssueError ?
-                                <Grid item xs={12}>
+                            this.props.newRecordFileUploadingOrIssueError
+                                ? <Grid item xs={12}>
                                     <Alert
                                         {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
                                         action={this.afterFailedSubmit}
                                     />
                                 </Grid>
-                                :
-                                <Grid item xs={12}>
+                                :                                <Grid item xs={12}>
                                     <StandardCard title={formLocale.sbsSubmission.afterSubmitTitle}>
                                         <Typography>{formLocale.sbsSubmission.afterSubmitText}</Typography>
                                     </StandardCard>
@@ -111,14 +110,14 @@ export default class SbsSubmission extends Component {
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage
-                }
-            }});
+                    message: formLocale.thesisSubmission.depositFailedMessage,
+                },
+            } });
         return (
             <StandardPage title={formLocale.sbsSubmission.sbsTitle}>
                 <form>
@@ -245,7 +244,7 @@ export default class SbsSubmission extends Component {
                                     component={ListEditorField}
                                     name="fez_record_search_key_keywords"
                                     maxCount={10}
-                                    searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                    searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}/>
                             </StandardCard>

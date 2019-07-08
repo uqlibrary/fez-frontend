@@ -1,9 +1,9 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
@@ -22,7 +22,7 @@ const PublicationListLoadingProgress = (componentProps) => (
         componentProps={componentProps} />
 );
 
-import {pathConfig} from 'config/routes';
+import { pathConfig } from 'config/routes';
 import locale from 'locale/pages';
 
 export default class RecordsSearchResults extends PureComponent {
@@ -32,12 +32,12 @@ export default class RecordsSearchResults extends PureComponent {
         loadingPublicationSources: PropTypes.object,
         history: PropTypes.object.isRequired,
         actions: PropTypes.object,
-        rawSearchQuery: PropTypes.string
+        rawSearchQuery: PropTypes.string,
     };
 
     static defaultProps = {
         publicationsList: [],
-        loadingPublicationSources: {}
+        loadingPublicationSources: {},
     };
 
     componentDidUpdate() {
@@ -111,8 +111,8 @@ export default class RecordsSearchResults extends PureComponent {
             {
                 label: searchResultsTxt.claim,
                 handleAction: this._claimPublication,
-                primary: true
-            }
+                primary: true,
+            },
         ];
 
         const unclaimablePublicationsList = this.getUnclaimablePublicationsList(this.props.publicationsList);
@@ -120,8 +120,8 @@ export default class RecordsSearchResults extends PureComponent {
             {
                 label: searchResultsTxt.unclaimable,
                 disabled: true,
-                primary: false
-            }
+                primary: false,
+            },
         ];
 
         return (
@@ -175,7 +175,7 @@ export default class RecordsSearchResults extends PureComponent {
                         {
                             !this.props.searchLoading &&
                             <Grid item sm={12}>
-                                <Grid container spacing={16} style={{marginTop: 12}}>
+                                <Grid container spacing={16} style={{ marginTop: 12 }}>
                                     <Grid item xs />
                                     <Grid item xs={12} sm="auto">
                                         <Button

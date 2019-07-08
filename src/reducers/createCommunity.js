@@ -4,7 +4,7 @@ export const initialState = {
     newRecord: null,
     newCommunitySaving: false,
     newCommunityError: false,
-    newCommunityErrorMessage: null
+    newCommunityErrorMessage: null,
 };
 
 const handlers = {
@@ -14,7 +14,7 @@ const handlers = {
             ...initialState,
             newRecord: action.payload,
             newCommunitySaving: false,
-            newCommunityError: false
+            newCommunityError: false,
         }
     ),
 
@@ -23,7 +23,7 @@ const handlers = {
             ...initialState,
             newCommunitySaving: false,
             newCommunityError: true,
-            newCommunityErrorMessage: action.payload
+            newCommunityErrorMessage: action.payload,
         }
     ),
 
@@ -31,9 +31,9 @@ const handlers = {
         {
             ...initialState,
             newCommunitySaving: true,
-            newCommunityError: false
+            newCommunityError: false,
         }
-    )
+    ),
 };
 
 export default function createCommunityReducer(state = initialState, action) {

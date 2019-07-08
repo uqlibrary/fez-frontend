@@ -1,11 +1,11 @@
-import {dataCollection} from 'mock/data/testing/records';
-import AvailableVersions from "./AvailableVersions";
+import { dataCollection } from 'mock/data/testing/records';
+import AvailableVersions from './AvailableVersions';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         publication: testProps.publication || dataCollection,
-        title: testProps.title || ''
+        title: testProps.title || '',
     };
     return getElement(AvailableVersions, props, isShallow);
 }

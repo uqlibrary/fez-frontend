@@ -16,7 +16,7 @@ export default class NewRecord extends PureComponent {
         history: PropTypes.object.isRequired,
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
-        author: PropTypes.object
+        author: PropTypes.object,
     };
 
     static defaultProps = {
@@ -45,21 +45,21 @@ export default class NewRecord extends PureComponent {
         }
 
         const txt = locale.pages.addRecord;
-        const {rawSearchQuery} = this.props;
+        const { rawSearchQuery } = this.props;
 
         // set initial value only if it's a title (not pubmed/DOI)
         const initialValues = {
             currentAuthor: [
                 {
                     'nameAsPublished': this.props.author.aut_display_name ? this.props.author.aut_display_name : '',
-                    'authorId': this.props.author.aut_id ? this.props.author.aut_id : ''
-                }
+                    'authorId': this.props.author.aut_id ? this.props.author.aut_id : '',
+                },
             ],
-            rek_title: rawSearchQuery || ''
+            rek_title: rawSearchQuery || '',
         };
 
         // set confirmation message depending on file upload status
-        const saveConfirmationLocale = {...txt.successWorkflowConfirmation};
+        const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={24}>
                 <Grid item xs={12}>

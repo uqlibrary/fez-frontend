@@ -1,4 +1,4 @@
-import {trendingPublicationsConfig} from 'config';
+import { trendingPublicationsConfig } from 'config';
 
 /**
  * Returns the data for graph - count of unique publication types
@@ -9,7 +9,7 @@ import {trendingPublicationsConfig} from 'config';
  */
 export function getPublicationsPerType(data, keepPublicationTypes) {
     const rawData = [...data];
-    const values = rawData.reduce((a, b) => {return a.concat(b.stats_display_type_i_lookup_exact.buckets);}, []);
+    const values = rawData.reduce((a, b) => { return a.concat(b.stats_display_type_i_lookup_exact.buckets); }, []);
     const publicationTypesCountObject = values
         .reduce((a, b) => {
             a[b.key] = (a[b.key] >= 0) ? (a[b.key] + b.doc_count) : b.doc_count;
@@ -31,7 +31,8 @@ export function getPublicationsPerType(data, keepPublicationTypes) {
             .reduce((init, item) => {
                 return init + item[1];
             }, 0);
-        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0]).join(', ');
+        const legendToDisplay = publicationTypesCount.slice(keepPublicationTypes).map(item => item[0])
+            .join(', ');
         topCounts.push(['Other', otherCounts, legendToDisplay]);
         return topCounts;
     }
@@ -91,7 +92,7 @@ export function getPublicationsPerYearSeries(data, topPublicationTypes) {
         series.push({
             name: publicationType,
             data: fields[publicationType],
-            ...(!!topPublicationTypes[index][2] && {extraInfoForLegend: topPublicationTypes[index][2]} || {})
+            ...(!!topPublicationTypes[index][2] && { extraInfoForLegend: topPublicationTypes[index][2] } || {}),
         });
     });
 
@@ -108,12 +109,12 @@ export function getPublicationsStats(years, data) {
     return {
         thomson_citation_count_i: {
             ...data.stats_thomson_citation_count_i,
-            years: `${years[0]} - ${years[years.length - 1]}`
+            years: `${years[0]} - ${years[years.length - 1]}`,
         },
         scopus_citation_count_i: {
             ...data.stats_scopus_citation_count_i,
-            years: `${years[0]} - ${years[years.length - 1]}`
-        }
+            years: `${years[0]} - ${years[years.length - 1]}`,
+        },
     };
 }
 
@@ -131,7 +132,7 @@ function getData(object, path) {
     }, object);
 }
 
-export const transformTrendingPublicationsMetricsData = ({data}, recordsToDisplayPerSource) => {
+export const transformTrendingPublicationsMetricsData = ({ data }, recordsToDisplayPerSource) => {
     const sources = trendingPublicationsConfig.sources;
 
     const trendingPublications = Object.entries(sources).map(([key, config]) => {
@@ -143,12 +144,12 @@ export const transformTrendingPublicationsMetricsData = ({data}, recordsToDispla
                     source: key,
                     count: count,
                     difference: getData(publication, config.metricDataPath.difference),
-                    citation_url: getData(publication, config.metricDataPath.citation_url)
+                    citation_url: getData(publication, config.metricDataPath.citation_url),
                 };
 
                 return {
                     ...publication,
-                    metricData
+                    metricData,
                 };
             } else {
                 return null;
@@ -164,7 +165,7 @@ export const transformTrendingPublicationsMetricsData = ({data}, recordsToDispla
             })
             .slice(0, recordsToDisplayPerSource);
 
-        return {key, values: recordsToDisplay};
+        return { key, values: recordsToDisplay };
     });
 
     // filter out sources which doesn't have trending publications

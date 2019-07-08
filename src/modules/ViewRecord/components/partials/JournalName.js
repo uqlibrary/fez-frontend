@@ -1,14 +1,14 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {default as globalLocale} from 'locale/global';
-import {default as viewRecordLocale} from 'locale/viewRecord';
-import {pathConfig} from 'config/routes';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
-import {Link} from 'react-router-dom';
+import { default as globalLocale } from 'locale/global';
+import { default as viewRecordLocale } from 'locale/viewRecord';
+import { pathConfig } from 'config/routes';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
+import { Link } from 'react-router-dom';
 
 export default class JournalName extends PureComponent {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
     };
 
     // fez_journal_issns returns era data
@@ -33,7 +33,7 @@ export default class JournalName extends PureComponent {
         const colorField = 'rek_issn_lookup';
         const colors = ['green', 'blue', 'yellow', 'white'];
         const filteredIssns = issns.filter(issn => colors.includes(issn[colorField]));
-        return filteredIssns.length > 0 ? {'issn': filteredIssns[0][issnField], 'color': filteredIssns[0][colorField]} : null;
+        return filteredIssns.length > 0 ? { 'issn': filteredIssns[0][issnField], 'color': filteredIssns[0][colorField] } : null;
     }
 
     renderSherpaRomeo = (issns) => {
@@ -68,7 +68,7 @@ export default class JournalName extends PureComponent {
     }
 
     render()  {
-        const {publication} = this.props;
+        const { publication } = this.props;
 
         return (
             <span>

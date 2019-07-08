@@ -19,7 +19,7 @@ import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
 import {
     useTabbedContext,
-    useRecordContext
+    useRecordContext,
 } from 'context';
 
 import pageLocale from 'locale/pages';
@@ -160,7 +160,7 @@ AdminInterface.propTypes = {
     handleSubmit: PropTypes.func,
     location: PropTypes.object,
     history: PropTypes.object,
-    tabs: PropTypes.object
+    tabs: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

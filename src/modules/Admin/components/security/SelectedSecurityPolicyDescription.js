@@ -6,11 +6,11 @@ import Typography from '@material-ui/core/Typography';
 
 import PolicyDescription from './PolicyDescription';
 
-export const SelectedSecurityPolicyDescription = ({title, selectedPolicyKey}) => (
+export const SelectedSecurityPolicyDescription = ({ title, selectedPolicyKey }) => (
     <Grid item xs={12} style={{
         marginTop: 12,
         padding: 24,
-        backgroundColor: 'rgba(0,0,0,0.05)'
+        backgroundColor: 'rgba(0,0,0,0.05)',
     }}>
         <Typography variant="h6" style={{ marginTop: -8 }}>
             {title}
@@ -27,9 +27,9 @@ export const SelectedSecurityPolicyDescription = ({title, selectedPolicyKey}) =>
 SelectedSecurityPolicyDescription.propTypes = {
     title: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.node
+        PropTypes.node,
     ]),
-    selectedPolicyKey: PropTypes.number
+    selectedPolicyKey: PropTypes.number,
 };
 
 export default React.memo(SelectedSecurityPolicyDescription);

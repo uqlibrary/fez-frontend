@@ -1,14 +1,14 @@
-import React, {PureComponent} from 'react';
-import {compose} from 'recompose';
+import React, { PureComponent } from 'react';
+import { compose } from 'recompose';
 import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import GrantListEditorHeader from './GrantListEditorHeader';
 import GrantListEditorRow from './GrantListEditorRow';
 import GrantListEditorForm from './GrantListEditorForm';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 
 export class GrantListEditor extends PureComponent {
@@ -21,19 +21,19 @@ export class GrantListEditor extends PureComponent {
         classes: PropTypes.object,
         required: PropTypes.bool,
         hideType: PropTypes.bool,
-        disableDeleteAllGrants: PropTypes.bool
+        disableDeleteAllGrants: PropTypes.bool,
     };
 
     static defaultProps = {
         hideType: false,
-        disableDeleteAllGrants: false
+        disableDeleteAllGrants: false,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             grants: this.getGrantsFromProps(props),
-            errorMessage: ''
+            errorMessage: '',
         };
     }
 
@@ -72,7 +72,7 @@ export class GrantListEditor extends PureComponent {
             grants: [
                 ...this.state.grants.slice(0, index - 1),
                 grant, previousGrant,
-                ...this.state.grants.slice(index + 1)]
+                ...this.state.grants.slice(index + 1)],
         });
     }
 
@@ -83,7 +83,7 @@ export class GrantListEditor extends PureComponent {
             grants: [
                 ...this.state.grants.slice(0, index),
                 nextGrant, grant,
-                ...this.state.grants.slice(index + 2)]
+                ...this.state.grants.slice(index + 2)],
         });
     }
 
@@ -96,19 +96,19 @@ export class GrantListEditor extends PureComponent {
     deleteAllGrants = () => {
         this.setState({
             grants: [],
-            errorMessage: ''
+            errorMessage: '',
         });
     }
 
     isFormPopulated = (value) => {
         this.setState({
-            grantFormPopulated: !!value
+            grantFormPopulated: !!value,
         });
     };
 
     render() {
-        const {classes, disabled, required, disableDeleteAllGrants} = this.props;
-        const {grants, errorMessage} = this.state;
+        const { classes, disabled, required, disableDeleteAllGrants } = this.props;
+        const { grants, errorMessage } = this.state;
 
         const renderGrantsRows = grants.map((grant, index) => (
             <GrantListEditorRow
@@ -129,7 +129,7 @@ export class GrantListEditor extends PureComponent {
             error = !!this.props.meta.error.props && React.Children.map(this.props.meta.error.props.children, (child, index) => {
                 if (child.type) {
                     return React.cloneElement(child, {
-                        key: index
+                        key: index,
                     });
                 } else {
                     return child;
@@ -165,8 +165,8 @@ export class GrantListEditor extends PureComponent {
                                 />
                             </List>
                         </Grid>
-                        <Grid item xs={12} style={{marginTop: -8}}>
-                            <List classes={{root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}`}}>
+                        <Grid item xs={12} style={{ marginTop: -8 }}>
+                            <List classes={{ root: `${classes.list} ${grants.length > 3 ? classes.scroll : ''}` }}>
                                 {renderGrantsRows}
                             </List>
                         </Grid>
@@ -193,8 +193,8 @@ export const styles = () => ({
         overflow: 'hidden',
     },
     scroll: {
-        overflowY: 'scroll'
-    }
+        overflowY: 'scroll',
+    },
 });
 
 export default compose(

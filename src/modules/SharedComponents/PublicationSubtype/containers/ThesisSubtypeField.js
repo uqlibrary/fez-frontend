@@ -1,7 +1,7 @@
 import React from 'react';
-import {connect} from 'react-redux';
-import {GenericSelectField} from 'modules/SharedComponents/GenericSelectField';
-import {THESIS_SUBTYPES} from 'config/general';
+import { connect } from 'react-redux';
+import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { THESIS_SUBTYPES } from 'config/general';
 
 const mapStateToProps = (state, props) => {
     return {
@@ -14,7 +14,7 @@ const mapStateToProps = (state, props) => {
         required: props.required,
         itemsLoadingHint: props.loadingHint || 'Loading..',
         errorText: !!props.meta && props.meta.error || props.error && !!props.errorText && props.errorText || '',
-        error: !!props.meta && !!props.meta.error || props.error || false
+        error: !!props.meta && !!props.meta.error || props.error || false,
     };
 };
 

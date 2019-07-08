@@ -29,12 +29,12 @@ const styles = theme => ({
         color: theme.palette.secondary.main,
         opacity: 0.66,
         '&:hover': {
-            opacity: 0.87
-        }
+            opacity: 0.87,
+        },
     },
     tabIndicator: {
         height: 4,
-        backgroundColor: theme.palette.primary.main
+        backgroundColor: theme.palette.primary.main,
     },
     badgeMargin: {
         top: 8,
@@ -42,8 +42,8 @@ const styles = theme => ({
         width: 12, height: 12,
         fontSize: 10,
         fontWeight: 'bold',
-        backgroundColor: '#595959'
-    }
+        backgroundColor: '#595959',
+    },
 });
 
 export const AdminContainer = ({
@@ -57,7 +57,7 @@ export const AdminContainer = ({
     disableSubmit,
     handleSubmit,
     match,
-    history
+    history,
 }) => {
     const [tabbed, setTabbed] = useState(
         Cookies.get('adminFormTabbed') &&
@@ -101,32 +101,32 @@ export const AdminContainer = ({
                     tabs={{
                         bibliographic: {
                             component: BibliographicSection,
-                            activated: false
+                            activated: false,
                         },
                         identifiers: {
                             component: IdentifiersSection,
-                            activated: false
+                            activated: false,
                         },
                         admin: {
                             component: AdminSection,
-                            activated: false
+                            activated: false,
                         },
                         grantInformation: {
                             component: GrantInformationSection,
-                            activated: false
+                            activated: false,
                         },
                         authorDetails: {
                             component: AuthorDetailsSection,
-                            activated: false
+                            activated: false,
                         },
                         files: {
                             component: FilesSection,
-                            activated: false
+                            activated: false,
                         },
                         security: {
                             component: SecuritySection,
-                            activated: true
-                        }
+                            activated: true,
+                        },
                     }}
                 />
             </RecordContext.Provider>
@@ -145,7 +145,7 @@ AdminContainer.propTypes = {
     disableSubmit: PropTypes.any,
     handleSubmit: PropTypes.func,
     match: PropTypes.object,
-    history: PropTypes.object
+    history: PropTypes.object,
 };
 
 export function isChanged(prevProps, nextProps) {

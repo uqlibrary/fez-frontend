@@ -4,9 +4,9 @@ import Immutable from 'immutable';
 
 jest.mock('redux-form/immutable', () => ({
     getFormValues: jest.fn(() => jest.fn(() => ({
-        get: jest.fn(() => ({ toJS: jest.fn(() => ({})) }))
+        get: jest.fn(() => ({ toJS: jest.fn(() => ({})) })),
     }))),
-    Field: (props) => <div {...props} />
+    Field: (props) => <div {...props} />,
 }));
 import { getFormValues } from 'redux-form/immutable';
 
@@ -19,12 +19,12 @@ function setup(testProps = {}, isShallow = false) {
         formValues: {
             dataStreams: Immutable.List([{
                 dsi_dsid: 'test.txt',
-                dsi_security_policy: 1
+                dsi_security_policy: 1,
             }]),
             rek_security_inherited: 1,
             rek_security_policy: 5,
-            rek_datastream_policy: 5
-        }
+            rek_datastream_policy: 5,
+        },
     }));
 
     useRecordContext.mockImplementation(() => ({
@@ -35,14 +35,14 @@ function setup(testProps = {}, isShallow = false) {
                 rek_ismemberof: 'Test collection',
                 parent: {
                     rek_security_policy: 2,
-                    rek_datastream_policy: 1
-                }
-            }]
-        }
+                    rek_datastream_policy: 1,
+                },
+            }],
+        },
     }));
     const props = {
         disabled: false,
-        ...testProps
+        ...testProps,
     };
 
     return getElement(SecuritySectionContainer, props, isShallow);

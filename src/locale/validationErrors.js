@@ -32,7 +32,7 @@ export default {
         requireChecked: 'Please accept deposit agreement',
         authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
-        grants: 'You must click ADD GRANT to enter the value to the grants list'
+        grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
@@ -88,6 +88,6 @@ export default {
         title: 'Title is required',
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
-        grants: 'You must click ADD GRANT to enter the value to the grants list'
-    }
+        grants: 'You must click ADD GRANT to enter the value to the grants list',
+    },
 };

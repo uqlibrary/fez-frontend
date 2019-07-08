@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
-import {get} from 'repositories/generic';
-import {CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API} from 'repositories/routes';
+import { get } from 'repositories/generic';
+import { CURRENT_ACCOUNT_API, CURRENT_AUTHOR_API, AUTHOR_DETAILS_API } from 'repositories/routes';
 import Raven from 'raven-js';
-import {sessionApi} from 'config';
+import { sessionApi } from 'config';
 
 /**
  * Loads the user's account and author details into the application
@@ -11,16 +11,16 @@ import {sessionApi} from 'config';
 export function loadCurrentAccount() {
     return dispatch => {
         if (
-            navigator.userAgent.indexOf('Googlebot') !== -1
-            || navigator.userAgent.indexOf('facebookexternalhit') !== -1
-            || navigator.userAgent.indexOf('bingbot') !== -1
-            || navigator.userAgent.indexOf('Slackbot-LinkExpanding') !== -1
-            || navigator.userAgent.indexOf('Twitterbot') !== -1
+            navigator.userAgent.indexOf('Googlebot') !== -1 ||
+            navigator.userAgent.indexOf('facebookexternalhit') !== -1 ||
+            navigator.userAgent.indexOf('bingbot') !== -1 ||
+            navigator.userAgent.indexOf('Slackbot-LinkExpanding') !== -1 ||
+            navigator.userAgent.indexOf('Twitterbot') !== -1
         ) {
-            dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+            dispatch({ type: actions.CURRENT_ACCOUNT_ANONYMOUS });
             return Promise.resolve({});
         } else {
-            dispatch({type: actions.CURRENT_ACCOUNT_LOADING});
+            dispatch({ type: actions.CURRENT_ACCOUNT_LOADING });
 
             let currentAuthor = null;
 
@@ -28,21 +28,21 @@ export function loadCurrentAccount() {
             return get(CURRENT_ACCOUNT_API())
                 .then(account => {
                     if (account.hasOwnProperty('hasSession') && account.hasSession === true) {
-                        if (process.env.ENABLE_LOG) Raven.setUserContext({id: account.id});
+                        if (process.env.ENABLE_LOG) Raven.setUserContext({ id: account.id });
                         return Promise.resolve(account);
                     } else {
-                        dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+                        dispatch({ type: actions.CURRENT_ACCOUNT_ANONYMOUS });
                         return Promise.reject(new Error('Session expired. User is unauthorized.'));
                     }
                 })
                 .then(accountResponse => {
                     dispatch({
                         type: actions.CURRENT_ACCOUNT_LOADED,
-                        payload: accountResponse
+                        payload: accountResponse,
                     });
 
                     // load current author details (based on token)
-                    dispatch({type: actions.CURRENT_AUTHOR_LOADING});
+                    dispatch({ type: actions.CURRENT_AUTHOR_LOADING });
                     return get(CURRENT_AUTHOR_API());
                 })
                 .then(currentAuthorResponse => {
@@ -50,29 +50,29 @@ export function loadCurrentAccount() {
                     currentAuthor = currentAuthorResponse.data;
                     dispatch({
                         type: actions.CURRENT_AUTHOR_LOADED,
-                        payload: currentAuthor
+                        payload: currentAuthor,
                     });
 
                     // load repository author details
-                    dispatch({type: actions.CURRENT_AUTHOR_DETAILS_LOADING});
-                    return get(AUTHOR_DETAILS_API({userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username}));
+                    dispatch({ type: actions.CURRENT_AUTHOR_DETAILS_LOADING });
+                    return get(AUTHOR_DETAILS_API({ userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username }));
                 })
                 .then(authorDetailsResponse => {
                     dispatch({
                         type: actions.CURRENT_AUTHOR_DETAILS_LOADED,
-                        payload: authorDetailsResponse
+                        payload: authorDetailsResponse,
                     });
                 })
                 .catch(error => {
                     if (!currentAuthor) {
                         dispatch({
                             type: actions.CURRENT_AUTHOR_FAILED,
-                            payload: error.message
+                            payload: error.message,
                         });
                     }
                     dispatch({
                         type: actions.CURRENT_AUTHOR_DETAILS_FAILED,
-                        payload: error.message
+                        payload: error.message,
                     });
                 });
         }
@@ -81,7 +81,7 @@ export function loadCurrentAccount() {
 
 export function logout() {
     return dispatch => {
-        dispatch({type: actions.CURRENT_ACCOUNT_ANONYMOUS});
+        dispatch({ type: actions.CURRENT_ACCOUNT_ANONYMOUS });
     };
 }
 
@@ -92,12 +92,12 @@ export function checkSession(reducerToSave = 'form') {
     return (dispatch) => {
         return sessionApi.get(CURRENT_ACCOUNT_API().apiUrl)
             .then(() => {
-                dispatch({type: actions.CURRENT_ACCOUNT_SESSION_VALID});
+                dispatch({ type: actions.CURRENT_ACCOUNT_SESSION_VALID });
             })
             .catch(() => {
                 dispatch({
                     type: actions.CURRENT_ACCOUNT_SESSION_EXPIRED,
-                    payload: reducerToSave
+                    payload: reducerToSave,
                 });
             });
     };
@@ -105,6 +105,6 @@ export function checkSession(reducerToSave = 'form') {
 
 export function clearSessionExpiredFlag() {
     return dispatch => {
-        dispatch({type: actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG});
+        dispatch({ type: actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG });
     };
 }

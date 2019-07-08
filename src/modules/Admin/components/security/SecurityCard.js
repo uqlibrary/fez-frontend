@@ -90,7 +90,7 @@ export const SecurityCard = ({ disabled }) => {
                                     disabled={disabled}
                                     text={{
                                         prompt: text.prompt,
-                                        selectedTitle: text.dataStreamSelectedTitle
+                                        selectedTitle: text.dataStreamSelectedTitle,
                                     }}
                                     fieldName="securitySection.rek_datastream_policy"
                                     recordType={recordType}
@@ -140,7 +140,7 @@ export const SecurityCard = ({ disabled }) => {
 };
 
 SecurityCard.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export function isSame(prevProps, nextProps) {

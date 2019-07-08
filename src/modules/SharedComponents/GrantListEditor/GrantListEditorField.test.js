@@ -2,7 +2,7 @@ import GrantListEditorField from './GrantListEditorField';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(GrantListEditorField, props, isShallow);
@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
 
 describe('GrantListEditorField', () => {
     it('should render default component', () => {
-        const wrapper = setup({input: {onChange: jest.fn()}});
+        const wrapper = setup({ input: { onChange: jest.fn() } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

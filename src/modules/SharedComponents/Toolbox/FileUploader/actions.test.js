@@ -6,17 +6,17 @@ describe('FileUploader actions ', () => {
         const uploadProgressCallback = notifyFileUploadProgress('a.txt', dispatchTestFn);
         const fileUploadProgressEvent = {
             loaded: 50,
-            total: 100
+            total: 100,
         };
         uploadProgressCallback(fileUploadProgressEvent);
-        expect(dispatchTestFn).toHaveBeenCalledWith({type: `${FILE_UPLOAD_PROGRESS}@a.txt`, complete: 50});
+        expect(dispatchTestFn).toHaveBeenCalledWith({ type: `${FILE_UPLOAD_PROGRESS}@a.txt`, complete: 50 });
     });
 
     it('notifies on clearing file uploader', () => {
-        expect(clearFileUpload()).toEqual({type: FILE_UPLOAD_CLEARED});
+        expect(clearFileUpload()).toEqual({ type: FILE_UPLOAD_CLEARED });
     });
 
     it('notifies on failing file upload', () => {
-        expect(notifyUploadFailed('a.txt')).toEqual({type: `${FILE_UPLOADED_FAILED}@a.txt`});
+        expect(notifyUploadFailed('a.txt')).toEqual({ type: `${FILE_UPLOADED_FAILED}@a.txt` });
     });
 });

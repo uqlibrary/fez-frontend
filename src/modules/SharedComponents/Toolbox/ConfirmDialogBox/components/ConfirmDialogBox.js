@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
@@ -13,7 +13,7 @@ export default class ConfirmDialogBox extends Component {
         onAction: PropTypes.func,
         onCancelAction: PropTypes.func,
         hideCancelButton: PropTypes.bool,
-        onRef: PropTypes.func
+        onRef: PropTypes.func,
     };
 
     static defaultProps = {
@@ -22,8 +22,8 @@ export default class ConfirmDialogBox extends Component {
             confirmationTitle: 'Confirmation',
             confirmationMessage: 'Are you sure?',
             cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes'
-        }
+            confirmButtonLabel: 'Yes',
+        },
     };
 
     constructor(props) {
@@ -34,7 +34,7 @@ export default class ConfirmDialogBox extends Component {
         this._onAction = this._onAction.bind(this);
 
         this.state = {
-            isDialogOpen: false
+            isDialogOpen: false,
         };
     }
 
@@ -48,13 +48,13 @@ export default class ConfirmDialogBox extends Component {
 
     showConfirmation() {
         this.setState({
-            isDialogOpen: true
+            isDialogOpen: true,
         });
     }
 
     _hideConfirmation() {
         this.setState({
-            isDialogOpen: false
+            isDialogOpen: false,
         });
     }
 
@@ -71,7 +71,7 @@ export default class ConfirmDialogBox extends Component {
 
     render() {
         return (
-            <Dialog style={{padding: 6}} open={this.state.isDialogOpen}>
+            <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                 <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
                 <DialogContent>
                     <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>

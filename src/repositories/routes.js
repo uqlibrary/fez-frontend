@@ -5,7 +5,7 @@ import {
     IN_REVIEW,
     UNPUBLISHED,
     RETRACTED,
-    SUBMITTED_FOR_APPROVAL
+    SUBMITTED_FOR_APPROVAL,
 } from 'config/general';
 
 export const zeroPaddedYear = (value) => value ? ('0000' + value).substr(-4) : '*';
@@ -49,13 +49,13 @@ export const getStandardSearchParams = ({ exportPublicationsFormat = '', page = 
         sort: sortBy,
         order_by: sortDirection.toLowerCase(),
         ...getFacetsParams(facets),
-        ...unknownAuthors
+        ...unknownAuthors,
     };
 };
 
 export const getOpenAccessSearchParams = ({ facets = {} }) => {
     return {
-        ...(!!facets.showOpenAccessOnly ? { rek_oa_status: openAccessConfig.openAccessIds } : {})
+        ...(!!facets.showOpenAccessOnly ? { rek_oa_status: openAccessConfig.openAccessIds } : {}),
     };
 };
 
@@ -92,7 +92,7 @@ export const AUTHOR_API = ({ authorId }) => (
 );
 export const AUTHOR_DETAILS_API = ({ userId }) => {
     return {
-        apiUrl: `authors/details/${userId}`
+        apiUrl: `authors/details/${userId}`,
     };
 };
 export const AUTHOR_ORCID_DETAILS_API = ({ userId, params }) => (
@@ -156,9 +156,9 @@ export const POSSIBLE_RECORDS_API = (values) => (
             params: {
                 rule: 'possible',
                 ...getStandardSearchParams(values),
-                ...getOpenAccessSearchParams(values)
-            }
-        }
+                ...getOpenAccessSearchParams(values),
+            },
+        },
     }
 );
 
@@ -173,9 +173,9 @@ export const CURRENT_USER_RECORDS_API = (values, route = 'search') => (
             params: {
                 rule: 'mine',
                 ...getStandardSearchParams(values),
-                ...getOpenAccessSearchParams(values)
-            }
-        }
+                ...getOpenAccessSearchParams(values),
+            },
+        },
     }
 );
 
@@ -186,9 +186,9 @@ export const INCOMPLETE_RECORDS_API = (values) => {
             params: {
                 rule: 'incomplete',
                 ...getStandardSearchParams(values),
-                ...getOpenAccessSearchParams(values)
-            }
-        }
+                ...getOpenAccessSearchParams(values),
+            },
+        },
     };
 };
 
@@ -200,9 +200,9 @@ export const AUTHOR_PUBLICATIONS_STATS_ONLY_API = (values) => (
                 rule: 'mine',
                 'filters[stats_only]': true,
                 ...getStandardSearchParams(values),
-                ...getOpenAccessSearchParams(values)
-            }
-        }
+                ...getOpenAccessSearchParams(values),
+            },
+        },
     }
 );
 export const TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/trending' });
@@ -214,14 +214,14 @@ export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {
             if (value.toLowerCase().indexOf('uq:') !== 0) {
                 return {
                     ...result,
-                    [key]: `UQ:${value}`
+                    [key]: `UQ:${value}`,
                 };
             }
             break;
         case 'rek_genre_type':
             return {
                 ...result,
-                [key]: value.map(item => `"${item}"`)
+                [key]: value.map(item => `"${item}"`),
             };
         case 'rek_status':
             return {
@@ -233,9 +233,9 @@ export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {
                         IN_CREATION,
                         IN_REVIEW,
                         IN_DRAFT,
-                        RETRACTED
+                        RETRACTED,
                     ]
-                    : value
+                    : value,
             };
         case 'rek_created_date':
         case 'rek_updated_date':
@@ -243,7 +243,7 @@ export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {
         case 'all':
             return {
                 ...result,
-                [key]: value
+                [key]: value,
             };
         default:
             break;
@@ -253,7 +253,7 @@ export const formatSearchQueryParams = ({ result, key, searchQueryParams }) => {
         ...result,
         [key]: !!value
             ? value
-            : searchQueryParams[key]
+            : searchQueryParams[key],
     };
 };
 
@@ -275,14 +275,14 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
 
     searchQueryParams = {
         ...values.searchQueryParams,
-        ...getOpenAccessSearchParams(values)
+        ...getOpenAccessSearchParams(values),
     };
 
     let advancedSearchQueryParams = null;
     if (values.searchMode === 'advanced') {
         advancedSearchQueryParams = {
             mode: 'advanced',   // mode to let axios request interceptor to know for serialising query params
-            key: { ...searchQueryParams }
+            key: { ...searchQueryParams },
         };
     }
 
@@ -292,9 +292,9 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
             params: {
                 ...getSearchType(values.searchQuery),
                 ...getStandardSearchParams(values),
-                ...(advancedSearchQueryParams || searchQueryParams)
-            }
-        }
+                ...(advancedSearchQueryParams || searchQueryParams),
+            },
+        },
     };
 };
 
@@ -309,9 +309,9 @@ export const SEARCH_KEY_LOOKUP_API = ({ searchKey, searchQuery }) => (
             params: {
                 rule: 'lookup',
                 search_key: searchKey,
-                lookup_value: searchQuery
-            }
-        }
+                lookup_value: searchQuery,
+            },
+        },
     }
 );
 
@@ -320,9 +320,9 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({ searchQuery }) => ({
     options: {
         params: {
             rule: 'lookup',
-            query: searchQuery.replace(',', '')
-        }
-    }
+            query: searchQuery.replace(',', ''),
+        },
+    },
 });
 
 export const THIRD_PARTY_LOOKUP_API_1FIELD = ({ type, field1 }) => (

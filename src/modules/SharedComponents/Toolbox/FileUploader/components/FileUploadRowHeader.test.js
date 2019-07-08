@@ -1,4 +1,4 @@
-import {FileUploadRowHeader} from './FileUploadRowHeader';
+import { FileUploadRowHeader } from './FileUploadRowHeader';
 import FileUploadRowHeaderWithStyles from './FileUploadRowHeader';
 
 const locale = {
@@ -10,16 +10,16 @@ const locale = {
         confirmationTitle: 'Delete all',
         confirmationMessage: 'Are you sure you want to delete all files?',
         cancelButtonLabel: 'No',
-        confirmButtonLabel: 'Yes'
-    }
+        confirmButtonLabel: 'Yes',
+    },
 };
 
 const getProps = (testProps = {}) => ({
     onDeleteAll: testProps.onDeleteAll || jest.fn(),
     classes: {
-        icon: ''
+        icon: '',
     },
-    ...testProps
+    ...testProps,
 });
 
 function setup(testProps, isShallow = true) {
@@ -41,10 +41,10 @@ describe('Component FileUploadRowHeader', () => {
         const props = {
             requireOpenAccessStatus: true,
             onDeleteAll: jest.fn(),
-            locale: locale
+            locale: locale,
         };
 
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -52,10 +52,10 @@ describe('Component FileUploadRowHeader', () => {
         const props = {
             requireOpenAccessStatus: true,
             onDeleteAll: jest.fn(),
-            locale: locale
+            locale: locale,
         };
 
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -63,10 +63,10 @@ describe('Component FileUploadRowHeader', () => {
         const props = {
             requireOpenAccessStatus: true,
             onDeleteAll: jest.fn(),
-            locale: locale
+            locale: locale,
         };
 
-        const wrapper = setup({...props}, false);
+        const wrapper = setup({ ...props }, false);
         const tightWrapper = wrapper.find('FileUploadRowHeader');
         tightWrapper.instance()._showConfirmation();
         wrapper.update();

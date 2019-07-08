@@ -3,7 +3,7 @@ import * as actions from 'actions/actionTypes';
 const initState = {
     itemsList: [],
     itemsLoading: false,
-    itemsLoadingError: false
+    itemsLoadingError: false,
 };
 
 const handlers = {
@@ -12,8 +12,8 @@ const handlers = {
             ...state,
             [`${actions.getActionSuffix(action.type)}`]: {
                 ...initState,
-                itemsLoading: true
-            }
+                itemsLoading: true,
+            },
         }
     ),
     [`${actions.SEARCH_KEY_LOOKUP_LOADED}@`]: (state, action) => (
@@ -21,8 +21,8 @@ const handlers = {
             ...state,
             [`${actions.getActionSuffix(action.type)}`]: {
                 ...initState,
-                itemsList: action.payload
-            }
+                itemsList: action.payload,
+            },
         }
     ),
     [`${actions.SEARCH_KEY_LOOKUP_FAILED}@`]: (state, action) => (
@@ -30,10 +30,10 @@ const handlers = {
             ...state,
             [`${actions.getActionSuffix(action.type)}`]: {
                 ...initState,
-                itemsLoadingError: true
-            }
+                itemsLoadingError: true,
+            },
         }
-    )
+    ),
 };
 
 export default function searchKeysReducer(state = {}, action) {

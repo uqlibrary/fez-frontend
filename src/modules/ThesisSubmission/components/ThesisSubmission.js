@@ -1,25 +1,25 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
-import {OrgUnitNameField, FilteredFieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { OrgUnitNameField, FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
-import {validation} from 'config';
+import { validation } from 'config';
 import locale from 'locale/components';
-import {default as formLocale} from 'locale/publicationForm';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {THESIS_SUBMISSION_SUBTYPES} from 'config/general';
+import { default as formLocale } from 'locale/publicationForm';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { THESIS_SUBMISSION_SUBTYPES } from 'config/general';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -35,7 +35,7 @@ export default class ThesisSubmission extends Component {
         fileAccessId: PropTypes.number,
         isSessionValid: PropTypes.bool,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
-        newRecord: PropTypes.object
+        newRecord: PropTypes.object,
     };
 
     constructor(props) {
@@ -88,15 +88,14 @@ export default class ThesisSubmission extends Component {
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             {
-                                this.props.newRecordFileUploadingOrIssueError ?
-                                    <Grid item xs={12}>
+                                this.props.newRecordFileUploadingOrIssueError
+                                    ? <Grid item xs={12}>
                                         <Alert
                                             {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
                                             action={this.afterFailedSubmit}
                                         />
                                     </Grid>
-                                    :
-                                    <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
+                                    :                                    <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
                                         <Grid container spacing={24}>
                                             <Grid item xs={12}>
                                                 <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
@@ -124,14 +123,14 @@ export default class ThesisSubmission extends Component {
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.thesisSubmission.depositFailedMessage
-                }
-            }});
+                    message: formLocale.thesisSubmission.depositFailedMessage,
+                },
+            } });
         return (
             <StandardPage title={this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle}>
                 <form>
@@ -239,7 +238,7 @@ export default class ThesisSubmission extends Component {
                                     maxCount={10}
                                     validate={[validation.requiredList]}
                                     maxInputLength={111}
-                                    searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                    searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}/>
                             </StandardCard>

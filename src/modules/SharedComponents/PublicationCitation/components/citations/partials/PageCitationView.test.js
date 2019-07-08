@@ -1,5 +1,5 @@
 import PageCitationView from './PageCitationView';
-import {conferencePaper} from 'mock/data/testing/records';
+import { conferencePaper } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
         publication: testProps.publication || {},
         searchKey: testProps.searchKey,
-        className: testProps.className
+        className: testProps.className,
     };
     return getElement(PageCitationView, props, isShallow);
 }
@@ -18,9 +18,9 @@ describe('PageCitationView test ', () => {
             publication: conferencePaper,
             searchKey: {
                 key: 'fez_record_search_key_start_page',
-                subkey: 'rek_start_page'
+                subkey: 'rek_start_page',
             },
-            className: 'citationPage'
+            className: 'citationPage',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -30,9 +30,9 @@ describe('PageCitationView test ', () => {
             publication: {},
             searchKey: {
                 key: 'fez_record_search_key_start_page',
-                subkey: 'rek_start_page'
+                subkey: 'rek_start_page',
             },
-            className: 'citationPage'
+            className: 'citationPage',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -42,8 +42,8 @@ describe('PageCitationView test ', () => {
             publication: conferencePaper,
             searchKey: {
                 key: 'fez_record_search_key_start_page',
-                subkey: 'rek_start_page'
-            }
+                subkey: 'rek_start_page',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -6,10 +6,10 @@ function setup(testProps, isShallow = true) {
         facetTitle: 'Test title',
         disabled: false,
         open: false,
-        classes: {listItemGutters: 'listItemGutters'},
+        classes: { listItemGutters: 'listItemGutters' },
         nestedItems: [],
         onToggle: jest.fn(),
-        ...testProps
+        ...testProps,
     };
     return getElement(FacetFilterListItem, props, isShallow);
 }
@@ -21,18 +21,18 @@ describe('Facet filter list item ', () => {
     });
 
     it('should render collapsed filter', () => {
-        const wrapper = setup({open: true, nestedItems: 'Test filter'});
+        const wrapper = setup({ open: true, nestedItems: 'Test filter' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({disabled: true});
+        const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should toggle nested items on click', () => {
         const testFn = jest.fn();
-        const wrapper = setup({onToggle: testFn});
+        const wrapper = setup({ onToggle: testFn });
         wrapper.props().onToggle();
         expect(testFn).toBeCalled();
     });

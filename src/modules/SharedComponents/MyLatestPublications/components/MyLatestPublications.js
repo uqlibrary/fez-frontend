@@ -1,14 +1,14 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {routes} from 'config';
-import {locale} from 'locale';
+import { routes } from 'config';
+import { locale } from 'locale';
 
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = (theme) => ({
     blueButton: {
@@ -16,8 +16,8 @@ export const styles = (theme) => ({
         color: theme.palette.white.main,
         '&:hover': {
             backgroundColor: theme.palette.accent.dark,
-        }
-    }
+        },
+    },
 });
 
 export class MyLatestPublications extends PureComponent {
@@ -28,13 +28,13 @@ export class MyLatestPublications extends PureComponent {
         accountAuthorDetailsLoading: PropTypes.bool,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         latestPublicationsList: [],
         totalPublicationsCount: null,
-        loadingLatestPublications: false
+        loadingLatestPublications: false,
     };
 
     componentDidMount() {

@@ -1,30 +1,30 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {FieldOfResearchListField} from 'modules/SharedComponents/LookupFields';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
-import {AccessSelectorField} from 'modules/SharedComponents/Toolbox/AccessSelectorField';
-import {LicenseSelectorField} from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
-import {GeoCoordinatesField} from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
-import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
-import {AuthorIdField} from 'modules/SharedComponents/LookupFields';
-import {RelatedDatasetAndPublicationListField} from 'modules/SharedComponents/LookupFields';
-import {default as Divider} from 'modules/SharedComponents/Toolbox/Divider';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
+import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
+import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
+import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
+import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
+import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
+import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
 
-import {routes, validation} from 'config';
+import { routes, validation } from 'config';
 import componentLocale from 'locale/components';
-import {default as formLocale} from 'locale/publicationForm';
-import {locale} from 'locale';
+import { default as formLocale } from 'locale/publicationForm';
+import { locale } from 'locale';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -37,7 +37,7 @@ export default class AddDataCollection extends Component {
         author: PropTypes.object,
         disableSubmit: PropTypes.bool,
         actions: PropTypes.object,
-        isSessionValid: PropTypes.bool
+        isSessionValid: PropTypes.bool,
     };
 
     componentWillReceiveProps(nextProps) {
@@ -67,13 +67,13 @@ export default class AddDataCollection extends Component {
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
-                errorAlert: {...formLocale.errorAlert}
-            }});
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
+                errorAlert: { ...formLocale.errorAlert },
+            } });
 
-        const saveConfirmationLocale = {...locale.pages.addDataset.successWorkflowConfirmation};
+        const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -307,7 +307,7 @@ export default class AddDataCollection extends Component {
                                             component={ListEditorField}
                                             name="fez_record_search_key_grant_agency"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_grant_agency', order: 'rek_grant_agency_order'}}
+                                            searchKey={{ value: 'rek_grant_agency', order: 'rek_grant_agency_order' }}
                                             locale={locale.components.fundingBodyForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -316,7 +316,7 @@ export default class AddDataCollection extends Component {
                                             component={ListEditorField}
                                             name="fez_record_search_key_grant_id"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_grant_id', order: 'rek_grant_id_order'}}
+                                            searchKey={{ value: 'rek_grant_id', order: 'rek_grant_id_order' }}
                                             locale={locale.components.grantIdForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -331,7 +331,7 @@ export default class AddDataCollection extends Component {
                                             component={ListEditorField}
                                             name="fez_record_search_key_type_of_data"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_type_of_data', order: 'rek_type_of_data_order'}}
+                                            searchKey={{ value: 'rek_type_of_data', order: 'rek_type_of_data_order' }}
                                             locale={locale.components.typeOfDataForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -343,7 +343,7 @@ export default class AddDataCollection extends Component {
                                             component={ListEditorField}
                                             name="fez_record_search_key_software_required"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_software_required', order: 'rek_software_required_order'}}
+                                            searchKey={{ value: 'rek_software_required', order: 'rek_software_required_order' }}
                                             locale={locale.components.softwareRequiredForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
@@ -355,14 +355,14 @@ export default class AddDataCollection extends Component {
                                             component={ListEditorField}
                                             name="fez_record_search_key_keywords"
                                             maxCount={10}
-                                            searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                            searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                             locale={locale.components.keywordsForm.field}
                                             disabled={this.props.submitting}/>
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Divider />
                                     </Grid>
-                                    <Grid item xs={12} sm={6} style={{padding: '0px 20px'}}>
+                                    <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                         <Typography variant="caption">{txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label}</Typography>
                                         <Field
                                             component={DatePickerField}
@@ -372,7 +372,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                             validate={[validation.dateRange]}/>
                                     </Grid>
-                                    <Grid item xs={12} sm={6} style={{padding: '0px 20px'}}>
+                                    <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
                                         <Typography variant="caption">{txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label}</Typography>
                                         <Field
                                             component={DatePickerField}
@@ -399,9 +399,9 @@ export default class AddDataCollection extends Component {
                                 <Field
                                     component={RelatedDatasetAndPublicationListField}
                                     name="fez_record_search_key_isdatasetof"
-                                    searchKey={{value: 'rek_isdatasetof', order: 'rek_isdatasetof_order'}}
+                                    searchKey={{ value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' }}
                                     disabled={this.props.submitting}
-                                    locale={{form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets}}
+                                    locale={{ form: txt.information.optionalDatasetDetails.fieldLabels.relatedDatasets }}
                                     height={50}
                                 />
                             </StandardCard>

@@ -8,7 +8,7 @@ function setup(testProps, isShallow = true) {
         rawSearchQuery: testProps.rawSearchQuery || '',
         addRecordStep: testProps.addRecordStep || jest.fn(),
         location: testProps.location || {
-            pathname: ''
+            pathname: '',
         },
         match: testProps.match || {},
         author: testProps.author || null,
@@ -16,20 +16,19 @@ function setup(testProps, isShallow = true) {
 
         },
         history: testProps.history || {
-            push: jest.fn()
-        }
+            push: jest.fn(),
+        },
     };
     return getElement(AddMissingRecord, props, isShallow);
 }
 
 describe('Component AddMissingRecord', () => {
-
     it('method getStepperIndex should return step [0] and Stepper should render the 1st step', () => {
         const props = {
             location: { pathname: routes.pathConfig.records.add.find },
-            addRecordStep: () => <span />
+            addRecordStep: () => <span />,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(0);
     });
@@ -38,9 +37,9 @@ describe('Component AddMissingRecord', () => {
         const props = {
             rawSearchQuery: 'This is a test',
             location: { pathname: routes.pathConfig.records.add.results },
-            addRecordStep: () => <span />
+            addRecordStep: () => <span />,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(1);
     });
@@ -49,18 +48,18 @@ describe('Component AddMissingRecord', () => {
         const props = {
             rawSearchQuery: 'This is a test',
             location: { pathname: `${routes.pathConfig.records.add.results}/test` },
-            addRecordStep: () => <span />
+            addRecordStep: () => <span />,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(0);
     });
 
     it('method getStepperIndex should return step [2] and Stepper should render the 3rd step', () => {
         const props = {
             location: { pathname: routes.pathConfig.records.add.new },
-            addRecordStep: () => <span />
+            addRecordStep: () => <span />,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.instance().getStepperIndex(props.location.pathname)).toEqual(2);
     });
@@ -69,12 +68,12 @@ describe('Component AddMissingRecord', () => {
         const testReplace = jest.fn();
         const props = {
             rawSearchQuery: null,
-            history: {replace: testReplace},
+            history: { replace: testReplace },
             location: { pathname: routes.pathConfig.records.add.results },
             match: { path: routes.pathConfig.records.add.results },
-            addRecordStep: () => <span />
+            addRecordStep: () => <span />,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
     });
 });

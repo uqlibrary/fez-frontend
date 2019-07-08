@@ -24,44 +24,44 @@ const grantColumns = [
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Grant agency ID',
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Grant ID',
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Grant acronym',
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Grant text',
         options: {
             display: 'false',
             sort: true,
-        }
+        },
     },
     {
         name: 'Actions',
         options: {
             display: true,
             sort: false,
-            filter: false
-        }
-    }
+            filter: false,
+        },
+    },
 ];
 
 const grantData = [
@@ -150,7 +150,7 @@ export const GrantInformationSection = ({ disabled }) => {
 };
 
 GrantInformationSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(GrantInformationSection);

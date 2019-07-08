@@ -1,19 +1,19 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
-import {openAccessConfig} from 'config';
+import { locale } from 'locale';
+import { openAccessConfig } from 'config';
 
 export default class OpenAccessIcon extends PureComponent {
     static propTypes = {
         isOpenAccess: PropTypes.bool,
         embargoDate: PropTypes.string,
         openAccessStatusId: PropTypes.number,
-        showEmbargoText: PropTypes.bool
+        showEmbargoText: PropTypes.bool,
     };
     static defaultProps = {
         isOpenAccess: false,
         embargoDate: null,
-        showEmbargoText: false
+        showEmbargoText: false,
     };
 
     render() {

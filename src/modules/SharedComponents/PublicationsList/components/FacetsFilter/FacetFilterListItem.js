@@ -1,10 +1,10 @@
-import React, {Fragment} from 'react';
+import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Collapse from '@material-ui/core/Collapse';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 import Typography from '@material-ui/core/Typography';
@@ -16,10 +16,10 @@ const styles = (theme) => ({
     },
     listText: {
         fontWeight: 400,
-    }
+    },
 });
 
-export function FacetsFilterListItem({facetTitle, classes, open, key, children, disabled, onToggle}) {
+export function FacetsFilterListItem({ facetTitle, classes, open, key, children, disabled, onToggle }) {
     return (
         <Fragment key={`facet_fragment_${key}`}>
             <ListItem
@@ -27,7 +27,7 @@ export function FacetsFilterListItem({facetTitle, classes, open, key, children, 
                 disabled={disabled}
                 key={`facet_filter_${key}`}
                 classes={{
-                    gutters: classes.listItemGutters
+                    gutters: classes.listItemGutters,
                 }}
                 onClick={onToggle}
             >
@@ -58,7 +58,7 @@ FacetsFilterListItem.propTypes = {
     open: PropTypes.bool,
     classes: PropTypes.object,
     children: PropTypes.any,
-    onToggle: PropTypes.func
+    onToggle: PropTypes.func,
 };
 
 function isOpenOrDisabled(prevProps, nextProps) {

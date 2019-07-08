@@ -1,4 +1,4 @@
-import {DocumentTypeField, styles} from './DocumentTypeField';
+import { DocumentTypeField, styles } from './DocumentTypeField';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -7,11 +7,11 @@ function setup(testProps, isShallow = true) {
         className: 'document-type-field',
         disabled: false,
         classes: {},
-        ...testProps
+        ...testProps,
     };
 
     return getElement(DocumentTypeField, props, isShallow);
-};
+}
 
 describe('DocumentTypeField component', () => {
     it('should render default view', () => {
@@ -20,7 +20,7 @@ describe('DocumentTypeField component', () => {
     });
 
     it('should render disabled view', () => {
-        const wrapper = setup({disabled: true});
+        const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('WithStyles(WithFormControlContext(Select))').props().disabled).toBeTruthy();
     });
@@ -28,7 +28,7 @@ describe('DocumentTypeField component', () => {
     it('should render with given document types selected by default', () => {
         const defaultDocTypes = [371, 316];
         const wrapper = setup({
-            docTypes: defaultDocTypes
+            docTypes: defaultDocTypes,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('WithStyles(MenuItem)').map(menuItem => defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy());
@@ -37,25 +37,26 @@ describe('DocumentTypeField component', () => {
     it('should handle doc type change event', () => {
         const updateDocTypeValuesFn = jest.fn();
         const wrapper = setup({
-            updateDocTypeValues: updateDocTypeValuesFn
+            updateDocTypeValues: updateDocTypeValuesFn,
         });
-        wrapper.find('WithStyles(WithFormControlContext(Select))').props().onChange({target: {value: 316}});
+        wrapper.find('WithStyles(WithFormControlContext(Select))').props()
+            .onChange({ target: { value: 316 } });
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
     });
 
     it('should have a proper style generator', () => {
         const theme = {
             typography: {
-                caption: 'test1'
+                caption: 'test1',
             },
             palette: {
                 accent: {
-                    main: 'test2'
+                    main: 'test2',
                 },
                 white: {
-                    main: 'test3'
-                }
-            }
+                    main: 'test3',
+                },
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
 
@@ -69,7 +70,7 @@ describe('DocumentTypeField component', () => {
 
     it('should have the value "0" if docTypes property is empty', () => {
         const wrapper = setup({
-            docTypes: null
+            docTypes: null,
         });
         expect(wrapper.find('WithStyles(WithFormControlContext(Select))').prop('value')).toBe('0');
     });

@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 // MUI 1
 import IconButton from '@material-ui/core/IconButton';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import HelpOutline from '@material-ui/icons/HelpOutline';
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
@@ -13,9 +13,9 @@ const styles = theme => ({
         color: theme.palette.secondary.main,
         opacity: 0.66,
         '&:hover': {
-            opacity: 0.87
-        }
-    }
+            opacity: 0.87,
+        },
+    },
 });
 
 export class HelpIcon extends Component {
@@ -28,22 +28,22 @@ export class HelpIcon extends Component {
         classes: PropTypes.object,
         IconComponent: PropTypes.oneOfType([
             PropTypes.func,
-            PropTypes.element
-        ])
+            PropTypes.element,
+        ]),
     };
 
     static defaultProps = {
         tooltip: 'Click for more information',
-        IconComponent: HelpOutline
+        IconComponent: HelpOutline,
     };
 
     setDrawerContent = () => {
-        const {title, text, buttonLabel, onClick} = this.props;
+        const { title, text, buttonLabel, onClick } = this.props;
         onClick(title, text, buttonLabel);
     };
 
     render() {
-        const {classes, tooltip, IconComponent} = this.props;
+        const { classes, tooltip, IconComponent } = this.props;
         return (
             <Tooltip title={tooltip}
                 placement="bottom-end"
@@ -57,4 +57,4 @@ export class HelpIcon extends Component {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(HelpIcon);
+export default withStyles(styles, { withTheme: true })(HelpIcon);

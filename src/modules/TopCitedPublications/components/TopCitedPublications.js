@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/components';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {PublicationsList} from 'modules/SharedComponents/PublicationsList';
-import {HelpIcon} from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { PublicationsList } from 'modules/SharedComponents/PublicationsList';
+import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 
 export const styles = theme => ({
@@ -22,15 +22,15 @@ export const styles = theme => ({
             margin: '-16px -16px 0px -16px',
         },
         backgroundColor: theme.palette.primary.main,
-        borderRadius: '4px 4px 0px 0px'
+        borderRadius: '4px 4px 0px 0px',
     },
     tab: {
-        color: theme.palette.white.main
+        color: theme.palette.white.main,
     },
     tabIndicator: {
         height: 4,
-        backgroundColor: theme.palette.accent.main
-    }
+        backgroundColor: theme.palette.accent.main,
+    },
 });
 
 export class TopCitedPublicationsClass extends PureComponent {
@@ -41,18 +41,18 @@ export class TopCitedPublicationsClass extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         theme: PropTypes.object,
         classes: PropTypes.object,
-        width: PropTypes.string
+        width: PropTypes.string,
     };
 
     static defaultProps = {
         topCitedPublicationsList: [],
-        loadingTopCitedPublications: false
+        loadingTopCitedPublications: false,
     };
 
     constructor(props) {
         super(props);
         this.state = {
-            topCitedTab: 'altmetric'
+            topCitedTab: 'altmetric',
         };
     }
 
@@ -64,12 +64,12 @@ export class TopCitedPublicationsClass extends PureComponent {
 
     handleTabChange = (event, value) => {
         this.setState({
-            topCitedTab: value
+            topCitedTab: value,
         });
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.components.topCitedPublications;
         if (this.props.loadingTopCitedPublications) {
             return (
@@ -86,34 +86,34 @@ export class TopCitedPublicationsClass extends PureComponent {
         const reorderedItems = this.props.topCitedPublicationsList.sort((source1, source2) => (txt[source1.key].order - txt[source2.key].order));
         return (
             <React.Fragment>
-                {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0 ?
-                    <StandardCard noHeader>
+                {!this.props.loadingTopCitedPublications && this.props.topCitedPublicationsList.length > 0
+                    ? <StandardCard noHeader>
                         <Tabs
                             className={classes.tabs}
-                            classes={{indicator: classes.tabIndicator}}
+                            classes={{ indicator: classes.tabIndicator }}
                             value={this.state.topCitedTab}
                             onChange={this.handleTabChange}
                             variant="fullWidth"
                             centered
                         >
                             {/* Tabs */}
-                            {reorderedItems.map(({key, values}) => (
+                            {reorderedItems.map(({ key, values }) => (
                                 values && values.length >= 1 &&
                                 <Tab className={classes.tab} key={key} label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title} value={key}/>
                             ))}
                         </Tabs>
 
                         {/* Content */}
-                        {reorderedItems.map(({key, values}) => (
+                        {reorderedItems.map(({ key, values }) => (
                             values && values.length >= 1 && (this.state.topCitedTab === key) &&
-                            <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{marginTop: 24}}>
+                            <Grid container alignItems={'flex-start'} alignContent={'flex-start'} key={key} style={{ marginTop: 24 }}>
                                 <Grid item xs>
                                     <Typography key={key} variant={'h6'} color={'primary'}><div key={key} className={`fez-icon ${key} xxlarge`}/> {txt[key].heading}</Typography>
                                 </Grid>
-                                <Grid item xs={'auto'} style={{marginTop: -12}}>
+                                <Grid item xs={'auto'} style={{ marginTop: -12 }}>
                                     <HelpIcon {...locale.components.trendingPublicationHelp}/>
                                 </Grid>
-                                <Grid item xs={12} style={{paddingTop: 24}} id={'topCitedPublications'}>
+                                <Grid item xs={12} style={{ paddingTop: 24 }} id={'topCitedPublications'}>
                                     <PublicationsList
                                         key={key}
                                         publicationsList={values}
@@ -123,8 +123,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                             </Grid>
                         ))}
                     </StandardCard>
-                    :
-                    <Alert {...txt.notAvailableAlert} />
+                    :                    <Alert {...txt.notAvailableAlert} />
                 }
             </React.Fragment>
         );

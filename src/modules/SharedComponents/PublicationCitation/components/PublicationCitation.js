@@ -66,8 +66,8 @@ export const styles = theme => ({
     },
     contentIndicatorTitle: {
         fontWeight: 400,
-        marginRight: '0.5ex'
-    }
+        marginRight: '0.5ex',
+    },
 });
 
 export class PublicationCitation extends PureComponent {
@@ -90,7 +90,7 @@ export class PublicationCitation extends PureComponent {
         hideCitationCounts: PropTypes.bool,
         hideLinks: PropTypes.bool,
         hideContentIndicators: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -106,7 +106,7 @@ export class PublicationCitation extends PureComponent {
         hideCountTotal: false,
         hideViewFullStatisticsLink: false,
         hideCitationCounts: false,
-        hideContentIndicators: false
+        hideContentIndicators: false,
     };
 
     constructor(props) {
@@ -135,7 +135,7 @@ export class PublicationCitation extends PureComponent {
             ThesisCitation,
             NewspaperArticleCitation,
             PatentCitation,
-            DataCollectionCitation
+            DataCollectionCitation,
         };
 
         // get default actions from locale
@@ -180,7 +180,7 @@ export class PublicationCitation extends PureComponent {
                 filteredPublicationType[0].citationComponent,
                 {
                     publication: this.props.publication,
-                    hideDoiLink: this.props.hideLinks
+                    hideDoiLink: this.props.hideLinks,
                 }
             )
             : (
@@ -191,9 +191,9 @@ export class PublicationCitation extends PureComponent {
     };
 
     renderActions = (actions) => {
-        const pid = this.props.publication
-            && this.props.publication.rek_pid
-            && this.props.publication.rek_pid.replace(':', '');
+        const pid = this.props.publication &&
+            this.props.publication.rek_pid &&
+            this.props.publication.rek_pid.replace(':', '');
         return actions && actions.length > 0
             ? actions.map((action, index) => {
                 const buttonProps = {
@@ -205,7 +205,7 @@ export class PublicationCitation extends PureComponent {
                     onClick: () => (this.props.showDefaultActions
                         ? this._handleDefaultActions(action.key)
                         : action.handleAction(this.props.publication)
-                    )
+                    ),
                 };
                 return (
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>

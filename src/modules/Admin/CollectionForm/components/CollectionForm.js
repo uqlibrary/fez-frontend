@@ -1,21 +1,21 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {validation} from 'config';
-import {default as formLocale} from 'locale/publicationForm';
-import {CommunitiesSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { validation } from 'config';
+import { default as formLocale } from 'locale/publicationForm';
+import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {pathConfig} from 'config/routes';
+import { pathConfig } from 'config/routes';
 
 export default class CollectionForm extends Component {
     static propTypes = {
@@ -31,11 +31,11 @@ export default class CollectionForm extends Component {
 
         newCollectionSaving: PropTypes.bool,
         newCollectionError: PropTypes.bool,
-        newRecord: PropTypes.object
+        newRecord: PropTypes.object,
     };
 
     static contextTypes = {
-        selectFieldMobileOverrides: PropTypes.object
+        selectFieldMobileOverrides: PropTypes.object,
     };
 
     constructor(props) {
@@ -92,14 +92,14 @@ export default class CollectionForm extends Component {
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
-                    message: formLocale.addACollection.addFailedMessage
-                }
-            }});
+                    message: formLocale.addACollection.addFailedMessage,
+                },
+            } });
         return (
             <StandardPage title={txt.title}>
                 <form>
@@ -164,7 +164,7 @@ export default class CollectionForm extends Component {
                                                 maxCount={10}
                                                 // validate={[validation.requiredList]}
                                                 maxInputLength={111}
-                                                searchKey={{value: 'rek_keywords', order: 'rek_keywords_order'}}
+                                                searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                 locale={txt.formLabels.keywords.field}
                                                 disabled={this.props.submitting}/>
                                         </Grid>

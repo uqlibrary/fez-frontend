@@ -1,13 +1,13 @@
 import React from 'react';
 import DateRange from './DateRange';
-import { rtlRender, fireEvent } from 'test-utils'
+import { rtlRender, fireEvent } from 'test-utils';
 
 function setup(testProps, isShallow = true) {
     const props = {
         onChange: testProps.onChange || jest.fn(),
         open: testProps.open || null,
         onToggle: testProps.onToggle || jest.fn(),
-        ...testProps
+        ...testProps,
     };
     return rtlRender(<DateRange {...props}/>);
 }
@@ -38,14 +38,14 @@ describe('Date range ', () => {
             open: true,
             value: {
                 from: 2010,
-                to: 2016
-            }
+                to: 2016,
+            },
         });
         expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render disabled component', () => {
-        const { asFragment } = setup({open: true, disabled: true});
+        const { asFragment } = setup({ open: true, disabled: true });
         expect(asFragment()).toMatchSnapshot();
     });
 
@@ -55,18 +55,18 @@ describe('Date range ', () => {
             open: true,
             value: {
                 from: 2010,
-                to: 2015
+                to: 2015,
             },
-            onChange
+            onChange,
         });
 
         expect(asFragment()).toMatchSnapshot();
-        fireEvent.change(getByLabelText(/from/i), {target: { value: '2010', name: 'from'}});
-        fireEvent.change(getByLabelText(/to/i), {target: { value: '2020', name: 'to'}});
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '2010', name: 'from' } });
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '2020', name: 'to' } });
         fireEvent.click(getByText(/go/i));
         expect(onChange).toHaveBeenCalledWith({
             from: 2010,
-            to: 2020
+            to: 2020,
         });
         expect(asFragment()).toMatchSnapshot();
     });
@@ -79,14 +79,14 @@ describe('Date range ', () => {
             isActive: true,
             value: {
                 from: 2010,
-                to: 2018
-            }
+                to: 2018,
+            },
         });
 
         fireEvent.click(getByText(/2010 - 2018/i));
         expect(testFn).toHaveBeenCalledWith({
             from: null,
-            to: null
+            to: null,
         });
         expect(asFragment()).toMatchSnapshot();
     });
@@ -98,18 +98,18 @@ describe('Date range ', () => {
             isActive: false,
             value: {
                 from: 2010,
-                to: 2018
-            }
+                to: 2018,
+            },
         });
 
-        fireEvent.change(getByLabelText(/from/i), {target: { value: '', name: 'from'}});
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '', name: 'from' } });
         fireEvent.click(getByText(/go/i));
 
         expect(testFn).toHaveBeenCalledWith({
             from: null,
-            to: 2018
+            to: 2018,
         });
-        expect(getByText("* - 2018")).toBeInTheDocument();
+        expect(getByText('* - 2018')).toBeInTheDocument();
     });
 
     it('should call onChange when to value is deleted and submitted range', () => {
@@ -120,18 +120,18 @@ describe('Date range ', () => {
             isActive: false,
             value: {
                 from: 2010,
-                to: 2018
-            }
+                to: 2018,
+            },
         });
 
-        fireEvent.change(getByLabelText(/to/i), {target: { value: '', name: 'to'}});
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '', name: 'to' } });
         fireEvent.click(getByText(/go/i));
 
         expect(testFn).toHaveBeenCalledWith({
             from: 2010,
-            to: null
+            to: null,
         });
-        expect(getByText("2010 - *")).toBeInTheDocument();
+        expect(getByText('2010 - *')).toBeInTheDocument();
     });
 
     it('should call onChange when from and to values deleted and submitted range', () => {
@@ -142,18 +142,18 @@ describe('Date range ', () => {
             isActive: false,
             value: {
                 from: 2010,
-                to: 2018
-            }
+                to: 2018,
+            },
         });
 
-        fireEvent.change(getByLabelText(/from/i), {target: { value: '', name: 'from'}});
-        fireEvent.change(getByLabelText(/to/i), {target: { value: '', name: 'to'}});
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '', name: 'from' } });
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '', name: 'to' } });
         fireEvent.click(getByText(/go/i));
 
         expect(testFn).toHaveBeenCalledWith({
             from: null,
-            to: null
+            to: null,
         });
-        expect(getByText("* - *")).toBeInTheDocument();
+        expect(getByText('* - *')).toBeInTheDocument();
     });
 });

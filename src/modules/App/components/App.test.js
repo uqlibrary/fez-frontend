@@ -1,33 +1,33 @@
-import {AppClass} from './App';
+import { AppClass } from './App';
 import App from './App';
-import {accounts} from 'mock/data';
-import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT} from 'config';
+import { accounts } from 'mock/data';
+import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT } from 'config';
 import mui1theme from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         classes: {},
-        theme: {palette:{white:{main: '#FFFFFF'}}},
+        theme: { palette: { white: { main: '#FFFFFF' } } },
         account: testProps.account || null,
         author: testProps.author || null,
         accountLoading: testProps.accountLoading || false,
         accountAuthorLoading: testProps.accountAuthorLoading || false,
         actions: testProps.actions || {
             loadCurrentAccount: jest.fn(),
-            searchAuthorPublications: jest.fn()
+            searchAuthorPublications: jest.fn(),
         },
         location: testProps.location || {},
-        history: testProps.history || {location: {}}
+        history: testProps.history || { location: {} },
     };
 
-    window.matchMedia = window.matchMedia || function () {
+    window.matchMedia = window.matchMedia || function() {
         return {
             matches: false,
-            addListener: function () {
+            addListener: function() {
             },
-            removeListener: function () {
-            }
+            removeListener: function() {
+            },
         };
     };
 
@@ -36,7 +36,7 @@ function setup(testProps, isShallow = true) {
 
 beforeAll(() => {
     delete global.window.location;
-    global.window.location = {href: jest.fn(), assign: jest.fn()};
+    global.window.location = { href: jest.fn(), assign: jest.fn() };
 });
 
 describe('Application component', () => {
@@ -45,13 +45,13 @@ describe('Application component', () => {
 
     beforeEach(() => {
         account =  {
-            "id": "uqauthor1",
-            "class": ["libstaff", "IS_CURRENT"],
+            'id': 'uqauthor1',
+            'class': ['libstaff', 'IS_CURRENT'],
         };
         author = {
-            "aut_id": 1,
-            "aut_org_username": "uqauthor1",
-            "aut_orcid_id": "abc-abc-abc"
+            'aut_id': 1,
+            'aut_org_username': 'uqauthor1',
+            'aut_orcid_id': 'abc-abc-abc',
         };
     });
 
@@ -63,10 +63,10 @@ describe('Application component', () => {
     it('redirects user to login if not Authorized', () => {
         const wrapper = setup({});
         const redirectUserToLogin = jest.spyOn(wrapper.instance(), 'redirectUserToLogin');
-        wrapper.setProps({accountLoading: true, account: null, location: {pathname: '/rhdsubmission'}});
+        wrapper.setProps({ accountLoading: true, account: null, location: { pathname: '/rhdsubmission' } });
         expect(redirectUserToLogin).not.toHaveBeenCalled();
 
-        wrapper.setProps({accountLoading: false, account: null, location: {pathname: '/rhdsubmission'}});
+        wrapper.setProps({ accountLoading: false, account: null, location: { pathname: '/rhdsubmission' } });
         expect(redirectUserToLogin).toHaveBeenCalled();
         wrapper.update();
 
@@ -78,33 +78,30 @@ describe('Application component', () => {
 
         wrapper.instance().setSessionExpiredConfirmation('hello');
         expect(wrapper.instance().sessionExpiredConfirmationBox).toEqual('hello');
-
     });
 
     it('when calling redirectToOrcid, it should redirect appropriately if user already received an orcid response', () => {
         const testFn = jest.fn();
         const testFn2 = jest.fn();
         delete global.window.location;
-        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?code=010101', search: '?code=010101', assign: testFn};
-        const wrapper = setup({history: {push: testFn2, location: {pathname: 'test'}}});
+        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?code=010101', search: '?code=010101', assign: testFn };
+        const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
 
         wrapper.instance().redirectToOrcid();
         expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
         expect(testFn2).not.toBeCalled();
-
     });
 
     it('when calling redirectToOrcid, it should redirect appropriately', () => {
         const testFn = jest.fn();
         const testFn2 = jest.fn();
         delete global.window.location;
-        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?name=none', search: '?name=none', assign: testFn};
-        const wrapper = setup({history: {push: testFn2, location: {pathname: 'test'}}});
+        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?name=none', search: '?name=none', assign: testFn };
+        const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
 
         wrapper.instance().redirectToOrcid();
         expect(testFn).not.toBeCalled();
         expect(testFn2).toBeCalledWith('/author-identifiers/orcid/link');
-
     });
 
     it('should call componentWillUnmount', () => {
@@ -116,18 +113,18 @@ describe('Application component', () => {
 
     it('Should show confirmation when the session expires', () => {
         const testFn = jest.fn();
-        const wrapper = setup({isSessionExpired: false});
-        wrapper.instance().sessionExpiredConfirmationBox = {showConfirmation: testFn};
+        const wrapper = setup({ isSessionExpired: false });
+        wrapper.instance().sessionExpiredConfirmationBox = { showConfirmation: testFn };
         wrapper.update();
         expect(testFn).not.toHaveBeenCalled();
-        wrapper.setProps({isSessionExpired: true});
+        wrapper.setProps({ isSessionExpired: true });
         expect(testFn).toHaveBeenCalled();
     });
 
     it('Should get the childContext correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
-        expect(wrapper.instance().getChildContext()).toEqual({"isMobile": false, "selectFieldMobileOverrides": {"autoWidth": true, "fullWidth": false, "menuItemStyle": {}, "style": {"width": "100%"}}});
+        expect(wrapper.instance().getChildContext()).toEqual({ 'isMobile': false, 'selectFieldMobileOverrides': { 'autoWidth': true, 'fullWidth': false, 'menuItemStyle': {}, 'style': { 'width': '100%' } } });
     });
 
     it('Should display mobile correctly', () => {
@@ -154,30 +151,30 @@ describe('Application component', () => {
     });
 
     it('should render for anon user', () => {
-        const wrapper = setup({location: {pathname: '/'}});
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        const wrapper = setup({ location: { pathname: '/' } });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading screen while account is loading', () => {
-        const wrapper = setup({accountLoading: true});
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        const wrapper = setup({ accountLoading: true });
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render application with routing for the user and display loading screen while loading author', () => {
         const wrapper = setup({
             account: account,
-            accountAuthorLoading: true
+            accountAuthorLoading: true,
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render alert if user is not fez author', () => {
         const wrapper = setup({
             account: account,
-            author: null
+            author: null,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -185,9 +182,9 @@ describe('Application component', () => {
     it('should render app for account with fez author with ORCID ID', () => {
         const wrapper = setup({
             account: account,
-            author: author
+            author: author,
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -196,76 +193,77 @@ describe('Application component', () => {
             account: account,
             author: {
                 ...author,
-                aut_orcid_id: null
-            }
+                aut_orcid_id: null,
+            },
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page', () => {
         const wrapper = setup({
             location: {
-                pathname: routes.pathConfig.hdrSubmission
+                pathname: routes.pathConfig.hdrSubmission,
             },
             account: account,
             author: {
                 ...author,
-                aut_orcid_id: null
-            }
+                aut_orcid_id: null,
+            },
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render app for HDR without ORCID ID', () => {
         const wrapper = setup({
-            account: accounts['s2222222'],
+            account: accounts.s2222222,
             author: {
                 ...author,
                 aut_org_username: null,
                 aut_student_username: 's2222222',
-                aut_orcid_id: null
-            }
+                aut_orcid_id: null,
+            },
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render thesis submission for HDR without menu', () => {
         const wrapper = setup({
             location: {
-                pathname: routes.pathConfig.hdrSubmission
+                pathname: routes.pathConfig.hdrSubmission,
             },
-            account: accounts['s2222222'],
+            account: accounts.s2222222,
             author: {
                 ...author,
                 aut_org_username: null,
                 aut_student_username: 's2222222',
-                aut_orcid_id: null
-            }
+                aut_orcid_id: null,
+            },
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render app for HDR with ORCID ID', () => {
         const wrapper = setup({
-            account: accounts['s2222222'],
+            account: accounts.s2222222,
             author: {
                 ...author,
                 aut_org_username: null,
                 aut_student_username: 's2222222',
-                aut_orcid_id: '1234-1234-1234'
-            }
+                aut_orcid_id: '1234-1234-1234',
+            },
         });
-        wrapper.instance().theme = {palette:{white:{main: '#FFFFFF'}}};
+        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().redirectUserToLogin()();
+        const wrapper = setup({}).instance()
+            .redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
     });
 
@@ -273,17 +271,18 @@ describe('Application component', () => {
         window.location.assign = jest.fn();
         const wrapper = setup({
             account: account,
-            author: author
-        }).instance().redirectUserToLogin(true)();
+            author: author,
+        }).instance()
+            .redirectUserToLogin(true)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
 
     it('should handleResize', () => {
         const wrapper = setup({});
         expect(wrapper.state().docked).toBeFalsy();
-        wrapper.instance().handleResize({matches: true});
+        wrapper.instance().handleResize({ matches: true });
         expect(wrapper.state().docked).toBeTruthy();
-        wrapper.instance().handleResize({matches: false});
+        wrapper.instance().handleResize({ matches: false });
         expect(wrapper.state().docked).toBeFalsy();
     });
 
@@ -303,8 +302,8 @@ describe('Application component', () => {
             author: author,
             history: {
                 push: testMethod,
-                location: {}
-            }
+                location: {},
+            },
         });
 
         wrapper.instance().redirectToOrcid();
@@ -315,8 +314,8 @@ describe('Application component', () => {
         const testMethod = jest.fn();
         const wrapper = setup({
             actions: {
-                loadCurrentAccount: testMethod
-            }
+                loadCurrentAccount: testMethod,
+            },
         });
         expect(testMethod).toHaveBeenCalledWith();
     });
@@ -325,119 +324,117 @@ describe('Application component', () => {
         const menuItems = routes.getMenuConfig(true, false);
 
         const getWrapper = (pathname) => (setup({
-            location: {pathname}
+            location: { pathname },
         }));
 
         const pathExpectations = [
             {
                 pathname: '/contact',
-                isPublic: true
+                isPublic: true,
             },
             {
                 pathname: '/dashboard',
-                isPublic: false
+                isPublic: false,
             },
             {
                 pathname: '/view/UQ:123432',
-                isPublic: true
+                isPublic: true,
             },
             {
                 pathname: '/',
-                isPublic: true
+                isPublic: true,
             },
             {
                 pathname: '/data-collections/mine',
-                isPublic: false
-            }
+                isPublic: false,
+            },
         ];
 
         pathExpectations.map(path => {
-            expect(getWrapper(path.pathname).instance().isPublicPage(menuItems)).toEqual(path.isPublic)
+            expect(getWrapper(path.pathname).instance()
+                .isPublicPage(menuItems)).toEqual(path.isPublic);
         });
-    })
+    });
 
     it('should load the incomplete publications list when the account is loaded', () => {
         const testMethod = jest.fn();
         const wrapper = setup({
-            account: {name: 'test1'},
+            account: { name: 'test1' },
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorPublications: testMethod
-            }
+                searchAuthorPublications: testMethod,
+            },
         });
         wrapper.update();
-        wrapper.setProps({account: {name: 'test2'}});
+        wrapper.setProps({ account: { name: 'test2' } });
         expect(testMethod).toHaveBeenCalled();
     });
 
     it('should determine if it has incomplete works from props and hide menu item', () => {
         const wrapper = setup({
-            account: {name: 'test1'},
+            account: { name: 'test1' },
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorPublications: jest.fn()
+                searchAuthorPublications: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
                     publicationsListPagingData: {
-                        total: 10
-                    }
-                }
-            }
+                        total: 10,
+                    },
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should determine if it has incomplete works from props and show menu item', () => {
         const wrapper = setup({
-            account: {name: 'test1'},
+            account: { name: 'test1' },
             accountLoading: false,
             actions: {
                 loadCurrentAccount: jest.fn(),
-                searchAuthorPublications: jest.fn()
+                searchAuthorPublications: jest.fn(),
             },
             incompleteRecordList: {
                 incomplete: {
                     publicationsListPagingData: {
-                        total: 10
-                    }
-                }
-            }
+                        total: 10,
+                    },
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
 
 describe('Testing wrapped App component', () => {
-
     it('Mounts', () => {
         const wrappedProps = {
             history: {
                 push: jest.fn(),
                 go: jest.fn(),
-                location: {pathname: '/'},
+                location: { pathname: '/' },
             },
             actions: {
                 logout: jest.fn(),
                 loadCurrentAccount: jest.fn(),
             },
-            account: {name: 'Ky'},
-            location: {pathname: '/'},
+            account: { name: 'Ky' },
+            location: { pathname: '/' },
             classes: {},
             theme: {
                 ...mui1theme,
                 palette: {
                     primary: {
-                        main: 'red'
-                    }
-                }
-            }
+                        main: 'red',
+                    },
+                },
+            },
         };
         const wrapper = getElement(App, wrappedProps, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-
     });
-
 });

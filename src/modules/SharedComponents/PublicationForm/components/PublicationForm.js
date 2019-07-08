@@ -36,7 +36,7 @@ export default class PublicationForm extends Component {
         hasDefaultDocTypeSubType: PropTypes.bool,
         docTypeSubTypeCombo: PropTypes.object,
         isAuthorSelected: PropTypes.bool,
-        initialValues: PropTypes.object
+        initialValues: PropTypes.object,
     };
 
     constructor(props) {
@@ -66,7 +66,7 @@ export default class PublicationForm extends Component {
                 <MenuItem value={item} key={`ntro-${index}`}>
                     {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
                 </MenuItem>
-            ))
+            )),
         ];
     }
 
@@ -93,7 +93,7 @@ export default class PublicationForm extends Component {
     };
 
     render() {
-        const alertProps = validation.getErrorAlertProps({...this.props, alertLocale: txt});
+        const alertProps = validation.getErrorAlertProps({ ...this.props, alertLocale: txt });
         return (
             <form onSubmit={this._handleDefaultSubmit}>
                 <Grid container spacing={24}>
@@ -112,7 +112,7 @@ export default class PublicationForm extends Component {
                                         required
                                         placeholder={txt.publicationType.hintText}
                                         SelectDisplayProps={{
-                                            id: 'rek-display-type'
+                                            id: 'rek-display-type',
                                         }}
                                     >
                                         {this.publicationTypeItems}
@@ -131,7 +131,7 @@ export default class PublicationForm extends Component {
                                             required
                                             placeholder={txt.publicationSubtype.hintText}
                                             SelectDisplayProps={{
-                                                id: 'rek-subtype'
+                                                id: 'rek-subtype',
                                             }}>
                                             {this.publicationSubtypeItems}
                                         </Field>
@@ -211,8 +211,7 @@ export default class PublicationForm extends Component {
                     {
                         (this.props.formValues.get('rek_display_type') > 0 &&
                             !this.props.hasSubtypes || (this.props.hasSubtypes && this.props.formValues.get('rek_subtype') && this.props.formValues.get('rek_subtype').length > 0)
-                        )
-                        &&
+                        )                        &&
                         <Grid item xs={12} sm="auto">
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}

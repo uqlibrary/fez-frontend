@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     authorDetails: {
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class DashboardAuthorDetails extends PureComponent {
@@ -17,7 +17,7 @@ export class DashboardAuthorDetails extends PureComponent {
         givenName: PropTypes.string,
         orgUnits: PropTypes.array,
         positions: PropTypes.array,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     constructor(props) {
@@ -44,7 +44,7 @@ export class DashboardAuthorDetails extends PureComponent {
     }
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
         return (
             <Grid container spacing={8}>
@@ -72,4 +72,4 @@ export class DashboardAuthorDetails extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(DashboardAuthorDetails);
+export default withStyles(styles, { withTheme: true })(DashboardAuthorDetails);

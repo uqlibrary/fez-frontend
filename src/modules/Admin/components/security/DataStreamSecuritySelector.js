@@ -23,7 +23,7 @@ export const DataStreamSecuritySelector = ({
     collections,
     classes,
     meta: {
-        initial: dataStreams
+        initial: dataStreams,
     },
     ...props
 }) => {
@@ -50,7 +50,7 @@ export const DataStreamSecuritySelector = ({
             const newDataStreamSecurity = [
                 ...dataStreamSecurity.slice(0, dataStreamIndexToChange),
                 { ...dataStreamToChange },
-                ...dataStreamSecurity.slice(dataStreamIndexToChange + 1)
+                ...dataStreamSecurity.slice(dataStreamIndexToChange + 1),
             ];
             setDataStreamSecurity(newDataStreamSecurity);
             props.input.onChange(newDataStreamSecurity);
@@ -99,9 +99,9 @@ DataStreamSecuritySelector.propTypes = {
     input: PropTypes.object,
     meta: PropTypes.shape({
         initial: PropTypes.shape({
-            toJS: PropTypes.func.isRequired
-        }).isRequired
-    }).isRequired
+            toJS: PropTypes.func.isRequired,
+        }).isRequired,
+    }).isRequired,
 };
 
 export function isSame(prevProps, nextProps) {

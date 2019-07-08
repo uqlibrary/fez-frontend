@@ -1,15 +1,15 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import CitationView from './CitationView';
-import {locale} from 'locale';
-import {pathConfig} from 'config/routes';
-import {Link} from 'react-router-dom';
-import {withStyles} from '@material-ui/core/styles';
+import { locale } from 'locale';
+import { pathConfig } from 'config/routes';
+import { Link } from 'react-router-dom';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     authorIdLink: {
-        color: theme.palette.success.main
-    }
+        color: theme.palette.success.main,
+    },
 });
 
 export class AuthorsCitationView extends PureComponent {
@@ -25,7 +25,7 @@ export class AuthorsCitationView extends PureComponent {
         thresholdNumberOfAuthors: PropTypes.number,
         showLink: PropTypes.bool,
         getLink: PropTypes.func,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -34,24 +34,24 @@ export class AuthorsCitationView extends PureComponent {
         searchKey: {
             key: 'fez_record_search_key_author',
             subkey: 'rek_author',
-            order: 'rek_author_order'
+            order: 'rek_author_order',
         },
         idSearchKey: {
             idKey: 'fez_record_search_key_author_id',
             idSubkey: 'rek_author_id',
-            idOrder: 'rek_author_id_order'
+            idOrder: 'rek_author_id_order',
         },
         className: 'citationAuthors',
         initialNumberOfAuthors: 10,
         thresholdNumberOfAuthors: 3,
         showLink: false,
-        getLink: pathConfig.list.author
+        getLink: pathConfig.list.author,
     };
 
     constructor(props) {
         super(props);
 
-        const {publication, searchKey: {key, order, subkey}, initialNumberOfAuthors, thresholdNumberOfAuthors} = props;
+        const { publication, searchKey: { key, order, subkey }, initialNumberOfAuthors, thresholdNumberOfAuthors } = props;
 
         const publicationAuthors = publication && publication[key] && [...publication[key]];    // copy authors to separate variable so sorting doesn't change original record
 
@@ -68,16 +68,16 @@ export class AuthorsCitationView extends PureComponent {
                     {
                         id: this.getAuthorId(author[order]),
                         value: author[subkey],
-                        order: author[order]
+                        order: author[order],
                     }
                 ))
-                : []
+                : [],
         };
     }
 
     getAuthorId = (order) => {
         let id = 0;
-        const {publication, idSearchKey: {idKey, idOrder, idSubkey}, showLink} = this.props;
+        const { publication, idSearchKey: { idKey, idOrder, idSubkey }, showLink } = this.props;
 
         if (showLink) {
             const authorIds = publication && publication[idKey] && [...publication[idKey]];
@@ -125,14 +125,14 @@ export class AuthorsCitationView extends PureComponent {
     _toggleShowMore = (e) => {
         e.preventDefault();
         this.setState({
-            toggleShowMoreLink: !this.state.toggleShowMoreLink
+            toggleShowMoreLink: !this.state.toggleShowMoreLink,
         });
     };
 
     render() {
-        const {showMoreLabel, showMoreTitle, showLessTitle, showLessLabel} = locale.components.publicationCitation.citationAuthors;
-        const {className, prefix, suffix, separator, initialNumberOfAuthors, showLink, getLink} = this.props;
-        const {authors, hasMoreAuthors, toggleShowMoreLink} = this.state;
+        const { showMoreLabel, showMoreTitle, showLessTitle, showLessLabel } = locale.components.publicationCitation.citationAuthors;
+        const { className, prefix, suffix, separator, initialNumberOfAuthors, showLink, getLink } = this.props;
+        const { authors, hasMoreAuthors, toggleShowMoreLink } = this.state;
 
         if (authors.length === 0) return (<span className={`${className || ''} empty`} />);
 
@@ -169,4 +169,4 @@ export class AuthorsCitationView extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(AuthorsCitationView);
+export default withStyles(styles, { withTheme: true })(AuthorsCitationView);

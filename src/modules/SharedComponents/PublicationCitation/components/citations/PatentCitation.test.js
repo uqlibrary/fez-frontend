@@ -1,5 +1,5 @@
 import PatentCitation from './PatentCitation';
-import {patent} from 'mock/data/testing/records';
+import { patent } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

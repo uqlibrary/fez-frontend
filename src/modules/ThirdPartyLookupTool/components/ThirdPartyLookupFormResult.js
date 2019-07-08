@@ -1,7 +1,7 @@
-import React, {Fragment, PureComponent} from 'react';
+import React, { Fragment, PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import Grid from '@material-ui/core/Grid/Grid';
 import Button from '@material-ui/core/Button/Button';
@@ -14,7 +14,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
         secondaryValue: PropTypes.string,
         formDisplay: PropTypes.object,
         // localeform: PropTypes.object.isRequired,
-        locale: PropTypes.object.isRequired
+        locale: PropTypes.object.isRequired,
     };
 
     static defaultProps = {
@@ -64,7 +64,7 @@ export class ThirdPartyLookupFormResult extends PureComponent {
                             variant="contained"
                             color={'primary'}
                             onClick={() => this._handleClear()}
-                            style={{marginTop: 20}}
+                            style={{ marginTop: 20 }}
                         />
                     </StandardCard>
                 </Grid>

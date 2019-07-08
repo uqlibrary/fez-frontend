@@ -18,37 +18,37 @@ const authorRecColumns = [
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Author UQ ID',
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: 'Affiliation %',
         options: {
             display: true,
             sort: true,
-        }
+        },
     },
     {
         name: '',
         options: {
             display: true,
             sort: false,
-            filter: false
-        }
-    }
+            filter: false,
+        },
+    },
 ];
 const authorRecData = [
     ['John Smith', 'UQ12345', <TextField
         fullWidth
         placeholder="1% - 100%"
         autoComplete="off"
-    />, <IconButton style={{ float: 'right', marginRight: -24 }}><PersonAdd /></IconButton>]
+    />, <IconButton style={{ float: 'right', marginRight: -24 }}><PersonAdd /></IconButton>],
 ];
 
 /* istanbul ignore next */
@@ -61,7 +61,7 @@ const authorRecOptions = {
     viewColumns: false,
     selectableRows: false,
     rowHover: false,
-    customToolbar: () => <div />
+    customToolbar: () => <div />,
 };
 
 /* istanbul ignore next */
@@ -82,9 +82,9 @@ export const AuthorDetailsSection = ({ disabled = false }) => (
                             nameAsPublishedHint: '',
                             identifierLabel: 'UQ identifier (if available)',
                             descriptionStep1NoStep2: 'Enter each author and add affiliation data to each.',
-                            addButton: <span>Add&nbsp;affiliation</span>
-                        }
-                    }
+                            addButton: <span>Add&nbsp;affiliation</span>,
+                        },
+                    },
                 }}
             />
         </Grid>
@@ -101,7 +101,7 @@ export const AuthorDetailsSection = ({ disabled = false }) => (
 );
 
 AuthorDetailsSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(AuthorDetailsSection);

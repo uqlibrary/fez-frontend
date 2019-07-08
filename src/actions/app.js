@@ -11,19 +11,19 @@ import * as actions from './actionTypes';
  */
 export function hidePossiblyYourPublicationsLure() {
     return {
-        type: actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE
+        type: actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE,
     };
 }
 
 export function showAppAlert(appAlert) {
     return {
         type: actions.APP_ALERT_SHOW,
-        payload: appAlert
+        payload: appAlert,
     };
 }
 
 export function dismissAppAlert() {
-    return {type: actions.APP_ALERT_HIDE};
+    return { type: actions.APP_ALERT_HIDE };
 }
 
 /**
@@ -34,7 +34,7 @@ export function setRedirectPath(redirectPath) {
     return dispatch => {
         dispatch({
             type: actions.SET_REDIRECT_PATH,
-            payload: redirectPath
+            payload: redirectPath,
         });
     };
 }
@@ -45,7 +45,7 @@ export function setRedirectPath(redirectPath) {
 export function clearRedirectPath() {
     return dispatch => {
         dispatch({
-            type: actions.CLEAR_REDIRECT_PATH
+            type: actions.CLEAR_REDIRECT_PATH,
         });
     };
 }

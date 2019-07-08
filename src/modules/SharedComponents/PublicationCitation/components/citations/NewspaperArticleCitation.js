@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class NewspaperArticleCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
     };
 
     constructor(props) {
@@ -23,7 +23,7 @@ export default class NewspaperArticleCitation extends Component {
                 : null,
             endPage: this.props.publication.fez_record_search_key_end_page
                 ? this.props.publication.fez_record_search_key_end_page.rek_end_page
-                : null
+                : null,
         };
 
         // eSpace citation view for Newspaper Article

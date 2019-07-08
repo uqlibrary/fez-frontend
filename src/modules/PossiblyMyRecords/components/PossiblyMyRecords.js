@@ -1,17 +1,17 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter} from 'modules/SharedComponents/PublicationsList';
+import { PublicationsList, PublicationsListPaging, PublicationsListSorting, FacetsFilter } from 'modules/SharedComponents/PublicationsList';
 
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {StandardRighthandCard} from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
-import {pathConfig} from 'config/routes';
-import {locale} from 'locale';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { StandardRighthandCard } from 'modules/SharedComponents/Toolbox/StandardRighthandCard';
+import { pathConfig } from 'config/routes';
+import { locale } from 'locale';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
@@ -35,7 +35,7 @@ export default class PossiblyMyRecords extends PureComponent {
         actions: PropTypes.object,
 
         hidePublicationFailed: PropTypes.bool,
-        hidePublicationFailedErrorMessage: PropTypes.string
+        hidePublicationFailedErrorMessage: PropTypes.string,
     };
 
     constructor(props) {
@@ -48,37 +48,37 @@ export default class PossiblyMyRecords extends PureComponent {
             sortDirection: locale.components.sorting.sortDirection[0],
             activeFacets: {
                 filters: {},
-                ranges: {}
-            }
+                ranges: {},
+            },
         };
         this.state = {
             // check if user has publications, once true always true
             // facets filtering might return no results, but facets should still be visible
             hasPublications: !props.loadingPossiblePublicationsList && props.possiblePublicationsList.length > 0,
             publicationToHide: null,
-            ...(!!props.location.state ? props.location.state : this.initState)
+            ...(!!props.location.state ? props.location.state : this.initState),
         };
     }
 
     componentDidMount() {
         if (!this.props.accountLoading) {
-            this.props.actions.searchPossiblyYourPublications({...this.state});
+            this.props.actions.searchPossiblyYourPublications({ ...this.state });
         }
     }
 
     componentWillReceiveProps(newProps) {
         // handle browser back button - set state from location/dispatch action for this state
-        if (this.props.location !== newProps.location
-            && newProps.history.action === 'POP'
-            && newProps.location.pathname === pathConfig.records.possible) {
-            this.setState({...(!!newProps.location.state ? newProps.location.state : this.initState)}, () => {
+        if (this.props.location !== newProps.location &&
+            newProps.history.action === 'POP' &&
+            newProps.location.pathname === pathConfig.records.possible) {
+            this.setState({ ...(!!newProps.location.state ? newProps.location.state : this.initState) }, () => {
                 // only will be called when user clicks back on my records page
-                this.props.actions.searchPossiblyYourPublications({...this.state});
+                this.props.actions.searchPossiblyYourPublications({ ...this.state });
             });
         }
         // set forever-true flag if user has publications
-        if (!this.state.hasPublications && !newProps.loadingPossiblePublicationsList
-            && !!newProps.possiblePublicationsList && newProps.possiblePublicationsList.length > 0) {
+        if (!this.state.hasPublications && !newProps.loadingPossiblePublicationsList &&
+            !!newProps.possiblePublicationsList && newProps.possiblePublicationsList.length > 0) {
             this.setState({ hasPublications: true });
         }
     }
@@ -91,24 +91,24 @@ export default class PossiblyMyRecords extends PureComponent {
         this.props.history.push({
             pathname: `${pathConfig.records.possible}`,
             search: `?ts=${Date.now()}`,
-            state: {...this.state}
+            state: { ...this.state },
         });
-        this.props.actions.searchPossiblyYourPublications({...this.state});
+        this.props.actions.searchPossiblyYourPublications({ ...this.state });
     };
 
     _hidePublication = () => {
         if (this.state.publicationToHide) {
             this.props.actions.hideRecord({
                 record: this.state.publicationToHide,
-                facets: this.state.activeFacets
+                facets: this.state.activeFacets,
             });
-            this.setState({publicationToHide: null});
+            this.setState({ publicationToHide: null });
         }
     };
 
     _confirmHidePublication = (item) => {
         // temporary keep which publication to hide in the state
-        this.setState({publicationToHide: item});
+        this.setState({ publicationToHide: item });
         this.hideConfirmationBox.showConfirmation();
     };
 
@@ -120,7 +120,7 @@ export default class PossiblyMyRecords extends PureComponent {
     _facetsChanged = (activeFacets) => {
         this.setState({
             activeFacets: activeFacets,
-            page: 1
+            page: 1,
         }, this.pushPageHistory);
     };
 
@@ -128,7 +128,7 @@ export default class PossiblyMyRecords extends PureComponent {
         this.setState(
             {
                 sortBy: sortBy,
-                sortDirection: sortDirection
+                sortDirection: sortDirection,
             }, this.pushPageHistory
         );
     };
@@ -137,7 +137,7 @@ export default class PossiblyMyRecords extends PureComponent {
         this.setState(
             {
                 pageSize: pageSize,
-                page: 1
+                page: 1,
             }, this.pushPageHistory
         );
     };
@@ -147,14 +147,14 @@ export default class PossiblyMyRecords extends PureComponent {
     getAlert = (alertLocale, hasFailed = false, error = null) => {
         return hasFailed ? (<Alert {...{
             ...alertLocale,
-            message: alertLocale.message ? alertLocale.message(error) : error
+            message: alertLocale.message ? alertLocale.message(error) : error,
         }} />) : null;
     };
 
     pageChanged = (page) => {
         this.setState(
             {
-                page: page
+                page: page,
             }, this.pushPageHistory
         );
     };
@@ -168,20 +168,20 @@ export default class PossiblyMyRecords extends PureComponent {
             {
                 label: txt.searchResults.inProgress,
                 disabled: true,
-                primary: false
-            }
+                primary: false,
+            },
         ];
 
         const actions = [
             {
                 label: txt.searchResults.claim,
                 handleAction: this._claimPublication,
-                primary: true
+                primary: true,
             },
             {
                 label: txt.searchResults.hide,
-                handleAction: this._confirmHidePublication
-            }
+                handleAction: this._confirmHidePublication,
+            },
         ];
         return (
             <StandardPage title={txt.title}>
@@ -250,7 +250,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                     }
                                                 </Typography>
                                             </Grid>
-                                            <Grid item xs style={{marginTop: 16}}>
+                                            <Grid item xs style={{ marginTop: 16 }}>
                                                 {
                                                     totalPossiblePubs > this.initState.pageSize &&
                                                         <React.Fragment>
@@ -302,9 +302,9 @@ export default class PossiblyMyRecords extends PureComponent {
                     }
                     {
                         // show available filters or selected filters (even if there are no results)
-                        ((this.props.possiblePublicationsFacets && Object.keys(this.props.possiblePublicationsFacets).length > 0)
-                        || (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0)
-                        || (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)) &&
+                        ((this.props.possiblePublicationsFacets && Object.keys(this.props.possiblePublicationsFacets).length > 0) ||
+                        (this.state.activeFacets && this.state.activeFacets.filters && Object.keys(this.state.activeFacets.filters).length > 0) ||
+                        (this.state.activeFacets && this.state.activeFacets.ranges && Object.keys(this.state.activeFacets.ranges).length > 0)) &&
                         <Hidden smDown>
                             <Grid item sm={3}>
                                 <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>

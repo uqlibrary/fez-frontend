@@ -5,11 +5,11 @@ function setup(testProps = {}, isShallow = true) {
         label: 'Access selector field',
         input: {
             value: 8,
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
         errorText: '',
         error: false,
-        ...testProps
+        ...testProps,
     };
 
     return getElement(AccessSelectorField, props, isShallow);
@@ -25,8 +25,8 @@ describe('AccessSelectorField component', () => {
     it('should render error and error message', () => {
         const wrapper = setup({
             meta: {
-                error: 'This field is required'
-            }
+                error: 'This field is required',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

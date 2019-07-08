@@ -1,28 +1,28 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import locale from 'locale/viewRecord';
-import {viewRecordsConfig, routes} from 'config';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView} from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { viewRecordsConfig, routes } from 'config';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { AuthorsCitationView, DoiCitationView, EditorsCitationView, DateCitationView } from 'modules/SharedComponents/PublicationCitation/components/citations/partials';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
-import {Link} from 'react-router-dom';
-import {GOOGLE_MAPS_API_URL} from 'config/general';
-import {withStyles} from '@material-ui/core/styles';
+import { Link } from 'react-router-dom';
+import { GOOGLE_MAPS_API_URL } from 'config/general';
+import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
 const styles = (theme) => ({
     gridRow: {
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     list: {
         listStyleType: 'none',
         padding: 0,
-        margin: 0
-    }
+        margin: 0,
+    },
 });
 
 export class AdditionalInformationClass extends PureComponent {
@@ -30,15 +30,15 @@ export class AdditionalInformationClass extends PureComponent {
         account: PropTypes.object,
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
-        isNtro: PropTypes.bool
+        isNtro: PropTypes.bool,
     };
 
     renderRow = (heading, data, index) => {
         return (
-            <div style={{padding: 8}} key={index}>
+            <div style={{ padding: 8 }} key={index}>
                 <Grid container spacing={16} key={`additional-info-${heading}`} className={this.props.classes.gridRow} alignItems="flex-start">
                     <Grid item xs={12} sm={3}>
-                        <Typography variant="body2" component={'span'} classes={{root: this.props.classes.header}}>
+                        <Typography variant="body2" component={'span'} classes={{ root: this.props.classes.header }}>
                             {heading}
                         </Typography>
                     </Grid>
@@ -138,7 +138,7 @@ export class AdditionalInformationClass extends PureComponent {
     }
 
     renderTitle = () => {
-        const {publication} = this.props;
+        const { publication } = this.props;
         return this.renderHTML(
             publication.rek_formatted_title
                 ? publication.rek_formatted_title
@@ -194,8 +194,8 @@ export class AdditionalInformationClass extends PureComponent {
             <PublicationMap
                 googleMapURL={GOOGLE_MAPS_API_URL}
                 loadingElement={<div className="googleMap loading" />}
-                containerElement={<div style={{height: '400px'}}/>}
-                mapElement={<div style={{height: '100%'}}/>}
+                containerElement={<div style={{ height: '400px' }}/>}
+                mapElement={<div style={{ height: '100%' }}/>}
                 coordinates={coordinatesList[0].rek_geographic_area}
                 readOnly
             />
@@ -303,6 +303,6 @@ export class AdditionalInformationClass extends PureComponent {
 }
 
 
-const StyledAdditionalInformation = withStyles(styles, {withTheme: true})(AdditionalInformationClass);
+const StyledAdditionalInformation = withStyles(styles, { withTheme: true })(AdditionalInformationClass);
 const AdditionalInformation = (props) => <StyledAdditionalInformation {...props}/>;
 export default AdditionalInformation;

@@ -6,7 +6,7 @@ function setup(testProps = {}, isShallow = true) {
         currentTab: 'pong',
         tabbed: false,
         children: '<p>Test container</p>',
-        ...testProps
+        ...testProps,
     };
 
     return getElement(TabContainer, props, isShallow);

@@ -2,7 +2,7 @@ import CollectionForm from './CollectionForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(CollectionForm, props, isShallow);

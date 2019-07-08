@@ -1,12 +1,12 @@
-import {connect} from 'react-redux';
-import {reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector, change} from 'redux-form/immutable';
+import { connect } from 'react-redux';
+import { reduxForm, getFormValues, getFormSyncErrors, stopSubmit, SubmissionError, reset, formValueSelector, change } from 'redux-form/immutable';
 import Immutable from 'immutable';
 import PublicationForm from '../components/PublicationForm';
-import {createNewRecord} from 'actions';
-import {general, publicationTypes} from 'config';
-import {locale} from 'locale';
-import {confirmDiscardFormChanges} from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-import {NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING} from 'config/general';
+import { createNewRecord } from 'actions';
+import { general, publicationTypes } from 'config';
+import { locale } from 'locale';
+import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
 import moment from 'moment';
 
 import * as recordForms from '../components/Forms';
@@ -24,7 +24,7 @@ const onSubmit = (values, dispatch, state) => {
     }
 
     // set default values for a new unapproved record
-    return dispatch(createNewRecord({...cleanValues}))
+    return dispatch(createNewRecord({ ...cleanValues }))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
             // reported bug to redux-form:
@@ -35,7 +35,7 @@ const onSubmit = (values, dispatch, state) => {
             }, 100);
         })
         .catch(error => {
-            throw new SubmissionError({_error: error.message});
+            throw new SubmissionError({ _error: error.message });
         });
 };
 
@@ -97,7 +97,7 @@ const validate = (values) => {
 let PublicationFormContainer = reduxForm({
     form: FORM_NAME,
     validate,
-    onSubmit
+    onSubmit,
 
 })(confirmDiscardFormChanges(PublicationForm, FORM_NAME));
 
@@ -109,7 +109,7 @@ const mapStateToProps = (state, props) => {
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
 
-    const selectedPublicationType = !!displayType && publicationTypes({...recordForms}).filter(type =>
+    const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms }).filter(type =>
         type.id === displayType
     );
 
@@ -138,11 +138,11 @@ const mapStateToProps = (state, props) => {
         isNtro: general.NTRO_SUBTYPES.includes(publicationSubtype),
         hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
         docTypeSubTypeCombo: docTypeSubTypeCombo,
-        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => {return object.selected === true;}) || false,
+        isAuthorSelected: !!formValues && formValues.get('authors') && formValues.get('authors').some((object) => { return object.selected === true; }) || false,
         initialValues: {
             languages: ['eng'],
-            rek_title: props.initialValues.rek_title || ''
-        }
+            rek_title: props.initialValues.rek_title || '',
+        },
     };
 };
 
@@ -154,7 +154,7 @@ const mapDispatchToProps = (dispatch) => {
         },
         changeFormType: (isNtro) => {
             dispatch(change(FORM_NAME, 'isNtro', isNtro));
-        }
+        },
     };
 };
 

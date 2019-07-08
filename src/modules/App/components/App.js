@@ -1,21 +1,21 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {Route, Switch} from 'react-router';
-import {routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL} from 'config';
+import { Route, Switch } from 'react-router';
+import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/global';
 
 // application components
-import {AppLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {MenuDrawer} from 'modules/SharedComponents/Toolbox/MenuDrawer';
-import {HelpDrawer} from 'modules/SharedComponents/Toolbox/HelpDrawer';
-import {AuthButton} from 'modules/SharedComponents/Toolbox/AuthButton';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
+import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
+import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
+import { AuthButton } from 'modules/SharedComponents/Toolbox/AuthButton';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import AppAlertContainer from '../containers/AppAlert';
-import {Meta} from 'modules/SharedComponents/Meta';
-import {OfflineSnackbar} from 'modules/SharedComponents/OfflineSnackbar';
-import {SearchComponent} from 'modules/SharedComponents/SearchComponent';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { Meta } from 'modules/SharedComponents/Meta';
+import { OfflineSnackbar } from 'modules/SharedComponents/OfflineSnackbar';
+import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
 
 // MUI1
@@ -28,11 +28,11 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Menu from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     appBG: {
-        ...theme.palette.primary.main
+        ...theme.palette.primary.main,
     },
     layoutCard: {
         maxWidth: '1200px',
@@ -40,14 +40,14 @@ const styles = theme => ({
         width: '90%',
         padding: 0,
         [theme.breakpoints.down('sm')]: {
-            margin: '0 auto 24px auto'
+            margin: '0 auto 24px auto',
         },
     },
     layoutFill: {
         margin: 0,
         padding: 0,
         maxHeight: '100%',
-        height: '100%'
+        height: '100%',
     },
     titleLink: {
         textOverflow: 'ellipsis',
@@ -58,15 +58,15 @@ const styles = theme => ({
             overflow: 'hidden',
             textDecoration: 'none',
             '&:hover': {
-                textDecoration: 'underline'
-            }
-        }
+                textDecoration: 'underline',
+            },
+        },
     },
     nowrap: {
         whiteSpace: 'nowrap',
         overflow: 'hidden',
-        textOverflow: 'ellipsis'
-    }
+        textOverflow: 'ellipsis',
+    },
 });
 
 export class AppClass extends PureComponent {
@@ -86,7 +86,7 @@ export class AppClass extends PureComponent {
     };
     static childContextTypes = {
         isMobile: PropTypes.bool,
-        selectFieldMobileOverrides: PropTypes.object
+        selectFieldMobileOverrides: PropTypes.object,
     };
 
     constructor(props) {
@@ -103,15 +103,15 @@ export class AppClass extends PureComponent {
         return {
             isMobile: this.state.isMobile,
             selectFieldMobileOverrides: {
-                style: !this.state.isMobile ? {width: '100%'} : {},
+                style: !this.state.isMobile ? { width: '100%' } : {},
                 autoWidth: !this.state.isMobile,
                 fullWidth: this.state.isMobile,
                 menuItemStyle: this.state.isMobile ? {
                     whiteSpace: 'normal',
                     lineHeight: '18px',
-                    paddingBottom: '8px'
+                    paddingBottom: '8px',
                 } : {},
-            }
+            },
         };
     }
 
@@ -136,13 +136,13 @@ export class AppClass extends PureComponent {
 
     handleResize = (mediaQuery) => {
         this.setState({
-            docked: mediaQuery.matches
+            docked: mediaQuery.matches,
         });
     };
 
     toggleDrawer = () => {
         this.setState({
-            menuDrawerOpen: !this.state.menuDrawerOpen
+            menuDrawerOpen: !this.state.menuDrawerOpen,
         });
     };
 
@@ -164,8 +164,8 @@ export class AppClass extends PureComponent {
     isPublicPage = (menuItems) => {
         return menuItems
             .filter(menuItem => this.props.location.pathname === menuItem.linkTo && menuItem.public)
-            .length > 0
-            || (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
+            .length > 0 ||
+            (new RegExp(routes.pathConfig.records.view(`(${routes.pidRegExp})`)).test(this.props.location.pathname));
     };
 
     setSessionExpiredConfirmation = (ref) => {
@@ -173,7 +173,7 @@ export class AppClass extends PureComponent {
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         if (this.props.accountLoading) {
             return (
                 <Grid container zeroMinWidth className={classes.layoutFill}>
@@ -189,11 +189,11 @@ export class AppClass extends PureComponent {
 
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
-        const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id
-            && this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
-        const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author
-            && this.props.account.class.indexOf('IS_CURRENT') >= 0
-            && this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
+        const isOrcidRequired = this.props.author && !this.props.author.aut_orcid_id &&
+            this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
+        const isHdrStudent = !isAuthorLoading && !!this.props.account && !!this.props.author &&
+            this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
+            this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
         const hasIncompleteWorks = !!(
             this.props.incompleteRecordList &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
@@ -207,7 +207,7 @@ export class AppClass extends PureComponent {
             this.props.location.pathname === routes.pathConfig.records.search;
         const showMenu = !isThesisSubmissionPage;
 
-        const containerStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 260} : {};
+        const containerStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 260 } : {};
         if (!isAuthorizedUser && isThesisSubmissionPage) {
             this.redirectUserToLogin()();
             return (<div/>);
@@ -218,32 +218,32 @@ export class AppClass extends PureComponent {
             // user is not logged in
             userStatusAlert = {
                 ...locale.global.loginAlert,
-                action: this.redirectUserToLogin()
+                action: this.redirectUserToLogin(),
             };
         } else if (!isPublicPage && !isAuthorLoading && this.props.account && !this.props.author) {
             // user is logged in, but doesn't have eSpace author identifier
             userStatusAlert = {
-                ...locale.global.notRegisteredAuthorAlert
+                ...locale.global.notRegisteredAuthorAlert,
             };
         } else if (!isPublicPage && !isAuthorLoading && isOrcidRequired && !isHdrStudent && !isThesisSubmissionPage) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
                 ...locale.global.noOrcidAlert,
-                action: this.redirectToOrcid
+                action: this.redirectToOrcid,
             };
         } else if (!isPublicPage && !isThesisSubmissionPage && !isAuthorLoading && isOrcidRequired && isHdrStudent) {
             // user is logged in, but doesn't have ORCID identifier
             userStatusAlert = {
-                ...locale.global.forceOrcidLinkAlert
+                ...locale.global.forceOrcidLinkAlert,
             };
         }
         const routesConfig = routes.getRoutesConfig({
             components: pages,
             account: this.props.account,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
-            isHdrStudent: isHdrStudent
+            isHdrStudent: isHdrStudent,
         });
-        const titleStyle = this.state.docked && !isThesisSubmissionPage ? {paddingLeft: 284} : {paddingLeft: 0};
+        const titleStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 284 } : { paddingLeft: 0 };
         const isIndex = this.props.history.location.pathname === '/';
         return (
             <Grid container className={classes.layoutFill}>
@@ -252,7 +252,7 @@ export class AppClass extends PureComponent {
                     className="AppBar"
                     color="primary"
                     position="fixed">
-                    <Toolbar style={{height: '70px'}}>
+                    <Toolbar style={{ height: '70px' }}>
                         <Grid container spacing={8}
                             alignItems="center"
                             direction="row"
@@ -266,9 +266,9 @@ export class AppClass extends PureComponent {
                                         TransitionComponent={Fade}>
                                         <IconButton
                                             aria-label={locale.global.mainNavButton.aria}
-                                            style={{marginLeft: '-12px', marginRight: '12px'}}
+                                            style={{ marginLeft: '-12px', marginRight: '12px' }}
                                             onClick={this.toggleDrawer}>
-                                            <Menu style={{color: 'white'}}/>
+                                            <Menu style={{ color: 'white' }}/>
                                         </IconButton>
                                     </Tooltip>
                                 </Grid>
@@ -279,13 +279,13 @@ export class AppClass extends PureComponent {
                                         !this.state.docked && !this.state.menuDrawerOpen &&
                                             <Hidden xsDown>
                                                 <Grid item>
-                                                    <div id="logo" className="smallLogo" style={{height: 66, width: 60}}>
+                                                    <div id="logo" className="smallLogo" style={{ height: 66, width: 60 }}>
                                                         {locale.global.logo.label}
                                                     </div>
                                                 </Grid>
                                             </Hidden>
                                     }
-                                    <Grid item xs={'auto'} style={{overflow: 'hidden', textOverflow: 'ellipsis'}}>
+                                    <Grid item xs={'auto'} style={{ overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                         <Typography variant="h5" component={'h1'} noWrap className={classes.titleLink}>
                                             {locale.global.appTitle}
                                         </Typography>
@@ -325,7 +325,7 @@ export class AppClass extends PureComponent {
                         locale={{
                             skipNavAriaLabel: locale.global.skipNav.ariaLabel,
                             skipNavTitle: locale.global.skipNav.title,
-                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel
+                            closeMenuLabel: locale.global.mainNavButton.closeMenuLabel,
                         }}/>
                 }
                 <div className="content-container" style={containerStyle}>
@@ -338,7 +338,7 @@ export class AppClass extends PureComponent {
                     {
                         userStatusAlert &&
                         <Grid container alignContent="center" justify="center" alignItems="center">
-                            <Grid item className={classes.layoutCard} style={{marginTop: 0, marginBottom: 0}}>
+                            <Grid item className={classes.layoutCard} style={{ marginTop: 0, marginBottom: 0 }}>
                                 <Alert {...userStatusAlert} />
                             </Grid>
                         </Grid>
@@ -367,6 +367,6 @@ export class AppClass extends PureComponent {
     }
 }
 
-const StyledApp = withStyles(styles, {withTheme: true})(AppClass);
+const StyledApp = withStyles(styles, { withTheme: true })(AppClass);
 const App = (props) => <StyledApp {...props}/>;
 export default App;

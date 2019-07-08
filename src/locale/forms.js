@@ -37,7 +37,7 @@ export default {
                 help: {
                     title: 'Content indicators',
                     text: <p>For more information about content indicators, click <a style={{ fontWeight: 700 }} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
-                    buttonLabel: 'CLOSE'
+                    buttonLabel: 'CLOSE',
                 },
                 title: 'Optional: Content Indicators',
                 description: 'You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
@@ -52,8 +52,8 @@ export default {
                 // },
                 fieldLabels: {
                     comments: 'Type edits/changes/comments here',
-                    url: 'Link (URL)'
-                }
+                    url: 'Link (URL)',
+                },
             },
             fileUpload: {
                 title: 'Optional: Upload additional files',
@@ -67,7 +67,7 @@ export default {
                 confirmationTitle: 'Cancel claiming a publication',
                 confirmationMessage: 'Are you sure you want to cancel claiming this work?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Claim has been submitted',
@@ -79,33 +79,33 @@ export default {
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
                     message: 'Retry uploading files and/or posting edits/changes/comments about this claim via "Fix record" screen or contact eSpace administrators.',
-                    type: 'warning'
+                    type: 'warning',
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
-                confirmButtonLabel: 'Go to my research'
+                confirmButtonLabel: 'Go to my research',
             },
             validationAlert: {
                 type: 'warning',
                 title: 'Validation',
-                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
             },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
                 message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
-                incompleteData: 'The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.'
+                incompleteData: 'The selected source has incomplete data. You will need to ADD A MISSING RECORD and enter the information manually.',
             },
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
                 message: 'Claim publication is being processed.',
-                showLoader: true
+                showLoader: true,
             },
             successAlert: {
                 type: 'done',
                 title: 'Success',
-                message: 'Publication claim has been submitted successfully.'
+                message: 'Publication claim has been submitted successfully.',
             },
             alreadyClaimedAlert: {
                 type: 'error',
@@ -114,8 +114,8 @@ export default {
                     <span>
                         This record has been assigned to you already.  If you feel this is incorrect, please notify the eSpace admin team at <a href="mailto:espace@library.uq.edu.au">espace@library.uq.edu.au</a>
                     </span>
-                )
-            }
+                ),
+            },
         },
         unclaimPublicationForm: {
             title: 'Remove this record from my profile',
@@ -129,20 +129,20 @@ export default {
                 confirmationTitle: 'Unclaim a record',
                 confirmationMessage: 'You have unclaimed this record successfully',
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research'
+                confirmButtonLabel: 'Go to my research',
             },
             alert: {
                 type: 'warning',
                 title: 'WARNING',
-                message: 'You are about to remove this publication from your eSpace profile.'
-            }
+                message: 'You are about to remove this publication from your eSpace profile.',
+            },
         },
         fixPublicationForm: {
             contentIndicators: {
                 help: {
                     title: 'Content indicators',
                     text: <p>For more information about content indicators, click <a style={{ fontWeight: 700 }} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
-                    buttonLabel: 'CLOSE'
+                    buttonLabel: 'CLOSE',
                 },
                 title: 'Content Indicators',
                 description: 'You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.',
@@ -157,8 +157,8 @@ export default {
                 // },
                 fieldLabels: {
                     comments: 'Describe the problem with this record, eg record is a duplicate, or suggested changes',
-                    url: 'Link (URL)'
-                }
+                    url: 'Link (URL)',
+                },
             },
             fileUpload: {
                 title: 'Upload files',
@@ -175,7 +175,7 @@ export default {
                 confirmationTitle: 'Cancel request',
                 confirmationMessage: 'Are you sure you want to cancel this request?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
+                confirmButtonLabel: 'Yes',
             },
             successWorkflowConfirmation: {
                 confirmationTitle: 'Your request has been submitted',
@@ -183,32 +183,32 @@ export default {
                 fileFailConfirmationAlert: {
                     title: 'File upload failed',
                     message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
-                    type: 'info'
+                    type: 'info',
                 },
                 cancelButtonLabel: 'Go to my dashboard',
-                confirmButtonLabel: 'Go to my research'
+                confirmButtonLabel: 'Go to my research',
             },
             validationAlert: {
                 type: 'warning',
                 title: 'Validation',
-                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
+                message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
             },
             errorAlert: {
                 type: 'error_outline',
                 title: 'Error',
-                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
+                message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`),
             },
             progressAlert: {
                 type: 'info_outline',
                 title: 'Saving',
                 message: 'Request is being processed.',
-                showLoader: true
+                showLoader: true,
             },
             successAlert: {
                 type: 'done',
                 title: 'Success',
-                message: 'Fix record request has been submitted successfully.'
-            }
-        }
-    }
+                message: 'Fix record request has been submitted successfully.',
+            },
+        },
+    },
 };

@@ -1,1 +1,1 @@
-export {default as confirmDiscardFormChanges} from './components/ConfirmDiscardFormChanges';
+export { default as confirmDiscardFormChanges } from './components/ConfirmDiscardFormChanges';

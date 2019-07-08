@@ -24,20 +24,20 @@ import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
 
-import {pathConfig} from 'config/routes';
+import { pathConfig } from 'config/routes';
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = (theme) => ({
     GridType: {
         paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     GridSubType: {
         marginTop: 12,
         paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
-    }
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
 });
 
 export class MyIncompleteRecordClass extends PureComponent {
@@ -61,7 +61,7 @@ export class MyIncompleteRecordClass extends PureComponent {
         publicationToFixFileUploadingError: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
 
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     componentWillReceiveProps(nextProps) {
@@ -109,8 +109,8 @@ export class MyIncompleteRecordClass extends PureComponent {
             alertLocale: {
                 ...alertLocale,
                 progressAlert: txt.progressAlert,
-                successAlert: txt.successAlert
-            }
+                successAlert: txt.successAlert,
+            },
         });
 
         // set confirmation message depending on file upload status
@@ -213,7 +213,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
-                                    style={{marginTop: -24}}
+                                    style={{ marginTop: -24 }}
                                     component={TextField}
                                     name="comments"
                                     type="text"
@@ -278,5 +278,5 @@ export class MyIncompleteRecordClass extends PureComponent {
     }
 }
 
-const MyIncompleteRecord = withStyles(styles, {withTheme: true})(MyIncompleteRecordClass);
+const MyIncompleteRecord = withStyles(styles, { withTheme: true })(MyIncompleteRecordClass);
 export default MyIncompleteRecord;

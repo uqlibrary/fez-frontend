@@ -11,7 +11,7 @@ export const initialState = {
     possiblePublicationsFacets: {},
     loadingPossiblePublicationsList: true,
     loadingPossibleCounts: true,
-    publicationsClaimedInProgress: []
+    publicationsClaimedInProgress: [],
 };
 
 const handlers = {
@@ -20,7 +20,7 @@ const handlers = {
         {
             ...state,
             loadingPossiblePublicationsList: true,
-            possiblePublicationsList: []
+            possiblePublicationsList: [],
         }
     ),
 
@@ -28,7 +28,7 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: action.payload
+            publicationToClaim: action.payload,
         }
     ),
 
@@ -36,7 +36,7 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: null
+            publicationToClaim: null,
         }
     ),
 
@@ -52,7 +52,7 @@ const handlers = {
                 current_page: action.payload.current_page,
                 from: action.payload.from,
                 to: action.payload.to,
-                per_page: action.payload.per_page
+                per_page: action.payload.per_page,
             },
         }
     ),
@@ -60,7 +60,7 @@ const handlers = {
     [actions.POSSIBLY_YOUR_PUBLICATIONS_FACETS_LOADED]: (state, action) => (
         {
             ...state,
-            possiblePublicationsFacets: action.payload
+            possiblePublicationsFacets: action.payload,
         }
     ),
 
@@ -71,14 +71,14 @@ const handlers = {
             possiblePublicationsList: [],
             loadingPossibleCounts: false,
             possibleCounts: 0,
-            possiblePublicationsPagingData: {}
+            possiblePublicationsPagingData: {},
         }
     ),
 
     [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => (
         {
             ...state,
-            loadingPossibleCounts: true
+            loadingPossibleCounts: true,
         }
     ),
 
@@ -86,7 +86,7 @@ const handlers = {
         {
             ...state,
             loadingPossibleCounts: false,
-            possibleCounts: action.payload.total
+            possibleCounts: action.payload.total,
         }
     ),
 
@@ -94,14 +94,14 @@ const handlers = {
         {
             ...state,
             loadingPossibleCounts: false,
-            possibleCounts: 0
+            possibleCounts: 0,
         }
     ),
 
     [actions.HIDE_PUBLICATIONS_LOADED]: (state, action) => (
         {
             ...state,
-            publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]
+            publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid],
         }
     ),
 
@@ -110,7 +110,7 @@ const handlers = {
             ...state,
             hidePublicationLoading: false,
             hidePublicationFailed: true,
-            hidePublicationFailedErrorMessage: action.payload
+            hidePublicationFailedErrorMessage: action.payload,
         }
     ),
 
@@ -118,7 +118,7 @@ const handlers = {
         {
             ...state,
             hidePublicationFailed: false,
-            hidePublicationFailedErrorMessage: null
+            hidePublicationFailedErrorMessage: null,
         }
     ),
 
@@ -126,7 +126,7 @@ const handlers = {
         {
             ...state,
             publicationToClaimFileUploadingError: !!action.payload.fileUploadOrIssueFailed,
-            publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid]
+            publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid],
         }
     ),
 
@@ -135,7 +135,7 @@ const handlers = {
             ...state,
             fullPublicationToClaim: null,
             fullPublicationToClaimLoading: true,
-            fullPublicationToClaimLoadingFailed: false
+            fullPublicationToClaimLoadingFailed: false,
         }
     ),
     [actions.PUBLICATION_TO_CLAIM_LOADED]: (state, action) => (
@@ -143,7 +143,7 @@ const handlers = {
             ...state,
             fullPublicationToClaim: action.payload,
             fullPublicationToClaimLoading: false,
-            fullPublicationToClaimLoadingFailed: false
+            fullPublicationToClaimLoadingFailed: false,
         }
     ),
     [actions.PUBLICATION_TO_CLAIM_FAILED]: (state, action) => (
@@ -151,9 +151,9 @@ const handlers = {
             ...state,
             fullPublicationToClaim: null,
             fullPublicationToClaimLoading: false,
-            fullPublicationToClaimLoadingFailed: action.payload
+            fullPublicationToClaimLoadingFailed: action.payload,
         }
-    )
+    ),
 };
 
 export default function claimPublicationReducer(state = initialState, action) {

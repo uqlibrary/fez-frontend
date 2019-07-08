@@ -28,7 +28,7 @@ describe('ConfirmDiscardFormChanges', () => {
         const promptDiscardFormChanges = jest.spyOn(wrapper.instance(), 'promptDiscardFormChanges');
         wrapper.setProps({
             dirty: true,
-            submitSucceeded: false
+            submitSucceeded: false,
         });
         wrapper.update();
         expect(promptDiscardFormChanges).toHaveBeenCalled();
@@ -39,7 +39,7 @@ describe('ConfirmDiscardFormChanges', () => {
         const getDiscardFormChangesConfirmationLocale = jest.spyOn(wrapper.instance(), 'getDiscardFormChangesConfirmationLocale');
         wrapper.setProps({
             dirty: true,
-            submitSucceeded: false
+            submitSucceeded: false,
         });
         wrapper.update();
         window.onbeforeunload();

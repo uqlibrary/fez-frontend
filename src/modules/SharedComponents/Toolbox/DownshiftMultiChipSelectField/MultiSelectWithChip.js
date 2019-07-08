@@ -215,7 +215,7 @@ DownshiftMultiple.propTypes = {
     onChange: PropTypes.func,
     name: PropTypes.string,
     label: PropTypes.string,
-    initialValue: PropTypes.any
+    initialValue: PropTypes.any,
 };
 
 /* istanbul ignore next */
@@ -245,7 +245,7 @@ const styles = theme => ({
         width: 'auto',
         flexGrow: 1,
         overflow: 'hidden',
-        textOverflow: 'ellipsis'
+        textOverflow: 'ellipsis',
     },
     divider: {
         height: theme.spacing.unit * 2,
@@ -256,9 +256,9 @@ const styles = theme => ({
         marginRight: -12,
         opacity: 0.66,
         '&:hover': {
-            opacity: 1
-        }
-    }
+            opacity: 1,
+        },
+    },
 });
 
 export default withStyles(styles)(DownshiftMultiple);

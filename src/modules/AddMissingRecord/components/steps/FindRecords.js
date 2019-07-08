@@ -1,15 +1,15 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
 // forms & custom components
-import {PublicationSearchForm} from 'modules/SharedComponents/PublicationSearchForm';
-import {pathConfig} from 'config/routes';
+import { PublicationSearchForm } from 'modules/SharedComponents/PublicationSearchForm';
+import { pathConfig } from 'config/routes';
 import locale from 'locale/pages';
 
 export default class FindRecords extends PureComponent {
     static propTypes = {
         actions: PropTypes.object,
-        history: PropTypes.object.isRequired
+        history: PropTypes.object.isRequired,
     };
 
     _performSearch = (values) => {
