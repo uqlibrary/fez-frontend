@@ -1,4 +1,4 @@
-import {ListRowHeader} from './ListRowHeader';
+import { ListRowHeader } from './ListRowHeader';
 import ListRowHeaderWithStyles from './ListRowHeader';
 
 function setup(testProps, isShallow = true) {
@@ -7,7 +7,7 @@ function setup(testProps, isShallow = true) {
         disabled: false,
         classes: {
             center: '',
-            header: ''
+            header: '',
         },
         ...testProps,
     };
@@ -15,7 +15,6 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('ListRowHeader renders ', () => {
-
     it('header for contributor editor control with name and delete all button only', () => {
         const wrapper = setup({ });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -30,15 +29,16 @@ describe('ListRowHeader renders ', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({});
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
-        wrapper.find('WithStyles(IconButton)').props().onClick();
+        wrapper.find('WithStyles(IconButton)').props()
+            .onClick();
         expect(showConfirmationFn).toHaveBeenCalled();
     });
 
     it('should render default view with styles', () => {
-        const wrapper = getElement(ListRowHeaderWithStyles, {onDeleteAll: jest.fn()});
+        const wrapper = getElement(ListRowHeaderWithStyles, { onDeleteAll: jest.fn() });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -46,7 +46,7 @@ describe('ListRowHeader renders ', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({});
         wrapper.instance().setConfirmationRef({
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         });
         wrapper.instance().showConfirmation();
         expect(showConfirmationFn).toHaveBeenCalled();
@@ -54,7 +54,7 @@ describe('ListRowHeader renders ', () => {
 
     it('should render larger grid item', () => {
         const wrapper = setup({
-            hideReorder: true
+            hideReorder: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

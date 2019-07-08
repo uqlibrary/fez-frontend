@@ -3,7 +3,7 @@ import {
     FIX_RECORD_LOADED,
     FIX_RECORD_LOAD_FAILED,
     FIX_RECORD_SET,
-    FIX_RECORD_CLEAR
+    FIX_RECORD_CLEAR,
 } from 'actions/actionTypes';
 
 export const initialState = {
@@ -40,7 +40,7 @@ const handlers = {
     }),
 };
 
-export default function fixRecordReducer(state = {...initialState}, action) {
+export default function fixRecordReducer(state = { ...initialState }, action) {
     const handler = handlers[action.type];
     if (!handler) {
         return state;

@@ -1,1 +1,1 @@
-export {default as AutoCompleteAsyncField} from './components/AutoCompleteAsyncField';
+export { default as AutoCompleteAsyncField } from './components/AutoCompleteAsyncField';

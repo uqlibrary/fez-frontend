@@ -1,9 +1,9 @@
-import Immutable from "immutable";
+import Immutable from 'immutable';
 import CreativeWorkForm from './CreativeWorkForm';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        'array': {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -19,8 +19,8 @@ function setup(testProps, isShallow = true){
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        'anyTouched': true,
+        'asyncValidating': false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -34,13 +34,13 @@ function setup(testProps, isShallow = true){
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "invalid": false,
-        "submitFailed": false,
-        "submitSucceeded": false,
-        "valid": true,
+        'dirty': true,
+        'form': 'form',
+        'initialized': false,
+        'invalid': false,
+        'submitFailed': false,
+        'submitSucceeded': false,
+        'valid': true,
         pure: true,
         // above are common immutable default props
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -51,7 +51,7 @@ function setup(testProps, isShallow = true){
         author: testProps.author || null,
         actions: testProps.actions || {},
         history: testProps.history || {
-            push: jest.fn()
+            push: jest.fn(),
         },
         ...testProps,
     };
@@ -64,9 +64,9 @@ describe('CreativeWorkForm validation ', () => {
             initialValues: {
                 rek_date: '2018-06-01',
                 fez_record_search_key_end_date: {
-                    rek_end_date: '2018-01-01' // before the start date - invalid!
-                }
-            }
+                    rek_end_date: '2018-01-01', // before the start date - invalid!
+                },
+            },
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();

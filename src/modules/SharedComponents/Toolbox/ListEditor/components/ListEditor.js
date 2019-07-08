@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
@@ -75,7 +75,8 @@ export default class ListsEditor extends Component {
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
             (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)
         ) {
-            // If when the item is submitted, there is no maxCount, its not exceeding the maxCount, is distinct and isnt already in the list...
+            // If when the item is submitted, there is no maxCount,
+            // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
@@ -85,7 +86,8 @@ export default class ListsEditor extends Component {
             } else if (!!item && item.includes(',') && !item.key && !item.value) {
                 // Item is a string with commas in it - we will strip and separate the values to be individual keywords
                 const commaSepListToArray = item.split(','); // Convert the string to an array of values
-                const cleanArray = commaSepListToArray.filter(item => item.trim() !== ''); // Filter out empty array values
+                // Filter out empty array values
+                const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
                 const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
                 if (totalArray.length > this.props.maxCount) {
                     // If the final list is longer that maxCount, trim it back
@@ -171,7 +173,7 @@ export default class ListsEditor extends Component {
                     inputField={this.props.inputField}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
-                    locale={{...(this.props.locale && this.props.locale.form && this.props.locale.form)}}
+                    locale={{ ...(this.props.locale && this.props.locale.form && this.props.locale.form) }}
                     {...(this.props.locale && this.props.locale.form && this.props.locale.form)}
                     isValid={this.props.isValid}
                     disabled={

@@ -1,5 +1,5 @@
 import ResearchReportCitation from './ResearchReportCitation';
-import {researchReport} from 'mock/data/testing/records';
+import { researchReport } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {
@@ -29,8 +29,8 @@ describe('ResearchReportCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...researchReport,
-                fez_record_search_key_series: {rek_series: null}
-            }
+                fez_record_search_key_series: { rek_series: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

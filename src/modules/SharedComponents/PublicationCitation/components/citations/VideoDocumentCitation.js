@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class VideoDocumentCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
     };
 
     constructor(props) {
@@ -15,8 +15,8 @@ export default class VideoDocumentCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            series: this.props.publication.fez_record_search_key_series ?
-                this.props.publication.fez_record_search_key_series.rek_series : null
+            series: this.props.publication.fez_record_search_key_series
+                ? this.props.publication.fez_record_search_key_series.rek_series : null,
         };
 
         // eSpace citation view for Video

@@ -1,7 +1,6 @@
 import publicationEnhancer, { calculateOpenAccess } from './publicationEnhancer';
 
 describe('publication enhancer', () => {
-
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
@@ -17,22 +16,24 @@ describe('publication enhancer', () => {
             rek_title: 'Title',
             rek_description: 'Description',
             rek_formatted_title: null,
-            rek_formatted_abstract: 'Abstract'
+            rek_formatted_abstract: 'Abstract',
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: {
-                calculateOpenAccess: expect.any(Function),
-                rek_pid: "UQ:1234",
-                rek_title: 'Title',
-                rek_description: 'Description',
-                rek_formatted_abstract: 'Abstract',
-                rek_formatted_title: null,
-            },
-            type: "FIX_RECORD_LOADED"
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: {
+                    calculateOpenAccess: expect.any(Function),
+                    rek_pid: 'UQ:1234',
+                    rek_title: 'Title',
+                    rek_description: 'Description',
+                    rek_formatted_abstract: 'Abstract',
+                    rek_formatted_title: null,
+                },
+                type: 'FIX_RECORD_LOADED',
+            })
+        );
     });
 
     it('should calculate open access', () => {
@@ -41,14 +42,14 @@ describe('publication enhancer', () => {
             rek_title: 'Title',
             rek_description: 'Description',
             rek_formatted_title: null,
-            rek_formatted_abstract: 'Abstract'
+            rek_formatted_abstract: 'Abstract',
         };
-        const next = jest.fn((action) => {
+        const next = jest.fn(action => {
             const result = action.payload.calculateOpenAccess();
             expect(result).toEqual({
                 isOpenAccess: false,
                 embargoDate: null,
-                openAccessStatusId: null
+                openAccessStatusId: null,
             });
         });
         publicationEnhancer()(next)({ type: 'FIX_RECORD_LOADED', payload: publication });
@@ -59,9 +60,9 @@ describe('publication enhancer', () => {
             rek_title: 'Title',
             rek_description: 'Description',
             rek_formatted_title: null,
-            rek_formatted_abstract: 'Abstract'
+            rek_formatted_abstract: 'Abstract',
         };
-        const next = jest.fn((action) => {
+        const next = jest.fn(action => {
             const result = action.payload.calculateOpenAccess();
             expect(result).toBeNull();
         });
@@ -75,16 +76,16 @@ describe('publication enhancer', () => {
                     rek_pid: 'UQ:1234',
                     rek_title: 'Title',
                     rek_description: 'Description',
-                    rek_formatted_abstract: 'Abstract'
+                    rek_formatted_abstract: 'Abstract',
                 },
                 {
                     rek_pid: 'UQ:1235',
                     rek_title: 'Title',
                     rek_description: 'Description',
-                    rek_formatted_abstract: 'Abstract'
-                }
+                    rek_formatted_abstract: 'Abstract',
+                },
             ],
-            count: 2
+            count: 2,
         };
         const next = jest.fn();
         const expectedPayload = {
@@ -95,7 +96,7 @@ describe('publication enhancer', () => {
                     rek_description: 'Description',
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
-                    calculateOpenAccess: expect.any(Function)
+                    calculateOpenAccess: expect.any(Function),
                 },
                 {
                     rek_pid: 'UQ:1235',
@@ -103,17 +104,19 @@ describe('publication enhancer', () => {
                     rek_description: 'Description',
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
-                    calculateOpenAccess: expect.any(Function)
-                }
+                    calculateOpenAccess: expect.any(Function),
+                },
             ],
-            count: 2
+            count: 2,
         };
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: payload });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: expectedPayload,
-            type: "LATEST_PUBLICATIONS_LOADED"
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: expectedPayload,
+                type: 'LATEST_PUBLICATIONS_LOADED',
+            })
+        );
     });
 
     it('should add a method to a list of publication to calculate open access for trending publications', () => {
@@ -123,15 +126,15 @@ describe('publication enhancer', () => {
                     rek_pid: 'UQ:1234',
                     rek_title: 'Title',
                     rek_description: 'Description',
-                    rek_formatted_abstract: 'Abstract'
+                    rek_formatted_abstract: 'Abstract',
                 },
                 {
                     rek_pid: 'UQ:1235',
                     rek_title: 'Title',
                     rek_description: 'Description',
-                    rek_formatted_abstract: 'Abstract'
-                }
-            ]
+                    rek_formatted_abstract: 'Abstract',
+                },
+            ],
         };
 
         const next = jest.fn();
@@ -143,7 +146,7 @@ describe('publication enhancer', () => {
                     rek_description: 'Description',
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
-                    calculateOpenAccess: expect.any(Function)
+                    calculateOpenAccess: expect.any(Function),
                 },
                 {
                     rek_pid: 'UQ:1235',
@@ -151,16 +154,18 @@ describe('publication enhancer', () => {
                     rek_description: 'Description',
                     rek_formatted_abstract: 'Abstract',
                     rek_formatted_title: null,
-                    calculateOpenAccess: expect.any(Function)
+                    calculateOpenAccess: expect.any(Function),
                 },
-            ]
+            ],
         };
         publicationEnhancer()(next)({ type: 'TRENDING_PUBLICATIONS_LOADED@altmetric', payload: payload });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            payload: expectedPayload,
-            type: "TRENDING_PUBLICATIONS_LOADED@altmetric"
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                payload: expectedPayload,
+                type: 'TRENDING_PUBLICATIONS_LOADED@altmetric',
+            })
+        );
     });
 
     it('should not add anything to data if action is not on the list', () => {
@@ -168,401 +173,409 @@ describe('publication enhancer', () => {
         const next = jest.fn();
         publicationEnhancer()(next)({
             type: 'FIX_RECORD_LOAD_FAILED',
-            payload: publication
+            payload: publication,
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            type: 'FIX_RECORD_LOAD_FAILED',
-            payload: publication
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                type: 'FIX_RECORD_LOAD_FAILED',
+                payload: publication,
+            })
+        );
     });
 
-    it('should not add anything to data if there\'s no data', () => {
+    it("should not add anything to data if there's no data", () => {
         const next = jest.fn();
         publicationEnhancer()(next)({
             type: 'SEARCH_LOADED',
-            payload: { nothing: 'here' }
+            payload: { nothing: 'here' },
         });
 
-        expect(next).toBeCalledWith(expect.objectContaining({
-            type: 'SEARCH_LOADED',
-            payload: { nothing: 'here' }
-        }));
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
+                type: 'SEARCH_LOADED',
+                payload: { nothing: 'here' },
+            })
+        );
     });
 
     it('should calculate OA status', () => {
         const publicationDOIOANoEmbargoDate = {
             fez_record_search_key_oa_embargo_days: {
-                rek_oa_embargo_days: 0
+                rek_oa_embargo_days: 0,
             },
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453693
-            }
+                rek_oa_status: 453693,
+            },
         };
         const publicationDOIOAWithEmbargoDate = {
             fez_record_search_key_oa_embargo_days: {
-                rek_oa_embargo_days: 400
+                rek_oa_embargo_days: 400,
             },
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453693
-            }
+                rek_oa_status: 453693,
+            },
         };
         const publicationPMC = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453954
-            }
+                rek_oa_status: 453954,
+            },
         };
         const publicationNotOA = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453700
-            }
+                rek_oa_status: 453700,
+            },
         };
         const publicationEmbargoOAFile = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
-                    dsi_embargo_date: "2021-12-01",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
+                    dsi_embargo_date: '2021-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
                 },
                 {
-                    dsi_pid: "UQ:1232313",
-                    dsi_dsid: "earlierFile.pdf",
-                    dsi_embargo_date: "2021-11-01",
+                    dsi_pid: 'UQ:1232313',
+                    dsi_dsid: 'earlierFile.pdf',
+                    dsi_embargo_date: '2021-11-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }],
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
+            ],
         };
         const publicationEmbargoMaturedOAFile = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
-                    dsi_embargo_date: "2019-12-01",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
+                    dsi_embargo_date: '2019-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }],
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
+            ],
         };
         const publicationMultipleOAFiles = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
-                    dsi_embargo_date: "2019-12-01",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
+                    dsi_embargo_date: '2019-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
                 },
                 {
-                    dsi_pid: "UQ:123",
-                    dsi_dsid: "UQ357538_OAEmbargo.pdf",
-                    dsi_embargo_date: "2021-12-01",
+                    dsi_pid: 'UQ:123',
+                    dsi_dsid: 'UQ357538_OAEmbargo.pdf',
+                    dsi_embargo_date: '2021-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
             ],
         };
         const publicationMultipleEmbargoOAFiles = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
-                    dsi_embargo_date: "2022-12-01",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
+                    dsi_embargo_date: '2022-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
                 },
                 {
-                    dsi_pid: "UQ:123",
-                    dsi_dsid: "UQ357538_OAEmbargo.pdf",
-                    dsi_embargo_date: "2023-12-01",
+                    dsi_pid: 'UQ:123',
+                    dsi_dsid: 'UQ357538_OAEmbargo.pdf',
+                    dsi_embargo_date: '2023-12-01',
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
             ],
         };
         const publicationNoEmbargoOAFile = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }],
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
+            ],
         };
         const publicationOtherNoFiles = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453697
+                rek_oa_status: 453697,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
-                }],
+                    dsi_state: 'A',
+                    dsi_size: 62,
+                },
+            ],
         };
         const publicationNoDataStream = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453697
-            }
+                rek_oa_status: 453697,
+            },
         };
         const publicationOAFileWithERA = {
             rek_created_date: '2019-12-25T00:00:00Z',
             rek_pid: 'pid:111',
             fez_record_search_key_oa_status: {
-                rek_oa_status: 453695
+                rek_oa_status: 453695,
             },
             fez_datastream_info: [
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "FezACML_UQ357538_OA.pdf.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'FezACML_UQ357538_OA.pdf.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "FezACML security for datastream - UQ357538_OA.pdf",
-                    dsi_mimetype: "text\/xml",
+                    dsi_label: 'FezACML security for datastream - UQ357538_OA.pdf',
+                    dsi_mimetype: 'text/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 62
+                    dsi_state: 'A',
+                    dsi_size: 62,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "presmd_UQ357538_OA.xml",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'presmd_UQ357538_OA.xml',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "",
-                    dsi_mimetype: "application\/xml",
+                    dsi_label: '',
+                    dsi_mimetype: 'application/xml',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 275290
+                    dsi_state: 'A',
+                    dsi_size: 275290,
                 },
                 {
-                    dsi_pid: "UQ:357538",
-                    dsi_dsid: "UQ357538_OA.pdf",
+                    dsi_pid: 'UQ:357538',
+                    dsi_dsid: 'UQ357538_OA.pdf',
                     dsi_embargo_date: null,
                     dsi_open_access: null,
-                    dsi_label: "Full text (open access)",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'Full text (open access)',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
                 },
                 {
-                    dsi_pid: "UQ:1234",
-                    dsi_dsid: "123.pdf",
+                    dsi_pid: 'UQ:1234',
+                    dsi_dsid: '123.pdf',
                     dsi_embargo_date: '2050-01-01',
                     dsi_open_access: null,
-                    dsi_label: "ERA restricted admins only",
-                    dsi_mimetype: "application\/pdf",
+                    dsi_label: 'ERA restricted admins only',
+                    dsi_mimetype: 'application/pdf',
                     dsi_copyright: null,
-                    dsi_state: "A",
-                    dsi_size: 1526884
-                }
-            ]
+                    dsi_state: 'A',
+                    dsi_size: 1526884,
+                },
+            ],
         };
 
         const expectOADoiNoEmbargoDate = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453693 };
         const expectOADoiWithEmbargoDate = {
-            embargoDate: "4th February 2021",
+            embargoDate: '4th February 2021',
             isOpenAccess: false,
-            openAccessStatusId: 453693
+            openAccessStatusId: 453693,
         };
         const expectOAPMC = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453954 };
         const expectNotOA = { embargoDate: null, isOpenAccess: false, openAccessStatusId: 453700 };
         const expectEmbargoOA = {
-            embargoDate: "1st November 2021",
+            embargoDate: '1st November 2021',
             isOpenAccess: false,
-            openAccessStatusId: 453695
+            openAccessStatusId: 453695,
         };
         const expectOA = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 };
         const expectEmbargoMultipleFiles = {
-            embargoDate: "1st December 2022",
+            embargoDate: '1st December 2022',
             isOpenAccess: false,
-            openAccessStatusId: 453695
+            openAccessStatusId: 453695,
         };
         const expectOAOther = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453697 };
         const expectNoDataStream = { embargoDate: null, isOpenAccess: true, openAccessStatusId: 453697 };
@@ -579,7 +592,6 @@ describe('publication enhancer', () => {
         expect(calculateOpenAccess(publicationMultipleEmbargoOAFiles)).toEqual(expectEmbargoMultipleFiles);
         expect(calculateOpenAccess(publicationOtherNoFiles)).toEqual(expectOAOther);
         expect(calculateOpenAccess(publicationNoDataStream)).toEqual(expectNoDataStream);
-
     });
 
     it('should clean up invalid HTML in rek_title from a search list', () => {
@@ -589,31 +601,35 @@ describe('publication enhancer', () => {
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'SEARCH_LOADED@wos', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'SEARCH_LOADED@wos',
                 payload: {
-                    data: [{
-                        rek_pid: 'UQ:1234',
-                        rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
-                        rek_formatted_abstract: null,
-                        rek_formatted_title: null,
-                        calculateOpenAccess: expect.any(Function)
-                    }]
-                }
-            }));
+                    data: [
+                        {
+                            rek_pid: 'UQ:1234',
+                            rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
+                            rek_formatted_abstract: null,
+                            rek_formatted_title: null,
+                            calculateOpenAccess: expect.any(Function),
+                        },
+                    ],
+                },
+            })
+        );
     });
 
     it('should clean up invalid HTML in rek_title from a publication list', () => {
         const publication = {
             rek_pid: 'UQ:1234',
             rek_title: '<br/>This is a <u>title</u> with <sup>sup</sup> and <sub>sub</sub>',
-            rek_formatted_abstract: '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>'
+            rek_formatted_abstract:
+                '<ul><li>one</li><li>tow</li></ul><span>hello</span><p class="some-css">good bye</p>',
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'LATEST_PUBLICATIONS_LOADED', payload: { data: [publication] } });
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'LATEST_PUBLICATIONS_LOADED',
                 payload: {
                     data: [
@@ -621,12 +637,13 @@ describe('publication enhancer', () => {
                             rek_pid: 'UQ:1234',
                             rek_title: 'This is a title with <sup>sup</sup> and <sub>sub</sub>',
                             calculateOpenAccess: expect.any(Function),
-                            rek_formatted_abstract: "onetowhello<p>good bye</p>",
+                            rek_formatted_abstract: 'onetowhello<p>good bye</p>',
                             rek_formatted_title: null,
-                        }
-                    ]
-                }
-            }));
+                        },
+                    ],
+                },
+            })
+        );
     });
 
     it('should set rek_formatted_abstract and rek_formatted_title to null due to invalid html', () => {
@@ -634,21 +651,22 @@ describe('publication enhancer', () => {
             rek_pid: 'UQ:1234',
             rek_title: 'Title',
             rek_formatted_title: '<b> </b>',
-            rek_formatted_abstract: '<br/>'
+            rek_formatted_abstract: '<br/>',
         };
         const next = jest.fn();
         publicationEnhancer()(next)({ type: 'VIEW_RECORD_LOADED', payload: publication });
 
-        expect(next).toBeCalledWith(expect.objectContaining(
-            {
+        expect(next).toBeCalledWith(
+            expect.objectContaining({
                 type: 'VIEW_RECORD_LOADED',
                 payload: {
                     rek_pid: 'UQ:1234',
                     rek_title: 'Title',
                     rek_formatted_title: null,
                     rek_formatted_abstract: null,
-                    calculateOpenAccess: expect.any(Function)
-                }
-            }));
+                    calculateOpenAccess: expect.any(Function),
+                },
+            })
+        );
     });
 });

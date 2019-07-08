@@ -16,13 +16,10 @@ import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/Navigation
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 
 import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
-import {
-    AuthorLinkingField,
-    ContributorLinkingField
-} from 'modules/SharedComponents/AuthorLinking';
+import { AuthorLinkingField, ContributorLinkingField } from 'modules/SharedComponents/AuthorLinking';
 import {
     ContentIndicatorsField,
-    showContentIndicatorsField
+    showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { validation, routes, claimRecordConfig } from 'config';
 import locale from 'locale/forms';
@@ -40,20 +37,14 @@ export default class ClaimRecord extends PureComponent {
         publicationFailedToClaim: PropTypes.string,
         redirectPath: PropTypes.string,
         history: PropTypes.object.isRequired,
-        actions: PropTypes.object.isRequired
+        actions: PropTypes.object.isRequired,
     };
 
     componentWillMount() {
-        const author = this.props.initialValues.get('author')
-            ? this.props.initialValues.get('author').toJS()
-            : null
-        ;
-
+        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         const publication = this.props.initialValues.get('publication')
             ? this.props.initialValues.get('publication').toJS()
-            : null
-        ;
-
+            : null;
         if (!author || !publication) {
             this.props.history.go(-1);
         }
@@ -62,8 +53,7 @@ export default class ClaimRecord extends PureComponent {
     componentDidMount() {
         const publication = this.props.initialValues.get('publication')
             ? this.props.initialValues.get('publication').toJS()
-            : null
-        ;
+            : null;
         if (publication && publication.rek_pid && this.props.actions) {
             this.props.actions.loadFullRecordToClaim(publication.rek_pid);
         }
@@ -97,48 +87,37 @@ export default class ClaimRecord extends PureComponent {
         }
     };
 
-    _setSuccessConfirmation = (ref) => {
+    _setSuccessConfirmation = ref => {
         this.successConfirmationBox = ref;
     };
 
-    _handleDefaultSubmit = (event) => {
+    _handleDefaultSubmit = event => {
         !!event && event.preventDefault();
     };
 
-    _contributorValidation = (link) => {
-        const publication = (
+    _contributorValidation = link => {
+        const publication =
             this.props.initialValues.get('publication') &&
             this.props.initialValues.get('publication').toJS &&
-            this.props.initialValues.get('publication').toJS()
-        );
-        return (
-            publication &&
+            this.props.initialValues.get('publication').toJS();
+        return publication &&
             publication.fez_record_search_key_author &&
             publication.fez_record_search_key_author.length > 0
-        )
             ? validation.isValidContributorLink(link)
-            : validation.isValidContributorLink(link, true)
-        ;
+            : validation.isValidContributorLink(link, true);
     };
 
     render() {
         const txt = locale.forms.claimPublicationForm;
 
         const publication = {
-            ...(
-                this.props.initialValues.get('publication') &&
-                this.props.initialValues.get('publication').toJS(0)
-            ),
-            ...this.props.fullPublicationToClaim
+            ...(this.props.initialValues.get('publication') && this.props.initialValues.get('publication').toJS(0)),
+            ...this.props.fullPublicationToClaim,
         };
 
-        const author = this.props.initialValues.get('author')
-            ? this.props.initialValues.get('author').toJS()
-            : null
-        ;
-
+        const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         if (!author) {
-            return (<div />);
+            return <div />;
         }
         if (!publication || this.props.fullPublicationToClaimLoading) {
             return (
@@ -152,30 +131,22 @@ export default class ClaimRecord extends PureComponent {
             );
         }
 
-        const authorLinked = publication &&
+        const authorLinked =
+            publication &&
             author &&
             Array.isArray(publication.fez_record_search_key_author_id) &&
-            publication.fez_record_search_key_author_id.some(
-                authorId => authorId.rek_author_id === author.aut_id
-            )
-        ;
-
-        const contributorLinked = publication &&
+            publication.fez_record_search_key_author_id.some(authorId => authorId.rek_author_id === author.aut_id);
+        const contributorLinked =
+            publication &&
             author &&
             Array.isArray(publication.fez_record_search_key_contributor_id) &&
             publication.fez_record_search_key_contributor_id.some(
                 contributorId => contributorId.rek_contributor_id === author.aut_id
-            )
-        ;
-
-        const contributorClassName = (
-            publication.fez_record_search_key_author &&
-            publication.fez_record_search_key_author.length > 0
-        )
-            ? 'contributorsField'
-            : 'requiredField'
-        ;
-
+            );
+        const contributorClassName =
+            publication.fez_record_search_key_author && publication.fez_record_search_key_author.length > 0
+                ? 'contributorsField'
+                : 'requiredField';
         // if publication.sources is set, user is claiming from Add missing record page
         const fromAddRecord = !!publication.sources;
         // set confirmation message depending on file upload status and publication fromAddRecord
@@ -187,17 +158,13 @@ export default class ClaimRecord extends PureComponent {
 
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
-                {
-                    this.props.publicationToClaimFileUploadingError &&
+                {this.props.publicationToClaimFileUploadingError && (
                     <Grid container>
                         <Grid item xs={12}>
-                            <Alert
-                                pushToTop
-                                { ...txt.successWorkflowConfirmation.fileFailConfirmationAlert }
-                            />
+                            <Alert pushToTop {...txt.successWorkflowConfirmation.fileFailConfirmationAlert} />
                         </Grid>
                     </Grid>
-                }
+                )}
                 {txt.successWorkflowConfirmation.successConfirmationMessage}
             </React.Fragment>
         );
@@ -210,7 +177,7 @@ export default class ClaimRecord extends PureComponent {
                 ...this.props,
                 dirty: true,
                 error: txt.errorAlert.incompleteData,
-                alertLocale: txt
+                alertLocale: txt,
             });
         } else if (publication.rek_pid && (authorLinked || contributorLinked)) {
             alertProps = { ...txt.alreadyClaimedAlert };
@@ -218,7 +185,7 @@ export default class ClaimRecord extends PureComponent {
             alertProps = validation.getErrorAlertProps({
                 ...this.props,
                 dirty: true,
-                alertLocale: txt
+                alertLocale: txt,
             });
         }
 
@@ -227,34 +194,31 @@ export default class ClaimRecord extends PureComponent {
                 <form onSubmit={this._handleDefaultSubmit}>
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard
-                                title={txt.claimingInformation.title}
-                                help={txt.claimingInformation.help}
-                            >
+                            <StandardCard title={txt.claimingInformation.title} help={txt.claimingInformation.help}>
                                 <PublicationCitation publication={publication} />
                             </StandardCard>
                         </Grid>
-                        {
-                            (!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
                             <React.Fragment>
                                 <ConfirmDialogBox
                                     onRef={this._setSuccessConfirmation}
                                     onAction={this._navigateToMyResearch}
                                     onCancelAction={this._claimAnother}
-                                    locale={saveConfirmationLocale} />
+                                    locale={saveConfirmationLocale}
+                                />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}
                                     txt={txt.cancelWorkflowConfirmation}
                                 />
-                                {
-                                    publication.fez_record_search_key_author &&
-                                    publication.fez_record_search_key_author.length > 0
-                                    && !authorLinked &&
+                                {publication.fez_record_search_key_author &&
+                                    publication.fez_record_search_key_author.length > 0 &&
+                                    !authorLinked && (
                                     <Grid item xs={12}>
                                         <StandardCard
                                             title={txt.authorLinking.title}
                                             help={txt.authorLinking.help}
-                                            className="requiredField">
+                                            className="requiredField"
+                                        >
                                             <label htmlFor="authorLinking">{txt.authorLinking.text}</label>
                                             <Field
                                                 name="authorLinking"
@@ -268,35 +232,41 @@ export default class ClaimRecord extends PureComponent {
                                             />
                                         </StandardCard>
                                     </Grid>
-                                }
-                                {
-                                    !claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
+                                )}
+                                {!claimRecordConfig.hideContributorLinking.includes(publication.rek_display_type) &&
                                     publication.fez_record_search_key_contributor &&
                                     publication.fez_record_search_key_contributor.length > 0 &&
-                                    !contributorLinked &&
+                                    !contributorLinked && (
                                     <Grid item xs={12}>
                                         <StandardCard
                                             title={txt.contributorLinking.title}
                                             help={txt.contributorLinking.help}
-                                            className={contributorClassName}>
-                                            <label htmlFor="contributorLinking">{txt.contributorLinking.text}</label>
+                                            className={contributorClassName}
+                                        >
+                                            <label htmlFor="contributorLinking">
+                                                {txt.contributorLinking.text}
+                                            </label>
                                             <Field
                                                 name="contributorLinking"
                                                 component={ContributorLinkingField}
                                                 loggedInAuthor={author}
                                                 authorList={publication.fez_record_search_key_contributor}
-                                                linkedAuthorIdList={publication.fez_record_search_key_contributor_id}
+                                                linkedAuthorIdList={
+                                                    publication.fez_record_search_key_contributor_id
+                                                }
                                                 disabled={this.props.submitting}
                                                 className={contributorClassName}
                                                 validate={this._contributorValidation}
                                             />
                                         </StandardCard>
                                     </Grid>
-                                }
-                                {
-                                    showContentIndicatorsField(publication) &&
+                                )}
+                                {showContentIndicatorsField(publication) && (
                                     <Grid item xs={12}>
-                                        <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help} >
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
                                             <Grid container spacing={24}>
                                                 <Grid item xs={12}>
                                                     <Typography>{txt.contentIndicators.description}</Typography>
@@ -315,7 +285,7 @@ export default class ClaimRecord extends PureComponent {
                                             </Grid>
                                         </StandardCard>
                                     </Grid>
-                                }
+                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                         <Grid container spacing={16}>
@@ -328,7 +298,8 @@ export default class ClaimRecord extends PureComponent {
                                                     fullWidth
                                                     multiline
                                                     rows={3}
-                                                    label={txt.comments.fieldLabels.comments} />
+                                                    label={txt.comments.fieldLabels.comments}
+                                                />
                                             </Grid>
                                             <Grid item xs={12}>
                                                 <Field
@@ -356,13 +327,12 @@ export default class ClaimRecord extends PureComponent {
                                     </StandardCard>
                                 </Grid>
                             </React.Fragment>
-                        }
-                        {
-                            alertProps &&
+                        )}
+                        {alertProps && (
                             <Grid item xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                     <Grid container spacing={24}>
                         <Grid item xs />
@@ -372,16 +342,11 @@ export default class ClaimRecord extends PureComponent {
                                 fullWidth
                                 children={txt.cancel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelClaim} />
+                                onClick={this._cancelClaim}
+                            />
                         </Grid>
-                        {
-                            (
-                                !publication.rek_pid ||
-                                !(authorLinked || contributorLinked)
-                            ) && !(
-                                !publication.rek_pid &&
-                                this.props.submitFailed
-                            ) &&
+                        {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
+                            !(!publication.rek_pid && this.props.submitFailed) && (
                             <Grid item>
                                 <Button
                                     variant={'contained'}
@@ -393,7 +358,7 @@ export default class ClaimRecord extends PureComponent {
                                     id="claimSubmit"
                                 />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                 </form>
             </StandardPage>

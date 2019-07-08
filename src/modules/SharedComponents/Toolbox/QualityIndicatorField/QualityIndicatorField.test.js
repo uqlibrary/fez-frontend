@@ -2,7 +2,7 @@ import QualityIndicatorField from './QualityIndicatorField';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(QualityIndicatorField, props, isShallow);
@@ -20,11 +20,11 @@ describe('QualityIndicatorField component', () => {
             placeholder: 'Test placeholder',
             input: {
                 value: ['One', 'Two'],
-                onChange: jest.fn()
+                onChange: jest.fn(),
             },
             meta: {
-                error: 'Test error'
-            }
+                error: 'Test error',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

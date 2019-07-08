@@ -1,6 +1,6 @@
-import {GrantListEditorHeader, styles} from './GrantListEditorHeader';
+import { GrantListEditorHeader, styles } from './GrantListEditorHeader';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         onDeleteAll: jest.fn(),
         locale: {},
@@ -20,12 +20,12 @@ describe('GrantListEditorHeader', () => {
     });
 
     it('should render default mobile view', () => {
-        const wrapper = setup({width: 'xs'});
+        const wrapper = setup({ width: 'xs' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should hide grant agency type input', () => {
-        const wrapper = setup({hideType: true});
+        const wrapper = setup({ hideType: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -43,7 +43,7 @@ describe('GrantListEditorHeader', () => {
         const showConfirmationFn = jest.fn();
         const wrapper = setup({});
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
         expect(toJson(wrapper)).toMatchSnapshot();

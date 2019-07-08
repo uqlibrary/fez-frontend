@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const PageCitationView = ({publication, searchKey, className = 'citationPage'}) => {
+const PageCitationView = ({ publication, searchKey, className = 'citationPage' }) => {
     const page = publication[searchKey.key] ? publication[searchKey.key][searchKey.subkey] : null;
     return (
         page &&
@@ -14,7 +14,7 @@ const PageCitationView = ({publication, searchKey, className = 'citationPage'}) 
 PageCitationView.propTypes = {
     publication: PropTypes.object.isRequired,
     searchKey: PropTypes.object.isRequired,
-    className: PropTypes.string
+    className: PropTypes.string,
 };
 
 export default PageCitationView;

@@ -1,10 +1,10 @@
 import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
-import {default as formLocale} from 'locale/publicationForm';
+import { default as formLocale } from 'locale/publicationForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        "array": {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -20,8 +20,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        "anyTouched": true,
-        "asyncValidating": false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,11 +35,11 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        "dirty": true,
-        "form": "form",
-        "initialized": false,
-        "submitFailed": false,
-        "valid": true,
+        dirty: true,
+        form: 'form',
+        initialized: false,
+        submitFailed: false,
+        valid: true,
         pure: true,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -52,7 +52,7 @@ function setup(testProps, isShallow = true) {
         actions: {
             logout: jest.fn(),
             checkSession: jest.fn(),
-            clearSessionExpiredFlag: jest.fn()
+            clearSessionExpiredFlag: jest.fn(),
         },
         ...testProps,
     };
@@ -82,41 +82,44 @@ describe('Collection form test', () => {
     });
 
     it('should render the full form', () => {
-        const wrapper = setup({formValues: {get: () => {return [1, 2, 3]}}});
+        const wrapper = setup({
+            formValues: {
+                get: () => {
+                    return [1, 2, 3];
+                },
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(4);
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
     });
 
     it('should render success panel', () => {
-        const wrapper = setup({submitSucceeded: true, newRecord: {rek_pid: 'UQ:12345'}});
+        const wrapper = setup({ submitSucceeded: true, newRecord: { rek_pid: 'UQ:12345' } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should not disable submit button if form submit has failed', () => {
-        const wrapper = setup({submitFailed: true});
+        const wrapper = setup({ submitFailed: true });
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
         wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label == formLocale.thesisSubmission.submit) {
+            if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
-        })
+        });
     });
 
     it('should ask when redirecting from form with data (even if submit failed)', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({dirty: true, submitSucceeded: false});
+        const wrapper = setup({ dirty: true, submitSucceeded: false });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should not ask when redirecting from form with data after successful submit', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({dirty: true, submitSucceeded: true});
+        const wrapper = setup({ dirty: true, submitSucceeded: true });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should display successfull submission screen', () => {
-        const testMethod = jest.fn();
         const wrapper = setup({});
         wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -124,19 +127,25 @@ describe('Collection form test', () => {
 
     it('should redirect to cancel page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().cancelSubmit();
+        setup({})
+            .instance()
+            .cancelSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance().afterSubmit();
+        setup({})
+            .instance()
+            .afterSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should reload the page', () => {
         jest.spyOn(window.location, 'reload');
-        const wrapper = setup({}).instance().reloadForm();
+        setup({})
+            .instance()
+            .reloadForm();
         expect(window.location.reload).toBeCalled();
     });
 });

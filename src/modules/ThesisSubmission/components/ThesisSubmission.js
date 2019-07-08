@@ -1,28 +1,28 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
-import {Field} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {NavigationDialogBox} from 'modules/SharedComponents/Toolbox/NavigationPrompt';
-import {ConfirmDialogBox} from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {ThesisSubtypeField} from 'modules/SharedComponents/PublicationSubtype';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { NavigationDialogBox } from 'modules/SharedComponents/Toolbox/NavigationPrompt';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import {
     OrgUnitNameField,
     FilteredFieldOfResearchListField,
 } from 'modules/SharedComponents/LookupFields';
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {ListEditorField} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FileUploadField} from 'modules/SharedComponents/Toolbox/FileUploader';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 
-import {validation} from 'config';
+import { validation } from 'config';
 import locale from 'locale/components';
-import {default as formLocale} from 'locale/publicationForm';
-import {RichEditorField} from 'modules/SharedComponents/RichEditor';
-import {THESIS_SUBMISSION_SUBTYPES} from 'config/general';
+import { default as formLocale } from 'locale/publicationForm';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { THESIS_SUBMISSION_SUBTYPES } from 'config/general';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -148,9 +148,9 @@ export default class ThesisSubmission extends Component {
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
-                validationAlert: {...formLocale.validationAlert},
-                progressAlert: {...formLocale.progressAlert},
-                successAlert: {...formLocale.successAlert},
+                validationAlert: { ...formLocale.validationAlert },
+                progressAlert: { ...formLocale.progressAlert },
+                successAlert: { ...formLocale.successAlert },
                 errorAlert: {
                     ...formLocale.errorAlert,
                     message: formLocale.thesisSubmission.depositFailedMessage,

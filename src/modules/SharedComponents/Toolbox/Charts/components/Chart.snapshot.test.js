@@ -4,7 +4,7 @@ function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         chartOptions: {},
-        ...testProps
+        ...testProps,
     };
     return getElement(Chart, props, isShallow);
 }
@@ -14,26 +14,26 @@ describe('Chart component', () => {
         const app = setup({
             chartOptions: {
                 title: {
-                    text: null
+                    text: null,
                 },
                 chart: {
-                    type: 'column'
+                    type: 'column',
                 },
                 xAxis: {
                     categories: [],
                     labels: {
                         rotation: -45,
-                        y: 18
-                    }
+                        y: 18,
+                    },
                 },
                 yAxis: {
                     min: 0,
                     title: {
-                        text: 'Title'
+                        text: 'Title',
                     },
                     stackLabels: {
-                        enabled: true
-                    }
+                        enabled: true,
+                    },
                 },
                 legend: {
                     align: 'right',
@@ -41,23 +41,23 @@ describe('Chart component', () => {
                     x: -30,
                     y: -10,
                     floating: true,
-                    shadow: false
+                    shadow: false,
                 },
                 tooltip: {
 
                 },
                 plotOptions: {
                     column: {
-                        stacking: 'normal'
-                    }
+                        stacking: 'normal',
+                    },
                 },
                 series: [
-                    {"name":"Journal Article","data":[]},
-                    {"name":"Conference Paper","data":[]},
-                    {"name":"Book Chapter","data":[]},
-                    {"name":"Book","data":[]},
-                    {"name":"Other","data":[]}
-                ]
+                    { 'name': 'Journal Article', 'data': [] },
+                    { 'name': 'Conference Paper', 'data': [] },
+                    { 'name': 'Book Chapter', 'data': [] },
+                    { 'name': 'Book', 'data': [] },
+                    { 'name': 'Other', 'data': [] },
+                ],
             },
         });
         expect(toJson(app)).toMatchSnapshot();
@@ -74,7 +74,7 @@ describe('Chart component', () => {
         const wrapper = setup({});
         const test = jest.fn();
         wrapper.instance().printMedia = {
-            addListener: test
+            addListener: test,
         };
         wrapper.instance().chartRef.current = true;
         wrapper.instance().componentDidMount();
@@ -85,7 +85,7 @@ describe('Chart component', () => {
         const wrapper = setup({});
         const test = jest.fn();
         wrapper.instance().chart = {
-            update: test
+            update: test,
         };
         wrapper.instance().componentDidUpdate();
         expect(test).toBeCalled();
@@ -95,11 +95,11 @@ describe('Chart component', () => {
         const wrapper = setup({});
         const test = jest.fn();
         wrapper.instance().chart = {
-            destroy: test
+            destroy: test,
         };
         wrapper.instance().printMedia = {
-            removeListener: test
-        }
+            removeListener: test,
+        };
         wrapper.instance().componentWillUnmount();
         expect(test).toBeCalledTimes(2);
     });
@@ -108,7 +108,7 @@ describe('Chart component', () => {
         const wrapper = setup({});
         const test = jest.fn();
         wrapper.instance().chart = {
-            reflow: test
+            reflow: test,
         };
         wrapper.instance().reflowChart();
         expect(test).toBeCalled();

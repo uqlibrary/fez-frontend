@@ -2,44 +2,42 @@ import * as actions from 'actions/actionTypes';
 import authorsReducer from './authors';
 
 describe('Authors reducer', () => {
-
     const initialState = {
         authorsListLoading: false,
         authorsListLoadingError: false,
-        authorsList: []
+        authorsList: [],
     };
-    const mockAuthor = {"aut_id":410,"aut_org_username":"uqifraze"};
+    const mockAuthor = { 'aut_id': 410, 'aut_org_username': 'uqifraze' };
 
     it('fails to load data', () => {
-        const test = authorsReducer(initialState, {type: actions.AUTHORS_LOAD_FAILED});
+        const test = authorsReducer(initialState, { type: actions.AUTHORS_LOAD_FAILED });
         expect(test).toEqual({
             authorsList: [],
             authorsListLoading: false,
-            authorsListLoadingError: true
-        })
+            authorsListLoadingError: true,
+        });
     });
 
     it('successfully loads authors data', () => {
-        const test = authorsReducer(initialState, {type: actions.AUTHORS_LOADED, payload: mockAuthor});
+        const test = authorsReducer(initialState, { type: actions.AUTHORS_LOADED, payload: mockAuthor });
         expect(test).toEqual({
             authorsList: mockAuthor,
             authorsListLoading: false,
-            authorsListLoadingError: false
-        })
+            authorsListLoadingError: false,
+        });
     });
 
     it('returns that it is loading author data', () => {
-        const test = authorsReducer(initialState, {type: actions.AUTHORS_LOADING});
+        const test = authorsReducer(initialState, { type: actions.AUTHORS_LOADING });
         expect(test).toEqual({
             authorsList: [],
             authorsListLoading: true,
-            authorsListLoadingError: false
-        })
+            authorsListLoadingError: false,
+        });
     });
 
     it('returns the initialState when supplied an invalid action type', () => {
-        const test = authorsReducer(initialState, {type: 'INVALID_ACTION_TYPE'});
+        const test = authorsReducer(initialState, { type: 'INVALID_ACTION_TYPE' });
         expect(test).toEqual(initialState);
     });
-
 });

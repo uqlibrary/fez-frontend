@@ -1,4 +1,4 @@
-import {InlineLoader} from './InlineLoader';
+import { InlineLoader } from './InlineLoader';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -6,9 +6,9 @@ function setup(testProps, isShallow = true) {
         classes: {
             text: {
                 fontWeight: 200,
-                margin: '24px 0'
+                margin: '24px 0',
             },
-        }
+        },
     };
     return getElement(InlineLoader, props, isShallow);
 }
@@ -16,9 +16,9 @@ function setup(testProps, isShallow = true) {
 describe('Component InlineLoader', () => {
     it('should render as expected', () => {
         const props = {
-            message: 'This is a tst'
+            message: 'This is a tst',
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

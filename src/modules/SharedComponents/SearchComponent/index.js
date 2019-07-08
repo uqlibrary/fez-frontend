@@ -1,1 +1,1 @@
-export {default as SearchComponent} from './containers/SearchComponent';
+export { default as SearchComponent } from './containers/SearchComponent';

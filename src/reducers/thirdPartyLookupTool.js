@@ -17,7 +17,7 @@ const handlers = {
         {
             ...state,
             loadingResults: false,
-            lookupResults: action.payload
+            lookupResults: action.payload,
         }
     ),
 
@@ -32,9 +32,9 @@ const handlers = {
     [actions.THIRD_PARTY_LOOKUP_TOOL_CLEAR]: () => (
         {
             ...initialState,
-            lookupResults: []
+            lookupResults: [],
         }
-    )
+    ),
 };
 
 export default function thirdPartyLookupToolReducer(state = initialState, action) {

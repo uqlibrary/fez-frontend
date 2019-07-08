@@ -21,8 +21,8 @@ const styles = {
         fontSize: '0.66rem',
         display: 'inline-block',
         float: 'right',
-        marginLeft: '0.25rem'
-    }
+        marginLeft: '0.25rem',
+    },
 };
 
 export class ExternalLink extends PureComponent {
@@ -30,7 +30,7 @@ export class ExternalLink extends PureComponent {
         className: PropTypes.string,
         openInNewIcon: PropTypes.bool,
         children: PropTypes.any,
-        classes: PropTypes.object.isRequired
+        classes: PropTypes.object.isRequired,
     };
 
     static defaultProps = {
@@ -38,7 +38,7 @@ export class ExternalLink extends PureComponent {
         target: '_blank',
         rel: 'noopener noreferrer',
         openInNewIcon: true,
-        classes: {}
+        classes: {},
     };
 
     constructor(props) {

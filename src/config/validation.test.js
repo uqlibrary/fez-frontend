@@ -1,10 +1,8 @@
-import React from 'react';
 import * as validation from './validation';
-import {accounts} from 'mock/data/account';
-import {locale} from 'locale';
-import {APP_URL} from 'config';
+import { locale } from 'locale';
+import { APP_URL } from 'config';
 import Immutable from 'immutable';
-import {MEDIATED_ACCESS_ID} from 'config/general';
+import { MEDIATED_ACCESS_ID } from 'config/general';
 
 describe('Validation method', () => {
     it('should validate required', () => {
@@ -27,7 +25,9 @@ describe('Validation method', () => {
         const testValue = validation.url('http://test.com');
         expect(testValue).toEqual(undefined);
 
-        const testValue2 = validation.url('https://apps.webofknowledge.com/full_record.do?product=WOS&search_mode=GeneralSearch&qid=4&SID=V2InJRD4KnBeEPoPCGm&page=1&doc=1');
+        const testValue2 = validation.url(
+            'https://apps.webofknowledge.com/full_record.do?product=WOS&search_mode=GeneralSearch&qid=4&SID=V2InJRD4KnBeEPoPCGm&page=1&doc=1'
+        );
         expect(testValue2).toEqual(undefined);
 
         const testValue3 = validation.url('https://www.uq.edu.au?test=This%20is%20a%20test');
@@ -42,7 +42,9 @@ describe('Validation method', () => {
         const testValue6 = validation.url(APP_URL + 'view/UQ:36649');
         expect(testValue6).toEqual(undefined);
 
-        const testValue7 = validation.url('http://1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890');
+        const testValue7 = validation.url(
+            'http://1234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+        );
         expect(testValue7).toEqual(undefined);
 
         const testFailValue = validation.url('sdjflsjdlfjsl');
@@ -57,12 +59,14 @@ describe('Validation method', () => {
         const testFailValue4 = validation.url('mailto:test@test.com');
         expect(testFailValue4).toEqual(locale.validationErrors.url);
 
-        const testFailValue5 = validation.url('javascript:window.alert(\'test\');');
+        // eslint-disable-next-line no-script-url
+        const testFailValue5 = validation.url("javascript:window.alert('test');");
         expect(testFailValue5).toEqual(locale.validationErrors.url);
 
-        const testFailValue6 = validation.url('http://12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890');
+        const testFailValue6 = validation.url(
+            'http://12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890'
+        );
         expect(testFailValue6).toEqual(locale.validationErrors.maxLength.replace('[max]', '2000'));
-
     });
 
     it('should validate Issn', () => {
@@ -88,7 +92,9 @@ describe('Validation method', () => {
     });
 
     it('should validate max length', () => {
-        expect(validation.maxLength10('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl')).toEqual(locale.validationErrors.maxLength.replace('[max]', 10));
+        expect(validation.maxLength10('sdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjslsdjflsjdlfjsl')).toEqual(
+            locale.validationErrors.maxLength.replace('[max]', 10)
+        );
         expect(validation.maxLength10('123')).toEqual(undefined);
         expect(validation.maxLength10('abc def gji')).toEqual(undefined);
         expect(validation.maxLength10(1234)).toEqual(undefined);
@@ -111,21 +117,43 @@ describe('Validation method', () => {
 
     it('should validate person selected', () => {
         expect(validation.peopleRequired([], 'Error', true)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person'}], 'Error', true)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person', selected: true}], 'Error', true)).toBeFalsy();
+        expect(validation.peopleRequired([{ name: 'First person' }], 'Error', true)).toEqual('Error');
+        expect(validation.peopleRequired([{ name: 'First person', selected: true }], 'Error', true)).toBeFalsy();
         expect(validation.peopleRequired([], 'Error', false)).toEqual('Error');
-        expect(validation.peopleRequired([{name: 'First person'}], 'Error', false)).toBeFalsy();
+        expect(validation.peopleRequired([{ name: 'First person' }], 'Error', false)).toBeFalsy();
     });
 
     it('should validate author/contributor link', () => {
-        const contributorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
-        const authorLinkValid = {"authors":[{"rek_contributor_id_id":null,"rek_contributor_id_pid":"UQ:641272","rek_contributor_id":410,"rek_contributor_id_order":1}],"valid":true};
+        const contributorLinkValid = {
+            authors: [
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:641272',
+                    rek_contributor_id: 410,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            valid: true,
+        };
+        const authorLinkValid = {
+            authors: [
+                {
+                    rek_contributor_id_id: null,
+                    rek_contributor_id_pid: 'UQ:641272',
+                    rek_contributor_id: 410,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            valid: true,
+        };
 
         expect(validation.isValidAuthorLink(authorLinkValid)).toEqual('');
         expect(validation.isValidAuthorLink('Invalid data')).toEqual(locale.validationErrors.authorLinking);
         expect(validation.isValidContributorLink(contributorLinkValid)).toEqual('');
         expect(validation.isValidContributorLink('Invalid data')).toEqual('');
-        expect(validation.isValidContributorLink('Invalid data', true)).toEqual(locale.validationErrors.contributorLinking);
+        expect(validation.isValidContributorLink('Invalid data', true)).toEqual(
+            locale.validationErrors.contributorLinking
+        );
     });
 
     it('should validate google scholar id', () => {
@@ -138,14 +166,23 @@ describe('Validation method', () => {
 
     it('should validate if the grants form is currently poplated', () => {
         expect(validation.grantFormIsPopulated(true)).toEqual(locale.validationErrors.grants);
-        expect(validation.grantFormIsPopulated({grantAgencyName: '', grantId: '', grantAgencyType: ''})).toEqual(undefined);
+        expect(validation.grantFormIsPopulated({ grantAgencyName: '', grantId: '', grantAgencyType: '' })).toEqual(
+            undefined
+        );
     });
 
     it('should conditionally validate file uploader based on open access value', () => {
-        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(locale.validationErrors.fileUploadRequired);
-        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({
-            fez_record_search_key_access_conditions: {rek_access_conditions: MEDIATED_ACCESS_ID}
-        }))).toEqual(undefined);
+        expect(validation.fileUploadNotRequiredForMediated(undefined, Immutable.Map({}))).toEqual(
+            locale.validationErrors.fileUploadRequired
+        );
+        expect(
+            validation.fileUploadNotRequiredForMediated(
+                undefined,
+                Immutable.Map({
+                    fez_record_search_key_access_conditions: { rek_access_conditions: MEDIATED_ACCESS_ID },
+                })
+            )
+        ).toEqual(undefined);
     });
 });
 
@@ -154,29 +191,38 @@ describe('getErrorAlertProps ', () => {
         // dirty = false, submitting = false, error, formErrors, submitSucceeded = false, alertLocale = {}
         const testCases = [
             {
-                parameters: {dirty: true, error: 'oops', alertLocale: {errorAlert: {title: 'submitFailed' }}},
-                expected: 'submitFailed'
+                parameters: { dirty: true, error: 'oops', alertLocale: { errorAlert: { title: 'submitFailed' } } },
+                expected: 'submitFailed',
             },
             {
-                parameters: {dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: {
+                    dirty: true,
+                    formErrors: [{ rek_title: 'This field is required' }],
+                    alertLocale: { validationAlert: { title: 'validationFailed' } },
+                },
+                expected: 'validationFailed',
             },
             {
-                parameters: {submitFailed: true, dirty: true, formErrors: [{'rek_title': 'This field is required'}], alertLocale: {validationAlert: {title: 'validationFailed'}}},
-                expected: 'validationFailed'
+                parameters: {
+                    submitFailed: true,
+                    dirty: true,
+                    formErrors: [{ rek_title: 'This field is required' }],
+                    alertLocale: { validationAlert: { title: 'validationFailed' } },
+                },
+                expected: 'validationFailed',
             },
             {
-                parameters: {submitting: true, alertLocale: {progressAlert: {title: 'submitting' }}},
-                expected: 'submitting'
+                parameters: { submitting: true, alertLocale: { progressAlert: { title: 'submitting' } } },
+                expected: 'submitting',
             },
             {
-                parameters: {submitSucceeded: true, alertLocale: {successAlert: {title: 'submitSucceeded' }}},
-                expected: 'submitSucceeded'
-            }
+                parameters: { submitSucceeded: true, alertLocale: { successAlert: { title: 'submitSucceeded' } } },
+                expected: 'submitSucceeded',
+            },
         ];
 
         testCases.forEach(testCase => {
-            const alertProps = validation.getErrorAlertProps({...testCase.parameters});
+            const alertProps = validation.getErrorAlertProps({ ...testCase.parameters });
             expect(alertProps.title).toEqual(testCase.expected);
         });
     });
@@ -184,13 +230,13 @@ describe('getErrorAlertProps ', () => {
     it('should return correct validation error summary', () => {
         const testCases = [
             {
-                parameters: {'rek_title': 'This field is required'},
-                expected: 'Title is required'
+                parameters: { rek_title: 'This field is required' },
+                expected: 'Title is required',
             },
             {
-                parameters: {'fez_record_search_key_journal_name': {'rek_journal_name': 'This field is required'}},
-                expected: 'Journal name is required'
-            }
+                parameters: { fez_record_search_key_journal_name: { rek_journal_name: 'This field is required' } },
+                expected: 'Journal name is required',
+            },
         ];
 
         testCases.forEach(testCase => {
@@ -199,8 +245,8 @@ describe('getErrorAlertProps ', () => {
         });
 
         const nonExistingFieldTestCase = {
-            parameters: {'some_nonexisting_field': 'This field is required'},
-            expected: null
+            parameters: { some_nonexisting_field: 'This field is required' },
+            expected: null,
         };
 
         const testMessage = validation.translateFormErrorsToText(nonExistingFieldTestCase.parameters);
@@ -211,15 +257,9 @@ describe('getErrorAlertProps ', () => {
     });
 });
 
-
 describe('checkDigit ', () => {
     it('should check checksum digit of ISMN values correctly', () => {
-        const testCases = [
-            '9790123456785',
-            '979-0-1234-5678-5',
-            '979-0-123-45678-5',
-            'M-2306-7118-7',
-        ];
+        const testCases = ['9790123456785', '979-0-1234-5678-5', '979-0-123-45678-5', 'M-2306-7118-7'];
 
         testCases.forEach(testCase => {
             expect(validation.checkDigit(testCase)).toBeTruthy();
@@ -227,16 +267,10 @@ describe('checkDigit ', () => {
     });
 
     it('should check checksum digit of ISMN values incorrectly', () => {
-        const testCases = [
-            'ISMN 979-0-1234-5678-5',
-            'THIS IS NOT A VALID ISMN',
-            '12345',
-            12345,
-        ];
+        const testCases = ['ISMN 979-0-1234-5678-5', 'THIS IS NOT A VALID ISMN', '12345', 12345];
 
         testCases.forEach(testCase => {
             expect(validation.checkDigit(testCase)).toBeFalsy();
         });
     });
 });
-

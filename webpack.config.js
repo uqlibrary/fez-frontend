@@ -48,7 +48,7 @@ module.exports = {
         quiet: false,
         stats: 'errors-only',
         watchContentBase: false,
-        disableHostCheck: true
+        disableHostCheck: true,
     },
     module: {
         rules: [
@@ -56,15 +56,15 @@ module.exports = {
                 test: /\.js$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
                 ],
                 enforce: 'pre',
-                use: 'eslint-loader'
+                use: 'eslint-loader',
             },
             {
                 test: /\.js?$/,
                 include: [
-                    path.resolve(__dirname, 'src')
+                    path.resolve(__dirname, 'src'),
                 ],
                 exclude: [
                     /node_modules/,
@@ -79,16 +79,16 @@ module.exports = {
                             '@babel/plugin-proposal-export-default-from',
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
-                            ["@babel/plugin-transform-spread", { "loose": true }]
-                        ]
-                    }
-                }
+                            ['@babel/plugin-transform-spread', { 'loose': true }],
+                        ],
+                    },
+                },
             },
             {
                 test: /\.json$/,
                 exclude: [
                     /node_modules/,
-                    /custom_modules/
+                    /custom_modules/,
                 ],
                 use: [
                     'json-loader',
@@ -105,7 +105,7 @@ module.exports = {
                 test: /\.scss|\.styl/,
                 include: [
                     path.resolve(__dirname, 'src'),
-                    path.resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')
+                    path.resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src'),
                 ],
                 use: [
                     'style-loader',
@@ -121,9 +121,9 @@ module.exports = {
                         loader: 'file-loader',
                         options: {
                             outputPath: 'assets/',
-                            publicPath: 'assets/'
-                        }
-                    }
+                            publicPath: 'assets/',
+                        },
+                    },
                 ],
             },
         ],
@@ -155,7 +155,7 @@ module.exports = {
                 eslint: {
                     configFile: '.eslintrc',
                     failOnWarning: false,
-                    failOnError: true
+                    failOnError: true,
                 },
                 postcss: {},
                 context: path.join(__dirname),
@@ -173,7 +173,7 @@ module.exports = {
             'process.env.BRANCH': JSON.stringify('development'),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
-        })
+        }),
     ],
     resolve: {
         descriptionFiles: [
@@ -188,16 +188,16 @@ module.exports = {
         modules: [
             'src',
             'node_modules',
-            'custom_modules'
-        ]
+            'custom_modules',
+        ],
     },
     optimization: {
         splitChunks: {
             cacheGroups: {
                 commons: {
-                    chunks: 'all'
-                }
-            }
-        }
-    }
+                    chunks: 'all',
+                },
+            },
+        },
+    },
 };

@@ -1,1 +1,1 @@
-export {default as PublicationStats} from './components/PublicationStats';
+export { default as PublicationStats } from './components/PublicationStats';

@@ -9,7 +9,7 @@ const handlers = {
     [actions.NEWS_LOADING]: (state) => {
         return {
             ...state,
-            ...initialState
+            ...initialState,
         };
     },
 
@@ -17,7 +17,7 @@ const handlers = {
         return {
             ...state,
             newsFeedList: action.payload,
-            loadingNewsFeedList: false
+            loadingNewsFeedList: false,
         };
     },
 
@@ -25,9 +25,9 @@ const handlers = {
         return {
             ...state,
             newsFeedList: [],
-            loadingNewsFeedList: false
+            loadingNewsFeedList: false,
         };
-    }
+    },
 };
 
 export default function newsFeedReducer(state = initialState, action) {

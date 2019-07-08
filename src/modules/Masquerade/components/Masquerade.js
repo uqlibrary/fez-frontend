@@ -11,14 +11,14 @@ import { routes } from 'config';
 
 export default class Masquerade extends PureComponent {
     static propTypes = {
-        account: PropTypes.object.isRequired
+        account: PropTypes.object.isRequired,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             userName: '',
-            loading: false
+            loading: false,
         };
     }
 
@@ -26,7 +26,7 @@ export default class Masquerade extends PureComponent {
         if (event && event.key && (event.key !== 'Enter') || this.state.userName.length === 0) return;
 
         this.setState({
-            loading: true
+            loading: true,
         });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
@@ -35,7 +35,7 @@ export default class Masquerade extends PureComponent {
 
     _usernameChanged = (event) => {
         this.setState({
-            userName: event.target.value
+            userName: event.target.value,
         });
     };
 

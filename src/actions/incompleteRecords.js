@@ -18,7 +18,7 @@ export function updateIncompleteRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Incomplete data for requests'
+                payload: 'Incomplete data for requests',
             });
 
             return Promise.reject(new Error('Incomplete data for requests'));
@@ -37,7 +37,7 @@ export function updateIncompleteRecord(data) {
         return dispatch => {
             dispatch({
                 type: actions.FIX_RECORD_FAILED,
-                payload: 'Current author is not linked to this record'
+                payload: 'Current author is not linked to this record',
             });
             return Promise.reject(new Error('Current author is not linked to this record'));
         };
@@ -96,7 +96,7 @@ export function updateIncompleteRecord(data) {
             .then(() => (
                 patch(
                     EXISTING_RECORD_API({
-                        pid: data.publication.rek_pid
+                        pid: data.publication.rek_pid,
                     }),
                     patchRecordRequest
                 )
@@ -105,7 +105,7 @@ export function updateIncompleteRecord(data) {
                 (!!data.comments || !!data.files)
                     ? post(
                         RECORDS_ISSUES_API({
-                            pid: data.publication.rek_pid
+                            pid: data.publication.rek_pid,
                         }),
                         createIssueRequest
                     )
@@ -115,15 +115,15 @@ export function updateIncompleteRecord(data) {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid
-                    }
+                        pid: data.publication.rek_pid,
+                    },
                 });
                 return Promise.resolve(responses);
             })
             .catch(error => {
                 dispatch({
                     type: actions.FIX_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });
