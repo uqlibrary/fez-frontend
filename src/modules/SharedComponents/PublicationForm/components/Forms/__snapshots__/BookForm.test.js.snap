@@ -1767,7 +1767,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           "fields": Object {
             "impactStatement": Object {
               "label": <span>
-                Creator research statement*. Include Background, Contribution and Significance 
+                Creator research statement*. Include Background, Contribution and Significance
+                 
                 <span
                   style={
                     Object {
@@ -1783,7 +1784,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             "scaleOfWork": Object {
               "description": "Select the option that best describes the significance of the work.",
               "label": <span>
-                Scale/Significance of work* 
+                Scale/Significance of work*
+                 
                 <span
                   style={
                     Object {
@@ -1803,7 +1805,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                 Creator research statement
               </h3>
               <p>
-                For more information about the research statement, click  
+                For more information about the research statement, click
+                 
                 <b>
                   <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"

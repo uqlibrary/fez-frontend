@@ -490,7 +490,8 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                 "fileUploadRestrictions": <div>
                   Maximum file size is 8GB. 
                   <br />
-                  PDF files must be saved using the following naming structure 
+                  PDF files must be saved using the following naming structure
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -1008,7 +1009,8 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                 "fileUploadRestrictions": <div>
                   Maximum file size is 8GB. 
                   <br />
-                  PDF files must be saved using the following naming structure 
+                  PDF files must be saved using the following naming structure
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>

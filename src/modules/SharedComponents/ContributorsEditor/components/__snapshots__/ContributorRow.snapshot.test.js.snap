@@ -584,7 +584,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 </Fragment>
 `;
 
-exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button 1`] = `
+exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
@@ -1039,7 +1039,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 </Fragment>
 `;
 
-exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details, and delete button 1`] = `
+exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
   <ConfirmDialogBox
     hideCancelButton={false}
