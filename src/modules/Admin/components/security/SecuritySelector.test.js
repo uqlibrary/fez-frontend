@@ -1,7 +1,4 @@
-import {
-    SecuritySelector,
-    styles,
-} from './SecuritySelector';
+import { SecuritySelector } from './SecuritySelector';
 
 function setup(testProps, isShallow = true) {
     const props = {

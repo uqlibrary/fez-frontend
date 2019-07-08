@@ -10,6 +10,6 @@ function setup(testProps, isShallow = true) {
 
 describe('ViewRecord container', () => {
     it('should mount', () => {
-        const wrapper = setup({}, false);
+        setup({}, false);
     });
 });

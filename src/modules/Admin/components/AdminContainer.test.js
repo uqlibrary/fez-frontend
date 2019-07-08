@@ -7,19 +7,18 @@ jest.mock('js-cookie', () => ({
 }));
 import Cookies from 'js-cookie';
 
-
 jest.mock('redux-form/immutable');
 
 jest.mock('@material-ui/styles/useTheme', () => () => ({
     breakpoints: {
-        down(screen) {
+        down() {
             return false;
         },
     },
 }));
 
 jest.mock('@material-ui/core/useMediaQuery');
-import { unstable_useMediaQuery } from '@material-ui/core/useMediaQuery';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 
 function setup(testProps = {}, isShallow = true) {
     const props = {
@@ -64,7 +63,7 @@ describe('AdminContainer component', () => {
     it('should render component with tabbed interface', () => {
         Cookies.get = jest.fn(() => 'tabbed');
 
-        unstable_useMediaQuery.mockImplementation(() => ({
+        useMediaQuery.mockImplementation(() => ({
             unstable_useMediaQuery: jest.fn(() => true),
         }));
 
@@ -116,17 +115,21 @@ describe('AdminContainer component', () => {
 
     describe('isChanged callback function', () => {
         it('should return true if props are not changed', () => {
-            expect(isChanged(
-                { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
-                { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
-            )).toBeTruthy();
+            expect(
+                isChanged(
+                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
+                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
+                )
+            ).toBeTruthy();
         });
 
         it('should return true if props are not changed', () => {
-            expect(isChanged(
-                { disableSubmit: false, loadRecordToView: false },
-                { disableSubmit: false, loadRecordToView: false }
-            )).toBeTruthy();
+            expect(
+                isChanged(
+                    { disableSubmit: false, loadRecordToView: false },
+                    { disableSubmit: false, loadRecordToView: false }
+                )
+            ).toBeTruthy();
         });
     });
 });

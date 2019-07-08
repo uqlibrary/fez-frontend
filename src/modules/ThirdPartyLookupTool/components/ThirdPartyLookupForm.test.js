@@ -1,5 +1,4 @@
 import { ThirdPartyLookupForm } from './ThirdPartyLookupForm';
-import { locale } from 'locale';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -75,7 +74,12 @@ describe('Component ThirdPartyLookupForm', () => {
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({ formDisplay: {}, isMinimised: false, primaryValue: 'blah', secondaryValue: 'blah' });
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: 'blah',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -113,7 +117,12 @@ describe('Component ThirdPartyLookupForm', () => {
         primaryField.simulate('change', { target: { name: 'primaryValue', value: 'blah' } });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({ formDisplay: {}, isMinimised: false, primaryValue: 'blah', secondaryValue: '' });
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: '',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -171,7 +180,9 @@ describe('Component ThirdPartyLookupForm', () => {
     it('should fire the lookup action', () => {
         const submitMock = jest.fn();
 
-        const testMethod = () => { return true; };
+        const testMethod = () => {
+            return true;
+        };
         const testProps = {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
@@ -206,7 +217,9 @@ describe('Component ThirdPartyLookupForm', () => {
     it('should fire the lookup action when there is a secondary field', () => {
         const submitMock = jest.fn();
 
-        const testMethod = () => { return true; };
+        const testMethod = () => {
+            return true;
+        };
         const testProps = {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
@@ -236,7 +249,12 @@ describe('Component ThirdPartyLookupForm', () => {
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({ formDisplay: {}, isMinimised: false, primaryValue: 'blah', secondaryValue: 'blah' });
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: 'blah',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);

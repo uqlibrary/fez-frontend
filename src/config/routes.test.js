@@ -1,4 +1,3 @@
-import React from 'react';
 import * as routes from './routes';
 import { accounts } from 'mock/data/account';
 import { locale } from 'locale';
@@ -50,12 +49,22 @@ describe('Routes method', () => {
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.s2222222, forceOrcidRegistration: true, isHdrStudent: true });
+        const testRoutes = routes.getRoutesConfig({
+            components: {},
+            account: accounts.s2222222,
+            forceOrcidRegistration: true,
+            isHdrStudent: true,
+        });
         expect(testRoutes.length).toEqual(8);
     });
 
     it('should return a list of routes for hdr student with ORCID', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.s2222222, forceOrcidRegistration: false, isHdrStudent: true });
+        const testRoutes = routes.getRoutesConfig({
+            components: {},
+            account: accounts.s2222222,
+            forceOrcidRegistration: false,
+            isHdrStudent: true,
+        });
         expect(testRoutes.length).toEqual(23);
     });
 
@@ -68,20 +77,23 @@ describe('Routes method', () => {
                 pathname: routes.pathConfig.contact,
             },
         };
-        const page = renderPage(props);
+        renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.authenticationRequired);
     });
 
     it('should render permissions denied page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent }, account: accounts.uqresearcher });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            account: accounts.uqresearcher,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.admin.masquerade,
             },
         };
-        const page = renderPage(props);
+        renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDenied);
     });
 
@@ -94,7 +106,7 @@ describe('Routes method', () => {
                 pathname: '/abc/abac/aba',
             },
         };
-        const page = renderPage(props);
+        renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.notFound);
     });
 
@@ -111,4 +123,3 @@ describe('Routes method', () => {
         expect(testMenuItems.length).toEqual(13);
     });
 });
-

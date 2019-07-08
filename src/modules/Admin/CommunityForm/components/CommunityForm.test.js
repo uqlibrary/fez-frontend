@@ -69,10 +69,6 @@ describe('Collection form test', () => {
         window.location.reload = jest.fn();
     });
 
-    afterAll(() => {
-        window.location.reload = reload;
-    });
-
     it('should render form', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -84,26 +80,23 @@ describe('Collection form test', () => {
         const wrapper = setup({ submitFailed: true });
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
         wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label == formLocale.thesisSubmission.submit) {
+            if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
         });
     });
 
     it('should ask when redirecting from form with data (even if submit failed)', () => {
-        const testMethod = jest.fn();
         const wrapper = setup({ dirty: true, submitSucceeded: false });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should not ask when redirecting from form with data after successful submit', () => {
-        const testMethod = jest.fn();
         const wrapper = setup({ dirty: true, submitSucceeded: true });
         expect(wrapper.find('NavigationDialogBox').length).toEqual(1);
     });
 
     it('should display successfull submission screen', () => {
-        const testMethod = jest.fn();
         const wrapper = setup({});
         wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -111,21 +104,24 @@ describe('Collection form test', () => {
 
     it('should redirect to cancel page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance()
+        setup({})
+            .instance()
             .cancelSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance()
+        setup({})
+            .instance()
             .afterSubmit();
         expect(window.location.assign).toBeCalledWith('/');
     });
 
     it('should reload the page', () => {
         jest.spyOn(window.location, 'reload');
-        const wrapper = setup({}).instance()
+        setup({})
+            .instance()
             .reloadForm();
         expect(window.location.reload).toBeCalled();
     });

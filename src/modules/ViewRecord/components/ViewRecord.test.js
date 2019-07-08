@@ -52,7 +52,7 @@ describe('Component ViewRecord ', () => {
 
     it('should load record to view', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({
+        setup({
             actions: { loadRecordToView: testMethod },
             match: { params: { pid: 'UQ:111' } },
         });
@@ -111,94 +111,122 @@ describe('Document type snapshots of ViewRecord ', () => {
         {
             recordType: 'Data collection',
             record: 'dataCollection',
-        }, {
+        },
+        {
             recordType: 'Data collection with FoR codes',
             record: 'dataCollectionWithFoRCodes',
-        }, {
+        },
+        {
             recordType: 'Newspaper article',
             record: 'newspaperArticle',
-        }, {
+        },
+        {
             recordType: 'Thesis',
             record: 'thesis',
-        }, {
+        },
+        {
             recordType: 'Conference proceedings',
             record: 'conferenceProceedings',
-        }, {
+        },
+        {
             recordType: 'Conference paper with proceedings',
             record: 'conferencePaperWithProceedingsTitle',
-        }, {
+        },
+        {
             recordType: 'Digilib image',
             record: 'digilibImage',
-        }, {
+        },
+        {
             recordType: 'Working paper',
             record: 'workingPaper',
-        }, {
+        },
+        {
             recordType: 'Design',
             record: 'design',
-        }, {
+        },
+        {
             recordType: 'Creative work',
             record: 'creativeWork',
-        }, {
+        },
+        {
             recordType: 'Department technical report',
             record: 'departmentTechnicalReport',
-        }, {
+        },
+        {
             recordType: 'Journal article',
             record: 'journalArticle',
-        }, {
+        },
+        {
             recordType: 'Book chapter',
             record: 'bookChapter',
-        }, {
+        },
+        {
             recordType: 'Book',
             record: 'book',
-        }, {
+        },
+        {
             recordType: 'Edited book',
             record: 'editedBook',
-        }, {
+        },
+        {
             recordType: 'Conference paper',
             record: 'conferencePaper',
-        }, {
+        },
+        {
             recordType: 'Generic',
             record: 'generic',
-        }, {
+        },
+        {
             recordType: 'Audio document',
             record: 'audioDocument',
-        }, {
+        },
+        {
             recordType: 'Preprint',
             record: 'preprint',
-        }, {
+        },
+        {
             recordType: 'Research report',
             record: 'researchReport',
-        }, {
+        },
+        {
             recordType: 'Seminar paper',
             record: 'seminarPaper',
-        }, {
+        },
+        {
             recordType: 'Manuscript',
             record: 'manuscript',
-        }, {
+        },
+        {
             recordType: 'Image',
             record: 'imageDocument',
-        }, {
+        },
+        {
             recordType: 'Video',
             record: 'videoDocument',
-        }, {
+        },
+        {
             recordType: 'Journal',
             record: 'journal',
-        }, {
+        },
+        {
             recordType: 'Patent',
             record: 'patent',
-        }, {
+        },
+        {
             recordType: 'NTRO 1',
             record: 'ntro',
-        }, {
+        },
+        {
             recordType: 'NTRO 2',
             record: 'ntro2',
-        }, {
+        },
+        {
             recordType: 'NTRO minimal',
             record: 'ntroMinimal',
         },
     ];
 
-    recordInfo.forEach((record) => {
+    recordInfo.forEach(record => {
         it(`should render ${record.recordType}`, () => {
             const wrapper = setup({
                 recordToView: records[record.record],

@@ -1,11 +1,8 @@
 import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
-import { locale } from 'locale';
-import PropTypes from 'prop-types';
-import React from 'react';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        lookupResults: testProps.lookupResults || [{ 'IS_INTERNATIONAL_COLLAB': '0' }],
+        lookupResults: testProps.lookupResults || [{ IS_INTERNATIONAL_COLLAB: '0' }],
         primaryValue: testProps.primaryValue || 'dummy UT',
         secondaryValue: testProps.secondaryValue || '123456789',
         formDisplay: testProps.formDisplay || {
@@ -21,7 +18,6 @@ function setup(testProps, isShallow = true) {
             tooltip: {
                 show: 'Show test form for',
                 hide: 'Hide test form for',
-
             },
             resultsLabel: 'Test Results',
             noResultsFound: {
@@ -79,7 +75,7 @@ describe('Component ThirdPartyLookupFormResult', () => {
                 lookupLabel: 'label 10',
                 primaryFieldHeading: 'pf heading 10',
                 secondaryFieldHeading: 'sf heading 10',
-                reportSecondaryFieldInOutput: true,  // <---- value defines point of test
+                reportSecondaryFieldInOutput: true, // <---- value defines point of test
             },
         };
         const wrapper = setup(testProps);

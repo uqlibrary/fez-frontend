@@ -1,7 +1,8 @@
+import React from 'react';
 import ConfirmDiscardFormChanges from './ConfirmDiscardFormChanges';
 
 function setup(testProps = {}, isShallow = true) {
-    const ComponentToWrap = () => <div/>;
+    const ComponentToWrap = () => <div />;
     const WrappedComponent = ConfirmDiscardFormChanges(ComponentToWrap);
     return getElement(WrappedComponent, testProps, isShallow);
 }
@@ -36,7 +37,10 @@ describe('ConfirmDiscardFormChanges', () => {
 
     it('should get confirmation locale', () => {
         const wrapper = setup({});
-        const getDiscardFormChangesConfirmationLocale = jest.spyOn(wrapper.instance(), 'getDiscardFormChangesConfirmationLocale');
+        const getDiscardFormChangesConfirmationLocale = jest.spyOn(
+            wrapper.instance(),
+            'getDiscardFormChangesConfirmationLocale'
+        );
         wrapper.setProps({
             dirty: true,
             submitSucceeded: false,

@@ -91,7 +91,7 @@ describe('SbsSubmission test', () => {
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label == formLocale.thesisSubmission.submit) {
+            if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(true);
             }
         });
@@ -102,7 +102,7 @@ describe('SbsSubmission test', () => {
         expect(wrapper.find('WithStyles(Button)').length).toEqual(2);
 
         wrapper.find('WithStyles(Button)').forEach(field => {
-            if (field.props().label == formLocale.thesisSubmission.submit) {
+            if (field.props().label === formLocale.thesisSubmission.submit) {
                 expect(field.props().disabled).toEqual(false);
             }
         });
@@ -126,9 +126,12 @@ describe('SbsSubmission test', () => {
 
     it('should redirect to after submit page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance()
+        setup({})
+            .instance()
             .afterSubmit();
-        expect(window.location.assign).toBeCalledWith(expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink));
+        expect(window.location.assign).toBeCalledWith(
+            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink)
+        );
     });
 
     it('should display confirmation box before submission', () => {

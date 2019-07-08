@@ -1,5 +1,3 @@
-import { PartialDateForm } from '../../../Toolbox/PartialDate/components/PartialDateForm';
-
 jest.dontMock('./BookChapterForm');
 
 import BookChapterForm from './BookChapterForm';
@@ -34,14 +32,22 @@ describe('BookChapterForm renders ', () => {
 
     it('component with 4 input fields for NTRO', () => {
         const wrapper = setup({ isNtro: true });
-        expect(wrapper.find('NtroFields').dive()
-            .find('Field').length).toEqual(5);
+        expect(
+            wrapper
+                .find('NtroFields')
+                .dive()
+                .find('Field').length
+        ).toEqual(5);
     });
 
     it('component with 5 input fields for NTRO with musical composition subtype', () => {
         const wrapper = setup({ isNtro: true, subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION });
-        expect(wrapper.find('NtroFields').dive()
-            .find('Field').length).toEqual(6);
+        expect(
+            wrapper
+                .find('NtroFields')
+                .dive()
+                .find('Field').length
+        ).toEqual(6);
     });
 
     it('shows an error when end page is less than start page', () => {

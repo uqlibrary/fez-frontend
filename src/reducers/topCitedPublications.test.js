@@ -25,7 +25,6 @@ describe('Top cited publications reducer', () => {
     });
 
     it('returns the correct state when top cited publications are loaded but 0 publications found', () => {
-        const source = 'altmetric';
         const test = topCitedPublicationsReducer(initialState, {
             type: actions.TOP_CITED_PUBLICATIONS_LOADED,
             payload: { total: 0, data: [] },

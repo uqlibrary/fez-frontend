@@ -10,6 +10,6 @@ function setup(testProps, isShallow = true) {
 
 describe('ThirdPartyLookupTool container', () => {
     it('should mount', () => {
-        const wrapper = setup({}, false);
+        setup({}, false);
     });
 });

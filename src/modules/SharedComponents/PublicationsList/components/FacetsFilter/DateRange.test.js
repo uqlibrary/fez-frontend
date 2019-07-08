@@ -2,14 +2,14 @@ import React from 'react';
 import DateRange from './DateRange';
 import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         onChange: testProps.onChange || jest.fn(),
         open: testProps.open || null,
         onToggle: testProps.onToggle || jest.fn(),
         ...testProps,
     };
-    return rtlRender(<DateRange {...props}/>);
+    return rtlRender(<DateRange {...props} />);
 }
 
 describe('Date range ', () => {
@@ -26,7 +26,6 @@ describe('Date range ', () => {
         const { asFragment } = setup({});
         expect(asFragment()).toMatchSnapshot();
     });
-
 
     it('should render date range form with default value', () => {
         const { asFragment } = setup({ open: true });

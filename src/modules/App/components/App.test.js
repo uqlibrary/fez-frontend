@@ -21,15 +21,15 @@ function setup(testProps, isShallow = true) {
         history: testProps.history || { location: {} },
     };
 
-    window.matchMedia = window.matchMedia || function() {
-        return {
-            matches: false,
-            addListener: function() {
-            },
-            removeListener: function() {
-            },
+    window.matchMedia =
+        window.matchMedia ||
+        function matchMedia() {
+            return {
+                matches: false,
+                addListener: function addListener() {},
+                removeListener: function removeListener() {},
+            };
         };
-    };
 
     return getElement(AppClass, props, isShallow);
 }
@@ -40,18 +40,19 @@ beforeAll(() => {
 });
 
 describe('Application component', () => {
-    let account, author;
+    let account;
+    let author;
     const saveLocation = window.location;
 
     beforeEach(() => {
-        account =  {
-            'id': 'uqauthor1',
-            'class': ['libstaff', 'IS_CURRENT'],
+        account = {
+            id: 'uqauthor1',
+            class: ['libstaff', 'IS_CURRENT'],
         };
         author = {
-            'aut_id': 1,
-            'aut_org_username': 'uqauthor1',
-            'aut_orcid_id': 'abc-abc-abc',
+            aut_id: 1,
+            aut_org_username: 'uqauthor1',
+            aut_orcid_id: 'abc-abc-abc',
         };
     });
 
@@ -80,23 +81,35 @@ describe('Application component', () => {
         expect(wrapper.instance().sessionExpiredConfirmationBox).toEqual('hello');
     });
 
-    it('when calling redirectToOrcid, it should redirect appropriately if user already received an orcid response', () => {
-        const testFn = jest.fn();
-        const testFn2 = jest.fn();
-        delete global.window.location;
-        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?code=010101', search: '?code=010101', assign: testFn };
-        const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
+    it(
+        'when calling redirectToOrcid, it should redirect appropriately ' +
+            'if user already received an orcid response',
+        () => {
+            const testFn = jest.fn();
+            const testFn2 = jest.fn();
+            delete global.window.location;
+            global.window.location = {
+                href: 'http://fez-staging.library.uq.edu.au?code=010101',
+                search: '?code=010101',
+                assign: testFn,
+            };
+            const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
 
-        wrapper.instance().redirectToOrcid();
-        expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
-        expect(testFn2).not.toBeCalled();
-    });
+            wrapper.instance().redirectToOrcid();
+            expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+            expect(testFn2).not.toBeCalled();
+        }
+    );
 
     it('when calling redirectToOrcid, it should redirect appropriately', () => {
         const testFn = jest.fn();
         const testFn2 = jest.fn();
         delete global.window.location;
-        global.window.location = { href: 'http://fez-staging.library.uq.edu.au?name=none', search: '?name=none', assign: testFn };
+        global.window.location = {
+            href: 'http://fez-staging.library.uq.edu.au?name=none',
+            search: '?name=none',
+            assign: testFn,
+        };
         const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
 
         wrapper.instance().redirectToOrcid();
@@ -124,7 +137,15 @@ describe('Application component', () => {
     it('Should get the childContext correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup({});
-        expect(wrapper.instance().getChildContext()).toEqual({ 'isMobile': false, 'selectFieldMobileOverrides': { 'autoWidth': true, 'fullWidth': false, 'menuItemStyle': {}, 'style': { 'width': '100%' } } });
+        expect(wrapper.instance().getChildContext()).toEqual({
+            isMobile: false,
+            selectFieldMobileOverrides: {
+                autoWidth: true,
+                fullWidth: false,
+                menuItemStyle: {},
+                style: { width: '100%' },
+            },
+        });
     });
 
     it('Should display mobile correctly', () => {
@@ -200,20 +221,24 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render app for account with fez author without ORCID ID should not display ORCID warning on thesis submission page', () => {
-        const wrapper = setup({
-            location: {
-                pathname: routes.pathConfig.hdrSubmission,
-            },
-            account: account,
-            author: {
-                ...author,
-                aut_orcid_id: null,
-            },
-        });
-        wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    it(
+        'should render app for account with fez author without ORCID ID should not ' +
+            'display ORCID warning on thesis submission page',
+        () => {
+            const wrapper = setup({
+                location: {
+                    pathname: routes.pathConfig.hdrSubmission,
+                },
+                account: account,
+                author: {
+                    ...author,
+                    aut_orcid_id: null,
+                },
+            });
+            wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
+            expect(toJson(wrapper)).toMatchSnapshot();
+        }
+    );
 
     it('should render app for HDR without ORCID ID', () => {
         const wrapper = setup({
@@ -262,17 +287,19 @@ describe('Application component', () => {
 
     it('should redirect to login page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({}).instance()
+        setup({})
+            .instance()
             .redirectUserToLogin()();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGIN));
     });
 
     it('should redirect to logout page', () => {
         window.location.assign = jest.fn();
-        const wrapper = setup({
+        setup({
             account: account,
             author: author,
-        }).instance()
+        })
+            .instance()
             .redirectUserToLogin(true)();
         expect(window.location.assign).toBeCalledWith(expect.stringContaining(AUTH_URL_LOGOUT));
     });
@@ -312,7 +339,7 @@ describe('Application component', () => {
 
     it('should start loading current user', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({
+        setup({
             actions: {
                 loadCurrentAccount: testMethod,
             },
@@ -323,9 +350,10 @@ describe('Application component', () => {
     it('should return true if user is on public page', () => {
         const menuItems = routes.getMenuConfig(true, false);
 
-        const getWrapper = (pathname) => (setup({
-            location: { pathname },
-        }));
+        const getWrapper = pathname =>
+            setup({
+                location: { pathname },
+            });
 
         const pathExpectations = [
             {
@@ -351,8 +379,11 @@ describe('Application component', () => {
         ];
 
         pathExpectations.map(path => {
-            expect(getWrapper(path.pathname).instance()
-                .isPublicPage(menuItems)).toEqual(path.isPublic);
+            expect(
+                getWrapper(path.pathname)
+                    .instance()
+                    .isPublicPage(menuItems)
+            ).toEqual(path.isPublic);
         });
     });
 

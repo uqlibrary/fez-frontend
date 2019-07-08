@@ -1,4 +1,4 @@
-import MemoizedAdminInterface, { AdminInterface } from './AdminInterface';
+import { AdminInterface } from './AdminInterface';
 
 jest.mock('../../../context');
 import { useTabbedContext, useRecordContext } from 'context';
@@ -231,7 +231,9 @@ describe('AdminInterface component', () => {
 
         expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
 
-        wrapper.find('WithStyles(Tabs)').props()
+        wrapper
+            .find('WithStyles(Tabs)')
+            .props()
             .onChange({}, 'files');
 
         expect(wrapper.find('TabContainer').props().currentTab).toBe('files');
@@ -251,7 +253,9 @@ describe('AdminInterface component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper.find('ConfirmDialogBox').props()
+        wrapper
+            .find('ConfirmDialogBox')
+            .props()
             .onAction();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

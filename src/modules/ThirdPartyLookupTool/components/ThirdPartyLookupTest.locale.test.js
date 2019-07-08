@@ -1,7 +1,4 @@
 import { ThirdPartyLookupTool } from './ThirdPartyLookupTool';
-import { routes } from '../../../../config';
-import { locale } from 'locale';
-import React from 'react';
 jest.mock('locale', () => ({
     locale: {
         components: {

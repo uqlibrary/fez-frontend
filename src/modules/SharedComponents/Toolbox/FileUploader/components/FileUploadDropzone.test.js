@@ -21,7 +21,7 @@ describe('Component FileUploadDropzone', () => {
         const _File = window.File;
         const FILE = (data = [''], name) => new _File(data, name, { lastModified: 12345678912 });
         window.File = jest.fn((data, name) => FILE(data, name));
-        getMockFile = (name) => new File([''], name);
+        getMockFile = name => new File([''], name);
     });
 
     it('should render component with default props', () => {
@@ -41,7 +41,9 @@ describe('Component FileUploadDropzone', () => {
         const testFn = jest.fn();
 
         wrapper.find('FileUploadDropzone').instance().dropzoneRef.open = testFn;
-        wrapper.find('FileUploadDropzone').instance()
+        wrapper
+            .find('FileUploadDropzone')
+            .instance()
             ._onKeyPress();
 
         wrapper.update();
@@ -62,45 +64,59 @@ describe('Component FileUploadDropzone', () => {
         const wrapper = setup({});
 
         const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, []);
+        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+            .instance()
+            .removeDuplicate(files, []);
 
         expect(uniqueFiles.length).toEqual(2);
         expect(duplicateFiles.length).toEqual(0);
         expect(sameFileNameWithDifferentExt.length).toEqual(1);
     });
 
-    it('should remove files with same filename but different extension from dropped incoming files and already queued files', () => {
-        const wrapper = setup({});
+    it(
+        'should remove files with same filename but different extension from ' +
+            'dropped incoming files and already queued files',
+        () => {
+            const wrapper = setup({});
 
-        const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
-        const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, queuedFiles);
+            const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
+            const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
+            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+                .instance()
+                .removeDuplicate(files, queuedFiles);
 
-        expect(uniqueFiles.length).toEqual(1);
-        expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
+            expect(uniqueFiles.length).toEqual(1);
+            expect(uniqueFiles).toEqual([getMockFile('a.txt')]);
 
-        expect(duplicateFiles.length).toEqual(1);
-        expect(duplicateFiles).toEqual(['b.txt']);
+            expect(duplicateFiles.length).toEqual(1);
+            expect(duplicateFiles).toEqual(['b.txt']);
 
-        expect(sameFileNameWithDifferentExt.length).toEqual(1);
-        expect(sameFileNameWithDifferentExt).toEqual(['a.doc']);
-    });
+            expect(sameFileNameWithDifferentExt.length).toEqual(1);
+            expect(sameFileNameWithDifferentExt).toEqual(['a.doc']);
+        }
+    );
 
-    it('should remove files with same filename but different extension from dropped incoming files and already queued files 2', () => {
-        const wrapper = setup({});
+    it(
+        'should remove files with same filename but different extension from dropped ' +
+            'incoming files and already queued files 2',
+        () => {
+            const wrapper = setup({});
 
-        const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
-        const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
-        const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper.instance().removeDuplicate(files, queuedFiles);
+            const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
+            const files = [getMockFile('a.doc'), getMockFile('d.txt'), getMockFile('b.txt')];
+            const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = wrapper
+                .instance()
+                .removeDuplicate(files, queuedFiles);
 
-        expect(uniqueFiles.length).toEqual(1);
-        expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
+            expect(uniqueFiles.length).toEqual(1);
+            expect(uniqueFiles).toEqual([getMockFile('a.doc')]);
 
-        expect(duplicateFiles.length).toEqual(2);
-        expect(duplicateFiles).toEqual(['d.txt', 'b.txt']);
+            expect(duplicateFiles.length).toEqual(2);
+            expect(duplicateFiles).toEqual(['d.txt', 'b.txt']);
 
-        expect(sameFileNameWithDifferentExt.length).toEqual(0);
-    });
+            expect(sameFileNameWithDifferentExt.length).toEqual(0);
+        }
+    );
 
     it('should not remove any files if there are no duplicate files', () => {
         const wrapper = setup({});
@@ -172,7 +188,7 @@ describe('Component FileUploadDropzone', () => {
         expect(tooManyFiles.length).toEqual(1);
     });
 
-    it('should not remove any files if number doesn\'t exceed max allowed number of files in removeTooManyFiles', () => {
+    it("should not remove any files if number doesn't exceed max allowed number of files in removeTooManyFiles", () => {
         const wrapper = setup({});
 
         const files = [getMockFile('c.txt'), getMockFile('1.txt'), getMockFile('1a.txt')];
@@ -195,44 +211,44 @@ describe('Component FileUploadDropzone', () => {
     it('should filter folders out from the file list in removeDroppedFolders', async() => {
         const wrapper = setup({});
 
-        const file_a = getMockFile('a.txt');
-        file_a.slice = (x, y) => true;
-        const file_b = getMockFile('droppedFolder');
-        file_b.slice = (x, y) => false;
-        const file_c = getMockFile('c.txt');
-        file_c.slice = (x, y) => true;
+        const fileA = getMockFile('a.txt');
+        fileA.slice = () => true;
+        const fileB = getMockFile('droppedFolder');
+        fileB.slice = () => false;
+        const fileC = getMockFile('c.txt');
+        fileC.slice = () => true;
 
-        const accepted = [file_a, file_b, file_c];
+        const accepted = [fileA, fileB, fileC];
         const errors = [];
 
         wrapper.instance().readFile = jest.fn((file, errors, resolve) => {
             file.slice() ? resolve(file) : resolve(false);
         });
 
-        await expect(wrapper.instance().removeDroppedFolders(accepted, errors)).resolves.toEqual([file_a, false, file_c]);
+        await expect(wrapper.instance().removeDroppedFolders(accepted, errors)).resolves.toEqual([fileA, false, fileC]);
     });
 
     it('should set all error messages', async() => {
-        const file_a = getMockFile('a.txt');
-        const file_a_doc = getMockFile('a.doc');
-        const file_b = getMockFile('b.txt');
-        const file_b_dup = getMockFile('b.txt');
-        const file_c = getMockFile('c.txt');
-        const file_d = getMockFile('web_d.txt');
-        const file_e = getMockFile('e.txt');
-        const file_f = getMockFile('f.txt');
-        const file_g = getMockFile('g.txt');
-        const file_g_doc = getMockFile('g.doc');
+        const fileA = getMockFile('a.txt');
+        const fileADoc = getMockFile('a.doc');
+        const fileB = getMockFile('b.txt');
+        const fileBDup = getMockFile('b.txt');
+        const fileC = getMockFile('c.txt');
+        const fileD = getMockFile('web_d.txt');
+        const fileE = getMockFile('e.txt');
+        const fileF = getMockFile('f.txt');
+        const fileG = getMockFile('g.txt');
+        const fileGDoc = getMockFile('g.doc');
         const onDropTestFn = jest.fn();
 
         const wrapper = setup({
             fileUploadLimit: 4,
-            filesInQueue: [file_a.name, file_b.name],
+            filesInQueue: [fileA.name, fileB.name],
             onDrop: onDropTestFn,
             fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const expectedFiles = [file_c, file_f].map(file => ({ fileData: file, name: file.name, size: file.size }));
+        const expectedFiles = [fileC, fileF].map(file => ({ fileData: file, name: file.name, size: file.size }));
         const expectedError = {
             tooBigFiles: ['e.txt'],
             notFiles: [],
@@ -242,19 +258,19 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: ['g.txt'],
         };
 
-        const accepted = [file_b_dup, file_c, file_d, file_f, file_g, file_a_doc, file_g_doc];
+        const accepted = [fileBDup, fileC, fileD, fileF, fileG, fileADoc, fileGDoc];
         wrapper.instance().removeDroppedFolders = jest.fn((accepted, {}) => new Promise(resolve => resolve(accepted)));
 
-        await wrapper.instance()._onDrop(accepted, [file_e]);
+        await wrapper.instance()._onDrop(accepted, [fileE]);
         // wrapper.update();
         expect(onDropTestFn).toHaveBeenCalledWith(expectedFiles, expectedError);
     });
 
     it('should set all correct error messages for filenames with comma', async() => {
-        const file_g = getMockFile('g.txt');
-        const file_a = getMockFile('i,am.txt');
-        const file_h = getMockFile('excel,txt');
-        const file_i = getMockFile('excel,xls.txt');
+        const fileG = getMockFile('g.txt');
+        const fileA = getMockFile('i,am.txt');
+        const fileH = getMockFile('excel,txt');
+        const fileI = getMockFile('excel,xls.txt');
         const onDropTestFn = jest.fn();
 
         const wrapper = setup({
@@ -264,7 +280,7 @@ describe('Component FileUploadDropzone', () => {
             fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const expectedFiles = [file_g].map(file => ({ fileData: file, name: file.name, size: file.size }));
+        const expectedFiles = [fileG].map(file => ({ fileData: file, name: file.name, size: file.size }));
         const expectedError = {
             tooBigFiles: [],
             notFiles: [],
@@ -274,8 +290,10 @@ describe('Component FileUploadDropzone', () => {
             tooManyFiles: [],
         };
 
-        const accepted = [file_g, file_a, file_h, file_i];
-        wrapper.instance().removeDroppedFolders = jest.fn((accepted, {}) => new Promise(resolve => resolve([file_g, file_a, file_h, file_i])));
+        const accepted = [fileG, fileA, fileH, fileI];
+        wrapper.instance().removeDroppedFolders = jest.fn(
+            (accepted, {}) => new Promise(resolve => resolve([fileG, fileA, fileH, fileI]))
+        );
 
         await wrapper.instance()._onDrop(accepted, []);
         // wrapper.update();
@@ -294,7 +312,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should read file', () => {
         const wrapper = setup({});
-        const readAsDataURLFn = jest.fn((slice) => slice);
+        const readAsDataURLFn = jest.fn(slice => slice);
         window.FileReader = jest.fn(() => ({
             readAsDataURL: readAsDataURLFn,
         }));
@@ -304,7 +322,7 @@ describe('Component FileUploadDropzone', () => {
 
     it('should call onerror if fail on read file', () => {
         const wrapper = setup({});
-        const result = wrapper.instance().onReadFileError({ name: 'test' }, [], jest.fn((result) => result))();
+        const result = wrapper.instance().onReadFileError({ name: 'test' }, [], jest.fn(result => result))();
         expect(result).toBeFalsy();
 
         const file = wrapper.instance().onReadFileLoad({ name: 'test' }, jest.fn())();
@@ -316,17 +334,19 @@ describe('Component FileUploadDropzone', () => {
             fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const file_a = getMockFile('test.000.zip');
-        const file_b = getMockFile('test.111.zip');
-        const file_c = getMockFile('test.999.zip');
-        const file_d = getMockFile('test.abc.zip');
-        const file_e = getMockFile('test.89.zip');
-        const file_f = getMockFile('test.222.zip');
-        const file_g = getMockFile('test.0123.zip');
+        const fileA = getMockFile('test.000.zip');
+        const fileB = getMockFile('test.111.zip');
+        const fileC = getMockFile('test.999.zip');
+        const fileD = getMockFile('test.abc.zip');
+        const fileE = getMockFile('test.89.zip');
+        const fileF = getMockFile('test.222.zip');
+        const fileG = getMockFile('test.0123.zip');
 
-        const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
+        const files = [fileA, fileB, fileC, fileD, fileE, fileF, fileG];
 
-        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper
+            .instance()
+            .removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(4);
         expect(invalidFileNames.length).toEqual(3);
@@ -337,17 +357,19 @@ describe('Component FileUploadDropzone', () => {
             fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const file_a = getMockFile('test.r00.zip');
-        const file_b = getMockFile('test.r11.zip');
-        const file_c = getMockFile('test.r9.zip');
-        const file_d = getMockFile('test.abc.zip');
-        const file_e = getMockFile('test.89.zip');
-        const file_f = getMockFile('test.r222.zip');
-        const file_g = getMockFile('test.r0222.zip');
+        const fileA = getMockFile('test.r00.zip');
+        const fileB = getMockFile('test.r11.zip');
+        const fileC = getMockFile('test.r9.zip');
+        const fileD = getMockFile('test.abc.zip');
+        const fileE = getMockFile('test.89.zip');
+        const fileF = getMockFile('test.r222.zip');
+        const fileG = getMockFile('test.r0222.zip');
 
-        const files = [file_a, file_b, file_c, file_d, file_e, file_f, file_g];
+        const files = [fileA, fileB, fileC, fileD, fileE, fileF, fileG];
 
-        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper
+            .instance()
+            .removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(3);
         expect(invalidFileNames.length).toEqual(4);
@@ -358,15 +380,17 @@ describe('Component FileUploadDropzone', () => {
             fileNameRestrictions: FILE_NAME_RESTRICTION,
         });
 
-        const file_a = getMockFile('test.part1.zip');
-        const file_b = getMockFile('test.part8888.zip');
-        const file_c = getMockFile('test.part342.zip');
-        const file_d = getMockFile('test.part33.zip');
-        const file_e = getMockFile('test.rpart89.zip');
+        const fileA = getMockFile('test.part1.zip');
+        const fileB = getMockFile('test.part8888.zip');
+        const fileC = getMockFile('test.part342.zip');
+        const fileD = getMockFile('test.part33.zip');
+        const fileE = getMockFile('test.rpart89.zip');
 
-        const files = [file_a, file_b, file_c, file_d, file_e];
+        const files = [fileA, fileB, fileC, fileD, fileE];
 
-        const { validFiles, invalidFileNames } = wrapper.instance().removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+        const { validFiles, invalidFileNames } = wrapper
+            .instance()
+            .removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
 
         expect(validFiles.length).toEqual(3);
         expect(invalidFileNames.length).toEqual(2);
