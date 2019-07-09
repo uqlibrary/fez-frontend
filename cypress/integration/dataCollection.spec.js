@@ -44,9 +44,8 @@ context('Data Collection form', () => {
             .should('have.length', 10);
 
         // Contact name ID
-        cy.get('input#ContactnameID-input').type('k', { delay: 1 });
-        cy.wait(1000);
-        cy.get('li#ContactnameID-item-0').click();
+        cy.get('input#ContactnameID-input').type('a', { delay: 200 });
+        cy.get('li#ContactnameID-item-0', { timeout: 5000 }).click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
