@@ -2099,7 +2099,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                               <a
 +                                 aria-label=\\"Full citation in Altmetric will open in a new window\\"
 +                                 class=\\"altmetricCitationCount CitationCountView-citationCount-741 ExternalLink-externalLink-738\\"
-+                                 href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                                 href=\\"https://queensland.altmetric.com/details/11749800\\"
 +                                 rel=\\"noopener noreferrer\\"
 +                                 tabindex=\\"0\\"
 +                                 target=\\"_blank\\"
@@ -3104,7 +3104,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                               <a
 +                                 aria-label=\\"Full citation in Altmetric will open in a new window\\"
 +                                 class=\\"altmetricCitationCount CitationCountView-citationCount-309 ExternalLink-externalLink-306\\"
-+                                 href=\\"http://www.altmetric.com/details.php?citation_id=11749800\\"
++                                 href=\\"https://queensland.altmetric.com/details/11749800\\"
 +                                 rel=\\"noopener noreferrer\\"
 +                                 tabindex=\\"0\\"
 +                                 target=\\"_blank\\"

@@ -181,7 +181,7 @@ export const trendingPublications = {
                     "as_pinterest_posts_count": 1,
                     "as_linkedin_posts_count": 0,
                     "as_peer_reviews_posts_count": 0,
-                    "as_citation_url": "http://www.altmetric.com/details.php?citation_id=101417"
+                    "as_citation_url": "https://queensland.altmetric.com/details/101417"
                 }
             },
             "fez_record_search_key_end_page": {
