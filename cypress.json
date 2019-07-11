@@ -6,5 +6,6 @@
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
   "videoUploadOnPasses": false,
-  "projectId": "mvfnrv"
+  "projectId": "mvfnrv",
+  "blacklistHosts": ["www.googletagmanager.com"]
 }
