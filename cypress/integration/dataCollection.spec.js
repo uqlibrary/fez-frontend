@@ -416,30 +416,89 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 1);
 
-        // Start/End date
-        // TODO: Awaiting Bug fix - https://www.pivotaltracker.com/story/show/167004604
-        cy.get('input#rek_start_date')
-            .clear()
-            .type('01/01/1980');
-        cy.get('input#rek_start_date').blur();
-        cy.get('input#rek_end_date')
-            .clear()
-            .type('01/01/1979');
-        cy.get('input#rek_end_date').blur();
-        cy.get('div[aria-describedby="rek_start_date-helper-text"]')
-            .find('p')
-            .contains('Please provide a valid start/end date range')
+        // Collection Start date
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#day')
+            .type('16', { delay: 1 });
+
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .contains('Month')
+            .parent()
+            .click();
+        cy.get('li[data-value="11"]').click();
+
+        // enter future date and see error
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#year')
+            .type('2100', { delay: 1 });
+
+        cy.contains('p', 'Date must be before now')
             .should('be.visible');
+
+        // enter valid year
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#year')
+            .clear()
+            .type('1976', { delay: 1 });
+
+        cy.contains('p', 'Date must be before now')
+            .should('not.be.visible');
+
+        cy.get('div.Alert')
+            .find('li')
+            .should('have.length', 1);
+
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
 
-        cy.get('input#rek_start_date')
+        // End Collection date
+        cy.contains('span', 'Collection end date')
+            .parent()
+            .find('input#day')
+            .type('16', { delay: 1 });
+
+        cy.contains('span', 'Collection end date')
+            .parent()
+            .contains('Month')
+            .parent()
+            .click();
+        cy.get('li[data-value="11"]').click();
+
+        // enter future date and see error
+        cy.contains('span', 'Collection end date')
+            .parent()
+            .find('input#year')
+            .type('2100', { delay: 1 });
+
+        cy.contains('p', 'Date must be before now')
+            .should('be.visible');
+
+        // enter end date before start date and see error
+        cy.contains('span', 'Collection end date')
+            .parent()
+            .find('input#year')
             .clear()
-            .type('01/01/1980');
-        cy.get('input#rek_start_date').blur();
-        cy.get('input#rek_end_date')
+            .type('1974', { delay: 1 });
+
+        cy.contains('p', 'Date range is not valid')
+            .should('be.visible');
+
+        // finally, enter valid date
+        cy.contains('span', 'Collection end date')
+            .parent()
+            .find('input#year')
             .clear()
-            .type('01/01/1981');
-        cy.get('input#rek_end_date').blur();
+            .type('1976', { delay: 1 });
+
+        cy.contains('p', 'Date range is not valid')
+            .should('not.be.visible');
+
+        cy.get('div.Alert')
+            .find('li')
+            .should('have.length', 1);
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
 
         // Related datasets
