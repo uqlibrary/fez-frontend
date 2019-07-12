@@ -417,22 +417,51 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Collection Start date
+        // the field is not required - if we focus on it, type something in, clear and click on a different field,
+        // we do not get an error
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#day')
-            .type('16', { delay: 1 });
+            .type('16', { delay: 1 })
+            .clear();
+        cy.get('input#keywords-input').type('Keywords 1', { delay: 1 });
+        cy.contains('p', 'Invalid day')
+            .should('not.be.visible');
+
+        // an 31st of april is an invalid date
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#day')
+            .type('31', { delay: 1 });
 
         cy.contains('span', 'Collection start date')
             .parent()
             .contains('Month')
             .parent()
             .click();
-        cy.get('li[data-value="11"]').click();
+        cy.get('li[data-value="3"]').click();
+
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#year')
+            .type('2000', { delay: 1 });
+
+        cy.contains('p', 'Invalid day')
+            .should('be.visible');
+
+
+        // now check valid dates
+        cy.contains('span', 'Collection start date')
+            .parent()
+            .find('input#day')
+            .clear()
+            .type('16', { delay: 1 });
 
         // enter future date and see error
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#year')
+            .clear()
             .type('2100', { delay: 1 });
 
         cy.contains('p', 'Date must be before now')

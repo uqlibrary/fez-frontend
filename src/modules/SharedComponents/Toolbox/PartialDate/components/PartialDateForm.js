@@ -124,8 +124,15 @@ export class PartialDateForm extends Component {
             this.errors.day = day && year && month > -1 && !valid ? locale.validationMessage.day : '';
         } else {
             this.errors.month = month < 0 ? locale.validationMessage.month : '';
-            this.errors.day =
-                isNaN(day) || ((month !== null || month > -1) && year && !valid) ? locale.validationMessage.day : '';
+            if (validationStatus === STATUS_INVALID) {
+                this.errors.day = ((isNaN(day) && !!this.props.required) || ((month !== null || month > -1) && year))
+                    ? locale.validationMessage.day
+                    : '';
+            } else if (validationStatus === STATUS_FUTURE_DATE) {
+                this.errors.day = locale.validationMessage.future;
+            } else {
+                this.errors.day = '';
+            }
         }
     };
 
