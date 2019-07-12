@@ -45,6 +45,7 @@ context('Data Collection form', () => {
 
         // Contact name ID
         cy.get('input#ContactnameID-input').type('a');
+        cy.wait(1000);
         cy.get('li#ContactnameID-item-0:visible')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -108,6 +109,7 @@ context('Data Collection form', () => {
 
         // Field of research
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
         cy.get('li#Fieldofresearch-item-4:visible')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -125,6 +127,7 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 7);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
         cy.get('li#Fieldofresearch-item-3:visible')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -134,6 +137,7 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 6);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
         cy.get('li#Fieldofresearch-item-1')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -147,6 +151,7 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 7);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
         cy.get('li#Fieldofresearch-item-2')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -439,6 +444,7 @@ context('Data Collection form', () => {
 
         // Related datasets
         cy.get('input#DatasetWorktitle-input').type('a');
+        cy.wait(1000);
         cy.get('li#DatasetWorktitle-item-0:visible')
             .invoke('width')
             .should('be.greaterThan', 0);
@@ -446,6 +452,7 @@ context('Data Collection form', () => {
         // cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         // cy.get('div.Alert').find('li').should('have.length', 1);
         cy.get('input#DatasetWorktitle-input').type('a');
+        cy.wait(1000);
         cy.get('li#DatasetWorktitle-item-1:visible')
             .invoke('width')
             .should('be.greaterThan', 0);
