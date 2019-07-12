@@ -25,12 +25,16 @@ export class DocumentTypeField extends PureComponent {
         className: PropTypes.string,
         disabled: PropTypes.bool,
         classes: PropTypes.object,
+        disableMultiple: PropTypes.bool,
+        locale: PropTypes.object,
     };
 
     static defaultProps = {
         value: [],
         disabled: false,
         className: 'displaytype menuitem',
+        disableMultiple: false,
+        locale: locale.components.searchComponent.advancedSearch.fieldTypes.rek_display_type,
     };
 
     constructor(props) {
@@ -44,10 +48,10 @@ export class DocumentTypeField extends PureComponent {
 
     render() {
         const { classes } = this.props;
-        const txt = locale.components.searchComponent;
+        const txt = this.props.locale;
         const docTypeItems = [
             <MenuItem key={0} disabled>
-                {txt.advancedSearch.fieldTypes.rek_display_type.hint}
+                {txt.hint}
             </MenuItem>,
             ...this.publicationTypes.map((item, index) => {
                 return (
@@ -69,16 +73,27 @@ export class DocumentTypeField extends PureComponent {
         // const {classes} = this.props;
         return (
             <FormControl fullWidth>
-                <InputLabel>{txt.advancedSearch.fieldTypes.rek_display_type.title}</InputLabel>
-                <Select
-                    aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
-                    value={this.props.docTypes || '0'}
-                    onChange={this._handleDocTypeChange}
-                    multiple
-                    fullWidth
-                    disabled={this.props.disabled}
-                    children={docTypeItems}
-                />
+                <InputLabel>{txt.title}</InputLabel>
+                {!!this.props.disableMultiple ? (
+                    <Select
+                        aria-label={txt.ariaLabel}
+                        value={this.props.docTypes || '0'}
+                        onChange={this._handleDocTypeChange}
+                        fullWidth
+                        disabled={this.props.disabled}
+                        children={docTypeItems}
+                    />
+                ) : (
+                    <Select
+                        aria-label={txt.ariaLabel}
+                        value={this.props.docTypes || '0'}
+                        onChange={this._handleDocTypeChange}
+                        multiple
+                        fullWidth
+                        disabled={this.props.disabled}
+                        children={docTypeItems}
+                    />
+                )}
             </FormControl>
         );
     }

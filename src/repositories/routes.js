@@ -290,3 +290,13 @@ export const THIRD_PARTY_LOOKUP_API_1FIELD = ({ type, field1 }) => ({ apiUrl: `t
 export const THIRD_PARTY_LOOKUP_API_2FIELD = ({ type, field1, field2 }) => ({
     apiUrl: `tool/lookup/${type}/${field1}/${field2}`,
 });
+
+/**
+ * return all collections which are a child of the supplied pid (ie child of the given community)
+ * @param communityPid
+ * @returns {{apiUrl: string}}
+ * @constructor
+ */
+export const COMMUNITY_LOOKUP_API = (communityPid) => ({
+    apiUrl: `communities/${communityPid}/collections`,
+});

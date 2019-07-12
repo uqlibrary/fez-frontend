@@ -25,6 +25,11 @@ describe('DocumentTypeField component', () => {
         expect(wrapper.find('WithStyles(Select)').props().disabled).toBeTruthy();
     });
 
+    it('should render non-multiple view', () => {
+        const wrapper = setup({ disableMultiple: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render with given document types selected by default', () => {
         const defaultDocTypes = [371, 316];
         const wrapper = setup({

@@ -1,5 +1,5 @@
-export const getActionSuffix = (action) => (action.substring(action.indexOf('@') + 1, action.length));
-export const getAction = (action) => (action.substring(0, action.indexOf('@') + 1));
+export const getActionSuffix = action => action.substring(action.indexOf('@') + 1, action.length);
+export const getAction = action => action.substring(0, action.indexOf('@') + 1);
 
 // Academic stats
 export const AUTHOR_PUBLICATIONS_STATS_LOADING = 'AUTHOR_PUBLICATIONS_STATS_LOADING';
@@ -119,7 +119,6 @@ export const CREATE_COMMUNITY_SAVING = 'CREATE_COMMUNITY_SAVING';
 export const CREATE_COMMUNITY_FAILED = 'CREATE_COMMUNITY_FAILED';
 export const CREATE_COMMUNITY_SUCCESS = 'CREATE_COMMUNITY_SUCCESS';
 
-
 // View records
 export const VIEW_RECORD_CLEAR = 'VIEW_RECORD_CLEAR';
 
@@ -170,7 +169,6 @@ export const THIRD_PARTY_LOOKUP_TOOL_LOADING = 'THIRD_PARTY_LOOKUP_TOOL_LOADING'
 export const THIRD_PARTY_LOOKUP_TOOL_SUCCESS = 'THIRD_PARTY_LOOKUP_TOOL_SUCCESS';
 export const THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED = 'THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED';
 
-
 // List of all actions loading publications - for middleware
 export const loadPublicationsListActions = new RegExp(`^(\
 ${LATEST_PUBLICATIONS_LOADED}|\
@@ -181,3 +179,8 @@ ${TRENDING_PUBLICATIONS_LOADED}(@\\w+)|\
 ${TOP_CITED_PUBLICATIONS_LOADED}(@\\w+)\
 )$`);
 export const loadPublicationActions = new RegExp(`^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED})$`);
+
+// digiteam batch input - fetch list of collections for given community
+export const COLLECTION_LIST_LOADING = 'COLLECTION_LIST_LOADING';
+export const COLLECTION_LIST_LOADED = 'COLLECTION_LIST_LOADED';
+export const COLLECTION_LIST_FAILED = 'COLLECTION_LIST_FAILED';

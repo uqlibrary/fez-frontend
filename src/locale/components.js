@@ -1592,8 +1592,42 @@ export default {
         },
         digiTeam: {
             batchImport: {
-                display: {
-                    title: 'Batch import',
+                title: 'Batch import',
+                help: {},
+                formLabels: {
+                    community: {
+                        label: 'Select destination collection',
+                        placeholder: 'Select a community this collection is a member of',
+                    },
+                    collection: {
+                        label: 'Select collection',
+                        placeholder: 'Select a collection',
+                        itemsLoadingHint: 'Loading...',
+                    },
+                    docType: {
+                        label: 'Select a document type',
+                        placeholder: 'Select a doctype',
+                    },
+                    directory: {
+                        label: 'Select a directory',
+                        placeholder: 'Select a directory',
+                    },
+                    cancelButtonLabel: 'Cancel and return to the homepage',
+                    confirmButtonLabel: 'Perform batch import',
+                },
+                details: {
+                    community: {
+                        help: {},
+                    },
+                    collection: {
+                        help: {},
+                    },
+                    docType: {
+                        help: {},
+                    },
+                    directory: {
+                        help: {},
+                    },
                 },
             },
         },
