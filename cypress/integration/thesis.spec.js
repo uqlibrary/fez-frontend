@@ -2,7 +2,7 @@ context('Thesis', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
         cy.closeUnsupported();
-        cy.wait(3000);
+        cy.wait(2000);
     });
 
     afterEach(() => {
@@ -19,14 +19,12 @@ context('Thesis', () => {
 
         // Title
         cy.type_ckeditor('editor1', '<p>This is a thesis title</p>');
-        cy.wait(1000);
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 7);
         // Abstract
         cy.type_ckeditor('editor2', '<p>This is the thesis abstract</p>');
-        cy.wait(1000);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -38,7 +36,6 @@ context('Thesis', () => {
         cy.get('div[id="menu-"]')
             .get('div[aria-hidden="true"]')
             .click({ force: true, multiple: true });
-        cy.wait(1000);
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -48,7 +45,6 @@ context('Thesis', () => {
         // Enrolling unit
         cy.get('input[label="Enrolling unit"]').type('a');
         cy.get('li[id="Enrollingunit-item-0"]').click();
-        cy.wait(1000);
         cy.get('.alert-text')
             .find('ul')
             .children()
