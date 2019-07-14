@@ -16,6 +16,8 @@ import Grid from '@material-ui/core/Grid';
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
+import { Alert } from '../../SharedComponents/Toolbox/Alert';
+import Button from '@material-ui/core/Button';
 
 export class DigiTeamBatchImport extends PureComponent {
     static propTypes = {
@@ -24,6 +26,8 @@ export class DigiTeamBatchImport extends PureComponent {
         docTypes: PropTypes.array,
         isLoading: PropTypes.bool,
         actions: PropTypes.object,
+        handleSubmit: PropTypes.object,
+        disableSubmit: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -97,6 +101,16 @@ export class DigiTeamBatchImport extends PureComponent {
             ariaLabel: 'Select a publications type',
         };
 
+        const alertProps = validation.getErrorAlertProps({
+            ...this.props,
+            alertLocale: {
+                validationAlert: { ...publicationForm.validationAlert },
+                progressAlert: { ...publicationForm.progressAlert },
+                successAlert: { ...publicationForm.successAlert },
+                errorAlert: { ...publicationForm.errorAlert },
+            },
+        });
+
         return (
             <StandardPage title={batchImportTxt.title}>
                 <form>
@@ -162,6 +176,38 @@ export class DigiTeamBatchImport extends PureComponent {
                     </Grid>
 
                     {/* <p>directory will go here</p> */}
+
+                    {alertProps && (
+                        <Grid item xs={12}>
+                            <Alert {...alertProps} />
+                        </Grid>
+                    )}
+
+                    <Grid container spacing={16}  style={{ paddingTop: 12 }}>
+                        <Grid item xs={false} sm />
+                        <Grid item xs={12} sm="auto">
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                children={batchImportTxt.formLabels.cancelButtonLabel}
+                                aria-label={batchImportTxt.formLabels.cancelButtonLabel}
+                                disabled={this.props.submitting}
+                                onClick={this._restartWorkflow}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm="auto">
+                            <Button
+                                id="submit-data-collection"
+                                variant="contained"
+                                color="primary"
+                                fullWidth
+                                children={batchImportTxt.formLabels.submitButtonLabel}
+                                aria-label={batchImportTxt.formLabels.submitButtonLabel}
+                                onClick={this.props.handleSubmit}
+                                disabled={this.props.submitting || this.props.disableSubmit}
+                            />
+                        </Grid>
+                    </Grid>
                 </form>
             </StandardPage>
         );

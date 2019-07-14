@@ -1613,7 +1613,11 @@ export default {
                         placeholder: 'Select a directory',
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
-                    confirmButtonLabel: 'Perform batch import',
+                    submitButtonLabel: 'Perform batch import',
+                    afterSubmitTitle: 'Batch imported successfully',
+                    afterSubmitText: 'Your batch was imported successfully.',
+                    afterSubmitButtonHome: 'Return to the homepage',
+                    afterSubmitButtonAgain: 'Import another bacth',
                 },
                 details: {
                     community: {
