@@ -119,7 +119,7 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 6);
         cy.get('button[title="Remove this item"]').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -143,7 +143,7 @@ context('Data Collection form', () => {
             .should('be.greaterThan', 0);
         cy.get('li#Fieldofresearch-item-1').click();
         cy.get('button[title="Remove all items"]').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -180,7 +180,7 @@ context('Data Collection form', () => {
             .should('be.greaterThan', 0);
         cy.get('li#Entercreatorsrole-item-1').click();
         cy.get('button#delete-creator-1').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -190,7 +190,7 @@ context('Data Collection form', () => {
         cy.get('div.Creators')
             .get('button[aria-label="Remove all items"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Alert')
@@ -266,13 +266,13 @@ context('Data Collection form', () => {
         cy.get('div.Fundingbody')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Fundingbody')
             .find('button[title="Remove all funding bodies"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#funding-body-input').type('Funding body 3');
@@ -299,13 +299,13 @@ context('Data Collection form', () => {
         cy.get('div.GrantIDs')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.GrantIDs')
             .find('button[title="Remove all grant IDs"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#grant-id-input').type('Grant ID 3');
@@ -332,13 +332,13 @@ context('Data Collection form', () => {
         cy.get('div.Typeofdata')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Typeofdata')
             .find('button[title="Remove all type of data"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#type-of-data-input').type('Type of data 3');
@@ -365,13 +365,13 @@ context('Data Collection form', () => {
         cy.get('div.Softwarerequired')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Softwarerequired')
             .find('button[title="Remove all software required"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#software-required-input').type('Software required 3');
@@ -398,13 +398,13 @@ context('Data Collection form', () => {
         cy.get('div.Keywords')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Keywords')
             .find('button[title="Remove all keywords"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('input#keywords-input').type('Keywords 3');
