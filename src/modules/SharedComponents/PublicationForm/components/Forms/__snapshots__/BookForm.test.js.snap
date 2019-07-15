@@ -149,7 +149,7 @@ exports[`BookForm renders  component 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -177,7 +177,7 @@ exports[`BookForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -212,7 +212,7 @@ exports[`BookForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -272,7 +272,7 @@ exports[`BookForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of editors below
                   </b>
@@ -307,7 +307,7 @@ exports[`BookForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -1026,7 +1026,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -1054,7 +1054,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -1089,7 +1089,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -1149,7 +1149,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of editors below
                   </b>
@@ -1184,7 +1184,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -1551,7 +1551,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -1579,7 +1579,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -1614,7 +1614,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -1674,7 +1674,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of editors below
                   </b>
@@ -1709,7 +1709,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -2247,7 +2247,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of editors below
                   </b>
@@ -2282,7 +2282,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -2664,7 +2664,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -2692,7 +2692,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -2727,7 +2727,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -2787,7 +2787,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     add to a list of editors below
                   </b>
@@ -2822,7 +2822,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                  - Please 
                   <b>
                     select your name
                   </b>

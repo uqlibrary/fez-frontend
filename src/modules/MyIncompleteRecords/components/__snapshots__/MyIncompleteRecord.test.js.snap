@@ -707,7 +707,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -1620,7 +1620,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -2558,7 +2558,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -3546,7 +3546,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -4459,7 +4459,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -5372,7 +5372,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -6285,7 +6285,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -7204,7 +7204,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"
@@ -8117,7 +8117,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             Object {
               "buttonLabel": "CLOSE",
               "text": <p>
-                For more information about identification of author/creator/designer, click 
+                For more information about identification of author/creator/designer, click
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
                   target="_blank"

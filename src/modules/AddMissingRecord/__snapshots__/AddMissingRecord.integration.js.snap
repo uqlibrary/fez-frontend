@@ -737,7 +737,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please 
++                         - Please 
 +                         <b>
 +                           add to a list of authors below
 +                         </b>
@@ -1993,7 +1993,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please 
++                         - Please 
 +                         <b>
 +                           add to a list of authors below
 +                         </b>
@@ -2106,7 +2106,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please 
++                         - Please 
 +                         <b>
 +                           add to a list of editors below
 +                         </b>
@@ -3008,7 +3008,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           >
                             Step 1 of 2
                           </span>
-                           - Please 
+                          - Please 
                           <b>
 -                           add to a list of authors below
 +                           add to a list of editors below
@@ -3098,7 +3098,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         Please 
 +                                 Step 2 of 2
 +                               </span>
-+                                - Please 
++                               - Please 
                                 <b>
 -                           provide a list of authors/creators
 +                                 select your name
@@ -3209,7 +3209,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                         </title>
 +                                       </svg>
                                       </span>
--                          - Please 
+-                         - Please 
 -                         <b>
 -                           add to a list of editors below
 -                         </b>
@@ -3535,7 +3535,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           >
                             Step 1 of 2
                           </span>
-                           - Please 
+                          - Please 
                           <b>
 -                           add to a list of editors below
 +                           add to a list of authors below
@@ -3624,7 +3624,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                         >
 -                                 Step 2 of 2
 -                               </span>
--                                - Please 
+-                               - Please 
 +                         Please 
                           <b>
 -                                 select your name
@@ -3741,7 +3741,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     />
 -                                   </button>
 -                                 </span>
-+                          - Please 
++                         - Please 
 +                         <b>
 +                           add to a list of editors below
 +                         </b>
