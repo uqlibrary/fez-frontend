@@ -26,3 +26,7 @@ export function collectionsByCommunityList(communityPid) {
     }
     return false; // should we instead dispatch a _FAILED ?
 }
+
+export function createDigiTeamBatchImport() {
+    // TODO
+}
