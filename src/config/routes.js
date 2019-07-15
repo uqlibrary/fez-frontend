@@ -386,7 +386,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && (isDeveloper(account) || isAdmin(account))
+        ...(account && (account.canMasquerade || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     path: pathConfig.admin.masquerade,
@@ -395,6 +395,10 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.pages.masquerade.title,
                 },
+            ]
+            : []),
+        ...(account && (isDeveloper(account) || isAdmin(account))
+            ? [
                 {
                     path: pathConfig.admin.unpublished,
                     render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
