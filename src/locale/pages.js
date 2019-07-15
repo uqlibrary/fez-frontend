@@ -112,7 +112,7 @@ export default {
             title: 'Permissions denied',
             children: (
                 <StandardCard>
-                    <p>The requested page available to authorised users only.</p>
+                    <p>The requested page is available to authorised users only.</p>
                 </StandardCard>
             ),
         },

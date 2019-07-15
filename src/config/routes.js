@@ -50,7 +50,7 @@ const isDigiteamMember = account => {
 };
 
 const isDeveloper = account => {
-    return account.canMasquerade;
+    return hasADGroup(account, 'lib_dev');
 };
 
 const isAdmin = account => {
@@ -411,7 +411,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && isDigiteamMember(account)
+        ...(account && (isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     path: pathConfig.digiteam.batchImport,
