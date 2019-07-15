@@ -918,10 +918,10 @@ exports[`DocumentTypeField component should render non-multiple view 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(InputLabel)>
     Work type
-  </WithStyles(WithFormControlContext(InputLabel))>
-  <WithStyles(WithFormControlContext(Select))
+  </WithStyles(InputLabel)>
+  <WithStyles(Select)
     aria-label="Select multiple publications types to search on"
     disabled={false}
     fullWidth={true}
@@ -1342,7 +1342,7 @@ exports[`DocumentTypeField component should render non-multiple view 1`] = `
     >
       Reference Entry
     </WithStyles(MenuItem)>
-  </WithStyles(WithFormControlContext(Select))>
+  </WithStyles(Select)>
 </WithStyles(FormControl)>
 `;
 
