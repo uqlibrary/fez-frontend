@@ -44,7 +44,6 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
           item={true}
           xs={12}
         >
-          $
           <WithStyles(Typography)>
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
@@ -162,7 +161,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
           item={true}
           xs={12}
         >
-          $
           <WithStyles(Typography)>
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
@@ -720,7 +718,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
           item={true}
           xs={12}
         >
-          $
           <WithStyles(Typography)>
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
@@ -1704,7 +1701,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
           item={true}
           xs={12}
         >
-          $
           <WithStyles(Typography)>
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>
@@ -2242,7 +2238,6 @@ exports[`Component NtroFields should show significance field even if contributio
           item={true}
           xs={12}
         >
-          $
           <WithStyles(Typography)>
             Select the option that best describes the significance of the work.
           </WithStyles(Typography)>

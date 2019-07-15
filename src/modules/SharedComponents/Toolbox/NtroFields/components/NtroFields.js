@@ -221,7 +221,7 @@ export default class NtroFields extends React.PureComponent {
                                 // In practice, they are always incomplete together
                                     (this.props.showContributionStatement || this.props.showSignificance) && (
                                         <Grid item xs={12}>
-                                        ${ /* prettier-ignore */ }
+                                            { /* prettier-ignore */ }
                                             <Typography>
                                                 {contributionStatement.fields.scaleOfWork.description}
                                             </Typography>

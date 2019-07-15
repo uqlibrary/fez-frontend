@@ -21,9 +21,14 @@ context('Claim possible work', () => {
             .should('have.length', 1)
             // .should('contain', possibleClaimsLocale.title);
             .should('contain', 'Claim possible works');
-        cy.get('h2 + div')
-            .should('have.length', 1)
-            .should('contain', 'Searching for possibly your works');
+
+        // This causes flake since the mock returns data too quickly.
+        // Need to mock network layer in Cypress to resolve.
+
+        // cy.get('h2 + div')
+        //     .should('have.length', 1)
+        //     .should('contain', 'Searching for possibly your works');
+
         cy.get('.StandardCard h6[class*="PublicationCitation-citationTitle"] > a').should('have.length', 8);
         cy.get('[class*="MuiGrid-grid-sm-3"] h6')
             .should('have.length', 1)
