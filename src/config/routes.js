@@ -46,7 +46,15 @@ const hasADGroup = (account, ADCheck) => {
 };
 
 const isDigiteamMember = account => {
-    return hasADGroup(account, 'lib_digistore_users') || account.canMasquerade;
+    return hasADGroup(account, 'lib_digistore_users');
+};
+
+const isDeveloper = account => {
+    return account.canMasquerade;
+};
+
+const isAdmin = account => {
+    return account.canMasquerade;
 };
 
 export const pathConfig = {
@@ -378,7 +386,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     path: pathConfig.admin.masquerade,
@@ -522,12 +530,16 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (account.canMasquerade || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,
                 },
+            ]
+            : []),
+        ...(account && (isDeveloper(account) || isAdmin(account))
+            ? [
                 {
                     // maybe this should be in some admin bit? tbd
                     linkTo: pathConfig.admin.thirdPartyTools,
@@ -546,7 +558,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && isDigiteamMember(account)
+        ...(account && (isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     linkTo: pathConfig.digiteam.batchImport,
@@ -554,7 +566,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isDigiteamMember(account))
+        ...(account && (account.canMasquerade || isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     divider: true,
