@@ -53,7 +53,6 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
     >
       <StandardCard
         help={Object {}}
-        title="Select a document type"
       >
         <WithStyles(Grid)
           container={true}
@@ -69,8 +68,7 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
               locale={
                 Object {
                   "ariaLabel": "Select a publications type",
-                  "hint": "Select document type",
-                  "title": "Work type",
+                  "title": "Publications type",
                 }
               }
               required={true}
@@ -79,6 +77,49 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+      style={
+        Object {
+          "paddingTop": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        sm={true}
+        xs={false}
+      />
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Cancel and return to the homepage"
+          fullWidth={true}
+          variant="contained"
+        >
+          Cancel and return to the homepage
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          aria-label="Perform batch import"
+          color="primary"
+          fullWidth={true}
+          id="submit-data-collection"
+          variant="contained"
+        >
+          Perform batch import
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
 </StandardPage>
