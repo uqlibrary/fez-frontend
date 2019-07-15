@@ -1590,5 +1590,12 @@ export default {
             label: 'Content Indicators',
             divider: ', ',
         },
+        digiTeam: {
+            batchImport: {
+                display: {
+                    title: 'Batch import',
+                },
+            },
+        },
     },
 };

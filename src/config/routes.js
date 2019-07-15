@@ -25,6 +25,30 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
     return `${searchUrl}?${param(params)}`;
 };
 
+/**
+ * in the list of groups on the account, look for the group name
+ * (pick a suitably unqiueable string, like lib_servicepoint_login)
+ * @param account
+ * @param ADCheck
+ * @returns {boolean}
+ */
+const hasADGroup = (account, ADCheck) => {
+    if (!account || !account.groups) {
+        return false;
+    }
+    const matches = account.groups.filter(group => {
+        return group.indexOf(ADCheck) >= 0;
+    });
+    if (matches.length > 1) {
+        console.log('poorly chosen AD check value - '.ADCheck);
+    }
+    return matches.length === 1;
+};
+
+const isDigiteamMember = account => {
+    return hasADGroup(account, 'lib_digistore_users') || account.canMasquerade;
+};
+
 export const pathConfig = {
     index: '/',
     dashboard: '/dashboard',
@@ -118,34 +142,39 @@ export const pathConfig = {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    digiteam: {
+        batchImport: '/digiteam/batchImport',
+    },
 };
 
 // a duplicate list of routes for
 const flattedPathConfig = [
     '/',
-    '/dashboard',
+    '/admin/masquerade',
+    '/admin/thirdPartyTools',
+    '/admin/unpublished',
+    '/author-identifiers/google-scholar/link',
+    '/author-identifiers/orcid/link',
     '/contact',
-    '/rhdsubmission',
-    '/sbslodge_new',
-    '/records/search',
+    '/dashboard',
+    '/digiteam/batchImport',
+    '/records/add/find',
+    '/records/add/new',
+    '/records/add/results',
+    '/records/claim',
+    '/records/incomplete',
     '/records/mine',
     '/records/possible',
-    '/records/incomplete',
-    '/records/claim',
-    '/records/add/find',
-    '/records/add/results',
-    '/records/add/new',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
+    '/records/search',
+    '/rhdsubmission',
+    '/sbslodge_new',
 ];
 
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin',
+    digiteam: 'digiteam',
 };
 
 export const getRoutesConfig = ({
@@ -374,6 +403,17 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
+        ...(account && isDigiteamMember(account)
+            ? [
+                {
+                    path: pathConfig.digiteam.batchImport,
+                    component: components.DigiTeamBatchImport,
+                    exact: true,
+                    access: [roles.digiteam],
+                    pageTitle: 'xxx',
+                },
+            ]
+            : []),
         ...publicPages,
         {
             render: childProps => {
@@ -504,6 +544,18 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
                 },
+            ]
+            : []),
+        ...(account && isDigiteamMember(account)
+            ? [
+                {
+                    linkTo: pathConfig.digiteam.batchImport,
+                    ...locale.menu.digiteam.batchImport,
+                },
+            ]
+            : []),
+        ...(account && (account.canMasquerade || isDigiteamMember(account))
+            ? [
                 {
                     divider: true,
                     path: '/234234234242',
