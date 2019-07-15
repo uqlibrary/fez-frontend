@@ -23,18 +23,14 @@ context('Data Collection form', () => {
             .should('have.length', 13);
 
         // Dataset name
-        cy.get('textarea#Datasetname')
-            .should('be.visible')
-            .type('Name of Dataset');
+        cy.get('textarea#Datasetname:visible').type('Name of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 12);
 
         // Dataset name
-        cy.get('textarea#Datasetdescription')
-            .should('be.visible')
-            .type('Description of Dataset');
+        cy.get('textarea#Datasetdescription:visible').type('Description of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
@@ -217,18 +213,16 @@ context('Data Collection form', () => {
             .should('have.length', 3);
 
         // Project name
-        cy.get('textarea#Projectname')
-            .should('be.visible')
-            .type('This is the project name');
+        cy.get('textarea#Projectname:visible').type('This is the project name');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 2);
 
         // Project description
-        cy.get('textarea#Projectdescription')
-            .should('be.visible')
-            .type('Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ');
+        cy.get('textarea#Projectdescription:visible').type(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. '
+        );
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
@@ -431,7 +425,7 @@ context('Data Collection form', () => {
         // cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         // cy.get('div.Alert').find('li').should('have.length', 1);
         cy.get('input#DatasetWorktitle-input').type('a');
-        cy.get('li#DatasetWorktitle-item-1').click();
+        cy.get('li#DatasetWorktitle-item-1:visible').click();
         cy.get('div[class="undefined Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .first()
