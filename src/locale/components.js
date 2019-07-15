@@ -1605,8 +1605,11 @@ export default {
                         itemsLoadingHint: 'Loading...',
                     },
                     docType: {
-                        label: 'Select a document type',
-                        placeholder: 'Select a doctype',
+                        // label: 'Select a document type',
+                        // placeholder: 'Select a doctype',
+                        title: 'Publications type',
+                        // hint: 'Select document type',
+                        ariaLabel: 'Select a publications type',
                     },
                     directory: {
                         label: 'Select a directory',

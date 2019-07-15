@@ -95,12 +95,6 @@ export class DigiTeamBatchImport extends PureComponent {
         // const publicationTypeTxt = componentLocale.publicationType;
         const AddACollectionTxt = publicationForm.addACollection; // check this is right...
 
-        const doctypeLocale = {
-            title: 'Work type',
-            hint: 'Select document type',
-            ariaLabel: 'Select a publications type',
-        };
-
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
@@ -167,7 +161,7 @@ export class DigiTeamBatchImport extends PureComponent {
                                         updateDocTypeValues={this._onDocTypeChange}
                                         disabled={this.props.isLoading}
                                         disableMultiple
-                                        locale={doctypeLocale}
+                                        locale={batchImportTxt.formLabels.docType}
                                         required
                                     />
                                 </Grid>
