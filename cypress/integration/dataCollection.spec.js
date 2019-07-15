@@ -269,6 +269,7 @@ context('Data Collection form', () => {
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
+        cy.get('[role="dialog"]').should('not.exist');
         cy.get('div.Fundingbody')
             .find('button[title="Remove all funding bodies"]')
             .click();
