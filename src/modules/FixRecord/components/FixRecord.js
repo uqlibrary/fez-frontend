@@ -67,7 +67,9 @@ export default class FixRecord extends PureComponent {
 
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
-            this.successConfirmationBox.showConfirmation();
+            this.successConfirmationBox &&
+                this.successConfirmationBox.showConfirmation &&
+                this.successConfirmationBox.showConfirmation();
         }
     }
 

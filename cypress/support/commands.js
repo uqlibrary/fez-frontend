@@ -30,7 +30,6 @@
 Cypress.Commands.add('type_ckeditor', (element, content) => {
     cy.window()
         .then(win => {
-            cy.wait(2000);
             win.CKEDITOR.instances[element].setData(content);
         });
 });

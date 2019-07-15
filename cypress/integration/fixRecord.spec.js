@@ -18,7 +18,10 @@ context('Request correction form', () => {
     });
 
     it('should render as expected', () => {
-        cy.contains('Loading work');
+        // This causes flake since the mock returns data too quickly.
+        // Need to mock network layer in Cypress to resolve.
+        // cy.contains('Loading work');
+
         // cy.contains('h2', fixPageLocale.title);
         cy.contains('h2', 'Request a correction, add more information or upload files');
         cy.get('.StandardCard')

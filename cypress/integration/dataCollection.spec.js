@@ -23,29 +23,32 @@ context('Data Collection form', () => {
             .should('have.length', 13);
 
         // Dataset name
-        cy.get('textarea#Datasetname').type('Name of Dataset', { delay: 1 });
+        cy.get('textarea#Datasetname:visible').type('Name of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 12);
 
-        // Dataset name
-        cy.get('textarea#Datasetdescription').type('Description of Dataset', { delay: 1 });
+        // Dataset description
+        cy.get('textarea#Datasetdescription:visible').type('Description of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 11);
 
         // Contact name
-        cy.get('input#Contactname').type('Ky Lane', { delay: 1 });
+        cy.get('input#Contactname').type('Ky Lane');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 10);
 
         // Contact name ID
-        cy.get('input#ContactnameID-input').type('k', { delay: 1 });
+        cy.get('input#ContactnameID-input').type('a');
         cy.wait(1000);
+        cy.get('li#ContactnameID-item-0:visible')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#ContactnameID-item-0').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
@@ -53,7 +56,7 @@ context('Data Collection form', () => {
             .should('have.length', 9);
 
         // Contact email
-        cy.get('input#Contactemail').type('k.lane@', { delay: 1 });
+        cy.get('input#Contactemail').type('k.lane@');
         cy.get('p#Contactemail-helper-text')
             .contains('Email address is not valid')
             .should('have.length', 1);
@@ -61,13 +64,13 @@ context('Data Collection form', () => {
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 9);
-        cy.get('input#Contactemail').type('uq.edu.au', { delay: 1 });
+        cy.get('input#Contactemail').type('uq.edu.au');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
 
         // DOI
-        cy.get('input#DOI').type('test', { delay: 1 });
+        cy.get('input#DOI').type('test');
         cy.get('p#DOI-helper-text')
             .contains('DOI is not valid')
             .should('have.length', 1);
@@ -80,14 +83,14 @@ context('Data Collection form', () => {
             .should('have.length', 8);
 
         // Publisher
-        cy.get('input#Publisher').type('A publisher', { delay: 1 });
+        cy.get('input#Publisher').type('A publisher');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
 
         // Publication date
-        cy.get('input#day').type('16', { delay: 1 });
+        cy.get('input#day').type('16');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
@@ -98,7 +101,7 @@ context('Data Collection form', () => {
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
-        cy.get('input#year').type('1976', { delay: 1 });
+        cy.get('input#year').type('1976');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
@@ -106,13 +109,17 @@ context('Data Collection form', () => {
 
         // Field of research
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
+        cy.get('li#Fieldofresearch-item-4:visible')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#Fieldofresearch-item-4').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 6);
         cy.get('button[title="Remove this item"]').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -120,15 +127,23 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 7);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
+        cy.get('li#Fieldofresearch-item-3:visible')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#Fieldofresearch-item-3').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 6);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
+        cy.get('li#Fieldofresearch-item-1')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#Fieldofresearch-item-1').click();
         cy.get('button[title="Remove all items"]').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -136,6 +151,10 @@ context('Data Collection form', () => {
             .find('li')
             .should('have.length', 7);
         cy.get('input#Fieldofresearch-input').type('a');
+        cy.wait(1000);
+        cy.get('li#Fieldofresearch-item-2')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#Fieldofresearch-item-2').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
@@ -143,22 +162,25 @@ context('Data Collection form', () => {
             .should('have.length', 6);
 
         // Creators
-        cy.get('input#creators-name-as-published-field').type('Ky Lane', { delay: 1 });
+        cy.get('input#creators-name-as-published-field').type('Ky Lane');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 6);
-        cy.get('input#Entercreatorsrole-input').type('Custom role', { delay: 1 });
+        cy.get('input#Entercreatorsrole-input').type('Custom role');
         cy.get('button#submit-author').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 5);
-        cy.get('input#creators-name-as-published-field').type('Vishal Asai', { delay: 1 });
+        cy.get('input#creators-name-as-published-field').type('Vishal Asai');
         cy.get('input#Entercreatorsrole-input').click();
+        cy.get('li#Entercreatorsrole-item-1')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#Entercreatorsrole-item-1').click();
         cy.get('button#delete-creator-1').click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -168,14 +190,14 @@ context('Data Collection form', () => {
         cy.get('div.Creators')
             .get('button[aria-label="Remove all items"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 6);
-        cy.get('input#creators-name-as-published-field').type('Ky Lane', { delay: 1 });
-        cy.get('input#Entercreatorsrole-input').type('UX Developer', { delay: 1 });
+        cy.get('input#creators-name-as-published-field').type('Ky Lane');
+        cy.get('input#Entercreatorsrole-input').type('UX Developer');
         cy.get('button#submit-author').click();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
@@ -207,23 +229,22 @@ context('Data Collection form', () => {
             .should('have.length', 3);
 
         // Copyright notice
-        cy.get('input#Copyrightnotice').type('This is a copyright notice', { delay: 1 });
+        cy.get('input#Copyrightnotice').type('This is a copyright notice');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 3);
 
         // Project name
-        cy.get('textarea#Projectname').type('This is the project name');
+        cy.get('textarea#Projectname:visible').type('This is the project name');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 2);
 
         // Project description
-        cy.get('textarea#Projectdescription').type(
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
-            { delay: 1 },
+        cy.get('textarea#Projectdescription:visible').type(
+            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. '
         );
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
@@ -231,11 +252,11 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Funding body
-        cy.get('input#funding-body-input').type('Funding body 1', { delay: 1 });
+        cy.get('input#funding-body-input').type('Funding body 1');
         cy.get('div.Fundingbody')
             .find('button#add-items')
             .click();
-        cy.get('input#funding-body-input').type('Funding body 2', { delay: 1 });
+        cy.get('input#funding-body-input').type('Funding body 2');
         cy.get('div.Fundingbody')
             .find('button#add-items')
             .click();
@@ -245,16 +266,16 @@ context('Data Collection form', () => {
         cy.get('div.Fundingbody')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Fundingbody')
             .find('button[title="Remove all funding bodies"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#funding-body-input').type('Funding body 3', { delay: 1 });
+        cy.get('input#funding-body-input').type('Funding body 3');
         cy.get('div.Fundingbody')
             .find('button#add-items')
             .click();
@@ -264,11 +285,11 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Grant ID
-        cy.get('input#grant-id-input').type('Grant ID 1', { delay: 1 });
+        cy.get('input#grant-id-input').type('Grant ID 1');
         cy.get('div.GrantIDs')
             .find('button#add-items')
             .click();
-        cy.get('input#grant-id-input').type('Grant ID 2', { delay: 1 });
+        cy.get('input#grant-id-input').type('Grant ID 2');
         cy.get('div.GrantIDs')
             .find('button#add-items')
             .click();
@@ -278,16 +299,16 @@ context('Data Collection form', () => {
         cy.get('div.GrantIDs')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.GrantIDs')
             .find('button[title="Remove all grant IDs"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#grant-id-input').type('Grant ID 3', { delay: 1 });
+        cy.get('input#grant-id-input').type('Grant ID 3');
         cy.get('div.GrantIDs')
             .find('button#add-items')
             .click();
@@ -297,11 +318,11 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Type of data
-        cy.get('input#type-of-data-input').type('Type of data 1', { delay: 1 });
+        cy.get('input#type-of-data-input').type('Type of data 1');
         cy.get('div.Typeofdata')
             .find('button#add-items')
             .click();
-        cy.get('input#type-of-data-input').type('Type of data 2', { delay: 1 });
+        cy.get('input#type-of-data-input').type('Type of data 2');
         cy.get('div.Typeofdata')
             .find('button#add-items')
             .click();
@@ -311,16 +332,16 @@ context('Data Collection form', () => {
         cy.get('div.Typeofdata')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Typeofdata')
             .find('button[title="Remove all type of data"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#type-of-data-input').type('Type of data 3', { delay: 1 });
+        cy.get('input#type-of-data-input').type('Type of data 3');
         cy.get('div.Typeofdata')
             .find('button#add-items')
             .click();
@@ -330,11 +351,11 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Software required
-        cy.get('input#software-required-input').type('Software required 1', { delay: 1 });
+        cy.get('input#software-required-input').type('Software required 1');
         cy.get('div.Softwarerequired')
             .find('button#add-items')
             .click();
-        cy.get('input#software-required-input').type('Software required 2', { delay: 1 });
+        cy.get('input#software-required-input').type('Software required 2');
         cy.get('div.Softwarerequired')
             .find('button#add-items')
             .click();
@@ -344,16 +365,16 @@ context('Data Collection form', () => {
         cy.get('div.Softwarerequired')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Softwarerequired')
             .find('button[title="Remove all software required"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#software-required-input').type('Software required 3', { delay: 1 });
+        cy.get('input#software-required-input').type('Software required 3');
         cy.get('div.Softwarerequired')
             .find('button#add-items')
             .click();
@@ -363,11 +384,11 @@ context('Data Collection form', () => {
             .should('have.length', 1);
 
         // Keywords
-        cy.get('input#keywords-input').type('Keywords 1', { delay: 1 });
+        cy.get('input#keywords-input').type('Keywords 1');
         cy.get('div.Keywords')
             .find('button#add-items')
             .click();
-        cy.get('input#keywords-input').type('Keywords 2', { delay: 1 });
+        cy.get('input#keywords-input').type('Keywords 2');
         cy.get('div.Keywords')
             .find('button#add-items')
             .click();
@@ -377,16 +398,16 @@ context('Data Collection form', () => {
         cy.get('div.Keywords')
             .find('button#delete-0')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
         cy.get('div.Keywords')
             .find('button[title="Remove all keywords"]')
             .click();
-        cy.get('button')
+        cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('input#keywords-input').type('Keywords 3', { delay: 1 });
+        cy.get('input#keywords-input').type('Keywords 3');
         cy.get('div.Keywords')
             .find('button#add-items')
             .click();
@@ -399,11 +420,11 @@ context('Data Collection form', () => {
         // TODO: Awaiting Bug fix - https://www.pivotaltracker.com/story/show/167004604
         cy.get('input#rek_start_date')
             .clear()
-            .type('01/01/1980', { delay: 1 });
+            .type('01/01/1980');
         cy.get('input#rek_start_date').blur();
         cy.get('input#rek_end_date')
             .clear()
-            .type('01/01/1979', { delay: 1 });
+            .type('01/01/1979');
         cy.get('input#rek_end_date').blur();
         cy.get('div[aria-describedby="rek_start_date-helper-text"]')
             .find('p')
@@ -413,20 +434,28 @@ context('Data Collection form', () => {
 
         cy.get('input#rek_start_date')
             .clear()
-            .type('01/01/1980', { delay: 1 });
+            .type('01/01/1980');
         cy.get('input#rek_start_date').blur();
         cy.get('input#rek_end_date')
             .clear()
-            .type('01/01/1981', { delay: 1 });
+            .type('01/01/1981');
         cy.get('input#rek_end_date').blur();
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
 
         // Related datasets
         cy.get('input#DatasetWorktitle-input').type('a');
+        cy.wait(1000);
+        cy.get('li#DatasetWorktitle-item-0:visible')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#DatasetWorktitle-item-0').click();
         // cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         // cy.get('div.Alert').find('li').should('have.length', 1);
         cy.get('input#DatasetWorktitle-input').type('a');
+        cy.wait(1000);
+        cy.get('li#DatasetWorktitle-item-1:visible')
+            .invoke('width')
+            .should('be.greaterThan', 0);
         cy.get('li#DatasetWorktitle-item-1').click();
         cy.get('div[class="undefined Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
