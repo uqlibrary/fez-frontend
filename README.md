@@ -218,7 +218,7 @@ To run tests, first start the build, using mock data, ie `npm run start:mock`
 Then:
 
 - use `npm run cypress:run`
-- or to open the Cypress UI use `npm cypress:open`
+- or to open the Cypress UI use `npm run cypress:open`
 - or to watch the tests `npm run cypress:watch`.
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
