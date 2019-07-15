@@ -589,7 +589,7 @@ export const NEW_DATASET_DEFAULT_VALUES = {
 
 export const HDR_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         { rek_ismemberof: 'UQ:152694' },
     ],
@@ -599,7 +599,7 @@ export const HDR_THESIS_DEFAULT_VALUES = {
 
 export const SBS_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         { rek_ismemberof: 'UQ:155729' },
     ],
