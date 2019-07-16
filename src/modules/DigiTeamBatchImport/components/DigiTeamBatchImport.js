@@ -147,37 +147,35 @@ export class DigiTeamBatchImport extends PureComponent {
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                    </Grid>
 
-                    <Grid item xs={12}>
-                        <StandardCard
-                            title={batchImportTxt.formLabels.docType.label}
-                            help={batchImportTxt.details.docType.help}
-                        >
-                            <Grid container spacing={16}>
-                                <Grid item xs={12}>
-                                    <DocumentTypeField
-                                        docTypes={this.props.docTypes}
-                                        updateDocTypeValues={this._onDocTypeChange}
-                                        disabled={this.props.isLoading}
-                                        disableMultiple
-                                        locale={batchImportTxt.formLabels.docType}
-                                        required
-                                    />
-                                </Grid>
-                            </Grid>
-                        </StandardCard>
-                    </Grid>
-
-                    {/* <p>directory will go here</p> */}
-
-                    {alertProps && (
                         <Grid item xs={12}>
-                            <Alert {...alertProps} />
+                            <StandardCard
+                                title={batchImportTxt.formLabels.docType.label}
+                                help={batchImportTxt.details.docType.help}
+                            >
+                                <Grid container spacing={16}>
+                                    <Grid item xs={12}>
+                                        <DocumentTypeField
+                                            docTypes={this.props.docTypes}
+                                            updateDocTypeValues={this._onDocTypeChange}
+                                            disabled={this.props.isLoading}
+                                            disableMultiple
+                                            locale={batchImportTxt.formLabels.docType}
+                                            required
+                                        />
+                                    </Grid>
+                                </Grid>
+                            </StandardCard>
                         </Grid>
-                    )}
 
-                    <Grid container spacing={16}  style={{ paddingTop: 12 }}>
+                        {/* <p>directory will go here</p> */}
+
+                        {alertProps && (
+                            <Grid item xs={12}>
+                                <Alert {...alertProps} />
+                            </Grid>
+                        )}
+
                         <Grid item xs={false} sm />
                         <Grid item xs={12} sm="auto">
                             <Button
