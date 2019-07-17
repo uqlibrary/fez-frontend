@@ -6,9 +6,7 @@ import PropTypes from 'prop-types';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
-// import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-// import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import DocumentTypeField from 'modules/SharedComponents/SearchComponent/components/Fields/DocumentTypeField';
 
 import Grid from '@material-ui/core/Grid';
@@ -18,6 +16,9 @@ import { default as componentLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
 import { Alert } from '../../SharedComponents/Toolbox/Alert';
 import Button from '@material-ui/core/Button';
+// import { collectionsList } from 'actions';
+
+export const FORM_NAME = 'DigiTeamBatchImport';
 
 export class DigiTeamBatchImport extends PureComponent {
     static propTypes = {
@@ -26,12 +27,16 @@ export class DigiTeamBatchImport extends PureComponent {
         docTypes: PropTypes.array,
         isLoading: PropTypes.bool,
         actions: PropTypes.object,
-        handleSubmit: PropTypes.object,
+        handleSubmit: PropTypes.func,
         disableSubmit: PropTypes.bool,
+        loadItemsList: PropTypes.func,
     };
 
     static defaultProps = {
         docTypes: [],
+        handleSubmit: function() {
+            console.log('handleSubmit not provided'); // TODO
+        },
     };
 
     constructor(props) {
@@ -43,39 +48,33 @@ export class DigiTeamBatchImport extends PureComponent {
         };
     }
 
-    // componentWillReceiveProps(nextProps) {
-    //     console.log('nextProps: ', nextProps);
-    // }
+    componentWillReceiveProps(nextProps) {
+        console.log('componentWillReceiveProps', nextProps);
+    }
 
-    _onCommunityChange = newCommunityPid => {
-        let newState = {
-            ...this.state,
-            rekMemberIdCommunity: newCommunityPid,
-        };
-        if (newCommunityPid !== this.state.rekMemberIdCommunity) {
-            // community has changed - clear the community
-            newState = {
-                ...newState,
+    _onCommunityChange = (event, communityPid) => {
+        console.log('selected community pid ', communityPid);
+        if (communityPid !== this.state.rekMemberIdCommunity) {
+            // community has changed - clear the collection
+            this.setState({
+                ...this.state,
+                rekMemberIdCommunity: communityPid,
                 rekMemberIdCollection: null,
-            };
+            });
+            console.log(this.state);
+
+            // this.forceUpdate();
         }
-
-        this.setState({
-            ...this.state,
-            newState,
-        });
-
-        // load collection list
-        this.props.actions &&
-            this.props.actions.collectionsByCommunityList &&
-            this.props.actions.collectionsByCommunityList(newCommunityPid);
     };
 
-    _onCollectionChanged = newCollectionPid => {
+    _onCollectionChanged = (event, collectionPid) => {
+        console.log('selected collection pid ', collectionPid);
         this.setState({
             ...this.state,
-            rekMemberIdCollection: newCollectionPid,
+            rekMemberIdCollection: collectionPid,
         });
+        console.log(this.state);
+        console.log(this.state);
     };
 
     // _loadCollections = () => {
@@ -93,7 +92,7 @@ export class DigiTeamBatchImport extends PureComponent {
     render() {
         const batchImportTxt = componentLocale.components.digiTeam.batchImport;
         // const publicationTypeTxt = componentLocale.publicationType;
-        const AddACollectionTxt = publicationForm.addACollection; // check this is right...
+        // const AddACollectionTxt = publicationForm.addACollection; // check this is right...
 
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
@@ -111,8 +110,8 @@ export class DigiTeamBatchImport extends PureComponent {
                     <Grid container spacing={16}>
                         <Grid item xs={12}>
                             <StandardCard
-                                title={batchImportTxt.formLabels.community.label}
-                                help={batchImportTxt.details.community.help}
+                                title={batchImportTxt.formLabels.label}
+                                help={batchImportTxt.details.help}
                             >
                                 <Grid container spacing={16}>
                                     <Grid item xs={12}>
@@ -120,7 +119,8 @@ export class DigiTeamBatchImport extends PureComponent {
                                             component={CommunitiesSelectField}
                                             disabled={this.props.submitting}
                                             name="community_ismemberof"
-                                            locale={AddACollectionTxt.formLabels.ismemberof}
+                                            // locale={AddACollectionTxt.formLabels.ismemberof}
+                                            locale={batchImportTxt.formLabels.community}
                                             required
                                             validate={[validation.required]}
                                             onChange={this._onCommunityChange}
@@ -131,16 +131,15 @@ export class DigiTeamBatchImport extends PureComponent {
                                         this.props.formValues.get('community_ismemberof').length > 0 && (
                                         <Grid item xs={12}>
                                             <Field
-                                                component={GenericSelectField}
-                                                disabled={this.props.submitting}
+                                                component={CollectionsSelectField}
                                                 name="collection_ismemberof"
-                                                // locale={batchImportTxt.formLabels.collection}
+                                                disabled={this.props.submitting}
+                                                // locale={AddACollectionTxt.formLabels.ismemberof}
+                                                locale={batchImportTxt.formLabels.collection}
                                                 required
                                                 validate={[validation.required]}
                                                 onChange={this._onCollectionChanged}
-                                                // itemsList={communityCollectionsList}
-                                                // itemsLoading={communityCollectionsLoading}
-                                                {...batchImportTxt.formLabels.collection}
+                                                parentPid={this.props.formValues.get('community_ismemberof')}
                                             />
                                         </Grid>
                                     )}
@@ -156,6 +155,7 @@ export class DigiTeamBatchImport extends PureComponent {
                                 <Grid container spacing={16}>
                                     <Grid item xs={12}>
                                         <DocumentTypeField
+                                            name="doctype"
                                             docTypes={this.props.docTypes}
                                             updateDocTypeValues={this._onDocTypeChange}
                                             disabled={this.props.isLoading}

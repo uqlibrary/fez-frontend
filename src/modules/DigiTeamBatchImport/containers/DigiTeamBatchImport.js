@@ -4,12 +4,10 @@ import { bindActionCreators } from 'redux';
 import Immutable from 'immutable';
 import { reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
 
-import DigiTeamBatchImport from '../components/DigiTeamBatchImport';
+import { FORM_NAME, DigiTeamBatchImport } from '../components/DigiTeamBatchImport';
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-
-const FORM_NAME = 'DigiTeamBatchImport';
 
 // const onSubmit = (values, dispatch, props) => {
 //     const currentAuthor = props.author || null;
@@ -32,17 +30,24 @@ const mapStateToProps = state => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        collectionList: state && state.get('digiTeamBatchImportReducer')
+        community: state && state.get('rekMemberIdCommunity'),
+        collection: state && state.get('rekMemberIdCollection'),
+        communityCollectionsList: state && state.get('digiTeamBatchImportReducer')
             ? state.get('digiTeamBatchImportReducer').communityCollectionsList
             : [],
+        itemsList: state && state.get('digiTeamBatchImportReducer')
+            ? state.get('digiTeamBatchImportReducer').itemsList
+            : [],
     };
+    console.log('mapStateToProps: ', result);
     return result;
 };
 
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        loadItemsList: () => dispatch(actions.collectionsByCommunityList()),
+        // loadItemsList: (parentPid) => dispatch(actions.collectionsList(parentPid)),
+        // collectionsByCommunityList: (parentPid) => dispatch(actions.collectionsByCommunityList(parentPid)),
     };
 }
 

@@ -1595,12 +1595,15 @@ export default {
                 title: 'Batch import',
                 help: {},
                 formLabels: {
+                    label: 'Select destination community (0)',
                     community: {
-                        label: 'Select destination collection',
+                        title: 'Select destination community (2)',
+                        label: 'Select destination community (1)',
                         placeholder: 'Select a community this collection is a member of',
                     },
                     collection: {
-                        label: 'Select collection',
+                        title: 'Select collection (1)',
+                        label: 'Select collection (2)',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
                     },

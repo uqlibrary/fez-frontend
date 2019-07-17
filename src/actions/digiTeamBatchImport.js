@@ -8,6 +8,7 @@ import { COMMUNITY_LOOKUP_API } from 'repositories/routes';
  * @returns {function(*): Promise<any | never>}
  */
 export function collectionsByCommunityList(communityPid) {
+    console.log('actions.digitTeamBatchImport.collectionsByCommunityList');
     if (!!communityPid) {
         return dispatch => {
             dispatch({ type: actions.COLLECTION_LIST_LOADING });

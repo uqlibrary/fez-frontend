@@ -5,7 +5,7 @@ import {
     SEARCH_INTERNAL_RECORDS_API,
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
-    SEARCH_AUTHOR_LOOKUP_API,
+    SEARCH_AUTHOR_LOOKUP_API, COMMUNITY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
@@ -21,8 +21,30 @@ function getSearch(source, searchQuery) {
  * loadCollectionsList - returns records for a list of all collections in eSpace
  * @returns {Promise}
  */
-export function collectionsList() {
+export function collectionsList(parentPid = null) {
+    if (parentPid !== null) {
+        console.log('in actions.search.collectionsList for ', parentPid);
+        return dispatch => {
+            dispatch({ type: actions.SEARCH_COLLECTION_LOADING }); // COLLECTION_LIST_LOADING
+            console.log('getting ', COMMUNITY_LOOKUP_API(parentPid));
+            return get(
+                COMMUNITY_LOOKUP_API(parentPid)
+            )
+                .then(
+                    response => {
+                        dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
+                        // COLLECTION_LIST_LOADED
+                    },
+                    error => {
+                        dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
+                        // COLLECTION_LIST_FAILED
+                    }
+                );
+        };
+    }
+
     return dispatch => {
+        console.log('actions.search - collectionsList - getting SEARCH_INTERNAL_RECORDS_API as no parent pid provided');
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
         return get(
             SEARCH_INTERNAL_RECORDS_API({
@@ -32,14 +54,15 @@ export function collectionsList() {
                 sortBy: 'title',
                 sortDirection: 'asc',
             })
-        ).then(
-            response => {
-                dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
-            },
-            error => {
-                dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
-            }
-        );
+        )
+            .then(
+                response => {
+                    dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
+                },
+                error => {
+                    dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
+                }
+            );
     };
 }
 
