@@ -90,10 +90,14 @@ context('Data Collection form', () => {
             .should('have.length', 8);
 
         // Publication date
-        cy.get('input#day').type('16');
+        cy.contains('h3', 'Dataset information')
+            .closest('.StandardCard')
+            .find('input#day')
+            .type('16', { delay: 1 });
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
+
         cy.get('div[role="button"][aria-haspopup="true"]')
             .contains('Month')
             .click();
@@ -101,7 +105,11 @@ context('Data Collection form', () => {
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
-        cy.get('input#year').type('1976');
+
+        cy.contains('h3', 'Dataset information')
+            .closest('.StandardCard')
+            .find('input#year')
+            .type('1976', { delay: 1 });
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
