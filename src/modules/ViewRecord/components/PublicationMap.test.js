@@ -5,7 +5,7 @@ function setup(testProps, isShallow = false) {
     const props = {
         ...testProps,
         googleMapURL:
-            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
+            'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places',
         loadingElement: <div />,
     };
     return getElement(PublicationMap, props, isShallow);
