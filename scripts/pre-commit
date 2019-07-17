@@ -1,5 +1,24 @@
 #!/bin/bash
 
+echo "Pre-commit hook running..."
+
+# Commits should be made directly on Staging branch.
+# (Do work in feature branch and then merge into Staging branch)
+
+FORBIDDEN_BRANCH="staging"
+THIS_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+
+if [[ "$THIS_BRANCH" == "$FORBIDDEN_BRANCH" ]] ; then
+  if [ ! -e ".git/MERGE_MODE" ]; then
+    echo "You are trying to commit directly on the $FORBIDDEN_BRANCH branch."
+    echo "Please commit in a feature branch and then merge into $FORBIDDEN_BRANCH branch instead."
+    echo "Aborting commit."
+    exit 1
+  fi
+fi
+
+# Run eslint on staged files
+
 STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1\}$")
 ESLINT="$(git rev-parse --show-toplevel)/node_modules/.bin/eslint"
 
