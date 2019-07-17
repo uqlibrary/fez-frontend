@@ -23,14 +23,14 @@ context('Data Collection form', () => {
             .should('have.length', 13);
 
         // Dataset name
-        cy.get('textarea#Datasetname:visible').type('Name of Dataset');
+        cy.get('textarea#Datasetname:visible', { timeout: 5000 }).type('Name of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 12);
 
         // Dataset description
-        cy.get('textarea#Datasetdescription:visible').type('Description of Dataset');
+        cy.get('textarea#Datasetdescription:visible', { timeout: 5000 }).type('Description of Dataset');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
@@ -236,14 +236,14 @@ context('Data Collection form', () => {
             .should('have.length', 3);
 
         // Project name
-        cy.get('textarea#Projectname:visible').type('This is the project name');
+        cy.get('textarea#Projectname:visible', { timeout: 5000 }).type('This is the project name');
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 2);
 
         // Project description
-        cy.get('textarea#Projectdescription:visible').type(
+        cy.get('textarea#Projectdescription:visible', { timeout: 5000 }).type(
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. '
         );
         cy.get('button#submit-data-collection').should('have.attr', 'disabled');
@@ -269,6 +269,7 @@ context('Data Collection form', () => {
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
+        cy.get('[role="dialog"]').should('not.exist');
         cy.get('div.Fundingbody')
             .find('button[title="Remove all funding bodies"]')
             .click();
