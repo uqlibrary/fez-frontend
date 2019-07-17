@@ -11,6 +11,7 @@ simple date-picker for UQ Library applications using ReactJs.
 - `onChange: PropTypes.func`
 - `floatingTitle: PropTypes.string`
 - `floatingTitleRequired: PropTypes.bool`
+- `disableFuture: PropTypes.bool`
 
 ## PartialDateField defaultProps
 
@@ -18,6 +19,7 @@ simple date-picker for UQ Library applications using ReactJs.
 - `allowPartial: false`
 - `floatingTitle: 'Enter a date'`
 - `months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']`
+- `disableFuture: false`
 
 ## Usage
 
@@ -33,7 +35,9 @@ const App = () => (
   <div>
     <PartialDateField
         dateFormat="YYYY-MM-DD"
-        allowPartial />
+        allowPartial
+        disableFuture
+    />
   </div>
 );
 
