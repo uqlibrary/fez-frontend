@@ -29,7 +29,7 @@ export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.o
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
-export const GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRh9tvaGojdXLq3dnNV3O95LIWGXzznc&v=3.exp&libraries=geometry,drawing,places';
+export const GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places';
 
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -589,7 +589,7 @@ export const NEW_DATASET_DEFAULT_VALUES = {
 
 export const HDR_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         { rek_ismemberof: 'UQ:152694' },
     ],
@@ -599,7 +599,7 @@ export const HDR_THESIS_DEFAULT_VALUES = {
 
 export const SBS_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
-    rek_status: 3,
+    rek_status: 2,
     fez_record_search_key_ismemberof: [
         { rek_ismemberof: 'UQ:155729' },
     ],
