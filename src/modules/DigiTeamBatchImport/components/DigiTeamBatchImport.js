@@ -26,9 +26,10 @@ export const DigiTeamBatchImport = (
         // handleSubmit: function() {
         //     console.log('handleSubmit not provided'); // TODO
         // },
+        // formValues: {}, // grandfathered
     }
 ) => {
-    const [communityPID, setCommunityPID] = useState(null);
+    const [communityPID, setCommunityPID] = useState(null); // props.formValues.toJS().communityPID
     const [collectionPID, setCollectionPID] = useState(null);
     const [docTypeID, setDocTypeID] = useState(null);
     // constructor(props) {
@@ -82,7 +83,8 @@ export const DigiTeamBatchImport = (
     //     console.log('_loadCollections');
     // };
 
-    const _onDocTypeChange = (event, newDocType) => {
+    const _onDocTypeChange = (newDocType) => {
+        console.log('newDocType = ', newDocType);
         // Update the state with new values
         setDocTypeID(newDocType);
 
@@ -161,6 +163,9 @@ export const DigiTeamBatchImport = (
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <DocumentTypeField
+                                        // docTypes={this.props.docTypes}
+                                        // updateDocTypeValues={this.props.updateDocTypeValues}
+                                        // disabled={this.props.isLoading}
                                         name="doctype"
                                         docTypes={props.docTypes}
                                         updateDocTypeValues={_onDocTypeChange}

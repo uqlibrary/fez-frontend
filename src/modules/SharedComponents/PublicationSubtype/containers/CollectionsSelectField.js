@@ -24,10 +24,15 @@ const mapStateToProps = (state, props) => {
 };
 
 function mapDispatchToProps(dispatch, props) {
-    console.log('mapDispatchToProps ', props);
+    console.log('CollectionsSelectField mapDispatchToProps ', props);
     if (!props.parentPid) {
-        props.parentPid = null;
+        return {
+            loadItemsList: () => dispatch(actions.collectionsList()),
+        };
     }
+
+    dispatch(actions.collectionsList(props.parentPid));
+    console.log('CollectionsSelectField:mapDispatchToProps - after dispatch 1');
     return {
         loadItemsList: () => dispatch(actions.collectionsList(props.parentPid)),
     };
