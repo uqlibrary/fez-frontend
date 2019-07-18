@@ -18,14 +18,10 @@ import { validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
 
-export const DigiTeamBatchImport = (
-    props = {
-        docTypes: [],
-        formValues: {},
-        collectionList: [],
-    }
-) => {
-    const [communityID, setCommunityID] = useState(props.formValues.toJS().communityID);
+export const DigiTeamBatchImport = props => {
+    const [communityID, setCommunityID] = useState(
+        props.formValues && props.formValues.toJS && props.formValues.toJS().communityID
+    );
     const [collectionsList, setCollectionsList] = useState(
         props.collectionList.map((item, index) => {
             return { text: item.rek_title, value: item.rek_pid, index };
@@ -184,6 +180,12 @@ DigiTeamBatchImport.propTypes = {
     disableSubmit: PropTypes.bool,
     collectionList: PropTypes.array,
     communityCollectionsLoading: PropTypes.bool,
+};
+
+DigiTeamBatchImport.defaultProps = {
+    docTypes: [],
+    formValues: {},
+    collectionList: [],
 };
 
 export default DigiTeamBatchImport;
