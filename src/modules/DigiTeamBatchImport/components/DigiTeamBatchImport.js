@@ -16,34 +16,17 @@ import { Alert } from '../../SharedComponents/Toolbox/Alert';
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
-// import { collectionsList } from 'actions';
 
 export const FORM_NAME = 'DigiTeamBatchImport';
 
 export const DigiTeamBatchImport = (
     props = {
         docTypes: [],
-        // handleSubmit: function() {
-        //     console.log('handleSubmit not provided'); // TODO
-        // },
-        // formValues: {}, // grandfathered
     }
 ) => {
     const [communityPID, setCommunityPID] = useState(null); // props.formValues.toJS().communityPID
     const [collectionPID, setCollectionPID] = useState(null);
     const [docTypeID, setDocTypeID] = useState(null);
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         communityId: null,
-    //         collectionId: null,
-    //         documentType: null,
-    //     };
-    // }
-
-    // componentWillReceiveProps(nextProps) {
-    //     console.log('componentWillReceiveProps', nextProps);
-    // }
 
     useEffect(() => {
         console.log('communityPID = ', communityPID);
@@ -52,51 +35,26 @@ export const DigiTeamBatchImport = (
     });
 
     const _onCommunityChange = (event, newCommunityPid) => {
-        console.log('selected community pid ', newCommunityPid);
         if (newCommunityPid !== communityPID) {
             // community has changed - clear the collection
             setCommunityPID(newCommunityPid);
             // community has changed - clear the community
             setCollectionPID(null);
-            // this.setState({
-            //     ...this.state,
-            //     communityId: communityPid,
-            //     collectionId: null,
-            // });
-            // console.log(this.state);
-
-            // this.forceUpdate();
         }
     };
 
     const _onCollectionChanged = (event, collectionPid) => {
-        console.log('selected collection pid ', collectionPid);
         setCollectionPID(collectionPid);
-        // this.setState({
-        //     ...this.state,
-        //     collectionId: collectionPid,
-        // });
-        // console.log(this.state);
     };
 
-    // _loadCollections = () => {
-    //     console.log('_loadCollections');
-    // };
-
-    const _onDocTypeChange = (newDocType) => {
-        console.log('newDocType = ', newDocType);
+    const _onDocTypeChange = (fieldProps) => {
         // Update the state with new values
-        setDocTypeID(newDocType);
+        setDocTypeID(fieldProps);
 
-        // this.setState({
-        //     ...this.state,
-        //     documentType: newDocType,
-        // });
+        return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
     };
 
     const batchImportTxt = componentLocale.components.digiTeam.batchImport;
-    // const publicationTypeTxt = componentLocale.publicationType;
-    // const AddACollectionTxt = publicationForm.addACollection; // check this is right...
 
     const alertProps = validation.getErrorAlertProps({
         ...props,
@@ -118,8 +76,8 @@ export const DigiTeamBatchImport = (
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <StandardCard
-                            title={batchImportTxt.formLabels.label}
-                            help={batchImportTxt.details.help}
+                            title={batchImportTxt.formLabels.community.label}
+                            help={batchImportTxt.details.community.help}
                         >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
@@ -143,6 +101,7 @@ export const DigiTeamBatchImport = (
                                             name="collectionID" // collection_ismemberof
                                             disabled={props.submitting}
                                             // locale={AddACollectionTxt.formLabels.ismemberof}
+                                            title={batchImportTxt.formLabels.collection.title}
                                             locale={batchImportTxt.formLabels.collection}
                                             required
                                             validate={[validation.required]}
@@ -163,9 +122,6 @@ export const DigiTeamBatchImport = (
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <DocumentTypeField
-                                        // docTypes={this.props.docTypes}
-                                        // updateDocTypeValues={this.props.updateDocTypeValues}
-                                        // disabled={this.props.isLoading}
                                         name="doctype"
                                         docTypes={props.docTypes}
                                         updateDocTypeValues={_onDocTypeChange}

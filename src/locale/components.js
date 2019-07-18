@@ -1595,22 +1595,21 @@ export default {
                 title: 'Batch import',
                 help: {},
                 formLabels: {
-                    label: 'Select destination community (0)',
                     community: {
-                        title: 'Select destination community (2)',
-                        label: 'Select destination community (1)',
+                        title: 'Select destination community (title)',
+                        label: 'Select destination community (label)',
                         placeholder: 'Select a community this collection is a member of',
                     },
                     collection: {
-                        title: 'Select collection (1)',
-                        label: 'Select collection (2)',
+                        title: 'Select collection (title)',
+                        label: 'Select collection (label)',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
                     },
                     docType: {
-                        // label: 'Select a document type',
+                        label: 'Select a document type (label)',
                         // placeholder: 'Select a doctype',
-                        title: 'Publications type',
+                        title: 'Publications type (title)',
                         // hint: 'Select document type',
                         ariaLabel: 'Select a publications type',
                     },

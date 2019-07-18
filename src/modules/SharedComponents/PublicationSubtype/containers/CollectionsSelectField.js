@@ -1,5 +1,4 @@
 import React from 'react';
-// import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import * as actions from 'actions';
@@ -24,7 +23,6 @@ const mapStateToProps = (state, props) => {
 };
 
 function mapDispatchToProps(dispatch, props) {
-    console.log('CollectionsSelectField mapDispatchToProps ', props);
     if (!props.parentPid) {
         return {
             loadItemsList: () => dispatch(actions.collectionsList()),
@@ -32,7 +30,6 @@ function mapDispatchToProps(dispatch, props) {
     }
 
     dispatch(actions.collectionsList(props.parentPid));
-    console.log('CollectionsSelectField:mapDispatchToProps - after dispatch 1');
     return {
         loadItemsList: () => dispatch(actions.collectionsList(props.parentPid)),
     };

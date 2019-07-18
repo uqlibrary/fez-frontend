@@ -38,8 +38,5 @@ export default function collectionsReducer(state = initState, action) {
     if (!handler) {
         return state;
     }
-
-    const result = handler(state, action);
-    console.log('reducer.searchCollection.collectionsReducer', result);
-    return result;
+    return handler(state, action);
 }

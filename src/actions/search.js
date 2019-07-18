@@ -5,7 +5,8 @@ import {
     SEARCH_INTERNAL_RECORDS_API,
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
-    SEARCH_AUTHOR_LOOKUP_API, COMMUNITY_LOOKUP_API,
+    SEARCH_AUTHOR_LOOKUP_API,
+    COMMUNITY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
@@ -44,7 +45,6 @@ export function collectionsList(parentPid = null) {
     }
 
     return dispatch => {
-        console.log('actions.search - collectionsList - getting SEARCH_INTERNAL_RECORDS_API as no parent pid provided');
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
         return get(
             SEARCH_INTERNAL_RECORDS_API({
