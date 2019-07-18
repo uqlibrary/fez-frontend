@@ -8,6 +8,7 @@ import { FORM_NAME, DigiTeamBatchImport } from '../components/DigiTeamBatchImpor
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
+// import { useState } from 'react';
 
 // const onSubmit = (values, dispatch, props) => {
 //     const currentAuthor = props.author || null;
@@ -25,13 +26,15 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
+    console.log('mapStateToProps, state = ', state);
+    console.log('state.communityId = ', state.get('communityId'));
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const result = {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        community: state && state.get('rekMemberIdCommunity'),
-        collection: state && state.get('rekMemberIdCollection'),
+        community: state && state.get('communityId'),
+        collection: state && state.get('collectionId'),
         communityCollectionsList: state && state.get('digiTeamBatchImportReducer')
             ? state.get('digiTeamBatchImportReducer').communityCollectionsList
             : [],
@@ -39,7 +42,7 @@ const mapStateToProps = state => {
             ? state.get('digiTeamBatchImportReducer').itemsList
             : [],
     };
-    console.log('mapStateToProps: ', result);
+    console.log('mapStateToProps: result = ', result);
     return result;
 };
 
