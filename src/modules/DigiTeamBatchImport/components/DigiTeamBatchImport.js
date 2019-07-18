@@ -11,10 +11,11 @@ import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubt
 // import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import DocumentTypeField from 'modules/SharedComponents/SearchComponent/components/Fields/DocumentTypeField';
-import { Alert } from '../../SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import DirectorySelectField from '../containers/DirectorySelectField';
 
 import { validation } from 'config';
-import { default as componentLocale } from 'locale/components';
+import { default as componentsLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
 
 export const DigiTeamBatchImport = (
@@ -43,7 +44,7 @@ export const DigiTeamBatchImport = (
         }
     };
 
-    const batchImportTxt = componentLocale.components.digiTeam.batchImport;
+    const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     // const publicationTypeTxt = componentLocale.publicationType;
     const AddACollectionTxt = publicationForm.addACollection; // check this is right...
 
@@ -121,7 +122,22 @@ export const DigiTeamBatchImport = (
                         </StandardCard>
                     </Grid>
 
-                    {/* <p>directory will go here</p> */}
+                    <Grid item xs={12}>
+                        <StandardCard title={batchImportTxt.formLabels.directory.label}>
+                            <Grid container spacing={24}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={DirectorySelectField}
+                                        disabled={props.submitting}
+                                        name="san-dir"
+                                        required
+                                        // onChange={_onDirectoryChange}
+                                        {...batchImportTxt.formLabels.directory}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
 
                     {alertProps && (
                         <Grid item xs={12}>

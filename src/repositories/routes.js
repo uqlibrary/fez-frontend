@@ -300,3 +300,9 @@ export const THIRD_PARTY_LOOKUP_API_2FIELD = ({ type, field1, field2 }) => ({
 export const COLLECTIONS_BY_COMMUNITY_LOOKUP_API = ({ communityPid }) => ({
     apiUrl: `communities/${communityPid}/collections`,
 });
+
+export const BATCH_IMPORT_DIRECTORIES_API = () => {
+    return {
+        apiUrl: 'external/records/batch-import/directories',
+    };
+};

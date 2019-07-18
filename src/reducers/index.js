@@ -2,6 +2,7 @@ export { default as academicStatsReducer } from './academic';
 export { default as accountReducer } from './account';
 export { default as appReducer } from './app';
 export { default as authorsReducer } from './authors';
+export { default as batchImportDirectoriesReducer } from './batchImportDirectories';
 export { default as claimPublicationReducer } from './claimPublication';
 export { default as collectionsReducer } from './searchCollections';
 export { default as communitiesReducer } from './searchCommunities';

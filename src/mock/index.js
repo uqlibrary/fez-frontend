@@ -80,6 +80,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: user }).apiUrl
     )
     .reply(200, mockData.hindexResponse)
+    .onGet(routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl)
+    .reply(200, mockData.batchImportDirectories)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
         if (config.params.source === 'scopus' && config.params.title)

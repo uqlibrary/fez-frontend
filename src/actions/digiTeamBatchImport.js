@@ -1,6 +1,6 @@
 import * as actions from './actionTypes';
 import { get } from 'repositories/generic';
-import { COLLECTIONS_BY_COMMUNITY_LOOKUP_API } from 'repositories/routes';
+import { COLLECTIONS_BY_COMMUNITY_LOOKUP_API, BATCH_IMPORT_DIRECTORIES_API } from 'repositories/routes';
 
 /**
  * Fetches collections that belong to a specific community
@@ -27,4 +27,18 @@ export function getCollectionsInCommunity(communityPid) {
 
 export function createDigiTeamBatchImport() {
     // TODO
+}
+
+export function getBatchImportDirectories() {
+    return dispatch => {
+        dispatch({ type: actions.DIRECTORY_LIST_LOADING });
+        return get(BATCH_IMPORT_DIRECTORIES_API()).then(
+            response => {
+                dispatch({ type: actions.DIRECTORY_LIST_LOADED, payload: response.data });
+            },
+            error => {
+                dispatch({ type: actions.DIRECTORY_LIST_FAILED, payload: error.message });
+            }
+        );
+    };
 }
