@@ -8,7 +8,7 @@ import { COLLECTIONS_BY_COMMUNITY_LOOKUP_API } from 'repositories/routes';
  * @param communityPid - the pid for which we want the child Collections
  * @returns {function(*): Promise<any | never>}
  */
-export function getColletionsInCommunity(communityPid) {
+export function getCollectionsInCommunity(communityPid) {
     if (!!communityPid) {
         return dispatch => {
             dispatch({ type: actions.COLLECTION_LIST_LOADING });

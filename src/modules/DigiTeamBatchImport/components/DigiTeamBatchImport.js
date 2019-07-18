@@ -38,8 +38,8 @@ export const DigiTeamBatchImport = (
 
             // load collection list
             props.actions &&
-                props.actions.getColletionsInCommunity &&
-                props.actions.getColletionsInCommunity(newCommunityPid);
+                props.actions.getCollectionsInCommunity &&
+                props.actions.getCollectionsInCommunity(newCommunityPid);
         }
     };
 

@@ -43,7 +43,7 @@ const mapStateToProps = state => {
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        loadItemsList: () => dispatch(actions.getColletionsInCommunity()),
+        loadItemsList: () => dispatch(actions.getCollectionsInCommunity()),
     };
 }
 
