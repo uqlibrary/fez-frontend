@@ -1584,10 +1584,17 @@ export default {
                     collectionStart: {
                         label: 'Collection start date',
                         placeholder: 'Date that data started being collected',
+                        name: 'fez_record_search_key_start_date.rek_start_date',
+                        rangeError: 'Date range is not valid',
                     },
                     collectionEnd: {
                         label: 'Collection end date',
                         placeholder: 'Date that data ceased being collected',
+                        name: 'fez_record_search_key_end_date.rek_end_date',
+                        id: 'rek_end_date',
+                    },
+                    collectionValidationMessage: {
+                        day: 'Invalid date',
                     },
                     geographicCoordinates: {
                         label: 'Geographic coordinates',

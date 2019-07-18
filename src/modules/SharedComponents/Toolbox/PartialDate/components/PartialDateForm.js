@@ -28,6 +28,10 @@ const styles = theme => ({
     },
 });
 
+export const STATUS_VALID = 1; // user entered a valid date
+export const STATUS_INVALID = 2; // user entered an invalid date
+export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the future, when prop disableFuture is
+
 export class PartialDateForm extends Component {
     static propTypes = {
         locale: PropTypes.object,
@@ -42,6 +46,7 @@ export class PartialDateForm extends Component {
         classes: PropTypes.object,
         required: PropTypes.bool,
         hasError: PropTypes.string,
+        disableFuture: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -53,6 +58,7 @@ export class PartialDateForm extends Component {
                 day: 'Invalid day',
                 month: 'Invalid month',
                 year: 'Invalid year',
+                future: 'Date must be before now',
             },
             minNumberCharCode: 48,
             maxNumberCharCode: 57,
@@ -76,6 +82,7 @@ export class PartialDateForm extends Component {
         floatingTitle: 'Enter a date',
         floatingTitleRequired: false,
         className: '',
+        disableFuture: false,
     };
 
     constructor(props) {
@@ -98,43 +105,74 @@ export class PartialDateForm extends Component {
         }
     }
 
+    /**
+     * validate the entered date field
+     * @param state
+     * @returns {int} returns one of STATUS_VALID, STATUS_INVALID, STATUS_FUTURE_DATE, defined above
+     * @private
+     */
     _validate = state => {
-        let valid;
+        let validationStatus;
         const { day, month, year } = state;
 
         if (this.props.allowPartial) {
-            valid = !!year && moment(state).isValid();
+            validationStatus = !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
         } else {
-            valid = !!day && month !== null && !!year && moment(state).isValid();
+            validationStatus = !!day && (month !== null) && !!year && moment(state).isValid()
+                ? STATUS_VALID
+                : STATUS_INVALID;
         }
-        return valid;
+
+        if ((validationStatus === STATUS_VALID) && !!this.props.disableFuture) {
+            if (!!this.props.allowPartial) {
+                const yearNow = moment().year();
+                if (state.year > yearNow) {
+                    return STATUS_FUTURE_DATE;
+                }
+            } else {
+                const dateNow = moment();
+                if (!moment(state).isSameOrBefore(dateNow)) {
+                    return STATUS_FUTURE_DATE;
+                }
+            }
+        }
+
+        return validationStatus;
     };
 
-    _displayErrors = (state, valid) => {
+    _displayErrors = (state, validationStatus) => {
         const { day, month, year } = state;
         const { locale } = this.props;
 
-        this.errors.year =
-            (this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required') ||
-            (!!year && isNaN(year) && locale.validationMessage.year) ||
+        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' ||
+            !!year && isNaN(year) && locale.validationMessage.year ||
             '';
 
         if (this.props.allowPartial) {
-            this.errors.month = year && month < 0 ? locale.validationMessage.month : '';
-            this.errors.day = day && year && month > -1 && !valid ? locale.validationMessage.day : '';
+            this.errors.month = (year && month < 0) ? locale.validationMessage.month : '';
+            this.errors.day = (day && year && month > -1 && (validationStatus !== STATUS_VALID))
+                ? locale.validationMessage.day
+                : '';
         } else {
             this.errors.month = month < 0 ? locale.validationMessage.month : '';
-            this.errors.day =
-                isNaN(day) || ((month !== null || month > -1) && year && !valid) ? locale.validationMessage.day : '';
+            if (validationStatus === STATUS_INVALID) {
+                this.errors.day = ((isNaN(day) && !!this.props.required) || ((month !== null || month > -1) && year))
+                    ? locale.validationMessage.day
+                    : '';
+            } else if (validationStatus === STATUS_FUTURE_DATE) {
+                this.errors.day = locale.validationMessage.future;
+            } else {
+                this.errors.day = '';
+            }
         }
     };
 
     _setDate = date => {
-        const valid = this._validate(date);
+        const validationStatus = this._validate(date);
 
-        this._displayErrors(date, valid);
+        this._displayErrors(date, validationStatus);
 
-        return valid ? moment(date).format(this.props.dateFormat) : '';
+        return (validationStatus === STATUS_VALID) ? moment(date).format(this.props.dateFormat) : '';
     };
 
     _isNumber = event => {
