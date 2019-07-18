@@ -179,6 +179,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [404, ['Request not found']];
     })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({
+                    communityPid: '.*',
+                }).apiUrl
+            )
+        )
+    )
+    .reply(200, mockData.collectionsByCommunitySearchResultsList)
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)

@@ -32,9 +32,10 @@ const mapStateToProps = state => {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        collectionList: state && state.get('digiTeamBatchImportReducer')
-            ? state.get('digiTeamBatchImportReducer').communityCollectionsList
-            : [],
+        collectionList:
+            state && state.get('digiTeamBatchImportReducer')
+                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
+                : [],
     };
     return result;
 };
@@ -42,7 +43,7 @@ const mapStateToProps = state => {
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        loadItemsList: () => dispatch(actions.collectionsByCommunityList()),
+        loadItemsList: () => dispatch(actions.getColletionsInCommunity()),
     };
 }
 

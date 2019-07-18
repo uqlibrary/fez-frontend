@@ -6,6 +6,7 @@ export {
 } from './account';
 export {
     collections,
+    collectionsByCommunitySearchResultsList,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
     externalTitleScopusResultsList,
