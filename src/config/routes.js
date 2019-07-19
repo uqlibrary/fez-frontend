@@ -152,7 +152,7 @@ export const pathConfig = {
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
     digiteam: {
-        batchImport: '/digiteam/batchImport',
+        batchImport: '/batch-import',
     },
 };
 
