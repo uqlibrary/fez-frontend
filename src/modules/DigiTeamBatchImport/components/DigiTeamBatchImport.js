@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
-import { reduxForm } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -185,8 +184,4 @@ DigiTeamBatchImport.defaultProps = {
     formValues: {},
 };
 
-const DigiTeamBatchImportForm = reduxForm({
-    form: 'batch-import',
-})(DigiTeamBatchImport);
-
-export default DigiTeamBatchImportForm;
+export default DigiTeamBatchImport;
