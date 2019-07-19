@@ -1,3 +1,4 @@
+export { default as collections } from './collections';
 export { default as collectionsByCommunity } from './collectionsByCommunity';
 export { default as communitySearchList } from './communitySearchList';
 export { default as externalDoiSearchResultList } from './externalDoiSearchResultList';
@@ -10,6 +11,7 @@ export { default as incompleteNTROrecordUqrdav10 } from './incompleteNTRORecordU
 export { default as incompleteNTROrecordUqsbutl1 } from './incompleteNTRORecordUqsbutl1';
 export { default as internalTitleSearchList } from './internalTitleSearchList';
 export { default as internalTitleSearchListNoResults } from './internalTitleSearchListNoResults';
+export { default as lookupToolIncites } from './lookupToolIncites';
 export { default as MyDatasetList } from './MyDatasetList';
 export { default as myRecordsList } from './myRecordsList';
 export { default as possibleUnclaimedList } from './possibleUnclaimedList';

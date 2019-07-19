@@ -18,12 +18,12 @@ export {
     incompleteNTROrecordUqsbutl1,
     internalTitleSearchList,
     internalTitleSearchListNoResults,
+    lookupToolIncites,
     MyDatasetList,
     myRecordsList,
     possibleUnclaimedList,
     record,
     recordsTypeList,
-    recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
 } from './records';
