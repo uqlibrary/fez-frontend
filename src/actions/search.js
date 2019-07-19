@@ -19,41 +19,27 @@ function getSearch(source, searchQuery) {
 }
 
 /**
- * loadCollectionsList - returns records for a list of all collections in eSpace
+ * loadCollectionsList - returns records for a list of collections in eSpace
+ * either all collections, or restricted by parent-community
  * @returns {Promise}
  */
 export function collectionsList(parentPid = null) {
-    if (parentPid !== null) {
-        console.log('in actions.search.collectionsList for ', parentPid);
-        return dispatch => {
-            dispatch({ type: actions.SEARCH_COLLECTION_LOADING }); // COLLECTION_LIST_LOADING
-            console.log('getting ', COMMUNITY_LOOKUP_API(parentPid));
-            return get(
-                COMMUNITY_LOOKUP_API(parentPid)
-            )
-                .then(
-                    response => {
-                        dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
-                        // COLLECTION_LIST_LOADED
-                    },
-                    error => {
-                        dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
-                        // COLLECTION_LIST_FAILED
-                    }
-                );
-        };
-    }
-
     return dispatch => {
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
-        return get(
-            SEARCH_INTERNAL_RECORDS_API({
+        let api;
+        if (parentPid !== null) {
+            api = COMMUNITY_LOOKUP_API(parentPid);
+        } else {
+            api = SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
                 searchQueryParams: { rek_object_type: 2 },
                 pageSize: 999,
                 sortBy: 'title',
                 sortDirection: 'asc',
-            })
+            });
+        }
+        return get(
+            api
         )
             .then(
                 response => {
