@@ -2,6 +2,7 @@ import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
 import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
+const moment = require('moment');
 
 // Max Length
 export const maxLength = max => value =>
@@ -216,14 +217,30 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const dateRange = (value, values) => {
-    const lowerInRange = values.toJS().fez_record_search_key_start_date;
-    const higherInRange = values.toJS().fez_record_search_key_end_date;
+    const lowerInRange =
+        !!values.toJS().fez_record_search_key_start_date &&
+        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
+        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!values.toJS().fez_record_search_key_end_date &&
+        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
+        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
 
-    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
-        return locale.validationErrors.dateRange;
-    } else {
-        return '';
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.collectionDateRange;
     }
+
+    return '';
+};
+
+export const fullDate = state => {
+    const valid = moment(state).isValid();
+
+    if (!valid) {
+        return 'date is not valid';
+    }
+
+    return '';
 };
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);

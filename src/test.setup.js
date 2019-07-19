@@ -103,4 +103,4 @@ global.mockSessionApi = setupSessionMockAdapter();
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
 const MockDate = require('mockdate');
-MockDate.set('1/1/2017');
+MockDate.set('6/30/2017');

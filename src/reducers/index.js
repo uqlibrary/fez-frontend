@@ -10,7 +10,6 @@ export { default as controlledVocabulariesReducer } from './controlledVocabulari
 export { default as createCollectionReducer } from './createCollection';
 export { default as createCommunityReducer } from './createCommunity';
 export { default as createRecordReducer } from './createRecord';
-export { default as digiTeamBatchImportReducer } from './digiTeamBatchImport';
 export { default as exportPublicationsReducer } from './exportPublications';
 export { default as fixRecordReducer } from './fixRecord';
 export { default as myLatestPublicationsReducer } from './myLatestPublications';

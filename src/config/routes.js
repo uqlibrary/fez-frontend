@@ -54,7 +54,7 @@ const isDeveloper = account => {
 };
 
 const isAdmin = account => {
-    return account.canMasquerade;
+    return account.is_administrator || account.is_super_administrator;
 };
 
 export const pathConfig = {

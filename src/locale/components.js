@@ -1596,18 +1596,20 @@ export default {
                 help: {},
                 formLabels: {
                     community: {
-                        label: 'Select destination collection',
+                        title: 'Select destination community (title)',
+                        label: 'Select destination community (label)',
                         placeholder: 'Select a community this collection is a member of',
                     },
                     collection: {
-                        label: 'Select collection',
+                        title: 'Select collection (title)',
+                        label: 'Select collection (label)',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
                     },
                     docType: {
-                        // label: 'Select a document type',
+                        label: 'Select a document type (label)',
                         // placeholder: 'Select a doctype',
-                        title: 'Publications type',
+                        title: 'Publications type (title)',
                         // hint: 'Select document type',
                         ariaLabel: 'Select a publications type',
                     },

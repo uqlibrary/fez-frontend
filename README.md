@@ -53,20 +53,30 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - runs production build version on `http://localhost:9000/`
   - uses mock data from src/mock
   - async loading is not working since chuncks are not saved, navigate directly to required routes
+- `npm run eslint`
+  - Runs ESLint on all JavaScript files in the project, with specific exceptions listed in `.eslintignore`.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
 ### Development notes
 
-#### ESLint
+#### Git safety checks
 
-There are two ways to run `eslint`:
-
-- Run `npm run eslint` command
-- Run the following in the project root directory to run eslint automatically before every local commit:
+- Run the following in the project root directory to install the pre-commit hook:
 
   ```sh
   ln -sf "../../scripts/pre-commit" ".git/hooks/pre-commit"
+  ```
+
+  It does two things:
+
+  - Prevent direct commits to the staging branch.
+  - Run eslint automatically before every local commit
+
+- Run the following in the project root directory to prevent accidental merges from the staging branch:
+
+  ```sh
+    ln -sf "../../scripts/prepare-commit-msg" ".git/hooks/prepare-commit-msg"
   ```
 
 #### Naming conventions
@@ -213,7 +223,13 @@ Before committing changes, locally run tests and update stapshots (if required).
 We are using [Cypress](https://docs.cypress.io/guides/getting-started/writing-your-first-test.html#Add-a-test-file) for
 our e2e UI testing.
 
-To run tests, use `npm run cypress:run` or to open the Cypress UI use `npm cypress:open` or to watch the tests `npm run cypress:watch`.
+To run tests, first start the build, using mock data, ie `npm run start:mock`
+
+Then:
+
+- use `npm run cypress:run`
+- or to open the Cypress UI use `npm run cypress:open`
+- or to watch the tests `npm run cypress:watch`.
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
 

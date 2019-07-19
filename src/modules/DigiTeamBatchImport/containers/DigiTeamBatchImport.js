@@ -4,12 +4,11 @@ import { bindActionCreators } from 'redux';
 import Immutable from 'immutable';
 import { reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
 
-import DigiTeamBatchImport from '../components/DigiTeamBatchImport';
+import { FORM_NAME, DigiTeamBatchImport } from '../components/DigiTeamBatchImport';
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-
-const FORM_NAME = 'DigiTeamBatchImport';
+// import { useState } from 'react';
 
 // const onSubmit = (values, dispatch, props) => {
 //     const currentAuthor = props.author || null;
@@ -27,23 +26,34 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
+    // console.log('container DigiTeamBatchImport mapStateToProps, state = ', state);
+    // console.log('container DigiTeamBatchImport state.communityId = ', state.get('communityId'));
+    if (!!getFormValues(FORM_NAME)(state)) {
+        console.log('container DigiTeamBatchImport getFormValues: ', getFormValues(FORM_NAME)(state).toJS());
+    }
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const result = {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        collectionList:
+        community: state && state.get('communityId'),
+        collection: state && state.get('collectionId'),
+        communityCollectionsList:
             state && state.get('digiTeamBatchImportReducer')
                 ? state.get('digiTeamBatchImportReducer').communityCollectionsList
                 : [],
+        itemsList:
+            state && state.get('digiTeamBatchImportReducer') ? state.get('digiTeamBatchImportReducer').itemsList : [],
     };
+    console.log('container DigiTeamBatchImport mapStateToProps: result = ', result);
     return result;
 };
 
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        loadItemsList: () => dispatch(actions.getCollectionsInCommunity()),
+        // loadItemsList: (parentPid) => dispatch(actions.collectionsList(parentPid)),
+        // collectionsByCommunityList: (parentPid) => dispatch(actions.collectionsByCommunityList(parentPid)),
     };
 }
 

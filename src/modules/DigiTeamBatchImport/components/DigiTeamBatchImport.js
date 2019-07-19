@@ -9,8 +9,7 @@ import Button from '@material-ui/core/Button';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
-// import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import DocumentTypeField from 'modules/SharedComponents/SearchComponent/components/Fields/DocumentTypeField';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
@@ -19,32 +18,26 @@ import { validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
 
-export const getMenuObjectsFromCollectionsArray = collectionList =>
-    collectionList.map((item, index) => {
-        return { text: item.rek_title, value: item.rek_pid, index };
-    });
+export const FORM_NAME = 'DigiTeamBatchImport';
 
 export const DigiTeamBatchImport = props => {
     const [communityID, setCommunityID] = useState(
         props.formValues && props.formValues.toJS && props.formValues.toJS().communityID
     );
-    const [collectionsList, setCollectionsList] = useState(getMenuObjectsFromCollectionsArray(props.collectionList));
-
-    const _onCommunityChange = (event, newCommunityPid) => {
-        if (newCommunityPid !== communityID) {
-            setCommunityID(newCommunityPid);
-            setCollectionsList([]); // community has changed - clear the collection
-
-            // load collection list
-            props.actions &&
-                props.actions.getCollectionsInCommunity &&
-                props.actions.getCollectionsInCommunity(newCommunityPid);
+    const _onCommunityChange = (event, newCommunityID) => {
+        if (newCommunityID !== communityID) {
+            setCommunityID(newCommunityID);
         }
     };
 
+    // const _onCollectionChanged = (event, collectionPid) => {
+    // };
+
+    const _onDocTypeChange = fieldProps => {
+        return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
+    };
+
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
-    // const publicationTypeTxt = componentLocale.publicationType;
-    const AddACollectionTxt = publicationForm.addACollection; // check this is right...
 
     const alertProps = validation.getErrorAlertProps({
         ...props,
@@ -74,8 +67,8 @@ export const DigiTeamBatchImport = props => {
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={props.submitting}
-                                        name="communityID"
-                                        locale={AddACollectionTxt.formLabels.ismemberof}
+                                        name="communityID" // community_ismemberof
+                                        locale={batchImportTxt.formLabels.community}
                                         required
                                         validate={[validation.required]}
                                         onChange={_onCommunityChange}
@@ -84,14 +77,15 @@ export const DigiTeamBatchImport = props => {
                                 {communityID && (
                                     <Grid item xs={12}>
                                         <Field
-                                            component={GenericSelectField}
+                                            component={CollectionsSelectField}
                                             disabled={props.submitting}
-                                            name="collectionID"
+                                            locale={batchImportTxt.formLabels.collection}
+                                            name="collectionID" // collection_ismemberof
+                                            // onChange={_onCollectionChanged}
+                                            parentPid={props.formValues.get('communityID')}
                                             required
+                                            title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
-                                            itemsList={collectionsList}
-                                            itemsLoading={props.communityCollectionsLoading}
-                                            {...batchImportTxt.formLabels.collection}
                                         />
                                     </Grid>
                                 )}
@@ -107,9 +101,9 @@ export const DigiTeamBatchImport = props => {
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <DocumentTypeField
-                                        name="docTypeID"
+                                        name="doctype"
                                         docTypes={props.docTypes}
-                                        // updateDocTypeValues={setDocTypeID}
+                                        updateDocTypeValues={_onDocTypeChange}
                                         disabled={props.isLoading}
                                         disableMultiple
                                         locale={batchImportTxt.formLabels.docType}
@@ -146,24 +140,24 @@ export const DigiTeamBatchImport = props => {
                     <Grid item xs={false} sm />
                     <Grid item xs={12} sm="auto">
                         <Button
-                            variant="contained"
-                            fullWidth
-                            children={batchImportTxt.formLabels.cancelButtonLabel}
                             aria-label={batchImportTxt.formLabels.cancelButtonLabel}
+                            children={batchImportTxt.formLabels.cancelButtonLabel}
                             disabled={props.submitting}
+                            fullWidth
                             // onClick={_restartWorkflow}
+                            variant="contained"
                         />
                     </Grid>
                     <Grid item xs={12} sm="auto">
                         <Button
-                            id="submit-data-collection"
-                            variant="contained"
-                            color="primary"
-                            fullWidth
-                            children={batchImportTxt.formLabels.submitButtonLabel}
                             aria-label={batchImportTxt.formLabels.submitButtonLabel}
-                            onClick={props.handleSubmit}
+                            children={batchImportTxt.formLabels.submitButtonLabel}
+                            color="primary"
                             disabled={props.submitting || props.disableSubmit}
+                            fullWidth
+                            id="submit-data-collection"
+                            onClick={props.handleSubmit}
+                            variant="contained"
                         />
                     </Grid>
                 </Grid>
@@ -173,21 +167,22 @@ export const DigiTeamBatchImport = props => {
 };
 
 DigiTeamBatchImport.propTypes = {
-    submitting: PropTypes.bool,
-    formValues: PropTypes.object,
-    docTypes: PropTypes.array,
-    isLoading: PropTypes.bool,
     actions: PropTypes.object,
-    handleSubmit: PropTypes.func,
-    disableSubmit: PropTypes.bool,
     collectionList: PropTypes.array,
     communityCollectionsLoading: PropTypes.bool,
+    disableSubmit: PropTypes.bool,
+    docTypes: PropTypes.array,
+    formValues: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    isLoading: PropTypes.bool,
+    loadItemsList: PropTypes.func,
+    submitting: PropTypes.bool,
 };
 
 DigiTeamBatchImport.defaultProps = {
+    collectionList: [],
     docTypes: [],
     formValues: {},
-    collectionList: [],
 };
 
 const DigiTeamBatchImportForm = reduxForm({

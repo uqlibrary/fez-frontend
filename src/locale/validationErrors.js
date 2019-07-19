@@ -39,6 +39,7 @@ export default {
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
+        collectionDateRange: 'Please provide a valid start/end Collection Date range',
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',
         requireChecked: 'Please accept deposit agreement',
@@ -46,7 +47,7 @@ export default {
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
-    validationErrorsSummary: {
+    validationErrorsSummary: { // appears in footer error block
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',
@@ -94,6 +95,7 @@ export default {
         impactStatement: 'Creator research statement is required',
         significance: 'Scale/Significance of work is required',
         dateRange: 'Publication start/end dates are invalid',
+        collectionDateRange: 'Collection start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
         community: 'You must select a community',
