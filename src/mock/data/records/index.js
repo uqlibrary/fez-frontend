@@ -1,3 +1,5 @@
+export { default as collectionsByCommunity } from './collectionsByCommunity';
+export { default as communitySearchList } from './communitySearchList';
 export { default as externalDoiSearchResultList } from './externalDoiSearchResultList';
 export { default as externalPubMedSearchResultsList } from './externalPubMedSearchResultsList';
 export { default as externalTitleSearchResultsList } from './externalTitleSearchResultsList';

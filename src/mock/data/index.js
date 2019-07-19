@@ -5,7 +5,9 @@ export {
     authorDetails
 } from './account';
 export {
+    communitySearchList,
     collections,
+    collectionsByCommunity,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
     externalTitleScopusResultsList,
