@@ -6,7 +6,7 @@ import {
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
     SEARCH_AUTHOR_LOOKUP_API,
-    COMMUNITY_LOOKUP_API,
+    COLLECTIONS_BY_COMMUNITY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
@@ -28,7 +28,7 @@ export function collectionsList(parentPid = null) {
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
         let api;
         if (parentPid !== null) {
-            api = COMMUNITY_LOOKUP_API(parentPid);
+            api = COLLECTIONS_BY_COMMUNITY_LOOKUP_API(parentPid);
         } else {
             api = SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
@@ -38,17 +38,14 @@ export function collectionsList(parentPid = null) {
                 sortDirection: 'asc',
             });
         }
-        return get(
-            api
-        )
-            .then(
-                response => {
-                    dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
-                },
-                error => {
-                    dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
-                }
-            );
+        return get(api).then(
+            response => {
+                dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
+            },
+            error => {
+                dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
+            }
+        );
     };
 }
 

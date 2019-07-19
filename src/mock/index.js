@@ -164,7 +164,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ) {
             // SEARCH_INTERNAL_RECORDS_API
             // return [200, mockData.internalTitleSearchListNoResults];
-            return [200, mockData.internalTitleSearchList];
+            if (config.params.key.rek_object_type === 1) {
+                return [200, mockData.communitySearchList];
+            } else {
+                return [200, mockData.internalTitleSearchList];
+            }
         } else if (
             config.params.key.id ||
             config.params.key.doi ||
@@ -190,7 +194,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             )
         )
     )
-    .reply(200, mockData.collectionsByCommunitySearchResultsList)
+    .reply(200, mockData.collectionsByCommunity)
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)
