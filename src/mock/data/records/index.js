@@ -1,5 +1,5 @@
-export { default as collections } from './collections';
-export { default as collectionsByCommunitySearchResultsList } from './collectionsByCommunitySearchResultsList';
+export { default as collectionsByCommunity } from './collectionsByCommunity';
+export { default as communitySearchList } from './communitySearchList';
 export { default as externalDoiSearchResultList } from './externalDoiSearchResultList';
 export { default as externalPubMedSearchResultsList } from './externalPubMedSearchResultsList';
 export { default as externalTitleScopusResultsList } from './externalTitleScopusResultsList';
