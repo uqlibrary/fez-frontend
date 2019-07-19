@@ -17,7 +17,7 @@ const mapStateToProps = (state, props) => {
         itemsLoadingError:
             (state.get('collectionsReducer') && state.get('collectionsReducer').itemsLoadingError) || false,
         itemsLoadingHint: props.loadingHint || 'Loading..',
-        hideLabel: true,
+        hideLabel: !props.parentPid,
         parentPid: props.parentPid,
     };
 };
@@ -45,6 +45,7 @@ const _onChange = (fieldProps) => {
 };
 
 export default function CollectionsSelectField(fieldProps) {
+    console.log('fieldProps = ', fieldProps);
     return (
         <CollectionsList
             onChange={_onChange(fieldProps)}

@@ -1596,13 +1596,13 @@ export default {
                 help: {},
                 formLabels: {
                     community: {
-                        title: 'Select destination community (title)',
-                        label: 'Select destination community (label)',
+                        title: 'Select destination community',
+                        label: 'Select destination community',
                         placeholder: 'Select a community this collection is a member of',
                     },
                     collection: {
-                        title: 'Select collection (title)',
-                        label: 'Select collection (label)',
+                        title: 'Select collection',
+                        label: 'Select collection',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
                     },

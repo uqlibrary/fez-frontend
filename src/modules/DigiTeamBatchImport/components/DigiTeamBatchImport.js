@@ -15,7 +15,7 @@ import { Alert } from '../../SharedComponents/Toolbox/Alert';
 
 import { validation } from 'config';
 import { default as componentLocale } from 'locale/components';
-import { default as publicationForm } from 'locale/publicationForm';
+import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'DigiTeamBatchImport';
 
@@ -55,14 +55,15 @@ export const DigiTeamBatchImport = (
     };
 
     const batchImportTxt = componentLocale.components.digiTeam.batchImport;
+    const addACollectionTxt = publicationLocale.addACollection;
 
     const alertProps = validation.getErrorAlertProps({
         ...props,
         alertLocale: {
-            validationAlert: { ...publicationForm.validationAlert },
-            progressAlert: { ...publicationForm.progressAlert },
-            successAlert: { ...publicationForm.successAlert },
-            errorAlert: { ...publicationForm.errorAlert },
+            validationAlert: { ...publicationLocale.validationAlert },
+            progressAlert: { ...publicationLocale.progressAlert },
+            successAlert: { ...publicationLocale.successAlert },
+            errorAlert: { ...publicationLocale.errorAlert },
         },
     });
 
@@ -76,17 +77,16 @@ export const DigiTeamBatchImport = (
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <StandardCard
-                            title={batchImportTxt.formLabels.community.label}
-                            help={batchImportTxt.details.community.help}
+                            title={batchImportTxt.formLabels.collection.label}
+                            help={batchImportTxt.formLabels.collection.help}
                         >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={props.submitting}
-                                        name="communityID" // community_ismemberof
-                                        // locale={AddACollectionTxt.formLabels.ismemberof}
-                                        locale={batchImportTxt.formLabels.community}
+                                        name="communityID"
+                                        label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
                                         onChange={_onCommunityChange}
@@ -98,11 +98,9 @@ export const DigiTeamBatchImport = (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
-                                            name="collectionID" // collection_ismemberof
+                                            name="collectionID"
                                             disabled={props.submitting}
-                                            // locale={AddACollectionTxt.formLabels.ismemberof}
-                                            title={batchImportTxt.formLabels.collection.title}
-                                            locale={batchImportTxt.formLabels.collection}
+                                            label={batchImportTxt.formLabels.collection.placeholder}
                                             required
                                             validate={[validation.required]}
                                             onChange={_onCollectionChanged}
