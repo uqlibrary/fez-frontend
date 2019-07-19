@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
+import { reduxForm } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
@@ -18,15 +19,16 @@ import { validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationForm } from 'locale/publicationForm';
 
+export const getMenuObjectsFromCollectionsArray = collectionList =>
+    collectionList.map((item, index) => {
+        return { text: item.rek_title, value: item.rek_pid, index };
+    });
+
 export const DigiTeamBatchImport = props => {
     const [communityID, setCommunityID] = useState(
         props.formValues && props.formValues.toJS && props.formValues.toJS().communityID
     );
-    const [collectionsList, setCollectionsList] = useState(
-        props.collectionList.map((item, index) => {
-            return { text: item.rek_title, value: item.rek_pid, index };
-        })
-    );
+    const [collectionsList, setCollectionsList] = useState(getMenuObjectsFromCollectionsArray(props.collectionList));
 
     const _onCommunityChange = (event, newCommunityPid) => {
         if (newCommunityPid !== communityID) {
@@ -54,9 +56,9 @@ export const DigiTeamBatchImport = props => {
         },
     });
 
-    const _restartWorkflow = () => {
-        // TODO
-    };
+    // const _restartWorkflow = () => {
+    //     // TODO
+    // };
 
     return (
         <StandardPage title={batchImportTxt.title}>
@@ -149,7 +151,7 @@ export const DigiTeamBatchImport = props => {
                             children={batchImportTxt.formLabels.cancelButtonLabel}
                             aria-label={batchImportTxt.formLabels.cancelButtonLabel}
                             disabled={props.submitting}
-                            onClick={_restartWorkflow}
+                            // onClick={_restartWorkflow}
                         />
                     </Grid>
                     <Grid item xs={12} sm="auto">
@@ -188,4 +190,8 @@ DigiTeamBatchImport.defaultProps = {
     collectionList: [],
 };
 
-export default DigiTeamBatchImport;
+const DigiTeamBatchImportForm = reduxForm({
+    form: 'batch-import',
+})(DigiTeamBatchImport);
+
+export default DigiTeamBatchImportForm;
