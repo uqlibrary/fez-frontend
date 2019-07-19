@@ -26,11 +26,6 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
-    // console.log('container DigiTeamBatchImport mapStateToProps, state = ', state);
-    // console.log('container DigiTeamBatchImport state.communityId = ', state.get('communityId'));
-    if (!!getFormValues(FORM_NAME)(state)) {
-        console.log('container DigiTeamBatchImport getFormValues: ', getFormValues(FORM_NAME)(state).toJS());
-    }
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const result = {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
@@ -45,7 +40,6 @@ const mapStateToProps = state => {
         itemsList:
             state && state.get('digiTeamBatchImportReducer') ? state.get('digiTeamBatchImportReducer').itemsList : [],
     };
-    console.log('container DigiTeamBatchImport mapStateToProps: result = ', result);
     return result;
 };
 
