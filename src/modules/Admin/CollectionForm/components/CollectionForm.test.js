@@ -2,7 +2,7 @@ import CollectionForm from './CollectionForm';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -58,7 +58,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(CollectionForm, props, isShallow);
+    return getElement(CollectionForm, props);
 }
 
 describe('Collection form test', () => {

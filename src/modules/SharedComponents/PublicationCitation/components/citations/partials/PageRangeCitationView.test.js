@@ -1,18 +1,18 @@
 import PageRangeCitationView from './PageRangeCitationView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps,
         publication: testProps.publication || {},
+        ...testProps,
     };
-    return getElement(PageRangeCitationView, props, isShallow);
+    return getElement(PageRangeCitationView, props);
 }
 
 describe('PageRangeCitationView test ', () => {
     it('should render nothing if search key not found', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

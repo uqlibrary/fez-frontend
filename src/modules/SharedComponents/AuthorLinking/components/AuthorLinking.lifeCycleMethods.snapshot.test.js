@@ -1,6 +1,6 @@
 import { AuthorLinking } from './AuthorLinking';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         classes: {
             infiniteContainer: 'infiniteContainer',
@@ -8,7 +8,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AuthorLinking, props, isShallow);
+    return getElement(AuthorLinking, props);
 }
 
 describe('AuthorLinking', () => {
@@ -89,14 +89,12 @@ describe('AuthorLinking', () => {
         };
 
         const wrapper = setup(props);
-        wrapper
-            .instance()
-            ._selectAuthor({
-                rek_author_id: null,
-                rek_author_pid: 'UQ:111111',
-                rek_author: 'Overgaard, Nana H.',
-                rek_author_order: 1,
-            });
+        wrapper.instance()._selectAuthor({
+            rek_author_id: null,
+            rek_author_pid: 'UQ:111111',
+            rek_author: 'Overgaard, Nana H.',
+            rek_author_order: 1,
+        });
         expect(onChange).toHaveBeenCalled();
 
         wrapper.instance()._acceptAuthorLinkingTermsAndConditions();

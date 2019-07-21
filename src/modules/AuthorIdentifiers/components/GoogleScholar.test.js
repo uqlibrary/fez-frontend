@@ -3,9 +3,9 @@ import { currentAuthor } from 'mock/data/account';
 
 jest.mock('redux-form/immutable');
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
-        'array': {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -21,8 +21,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        'anyTouched': true,
-        'asyncValidating': false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,11 +35,11 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        'dirty': true,
-        'form': 'form',
-        'initialized': false,
-        'invalid': false,
-        'valid': true,
+        dirty: true,
+        form: 'form',
+        initialized: false,
+        invalid: false,
+        valid: true,
         pure: true,
         pristine: true,
         submitting: false,
@@ -64,7 +64,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(GoogleScholar, props, isShallow);
+    return getElement(GoogleScholar, props, args);
 }
 
 describe('Component GoogleScholar ', () => {
@@ -75,7 +75,7 @@ describe('Component GoogleScholar ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render form if author doesn\'t have google scholar id', () => {
+    it("should render form if author doesn't have google scholar id", () => {
         const wrapper = setup({
             author: currentAuthor.uqnoauthid.data,
         });
@@ -118,7 +118,8 @@ describe('Component GoogleScholar ', () => {
     it('should display submission error if saving failed', () => {
         const wrapper = setup({
             author: currentAuthor.uqnoauthid.data,
-            submitFailed: true, error: 'failed!',
+            submitFailed: true,
+            error: 'failed!',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -132,13 +133,13 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should redirect to dashboard if user is not an author', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillMount();
         expect(wrapper.instance().props.history.push).toHaveBeenCalled();
     });
 
     it('should not redirect to dashboard if submit success state has not changed', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillReceiveProps({
             submitSucceeded: wrapper.instance().props.submitSucceeded,
         });
@@ -147,17 +148,20 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should reset author update state when component is unmounted', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
     });
 
     it('should handle keyboard form submit event', () => {
         const handleSubmitFn = jest.fn();
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-            handleSubmit: handleSubmitFn,
-        }, false);
+        const wrapper = setup(
+            {
+                author: currentAuthor.uqnoauthid.data,
+                handleSubmit: handleSubmitFn,
+            },
+            { isShallow: false }
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('form').simulate('keyDown', { key: 'Enter' });
         expect(handleSubmitFn).toHaveBeenCalled();
@@ -168,7 +172,7 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should get correct alert message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const alert1 = wrapper.instance().getAlert({});
         expect(alert1).toBeNull();
         const Alert = wrapper.instance().getAlert({

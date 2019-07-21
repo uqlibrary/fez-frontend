@@ -395,7 +395,7 @@ export const ntro = {
     ],
 };
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: {},
         theme: {},
@@ -403,12 +403,12 @@ function setup(testProps, isShallow = true) {
         account: testProps.account || { canMasquerade: true },
         ...testProps,
     };
-    return getElement(NtroDetailsClass, props, isShallow);
+    return getElement(NtroDetailsClass, props, args);
 }
 
 describe('NtroDetails ', () => {
     it('renders component as expected', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -524,10 +524,7 @@ describe('NtroDetails ', () => {
             account: { canMasquerade: true },
             publication: {
                 ...ntro,
-                fez_record_search_key_ismn: [
-                    { rek_ismn: 12345 },
-                    { rek_ismn: 67890 },
-                ],
+                fez_record_search_key_ismn: [{ rek_ismn: 12345 }, { rek_ismn: 67890 }],
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -538,10 +535,7 @@ describe('NtroDetails ', () => {
             account: { canMasquerade: true },
             publication: {
                 ...ntro,
-                fez_record_search_key_isrc: [
-                    { rek_isrc: 12345 },
-                    { rek_isrc: 67890 },
-                ],
+                fez_record_search_key_isrc: [{ rek_isrc: 12345 }, { rek_isrc: 67890 }],
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -606,12 +600,16 @@ describe('NtroDetails ', () => {
     });
 
     it('rendered full mount', () => {
-        const wrapper = getElement(NtroDetails, {
-            classes: {},
-            theme: {},
-            publication: ntro,
-            account: { canMasquerade: true },
-        }, false);
+        const wrapper = getElement(
+            NtroDetails,
+            {
+                classes: {},
+                theme: {},
+                publication: ntro,
+                account: { canMasquerade: true },
+            },
+            { isShallow: false }
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

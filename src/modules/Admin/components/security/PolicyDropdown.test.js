@@ -1,12 +1,12 @@
 import { PolicyDropdown } from './PolicyDropdown';
 
-const setup = (testProps, isShallow = true) => {
+function setup(testProps = {}) {
     const props = {
         fieldName: 'test',
         ...testProps,
     };
-    return getElement(PolicyDropdown, props, isShallow);
-};
+    return getElement(PolicyDropdown, props);
+}
 
 describe('PolicyDropdown component', () => {
     it('should render properly', () => {

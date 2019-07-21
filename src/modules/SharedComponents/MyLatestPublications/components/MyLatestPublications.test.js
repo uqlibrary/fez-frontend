@@ -1,7 +1,7 @@
 import { latestPubsPayload } from 'mock/data/testing/latestPublications';
 import { MyLatestPublications, styles } from './MyLatestPublications';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         history: {},
         actions: {
@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
         classes: { blueButton: 'blueButton' },
         ...testProps,
     };
-    return getElement(MyLatestPublications, props, isShallow);
+    return getElement(MyLatestPublications, props);
 }
 
 describe('Component MyLatestPublications', () => {

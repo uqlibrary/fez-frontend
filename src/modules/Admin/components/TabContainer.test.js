@@ -1,6 +1,6 @@
 import TabContainer from './TabContainer';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         value: 'ping',
         currentTab: 'pong',
@@ -9,7 +9,7 @@ function setup(testProps = {}, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(TabContainer, props, isShallow);
+    return getElement(TabContainer, props);
 }
 
 describe('TabContainer component', () => {

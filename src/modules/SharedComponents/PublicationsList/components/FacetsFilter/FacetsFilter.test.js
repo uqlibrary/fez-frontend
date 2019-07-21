@@ -2,7 +2,7 @@ import FacetsFilter from './FacetsFilter';
 import { possibleUnclaimedList } from 'mock/data';
 import { general } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         activeFacets: { filters: {}, ranges: {} } || testProps.activeFacets,
         facetsData: {} || testProps.facetsData,
@@ -11,17 +11,17 @@ function setup(testProps, isShallow = true) {
         showOpenAccessFilter: false,
         ...testProps,
     };
-    return getElement(FacetsFilter, props, isShallow);
+    return getElement(FacetsFilter, props, args);
 }
 
 describe('FacetsFilter ', () => {
     it('renders empty component for empty data', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set state when component receives new props', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillReceiveProps({
             activeFacets: {
                 filters: {
@@ -78,7 +78,7 @@ describe('FacetsFilter ', () => {
                     ranges: {},
                 },
             },
-            false
+            { isShallow: false }
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         const category = wrapper.find('FacetsFilterListItem#facet-category-Display-type');
@@ -542,7 +542,7 @@ describe('FacetsFilter ', () => {
         const excludeFacetsList = [];
         const renameFacetsList = {};
         const lookupFacetsList = {};
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
         ).toMatchSnapshot();
@@ -552,7 +552,7 @@ describe('FacetsFilter ', () => {
         const excludeFacetsList = [];
         const renameFacetsList = {};
         const result = [];
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().getFacetsToDisplay({}, excludeFacetsList, renameFacetsList)).toEqual(result);
     });
 
@@ -561,7 +561,7 @@ describe('FacetsFilter ', () => {
         const renameFacetsList = {};
         const lookupFacetsList = {};
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
         ).toMatchSnapshot();
@@ -571,7 +571,7 @@ describe('FacetsFilter ', () => {
         const excludeFacetsList = [];
         const renameFacetsList = { 'Display type': 'Work type' };
         const lookupFacetsList = {};
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
         ).toMatchSnapshot();
@@ -581,7 +581,7 @@ describe('FacetsFilter ', () => {
         const excludeFacetsList = ['Scopus document type', 'Subtype', 'Year published'];
         const renameFacetsList = { 'Display type': 'Work type' };
         const lookupFacetsList = {};
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
         ).toMatchSnapshot();
@@ -598,7 +598,7 @@ describe('FacetsFilter ', () => {
                 { title: 'Generic Document', key: 202, count: 1 },
             ],
         };
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper.instance().getNestedListItems(facetsCategory))).toMatchSnapshot();
     });
 
@@ -627,7 +627,7 @@ describe('FacetsFilter ', () => {
     );
 
     it('_handleResetClick returns empty state for activeFacets', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             hasActiveFilters: true,
             activeFacets: {
@@ -678,7 +678,7 @@ describe('FacetsFilter ', () => {
     });
 
     it('_handleFacetClick returns correct state object for active facets', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ activeFacets: { filters: {}, ranges: {} } });
         wrapper.instance()._handleFacetClick('Category1', 'Facet1')();
         wrapper.instance()._handleFacetClick('Category2', 'Facet2')();
@@ -704,7 +704,7 @@ describe('FacetsFilter ', () => {
     });
 
     it('should set ranges values if _handleYearPublishedRangeFacet is called', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._handleYearPublishedRangeFacet('Year')({ from: 2000, to: 2010 });
         expect(wrapper.state().activeFacets).toEqual({
             filters: {},
@@ -737,7 +737,7 @@ describe('FacetsFilter ', () => {
             ranges: {},
         };
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeFalsy();
     });
 
@@ -749,7 +749,7 @@ describe('FacetsFilter ', () => {
             ranges: {},
         };
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
     });
 
@@ -761,7 +761,7 @@ describe('FacetsFilter ', () => {
             ranges: {},
         };
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', 134)).toBeTruthy();
     });
 
@@ -773,7 +773,7 @@ describe('FacetsFilter ', () => {
             ranges: {},
         };
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().isFacetFilterActive(activeFacets, 'Display type', '134')).toBeFalsy();
     });
 

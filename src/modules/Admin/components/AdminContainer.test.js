@@ -20,7 +20,7 @@ jest.mock('@material-ui/styles/useTheme', () => () => ({
 jest.mock('@material-ui/core/useMediaQuery');
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: {
             helpIcon: 'helpicon',
@@ -43,7 +43,7 @@ function setup(testProps = {}, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AdminContainer, props, isShallow);
+    return getElement(AdminContainer, props, args);
 }
 
 describe('AdminContainer component', () => {
@@ -109,7 +109,7 @@ describe('AdminContainer component', () => {
 
     it('should full mount the component', () => {
         Cookies.get = jest.fn(() => 'tabbed');
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

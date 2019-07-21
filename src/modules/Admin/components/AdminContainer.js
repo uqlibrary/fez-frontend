@@ -19,10 +19,7 @@ import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './FilesSection';
 import AuthorDetailsSection from './AuthorDetailsSection';
 
-import {
-    TabbedContext,
-    RecordContext,
-} from 'context';
+import { TabbedContext, RecordContext } from 'context';
 
 const styles = theme => ({
     helpIcon: {
@@ -39,7 +36,8 @@ const styles = theme => ({
     badgeMargin: {
         top: 8,
         left: 28,
-        width: 12, height: 12,
+        width: 12,
+        height: 12,
         fontSize: 10,
         fontWeight: 'bold',
         backgroundColor: '#595959',
@@ -60,8 +58,7 @@ export const AdminContainer = ({
     history,
 }) => {
     const [tabbed, setTabbed] = useState(
-        Cookies.get('adminFormTabbed') &&
-        !!(Cookies.get('adminFormTabbed') === 'tabbed')
+        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
     );
     const theme = useTheme();
 
@@ -149,11 +146,13 @@ AdminContainer.propTypes = {
 };
 
 export function isChanged(prevProps, nextProps) {
-    return prevProps.disableSubmit === nextProps.disableSubmit &&
+    return (
+        prevProps.disableSubmit === nextProps.disableSubmit &&
         prevProps.submitting === nextProps.submitting &&
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-        prevProps.loadingRecordToView === nextProps.loadingRecordToView;
+        prevProps.loadingRecordToView === nextProps.loadingRecordToView
+    );
 }
 
 export default React.memo(withStyles(styles, { withTheme: true })(AdminContainer), isChanged);

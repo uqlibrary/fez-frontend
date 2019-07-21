@@ -4,12 +4,12 @@ import { recordLinks } from 'mock/data/testing/records';
 import { openAccessConfig } from 'config';
 import { calculateOpenAccess } from 'middleware/publicationEnhancer';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: { header: 'header', link: 'link' },
         publication: testProps.publication || recordLinks,
     };
-    return getElement(LinksClass, props, isShallow);
+    return getElement(LinksClass, props, args);
 }
 
 describe('Component Links ', () => {
@@ -32,7 +32,7 @@ describe('Component Links ', () => {
                     rek_doi_xsdmf_id: 16514,
                     rek_doi: '10.1016/j.pnsc.2012.12.004',
                 },
-            }
+			  }
             : {}),
         fez_record_search_key_link: [
             {
@@ -127,7 +127,7 @@ describe('Component Links ', () => {
     });
 
     it('Full mount render', () => {
-        const wrapper = getElement(Links, { publication: recordLinks }, false);
+        const wrapper = getElement(Links, { publication: recordLinks }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -139,7 +139,10 @@ describe('Component Links ', () => {
     });
 
     it('should render list of 3 not OA links and DOI link with OA Embargo date set for OPEN_ACCESS_ID_DOI', () => {
-        const wrapper = setup({ publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI) }, false);
+        const wrapper = setup(
+            { publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI) },
+            { isShallow: false }
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
         expect(wrapper.find('.openAccessEmbargoed').length).toEqual(1);
@@ -156,7 +159,7 @@ describe('Component Links ', () => {
             },
         };
 
-        const wrapper = setup({ publication: pmcProps }, false);
+        const wrapper = setup({ publication: pmcProps }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
         expect(wrapper.find('.openAccess').length).toEqual(2);
@@ -173,7 +176,7 @@ describe('Component Links ', () => {
             },
         };
 
-        const wrapper = setup({ publication: pmcProps }, false);
+        const wrapper = setup({ publication: pmcProps }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
         expect(wrapper.find('.openAccess').length).toEqual(1);
@@ -196,7 +199,7 @@ describe('Component Links ', () => {
             },
         };
 
-        const wrapper = setup({ publication: pmcProps }, false);
+        const wrapper = setup({ publication: pmcProps }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(4);
         expect(wrapper.find('.openAccess').length).toEqual(1);
@@ -204,7 +207,7 @@ describe('Component Links ', () => {
 
     it(
         'should render 3 not OA links and DOI not OA and PMC ' +
-            'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
+			'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
         () => {
             const pmcProps = {
                 ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),

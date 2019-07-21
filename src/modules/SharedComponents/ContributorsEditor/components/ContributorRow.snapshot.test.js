@@ -2,7 +2,7 @@ import { ContributorRow, styles } from './ContributorRow';
 
 import { authorsSearch } from 'mock/data';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     // build full props list requied by the component
     const props = {
         index: 0,
@@ -26,7 +26,7 @@ function setup(testProps, isShallow = true) {
         required: false,
         ...testProps,
     };
-    return getElement(ContributorRow, props, isShallow);
+    return getElement(ContributorRow, props, args);
 }
 
 describe('Component ContributorRow', () => {
@@ -150,7 +150,7 @@ describe('Component ContributorRow', () => {
                 canMoveUp: true,
                 onMoveUp: testFunction,
             },
-            false
+            { isShallow: false }
         );
 
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
@@ -171,7 +171,7 @@ describe('Component ContributorRow', () => {
                 canMoveDown: true,
                 onMoveDown: testFunction,
             },
-            false
+            { isShallow: false }
         );
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
@@ -193,7 +193,7 @@ describe('Component ContributorRow', () => {
                 showContributorAssignment: true,
                 onSelect: testFunction,
             },
-            false
+            { isShallow: false }
         );
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
@@ -206,7 +206,7 @@ describe('Component ContributorRow', () => {
                 index: 0,
                 onDelete: testFunction,
             },
-            false
+            { isShallow: false }
         );
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
@@ -309,7 +309,7 @@ describe('Component ContributorRow', () => {
 
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = {
             showConfirmation: testFunction,
         };

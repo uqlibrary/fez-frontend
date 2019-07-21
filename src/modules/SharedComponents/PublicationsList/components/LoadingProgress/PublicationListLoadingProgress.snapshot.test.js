@@ -1,7 +1,7 @@
 import { PublicationListLoadingProgressClass } from './PublicationListLoadingProgress';
 import PublicationListLoadingProgress from './PublicationListLoadingProgress';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
@@ -9,7 +9,7 @@ function setup(testProps, isShallow = true) {
         mobile: testProps.mobile || false,
         ...testProps,
     };
-    return getElement(PublicationListLoadingProgressClass, props, isShallow);
+    return getElement(PublicationListLoadingProgressClass, props);
 }
 
 describe('Search Dashboard test', () => {
@@ -28,9 +28,8 @@ describe('Search Dashboard test', () => {
                 wosCount: 5,
             },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -49,9 +48,8 @@ describe('Search Dashboard test', () => {
                 wosCount: 5,
             },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -70,9 +68,8 @@ describe('Search Dashboard test', () => {
                 wosCount: 5,
             },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -92,7 +89,7 @@ describe('Search Dashboard test', () => {
             },
         };
 
-        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, false);
+        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

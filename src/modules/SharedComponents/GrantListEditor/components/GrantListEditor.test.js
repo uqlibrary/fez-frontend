@@ -2,7 +2,7 @@ import React from 'react';
 import { GrantListEditor, styles } from './GrantListEditor';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         disabled: false,
         meta: {},
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
         hideType: false,
         ...testProps,
     };
-    return getElement(GrantListEditor, props, isShallow);
+    return getElement(GrantListEditor, props);
 }
 
 describe('GrantListEditor', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -49,9 +49,7 @@ describe('GrantListEditor', () => {
     it('should render error from props', () => {
         const wrapper = setup({
             meta: {
-                error: (
-                    <span>Some error</span>
-                ),
+                error: <span>Some error</span>,
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -81,7 +79,7 @@ describe('GrantListEditor', () => {
     });
 
     it('should update with error message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -141,7 +139,7 @@ describe('GrantListEditor', () => {
     });
 
     it('should add grant to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().addGrant({
             grantAgencyName: 'Test',
             grantId: '123',
@@ -343,8 +341,8 @@ describe('GrantListEditor', () => {
     it('isFormPopulated() sets state correctly', () => {
         const wrapper = setup({ onChange: jest.fn() });
         wrapper.instance().isFormPopulated(true);
-        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': true, 'grants': [] });
+        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: true, grants: [] });
         wrapper.instance().isFormPopulated(false);
-        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': false, 'grants': [] });
+        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: false, grants: [] });
     });
 });

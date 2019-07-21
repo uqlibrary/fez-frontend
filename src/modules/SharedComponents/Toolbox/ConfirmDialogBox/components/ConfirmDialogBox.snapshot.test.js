@@ -1,6 +1,6 @@
 import ConfirmDialogBox from './ConfirmDialogBox';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         locale: {
             confirmationTitle: 'Confirmation',
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
         onRef: jest.fn(),
         ...testProps,
     };
-    return getElement(ConfirmDialogBox, props, isShallow);
+    return getElement(ConfirmDialogBox, props);
 }
 
 describe('ConfirmDialogBox snapshots tests', () => {
     it('renders component with yes/no buttons', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -54,7 +54,7 @@ describe('ConfirmDialogBox snapshots tests', () => {
     });
 
     it('should show and hide confirmation dialog', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().showConfirmation();
         expect(wrapper.state().isDialogOpen).toBeTruthy();
         expect(toJson(wrapper)).toMatchSnapshot();

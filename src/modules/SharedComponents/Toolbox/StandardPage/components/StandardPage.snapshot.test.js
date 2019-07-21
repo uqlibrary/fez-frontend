@@ -1,9 +1,9 @@
 import { Page } from './StandardPage';
 import StandardPage from './StandardPage';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = { ...testProps, classes: {} };
-    return getElement(Page, props, isShallow);
+    return getElement(Page, props, args);
 }
 
 describe('Snapshot tests for StandardPage component', () => {
@@ -30,16 +30,16 @@ describe('Snapshot tests for StandardPage component', () => {
     });
 });
 
-function setup2(testProps, isShallow = false) {
+function setup2(testProps = {}, args = { isShallow: false }) {
     const props = { ...testProps, classes: {} };
-    return getElement(StandardPage, props, isShallow);
+    return getElement(StandardPage, props, args);
 }
 
 describe('Snapshot tests for full mount StandardPage component', () => {
     it('renders StandardPage with title and  help and content', () => {
         const wrapper = setup2(
             { title: 'Test', children: 'Test', help: { title: 'Test', text: 'Test', buttonLabel: 'Test' } },
-            false
+            { isShallow: false }
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -1,7 +1,7 @@
 import { GrantListEditorFormClass } from './GrantListEditorForm';
 import GrantListEditorForm from './GrantListEditorForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         onAdd: jest.fn(),
         errorText: null,
@@ -14,26 +14,30 @@ function setup(testProps, isShallow = true) {
         isPopulated: testProps.isPopulated || undefined,
         ...testProps,
     };
-    return getElement(GrantListEditorFormClass, props, isShallow);
+    return getElement(GrantListEditorFormClass, props, args);
 }
 
 describe('GrantListEditorForm', () => {
     it('should render default view', () => {
-        const wrapper = getElement(GrantListEditorForm, {
-            onAdd: jest.fn(),
-            errorText: null,
-            locale: { addButton: 'Test' },
-            disabled: false,
-            required: true,
-            hideType: false,
-            classes: {},
-            theme: {},
-        }, false);
+        const wrapper = getElement(
+            GrantListEditorForm,
+            {
+                onAdd: jest.fn(),
+                errorText: null,
+                locale: { addButton: 'Test' },
+                disabled: false,
+                required: true,
+                hideType: false,
+                classes: {},
+                theme: {},
+            },
+            { isShallow: false }
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render default view', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

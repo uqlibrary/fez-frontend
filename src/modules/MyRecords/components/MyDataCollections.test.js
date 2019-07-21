@@ -2,7 +2,7 @@ import myDatasets from './MyRecords';
 import { routes } from 'config';
 import { locale } from 'locale';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         actions: {
             loadAuthorPublications: jest.fn(),
@@ -24,7 +24,7 @@ function setup(testProps, isShallow = true) {
         publicationsListFacets: {},
         ...testProps,
     };
-    return getElement(myDatasets, props, isShallow);
+    return getElement(myDatasets, props);
 }
 
 describe('myDatasets test', () => {
@@ -46,7 +46,7 @@ describe('myDatasets test', () => {
     });
 
     it('renders no results', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -138,14 +138,12 @@ describe('myDatasets test', () => {
         const wrapper = setup({ loadingPublicationsList: true, publicationsList: [] });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper
-            .instance()
-            .componentWillReceiveProps({
-                loadingPublicationsList: false,
-                publicationsList: [1, 2, 3],
-                history: {},
-                location: {},
-            });
+        wrapper.instance().componentWillReceiveProps({
+            loadingPublicationsList: false,
+            publicationsList: [1, 2, 3],
+            history: {},
+            location: {},
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
@@ -193,13 +191,11 @@ describe('myDatasets test', () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper
-            .instance()
-            .componentWillReceiveProps({
-                history: { action: 'PUSH' },
-                location: { pathname: routes.pathConfig.dataset.mine },
-                mine: {},
-            });
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'PUSH' },
+            location: { pathname: routes.pathConfig.dataset.mine },
+            mine: {},
+        });
         expect(testAction).not.toHaveBeenCalled();
     });
 });

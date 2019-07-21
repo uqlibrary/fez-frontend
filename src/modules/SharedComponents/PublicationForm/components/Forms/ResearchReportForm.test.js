@@ -3,12 +3,12 @@ jest.dontMock('./ResearchReportForm');
 import ResearchReportForm from './ResearchReportForm';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(ResearchReportForm, props, isShallow);
+    return getElement(ResearchReportForm, props);
 }
 
 describe('ResearchReportForm renders ', () => {
@@ -67,16 +67,20 @@ describe('ResearchReportForm renders ', () => {
         };
         const wrapper = setup(testProps);
         expect(wrapper.find('Field').length).toEqual(11);
-        expect(wrapper.find('NtroFields').dive()
-            .find('Field').length).toEqual(6);
+        expect(
+            wrapper
+                .find('NtroFields')
+                .dive()
+                .find('Field').length
+        ).toEqual(6);
     });
 
     it('should render validation required', () => {
         const wrapper = setup({
             formValues: {
-                get: (key) => {
+                get: key => {
                     const values = {
-                        'rek_subtype': NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+                        rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
                     };
                     return values[key];
                 },

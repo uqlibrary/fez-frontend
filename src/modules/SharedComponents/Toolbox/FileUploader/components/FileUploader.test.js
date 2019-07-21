@@ -16,12 +16,12 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploader, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploader, getProps(testProps));
 }
 
 describe('Component FileUploader', () => {
-    const getMockFile = name => ({ fileData: new File([''], name), name: name, size: 0 });
+    const getMockFile = (name) => ({ fileData: new File([''], name), name: name, size: 0 });
     const MockDate = require('mockdate');
     beforeEach(() => {
         MockDate.set('2020-01-01T00:00:00.000Z', 10);
@@ -35,7 +35,7 @@ describe('Component FileUploader', () => {
     });
 
     it('should render default component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -52,7 +52,7 @@ describe('Component FileUploader', () => {
                     fileNameRestrictions: FILE_NAME_RESTRICTION,
                 },
             }),
-            false
+            { isShallow: false }
         );
         const tree = toJson(wrapper);
 
@@ -63,13 +63,13 @@ describe('Component FileUploader', () => {
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({ disabled: true }, true);
+        const wrapper = setup({ disabled: true });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
     it('should render rows for uploaded files', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         const tree = toJson(wrapper);
 
@@ -152,7 +152,7 @@ describe('Component FileUploader', () => {
 
     it(
         'should render rows for uploaded files with access condition dropdown based ' +
-            'on quick template Id and require open access',
+			'on quick template Id and require open access',
         () => {
             const wrapper = setup({ defaultQuickTemplateId: 3, requireOpenAccessStatus: true });
 
@@ -188,7 +188,7 @@ describe('Component FileUploader', () => {
     });
 
     it('should not reset file access or embargo date info when second lot of files dropped', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         const fileA = getMockFile('a.txt');
         const fileB = getMockFile('b.txt');
@@ -226,7 +226,7 @@ describe('Component FileUploader', () => {
 
     it(
         'should accept terms and condition and reset back to not accepted state if access condition ' +
-            'changed back to closed access',
+			'changed back to closed access',
         () => {
             const wrapper = setup({ requireOpenAccessStatus: true });
 
@@ -256,7 +256,7 @@ describe('Component FileUploader', () => {
 
     it(
         'should return false if any file has open access with date selected ' +
-            'but the terms and conditions are not accepted',
+			'but the terms and conditions are not accepted',
         () => {
             const wrapper = setup({ requireOpenAccessStatus: true });
 
@@ -324,7 +324,7 @@ describe('Component FileUploader', () => {
     });
 
     it('should get correct error message based on errors object', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         expect(
             wrapper.instance().getErrorMessage({
@@ -336,14 +336,14 @@ describe('Component FileUploader', () => {
             })
         ).toEqual(
             'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; ' +
-                'File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have ' +
-                'invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum ' +
-                'allowed upload file size'
+				'File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have ' +
+				'invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum ' +
+				'allowed upload file size'
         );
     });
 
     it('should get empty string as an error message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper.instance().getErrorMessage({
                 tooManyFiles: [],
@@ -371,7 +371,7 @@ describe('Component FileUploader', () => {
     });
 
     it('should keep terms and conditions as accepted on file delete if any of remaining files are open access', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const fileA = getMockFile('a.txt');
         const fileB = getMockFile('b.txt');
         const fileC = getMockFile('c.txt');

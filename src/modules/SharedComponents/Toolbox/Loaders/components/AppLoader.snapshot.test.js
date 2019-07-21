@@ -1,7 +1,7 @@
 import { AppLoader } from './AppLoader';
 import AppLoaderWithStyles from './AppLoader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {
@@ -23,7 +23,7 @@ function setup(testProps, isShallow = true) {
             },
         },
     };
-    return getElement(AppLoader, props, isShallow);
+    return getElement(AppLoader, props);
 }
 
 describe('Component AppLoader', () => {

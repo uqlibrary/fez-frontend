@@ -3,8 +3,8 @@ import FormViewToggler from './FormViewToggler';
 jest.mock('../../../context');
 import { useTabbedContext } from 'context';
 
-function setup(isShallow = true) {
-    return getElement(FormViewToggler, {}, isShallow);
+function setup() {
+    return getElement(FormViewToggler, {});
 }
 
 describe('FormViewToggler component', () => {
@@ -33,7 +33,9 @@ describe('FormViewToggler component', () => {
         }));
         const wrapper = setup();
 
-        wrapper.find('WithStyles(Switch)').props()
+        wrapper
+            .find('WithStyles(Switch)')
+            .props()
             .onChange();
         expect(toggleFn).toHaveBeenCalled();
     });

@@ -1,7 +1,7 @@
 import { SimpleSearchComponent, styles } from './SimpleSearchComponent';
 import * as constants from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         searchText: '',
         className: 'simple-search',
@@ -24,12 +24,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(SimpleSearchComponent, props, isShallow);
+    return getElement(SimpleSearchComponent, props);
 }
 
 describe('SimpleSearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -129,7 +129,7 @@ describe('SimpleSearchComponent', () => {
     });
 
     it('should toggle mobile search', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._handleToggleMobile();
         expect(wrapper.state().showMobile).toBe(true);
         wrapper.instance()._handleToggleMobile();
@@ -147,7 +147,7 @@ describe('SimpleSearchComponent', () => {
     });
 
     it('searchTextValidationMessage() should return a message for being too long', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ searchText: 'this is way too long' });
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
@@ -157,7 +157,7 @@ describe('SimpleSearchComponent', () => {
     });
 
     it('searchTextValidationMessage() should return false for being fine', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 20;
         wrapper.setState({ searchText: 'this is fine' });
         wrapper.update();
@@ -186,7 +186,7 @@ describe('SimpleSearchComponent', () => {
             onSearchTextChange: () => {},
         });
         const defaultPropMethodNames = ['onSearch', 'onToggleSearchMode', 'onInvalidSearch'];
-        defaultPropMethodNames.forEach(methodName => {
+        defaultPropMethodNames.forEach((methodName) => {
             expect(wrapper.instance().props[methodName]()).toBeUndefined();
         });
     });

@@ -12,18 +12,18 @@ import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
 
 export const FORM_NAME = 'Prototype';
 
-export const isFileValid = (dataStream) => {
-    const { files: { blacklist } } = viewRecordsConfig;
+export const isFileValid = dataStream => {
+    const {
+        files: { blacklist },
+    } = viewRecordsConfig;
 
-    return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-        dataStream.dsi_state === 'A';
+    return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
 };
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(adminUpdate(values.toJS()))
-        .catch(error => {
-            throw new SubmissionError({ _error: error });
-        });
+    return dispatch(adminUpdate(values.toJS())).catch(error => {
+        throw new SubmissionError({ _error: error });
+    });
 };
 
 let PrototypeContainer = reduxForm({
@@ -31,7 +31,7 @@ let PrototypeContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const recordToView = state.get('viewRecordReducer').recordToView;
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     let initialFormValues = null;
@@ -46,19 +46,15 @@ const mapStateToProps = (state) => {
                 subject: [],
                 securitySection: {
                     rek_security_policy: recordToView.rek_security_policy,
-                    ...(
-                        recordType === RECORD_TYPE_COLLECTION
-                            ? { rek_datastream_policy: recordToView.rek_datastream_policy }
-                            : {}
-                    ),
-                    ...(
-                        recordType === RECORD_TYPE_RECORD
-                            ? {
-                                rek_security_inherited: recordToView.rek_security_inherited,
-                                dataStreams: recordToView.fez_datastream_info.filter(isFileValid),
-                            }
-                            : {}
-                    ),
+                    ...(recordType === RECORD_TYPE_COLLECTION
+                        ? { rek_datastream_policy: recordToView.rek_datastream_policy }
+                        : {}),
+                    ...(recordType === RECORD_TYPE_RECORD
+                        ? {
+                            rek_security_inherited: recordToView.rek_security_inherited,
+                            dataStreams: recordToView.fez_datastream_info.filter(isFileValid),
+                        }
+                        : {}),
                 },
             },
         };
@@ -73,10 +69,13 @@ const mapStateToProps = (state) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
-PrototypeContainer = connect(mapStateToProps, mapDispatchToProps)(PrototypeContainer);
+PrototypeContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PrototypeContainer);
 
 export default withRouter(PrototypeContainer);

@@ -1,6 +1,6 @@
 import LicenseSelectorField from './LicenseSelectorField';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         label: 'License selector field',
         input: {
@@ -12,7 +12,7 @@ function setup(testProps = {}, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(LicenseSelectorField, props, isShallow);
+    return getElement(LicenseSelectorField, props);
 }
 
 describe('LicenseSelectorField component', () => {

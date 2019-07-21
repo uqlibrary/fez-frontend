@@ -2,7 +2,7 @@ import { publicationDetails } from 'mock/data/testing/records';
 import { PublicationDetailsClass } from './PublicationDetails';
 import PublicationDetails from './PublicationDetails';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
         publication: testProps.publication || publicationDetails,
@@ -10,12 +10,12 @@ function setup(testProps, isShallow = true) {
         actions: testProps.actions,
         classes: { ul: 'ul', header: 'header', data: 'data', gridRow: 'gridRow' },
     };
-    return getElement(PublicationDetailsClass, props, isShallow);
+    return getElement(PublicationDetailsClass, props, args);
 }
 
 describe('Publication Details Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -43,21 +43,26 @@ describe('Publication Details Component ', () => {
     });
 
     it('Renders nothing for no display type lookup', () => {
-        const wrapper = setup({ publication: {
-            ...publicationDetails,
-            rek_display_type_lookup: null,
-        },
+        const wrapper = setup({
+            publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: null,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('Renders full mount', () => {
-        const wrapper = getElement(PublicationDetails, {
-            publication: {
-                ...publicationDetails,
-                rek_display_type_lookup: null,
+        const wrapper = getElement(
+            PublicationDetails,
+            {
+                publication: {
+                    ...publicationDetails,
+                    rek_display_type_lookup: null,
+                },
             },
-        }, false);
+            { isShallow: false }
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,16 +1,16 @@
 import Masquerade from './Masquerade';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
-        author: testProps.author || null,
-        actions: testProps.actions || {},
-        history: testProps.history || {
+        author: null,
+        actions: {},
+        history: {
             push: jest.fn(),
         },
-        account: testProps.account || {},
+        account: {},
         ...testProps,
     };
-    return getElement(Masquerade, props, isShallow);
+    return getElement(Masquerade, props);
 }
 
 beforeAll(() => {
@@ -20,7 +20,7 @@ beforeAll(() => {
 
 describe('Component Masquerade', () => {
     it('should correctly set state on username change', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         wrapper.instance()._usernameChanged({
             target: {
@@ -33,7 +33,7 @@ describe('Component Masquerade', () => {
     });
 
     it('should not masquerade if Esc key is pressed', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._usernameChanged({
             target: {
                 value: 'uqtest',
@@ -49,7 +49,7 @@ describe('Component Masquerade', () => {
     });
 
     it('should not masquerade if Enter is pressed but username length is 0', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._masqueradeAs({
             key: 'Enter',
         });
@@ -57,7 +57,7 @@ describe('Component Masquerade', () => {
     });
 
     it('should masquerade if Enter is pressed and username is set', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._usernameChanged({
             target: {
                 value: 'uqtest',
@@ -72,7 +72,7 @@ describe('Component Masquerade', () => {
     });
 
     it('should not masquerade if Enter is pressed without entering username', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._masqueradeAs({
             key: 'Enter',
         });
@@ -80,7 +80,7 @@ describe('Component Masquerade', () => {
     });
 
     it('should not masquerade if button is pressed without entering username', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._masqueradeAs({ type: 'Click' });
         expect(wrapper.state('loading')).toBeFalsy();
     });

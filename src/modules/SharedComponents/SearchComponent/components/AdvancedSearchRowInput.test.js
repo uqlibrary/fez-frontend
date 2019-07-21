@@ -1,6 +1,6 @@
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         children: jest.fn(),
         inputField: {
@@ -12,12 +12,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AdvancedSearchRowInput, props, isShallow);
+    return getElement(AdvancedSearchRowInput, props);
 }
 
 describe('AdvancedSearchRowInput', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -31,14 +31,14 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
                 'aria-label': undefined,
-                'autoComplete': 'search',
-                'error': false,
-                'errorText': undefined,
-                'hideLabel': true,
-                'id': 'textfield',
-                'label': undefined,
-                'placeholder': 'Field hint',
-                'onChange': inputProps.onChange,
+                autoComplete: 'search',
+                error: false,
+                errorText: undefined,
+                hideLabel: true,
+                id: 'textfield',
+                label: undefined,
+                placeholder: 'Field hint',
+                onChange: inputProps.onChange,
             });
         });
         setup({
@@ -52,14 +52,14 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
                 'aria-label': undefined,
-                'autoComplete': 'search',
-                'error': true,
-                'errorText': 'Must be at least 10 characters',
-                'hideLabel': true,
-                'id': 'textfield',
-                'label': undefined,
-                'placeholder': 'This is hint for text input',
-                'onChange': inputProps.onChange,
+                autoComplete: 'search',
+                error: true,
+                errorText: 'Must be at least 10 characters',
+                hideLabel: true,
+                id: 'textfield',
+                label: undefined,
+                placeholder: 'This is hint for text input',
+                onChange: inputProps.onChange,
             });
         });
         setup({
@@ -127,16 +127,16 @@ describe('AdvancedSearchRowInput', () => {
     it('should render correct input props for publisher lookup field', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
-                'allowFreeText': true,
+                allowFreeText: true,
                 'aria-label': 'Type a publisher to search for',
-                'error': false,
-                'errorText': undefined,
-                'floatingLabelText': 'Type a publisher to search for',
-                'hideLabel': true,
-                'hintText': 'Add your publisher',
-                'label': undefined,
-                'onChange': inputProps.onChange,
-                'value': 'Test',
+                error: false,
+                errorText: undefined,
+                floatingLabelText: 'Type a publisher to search for',
+                hideLabel: true,
+                hintText: 'Add your publisher',
+                label: undefined,
+                onChange: inputProps.onChange,
+                value: 'Test',
             });
         });
         setup({
@@ -157,16 +157,16 @@ describe('AdvancedSearchRowInput', () => {
     it('should render correct input props for org unit lookup field', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
-                'allowFreeText': true,
+                allowFreeText: true,
                 'aria-label': 'Type a org unit to search for',
-                'error': false,
-                'errorText': undefined,
-                'floatingLabelText': 'Type a org unit to search for',
-                'hideLabel': true,
-                'hintText': 'Add your org unit',
-                'label': undefined,
-                'onChange': inputProps.onChange,
-                'value': 'Test',
+                error: false,
+                errorText: undefined,
+                floatingLabelText: 'Type a org unit to search for',
+                hideLabel: true,
+                hintText: 'Add your org unit',
+                label: undefined,
+                onChange: inputProps.onChange,
+                value: 'Test',
             });
         });
         setup({
@@ -188,17 +188,17 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
                 'aria-label': 'Select multiple thesis types to search for',
-                'error': false,
-                'errorText': undefined,
-                'hintText': 'Select as many thesis types as you want',
-                'label': undefined,
-                'onChange': inputProps.onChange,
-                'autoWidth': false,
-                'displayEmpty': true,
-                'hideLabel': true,
-                'multiple': true,
-                'selectedValue': [],
-                'style': { 'marginTop': 0 },
+                error: false,
+                errorText: undefined,
+                hintText: 'Select as many thesis types as you want',
+                label: undefined,
+                onChange: inputProps.onChange,
+                autoWidth: false,
+                displayEmpty: true,
+                hideLabel: true,
+                multiple: true,
+                selectedValue: [],
+                style: { marginTop: 0 },
             });
         });
         setup({
@@ -221,19 +221,19 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
                 'aria-label': 'Select multiple collections to search for',
-                'error': false,
-                'errorText': undefined,
-                'hintText': 'Select as many genres as you want',
-                'label': undefined,
-                'onChange': inputProps.onChange,
-                'autoWidth': false,
-                'displayEmpty': true,
-                'hideLabel': true,
-                'multiple': true,
-                'selectedValue': [],
-                'errorHint': undefined,
-                'loadingHint': undefined,
-                'style': { 'marginTop': 0 },
+                error: false,
+                errorText: undefined,
+                hintText: 'Select as many genres as you want',
+                label: undefined,
+                onChange: inputProps.onChange,
+                autoWidth: false,
+                displayEmpty: true,
+                hideLabel: true,
+                multiple: true,
+                selectedValue: [],
+                errorHint: undefined,
+                loadingHint: undefined,
+                style: { marginTop: 0 },
             });
         });
         setup({
@@ -256,16 +256,16 @@ describe('AdvancedSearchRowInput', () => {
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             expect(inputProps).toEqual({
                 'aria-label': 'Select status to search for',
-                'error': false,
-                'errorText': undefined,
-                'hintText': 'Select status you want',
-                'label': undefined,
-                'onChange': inputProps.onChange,
-                'autoWidth': false,
-                'displayEmpty': false,
-                'hideLabel': true,
-                'selectedValue': [],
-                'style': { 'marginTop': 0 },
+                error: false,
+                errorText: undefined,
+                hintText: 'Select status you want',
+                label: undefined,
+                onChange: inputProps.onChange,
+                autoWidth: false,
+                displayEmpty: false,
+                hideLabel: true,
+                selectedValue: [],
+                style: { marginTop: 0 },
             });
         });
         setup({
@@ -322,7 +322,7 @@ describe('AdvancedSearchRowInput', () => {
     });
 
     it('should call onChange from input props for TextField', () => {
-        const onChangeFn = jest.fn((value) => expect(value).toEqual('Testing'));
+        const onChangeFn = jest.fn(value => expect(value).toEqual('Testing'));
         const childrenFn = jest.fn((InputComponent, inputProps) => {
             const wrapper = getElement(InputComponent, inputProps);
             expect(toJson(wrapper)).toMatchSnapshot();
@@ -347,7 +347,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('AuthorIdField').simulate('change', { id: '1234', value: 'Test value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -371,7 +371,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('AuthorIdField').simulate('change', { id: 'test', value: 'Test value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -395,7 +395,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('OrgUnitNameField').simulate('change', { id: '1245', value: 'Test Value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -413,12 +413,12 @@ describe('AdvancedSearchRowInput', () => {
     });
 
     it('should call onChange from input props for StatusLookup field', () => {
-        const onChangeFn = jest.fn((value) => {
+        const onChangeFn = jest.fn(value => {
             expect(value).toEqual('Test Value');
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('UnpublishedStatusField').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
@@ -436,12 +436,12 @@ describe('AdvancedSearchRowInput', () => {
     });
 
     it('should call onChange from input props for CollectionsLookup field', () => {
-        const onChangeFn = jest.fn((value) => {
+        const onChangeFn = jest.fn(value => {
             expect(value).toEqual('Test Value');
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('CollectionsSelectField').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
@@ -465,7 +465,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('ThesisSubtypeField').simulate('change', 'Test');
             expect(onChangeFn).toHaveBeenCalled();

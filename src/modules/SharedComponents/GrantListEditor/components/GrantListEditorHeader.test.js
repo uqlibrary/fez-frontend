@@ -1,6 +1,6 @@
 import { GrantListEditorHeader, styles } from './GrantListEditorHeader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         locale: {},
@@ -10,12 +10,12 @@ function setup(testProps, isShallow = true) {
         hideType: false,
         ...testProps,
     };
-    return getElement(GrantListEditorHeader, props, isShallow);
+    return getElement(GrantListEditorHeader, props);
 }
 
 describe('GrantListEditorHeader', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -34,14 +34,14 @@ describe('GrantListEditorHeader', () => {
     });
 
     it('should set confirmation box ref', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().handleConfirmationBoxRef('test');
         expect(wrapper.instance().confirmationBox).toEqual('test');
     });
 
     it('should show confirmation box', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = {
             showConfirmation: showConfirmationFn,
         };

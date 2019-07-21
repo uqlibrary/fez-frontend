@@ -1,11 +1,11 @@
 import SelectedSecurityPolicyDescription from './SelectedSecurityPolicyDescription';
 
-const setup = (testProps, isShallow = true) => {
+const setup = testProps => {
     const props = {
         title: 'test',
         ...testProps,
     };
-    return getElement(SelectedSecurityPolicyDescription, props, isShallow);
+    return getElement(SelectedSecurityPolicyDescription, props);
 };
 
 describe('SelectedSecurityPolicyDescription component', () => {

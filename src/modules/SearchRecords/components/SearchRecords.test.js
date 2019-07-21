@@ -2,7 +2,7 @@ import SearchRecords from './SearchRecords';
 import { routes } from 'config';
 import { locale } from 'locale';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         publicationsList: [],
         searchLoading: false,
@@ -19,12 +19,12 @@ function setup(testProps, isShallow = true) {
         history: {},
         ...testProps,
     };
-    return getElement(SearchRecords, props, isShallow);
+    return getElement(SearchRecords, props);
 }
 
 describe('SearchRecords page', () => {
     it('should render placeholders', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -82,7 +82,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should not try to parse empty search location in componentWillReceiveProps lifecycle method', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testFn = jest.fn();
         wrapper.instance().parseSearchQueryStringFromUrl = testFn;
         wrapper.setProps({
@@ -335,7 +335,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should correctly parse search query string from location search (default filters + title', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         const result = wrapper
             .instance()
@@ -359,7 +359,7 @@ describe('SearchRecords page', () => {
     });
 
     it('should parse properly when activeFacets.showOpenAccessOnly is not present in url', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = wrapper.instance().parseSearchQueryStringFromUrl('activeFacets%5Btest1%5D=test2');
         expect(test).toMatchSnapshot();
     });
@@ -368,7 +368,7 @@ describe('SearchRecords page', () => {
         'should correctly parse search query string from location search ' +
             '(default filters + publication type facet + title',
         () => {
-            const wrapper = setup({});
+            const wrapper = setup();
 
             const result = wrapper
                 .instance()
@@ -401,7 +401,7 @@ describe('SearchRecords page', () => {
         'should correctly parse search query string from location search ' +
             '(changed filters + publication type + open access)',
         () => {
-            const wrapper = setup({});
+            const wrapper = setup();
 
             const result = wrapper
                 .instance()
@@ -431,7 +431,7 @@ describe('SearchRecords page', () => {
     );
 
     it('should correctly parse search query string from location search (published year)', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         const result = wrapper
             .instance()
@@ -467,7 +467,7 @@ describe('SearchRecords page', () => {
         'should correctly parse search query string from location search and ' +
             'reset pageSize if not in valid values (20, 50, 100)',
         () => {
-            const wrapper = setup({});
+            const wrapper = setup();
 
             const result = wrapper
                 .instance()
@@ -504,7 +504,7 @@ describe('SearchRecords page', () => {
         'should correctly parse search query string from location search and ' +
             'reset sortDirection if not in valid values (Desc, Asc)',
         () => {
-            const wrapper = setup({});
+            const wrapper = setup();
 
             const result = wrapper
                 .instance()
@@ -541,7 +541,7 @@ describe('SearchRecords page', () => {
         'should correctly parse search query string from location search and ' +
             'reset sortBy if not in the valid values',
         () => {
-            const wrapper = setup({});
+            const wrapper = setup();
 
             const result = wrapper
                 .instance()

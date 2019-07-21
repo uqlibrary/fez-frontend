@@ -1,7 +1,7 @@
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { UQ352045 } from 'mock/data/records';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         recordToFix: null,
         author: { aut_id: 410 },
@@ -17,7 +17,7 @@ function setup(testProps, isShallow = true) {
         actions: {},
         ...testProps,
     };
-    return getElement(MyIncompleteRecordContainer, props, isShallow);
+    return getElement(MyIncompleteRecordContainer, props);
 }
 
 describe('MyIncompleteRecord Container', () => {
@@ -55,7 +55,7 @@ describe('MyIncompleteRecord Container', () => {
     });
 
     it('should display form once record and author loaded', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         const componentWillReceiveProps = jest.spyOn(wrapper.instance(), 'componentWillReceiveProps');
         const getInitialValues = jest.spyOn(wrapper.instance(), 'getInitialValues');
@@ -484,7 +484,7 @@ describe('MyIncompleteRecord Container', () => {
     });
 
     it('isFileValid()', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         expect(
             wrapper.instance().isFileValid({
@@ -658,7 +658,7 @@ describe('Cards', () => {
     };
 
     it('will display correct empty fields for an Architectural Design work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Design',
@@ -686,7 +686,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Textual Book work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Book',
@@ -714,7 +714,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Textual Book work with lang supplied', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Book',
@@ -749,7 +749,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Musical Creative work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Creative',
@@ -777,7 +777,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Website Creative work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Creative',
@@ -805,7 +805,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Public Sector Research Report work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Research Report',
@@ -833,7 +833,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Live Performance of Musical Creative Work work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Creative',
@@ -861,7 +861,7 @@ describe('Cards', () => {
     });
 
     it('will display correct empty fields for a Exhibition Creative Work work', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Creative',
@@ -890,7 +890,7 @@ describe('Cards', () => {
 
     // of course, the card should never be called like this...
     it('will display empty where nothing is incomplete', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testRecord = {
             ...baseRecordTest,
             rek_genre: 'Creative',

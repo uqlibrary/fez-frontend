@@ -1,8 +1,8 @@
-import { MyIncompleteRecordClass, styles }from './MyIncompleteRecord';
+import { MyIncompleteRecordClass, styles } from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import { routes } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -62,7 +62,7 @@ function setup(testProps, isShallow = true) {
         publicationToFixFileUploadingError: false,
         ...testProps,
     };
-    return getElement(MyIncompleteRecordClass, props, isShallow);
+    return getElement(MyIncompleteRecordClass, props);
 }
 
 describe('Component MyIncompleteRecord', () => {
@@ -73,7 +73,8 @@ describe('Component MyIncompleteRecord', () => {
             isAuthorLinked: false,
             history: {
                 go: testMethod,
-            } });
+            },
+        });
         expect(testMethod).toHaveBeenCalled();
     });
 
@@ -142,10 +143,12 @@ describe('Component MyIncompleteRecord', () => {
 
     it('should be able to navigate to specific routes', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ history: {
-            push: testFn,
-            go: jest.fn(),
-        } });
+        const wrapper = setup({
+            history: {
+                push: testFn,
+                go: jest.fn(),
+            },
+        });
         wrapper.instance()._navigateToMyIncomplete();
         expect(testFn).toBeCalledWith(routes.pathConfig.records.incomplete);
 
@@ -159,7 +162,6 @@ describe('Component MyIncompleteRecord', () => {
             recordToFix: mockRecordToFix,
             publicationToFixFileUploadingError: false,
         });
-
 
         const nextProps = { submitSucceeded: true };
         wrapper.setProps(nextProps);
@@ -235,7 +237,6 @@ describe('Component MyIncompleteRecord', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
     it('_navigateToMyIncomplete()', () => {
         const testFN = jest.fn();
         const wrapper = setup({
@@ -244,9 +245,7 @@ describe('Component MyIncompleteRecord', () => {
             },
             recordToFix: {
                 fez_datastream_info: [],
-                fez_record_search_key_author_id: [
-                    { rek_author_id: 1 },
-                ],
+                fez_record_search_key_author_id: [{ rek_author_id: 1 }],
             },
             history: { push: testFN },
             accountAuthorLoading: false,
@@ -264,9 +263,7 @@ describe('Component MyIncompleteRecord', () => {
             },
             recordToFix: {
                 fez_datastream_info: [],
-                fez_record_search_key_author_id: [
-                    { rek_author_id: 1 },
-                ],
+                fez_record_search_key_author_id: [{ rek_author_id: 1 }],
             },
             history: { push: testFN },
             accountAuthorLoading: false,

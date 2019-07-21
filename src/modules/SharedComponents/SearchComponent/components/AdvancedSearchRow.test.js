@@ -12,13 +12,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(AdvancedSearchRow, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(AdvancedSearchRow, getProps(testProps));
 }
 
 describe('AdvancedSearchRow', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -36,7 +36,7 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const wrapper = setup({ rowIndex: 1, onSearchRowChange: testFn });
         wrapper.instance()._handleSearchFieldChange({ target: { value: 2 } });
-        expect(testFn).toHaveBeenCalledWith(1, { 'label': '', 'searchField': 2, 'value': '' });
+        expect(testFn).toHaveBeenCalledWith(1, { label: '', searchField: 2, value: '' });
     });
 
     it('should handle search field text change', () => {
@@ -59,7 +59,7 @@ describe('AdvancedSearchRow', () => {
     });
 
     it('should render input component and props', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const inputComponent = wrapper.instance().renderInputComponentAndProps()('div', {});
         expect(inputComponent).toMatchSnapshot();
     });

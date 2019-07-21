@@ -3,7 +3,7 @@
 - UI components
 
 ## Testing
-  
+
 Global test setup is done in /src/test.setup.js:
 
 - getElement - globally available function which creates a shallow or mounted component
@@ -14,7 +14,11 @@ Template for modules unit tests:
 
 import [COMPONENT_NAME] from './[COMPONENT_NAME]';
 
-function setup(testProps, isShallow = true) {
+/**
+ * @params Object testProps
+ * @params Object args Possible keys isShallow, context, store, requireStore
+ */
+function setup(testProps = {}, args = {}) {
     // build full props list required by the component
     const props = {
         ...testProps,
@@ -26,7 +30,7 @@ function setup(testProps, isShallow = true) {
             push: jest.fn()
         }
     };
-    return getElement([COMPONENT_NAME], props, isShallow);
+    return getElement([COMPONENT_NAME], props, args);
 }
 
 describe('Component [COMPONENT_NAME]', () => {

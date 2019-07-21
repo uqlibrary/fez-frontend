@@ -121,7 +121,7 @@ exports[`SecurityCard component should render security card correctly for collec
           xs={12}
         >
           <Memo(SecuritySelector)
-            disabled={false}
+            disabled={true}
             fieldName="securitySection.rek_security_policy"
             recordType="collection"
             securityPolicy={5}
@@ -155,7 +155,7 @@ exports[`SecurityCard component should render security card correctly for collec
           xs={12}
         >
           <Memo(SecuritySelector)
-            disabled={false}
+            disabled={true}
             fieldName="securitySection.rek_datastream_policy"
             recordType="collection"
             securityPolicy={5}

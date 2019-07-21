@@ -1,11 +1,11 @@
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, args = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(FileUploadDropzoneStaticContent, props, isShallow);
+    return getElement(FileUploadDropzoneStaticContent, props, args);
 }
 
 describe('Component FileUploadDropzoneStaticContent', () => {
@@ -17,7 +17,7 @@ describe('Component FileUploadDropzoneStaticContent', () => {
                 fileUploadInstruction: 'Upload whatever you like :)',
             },
         };
-        const wrapper = setup(props, false);
+        const wrapper = setup(props, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

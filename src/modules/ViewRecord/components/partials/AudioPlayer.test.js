@@ -1,25 +1,25 @@
 import { journalArticle } from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
         pid: testProps.pid || journalArticle.rek_pid,
         fileName:
-            testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+			testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: testProps.mimeType || 'audio/mp3',
     };
-    return getElement(AudioPlayer, props, isShallow);
+    return getElement(AudioPlayer, props, args);
 }
 
 describe('Audio Player Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set playing state via audioPlayerPlay()', async() => {
-        const wrapper = setup({}, true);
+        const wrapper = setup();
 
         // Without promise
         wrapper.instance().audioPlayerPlay();
@@ -38,7 +38,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should play audio via button click', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('PlayArrowIcon.play');
         const audio = wrapper.find('audio');
@@ -49,7 +49,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should play audio', () => {
-        const shallowWrapper = setup({});
+        const shallowWrapper = setup();
         shallowWrapper.setState({ isPlaying: true });
         expect(toJson(shallowWrapper)).toMatchSnapshot();
     });
@@ -62,7 +62,7 @@ describe('Audio Player Component ', () => {
                 fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
                 mimeType: 'audio/mp3',
             },
-            false
+            { isShallow: false }
         );
         wrapper.setState({ isPlaying: true });
         wrapper.update();
@@ -83,7 +83,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should set component state to playing', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({ isPlaying: true });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -16,7 +16,7 @@ jest.mock('query-string', () => ({
 }));
 import queryString from 'query-string';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {
             tabIndicator: 'tabindicator',
@@ -35,7 +35,7 @@ function setup(testProps = {}, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AdminInterface, props, isShallow);
+    return getElement(AdminInterface, props);
 }
 
 describe('AdminInterface component', () => {

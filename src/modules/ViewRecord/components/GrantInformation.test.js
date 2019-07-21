@@ -2,7 +2,7 @@ import { journalArticle } from 'mock/data/testing/records';
 import { GrantInformationClass } from './GrantInformation';
 import GrantInformation from './GrantInformation';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         publication: journalArticle,
         history: { push: jest.fn() },
@@ -10,12 +10,12 @@ function setup(testProps, isShallow = true) {
         classes: {},
         ...testProps,
     };
-    return getElement(GrantInformationClass, props, isShallow);
+    return getElement(GrantInformationClass, props, args);
 }
 
 describe('Grant Information Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#grantInformation').length).toEqual(1);
     });
@@ -29,7 +29,7 @@ describe('Grant Information Component ', () => {
                 actions: {},
                 classes: {},
             },
-            false
+            { isShallow: false }
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -92,7 +92,7 @@ describe('Grant Information Component ', () => {
 
     it('should not break if rek_grant_id is not in the search key', () => {
         const { fez_record_search_key_grant_id: fsrkGrantID, ...journalArticleWithoutRekGrantId } = journalArticle;
-        const fsrkwithouGrantID = fsrkGrantID.map(grantId => {
+        const fsrkwithouGrantID = fsrkGrantID.map((grantId) => {
             delete grantId.rek_grant_id;
             return grantId;
         });

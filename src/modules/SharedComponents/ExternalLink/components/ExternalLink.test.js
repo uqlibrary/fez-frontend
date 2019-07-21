@@ -1,11 +1,11 @@
 import { ExternalLink } from './ExternalLink';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         ...testProps,
     };
-    return getElement(ExternalLink, props, isShallow);
+    return getElement(ExternalLink, props);
 }
 
 describe('ExternalLink test ', () => {

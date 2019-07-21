@@ -1,9 +1,9 @@
 import Checkbox from './Checkbox';
 import filterProps from '../../helpers/_filterProps';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = filterProps(testProps, Checkbox.propTypes);
-    return getElement(Checkbox, { ...props, ...testProps }, isShallow);
+    return getElement(Checkbox, { ...props, ...testProps });
 }
 
 describe('Checkbox snapshots tests', () => {
@@ -23,7 +23,9 @@ describe('Checkbox snapshots tests', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('WithStyles(Checkbox)').props()
+        wrapper
+            .find('WithStyles(Checkbox)')
+            .props()
             .onChange();
         expect(onChangeFn).toHaveBeenCalled();
     });

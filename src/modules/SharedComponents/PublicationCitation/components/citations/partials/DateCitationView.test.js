@@ -1,17 +1,17 @@
 import DateCitationView from './DateCitationView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(DateCitationView, props, isShallow);
+    return getElement(DateCitationView, props);
 }
 
 describe('DateCitationView test', () => {
     it('should render empty component with no date', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -15,13 +15,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(AdvancedSearchComponent, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(AdvancedSearchComponent, getProps(testProps));
 }
 
 describe('AdvancedSearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -51,7 +51,7 @@ describe('AdvancedSearchComponent', () => {
     });
 
     it('should have default event handler props return undefined', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const defaultPropMethodNames = [
             'onToggleSearchMode',
             'onToggleMinimise',

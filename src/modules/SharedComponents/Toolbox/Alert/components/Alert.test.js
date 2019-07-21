@@ -1,6 +1,6 @@
 import { Alert } from './Alert';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
         showLoader: testProps.showLoader || false,
         ...testProps,
     };
-    return getElement(Alert, props, isShallow);
+    return getElement(Alert, props);
 }
 
 describe('Alert component functionality test ', () => {
     it('matches snapshot', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -66,7 +66,9 @@ describe('Alert component functionality test ', () => {
         const wrapper = setup({ dismissAction: dismissFunc, allowDismiss: true });
         expect(wrapper.find('#dismiss').exists()).toBeTruthy();
         expect(wrapper.find('#dismiss')).toHaveLength(2);
-        wrapper.find('#dismiss').at(0)
+        wrapper
+            .find('#dismiss')
+            .at(0)
             .simulate('click');
         expect(dismissFunc).toHaveBeenCalled();
     });

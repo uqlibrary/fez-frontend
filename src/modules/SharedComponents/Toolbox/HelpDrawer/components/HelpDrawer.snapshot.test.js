@@ -2,7 +2,7 @@ import React from 'react';
 import { HelpDrawer } from './HelpDrawer';
 import HelpDrawerWithStyles from './HelpDrawer';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: { palette: { white: { main: '#FFFFFF' } } },
@@ -13,7 +13,7 @@ function setup(testProps, isShallow = true) {
         buttonLabel: 'Test OK',
         ...testProps,
     };
-    return getElement(HelpDrawer, props, isShallow);
+    return getElement(HelpDrawer, props);
 }
 
 describe('HelpDrawer snapshots tests', () => {
@@ -38,7 +38,7 @@ describe('HelpDrawer snapshots tests', () => {
     it('renders text as react element', () => {
         const wrapper = setup({
             title: 'HelpDrawer title',
-            text: (<span>Test text</span>),
+            text: <span>Test text</span>,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

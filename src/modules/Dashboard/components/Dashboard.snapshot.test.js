@@ -7,7 +7,7 @@ const publicationTotalCount = {
     articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
     articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string,
 };
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
@@ -34,7 +34,7 @@ function setup(testProps, isShallow = true) {
             ...testProps.incomplete,
         },
     };
-    return getElement(DashboardClass, props, isShallow);
+    return getElement(DashboardClass, props, args);
 }
 
 describe('Dashboard test', () => {
@@ -179,14 +179,14 @@ describe('Dashboard test', () => {
 
     it('handleTabChange method', () => {
         const value = 'test';
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().handleTabChange(null, value);
         wrapper.update();
         expect(wrapper.state()).toEqual({ dashboardPubsTabs: value });
     });
 
     it('should get styles for full render', () => {
-        const wrapper = setup({ publicationTotalCount }, false);
+        const wrapper = setup({ publicationTotalCount }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -400,7 +400,7 @@ describe('Dashboard test', () => {
                 publicationsListFacets: {},
             },
             history: {},
-        }, false);
+        }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

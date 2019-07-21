@@ -1,17 +1,17 @@
 import UnpublishedStatusField, { mapStateToProps } from './UnpublishedStatusField';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         onChange: jest.fn(),
         ...testProps,
     };
 
-    return getElement(UnpublishedStatusField, props, isShallow);
+    return getElement(UnpublishedStatusField, props, args);
 }
 
 describe('UnpublishedStatusField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

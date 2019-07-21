@@ -1,6 +1,6 @@
 import { AuthorLinking } from './AuthorLinking';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         searchKey: testProps.searchKey || {},
         author: testProps.author || { aut_id: 410 },
@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(AuthorLinking, props, isShallow);
+    return getElement(AuthorLinking, props);
 }
 
 // Authors
@@ -46,7 +46,7 @@ const searchKey = { value: 'rek_author_id', order: 'rek_author_id_order', type: 
 
 describe('AuthorLinking', () => {
     it('should prepare output correctly with linked author ids provided where logged in author id not present', () => {
-        const component = setup({});
+        const component = setup();
         const preparedOutput = component.instance().prepareOutput(
             { searchKey },
             {
@@ -74,7 +74,7 @@ describe('AuthorLinking', () => {
     });
 
     it('should prepare output correctly with empty linked author id list', () => {
-        const component = setup({});
+        const component = setup();
         const preparedOutput = component.instance().prepareOutput(
             { searchKey },
             {
@@ -222,7 +222,7 @@ describe('ContributorLinking', () => {
         'should prepare output correctly with linked contributor ' +
             'ids provided where logged in author id not present',
         () => {
-            const component = setup({});
+            const component = setup();
             const preparedOutput = component.instance().prepareOutput(
                 { searchKey: contributorSearchKey },
                 {
@@ -296,7 +296,7 @@ describe('ContributorLinking', () => {
     );
 
     it('should prepare output correctly with empty linked author id list', () => {
-        const component = setup({});
+        const component = setup();
         const preparedOutput = component.instance().prepareOutput(
             { searchKey: contributorSearchKey },
             {
@@ -373,7 +373,7 @@ describe('ContributorLinking', () => {
 
 describe('layout', () => {
     it('should handle basic props properly', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

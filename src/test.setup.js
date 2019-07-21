@@ -30,7 +30,7 @@ export const setupStoreForMount = () => {
     const initialState = Immutable.Map();
 
     const store = {
-        getState: jest.fn(() => (initialState)),
+        getState: jest.fn(() => initialState),
         dispatch: jest.fn(),
         subscribe: jest.fn(),
     };
@@ -48,24 +48,26 @@ const setupSessionMockAdapter = () => {
 };
 
 // get a mounted or shallow element
-const getElement = (component, props, isShallow = true, requiresStore = false, context = {}) => {
+const getElement = (component, props, args = {}) => {
+    const { isShallow, requiresStore, context, store } = {
+        isShallow: true,
+        requiresStore: false,
+        context: {},
+        store: setupStoreForMount().store,
+        ...args,
+    };
+
     if (isShallow) {
         if (requiresStore) {
-            return shallow(
-                <Provider store={setupStoreForMount().store}>
-                    {React.createElement(component, props)}
-                </Provider>,
-                { context }
-            );
+            return shallow(<Provider store={store}>{React.createElement(component, props)}</Provider>, {
+                context,
+            });
         } else {
-            return shallow(
-                React.createElement(component, props),
-                { context }
-            );
+            return shallow(React.createElement(component, props), { context });
         }
     }
     return mount(
-        <Provider store={setupStoreForMount().store}>
+        <Provider store={store}>
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <MuiThemeProvider theme={mui1theme}>
                     <MuiPickersUtilsProvider utils={MomentUtils}>
@@ -98,6 +100,7 @@ global.setupMockAdapter = setupMockAdapter;
 global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
 global.mockSessionApi = setupSessionMockAdapter();
+global.setupStoreForMount = setupStoreForMount();
 
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 

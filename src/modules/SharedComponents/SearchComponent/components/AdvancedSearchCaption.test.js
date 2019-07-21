@@ -16,8 +16,8 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(AdvancedSearchCaption, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(AdvancedSearchCaption, getProps(testProps));
 }
 
 describe('Component AdvancedSearchCaption', () => {

@@ -1,7 +1,7 @@
 import Orcid from './Orcid';
 import { accounts, currentAuthor } from 'mock/data/account';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
 
@@ -20,7 +20,7 @@ function setup(testProps, isShallow = true) {
             push: jest.fn(),
         },
     };
-    return getElement(Orcid, props, isShallow);
+    return getElement(Orcid, props);
 }
 
 describe('Component Orcid ', () => {
@@ -145,7 +145,7 @@ describe('Component Orcid ', () => {
     });
 
     it('should update state when account is updated via props', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         // orcid request state is not set because account hasn't been loaded yet
         expect(wrapper.state().orcidRequest.state).toBeFalsy();
@@ -166,7 +166,7 @@ describe('Component Orcid ', () => {
     });
 
     it('should navigate back to dashboard if author already has orcid', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         // account/author has been loaded
         wrapper.instance().componentWillReceiveProps({
@@ -323,7 +323,7 @@ describe('Component Orcid ', () => {
     });
 
     it('should reset author update state when component is unmounted', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
     });
@@ -331,7 +331,7 @@ describe('Component Orcid ', () => {
     it('should set query params correctly with code and state', () => {
         delete window.location;
         global.window.location = { hash: 'http://localhost:3000?code=123&state=testing' };
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().orcidResponse).toMatchObject({
             code: '123',
             state: 'testing',

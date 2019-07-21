@@ -1,6 +1,6 @@
 import AccessSelectorField from './AccessSelectorField';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         label: 'Access selector field',
         input: {
@@ -12,7 +12,7 @@ function setup(testProps = {}, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AccessSelectorField, props, isShallow);
+    return getElement(AccessSelectorField, props);
 }
 
 describe('AccessSelectorField component', () => {

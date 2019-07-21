@@ -1,12 +1,12 @@
 import NewRecord from './NewRecord';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         history: {},
         actions: {},
         ...testProps,
     };
-    return getElement(NewRecord, props, isShallow);
+    return getElement(NewRecord, props, args);
 }
 
 describe('Add new record', () => {
@@ -16,7 +16,7 @@ describe('Add new record', () => {
     });
 
     it('should render stepper and a publication form', () => {
-        const wrapper = setup({ history: {}, author: { 'aut_display_name': 'Fred', 'aut_id': 44 } });
+        const wrapper = setup({ history: {}, author: { aut_display_name: 'Fred', aut_id: 44 } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -64,12 +64,15 @@ describe('Add new record', () => {
     });
 
     it('should render the confirm dialog with an alert for failed file upload', () => {
-        const wrapper = setup({
-            author: { aut_id: 12345, aut_display_name: 'Test' },
-            history: {},
-            newRecordFileUploadingError: true,
-            rawSearchQuery: 'This is a test',
-        }, false);
+        const wrapper = setup(
+            {
+                author: { aut_id: 12345, aut_display_name: 'Test' },
+                history: {},
+                newRecordFileUploadingError: true,
+                rawSearchQuery: 'This is a test',
+            },
+            { isShallow: false }
+        );
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
 

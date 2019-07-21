@@ -1,6 +1,6 @@
 import { DocumentTypeField, styles } from './DocumentTypeField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         docTypes: [],
         updateDocTypeValues: jest.fn(),
@@ -10,12 +10,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(DocumentTypeField, props, isShallow);
+    return getElement(DocumentTypeField, props);
 }
 
 describe('DocumentTypeField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

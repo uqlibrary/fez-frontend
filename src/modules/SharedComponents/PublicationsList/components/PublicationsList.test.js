@@ -1,19 +1,19 @@
 import PublicationsList from './PublicationsList';
 import { myRecordsList } from 'mock/data';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         publicationsList: testProps.publicationsList || [], // : PropTypes.array,
         customActions: testProps.customActions || [], // : PropTypes.array,
         showDefaultActions: testProps.showDefaultActions || false, // : PropTypes.bool
         ...testProps,
     };
-    return getElement(PublicationsList, props, isShallow);
+    return getElement(PublicationsList, props);
 }
 
 describe('PublicationsList', () => {
     it('renders empty component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -25,9 +25,7 @@ describe('PublicationsList', () => {
     it('renders component with custom subset actions', () => {
         const test = [];
         const wrapper = setup({
-            publicationsListSubset: [
-                'test',
-            ],
+            publicationsListSubset: ['test'],
             subsetCustomActions: test,
         });
         expect(

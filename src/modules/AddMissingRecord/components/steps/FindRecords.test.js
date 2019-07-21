@@ -1,12 +1,12 @@
 import FindRecords from './FindRecords';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         history: {},
         ...testProps,
     };
-    return getElement(FindRecords, props, isShallow);
+    return getElement(FindRecords, props);
 }
 
 describe('Search record', () => {
@@ -35,7 +35,7 @@ describe('Search record', () => {
             history: {
                 push: pushFn,
             },
-        }, true);
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.props().onSkipSearch();
         expect(pushFn).toHaveBeenCalledWith('/records/add/new');

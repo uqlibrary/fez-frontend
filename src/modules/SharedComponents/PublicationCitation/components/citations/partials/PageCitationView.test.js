@@ -1,7 +1,7 @@
 import PageCitationView from './PageCitationView';
 import { conferencePaper } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
@@ -9,7 +9,7 @@ function setup(testProps, isShallow = true) {
         searchKey: testProps.searchKey,
         className: testProps.className,
     };
-    return getElement(PageCitationView, props, isShallow);
+    return getElement(PageCitationView, props);
 }
 
 describe('PageCitationView test ', () => {

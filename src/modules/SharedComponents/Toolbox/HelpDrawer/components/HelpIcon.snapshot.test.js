@@ -1,7 +1,7 @@
 import { HelpIcon } from './HelpIcon';
 import HelpIconWithStyles from './HelpIcon';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: { palette: { white: { main: '#FFFFFF' } } },
@@ -12,12 +12,12 @@ function setup(testProps, isShallow = true) {
         onClick: jest.fn(),
         ...testProps,
     };
-    return getElement(HelpIcon, props, isShallow);
+    return getElement(HelpIcon, props);
 }
 
 describe('HelpIcon snapshots tests', () => {
     it('renders help icon', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

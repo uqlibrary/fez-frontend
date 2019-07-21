@@ -4,22 +4,22 @@ import BookChapterForm from './BookChapterForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(BookChapterForm, props, isShallow);
+    return getElement(BookChapterForm, props);
 }
 
 describe('BookChapterForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 14 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(14);
     });
 

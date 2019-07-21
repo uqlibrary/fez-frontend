@@ -1,6 +1,6 @@
 import { SecuritySelector } from './SecuritySelector';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         classes: {},
         disabled: false,
@@ -16,7 +16,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(SecuritySelector, props, isShallow);
+    return getElement(SecuritySelector, props);
 }
 
 describe('SecuritySelector component', () => {

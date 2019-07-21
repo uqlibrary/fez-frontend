@@ -1,6 +1,6 @@
 import DepositAgreementField from './DepositAgreementField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         disabled: false,
         isDepositAgreementAccepted: false,
@@ -16,9 +16,8 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(DepositAgreementField, props, isShallow);
+    return getElement(DepositAgreementField, props);
 }
-
 
 describe('Component DepositAgreement', () => {
     it('should render default view', () => {

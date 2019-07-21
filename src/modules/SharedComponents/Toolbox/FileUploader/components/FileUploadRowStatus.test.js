@@ -8,13 +8,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadRowStatus, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploadRowStatus, getProps(testProps));
 }
 
 describe('Component FileUploadRowStatus', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -50,7 +50,7 @@ describe('Component FileUploadRowStatus', () => {
     });
 
     it('should mount the container', () => {
-        const wrapper = getElement(FileUploadRowStatusContainer, getProps(), false);
+        const wrapper = getElement(FileUploadRowStatusContainer, getProps(), { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

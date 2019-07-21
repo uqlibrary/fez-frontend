@@ -2,7 +2,7 @@ import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
 import * as routes from '../../../config/routes';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
 
@@ -18,7 +18,7 @@ function setup(testProps, isShallow = true) {
             push: jest.fn(),
         },
     };
-    return getElement(AddMissingRecord, props, isShallow);
+    return getElement(AddMissingRecord, props);
 }
 
 describe('Component AddMissingRecord', () => {
@@ -65,7 +65,7 @@ describe('Component AddMissingRecord', () => {
 
     it(
         'should call back to step [0] (records/add/find) when there ' +
-            'is no rawSearchQuery defined when landing on records/add/results',
+			'is no rawSearchQuery defined when landing on records/add/results',
         () => {
             const testReplace = jest.fn();
             const props = {

@@ -10,9 +10,4 @@ export const useFormValuesContext = () => useContext(FormValuesContext);
 export const useRecordContext = () => useContext(RecordContext);
 export const useTabbedContext = () => useContext(TabbedContext);
 
-export {
-    AccountContext,
-    FormValuesContext,
-    RecordContext,
-    TabbedContext,
-};
+export { AccountContext, FormValuesContext, RecordContext, TabbedContext };

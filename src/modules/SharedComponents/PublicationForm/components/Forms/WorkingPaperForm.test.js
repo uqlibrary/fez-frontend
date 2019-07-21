@@ -2,22 +2,22 @@ jest.dontMock('./WorkingPaperForm');
 
 import WorkingPaperForm from './WorkingPaperForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(WorkingPaperForm, props, isShallow);
+    return getElement(WorkingPaperForm, props);
 }
 
 describe('WorkingPaperForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 11 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(11);
     });
 
@@ -29,7 +29,7 @@ describe('WorkingPaperForm renders ', () => {
     });
 
     it('should normalize total pages field', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().getNumbersOnly('Four')).toBe('');
         expect(wrapper.instance().getNumbersOnly('12Three')).toBe('12');
         expect(wrapper.instance().getNumbersOnly('  01Three')).toBe('01');
