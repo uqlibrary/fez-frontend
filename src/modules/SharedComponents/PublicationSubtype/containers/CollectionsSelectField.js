@@ -45,7 +45,6 @@ const _onChange = (fieldProps) => {
 };
 
 export default function CollectionsSelectField(fieldProps) {
-    console.log('fieldProps = ', fieldProps);
     return (
         <CollectionsList
             onChange={_onChange(fieldProps)}

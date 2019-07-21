@@ -10,7 +10,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import DocumentTypeField from 'modules/SharedComponents/SearchComponent/components/Fields/DocumentTypeField';
+import { DocumentTypeSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from '../../SharedComponents/Toolbox/Alert';
 
 import { validation } from 'config';
@@ -34,22 +34,23 @@ export const DigiTeamBatchImport = (
         console.log('docTypeID = ', docTypeID);
     });
 
-    const _onCommunityChange = (event, newCommunityPid) => {
-        if (newCommunityPid !== communityPID) {
+    const _onCommunityChange = (event, selectedCommunityPid) => {
+        if (selectedCommunityPid !== communityPID) {
             // community has changed - clear the collection
-            setCommunityPID(newCommunityPid);
+            setCommunityPID(selectedCommunityPid);
+
             // community has changed - clear the community
             setCollectionPID(null);
         }
     };
 
-    const _onCollectionChanged = (event, collectionPid) => {
-        setCollectionPID(collectionPid);
+    const _onCollectionChanged = (event, selectedCollectionPid) => {
+        setCollectionPID(selectedCollectionPid);
     };
 
-    const _onDocTypeChange = (fieldProps) => {
+    const _onDocTypeChange = (fieldProps, selectedDocType) => {
         // Update the state with new values
-        setDocTypeID(fieldProps);
+        setDocTypeID(selectedDocType);
 
         return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
     };
@@ -75,6 +76,11 @@ export const DigiTeamBatchImport = (
         <StandardPage title={batchImportTxt.title}>
             <form>
                 <Grid container spacing={16}>
+                    <Grid item xs={12}>
+                        <Alert title={batchImportTxt.prompt.title}
+                            message={batchImportTxt.prompt.message}
+                            type={batchImportTxt.prompt.type} />
+                    </Grid>
                     <Grid item xs={12}>
                         <StandardCard
                             title={batchImportTxt.formLabels.collection.label}
@@ -119,14 +125,14 @@ export const DigiTeamBatchImport = (
                         >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
-                                    <DocumentTypeField
-                                        name="doctype"
-                                        docTypes={props.docTypes}
-                                        updateDocTypeValues={_onDocTypeChange}
-                                        disabled={props.isLoading}
-                                        disableMultiple
-                                        locale={batchImportTxt.formLabels.docType}
+                                    <Field
+                                        component={DocumentTypeSelectField}
+                                        name="documentType"
+                                        disabled={props.submitting}
+                                        label={batchImportTxt.formLabels.docType.placeholder}
                                         required
+                                        validate={[validation.required]}
+                                        onChange={_onDocTypeChange}
                                     />
                                 </Grid>
                             </Grid>

@@ -8,17 +8,6 @@ import { FORM_NAME, DigiTeamBatchImport } from '../components/DigiTeamBatchImpor
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
-// import { useState } from 'react';
-
-// const onSubmit = (values, dispatch, props) => {
-//     const currentAuthor = props.author || null;
-//     return dispatch(createDigiTeamBatchImport({ ...values.toJS() }, (currentAuthor && currentAuthor.aut_id) || null))
-//         .catch(
-//             error => {
-//                 throw new SubmissionError({ _error: error });
-//             }
-//         );
-// };
 
 let DigiTeamBatchImportContainer = reduxForm({
     form: FORM_NAME,
@@ -26,13 +15,8 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
-    // console.log('container DigiTeamBatchImport mapStateToProps, state = ', state);
-    // console.log('container DigiTeamBatchImport state.communityId = ', state.get('communityId'));
-    if (!!getFormValues(FORM_NAME)(state)) {
-        console.log('container DigiTeamBatchImport getFormValues: ', getFormValues(FORM_NAME)(state).toJS());
-    }
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const result = {
+    return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
@@ -45,8 +29,6 @@ const mapStateToProps = state => {
             ? state.get('digiTeamBatchImportReducer').itemsList
             : [],
     };
-    console.log('container DigiTeamBatchImport mapStateToProps: result = ', result);
-    return result;
 };
 
 function mapDispatchToProps(dispatch) {
