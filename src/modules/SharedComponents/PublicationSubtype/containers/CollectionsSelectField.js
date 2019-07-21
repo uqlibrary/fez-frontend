@@ -17,7 +17,7 @@ const mapStateToProps = (state, props) => {
         itemsLoadingError:
             (state.get('collectionsReducer') && state.get('collectionsReducer').itemsLoadingError) || false,
         itemsLoadingHint: props.loadingHint || 'Loading..',
-        hideLabel: true,
+        hideLabel: !props.parentPid,
         parentPid: props.parentPid,
     };
 };

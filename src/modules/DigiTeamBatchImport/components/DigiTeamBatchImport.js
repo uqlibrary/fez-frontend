@@ -9,13 +9,13 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import DocumentTypeField from 'modules/SharedComponents/SearchComponent/components/Fields/DocumentTypeField';
+import { DocumentTypeSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
 
 import { validation } from 'config';
 import { default as componentsLocale } from 'locale/components';
-import { default as publicationForm } from 'locale/publicationForm';
+import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'DigiTeamBatchImport';
 
@@ -29,22 +29,20 @@ export const DigiTeamBatchImport = props => {
         }
     };
 
-    // const _onCollectionChanged = (event, collectionPid) => {
-    // };
-
     const _onDocTypeChange = fieldProps => {
         return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
     };
 
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
+    const addACollectionTxt = publicationLocale.addACollection;
 
     const alertProps = validation.getErrorAlertProps({
         ...props,
         alertLocale: {
-            validationAlert: { ...publicationForm.validationAlert },
-            progressAlert: { ...publicationForm.progressAlert },
-            successAlert: { ...publicationForm.successAlert },
-            errorAlert: { ...publicationForm.errorAlert },
+            validationAlert: { ...publicationLocale.validationAlert },
+            progressAlert: { ...publicationLocale.progressAlert },
+            successAlert: { ...publicationLocale.successAlert },
+            errorAlert: { ...publicationLocale.errorAlert },
         },
     });
 
@@ -57,17 +55,24 @@ export const DigiTeamBatchImport = props => {
             <form>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
+                        <Alert
+                            title={batchImportTxt.prompt.title}
+                            message={batchImportTxt.prompt.message}
+                            type={batchImportTxt.prompt.type}
+                        />
+                    </Grid>
+                    <Grid item xs={12}>
                         <StandardCard
-                            title={batchImportTxt.formLabels.community.label}
-                            help={batchImportTxt.details.community.help}
+                            title={batchImportTxt.formLabels.collection.label}
+                            help={batchImportTxt.formLabels.collection.help}
                         >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={props.submitting}
-                                        name="communityID" // community_ismemberof
-                                        locale={batchImportTxt.formLabels.community}
+                                        name="communityID"
+                                        label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
                                         onChange={_onCommunityChange}
@@ -78,10 +83,8 @@ export const DigiTeamBatchImport = props => {
                                         <Field
                                             component={CollectionsSelectField}
                                             disabled={props.submitting}
-                                            locale={batchImportTxt.formLabels.collection}
-                                            name="collectionID" // collection_ismemberof
-                                            // onChange={_onCollectionChanged}
-                                            parentPid={props.formValues.get('communityID')}
+                                            label={batchImportTxt.formLabels.collection.placeholder}
+                                            name="collectionID"
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -99,14 +102,14 @@ export const DigiTeamBatchImport = props => {
                         >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
-                                    <DocumentTypeField
-                                        name="doctype"
-                                        docTypes={props.docTypes}
-                                        updateDocTypeValues={_onDocTypeChange}
-                                        disabled={props.isLoading}
-                                        disableMultiple
-                                        locale={batchImportTxt.formLabels.docType}
+                                    <Field
+                                        component={DocumentTypeSelectField}
+                                        name="documentType"
+                                        disabled={props.submitting}
+                                        label={batchImportTxt.formLabels.docType.placeholder}
                                         required
+                                        validate={[validation.required]}
+                                        onChange={_onDocTypeChange}
                                     />
                                 </Grid>
                             </Grid>

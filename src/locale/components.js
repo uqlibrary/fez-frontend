@@ -1593,25 +1593,23 @@ export default {
         digiTeam: {
             batchImport: {
                 title: 'Batch import',
+                prompt: {
+                    title: 'Workflow',
+                    message: 'Blah about what they should do on this form.',
+                    type: 'info_outline',
+                },
                 help: {},
                 formLabels: {
-                    community: {
-                        title: 'Select destination community (title)',
-                        label: 'Select destination community (label)',
-                        placeholder: 'Select a community this collection is a member of',
-                    },
                     collection: {
-                        title: 'Select collection (title)',
-                        label: 'Select collection (label)',
+                        label: 'Select collection',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
+                        ariaLabel: 'Select a collection',
                     },
                     docType: {
-                        label: 'Select a document type (label)',
-                        // placeholder: 'Select a doctype',
-                        title: 'Publications type (title)',
-                        // hint: 'Select document type',
-                        ariaLabel: 'Select a publications type',
+                        label: 'Select a document type',
+                        placeholder: 'Select a doctype',
+                        ariaLabel: 'Select a document type',
                     },
                     directory: {
                         label: 'Select a directory',
