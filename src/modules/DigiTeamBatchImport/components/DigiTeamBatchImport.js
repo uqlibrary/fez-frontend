@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
@@ -20,14 +20,7 @@ import { default as publicationLocale } from 'locale/publicationForm';
 export const FORM_NAME = 'DigiTeamBatchImport';
 
 export const DigiTeamBatchImport = props => {
-    const [communityID, setCommunityID] = useState(
-        props.formValues && props.formValues.toJS && props.formValues.toJS().communityID
-    );
-    const _onCommunityChange = (event, newCommunityID) => {
-        if (newCommunityID !== communityID) {
-            setCommunityID(newCommunityID);
-        }
-    };
+    const communityID = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
 
     const _onDocTypeChange = fieldProps => {
         return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
@@ -75,7 +68,7 @@ export const DigiTeamBatchImport = props => {
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        onChange={_onCommunityChange}
+                                        // onChange={_onCommunityChange}
                                     />
                                 </Grid>
                                 {communityID && (
