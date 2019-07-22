@@ -40,7 +40,7 @@ const CollectionsList = connect(
     mapDispatchToProps
 )(GenericSelectField);
 
-const _onChange = (fieldProps) => {
+const _onChange = fieldProps => {
     return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
 };
 

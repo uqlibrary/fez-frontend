@@ -152,31 +152,31 @@ export const pathConfig = {
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
     digiteam: {
-        batchImport: '/digiteam/batchImport',
+        batchImport: '/batch-import',
     },
 };
 
 // a duplicate list of routes for
 const flattedPathConfig = [
     '/',
-    '/dashboard',
+    '/admin/masquerade',
+    '/admin/thirdPartyTools',
+    '/admin/unpublished',
+    '/author-identifiers/google-scholar/link',
+    '/author-identifiers/orcid/link',
     '/contact',
-    '/rhdsubmission',
-    '/sbslodge_new',
-    '/records/search',
+    '/dashboard',
+    '/digiteam/batchImport',
+    '/records/add/find',
+    '/records/add/new',
+    '/records/add/results',
+    '/records/claim',
+    '/records/incomplete',
     '/records/mine',
     '/records/possible',
-    '/records/incomplete',
-    '/records/claim',
-    '/records/add/find',
-    '/records/add/results',
-    '/records/add/new',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
-    '/digiteam/batchImport',
+    '/records/search',
+    '/rhdsubmission',
+    '/sbslodge_new',
 ];
 
 // TODO: will we even have roles?

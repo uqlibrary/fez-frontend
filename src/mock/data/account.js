@@ -115,6 +115,24 @@ export const accounts = {
         "canMasquerade": false,
         "blocked": false
     },
+    digiteamMember: {
+        'id': 'digiteamMember',
+        "class": ["Campus-STLUCIA"],
+        "type": 3,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "Researcher",
+        "name": "J Researcher",
+        "mail": "j.Researcher@uq.edu.au",
+        "barcode": "240675201000000",
+        "groups": ["CN=lib_digistore_users,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au"],
+        "classes": [],
+        "expiryDate": "31-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": false,
+        "blocked": false
+    },
     // expired session
     uqexpired: {
         'hasSession': false

@@ -15,19 +15,23 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
+    const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
+    const communityID = formValues.toJS().communityID;
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        community: state && state.get('communityId'),
-        collection: state && state.get('collectionId'),
-        communityCollectionsList: state && state.get('digiTeamBatchImportReducer')
-            ? state.get('digiTeamBatchImportReducer').communityCollectionsList
-            : [],
-        itemsList: state && state.get('digiTeamBatchImportReducer')
-            ? state.get('digiTeamBatchImportReducer').itemsList
-            : [],
+        // community: state && state.get('communityId'),
+        // collection: state && state.get('collectionId'),
+        communityCollectionsList:
+            communityID && state && state.get('digiTeamBatchImportReducer')
+                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
+                : [],
+        itemsList:
+            state && state.get('digiTeamBatchImportReducer')
+                ? state.get('digiTeamBatchImportReducer').itemsList
+                : [],
     };
 };
 

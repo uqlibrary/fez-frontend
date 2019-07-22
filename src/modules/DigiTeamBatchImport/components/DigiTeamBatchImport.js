@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
@@ -11,22 +10,19 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
-import { Alert } from '../../SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import DirectorySelectField from '../containers/DirectorySelectField';
 
 import { validation } from 'config';
-import { default as componentLocale } from 'locale/components';
+import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'DigiTeamBatchImport';
 
-export const DigiTeamBatchImport = (
-    props = {
-        docTypes: [],
-    }
-) => {
+export const DigiTeamBatchImport = props => {
     const communityIDValue = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
 
-    const batchImportTxt = componentLocale.components.digiTeam.batchImport;
+    const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
 
     const alertProps = validation.getErrorAlertProps({
@@ -39,18 +35,20 @@ export const DigiTeamBatchImport = (
         },
     });
 
-    const _restartWorkflow = () => {
-        // TODO
-    };
+    // const _restartWorkflow = () => {
+    //     // TODO
+    // };
 
     return (
         <StandardPage title={batchImportTxt.title}>
             <form>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
-                        <Alert title={batchImportTxt.prompt.title}
+                        <Alert
+                            title={batchImportTxt.prompt.title}
                             message={batchImportTxt.prompt.message}
-                            type={batchImportTxt.prompt.type} />
+                            type={batchImportTxt.prompt.type}
+                        />
                     </Grid>
                     <Grid item xs={12}>
                         <StandardCard
@@ -79,7 +77,7 @@ export const DigiTeamBatchImport = (
                                             required
                                             validate={[validation.required]}
                                             // onChange={_onCollectionChanged}
-                                            parentPid={props.formValues.get('communityID')}
+                                            parentPid={communityIDValue}
                                         />
                                     </Grid>
                                 )}
@@ -108,7 +106,22 @@ export const DigiTeamBatchImport = (
                         </StandardCard>
                     </Grid>
 
-                    {/* <p>directory will go here</p> */}
+                    <Grid item xs={12}>
+                        <StandardCard title={batchImportTxt.formLabels.directory.label}>
+                            <Grid container spacing={24}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={DirectorySelectField}
+                                        disabled={props.submitting}
+                                        name="san-dir"
+                                        required
+                                        // onChange={_onDirectoryChange}
+                                        {...batchImportTxt.formLabels.directory}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
 
                     {alertProps && (
                         <Grid item xs={12}>
@@ -119,24 +132,24 @@ export const DigiTeamBatchImport = (
                     <Grid item xs={false} sm />
                     <Grid item xs={12} sm="auto">
                         <Button
-                            variant="contained"
-                            fullWidth
-                            children={batchImportTxt.formLabels.cancelButtonLabel}
                             aria-label={batchImportTxt.formLabels.cancelButtonLabel}
+                            children={batchImportTxt.formLabels.cancelButtonLabel}
                             disabled={props.submitting}
-                            onClick={_restartWorkflow}
+                            fullWidth
+                            // onClick={_restartWorkflow}
+                            variant="contained"
                         />
                     </Grid>
                     <Grid item xs={12} sm="auto">
                         <Button
-                            id="submit-data-collection"
-                            variant="contained"
-                            color="primary"
-                            fullWidth
-                            children={batchImportTxt.formLabels.submitButtonLabel}
                             aria-label={batchImportTxt.formLabels.submitButtonLabel}
-                            onClick={props.handleSubmit}
+                            children={batchImportTxt.formLabels.submitButtonLabel}
+                            color="primary"
                             disabled={props.submitting || props.disableSubmit}
+                            fullWidth
+                            id="submit-data-collection"
+                            onClick={props.handleSubmit}
+                            variant="contained"
                         />
                     </Grid>
                 </Grid>
@@ -146,18 +159,22 @@ export const DigiTeamBatchImport = (
 };
 
 DigiTeamBatchImport.propTypes = {
-    submitting: PropTypes.bool,
-    formValues: PropTypes.object,
-    docTypes: PropTypes.array,
-    isLoading: PropTypes.bool,
     actions: PropTypes.object,
-    handleSubmit: PropTypes.func,
+    collectionList: PropTypes.array,
+    communityCollectionsLoading: PropTypes.bool,
     disableSubmit: PropTypes.bool,
+    docTypes: PropTypes.array,
+    formValues: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    isLoading: PropTypes.bool,
     loadItemsList: PropTypes.func,
+    submitting: PropTypes.bool,
 };
 
 DigiTeamBatchImport.defaultProps = {
-    // collectionList: [],
-    // docTypes: [],
+    collectionList: [],
+    docTypes: [],
     formValues: {},
 };
+
+export default DigiTeamBatchImport;

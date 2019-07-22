@@ -297,6 +297,12 @@ export const THIRD_PARTY_LOOKUP_API_2FIELD = ({ type, field1, field2 }) => ({
  * @returns {{apiUrl: string}}
  * @constructor
  */
-export const COMMUNITY_LOOKUP_API = (communityPid) => ({
+export const COLLECTIONS_BY_COMMUNITY_LOOKUP_API = (communityPid) => ({
     apiUrl: `communities/${communityPid}/collections`,
 });
+
+export const BATCH_IMPORT_DIRECTORIES_API = () => {
+    return {
+        apiUrl: 'external/records/batch-import/directories',
+    };
+};

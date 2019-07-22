@@ -2,6 +2,7 @@ export appReducer from './app';
 export academicStatsReducer from './academic';
 export accountReducer from './account';
 export authorsReducer from './authors';
+export { default as batchImportDirectoriesReducer } from './batchImportDirectories';
 export claimPublicationReducer from './claimPublication';
 export fixRecordReducer from './fixRecord';
 export viewRecordReducer from './viewRecord';
