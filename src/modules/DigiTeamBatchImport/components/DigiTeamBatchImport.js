@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Field } from 'redux-form/lib/immutable';
@@ -25,36 +24,7 @@ export const DigiTeamBatchImport = (
         docTypes: [],
     }
 ) => {
-    const [communityPID, setCommunityPID] = useState(null); // props.formValues.toJS().communityPID
-    const [collectionPID, setCollectionPID] = useState(null);
-    const [docTypeID, setDocTypeID] = useState(null);
-
-    useEffect(() => {
-        console.log('communityPID = ', communityPID);
-        console.log('collectionPID = ', collectionPID);
-        console.log('docTypeID = ', docTypeID);
-    });
-
-    const _onCommunityChange = (event, selectedCommunityPid) => {
-        if (selectedCommunityPid !== communityPID) {
-            // community has changed - clear the collection
-            setCommunityPID(selectedCommunityPid);
-
-            // community has changed - clear the community
-            setCollectionPID(null);
-        }
-    };
-
-    const _onCollectionChanged = (event, selectedCollectionPid) => {
-        setCollectionPID(selectedCollectionPid);
-    };
-
-    const _onDocTypeChange = (fieldProps, selectedDocType) => {
-        // Update the state with new values
-        setDocTypeID(selectedDocType);
-
-        return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
-    };
+    const communityIDValue = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
 
     const batchImportTxt = componentLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
@@ -96,12 +66,10 @@ export const DigiTeamBatchImport = (
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        onChange={_onCommunityChange}
+                                        // onChange={_onCommunityChange}
                                     />
                                 </Grid>
-                                {props.formValues &&
-                                    props.formValues.get('communityID') &&
-                                    props.formValues.get('communityID').length > 0 && (
+                                {communityIDValue && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
@@ -110,7 +78,7 @@ export const DigiTeamBatchImport = (
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             required
                                             validate={[validation.required]}
-                                            onChange={_onCollectionChanged}
+                                            // onChange={_onCollectionChanged}
                                             parentPid={props.formValues.get('communityID')}
                                         />
                                     </Grid>
@@ -133,7 +101,7 @@ export const DigiTeamBatchImport = (
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        onChange={_onDocTypeChange}
+                                        // onChange={_onDocTypeChange}
                                     />
                                 </Grid>
                             </Grid>
@@ -188,4 +156,8 @@ DigiTeamBatchImport.propTypes = {
     loadItemsList: PropTypes.func,
 };
 
-export default DigiTeamBatchImport;
+DigiTeamBatchImport.defaultProps = {
+    // collectionList: [],
+    // docTypes: [],
+    formValues: {},
+};
