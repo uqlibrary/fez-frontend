@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { Field } from 'redux-form/lib/immutable';
@@ -10,7 +11,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { DocumentTypeSelectField } from 'modules/SharedComponents/PublicationSubtype';
+import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from '../../SharedComponents/Toolbox/Alert';
 
 import { validation } from 'config';
@@ -126,7 +127,7 @@ export const DigiTeamBatchImport = (
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
-                                        component={DocumentTypeSelectField}
+                                        component={DocumentTypeSingleField}
                                         name="documentType"
                                         disabled={props.submitting}
                                         label={batchImportTxt.formLabels.docType.placeholder}

@@ -35,11 +35,12 @@ const _onChange = (fieldProps) => {
 
 /**
  * provide a drop down that returns a Single Document Type (Publication type)
+ * (see DocumentTypeMultipleField for selecting MULTIPLE document type)
  * @param fieldProps
  * @returns {*}
  * @constructor
  */
-export default function DocumentTypeSelectField(fieldProps) {
+export default function DocumentTypeSingleField(fieldProps) {
     return (
         <SingleDocumentTypeList
             onChange={_onChange(fieldProps)}

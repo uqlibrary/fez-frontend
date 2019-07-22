@@ -13,9 +13,18 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
         item={true}
         xs={12}
       >
+        <WithStyles(Alert)
+          message="Blah about what they should do on this form."
+          title="Workflow"
+          type="info_outline"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
         <StandardCard
-          help={Object {}}
-          title="Select destination collection"
+          title="Select collection"
         >
           <WithStyles(Grid)
             container={true}
@@ -27,13 +36,8 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
             >
               <Field
                 component={[Function]}
-                locale={
-                  Object {
-                    "label": "Select community",
-                    "placeholder": "Select a community this collection is a member of",
-                  }
-                }
-                name="community_ismemberof"
+                label="Select a community this collection is a member of"
+                name="communityID"
                 onChange={[Function]}
                 required={true}
                 validate={
@@ -46,47 +50,38 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
           </WithStyles(Grid)>
         </StandardCard>
       </WithStyles(Grid)>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <StandardCard
-        help={Object {}}
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
       >
-        <WithStyles(Grid)
-          container={true}
-          spacing={16}
+        <StandardCard
+          help={Object {}}
+          title="Select a document type"
         >
           <WithStyles(Grid)
-            item={true}
-            xs={12}
+            container={true}
+            spacing={16}
           >
-            <WithStyles(DocumentTypeField)
-              disableMultiple={true}
-              docTypes={Array []}
-              locale={
-                Object {
-                  "ariaLabel": "Select a publications type",
-                  "title": "Publications type",
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                label="Select a doctype"
+                name="documentType"
+                onChange={[Function]}
+                required={true}
+                validate={
+                  Array [
+                    [Function],
+                  ]
                 }
-              }
-              required={true}
-              updateDocTypeValues={[Function]}
-            />
+              />
+            </WithStyles(Grid)>
           </WithStyles(Grid)>
-        </WithStyles(Grid)>
-      </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      container={true}
-      spacing={16}
-      style={
-        Object {
-          "paddingTop": 12,
-        }
-      }
-    >
+        </StandardCard>
+      </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
         sm={true}
@@ -100,6 +95,7 @@ exports[`Component DigiTeamBatchImport renders page 1`] = `
         <WithStyles(Button)
           aria-label="Cancel and return to the homepage"
           fullWidth={true}
+          onClick={[Function]}
           variant="contained"
         >
           Cancel and return to the homepage
