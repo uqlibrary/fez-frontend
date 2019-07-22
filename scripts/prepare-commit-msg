@@ -1,0 +1,19 @@
+#!/bin/bash
+# Disallow merges from staging
+
+MERGE_MESSAGE_FILE=$1
+ACTION=$2
+THIS_BRANCH=$(git rev-parse --abbrev-ref HEAD)
+FORBIDDEN_BRANCH="staging"
+REGEX="^Merge (remote-tracking )?branch '(origin/)?$FORBIDDEN_BRANCH'.*$"
+
+if [[ "$ACTION" == 'merge' ]]; then
+  COMMIT_MESSAGE=$(cat "$MERGE_MESSAGE_FILE")
+  if grep -Eq "$REGEX" <<< "$COMMIT_MESSAGE"; then
+    echo "You are trying to merge '$FORBIDDEN_BRANCH' branch into '$THIS_BRANCH' branch."
+    echo "'$FORBIDDEN_BRANCH' branch is not supposed to be merged into anywhere else."
+    printf "\n\e[31m\e[1mAborting commit.\e[0m Run 'git merge --abort' to reset state.\n\n"
+    echo "(Ignore the line below)"
+    exit 1;
+  fi
+fi

@@ -180,7 +180,12 @@ ${TOP_CITED_PUBLICATIONS_LOADED}(@\\w+)\
 )$`);
 export const loadPublicationActions = new RegExp(`^(${FIX_RECORD_LOADED}|${VIEW_RECORD_LOADED})$`);
 
-// digiteam batch input - fetch list of collections for given community
-export const COLLECTION_LIST_LOADING = 'COLLECTION_LIST_LOADING';
-export const COLLECTION_LIST_LOADED = 'COLLECTION_LIST_LOADED';
-export const COLLECTION_LIST_FAILED = 'COLLECTION_LIST_FAILED';
+// digiteam batch import - fetch list of directories for importing
+export const DIRECTORY_LIST_LOADING = 'DIRECTORY_LIST_LOADING';
+export const DIRECTORY_LIST_LOADED = 'DIRECTORY_LIST_LOADED';
+export const DIRECTORY_LIST_FAILED = 'DIRECTORY_LIST_FAILED';
+
+// digiteam batch import - submit import request
+export const BATCH_IMPORT_REQUESTING = 'BATCH_IMPORT_REQUESTING';
+export const BATCH_IMPORT_REQUESTED = 'BATCH_IMPORT_REQUESTED';
+export const BATCH_IMPORT_REQUEST_FAILED = 'BATCH_IMPORT_REQUEST_FAILED';

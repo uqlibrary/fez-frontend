@@ -1,28 +1,34 @@
 import * as actions from './actionTypes';
-import { get } from 'repositories/generic';
-import { COMMUNITY_LOOKUP_API } from 'repositories/routes';
+import { get, post } from 'repositories/generic';
+import { BATCH_IMPORT_DIRECTORIES_API, BATCH_IMPORT_API } from 'repositories/routes';
+import * as transformers from './transformers';
 
-/**
- * loadCollectionsList - returns records for a list of collections that are a child of a specific community in eSpace
- * @param communityPid - the pid for which we want the child Collections
- * @returns {function(*): Promise<any | never>}
- */
-export function collectionsByCommunityList(communityPid) {
-    if (!!communityPid) {
-        return dispatch => {
-            dispatch({ type: actions.COLLECTION_LIST_LOADING });
-            return get(
-                COMMUNITY_LOOKUP_API(communityPid)
-            )
-                .then(
-                    response => {
-                        dispatch({ type: actions.COLLECTION_LIST_LOADED, payload: response.data });
-                    },
-                    error => {
-                        dispatch({ type: actions.COLLECTION_LIST_FAILED, payload: error.message });
-                    }
-                );
-        };
-    }
-    return false; // should we instead dispatch a _FAILED ?
+export function getBatchImportDirectories() {
+    return dispatch => {
+        dispatch({ type: actions.DIRECTORY_LIST_LOADING });
+        return get(BATCH_IMPORT_DIRECTORIES_API()).then(
+            response => {
+                dispatch({ type: actions.DIRECTORY_LIST_LOADED, payload: response.data });
+            },
+            error => {
+                dispatch({ type: actions.DIRECTORY_LIST_FAILED, payload: error.message });
+            }
+        );
+    };
+}
+
+export function createDigiTeamBatchImport(data) {
+    return dispatch => {
+        dispatch({ type: actions.BATCH_IMPORT_REQUESTING });
+        const batchImportRequest = transformers.getBatchImport(data);
+
+        return post(BATCH_IMPORT_API(), batchImportRequest).then(
+            response => {
+                dispatch({ type: actions.BATCH_IMPORT_REQUESTED, payload: response.data });
+            },
+            error => {
+                dispatch({ type: actions.BATCH_IMPORT_REQUEST_FAILED, payload: error.message });
+            }
+        );
+    };
 }

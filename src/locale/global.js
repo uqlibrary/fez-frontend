@@ -96,7 +96,7 @@ export default {
                 'Error has occurred during request and request cannot be processed. Please contact eSpace ' +
                 'administrators or try again later.',
             genericAlternate:
-                'Error has occurred during request and request cant be processed. Please contact eSpace ' +
+                "Error has occurred during request and request can't be processed. Please contact eSpace " +
                 'administrators or try again later.',
         },
         notRegisteredAuthorAlert: {

@@ -5,7 +5,9 @@ export {
     authorDetails
 } from './account';
 export {
+    communitySearchList,
     collections,
+    collectionsByCommunity,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
     externalTitleScopusResultsList,
@@ -16,12 +18,12 @@ export {
     incompleteNTROrecordUqsbutl1,
     internalTitleSearchList,
     internalTitleSearchListNoResults,
+    lookupToolIncites,
     MyDatasetList,
     myRecordsList,
     possibleUnclaimedList,
     record,
     recordsTypeList,
-    recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
 } from './records';
@@ -35,3 +37,4 @@ export {
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
+export { batchImportDirectories } from './batchImportDirectories';

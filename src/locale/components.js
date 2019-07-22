@@ -1593,23 +1593,23 @@ export default {
         digiTeam: {
             batchImport: {
                 title: 'Batch import',
+                prompt: {
+                    title: 'Workflow',
+                    message: 'Blah about what they should do on this form.',
+                    type: 'info_outline',
+                },
                 help: {},
                 formLabels: {
-                    community: {
-                        label: 'Select destination collection',
-                        placeholder: 'Select a community this collection is a member of',
-                    },
                     collection: {
                         label: 'Select collection',
                         placeholder: 'Select a collection',
                         itemsLoadingHint: 'Loading...',
+                        ariaLabel: 'Select a collection',
                     },
                     docType: {
-                        // label: 'Select a document type',
-                        // placeholder: 'Select a doctype',
-                        title: 'Publications type',
-                        // hint: 'Select document type',
-                        ariaLabel: 'Select a publications type',
+                        label: 'Select a document type',
+                        placeholder: 'Select a doctype',
+                        ariaLabel: 'Select a document type',
                     },
                     directory: {
                         label: 'Select a directory',
@@ -1617,10 +1617,16 @@ export default {
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Perform batch import',
-                    afterSubmitTitle: 'Batch imported successfully',
-                    afterSubmitText: 'Your batch was imported successfully.',
-                    afterSubmitButtonHome: 'Return to the homepage',
-                    afterSubmitButtonAgain: 'Import another bacth',
+                },
+                submitSuccessAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'The request to batch-import has been submitted successfully.',
+                },
+                submitFailureAlert: {
+                    type: 'error',
+                    title: 'Error',
+                    message: 'The batch-import request could not be submitted.',
                 },
                 details: {
                     community: {

@@ -17,3 +17,5 @@ export const lookupToolIncites = [
         "TOT_CITES": "0"
     }
 ];
+
+export default lookupToolIncites;

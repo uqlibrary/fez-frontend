@@ -6,6 +6,7 @@ import {
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
     SEARCH_AUTHOR_LOOKUP_API,
+    COLLECTIONS_BY_COMMUNITY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
@@ -18,21 +19,26 @@ function getSearch(source, searchQuery) {
 }
 
 /**
- * loadCollectionsList - returns records for a list of all collections in eSpace
+ * collectionsList - returns records for a list of collections in eSpace
+ * either all collections, or restricted by parent-community
  * @returns {Promise}
  */
-export function collectionsList() {
+export function collectionsList(parentPid = null) {
     return dispatch => {
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
-        return get(
-            SEARCH_INTERNAL_RECORDS_API({
+        let api;
+        if (parentPid !== null) {
+            api = COLLECTIONS_BY_COMMUNITY_LOOKUP_API(parentPid);
+        } else {
+            api = SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
                 searchQueryParams: { rek_object_type: 2 },
                 pageSize: 999,
                 sortBy: 'title',
                 sortDirection: 'asc',
-            })
-        ).then(
+            });
+        }
+        return get(api).then(
             response => {
                 dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
             },

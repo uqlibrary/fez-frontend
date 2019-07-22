@@ -2,47 +2,49 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux';
 import Immutable from 'immutable';
-import { reduxForm, getFormValues, getFormSyncErrors } from 'redux-form/immutable';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 
-import DigiTeamBatchImport from '../components/DigiTeamBatchImport';
+import { FORM_NAME, DigiTeamBatchImport } from '../components/DigiTeamBatchImport';
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 
-const FORM_NAME = 'DigiTeamBatchImport';
-
-// const onSubmit = (values, dispatch, props) => {
-//     const currentAuthor = props.author || null;
-//     return dispatch(createDigiTeamBatchImport({ ...values.toJS() }, (currentAuthor && currentAuthor.aut_id) || null))
-//         .catch(
-//             error => {
-//                 throw new SubmissionError({ _error: error });
-//             }
-//         );
-// };
+const onSubmit = (values, dispatch) => {
+    const data = { ...values.toJS() };
+    return dispatch(actions.createDigiTeamBatchImport(data))
+        .then(response => {
+            if (!response || !!response.data) {
+                throw new SubmissionError();
+            }
+        })
+        .catch(error => {
+            throw new SubmissionError({ _error: error.message });
+        });
+};
 
 let DigiTeamBatchImportContainer = reduxForm({
     form: FORM_NAME,
-    // onSubmit,
+    onSubmit,
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const result = {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+    const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
+    const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
+    const communityID = formValues.toJS().communityID;
+    return {
+        formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        collectionList: state && state.get('digiTeamBatchImportReducer')
-            ? state.get('digiTeamBatchImportReducer').communityCollectionsList
-            : [],
+        communityCollectionsList:
+            communityID && state && state.get('digiTeamBatchImportReducer')
+                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
+                : [],
     };
-    return result;
 };
 
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        loadItemsList: () => dispatch(actions.collectionsByCommunityList()),
     };
 }
 

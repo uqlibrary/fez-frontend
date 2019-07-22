@@ -50,11 +50,12 @@ const isDigiteamMember = account => {
 };
 
 const isDeveloper = account => {
-    return account.canMasquerade;
+    return hasADGroup(account, 'lib_dev');
 };
 
 const isAdmin = account => {
     return account.canMasquerade;
+    // return account.is_administrator || account.is_super_administrator;
 };
 
 export const pathConfig = {
@@ -151,7 +152,7 @@ export const pathConfig = {
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
     digiteam: {
-        batchImport: '/digiteam/batchImport',
+        batchImport: '/batch-import',
     },
 };
 
@@ -386,7 +387,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && (isDeveloper(account) || isAdmin(account))
+        ...(account && (account.canMasquerade || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     path: pathConfig.admin.masquerade,
@@ -395,6 +396,10 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.pages.masquerade.title,
                 },
+            ]
+            : []),
+        ...(account && (isDeveloper(account) || isAdmin(account))
+            ? [
                 {
                     path: pathConfig.admin.unpublished,
                     render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
@@ -411,7 +416,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && isDigiteamMember(account)
+        ...(account && (isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
             ? [
                 {
                     path: pathConfig.digiteam.batchImport,
