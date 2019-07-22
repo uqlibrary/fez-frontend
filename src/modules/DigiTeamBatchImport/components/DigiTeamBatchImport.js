@@ -14,6 +14,7 @@ import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
 
 import { validation } from 'config';
+import { pathConfig } from 'config/routes';
 import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
@@ -35,9 +36,9 @@ export const DigiTeamBatchImport = props => {
         },
     });
 
-    // const _restartWorkflow = () => {
-    //     // TODO
-    // };
+    const _abandonImport = () => {
+        props.history.push(pathConfig.index);
+    };
 
     return (
         <StandardPage title={batchImportTxt.title}>
@@ -136,7 +137,7 @@ export const DigiTeamBatchImport = props => {
                             children={batchImportTxt.formLabels.cancelButtonLabel}
                             disabled={props.submitting}
                             fullWidth
-                            // onClick={_restartWorkflow}
+                            onClick={_abandonImport}
                             variant="contained"
                         />
                     </Grid>
