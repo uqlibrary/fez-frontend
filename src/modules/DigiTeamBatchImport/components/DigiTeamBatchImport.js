@@ -78,6 +78,7 @@ export const DigiTeamBatchImport = props => {
                                             disabled={props.submitting}
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collectionID"
+                                            parentPid={communityID}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}

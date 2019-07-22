@@ -19,7 +19,7 @@ function getSearch(source, searchQuery) {
 }
 
 /**
- * loadCollectionsList - returns records for a list of collections in eSpace
+ * collectionsList - returns records for a list of collections in eSpace
  * either all collections, or restricted by parent-community
  * @returns {Promise}
  */

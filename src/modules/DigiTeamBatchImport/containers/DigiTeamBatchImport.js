@@ -15,16 +15,16 @@ let DigiTeamBatchImportContainer = reduxForm({
 })(confirmDiscardFormChanges(DigiTeamBatchImport, FORM_NAME));
 
 const mapStateToProps = state => {
-    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
+    const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
+    const communityID = formValues.toJS().communityID;
     return {
-        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        community: state && state.get('communityId'),
-        collection: state && state.get('collectionId'),
         communityCollectionsList:
-            state && state.get('digiTeamBatchImportReducer')
-                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
+            communityID && state && state.get('digiTeamBatchImportReducer')
+                ? state.get('digiTeamBatchImportReducer').collectionsList(communityID)
                 : [],
         itemsList:
             state && state.get('digiTeamBatchImportReducer') ? state.get('digiTeamBatchImportReducer').itemsList : [],
@@ -34,8 +34,6 @@ const mapStateToProps = state => {
 function mapDispatchToProps(dispatch) {
     return {
         actions: bindActionCreators(actions, dispatch),
-        // loadItemsList: (parentPid) => dispatch(actions.collectionsList(parentPid)),
-        // collectionsByCommunityList: (parentPid) => dispatch(actions.collectionsByCommunityList(parentPid)),
     };
 }
 
