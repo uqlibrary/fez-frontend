@@ -9,7 +9,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { DocumentTypeSelectField } from 'modules/SharedComponents/PublicationSubtype';
+import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
 
@@ -20,11 +20,7 @@ import { default as publicationLocale } from 'locale/publicationForm';
 export const FORM_NAME = 'DigiTeamBatchImport';
 
 export const DigiTeamBatchImport = props => {
-    const communityID = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
-
-    const _onDocTypeChange = fieldProps => {
-        return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
-    };
+    const communityIDValue = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
 
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
@@ -71,14 +67,14 @@ export const DigiTeamBatchImport = props => {
                                         // onChange={_onCommunityChange}
                                     />
                                 </Grid>
-                                {communityID && (
+                                {communityIDValue && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
                                             disabled={props.submitting}
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collectionID"
-                                            parentPid={communityID}
+                                            parentPid={communityIDValue}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -97,13 +93,13 @@ export const DigiTeamBatchImport = props => {
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
-                                        component={DocumentTypeSelectField}
+                                        component={DocumentTypeSingleField}
                                         name="documentType"
                                         disabled={props.submitting}
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        onChange={_onDocTypeChange}
+                                        // onChange={_onDocTypeChange}
                                     />
                                 </Grid>
                             </Grid>

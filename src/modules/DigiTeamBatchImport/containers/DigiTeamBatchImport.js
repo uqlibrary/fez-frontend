@@ -24,7 +24,7 @@ const mapStateToProps = state => {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         communityCollectionsList:
             communityID && state && state.get('digiTeamBatchImportReducer')
-                ? state.get('digiTeamBatchImportReducer').collectionsList(communityID)
+                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
                 : [],
         itemsList:
             state && state.get('digiTeamBatchImportReducer') ? state.get('digiTeamBatchImportReducer').itemsList : [],
