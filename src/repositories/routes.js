@@ -306,3 +306,9 @@ export const BATCH_IMPORT_DIRECTORIES_API = () => {
         apiUrl: 'external/records/batch-import/directories',
     };
 };
+
+export const BATCH_IMPORT_API = () => {
+    return {
+        apiUrl: 'external/records/batch-import',
+    };
+};

@@ -31,8 +31,8 @@ export const DigiTeamBatchImport = props => {
         alertLocale: {
             validationAlert: { ...publicationLocale.validationAlert },
             progressAlert: { ...publicationLocale.progressAlert },
-            successAlert: { ...publicationLocale.successAlert },
-            errorAlert: { ...publicationLocale.errorAlert },
+            successAlert: { ...batchImportTxt.submitSuccessAlert },
+            errorAlert: { ...batchImportTxt.submitFailureAlert },
         },
     });
 
@@ -65,7 +65,6 @@ export const DigiTeamBatchImport = props => {
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        // onChange={_onCommunityChange}
                                     />
                                 </Grid>
                                 {communityIDValue && (
@@ -114,9 +113,9 @@ export const DigiTeamBatchImport = props => {
                                     <Field
                                         component={DirectorySelectField}
                                         disabled={props.submitting}
-                                        name="san-dir"
+                                        name="importDirectory"
                                         required
-                                        // onChange={_onDirectoryChange}
+                                        validate={[validation.required]}
                                         {...batchImportTxt.formLabels.directory}
                                     />
                                 </Grid>
@@ -167,6 +166,7 @@ DigiTeamBatchImport.propTypes = {
     docTypes: PropTypes.array,
     formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
+    history: PropTypes.object.isRequired,
     isLoading: PropTypes.bool,
     loadItemsList: PropTypes.func,
     submitting: PropTypes.bool,

@@ -1617,10 +1617,16 @@ export default {
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'Perform batch import',
-                    afterSubmitTitle: 'Batch imported successfully',
-                    afterSubmitText: 'Your batch was imported successfully.',
-                    afterSubmitButtonHome: 'Return to the homepage',
-                    afterSubmitButtonAgain: 'Import another bacth',
+                },
+                submitSuccessAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'The request to batch-import has been submitted successfully.',
+                },
+                submitFailureAlert: {
+                    type: 'error',
+                    title: 'Error',
+                    message: 'The batch-import request could not be submitted.',
                 },
                 details: {
                     community: {
