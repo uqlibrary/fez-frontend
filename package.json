@@ -97,6 +97,8 @@
     "postcss-loader": "^2.1.4",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
     "prettier": "^1.18.2",
+    "prettier-eslint": "^9.0.0",
+    "prettier-eslint-cli": "^5.0.0",
     "progress-bar-webpack-plugin": "^1.11.0",
     "query-string": "^6.5.0",
     "react-test-renderer": "16.3.2",
