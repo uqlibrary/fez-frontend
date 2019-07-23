@@ -195,7 +195,7 @@
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
     "eslint": "eslint '**/*.js' --quiet",
     "eslint:fix": "eslint '**/*.js' --quiet --fix",
-    "codestyles:check": "prettier-eslint '**/*.js' --list-different",
+    "codestyles:list-files": "prettier-eslint '**/*.js' --list-different -l silent",
     "codestyles:fix": "prettier-eslint '**/*.js' --write",
     "cypress:open": "cypress open",
     "cypress:watch": "cypress run --headed",
