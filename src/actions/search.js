@@ -28,7 +28,7 @@ export function collectionsList(parentPid = null) {
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
         let api;
         if (parentPid !== null) {
-            api = COLLECTIONS_BY_COMMUNITY_LOOKUP_API(parentPid);
+            api = COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: parentPid });
         } else {
             api = SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
