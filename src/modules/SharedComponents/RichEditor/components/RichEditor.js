@@ -15,6 +15,7 @@ export default class RichEditor extends PureComponent {
         maxValue: PropTypes.number,
         instructions: PropTypes.any,
         title: PropTypes.any,
+        titleProps: PropTypes.object,
         description: PropTypes.any,
         inputRef: PropTypes.object,
     };
@@ -25,6 +26,7 @@ export default class RichEditor extends PureComponent {
         height: 100,
         disabled: false,
         returnSingleValue: false,
+        titleProps: {},
     };
 
     componentDidMount() {
@@ -54,7 +56,7 @@ export default class RichEditor extends PureComponent {
         this.editorInstance.setReadOnly(!!this.props.disabled);
     };
 
-    onChange = evt => {
+    onChange = (evt) => {
         const textValue = evt.editor.document
             .getBody()
             .getText()
@@ -94,7 +96,10 @@ export default class RichEditor extends PureComponent {
             <React.Fragment>
                 <span>
                     {this.props.title && (
-                        <Typography color={this.props.meta && this.props.meta.error && 'error'}>
+                        <Typography
+                            {...this.props.titleProps}
+                            color={this.props.meta && this.props.meta.error && 'error'}
+                        >
                             {this.props.title}
                         </Typography>
                     )}

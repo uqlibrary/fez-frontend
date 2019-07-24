@@ -14,14 +14,14 @@ import AdminInterface from './AdminInterface';
 import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './IdentifiersSection';
 import BibliographicSection from './BibliographicSection';
-import AdminSection from './AdminSection';
+import AdminSection from './admin/AdminSection';
 import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './FilesSection';
 import AuthorDetailsSection from './AuthorDetailsSection';
 
 import { TabbedContext, RecordContext } from 'context';
 
-const styles = theme => ({
+const styles = (theme) => ({
     helpIcon: {
         color: theme.palette.secondary.main,
         opacity: 0.66,

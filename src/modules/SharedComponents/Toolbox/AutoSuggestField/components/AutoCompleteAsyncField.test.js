@@ -123,7 +123,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
+        expect(styles({ spacing: { unit: 8 } })).toMatchSnapshot();
     });
 
     it('should call stateReducer function on state change as free text field', () => {
@@ -173,7 +173,7 @@ describe('AutoCompleteAsyncField component', () => {
 
     it(
         'should test stateReducer function correctly when free text input is ' +
-			'not allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
+            'not allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
         () => {
             const wrapper = setup({ required: true });
             const result = wrapper

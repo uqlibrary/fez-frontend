@@ -9,8 +9,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import Chip from '@material-ui/core/Chip';
 
-export const styles = () => ({
+export const styles = (theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -26,6 +27,9 @@ export const styles = () => ({
     },
     inputRoot: {
         flexWrap: 'wrap',
+    },
+    chip: {
+        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
     },
 });
 
@@ -53,6 +57,8 @@ export class AutoCompleteAsyncField extends Component {
         openOnFocus: PropTypes.bool,
         clearInput: PropTypes.bool,
         MenuItemComponent: PropTypes.func,
+        showChips: PropTypes.bool,
+        selectedItem: PropTypes.array,
     };
 
     static defaultProps = {
@@ -89,7 +95,7 @@ export class AutoCompleteAsyncField extends Component {
         }
     }
 
-    getSuggestions = event => {
+    getSuggestions = (event) => {
         if (this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category, event.target.value);
         }
@@ -99,7 +105,7 @@ export class AutoCompleteAsyncField extends Component {
         return (
             <TextField
                 InputProps={{
-                    inputRef: node => {
+                    inputRef: (node) => {
                         this.textInputRef = node;
                         if (!!this.textInputRef && this.props.openOnFocus) {
                             this.textInputRef.addEventListener('focus', openMenu);
@@ -115,7 +121,7 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
-    renderMenuItemComponent = suggestion => <this.props.MenuItemComponent suggestion={suggestion} />;
+    renderMenuItemComponent = (suggestion) => <this.props.MenuItemComponent suggestion={suggestion} />;
 
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
@@ -172,6 +178,18 @@ export class AutoCompleteAsyncField extends Component {
             }
             : () => {};
 
+    handleDelete = (item) => () => {
+        this.setState(
+            (state) => {
+                const selectedItem = [...state.selectedItem];
+                selectedItem.splice(selectedItem.indexOf(item), 1);
+                return { selectedItem };
+            },
+            () => {
+                this.props.onChange(this.state.selectedItem);
+            }
+        );
+    };
     render() {
         const {
             classes,
@@ -224,6 +242,19 @@ export class AutoCompleteAsyncField extends Component {
                                             classes,
                                             inputProps: getInputProps({
                                                 onChange: this.getSuggestions,
+                                                ...(this.props.showChips
+                                                    ? {
+                                                        startAdornment: this.props.selectedItem.map((item) => (
+                                                            <Chip
+                                                                key={item.id}
+                                                                tabIndex={-1}
+                                                                label={item.value}
+                                                                className={classes.chip}
+                                                                onDelete={this.handleDelete(item)}
+                                                            />
+                                                        )),
+                                                    }
+                                                    : {}),
                                             }),
                                             error: error,
                                             errorText: (error && errorText) || '',
@@ -242,6 +273,11 @@ export class AutoCompleteAsyncField extends Component {
                                         </Grid>
                                     )}
                                 </Grid>
+                                {itemsListLoading && (
+                                    <Grid item xs={'auto'}>
+                                        <CircularProgress size={16} color="primary" />
+                                    </Grid>
+                                )}
                                 {isOpen && itemsList.length > 0 ? (
                                     <div {...getMenuProps()}>
                                         <Popper
@@ -259,7 +295,7 @@ export class AutoCompleteAsyncField extends Component {
                                                 }}
                                             >
                                                 {itemsList
-                                                    .filter(suggestion =>
+                                                    .filter((suggestion) =>
                                                         this.props.filter(
                                                             inputValue,
                                                             isNaN(inputValue)

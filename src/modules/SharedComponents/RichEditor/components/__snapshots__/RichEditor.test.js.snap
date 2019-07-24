@@ -548,6 +548,7 @@ exports[`RichEditor should render component 1`] = `
             }
             onChange={[MockFunction]}
             returnSingleValue={false}
+            titleProps={Object {}}
             value=""
           >
             <span />
@@ -1189,6 +1190,7 @@ exports[`RichEditor should render error as one child 1`] = `
             }
             onChange={[MockFunction]}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -2910,6 +2912,7 @@ exports[`RichEditor should render error as react children 1`] = `
             }
             onChange={[MockFunction]}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -4621,6 +4624,7 @@ exports[`RichEditor should render error showing input length 1`] = `
             }
             onChange={[MockFunction]}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Object {
                 "get": [MockFunction] {
@@ -6308,6 +6312,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
             }
             onChange={[MockFunction]}
             returnSingleValue={false}
+            titleProps={Object {}}
             value={
               Immutable.Map {
                 "htmlText": "This is test value",
@@ -7957,6 +7962,7 @@ exports[`RichEditor should render given title and description 1`] = `
             onChange={[MockFunction]}
             returnSingleValue={false}
             title="This is test title"
+            titleProps={Object {}}
             value=""
           >
             <span>
@@ -9572,6 +9578,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
             onChange={[MockFunction]}
             returnSingleValue={false}
             title="This is title with error"
+            titleProps={Object {}}
             value=""
           >
             <span>

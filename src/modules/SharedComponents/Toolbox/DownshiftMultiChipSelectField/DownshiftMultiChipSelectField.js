@@ -6,6 +6,7 @@ export default function DownshiftMultiChipSelectField(fieldProps) {
     return (
         <MultiSelectWithChip
             onChange={fieldProps.input.onChange}
+            initialValue={fieldProps.meta.initial}
             {...fieldProps}
         />
     );
