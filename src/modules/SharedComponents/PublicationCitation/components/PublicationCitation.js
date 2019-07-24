@@ -40,7 +40,7 @@ import DataCollectionCitation from './citations/DataCollectionCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 import AdminActions from './citations/partials/AdminActions';
 
-export const styles = theme => ({
+export const styles = (theme) => ({
     divider: {
         marginBottom: 12,
         marginTop: 12,
@@ -142,7 +142,7 @@ export class PublicationCitation extends PureComponent {
         this.defaultActions = locale.components.publicationCitation.defaultActions;
     }
 
-    _handleDefaultActions = action => {
+    _handleDefaultActions = (action) => {
         switch (action) {
             case 'fixRecord':
                 this.props.history.push(routes.pathConfig.records.fix(this.props.publication.rek_pid));
@@ -166,26 +166,22 @@ export class PublicationCitation extends PureComponent {
         );
     };
 
-    renderCitation = publicationTypeId => {
+    renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId
-            ? publicationTypes(this.citationComponents).filter(item => {
-                return item.id === publicationTypeId;
-            })
+            ? publicationTypes(this.citationComponents)[publicationTypeId]
             : null;
 
-        return filteredPublicationType &&
-            filteredPublicationType.length > 0 &&
-            filteredPublicationType[0].citationComponent ? (
-                React.createElement(filteredPublicationType[0].citationComponent, {
-                    publication: this.props.publication,
-                    hideDoiLink: this.props.hideLinks,
-                })
-            ) : (
-                <div>Citation display not available for {publicationTypeId}</div>
-            );
+        return (filteredPublicationType || {}).citationComponent ? (
+            React.createElement(filteredPublicationType.citationComponent, {
+                publication: this.props.publication,
+                hideDoiLink: this.props.hideLinks,
+            })
+        ) : (
+            <div>Citation display not available for {publicationTypeId}</div>
+        );
     };
 
-    renderActions = actions => {
+    renderActions = (actions) => {
         const pid =
             this.props.publication && this.props.publication.rek_pid && this.props.publication.rek_pid.replace(':', '');
         return actions && actions.length > 0
@@ -366,7 +362,7 @@ export class PublicationCitation extends PureComponent {
                                 {locale.components.contentIndicators.label}:
                             </span>
                             {this.props.publication.fez_record_search_key_content_indicator
-                                .map(item => item.rek_content_indicator_lookup)
+                                .map((item) => item.rek_content_indicator_lookup)
                                 .join(locale.components.contentIndicators.divider)}
                         </Typography>
                     </Grid>

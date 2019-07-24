@@ -9,9 +9,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
-import { publicationTypes } from 'config';
 import { locale } from 'locale';
-import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
@@ -20,7 +18,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Hidden from '@material-ui/core/Hidden';
 import * as validationRules from 'config/validation';
 
-export const styles = theme => ({
+export const styles = (theme) => ({
     sideBar: {
         [theme.breakpoints.up('md')]: {
             paddingLeft: 32,
@@ -100,26 +98,25 @@ export class AdvancedSearchComponent extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({ ...recordForms });
     }
 
-    haveAllAdvancedSearchFieldsValidated = fieldRows => {
+    haveAllAdvancedSearchFieldsValidated = (fieldRows) => {
         const fieldTypes = locale.components.searchComponent.advancedSearch.fieldTypes;
         return (
             !this.props.isLoading &&
             !this.props.yearFilter.invalid &&
             fieldRows
                 .reduce((errors, item) => {
-                    const newErrors = fieldTypes[item.searchField].validation.map(rule =>
+                    const newErrors = fieldTypes[item.searchField].validation.map((rule) =>
                         validationRules[rule](item.value)
                     );
                     return [...errors, ...newErrors];
                 }, [])
-                .filter(error => !!error).length === 0
+                .filter((error) => !!error).length === 0
         );
     };
 
-    _handleAdvancedSearch = event => {
+    _handleAdvancedSearch = (event) => {
         event.preventDefault();
         if (event.key && event.key !== 'Enter') {
             return;
@@ -147,7 +144,7 @@ export class AdvancedSearchComponent extends PureComponent {
         !!this.props.onAdvancedSearchRowAdd && this.props.onAdvancedSearchRowAdd();
     };
 
-    _removeAdvancedSearchRow = index => {
+    _removeAdvancedSearchRow = (index) => {
         !!this.props.onAdvancedSearchRowRemove && this.props.onAdvancedSearchRowRemove(index);
     };
 
@@ -155,7 +152,7 @@ export class AdvancedSearchComponent extends PureComponent {
         !!this.props.onAdvancedSearchReset && this.props.onAdvancedSearchReset();
     };
 
-    _handleDateRangeChange = key => value => {
+    _handleDateRangeChange = (key) => (value) => {
         !!this.props.updateDateRange && this.props.updateDateRange(key, value);
     };
 
@@ -175,7 +172,7 @@ export class AdvancedSearchComponent extends PureComponent {
         const lastFieldAdded = [...this.props.fieldRows].pop();
         const canAddAnotherField =
             this.haveAllAdvancedSearchFieldsValidated(this.props.fieldRows) && lastFieldAdded.searchField !== '0';
-        const alreadyAddedFields = this.props.fieldRows.map(item => item.searchField);
+        const alreadyAddedFields = this.props.fieldRows.map((item) => item.searchField);
 
         return (
             <form id="advancedSearchForm" onSubmit={this._handleAdvancedSearch} style={{ padding: 12 }}>
@@ -207,7 +204,7 @@ export class AdvancedSearchComponent extends PureComponent {
                             <Grid container>
                                 <Grid item xs={12} md={8}>
                                     {this.props.fieldRows
-                                        .filter(item => {
+                                        .filter((item) => {
                                             return (
                                                 item.searchField &&
                                                 txt.advancedSearch.fieldTypes[item.searchField].type !== null

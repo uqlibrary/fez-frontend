@@ -43,10 +43,10 @@ export default class PublicationForm extends Component {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({ ...recordForms });
+        this.publicationTypes = Object.values(publicationTypes({ ...recordForms }));
         this.publicationTypeItems = [
             ...this.publicationTypes
-                .filter(item => {
+                .filter((item) => {
                     return item.isFavourite;
                 })
                 .map((item, index) => {
@@ -58,7 +58,7 @@ export default class PublicationForm extends Component {
                 }),
             ...[<Divider key="div_0" />],
             ...this.publicationTypes
-                .filter(item => {
+                .filter((item) => {
                     return item.hasFormComponent;
                 })
                 .map((item, index) => {
@@ -96,7 +96,7 @@ export default class PublicationForm extends Component {
         }
     }
 
-    _handleDefaultSubmit = event => {
+    _handleDefaultSubmit = (event) => {
         !!event && event.preventDefault();
     };
 

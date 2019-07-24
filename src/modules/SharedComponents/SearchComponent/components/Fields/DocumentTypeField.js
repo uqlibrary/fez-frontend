@@ -8,7 +8,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
 
-export const styles = theme => ({
+export const styles = (theme) => ({
     title: {
         ...theme.typography.caption,
     },
@@ -35,10 +35,10 @@ export class DocumentTypeField extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes();
+        this.publicationTypes = Object.values(publicationTypes());
     }
 
-    _handleDocTypeChange = event => {
+    _handleDocTypeChange = (event) => {
         this.props.updateDocTypeValues(event.target.value);
     };
 
