@@ -1046,6 +1046,46 @@ export default {
                 },
             },
         },
+        subjectForm: {
+            title: 'Subject',
+            text: 'Select subject codes',
+            // help: {
+            //     title: 'Field of research',
+            //     text: 'more info',
+            //     buttonLabel: 'CLOSE'
+            // },
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Begin typing to select and add subject(s)',
+                        inputFieldHint: 'Start typing code or field name and select from list',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Subject',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         paging: {
             nextPage: 'Next',
             previousPage: 'Previous',

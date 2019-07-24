@@ -135,7 +135,9 @@ export const dateTimeYear = value =>
         ? locale.validationErrors.dateTimeYear
         : undefined;
 export const validFileUpload = value => {
-    return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
+    return value && value.hasOwnProperty('isValid') && !value.isValid
+        ? locale.validationErrors.fileUpload
+        : undefined;
 };
 
 export const fileUploadRequired = value => {
@@ -145,11 +147,17 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
-    if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
+    const accessCondition = values.toJS()
+        .fez_record_search_key_access_conditions;
+    if (
+        !!accessCondition &&
+        accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID
+    ) {
         return undefined;
     } else {
-        return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
+        return value === undefined || value.queue.length === 0
+            ? locale.validationErrors.fileUploadRequired
+            : undefined;
     }
 };
 
@@ -166,7 +174,9 @@ export const isValidIsbn = subject => {
     // Checks for ISBN-10 or ISBN-13 format
     // https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
     const regex = /^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
-    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
+    return subject.trim().length === 0 || regex.test(subject)
+        ? ''
+        : locale.validationErrors.isbn;
 };
 
 export const checkDigit = subject => {
@@ -188,13 +198,17 @@ export const checkDigit = subject => {
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
     // const regex = /^(?:ISMN )?((?:979-0-[\d-]{9}-\d)|(?:M-[\d-]{9}-\d))$/gi;
-    return subject.trim().length === 0 || checkDigit(subject) ? '' : locale.validationErrors.ismn;
+    return subject.trim().length === 0 || checkDigit(subject)
+        ? ''
+        : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
     // https://www.wikidata.org/wiki/Property:P1243
     const regex = /^(?:ISRC )?(?:[A-Z]{2}-[A-Z0-9]{3}-\d{2}-\d{5})$/gi;
-    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isrc;
+    return subject.trim().length === 0 || regex.test(subject)
+        ? ''
+        : locale.validationErrors.isrc;
 };
 
 export const isValidAuthorLink = link => {
@@ -202,7 +216,9 @@ export const isValidAuthorLink = link => {
 };
 
 export const isValidContributorLink = (link, required = false) => {
-    return required && !(link && link.valid) ? locale.validationErrors.contributorLinking : '';
+    return required && !(link && link.valid)
+        ? locale.validationErrors.contributorLinking
+        : '';
 };
 
 // Google Scholar ID
@@ -219,7 +235,11 @@ export const dateRange = (value, values) => {
     const lowerInRange = values.toJS().fez_record_search_key_start_date;
     const higherInRange = values.toJS().fez_record_search_key_end_date;
 
-    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
+    if (
+        !!lowerInRange &&
+        !!higherInRange &&
+        lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)
+    ) {
         return locale.validationErrors.dateRange;
     } else {
         return '';
@@ -271,7 +291,9 @@ export const getErrorAlertProps = ({
             };
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
-            const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
+            const errorMessagesList = formErrors
+                ? translateFormErrorsToText(formErrors)
+                : null;
             const message = (
                 <span>
                     {alertLocale.validationAlert.message}

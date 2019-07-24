@@ -3,8 +3,8 @@ import React from 'react';
 export default {
     validationErrors: {
         publicationSearch:
-            'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) ' +
-            'or the title (min 10 characters) of the publication',
+            // eslint-disable-next-line max-len
+            'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
         ismn: 'ISMN value is not valid',
@@ -16,6 +16,7 @@ export default {
         url: 'URL is not valid',
         doi: 'DOI is not valid',
         forRequired: 'Field of research values are required',
+        subRequired: 'Subject values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
