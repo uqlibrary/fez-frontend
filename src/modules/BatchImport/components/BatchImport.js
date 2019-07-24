@@ -21,23 +21,23 @@ import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-
-export const BatchImport = props => {
+export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history, submitting, ...props }) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
 
     const alertProps = validation.getErrorAlertProps({
-        ...props,
         alertLocale: {
             validationAlert: { ...publicationLocale.validationAlert },
             progressAlert: { ...publicationLocale.progressAlert },
             successAlert: { ...batchImportTxt.submitSuccessAlert },
             errorAlert: { ...batchImportTxt.submitFailureAlert },
         },
+        ...props,
+        submitting,
     });
 
     const _abandonImport = () => {
-        props.history.push(pathConfig.index);
+        history.push(pathConfig.index);
     };
 
     return (
@@ -60,21 +60,21 @@ export const BatchImport = props => {
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
-                                        disabled={props.submitting}
+                                        disabled={submitting}
                                         name="communityID"
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
                                     />
                                 </Grid>
-                                {props.communityID && (
+                                {communityID && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
-                                            disabled={props.submitting}
+                                            disabled={submitting}
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collectionID"
-                                            parentPid={props.communityID}
+                                            parentPid={communityID}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -95,7 +95,7 @@ export const BatchImport = props => {
                                     <Field
                                         component={DocumentTypeSingleField}
                                         name="documentType"
-                                        disabled={props.submitting}
+                                        disabled={submitting}
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
@@ -111,7 +111,7 @@ export const BatchImport = props => {
                                 <Grid item xs={12}>
                                     <Field
                                         component={DirectorySelectField}
-                                        disabled={props.submitting}
+                                        disabled={submitting}
                                         name="importDirectory"
                                         required
                                         validate={[validation.required]}
@@ -133,7 +133,7 @@ export const BatchImport = props => {
                         <Button
                             aria-label={batchImportTxt.formLabels.cancelButtonLabel}
                             children={batchImportTxt.formLabels.cancelButtonLabel}
-                            disabled={props.submitting}
+                            disabled={submitting}
                             fullWidth
                             onClick={_abandonImport}
                             variant="contained"
@@ -144,10 +144,10 @@ export const BatchImport = props => {
                             aria-label={batchImportTxt.formLabels.submitButtonLabel}
                             children={batchImportTxt.formLabels.submitButtonLabel}
                             color="primary"
-                            disabled={props.submitting || props.disableSubmit}
+                            disabled={submitting || disableSubmit}
                             fullWidth
                             id="submit-data-collection"
-                            onClick={props.handleSubmit}
+                            onClick={handleSubmit}
                             variant="contained"
                         />
                     </Grid>
