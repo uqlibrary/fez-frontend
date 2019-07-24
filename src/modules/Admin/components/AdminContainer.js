@@ -13,18 +13,16 @@ import AdminInterface from './AdminInterface';
 
 import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './IdentifiersSection';
-import BibliographicSection from './BibliographicSection';
-import AdminSection from './AdminSection';
+import BibliographicSection from './bibliographic/BibliographicSection';
+import AdminSection from './admin/AdminSection';
 import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './FilesSection';
 import AuthorDetailsSection from './AuthorDetailsSection';
 
-import {
-    TabbedContext,
-    RecordContext,
-} from 'context';
+import { TabbedContext, RecordContext } from 'context';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
-const styles = theme => ({
+const styles = (theme) => ({
     helpIcon: {
         color: theme.palette.secondary.main,
         opacity: 0.66,
@@ -39,7 +37,8 @@ const styles = theme => ({
     badgeMargin: {
         top: 8,
         left: 28,
-        width: 12, height: 12,
+        width: 12,
+        height: 12,
         fontSize: 10,
         fontWeight: 'bold',
         backgroundColor: '#595959'
@@ -60,8 +59,7 @@ export const AdminContainer = ({
     history
 }) => {
     const [tabbed, setTabbed] = useState(
-        Cookies.get('adminFormTabbed') &&
-        !!(Cookies.get('adminFormTabbed') === 'tabbed')
+        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
     );
     const theme = useTheme();
 
@@ -87,7 +85,12 @@ export const AdminContainer = ({
     }
 
     return (
-        <TabbedContext.Provider value={{ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }}>
+        <TabbedContext.Provider
+            value={{
+                tabbed: isMobileView ? false : tabbed,
+                toggleTabbed: handleToggle
+            }}
+        >
             <RecordContext.Provider value={{ record: recordToView }}>
                 <AdminInterface
                     classes={classes}
@@ -99,17 +102,17 @@ export const AdminContainer = ({
                     location={location}
                     history={history}
                     tabs={{
-                        bibliographic: {
-                            component: BibliographicSection,
-                            activated: false
+                        admin: {
+                            component: AdminSection,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
                         },
                         identifiers: {
                             component: IdentifiersSection,
-                            activated: false
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
                         },
-                        admin: {
-                            component: AdminSection,
-                            activated: false
+                        bibliographic: {
+                            component: BibliographicSection,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
                         },
                         grantInformation: {
                             component: GrantInformationSection,
@@ -149,11 +152,13 @@ AdminContainer.propTypes = {
 };
 
 export function isChanged(prevProps, nextProps) {
-    return prevProps.disableSubmit === nextProps.disableSubmit &&
-        prevProps.submitting === nextProps.submitting &&
-        prevProps.submitSucceeded === nextProps.submitSucceeded &&
-        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-        prevProps.loadingRecordToView === nextProps.loadingRecordToView;
+    return (
+        prevProps.disableSubmit === nextProps.disableSubmit &&
+		prevProps.submitting === nextProps.submitting &&
+		prevProps.submitSucceeded === nextProps.submitSucceeded &&
+		(prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
+		prevProps.loadingRecordToView === nextProps.loadingRecordToView
+    );
 }
 
 export default React.memo(withStyles(styles, { withTheme: true })(AdminContainer), isChanged);

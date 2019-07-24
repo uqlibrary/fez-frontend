@@ -9,8 +9,9 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import Chip from '@material-ui/core/Chip';
 
-export const styles = () => ({
+export const styles = (theme) => ({
     root: {
         flexGrow: 1,
     },
@@ -26,7 +27,10 @@ export const styles = () => ({
     },
     inputRoot: {
         flexWrap: 'wrap',
-    }
+    },
+    chip: {
+        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`
+    },
 });
 
 export class AutoCompleteAsyncField extends Component {
@@ -55,7 +59,9 @@ export class AutoCompleteAsyncField extends Component {
         filter: PropTypes.func,
         openOnFocus: PropTypes.bool,
         clearInput: PropTypes.bool,
-        MenuItemComponent: PropTypes.func
+        MenuItemComponent: PropTypes.func,
+        showChips: PropTypes.bool,
+        selectedItem: PropTypes.array
     };
 
     static defaultProps = {
@@ -172,6 +178,15 @@ export class AutoCompleteAsyncField extends Component {
             : () => {}
     );
 
+    handleDelete = item => () => {
+        this.setState(state => {
+            const selectedItem = [...state.selectedItem];
+            selectedItem.splice(selectedItem.indexOf(item), 1);
+            return { selectedItem };
+        }, () => {
+            this.props.onChange(this.state.selectedItem);
+        });
+    };
     render() {
         const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
         const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
@@ -199,7 +214,20 @@ export class AutoCompleteAsyncField extends Component {
                                                 fullWidth: true,
                                                 classes,
                                                 inputProps: getInputProps({
-                                                    onChange: this.getSuggestions
+                                                    onChange: this.getSuggestions,
+                                                    ...(
+                                                        this.props.showChips ? {
+                                                            startAdornment: this.props.selectedItem.map(item => (
+                                                                <Chip
+                                                                    key={item.id}
+                                                                    tabIndex={-1}
+                                                                    label={item.value}
+                                                                    className={classes.chip}
+                                                                    onDelete={this.handleDelete(item)}
+                                                                />
+                                                            ))
+                                                        } : {}
+                                                    )
                                                 }),
                                                 error: error,
                                                 errorText: error && errorText || '',

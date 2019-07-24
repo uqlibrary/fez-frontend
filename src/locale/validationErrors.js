@@ -2,7 +2,8 @@ import React from 'react';
 
 export default {
     validationErrors: {
-        publicationSearch: 'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
+        publicationSearch:
+            'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
         ismn: 'ISMN value is not valid',
@@ -14,6 +15,7 @@ export default {
         url: 'URL is not valid',
         doi: 'DOI is not valid',
         forRequired: 'Field of research values are required',
+        subRequired: 'Subject values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
@@ -21,17 +23,31 @@ export default {
         maxWords: 'Must be [max] words or less',
         authorLinking: 'Please select and confirm an author',
         contributorLinking: 'Please select and confirm a contributor',
-        authorRequired: (<span>Please <b>provide a list of authors/creators</b> of the work and <b>select an author/creator or editor/contributor</b> as you</span>),
-        editorRequired: (<span>Please <b>provide a list of editors/contributors</b> of the work and <b>select an editor/contributor or author/creator</b> as you</span>),
+        authorRequired: (
+            <span>
+                Please <b>provide a list of authors/creators</b> of the work and{' '}
+                <b>select an author/creator or editor/contributor</b> as you
+            </span>
+        ),
+        editorRequired: (
+            <span>
+                Please <b>provide a list of editors/contributors</b> of the work
+                and <b>select an editor/contributor or author/creator</b> as you
+            </span>
+        ),
         supervisorRequired: 'Please provide a list of supervisors',
-        googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
+        googleScholarId:
+            'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
         pageRange: 'Please provide a valid start/end page range',
-        remindToAdd: 'Please remember to click ADD to add this item to your list',
+        remindToAdd:
+            'Please remember to click ADD to add this item to your list',
         requireChecked: 'Please accept deposit agreement',
-        authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
-        authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
+        authorsAffiliationIncomplete:
+            'Rows marked with a red prefix must be updated',
+        authorAffiliationIncomplete:
+            'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list'
     },
     validationErrorsSummary: {
@@ -65,10 +81,13 @@ export default {
         files: 'File submission to be completed',
         fieldOfResearch: 'Field of research (FoR) codes are required',
         fez_record_search_key_keywords: 'Keywords are required',
-        contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
-        authorLinking: 'You are required to select a author from the list, then confirm that it is you',
+        contributorLinking:
+            'You are required to select a contributor from the list, then confirm that it is you',
+        authorLinking:
+            'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        fixRecordAnyField: 'Please provide additional information, corrections or upload file(s).',
+        fixRecordAnyField:
+            'Please provide additional information, corrections or upload file(s).',
         contactName: 'Contact name is required',
         contactNameId: 'ID for contact name is required',
         contactEmail: 'Contact email is required',
@@ -86,7 +105,8 @@ export default {
         // Collection form validations
         community: 'You must select a community',
         title: 'Title is required',
-        authorsAffiliation: 'Author affiliation rows marked with red are required',
+        authorsAffiliation:
+            'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
         grants: 'You must click ADD GRANT to enter the value to the grants list'
     }

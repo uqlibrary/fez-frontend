@@ -9,9 +9,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
-import {publicationTypes} from 'config';
 import {locale} from 'locale';
-import * as recordForms from '../../PublicationForm/components/Forms';
 import DocumentTypeField from './Fields/DocumentTypeField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
@@ -98,7 +96,6 @@ export class AdvancedSearchComponent extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes({...recordForms});
     }
 
     haveAllAdvancedSearchFieldsValidated = (fieldRows) => {

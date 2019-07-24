@@ -11,14 +11,16 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-import { refereedsources, openaccess, qindex } from './MockData';
+import { refereedsources, openaccess, qindex } from '../MockData';
 import { validation } from 'config';
 
 /* istanbul ignore next */
 export const AdminSection = ({ disabled }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>
-            <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
+            <Typography variant="body2" component="p">
+				Some explanatory text might go here. It may not. Time will tell.
+            </Typography>
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -29,12 +31,16 @@ export const AdminSection = ({ disabled }) => (
                 placeholder=""
                 disabled={disabled}
             >
-                <MenuItem value="" disabled>Please select a source</MenuItem>
-                {
-                    refereedsources.map((item, index) => {
-                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                    })
-                }
+                <MenuItem value="" disabled>
+					Please select a source
+                </MenuItem>
+                {refereedsources.map((item, index) => {
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
+                })}
             </Field>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -46,12 +52,16 @@ export const AdminSection = ({ disabled }) => (
                 placeholder=""
                 disabled={disabled}
             >
-                <MenuItem value="" disabled>Please select a status</MenuItem>
-                {
-                    openaccess.map((item, index) => {
-                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                    })
-                }
+                <MenuItem value="" disabled>
+					Please select a status
+                </MenuItem>
+                {openaccess.map((item, index) => {
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
+                })}
             </Field>
         </Grid>
 
@@ -62,7 +72,8 @@ export const AdminSection = ({ disabled }) => (
                 name="succeeds"
                 fullWidth
                 label="Succeeds"
-                placeholder="PID of succeeded record" />
+                placeholder="PID of succeeded record"
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -71,13 +82,18 @@ export const AdminSection = ({ disabled }) => (
                 name="qindexcode"
                 label="Research Code (Q-Index code)"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Please select a code</MenuItem>
-                {
-                    qindex.map((item, index) => {
-                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                    })
-                }
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+					Please select a code
+                </MenuItem>
+                {qindex.map((item, index) => {
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
+                })}
             </Field>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -87,10 +103,13 @@ export const AdminSection = ({ disabled }) => (
                 name="qindexcodestatus"
                 label="Research Code status"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Please select a status</MenuItem>
-                <MenuItem value={1} >Confirmed code</MenuItem>
-                <MenuItem value={2} >Provisional code</MenuItem>
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+					Please select a status
+                </MenuItem>
+                <MenuItem value={1}>Confirmed code</MenuItem>
+                <MenuItem value={2}>Provisional code</MenuItem>
             </Field>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -99,32 +118,41 @@ export const AdminSection = ({ disabled }) => (
                 disabled={disabled}
                 name="inststatus"
                 label="Institutional status"
-                placeholder="">
-                <MenuItem value="" disabled>Please select a status</MenuItem>
-                <MenuItem value={1} >UQ</MenuItem>
-                <MenuItem value={2} >Non-UQ</MenuItem>
-                <MenuItem value={3} >Unknown</MenuItem>
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+					Please select a status
+                </MenuItem>
+                <MenuItem value={1}>UQ</MenuItem>
+                <MenuItem value={2}>Non-UQ</MenuItem>
+                <MenuItem value={3}>Unknown</MenuItem>
             </Field>
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Additional notes</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>
+				Additional notes
+            </Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="notes"
                 height={100}
-                format={value => Immutable.Map(value)}
-                validate={[validation.required]} />
+                format={(value) => Immutable.Map(value)}
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Internal notes</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>
+				Internal notes
+            </Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="internalnotes"
-                format={value => Immutable.Map(value)}
+                format={(value) => Immutable.Map(value)}
                 height={100}
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
     </Grid>
 );

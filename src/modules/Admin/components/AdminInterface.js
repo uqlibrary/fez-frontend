@@ -17,32 +17,49 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
-import {
-    useTabbedContext,
-    useRecordContext
-} from 'context';
+import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
 import { validation } from 'config';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
-function useQueryStringTabValueState(location, initialValue = 'security') {
-    const tabValue = queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security'
-        ? 'security'
-        : initialValue;
+function useQueryStringTabValueState(location, initialValue) {
+    const tabValue =
+        queryString.parse(location.search, { ignoreQueryPrefix: true }).tab ===
+        'security'
+            ? 'security'
+            : initialValue;
     return useState(tabValue);
 }
 
-export const AdminInterface = ({ classes, submitting, handleSubmit, location, tabs, history, submitSucceeded }) => {
+export const AdminInterface = ({
+    classes,
+    submitting,
+    handleSubmit,
+    location,
+    tabs,
+    history,
+    submitSucceeded
+}) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
-    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location);
+    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(
+        location,
+        (record.rek_object_type_lookup.toLowerCase() !== RECORD_TYPE_RECORD &&
+            'security') ||
+            'bibliographic'
+    );
 
     const successConfirmationRef = useRef();
     const alertProps = useRef(null);
     const txt = useRef(pageLocale.pages.edit);
 
-    alertProps.current = validation.getErrorAlertProps({ submitting, submitSucceeded, alertLocale: txt.current.alerts });
+    alertProps.current = validation.getErrorAlertProps({
+        submitting,
+        submitSucceeded,
+        alertLocale: txt.current.alerts
+    });
 
     /* istanbul ignore next */
     useEffect(() => {
@@ -57,15 +74,24 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    const setSuccessConfirmationRef = useCallback((node) => {
+    const setSuccessConfirmationRef = useCallback(node => {
         successConfirmationRef.current = node;
     }, []);
 
     const navigateToSearchResult = useCallback(() => history.go(-1));
 
-    const renderTabContainer = useCallback((tab) => (
-        <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
+    const renderTabContainer = useCallback(tab => (
+        <TabContainer
+            key={tab}
+            value={tab}
+            currentTab={currentTabValue}
+            tabbed={tabbed}
+        >
+            <StandardCard
+                title={txt.current.sections[tab].title}
+                primaryHeader={!!tabbed}
+                squareTop={!!tabbed}
+            >
                 <Field
                     component={tabs[tab].component}
                     disabled={submitting}
@@ -80,61 +106,81 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     return (
         <StandardPage>
             <React.Fragment>
-                <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
+                <Grid
+                    container
+                    direction="row"
+                    alignItems="center"
+                    style={{ marginTop: -24 }}
+                >
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
                         onAction={navigateToSearchResult}
                         locale={saveConfirmationLocale}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography variant="h5" color="primary" style={{ fontSize: 24 }}>{`${record.rek_pid} ${record.rek_title}`}</Typography>
+                        <Typography
+                            variant="h5"
+                            color="primary"
+                            style={{ fontSize: 24 }}
+                        >{`Edit ${record.rek_display_type_lookup} - ${
+                                record.rek_title
+                            }: ${record.rek_pid}`}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
                             <FormViewToggler />
                         </Grid>
                         <Grid container spacing={0} direction="row">
-                            {
-                                tabbed &&
+                            {tabbed && (
                                 <Grid item xs={12}>
-                                    <Tabs value={currentTabValue}
+                                    <Tabs
+                                        value={currentTabValue}
                                         variant="fullWidth"
-                                        style={{ marginRight: -56, marginLeft: -56 }}
-                                        classes={{ indicator: classes.tabIndicator }}
+                                        style={{
+                                            marginRight: -56,
+                                            marginLeft: -56
+                                        }}
+                                        classes={{
+                                            indicator: classes.tabIndicator
+                                        }}
                                         onChange={handleTabChange}
                                         variant="scrollable"
                                         scrollButtons="on"
                                         indicatorColor="primary"
-                                        textColor="primary">
-                                        {
-                                            Object.keys(tabs)
-                                                .filter(tab => tabs[tab].activated)
-                                                .map(tab => (
-                                                    <Tab key={tab} label={txt.current.sections[tab].title} value={tab} />
-                                                ))
-                                        }
+                                        textColor="primary"
+                                    >
+                                        {Object.keys(tabs)
+                                            .filter(tab => tabs[tab].activated)
+                                            .map(tab => (
+                                                <Tab
+                                                    key={tab}
+                                                    label={
+                                                        txt.current.sections[
+                                                            tab
+                                                        ].title
+                                                    }
+                                                    value={tab}
+                                                />
+                                            ))}
                                     </Tabs>
                                 </Grid>
-                            }
+                            )}
                         </Grid>
                     </Hidden>
                 </Grid>
                 {/* --------------- Content here ---------------*/}
                 <form>
                     <Grid container spacing={16}>
-                        {
-                            !tabbed
-                                ? Object.keys(tabs)
-                                    .filter(tab => tabs[tab].activated)
-                                    .map(renderTabContainer)
-                                : renderTabContainer(currentTabValue)
-                        }
-                        {
-                            alertProps.current &&
+                        {!tabbed
+                            ? Object.keys(tabs)
+                                .filter(tab => tabs[tab].activated)
+                                .map(renderTabContainer)
+                            : renderTabContainer(currentTabValue)}
+                        {alertProps.current && (
                             <Grid item xs={12}>
                                 <Alert pushToTop {...alertProps.current} />
                             </Grid>
-                        }
+                        )}
                         <Grid item xs={12} sm={12}>
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}

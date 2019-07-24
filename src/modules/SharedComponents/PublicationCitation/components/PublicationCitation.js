@@ -168,7 +168,7 @@ export class PublicationCitation extends PureComponent {
 
     renderCitation = (publicationTypeId) => {
         const filteredPublicationType = publicationTypeId
-            ? publicationTypes(this.citationComponents).filter((item) => {
+            ? Object.values(publicationTypes(this.citationComponents)).filter((item) => {
                 return item.id === publicationTypeId;
             })
             : null;
