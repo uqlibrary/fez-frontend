@@ -4,6 +4,7 @@ import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import Typography from '@material-ui/core/Typography';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -45,18 +46,11 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
             <form>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
-                        <Alert
-                            title={batchImportTxt.prompt.title}
-                            message={batchImportTxt.prompt.message}
-                            type={batchImportTxt.prompt.type}
-                        />
-                    </Grid>
-                    <Grid item xs={12}>
-                        <StandardCard
-                            title={batchImportTxt.formLabels.collection.label}
-                            help={batchImportTxt.formLabels.collection.help}
-                        >
+                        <StandardCard title={batchImportTxt.cardTitle} help={batchImportTxt.help}>
                             <Grid container spacing={16}>
+                                <Grid item xs={12}>
+                                    <Typography variant="body2">{batchImportTxt.cardDescription}</Typography>
+                                </Grid>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
@@ -82,14 +76,7 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
                                     </Grid>
                                 )}
                             </Grid>
-                        </StandardCard>
-                    </Grid>
 
-                    <Grid item xs={12}>
-                        <StandardCard
-                            title={batchImportTxt.formLabels.docType.label}
-                            help={batchImportTxt.details.docType.help}
-                        >
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
@@ -102,11 +89,7 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
                                     />
                                 </Grid>
                             </Grid>
-                        </StandardCard>
-                    </Grid>
 
-                    <Grid item xs={12}>
-                        <StandardCard title={batchImportTxt.formLabels.directory.label}>
                             <Grid container spacing={24}>
                                 <Grid item xs={12}>
                                     <Field

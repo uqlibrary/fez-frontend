@@ -1592,12 +1592,9 @@ export default {
         },
         digiTeam: {
             batchImport: {
-                title: 'Batch import',
-                prompt: {
-                    title: 'Workflow',
-                    message: 'Blah about what they should do on this form.',
-                    type: 'info_outline',
-                },
+                title: 'Perform batch import',
+                cardTitle: 'Batch import information',
+                cardDescription: 'Blah about what they should do on this form.',
                 help: {},
                 formLabels: {
                     collection: {

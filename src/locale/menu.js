@@ -60,7 +60,7 @@ export default {
         },
         digiteam: {
             batchImport: {
-                primaryText: 'Batch import',
+                primaryText: 'Perform batch import',
             },
         },
     },
