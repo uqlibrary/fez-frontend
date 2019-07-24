@@ -7,9 +7,11 @@ import Button from '@material-ui/core/Button';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { CommunitiesSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
-import { DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
+import {
+    CommunitiesSelectField,
+    CollectionsSelectField,
+    DocumentTypeSingleField,
+} from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
 
@@ -156,11 +158,11 @@ export const BatchImport = props => {
 };
 
 BatchImport.propTypes = {
-    communityID: PropTypes.number,
+    communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
     handleSubmit: PropTypes.func,
     history: PropTypes.object.isRequired,
     submitting: PropTypes.bool,
 };
 
-export default BatchImport;
+export default React.memo(BatchImport);

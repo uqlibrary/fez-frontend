@@ -1,10 +1,9 @@
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { bindActionCreators } from 'redux';
 import Immutable from 'immutable';
 import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 
-import { FORM_NAME, BatchImport } from '../components/BatchImport';
+import BatchImport, { FORM_NAME } from '../components/BatchImport';
 
 import * as actions from 'actions';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -38,16 +37,7 @@ const mapStateToProps = state => {
     };
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch),
-    };
-}
-
-BatchImportContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(BatchImportContainer);
+BatchImportContainer = connect(mapStateToProps)(BatchImportContainer);
 
 BatchImportContainer = withRouter(BatchImportContainer);
 export default BatchImportContainer;

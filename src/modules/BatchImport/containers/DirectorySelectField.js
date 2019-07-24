@@ -13,15 +13,6 @@ const mapStateToProps = (state, props) => {
         label: (props.locale && props.locale.label) || props.label || '',
         selectedValue: props.input.value || [],
         itemsList: translatedItemList || [],
-        batchImportDirectoryLoading:
-            (state.get('batchImportDirectoriesReducer') &&
-                state.get('batchImportDirectoriesReducer').batchImportDirectoryLoading) ||
-            false,
-        batchImportDirectoryLoadingError:
-            (state.get('batchImportDirectoriesReducer') &&
-                state.get('batchImportDirectoriesReducer').batchImportDirectoryLoadingError) ||
-            false,
-        batchImportDirectoryLoadingHint: props.loadingHint || 'Loading..',
     };
 };
 
