@@ -306,7 +306,7 @@ mock.onPost(
     .reply(200, { data: {} })
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
     .onPost(routes.BATCH_IMPORT_API().apiUrl)
-    .reply(201, {})
+    .reply(201, { data: 'Batch Import Job Created' })
     // .reply(422)
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!

@@ -13,9 +13,10 @@ const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
     return dispatch(actions.createBatchImport(data))
         .then(response => {
-            if (!response || !!response.data) {
+            if (!response || !response.data) {
                 throw new SubmissionError();
             }
+            // console.log(`Success: ${response.data}`);
         })
         .catch(error => {
             throw new SubmissionError({ _error: error.message });
@@ -30,15 +31,10 @@ let BatchImportContainer = reduxForm({
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
-    const communityID = formValues.toJS().communityID;
     return {
-        formValues,
-        formErrors: formErrors,
+        communityID: formValues.toJS().communityID,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        communityCollectionsList:
-            communityID && state && state.get('digiTeamBatchImportReducer')
-                ? state.get('digiTeamBatchImportReducer').communityCollectionsList
-                : [],
+        formErrors,
     };
 };
 

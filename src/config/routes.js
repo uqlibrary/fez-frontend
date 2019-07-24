@@ -166,7 +166,7 @@ const flattedPathConfig = [
     '/author-identifiers/orcid/link',
     '/contact',
     '/dashboard',
-    '/digiteam/batchImport',
+    '/batch-import',
     '/records/add/find',
     '/records/add/new',
     '/records/add/results',

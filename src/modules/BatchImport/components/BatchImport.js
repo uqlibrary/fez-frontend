@@ -21,8 +21,6 @@ import { default as publicationLocale } from 'locale/publicationForm';
 export const FORM_NAME = 'BatchImport';
 
 export const BatchImport = props => {
-    const communityIDValue = props.formValues && props.formValues.toJS && props.formValues.toJS().communityID;
-
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
 
@@ -67,14 +65,14 @@ export const BatchImport = props => {
                                         validate={[validation.required]}
                                     />
                                 </Grid>
-                                {communityIDValue && (
+                                {props.communityID && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
                                             disabled={props.submitting}
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collectionID"
-                                            parentPid={communityIDValue}
+                                            parentPid={props.communityID}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -99,7 +97,6 @@ export const BatchImport = props => {
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
-                                        // onChange={_onDocTypeChange}
                                     />
                                 </Grid>
                             </Grid>
@@ -159,23 +156,11 @@ export const BatchImport = props => {
 };
 
 BatchImport.propTypes = {
-    actions: PropTypes.object,
-    collectionList: PropTypes.array,
-    communityCollectionsLoading: PropTypes.bool,
+    communityID: PropTypes.number,
     disableSubmit: PropTypes.bool,
-    docTypes: PropTypes.array,
-    formValues: PropTypes.object,
     handleSubmit: PropTypes.func,
     history: PropTypes.object.isRequired,
-    isLoading: PropTypes.bool,
-    loadItemsList: PropTypes.func,
     submitting: PropTypes.bool,
-};
-
-BatchImport.defaultProps = {
-    collectionList: [],
-    docTypes: [],
-    formValues: {},
 };
 
 export default BatchImport;
