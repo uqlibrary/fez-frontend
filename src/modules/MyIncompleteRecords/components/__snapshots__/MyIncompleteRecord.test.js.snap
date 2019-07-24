@@ -6,7 +6,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -731,9 +731,9 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -757,7 +757,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -792,7 +792,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -919,7 +919,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -1644,9 +1644,9 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1670,7 +1670,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -1705,7 +1705,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -1857,7 +1857,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -2582,9 +2582,9 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2608,7 +2608,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -2643,7 +2643,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -2729,7 +2729,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 "fileUploadRestrictions": <div>
                   Maximum file size is 8GB. 
                   <br />
-                  PDF files must be saved using the following naming structure 
+                  PDF files must be saved using the following naming structure
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -2845,7 +2845,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -3570,9 +3570,9 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3596,7 +3596,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -3631,7 +3631,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -3758,7 +3758,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -4483,9 +4483,9 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4509,7 +4509,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -4544,7 +4544,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -4671,7 +4671,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -5396,9 +5396,9 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5422,7 +5422,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -5457,7 +5457,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -5584,7 +5584,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -6309,9 +6309,9 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6335,7 +6335,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -6370,7 +6370,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -6497,7 +6497,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -7228,9 +7228,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7254,7 +7254,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -7289,7 +7289,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>
@@ -7416,7 +7416,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
     Object {
       "buttonLabel": "CLOSE",
       "text": <div>
-        For help, click 
+        For help, click
         <a
           href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
           target="_blank"
@@ -8141,9 +8141,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   }
                 }
               >
-                red
+                red 
               </span>
-               prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8167,7 +8167,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 2 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Update the affiliation information
                       </b>
@@ -8202,7 +8202,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 1 of 2
                       </span>
-                       - 
+                      - 
                       <b>
                         Select an author
                       </b>

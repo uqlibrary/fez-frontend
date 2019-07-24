@@ -1978,9 +1978,9 @@ exports[`Index page should render placeholders 1`] = `
                                                           "collectionsList": [Function],
                                                           "communitiesList": [Function],
                                                           "countPossiblyYourPublications": [Function],
+                                                          "createBatchImport": [Function],
                                                           "createCollection": [Function],
                                                           "createCommunity": [Function],
-                                                          "createBatchImport": [Function],
                                                           "createNewRecord": [Function],
                                                           "createSearchPromise": [Function],
                                                           "dismissAppAlert": [Function],
@@ -2089,9 +2089,9 @@ exports[`Index page should render placeholders 1`] = `
                                                             "collectionsList": [Function],
                                                             "communitiesList": [Function],
                                                             "countPossiblyYourPublications": [Function],
+                                                            "createBatchImport": [Function],
                                                             "createCollection": [Function],
                                                             "createCommunity": [Function],
-                                                            "createBatchImport": [Function],
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "dismissAppAlert": [Function],
@@ -2207,9 +2207,9 @@ exports[`Index page should render placeholders 1`] = `
                                                               "collectionsList": [Function],
                                                               "communitiesList": [Function],
                                                               "countPossiblyYourPublications": [Function],
+                                                              "createBatchImport": [Function],
                                                               "createCollection": [Function],
                                                               "createCommunity": [Function],
-                                                              "createBatchImport": [Function],
                                                               "createNewRecord": [Function],
                                                               "createSearchPromise": [Function],
                                                               "dismissAppAlert": [Function],
@@ -2744,9 +2744,9 @@ exports[`Index page should render placeholders 1`] = `
                                                                 "collectionsList": [Function],
                                                                 "communitiesList": [Function],
                                                                 "countPossiblyYourPublications": [Function],
+                                                                "createBatchImport": [Function],
                                                                 "createCollection": [Function],
                                                                 "createCommunity": [Function],
-                                                                "createBatchImport": [Function],
                                                                 "createNewRecord": [Function],
                                                                 "createSearchPromise": [Function],
                                                                 "dismissAppAlert": [Function],
@@ -3995,7 +3995,7 @@ exports[`Index page should render placeholders 1`] = `
                                                                                           className="MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-180 alert-text"
                                                                                         >
                                                                                           <b>
-                                                                                            There has been an error -
+                                                                                            There has been an error - 
                                                                                           </b>
                                                                                           Trending publications are temporarily unavailable
                                                                                         </div>
@@ -6139,9 +6139,9 @@ exports[`Index page should render placeholders 1`] = `
                                                                   "collectionsList": [Function],
                                                                   "communitiesList": [Function],
                                                                   "countPossiblyYourPublications": [Function],
+                                                                  "createBatchImport": [Function],
                                                                   "createCollection": [Function],
                                                                   "createCommunity": [Function],
-                                                                  "createBatchImport": [Function],
                                                                   "createNewRecord": [Function],
                                                                   "createSearchPromise": [Function],
                                                                   "dismissAppAlert": [Function],
@@ -6204,9 +6204,9 @@ exports[`Index page should render placeholders 1`] = `
                                                                     "collectionsList": [Function],
                                                                     "communitiesList": [Function],
                                                                     "countPossiblyYourPublications": [Function],
+                                                                    "createBatchImport": [Function],
                                                                     "createCollection": [Function],
                                                                     "createCommunity": [Function],
-                                                                    "createBatchImport": [Function],
                                                                     "createNewRecord": [Function],
                                                                     "createSearchPromise": [Function],
                                                                     "dismissAppAlert": [Function],

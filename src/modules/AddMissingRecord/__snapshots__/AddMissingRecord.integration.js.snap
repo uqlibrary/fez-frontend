@@ -813,7 +813,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         </b>
 +                          of the work and
 +                         <b>
-+                           select an author/creator or editor/contributor
++                            select an author/creator or editor/contributor
 +                         </b>
 +                          as you
 +                       </span>
@@ -2069,7 +2069,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          of the work and
 +                         <b>
-+                           select an author/creator or editor/contributor
++                            select an author/creator or editor/contributor
 +                         </b>
 +                          as you
 +                       </span>
@@ -2176,7 +2176,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          of the work and
 +                         <b>
-+                           select an editor/contributor or author/creator
++                            select an editor/contributor or author/creator
 +                         </b>
 +                          as you
 +                       </span>
@@ -3105,7 +3105,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                 </b>
 -                          of the work and
 -                         <b>
--                           select an author/creator or editor/contributor
+-                            select an author/creator or editor/contributor
 -                         </b>
 -                          as you
 -                       </span>
@@ -3360,7 +3360,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         </b>
 -                          of the work and
 -                         <b>
--                           select an editor/contributor or author/creator
+-                            select an editor/contributor or author/creator
 -                         </b>
 -                          as you
 -                       </span>
@@ -3633,7 +3633,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                from the list below (if applicable).
 +                          of the work and
 +                         <b>
-+                           select an author/creator or editor/contributor
++                            select an author/creator or editor/contributor
 +                         </b>
 +                          as you
 +                       </span>
@@ -3887,7 +3887,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          of the work and
 +                         <b>
-+                           select an editor/contributor or author/creator
++                            select an editor/contributor or author/creator
 +                         </b>
 +                          as you
 +                       </span>
