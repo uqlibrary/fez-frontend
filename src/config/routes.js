@@ -420,7 +420,7 @@ export const getRoutesConfig = ({
             ? [
                 {
                     path: pathConfig.digiteam.batchImport,
-                    component: components.DigiTeamBatchImport,
+                    component: components.BatchImport,
                     exact: true,
                     access: [roles.digiteam],
                     pageTitle: 'xxx',

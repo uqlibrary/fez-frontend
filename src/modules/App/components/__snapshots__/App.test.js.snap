@@ -170,7 +170,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -669,7 +669,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1388,7 +1388,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1960,7 +1960,7 @@ exports[`Application component should redirect to login page with correct return
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2457,7 +2457,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3172,7 +3172,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3717,7 +3717,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4226,7 +4226,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4914,7 +4914,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -5603,7 +5603,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6198,7 +6198,7 @@ exports[`Application component should render application with routing for the us
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6507,7 +6507,7 @@ exports[`Application component should render for anon user 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6822,7 +6822,7 @@ exports[`Application component should render thesis submission for HDR without m
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -11553,7 +11553,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       }
                                                                       title="Click to return to the eSpace home page"
                                                                     >
-                                                                      UQ eSpace 
+                                                                      UQ eSpace
                                                                     </a>
                                                                   </h1>
                                                                 </Typography>
@@ -11770,7 +11770,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                               "countPossiblyYourPublications": [Function],
                                                               "createCollection": [Function],
                                                               "createCommunity": [Function],
-                                                              "createDigiTeamBatchImport": [Function],
+                                                              "createBatchImport": [Function],
                                                               "createNewRecord": [Function],
                                                               "createSearchPromise": [Function],
                                                               "dismissAppAlert": [Function],
@@ -16923,7 +16923,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "countPossiblyYourPublications": [Function],
                                 "createCollection": [Function],
                                 "createCommunity": [Function],
-                                "createDigiTeamBatchImport": [Function],
+                                "createBatchImport": [Function],
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "dismissAppAlert": [Function],
@@ -18560,7 +18560,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "countPossiblyYourPublications": [Function],
                                                                             "createCollection": [Function],
                                                                             "createCommunity": [Function],
-                                                                            "createDigiTeamBatchImport": [Function],
+                                                                            "createBatchImport": [Function],
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "dismissAppAlert": [Function],
@@ -18671,7 +18671,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "countPossiblyYourPublications": [Function],
                                                                               "createCollection": [Function],
                                                                               "createCommunity": [Function],
-                                                                              "createDigiTeamBatchImport": [Function],
+                                                                              "createBatchImport": [Function],
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "dismissAppAlert": [Function],
@@ -18789,7 +18789,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "countPossiblyYourPublications": [Function],
                                                                                 "createCollection": [Function],
                                                                                 "createCommunity": [Function],
-                                                                                "createDigiTeamBatchImport": [Function],
+                                                                                "createBatchImport": [Function],
                                                                                 "createNewRecord": [Function],
                                                                                 "createSearchPromise": [Function],
                                                                                 "dismissAppAlert": [Function],
@@ -19326,7 +19326,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   "countPossiblyYourPublications": [Function],
                                                                                   "createCollection": [Function],
                                                                                   "createCommunity": [Function],
-                                                                                  "createDigiTeamBatchImport": [Function],
+                                                                                  "createBatchImport": [Function],
                                                                                   "createNewRecord": [Function],
                                                                                   "createSearchPromise": [Function],
                                                                                   "dismissAppAlert": [Function],
@@ -20575,7 +20575,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                             className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-319 alert-text"
                                                                                                           >
                                                                                                             <b>
-                                                                                                              There has been an error - 
+                                                                                                              There has been an error -
                                                                                                             </b>
                                                                                                             Trending publications are temporarily unavailable
                                                                                                           </div>
@@ -22721,7 +22721,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "countPossiblyYourPublications": [Function],
                                                                                     "createCollection": [Function],
                                                                                     "createCommunity": [Function],
-                                                                                    "createDigiTeamBatchImport": [Function],
+                                                                                    "createBatchImport": [Function],
                                                                                     "createNewRecord": [Function],
                                                                                     "createSearchPromise": [Function],
                                                                                     "dismissAppAlert": [Function],
@@ -22786,7 +22786,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "countPossiblyYourPublications": [Function],
                                                                                       "createCollection": [Function],
                                                                                       "createCommunity": [Function],
-                                                                                      "createDigiTeamBatchImport": [Function],
+                                                                                      "createBatchImport": [Function],
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "dismissAppAlert": [Function],

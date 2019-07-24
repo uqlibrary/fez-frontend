@@ -28,9 +28,7 @@ export const CommunityForm = () => <Async load={import('modules/Admin/CommunityF
 export const ThirdPartyLookupTool = () => (
     <Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />
 );
-export const DigiTeamBatchImport = () => (
-    <Async load={import('modules/DigiTeamBatchImport/containers/DigiTeamBatchImport')} />
-);
+export const BatchImport = () => <Async load={import('modules/BatchImport/containers/BatchImport')} />;
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
