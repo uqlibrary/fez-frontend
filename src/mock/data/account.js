@@ -130,7 +130,7 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        "canMasquerade": false,
+        "canMasquerade": true,
         "blocked": false
     },
     // expired session
