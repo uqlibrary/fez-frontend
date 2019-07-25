@@ -100,6 +100,9 @@ export default {
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
         community: 'You must select a community',
+        collection: 'You must select a collection',
+        documentType: 'You must select a document type',
+        directory: 'You must select a directory',
         title: 'Title is required',
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',

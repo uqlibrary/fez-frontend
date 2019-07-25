@@ -1605,7 +1605,7 @@ export default {
                     },
                     docType: {
                         label: 'Select a document type',
-                        placeholder: 'Select a doctype',
+                        placeholder: 'Select a document type',
                         ariaLabel: 'Select a document type',
                     },
                     directory: {

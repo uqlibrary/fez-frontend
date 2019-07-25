@@ -23,15 +23,7 @@ import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-export const BatchImport = ({
-    communityID,
-    disableSubmit,
-    error,
-    handleSubmit,
-    history,
-    submitSucceeded,
-    submitting,
-}) => {
+export const BatchImport = ({ community, disableSubmit, handleSubmit, history, submitSucceeded, submitting }) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
     const { formErrors } = useFormErrorsContext();
@@ -43,7 +35,6 @@ export const BatchImport = ({
             successAlert: { ...batchImportTxt.submitSuccessAlert },
             errorAlert: { ...batchImportTxt.submitFailureAlert },
         },
-        error,
         formErrors,
         submitSucceeded,
         submitting,
@@ -67,20 +58,22 @@ export const BatchImport = ({
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={submitting}
-                                        name="communityID"
+                                        error={formErrors.community}
+                                        name="community"
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
                                     />
                                 </Grid>
-                                {communityID && (
+                                {community && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
                                             disabled={submitting}
+                                            error={formErrors.collection}
                                             label={batchImportTxt.formLabels.collection.placeholder}
-                                            name="collectionID"
-                                            parentPid={communityID}
+                                            name="collection"
+                                            parentPid={community}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -95,6 +88,7 @@ export const BatchImport = ({
                                         component={DocumentTypeSingleField}
                                         name="documentType"
                                         disabled={submitting}
+                                        error={formErrors.documentType}
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
@@ -107,7 +101,8 @@ export const BatchImport = ({
                                     <Field
                                         component={DirectorySelectField}
                                         disabled={submitting}
-                                        name="importDirectory"
+                                        error={formErrors.directory}
+                                        name="directory"
                                         required
                                         validate={[validation.required]}
                                         {...batchImportTxt.formLabels.directory}
@@ -153,9 +148,8 @@ export const BatchImport = ({
 };
 
 BatchImport.propTypes = {
-    communityID: PropTypes.string,
+    community: PropTypes.string,
     disableSubmit: PropTypes.bool,
-    error: PropTypes.string,
     handleSubmit: PropTypes.func,
     history: PropTypes.object.isRequired,
     submitting: PropTypes.bool,
