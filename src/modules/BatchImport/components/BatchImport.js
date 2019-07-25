@@ -15,6 +15,7 @@ import {
 } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
+import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
 import { pathConfig } from 'config/routes';
@@ -22,9 +23,18 @@ import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history, submitting, ...props }) => {
+export const BatchImport = ({
+    communityID,
+    disableSubmit,
+    error,
+    handleSubmit,
+    history,
+    submitSucceeded,
+    submitting,
+}) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
+    const { formErrors } = useFormErrorsContext();
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: {
@@ -33,7 +43,9 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
             successAlert: { ...batchImportTxt.submitSuccessAlert },
             errorAlert: { ...batchImportTxt.submitFailureAlert },
         },
-        ...props,
+        error,
+        formErrors,
+        submitSucceeded,
         submitting,
     });
 
@@ -143,9 +155,11 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
 BatchImport.propTypes = {
     communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
+    error: PropTypes.string,
     handleSubmit: PropTypes.func,
     history: PropTypes.object.isRequired,
     submitting: PropTypes.bool,
+    submitSucceeded: PropTypes.bool,
 };
 
 export default React.memo(BatchImport);
