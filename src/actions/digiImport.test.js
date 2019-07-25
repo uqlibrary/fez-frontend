@@ -2,21 +2,17 @@ import * as actions from './actionTypes';
 import * as digiImport from './digiImport';
 
 const successfulCreationResponse = {
-    'data': 'Batch Import Job Created',
+    data: 'Batch Import Job Created',
 };
 
 const successfulDirectoryRequest = {
-    'data': [
-        'Archives',
-        'Audio_MA',
-        'Audio_OA',
-    ],
+    data: ['Archives', 'Audio_MA', 'Audio_OA'],
 };
 
 const validCreationRequest = {
-    'collection_pid': 'UQ:734356',
-    'directory': 'eSpace Security Testing',
-    'doc_type_id': 238,
+    collection_pid: 'UQ:734356',
+    directory: 'eSpace Security Testing',
+    doc_type_id: 238,
 };
 
 describe('batch import creators', () => {
@@ -40,17 +36,11 @@ describe('batch import creators', () => {
 
     it('should dispatch 2 actions on error 422 on creation of batch request', async() => {
         const invalidResponse = {
-            'message': 'The given data was invalid.',
-            'errors': {
-                'collection_pid': [
-                    'validation.required',
-                ],
-                'doc_type_id': [
-                    'validation.required',
-                ],
-                'directory': [
-                    'validation.required',
-                ],
+            message: 'The given data was invalid.',
+            errors: {
+                collection_pid: ['validation.required'],
+                doc_type_id: ['validation.required'],
+                directory: ['validation.required'],
             },
         };
         mockApi.onAny().reply(422, invalidResponse);

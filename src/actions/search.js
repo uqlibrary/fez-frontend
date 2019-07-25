@@ -56,7 +56,7 @@ export function collectionsList(parentPid = null) {
  */
 export function communitiesList() {
     return dispatch => {
-        dispatch({ type: `${actions.SEARCH_COMMUNITIES_LOADING}` });
+        dispatch({ type: actions.SEARCH_COMMUNITIES_LOADING });
         return get(
             SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
@@ -67,10 +67,10 @@ export function communitiesList() {
             })
         ).then(
             response => {
-                dispatch({ type: `${actions.SEARCH_COMMUNITIES_LOADED}`, payload: response.data });
+                dispatch({ type: actions.SEARCH_COMMUNITIES_LOADED, payload: response.data });
             },
             error => {
-                dispatch({ type: `${actions.SEARCH_COMMUNITIES_FAILED}`, payload: error.message });
+                dispatch({ type: actions.SEARCH_COMMUNITIES_FAILED, payload: error.message });
             }
         );
     };

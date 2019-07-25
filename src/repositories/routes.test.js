@@ -768,17 +768,13 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for BATCH_IMPORT_DIRECTORIES_API', () => {
-        expect(
-            routes.BATCH_IMPORT_DIRECTORIES_API()
-        ).toEqual({
+        expect(routes.BATCH_IMPORT_DIRECTORIES_API()).toEqual({
             apiUrl: 'external/records/batch-import/directories',
         });
     });
 
     it('should construct url for BATCH_IMPORT_API', () => {
-        expect(
-            routes.BATCH_IMPORT_API()
-        ).toEqual({
+        expect(routes.BATCH_IMPORT_API()).toEqual({
             apiUrl: 'external/records/batch-import',
         });
     });

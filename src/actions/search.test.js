@@ -532,17 +532,20 @@ describe('Search action creators', () => {
             current_page: 1,
             from: 1,
             to: 2,
-            data: [{
-                rek_pid: 'UQ:734481',
-                rek_title_xsdmf_id: 58,
-                rek_title: 'Andrew Martlew - Security Testing New Security Interface - Administrators',
-                redacted: true,
-            }, {
-                rek_pid: 'UQ:734482',
-                rek_title_xsdmf_id: 58,
-                rek_title: 'Andrew Martlew - Security Testing New Security Interface - Staff and Students',
-                redacted: true,
-            }],
+            data: [
+                {
+                    rek_pid: 'UQ:734481',
+                    rek_title_xsdmf_id: 58,
+                    rek_title: 'Andrew Martlew - Security Testing New Security Interface - Administrators',
+                    redacted: true,
+                },
+                {
+                    rek_pid: 'UQ:734482',
+                    rek_title_xsdmf_id: 58,
+                    rek_title: 'Andrew Martlew - Security Testing New Security Interface - Staff and Students',
+                    redacted: true,
+                },
+            ],
             filters: {
                 redacted: true,
             },

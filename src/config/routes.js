@@ -511,7 +511,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (isAdmin(account))
+        ...(account && isAdmin(account)
             ? [
                 {
                     // maybe this should be in some admin bit? tbd
