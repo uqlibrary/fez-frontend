@@ -756,4 +756,30 @@ describe('Backend routes method', () => {
             apiUrl: 'tool/lookup/test1/test2/test3',
         });
     });
+
+    it('should construct url for COLLECTIONS_BY_COMMUNITY_LOOKUP_API', () => {
+        expect(
+            routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({
+                communityPid: 'UQ:123456',
+            })
+        ).toEqual({
+            apiUrl: 'communities/UQ:123456/collections',
+        });
+    });
+
+    it('should construct url for BATCH_IMPORT_DIRECTORIES_API', () => {
+        expect(
+            routes.BATCH_IMPORT_DIRECTORIES_API()
+        ).toEqual({
+            apiUrl: 'external/records/batch-import/directories',
+        });
+    });
+
+    it('should construct url for BATCH_IMPORT_API', () => {
+        expect(
+            routes.BATCH_IMPORT_API()
+        ).toEqual({
+            apiUrl: 'external/records/batch-import',
+        });
+    });
 });
