@@ -18,5 +18,6 @@ describe('Pages component', () => {
         expect(JSON.stringify(pages.ThirdPartyLookupTool())).toEqual(expectation);
         expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
         expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
+        expect(JSON.stringify(pages.BatchImport())).toEqual(expectation);
     });
 });
