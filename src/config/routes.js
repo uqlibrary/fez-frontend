@@ -25,34 +25,6 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
     return `${searchUrl}?${param(params)}`;
 };
 
-/**
- * in the list of groups on the account, look for the group name
- * (pick a suitably unqiueable string, like lib_servicepoint_login)
- * @param account
- * @param ADCheck
- * @returns {boolean}
- */
-const hasADGroup = (account, ADCheck) => {
-    if (!account || !account.groups) {
-        return false;
-    }
-    const matches = account.groups.filter(group => {
-        return group.indexOf(ADCheck) >= 0;
-    });
-    if (matches.length > 1) {
-        console.log('poorly chosen AD check value - '.ADCheck);
-    }
-    return matches.length === 1;
-};
-
-const isDigiteamMember = account => {
-    return hasADGroup(account, 'lib_digistore_users');
-};
-
-const isDeveloper = account => {
-    return hasADGroup(account, 'lib_dev');
-};
-
 const isAdmin = account => {
     return account.canMasquerade;
     // return account.is_administrator || account.is_super_administrator;
@@ -387,7 +359,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isDeveloper(account) || isAdmin(account))
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
                 {
                     path: pathConfig.admin.masquerade,
@@ -398,7 +370,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && (isDeveloper(account) || isAdmin(account))
+        ...(account && isAdmin(account)
             ? [
                 {
                     path: pathConfig.admin.unpublished,
@@ -414,16 +386,12 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.components.thirdPartyLookupTools.title,
                 },
-            ]
-            : []),
-        ...(account && (isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
-            ? [
                 {
                     path: pathConfig.digiteam.batchImport,
                     component: components.BatchImport,
                     exact: true,
                     access: [roles.digiteam],
-                    pageTitle: 'xxx',
+                    pageTitle: locale.components.digiTeam.batchImport.title,
                 },
             ]
             : []),
@@ -535,7 +503,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isDeveloper(account) || isAdmin(account))
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
                 {
                     linkTo: pathConfig.admin.masquerade,
@@ -543,7 +511,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (isDeveloper(account) || isAdmin(account))
+        ...(account && (isAdmin(account))
             ? [
                 {
                     // maybe this should be in some admin bit? tbd
@@ -563,7 +531,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
+        ...(account && isAdmin(account)
             ? [
                 {
                     linkTo: pathConfig.digiteam.batchImport,
@@ -571,7 +539,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isDigiteamMember(account) || isDeveloper(account) || isAdmin(account))
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
                 {
                     divider: true,
