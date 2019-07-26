@@ -621,12 +621,3 @@ export const getExternalSourceIdSearchKeys = data => {
 
     return result;
 };
-
-export const getBatchImport = data => {
-    const { collection, documentType, directory } = data;
-    return {
-        collection_pid: collection,
-        doc_type_id: documentType,
-        directory,
-    };
-};

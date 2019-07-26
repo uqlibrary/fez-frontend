@@ -1,5 +1,5 @@
 import * as actions from './actionTypes';
-import * as digiImport from './digiImport';
+import * as batchImport from './batchImport';
 
 const successfulCreationResponse = {
     data: 'Batch Import Job Created',
@@ -30,7 +30,7 @@ describe('batch import creators', () => {
 
         const expectedActions = [actions.BATCH_IMPORT_REQUESTING, actions.BATCH_IMPORT_REQUESTED];
 
-        await mockActionsStore.dispatch(digiImport.createBatchImport(validCreationRequest));
+        await mockActionsStore.dispatch(batchImport.createBatchImport(validCreationRequest));
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -48,7 +48,7 @@ describe('batch import creators', () => {
         const expectedActions = [actions.BATCH_IMPORT_REQUESTING, actions.BATCH_IMPORT_REQUEST_FAILED];
 
         try {
-            await mockActionsStore.dispatch(digiImport.createBatchImport({}));
+            await mockActionsStore.dispatch(batchImport.createBatchImport({}));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             // local/global.js converts 422 to 500
@@ -66,7 +66,7 @@ describe('batch import creators', () => {
         ];
 
         try {
-            await mockActionsStore.dispatch(digiImport.createBatchImport(validCreationRequest));
+            await mockActionsStore.dispatch(batchImport.createBatchImport(validCreationRequest));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -89,7 +89,7 @@ describe('batch import request directory', () => {
 
         const expectedActions = [actions.DIRECTORY_LIST_LOADING, actions.DIRECTORY_LIST_LOADED];
 
-        await mockActionsStore.dispatch(digiImport.getBatchImportDirectories());
+        await mockActionsStore.dispatch(batchImport.getBatchImportDirectories());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
 
@@ -99,7 +99,7 @@ describe('batch import request directory', () => {
         const expectedActions = [actions.DIRECTORY_LIST_LOADING, actions.APP_ALERT_SHOW, actions.DIRECTORY_LIST_FAILED];
 
         try {
-            await mockActionsStore.dispatch(digiImport.getBatchImportDirectories());
+            await mockActionsStore.dispatch(batchImport.getBatchImportDirectories());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         } catch (e) {
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);

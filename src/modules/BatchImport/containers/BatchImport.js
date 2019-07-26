@@ -32,7 +32,7 @@ let BatchImportContainer = ({ formErrors, ...props }) => (
 );
 
 BatchImportContainer.propTypes = {
-    community: PropTypes.string,
+    communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
 };
@@ -46,7 +46,7 @@ const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
     return {
-        community: formValues.toJS().community,
+        communityID: formValues.toJS().communityID,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         formErrors,
     };

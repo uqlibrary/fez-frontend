@@ -23,7 +23,7 @@ import { default as componentsLocale } from 'locale/components';
 import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-export const BatchImport = ({ community, disableSubmit, handleSubmit, history, submitSucceeded, submitting }) => {
+export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history, submitSucceeded, submitting }) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
     const { formErrors } = useFormErrorsContext();
@@ -58,22 +58,22 @@ export const BatchImport = ({ community, disableSubmit, handleSubmit, history, s
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={submitting}
-                                        error={formErrors.community}
-                                        name="community"
+                                        error={formErrors.communityID}
+                                        name="communityID"
                                         label={addACollectionTxt.formLabels.ismemberof.placeholder}
                                         required
                                         validate={[validation.required]}
                                     />
                                 </Grid>
-                                {community && (
+                                {!!communityID && (
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionsSelectField}
                                             disabled={submitting}
                                             error={formErrors.collection}
                                             label={batchImportTxt.formLabels.collection.placeholder}
-                                            name="collection"
-                                            parentPid={community}
+                                            name="collection_pid"
+                                            parentPid={communityID}
                                             required
                                             title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
@@ -86,9 +86,9 @@ export const BatchImport = ({ community, disableSubmit, handleSubmit, history, s
                                 <Grid item xs={12}>
                                     <Field
                                         component={DocumentTypeSingleField}
-                                        name="documentType"
+                                        name="doc_type_id"
                                         disabled={submitting}
-                                        error={formErrors.documentType}
+                                        error={formErrors.doc_type_id}
                                         label={batchImportTxt.formLabels.docType.placeholder}
                                         required
                                         validate={[validation.required]}
@@ -148,7 +148,7 @@ export const BatchImport = ({ community, disableSubmit, handleSubmit, history, s
 };
 
 BatchImport.propTypes = {
-    community: PropTypes.string,
+    communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
     handleSubmit: PropTypes.func,
     history: PropTypes.object.isRequired,
