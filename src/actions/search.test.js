@@ -523,4 +523,55 @@ describe('Search action creators', () => {
             );
         });
     });
+
+    describe('collectionsList', () => {
+        const successfulCollectionRequest = {
+            total: 2,
+            took: 23,
+            per_page: 20,
+            current_page: 1,
+            from: 1,
+            to: 2,
+            data: [{
+                rek_pid: 'UQ:734481',
+                rek_title_xsdmf_id: 58,
+                rek_title: 'Andrew Martlew - Security Testing New Security Interface - Administrators',
+                redacted: true,
+            }, {
+                rek_pid: 'UQ:734482',
+                rek_title_xsdmf_id: 58,
+                rek_title: 'Andrew Martlew - Security Testing New Security Interface - Staff and Students',
+                redacted: true,
+            }],
+            filters: {
+                redacted: true,
+            },
+        };
+
+        it('should dispatch 2 actions on successful collectionsList request', async() => {
+            mockApi.onAny().reply(200, successfulCollectionRequest);
+
+            const expectedActions = [actions.SEARCH_COLLECTION_LOADING, actions.SEARCH_COLLECTION_LOADED];
+
+            await mockActionsStore.dispatch(searchActions.collectionsList('UQ:1234'));
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('should dispatch 3 actions on error 500 on collectionsList request', async() => {
+            mockApi.onAny().reply(500, { data: '' });
+
+            const expectedActions = [
+                actions.SEARCH_COLLECTION_LOADING,
+                actions.APP_ALERT_SHOW,
+                actions.SEARCH_COLLECTION_FAILED,
+            ];
+
+            try {
+                await mockActionsStore.dispatch(searchActions.collectionsList('invalid'));
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            } catch (e) {
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+            }
+        });
+    });
 });
