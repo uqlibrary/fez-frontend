@@ -121,7 +121,6 @@ export const fieldConfig = {
             label: 'Link',
             placeholder: '',
             locale: locale.components.linkListForm.field,
-            onAdd: (link) => console.log(link),
         },
     },
     rek_description: {
