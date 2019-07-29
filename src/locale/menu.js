@@ -60,7 +60,7 @@ export default {
         },
         digiteam: {
             batchImport: {
-                primaryText: 'Perform batch import',
+                primaryText: 'CSV ingest',
             },
         },
     },

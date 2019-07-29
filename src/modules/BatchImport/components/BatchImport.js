@@ -4,7 +4,6 @@ import { Field } from 'redux-form/lib/immutable';
 
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -58,21 +57,18 @@ export const BatchImport = ({
             <form>
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
-                        <StandardCard title={batchImportTxt.cardTitle} help={batchImportTxt.help}>
+                        <StandardCard help={batchImportTxt.help}>
                             <Grid container spacing={16}>
-                                <Grid item xs={12}>
-                                    <Typography variant="body2">{batchImportTxt.cardDescription}</Typography>
-                                </Grid>
                                 <Grid item xs={12}>
                                     <Field
                                         component={CommunitiesSelectField}
                                         disabled={submitting}
                                         error={formErrors.communityID}
                                         name="communityID"
-                                        label={batchImportTxt.formLabels.collection.label}
+                                        onChange={resetCollectionField}
                                         required
                                         validate={[validation.required]}
-                                        onChange={resetCollectionField}
+                                        {...batchImportTxt.formLabels.community}
                                     />
                                 </Grid>
                                 {!!communityID && (
@@ -81,12 +77,11 @@ export const BatchImport = ({
                                             component={CollectionSelectField}
                                             disabled={submitting}
                                             error={formErrors.collection_pid}
-                                            label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collection_pid"
                                             parentPid={communityID}
                                             required
-                                            title={batchImportTxt.formLabels.collection.title}
                                             validate={[validation.required]}
+                                            {...batchImportTxt.formLabels.collection}
                                         />
                                     </Grid>
                                 )}
@@ -96,12 +91,12 @@ export const BatchImport = ({
                                 <Grid item xs={12}>
                                     <Field
                                         component={DocumentTypeSingleField}
-                                        name="doc_type_id"
                                         disabled={submitting}
                                         error={formErrors.doc_type_id}
-                                        label={batchImportTxt.formLabels.docType.placeholder}
+                                        name="doc_type_id"
                                         required
                                         validate={[validation.required]}
+                                        {...batchImportTxt.formLabels.docType}
                                     />
                                 </Grid>
                             </Grid>

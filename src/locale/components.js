@@ -1592,15 +1592,17 @@ export default {
         },
         digiTeam: {
             batchImport: {
-                title: 'Perform batch import',
-                cardTitle: 'Batch import information',
-                cardDescription: 'Blah about what they should do on this form.',
+                title: 'CSV ingest',
                 help: {},
                 formLabels: {
+                    community: {
+                        label: 'Select a community',
+                        placeholder: 'Select a community',
+                        ariaLabel: 'Select a community',
+                    },
                     collection: {
-                        label: 'Select collection',
+                        label: 'Select a collection',
                         placeholder: 'Select a collection',
-                        itemsLoadingHint: 'Loading...',
                         ariaLabel: 'Select a collection',
                     },
                     docType: {
@@ -1609,11 +1611,12 @@ export default {
                         ariaLabel: 'Select a document type',
                     },
                     directory: {
-                        label: 'Select a directory',
-                        placeholder: 'Select a directory',
+                        label: 'Select folder where CSV and datastream files are located',
+                        placeholder: 'Select folder where CSV and datastream files are located',
+                        ariaLabel: 'Select folder where CSV and datastream files are located',
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
-                    submitButtonLabel: 'Perform batch import',
+                    submitButtonLabel: 'CSV ingest',
                 },
                 submitSuccessAlert: {
                     type: 'done',
