@@ -26,29 +26,16 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 
 function useQueryStringTabValueState(location, initialValue) {
     const tabValue =
-        queryString.parse(location.search, { ignoreQueryPrefix: true }).tab ===
-        'security'
-            ? 'security'
-            : initialValue;
+		queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
     return useState(tabValue);
 }
 
-export const AdminInterface = ({
-    classes,
-    submitting,
-    handleSubmit,
-    location,
-    tabs,
-    history,
-    submitSucceeded
-}) => {
+export const AdminInterface = ({ classes, submitting, handleSubmit, location, tabs, history, submitSucceeded }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
     const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(
         location,
-        (record.rek_object_type_lookup.toLowerCase() !== RECORD_TYPE_RECORD &&
-            'security') ||
-            'bibliographic'
+        (record.rek_object_type_lookup.toLowerCase() !== RECORD_TYPE_RECORD && 'security') || 'bibliographic'
     );
 
     const successConfirmationRef = useRef();
@@ -74,29 +61,16 @@ export const AdminInterface = ({
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    const setSuccessConfirmationRef = useCallback(node => {
+    const setSuccessConfirmationRef = useCallback((node) => {
         successConfirmationRef.current = node;
     }, []);
 
     const navigateToSearchResult = useCallback(() => history.go(-1));
 
-    const renderTabContainer = useCallback(tab => (
-        <TabContainer
-            key={tab}
-            value={tab}
-            currentTab={currentTabValue}
-            tabbed={tabbed}
-        >
-            <StandardCard
-                title={txt.current.sections[tab].title}
-                primaryHeader={!!tabbed}
-                squareTop={!!tabbed}
-            >
-                <Field
-                    component={tabs[tab].component}
-                    disabled={submitting}
-                    name={`${tab}Section`}
-                />
+    const renderTabContainer = useCallback((tab) => (
+        <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
+                <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
     ));
@@ -106,25 +80,16 @@ export const AdminInterface = ({
     return (
         <StandardPage>
             <React.Fragment>
-                <Grid
-                    container
-                    direction="row"
-                    alignItems="center"
-                    style={{ marginTop: -24 }}
-                >
+                <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
                         onAction={navigateToSearchResult}
                         locale={saveConfirmationLocale}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography
-                            variant="h5"
-                            color="primary"
-                            style={{ fontSize: 24 }}
-                        >{`Edit ${record.rek_display_type_lookup} - ${
-                                record.rek_title
-                            }: ${record.rek_pid}`}</Typography>
+                        <Typography variant="h5" color="primary" style={{ fontSize: 24 }}>{`Edit ${
+                            record.rek_display_type_lookup
+                        } - ${record.rek_title}: ${record.rek_pid}`}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
@@ -150,17 +115,9 @@ export const AdminInterface = ({
                                         textColor="primary"
                                     >
                                         {Object.keys(tabs)
-                                            .filter(tab => tabs[tab].activated)
-                                            .map(tab => (
-                                                <Tab
-                                                    key={tab}
-                                                    label={
-                                                        txt.current.sections[
-                                                            tab
-                                                        ].title
-                                                    }
-                                                    value={tab}
-                                                />
+                                            .filter((tab) => tabs[tab].activated)
+                                            .map((tab) => (
+                                                <Tab key={tab} label={txt.current.sections[tab].title} value={tab} />
                                             ))}
                                     </Tabs>
                                 </Grid>
@@ -173,7 +130,7 @@ export const AdminInterface = ({
                     <Grid container spacing={16}>
                         {!tabbed
                             ? Object.keys(tabs)
-                                .filter(tab => tabs[tab].activated)
+                                .filter((tab) => tabs[tab].activated)
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
                         {alertProps.current && (

@@ -20,9 +20,9 @@ import { adminInterfaceConfig } from 'config';
 // import { languages } from '../MockData';
 
 /* istanbul ignore next */
-export const AdminSection = ({ disabled = false }) => {
+export const IdentifiersSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].admin());
+    const cards = useRef(adminInterfaceConfig[record.rek_display_type].identifiers());
 
     return <Section cards={cards} disabled={disabled} />;
 };
@@ -169,14 +169,14 @@ export const AdminSection = ({ disabled = false }) => {
 //     </Grid>
 // );
 
-// AdminSection.propTypes = {
+// IdentifiersSection.propTypes = {
 //     disabled: PropTypes.bool
 // };
 
-// export default React.memo(AdminSection);
+// export default React.memo(IdentifiersSection);
 
-AdminSection.propTypes = {
+IdentifiersSection.propTypes = {
     disabled: PropTypes.bool
 };
 
-export default React.memo(AdminSection);
+export default React.memo(IdentifiersSection);

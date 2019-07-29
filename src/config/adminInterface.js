@@ -5,7 +5,11 @@ import Immutable from 'immutable';
 import { validation } from 'config';
 
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
+import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
+import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
+import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
@@ -26,6 +30,98 @@ export const fieldConfig = {
             height: 100,
             format: (value) => Immutable.Map(value),
             validate: [validation.required]
+        }
+    },
+    rek_herdc_notes: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'adminSection.rek_herdc_notes',
+            title: 'HERDC notes',
+            disabled: true,
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666
+                }
+            },
+            height: 100,
+            format: (value) => Immutable.Map(value)
+        }
+    },
+    fez_internal_notes: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'adminSection.fez_internal_notes.ain_detail',
+            title: 'Internal notes',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666
+                }
+            },
+            height: 100,
+            format: (value) => Immutable.Map(value)
+        }
+    },
+    fez_record_search_key_isi_loc: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'identifiersSection.fez_record_search_key_isi_loc.rek_isi_loc',
+            fullWidth: true,
+            label: 'WoS ID',
+            placeholder: ''
+        }
+    },
+    fez_record_search_key_scopus_id: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'identifiersSection.fez_record_search_key_scopus_id.rek_scopus_id',
+            fullWidth: true,
+            label: 'Scopus ID',
+            placeholder: ''
+        }
+    },
+    fez_record_search_key_pubmed_id: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'identifiersSection.fez_record_search_key_pubmed_id.rek_pubmed_id',
+            fullWidth: true,
+            label: 'PubMed ID',
+            placeholder: ''
+        }
+    },
+    rek_wok_doc_type: {
+        component: WoSDocTypesField,
+        componentProps: {
+            name: 'identifiersSection.rek_wok_doc_type',
+            label: 'WoS Doc Type',
+            placeholder: ''
+        }
+    },
+    rek_scopus_doc_type: {
+        component: ScopusDocTypesField,
+        componentProps: {
+            name: 'identifiersSection.rek_scopus_doc_type',
+            label: 'Scopus Doc Type',
+            placeholder: ''
+        }
+    },
+    rek_pubmed_doc_type: {
+        component: PubmedDocTypesField,
+        componentProps: {
+            name: 'identifiersSection.rek_pubmed_doc_type',
+            label: 'PubMed Doc Type',
+            placeholder: ''
+        }
+    },
+    links: {
+        component: LinkInfoListEditorField,
+        componentProps: {
+            name: 'identifiersSection.links',
+            label: 'Link',
+            placeholder: '',
+            locale: locale.components.linkListForm.field,
+            onAdd: (link) => console.log(link)
         }
     },
     rek_description: {
@@ -95,12 +191,10 @@ export const fieldConfig = {
     fez_record_search_key_doi: {
         component: GenericTextField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_doi.rek_doi',
+            name: 'identifiersSection.fez_record_search_key_doi.rek_doi',
             fullWidth: true,
             label: 'DOI',
-            placeholder: '',
-            required: true,
-            validate: [validation.required]
+            placeholder: ''
         }
     },
     fez_record_search_key_place_of_publication: {
@@ -342,26 +436,25 @@ export const adminInterfaceConfig = {
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
         admin: () => [
             {
-                title: 'Admin Information',
                 groups: [
-                    ['rek_pid'],
-                    ['rek_display_type'],
-                    ['rek_herdc_notes'],
                     ['fez_internal_notes'],
-                    ['fez_record_search_key_retracted']
+                    ['rek_herdc_notes']
+                    // ['fez_record_search_key_retracted']
                 ]
             }
         ],
         identifiers: () => [
             {
-                title: 'Identifiers',
                 groups: [
-                    ['rek_doi', 'rek_isi_loc', 'rek_wos_doc_type'],
+                    ['fez_record_search_key_doi'],
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
                     ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
-                    ['fez_record_search_key_link'],
-                    ['fez_record_search_key_link_description']
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type']
                 ]
+            },
+            {
+                title: 'Manage links',
+                groups: [['links']]
             }
         ],
         bibliographic: (isLote = false, isNtro = false) => [
@@ -466,9 +559,6 @@ export const valueExtractor = {
     rek_subtype: {
         getValue: (record) => record.rek_subtype
     },
-    fez_record_search_key_doi: {
-        getValue: (record) => ({ ...record.fez_record_search_key_doi })
-    },
     languages: {
         getValue: (record) => record.fez_record_search_key_language.map((language) => language.rek_language)
     },
@@ -566,5 +656,26 @@ export const valueExtractor = {
     },
     fez_record_search_key_translated_title: {
         getValue: (record) => (record.fez_record_search_key_translated_title || {}).rek_translated_title
+    },
+    fez_record_search_key_doi: {
+        getValue: (record) => ({ ...record.fez_record_search_key_doi })
+    },
+    fez_record_search_key_isi_loc: {
+        getValue: (record) => ({ ...record.fez_record_search_key_isi_loc })
+    },
+    fez_record_search_key_scopus_id: {
+        getValue: (record) => ({ ...record.fez_record_search_key_scopus_id })
+    },
+    fez_record_search_key_pubmed_id: {
+        getValue: (record) => ({ ...record.fez_record_search_key_pubmed_id })
+    },
+    rek_wok_doc_type: {
+        getValue: (record) => record.rek_wok_doc_type
+    },
+    rek_scopus_doc_type: {
+        getValue: (record) => record.rek_scopus_doc_type
+    },
+    rek_pubmed_doc_type: {
+        getValue: (record) => record.rek_pubmed_doc_type
     }
 };

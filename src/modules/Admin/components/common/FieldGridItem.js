@@ -7,7 +7,6 @@ import { fieldConfig } from 'config';
 
 export const FieldGridItem = ({ field, group, disabled }) => (
     <Grid item xs={12 / group.length}>
-        {!!fieldConfig[field].beforeComponent && fieldConfig[field].beforeComponent()}
         <Field disabled={disabled} component={fieldConfig[field].component} {...fieldConfig[field].componentProps} />
     </Grid>
 );

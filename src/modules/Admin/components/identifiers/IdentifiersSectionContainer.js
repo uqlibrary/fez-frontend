@@ -6,17 +6,17 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
-import AdminSection from './AdminSection';
+import IdentifiersSection from './IdentifiersSection';
 
-const AdminSectionContainer = ({ disabled, formValues }) => {
+const IdentifiersSectionContainer = ({ disabled, formValues }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
-            <AdminSection disabled={disabled} />
+            <IdentifiersSection disabled={disabled} />
         </FormValuesContext.Provider>
     );
 };
 
-AdminSectionContainer.propTypes = {
+IdentifiersSectionContainer.propTypes = {
     disabled: PropTypes.bool,
     formValues: PropTypes.object
 };
@@ -25,8 +25,8 @@ const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        formValues: formValues.get('adminSection') || Immutable.Map({})
+        formValues: formValues.get('identifiersSection') || Immutable.Map({})
     };
 };
 
-export default connect(mapStateToProps)(React.memo(AdminSectionContainer));
+export default connect(mapStateToProps)(React.memo(IdentifiersSectionContainer));

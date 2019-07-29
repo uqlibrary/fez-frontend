@@ -12,7 +12,7 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
 import SecuritySection from './security/SecuritySectionContainer';
-import IdentifiersSection from './IdentifiersSection';
+import IdentifiersSection from './identifiers/IdentifiersSection';
 import BibliographicSection from './bibliographic/BibliographicSection';
 import AdminSection from './admin/AdminSection';
 import GrantInformationSection from './GrantInformationSection';
