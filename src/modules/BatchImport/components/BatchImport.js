@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
@@ -8,37 +8,44 @@ import Typography from '@material-ui/core/Typography';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import {
-    CommunitiesSelectField,
-    CollectionsSelectField,
-    DocumentTypeSingleField,
-} from 'modules/SharedComponents/PublicationSubtype';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
+import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
+// import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
 import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
 import { pathConfig } from 'config/routes';
 import { default as componentsLocale } from 'locale/components';
-import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
-export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history, submitSucceeded, submitting }) => {
+export const BatchImport = ({
+    collectionsList,
+    communityID,
+    disableSubmit,
+    handleSubmit,
+    history,
+    loadItemsList,
+    submitting,
+}) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
     const addACollectionTxt = publicationLocale.addACollection;
     const { formErrors } = useFormErrorsContext();
 
-    const alertProps = validation.getErrorAlertProps({
-        alertLocale: {
-            validationAlert: { ...publicationLocale.validationAlert },
-            progressAlert: { ...publicationLocale.progressAlert },
-            successAlert: { ...batchImportTxt.submitSuccessAlert },
-            errorAlert: { ...batchImportTxt.submitFailureAlert },
-        },
-        formErrors,
-        submitSucceeded,
-        submitting,
-    });
+    useEffect(() => {
+        loadItemsList(communityID);
+    }, [communityID, loadItemsList]);
+    // const alertProps = validation.getErrorAlertProps({
+    //     alertLocale: {
+    //         validationAlert: { ...publicationLocale.validationAlert },
+    //         progressAlert: { ...publicationLocale.progressAlert },
+    //         successAlert: { ...batchImportTxt.submitSuccessAlert },
+    //         errorAlert: { ...batchImportTxt.submitFailureAlert },
+    //     },
+    //     formErrors,
+    //     submitSucceeded,
+    //     submitting,
+    // });
 
     const _abandonImport = () => {
         history.push(pathConfig.index);
@@ -68,7 +75,8 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
                                 {!!communityID && (
                                     <Grid item xs={12}>
                                         <Field
-                                            component={CollectionsSelectField}
+                                            component={GenericSelectField}
+                                            itemsList={collectionsList}
                                             disabled={submitting}
                                             error={formErrors.collection}
                                             label={batchImportTxt.formLabels.collection.placeholder}
@@ -112,11 +120,11 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
                         </StandardCard>
                     </Grid>
 
-                    {alertProps && (
+                    {/* {alertProps && (
                         <Grid item xs={12}>
                             <Alert {...alertProps} />
                         </Grid>
-                    )}
+                    )} */}
 
                     <Grid item xs={false} sm />
                     <Grid item xs={12} sm="auto">
@@ -148,12 +156,18 @@ export const BatchImport = ({ communityID, disableSubmit, handleSubmit, history,
 };
 
 BatchImport.propTypes = {
+    collectionsList: PropTypes.array,
     communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
     handleSubmit: PropTypes.func,
-    history: PropTypes.object.isRequired,
-    submitting: PropTypes.bool,
+    history: PropTypes.object,
+    loadItemsList: PropTypes.func,
     submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
 };
 
-export default React.memo(BatchImport);
+function isSame(prevProps, nextProps) {
+    return prevProps.communityID === nextProps.communityID;
+}
+
+export default React.memo(BatchImport, isSame);

@@ -25,34 +25,57 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-let BatchImportContainer = ({ formErrors, ...props }) => (
-    <FormErrorsContext.Provider value={{ formErrors }}>
-        <BatchImport {...{ ...props }} />
-    </FormErrorsContext.Provider>
-);
+let BatchImportContainer = ({ formErrors, formValues, collectionItems, ...props }) => {
+    const communityID = formValues.toJS().communityID;
+    const collectionsList = collectionItems.map((item, index) => {
+        return { text: item.rek_title, value: item.rek_pid, index: index + 1 };
+    });
+    return (
+        <FormErrorsContext.Provider value={{ formErrors }}>
+            <BatchImport {...{ ...props, communityID, collectionsList }} />
+        </FormErrorsContext.Provider>
+    );
+};
 
 BatchImportContainer.propTypes = {
-    communityID: PropTypes.string,
     disableSubmit: PropTypes.bool,
+    collectionItems: PropTypes.array,
     formErrors: PropTypes.object,
+    formValues: PropTypes.object,
 };
+
+const isCommunityUnchanged = (prevProps, nextProps) =>
+    prevProps.formValues.toJS().communityID === nextProps.formValues.toJS().communityID;
 
 BatchImportContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(BatchImportContainer, FORM_NAME));
+})(confirmDiscardFormChanges(React.memo(BatchImportContainer, isCommunityUnchanged), FORM_NAME));
 
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
+
+    const collectionItems = state.get('collectionsReducer').itemsList;
+
     return {
-        communityID: formValues.toJS().communityID,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         formErrors,
+        formValues,
+        collectionItems,
     };
 };
 
-BatchImportContainer = connect(mapStateToProps)(BatchImportContainer);
+function mapDispatchToProps(dispatch) {
+    return {
+        loadItemsList: communityID => dispatch(actions.collectionsList(communityID)),
+    };
+}
 
-BatchImportContainer = withRouter(BatchImportContainer);
+BatchImportContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(BatchImportContainer);
+
+BatchImportContainer = withRouter(React.memo(BatchImportContainer, () => true));
 export default React.memo(BatchImportContainer);
