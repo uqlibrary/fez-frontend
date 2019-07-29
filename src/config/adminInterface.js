@@ -120,8 +120,7 @@ export const fieldConfig = {
             name: 'identifiersSection.links',
             label: 'Link',
             placeholder: '',
-            locale: locale.components.linkListForm.field,
-            onAdd: (link) => console.log(link)
+            locale: locale.components.linkListForm.field
         }
     },
     rek_description: {
