@@ -25,14 +25,12 @@ const onSubmit = (values, dispatch) => {
         });
 };
 
-let BatchImportContainer = ({ formErrors, formValues, collectionItems, ...props }) => {
+let BatchImportContainer = ({ formErrors, formValues, ...props }) => {
     const communityID = formValues.toJS().communityID;
-    const collectionsList = collectionItems.map((item, index) => {
-        return { text: item.rek_title, value: item.rek_pid, index: index + 1 };
-    });
+
     return (
         <FormErrorsContext.Provider value={{ formErrors }}>
-            <BatchImport {...{ ...props, communityID, collectionsList }} />
+            <BatchImport {...{ ...props, communityID }} />
         </FormErrorsContext.Provider>
     );
 };
@@ -44,38 +42,29 @@ BatchImportContainer.propTypes = {
     formValues: PropTypes.object,
 };
 
-const isCommunityUnchanged = (prevProps, nextProps) =>
-    prevProps.formValues.toJS().communityID === nextProps.formValues.toJS().communityID;
-
 BatchImportContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
-})(confirmDiscardFormChanges(React.memo(BatchImportContainer, isCommunityUnchanged), FORM_NAME));
+})(confirmDiscardFormChanges(React.memo(BatchImportContainer), FORM_NAME));
 
 const mapStateToProps = state => {
     const formErrors = (state && getFormSyncErrors(FORM_NAME)(state)) || Immutable.Map({});
     const formValues = (state && getFormValues(FORM_NAME)(state)) || Immutable.Map({});
 
-    const collectionItems = state.get('collectionsReducer').itemsList;
-
     return {
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         formErrors,
         formValues,
-        collectionItems,
     };
 };
 
-function mapDispatchToProps(dispatch) {
-    return {
-        loadItemsList: communityID => dispatch(actions.collectionsList(communityID)),
-    };
-}
+const mapDispatchToProps = dispatch => ({
+    loadItemsList: communityID => communityID && dispatch(actions.collectionsList(communityID)),
+});
 
 BatchImportContainer = connect(
     mapStateToProps,
     mapDispatchToProps
 )(BatchImportContainer);
 
-BatchImportContainer = withRouter(React.memo(BatchImportContainer, () => true));
-export default React.memo(BatchImportContainer);
+export default withRouter(BatchImportContainer);

@@ -8,44 +8,46 @@ import Typography from '@material-ui/core/Typography';
 
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
-import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
-// import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import DirectorySelectField from '../containers/DirectorySelectField';
+import CollectionSelectField from '../containers/CollectionSelectField';
 import { useFormErrorsContext } from 'context';
 
 import { validation } from 'config';
 import { pathConfig } from 'config/routes';
 import { default as componentsLocale } from 'locale/components';
+import { default as publicationLocale } from 'locale/publicationForm';
 
 export const FORM_NAME = 'BatchImport';
 export const BatchImport = ({
-    collectionsList,
     communityID,
     disableSubmit,
     handleSubmit,
     history,
     loadItemsList,
+    resetCollectionField,
+    submitSucceeded,
     submitting,
 }) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
-    const addACollectionTxt = publicationLocale.addACollection;
     const { formErrors } = useFormErrorsContext();
 
     useEffect(() => {
         loadItemsList(communityID);
     }, [communityID, loadItemsList]);
-    // const alertProps = validation.getErrorAlertProps({
-    //     alertLocale: {
-    //         validationAlert: { ...publicationLocale.validationAlert },
-    //         progressAlert: { ...publicationLocale.progressAlert },
-    //         successAlert: { ...batchImportTxt.submitSuccessAlert },
-    //         errorAlert: { ...batchImportTxt.submitFailureAlert },
-    //     },
-    //     formErrors,
-    //     submitSucceeded,
-    //     submitting,
-    // });
+
+    const alertProps = validation.getErrorAlertProps({
+        alertLocale: {
+            validationAlert: { ...publicationLocale.validationAlert },
+            progressAlert: { ...publicationLocale.progressAlert },
+            successAlert: { ...batchImportTxt.submitSuccessAlert },
+            errorAlert: { ...batchImportTxt.submitFailureAlert },
+        },
+        formErrors,
+        submitSucceeded,
+        submitting,
+    });
 
     const _abandonImport = () => {
         history.push(pathConfig.index);
@@ -67,18 +69,18 @@ export const BatchImport = ({
                                         disabled={submitting}
                                         error={formErrors.communityID}
                                         name="communityID"
-                                        label={addACollectionTxt.formLabels.ismemberof.placeholder}
+                                        label={batchImportTxt.formLabels.collection.label}
                                         required
                                         validate={[validation.required]}
+                                        onChange={resetCollectionField}
                                     />
                                 </Grid>
                                 {!!communityID && (
                                     <Grid item xs={12}>
                                         <Field
-                                            component={GenericSelectField}
-                                            itemsList={collectionsList}
+                                            component={CollectionSelectField}
                                             disabled={submitting}
-                                            error={formErrors.collection}
+                                            error={formErrors.collection_pid}
                                             label={batchImportTxt.formLabels.collection.placeholder}
                                             name="collection_pid"
                                             parentPid={communityID}
@@ -120,11 +122,11 @@ export const BatchImport = ({
                         </StandardCard>
                     </Grid>
 
-                    {/* {alertProps && (
+                    {alertProps && (
                         <Grid item xs={12}>
                             <Alert {...alertProps} />
                         </Grid>
-                    )} */}
+                    )}
 
                     <Grid item xs={false} sm />
                     <Grid item xs={12} sm="auto">
@@ -162,12 +164,9 @@ BatchImport.propTypes = {
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     loadItemsList: PropTypes.func,
+    resetCollectionField: PropTypes.func,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
 };
 
-function isSame(prevProps, nextProps) {
-    return prevProps.communityID === nextProps.communityID;
-}
-
-export default React.memo(BatchImport, isSame);
+export default React.memo(BatchImport);
