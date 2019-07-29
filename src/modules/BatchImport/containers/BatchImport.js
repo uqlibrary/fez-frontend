@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import Immutable from 'immutable';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { change, getFormSyncErrors, getFormValues, reduxForm, SubmissionError } from 'redux-form/immutable';
 
 import BatchImport, { FORM_NAME } from '../components/BatchImport';
 
@@ -60,6 +60,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     loadItemsList: communityID => communityID && dispatch(actions.collectionsList(communityID)),
+    resetCollectionField: () => dispatch(change(FORM_NAME, 'collection_pid', null)),
 });
 
 BatchImportContainer = connect(
