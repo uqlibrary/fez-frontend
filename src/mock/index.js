@@ -156,6 +156,11 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
             return [200, mockData.collections];
         } else if (
+            config.params.key &&
+            config.params.key.rek_object_type === 1
+        ) {
+            return [200, mockData.communitySearchList];
+        } else if (
             config.params.id ||
             config.params.doi ||
             config.params.hasOwnProperty('all') ||
@@ -164,11 +169,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         ) {
             // SEARCH_INTERNAL_RECORDS_API
             // return [200, mockData.internalTitleSearchListNoResults];
-            if (config.params.key.rek_object_type === 1) {
-                return [200, mockData.communitySearchList];
-            } else {
-                return [200, mockData.internalTitleSearchList];
-            }
+            return [200, mockData.internalTitleSearchList];
         } else if (
             config.params.key.id ||
             config.params.key.doi ||

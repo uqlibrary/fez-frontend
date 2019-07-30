@@ -12,6 +12,10 @@ context('Batch import', () => {
         cy.wait(1000); // Wait for data load. Without it, the click below doesn't trigger the menu.
     });
 
+    afterEach(() => {
+        cy.navToHomeFromMenu();
+    });
+
     it('should have expected elements', () => {
         cy.get('h2')
             .should('have.length', 1)
