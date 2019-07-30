@@ -7,30 +7,22 @@ const mapStateToProps = (state, props) => {
     const { itemsList, itemsLoading, itemsLoadingError } = state.get('collectionsReducer') || {};
 
     const translatedItemList = itemsList.map((item, index) => {
-        return { text: item.rek_title, value: item.rek_pid, index: index + 1 };
+        return { text: item.rek_title, value: item.rek_pid, index };
     });
 
     return {
-        selectedValue: props.input.value || [],
+        selectedValue: props.value || [],
         itemsList: translatedItemList || [],
         itemsLoading,
         itemsLoadingError,
         itemsLoadingHint: props.loadingHint || 'Loading..',
-        hideLabel: !props.parentPid,
-        parentPid: props.parentPid,
+        hideLabel: true,
     };
 };
 
-function mapDispatchToProps(dispatch, props) {
-    if (!props.parentPid) {
-        return {
-            loadItemsList: () => dispatch(actions.collectionsList()),
-        };
-    }
-
-    dispatch(actions.collectionsList(props.parentPid));
+function mapDispatchToProps(dispatch) {
     return {
-        loadItemsList: () => dispatch(actions.collectionsList(props.parentPid)),
+        loadItemsList: () => dispatch(actions.collectionsList()),
     };
 }
 
@@ -39,10 +31,6 @@ const CollectionsList = connect(
     mapDispatchToProps
 )(GenericSelectField);
 
-const _onChange = fieldProps => {
-    return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
-};
-
 export default function CollectionsSelectField(fieldProps) {
-    return <CollectionsList onChange={_onChange(fieldProps)} {...fieldProps} />;
+    return <CollectionsList {...fieldProps} />;
 }
