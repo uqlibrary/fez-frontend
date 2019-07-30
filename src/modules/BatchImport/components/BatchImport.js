@@ -64,6 +64,7 @@ export const BatchImport = ({
                                         component={CommunitiesSelectField}
                                         disabled={submitting}
                                         error={formErrors.communityID}
+                                        id="communityPID"
                                         name="communityID"
                                         onChange={resetCollectionField}
                                         required
@@ -72,11 +73,14 @@ export const BatchImport = ({
                                     />
                                 </Grid>
                                 {!!communityID && (
+                                    // Branch tested in cypress
+                                    /* istanbul ignore next */
                                     <Grid item xs={12}>
                                         <Field
                                             component={CollectionSelectField}
                                             disabled={submitting}
                                             error={formErrors.collection_pid}
+                                            id="collectionPID"
                                             name="collection_pid"
                                             parentPid={communityID}
                                             required
@@ -93,6 +97,7 @@ export const BatchImport = ({
                                         component={DocumentTypeSingleField}
                                         disabled={submitting}
                                         error={formErrors.doc_type_id}
+                                        id="doctypePID"
                                         name="doc_type_id"
                                         required
                                         validate={[validation.required]}
@@ -107,6 +112,7 @@ export const BatchImport = ({
                                         component={DirectorySelectField}
                                         disabled={submitting}
                                         error={formErrors.directory}
+                                        id="directory"
                                         name="directory"
                                         required
                                         validate={[validation.required]}
@@ -118,6 +124,8 @@ export const BatchImport = ({
                     </Grid>
 
                     {alertProps && (
+                        // Branch tested in cypress
+                        /* istanbul ignore next */
                         <Grid item xs={12}>
                             <Alert {...alertProps} />
                         </Grid>
@@ -130,6 +138,7 @@ export const BatchImport = ({
                             children={batchImportTxt.formLabels.cancelButtonLabel}
                             disabled={submitting}
                             fullWidth
+                            id="cancelBatchImport"
                             onClick={_abandonImport}
                             variant="contained"
                         />
@@ -141,7 +150,7 @@ export const BatchImport = ({
                             color="primary"
                             disabled={submitting || disableSubmit}
                             fullWidth
-                            id="submit-data-collection"
+                            id="submitBatchImport"
                             onClick={handleSubmit}
                             variant="contained"
                         />
