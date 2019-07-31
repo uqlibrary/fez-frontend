@@ -26,18 +26,19 @@ const onSubmit = (values, dispatch) => {
 };
 
 let BatchImportContainer = ({ formErrors, formValues, ...props }) => {
-    const communityID = formValues.toJS().communityID;
+    const componentProps = {
+        ...props,
+        communityID: formValues.toJS().communityID,
+    };
 
     return (
         <FormErrorsContext.Provider value={{ formErrors }}>
-            <BatchImport {...{ ...props, communityID }} />
+            <BatchImport {...componentProps} />
         </FormErrorsContext.Provider>
     );
 };
 
 BatchImportContainer.propTypes = {
-    disableSubmit: PropTypes.bool,
-    collectionItems: PropTypes.array,
     formErrors: PropTypes.object,
     formValues: PropTypes.object,
 };
@@ -59,7 +60,7 @@ const mapStateToProps = state => {
 };
 
 const mapDispatchToProps = dispatch => ({
-    loadItemsList: communityID => communityID && dispatch(actions.collectionsList(communityID)),
+    loadItemsList: communityID => dispatch(actions.collectionsList(communityID)),
     resetCollectionField: () => dispatch(change(FORM_NAME, 'collection_pid', null)),
 });
 

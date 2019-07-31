@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
@@ -9,6 +9,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import DirectorySelectField from '../containers/DirectorySelectField';
 import CollectionSelectField from '../containers/CollectionSelectField';
 import { useFormErrorsContext } from 'context';
@@ -25,16 +26,27 @@ export const BatchImport = ({
     handleSubmit,
     history,
     loadItemsList,
+    reset,
     resetCollectionField,
     submitSucceeded,
     submitting,
 }) => {
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
+
     const { formErrors } = useFormErrorsContext();
 
+    const restartPrompt = useRef(null);
+    const setRestartPrompt = ref => {
+        restartPrompt.current = ref;
+    };
+
     useEffect(() => {
-        loadItemsList(communityID);
+        communityID && loadItemsList(communityID);
     }, [communityID, loadItemsList]);
+
+    useEffect(() => {
+        submitSucceeded && restartPrompt.current.showConfirmation();
+    }, [submitSucceeded]);
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: {
@@ -55,6 +67,12 @@ export const BatchImport = ({
     return (
         <StandardPage title={batchImportTxt.title}>
             <form>
+                <ConfirmDialogBox
+                    onRef={setRestartPrompt}
+                    onAction={reset}
+                    onCancelAction={_abandonImport}
+                    locale={batchImportTxt.postSubmitConfirmation}
+                />
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <StandardCard help={batchImportTxt.help}>
@@ -168,6 +186,7 @@ BatchImport.propTypes = {
     handleSubmit: PropTypes.func,
     history: PropTypes.object,
     loadItemsList: PropTypes.func,
+    reset: PropTypes.func,
     resetCollectionField: PropTypes.func,
     submitSucceeded: PropTypes.bool,
     submitting: PropTypes.bool,
