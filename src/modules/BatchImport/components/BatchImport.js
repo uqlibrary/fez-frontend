@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
@@ -31,6 +31,7 @@ export const BatchImport = ({
     submitSucceeded,
     submitting,
 }) => {
+    const [validationErrors, setValidationErrors] = useState(null);
     const batchImportTxt = componentsLocale.components.digiTeam.batchImport;
 
     const { formErrors } = useFormErrorsContext();
@@ -52,17 +53,21 @@ export const BatchImport = ({
         submitSucceeded && restartPrompt.current.showConfirmation();
     }, [submitSucceeded]);
 
-    const alertProps = validation.getErrorAlertProps({
-        alertLocale: {
-            validationAlert: { ...publicationLocale.validationAlert },
-            progressAlert: { ...batchImportTxt.submitProgressAlert },
-            successAlert: { ...batchImportTxt.submitSuccessAlert },
-            errorAlert: { ...batchImportTxt.submitFailureAlert },
-        },
-        formErrors,
-        submitSucceeded,
-        submitting,
-    });
+    useEffect(() => {
+        setValidationErrors(
+            validation.getErrorAlertProps({
+                alertLocale: {
+                    validationAlert: { ...publicationLocale.validationAlert },
+                    progressAlert: { ...batchImportTxt.submitProgressAlert },
+                    successAlert: { ...batchImportTxt.submitSuccessAlert },
+                    errorAlert: { ...batchImportTxt.submitFailureAlert },
+                },
+                formErrors,
+                submitSucceeded,
+                submitting,
+            })
+        );
+    }, [batchImportTxt, formErrors, submitSucceeded, submitting]);
 
     const _abandonImport = () => {
         history.push(pathConfig.index);
@@ -145,11 +150,11 @@ export const BatchImport = ({
                         </StandardCard>
                     </Grid>
 
-                    {alertProps && (
+                    {validationErrors && (
                         // Branch tested in cypress
                         /* istanbul ignore next */
                         <Grid item xs={12}>
-                            <Alert {...alertProps} />
+                            <Alert {...validationErrors} />
                         </Grid>
                     )}
 
