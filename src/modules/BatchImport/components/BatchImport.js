@@ -41,17 +41,21 @@ export const BatchImport = ({
     };
 
     useEffect(() => {
+        // Branch tested in cypress
+        /* istanbul ignore next */
         communityID && loadItemsList(communityID);
     }, [communityID, loadItemsList]);
 
     useEffect(() => {
+        // Branch tested in cypress
+        /* istanbul ignore next */
         submitSucceeded && restartPrompt.current.showConfirmation();
     }, [submitSucceeded]);
 
     const alertProps = validation.getErrorAlertProps({
         alertLocale: {
             validationAlert: { ...publicationLocale.validationAlert },
-            progressAlert: { ...publicationLocale.progressAlert },
+            progressAlert: { ...batchImportTxt.submitProgressAlert },
             successAlert: { ...batchImportTxt.submitSuccessAlert },
             errorAlert: { ...batchImportTxt.submitFailureAlert },
         },

@@ -1618,6 +1618,11 @@ export default {
                     cancelButtonLabel: 'Cancel and return to the homepage',
                     submitButtonLabel: 'CSV ingest',
                 },
+                submitProgressAlert: {
+                    type: 'info',
+                    title: 'Requesting CSV ingest',
+                    message: 'Waiting for response...',
+                },
                 submitSuccessAlert: {
                     type: 'done',
                     title: 'Success',
