@@ -71,7 +71,6 @@ export default class ListEditor extends Component {
     };
 
     addItem = (item) => {
-        console.log(item);
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
