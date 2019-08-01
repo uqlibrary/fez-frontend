@@ -3,9 +3,12 @@ import { connect } from 'react-redux';
 
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 
+import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
+
 const mapStateToProps = (state, props) => {
-    const itemsList = state.get('collectionsReducer').itemsList.map((item, index) => {
-        return { text: item.rek_title, value: item.rek_pid, index: index + 1 };
+    const itemsList = state.get('collectionsReducer').itemsList.map(item => {
+        const securityPolicy = TOP_LEVEL_SECURITY_POLICIES.find(policy => policy.id === item.rek_security_policy);
+        return { text: `${item.rek_title} (${securityPolicy.label})`, value: item.rek_pid, index: item.rek_pid };
     });
     return {
         selectedValue: props.input.value || [],

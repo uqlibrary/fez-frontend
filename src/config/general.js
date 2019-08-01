@@ -1077,6 +1077,44 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     },
 ];
 
+export const TOP_LEVEL_SECURITY_POLICIES = [
+    {
+        id: 1,
+        value: 1,
+        name: 'Administrators',
+        label: 'Administrators',
+        order: 0,
+    },
+    {
+        id: 2,
+        value: 2,
+        name: 'Theses Assessors',
+        label: 'Theses Assessors',
+        order: 10,
+    },
+    {
+        id: 3,
+        value: 3,
+        name: 'Evidence Assessors',
+        label: 'Evidence Assessors',
+        order: 20,
+    },
+    {
+        id: 4,
+        value: 4,
+        name: 'Staff and Students',
+        label: 'Staff and Students',
+        order: 30,
+    },
+    {
+        id: 5,
+        value: 5,
+        name: 'Public',
+        label: 'Public',
+        order: 100,
+    },
+];
+
 export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_THESIS,
