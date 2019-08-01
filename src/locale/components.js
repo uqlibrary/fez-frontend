@@ -1616,7 +1616,7 @@ export default {
                         ariaLabel: 'Select folder where CSV and datastream files are located',
                     },
                     cancelButtonLabel: 'Cancel and return to the homepage',
-                    submitButtonLabel: 'CSV ingest',
+                    submitButtonLabel: 'Ingest now',
                 },
                 submitProgressAlert: {
                     type: 'info',
