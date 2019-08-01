@@ -1,8 +1,10 @@
 // import React from 'react';
 import { PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
-import locale from 'locale/components';
 import Immutable from 'immutable';
+
 import { validation } from 'config';
+import locale from 'locale/components';
+import { default as formLocale } from 'locale/publicationForm';
 
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -14,6 +16,7 @@ import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 
 export const fieldConfig = {
     rek_title: {
@@ -428,6 +431,16 @@ export const fieldConfig = {
             placeholder: '',
             fullWidth: true
         }
+    },
+    authors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.authors',
+            showIdentifierLookup: true,
+            showContributorAssignment: true,
+            locale: formLocale.journalArticle.authors.field,
+            validate: [validation.authorRequired]
+        }
     }
 };
 
@@ -444,6 +457,7 @@ export const adminInterfaceConfig = {
         ],
         identifiers: () => [
             {
+                title: 'Manager identifiers',
                 groups: [
                     ['fez_record_search_key_doi'],
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
@@ -534,6 +548,12 @@ export const adminInterfaceConfig = {
                 groups: [
                     // ['fez_record_search_key_for_codes']
                 ]
+            }
+        ],
+        authors: () => [
+            {
+                title: 'Authors',
+                groups: [['authors']]
             }
         ]
     }
@@ -676,5 +696,45 @@ export const valueExtractor = {
     },
     rek_pubmed_doc_type: {
         getValue: (record) => record.rek_pubmed_doc_type
+    },
+    links: {
+        getValue: (record) =>
+            (record.fez_record_search_key_link || []).map((link) => ({
+                rek_order: link.rek_link_order,
+                rek_value: {
+                    key: link.rek_link,
+                    value: record.fez_record_search_key_link_description
+                        .filter((description) => description.rek_link_description_order === link.rek_link_order)
+                        .reduce((pv, cv) => cv.rek_link_description, '')
+                }
+            }))
+    },
+    authors: {
+        getValue: (record) => {
+            const authors = (record.fez_record_search_key_author || []).reduce(
+                (authorsObject, author) => ({
+                    ...authorsObject,
+                    [author.rek_author_order]: author
+                }),
+                {}
+            );
+
+            const authorIds = (record.fez_record_search_key_author_id || []).reduce(
+                (authorIdsObject, authorId) => ({
+                    ...authorIdsObject,
+                    [authorId.rek_author_id_order]: authorId
+                }),
+                {}
+            );
+
+            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => {
+                return {
+                    nameAsPublished: authors[order].rek_author,
+                    creatorRole: '',
+                    uqIdentifier: `${authorIds[order].rek_author_id}` || '',
+                    authorId: authorIds[order].rek_author_id
+                };
+            });
+        }
     }
 };
