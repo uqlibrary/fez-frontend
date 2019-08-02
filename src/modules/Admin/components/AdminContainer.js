@@ -1,9 +1,11 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useCallback } from 'react';
+import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import locale from 'locale/pages';
 
+// import { loadRecordToView } from 'actions';
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
@@ -12,12 +14,13 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
 import SecuritySection from './security/SecuritySectionContainer';
-import IdentifiersSection from './identifiers/IdentifiersSection';
-import BibliographicSection from './bibliographic/BibliographicSection';
-import AdminSection from './admin/AdminSection';
+import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
+import BibliographicSection from './bibliographic/BibliographicSectionContainer';
+import AdminSection from './admin/AdminSectionContainer';
 import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './FilesSection';
-import AuthorDetailsSection from './AuthorDetailsSection';
+// import AuthorDetailsSection from './authors/AuthorDetailsSection';
+import AuthorsSection from './authors/AuthorsSectionContainer';
 
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_RECORD } from 'config/general';
@@ -46,32 +49,32 @@ const styles = (theme) => ({
 });
 
 export const AdminContainer = ({
-    loadingRecordToView,
-    recordToView,
-    actions,
     location,
     classes,
     submitting,
     submitSucceeded,
     disableSubmit,
     handleSubmit,
-    match,
+    // match,
     history,
 }) => {
     const [tabbed, setTabbed] = useState(
         Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
     );
     const theme = useTheme();
+    const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
+    // const dispatch = useDispatch();
 
+    console.log('loadingRecordToView', loadingRecordToView);
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
-    useEffect(() => {
-        if (!!match.params.pid && !!actions.loadRecordToView) {
-            actions.loadRecordToView(match.params.pid);
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (!!match.params.pid && !!loadRecordToView) {
+    //         dispatch(loadRecordToView(match.params.pid));
+    //     }
+    // }, []);
 
     /* istanbul ignore next */
     const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
@@ -114,8 +117,8 @@ export const AdminContainer = ({
                             activated: false,
                         },
                         authorDetails: {
-                            component: AuthorDetailsSection,
-                            activated: false,
+                            component: AuthorsSection,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         files: {
                             component: FilesSection,
