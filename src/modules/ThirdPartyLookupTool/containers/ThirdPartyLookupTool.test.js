@@ -2,7 +2,7 @@ import ThirdPartyLookupTool from './ThirdPartyLookupTool';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(ThirdPartyLookupTool, props, isShallow);
@@ -10,6 +10,6 @@ function setup(testProps, isShallow = true) {
 
 describe('ThirdPartyLookupTool container', () => {
     it('should mount', () => {
-        const wrapper = setup({}, false);
+        setup({}, false);
     });
 });

@@ -1,9 +1,9 @@
-import {PureComponent} from 'react';
+import { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import * as validationRules from 'config/validation';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {AuthorIdField, PublisherField, OrgUnitNameField} from 'modules/SharedComponents/LookupFields';
-import {ThesisSubtypeField, CollectionsSelectField} from 'modules/SharedComponents/PublicationSubtype';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { AuthorIdField, PublisherField, OrgUnitNameField } from 'modules/SharedComponents/LookupFields';
+import { ThesisSubtypeField, CollectionsSelectField } from 'modules/SharedComponents/PublicationSubtype';
 import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 
 export default class AdvancedSearchRowInput extends PureComponent {
@@ -12,7 +12,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
         value: PropTypes.oneOfType([
             PropTypes.string,
             PropTypes.array,
-            PropTypes.number
+            PropTypes.number,
         ]),
         hintText: PropTypes.string,
         label: PropTypes.any,
@@ -26,22 +26,22 @@ export default class AdvancedSearchRowInput extends PureComponent {
             multiple: PropTypes.bool,
             errorHint: PropTypes.string,
             loadingHint: PropTypes.string,
-            ariaLabel: PropTypes.string
-        })
+            ariaLabel: PropTypes.string,
+        }),
     };
 
     constructor(props) {
         super(props);
         this.state = {
             InputComponent: TextField,
-            inputProps: {}
+            inputProps: {},
         };
     }
 
     componentWillMount() {
         this.setState({
             InputComponent: this.getInputComponent(),
-            inputProps: this.getInputProps()
+            inputProps: this.getInputProps(),
         });
     }
 
@@ -51,8 +51,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             inputProps: {
                 ...this.state.inputProps,
                 'error': !!this.runValidationRules(nextProps.value),
-                'errorText': this.runValidationRules(nextProps.value)
-            }
+                'errorText': this.runValidationRules(nextProps.value),
+            },
         });
     }
 
@@ -102,7 +102,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'aria-label': this.props.inputField.ariaLabel,
             'allowFreeText': true,
             'floatingLabelText': this.props.inputField.ariaLabel,
-            'hideLabel': true
+            'hideLabel': true,
         };
 
         const selectDefaultProps = {
@@ -111,6 +111,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             'hintText': this.props.inputField.hint,
             'onChange': (item) => this.props.onChange(item, item),
             'aria-label': this.props.inputField.ariaLabel,
+            'label': this.props.inputField.label,
+            'style': { marginTop: 0 },
         };
 
         switch (this.props.inputField.type) {
@@ -125,7 +127,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'OrgUnitLookup':
                 return {
                     ...lookupDefaultProps,
-                    'onChange': (item) => this.props.onChange(item.value, item.value)
+                    'onChange': (item) => this.props.onChange(item.value, item.value),
                 };
             case 'AuthorIdLookup':
             case 'ContributorIdLookup':
@@ -138,7 +140,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                         } else {
                             this.props.onChange(0, '');
                         }
-                    }
+                    },
                 };
             case 'ThesisTypeLookup':
                 return {
@@ -146,7 +148,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'multiple': this.props.inputField.multiple,
                     'autoWidth': false,
                     'hideLabel': true,
-                    'displayEmpty': true
+                    'displayEmpty': true,
                 };
             case 'CollectionsLookup':
                 return {
@@ -157,7 +159,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'onChange': this.props.onChange,
                     'autoWidth': false,
                     'hideLabel': true,
-                    'displayEmpty': true
+                    'displayEmpty': true,
                 };
             case 'StatusLookup':
                 return {
@@ -165,7 +167,7 @@ export default class AdvancedSearchRowInput extends PureComponent {
                     'autoWidth': false,
                     'hideLabel': true,
                     'displayEmpty': false,
-                    'onChange': (item) => this.props.onChange(item)
+                    'onChange': (item) => this.props.onChange(item),
                 };
             default: return {};
         }

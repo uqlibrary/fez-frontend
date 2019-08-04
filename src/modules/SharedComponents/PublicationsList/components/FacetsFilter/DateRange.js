@@ -15,24 +15,24 @@ export default class DateRange extends React.Component {
         defaultValue: PropTypes.object,
         open: PropTypes.bool,
         locale: PropTypes.object,
-        onToggle: PropTypes.func.isRequired
+        onToggle: PropTypes.func.isRequired,
     };
 
     static defaultProps = {
         value: {
             from: null,
-            to: null
+            to: null,
         },
         defaultValue: {
-            from: (new Date()).getFullYear() - 10,
-            to: (new Date()).getFullYear() + 5
+            from: new Date().getFullYear() - 10,
+            to: new Date().getFullYear() + 5,
         },
         locale: {
             fromFieldLabel: 'From',
             toFieldLabel: 'To',
             rangeSubmitButtonLabel: 'Go',
-            displayTitle: 'Date range'
-        }
+            displayTitle: 'Date range',
+        },
     };
 
     constructor(props) {
@@ -40,7 +40,7 @@ export default class DateRange extends React.Component {
         this.state = {
             from: this.props.value.from || this.props.defaultValue.from,
             to: this.props.value.to || this.props.defaultValue.to,
-            isActive: !!this.props.value.from || !!this.props.value.to
+            isActive: !!this.props.value.from || !!this.props.value.to,
         };
     }
 
@@ -53,23 +53,23 @@ export default class DateRange extends React.Component {
         });
     }
 
-    setValue = (key) => (event) => {
+    setValue = key => event => {
         const intValue = parseInt(event.target.value, 10);
         this.setState({
-            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? '*' : intValue
+            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? undefined : intValue,
         });
     };
 
     setDateRange = () => {
-        this.setState({isActive: true});
+        this.setState({ isActive: true });
         const isFromYearSet = !isNaN(parseInt(this.state.from, 10));
         const isToYearSet = !isNaN(parseInt(this.state.to, 10));
 
-        this.props.onChange({from: isFromYearSet ? this.state.from : null, to: isToYearSet ? this.state.to : null});
+        this.props.onChange({ from: isFromYearSet ? this.state.from : null, to: isToYearSet ? this.state.to : null });
     };
 
     renderDateRangeForm = () => (
-        <div style={{padding: 8}}>
+        <div style={{ padding: 8 }}>
             <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
                 <Grid item xs={4}>
                     <TextField
@@ -78,7 +78,8 @@ export default class DateRange extends React.Component {
                         value={this.state.from}
                         onChange={this.setValue('from')}
                         disabled={this.props.disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
@@ -87,15 +88,20 @@ export default class DateRange extends React.Component {
                         value={this.state.to}
                         onChange={this.setValue('to')}
                         disabled={this.props.disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item>
                     <Button
                         variant={'text'}
                         children={this.props.locale.rangeSubmitButtonLabel}
                         onClick={this.setDateRange}
-                        disabled={this.props.disabled || (!isNaN(this.state.to - this.state.from) && (this.state.to - this.state.from) < 0)}
-                        fullWidth/>
+                        disabled={
+                            this.props.disabled ||
+                            (!isNaN(this.state.to - this.state.from) && this.state.to - this.state.from < 0)
+                        }
+                        fullWidth
+                    />
                 </Grid>
             </Grid>
         </div>
@@ -103,36 +109,33 @@ export default class DateRange extends React.Component {
 
     removeDateRange = () => {
         if (this.state.isActive) {
-            this.setState({isActive: false});
-            this.props.onChange({from: null, to: null});
+            this.setState({ isActive: false });
+            this.props.onChange({ from: null, to: null });
         }
-    }
-
-    getNestedItem = () => {
-        const isActive = this.state.isActive;
-        return (
-            !isActive
-                ? this.renderDateRangeForm()
-                : <FacetFilterNestedListItem
-                    onFacetClick={this.removeDateRange}
-                    isActive={isActive}
-                    primaryText={`${this.state.from} - ${this.state.to}`}
-                    disabled={this.props.disabled}
-                />
-        );
-    }
+    };
 
     render() {
         const txt = this.props.locale;
+        const isActive = this.state.isActive;
         return (
             <FacetFilterListItem
                 key="date-range"
                 facetTitle={txt.displayTitle}
                 disabled={this.props.disabled}
                 onToggle={this.props.onToggle}
-                nestedItems={this.getNestedItem()}
                 open={this.props.open}
-            />
+            >
+                {!isActive ? (
+                    this.renderDateRangeForm()
+                ) : (
+                    <FacetFilterNestedListItem
+                        onFacetClick={this.removeDateRange}
+                        isActive={isActive}
+                        primaryText={`${this.state.from || '*'} - ${this.state.to || '*'}`}
+                        disabled={this.props.disabled}
+                    />
+                )}
+            </FacetFilterListItem>
         );
     }
 }

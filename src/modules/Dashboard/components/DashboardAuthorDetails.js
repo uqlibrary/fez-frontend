@@ -1,13 +1,13 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     authorDetails: {
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class DashboardAuthorDetails extends PureComponent {
@@ -17,7 +17,7 @@ export class DashboardAuthorDetails extends PureComponent {
         givenName: PropTypes.string,
         orgUnits: PropTypes.array,
         positions: PropTypes.array,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     constructor(props) {
@@ -38,13 +38,15 @@ export class DashboardAuthorDetails extends PureComponent {
             return false;
         }
 
-        return positions.filter((position) => {
-            return this.isCasualPosition(position);
-        }).length === positions.length;
+        return (
+            positions.filter(position => {
+                return this.isCasualPosition(position);
+            }).length === positions.length
+        );
     }
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const areAllCasualPositions = this.areAllCasualPositions(this.props.positions);
         return (
             <Grid container spacing={8}>
@@ -55,21 +57,29 @@ export class DashboardAuthorDetails extends PureComponent {
                 </Grid>
                 {/* Author Name/Positions/OrgUnits */}
                 <Grid item xs={12}>
-                    {
-                        this.props.positions && this.props.positions.length > 0 && this.props.positions.map((item, index) => (
-                            ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) &&
-                            <Typography key={index} variant={'caption'} component={'span'} className={classes.authorDetails}>
-                                <b>{item}</b>
-                                {
-                                    this.props.orgUnits && this.props.orgUnits.length > 0 && this.props.orgUnits[index] &&
-                                    `, ${this.props.orgUnits[index]}`
-                                }
-                            </Typography>))
-                    }
+                    {this.props.positions &&
+                        this.props.positions.length > 0 &&
+                        this.props.positions.map(
+                            (item, index) =>
+                                ((!areAllCasualPositions && !this.isCasualPosition(item)) || areAllCasualPositions) && (
+                                    <Typography
+                                        key={index}
+                                        variant={'caption'}
+                                        component={'span'}
+                                        className={classes.authorDetails}
+                                    >
+                                        <b>{item}</b>
+                                        {this.props.orgUnits &&
+                                            this.props.orgUnits.length > 0 &&
+                                            this.props.orgUnits[index] &&
+                                            `, ${this.props.orgUnits[index]}`}
+                                    </Typography>
+                                )
+                        )}
                 </Grid>
             </Grid>
         );
     }
 }
 
-export default withStyles(styles, {withTheme: true})(DashboardAuthorDetails);
+export default withStyles(styles, { withTheme: true })(DashboardAuthorDetails);

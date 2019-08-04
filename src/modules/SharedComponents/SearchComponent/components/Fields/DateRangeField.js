@@ -1,16 +1,16 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
-import {withStyles} from '@material-ui/core/styles';
-import {DatePickerField} from 'modules/SharedComponents/Toolbox/DatePickerField';
-import {GENERIC_DATE_FORMAT} from 'config/general';
+import { withStyles } from '@material-ui/core/styles';
+import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
+import { GENERIC_DATE_FORMAT } from 'config/general';
 
 const styles = theme => ({
     title: {
-        ...theme.typography.caption
-    }
+        ...theme.typography.caption,
+    },
 });
 
 export class DateRangeField extends PureComponent {
@@ -21,25 +21,17 @@ export class DateRangeField extends PureComponent {
         classes: PropTypes.object,
         locale: PropTypes.object,
         format: PropTypes.string,
-        from: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object
-        ]),
-        to: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number,
-            PropTypes.object
-        ]),
+        from: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
+        to: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.object]),
         onChange: PropTypes.func.isRequired,
-        disableFuture: PropTypes.bool
+        disableFuture: PropTypes.bool,
     };
 
     static defaultProps = {
         className: 'publicationyearrange menuitem',
         disabled: false,
         format: GENERIC_DATE_FORMAT,
-        disableFuture: false
+        disableFuture: false,
     };
 
     constructor(props) {
@@ -47,46 +39,53 @@ export class DateRangeField extends PureComponent {
         this.state = {
             from: props.from || null,
             to: props.to || null,
-            error: undefined
+            error: undefined,
         };
     }
 
     componentWillUpdate(nextProps, nextState) {
         if (
             !!this.props.onChange &&
-            (this.state.from !== nextState.from || this.state.to !== nextState.to || this.state.error !== nextState.error) &&
+            (this.state.from !== nextState.from ||
+                this.state.to !== nextState.to ||
+                this.state.error !== nextState.error) &&
             !nextState.error
-        ) this.props.onChange(nextState);
+        ) { this.props.onChange(nextState); }
     }
 
-    updateDateRangeValue = (key) => (value) => {
-        this.setState({
-            [key]: value
-        }, () => {
-            const {from, to} = this.state;
-            if (!!from && !!to && from.isAfter(to)) {
-                this.setState({
-                    error: 'Please provide valid date range'
-                });
-            } else {
-                this.setState({
-                    error: undefined
-                });
+    updateDateRangeValue = key => value => {
+        this.setState(
+            {
+                [key]: value,
+            },
+            () => {
+                const { from, to } = this.state;
+                if (!!from && !!to && from.isAfter(to)) {
+                    this.setState({
+                        error: 'Please provide valid date range',
+                    });
+                } else {
+                    this.setState({
+                        error: undefined,
+                    });
+                }
             }
-        });
+        );
     };
 
     render() {
-        const {classes, locale} = this.props;
+        const { classes, locale } = this.props;
         return (
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <InputLabel shrink className={classes.title}>{locale.title}</InputLabel>
+                        <InputLabel shrink className={classes.title}>
+                            {locale.title}
+                        </InputLabel>
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <DatePickerField
                             value={this.state.from}
                             onChange={this.updateDateRangeValue('from')}
@@ -98,13 +97,13 @@ export class DateRangeField extends PureComponent {
                     </Grid>
                     <Grid item xs="auto">
                         <TextField
-                            style={{width: 24}}
+                            style={{ width: 24 }}
                             value=" to "
                             disabled
-                            InputProps={{disableUnderline: true}}
+                            InputProps={{ disableUnderline: true }}
                         />
                     </Grid>
-                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <DatePickerField
                             value={this.state.to}
                             onChange={this.updateDateRangeValue('to')}
@@ -119,5 +118,4 @@ export class DateRangeField extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(DateRangeField);
-
+export default withStyles(styles, { withTheme: true })(DateRangeField);

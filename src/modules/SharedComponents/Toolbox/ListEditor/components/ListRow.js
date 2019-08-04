@@ -1,6 +1,6 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {ConfirmDialogBox} from '../../ConfirmDialogBox';
+import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -8,7 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export class ListRow extends PureComponent {
     static propTypes = {
@@ -22,7 +22,8 @@ export class ListRow extends PureComponent {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
+        form: PropTypes.string,
     };
 
     static defaultProps = {
@@ -34,9 +35,10 @@ export class ListRow extends PureComponent {
                 confirmationTitle: 'Delete item',
                 confirmationMessage: 'Are you sure you want to delete this item?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
-            }
-        }
+                confirmButtonLabel: 'Yes',
+            },
+        },
+        form: 'Form',
     };
 
     showConfirmation = () => {
@@ -62,11 +64,11 @@ export class ListRow extends PureComponent {
     }
 
     render() {
-        const {item, disabled, hideReorder, canMoveUp, canMoveDown, classes} = this.props;
-        const {moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation} = this.props.locale;
-
+        const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
+        const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation } = this.props.locale;
+        const componentID = this.props.form.replace(/\s+/g, '');
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
+            <div style={{ flexGrow: 1, padding: 8 }} className={`ListRow-${componentID} ListRow-${componentID}-${item.value || item}`}>
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
@@ -105,7 +107,7 @@ export class ListRow extends PureComponent {
                     }
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteHint}>
-                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                            <IconButton onClick={this.showConfirmation} disabled={disabled} id={`delete-${this.props.index}`}>
                                 <Delete/>
                             </IconButton>
                         </Tooltip>
@@ -118,11 +120,11 @@ export class ListRow extends PureComponent {
 
 const styles = () => ({
     center: {
-        textAlign: 'center'
+        textAlign: 'center',
     },
     row: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
-    }
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+    },
 });
 
 export default withStyles(styles)(ListRow);

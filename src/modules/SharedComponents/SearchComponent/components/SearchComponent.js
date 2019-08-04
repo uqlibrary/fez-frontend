@@ -5,10 +5,10 @@ import param from 'can-param';
 import Snackbar from '@material-ui/core/Snackbar';
 import { routes } from 'config';
 import {
-    defaultQueryParams,
+    DEFAULT_QUERY_PARAMS,
     UNPUBLISHED_STATUS_MAP,
     UNPUBLISHED_STATUS_TEXT_MAP,
-    GENERIC_DATE_FORMAT
+    GENERIC_DATE_FORMAT,
 } from 'config/general';
 import { locale } from 'locale';
 
@@ -41,11 +41,11 @@ export default class SearchComponent extends PureComponent {
         className: PropTypes.string,
         actions: PropTypes.object,
         history: PropTypes.object.isRequired,
-        location: PropTypes.object
+        location: PropTypes.object,
     };
 
     static contextTypes = {
-        isMobile: PropTypes.bool
+        isMobile: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -60,7 +60,7 @@ export default class SearchComponent extends PureComponent {
         isAdvancedSearch: false,
         isAdvancedSearchMinimised: false,
         isOpenAccessInAdvancedMode: false,
-        updateFacetExcludesFromSearchFields: () => { }
+        updateFacetExcludesFromSearchFields: () => { },
     };
 
     constructor(props) {
@@ -71,10 +71,10 @@ export default class SearchComponent extends PureComponent {
             isAdvancedSearch: props.isAdvancedSearch,
             simpleSearch: {
                 searchText: (
-                    !!props.searchQueryParams.all
-                    && !!props.searchQueryParams.all.value
-                    && props.searchQueryParams.all.value
-                ) || props.searchQueryParams.all || ''
+                    !!props.searchQueryParams.all &&
+                    !!props.searchQueryParams.all.value &&
+                    props.searchQueryParams.all.value
+                ) || props.searchQueryParams.all || '',
             },
             advancedSearch: {
                 fieldRows: this.getFieldRowsFromSearchQuery(props.searchQueryParams),
@@ -82,8 +82,8 @@ export default class SearchComponent extends PureComponent {
                 isOpenAccess: props.isOpenAccessInAdvancedMode || false,
                 docTypes: this.getDocTypesFromSearchQuery(props.searchQueryParams),
                 yearFilter: this.getYearRangeFromActiveFacets(props.activeFacets),
-                ...this.getDateRangeFromSearchQuery(props.searchQueryParams)
-            }
+                ...this.getDateRangeFromSearchQuery(props.searchQueryParams),
+            },
         };
     }
 
@@ -96,10 +96,10 @@ export default class SearchComponent extends PureComponent {
                 isAdvancedSearch: nextProps.isAdvancedSearch,
                 simpleSearch: {
                     searchText:
-                        (nextProps.searchQueryParams.all || {}).value
-                        || (typeof nextProps.searchQueryParams.all === 'string') &&
-                        nextProps.searchQueryParams.all
-                        || ''
+                        (nextProps.searchQueryParams.all || {}).value ||
+                        (typeof nextProps.searchQueryParams.all === 'string') &&
+                        nextProps.searchQueryParams.all ||
+                        '',
                 },
                 advancedSearch: {
                     fieldRows: this.getFieldRowsFromSearchQuery(nextProps.searchQueryParams),
@@ -110,8 +110,8 @@ export default class SearchComponent extends PureComponent {
                         from: this.state.advancedSearch.yearFilter.from,
                         to: this.state.advancedSearch.yearFilter.to,
                     },
-                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams)
-                }
+                    ...this.getDateRangeFromSearchQuery(nextProps.searchQueryParams),
+                },
             }, () => {
                 // Update the excluded facets in SearchRecords to hide from facetFilter
                 this.props.updateFacetExcludesFromSearchFields(
@@ -125,7 +125,7 @@ export default class SearchComponent extends PureComponent {
         const defaultFieldRow = {
             searchField: '0',
             value: '',
-            label: ''
+            label: '',
         };
 
         const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams)
@@ -147,7 +147,7 @@ export default class SearchComponent extends PureComponent {
                                     value: UNPUBLISHED_STATUS_TEXT_MAP[
                                         searchQueryParams[key].value
                                     ],
-                                    label: ''
+                                    label: '',
                                 } ||
                                 null
                             ;
@@ -160,7 +160,7 @@ export default class SearchComponent extends PureComponent {
                                     value: searchQueryParams[key].hasOwnProperty('label')
                                         ? this.parseDateRange(searchQueryParams[key].label)
                                         : {},
-                                    label: ''
+                                    label: '',
                                 } ||
                                 null
                             ;
@@ -172,7 +172,7 @@ export default class SearchComponent extends PureComponent {
                                     : searchQueryParams[key],
                                 label: searchQueryParams[key].hasOwnProperty('label')
                                     ? searchQueryParams[key].label
-                                    : ''
+                                    : '',
                             };
                     }
                 })
@@ -185,7 +185,7 @@ export default class SearchComponent extends PureComponent {
         const fieldRows = !!searchQueryParams && Object.keys(searchQueryParams);
         const keys = {
             rek_created_date: 'createdRange',
-            rek_updated_date: 'updatedRange'
+            rek_updated_date: 'updatedRange',
         };
 
         return fieldRows
@@ -206,14 +206,14 @@ export default class SearchComponent extends PureComponent {
         const parts = range.substring(1, range.length - 1).split(' to ');
         return {
             from: moment(parts[0], GENERIC_DATE_FORMAT),
-            to: moment(parts[1], GENERIC_DATE_FORMAT)
+            to: moment(parts[1], GENERIC_DATE_FORMAT),
         };
     };
 
     getDocTypesFromSearchQuery = (searchQueryParams) => {
-        if (!searchQueryParams
-            || !searchQueryParams.rek_display_type
-            || searchQueryParams.rek_display_type.some(isNaN)
+        if (!searchQueryParams ||
+            !searchQueryParams.rek_display_type ||
+            searchQueryParams.rek_display_type.some(isNaN)
         ) {
             return [];
         } else {
@@ -254,7 +254,7 @@ export default class SearchComponent extends PureComponent {
                         : routes.pathConfig.records.search
                 ),
                 search: param(searchQuery),
-                state: { ...searchQuery }
+                state: { ...searchQuery },
             });
         }
     };
@@ -264,15 +264,15 @@ export default class SearchComponent extends PureComponent {
             isAdvancedSearch: !this.state.isAdvancedSearch,
             advancedSearch: {
                 ...this.state.advancedSearch,
-                isMinimised: false
-            }
+                isMinimised: false,
+            },
         });
     };
 
     _displaySnackbar = (message) => {
         this.setState({
             snackbarMessage: message,
-            snackbarOpen: true
+            snackbarOpen: true,
         });
     };
 
@@ -284,18 +284,18 @@ export default class SearchComponent extends PureComponent {
     _handleSimpleSearchTextChange = (value) => {
         this.setState({
             simpleSearch: {
-                searchText: value
+                searchText: value,
             },
-            snackbarOpen: false
+            snackbarOpen: false,
         });
     };
 
     _handleSimpleSearch = () => {
         const searchQuery = {
             searchQueryParams: {
-                all: this.state.simpleSearch.searchText
+                all: this.state.simpleSearch.searchText,
             },
-            ...defaultQueryParams
+            ...DEFAULT_QUERY_PARAMS,
         };
 
         // Perform search
@@ -311,8 +311,8 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
-                isMinimised: !this.state.advancedSearch.isMinimised
-            }
+                isMinimised: !this.state.advancedSearch.isMinimised,
+            },
         });
     };
 
@@ -320,8 +320,8 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
-                isOpenAccess: !this.state.advancedSearch.isOpenAccess
-            }
+                isOpenAccess: !this.state.advancedSearch.isOpenAccess,
+            },
         });
     };
 
@@ -330,8 +330,8 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
-                docTypes: docTypeValues
-            }
+                docTypes: docTypeValues,
+            },
         });
     };
 
@@ -339,8 +339,8 @@ export default class SearchComponent extends PureComponent {
         this.setState({
             advancedSearch: {
                 ...this.state.advancedSearch,
-                yearFilter: yearRange
-            }
+                yearFilter: yearRange,
+            },
         });
     };
 
@@ -355,9 +355,9 @@ export default class SearchComponent extends PureComponent {
                 fieldRows: [
                     ...fieldRows.slice(0, captionIndex),
                     { searchField: field, value: dateRange, label: '' },
-                    ...fieldRows.slice(captionIndex + 1)
-                ]
-            }
+                    ...fieldRows.slice(captionIndex + 1),
+                ],
+            },
         });
     };
 
@@ -370,9 +370,9 @@ export default class SearchComponent extends PureComponent {
                     {
                         searchField: '0',
                         value: '',
-                    }
-                ]
-            }
+                    },
+                ],
+            },
         });
     };
 
@@ -382,9 +382,9 @@ export default class SearchComponent extends PureComponent {
                 ...this.state.advancedSearch,
                 fieldRows: [
                     ...this.state.advancedSearch.fieldRows.slice(0, index),
-                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
-                ]
-            }
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1),
+                ],
+            },
         });
     };
 
@@ -395,13 +395,13 @@ export default class SearchComponent extends PureComponent {
                 docTypes: [],
                 yearFilter: {
                     from: 0,
-                    to: 0
+                    to: 0,
                 },
                 fieldRows: [{
                     searchField: '0',
-                    value: ''
-                }]
-            }
+                    value: '',
+                }],
+            },
         });
     };
 
@@ -412,9 +412,9 @@ export default class SearchComponent extends PureComponent {
                 fieldRows: [
                     ...this.state.advancedSearch.fieldRows.slice(0, index),
                     searchRow,
-                    ...this.state.advancedSearch.fieldRows.slice(index + 1)
-                ]
-            }
+                    ...this.state.advancedSearch.fieldRows.slice(index + 1),
+                ],
+            },
         });
     };
 
@@ -432,25 +432,26 @@ export default class SearchComponent extends PureComponent {
                         ...searchQueries,
                         [searchField]: {
                             ...rest,
-                            value: UNPUBLISHED_STATUS_MAP[item.value]
-                        }
+                            value: UNPUBLISHED_STATUS_MAP[item.value],
+                        },
                     };
                 } else if (this.props.isAdmin && (
-                    searchField === 'rek_created_date'
-                    || searchField === 'rek_updated_date'
+                    searchField === 'rek_created_date' ||
+                    searchField === 'rek_updated_date'
                 )) {
                     const rangeValue = `[${
                         item.value.from.utc().format()
                     } TO ${
-                        item.value.to.endOf('day').utc().format()
+                        item.value.to.endOf('day').utc()
+                            .format()
                     }]`;
                     const rangeKeys = {
                         rek_created_date: 'Created date',
-                        rek_updated_date: 'Updated date'
+                        rek_updated_date: 'Updated date',
                     };
                     ranges = {
                         ...ranges,
-                        [rangeKeys[searchField]]: rangeValue
+                        [rangeKeys[searchField]]: rangeValue,
                     };
                     return {
                         ...searchQueries,
@@ -461,8 +462,8 @@ export default class SearchComponent extends PureComponent {
                             } to ${
                                 item.value.to.format(GENERIC_DATE_FORMAT)
                             }]`,
-                            value: rangeValue
-                        }
+                            value: rangeValue,
+                        },
                     };
                 } else {
                     return { ...searchQueries, [searchField]: rest };
@@ -476,8 +477,8 @@ export default class SearchComponent extends PureComponent {
                 ...ranges,
                 'Year published': {
                     from: this.state.advancedSearch.yearFilter.from,
-                    to: this.state.advancedSearch.yearFilter.to
-                }
+                    to: this.state.advancedSearch.yearFilter.to,
+                },
             };
         }
 
@@ -486,14 +487,14 @@ export default class SearchComponent extends PureComponent {
     };
 
     getSearchQuery = (searchQueryParams, ranges = {}) => {
-        const { activeFacets } = defaultQueryParams;
+        const { activeFacets } = DEFAULT_QUERY_PARAMS;
         const docTypeParams = this.state.advancedSearch.docTypes;
 
         const searchQuery = {
-            ...defaultQueryParams,
+            ...DEFAULT_QUERY_PARAMS,
             searchQueryParams: {
                 ...searchQueryParams,
-                rek_display_type: docTypeParams
+                rek_display_type: docTypeParams,
             },
             searchMode: locale.components.searchComponent.advancedSearch.mode,
             activeFacets: {
@@ -502,8 +503,8 @@ export default class SearchComponent extends PureComponent {
                 ...(this.state.advancedSearch.isOpenAccess
                     ? { showOpenAccessOnly: true }
                     : {}
-                )
-            }
+                ),
+            },
         };
         return searchQuery;
     };

@@ -24,20 +24,20 @@ import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
 
-import {pathConfig} from 'config/routes';
+import { pathConfig } from 'config/routes';
 
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
-export const styles = (theme) => ({
+export const styles = theme => ({
     GridType: {
         paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
     GridSubType: {
         marginTop: 12,
         paddingBottom: 12,
-        borderBottom: `1px solid ${theme.palette.secondary.light}`
-    }
+        borderBottom: `1px solid ${theme.palette.secondary.light}`,
+    },
 });
 
 export class MyIncompleteRecordClass extends PureComponent {
@@ -61,7 +61,7 @@ export class MyIncompleteRecordClass extends PureComponent {
         publicationToFixFileUploadingError: PropTypes.bool,
         disableDeleteAllGrants: PropTypes.bool,
 
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     componentWillReceiveProps(nextProps) {
@@ -82,11 +82,11 @@ export class MyIncompleteRecordClass extends PureComponent {
         this.props.history.push(pathConfig.records.incomplete);
     };
 
-    _setSuccessConfirmation = (ref) => {
+    _setSuccessConfirmation = ref => {
         this.successConfirmationBox = ref;
     };
 
-    _handleDefaultSubmit = (event) => {
+    _handleDefaultSubmit = event => {
         if (event) event.preventDefault();
     };
 
@@ -104,31 +104,29 @@ export class MyIncompleteRecordClass extends PureComponent {
         const txtFixForm = formsLocale.forms.fixPublicationForm;
         const authors = txt.fields.authors;
 
-        // console.log(this.props);
         const alertProps = validation.getErrorAlertProps({
             ...this.props,
             alertLocale: {
                 ...alertLocale,
                 progressAlert: txt.progressAlert,
-                successAlert: txt.successAlert
-            }
+                successAlert: txt.successAlert,
+            },
         });
 
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <React.Fragment>
-                {
-                    this.props.publicationToFixFileUploadingError &&
+                {this.props.publicationToFixFileUploadingError && (
                     <Alert {...saveConfirmationLocale.fileFailConfirmationAlert} />
-                }
+                )}
                 {saveConfirmationLocale.confirmationMessage}
             </React.Fragment>
         );
 
         return (
             <StandardPage title={txt.title} help={txt.help}>
-                <PublicationCitation publication={recordToFix} />
+                <PublicationCitation publication={recordToFix} hideContentIndicators />
                 <form onSubmit={this._handleDefaultSubmit}>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
@@ -142,44 +140,49 @@ export class MyIncompleteRecordClass extends PureComponent {
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <Alert
-                                title={txt.prompt.title}
-                                message={txt.prompt.message}
-                                type={txt.prompt.type}
-                            />
+                            <Alert title={txt.prompt.title} message={txt.prompt.message} type={txt.prompt.type} />
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard title={viewRecordLocale.viewRecord.sections.publicationDetails}>
                                 <Grid container spacing={8} className={this.props.classes.GridType}>
-                                    {
-                                        !!recordToFix && !!recordToFix.rek_display_type_lookup &&
+                                    {!!recordToFix && !!recordToFix.rek_display_type_lookup && (
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_display_type}</Typography>
+                                                <Typography variant="body2">
+                                                    {
+                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
+                                                            .rek_display_type
+                                                    }
+                                                </Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
-                                                <Typography variant="body2">{recordToFix.rek_display_type_lookup}</Typography>
+                                                <Typography variant="body2">
+                                                    {recordToFix.rek_display_type_lookup}
+                                                </Typography>
                                             </Grid>
                                         </Grid>
-                                    }
+                                    )}
                                 </Grid>
                                 <Grid container spacing={8} className={this.props.classes.GridSubType}>
-                                    {
-                                        !!recordToFix && !!recordToFix.rek_subtype &&
+                                    {!!recordToFix && !!recordToFix.rek_subtype && (
                                         <Grid container spacing={16} alignItems="flex-start">
                                             <Grid item xs={12} sm={3}>
-                                                <Typography variant="body2">{viewRecordLocale.viewRecord.headings.default.publicationDetails.rek_subtype}</Typography>
+                                                <Typography variant="body2">
+                                                    {
+                                                        viewRecordLocale.viewRecord.headings.default.publicationDetails
+                                                            .rek_subtype
+                                                    }
+                                                </Typography>
                                             </Grid>
                                             <Grid item xs={12} sm={9}>
                                                 <Typography variant="body2">{recordToFix.rek_subtype}</Typography>
                                             </Grid>
                                         </Grid>
-                                    }
+                                    )}
                                 </Grid>
                             </StandardCard>
                         </Grid>
-                        {
-                            isNtro &&
+                        {isNtro && (
                             <NtroFields
                                 submitting={this.props.submitting}
                                 hideIsmn
@@ -193,7 +196,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 disableDeleteAllGrants={this.props.disableDeleteAllGrants}
                                 {...ntroFieldProps}
                             />
-                        }
+                        )}
                         <Grid item xs={12}>
                             <StandardCard title={authors.title} help={authors.help}>
                                 <Typography>{authors.description}</Typography>
@@ -214,7 +217,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                         <Grid item xs={12}>
                             <StandardCard title={txt.fields.notes.title}>
                                 <Field
-                                    style={{marginTop: -24}}
+                                    style={{ marginTop: -24 }}
                                     component={TextField}
                                     name="comments"
                                     type="text"
@@ -227,8 +230,7 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 />
                             </StandardCard>
                         </Grid>
-                        {
-                            !hasAnyFiles &&
+                        {!hasAnyFiles && (
                             <Grid item xs={12}>
                                 <StandardCard title={txt.fields.fileUpload.title}>
                                     <Field
@@ -242,13 +244,12 @@ export class MyIncompleteRecordClass extends PureComponent {
                                     />
                                 </StandardCard>
                             </Grid>
-                        }
-                        {
-                            alertProps &&
+                        )}
+                        {alertProps && (
                             <Grid item xs={12}>
                                 <Alert pushToTop {...alertProps} />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                     <Grid container spacing={24}>
                         <Hidden smDown>
@@ -260,7 +261,8 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 fullWidth
                                 children={txt.cancelButtonLabel}
                                 disabled={this.props.submitting}
-                                onClick={this._cancelFix} />
+                                onClick={this._cancelFix}
+                            />
                         </Grid>
                         <Grid item xs={12} md="auto">
                             <Button
@@ -270,7 +272,8 @@ export class MyIncompleteRecordClass extends PureComponent {
                                 fullWidth
                                 children={txt.submitButtonLabel}
                                 onClick={this.props.handleSubmit}
-                                disabled={this.props.submitting || this.props.disableSubmit} />
+                                disabled={this.props.submitting || this.props.disableSubmit}
+                            />
                         </Grid>
                     </Grid>
                 </form>
@@ -279,5 +282,5 @@ export class MyIncompleteRecordClass extends PureComponent {
     }
 }
 
-const MyIncompleteRecord = withStyles(styles, {withTheme: true})(MyIncompleteRecordClass);
+const MyIncompleteRecord = withStyles(styles, { withTheme: true })(MyIncompleteRecordClass);
 export default MyIncompleteRecord;

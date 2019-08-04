@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {ConfirmDialogBox} from '../../ConfirmDialogBox';
+import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
 import Typography from '@material-ui/core/Typography';
 import DeleteForever from '@material-ui/icons/DeleteForever';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export class ListRowHeader extends Component {
     static propTypes = {
@@ -14,7 +14,7 @@ export class ListRowHeader extends Component {
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -26,9 +26,9 @@ export class ListRowHeader extends Component {
                 confirmationTitle: 'Delete all',
                 confirmationMessage: 'Are you sure you want to delete all items?',
                 cancelButtonLabel: 'No',
-                confirmButtonLabel: 'Yes'
-            }
-        }
+                confirmButtonLabel: 'Yes',
+            },
+        },
     };
 
     constructor(props) {
@@ -42,11 +42,11 @@ export class ListRowHeader extends Component {
     setConfirmationRef = ref => (this.confirmationBox = ref);
 
     render() {
-        const {nameColumn, reorderColumn, deleteAll, deleteAllConfirmation} = this.props.locale;
-        const {disabled, hideReorder, classes} = this.props;
+        const { nameColumn, reorderColumn, deleteAll, deleteAllConfirmation } = this.props.locale;
+        const { disabled, hideReorder, classes } = this.props;
 
         return (
-            <div style={{flexGrow: 1, padding: 8}}>
+            <div style={{ flexGrow: 1, padding: 8 }}>
                 <ConfirmDialogBox
                     onRef={this.setConfirmationRef}
                     onAction={this.props.onDeleteAll}
@@ -77,14 +77,14 @@ export class ListRowHeader extends Component {
 
 const styles = () => ({
     right: {
-        textAlign: 'right'
+        textAlign: 'right',
     },
     center: {
-        textAlign: 'center'
+        textAlign: 'center',
     },
     header: {
-        borderBottom: '1px solid rgba(0, 0, 0, 0.1)'
-    }
+        borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
+    },
 });
 
 export default withStyles(styles)(ListRowHeader);

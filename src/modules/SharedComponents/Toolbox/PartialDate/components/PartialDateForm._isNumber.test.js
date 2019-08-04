@@ -1,8 +1,8 @@
-import {PartialDateForm} from './PartialDateForm';
+import { PartialDateForm } from './PartialDateForm';
 
 const locale = {
     minNumberCharCode: 48,
-    maxNumberCharCode: 57
+    maxNumberCharCode: 57,
 };
 
 const partialDateForm = new PartialDateForm({ allowPartial: true, locale: locale });
@@ -12,7 +12,7 @@ describe('PartialDateForm unit tests', () => {
         const test = jest.fn();
         const event = {
             charCode: 39,
-            preventDefault: test
+            preventDefault: test,
         };
         partialDateForm._isNumber(event);
         expect(test).toBeCalled();
@@ -22,7 +22,7 @@ describe('PartialDateForm unit tests', () => {
         const test = jest.fn();
         const event = {
             charCode: 59,
-            preventDefault: test
+            preventDefault: test,
         };
         partialDateForm._isNumber(event);
         expect(test).toBeCalled();
@@ -32,7 +32,7 @@ describe('PartialDateForm unit tests', () => {
         const test = jest.fn();
         const event = {
             charCode: 50,
-            preventDefault: test
+            preventDefault: test,
         };
         partialDateForm._isNumber(event);
         expect(test).not.toBeCalled();

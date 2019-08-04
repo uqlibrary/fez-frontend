@@ -20,7 +20,7 @@ function setup(testProps, isShallow = true) {
             hideIcon: 'hideIcon',
             primary: 'primary',
             identifierName: 'identifierName',
-            identifierSubtitle: 'identifierSubtitle'
+            identifierSubtitle: 'identifierSubtitle',
         },
         width: 'md',
         required: false,
@@ -30,10 +30,9 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Component ContributorRow', () => {
-
     it('a row with index and contributor set, renders only name and delete button', () => {
         const wrapper = setup({
-            index: 0
+            index: 0,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -42,16 +41,16 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({
             locale: {
                 selectHint: '',
-                deleteButtonId: () => 'delete-record-0'
-            }
+                deleteButtonId: () => 'delete-record-0',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-    })
+    });
 
     it('a row with index and contributor set, renders only name and delete button for mobile view', () => {
         const wrapper = setup({
             index: 0,
-            width: 'xs'
+            width: 'xs',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -62,9 +61,9 @@ describe('Component ContributorRow', () => {
             index: 0,
             showIdentifierLookup: true,
             contributor: {
-                nameAsPublished: "J. Smith",
-                selected: true
-            }
+                nameAsPublished: 'J. Smith',
+                selected: true,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -75,10 +74,10 @@ describe('Component ContributorRow', () => {
             index: 0,
             showRoleInput: true,
             contributor: {
-                nameAsPublished: "J. Smith",
+                nameAsPublished: 'J. Smith',
                 selected: true,
-                creatorRole: 'Investigator'
-            }
+                creatorRole: 'Investigator',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -89,9 +88,9 @@ describe('Component ContributorRow', () => {
             index: 0,
             showIdentifierLookup: true,
             contributor: {
-                nameAsPublished: "J. Smith",
-                selected: true
-            }
+                nameAsPublished: 'J. Smith',
+                selected: true,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -102,38 +101,38 @@ describe('Component ContributorRow', () => {
             index: 0,
             showRoleInput: true,
             contributor: {
-                nameAsPublished: "J. Smith",
+                nameAsPublished: 'J. Smith',
                 selected: true,
-                creatorRole: 'Investigator'
-            }
+                creatorRole: 'Investigator',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('a row with index and contributor with author details set, contributor author details, and delete button', () => {
+    it('a row with index and contributor with author details set, contributor author details & delete button', () => {
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({
             contributor,
             index: 0,
-            showIdentifierLookup: true
+            showIdentifierLookup: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('a row with index and contributor set, renders reorder buttons, contributor assignment, and delete button', () => {
+    it('a row with index and contributor set, renders reorder buttons, contributor assignment & delete button', () => {
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({
             contributor,
             index: 0,
             canMoveUp: true,
             canMoveDown: true,
-            showContributorAssignment: true
+            showContributorAssignment: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -141,15 +140,18 @@ describe('Component ContributorRow', () => {
     it('a row with index and contributor set calls move up function', () => {
         const testFunction = jest.fn();
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
-        const wrapper = setup({
-            contributor,
-            index: 0,
-            canMoveUp: true,
-            onMoveUp: testFunction
-        }, false);
+        const wrapper = setup(
+            {
+                contributor,
+                index: 0,
+                canMoveUp: true,
+                onMoveUp: testFunction,
+            },
+            false
+        );
 
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
@@ -163,11 +165,14 @@ describe('Component ContributorRow', () => {
 
     it('a row with index and contributor set calls move down function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            canMoveDown: true,
-            onMoveDown: testFunction
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                canMoveDown: true,
+                onMoveDown: testFunction,
+            },
+            false
+        );
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
@@ -182,21 +187,27 @@ describe('Component ContributorRow', () => {
 
     it('a row with index and contributor set calls assignment function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            showContributorAssignment: true,
-            onSelect: testFunction
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                showContributorAssignment: true,
+                onSelect: testFunction,
+            },
+            false
+        );
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
     });
 
     it('a row with index and contributor set calls delete function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({
-            index: 0,
-            onDelete: testFunction
-        }, false);
+        const wrapper = setup(
+            {
+                index: 0,
+                onDelete: testFunction,
+            },
+            false
+        );
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);
         wrapper.find('pure(DeleteIcon)').simulate('click');
@@ -211,9 +222,9 @@ describe('Component ContributorRow', () => {
             disabled: false,
             contributor: {
                 selected: false,
-                nameAsPublished: "J. Smith"
+                nameAsPublished: 'J. Smith',
             },
-            onSelect: testFunction
+            onSelect: testFunction,
         });
         wrapper.instance()._select();
         expect(testFunction).toBeCalledWith(0);
@@ -232,9 +243,9 @@ describe('Component ContributorRow', () => {
             disabled: false,
             contributor: {
                 selected: true,
-                nameAsPublished: "J. Smith"
+                nameAsPublished: 'J. Smith',
             },
-            onSelect: testFunction
+            onSelect: testFunction,
         };
 
         const wrapper = setup(testObj);
@@ -242,24 +253,23 @@ describe('Component ContributorRow', () => {
         expect(testFunction).toBeCalledWith(testObj.index);
     });
 
-
     it('should call the lifecycle method of the component if props change', () => {
         const testFunction = jest.fn();
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({ contributor, index: 0 });
         wrapper.instance().shouldComponentUpdate = testFunction;
-        wrapper.setProps({ nameAsPublished: "Ky Lane" });
+        wrapper.setProps({ nameAsPublished: 'Ky Lane' });
         expect(testFunction).toBeCalled();
     });
 
     it('should attempt to assign the current author when keyboard submit', () => {
         const testFunction = jest.fn();
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({ contributor, index: 0 });
         wrapper.instance()._select = testFunction;
@@ -273,25 +283,26 @@ describe('Component ContributorRow', () => {
 
     it('Row should be clickable when showContributorAssignment set to true', () => {
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({
             showContributorAssignment: true,
             contributor,
-            index: 0
+            index: 0,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('Row should not be clickable when showContributorAssignment set to false', () => {
         const contributor = {
-            nameAsPublished: "J. Smith",
-            ...authorsSearch.data[0]
+            nameAsPublished: 'J. Smith',
+            ...authorsSearch.data[0],
         };
         const wrapper = setup({
             showContributorAssignment: false,
-            contributor, index: 0
+            contributor,
+            index: 0,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -300,7 +311,7 @@ describe('Component ContributorRow', () => {
         const testFunction = jest.fn();
         const wrapper = setup({});
         wrapper.instance().confirmationBox = {
-            showConfirmation: testFunction
+            showConfirmation: testFunction,
         };
         wrapper.instance()._showConfirmation();
         expect(testFunction).toBeCalled();
@@ -312,9 +323,9 @@ describe('Component ContributorRow', () => {
             disabled: false,
             onDelete: onDeleteFn,
             contributor: {
-                nameAsPublished: 'test'
+                nameAsPublished: 'test',
             },
-            index: 0
+            index: 0,
         });
         wrapper.instance()._onDelete();
         expect(onDeleteFn).toHaveBeenCalled();
@@ -325,7 +336,7 @@ describe('Component ContributorRow', () => {
             disabled: true,
             onDelete: jest.fn(),
             onMoveUp: jest.fn(),
-            onMoveDown: jest.fn()
+            onMoveDown: jest.fn(),
         });
         wrapper.instance()._onDelete();
         expect(wrapper.instance().props.onDelete).not.toBeCalled();
@@ -344,16 +355,19 @@ describe('Component ContributorRow', () => {
                 selected: true,
                 affiliation: 'NotUQ',
                 orgaff: 'Somewhere',
-                orgtype: '453983'
+                orgtype: '453983',
             },
         });
 
         const blurFn = jest.fn();
-        wrapper.find('WithStyles(ListItem)').props().onClick({
-            currentTarget: {
-                blur: blurFn
-            }
-        });
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
+            .onClick({
+                currentTarget: {
+                    blur: blurFn,
+                },
+            });
         expect(blurFn).toHaveBeenCalled();
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -370,17 +384,23 @@ describe('Component ContributorRow', () => {
                 selected: true,
                 affiliation: 'NotUQ',
                 orgaff: 'Somewhere',
-                orgtype: '453983'
+                orgtype: '453983',
             },
             width: 'xs',
             classes: {
                 identifierName: 'test-class-1',
-                identifierSubtitle: 'test-class-2'
-            }
+                identifierSubtitle: 'test-class-2',
+            },
         });
 
-        wrapper.find('WithStyles(ListItem)').props().onClick();
-        wrapper.find('WithStyles(ListItem)').props().onKeyDown();
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
+            .onClick();
+        wrapper
+            .find('WithStyles(ListItem)')
+            .props()
+            .onKeyDown();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -388,18 +408,18 @@ describe('Component ContributorRow', () => {
         const theme = {
             palette: {
                 accent: {
-                    light: 'test1'
-                }
+                    light: 'test1',
+                },
             },
             typography: {
                 fontWeightMedium: 'test2',
                 body2: {
-                    fontSize: 'test3'
+                    fontSize: 'test3',
                 },
                 caption: {
-                    fontSize: 'test4'
-                }
-            }
+                    fontSize: 'test4',
+                },
+            },
         };
         expect(styles(theme)).toMatchSnapshot();
 
@@ -414,44 +434,38 @@ describe('Component ContributorRow', () => {
         const wrapper = setup({
             contributor: {
                 orgtype: 'test',
-                affiliation: 'NotUQ'
-            }
+                affiliation: 'NotUQ',
+            },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with UQ affiiliation and missing author title', () => {
         const wrapper = setup({
             contributor: {
                 affiliation: 'UQ',
-                aut_title: ''
+                aut_title: '',
             },
             width: 'xs',
             classes: {
                 identifierName: 'test1',
-                identifierSubtitle: 'test2'
-            }
+                identifierSubtitle: 'test2',
+            },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with UQ affiiliation and missing author title in non-xs width', () => {
         const wrapper = setup({
             contributor: {
                 affiliation: 'UQ',
-                aut_title: ''
+                aut_title: '',
             },
             classes: {
-                primary: 'test'
-            }
+                primary: 'test',
+            },
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row with student author title in xs width', () => {
@@ -468,9 +482,7 @@ describe('Component ContributorRow', () => {
             },
             width: 'xs',
         });
-        expect(
-            wrapper.instance().getContributorRowText()
-        ).toMatchSnapshot();
+        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
     });
 
     it('should render row as required', () => {
@@ -479,14 +491,14 @@ describe('Component ContributorRow', () => {
                 nameAsPublished: 'Test',
                 orgaff: 'Test',
                 affilication: 'NotUQ',
-                orgtype: 'NGO'
+                orgtype: 'NGO',
             },
             classes: {
-                highlighted: 'highlighted'
+                highlighted: 'highlighted',
             },
-            required: true
+            required: true,
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
-    })
+    });
 });

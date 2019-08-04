@@ -1,7 +1,7 @@
 import PartialDateForm from './PartialDateForm';
 
 function setup(testProps, isShallow = true) {
-    const props = {...testProps};
+    const props = { ...testProps };
     return getElement(PartialDateForm, props, isShallow);
 }
 
@@ -10,12 +10,12 @@ describe('PartialDateForm snapshots tests', () => {
         const props = {
             name: 'partialDate',
             allowPartial: true,
-            onChange: () => {}
+            onChange: () => {},
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
@@ -24,12 +24,12 @@ describe('PartialDateForm snapshots tests', () => {
             name: 'partialDate',
             allowPartial: true,
             className: 'requiredField',
-            onChange: () => {}
+            onChange: () => {},
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
@@ -38,12 +38,12 @@ describe('PartialDateForm snapshots tests', () => {
             name: 'partialDate',
             allowPartial: false,
             className: 'requiredField',
-            onChange: () => {}
+            onChange: () => {},
         };
 
         const wrapper = setup(props);
 
-        let tree = toJson(wrapper);
+        const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 });

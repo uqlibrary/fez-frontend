@@ -1,4 +1,4 @@
-import {PublicationsListSorting} from './PublicationsListSorting';
+import { PublicationsListSorting } from './PublicationsListSorting';
 
 jest.mock('locale', () => ({
     locale: {
@@ -6,20 +6,20 @@ jest.mock('locale', () => ({
             sorting: {
                 sortBy: [
                     {
-                        value: false
-                    }
+                        value: false,
+                    },
                 ],
                 sortDirection: [
-                    false
-                ]
-            }
-        }
-    }
+                    false,
+                ],
+            },
+        },
+    },
 }));
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(PublicationsListSorting, props, isShallow);

@@ -1,6 +1,5 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
-import {routes} from 'config';
-import {render} from 'enzyme';
+import { routes } from 'config';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -23,19 +22,18 @@ function setup(testProps, isShallow = true) {
         },
         location: {
             pathname: routes.pathConfig.records.possible,
-            state: null
+            state: null,
         },
         history: {
             push: jest.fn(),
-            go: jest.fn()
+            go: jest.fn(),
         },
-        ...testProps
+        ...testProps,
     };
     return getElement(PossiblyMyRecords, props, isShallow);
 }
 
 describe('Component PossiblyMyRecords', () => {
-
     it('renders nothing while account is loading', () => {
         const wrapper = setup({ accountLoading: true });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -47,12 +45,12 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('renders loading component while loading publication data', () => {
-        const wrapper = setup({ loadingPossiblePublicationsList: true });
+        const wrapper = setup({ loadingPossiblePublicationsList: true, loadingPossibleCounts: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publication counts', () => {
-        const wrapper = setup({ loadingPossibleCounts: true });
+        const wrapper = setup({ loadingPossibleCounts: true, loadingPossiblePublicationsList: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -61,27 +59,38 @@ describe('Component PossiblyMyRecords', () => {
             possibleCounts: 5,
             possiblePublicationsList: [1, 2, 3],
             possiblePublicationsFacets: {
-                "Display type": {
-                    "doc_count_error_upper_bound": 0,
-                    "sum_other_doc_count": 3,
-                    "buckets": [{"key": 179, "doc_count": 95}, {"key": 130, "doc_count": 34}, {
-                        "key": 177,
-                        "doc_count": 2
-                    }, {"key": 183, "doc_count": 2}, {"key": 174, "doc_count": 1}]
+                'Display type': {
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 3,
+                    buckets: [
+                        { key: 179, doc_count: 95 },
+                        { key: 130, doc_count: 34 },
+                        {
+                            key: 177,
+                            doc_count: 2,
+                        },
+                        { key: 183, doc_count: 2 },
+                        { key: 174, doc_count: 1 },
+                    ],
                 },
-                "Keywords": {
-                    "doc_count_error_upper_bound": 0,
-                    "sum_other_doc_count": 641,
-                    "buckets": [{"key": "Brca1", "doc_count": 15}, {
-                        "key": "Oncology",
-                        "doc_count": 15
-                    }, {"key": "Breast cancer", "doc_count": 13}, {
-                        "key": "Genetics & Heredity",
-                        "doc_count": 12
-                    }, {"key": "Biochemistry & Molecular Biology", "doc_count": 10}]
-                }
-
-            }
+                Keywords: {
+                    doc_count_error_upper_bound: 0,
+                    sum_other_doc_count: 641,
+                    buckets: [
+                        { key: 'Brca1', doc_count: 15 },
+                        {
+                            key: 'Oncology',
+                            doc_count: 15,
+                        },
+                        { key: 'Breast cancer', doc_count: 13 },
+                        {
+                            key: 'Genetics & Heredity',
+                            doc_count: 12,
+                        },
+                        { key: 'Biochemistry & Molecular Biology', doc_count: 10 },
+                    ],
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -89,7 +98,7 @@ describe('Component PossiblyMyRecords', () => {
     it('renders alert when the hide pub api fails', () => {
         const wrapper = setup({
             hidePublicationFailed: true,
-            hidePublicationFailedErrorMessage: 'Test error message'
+            hidePublicationFailedErrorMessage: 'Test error message',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -99,10 +108,10 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({
             actions: {
                 setClaimPublication: actionFunction,
-                searchPossiblyYourPublications: jest.fn()
-            }
+                searchPossiblyYourPublications: jest.fn(),
+            },
         });
-        wrapper.instance()._claimPublication({pid: 11111});
+        wrapper.instance()._claimPublication({ pid: 11111 });
         expect(actionFunction).toHaveBeenCalled();
     });
 
@@ -110,8 +119,8 @@ describe('Component PossiblyMyRecords', () => {
         const actionFunction = jest.fn();
         setup({
             actions: {
-                searchPossiblyYourPublications: actionFunction
-            }
+                searchPossiblyYourPublications: actionFunction,
+            },
         });
         expect(actionFunction).toHaveBeenCalled();
     });
@@ -127,19 +136,18 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({
             actions: {
                 hideRecord: actionFunction,
-                searchPossiblyYourPublications: jest.fn()
-            }
+                searchPossiblyYourPublications: jest.fn(),
+            },
         });
 
         // test no-op
         wrapper.instance()._hidePublication();
         expect(actionFunction).not.toBeCalled();
 
-        wrapper.setState({ publicationToHide: {pid: 1111} });
+        wrapper.setState({ publicationToHide: { pid: 1111 } });
         wrapper.instance()._hidePublication();
         expect(actionFunction).toHaveBeenCalled();
         expect(wrapper.state().publicationToHide).toBeFalsy();
-
     });
 
     it('calls the action to reset error message and status when leaving the page', () => {
@@ -147,23 +155,23 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({
             actions: {
                 hideRecordErrorReset: resetFn,
-                searchPossiblyYourPublications: jest.fn()
-            }
+                searchPossiblyYourPublications: jest.fn(),
+            },
         });
         wrapper.unmount();
         expect(resetFn).toHaveBeenCalled();
     });
 
     it('sets the state when confirming an item to be hidden', () => {
-        const pubToHide = {test: 'This is a test'};
+        const pubToHide = { test: 'This is a test' };
         const wrapper = setup({});
-        wrapper.instance().hideConfirmationBox = {showConfirmation: jest.fn()};
+        wrapper.instance().hideConfirmationBox = { showConfirmation: jest.fn() };
         wrapper.instance()._confirmHidePublication(pubToHide);
         expect(wrapper.state().publicationToHide).toEqual(pubToHide);
     });
 
     it('sets the state for activeFacets', () => {
-        const facetActive = {test: 'This is a test'};
+        const facetActive = { test: 'This is a test' };
         const wrapper = setup({});
         wrapper.instance()._facetsChanged(facetActive);
         expect(wrapper.state().activeFacets).toEqual(facetActive);
@@ -179,26 +187,26 @@ describe('Component PossiblyMyRecords', () => {
                         ranges: {
                             Year: {
                                 from: 2000,
-                                to: 2010
-                            }
-                        }
-                    }
-                }
-            }
+                                to: 2010,
+                            },
+                        },
+                    },
+                },
+            },
         });
         expect(wrapper.state().hasPublications).toEqual(true);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('sets forever true has publications', () => {
-        const wrapper = setup({loadingPossiblePublicationsList: true});
+        const wrapper = setup({ loadingPossiblePublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
         wrapper.instance().componentWillReceiveProps({
             loadingPossiblePublicationsList: false,
-            possiblePublicationsList: [1,2,3],
+            possiblePublicationsList: [1, 2, 3],
             history: {},
-            location: {}
+            location: {},
         });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
@@ -208,13 +216,13 @@ describe('Component PossiblyMyRecords', () => {
         const wrapper = setup({
             accountLoading: true,
             actions: {
-                searchPossiblyYourPublications: testAction
-            }
+                searchPossiblyYourPublications: testAction,
+            },
         });
 
         wrapper.instance().componentWillReceiveProps({
             history: {
-                action: 'POP'
+                action: 'POP',
             },
             location: {
                 pathname: routes.pathConfig.records.possible,
@@ -225,12 +233,12 @@ describe('Component PossiblyMyRecords', () => {
                         ranges: {
                             Year: {
                                 from: 2000,
-                                to: 2010
-                            }
-                        }
-                    }
-                }
-            }
+                                to: 2010,
+                            },
+                        },
+                    },
+                },
+            },
         });
         expect(testAction).toHaveBeenCalled();
         expect(wrapper.state().hasPublications).toEqual(true);
@@ -239,18 +247,17 @@ describe('Component PossiblyMyRecords', () => {
             ranges: {
                 Year: {
                     from: 2000,
-                    to: 2010
-                }
-            }
+                    to: 2010,
+                },
+            },
         });
 
         wrapper.instance().componentWillReceiveProps({
-            history: {action: 'POP'},
-            location: {pathname: routes.pathConfig.records.possible, state: null}
+            history: { action: 'POP' },
+            location: { pathname: routes.pathConfig.records.possible, state: null },
         });
 
-        expect(wrapper.state().activeFacets).toEqual({filters: {}, ranges: {}});
-
+        expect(wrapper.state().activeFacets).toEqual({ filters: {}, ranges: {} });
     });
 
     it('should push sorted state into page history', () => {
@@ -293,7 +300,7 @@ describe('Component PossiblyMyRecords', () => {
 
         const test2 = testFn(
             {
-                message: (msg) => 'Alert: ' + msg
+                message: msg => 'Alert: ' + msg,
             },
             true,
             'test message'
@@ -310,10 +317,9 @@ describe('Component PossiblyMyRecords', () => {
             loadingPossiblePublicationsList: false,
         });
         wrapper.setState({
-            hasPublications: true
+            hasPublications: true,
         });
         expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListSorting)').length).toBe(1);
         expect(wrapper.find('StandardCard WithStyles(Grid) WithStyles(PublicationsListPaging)').length).toBe(2);
     });
-
 });

@@ -1,6 +1,6 @@
-import React, {PureComponent, Fragment} from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 
 export default class PublicationsList extends PureComponent {
     static propTypes = {
@@ -14,7 +14,8 @@ export default class PublicationsList extends PureComponent {
         showSourceCountIcon: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
         hideCountDiff: PropTypes.bool,
-        hideCountTotal: PropTypes.bool
+        hideCountTotal: PropTypes.bool,
+        publicationsLoading: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -31,9 +32,14 @@ export default class PublicationsList extends PureComponent {
     renderPublicationCitation(index, publication) {
         return (
             <PublicationCitation
+                publicationsLoading={this.props.publicationsLoading}
                 key={index + publication.rek_title + publication.rek_date}
                 publication={publication}
-                customActions={!publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1 ? this.props.customActions : this.props.subsetCustomActions}
+                customActions={
+                    !publication.rek_pid || this.props.publicationsListSubset.indexOf(publication.rek_pid) === -1
+                        ? this.props.customActions
+                        : this.props.subsetCustomActions
+                }
                 showSources={this.props.showSources}
                 showDefaultActions={this.props.showDefaultActions}
                 showMetrics={this.props.showMetrics}
@@ -50,10 +56,6 @@ export default class PublicationsList extends PureComponent {
             return this.renderPublicationCitation(index, publication);
         });
 
-        return (
-            <Fragment>
-                {publications}
-            </Fragment>
-        );
+        return <Fragment>{publications}</Fragment>;
     }
 }

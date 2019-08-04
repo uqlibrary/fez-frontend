@@ -1,6 +1,6 @@
 import React from 'react';
-import {LookupListEditor} from 'modules/SharedComponents/Toolbox/ListEditor';
-import {FieldOfResearchField, FilteredFieldOfResearchField} from './FieldOfResearchField';
+import { LookupListEditor } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { FieldOfResearchField, FilteredFieldOfResearchField } from './FieldOfResearchField';
 
 export const FieldOfResearchListField = (fieldProps) => {
     return(<LookupListEditor

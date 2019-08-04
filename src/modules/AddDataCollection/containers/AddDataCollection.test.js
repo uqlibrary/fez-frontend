@@ -4,7 +4,7 @@ jest.mock('material-ui-pickers/DatePicker');
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
     return getElement(AddDataCollection, props, isShallow);

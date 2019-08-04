@@ -4,30 +4,39 @@ import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export class InlineLoader extends React.Component {
     static propTypes = {
         message: PropTypes.string,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
-        message: 'Loading'
+        message: 'Loading',
     };
 
     render() {
         return (
-            <div style={{padding: 8}}>
-                <Grid container direction={'row'} spacing={8} justify="center" alignItems="center" alignContent={'center'}>
+            <div style={{ padding: 8 }}>
+                <Grid
+                    container
+                    direction={'row'}
+                    spacing={8}
+                    justify="center"
+                    alignItems="center"
+                    alignContent={'center'}
+                >
                     <Hidden smUp>
                         <Grid item xs />
                     </Hidden>
-                    <Grid item xs={'auto'} style={{textAlign: 'center'}}>
-                        <CircularProgress size={18} thickness={2} color="primary"/>
+                    <Grid item xs={'auto'} style={{ textAlign: 'center' }}>
+                        <CircularProgress size={18} thickness={2} color="primary" />
                     </Grid>
-                    <Grid item xs={'auto'} style={{textAlign: 'center'}}>
-                        <Typography color={'primary'} variant={'h5'} component={'span'} style={{fontSize: '1.33rem'}}>{this.props.message}</Typography>
+                    <Grid item xs={'auto'} style={{ textAlign: 'center' }}>
+                        <Typography color={'primary'} variant={'h5'} component={'span'} style={{ fontSize: '1.33rem' }}>
+                            {this.props.message}
+                        </Typography>
                     </Grid>
                     <Hidden smUp>
                         <Grid item xs />
@@ -38,4 +47,4 @@ export class InlineLoader extends React.Component {
     }
 }
 
-export default withStyles(null, {withTheme: true})(InlineLoader);
+export default withStyles(null, { withTheme: true })(InlineLoader);

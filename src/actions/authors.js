@@ -1,8 +1,8 @@
 import * as actions from './actionTypes';
-import {get, patch} from 'repositories/generic';
-import {AUTHORS_SEARCH_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API} from 'repositories/routes';
-import {pathConfig} from 'config/routes';
-import {getAuthorIdentifierOrcidPatchRequest} from './transformers';
+import { get, patch } from 'repositories/generic';
+import { AUTHORS_SEARCH_API, AUTHOR_API, AUTHOR_ORCID_DETAILS_API } from 'repositories/routes';
+import { pathConfig } from 'config/routes';
+import { getAuthorIdentifierOrcidPatchRequest } from './transformers';
 
 /**
  * Returns the authors list based on a query, filtered locally by filterBy function
@@ -12,19 +12,19 @@ import {getAuthorIdentifierOrcidPatchRequest} from './transformers';
  */
 export function searchAuthors(query) {
     return dispatch => {
-        dispatch({type: actions.AUTHORS_LOADING});
+        dispatch({ type: actions.AUTHORS_LOADING });
 
-        return get(AUTHORS_SEARCH_API({query: query}))
+        return get(AUTHORS_SEARCH_API({ query: query }))
             .then(response => {
                 dispatch({
                     type: actions.AUTHORS_LOADED,
-                    payload: response.data
+                    payload: response.data,
                 });
             })
             .catch(error => {
                 dispatch({
                     type: actions.AUTHORS_LOAD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -38,13 +38,13 @@ export function searchAuthors(query) {
  */
 export function updateCurrentAuthor(authorId, data) {
     return dispatch => {
-        dispatch({type: actions.CURRENT_AUTHOR_SAVING});
+        dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
 
-        return patch(AUTHOR_API({authorId}), data)
+        return patch(AUTHOR_API({ authorId }), data)
             .then((response) => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
-                    payload: response.data
+                    payload: response.data,
                 });
 
                 return Promise.resolve(response.data);
@@ -52,7 +52,7 @@ export function updateCurrentAuthor(authorId, data) {
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
@@ -69,7 +69,7 @@ export function updateCurrentAuthor(authorId, data) {
  */
 export function linkAuthorOrcidId(userId, authorId, orcidCode) {
     return dispatch => {
-        dispatch({type: actions.CURRENT_AUTHOR_SAVING});
+        dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
 
         let orcidId = null;
 
@@ -77,11 +77,11 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
         // TODO: redirUri should be moved to backend (API update pending)
         const params = {
             code: orcidCode,
-            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink
+            redirUri: pathConfig.authorIdentifiers.orcid.absoluteLink,
         };
 
         // get ORCID id for current user
-        return get(AUTHOR_ORCID_DETAILS_API({userId: userId, params: params}))
+        return get(AUTHOR_ORCID_DETAILS_API({ userId: userId, params: params }))
             .then((response) => {
                 orcidId = response.orcid;
 
@@ -92,19 +92,19 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 
                 // patch author record with corresponding ORCID id
                 const authorPatchRequest = getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
-                return patch(AUTHOR_API({authorId}), authorPatchRequest);
+                return patch(AUTHOR_API({ authorId }), authorPatchRequest);
             })
             .then((response) => {
                 // author details saved successfully
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
-                    payload: response.data
+                    payload: response.data,
                 });
             })
             .catch(error => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVE_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
             });
     };
@@ -116,6 +116,6 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 * */
 export function resetSavingAuthorState() {
     return dispatch => {
-        dispatch({type: actions.CURRENT_AUTHOR_SAVE_RESET});
+        dispatch({ type: actions.CURRENT_AUTHOR_SAVE_RESET });
     };
 }

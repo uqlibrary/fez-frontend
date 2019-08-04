@@ -1,11 +1,6 @@
 dist
 node_modules
 coverage
-webpack.*.js
-*server.js
-conf
-gulp_tasks
-/yarn.lock
-*.test.js
-*.config.js
 **/mock/data/**/*.js
+cypress/examples
+custom_modules

@@ -1,15 +1,15 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import InputLabel from '@material-ui/core/InputLabel';
 import locale from 'locale/components';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
     title: {
-        ...theme.typography.caption
-    }
+        ...theme.typography.caption,
+    },
 });
 
 export class PublicationYearRangeField extends PureComponent {
@@ -19,7 +19,7 @@ export class PublicationYearRangeField extends PureComponent {
         className: PropTypes.string,
         disabled: PropTypes.bool,
         invalid: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
@@ -27,9 +27,9 @@ export class PublicationYearRangeField extends PureComponent {
         yearFilter: {
             from: null,
             to: null,
-            valid: true
+            valid: true,
         },
-        disabled: false
+        disabled: false,
     };
 
     setValue = (key) => (event) => {
@@ -39,7 +39,7 @@ export class PublicationYearRangeField extends PureComponent {
         this.props.updateYearRangeFilter({
             ...this.props.yearFilter,
             [key]: isNaN(intValue) ? 0 : intValue,
-            invalid: !!this.isInvalidYear({...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue})
+            invalid: !!this.isInvalidYear({ ...this.props.yearFilter, [key]: isNaN(intValue) ? 0 : intValue }),
         });
     };
 
@@ -51,7 +51,7 @@ export class PublicationYearRangeField extends PureComponent {
 
     render() {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes.facet_year_range;
-        const {classes} = this.props;
+        const { classes } = this.props;
         return (
             <React.Fragment>
                 <Grid container>
@@ -60,7 +60,7 @@ export class PublicationYearRangeField extends PureComponent {
                     </Grid>
                 </Grid>
                 <Grid container>
-                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <InputLabel hidden id="from-label">{txt.fromAria}</InputLabel>
                         <TextField
                             fullWidth
@@ -72,7 +72,7 @@ export class PublicationYearRangeField extends PureComponent {
                             placeholder={txt.fromHint}
                             aria-label={txt.fromAria}
                             inputProps={{
-                                'aria-labelledby': 'from-label'
+                                'aria-labelledby': 'from-label',
                             }}
                             disabled={this.props.disabled}
                         />
@@ -80,16 +80,16 @@ export class PublicationYearRangeField extends PureComponent {
                     <Grid item xs={'auto'}>
                         <InputLabel hidden id="combiner-label">to</InputLabel>
                         <TextField
-                            style={{width: 24}}
+                            style={{ width: 24 }}
                             value={' to '}
                             disabled
                             inputProps={{
-                                'aria-labelledby': 'combiner-label'
+                                'aria-labelledby': 'combiner-label',
                             }}
-                            InputProps={{disableUnderline: true}}
+                            InputProps={{ disableUnderline: true }}
                         />
                     </Grid>
-                    <Grid item zeroMinWidth style={{flexGrow: 1, width: 1}}>
+                    <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
                         <InputLabel hidden id="to-label">{txt.toAria}</InputLabel>
                         <TextField
                             fullWidth
@@ -102,7 +102,7 @@ export class PublicationYearRangeField extends PureComponent {
                             aria-label={txt.toAria}
                             disabled={this.props.disabled}
                             inputProps={{
-                                'aria-labelledby': 'to-label'
+                                'aria-labelledby': 'to-label',
                             }}
                         />
                     </Grid>
@@ -112,5 +112,5 @@ export class PublicationYearRangeField extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(PublicationYearRangeField);
+export default withStyles(styles, { withTheme: true })(PublicationYearRangeField);
 

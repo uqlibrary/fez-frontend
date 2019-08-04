@@ -1,10 +1,10 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 
-import {InlineLoader} from 'modules/SharedComponents/Toolbox/Loaders';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
-import {Alert} from 'modules/SharedComponents/Toolbox/Alert';
-import {PublicationCitation} from 'modules/SharedComponents/PublicationCitation';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
+import { PublicationCitation } from 'modules/SharedComponents/PublicationCitation';
 import locale from 'locale/pages';
 import Files from './Files';
 import PublicationDetails from './PublicationDetails';
@@ -16,7 +16,7 @@ import NtroDetails from './NtroDetails';
 import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
-import {general} from 'config';
+import { general } from 'config';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -26,7 +26,7 @@ export default class ViewRecord extends PureComponent {
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
-        account: PropTypes.object
+        account: PropTypes.object,
     };
 
     componentDidMount() {
@@ -49,7 +49,7 @@ export default class ViewRecord extends PureComponent {
 
     render() {
         const txt = locale.pages.viewRecord;
-        const {loadingRecordToView, recordToViewError, recordToView} = this.props;
+        const { loadingRecordToView, recordToViewError, recordToView } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
         if(loadingRecordToView) {
             return <InlineLoader message={txt.loadingMessage}/>;
@@ -64,9 +64,9 @@ export default class ViewRecord extends PureComponent {
         }
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
-                <Grid container style={{marginTop: -24}}>
+                <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
-                        <PublicationCitation publication={recordToView} hideTitle />
+                        <PublicationCitation publication={recordToView} hideTitle hideContentIndicators/>
                     </Grid>
                 </Grid>
                 <Grid container spacing={24}>

@@ -1,5 +1,5 @@
 import DigilibImageCitation from './DigilibImageCitation';
-import {digilibImage} from 'mock/data/testing/records';
+import { digilibImage } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = false) {
     const props = {

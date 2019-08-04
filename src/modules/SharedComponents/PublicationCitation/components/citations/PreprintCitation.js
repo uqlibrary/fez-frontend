@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class PreprintCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
     };
 
     constructor(props) {
@@ -14,7 +14,7 @@ export default class PreprintCitation extends Component {
     render() {
         const record = {
             id: this.props.publication.rek_pid,
-            title: this.props.publication.rek_title
+            title: this.props.publication.rek_title,
         };
 
         // eSpace citation view for Preprint

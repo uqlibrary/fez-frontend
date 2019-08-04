@@ -71,6 +71,9 @@
     "chromedriver": "^2.38.2",
     "cross-env": "^5.2.0",
     "css-loader": "^2.1.1",
+    "cypress": "3.3.2",
+    "cypress-file-upload": "^3.2.0",
+    "cypress-plugin-tab": "^1.0.1",
     "dom-testing-library": "^3.17.1",
     "enzyme": "^3.9.0",
     "enzyme-adapter-react-16": "1.13.2",
@@ -93,6 +96,7 @@
     "node-sass": "^4.12.0",
     "postcss-loader": "^2.1.4",
     "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
+    "prettier": "^1.18.2",
     "progress-bar-webpack-plugin": "^1.11.0",
     "query-string": "^6.5.0",
     "react-test-renderer": "16.3.2",
@@ -102,6 +106,7 @@
     "sass-loader": "^7.0.0",
     "sinon": "5.0.2",
     "snapshot-diff": "^0.5.1",
+    "start-server-and-test": "^1.9.1",
     "string-to-arraybuffer": "^1.0.0",
     "strip-loader": "^0.1.2",
     "style-loader": "^0.21.0",
@@ -118,13 +123,14 @@
     "@material-ui/core": "^3.2.0",
     "@material-ui/icons": "^3.0.1",
     "@material/animation": "0.34.0",
-    "axios": "^0.18.1",
+    "axios": "0.18.1",
     "axios-cache-adapter": "^2.0.0",
     "babel-loader": "^8.0.0",
     "can-deparam": "^1.1.1",
     "can-param": "^1.0.4",
     "classnames": "^2.2.6",
     "connected-react-router": "^4.3.0",
+    "cypress-plugin-snapshots": "git://github.com/meinaart/cypress-plugin-snapshots.git#c30b950",
     "deep-diff": "^1.0.2",
     "dompurify": "^1.0.4",
     "downshift": "^2.2.0",
@@ -166,7 +172,9 @@
     "redux-form": "7.3.0",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.2.0",
-    "timezones.json": "^1.2.1"
+    "throttle-debounce": "^2.1.0",
+    "timezones.json": "^1.2.1",
+    "wait-on": "^3.2.0"
   },
   "scripts": {
     "start": "webpack-dev-server",
@@ -181,9 +189,15 @@
     "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.js",
     "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest integration.js --no-coverage",
     "test:watch": "npm run test -- --watch --onlyChanged",
-    "test:update": "npm run test -- --updateSnapshot",
+    "test:update": "npm run test -- --u",
     "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
-    "eslint": "eslint 'src/**/*.js' --quiet"
+    "eslint": "eslint '**/*.js' --quiet",
+    "cypress:open": "cypress open",
+    "cypress:watch": "cypress run --headed",
+    "cypress:run": "cypress run",
+    "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
+    "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
+    "test:all": "npm run test && npm run cypress:run"
   },
   "engines": {
     "npm": "^6.9.0",
@@ -264,7 +278,7 @@
     },
     "testMatch": [
       "**/__tests__/**/*.[jt]s?(x)",
-      "**/?(*.)+(spec|test).[jt]s?(x)",
+      "**/?(*.)+(test).[jt]s?(x)",
       "**/?(*.)+(integration).[jt]s?(x)"
     ],
     "moduleFileExtensions": [

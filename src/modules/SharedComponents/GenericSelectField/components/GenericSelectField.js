@@ -1,60 +1,61 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import FormHelperText from '@material-ui/core/FormHelperText';
 import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = theme => ({
     selectedMenuItem: {
         backgroundColor: `${theme.palette.accent.main} !important`,
-        color: theme.palette.white.main
-    }
+        color: theme.palette.white.main,
+    },
 });
 
 export class GenericSelectFieldClass extends Component {
     static propTypes = {
-        onChange: PropTypes.func,
-        itemsList: PropTypes.array,
-        itemsLoading: PropTypes.bool,
-        loadItemsList: PropTypes.func,
-        itemsLoadingHint: PropTypes.string,
-        selectedValue: PropTypes.any,
-        parentItemsId: PropTypes.number,
+        ariaLabel: PropTypes.string,
+        autoWidth: PropTypes.bool,
+        classes: PropTypes.object,
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        menuItemClassName: PropTypes.string,
-        fullWidth: PropTypes.bool,
-        autoWidth: PropTypes.bool,
-        errorText: PropTypes.string,
-        hintText: PropTypes.string,
-        multiple: PropTypes.bool,
-        required: PropTypes.bool,
-        error: PropTypes.any,
-        ariaLabel: PropTypes.string,
-        loadingHint: PropTypes.string,
-        label: PropTypes.string,
-        locale: PropTypes.object,
-        hideLabel: PropTypes.bool,
         displayEmpty: PropTypes.bool,
-
-        classes: PropTypes.object,
-        id: PropTypes.string
+        error: PropTypes.any,
+        errorText: PropTypes.string,
+        fullWidth: PropTypes.bool,
+        hideLabel: PropTypes.bool,
+        hintText: PropTypes.string,
+        id: PropTypes.string,
+        itemsList: PropTypes.array,
+        itemsLoading: PropTypes.bool,
+        itemsLoadingHint: PropTypes.string,
+        label: PropTypes.string,
+        loadingHint: PropTypes.string,
+        loadItemsList: PropTypes.func,
+        locale: PropTypes.object,
+        menuItemClassName: PropTypes.string,
+        meta: PropTypes.object,
+        multiple: PropTypes.bool,
+        onChange: PropTypes.func,
+        parentItemsId: PropTypes.number,
+        required: PropTypes.bool,
+        selectedValue: PropTypes.any,
+        style: PropTypes.object,
     };
 
     static defaultProps = {
         itemsList: [],
         locale: {
             label: 'Select item',
-            loading: 'loading...'
+            loading: 'loading...',
         },
         menuItemClassName: '',
         fullWidth: false,
         autoWidth: false,
         hintText: null,
-        multiple: false
+        multiple: false,
     };
 
     componentDidMount() {
@@ -69,97 +70,104 @@ export class GenericSelectFieldClass extends Component {
         }
     }
 
-    _itemSelected = (event) => {
+    _itemSelected = event => {
         let value = event.target.value;
-        if (value[0] === -1 && value.length === 1) {
-            value = '';
-        } else if(value[0] === -1 && value.length > 1) {
-            value.shift();
+        if (value[0] === -1) {
+            if (value.length === 1) {
+                value = '';
+            }
+            if (value.length > 1) {
+                value.shift();
+            }
         }
         this.props.onChange(value);
     };
 
-    getMenuItemProps = (item, selectedValue, multiple) => {
-        if (multiple) {
-            return {
-                selected: selectedValue.indexOf(item.value || item) > -1,
-                value: item.value || item,
-            };
-        } else {
-            return {
-                value: item.value || item,
-            };
-        }
-    };
-
     newValue = () => {
-        if(this.props.multiple) {
-            if(this.props.hideLabel) {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [-1];
+        if (this.props.multiple) {
+            if (this.props.hideLabel) {
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || [
+                        -1,
+                    ]
+                );
             } else {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || [];
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) || []
+                );
             }
         } else {
-            if(this.props.hideLabel) {
-                return this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue || '-1';
-            } else{
+            if (this.props.hideLabel) {
+                return (
+                    (this.props.selectedValue && this.props.selectedValue.length > 0 && this.props.selectedValue) ||
+                    '-1'
+                );
+            } else {
                 return this.props.selectedValue || '';
             }
         }
     };
 
-    loadingIndicationText = () => this.props.itemsLoading ? this.props.loadingHint : this.props.hintText;
+    loadingIndicationText = () => (this.props.itemsLoading ? this.props.loadingHint : this.props.hintText);
 
     renderMenuItems = () => {
-        const {classes} = this.props;
+        const { classes } = this.props;
         return [
-            this.props.hideLabel && <MenuItem value={-1} key={0} style={{display: 'block'}} disabled>{this.loadingIndicationText()}</MenuItem>,
+            this.props.hideLabel && (
+                <MenuItem value={-1} key={0} style={{ display: 'block' }} disabled>
+                    {this.loadingIndicationText()}
+                </MenuItem>
+            ),
             ...this.props.itemsList.map((item, index) => {
                 return (
                     <MenuItem
-                        classes={{selected: classes.selectedMenuItem}}
-                        style={{display: 'block'}}
-                        {...(this.getMenuItemProps(item, this.props.selectedValue, this.props.multiple))}
+                        classes={{ selected: classes.selectedMenuItem }}
+                        style={{ display: 'block' }}
+                        selected={
+                            (this.props.multiple && this.props.selectedValue.includes(item.value || item)) || undefined
+                        }
+                        value={item.value || item}
                         key={index + 1}
-                        disabled={item && !item.value}
-                        aria-label={item.text || item.value || item}>
+                        disabled={item && (!item.value || !!item.disabled)}
+                        aria-label={item.text || item.value || item}
+                    >
                         {item.text || item.value || item}
                     </MenuItem>
                 );
-            })
+            }),
         ];
-    }
+    };
 
     render() {
         return (
             <FormControl fullWidth required={this.props.required} error={!!this.props.error}>
-                {
-                    this.props.locale.label &&
-                    <InputLabel hidden={this.props.hideLabel} id={`${this.props.locale.label}-label`}>{this.props.locale.label}</InputLabel>
-                }
+                <InputLabel hidden={this.props.hideLabel} id={`${this.props.label}-label`}>
+                    {this.props.label}
+                </InputLabel>
                 <Select
+                    style={this.props.style}
                     value={this.newValue()}
                     displayEmpty={this.props.displayEmpty}
                     onChange={this._itemSelected}
                     disabled={this.props.disabled || !!this.props.itemsLoading}
-                    inputProps={{'aria-labelledby': `${this.props.locale.label}-label`}}
+                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
                     autoWidth={this.props.autoWidth}
                     multiple={this.props.multiple}
+                    inputProps={{ style: { border: '1px solid red' } }}
                     SelectDisplayProps={{
-                        id: this.props.id
+                        id: this.props.id,
                     }}
                 >
                     {this.renderMenuItems()}
                 </Select>
-                {
-                    !!this.props.error &&
+                {!!this.props.error && (
                     <FormHelperText error={!!this.props.error}>{this.props.errorText}</FormHelperText>
-                }
+                )}
             </FormControl>
         );
     }
 }
 
-const StyledGenericSelectField = withStyles(styles, {withTheme: true})(GenericSelectFieldClass);
-const GenericSelectField = (props) => <StyledGenericSelectField {...props}/>;
+const StyledGenericSelectField = withStyles(styles, { withTheme: true })(GenericSelectFieldClass);
+const GenericSelectField = props => <StyledGenericSelectField {...props} />;
 export default GenericSelectField;

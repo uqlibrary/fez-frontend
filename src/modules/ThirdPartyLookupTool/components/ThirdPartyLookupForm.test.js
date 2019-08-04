@@ -1,5 +1,4 @@
-import {ThirdPartyLookupForm} from './ThirdPartyLookupForm';
-import {locale} from 'locale';
+import { ThirdPartyLookupForm } from './ThirdPartyLookupForm';
 
 function setup(testProps, isShallow = true) {
     const props = {
@@ -16,24 +15,23 @@ function setup(testProps, isShallow = true) {
         },
         sendInputsToResultComponent: testProps.sendInputsToResultComponent || jest.fn(),
         actions: testProps.actions || {},
-        locale: testProps.locale || {} // locale.components.thirdPartyLookupTools,
+        locale: testProps.locale || {}, // locale.components.thirdPartyLookupTools,
     };
     return getElement(ThirdPartyLookupForm, props, isShallow);
 }
 
 describe('Component ThirdPartyLookupForm', () => {
-
     it('should display form in minimised view', () => {
         const props = {};
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should show form with non-minimised form', () => {
         const props = {
-            isMinimised: false
+            isMinimised: false,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -52,9 +50,9 @@ describe('Component ThirdPartyLookupForm', () => {
                 },
                 bottomTip: '',
                 submitButtonLabel: 'Submit to Incites',
-            }
+            },
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -63,20 +61,25 @@ describe('Component ThirdPartyLookupForm', () => {
 
         const props = {
             isMinimised: false,
-            sendInputsToResultComponent: submitMock
+            sendInputsToResultComponent: submitMock,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         wrapper.instance()._handleSubmitLookup = submitMock;
 
         const textFields = wrapper.find('TextField');
         expect(textFields.length).toEqual(2);
 
         textFields.forEach(field => {
-            field.simulate('change', {target: {name: field.props().className, value: 'blah'}});
+            field.simulate('change', { target: { name: field.props().className, value: 'blah' } });
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: 'blah',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -104,17 +107,22 @@ describe('Component ThirdPartyLookupForm', () => {
                 },
                 bottomTip: '',
                 submitButtonLabel: 'Submit to Incites',
-            }
+            },
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
         wrapper.instance()._handleSubmitLookup = submitMock;
 
         const primaryField = wrapper.find('.primaryValue');
         expect(primaryField.length).toEqual(1);
-        primaryField.simulate('change', {target: {name: 'primaryValue', value: 'blah'}});
+        primaryField.simulate('change', { target: { name: 'primaryValue', value: 'blah' } });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah', secondaryValue: ''});
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: '',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -146,13 +154,13 @@ describe('Component ThirdPartyLookupForm', () => {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
         };
-        const wrapper = setup({...props});
+        const wrapper = setup({ ...props });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
         button.simulate('click');
 
-        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: '',secondaryValue: ''});
+        expect(wrapper.state()).toEqual({ formDisplay: {}, isMinimised: false, primaryValue: '', secondaryValue: '' });
         expect(submitMock).not.toHaveBeenCalled();
     });
 
@@ -163,7 +171,7 @@ describe('Component ThirdPartyLookupForm', () => {
         };
         const wrapper = setup(testProps);
 
-        wrapper.instance()._handleSubmitLookup({key: 'a'});
+        wrapper.instance()._handleSubmitLookup({ key: 'a' });
         wrapper.update();
 
         expect(testMethod).not.toHaveBeenCalled();
@@ -172,12 +180,14 @@ describe('Component ThirdPartyLookupForm', () => {
     it('should fire the lookup action', () => {
         const submitMock = jest.fn();
 
-        const testMethod = () => { return true };
+        const testMethod = () => {
+            return true;
+        };
         const testProps = {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
             actions: {
-                loadThirdPartyResults: testMethod
+                loadThirdPartyResults: testMethod,
             },
             localeform: {
                 apiType: 'fire1',
@@ -188,13 +198,13 @@ describe('Component ThirdPartyLookupForm', () => {
                 },
                 bottomTip: '',
                 submitButtonLabel: 'Submit 1',
-            }
+            },
         };
-        const wrapper = setup({...testProps});
+        const wrapper = setup({ ...testProps });
 
         const primaryField = wrapper.find('.primaryValue');
         expect(primaryField.length).toEqual(1);
-        primaryField.simulate('change', {target: {name: 'primaryValue', value: 'blah'}});
+        primaryField.simulate('change', { target: { name: 'primaryValue', value: 'blah' } });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -207,12 +217,14 @@ describe('Component ThirdPartyLookupForm', () => {
     it('should fire the lookup action when there is a secondary field', () => {
         const submitMock = jest.fn();
 
-        const testMethod = () => { return true };
+        const testMethod = () => {
+            return true;
+        };
         const testProps = {
             isMinimised: false,
             sendInputsToResultComponent: submitMock,
             actions: {
-                loadThirdPartyResults: testMethod
+                loadThirdPartyResults: testMethod,
             },
             localeform: {
                 apiType: 'fire7',
@@ -226,18 +238,23 @@ describe('Component ThirdPartyLookupForm', () => {
                 },
                 bottomTip: '',
                 submitButtonLabel: 'Submit 7',
-            }
+            },
         };
-        const wrapper = setup({...testProps});
+        const wrapper = setup({ ...testProps });
 
         const textFields = wrapper.find('TextField');
         expect(textFields.length).toEqual(2);
         textFields.forEach(field => {
-            field.simulate('change', {target: {name: field.props().className, value: 'blah'}});
+            field.simulate('change', { target: { name: field.props().className, value: 'blah' } });
         });
 
         // confirm the entered values of the fields made it into state
-        expect(wrapper.state()).toEqual({formDisplay: {}, isMinimised: false, primaryValue: 'blah',secondaryValue: 'blah'});
+        expect(wrapper.state()).toEqual({
+            formDisplay: {},
+            isMinimised: false,
+            primaryValue: 'blah',
+            secondaryValue: 'blah',
+        });
 
         const button = wrapper.find('WithStyles(Button)');
         expect(button.length).toEqual(1);
@@ -267,7 +284,7 @@ describe('Component ThirdPartyLookupForm', () => {
                 bottomTip: '',
                 submitButtonLabel: 'Submit2',
             },
-            isMinimised: false
+            isMinimised: false,
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -286,7 +303,7 @@ describe('Component ThirdPartyLookupForm', () => {
                 },
                 bottomTip: 'test bottom tip',
             },
-            isMinimised: false
+            isMinimised: false,
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();

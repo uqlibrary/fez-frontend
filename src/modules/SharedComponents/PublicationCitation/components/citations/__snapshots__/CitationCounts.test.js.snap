@@ -3892,7 +3892,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                           </WithStyles(CitationCountView)>
                           <WithStyles(CitationCountView)
                             count={1}
-                            link="http://www.altmetric.com/details.php?citation_id=12345"
+                            link="https://queensland.altmetric.com/details/12345"
                             source="altmetric"
                             title="Full citation in Altmetric will open in a new window"
                           >
@@ -3904,7 +3904,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 }
                               }
                               count={1}
-                              link="http://www.altmetric.com/details.php?citation_id=12345"
+                              link="https://queensland.altmetric.com/details/12345"
                               source="altmetric"
                               theme={
                                 Object {
@@ -4330,7 +4330,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-99"
-                                href="http://www.altmetric.com/details.php?citation_id=12345"
+                                href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
@@ -4343,7 +4343,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
-                                  href="http://www.altmetric.com/details.php?citation_id=12345"
+                                  href="https://queensland.altmetric.com/details/12345"
                                   openInNewIcon={false}
                                   rel="noopener noreferrer"
                                   target="_blank"
@@ -4771,7 +4771,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
-                                    href="http://www.altmetric.com/details.php?citation_id=12345"
+                                    href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
                                     target="_blank"
@@ -8090,6 +8090,15 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                   },
                 ],
                 "fez_record_search_key_biosis_id": null,
+                "fez_record_search_key_content_indicator": Array [
+                  Object {
+                    "rek_content_indicator": 454079,
+                    "rek_content_indicator_id": 1,
+                    "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                    "rek_content_indicator_order": 1,
+                    "rek_content_indicator_pid": "UQ:678728",
+                  },
+                ],
                 "fez_record_search_key_contributor": Array [],
                 "fez_record_search_key_contributor_id": Array [],
                 "fez_record_search_key_corresponding_country": Array [
@@ -8947,6 +8956,15 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                     },
                   ],
                   "fez_record_search_key_biosis_id": null,
+                  "fez_record_search_key_content_indicator": Array [
+                    Object {
+                      "rek_content_indicator": 454079,
+                      "rek_content_indicator_id": 1,
+                      "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+                      "rek_content_indicator_order": 1,
+                      "rek_content_indicator_pid": "UQ:678728",
+                    },
+                  ],
                   "fez_record_search_key_contributor": Array [],
                   "fez_record_search_key_contributor_id": Array [],
                   "fez_record_search_key_corresponding_country": Array [
@@ -11485,7 +11503,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                           </WithStyles(CitationCountView)>
                           <WithStyles(CitationCountView)
                             count={1}
-                            link="http://www.altmetric.com/details.php?citation_id=23535331"
+                            link="https://queensland.altmetric.com/details/23535331"
                             source="altmetric"
                             title="Full citation in Altmetric will open in a new window"
                           >
@@ -11497,7 +11515,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 }
                               }
                               count={1}
-                              link="http://www.altmetric.com/details.php?citation_id=23535331"
+                              link="https://queensland.altmetric.com/details/23535331"
                               source="altmetric"
                               theme={
                                 Object {
@@ -11923,7 +11941,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-99"
-                                href="http://www.altmetric.com/details.php?citation_id=23535331"
+                                href="https://queensland.altmetric.com/details/23535331"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
@@ -11936,7 +11954,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
-                                  href="http://www.altmetric.com/details.php?citation_id=23535331"
+                                  href="https://queensland.altmetric.com/details/23535331"
                                   openInNewIcon={false}
                                   rel="noopener noreferrer"
                                   target="_blank"
@@ -12364,7 +12382,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
-                                    href="http://www.altmetric.com/details.php?citation_id=23535331"
+                                    href="https://queensland.altmetric.com/details/23535331"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
                                     target="_blank"
@@ -19668,7 +19686,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                           </WithStyles(CitationCountView)>
                           <WithStyles(CitationCountView)
                             count={1}
-                            link="http://www.altmetric.com/details.php?citation_id=12345"
+                            link="https://queensland.altmetric.com/details/12345"
                             source="altmetric"
                             title="Full citation in Altmetric will open in a new window"
                           >
@@ -19680,7 +19698,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 }
                               }
                               count={1}
-                              link="http://www.altmetric.com/details.php?citation_id=12345"
+                              link="https://queensland.altmetric.com/details/12345"
                               source="altmetric"
                               theme={
                                 Object {
@@ -20106,7 +20124,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
                                 className="altmetricCitationCount CitationCountView-citationCount-99"
-                                href="http://www.altmetric.com/details.php?citation_id=12345"
+                                href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
@@ -20119,7 +20137,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
                                     }
                                   }
-                                  href="http://www.altmetric.com/details.php?citation_id=12345"
+                                  href="https://queensland.altmetric.com/details/12345"
                                   openInNewIcon={false}
                                   rel="noopener noreferrer"
                                   target="_blank"
@@ -20547,7 +20565,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
                                     className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
-                                    href="http://www.altmetric.com/details.php?citation_id=12345"
+                                    href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
                                     target="_blank"

@@ -5,46 +5,44 @@ function setup(testProps, isShallow = true) {
         author: testProps.author || null,
         actions: testProps.actions || {},
         history: testProps.history || {
-            push: jest.fn()
+            push: jest.fn(),
         },
         account: testProps.account || {},
-        ...testProps
+        ...testProps,
     };
     return getElement(Masquerade, props, isShallow);
 }
 
-const { href } = window.location;
-
 beforeAll(() => {
     delete global.window.location;
-    global.window.location = {href: jest.fn(), assign: jest.fn()};
+    global.window.location = { href: jest.fn(), assign: jest.fn() };
 });
 
 describe('Component Masquerade', () => {
     it('should correctly set state on username change', () => {
-       const wrapper = setup({});
+        const wrapper = setup({});
 
-       wrapper.instance()._usernameChanged({
-           target: {
-               value: 'uqtest'
-           }
-       });
+        wrapper.instance()._usernameChanged({
+            target: {
+                value: 'uqtest',
+            },
+        });
 
-       wrapper.update();
-       expect(wrapper.state('userName')).toEqual('uqtest');
+        wrapper.update();
+        expect(wrapper.state('userName')).toEqual('uqtest');
     });
 
     it('should not masquerade if Esc key is pressed', () => {
         const wrapper = setup({});
         wrapper.instance()._usernameChanged({
             target: {
-                value: 'uqtest'
-            }
+                value: 'uqtest',
+            },
         });
         wrapper.update();
 
         wrapper.instance()._masqueradeAs({
-            key: 'Esc'
+            key: 'Esc',
         });
 
         expect(wrapper.state('loading')).toBeFalsy();
@@ -53,7 +51,7 @@ describe('Component Masquerade', () => {
     it('should not masquerade if Enter is pressed but username length is 0', () => {
         const wrapper = setup({});
         wrapper.instance()._masqueradeAs({
-            key: 'Enter'
+            key: 'Enter',
         });
         expect(wrapper.state('loading')).toBeFalsy();
     });
@@ -62,14 +60,28 @@ describe('Component Masquerade', () => {
         const wrapper = setup({});
         wrapper.instance()._usernameChanged({
             target: {
-                value: 'uqtest'
-            }
+                value: 'uqtest',
+            },
         });
         wrapper.update();
 
         wrapper.instance()._masqueradeAs({
-            key: 'Enter'
+            key: 'Enter',
         });
         expect(wrapper.state('loading')).toBeTruthy();
+    });
+
+    it('should not masquerade if Enter is pressed without entering username', () => {
+        const wrapper = setup({});
+        wrapper.instance()._masqueradeAs({
+            key: 'Enter',
+        });
+        expect(wrapper.state('loading')).toBeFalsy();
+    });
+
+    it('should not masquerade if button is pressed without entering username', () => {
+        const wrapper = setup({});
+        wrapper.instance()._masqueradeAs({ type: 'Click' });
+        expect(wrapper.state('loading')).toBeFalsy();
     });
 });

@@ -9,7 +9,10 @@ const CheckboxWrapper = props => {
     filteredProps.onChange = (event, isInputChecked) => props.input.onChange(isInputChecked);
     delete filteredProps.errorText;
     return (
-        <div style={{position: 'relative', width: '100%'}} className={props.meta && props.meta.error ? 'error-checkbox' : {}}>
+        <div
+            style={{ position: 'relative', width: '100%' }}
+            className={props.meta && props.meta.error ? 'error-checkbox' : {}}
+        >
             <Checkbox {...filteredProps} />
         </div>
     );
@@ -20,8 +23,8 @@ CheckboxWrapper.propTypes = {
     help: PropTypes.shape({
         title: PropTypes.string,
         text: PropTypes.any,
-        buttonLabel: PropTypes.string
-    })
+        buttonLabel: PropTypes.string,
+    }),
 };
 
 export default CheckboxWrapper;

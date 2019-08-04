@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {withScriptjs, withGoogleMap, GoogleMap, Polygon, Marker} from 'react-google-maps/lib';
+import { withScriptjs, withGoogleMap, GoogleMap, Polygon, Marker } from 'react-google-maps/lib';
 import DrawingManager from 'react-google-maps/lib/components/drawing/DrawingManager';
 import SearchBox from 'react-google-maps/lib/components/places/SearchBox';
-import {compose, lifecycle} from 'recompose';
+import { compose, lifecycle } from 'recompose';
 import get from 'lodash.get';
 
 export const GoogleMapViewComponent = (props) => {
@@ -12,14 +12,14 @@ export const GoogleMapViewComponent = (props) => {
         strokeOpacity: 0.8,
         strokeWeight: 2,
         fillColor: '#FF0000',
-        fillOpacity: 0.35
+        fillOpacity: 0.35,
     };
     const bounds = new window.google.maps.LatLngBounds();
     props.geoCoords.map((coord) => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
     return (
-        <div>
+        <div id="googleMap">
             {
                 <GoogleMap
                     defaultZoom={props.zoom}
@@ -48,8 +48,8 @@ export const GoogleMapViewComponent = (props) => {
                                         window.google.maps.drawing.OverlayType.MARKER,
                                         window.google.maps.drawing.OverlayType.POLYGON,
                                         window.google.maps.drawing.OverlayType.RECTANGLE,
-                                    ]
-                                }
+                                    ],
+                                },
                             }}
                             onMarkerComplete={props.handleMarkerComplete}
                             onPolygonComplete={props.handlePolygonComplete}
@@ -102,7 +102,7 @@ GoogleMapViewComponent.propTypes = {
     onPlacesChanged: PropTypes.func,
     handleMarkerComplete: PropTypes.func,
     handlePolygonComplete: PropTypes.func,
-    handleRectangleComplete: PropTypes.func
+    handleRectangleComplete: PropTypes.func,
 };
 
 export const getDefaultCenter = (geoCoords) => {
@@ -113,12 +113,12 @@ export const getDefaultCenter = (geoCoords) => {
         const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
         return {
             lng: (maxLngPoint + minLngPoint) / 2,
-            lat: (minLatPoint + maxLatPoint) / 2
+            lat: (minLatPoint + maxLatPoint) / 2,
         };
     } else {
         return {
             lng: 153.013346,
-            lat: -27.499412
+            lat: -27.499412,
         };
     }
 };
@@ -133,7 +133,7 @@ const PublicationMap = compose(
             const geoCoords = !!this.props.coordinates && this.props.coordinates.split(' ').map(item => (
                 {
                     lng: Number(item.split(',')[0]),
-                    lat: Number(item.split(',')[1])
+                    lat: Number(item.split(',')[1]),
                 }
             )) || [];
 
@@ -148,7 +148,7 @@ const PublicationMap = compose(
                 this.setState({
                     currentOverlay: currentOverlay,
                     geoCoords: geoCoords,
-                    isSearch: false
+                    isSearch: false,
                 });
             };
 
@@ -164,7 +164,7 @@ const PublicationMap = compose(
                 onBoundsChanged: () => {
                     this.setState({
                         bounds: refs.map.getBounds(),
-                        center: refs.map.getCenter()
+                        center: refs.map.getCenter(),
                     });
                 },
                 onDrawingManagerMounted: ref => {
@@ -191,8 +191,8 @@ const PublicationMap = compose(
 
                     this.setState({
                         center: nextCenter,
-                        geoCoords: nextMarkers.map(coord => ({lat: coord.position.lat(), lng: coord.position.lng()})),
-                        isSearch: true
+                        geoCoords: nextMarkers.map(coord => ({ lat: coord.position.lat(), lng: coord.position.lng() })),
+                        isSearch: true,
                     });
                     refs.map.fitBounds(bounds);
                 },
@@ -201,17 +201,18 @@ const PublicationMap = compose(
                     const sw = rectangle.getBounds().getSouthWest();
                     updateState(
                         [
-                            {lat: ne.lat(), lng: ne.lng()},
-                            {lat: ne.lat(), lng: sw.lng()},
-                            {lat: sw.lat(), lng: sw.lng()},
-                            {lat: sw.lat(), lng: ne.lng()},
-                            {lat: ne.lat(), lng: ne.lng()}
+                            { lat: ne.lat(), lng: ne.lng() },
+                            { lat: ne.lat(), lng: sw.lng() },
+                            { lat: sw.lat(), lng: sw.lng() },
+                            { lat: sw.lat(), lng: ne.lng() },
+                            { lat: ne.lat(), lng: ne.lng() },
                         ],
                         rectangle
                     );
                 },
                 handlePolygonComplete: (polygon) => {
-                    const points = polygon.getPath().getArray().map(point => ({lat: point.lat(), lng: point.lng()}));
+                    const points = polygon.getPath().getArray()
+                        .map(point => ({ lat: point.lat(), lng: point.lng() }));
                     updateState(
                         [...points, points[0]],
                         polygon
@@ -219,10 +220,10 @@ const PublicationMap = compose(
                 },
                 handleMarkerComplete: (marker) => {
                     updateState(
-                        [{lat: marker.getPosition().lat(), lng: marker.getPosition().lng()}],
+                        [{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }],
                         marker
                     );
-                }
+                },
             });
         },
         componentWillUpdate(nextProps, nextState) {
@@ -235,7 +236,7 @@ const PublicationMap = compose(
                     ).join(' ')
                 );
             }
-        }
+        },
     }),
     withScriptjs,
     withGoogleMap

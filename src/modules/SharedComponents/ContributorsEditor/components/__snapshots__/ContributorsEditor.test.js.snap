@@ -30,13 +30,14 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test1",
@@ -56,6 +57,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test2",
@@ -75,6 +77,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test3",
@@ -127,13 +130,14 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test1",
@@ -153,6 +157,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test2",
@@ -172,6 +177,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": "test3",
@@ -285,13 +291,14 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": 1,
@@ -310,6 +317,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": 2,
@@ -328,6 +336,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "nameAsPublished": 3,
@@ -402,13 +411,14 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
       <WithStyles(List)
         classes={
           Object {
-            "root": "list scroll",
+            "root": "ContributorList list scroll",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": 1,
@@ -427,6 +437,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": 2,
@@ -445,6 +456,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": 3,
@@ -463,6 +475,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": 4,
@@ -515,13 +528,14 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "selected": true,
@@ -3513,13 +3527,14 @@ exports[`ContributorsEditor should get contributors from props and input value s
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": "test 1",
@@ -3538,6 +3553,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": "test 2",
@@ -3624,13 +3640,14 @@ exports[`ContributorsEditor should get contributors from props and input value s
       <WithStyles(List)
         classes={
           Object {
-            "root": "list ",
+            "root": "ContributorList list ",
           }
         }
       >
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={true}
           canMoveUp={false}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": "test 1",
@@ -3649,6 +3666,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canMoveDown={false}
           canMoveUp={true}
+          className="ContributorRow"
           contributor={
             Object {
               "displayName": "test 2",

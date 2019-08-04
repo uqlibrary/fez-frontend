@@ -1,8 +1,8 @@
-import {connect} from 'react-redux';
-import {bindActionCreators} from 'redux';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
 import AddMissingRecord from '../components/AddMissingRecord';
-import {withRouter} from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 
 const mapStateToProps = (state, props) => {
     return {
@@ -10,14 +10,14 @@ const mapStateToProps = (state, props) => {
         ...(state && state.get('createRecordReducer') ? state.get('createRecordReducer') : {}),
         author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
         initialValues: {
-            rek_title: props.rawSearchQuery || ''
-        }
+            rek_title: props.rawSearchQuery || '',
+        },
     };
 };
 
 function mapDispatchToProps(dispatch) {
     return {
-        actions: bindActionCreators(actions, dispatch)
+        actions: bindActionCreators(actions, dispatch),
     };
 }
 

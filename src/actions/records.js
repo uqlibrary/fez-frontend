@@ -1,8 +1,14 @@
-import {post, patch} from 'repositories/generic';
-import {NEW_RECORD_API, EXISTING_RECORD_API, RECORDS_ISSUES_API, NEW_COLLECTION_API, NEW_COMMUNITY_API} from 'repositories/routes';
-import {putUploadFiles} from 'repositories';
+import { post, patch } from 'repositories/generic';
+import {
+    NEW_RECORD_API,
+    EXISTING_RECORD_API,
+    RECORDS_ISSUES_API,
+    NEW_COLLECTION_API,
+    NEW_COMMUNITY_API,
+} from 'repositories/routes';
+import { putUploadFiles } from 'repositories';
 import * as transformers from './transformers';
-import {NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES} from 'config/general';
+import { NEW_RECORD_DEFAULT_VALUES, NEW_COLLECTION_DEFAULT_VALUES, NEW_COMMUNITY_DEFAULT_VALUES } from 'config/general';
 import * as actions from './actionTypes';
 
 /**
@@ -13,14 +19,18 @@ import * as actions from './actionTypes';
  */
 export function createNewRecord(data) {
     return dispatch => {
-        dispatch({type: actions.CREATE_RECORD_SAVING});
+        dispatch({ type: actions.CREATE_RECORD_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
-            ...transformers.getRecordAuthorsSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
-            ...transformers.getRecordAuthorsIdSearchKey(data.authors || data.currentAuthor && [data.currentAuthor[0]] || null),
+            ...transformers.getRecordAuthorsSearchKey(
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+            ),
+            ...transformers.getRecordAuthorsIdSearchKey(
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+            ),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
             ...transformers.getRecordSupervisorsSearchKey(data.supervisors),
@@ -28,35 +38,42 @@ export function createNewRecord(data) {
             ...transformers.getDatasetContactDetailSearchKeys(data.contact || null),
             ...transformers.getGeographicAreaSearchKey(data.geographicArea || null),
             ...transformers.getDatasetCreatorRolesSearchKey(data.authors || null),
-            ...transformers.getRecordAuthorAffiliationSearchKey(data.isNtro && data.authors || null),
-            ...transformers.getRecordAuthorAffiliationTypeSearchKey(data.isNtro && data.authors || null),
-            ...transformers.getRecordAbstractDescriptionSearchKey(data.isNtro && data.ntroAbstract || null),
-            ...transformers.getGrantsListSearchKey(data.isNtro && data.grants || null),
-            ...transformers.getNtroMetadataSearchKeys(data.isNtro && data || null),
-            ...transformers.getLanguageSearchKey(data.isNtro && data.languages || null),
-            ...transformers.getQualityIndicatorSearchKey(data.isNtro && data.qualityIndicators || null),
+            ...transformers.getRecordAuthorAffiliationSearchKey((data.isNtro && data.authors) || null),
+            ...transformers.getRecordAuthorAffiliationTypeSearchKey((data.isNtro && data.authors) || null),
+            ...transformers.getRecordAbstractDescriptionSearchKey((data.isNtro && data.ntroAbstract) || null),
+            ...transformers.getGrantsListSearchKey((data.isNtro && data.grants) || null),
+            ...transformers.getNtroMetadataSearchKeys((data.isNtro && data) || null),
+            ...transformers.getLanguageSearchKey((data.isNtro && data.languages) || null),
+            ...transformers.getQualityIndicatorSearchKey((data.isNtro && data.qualityIndicators) || null),
+            ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
         };
 
         // delete extra form values from request object
-        if (recordRequest.authors) delete recordRequest.authors;
-        if (recordRequest.editors) delete recordRequest.editors;
-        if (recordRequest.files) delete recordRequest.files;
-        if (recordRequest.currentAuthor) delete recordRequest.currentAuthor;
-        if (recordRequest.supervisors) delete recordRequest.supervisors;
-        if (recordRequest.fieldOfResearch) delete recordRequest.fieldOfResearch;
-        if (recordRequest.comments) delete recordRequest.comments;
-        if (recordRequest.contact) delete recordRequest.contact;
-        if (recordRequest.geographicArea) delete recordRequest.geographicArea;
-        if (recordRequest.ntroAbstract) delete recordRequest.ntroAbstract;
-        if (recordRequest.grants) delete recordRequest.grants;
-        if (recordRequest.significance) delete recordRequest.significance;
-        if (recordRequest.impactStatement) delete recordRequest.impactStatement;
-        if (recordRequest.languages) delete recordRequest.languages;
-        if (recordRequest.qualityIndicators) delete recordRequest.qualityIndicators;
+        const keysToDelete = [
+            'authors',
+            'comments',
+            'contact',
+            'currentAuthor',
+            'editors',
+            'fieldOfResearch',
+            'files',
+            'geographicArea',
+            'grants',
+            'impactStatement',
+            'languages',
+            'ntroAbstract',
+            'qualityIndicators',
+            'significance',
+            'supervisors',
+            'contentIndicators',
+        ];
+        keysToDelete.forEach(key => {
+            delete recordRequest[key];
+        });
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -64,16 +81,24 @@ export function createNewRecord(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then(() => (data.comments ? post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'Notes from creator of the new record: ' +  data.comments}) : newRecord))
-            .then((response) => {
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+            )
+            .then(() =>
+                data.comments
+                    ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                        issue: 'Notes from creator of the new record: ' + data.comments,
+                    })
+                    : newRecord
+            )
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
                         newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false
-                    }
+                        fileUploadOrIssueFailed: false,
+                    },
                 });
                 return Promise.resolve(response.data ? response.data : newRecord);
             })
@@ -84,8 +109,8 @@ export function createNewRecord(data) {
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
-                            fileUploadOrIssueFailed: true
-                        }
+                            fileUploadOrIssueFailed: true,
+                        },
                     });
 
                     return Promise.resolve(newRecord);
@@ -93,14 +118,13 @@ export function createNewRecord(data) {
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
             });
     };
 }
-
 
 /**
  * Submit thesis involves two steps: upload files, create record with uploaded files.
@@ -147,7 +171,9 @@ export function createNewRecord(data) {
 //                 return post(NEW_RECORD_API(), recordRequest);
 //             })
 //             .then(response => {
-//                 // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 // if(process.env.ENABLE_LOG) {
+//                 //     Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 // }
 //                 dispatch({
 //                     type: actions.CREATE_RECORD_SUCCESS,
 //                     payload: {
@@ -181,7 +207,7 @@ export function createNewRecord(data) {
  */
 export function submitThesis(data) {
     return dispatch => {
-        dispatch({type: actions.CREATE_RECORD_SAVING});
+        dispatch({ type: actions.CREATE_RECORD_SAVING });
         // set default values, links
         const recordRequest = {
             ...JSON.parse(JSON.stringify(data)),
@@ -193,22 +219,27 @@ export function submitThesis(data) {
             rek_title: data.thesisTitle.plainText,
             rek_formatted_title: data.thesisTitle.htmlText,
             rek_description: data.thesisAbstract.plainText,
-            rek_formatted_abstract: data.thesisAbstract.htmlText
+            rek_formatted_abstract: data.thesisAbstract.htmlText,
         };
 
         // delete extra form values from request object
-        recordRequest.authors && (delete recordRequest.authors);
-        recordRequest.editors && (delete recordRequest.editors);
-        recordRequest.currentAuthor && (delete recordRequest.currentAuthor);
-        recordRequest.supervisors && (delete recordRequest.supervisors);
-        recordRequest.fieldOfResearch && (delete recordRequest.fieldOfResearch);
-        recordRequest.files && (delete recordRequest.files);
-        recordRequest.thesisTitle && (delete recordRequest.thesisTitle);
-        recordRequest.thesisAbstract && (delete recordRequest.thesisAbstract);
+        const keysToDelete = [
+            'authors',
+            'editors',
+            'currentAuthor',
+            'supervisors',
+            'fieldOfResearch',
+            'files',
+            'thesisTitle',
+            'thesisAbstract',
+        ];
+        keysToDelete.forEach(key => {
+            delete recordRequest[key];
+        });
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload ? {...transformers.getRecordFileAttachmentSearchKey(data.files.queue)} : null;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -216,16 +247,18 @@ export function submitThesis(data) {
                 newRecord = response.data;
                 return response;
             })
-            .then(() =>(hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
-            .then(() => (hasFilesToUpload ? patch(EXISTING_RECORD_API({pid: newRecord.rek_pid}), recordPatch) : newRecord))
-            .then((response) => {
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+            )
+            .then(response => {
                 /* istanbul ignore next */
                 dispatch({
                     type: actions.CREATE_RECORD_SUCCESS,
                     payload: {
                         newRecord: response.data ? response.data : newRecord,
-                        fileUploadOrIssueFailed: false
-                    }
+                        fileUploadOrIssueFailed: false,
+                    },
                 });
                 /* istanbul ignore next */
                 return Promise.resolve(response.data ? response.data : newRecord);
@@ -237,27 +270,27 @@ export function submitThesis(data) {
                         type: actions.CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
-                            fileUploadOrIssueFailed: true
-                        }
+                            fileUploadOrIssueFailed: true,
+                        },
                     });
-                    return post(RECORDS_ISSUES_API({pid: newRecord.rek_pid}), {issue: 'The submitter had issues uploading files on this record: ' + newRecord})
-                        .then(
-                            /* istanbul ignore next */
-                            () => {
-                                return Promise.resolve(newRecord);
-                            }
-                        );
+                    return post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
+                        issue: `The submitter had issues uploading files on this record: ${newRecord}`,
+                    }).then(
+                        /* istanbul ignore next */
+                        () => {
+                            return Promise.resolve(newRecord);
+                        }
+                    );
                 }
 
                 dispatch({
                     type: actions.CREATE_RECORD_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
                 return Promise.reject(error);
             });
     };
 }
-
 
 /**
  * Save a new collection involves a single request.
@@ -267,7 +300,7 @@ export function submitThesis(data) {
  */
 export function createCollection(data, authorId) {
     return dispatch => {
-        dispatch({type: actions.CREATE_COLLECTION_SAVING});
+        dispatch({ type: actions.CREATE_COLLECTION_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_COLLECTION_DEFAULT_VALUES,
@@ -275,23 +308,23 @@ export function createCollection(data, authorId) {
             fez_record_search_key_ismemberof: [
                 {
                     rek_ismemberof: data.fez_record_search_key_ismemberof,
-                    rek_ismemberof_order: 1
-                }
+                    rek_ismemberof_order: 1,
+                },
             ],
             rek_depositor: authorId,
         };
         return post(NEW_COLLECTION_API(), recordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_SUCCESS,
-                    payload: response.data
+                    payload: response.data,
                 });
                 return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.CREATE_COLLECTION_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
@@ -307,7 +340,7 @@ export function createCollection(data, authorId) {
  */
 export function createCommunity(data, authorId) {
     return dispatch => {
-        dispatch({type: actions.CREATE_COMMUNITY_SAVING});
+        dispatch({ type: actions.CREATE_COMMUNITY_SAVING });
         // set default values, links
         const recordRequest = {
             ...NEW_COMMUNITY_DEFAULT_VALUES,
@@ -315,24 +348,23 @@ export function createCommunity(data, authorId) {
             rek_depositor: authorId,
         };
         return post(NEW_COMMUNITY_API(), recordRequest)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_SUCCESS,
-                    payload: response.data
+                    payload: response.data,
                 });
                 return Promise.resolve(response.data);
             })
             .catch(error => {
                 dispatch({
                     type: actions.CREATE_COMMUNITY_FAILED,
-                    payload: error.message
+                    payload: error.message,
                 });
 
                 return Promise.reject(error);
             });
     };
 }
-
 
 /**
  * Clear new record
@@ -341,7 +373,7 @@ export function createCommunity(data, authorId) {
 export function clearNewRecord() {
     return dispatch => {
         dispatch({
-            type: actions.CREATE_RECORD_RESET
+            type: actions.CREATE_RECORD_RESET,
         });
     };
 }

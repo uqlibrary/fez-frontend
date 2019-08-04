@@ -21,6 +21,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -125,6 +126,22 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -560,7 +577,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -576,7 +593,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -596,7 +613,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -917,6 +934,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -1021,6 +1039,22 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -1456,7 +1490,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -1472,7 +1506,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -1492,7 +1526,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -1838,6 +1872,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -1942,6 +1977,22 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -2377,7 +2428,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -2393,7 +2444,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -2413,7 +2464,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -2809,6 +2860,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -2913,6 +2965,22 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -3348,7 +3416,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -3364,7 +3432,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -3384,7 +3452,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -3705,6 +3773,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -3809,6 +3878,22 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -4244,7 +4329,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -4260,7 +4345,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -4280,7 +4365,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -4601,6 +4686,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -4705,6 +4791,22 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -5140,7 +5242,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -5156,7 +5258,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -5176,7 +5278,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -5497,6 +5599,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -5601,6 +5704,22 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -6036,7 +6155,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -6052,7 +6171,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -6072,7 +6191,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -6393,6 +6512,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -6497,6 +6617,22 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -6938,7 +7074,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -6954,7 +7090,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -6974,7 +7110,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -7295,6 +7431,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
   title="Complete my work"
 >
   <withRouter(Connect(WithStyles(PublicationCitation)))
+    hideContentIndicators={true}
     publication={
       Object {
         "fez_datastream_info": Array [],
@@ -7399,6 +7536,22 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         "fez_record_search_key_conference_name": null,
         "fez_record_search_key_construction_date": null,
         "fez_record_search_key_contact_details_email": Array [],
+        "fez_record_search_key_content_indicator": Array [
+          Object {
+            "rek_content_indicator": 454079,
+            "rek_content_indicator_id": 1,
+            "rek_content_indicator_lookup": "Scholarship of Teaching and Learning",
+            "rek_content_indicator_order": 1,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+          Object {
+            "rek_content_indicator": 454080,
+            "rek_content_indicator_id": 2,
+            "rek_content_indicator_lookup": "Protocol",
+            "rek_content_indicator_order": 2,
+            "rek_content_indicator_pid": "UQ:41878",
+          },
+        ],
         "fez_record_search_key_contributor": Array [],
         "fez_record_search_key_contributor_id": Array [],
         "fez_record_search_key_convener": null,
@@ -7834,7 +7987,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               "fields": Object {
                 "impactStatement": Object {
                   "label": <span>
-                    Creator research statement*. Include Background, Contribution and Significance 
+                    Creator research statement*. Include Background, Contribution and Significance
                     <span
                       style={
                         Object {
@@ -7850,7 +8003,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                 "scaleOfWork": Object {
                   "description": "Select the option that best describes the significance of the work.",
                   "label": <span>
-                    Scale/Significance of work* 
+                    Scale/Significance of work*
                     <span
                       style={
                         Object {
@@ -7870,7 +8023,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                     Creator research statement
                   </h3>
                   <p>
-                    For more information about the research statement, click  
+                    For more information about the research statement, click
                     <b>
                       <a
                         href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"

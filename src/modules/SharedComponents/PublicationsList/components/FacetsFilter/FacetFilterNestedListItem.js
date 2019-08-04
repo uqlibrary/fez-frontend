@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Clear from '@material-ui/icons/Clear';
 import Typography from '@material-ui/core/Typography';
 
@@ -19,15 +19,15 @@ const styles = (theme) => ({
     },
     inset: {
         '&:first-child': {
-            paddingLeft: theme.spacing.unit * 2
-        }
+            paddingLeft: theme.spacing.unit * 2,
+        },
     },
     selectedFacet: {
-        color: theme.palette.primary.main
-    }
+        color: theme.palette.primary.main,
+    },
 });
 
-export function FacetsFilterNestedListItem({onFacetClick, index, disabled, primaryText, isActive, classes}) {
+export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, primaryText, isActive, classes }) {
     return (
         <ListItem
             key={`facet-filter-nested-item-${index}`}
@@ -35,7 +35,7 @@ export function FacetsFilterNestedListItem({onFacetClick, index, disabled, prima
             onClick={onFacetClick}
             disabled={disabled}
             classes={{
-                gutters: classes.listItemGutters
+                gutters: classes.listItemGutters,
             }}
         >
             {
@@ -48,7 +48,7 @@ export function FacetsFilterNestedListItem({onFacetClick, index, disabled, prima
                 inset
                 className={classes.listText}
                 disableTypography
-                classes={{inset: classes.inset}}
+                classes={{ inset: classes.inset }}
             >
                 <Typography variant={'body2'} color={isActive ? 'primary' : 'default'}>
                     {primaryText}

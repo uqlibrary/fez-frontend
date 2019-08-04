@@ -1,8 +1,8 @@
 import React from 'react';
-import {GrantListEditor, styles} from './GrantListEditor';
+import { GrantListEditor, styles } from './GrantListEditor';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         disabled: false,
         meta: {},
@@ -35,13 +35,13 @@ describe('GrantListEditor', () => {
                     {
                         grantAgencyName: 'Testing',
                         grantId: '1234',
-                        grantAgencyType: 'Test'
-                    }
-                ]
+                        grantAgencyType: 'Test',
+                    },
+                ],
             },
             locale: {
-                form: {}
-            }
+                form: {},
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -51,8 +51,8 @@ describe('GrantListEditor', () => {
             meta: {
                 error: (
                     <span>Some error</span>
-                )
-            }
+                ),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -65,8 +65,8 @@ describe('GrantListEditor', () => {
                         <span>Test error 1</span>
                         <span>Test error 2</span>
                     </p>
-                )
-            }
+                ),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -74,8 +74,8 @@ describe('GrantListEditor', () => {
     it('should render string error from props', () => {
         const wrapper = setup({
             meta: {
-                error: 'Test error'
-            }
+                error: 'Test error',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -86,7 +86,7 @@ describe('GrantListEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setState({
-            errorMessage: 'Test error message from state'
+            errorMessage: 'Test error message from state',
         });
 
         wrapper.update();
@@ -102,10 +102,10 @@ describe('GrantListEditor', () => {
                     {
                         grantAgencyName: 'Testing',
                         grantId: '1234',
-                        grantAgencyType: 'Test'
-                    }
-                ])
-            }
+                        grantAgencyType: 'Test',
+                    },
+                ]),
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -119,11 +119,11 @@ describe('GrantListEditor', () => {
                     {
                         grantAgencyName: 'Testing',
                         grantId: '1234',
-                        grantAgencyType: 'Test'
-                    }
-                ]
+                        grantAgencyType: 'Test',
+                    },
+                ],
             },
-            onChange: onChangeFn
+            onChange: onChangeFn,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -132,9 +132,9 @@ describe('GrantListEditor', () => {
                 {
                     grantAgencyName: 'Test',
                     grantId: '123',
-                    grantAgencyType: 'Testing'
-                }
-            ]
+                    grantAgencyType: 'Testing',
+                },
+            ],
         });
 
         expect(onChangeFn).toHaveBeenCalled();
@@ -145,7 +145,7 @@ describe('GrantListEditor', () => {
         wrapper.instance().addGrant({
             grantAgencyName: 'Test',
             grantId: '123',
-            grantAgencyType: 'Testing'
+            grantAgencyType: 'Testing',
         });
         wrapper.update();
 
@@ -156,35 +156,35 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const grant3 = {
             grantAgencyName: 'Test 3',
             grantId: '456',
-            grantAgencyType: 'Testing 3'
+            grantAgencyType: 'Testing 3',
         };
 
         const grant4 = {
             grantAgencyName: 'Test 4',
             grantId: '456',
-            grantAgencyType: 'Testing 4'
+            grantAgencyType: 'Testing 4',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2, grant3, grant4]
+                value: [grant1, grant2, grant3, grant4],
             },
             classes: {
-                scroll: 'scroll-class'
-            }
+                scroll: 'scroll-class',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -193,20 +193,20 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2]
-            }
+                value: [grant1, grant2],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -221,14 +221,14 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1]
-            }
+                value: [grant1],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -237,25 +237,24 @@ describe('GrantListEditor', () => {
     });
 
     it('should not move the grant up the disabled grant', () => {
-
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
             grantAgencyType: 'Testing 1',
-            disabled: true
+            disabled: true,
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2]
-            }
+                value: [grant1, grant2],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -267,20 +266,20 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2]
-            }
+                value: [grant1, grant2],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -295,20 +294,20 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2]
-            }
+                value: [grant1, grant2],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -320,20 +319,20 @@ describe('GrantListEditor', () => {
         const grant1 = {
             grantAgencyName: 'Test 1',
             grantId: '123',
-            grantAgencyType: 'Testing 1'
+            grantAgencyType: 'Testing 1',
         };
 
         const grant2 = {
             grantAgencyName: 'Test 2',
             grantId: '456',
-            grantAgencyType: 'Testing 2'
+            grantAgencyType: 'Testing 2',
         };
 
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: [grant1, grant2]
-            }
+                value: [grant1, grant2],
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -342,10 +341,10 @@ describe('GrantListEditor', () => {
     });
 
     it('isFormPopulated() sets state correctly', () => {
-        const wrapper = setup({onChange: jest.fn()});
+        const wrapper = setup({ onChange: jest.fn() });
         wrapper.instance().isFormPopulated(true);
-        expect(wrapper.state()).toEqual({"errorMessage": "", "grantFormPopulated": true, "grants": []})
+        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': true, 'grants': [] });
         wrapper.instance().isFormPopulated(false);
-        expect(wrapper.state()).toEqual({"errorMessage": "", "grantFormPopulated": false, "grants": []})
+        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': false, 'grants': [] });
     });
 });

@@ -2,7 +2,7 @@ import * as actions from 'actions/actionTypes';
 
 export const initialState = {
     topCitedPublicationsList: [],
-    loadingTopCitedPublications: false
+    loadingTopCitedPublications: false,
 };
 
 const handlers = {
@@ -10,7 +10,7 @@ const handlers = {
         return {
             ...state,
             topCitedPublicationsList: [],
-            loadingTopCitedPublications: true
+            loadingTopCitedPublications: true,
         };
     },
 
@@ -21,14 +21,14 @@ const handlers = {
             ...state.topCitedPublicationsList,
             {
                 key: source,
-                values: action.payload.data
-            }
+                values: action.payload.data,
+            },
         ];
 
         return {
             ...state,
             topCitedPublicationsList,
-            loadingTopCitedPublications: false
+            loadingTopCitedPublications: false,
         };
     },
 
@@ -36,7 +36,7 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: action.payload.data,
-            loadingTopCitedPublications: false
+            loadingTopCitedPublications: false,
         };
     },
 
@@ -44,9 +44,9 @@ const handlers = {
         return {
             ...state,
             trendingPublicationsList: [],
-            loadingTopCitedPublications: false
+            loadingTopCitedPublications: false,
         };
-    }
+    },
 };
 
 export default function topCitedPublicationsReducer(state = initialState, action) {

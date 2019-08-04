@@ -11,7 +11,7 @@ describe('CitationTitleView partial', () => {
             prefix: 'prefix',
             suffix: 'suffix',
             className: 'className',
-            value: 'value'
+            value: 'value',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -23,7 +23,7 @@ describe('CitationTitleView partial', () => {
 
     it('should render properly with value prop only', () => {
         const wrapper = setup({
-            value: 'value'
+            value: 'value',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -31,7 +31,7 @@ describe('CitationTitleView partial', () => {
     it('should render properly with a suffix that equal to the last character of the value', () => {
         const wrapper = setup({
             value: 'values',
-            suffix: 's'
+            suffix: 's',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

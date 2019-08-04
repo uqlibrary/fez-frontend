@@ -7,7 +7,7 @@ export const leftJoin = (objArr1, objArr2, key1, key2) => {
             ...objArr2.find(
                 anObj2 => anObj1[key1] === anObj2[key2]
             ),
-            ...anObj1
+            ...anObj1,
         })
     );
 };

@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {locale} from 'locale';
-import {ExternalLink} from 'modules/SharedComponents/ExternalLink';
+import { locale } from 'locale';
+import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export default class PubmedCentralLink extends PureComponent {
     static propTypes = {
-        pubmedCentralId: PropTypes.string
+        pubmedCentralId: PropTypes.string,
     };
 
     render() {

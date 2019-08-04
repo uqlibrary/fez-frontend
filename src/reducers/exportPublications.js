@@ -23,7 +23,7 @@ const handlers = {
     [actions.EXPORT_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
-            exportPublicationsLoading: false
+            exportPublicationsLoading: false,
         };
     },
 };

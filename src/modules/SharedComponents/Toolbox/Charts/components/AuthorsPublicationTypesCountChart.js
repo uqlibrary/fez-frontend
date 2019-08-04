@@ -1,11 +1,11 @@
 import React from 'react';
-import {PropTypes} from 'prop-types';
+import { PropTypes } from 'prop-types';
 import Chart from './Chart';
 
 class AuthorsPublicationTypesCountChart extends React.Component {
     static propTypes = {
         className: PropTypes.string,
-        series: PropTypes.array
+        series: PropTypes.array,
     };
 
     static defaultProps = {
@@ -16,9 +16,9 @@ class AuthorsPublicationTypesCountChart extends React.Component {
                 ['Conference papers', 150],
                 ['Book chapters', 106],
                 ['Books', 30],
-                ['Other', 5]
-            ]
-        }]
+                ['Other', 5],
+            ],
+        }],
     };
 
     constructor(props) {
@@ -31,29 +31,29 @@ class AuthorsPublicationTypesCountChart extends React.Component {
                     plotShadow: false,
                     plotBorderWidth: 0,
                     spacingBottom: 10,
-                    type: 'pie'
+                    type: 'pie',
                 },
                 credits: {
-                    enabled: false
+                    enabled: false,
                 },
                 legend: {
                     itemStyle: {
-                        width: 110
+                        width: 110,
                     },
                     align: 'center',
                     symbolRadius: 0,
                     floating: true,
                     layout: 'vertical',
-                    y: -110
+                    y: -110,
                 },
                 tooltip: {
-                    enabled: false
+                    enabled: false,
                 },
                 title: {
-                    text: ''
+                    text: '',
                 },
                 subtitle: {
-                    text: ''
+                    text: '',
                 },
                 plotOptions: {
                     pie: {
@@ -62,7 +62,7 @@ class AuthorsPublicationTypesCountChart extends React.Component {
                         dataLabels: {
                             style: {
                                 color: '#FFFFFF',
-                                textOutline: 'none'
+                                textOutline: 'none',
                             },
                             allowOverlap: false,
                             distance: 10,
@@ -71,17 +71,17 @@ class AuthorsPublicationTypesCountChart extends React.Component {
                             className: 'pieLabels ',
                             format: '{y}',
                             useHTML: false,
-                            enabled: true
+                            enabled: true,
                         },
                         shadow: false,
                         center: ['50%', '50%'],
                         size: '90%',
                         innerSize: '65%',
-                        borderColor: 'none'
-                    }
+                        borderColor: 'none',
+                    },
                 },
-                series: this.props.series
-            }
+                series: this.props.series,
+            },
         };
     }
 

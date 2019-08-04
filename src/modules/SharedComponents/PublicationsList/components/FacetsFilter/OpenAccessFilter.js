@@ -1,4 +1,4 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
@@ -10,7 +10,7 @@ export default class OpenAccessFilter extends PureComponent {
         isActive: PropTypes.bool,
         open: PropTypes.bool,
         onToggle: PropTypes.func.isRequired,
-        locale: PropTypes.object
+        locale: PropTypes.object,
     };
 
     updateFilter = () => {
@@ -28,14 +28,14 @@ export default class OpenAccessFilter extends PureComponent {
                 disabled={this.props.disabled}
                 onToggle={this.props.onToggle}
                 open={this.props.open}
-                nestedItems={
-                    <FacetFilterNestedListItem
-                        onFacetClick={this.updateFilter}
-                        isActive={isActive}
-                        primaryText={txt.activeFilter}
-                        disabled={this.props.disabled}
-                    />
-                } />
+            >
+                <FacetFilterNestedListItem
+                    onFacetClick={this.updateFilter}
+                    isActive={isActive}
+                    primaryText={txt.activeFilter}
+                    disabled={this.props.disabled}
+                />
+            </FacetFilterListItem>
         );
     }
 }

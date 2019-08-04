@@ -1,32 +1,32 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {StandardPage} from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import locale from 'locale/pages';
-import {routes} from 'config';
+import { routes } from 'config';
 
 export default class Masquerade extends PureComponent {
     static propTypes = {
-        account: PropTypes.object.isRequired
+        account: PropTypes.object.isRequired,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             userName: '',
-            loading: false
+            loading: false,
         };
     }
 
     _masqueradeAs = (event) => {
-        if(event && event.key && (event.key !== 'Enter' || this.state.userName.length === 0)) return;
+        if (event && event.key && (event.key !== 'Enter') || this.state.userName.length === 0) return;
 
         this.setState({
-            loading: true
+            loading: true,
         });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
@@ -35,7 +35,7 @@ export default class Masquerade extends PureComponent {
 
     _usernameChanged = (event) => {
         this.setState({
-            userName: event.target.value
+            userName: event.target.value,
         });
     };
 
@@ -46,7 +46,7 @@ export default class Masquerade extends PureComponent {
             <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
                     <Typography>{txt.description(this.props.account)}</Typography>
-                    <Grid container spacing={24} alignItems={'flex-end'} style={{marginTop: 12}}>
+                    <Grid container spacing={24} alignItems={'flex-end'} style={{ marginTop: 12 }}>
                         <Grid item xs>
                             <TextField
                                 fullWidth
@@ -59,12 +59,13 @@ export default class Masquerade extends PureComponent {
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
-                                variant={'contained'}
+                                variant="contained"
+                                id="submitMasquerade"
                                 fullWidth
                                 color="primary"
                                 children={txt.labels.submit}
                                 disabled={this.state.loading}
-                                onClick={this._masqueradeAs}/>
+                                onClick={this._masqueradeAs} />
                         </Grid>
                     </Grid>
                 </StandardCard>

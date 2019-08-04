@@ -57,6 +57,7 @@ exports[`Component Masquerade Should render form as expected 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="submitMasquerade"
           onClick={[Function]}
           variant="contained"
         >
@@ -125,6 +126,7 @@ exports[`Component Masquerade Should render readonly description 1`] = `
           color="primary"
           disabled={false}
           fullWidth={true}
+          id="submitMasquerade"
           onClick={[Function]}
           variant="contained"
         >

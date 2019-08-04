@@ -6,14 +6,14 @@ import Adapter from 'enzyme-adapter-react-16';
 import toJson from 'enzyme-to-json';
 import '@babel/polyfill';
 
-import {Provider} from 'react-redux';
+import { Provider } from 'react-redux';
 import Immutable from 'immutable';
-import {MemoryRouter} from 'react-router-dom';
+import { MemoryRouter } from 'react-router-dom';
 import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 import MockAdapter from 'axios-mock-adapter';
-import {mui1theme} from 'config';
-import {api, sessionApi} from 'config/axios';
+import { mui1theme } from 'config';
+import { api, sessionApi } from 'config/axios';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
 import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
 
@@ -33,19 +33,19 @@ export const setupStoreForMount = () => {
     const store = {
         getState: jest.fn(() => (initialState)),
         dispatch: jest.fn(),
-        subscribe: jest.fn()
+        subscribe: jest.fn(),
     };
     const next = jest.fn();
     const invoke = (action) => thunk(store)(next)(action);
-    return {store, next, invoke};
+    return { store, next, invoke };
 };
 
 const setupMockAdapter = () => {
-    return new MockAdapter(api, {delayResponse: 100});
+    return new MockAdapter(api, { delayResponse: 100 });
 };
 
 const setupSessionMockAdapter = () => {
-    return new MockAdapter(sessionApi, {delayResponse: 100});
+    return new MockAdapter(sessionApi, { delayResponse: 100 });
 };
 
 // get a mounted or shallow element
@@ -56,12 +56,12 @@ const getElement = (component, props, isShallow = true, requiresStore = false, c
                 <Provider store={setupStoreForMount().store}>
                     {React.createElement(component, props)}
                 </Provider>,
-                {context}
+                { context }
             );
         } else {
             return shallow(
                 React.createElement(component, props),
-                {context}
+                { context }
             );
         }
     }
@@ -103,4 +103,4 @@ global.mockSessionApi = setupSessionMockAdapter();
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
 const MockDate = require('mockdate');
-MockDate.set('1/1/2017');
+MockDate.set('6/30/2017');
