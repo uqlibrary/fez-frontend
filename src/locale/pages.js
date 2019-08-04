@@ -122,7 +122,7 @@ export default {
                 <StandardCard>
                     <p>The requested file could not be found or is available to authorised users only.</p>
                 </StandardCard>
-            )
+            ),
         },
         thesisSubmissionDenied: {
             title: 'Thesis deposit access denied',

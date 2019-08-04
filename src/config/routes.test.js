@@ -99,14 +99,17 @@ describe('Routes method', () => {
 
     it('should render permissions denied or not found page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({components: {StandardPage: testComponent}, account: accounts.uqresearcher});
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            account: accounts.uqresearcher,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
-                pathname: '/view/UQ:1/test.pdf'
-            }
+                pathname: '/view/UQ:1/test.pdf',
+            },
         };
-        const page = renderPage(props);
+        renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDeniedOrNotFound);
     });
 

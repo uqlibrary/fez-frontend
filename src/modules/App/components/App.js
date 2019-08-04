@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/global';
+import { isFileUrl } from 'config/routes';
 
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';

@@ -47,7 +47,4 @@ describe('App action creator', () => {
         mockActionsStore.dispatch(appActions.clearRedirectPath());
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });
-
-
-
 });

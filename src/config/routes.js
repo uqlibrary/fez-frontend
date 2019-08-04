@@ -380,7 +380,9 @@ export const getRoutesConfig = ({
         {
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
-                if (isFileUrl(childProps.location.pathname) && account) return components.StandardPage({ ...locale.pages.permissionDeniedOrNotFound });
+                if (isFileUrl(childProps.location.pathname) && account) {
+                    return components.StandardPage({ ...locale.pages.permissionDeniedOrNotFound });
+                }
                 if (isValidRoute && account) return components.StandardPage({ ...locale.pages.permissionDenied });
                 if (isValidRoute) return components.StandardPage({ ...locale.pages.authenticationRequired });
                 return components.StandardPage({ ...locale.pages.notFound });
