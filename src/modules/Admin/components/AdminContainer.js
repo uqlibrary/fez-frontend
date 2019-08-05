@@ -65,7 +65,6 @@ export const AdminContainer = ({
     const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
     // const dispatch = useDispatch();
 
-    console.log('loadingRecordToView', loadingRecordToView);
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
@@ -157,10 +156,10 @@ AdminContainer.propTypes = {
 export function isChanged(prevProps, nextProps) {
     return (
         prevProps.disableSubmit === nextProps.disableSubmit &&
-		prevProps.submitting === nextProps.submitting &&
-		prevProps.submitSucceeded === nextProps.submitSucceeded &&
-		(prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-		prevProps.loadingRecordToView === nextProps.loadingRecordToView
+        prevProps.submitting === nextProps.submitting &&
+        prevProps.submitSucceeded === nextProps.submitSucceeded &&
+        (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
+        prevProps.loadingRecordToView === nextProps.loadingRecordToView
     );
 }
 

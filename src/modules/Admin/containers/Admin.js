@@ -20,7 +20,7 @@ export const getBibliographicInitialValues = (record) =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .bibliographic(
             record.fez_record_search_key_language.length > 1 ||
-            record.fez_record_search_key_language[0].rek_language !== 'eng'
+                record.fez_record_search_key_language[0].rek_language !== 'eng'
         )
         .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
@@ -121,7 +121,6 @@ const getReduxFormInitialValues = (recordToView) => {
         bibliographicSection: (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
         authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {}
     };
-    console.log(initialValues);
     return initialValues;
 };
 
