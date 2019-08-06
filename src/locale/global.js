@@ -93,8 +93,9 @@ export default {
                 status: 500,
             },
             generic:
-                'Error has occurred during request and request cannot be processed. Please contact eSpace ' +
-                'administrators or try again later.',
+                'A UQ eSpace system maintenance outage is scheduled from Friday 2/8/19 (6pm) to Monday ' +
+                '5/8/19 (7:30am). Users will be able to browse but all functionality that requires login ' +
+                'will not be available. Apologies for the inconvenience.',
             genericAlternate:
                 "Error has occurred during request and request can't be processed. Please contact eSpace " +
                 'administrators or try again later.',
