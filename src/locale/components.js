@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 
 export default {
@@ -10,18 +11,18 @@ export default {
                 displayTitle: 'Published year range',
                 fromFieldLabel: 'From',
                 toFieldLabel: 'To',
-                rangeSubmitButtonLabel: 'Go'
+                rangeSubmitButtonLabel: 'Go',
             },
             openAccessFilter: {
                 displayTitle: 'Open access status',
-                activeFilter: 'Show only open access records'
+                activeFilter: 'Show only open access records',
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
             renameFacetsList: { 'Display type': 'Work type', 'Subtype': 'Work subtype' },
             lookupFacetsList: {
                 'Author': 'Author (lookup)',
                 'Collection': 'Collection (lookup)',
-                'Subject': 'Subject (lookup)'
+                'Subject': 'Subject (lookup)',
             },
             // help: {
             //     title: 'Refining your results',
@@ -39,7 +40,7 @@ export default {
             publicationStatsRowTitle3: 'Total citations',
             publicationStatsRowTitle4: 'Total works',
             publicationStatsRowTitle5: 'Works year range',
-            publicationStatsNA: 'N/A'
+            publicationStatsNA: 'N/A',
         },
         publicationCitation: {
             publicationSourcesLabel: 'Found in: ',
@@ -58,14 +59,14 @@ export default {
                 google: {
                     externalUrl: 'https://scholar.google.com/scholar?q=intitle:[id]',
                     title: 'Google scholar',
-                }
+                },
             },
             linkWillOpenInNewWindow: 'Full citation in [destination] will open in a new window',
             citationAuthors: {
                 showMoreLabel: 'Show [numberOfAuthors] more...',
                 showMoreTitle: 'Click to show [numberOfAuthors] more authors',
                 showLessLabel: 'Show less',
-                showLessTitle: 'Show less authors'
+                showLessTitle: 'Show less authors',
             },
             defaultActions: [
                 { key: 'fixRecord', label: 'Request Correction', primary: false },
@@ -75,15 +76,15 @@ export default {
                 trendDifferenceShares: {
                     scopus: 'Difference in citations',
                     thomson: 'Difference in citations',
-                    altmetric: 'Difference in social media activities'
+                    altmetric: 'Difference in social media activities',
                 },
                 sourceTitles: {
                     scopus: 'Scopus',
                     thomson: 'Web of science',
-                    altmetric: 'Altmetric'
+                    altmetric: 'Altmetric',
                 },
-                recordsPerSource: 5
-            }
+                recordsPerSource: 5,
+            },
         },
         myTrendingPublications: {
             loading: 'Loading your trending publications',
@@ -91,19 +92,19 @@ export default {
                 altmetric: {
                     title: 'Altmetric score',
                     subtitle: 'The +plus score indicates recent increase in social media activity',
-                    order: 2
+                    order: 2,
                 },
                 thomson: {
                     title: 'Web of Science citation count',
                     subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
-                    order: 1
+                    order: 1,
                 },
                 scopus: {
                     title: 'Scopus citation count',
                     subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
-                    order: 0
-                }
-            }
+                    order: 0,
+                },
+            },
         },
         trendingPublicationHelp: {
             title: 'About these metrics',
@@ -126,41 +127,41 @@ export default {
                         https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
                     </a>
                 </React.Fragment>),
-            buttonLabel: 'CLOSE'
+            buttonLabel: 'CLOSE',
         },
         myLatestPublications: {
             loading: 'Loading your latest publications',
-            viewAllButtonLabel: 'View all'
+            viewAllButtonLabel: 'View all',
         },
         topCitedPublications: {
             loading: 'Loading trending publications',
             notAvailableAlert: {
                 type: 'error',
                 title: 'There has been an error',
-                message: 'Trending publications are temporarily unavailable'
+                message: 'Trending publications are temporarily unavailable',
             },
             altmetric: {
                 title: (<span>Trending on Altmetric</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
-                order: 0
+                order: 0,
             },
             scopus: {
                 title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
                 subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
-                order: 1
+                order: 1,
             },
             thomson: {
                 title: (<span>Trending on Web of science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
                 subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
-                order: 2
+                order: 2,
             },
-            recordsPerSource: 20
+            recordsPerSource: 20,
         },
         keywordsForm: {
             field: {
@@ -169,8 +170,8 @@ export default {
                         inputFieldLabel: 'Keywords',
                         inputFieldHint: 'Type keywords',
                         addButtonLabel: 'Add',
-                        id: 'keywords-input'
-                    }
+                        id: 'keywords-input',
+                    },
                 },
                 header: {
                     locale: {
@@ -181,9 +182,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all keywords?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -194,11 +195,11 @@ export default {
                             confirmationTitle: 'Delete keyword',
                             confirmationMessage: 'Are you sure you want to delete this keyword?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         fundingBodyForm: {
             field: {
@@ -207,8 +208,8 @@ export default {
                         inputFieldLabel: 'Funding body',
                         inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
                         addButtonLabel: 'Add',
-                        id: 'funding-body-input'
-                    }
+                        id: 'funding-body-input',
+                    },
                 },
                 header: {
                     locale: {
@@ -219,9 +220,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all funding bodies?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -232,11 +233,11 @@ export default {
                             confirmationTitle: 'Delete funding body',
                             confirmationMessage: 'Are you sure you want to delete this funding body?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         grantIdForm: {
             field: {
@@ -245,8 +246,8 @@ export default {
                         inputFieldLabel: 'Grant IDs',
                         inputFieldHint: 'Type grantID',
                         addButtonLabel: 'Add',
-                        id: 'grant-id-input'
-                    }
+                        id: 'grant-id-input',
+                    },
                 },
                 header: {
                     locale: {
@@ -257,9 +258,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all grant IDs?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -270,11 +271,11 @@ export default {
                             confirmationTitle: 'Delete grant ID',
                             confirmationMessage: 'Are you sure you want to delete this grant ID?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         thirdPartyLookupTools: {
             display: {
@@ -282,13 +283,13 @@ export default {
                 loadingMessage: 'Loading',
                 tooltip: {
                     show: 'Show form for',
-                    hide: 'Hide form for'
+                    hide: 'Hide form for',
                 },
                 resultsLabel: 'Results',
                 noResultsFound: {
-                    text: 'No results found'
+                    text: 'No results found',
                 },
-                clearButtonLabel: 'New Search'
+                clearButtonLabel: 'New Search',
             },
             forms: [
                 {
@@ -309,8 +310,8 @@ export default {
                     },
                     bottomTip: '',
                     submitButtonLabel: 'Submit to Incites',
-                    isMinimised: false // set this to true when we have more than one form
-                }
+                    isMinimised: false, // set this to true when we have more than one form
+                },
             ],
         },
         typeOfDataForm: {
@@ -320,8 +321,8 @@ export default {
                         inputFieldLabel: 'Type of data',
                         inputFieldHint: 'Type type of data',
                         addButtonLabel: 'Add',
-                        id: 'type-of-data-input'
-                    }
+                        id: 'type-of-data-input',
+                    },
                 },
                 header: {
                     locale: {
@@ -332,9 +333,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all type of data?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -345,11 +346,11 @@ export default {
                             confirmationTitle: 'Delete type of data',
                             confirmationMessage: 'Are you sure you want to delete this type of data?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         softwareRequiredForm: {
             field: {
@@ -358,8 +359,8 @@ export default {
                         inputFieldLabel: 'Software required',
                         inputFieldHint: 'Type software required',
                         addButtonLabel: 'Add',
-                        id: 'software-required-input'
-                    }
+                        id: 'software-required-input',
+                    },
                 },
                 header: {
                     locale: {
@@ -370,9 +371,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all software required?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -383,11 +384,11 @@ export default {
                             confirmationTitle: 'Delete software required',
                             confirmationMessage: 'Are you sure you want to delete this software required?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         isbnForm: {
             title: 'ISBN',
@@ -403,8 +404,8 @@ export default {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
-                    }
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
+                    },
                 },
                 header: {
                     locale: {
@@ -415,9 +416,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -428,11 +429,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         issnForm: {
             title: 'ISSN',
@@ -448,8 +449,8 @@ export default {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
-                    }
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
+                    },
                 },
                 header: {
                     locale: {
@@ -460,9 +461,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -473,11 +474,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         ismnForm: {
             title: 'ISMN',
@@ -493,8 +494,8 @@ export default {
                         inputFieldLabel: 'ISMN value',
                         inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
-                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
-                    }
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
+                    },
                 },
                 header: {
                     locale: {
@@ -505,9 +506,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -518,11 +519,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         isrcForm: {
             title: 'ISRC',
@@ -538,8 +539,8 @@ export default {
                         inputFieldLabel: 'ISRC value',
                         inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
                         addButtonLabel: <span>Add&nbsp;ISRC</span>,
-                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>)
-                    }
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
+                    },
                 },
                 header: {
                     locale: {
@@ -550,9 +551,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -563,11 +564,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         linkListForm: {
             title: 'Manage links',
@@ -579,7 +580,7 @@ export default {
                         descriptionInputFieldLabel: 'Description',
                         descriptionFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;link</span>,
-                    }
+                    },
                 },
                 header: {
                     locale: {
@@ -590,9 +591,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -603,11 +604,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         authors: {
             title: 'Authors',
@@ -618,7 +619,7 @@ export default {
                 text: (
                     <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
-                buttonLabel: 'CLOSE'
+                buttonLabel: 'CLOSE',
             },
             field: {
                 form: {
@@ -633,8 +634,8 @@ export default {
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
-                        nameAsPublishedFieldId: 'authors-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'authors-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -650,9 +651,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -668,12 +669,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-author-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-author-${index}`,
+                    },
+                },
+            },
 
         },
         editors: {
@@ -698,8 +699,8 @@ export default {
                         nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor',
-                        nameAsPublishedFieldId: 'editors-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'editors-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -715,9 +716,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -732,12 +733,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-editor-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-editor-${index}`,
+                    },
+                },
+            },
         },
         creators: {
             title: 'Creators',
@@ -763,8 +764,8 @@ export default {
                         creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator',
-                        nameAsPublishedFieldId: 'creators-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'creators-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -781,9 +782,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -798,12 +799,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-creator-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-creator-${index}`,
+                    },
+                },
+            },
         },
         designers: {
             title: 'Designer name',
@@ -813,7 +814,7 @@ export default {
                 text: (
                     <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
-                buttonLabel: 'CLOSE'
+                buttonLabel: 'CLOSE',
             },
             field: {
                 form: {
@@ -828,8 +829,8 @@ export default {
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
-                        nameAsPublishedFieldId: 'designers-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'designers-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -845,9 +846,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -862,12 +863,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-designer-${index}`
-                    }
+                        deleteButtonId: (index) => `delete-designer-${index}`,
+                    },
                 },
-            }
+            },
         },
         supervisors: {
             title: 'Supervisors',
@@ -890,8 +891,8 @@ export default {
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor',
-                        nameAsPublishedFieldId: 'supervisors-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'supervisors-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -907,9 +908,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -924,12 +925,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-supervisor-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-supervisor-${index}`,
+                    },
+                },
+            },
         },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
@@ -947,8 +948,8 @@ export default {
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor',
-                        nameAsPublishedFieldId: 'supervisors-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'supervisors-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -962,9 +963,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -977,19 +978,19 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-supervisor-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-supervisor-${index}`,
+                    },
+                },
+            },
         },
         contributors: {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
                 text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
-                buttonLabel: 'CLOSE'
+                buttonLabel: 'CLOSE',
             },
             field: {
                 form: {
@@ -1004,8 +1005,8 @@ export default {
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',
-                        nameAsPublishedFieldId: 'contributors-name-as-published-field'
-                    }
+                        nameAsPublishedFieldId: 'contributors-name-as-published-field',
+                    },
                 },
                 header: {
                     locale: {
@@ -1021,9 +1022,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -1038,12 +1039,12 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
+                            confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: (index) => `delete-contributor-${index}`
-                    }
-                }
-            }
+                        deleteButtonId: (index) => `delete-contributor-${index}`,
+                    },
+                },
+            },
         },
         fieldOfResearchForm: {
             title: 'Field of research',
@@ -1057,8 +1058,8 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Field of research',
-                        inputFieldHint: 'Start typing code or field name and select from list'
-                    }
+                        inputFieldHint: 'Start typing code or field name and select from list',
+                    },
                 },
                 header: {
                     locale: {
@@ -1068,9 +1069,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -1079,11 +1080,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         subjectForm: {
             title: 'Subject',
@@ -1097,8 +1098,8 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Begin typing to select and add subject(s)',
-                        inputFieldHint: 'Start typing code or field name and select from list'
-                    }
+                        inputFieldHint: 'Start typing code or field name and select from list',
+                    },
                 },
                 header: {
                     locale: {
@@ -1108,9 +1109,9 @@ export default {
                             confirmationTitle: 'Delete all',
                             confirmationMessage: 'Are you sure you want to delete all items?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
                 },
                 row: {
                     locale: {
@@ -1119,11 +1120,11 @@ export default {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
                             cancelButtonLabel: 'No',
-                            confirmButtonLabel: 'Yes'
-                        }
-                    }
-                }
-            }
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
         },
         paging: {
             nextPage: 'Next',
@@ -1134,7 +1135,7 @@ export default {
             totalRecords: '([total] records)',
             pagingBracket: 3,
             pageButtonAriaLabel: 'Click to select page [pageNumber] of [totalPages] result pages',
-            firstLastSeparator: '...'
+            firstLastSeparator: '...',
         },
         sorting: {
             pageSize: 'Records per page',
@@ -1148,16 +1149,16 @@ export default {
                 { value: 'updated_date', label: 'Updated date' },
                 { value: 'altmetric_score', label: 'Altmetric score' },
                 { value: 'scopus_citation_count', label: 'Scopus citation count' },
-                { value: 'thomson_citation_count', label: 'Web of Science citation count' }
+                { value: 'thomson_citation_count', label: 'Web of Science citation count' },
             ],
             sortDirection: [
                 'Desc',
-                'Asc'
+                'Asc',
             ],
-            recordsPerPage: [20, 50, 100]
+            recordsPerPage: [20, 50, 100],
         },
         newsFeed: {
-            title: 'Latest news'
+            title: 'Latest news',
         },
         ntroFields: {
             header: {
@@ -1175,7 +1176,7 @@ export default {
                             A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
                         </p>
                     </React.Fragment>
-                )
+                ),
             },
             metadata: {
                 help: {
@@ -1186,19 +1187,19 @@ export default {
                             <p>For more information about each quality indicator option, click <b><a style={{ fontWeight: 700 }} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
-                    buttonLabel: 'CLOSE'
-                }
-            }
+                    buttonLabel: 'CLOSE',
+                },
+            },
         },
         export: {
             label: 'Export results',
             format: [
                 { value: 'excel', label: 'Excel File' },
-                { value: 'endnote', label: 'Endnote File' }
+                { value: 'endnote', label: 'Endnote File' },
             ],
             filename: {
                 prefix: 'espace_export',
-                dateFormat: 'YYYYMMDDHHmmss'
+                dateFormat: 'YYYYMMDDHHmmss',
             },
         },
         searchComponent: {
@@ -1217,7 +1218,7 @@ export default {
                 mode: 'advanced',
                 tooltip: {
                     show: 'Show advanced search',
-                    hide: 'Hide advanced search'
+                    hide: 'Hide advanced search',
                 },
                 selectAria: 'Click to select a field to search from the list - [current_selection] currently selected',
                 deleteAria: 'Click to delete this search row',
@@ -1230,11 +1231,11 @@ export default {
                         type: 'TextField',
                         hint: 'Select a field to search on',
                         validation: [],
-                        ariaLabel: 'Select a field to search on'
+                        ariaLabel: 'Select a field to search on',
                     },
                     'divider1': {
                         order: 0.5,
-                        type: 'divider'
+                        type: 'divider',
                     },
                     'all': {
                         order: 1,
@@ -1245,7 +1246,7 @@ export default {
                         hint: 'Add some text to search all fields with',
                         captionValue: 'anything',
                         validation: ['maxLength500'],
-                        ariaLabel: 'Type a value to search all fields for'
+                        ariaLabel: 'Type a value to search all fields for',
                     },
                     'rek_title': {
                         order: 2,
@@ -1255,7 +1256,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a title',
                         validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type a title to search for'
+                        ariaLabel: 'Type a title to search for',
                     },
                     'rek_book_title': {
                         order: 2.5,
@@ -1265,7 +1266,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a book title',
                         validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type a book title to search for'
+                        ariaLabel: 'Type a book title to search for',
                     },
                     'rek_pid': {
                         order: 9,
@@ -1275,7 +1276,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a PID',
                         validation: ['required'],
-                        ariaLabel: 'Type a PID to search for'
+                        ariaLabel: 'Type a PID to search for',
                     },
                     'rek_author': {
                         order: 3,
@@ -1285,7 +1286,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add an author name',
                         validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type an author name to search for'
+                        ariaLabel: 'Type an author name to search for',
                     },
                     'rek_contributor': {
                         order: 5,
@@ -1295,7 +1296,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add an editor/contributor name',
                         validation: ['required', 'maxLength255'],
-                        ariaLabel: 'Type a contributor name to search for'
+                        ariaLabel: 'Type a contributor name to search for',
                     },
                     'rek_series': {
                         order: 10,
@@ -1305,7 +1306,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a series name',
                         validation: ['required', 'maxLength500'],
-                        ariaLabel: 'Type a series name to search for'
+                        ariaLabel: 'Type a series name to search for',
                     },
                     'rek_journal_name': {
                         order: 11,
@@ -1315,7 +1316,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a journal name',
                         validation: ['required', 'maxLength500'],
-                        ariaLabel: 'Type a journal name to search for'
+                        ariaLabel: 'Type a journal name to search for',
                     },
                     'rek_conference_name': {
                         order: 12,
@@ -1325,7 +1326,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a conference name',
                         validation: ['required', 'maxLength500'],
-                        ariaLabel: 'Type a conference name to search for'
+                        ariaLabel: 'Type a conference name to search for',
                     },
                     'rek_doi': {
                         order: 8,
@@ -1335,7 +1336,7 @@ export default {
                         type: 'TextField',
                         hint: 'Add a DOI',
                         validation: ['required', 'doi'],
-                        ariaLabel: 'Type a DOI to search for'
+                        ariaLabel: 'Type a DOI to search for',
                     },
                     'rek_publisher': {
                         order: 13,
@@ -1345,7 +1346,7 @@ export default {
                         type: 'PublisherLookup',
                         hint: 'Add a publisher',
                         validation: ['required'],
-                        ariaLabel: 'Type a publisher to search for'
+                        ariaLabel: 'Type a publisher to search for',
                     },
                     'rek_ismemberof': {
                         order: 7,
@@ -1359,7 +1360,7 @@ export default {
                         multiple: true,
                         validation: ['requiredList'],
                         ariaLabel: 'Select multiple collections to search for',
-                        label: 'Collections'
+                        label: 'Collections',
                     },
                     'rek_genre_type': {
                         order: 14,
@@ -1370,7 +1371,7 @@ export default {
                         hint: 'Select a Thesis type',
                         multiple: true,
                         validation: ['required'],
-                        ariaLabel: 'Select multiple thesis types to search for'
+                        ariaLabel: 'Select multiple thesis types to search for',
                     },
                     'rek_author_id': {
                         order: 4,
@@ -1380,7 +1381,7 @@ export default {
                         type: 'AuthorIdLookup',
                         hint: 'Add an author id',
                         validation: ['required', 'maxLength9'],
-                        ariaLabel: 'Begin typing an author ID to select an author from the list'
+                        ariaLabel: 'Begin typing an author ID to select an author from the list',
                     },
                     'rek_contributor_id': {
                         order: 6,
@@ -1390,7 +1391,7 @@ export default {
                         type: 'ContributorIdLookup',
                         hint: 'Add a contributor id',
                         validation: ['required', 'maxLength9'],
-                        ariaLabel: 'Begin typing an contributor ID to select an author from the list'
+                        ariaLabel: 'Begin typing an contributor ID to select an author from the list',
                     },
                     'rek_org_unit_name': {
                         order: 15,
@@ -1400,7 +1401,7 @@ export default {
                         type: 'OrgUnitLookup',
                         hint: 'Add a school, centre or institute',
                         validation: ['required'],
-                        ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list'
+                        ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
                     },
                     'rek_display_type': {
                         order: 20,
@@ -1410,7 +1411,7 @@ export default {
                         type: null,
                         hint: 'Select document types',
                         validation: [],
-                        ariaLabel: 'Select multiple publications types to search on'
+                        ariaLabel: 'Select multiple publications types to search on',
                     },
                     'facet_year_range': {
                         order: 21,
@@ -1424,7 +1425,7 @@ export default {
                         toAria: 'Enter a year to search to',
                         toHint: 'Year to',
                         invalidText: 'Invalid year range',
-                        ariaLabel: 'Add valid year ranges to search between'
+                        ariaLabel: 'Add valid year ranges to search between',
                     },
                     'rek_status': {
                         order: 16,
@@ -1435,7 +1436,7 @@ export default {
                         hint: 'Select status',
                         validation: [],
                         ariaLabel: 'Select a status to search on',
-                        isUnpublishedField: true
+                        isUnpublishedField: true,
                     },
                     'rek_created_date': {
                         order: 22,
@@ -1446,7 +1447,7 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null)
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null),
                     },
                     'rek_updated_date': {
                         order: 23,
@@ -1457,8 +1458,8 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null)
-                    }
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null),
+                    },
                 },
                 openAccess: {
                     title: 'Open access',
@@ -1466,21 +1467,21 @@ export default {
                     captionText: (
                         <span className="value">open access/full text</span>
                     ),
-                    ariaLabel: 'Check to search for publications with are only open access / full text'
+                    ariaLabel: 'Check to search for publications with are only open access / full text',
                 },
                 addField: {
                     title: 'Add another field',
-                    aria: 'Click to add another advanced search field'
+                    aria: 'Click to add another advanced search field',
                 },
                 reset: {
                     title: 'Reset',
-                    aria: 'Click to reset the advanced search'
+                    aria: 'Click to reset the advanced search',
                 },
                 simpleSearch: {
                     title: 'Simple search',
-                    aria: 'Click to return to the simple search'
-                }
-            }
+                    aria: 'Click to return to the simple search',
+                },
+            },
         },
         whatIsEspace: {
             title: 'What is eSpace?',
@@ -1489,10 +1490,10 @@ export default {
             </span>),
             readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
-            readMoreLink: '/contact'
+            readMoreLink: '/contact',
         },
         fileUploader: {
-            label: 'Click here to select files, or drag files into this area to upload'
+            label: 'Click here to select files, or drag files into this area to upload',
         },
         securitySection: {
             admin: {
@@ -1500,7 +1501,7 @@ export default {
                     label: 'Use this interface as a...',
                     menuItemText: {
                         superAdmin: 'Super admin',
-                        admin: 'Admin'
+                        admin: 'Admin',
                     },
                 },
                 typeField: {
@@ -1509,13 +1510,13 @@ export default {
                         community: 'Community',
                         collection: 'Collection',
                         record: 'Record',
-                        dataStream: 'Data Stream'
-                    }
+                        dataStream: 'Data Stream',
+                    },
                 },
                 warning: {
                     message: 'This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you\'re doing.',
-                    title: 'Warning'
-                }
+                    title: 'Warning',
+                },
             },
             community: {
                 cardTitle: (pid) => (<span><strong>Community</strong> level security - {pid}</span>),
@@ -1548,22 +1549,22 @@ export default {
                 dataStream: {
                     cardTitle: (pid) => (<span><strong>Datastream</strong> level security - {pid}</span>),
                     overridePrompt: 'Override datastream security policy details',
-                    overridePolicyPrompt: 'Security policy for this file to override inheritance'
+                    overridePolicyPrompt: 'Security policy for this file to override inheritance',
                 },
                 inheritedPolicy: {
                     record: {
-                        title: 'Inherited security policy details'
+                        title: 'Inherited security policy details',
                     },
                     dataStream: {
-                        title: 'Inherited datastream security policy details'
-                    }
-                }
+                        title: 'Inherited datastream security policy details',
+                    },
+                },
             },
-            submit: 'Submit'
+            submit: 'Submit',
         },
         contentIndicators: {
             label: 'Content Indicators',
-            divider: ', '
-        }
-    }
+            divider: ', ',
+        },
+    },
 };

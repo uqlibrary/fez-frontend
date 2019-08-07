@@ -7,7 +7,7 @@ export default function AuthorLinkingField(fieldProps) {
         searchKey={{
             value: 'rek_author_id',
             order: 'rek_author_id_order',
-            type: 'author'
+            type: 'author',
         }}
         {...fieldProps} />);
 }

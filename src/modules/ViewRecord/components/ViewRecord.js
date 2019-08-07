@@ -26,7 +26,7 @@ export default class ViewRecord extends PureComponent {
         match: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
-        account: PropTypes.object
+        account: PropTypes.object,
     };
 
     componentDidMount() {

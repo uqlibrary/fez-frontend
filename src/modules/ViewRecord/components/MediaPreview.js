@@ -13,7 +13,7 @@ export default class MediaPreview extends React.Component {
         mediaUrl: PropTypes.string.isRequired,
         previewMediaUrl: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
-        onClose: PropTypes.func.isRequired
+        onClose: PropTypes.func.isRequired,
     };
 
     constructor(props) {
@@ -21,7 +21,7 @@ export default class MediaPreview extends React.Component {
         this.mediaPreviewRef = React.createRef();
         this.state = {
             videoErrorMsg: null,
-            videoErrorCode: null
+            videoErrorCode: null,
         };
     }
 
@@ -29,7 +29,7 @@ export default class MediaPreview extends React.Component {
         if(this.props.previewMediaUrl !== nextProps.previewMediaUrl) {
             this.setState({
                 videoErrorMsg: null,
-                videoErrorCode: null
+                videoErrorCode: null,
             });
         }
     }
@@ -62,16 +62,16 @@ export default class MediaPreview extends React.Component {
         if(event.message && event.code) {
             this.setState({
                 videoErrorMsg: event.message,
-                videoErrorCode: event.code
+                videoErrorCode: event.code,
             }, () => {
                 this.scrollToPreview();
             });
         }
     };
 
-    MediaPreviewButtons = ({openInNewWindow, close}) => {
+    MediaPreviewButtons = ({ openInNewWindow, close }) => {
         return (
-            <div style={{padding: 8}}>
+            <div style={{ padding: 8 }}>
                 <Grid container spacing={16} justify="flex-end" direction="row">
                     <Grid item xs={12} sm="auto">
                         <Button variant="contained" onClick={this.openFileInNewWindow} color="primary" fullWidth>
@@ -89,14 +89,14 @@ export default class MediaPreview extends React.Component {
     };
 
     render()  {
-        const {mediaUrl, previewMediaUrl, mimeType} = this.props;
-        const {videoTitle, imageTitle} = locale.viewRecord.sections.files.preview;
+        const { mediaUrl, previewMediaUrl, mimeType } = this.props;
+        const { videoTitle, imageTitle } = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isImage = mimeType.indexOf('image') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
         return (
             <React.Fragment>
-                <Grid container spacing={0} direction={'row'} style={{marginTop: 32}}>
+                <Grid container spacing={0} direction={'row'} style={{ marginTop: 32 }}>
                     <span ref={this.mediaPreviewRef}/>
                     <Grid item xs>
                         <Typography variant={'h6'} component={'h2'}>{title}</Typography>
@@ -109,7 +109,7 @@ export default class MediaPreview extends React.Component {
                 </Grid>
                 {
                     isVideo && this.state.videoErrorMsg && this.state.videoErrorCode &&
-                        <div style={{marginTop: 12, marginBottom: 12}}>
+                        <div style={{ marginTop: 12, marginBottom: 12 }}>
                             <Alert {...locale.viewRecord.videoFailedAlert} message={`${locale.viewRecord.videoFailedAlert.message} (${this.state.videoErrorMsg} - ${this.state.videoErrorCode})`} />
                         </div>
                 }
@@ -133,7 +133,7 @@ export default class MediaPreview extends React.Component {
                                 <img src={previewMediaUrl}
                                     alt={mediaUrl}
                                     onLoad={this.scrollToPreview()}
-                                    style={{border: '5px solid black', maxWidth: '100%'}} />
+                                    style={{ border: '5px solid black', maxWidth: '100%' }} />
                             </Grid>
                             <Grid item xs />
                         </Grid>

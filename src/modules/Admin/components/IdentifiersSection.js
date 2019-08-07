@@ -18,7 +18,9 @@ import { FormValuesContext } from 'context';
 export const IdentifiersSection = ({ disabled = false }) => (
     <Grid container spacing={8}>
         <Grid item xs={12} sm={12}>
-            <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
+            <Typography variant="body2" component="p">
+                Some explanatory text might go here. It may not. Time will tell.
+            </Typography>
         </Grid>
         <Grid item xs={12}>
             <FormValuesContext.Consumer>
@@ -30,7 +32,8 @@ export const IdentifiersSection = ({ disabled = false }) => (
                         label="Collection"
                         placeholder="Begin typing to select and add collection(s)"
                         optionsList={collectionItems}
-                        name="identifiersSection.collection" />
+                        name="identifiersSection.collection"
+                    />
                 )}
             </FormValuesContext.Consumer>
         </Grid>
@@ -42,7 +45,8 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 label="WOS ID (ISI Loc)"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -51,10 +55,17 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 name="identifiersSection.wosDocType"
                 label="WOS Document type"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Select a document type</MenuItem>
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+                    Select a document type
+                </MenuItem>
                 {WOSDocTypes.map((item, index) => {
-                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
                 })}
             </Field>
         </Grid>
@@ -66,7 +77,8 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 label="Scopus ID"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -75,10 +87,17 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 name="identifiersSection.scopusDocType"
                 label="Scopus Document type"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Select a document type</MenuItem>
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+                    Select a document type
+                </MenuItem>
                 {ScopusDocTypes.map((item, index) => {
-                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
                 })}
             </Field>
         </Grid>
@@ -90,7 +109,8 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 label="PubMed ID"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -99,10 +119,17 @@ export const IdentifiersSection = ({ disabled = false }) => (
                 name="identifiersSection.pubmedDocType"
                 label="PubMed Document type"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Select a document type</MenuItem>
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+                    Select a document type
+                </MenuItem>
                 {PubmedDocTypes.map((item, index) => {
-                    return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
                 })}
             </Field>
         </Grid>
@@ -110,7 +137,7 @@ export const IdentifiersSection = ({ disabled = false }) => (
 );
 
 IdentifiersSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(IdentifiersSection);

@@ -1,4 +1,4 @@
-import {PublicationsListPaging} from './PublicationsListPaging';
+import { PublicationsListPaging } from './PublicationsListPaging';
 import PublicationsListPagingWithStyles from './PublicationsListPaging';
 
 const getProps = (testProps = {}) => ({
@@ -8,20 +8,20 @@ const getProps = (testProps = {}) => ({
         to: 0,
         total: 0,
         per_page: 20,
-        current_page: 1
+        current_page: 1,
     },
     disabled: false,
     onPageChanged: jest.fn(),
-    ...testProps
+    ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(PublicationsListPaging, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(PublicationsListPaging, getProps(testProps));
 }
 
 describe('PublicationsListPaging renders ', () => {
     it('component with empty paging data', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -36,9 +36,9 @@ describe('PublicationsListPaging renders ', () => {
             to: 40,
             total: 60,
             per_page: 20,
-            current_page: 20
+            current_page: 20,
         };
-        const wrapper = setup({pagingData: data});
+        const wrapper = setup({ pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -48,23 +48,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
-        const wrapper = setup({pagingData: data});
+        const wrapper = setup({ pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        // const pages = wrapper.find('.publicationsListPaging .page');
-        // expect(pages.length).toBe(3);
-        //
-        // const selectedPage = wrapper.find('.publicationsListPaging .page.selectedPage');
-        // expect(selectedPage.length).toBe(1);
-        // expect(selectedPage.props().label).toBe(1);
-        //
-        // const nextPage = wrapper.find('.pagingNext');
-        // expect(nextPage.length).toBe(1);
-        //
-        // const previousPage = wrapper.find('.pagingPrevious');
-        // expect(previousPage.length).toBe(1);
     });
 
     it('component with non-empty paging data, second page', () => {
@@ -73,23 +60,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 40,
             total: 60,
             per_page: 20,
-            current_page: 2
+            current_page: 2,
         };
-        const wrapper = setup({pagingData: data});
+        const wrapper = setup({ pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        // const pages = wrapper.find('.publicationsListPaging .page');
-        // expect(pages.length).toBe(3);
-        //
-        // const selectedPage = wrapper.find('.publicationsListPaging .page.selectedPage');
-        // expect(selectedPage.length).toBe(1);
-        // expect(selectedPage.props().label).toBe(2);
-        //
-        // const nextPage = wrapper.find('.pagingNext');
-        // expect(nextPage.length).toBe(1);
-        //
-        // const previousPage = wrapper.find('.pagingPrevious');
-        // expect(previousPage.length).toBe(1);
     });
 
     it('component with non-empty paging data, last page', () => {
@@ -98,23 +72,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 60,
             total: 60,
             per_page: 20,
-            current_page: 3
+            current_page: 3,
         };
-        const wrapper = setup({pagingData: data});
+        const wrapper = setup({ pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        // const pages = wrapper.find('.publicationsListPaging .page');
-        // expect(pages.length).toBe(3);
-        //
-        // const selectedPage = wrapper.find('.publicationsListPaging .page.selectedPage');
-        // expect(selectedPage.length).toBe(1);
-        // expect(selectedPage.props().label).toBe(3);
-        //
-        // const nextPage = wrapper.find('.pagingNext');
-        // expect(nextPage.length).toBe(1);
-        //
-        // const previousPage = wrapper.find('.pagingPrevious');
-        // expect(previousPage.length).toBe(1);
     });
 
     it('component with ellipsis paging results', () => {
@@ -123,23 +84,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 520,
             total: 1000,
             per_page: 20,
-            current_page: 10
+            current_page: 10,
         };
-        const wrapper = setup({pagingData: data});
+        const wrapper = setup({ pagingData: data });
         expect(toJson(wrapper)).toMatchSnapshot();
-
-        // const pages = wrapper.find('.publicationsListPaging .page');
-        // expect(pages.length).toBe(9);
-        //
-        // const selectedPage = wrapper.find('.publicationsListPaging .page.selectedPage');
-        // expect(selectedPage.length).toBe(1);
-        // expect(selectedPage.props().label).toBe(10);
-        //
-        // const nextPage = wrapper.find('.pagingNext');
-        // expect(nextPage.length).toBe(1);
-        //
-        // const previousPage = wrapper.find('.pagingPrevious');
-        // expect(previousPage.length).toBe(1);
     });
 
     it('component with all fields disabled', () => {
@@ -148,13 +96,13 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
 
-        const wrapper = setup({disabled: true, pagingData: data});
+        const wrapper = setup({ disabled: true, pagingData: data });
         wrapper.find('page').forEach(page => {
             expect(page.props().disabled).toEqual(true);
-        })
+        });
     });
 
     it('component with non-empty paging data, pageChanged called', () => {
@@ -163,10 +111,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
+        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
         wrapper.instance().pageChanged();
         expect(testFunction).toBeCalled();
     });
@@ -177,10 +125,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
+        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
 
         const nextPage = wrapper.find('.paging-next');
         expect(nextPage.length).toBe(1);
@@ -194,10 +142,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 40,
             total: 60,
             per_page: 20,
-            current_page: 2
+            current_page: 2,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
+        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
 
         const page = wrapper.find('.paging-previous');
         expect(page.length).toBe(1);
@@ -211,12 +159,15 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
+        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
         const pages = wrapper.find('.paging-button');
-        pages.at(1).props().onClick();
+        pages
+            .at(1)
+            .props()
+            .onClick();
         expect(testFunction).toBeCalled();
     });
 
@@ -226,7 +177,7 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 60,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
 
         const nextData = {
@@ -234,14 +185,14 @@ describe('PublicationsListPaging renders ', () => {
             to: 40,
             total: 60,
             per_page: 20,
-            current_page: 2
+            current_page: 2,
         };
         const testFunction = jest.fn();
-        const wrapper = setup({pagingData: data, onPageChanged: testFunction, isShallow: false});
-        wrapper.instance().componentWillReceiveProps({pagingData: nextData});
+        const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
+        wrapper.instance().componentWillReceiveProps({ pagingData: nextData });
         expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
 
-        wrapper.instance().componentWillReceiveProps({pagingData: {}, disabled: true});
+        wrapper.instance().componentWillReceiveProps({ pagingData: {}, disabled: true });
         expect(JSON.stringify(wrapper.state())).toBe(JSON.stringify(nextData));
     });
 
@@ -251,10 +202,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 1000,
             per_page: 20,
-            current_page: 25
+            current_page: 25,
         };
-        const wrapper = setup({pagingData: data});
-        wrapper.setState({...data});
+        const wrapper = setup({ pagingData: data });
+        wrapper.setState({ ...data });
         wrapper.update();
         expect(wrapper.instance().renderPageButtons().length).toEqual(7);
     });
@@ -265,10 +216,10 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 1000,
             per_page: 20,
-            current_page: 1
+            current_page: 1,
         };
-        const wrapper = setup({pagingData: data});
-        wrapper.setState({...data});
+        const wrapper = setup({ pagingData: data });
+        wrapper.setState({ ...data });
         wrapper.update();
         expect(wrapper.instance().renderPageButtons().length).toEqual(4);
     });
@@ -279,18 +230,18 @@ describe('PublicationsListPaging renders ', () => {
             to: 20,
             total: 1000,
             per_page: 20,
-            current_page: 50
+            current_page: 50,
         };
-        const wrapper = setup({pagingData: data});
-        wrapper.setState({...data});
+        const wrapper = setup({ pagingData: data });
+        wrapper.setState({ ...data });
         wrapper.update();
         expect(wrapper.instance().renderPageButtons().length).toEqual(4);
     });
 
     it('should render buttons with zero total pages', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
-            total: null
+            total: null,
         });
         expect(wrapper.instance().renderButton('test')).toMatchSnapshot();
         expect(wrapper.instance().renderPageButtons()).toEqual([]);

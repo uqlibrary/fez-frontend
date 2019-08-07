@@ -1,12 +1,12 @@
 import Chart from './Chart';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         chartOptions: {},
-        ...testProps
+        ...testProps,
     };
-    return getElement(Chart, props, isShallow);
+    return getElement(Chart, props);
 }
 
 describe('Chart component', () => {
@@ -14,26 +14,26 @@ describe('Chart component', () => {
         const app = setup({
             chartOptions: {
                 title: {
-                    text: null
+                    text: null,
                 },
                 chart: {
-                    type: 'column'
+                    type: 'column',
                 },
                 xAxis: {
                     categories: [],
                     labels: {
                         rotation: -45,
-                        y: 18
-                    }
+                        y: 18,
+                    },
                 },
                 yAxis: {
                     min: 0,
                     title: {
-                        text: 'Title'
+                        text: 'Title',
                     },
                     stackLabels: {
-                        enabled: true
-                    }
+                        enabled: true,
+                    },
                 },
                 legend: {
                     align: 'right',
@@ -41,23 +41,21 @@ describe('Chart component', () => {
                     x: -30,
                     y: -10,
                     floating: true,
-                    shadow: false
+                    shadow: false,
                 },
-                tooltip: {
-
-                },
+                tooltip: {},
                 plotOptions: {
                     column: {
-                        stacking: 'normal'
-                    }
+                        stacking: 'normal',
+                    },
                 },
                 series: [
-                    {"name":"Journal Article","data":[]},
-                    {"name":"Conference Paper","data":[]},
-                    {"name":"Book Chapter","data":[]},
-                    {"name":"Book","data":[]},
-                    {"name":"Other","data":[]}
-                ]
+                    { name: 'Journal Article', data: [] },
+                    { name: 'Conference Paper', data: [] },
+                    { name: 'Book Chapter', data: [] },
+                    { name: 'Book', data: [] },
+                    { name: 'Other', data: [] },
+                ],
             },
         });
         expect(toJson(app)).toMatchSnapshot();
@@ -66,15 +64,15 @@ describe('Chart component', () => {
     it('should set printMedia property', () => {
         const test = jest.fn();
         window.matchMedia = test;
-        setup({});
+        setup();
         expect(test).toBeCalled();
     });
 
     it('componentDidMount', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().printMedia = {
-            addListener: test
+            addListener: test,
         };
         wrapper.instance().chartRef.current = true;
         wrapper.instance().componentDidMount();
@@ -82,36 +80,35 @@ describe('Chart component', () => {
     });
 
     it('componentDidUpdate', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
-            update: test
+            update: test,
         };
         wrapper.instance().componentDidUpdate();
         expect(test).toBeCalled();
     });
 
     it('componentWillUnmount', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
-            destroy: test
+            destroy: test,
         };
         wrapper.instance().printMedia = {
-            removeListener: test
-        }
+            removeListener: test,
+        };
         wrapper.instance().componentWillUnmount();
         expect(test).toBeCalledTimes(2);
     });
 
     it('reflowChart', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
-            reflow: test
+            reflow: test,
         };
         wrapper.instance().reflowChart();
         expect(test).toBeCalled();
     });
 });
-

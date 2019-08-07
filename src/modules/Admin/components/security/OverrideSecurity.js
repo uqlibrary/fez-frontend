@@ -17,7 +17,7 @@ export const OverrideSecurity = ({ label, input, disabled }) => (
 OverrideSecurity.propTypes = {
     label: PropTypes.string,
     input: PropTypes.object,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(OverrideSecurity);

@@ -1,15 +1,15 @@
 import TabContainer from './TabContainer';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         value: 'ping',
         currentTab: 'pong',
         tabbed: false,
         children: '<p>Test container</p>',
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(TabContainer, props, isShallow);
+    return getElement(TabContainer, props);
 }
 
 describe('TabContainer component', () => {

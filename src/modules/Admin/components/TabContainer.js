@@ -18,5 +18,5 @@ TabContainer.propTypes = {
     value: PropTypes.string,
     tabbed: PropTypes.bool,
     currentTab: PropTypes.string,
-    children: PropTypes.node
+    children: PropTypes.node,
 };

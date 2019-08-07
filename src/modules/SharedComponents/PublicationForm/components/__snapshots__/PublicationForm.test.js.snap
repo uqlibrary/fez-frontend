@@ -28,7 +28,8 @@ exports[`Component PublicationForm Shows an alert 1`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -461,7 +462,8 @@ exports[`Component PublicationForm Shows an alert 2`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -848,7 +850,8 @@ exports[`Component PublicationForm Shows an alert 2`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -986,7 +989,8 @@ exports[`Component PublicationForm Shows an alert 3`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -1373,7 +1377,8 @@ exports[`Component PublicationForm Shows an alert 3`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -1511,7 +1516,8 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -1944,7 +1950,8 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -2396,7 +2403,8 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -2861,7 +2869,8 @@ exports[`Component PublicationForm should call componentWillReceiveProps when pr
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -3326,7 +3335,8 @@ exports[`Component PublicationForm should render component initialised with just
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -3759,7 +3769,8 @@ exports[`Component PublicationForm should render component initialised with two 
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -4213,7 +4224,8 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -4620,7 +4632,8 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -4754,7 +4767,8 @@ exports[`Component PublicationForm should render component with GenericDocument 
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -5161,7 +5175,8 @@ exports[`Component PublicationForm should render component with GenericDocument 
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -5292,7 +5307,8 @@ exports[`Component PublicationForm should render component with JournalArticleFo
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -5699,7 +5715,8 @@ exports[`Component PublicationForm should render component with JournalArticleFo
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -5830,7 +5847,8 @@ exports[`Component PublicationForm should render component with ResearchReportFo
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -6237,7 +6255,8 @@ exports[`Component PublicationForm should render component with ResearchReportFo
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about content indicators, click 
+              For more information about content indicators, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                 rel="noreferrer"
@@ -6368,7 +6387,8 @@ exports[`Component PublicationForm should render component with all fields disab
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"
@@ -6801,7 +6821,8 @@ exports[`Component PublicationForm should render form after selecting both publi
           Object {
             "buttonLabel": "CLOSE",
             "text": <p>
-              For more information about each type, click 
+              For more information about each type, click
+               
               <a
                 href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
                 rel="noreferrer"

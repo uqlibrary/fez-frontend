@@ -1,21 +1,24 @@
-import {NavigationPrompt} from './NavigationPrompt';
+import { NavigationPrompt } from './NavigationPrompt';
 
-function setup(testProps, isShallow = true) {
-    const props = {...testProps};
-    return getElement(NavigationPrompt, props, isShallow);
+function setup(testProps = {}, args = { isShallow: true }) {
+    const props = { ...testProps };
+    return getElement(NavigationPrompt, props, args);
 }
 
 describe('NavigationPrompt component', () => {
     it('should render', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({when: true, history: {block: testFunction}, children: jest.fn()}, false);
+        const wrapper = setup(
+            { when: true, history: { block: testFunction }, children: jest.fn() },
+            { isShallow: false }
+        );
         const smallWrapper = wrapper.find('NavigationPrompt');
         expect(toJson(smallWrapper)).toMatchSnapshot();
         expect(testFunction).toBeCalled();
     });
 
     it('should not', () => {
-        const wrapper = setup({when: false, history: {block: jest.fn()}, children: jest.fn()});
+        const wrapper = setup({ when: false, history: { block: jest.fn() }, children: jest.fn() });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -23,8 +26,8 @@ describe('NavigationPrompt component', () => {
         const unblockFn = jest.fn();
         const wrapper = setup({
             when: true,
-            history: {block: jest.fn(() => unblockFn)},
-            children: jest.fn()
+            history: { block: jest.fn(() => unblockFn) },
+            children: jest.fn(),
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -39,13 +42,13 @@ describe('NavigationPrompt component', () => {
     it('should block navigation', () => {
         const wrapper = setup({
             when: true,
-            history: {block: jest.fn()},
-            children: jest.fn()
+            history: { block: jest.fn() },
+            children: jest.fn(),
         });
 
         const showConfirmationFn = jest.fn();
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
         const result = wrapper.instance().blockNavigation('/test');
@@ -58,62 +61,60 @@ describe('NavigationPrompt component', () => {
     it('should not block navigation', () => {
         const wrapper = setup({
             when: false,
-            history: {block: jest.fn()},
-            children: jest.fn()
+            history: { block: jest.fn() },
+            children: jest.fn(),
         });
         const showConfirmationFn = jest.fn();
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
         const result = wrapper.instance().blockNavigation('/test');
 
-        expect(wrapper.state().nextLocation).toBeNull()
+        expect(wrapper.state().nextLocation).toBeNull();
         expect(showConfirmationFn).not.toBeCalled();
         expect(result).toBeFalsy();
     });
 
     it('should cancel navigation to next location', () => {
-        let onCancelFn = jest.fn();
         const wrapper = setup({
             when: true,
-            history: {block: jest.fn()},
+            history: { block: jest.fn() },
             children: jest.fn((setNavigationConfirmation, onConfirm, onCancel) => {
-                onCancelFn = onCancel
                 return {
-                    cancel: onCancel
-                }
-            })
+                    cancel: onCancel,
+                };
+            }),
         });
 
         wrapper.setState({
-            nextLocation: '/test'
+            nextLocation: '/test',
         });
         wrapper.props().children.cancel();
         expect(wrapper.state().nextLocation).toBeNull();
     });
 
     it('should navigation to next location on confirm', () => {
-        let pushFn = jest.fn();
+        const pushFn = jest.fn();
 
         const wrapper = setup({
             when: true,
             history: {
                 block: jest.fn((unblock) => {
-                    return () => unblock({pathname: '/test'});
+                    return () => unblock({ pathname: '/test' });
                 }),
-                push: pushFn
+                push: pushFn,
             },
-            children: jest.fn((setNavigationConfirmation, onConfirm, onCancel) => {
+            children: jest.fn((setNavigationConfirmation, onConfirm) => {
                 return {
-                    confirm: onConfirm
-                }
-            })
+                    confirm: onConfirm,
+                };
+            }),
         });
 
         const showConfirmationFn = jest.fn();
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
         wrapper.update();

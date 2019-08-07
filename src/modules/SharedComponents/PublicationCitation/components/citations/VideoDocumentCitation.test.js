@@ -1,18 +1,18 @@
 import VideoDocumentCitation from './VideoDocumentCitation';
-import {videoDocument} from 'mock/data/testing/records';
+import { videoDocument } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         classes: {},
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(VideoDocumentCitation, props, isShallow);
+    return getElement(VideoDocumentCitation, props, args);
 }
 
 describe('VideoDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

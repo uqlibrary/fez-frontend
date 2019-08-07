@@ -15,7 +15,7 @@ const DataStreamSecurityItem = ({
     onSecurityChange,
     initialDataStream,
     inheritedSecurity,
-    policyDropdownLabel
+    policyDropdownLabel,
 }) => {
     const handleDataStreamChange = useCallback((value) => {
         onSecurityChange(index, (
@@ -24,7 +24,7 @@ const DataStreamSecurityItem = ({
                 : {
                     ...dataStream,
                     dsi_security_inherited: 0,
-                    dsi_security_policy: value
+                    dsi_security_policy: value,
                 }
         ));
     });
@@ -51,9 +51,9 @@ const DataStreamSecurityItem = ({
                     {...{
                         input: {
                             onChange: handleDataStreamChange,
-                            onBlur: /* istanbul ignore next */ () => { }
+                            onBlur: /* istanbul ignore next */ () => { },
                         },
-                        value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy
+                        value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
                 />
             </Grid>
@@ -69,7 +69,7 @@ DataStreamSecurityItem.propTypes = {
     initialDataStream: PropTypes.object,
     inheritedSecurity: PropTypes.number,
     onSecurityChange: PropTypes.func.isRequired,
-    policyDropdownLabel: PropTypes.string
+    policyDropdownLabel: PropTypes.string,
 };
 
 export function isSame(prevProps, nextProps) {

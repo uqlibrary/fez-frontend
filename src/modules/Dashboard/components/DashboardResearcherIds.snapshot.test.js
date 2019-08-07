@@ -1,15 +1,15 @@
-import {DashboardResearcherIdsClass} from './DashboardResearcherIds';
+import { DashboardResearcherIdsClass } from './DashboardResearcherIds';
 import Dashboard from './DashboardResearcherIds';
-import {currentAuthor} from 'mock/data';
+import { currentAuthor } from 'mock/data';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     // build full props list required by the component
     const props = {
         classes: {},
         theme: {},
-        ...testProps
+        ...testProps,
     };
-    return getElement(DashboardResearcherIdsClass, props, isShallow);
+    return getElement(DashboardResearcherIdsClass, props);
 }
 
 describe('Dashboard Rsearcher IDs test', () => {
@@ -23,7 +23,7 @@ describe('Dashboard Rsearcher IDs test', () => {
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
                 orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
             },
-            authenticated: {publons:false, researcher:true, scopus:false, google_scholar:false, orcid:true}
+            authenticated: { publons: false, researcher: true, scopus: false, google_scholar: false, orcid: true },
         };
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -32,7 +32,7 @@ describe('Dashboard Rsearcher IDs test', () => {
     it('navigateToRoute method', () => {
         const testFn = jest.fn();
         const values = {
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
@@ -40,26 +40,27 @@ describe('Dashboard Rsearcher IDs test', () => {
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
                 orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
             },
-            authenticated: {publons:false, researcher:true, scopus:false, google_scholar:false, orcid:true}
+            authenticated: { publons: false, researcher: true, scopus: false, google_scholar: false, orcid: true },
         };
         const wrapper = setup(values);
         wrapper.instance().navigateToRoute(null, 'publons');
-        expect(testFn).toHaveBeenCalledWith("http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons");
-
+        expect(testFn).toHaveBeenCalledWith(
+            'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons'
+        );
     });
 
     it('Testing clicking on ID internal links', () => {
         const testFn = jest.fn();
         const values = {
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
                 scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: null // currentAuthor.uqresearcher.data.aut_orcid_id,
+                orcid: null, // currentAuthor.uqresearcher.data.aut_orcid_id,
             },
-            authenticated: {publons:false, researcher:false, scopus:false, google_scholar:false, orcid:false}
+            authenticated: { publons: false, researcher: false, scopus: false, google_scholar: false, orcid: false },
         };
         const wrapper = setup(values);
         const navigateToRoute = jest.spyOn(wrapper.instance(), 'navigateToRoute');
@@ -70,24 +71,23 @@ describe('Dashboard Rsearcher IDs test', () => {
             expect(navigateToRoute).toHaveBeenCalled();
         });
         button.forEach(button => {
-            button.simulate('keypress', {key: 'Enter'});
+            button.simulate('keypress', { key: 'Enter' });
             expect(navigateToRoute).toHaveBeenCalled();
         });
-
     });
 
     it('Testing styles on unauth internal links', () => {
         const testFn = jest.fn();
         const values = {
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
                 scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: null
+                orcid: null,
             },
-            authenticated: {publons:false, researcher:false, scopus:false, google_scholar:false, orcid: false}
+            authenticated: { publons: false, researcher: false, scopus: false, google_scholar: false, orcid: false },
         };
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -96,15 +96,15 @@ describe('Dashboard Rsearcher IDs test', () => {
     it('Testing styles on auth internal links', () => {
         const testFn = jest.fn();
         const values = {
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
                 scopus: currentAuthor.uqresearcher.data.aut_scopus_id,
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
-                orcid: null
+                orcid: null,
             },
-            authenticated: {publons:true, researcher:true, scopus:true, google_scholar:true, orcid: true}
+            authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe('Dashboard Rsearcher IDs test', () => {
     it('Testing orcid caption', () => {
         const testFn = jest.fn();
         const values = {
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
@@ -121,7 +121,7 @@ describe('Dashboard Rsearcher IDs test', () => {
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
                 orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
             },
-            authenticated: {publons:true, researcher:true, scopus:true, google_scholar:true, orcid: true}
+            authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
         const wrapper = setup(values);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -132,7 +132,7 @@ describe('Dashboard Rsearcher IDs test', () => {
         const values = {
             classes: {},
             theme: {},
-            history: {push: testFn},
+            history: { push: testFn },
             values: {
                 publons: currentAuthor.uqresearcher.data.aut_publons_id,
                 researcher: currentAuthor.uqresearcher.data.aut_researcher_id,
@@ -140,10 +140,9 @@ describe('Dashboard Rsearcher IDs test', () => {
                 google_scholar: currentAuthor.uqresearcher.data.aut_google_scholar_id,
                 orcid: currentAuthor.uqresearcher.data.aut_orcid_id,
             },
-            authenticated: {publons:true, researcher:true, scopus:true, google_scholar:true, orcid: true}
+            authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = getElement(Dashboard, values, false);
+        const wrapper = getElement(Dashboard, values, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 });

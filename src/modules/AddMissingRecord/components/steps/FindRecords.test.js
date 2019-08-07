@@ -1,17 +1,17 @@
 import FindRecords from './FindRecords';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         history: {},
-        ...testProps
+        ...testProps,
     };
-    return getElement(FindRecords, props, isShallow);
+    return getElement(FindRecords, props);
 }
 
 describe('Search record', () => {
     it('should render stepper and a publication search form', () => {
-        const wrapper = setup({history: {}});
+        const wrapper = setup({ history: {} });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -19,11 +19,11 @@ describe('Search record', () => {
         const searchPublications = jest.fn();
         const navigateToResults = jest.fn();
         const history = {
-            push: navigateToResults
+            push: navigateToResults,
         };
 
-        const wrapper = setup({history: history, actions: {searchPublications: searchPublications}});
-        wrapper.instance()._performSearch(Immutable.Map({searchQuery: 'bla'}));
+        const wrapper = setup({ history: history, actions: { searchPublications: searchPublications } });
+        wrapper.instance()._performSearch(Immutable.Map({ searchQuery: 'bla' }));
 
         expect(searchPublications).toBeCalled();
         expect(navigateToResults).toBeCalled();
@@ -33,9 +33,9 @@ describe('Search record', () => {
         const pushFn = jest.fn();
         const wrapper = setup({
             history: {
-                push: pushFn
-            }
-        }, true);
+                push: pushFn,
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.props().onSkipSearch();
         expect(pushFn).toHaveBeenCalledWith('/records/add/new');

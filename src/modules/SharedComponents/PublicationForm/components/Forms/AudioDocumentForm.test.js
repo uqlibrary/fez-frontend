@@ -2,44 +2,44 @@ jest.dontMock('./AudioDocumentForm');
 
 import AudioDocumentForm from './AudioDocumentForm';
 
-function setup(testProps, isShallow = true){
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-    return getElement(AudioDocumentForm, props, isShallow);
+    return getElement(AudioDocumentForm, props);
 }
 
 describe('AudioDocumentForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 9 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(9);
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({ submitting: true });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
-        })
+        });
     });
 
     it('component should render contributor assignment', () => {
         const wrapper = setup({
             formValues: {
-                get: (key) => {
+                get: key => {
                     const values = {
-                        'editors': [{selected: true}, {selected: true}],
-                        'authors': [{selected: true}, {selected: true}]
-                    }
+                        editors: [{ selected: true }, { selected: true }],
+                        authors: [{ selected: true }, { selected: true }],
+                    };
                     return values[key];
-                }
-            }
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

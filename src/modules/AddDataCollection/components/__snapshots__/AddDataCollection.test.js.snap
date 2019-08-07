@@ -453,14 +453,17 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   Licensing and terms of access
                 </h3>
                 <p>
-                  View 
+                  View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
                   >
                     Creative Commons Licenses
                   </a>
-                   and 
+                   
+                  and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -1087,7 +1090,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                     </li>
                     <li>
-                      two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                     </li>
                     <li>
                       are uploaded individually and not inside a folder
@@ -1127,7 +1130,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 },
                 "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
                 "ntroSpecificInstructions": <span>
-                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
                   <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
                     target="_blank"
@@ -1652,14 +1655,17 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   Licensing and terms of access
                 </h3>
                 <p>
-                  View 
+                  View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
                   >
                     Creative Commons Licenses
                   </a>
-                   and 
+                   
+                  and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -2286,7 +2292,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                     </li>
                     <li>
-                      two periods are allowed for multipart zip files.  Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                     </li>
                     <li>
                       are uploaded individually and not inside a folder
@@ -2326,7 +2332,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 },
                 "instructions": "You may add up to [fileUploadLimit] files (max [maxFileSize][fileSizeUnit] each)",
                 "ntroSpecificInstructions": <span>
-                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.  
+                  You must upload at least one piece of evidence that demonstrates claims you have made about this work, e.g. Event program, music score, recording, scholarly review, front matter (book, catalogue) or full chapter.
                   <a
                     href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836613"
                     target="_blank"

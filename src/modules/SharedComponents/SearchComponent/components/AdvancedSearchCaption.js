@@ -1,24 +1,24 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import {DOCUMENT_TYPES_LOOKUP} from 'config/general';
-import {locale} from 'locale';
-import {withStyles} from '@material-ui/core/styles';
+import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
+import { locale } from 'locale';
+import { withStyles } from '@material-ui/core/styles';
 
 const styles = (theme) => ({
     and: {
         ...theme.typography.caption,
     },
     title: {
-        ...theme.typography.caption
+        ...theme.typography.caption,
     },
     combiner: {
         ...theme.typography.caption,
-        fontStyle: 'italic'
+        fontStyle: 'italic',
     },
     value: {
         ...theme.typography.caption,
-        fontWeight: 'bold'
-    }
+        fontWeight: 'bold',
+    },
 
 });
 
@@ -29,19 +29,19 @@ export class AdvancedSearchCaption extends PureComponent {
         docTypes: PropTypes.array,
         yearFilter: PropTypes.object,
         isOpenAccess: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         fieldRows: [{
             searchField: '0',
             value: '',
-            label: ''
+            label: '',
         }],
         yearFilter: {
             from: null,
             to: null,
-            invalid: true
+            invalid: true,
         },
         isOpenAccess: false,
     };
@@ -49,13 +49,13 @@ export class AdvancedSearchCaption extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {
-            captionData: this.updateStateData(props)
+            captionData: this.updateStateData(props),
         };
     }
 
     componentWillReceiveProps(nextProps) {
         this.setState({
-            captionData: this.updateStateData(nextProps)
+            captionData: this.updateStateData(nextProps),
         });
     }
 
@@ -64,10 +64,10 @@ export class AdvancedSearchCaption extends PureComponent {
         if(Array.isArray(item.value)) {
             const values = [...item.value];
             const lastValue = values.pop();
-            return {...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue};
+            return { ...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue };
         }
         if(item.title === 'Any field' && item.value === '') {
-            return {...item, value: 'anything'};
+            return { ...item, value: 'anything' };
         } else {
             return item;
         }
@@ -84,7 +84,7 @@ export class AdvancedSearchCaption extends PureComponent {
                     return this.getCleanValue({
                         title: txt[item.searchField].title,
                         combiner: txt[item.searchField].combiner,
-                        value: item.value
+                        value: item.value,
                     });
                 }
             });
@@ -99,18 +99,18 @@ export class AdvancedSearchCaption extends PureComponent {
         return this.getCleanValue({
             title: txt.rek_display_type.title,
             combiner: txt.rek_display_type.combiner,
-            value: docsString
+            value: docsString,
         });
     };
 
     getOpenAccessData = (isOpenAccess) => {
         const txt = locale.components.searchComponent.advancedSearch.openAccess;
-        return isOpenAccess ? {title: '', combiner: txt.combiner, value: txt.captionText} : null;
+        return isOpenAccess ? { title: '', combiner: txt.combiner, value: txt.captionText } : null;
     };
 
     getYearFilterData = (yearFilter) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return yearFilter.from &&  yearFilter.to ? {title: txt.facet_year_range.captionTitle, combiner: txt.facet_year_range.combiner, value: `${yearFilter.from} to ${yearFilter.to}`} : null;
+        return yearFilter.from &&  yearFilter.to ? { title: txt.facet_year_range.captionTitle, combiner: txt.facet_year_range.combiner, value: `${yearFilter.from} to ${yearFilter.to}` } : null;
     };
 
     updateStateData = (props) => {
@@ -118,12 +118,12 @@ export class AdvancedSearchCaption extends PureComponent {
             ...this.getSearchFieldData(props.fieldRows),
             this.getDocTypeData(props.docTypes),
             this.getOpenAccessData(props.isOpenAccess),
-            this.getYearFilterData(props.yearFilter)
+            this.getYearFilterData(props.yearFilter),
         ];
     };
 
     renderCaptions = (items) => {
-        const {classes} = this.props;
+        const { classes } = this.props;
         return items
             .filter((item) => item !== null) // Dont render nulls
             .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
@@ -149,4 +149,4 @@ export class AdvancedSearchCaption extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(AdvancedSearchCaption);
+export default withStyles(styles, { withTheme: true })(AdvancedSearchCaption);

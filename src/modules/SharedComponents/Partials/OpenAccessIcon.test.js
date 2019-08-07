@@ -1,38 +1,25 @@
 import OpenAccessIcon from './OpenAccessIcon';
-import {openAccessConfig} from 'config';
+import { openAccessConfig } from 'config';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         isOpenAccess: false,
         embargoDate: null,
         openAccessStatusId: 1234,
         showEmbargoText: false,
-        ...testProps
+        ...testProps,
     };
-    return getElement(OpenAccessIcon, props, isShallow);
+    return getElement(OpenAccessIcon, props, args);
 }
 
 describe('Journal Name Component test ', () => {
     it('should render open access', () => {
-        const wrapper = setup({isOpenAccess: true});
+        const wrapper = setup({ isOpenAccess: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render open access with OPEN_ACCESS_ID_LINK_NO_DOI', () => {
-        const wrapper = setup({isOpenAccess: true, openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render embargoed', () => {
-        const wrapper = setup({
-            embargoDate: '2019-01-01',
-            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render closed access', () => {
-        const wrapper = setup({});
+        const wrapper = setup({ isOpenAccess: true, openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -40,7 +27,20 @@ describe('Journal Name Component test ', () => {
         const wrapper = setup({
             embargoDate: '2019-01-01',
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
-            showEmbargoText: true
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render closed access', () => {
+        const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render embargoed', () => {
+        const wrapper = setup({
+            embargoDate: '2019-01-01',
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
+            showEmbargoText: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

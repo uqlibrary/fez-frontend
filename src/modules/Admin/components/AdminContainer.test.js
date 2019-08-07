@@ -3,48 +3,47 @@ import { recordWithDatastreams } from 'mock/data';
 
 jest.mock('js-cookie', () => ({
     get: jest.fn(),
-    set: jest.fn()
+    set: jest.fn(),
 }));
 import Cookies from 'js-cookie';
 
-
 jest.mock('redux-form/immutable');
 
-jest.mock('@material-ui/styles/useTheme', () => (() => ({
+jest.mock('@material-ui/styles/useTheme', () => () => ({
     breakpoints: {
-        down(screen) {
-            return false
-        }
-    }
-})));
+        down() {
+            return false;
+        },
+    },
+}));
 
 jest.mock('@material-ui/core/useMediaQuery');
-import { unstable_useMediaQuery } from '@material-ui/core/useMediaQuery';
+import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: {
             helpIcon: 'helpicon',
             tabIndicator: 'tabindicator',
-            badgeMargin: 'badgemargin'
+            badgeMargin: 'badgemargin',
         },
         match: {
             params: {
-                pid: 'UQ:111111'
-            }
+                pid: 'UQ:111111',
+            },
         },
         actions: {
-            loadRecordToView: jest.fn()
+            loadRecordToView: jest.fn(),
         },
         loadingRecordToView: false,
         recordToView: recordWithDatastreams,
         location: {
-            search: ''
+            search: '',
         },
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(AdminContainer, props, isShallow);
+    return getElement(AdminContainer, props, args);
 }
 
 describe('AdminContainer component', () => {
@@ -56,7 +55,7 @@ describe('AdminContainer component', () => {
 
     it('should render loading record view', () => {
         const wrapper = setup({
-            loadingRecordToView: true
+            loadingRecordToView: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -64,13 +63,13 @@ describe('AdminContainer component', () => {
     it('should render component with tabbed interface', () => {
         Cookies.get = jest.fn(() => 'tabbed');
 
-        unstable_useMediaQuery.mockImplementation(() => ({
-            unstable_useMediaQuery: jest.fn(() => true)
+        useMediaQuery.mockImplementation(() => ({
+            unstable_useMediaQuery: jest.fn(() => true),
         }));
 
         const wrapper = setup({
             loadingRecordToView: false,
-            recordToView: null
+            recordToView: null,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -78,7 +77,7 @@ describe('AdminContainer component', () => {
     it('should render empty div if record is not loaded', () => {
         const wrapper = setup({
             loadingRecordToView: false,
-            recordToView: null
+            recordToView: null,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -88,21 +87,21 @@ describe('AdminContainer component', () => {
             classes: {
                 helpIcon: 'helpicon',
                 tabIndicator: 'tabindicator',
-                badgeMargin: 'badgemargin'
+                badgeMargin: 'badgemargin',
             },
             match: {
                 params: {
-                    pid: 'UQ:111111'
-                }
+                    pid: 'UQ:111111',
+                },
             },
             actions: {
-                loadRecordToView: jest.fn()
+                loadRecordToView: jest.fn(),
             },
             loadingRecordToView: false,
             recordToView: recordWithDatastreams,
             location: {
-                search: ''
-            }
+                search: '',
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -110,23 +109,27 @@ describe('AdminContainer component', () => {
 
     it('should full mount the component', () => {
         Cookies.get = jest.fn(() => 'tabbed');
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     describe('isChanged callback function', () => {
         it('should return true if props are not changed', () => {
-            expect(isChanged(
-                { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
-                { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
-            )).toBeTruthy();
+            expect(
+                isChanged(
+                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
+                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
+                )
+            ).toBeTruthy();
         });
 
         it('should return true if props are not changed', () => {
-            expect(isChanged(
-                { disableSubmit: false, loadRecordToView: false },
-                { disableSubmit: false, loadRecordToView: false }
-            )).toBeTruthy();
+            expect(
+                isChanged(
+                    { disableSubmit: false, loadRecordToView: false },
+                    { disableSubmit: false, loadRecordToView: false }
+                )
+            ).toBeTruthy();
         });
     });
 });

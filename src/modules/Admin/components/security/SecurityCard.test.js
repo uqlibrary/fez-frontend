@@ -15,10 +15,10 @@ import { useFormValuesContext, useRecordContext } from 'context';
 function setup(testProps = {}) {
     const props = {
         disabled: false,
-        ...testProps
+        ...testProps,
     };
     return shallow(<SecurityCard {...props} />);
-};
+}
 
 
 describe('SecurityCard component', () => {
@@ -27,12 +27,12 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([{
                     dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1
+                    dsi_security_policy: 1,
                 }]),
                 rek_security_inherited: 1,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
@@ -43,10 +43,10 @@ describe('SecurityCard component', () => {
                     rek_ismemberof: 'Test collection',
                     parent: {
                         rek_security_policy: 2,
-                        rek_datastream_policy: 1
-                    }
-                }]
-            }
+                        rek_datastream_policy: 1,
+                    },
+                }],
+            },
         }));
 
         const wrapper = setup();
@@ -62,8 +62,8 @@ describe('SecurityCard component', () => {
                 dataStreams: [],
                 rek_security_inherited: 1,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
@@ -74,10 +74,10 @@ describe('SecurityCard component', () => {
                     rek_ismemberof: 'Test collection',
                     parent: {
                         rek_security_policy: 2,
-                        rek_datastream_policy: 1
-                    }
-                }]
-            }
+                        rek_datastream_policy: 1,
+                    },
+                }],
+            },
         }));
 
         const wrapper = setup();
@@ -92,12 +92,12 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([{
                     dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1
+                    dsi_security_policy: 1,
                 }]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
@@ -108,10 +108,10 @@ describe('SecurityCard component', () => {
                     rek_ismemberof: 'Test collection',
                     parent: {
                         rek_security_policy: 2,
-                        rek_datastream_policy: 1
-                    }
-                }]
-            }
+                        rek_datastream_policy: 1,
+                    },
+                }],
+            },
         }));
 
         const wrapper = setup();
@@ -127,15 +127,15 @@ describe('SecurityCard component', () => {
                 dataStreams: new List([]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Collection'
-            }
+                rek_object_type_lookup: 'Collection',
+            },
         }));
 
         const wrapper = setup();
@@ -150,15 +150,15 @@ describe('SecurityCard component', () => {
             formValues: {
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
-                rek_object_type_lookup: 'Community'
-            }
+                rek_object_type_lookup: 'Community',
+            },
         }));
 
         const wrapper = setup();
@@ -173,12 +173,12 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([{
                     dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1
+                    dsi_security_policy: 1,
                 }]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
-                rek_datastream_policy: 5
-            }
+                rek_datastream_policy: 5,
+            },
         }));
 
         useRecordContext.mockImplementation(() => ({
@@ -189,10 +189,10 @@ describe('SecurityCard component', () => {
                     rek_ismemberof: 'Test collection',
                     parent: {
                         rek_security_policy: 2,
-                        rek_datastream_policy: 1
-                    }
-                }]
-            }
+                        rek_datastream_policy: 1,
+                    },
+                }],
+            },
         }));
 
         const wrapper = setup({ disabled: true });

@@ -3,6 +3,7 @@ import React from 'react';
 export default {
     validationErrors: {
         publicationSearch:
+            // eslint-disable-next-line max-len
             'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
@@ -31,24 +32,20 @@ export default {
         ),
         editorRequired: (
             <span>
-                Please <b>provide a list of editors/contributors</b> of the work
-                and <b>select an editor/contributor or author/creator</b> as you
+                Please <b>provide a list of editors/contributors</b> of the work and{' '}
+                <b>select an editor/contributor or author/creator</b> as you
             </span>
         ),
         supervisorRequired: 'Please provide a list of supervisors',
-        googleScholarId:
-            'Please provide a valid 12 character Google Scholar ID',
+        googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
         pageRange: 'Please provide a valid start/end page range',
-        remindToAdd:
-            'Please remember to click ADD to add this item to your list',
+        remindToAdd: 'Please remember to click ADD to add this item to your list',
         requireChecked: 'Please accept deposit agreement',
-        authorsAffiliationIncomplete:
-            'Rows marked with a red prefix must be updated',
-        authorAffiliationIncomplete:
-            'Please update affiliation data for the selected author',
-        grants: 'You must click ADD GRANT to enter the value to the grants list'
+        authorsAffiliationIncomplete: 'Rows marked with a red prefix must be updated',
+        authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
+        grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
     validationErrorsSummary: {
         rek_title: 'Title is required',
@@ -81,13 +78,10 @@ export default {
         files: 'File submission to be completed',
         fieldOfResearch: 'Field of research (FoR) codes are required',
         fez_record_search_key_keywords: 'Keywords are required',
-        contributorLinking:
-            'You are required to select a contributor from the list, then confirm that it is you',
-        authorLinking:
-            'You are required to select a author from the list, then confirm that it is you',
+        contributorLinking: 'You are required to select a contributor from the list, then confirm that it is you',
+        authorLinking: 'You are required to select a author from the list, then confirm that it is you',
         comments: 'Comments are required',
-        fixRecordAnyField:
-            'Please provide additional information, corrections or upload file(s).',
+        fixRecordAnyField: 'Please provide additional information, corrections or upload file(s).',
         contactName: 'Contact name is required',
         contactNameId: 'ID for contact name is required',
         contactEmail: 'Contact email is required',
@@ -105,9 +99,8 @@ export default {
         // Collection form validations
         community: 'You must select a community',
         title: 'Title is required',
-        authorsAffiliation:
-            'Author affiliation rows marked with red are required',
+        authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
-        grants: 'You must click ADD GRANT to enter the value to the grants list'
-    }
+        grants: 'You must click ADD GRANT to enter the value to the grants list',
+    },
 };

@@ -1,14 +1,14 @@
 import GeoCoordinatesField from './GeoCoordinatesField';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         input: {
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(GeoCoordinatesField, props, isShallow);
+    return getElement(GeoCoordinatesField, props);
 }
 
 describe('GeoCoordinatesField component', () => {

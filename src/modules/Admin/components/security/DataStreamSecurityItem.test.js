@@ -4,7 +4,7 @@ import {
     rtlRender,
     fireEvent,
     cleanup,
-    waitForElement
+    waitForElement,
 } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -12,23 +12,23 @@ function setup(testProps = {}) {
         disabled: false,
         classes: {
             dataStreamFileBlock: 'dataStreamFileBlock',
-            dataStreamFileName: 'dataStreamFileName'
+            dataStreamFileName: 'dataStreamFileName',
         },
         dataStream: {
             dsi_dsid: 'test.jpg',
             dsi_security_policy: 2,
-            dsi_security_inherited: 1
+            dsi_security_inherited: 1,
         },
         index: 0,
         initialDataStream: {
             dsi_dsid: 'test.jpg',
             dsi_security_policy: 2,
-            dsi_security_inherited: 1
+            dsi_security_inherited: 1,
         },
         inheritedSecurity: 2,
         onSecurityChange: jest.fn(),
         policyDropdownLabel: 'Test label',
-        ...testProps
+        ...testProps,
     };
     return rtlRender(<DataStreamSecurityItem {...props} />);
 }
@@ -45,19 +45,19 @@ describe('DataStreamSecurityItem component', () => {
             dataStream: {
                 dsi_dsid: 'test.jpg',
                 dsi_security_policy: 2,
-                dsi_security_inherited: 0
-            }
+                dsi_security_inherited: 0,
+            },
         });
         expect(asFragment()).toMatchSnapshot();
     });
 
-    it('should change security value for the file', async () => {
+    it('should change security value for the file', async() => {
         const { asFragment, getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',
                 dsi_security_policy: 1,
-                dsi_security_inherited: 0
-            }
+                dsi_security_inherited: 0,
+            },
         });
 
         let fragment = asFragment();
@@ -69,13 +69,13 @@ describe('DataStreamSecurityItem component', () => {
         expect(fragment).toMatchDiffSnapshot(asFragment());
     });
 
-    it('should change security value for the file back to inherited', async () => {
+    it('should change security value for the file back to inherited', async() => {
         const { asFragment, getByText, getByTestId } = setup({
             dataStream: {
                 dsi_dsid: 'test.jpg',
                 dsi_security_policy: 1,
-                dsi_security_inherited: 0
-            }
+                dsi_security_inherited: 0,
+            },
         });
 
         let fragment = asFragment();

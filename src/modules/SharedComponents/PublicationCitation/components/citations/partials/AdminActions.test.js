@@ -4,7 +4,7 @@ import {
     rtlRender,
     fireEvent,
     cleanup,
-    waitForElement
+    waitForElement,
 } from 'test-utils';
 
 function setup(testProps = {}) {
@@ -19,7 +19,7 @@ function setup(testProps = {}) {
 describe('AdminActions component', () => {
     afterEach(() => cleanup);
 
-    it('should handle admin actions menu', async () => {
+    it('should handle admin actions menu', async() => {
         global.window.open = jest.fn((url, target) => {
             expect(url).toBe('https://fez-staging.library.uq.edu.au/records/UQ:111111/edit');
             expect(target).toBe('_self');

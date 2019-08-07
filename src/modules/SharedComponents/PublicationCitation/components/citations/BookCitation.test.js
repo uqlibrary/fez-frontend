@@ -1,18 +1,18 @@
 import BookCitation from './BookCitation';
-import {book} from 'mock/data/testing/records';
-import {editedBook} from 'mock/data/testing/records';
+import { book } from 'mock/data/testing/records';
+import { editedBook } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(BookCitation, props, isShallow);
+    return getElement(BookCitation, props, args);
 }
 
 describe('BookCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -27,7 +27,7 @@ describe('BookCitation renders ', () => {
     });
 
     it('component with an empty doi view ', () => {
-        const wrapper = setup({ publication: {...editedBook, fez_record_search_key_doi: {rek_doi: null}} });
+        const wrapper = setup({ publication: { ...editedBook, fez_record_search_key_doi: { rek_doi: null } } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

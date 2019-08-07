@@ -3,7 +3,7 @@ import { FILE_UPLOAD_PROGRESS, FILE_UPLOADED_FAILED, FILE_UPLOAD_CLEARED, FILE_U
 const handlers = {
     [`${FILE_UPLOAD_STARTED}`]: () => {
         return {
-            isUploadInProgress: true
+            isUploadInProgress: true,
         };
     },
     [`${FILE_UPLOAD_PROGRESS}@`]: (state, action) => {
@@ -11,19 +11,19 @@ const handlers = {
 
         const uploadProgress = {
             ...state,
-            [`${file}`]: action.complete
+            [`${file}`]: action.complete,
         };
 
         return {
             ...uploadProgress,
-            isUploadInProgress: true
+            isUploadInProgress: true,
         };
     },
     [`${FILE_UPLOADED_FAILED}@`]: (state, action) => {
         const file = action.type.substring(action.type.indexOf('@') + 1, action.type.length);
 
         const uploadProgress = {
-            ...state
+            ...state,
         };
 
         delete uploadProgress.file;
@@ -31,18 +31,21 @@ const handlers = {
         return {
             ...uploadProgress,
             [`${file}`]: 0,
-            isUploadInProgress: false
+            isUploadInProgress: false,
         };
     },
     [FILE_UPLOAD_CLEARED]: () => {
         return {
-            isUploadInProgress: false
+            isUploadInProgress: false,
         };
-    }
+    },
 };
 
 const fileUploadReducer = (state = { isUploadInProgress: false }, action) => {
-    const handler = [FILE_UPLOAD_STARTED, FILE_UPLOAD_CLEARED].indexOf(action.type) > -1 ? handlers[action.type] : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
+    const handler =
+        [FILE_UPLOAD_STARTED, FILE_UPLOAD_CLEARED].indexOf(action.type) > -1
+            ? handlers[action.type]
+            : handlers[action.type.substring(0, action.type.indexOf('@') + 1)];
 
     if (!handler) {
         return state;

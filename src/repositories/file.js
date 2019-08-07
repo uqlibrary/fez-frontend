@@ -1,7 +1,7 @@
-import {generateCancelToken} from 'config';
+import { generateCancelToken } from 'config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
-import {FILE_UPLOAD_API} from './routes';
-import {get, put} from './generic';
+import { FILE_UPLOAD_API } from './routes';
+import { get, put } from './generic';
 import Raven from 'raven-js';
 
 /**
@@ -12,20 +12,20 @@ import Raven from 'raven-js';
  * @returns {Promise}
  */
 export function putUploadFile(pid, file, dispatch) {
-    return get(FILE_UPLOAD_API({pid: pid, fileName: file.name}))
+    return get(FILE_UPLOAD_API({ pid: pid, fileName: file.name }))
         .then(uploadUrl => {
             const options = {
                 headers: {
-                    'Content-Type': 'multipart/form-data'
+                    'Content-Type': 'multipart/form-data',
                 },
                 onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
-                cancelToken: generateCancelToken().token
+                cancelToken: generateCancelToken().token,
             };
             const fileUrl = Array.isArray(uploadUrl) && uploadUrl.length > 0 ? uploadUrl[0] : uploadUrl;
-            return put({apiUrl: fileUrl}, file.fileData, options);
+            return put({ apiUrl: fileUrl }, file.fileData, options);
         })
         .then(uploadResponse => {
-            fileUploadActions.notifyFileUploadProgress(file.name, dispatch)({loaded: 1, total: 1});
+            fileUploadActions.notifyFileUploadProgress(file.name, dispatch)({ loaded: 1, total: 1 });
             return Promise.resolve(uploadResponse);
         })
         .catch(error => {

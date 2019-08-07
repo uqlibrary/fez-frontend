@@ -1,9 +1,6 @@
-import {
-    SecuritySelector,
-    styles
-} from './SecuritySelector';
+import { SecuritySelector } from './SecuritySelector';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         classes: {},
         disabled: false,
@@ -12,14 +9,14 @@ function setup(testProps, isShallow = true) {
             description: 'test1',
             prompt: 'test2',
             dataStream: {
-                overridePrompt: 'test3'
-            }
+                overridePrompt: 'test3',
+            },
         },
         recordType: 'community',
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(SecuritySelector, props, isShallow);
+    return getElement(SecuritySelector, props);
 }
 
 describe('SecuritySelector component', () => {
@@ -31,7 +28,7 @@ describe('SecuritySelector component', () => {
                 prompt: 'test2',
                 selectedTitle: 'test3',
             },
-            securityPolicy: 2
+            securityPolicy: 2,
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -46,7 +43,7 @@ describe('SecuritySelector component', () => {
                 selectedTitle: 'test3',
             },
             securityPolicy: 2,
-            recordType: 'collection'
+            recordType: 'collection',
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -61,7 +58,7 @@ describe('SecuritySelector component', () => {
                 selectedTitle: 'test3',
             },
             securityPolicy: 2,
-            recordType: 'record'
+            recordType: 'record',
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();

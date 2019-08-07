@@ -1,22 +1,22 @@
-import {FileUploadEmbargoDate} from './FileUploadEmbargoDate';
+import { FileUploadEmbargoDate } from './FileUploadEmbargoDate';
 import FileUploadEmbargoDateWithStyles from './FileUploadEmbargoDate';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         minDate: new Date('2016'),
         value: new Date('2016'),
         classes: {
-            input: ''
+            input: '',
         },
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(FileUploadEmbargoDate, props, isShallow);
+    return getElement(FileUploadEmbargoDate, props);
 }
 
 describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance()._onChange();
     });
@@ -26,14 +26,14 @@ describe('Component FileUploadEmbargoDate', () => {
             minDate: new Date('2016'),
             value: new Date('2016'),
             classes: {
-                input: ''
-            }
+                input: '',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render disabled', () => {
-        const wrapper = setup({disabled: true});
+        const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -41,14 +41,14 @@ describe('Component FileUploadEmbargoDate', () => {
         const onDateChangedTestFn = jest.fn();
         const props = {
             locale: {
-                datePickerLocale: 'en-AU'
+                datePickerLocale: 'en-AU',
             },
             defaultConfig: {
                 fileMetaKey: 'date',
                 dateTimeFormat: global.Intl.DateTimeFormat,
-                fieldName: 'accessDate'
+                fieldName: 'accessDate',
             },
-            onChange: onDateChangedTestFn
+            onChange: onDateChangedTestFn,
         };
 
         const wrapper = setup(props);

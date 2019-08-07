@@ -9,40 +9,30 @@ const mapStateToProps = (state, props) => {
     return {
         category: category,
         itemsList:
-            state.get('searchKeysReducer') &&
-            state.get('searchKeysReducer')[category]
-                ? state
-                    .get('searchKeysReducer')
-                    [category].itemsList.map(publication => ({
-                        id: publication.rek_pid,
-                        value: publication.rek_title,
-                        publication: publication
-                    }))
+            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
+                ? state.get('searchKeysReducer')[category].itemsList.map((publication) => ({
+                    id: publication.rek_pid,
+                    value: publication.rek_title,
+                    publication: publication,
+                }))
                 : [],
-        onChange: item => props.input.onChange(item),
+        onChange: (item) => props.input.onChange(item),
         async: true,
         errorText: props.meta ? props.meta.error : null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: item => (!!item && String(item.value)) || '',
-        selectedValue:
-            (!!props.input &&
-                !!props.input.value && { value: props.input.value }) ||
-            null,
+        itemToString: (item) => (!!item && String(item.value)) || '',
+        selectedValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
         maxResults: 20,
-        MenuItemComponent: item => (
-            <PublicationCitation
-                publication={item.suggestion.publication}
-                hideCitationCounts
-                hideLinks
-            />
-        )
+        MenuItemComponent: (item) => (
+            <PublicationCitation publication={item.suggestion.publication} hideCitationCounts hideLinks />
+        ),
     };
 };
 
-const mapDispatchToProps = dispatch => {
+const mapDispatchToProps = (dispatch) => {
     return {
         loadSuggestions: (searchKey, searchQuery = ' ') =>
-            dispatch(actions.loadPublicationList(searchKey, searchQuery))
+            dispatch(actions.loadPublicationList(searchKey, searchQuery)),
     };
 };
 

@@ -1,21 +1,21 @@
 import PubmedCentralLink from './PubmedCentralLink';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
-        pubmedCentralId: testProps.pubmedCentralId
+        pubmedCentralId: testProps.pubmedCentralId,
     };
 
-    return getElement(PubmedCentralLink, props, isShallow);
+    return getElement(PubmedCentralLink, props);
 }
 
 describe('PubmedCentralLink test ', () => {
     it('should render component with empty span', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with pubmedCentralId', () => {
-        const wrapper = setup({pubmedCentralId: 'PMC12345677'});
+        const wrapper = setup({ pubmedCentralId: 'PMC12345677' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

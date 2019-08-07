@@ -1,12 +1,12 @@
-import React, {Component} from 'react';
-import {Field} from 'redux-form/immutable';
+import React, { Component } from 'react';
+import { Field } from 'redux-form/immutable';
 import PropTypes from 'prop-types';
-import {propTypes} from 'redux-form/immutable';
+import { propTypes } from 'redux-form/immutable';
 
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import Button from '@material-ui/core/Button';
-import {validation} from 'config';
+import { validation } from 'config';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -15,7 +15,7 @@ export default class PublicationSearchForm extends Component {
     static propTypes = {
         ...propTypes, // all redux-form props
         onSkipSearch: PropTypes.func,
-        locale: PropTypes.object
+        locale: PropTypes.object,
     };
 
     constructor(props) {

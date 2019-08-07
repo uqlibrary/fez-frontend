@@ -1,11 +1,11 @@
-import React, {PureComponent} from 'react';
+import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import Snackbar from '@material-ui/core/Snackbar';
 import Grid from '@material-ui/core/Grid';
 import Link from '@material-ui/icons/Link';
 import LinkOff from '@material-ui/icons/LinkOff';
-import {locale} from 'locale';
-import {withStyles} from '@material-ui/core/styles';
+import { locale } from 'locale';
+import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
     success: {
@@ -18,14 +18,14 @@ export const styles = theme => ({
 
 export class OfflineSnackbar extends PureComponent {
     static propTypes = {
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             open: !navigator.onLine,
-            online: navigator.onLine
+            online: navigator.onLine,
         };
     }
 
@@ -40,35 +40,40 @@ export class OfflineSnackbar extends PureComponent {
     }
 
     updateOnlineState = () => {
-        this.setState({open: true, online: navigator.onLine});
+        this.setState({ open: true, online: navigator.onLine });
     };
 
     renderMessage = (message, icon) => {
         return (
             <Grid container alignItems={'center'} justify={'center'} alignContent={'center'}>
                 <Grid item xs />
-                <Grid item style={{marginRight: 24}}>{icon}</Grid>
+                <Grid item style={{ marginRight: 24 }}>
+                    {icon}
+                </Grid>
                 <Grid item>{message}</Grid>
                 <Grid item xs />
             </Grid>
         );
     };
 
-    handleRequestClose = (reason) => {
+    handleRequestClose = reason => {
         // MUI hack to prevent the snackbar from being hidden by clicking/touchTapping away
         if (reason !== 'clickaway') {
-            this.setState({open: false});
+            this.setState({ open: false });
         }
     };
 
     render() {
-        const {classes} = this.props;
+        const { classes } = this.props;
         const txt = locale.global.offlineSnackbar;
-        const snackbarProps = this.state.online ?
-            {...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success}/>)} :
-            {...txt.offline, message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error}/>)};
+        const snackbarProps = this.state.online
+            ? { ...txt.online, message: this.renderMessage(txt.online.message, <Link className={classes.success} />) }
+            : {
+                ...txt.offline,
+                message: this.renderMessage(txt.offline.message, <LinkOff className={classes.error} />),
+            };
 
-        return  (
+        return (
             <div className="offlineSnackbar">
                 <Snackbar
                     anchorOrigin={{
@@ -85,4 +90,4 @@ export class OfflineSnackbar extends PureComponent {
     }
 }
 
-export default withStyles(styles, {withTheme: true})(OfflineSnackbar);
+export default withStyles(styles, { withTheme: true })(OfflineSnackbar);

@@ -1,20 +1,18 @@
 import AuthorLinkingField from './AuthorLinkingField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         input: {
-            onChange: () => {}
+            onChange: () => {},
         },
         ...testProps,
     };
-    return getElement(AuthorLinkingField, props, isShallow);
+    return getElement(AuthorLinkingField, props);
 }
 
 describe('Component AuthorLinkingField', () => {
-
     it('should render as expected', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 });

@@ -8,26 +8,26 @@ import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
 import SecurityCard from './SecurityCard';
 
-const SecuritySectionContainer = ({ disabled, formValues }) => {
+const SecuritySectionContainer = ({ disabled, formValues, isSuperAdmin }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
-            <SecurityCard
-                disabled={disabled}
-            />
+            <SecurityCard disabled={disabled} isSuperAdmin={isSuperAdmin} />
         </FormValuesContext.Provider>
     );
 };
 
 SecuritySectionContainer.propTypes = {
     disabled: PropTypes.bool,
-    formValues: PropTypes.object
+    isSuperAdmin: PropTypes.bool,
+    formValues: PropTypes.object,
 };
 
 const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        formValues: formValues.get('securitySection') || Immutable.Map({})
+        isSuperAdmin: Boolean(((state.get('accountReducer') || {}).authorDetails || {}).is_super_administrator),
+        formValues: formValues.get('securitySection') || Immutable.Map({}),
     };
 };
 

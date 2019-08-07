@@ -1,16 +1,16 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import {Field} from 'redux-form/immutable';
+import { Field } from 'redux-form/immutable';
 
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
-import {StandardCard} from 'modules/SharedComponents/Toolbox/StandardCard';
-import {PartialDateField} from 'modules/SharedComponents/Toolbox/PartialDate';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { PartialDateField } from 'modules/SharedComponents/Toolbox/PartialDate';
 
-import {ContributorsEditorField} from 'modules/SharedComponents/ContributorsEditor';
-import {NtroFields} from 'modules/SharedComponents/Toolbox/NtroFields';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
-import {validation} from 'config';
-import {default as formLocale} from 'locale/publicationForm';
+import { validation } from 'config';
+import { default as formLocale } from 'locale/publicationForm';
 
 import Grid from '@material-ui/core/Grid';
 
@@ -19,7 +19,7 @@ export default class DesignForm extends Component {
         submitting: PropTypes.bool,
         subtype: PropTypes.string,
         isNtro: PropTypes.bool,
-        isAuthorSelected: PropTypes.bool
+        isAuthorSelected: PropTypes.bool,
     };
 
     constructor(props) {

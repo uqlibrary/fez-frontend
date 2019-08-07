@@ -1,20 +1,16 @@
 import CollectionForm from './CollectionForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, args = {}) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(CollectionForm, props, isShallow);
+    return getElement(CollectionForm, props, args);
 }
 
 describe('CollectionForm container', () => {
-    it('should mount', () => {
-        const wrapper = setup({}, false);
-    });
-
-    it('should read the local storage', () => {
-        const wrapper = setup({}, false);
+    it('should mount and read the local storage', () => {
+        setup({}, { isShallow: false });
         expect(localStorage.getItem).toHaveBeenLastCalledWith('form');
     });
 });

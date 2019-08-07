@@ -17,7 +17,7 @@ export default class RichEditor extends PureComponent {
         title: PropTypes.any,
         titleProps: PropTypes.object,
         description: PropTypes.any,
-        inputRef: PropTypes.object
+        inputRef: PropTypes.object,
     };
 
     static defaultProps = {
@@ -26,7 +26,7 @@ export default class RichEditor extends PureComponent {
         height: 100,
         disabled: false,
         returnSingleValue: false,
-        titleProps: {}
+        titleProps: {},
     };
 
     componentDidMount() {
@@ -37,22 +37,17 @@ export default class RichEditor extends PureComponent {
                 {
                     removeButtons: 'Cut,Copy,Paste,Undo,Redo,Anchor',
                     height: this.props.height,
-                    pasteFilter: 'semantic-content'
+                    pasteFilter: 'semantic-content',
                 },
                 (!!this.props.value && this.props.value.get('htmlText')) || null
             );
 
-        !!this.editorInstance &&
-            this.editorInstance.on('instanceReady', this.onInstanceReady);
-        !!this.editorInstance &&
-            this.editorInstance.on('change', this.onChange);
+        !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
+        !!this.editorInstance && this.editorInstance.on('change', this.onChange);
     }
 
     componentWillReceiveProps(nextProps) {
-        if (
-            nextProps.disabled !== this.props.disabled &&
-            this.editorInstance !== null
-        ) {
+        if (nextProps.disabled !== this.props.disabled && this.editorInstance !== null) {
             this.editorInstance.setReadOnly(!!nextProps.disabled);
         }
     }
@@ -61,7 +56,7 @@ export default class RichEditor extends PureComponent {
         this.editorInstance.setReadOnly(!!this.props.disabled);
     };
 
-    onChange = evt => {
+    onChange = (evt) => {
         const textValue = evt.editor.document
             .getBody()
             .getText()
@@ -73,7 +68,7 @@ export default class RichEditor extends PureComponent {
                     plainText: evt.editor.document
                         .getBody()
                         .getText()
-                        .trim()
+                        .trim(),
                 }
                 : null
         );
@@ -82,25 +77,20 @@ export default class RichEditor extends PureComponent {
     render() {
         let error = null;
         const inputLength =
-            (this.props.value &&
-                this.props.value.plainText &&
-                this.props.value.plainText.length) ||
+            (this.props.value && this.props.value.plainText && this.props.value.plainText.length) ||
             this.props.value.length - 7; // default rich editor has "<p></p>"
         if (this.props.meta && this.props.meta.error) {
             error =
                 !!this.props.meta.error.props &&
-                React.Children.map(
-                    this.props.meta.error.props.children,
-                    (child, index) => {
-                        if (child.type) {
-                            return React.cloneElement(child, {
-                                key: index
-                            });
-                        } else {
-                            return child;
-                        }
+                React.Children.map(this.props.meta.error.props.children, (child, index) => {
+                    if (child.type) {
+                        return React.cloneElement(child, {
+                            key: index,
+                        });
+                    } else {
+                        return child;
                     }
-                );
+                });
         }
         return (
             <React.Fragment>
@@ -108,39 +98,25 @@ export default class RichEditor extends PureComponent {
                     {this.props.title && (
                         <Typography
                             {...this.props.titleProps}
-                            color={
-                                this.props.meta &&
-                                this.props.meta.error &&
-                                'error'
-                            }
+                            color={this.props.meta && this.props.meta.error && 'error'}
                         >
                             {this.props.title}
                         </Typography>
                     )}
                     {this.props.description && (
-                        <Typography
-                            color={
-                                this.props.meta &&
-                                this.props.meta.error &&
-                                'error'
-                            }
-                            variant={'caption'}
-                        >
+                        <Typography color={this.props.meta && this.props.meta.error && 'error'} variant={'caption'}>
                             {this.props.description}
                         </Typography>
                     )}
                 </span>
-                <div
-                    className={this.props.className}
-                    ref={this.props.inputRef}
-                />
+                <div className={this.props.className} ref={this.props.inputRef} />
                 {this.props.meta && this.props.meta.error && (
                     <Typography
                         color="error"
                         variant="caption"
                         component={'span'}
                         style={{
-                            display: 'inline-block'
+                            display: 'inline-block',
                         }}
                     >
                         {error || this.props.meta.error}
@@ -151,15 +127,13 @@ export default class RichEditor extends PureComponent {
                     <Typography
                         component={'span'}
                         style={{
-                            display: 'inline-block'
+                            display: 'inline-block',
                         }}
                         variant="caption"
-                        color={
-                            this.props.meta && this.props.meta.error && 'error'
-                        }
+                        color={this.props.meta && this.props.meta.error && 'error'}
                     >
-                        {inputLength > 0 ? inputLength : 0} characters of{' '}
-                        {this.props.maxValue} {this.props.instructions || ''}
+                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}{' '}
+                        {this.props.instructions || ''}
                     </Typography>
                 )}
             </React.Fragment>

@@ -1,0 +1,6 @@
+/* prettier-ignore */
+{
+    "rules": {
+        "max-len": "off"
+    }
+}

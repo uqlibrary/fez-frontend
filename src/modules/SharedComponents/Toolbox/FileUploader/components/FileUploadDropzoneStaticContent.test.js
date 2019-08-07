@@ -1,11 +1,11 @@
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps, args = {}) {
     const props = {
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(FileUploadDropzoneStaticContent, props, isShallow);
+    return getElement(FileUploadDropzoneStaticContent, props, args);
 }
 
 describe('Component FileUploadDropzoneStaticContent', () => {
@@ -14,10 +14,10 @@ describe('Component FileUploadDropzoneStaticContent', () => {
             locale: {
                 fileUploadRestrictionHeading: 'Restrictions for file upload',
                 fileUploadRestrictions: 'No restrictions applies to Tests!!!',
-                fileUploadInstruction: 'Upload whatever you like :)'
-            }
+                fileUploadInstruction: 'Upload whatever you like :)',
+            },
         };
-        const wrapper = setup(props, false);
+        const wrapper = setup(props, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

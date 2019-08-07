@@ -15,7 +15,7 @@ import { useRecordContext, useFormValuesContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { locale } from 'locale';
 
-export const SecurityCard = ({ disabled }) => {
+export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
@@ -32,22 +32,17 @@ export const SecurityCard = ({ disabled }) => {
     /**
      * Redux-form normalize callback
      */
-    const overrideSecurityValueNormalizer = (value) => value ? 0 : 1;
+    const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
 
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
-                <Alert
-                    type="warning"
-                    title={admin.warning.title}
-                    message={admin.warning.message}
-                />
+                <Alert type="warning" title={admin.warning.title} message={admin.warning.message} />
             </Grid>
             <Grid item xs={12}>
                 <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader>
                     <Grid container spacing={16}>
-                        {
-                            recordType === RECORD_TYPE_RECORD &&
+                        {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails
@@ -66,49 +61,42 @@ export const SecurityCard = ({ disabled }) => {
                                     />
                                 </Grid>
                             </React.Fragment>
-                        }
-                        {
-                            (
-                                recordType === RECORD_TYPE_COMMUNITY ||
-                                recordType === RECORD_TYPE_COLLECTION ||
-                                (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)
-                            ) &&
+                        )}
+                        {(recordType === RECORD_TYPE_COMMUNITY ||
+                            recordType === RECORD_TYPE_COLLECTION ||
+                            (recordType === RECORD_TYPE_RECORD && isOverrideSecurityChecked)) && (
                             <Grid item xs={12}>
                                 <SecuritySelector
-                                    disabled={disabled}
+                                    disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={text}
                                     fieldName="securitySection.rek_security_policy"
                                     recordType={recordType}
                                     securityPolicy={securityPolicy}
                                 />
                             </Grid>
-                        }
-                        {
-                            recordType === RECORD_TYPE_COLLECTION &&
+                        )}
+                        {recordType === RECORD_TYPE_COLLECTION && (
                             <Grid item xs={12}>
                                 <SecuritySelector
-                                    disabled={disabled}
+                                    disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={{
                                         prompt: text.prompt,
-                                        selectedTitle: text.dataStreamSelectedTitle
+                                        selectedTitle: text.dataStreamSelectedTitle,
                                     }}
                                     fieldName="securitySection.rek_datastream_policy"
                                     recordType={recordType}
                                     securityPolicy={dataStreamPolicy}
                                 />
                             </Grid>
-
-                        }
+                        )}
                     </Grid>
                 </StandardCard>
             </Grid>
-            {
-                !!dataStreams && dataStreams.length > 0 &&
+            {!!dataStreams && dataStreams.length > 0 && (
                 <Grid item xs={12}>
                     <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
                         <Grid container spacing={8}>
-                            {
-                                dataStreams.length &&
+                            {dataStreams.length && (
                                 <React.Fragment>
                                     <Grid item xs={12}>
                                         <InheritedSecurityDetails
@@ -121,7 +109,6 @@ export const SecurityCard = ({ disabled }) => {
                                         <Field
                                             component={DataStreamSecuritySelector}
                                             name="securitySection.dataStreams"
-
                                             {...{
                                                 disabled,
                                                 text: text.dataStream,
@@ -130,17 +117,18 @@ export const SecurityCard = ({ disabled }) => {
                                         />
                                     </Grid>
                                 </React.Fragment>
-                            }
+                            )}
                         </Grid>
                     </StandardCard>
                 </Grid>
-            }
+            )}
         </Grid>
     );
 };
 
 SecurityCard.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
+    isSuperAdmin: PropTypes.bool,
 };
 
 export function isSame(prevProps, nextProps) {
@@ -148,4 +136,3 @@ export function isSame(prevProps, nextProps) {
 }
 
 export default React.memo(SecurityCard, isSame);
-

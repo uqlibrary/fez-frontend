@@ -1,6 +1,6 @@
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
-function setup(testProps, isShallow = true){
+function setup(testProps = {}) {
     const props = {
         orgAffiliation: testProps.orgAffiliation || '',
         orgType: testProps.orgType || '',
@@ -9,37 +9,37 @@ function setup(testProps, isShallow = true){
         locale: {
             fields: {
                 organisation: {
-                    inputLabel: 'Organisation'
+                    inputLabel: 'Organisation',
                 },
                 organisationType: {
                     inputLabel: 'Organisation type',
                     placeholder: 'Select an organisation type',
-                }
-            }
+                },
+            },
         },
         ...testProps,
     };
-    return getElement(NonUqOrgAffiliationFormSection, props, isShallow);
+    return getElement(NonUqOrgAffiliationFormSection, props);
 }
 
 describe('NonUqOrgAffiliationFormSection tests ', () => {
     it('should render component with defaults', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with organisation affiliation value', () => {
-        const wrapper = setup({orgAffiliation: 'Test'});
+        const wrapper = setup({ orgAffiliation: 'Test' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with organisation affiliation type value', () => {
-        const wrapper = setup({orgType: '453987'});
+        const wrapper = setup({ orgType: '453987' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with both values', () => {
-        const wrapper = setup({orgAffiliation: 'Test', orgType: '453987'});
+        const wrapper = setup({ orgAffiliation: 'Test', orgType: '453987' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

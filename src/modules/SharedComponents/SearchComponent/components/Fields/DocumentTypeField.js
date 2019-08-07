@@ -8,15 +8,14 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import { withStyles } from '@material-ui/core/styles';
 
-export const styles = theme => ({
+export const styles = (theme) => ({
     title: {
-        ...theme.typography.caption
+        ...theme.typography.caption,
     },
     selectedMenuItem: {
-        backgroundColor: `${((theme.palette || {}).accent || {}).main ||
-            ''} !important`,
-        color: ((theme.palette || {}).white || {}).main || ''
-    }
+        backgroundColor: `${((theme.palette || {}).accent || {}).main || ''} !important`,
+        color: ((theme.palette || {}).white || {}).main || '',
+    },
 });
 
 export class DocumentTypeField extends PureComponent {
@@ -25,13 +24,13 @@ export class DocumentTypeField extends PureComponent {
         updateDocTypeValues: PropTypes.func,
         className: PropTypes.string,
         disabled: PropTypes.bool,
-        classes: PropTypes.object
+        classes: PropTypes.object,
     };
 
     static defaultProps = {
         value: [],
         disabled: false,
-        className: 'displaytype menuitem'
+        className: 'displaytype menuitem',
     };
 
     constructor(props) {
@@ -39,7 +38,7 @@ export class DocumentTypeField extends PureComponent {
         this.publicationTypes = Object.values(publicationTypes());
     }
 
-    _handleDocTypeChange = event => {
+    _handleDocTypeChange = (event) => {
         this.props.updateDocTypeValues(event.target.value);
     };
 
@@ -65,18 +64,14 @@ export class DocumentTypeField extends PureComponent {
                         key={index + 1}
                     />
                 );
-            })
+            }),
         ];
         // const {classes} = this.props;
         return (
             <FormControl fullWidth>
-                <InputLabel>
-                    {txt.advancedSearch.fieldTypes.rek_display_type.title}
-                </InputLabel>
+                <InputLabel>{txt.advancedSearch.fieldTypes.rek_display_type.title}</InputLabel>
                 <Select
-                    aria-label={
-                        txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel
-                    }
+                    aria-label={txt.advancedSearch.fieldTypes.rek_display_type.ariaLabel}
                     value={this.props.docTypes || '0'}
                     onChange={this._handleDocTypeChange}
                     multiple

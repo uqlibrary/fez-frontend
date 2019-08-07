@@ -4,7 +4,7 @@ function setup(testProps, isShallow = true) {
     const props = {
         ...testProps,
         classes: testProps.classes || {
-            hideLabel: 'hidden'
+            hideLabel: 'hidden',
         },
     };
     return getElement(PartialDateForm, props, isShallow);
@@ -26,7 +26,7 @@ describe('PartialDateForm component', () => {
         wrapper.setState({
             day: '',
             month: '',
-            year: NaN
+            year: NaN,
         });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();

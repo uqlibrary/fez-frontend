@@ -1,3 +1,3 @@
-export {putUploadFiles} from './file';
+export { putUploadFiles } from './file';
 export * as routes from './routes';
-export {post, patch, get, put} from './generic';
+export { post, patch, get, put } from './generic';

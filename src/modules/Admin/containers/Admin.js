@@ -27,7 +27,7 @@ export const getBibliographicInitialValues = (record) =>
         .reduce((initialValue, field) => {
             return {
                 ...initialValue,
-                [field]: valueExtractor[field].getValue(record)
+                [field]: valueExtractor[field].getValue(record),
             };
         }, {});
 
@@ -39,7 +39,7 @@ export const getIdentifiersInitialValues = (record) =>
         .reduce((initialValue, field) => {
             return {
                 ...initialValue,
-                [field]: valueExtractor[field].getValue(record)
+                [field]: valueExtractor[field].getValue(record),
             };
         }, {});
 
@@ -51,13 +51,13 @@ export const getAuthorsInitialValues = (record) =>
         .reduce((initialValue, field) => {
             return {
                 ...initialValue,
-                [field]: valueExtractor[field].getValue(record)
+                [field]: valueExtractor[field].getValue(record),
             };
         }, {});
 
 export const isFileValid = (dataStream) => {
     const {
-        files: { blacklist }
+        files: { blacklist },
     } = viewRecordsConfig;
 
     return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
@@ -71,7 +71,7 @@ const onSubmit = (values, dispatch) => {
 
 const PrototypeContainer = reduxForm({
     form: FORM_NAME,
-    onSubmit
+    onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 // const mapStateToProps = (state) => {
@@ -101,25 +101,25 @@ const getReduxFormInitialValues = (recordToView) => {
         subject: [],
         adminSection: {
             rek_herdc_notes: recordToView.rek_herdc_notes,
-            fez_internal_notes: { ...recordToView.fez_internal_notes }
+            fez_internal_notes: { ...recordToView.fez_internal_notes },
         },
         identifiersSection: (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
         securitySection: {
             rek_security_policy: recordToView.rek_security_policy,
             ...(recordType === RECORD_TYPE_COLLECTION
                 ? {
-                    rek_datastream_policy: recordToView.rek_datastream_policy
+                    rek_datastream_policy: recordToView.rek_datastream_policy,
                 }
                 : {}),
             ...(recordType === RECORD_TYPE_RECORD
                 ? {
                     rek_security_inherited: recordToView.rek_security_inherited,
-                    dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid)
+                    dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
                 }
-                : {})
+                : {}),
         },
         bibliographicSection: (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
-        authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {}
+        authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
     };
     return initialValues;
 };
@@ -157,6 +157,6 @@ export const AdminReduxFormContainer = (props) => {
 };
 
 AdminReduxFormContainer.propTypes = {
-    match: PropTypes.object
+    match: PropTypes.object,
 };
 export default withRouter(AdminReduxFormContainer);

@@ -13,7 +13,9 @@ export const FilesSection = ({ disabled = false }) => (
     <React.Fragment>
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
-                <Typography variant="body2" component="p">Some explanatory text might go here. It may not. Time will tell.</Typography>
+                <Typography variant="body2" component="p">
+                    Some explanatory text might go here. It may not. Time will tell.
+                </Typography>
             </Grid>
         </Grid>
         <Grid item xs={12}>
@@ -29,7 +31,7 @@ export const FilesSection = ({ disabled = false }) => (
 );
 
 FilesSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(FilesSection);

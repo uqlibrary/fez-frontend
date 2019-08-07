@@ -1,17 +1,17 @@
 import PatentCitation from './PatentCitation';
-import {patent} from 'mock/data/testing/records';
+import { patent } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(PatentCitation, props, isShallow);
+    return getElement(PatentCitation, props, args);
 }
 
 describe('PatentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

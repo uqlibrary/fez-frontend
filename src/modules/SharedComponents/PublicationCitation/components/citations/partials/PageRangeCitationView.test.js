@@ -1,18 +1,18 @@
 import PageRangeCitationView from './PageRangeCitationView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
+        publication: testProps.publication || {},
         ...testProps,
-        publication: testProps.publication || {}
     };
-    return getElement(PageRangeCitationView, props, isShallow);
+    return getElement(PageRangeCitationView, props);
 }
 
 describe('PageRangeCitationView test ', () => {
     it('should render nothing if search key not found', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -20,9 +20,9 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 11
-                }
-            }
+                    rek_start_page: 11,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -31,9 +31,9 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_end_page: {
-                    rek_end_page: 11
-                }
-            }
+                    rek_end_page: 11,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -42,12 +42,12 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 13
+                    rek_start_page: 13,
                 },
                 fez_record_search_key_end_page: {
-                    rek_end_page: 17
-                }
-            }
+                    rek_end_page: 17,
+                },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -56,10 +56,10 @@ describe('PageRangeCitationView test ', () => {
         const wrapper = setup({
             publication: {
                 fez_record_search_key_start_page: {
-                    rek_start_page: 13
+                    rek_start_page: 13,
                 },
-                fez_record_search_key_end_page: {}
-            }
+                fez_record_search_key_end_page: {},
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

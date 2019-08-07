@@ -1,9 +1,9 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Downshift from 'downshift';
-import {withStyles} from '@material-ui/core/styles';
+import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
-import {TextField} from 'modules/SharedComponents/Toolbox/TextField';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import MenuItem from '@material-ui/core/MenuItem';
 import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
@@ -23,13 +23,13 @@ export const styles = (theme) => ({
         maxHeight: 250,
         overflowY: 'scroll',
         position: 'absolute',
-        zIndex: 999
+        zIndex: 999,
     },
     inputRoot: {
         flexWrap: 'wrap',
     },
     chip: {
-        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`
+        margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
     },
 });
 
@@ -39,10 +39,7 @@ export class AutoCompleteAsyncField extends Component {
         loadSuggestions: PropTypes.func,
         itemsList: PropTypes.array,
         itemsListLoading: PropTypes.bool,
-        category: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.number
-        ]),
+        category: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         onChange: PropTypes.func,
         itemToString: PropTypes.func,
         floatingLabelText: PropTypes.string,
@@ -61,7 +58,7 @@ export class AutoCompleteAsyncField extends Component {
         clearInput: PropTypes.bool,
         MenuItemComponent: PropTypes.func,
         showChips: PropTypes.bool,
-        selectedItem: PropTypes.array
+        selectedItem: PropTypes.array,
     };
 
     static defaultProps = {
@@ -69,21 +66,27 @@ export class AutoCompleteAsyncField extends Component {
         required: false,
         filter: (searchText, key) => {
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(`(${searchText.split(' ').join('|').replace(/[()]/g, '')})`, 'gi');
+            const regex = new RegExp(
+                `(${searchText
+                    .split(' ')
+                    .join('|')
+                    .replace(/[()]/g, '')})`,
+                'gi'
+            );
             return regex.test(anyKey);
         },
-        MenuItemComponent: ({suggestion}) => (
+        MenuItemComponent: ({ suggestion }) => (
             <ListItemText
                 primary={suggestion.value}
                 secondary={suggestion.id}
                 primaryTypographyProps={{
-                    variant: 'body1'
+                    variant: 'body1',
                 }}
                 secondaryTypographyProps={{
-                    variant: 'body2'
+                    variant: 'body2',
                 }}
             />
-        )
+        ),
     };
 
     componentDidMount() {
@@ -102,7 +105,7 @@ export class AutoCompleteAsyncField extends Component {
         return (
             <TextField
                 InputProps={{
-                    inputRef: node => {
+                    inputRef: (node) => {
                         this.textInputRef = node;
                         if (!!this.textInputRef && this.props.openOnFocus) {
                             this.textInputRef.addEventListener('focus', openMenu);
@@ -118,11 +121,11 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
-    renderMenuItemComponent = (suggestion) => (<this.props.MenuItemComponent suggestion={suggestion} />);
+    renderMenuItemComponent = (suggestion) => <this.props.MenuItemComponent suggestion={suggestion} />;
 
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
-        const isSelected = (selectedItem && selectedItem.value || '').indexOf(suggestion.value) > -1;
+        const isSelected = ((selectedItem && selectedItem.value) || '').indexOf(suggestion.value) > -1;
         return (
             <MenuItem
                 button
@@ -132,12 +135,10 @@ export class AutoCompleteAsyncField extends Component {
                 style={{
                     fontWeight: isSelected ? 500 : 400,
                     whiteSpace: 'normal',
-                    height: 'auto'
+                    height: 'auto',
                 }}
             >
-                {
-                    this.renderMenuItemComponent(suggestion)
-                }
+                {this.renderMenuItemComponent(suggestion)}
             </MenuItem>
         );
     };
@@ -149,7 +150,7 @@ export class AutoCompleteAsyncField extends Component {
                 case Downshift.stateChangeTypes.mouseUp:
                     return {
                         ...changes,
-                        inputValue: state.inputValue
+                        inputValue: state.inputValue,
                     };
                 default:
                     return changes;
@@ -162,7 +163,7 @@ export class AutoCompleteAsyncField extends Component {
                 case Downshift.stateChangeTypes.mouseUp:
                     return {
                         ...changes,
-                        inputValue: ''
+                        inputValue: '',
                     };
                 default:
                     return changes;
@@ -170,33 +171,51 @@ export class AutoCompleteAsyncField extends Component {
         }
     };
 
-    handleStateChange = () => (
+    handleStateChange = () =>
         this.props.allowFreeText
-            ? ({inputValue}) => {
-                inputValue !== undefined && this.props.onChange({value: inputValue});
+            ? ({ inputValue }) => {
+                inputValue !== undefined && this.props.onChange({ value: inputValue });
             }
-            : () => {}
-    );
+            : () => {};
 
-    handleDelete = item => () => {
-        this.setState(state => {
-            const selectedItem = [...state.selectedItem];
-            selectedItem.splice(selectedItem.indexOf(item), 1);
-            return { selectedItem };
-        }, () => {
-            this.props.onChange(this.state.selectedItem);
-        });
+    handleDelete = (item) => () => {
+        this.setState(
+            (state) => {
+                const selectedItem = [...state.selectedItem];
+                selectedItem.splice(selectedItem.indexOf(item), 1);
+                return { selectedItem };
+            },
+            () => {
+                this.props.onChange(this.state.selectedItem);
+            }
+        );
     };
     render() {
-        const { classes, itemsList, error, errorText, hintText, floatingLabelText, hideLabel, disabled, maxResults, itemToString, required, selectedValue, itemsListLoading } = this.props;
-        const selectedItemProps = this.props.clearInput ? {selectedItem: ''} : {};
+        const {
+            classes,
+            itemsList,
+            error,
+            errorText,
+            hintText,
+            floatingLabelText,
+            hideLabel,
+            disabled,
+            maxResults,
+            itemToString,
+            required,
+            selectedValue,
+            itemsListLoading,
+        } = this.props;
+        const selectedItemProps = this.props.clearInput ? { selectedItem: '' } : {};
         const labelText = floatingLabelText || 'autosuggest';
         return (
             <div className={classes.root}>
-                <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>{floatingLabelText || ''}</label>
+                <label id={`${labelText.replace(/[^\w]/g, '')}-label`} hidden>
+                    {floatingLabelText || ''}
+                </label>
                 <Downshift
                     {...selectedItemProps}
-                    defaultInputValue={!!selectedValue && selectedValue.value || ''}
+                    defaultInputValue={(!!selectedValue && selectedValue.value) || ''}
                     stateReducer={this.stateReducer}
                     onChange={this.props.onChange}
                     itemToString={itemToString}
@@ -204,80 +223,106 @@ export class AutoCompleteAsyncField extends Component {
                     aria-label={labelText}
                     onStateChange={this.handleStateChange()}
                 >
-                    {
-                        ({ getInputProps, getMenuProps, isOpen, inputValue, getItemProps, selectedItem, highlightedIndex, openMenu }) => {
-                            return (
-                                <div className={classes.container}>
-                                    <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
-                                        <Grid item xs>
-                                            {this.renderInput({
-                                                fullWidth: true,
-                                                classes,
-                                                inputProps: getInputProps({
-                                                    onChange: this.getSuggestions,
-                                                    ...(
-                                                        this.props.showChips ? {
-                                                            startAdornment: this.props.selectedItem.map(item => (
-                                                                <Chip
-                                                                    key={item.id}
-                                                                    tabIndex={-1}
-                                                                    label={item.value}
-                                                                    className={classes.chip}
-                                                                    onDelete={this.handleDelete(item)}
-                                                                />
-                                                            ))
-                                                        } : {}
-                                                    )
-                                                }),
-                                                error: error,
-                                                errorText: error && errorText || '',
-                                                placeholder: hintText,
-                                                label: !hideLabel ? labelText : undefined,
-                                                id: `${labelText.replace(/[^\w]/g, '')}-input`,
-                                                value: inputValue,
-                                                disabled: disabled,
-                                                required: required,
-                                                openMenu: openMenu
-                                            })}
-                                        </Grid>
-                                        {
-                                            itemsListLoading &&
-                                                <Grid item xs={'auto'}>
-                                                    <CircularProgress size={16} color="primary" />
-                                                </Grid>
-                                        }
-                                    </Grid>
-                                    {isOpen && itemsList.length > 0 ? (
-                                        <div {...getMenuProps()}>
-                                            <Popper disablePortal id="downshift-popper" open anchorEl={this.textInputRef} placement="bottom-start">
-                                                <Paper className={classes.paper} square style={{
-                                                    width: this.textInputRef ? this.textInputRef.clientWidth : null
-                                                }}>
-                                                    {
-                                                        itemsList
-                                                            .filter(suggestion => this.props.filter(
-                                                                inputValue,
-                                                                isNaN(inputValue) ? suggestion.value : suggestion.id ||
-                                                                    suggestion.value.toString()
-                                                            ))
-                                                            .slice(0, maxResults).map((suggestion, index) => {
-                                                                return !!suggestion && this.renderSuggestion({
-                                                                    suggestion,
-                                                                    index,
-                                                                    itemProps: getItemProps({ item: suggestion }),
-                                                                    highlightedIndex,
-                                                                    selectedItem,
-                                                                });
-                                                            })
+                    {({
+                        getInputProps,
+                        getMenuProps,
+                        isOpen,
+                        inputValue,
+                        getItemProps,
+                        selectedItem,
+                        highlightedIndex,
+                        openMenu,
+                    }) => {
+                        return (
+                            <div className={classes.container}>
+                                <Grid container spacing={16} alignItems={'flex-end'} alignContent={'flex-end'}>
+                                    <Grid item xs>
+                                        {this.renderInput({
+                                            fullWidth: true,
+                                            classes,
+                                            inputProps: getInputProps({
+                                                onChange: this.getSuggestions,
+                                                ...(this.props.showChips
+                                                    ? {
+                                                        startAdornment: this.props.selectedItem.map((item) => (
+                                                            <Chip
+                                                                key={item.id}
+                                                                tabIndex={-1}
+                                                                label={item.value}
+                                                                className={classes.chip}
+                                                                onDelete={this.handleDelete(item)}
+                                                            />
+                                                        )),
                                                     }
-                                                </Paper>
-                                            </Popper>
-                                        </div>
-                                    ) : null}
-                                </div>
-                            );
-                        }
-                    }
+                                                    : {}),
+                                            }),
+                                            error: error,
+                                            errorText: (error && errorText) || '',
+                                            placeholder: hintText,
+                                            label: !hideLabel ? labelText : undefined,
+                                            id: `${labelText.replace(/[^\w]/g, '')}-input`,
+                                            value: inputValue,
+                                            disabled: disabled,
+                                            required: required,
+                                            openMenu: openMenu,
+                                        })}
+                                    </Grid>
+                                    {itemsListLoading && (
+                                        <Grid item xs={'auto'}>
+                                            <CircularProgress size={16} color="primary" />
+                                        </Grid>
+                                    )}
+                                </Grid>
+                                {itemsListLoading && (
+                                    <Grid item xs={'auto'}>
+                                        <CircularProgress size={16} color="primary" />
+                                    </Grid>
+                                )}
+                                {isOpen && itemsList.length > 0 ? (
+                                    <div {...getMenuProps()}>
+                                        <Popper
+                                            disablePortal
+                                            id="downshift-popper"
+                                            open
+                                            anchorEl={this.textInputRef}
+                                            placement="bottom-start"
+                                        >
+                                            <Paper
+                                                className={classes.paper}
+                                                square
+                                                style={{
+                                                    width: this.textInputRef ? this.textInputRef.clientWidth : null,
+                                                }}
+                                            >
+                                                {itemsList
+                                                    .filter((suggestion) =>
+                                                        this.props.filter(
+                                                            inputValue,
+                                                            isNaN(inputValue)
+                                                                ? suggestion.value
+                                                                : suggestion.id || suggestion.value.toString()
+                                                        )
+                                                    )
+                                                    .slice(0, maxResults)
+                                                    .map((suggestion, index) => {
+                                                        return (
+                                                            !!suggestion &&
+                                                            this.renderSuggestion({
+                                                                suggestion,
+                                                                index,
+                                                                itemProps: getItemProps({ item: suggestion }),
+                                                                highlightedIndex,
+                                                                selectedItem,
+                                                            })
+                                                        );
+                                                    })}
+                                            </Paper>
+                                        </Popper>
+                                    </div>
+                                ) : null}
+                            </div>
+                        );
+                    }}
                 </Downshift>
             </div>
         );

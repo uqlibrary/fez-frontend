@@ -24,7 +24,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
               <b>
                 Publication date:
               </b>
-               Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released. 
+               Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released.
+               
             </p>
           </React.Fragment>,
           "title": "Audio document information",
@@ -397,7 +398,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
               <b>
                 Publication date:
               </b>
-               Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released. 
+               Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released.
+               
             </p>
           </React.Fragment>,
           "title": "Audio document information",

@@ -4,9 +4,9 @@ const setup = (testProps) => {
     const props = {
         label: 'test',
         input: {
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
-        ...testProps
+        ...testProps,
     };
     return getElement(OverrideSecurity, props);
 };

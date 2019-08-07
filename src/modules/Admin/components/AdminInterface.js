@@ -26,7 +26,7 @@ import { RECORD_TYPE_RECORD } from 'config/general';
 
 function useQueryStringTabValueState(location, initialValue) {
     const tabValue =
-		queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
+        queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
     return useState(tabValue);
 }
 
@@ -45,7 +45,7 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
-        alertLocale: txt.current.alerts
+        alertLocale: txt.current.alerts,
     });
 
     /* istanbul ignore next */
@@ -103,10 +103,10 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                                         variant="fullWidth"
                                         style={{
                                             marginRight: -56,
-                                            marginLeft: -56
+                                            marginLeft: -56,
                                         }}
                                         classes={{
-                                            indicator: classes.tabIndicator
+                                            indicator: classes.tabIndicator,
                                         }}
                                         onChange={handleTabChange}
                                         variant="scrollable"
@@ -163,7 +163,7 @@ AdminInterface.propTypes = {
     handleSubmit: PropTypes.func,
     location: PropTypes.object,
     history: PropTypes.object,
-    tabs: PropTypes.object
+    tabs: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

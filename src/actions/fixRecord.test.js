@@ -4,7 +4,7 @@ import * as fixRecordActions from './fixRecord';
 import * as mockData from 'mock/data/testing/records';
 
 describe('Fix record actions', () => {
-    const testPid = "UQ:41878";
+    const testPid = 'UQ:41878';
 
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
@@ -16,14 +16,14 @@ describe('Fix record actions', () => {
     });
 
     describe('loadRecordToFix action', () => {
-        it('dispatches expected actions when loading a record to fix from API successfully', async () => {
+        it('dispatches expected actions when loading a record to fix from API successfully', async() => {
             mockApi
-                .onGet(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}});
+                .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: { ...mockData.mockRecordToFix } });
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
-                actions.FIX_RECORD_LOADED
+                actions.FIX_RECORD_LOADED,
             ];
 
             try {
@@ -34,7 +34,7 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions when loading a record to fix from API failed', async () => {
+        it('dispatches expected actions when loading a record to fix from API failed', async() => {
             mockApi
                 .onAny()
                 .reply(500);
@@ -42,7 +42,7 @@ describe('Fix record actions', () => {
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
                 actions.APP_ALERT_SHOW,
-                actions.FIX_RECORD_LOAD_FAILED
+                actions.FIX_RECORD_LOAD_FAILED,
             ];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
@@ -52,7 +52,7 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions when loading a record to fix from API for anon user', async () => {
+        it('dispatches expected actions when loading a record to fix from API for anon user', async() => {
             mockApi
                 .onAny()
                 .reply(403);
@@ -60,7 +60,7 @@ describe('Fix record actions', () => {
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.FIX_RECORD_LOAD_FAILED
+                actions.FIX_RECORD_LOAD_FAILED,
             ];
             await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -68,9 +68,9 @@ describe('Fix record actions', () => {
     });
 
     describe('setting/clearing record to fix action', () => {
-        it('dispatches expected actions when setting a loaded record to fix', async () => {
+        it('dispatches expected actions when setting a loaded record to fix', async() => {
             const expectedActions = [
-                actions.FIX_RECORD_SET
+                actions.FIX_RECORD_SET,
             ];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.mockRecordToFix));
@@ -80,9 +80,9 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions when clearing a loaded record to fix', async () => {
+        it('dispatches expected actions when clearing a loaded record to fix', async() => {
             const expectedActions = [
-                actions.FIX_RECORD_CLEAR
+                actions.FIX_RECORD_CLEAR,
             ];
 
             try {
@@ -95,11 +95,11 @@ describe('Fix record actions', () => {
     });
 
     describe('fixRecord action', () => {
-        it('dispatches expected actions with invalid data (missing publication data)', async () => {
-            const testInput = {author: ''};
+        it('dispatches expected actions with invalid data (missing publication data)', async() => {
+            const testInput = { author: '' };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -110,11 +110,11 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions with invalid data (missing author data)', async () => {
-            const testInput = {publication: ''};
+        it('dispatches expected actions with invalid data (missing author data)', async() => {
+            const testInput = { publication: '' };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -125,22 +125,22 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions with invalid data (missing author is not linked to publication)', async () => {
+        it('dispatches expected actions with invalid data (missing author is not linked to publication)', async() => {
             const testInput = {
                 publication: {
                     fez_record_search_key_author_id: [
                         {
-                            rek_author_id: 123
-                        }
-                    ]
+                            rek_author_id: 123,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 124
-                }
+                    aut_id: 124,
+                },
             };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -151,22 +151,22 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions with invalid data (missing editor is not linked to publication)', async () => {
+        it('dispatches expected actions with invalid data (missing editor is not linked to publication)', async() => {
             const testInput = {
                 publication: {
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 124
-                        }
-                    ]
+                            rek_contributor_id: 124,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 123
-                }
+                    aut_id: 123,
+                },
             };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -177,30 +177,30 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions - fixing edited book record', async () => {
+        it('dispatches expected actions - fixing edited book record', async() => {
             const testInput = {
                 publication: {
                     ...mockData.mockRecordToFix,
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 123
-                        }
-                    ]
+                            rek_contributor_id: 123,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 123
-                }
+                    aut_id: 123,
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS
+                actions.FIX_RECORD_SUCCESS,
             ];
 
             mockApi
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...testInput.publication}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: { ...testInput.publication } })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
                 .reply(200, {});
 
             try {
@@ -211,41 +211,41 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for successful record fix with files', async () => {
+        it('dispatches expected actions for successful record fix with files', async() => {
             const testInput = {
                 publication: {
-                    ...mockData.mockRecordToFix
+                    ...mockData.mockRecordToFix,
                 },
                 author: {
-                    aut_id: 410
+                    aut_id: 410,
                 },
                 files: {
                     queue: [
                         {
                             name: 'test.txt',
                             fileData: {
-                                name: 'test.txt'
-                            }
-                        }
-                    ]
-                }
+                                name: 'test.txt',
+                            },
+                        },
+                    ],
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
                 'FILE_UPLOAD_STARTED',
                 'FILE_UPLOAD_PROGRESS@test.txt',
-                actions.FIX_RECORD_SUCCESS
+                actions.FIX_RECORD_SUCCESS,
             ];
 
             mockApi
-                .onGet(repositories.routes.FILE_UPLOAD_API({pid: testPid, fileName: "test.txt"}).apiUrl)
+                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: testPid, fileName: 'test.txt' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', {"name": "test.txt"})
+                .onPut('s3-ap-southeast-2.amazonaws.com', { 'name': 'test.txt' })
                 .reply(200, {})
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: { ...mockData.mockRecordToFix } })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
                 .reply(200, {});
 
             try {
@@ -256,26 +256,26 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for successful record fix with url link', async () => {
+        it('dispatches expected actions for successful record fix with url link', async() => {
             const testInput = {
                 publication: {
-                    ...mockData.mockRecordToFix
+                    ...mockData.mockRecordToFix,
                 },
                 author: {
-                    aut_id: 410
+                    aut_id: 410,
                 },
-                rek_link: 'http://www.google.com'
+                rek_link: 'http://www.google.com',
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS
+                actions.FIX_RECORD_SUCCESS,
             ];
 
             mockApi
-                .onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}})
-                .onPost(repositories.routes.RECORDS_ISSUES_API({pid: testPid}).apiUrl)
+                .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: { ...mockData.mockRecordToFix } })
+                .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: testPid }).apiUrl)
                 .reply(200, {});
 
             try {
@@ -286,20 +286,20 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for successful record fix', async () => {
+        it('dispatches expected actions for successful record fix', async() => {
             const testInput = {
                 publication: {
-                    ...mockData.mockRecordToFix
+                    ...mockData.mockRecordToFix,
                 },
                 author: {
-                    aut_id: 410
+                    aut_id: 410,
                 },
-                contentIndicators: []
+                contentIndicators: [],
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS
+                actions.FIX_RECORD_SUCCESS,
             ];
 
             mockApi.onAny().reply(200, {});
@@ -312,14 +312,14 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for record fix for anon user', async () => {
+        it('dispatches expected actions for record fix for anon user', async() => {
             const testInput = {
                 publication: {
                     ...mockData.mockRecordToFix,
-                    fez_record_search_key_content_indicator: null
+                    fez_record_search_key_content_indicator: null,
                 },
                 author: {
-                    aut_id: 410
+                    aut_id: 410,
                 },
                 contentIndicators: [],
             };
@@ -327,7 +327,7 @@ describe('Fix record actions', () => {
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             mockApi
@@ -342,20 +342,20 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for record fix with API returning error', async () => {
+        it('dispatches expected actions for record fix with API returning error', async() => {
             const testInput = {
                 publication: {
-                    ...mockData.mockRecordToFix
+                    ...mockData.mockRecordToFix,
                 },
                 author: {
-                    aut_id: 410
-                }
+                    aut_id: 410,
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
                 actions.APP_ALERT_SHOW,
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             mockApi
@@ -372,13 +372,13 @@ describe('Fix record actions', () => {
     });
 
     describe('unclaimRecord action', () => {
-        it('dispatches expected actions with invalid data (missing publication data)', async () => {
+        it('dispatches expected actions with invalid data (missing publication data)', async() => {
             const testInput = {
-                author: {}
+                author: {},
             };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -389,13 +389,13 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions with invalid data (missing author)', async () => {
+        it('dispatches expected actions with invalid data (missing author)', async() => {
             const testInput = {
-                publication: {}
+                publication: {},
             };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -406,27 +406,27 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions with invalid data (missing author/record link)', async () => {
+        it('dispatches expected actions with invalid data (missing author/record link)', async() => {
             const testInput = {
                 publication: {
                     fez_record_search_key_author_id: [
                         {
-                            rek_author_id: 123
-                        }
+                            rek_author_id: 123,
+                        },
                     ],
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 125
-                        }
-                    ]
+                            rek_contributor_id: 125,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 124
-                }
+                    aut_id: 124,
+                },
             };
 
             const expectedActions = [
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             try {
@@ -437,35 +437,35 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for successful record unclaim', async () => {
+        it('dispatches expected actions for successful record unclaim', async() => {
             const testInput = {
                 publication: {
                     ...mockData.mockRecordToFix,
                     fez_record_search_key_author_id: [
                         {
-                            rek_author_id: 123
-                        }
+                            rek_author_id: 123,
+                        },
                     ],
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 123
-                        }
-                    ]
+                            rek_contributor_id: 123,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 123
-                }
+                    aut_id: 123,
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_UNCLAIM_SUCCESS
+                actions.FIX_RECORD_UNCLAIM_SUCCESS,
             ];
 
-            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({pid: testPid}).apiUrl)
-                .reply(200, {data: {...mockData.mockRecordToFix}})
+            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+                .reply(200, { data: { ...mockData.mockRecordToFix } })
                 .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API().apiUrl)
-                .reply(200, {data: {pid: testPid}});
+                .reply(200, { data: { pid: testPid } });
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -475,30 +475,30 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for record unclaim for anon user', async () => {
+        it('dispatches expected actions for record unclaim for anon user', async() => {
             const testInput = {
                 publication: {
                     ...mockData.record,
                     fez_record_search_key_author_id: [
                         {
-                            rek_author_id: 123
-                        }
+                            rek_author_id: 123,
+                        },
                     ],
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 123
-                        }
-                    ]
+                            rek_contributor_id: 123,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 123
-                }
+                    aut_id: 123,
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             mockApi
@@ -513,30 +513,30 @@ describe('Fix record actions', () => {
             }
         });
 
-        it('dispatches expected actions for record unclaim with API returning error', async () => {
+        it('dispatches expected actions for record unclaim with API returning error', async() => {
             const testInput = {
                 publication: {
                     ...mockData.mockRecordToFix,
                     fez_record_search_key_author_id: [
                         {
-                            rek_author_id: 123
-                        }
+                            rek_author_id: 123,
+                        },
                     ],
                     fez_record_search_key_contributor_id: [
                         {
-                            rek_contributor_id: 123
-                        }
-                    ]
+                            rek_contributor_id: 123,
+                        },
+                    ],
                 },
                 author: {
-                    aut_id: 123
-                }
+                    aut_id: 123,
+                },
             };
 
             const expectedActions = [
                 actions.FIX_RECORD_PROCESSING,
                 actions.APP_ALERT_SHOW,
-                actions.FIX_RECORD_FAILED
+                actions.FIX_RECORD_FAILED,
             ];
 
             mockApi

@@ -1,17 +1,17 @@
-import {RighthandCard} from './StandardRighthandCard';
+import { RighthandCard } from './StandardRighthandCard';
 
 function setup(testProps, isShallow = true) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps
+        ...testProps,
     };
     return getElement(RighthandCard, props, isShallow);
 }
 
 describe('Snapshot tests for RighthandCard component', () => {
     it('renders with title and no help icon', () => {
-        const wrapper = setup({title: 'card title'});
+        const wrapper = setup({ title: 'card title' });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -20,10 +20,10 @@ describe('Snapshot tests for RighthandCard component', () => {
         const wrapper = setup({
             title: 'Title',
             help: {
-                title:'Help text',
-                text:'Some help text',
-                buttonLabel:'OK'
-            }
+                title: 'Help text',
+                text: 'Some help text',
+                buttonLabel: 'OK',
+            },
         });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
@@ -33,11 +33,11 @@ describe('Snapshot tests for RighthandCard component', () => {
         const wrapper = setup({
             title: 'Title',
             help: {
-                title:'Help text',
-                text:'Some help text',
-                buttonLabel:'OK'
+                title: 'Help text',
+                text: 'Some help text',
+                buttonLabel: 'OK',
             },
-            children: 'Some content'
+            children: 'Some content',
         });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();

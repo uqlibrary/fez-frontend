@@ -1,17 +1,17 @@
 import GenericDocumentCitation from './GenericDocumentCitation';
-import {generic} from 'mock/data/testing/records';
+import { generic } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(GenericDocumentCitation, props, isShallow);
+    return getElement(GenericDocumentCitation, props, args);
 }
 
 describe('GenericDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -24,9 +24,9 @@ describe('GenericDocumentCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...generic,
-                fez_record_search_key_publisher: {rek_publisher: null},
-                rek_title: null
-            }
+                fez_record_search_key_publisher: { rek_publisher: null },
+                rek_title: null,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -34,7 +34,7 @@ describe('GenericDocumentCitation renders ', () => {
     it('component when no title', () => {
         delete generic.rek_title;
         const wrapper = setup({
-            publication: generic
+            publication: generic,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

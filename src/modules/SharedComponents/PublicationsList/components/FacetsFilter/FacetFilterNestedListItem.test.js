@@ -1,6 +1,6 @@
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         index: 0,
         primaryText: 'Test facet filter',
@@ -9,12 +9,12 @@ function setup(testProps, isShallow = true) {
         classes: {
             listItemGutters: 'listItemGutters',
             inset: 'inset',
-            selectedFacet: 'selectedFacet'
+            selectedFacet: 'selectedFacet',
         },
         onFacetClick: jest.fn(),
-        ...testProps
+        ...testProps,
     };
-    return getElement(FacetFilterNestedListItem, props, isShallow);
+    return getElement(FacetFilterNestedListItem, props, args);
 }
 
 describe('Facet filter nested list item ', () => {
@@ -34,16 +34,16 @@ describe('Facet filter nested list item ', () => {
     });
 
     it('should render inactive filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: false }, false);
+        const wrapper = setup({ primaryText: 'Test filter', isActive: false }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render memoised version of the filter view', () => {
-        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true }, false);
+        const wrapper = setup({ primaryText: 'Test filter', isActive: true, disabled: true }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setProps({
             inActive: true,
-            disabled: true
+            disabled: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

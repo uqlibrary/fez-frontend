@@ -1,17 +1,17 @@
 import DesignCitation from './DesignCitation';
-import {design} from 'mock/data/testing/records';
+import { design } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(DesignCitation, props, isShallow);
+    return getElement(DesignCitation, props, args);
 }
 
 describe('DesignCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -24,8 +24,8 @@ describe('DesignCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...design,
-                fez_record_search_key_source: {rek_source: null}
-            }
+                fez_record_search_key_source: { rek_source: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

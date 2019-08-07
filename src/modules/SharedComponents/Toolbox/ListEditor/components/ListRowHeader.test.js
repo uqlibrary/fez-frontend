@@ -1,23 +1,22 @@
-import {ListRowHeader} from './ListRowHeader';
+import { ListRowHeader } from './ListRowHeader';
 import ListRowHeaderWithStyles from './ListRowHeader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         disabled: false,
         classes: {
             center: '',
-            header: ''
+            header: '',
         },
         ...testProps,
     };
-    return getElement(ListRowHeader, props, isShallow);
+    return getElement(ListRowHeader, props);
 }
 
 describe('ListRowHeader renders ', () => {
-
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup({ });
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -28,25 +27,28 @@ describe('ListRowHeader renders ', () => {
 
     it('should show confirmation box', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         };
 
-        wrapper.find('WithStyles(IconButton)').props().onClick();
+        wrapper
+            .find('WithStyles(IconButton)')
+            .props()
+            .onClick();
         expect(showConfirmationFn).toHaveBeenCalled();
     });
 
     it('should render default view with styles', () => {
-        const wrapper = getElement(ListRowHeaderWithStyles, {onDeleteAll: jest.fn()});
+        const wrapper = getElement(ListRowHeaderWithStyles, { onDeleteAll: jest.fn() });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set confirmation ref', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setConfirmationRef({
-            showConfirmation: showConfirmationFn
+            showConfirmation: showConfirmationFn,
         });
         wrapper.instance().showConfirmation();
         expect(showConfirmationFn).toHaveBeenCalled();
@@ -54,7 +56,7 @@ describe('ListRowHeader renders ', () => {
 
     it('should render larger grid item', () => {
         const wrapper = setup({
-            hideReorder: true
+            hideReorder: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

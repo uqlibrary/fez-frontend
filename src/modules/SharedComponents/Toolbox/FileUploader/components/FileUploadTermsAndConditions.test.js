@@ -9,18 +9,18 @@ const getProps = (testProps = {}) => ({
     classes: {
         label: '',
         error: '',
-        accepted: ''
+        accepted: '',
     },
-    ...testProps
+    ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadTermsAndConditions, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploadTermsAndConditions, getProps(testProps));
 }
 
 describe('Component FileUploadTermsAndConditions', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -30,14 +30,14 @@ describe('Component FileUploadTermsAndConditions', () => {
     });
 
     it('should render checked if terms and conditions accepted', () => {
-        const wrapper = setup({isTermsAndConditionsAccepted: true});
+        const wrapper = setup({ isTermsAndConditionsAccepted: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call onAcceptTermsAndConditions to handle change', () => {
         const testFn = jest.fn();
-        const wrapper = setup({onAcceptTermsAndConditions: testFn});
-        wrapper.instance()._handleChange({target: {checked: true}});
+        const wrapper = setup({ onAcceptTermsAndConditions: testFn });
+        wrapper.instance()._handleChange({ target: { checked: true } });
         expect(testFn).toHaveBeenCalledWith(true);
     });
 });

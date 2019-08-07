@@ -1,17 +1,17 @@
 import WorkingPaperCitation from './WorkingPaperCitation';
-import {workingPaper} from 'mock/data/testing/records';
+import { workingPaper } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(WorkingPaperCitation, props, isShallow);
+    return getElement(WorkingPaperCitation, props, args);
 }
 
 describe('WorkingPaperCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -24,8 +24,8 @@ describe('WorkingPaperCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...workingPaper,
-                fez_record_search_key_doi: {rek_doi: null}
-            }
+                fez_record_search_key_doi: { rek_doi: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -1,15 +1,15 @@
-import {trendingPublications} from 'mock/data/testing/trendingPublications';
-import {TopCitedPublicationsClass} from './TopCitedPublications';
-import {transformTrendingPublicationsMetricsData} from 'actions/academicDataTransformers';
+import { trendingPublications } from 'mock/data/testing/trendingPublications';
+import { TopCitedPublicationsClass } from './TopCitedPublications';
+import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
 
-function setup(testProps, isShallow = true){
+function setup(testProps, isShallow = true) {
     const props = {
         classes: {},
         theme: {},
         actions: {
-            searchTopCitedPublications: jest.fn()
+            searchTopCitedPublications: jest.fn(),
         },
-        ...testProps
+        ...testProps,
     };
     return getElement(TopCitedPublicationsClass, props, isShallow);
 }
@@ -17,7 +17,7 @@ function setup(testProps, isShallow = true){
 describe('Component TopCitedPublications', () => {
     it('should render top cited publications', () => {
         const wrapper = setup({
-            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications)
+            topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -25,13 +25,13 @@ describe('Component TopCitedPublications', () => {
     it('should render tabs with xs width properly', () => {
         const wrapper = setup({
             topCitedPublicationsList: transformTrendingPublicationsMetricsData(trendingPublications),
-            width: 'xs'
+            width: 'xs',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render loading indicator', () => {
-        const wrapper = setup({loadingTopCitedPublications: true});
+        const wrapper = setup({ loadingTopCitedPublications: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -40,7 +40,7 @@ describe('Component TopCitedPublications', () => {
         const wrapper = setup({
             topCitedPublicationsList: [],
             loadingTopCitedPublications: false,
-            actions: {searchTopCitedPublications: testFn}});
+            actions: { searchTopCitedPublications: testFn } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -50,5 +50,4 @@ describe('Component TopCitedPublications', () => {
         wrapper.instance().handleTabChange(null, test);
         expect(wrapper.state().topCitedTab).toBe(test);
     });
-
 });

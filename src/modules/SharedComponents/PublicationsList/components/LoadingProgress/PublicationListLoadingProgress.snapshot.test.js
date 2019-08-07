@@ -1,15 +1,15 @@
-import {PublicationListLoadingProgressClass} from './PublicationListLoadingProgress';
+import { PublicationListLoadingProgressClass } from './PublicationListLoadingProgress';
 import PublicationListLoadingProgress from './PublicationListLoadingProgress';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
-        classes:{},
+        classes: {},
         theme: {},
         loadingPublicationSources: testProps.loadingPublicationSources || {},
         mobile: testProps.mobile || false,
-        ...testProps
+        ...testProps,
     };
-    return getElement(PublicationListLoadingProgressClass, props, isShallow);
+    return getElement(PublicationListLoadingProgressClass, props);
 }
 
 describe('Search Dashboard test', () => {
@@ -25,12 +25,11 @@ describe('Search Dashboard test', () => {
                 totalSearchedCount: 4,
                 totalSourcesCount: 4,
                 wos: true,
-                wosCount: 5
-            }
+                wosCount: 5,
+            },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -46,12 +45,11 @@ describe('Search Dashboard test', () => {
                 totalSearchedCount: 3,
                 totalSourcesCount: 4,
                 wos: true,
-                wosCount: 5
-            }
+                wosCount: 5,
+            },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -67,12 +65,11 @@ describe('Search Dashboard test', () => {
                 totalSearchedCount: 0,
                 totalSourcesCount: 4,
                 wos: false,
-                wosCount: 5
-            }
+                wosCount: 5,
+            },
         };
-        const mobile = true;
 
-        const wrapper = setup(loadingPublicationSources, mobile);
+        const wrapper = setup(loadingPublicationSources);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -88,11 +85,11 @@ describe('Search Dashboard test', () => {
                 totalSearchedCount: 0,
                 totalSourcesCount: 4,
                 wos: false,
-                wosCount: 5
-            }
+                wosCount: 5,
+            },
         };
 
-        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, false);
+        const wrapper = getElement(PublicationListLoadingProgress, loadingPublicationSources, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -1,39 +1,39 @@
 jest.dontMock('./CreativeWorkForm');
 
 import CreativeWorkForm from './CreativeWorkForm';
-import {NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT} from 'config/general';
+import { NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT } from 'config/general';
 
-function setup(testProps, isShallow = true){
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-    return getElement(CreativeWorkForm, props, isShallow);
+    return getElement(CreativeWorkForm, props);
 }
 
 describe('CreativeWorkForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 10 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(10);
     });
 
     it('component with all fields disabled', () => {
-        const wrapper = setup({submitting: true});
+        const wrapper = setup({ submitting: true });
         wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
-        })
+        });
     });
 
     it('should show exhibition content correctly', () => {
         const testProps = {
             subtype: NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
-            isNtro: true
+            isNtro: true,
         };
         const wrapper = setup(testProps);
         expect(toJson(wrapper)).toMatchSnapshot();

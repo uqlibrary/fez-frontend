@@ -1,17 +1,17 @@
 import { PolicyDropdown } from './PolicyDropdown';
 
-const setup = (testProps, isShallow = true) => {
+function setup(testProps = {}) {
     const props = {
         fieldName: 'test',
-        ...testProps
+        ...testProps,
     };
-    return getElement(PolicyDropdown, props, isShallow);
-};
+    return getElement(PolicyDropdown, props);
+}
 
 describe('PolicyDropdown component', () => {
     it('should render properly', () => {
         const wrapper = setup({
-            displayPrompt: true
+            displayPrompt: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

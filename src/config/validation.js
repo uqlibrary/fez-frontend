@@ -9,8 +9,7 @@ export const maxLength = max => value =>
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLengthWithWhitespace = max => value =>
-    (value && (value.plainText && value.plainText.length > max)) ||
-    (!value.plainText && value.length > max + 7)
+    (value && (value.plainText && value.plainText.length > max)) || (!value.plainText && value.length > max + 7)
         ? locale.validationErrors.maxLength.replace('[max]', max)
         : undefined;
 export const maxLength9 = maxLength(9);
@@ -40,9 +39,7 @@ export const maxWords = max => value => {
     }
 
     const regExp = '^ *\\S+(?: +\\S+){[max],}$';
-    return new RegExp(regExp.replace('[max]', max), 'gim').test(
-        valueToValidate.trim()
-    )
+    return new RegExp(regExp.replace('[max]', max), 'gim').test(valueToValidate.trim())
         ? locale.validationErrors.maxWords.replace('[max]', max)
         : undefined;
 };
@@ -70,13 +67,10 @@ export const isValidDOIValue = value => {
         /^10.1002\/[^\s]+$/i,
         /^10.\d{4}\/\d+-\d+X?\(\d+\)\d+<[\d\w]+:[\d\w]*>\d+.\d+.\w+;\d$/i,
         /^10.1021\/\w\w\d+$/i,
-        /^10.1207\/[\w\d]+\&\d+_\d+$/i
+        /^10.1207\/[\w\d]+\&\d+_\d+$/i,
     ];
 
-    return regexGroup.reduce(
-        (isValid, regex) => regex.test(value.trim()) || isValid,
-        false
-    );
+    return regexGroup.reduce((isValid, regex) => regex.test(value.trim()) || isValid, false);
 };
 export const isValidPubMedValue = value => {
     // pubmed id is all digits, min 3 digits
@@ -93,68 +87,39 @@ export const isValidPublicationTitle = value => {
 };
 
 // Generic
-export const required = value =>
-    value ? undefined : locale.validationErrors.required;
+export const required = value => (value ? undefined : locale.validationErrors.required);
 
 // Check if copyright/agreement is checked
-export const requireChecked = value =>
-    value === 'on' ? undefined : locale.validationErrors.requireChecked;
+export const requireChecked = value => (value === 'on' ? undefined : locale.validationErrors.requireChecked);
 
 export const requiredList = value => {
-    return ((value instanceof Immutable.List && value.toJS()) || value || [])
-        .length > 0
+    return ((value instanceof Immutable.List && value.toJS()) || value || []).length > 0
         ? undefined
         : locale.validationErrors.required;
 };
 
 export const email = value =>
-    !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value)
-        ? locale.validationErrors.email
-        : undefined;
+    !value || !/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(value) ? locale.validationErrors.email : undefined;
 export const url = value =>
-    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value)
-        ? locale.validationErrors.url
-        : maxLength2000(value);
-export const doi = value =>
-    !!value && !isValidDOIValue(value)
-        ? locale.validationErrors.doi
-        : undefined;
+    value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
+export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
 export const forRequired = itemList =>
-    !itemList || itemList.length === 0
-        ? locale.validationErrors.forRequired
-        : undefined;
-export const subRequired = itemList =>
-    !itemList || itemList.length === 0
-        ? locale.validationErrors.subRequired
-        : undefined;
+    !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
-export const peopleRequired = (
-    itemList,
-    validationError,
-    checkSelected = true
-) =>
+export const peopleRequired = (itemList, validationError, checkSelected = true) =>
     !itemList ||
     itemList.length === 0 ||
-    (checkSelected &&
-        itemList &&
-        itemList.filter(item => item.selected).length === 0)
+    (checkSelected && itemList && itemList.filter(item => item.selected).length === 0)
         ? validationError
         : undefined;
 
-export const authorRequired = authors =>
-    peopleRequired(authors, locale.validationErrors.authorRequired, true);
-export const editorRequired = editors =>
-    peopleRequired(editors, locale.validationErrors.editorRequired, true);
+export const authorRequired = authors => peopleRequired(authors, locale.validationErrors.authorRequired, true);
+export const editorRequired = editors => peopleRequired(editors, locale.validationErrors.editorRequired, true);
 export const supervisorRequired = supervisors =>
-    peopleRequired(
-        supervisors,
-        locale.validationErrors.supervisorRequired,
-        false
-    );
+    peopleRequired(supervisors, locale.validationErrors.supervisorRequired, false);
 
 export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) =>
-    (authorAffiliation.uqIdentifier === '0' ||
-        authorAffiliation.uqIdentifier === String(loggedInAuthor.aut_id)) &&
+    (authorAffiliation.uqIdentifier === '0' || authorAffiliation.uqIdentifier === String(loggedInAuthor.aut_id)) &&
     ((authorAffiliation.nameAsPublished || '').trim().length === 0 ||
         (authorAffiliation.orgaff || '').trim().length === 0 ||
         (authorAffiliation.orgtype || '').trim().length === 0 ||
@@ -162,15 +127,11 @@ export const authorAffiliationRequired = (authorAffiliation, loggedInAuthor) =>
 
 // DateTime
 export const dateTimeDay = value =>
-    value &&
-    (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31)
+    value && (isNaN(value) || parseInt(value, 10) < 0 || parseInt(value, 10) > 31)
         ? locale.validationErrors.dateTimeDay
         : undefined;
 export const dateTimeYear = value =>
-    !value ||
-    value.length === 0 ||
-    isNaN(value) ||
-    parseInt(value, 10) > new Date().getFullYear()
+    !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > new Date().getFullYear()
         ? locale.validationErrors.dateTimeYear
         : undefined;
 export const validFileUpload = value => {
@@ -285,8 +246,7 @@ export const dateRange = (value, values) => {
     }
 };
 
-export const grantFormIsPopulated = value =>
-    value === true ? locale.validationErrors.grants : undefined;
+export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
 
 export const translateFormErrorsToText = formErrors => {
     if (!formErrors) return null;
@@ -315,7 +275,7 @@ export const getErrorAlertProps = ({
     error,
     formErrors,
     submitSucceeded = false,
-    alertLocale = {}
+    alertLocale = {},
 }) => {
     let alertProps = null;
     if (submitting) {
@@ -327,9 +287,7 @@ export const getErrorAlertProps = ({
             // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message
-                    ? alertLocale.errorAlert.message(error)
-                    : error
+                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error,
             };
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
@@ -342,11 +300,7 @@ export const getErrorAlertProps = ({
                     <ul>
                         {errorMessagesList &&
                             errorMessagesList.length > 0 &&
-                            errorMessagesList.map((item, index) => (
-                                <li key={`validation-summary-${index}`}>
-                                    {item}
-                                </li>
-                            ))}
+                            errorMessagesList.map((item, index) => <li key={`validation-summary-${index}`}>{item}</li>)}
                     </ul>
                 </span>
             );

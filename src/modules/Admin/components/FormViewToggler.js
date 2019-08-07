@@ -1,5 +1,5 @@
 import React from 'react';
-import { useTabbedContext} from 'context';
+import { useTabbedContext } from 'context';
 
 import Grid from '@material-ui/core/Grid';
 import Tooltip from '@material-ui/core/Tooltip';
@@ -10,7 +10,7 @@ import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import txt from 'locale/pages';
 
 export const FormViewToggler = React.memo(() => {
-    const { tabbed, toggleTabbed} = useTabbedContext();
+    const { tabbed, toggleTabbed } = useTabbedContext();
     return (
         <Grid container direction="row" spacing={0} alignItems="center">
             <Grid item>

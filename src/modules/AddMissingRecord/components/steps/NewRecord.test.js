@@ -1,31 +1,30 @@
 import NewRecord from './NewRecord';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         history: {},
         actions: {},
-        ...testProps
+        ...testProps,
     };
-    return getElement(NewRecord, props, isShallow);
+    return getElement(NewRecord, props, args);
 }
 
 describe('Add new record', () => {
-
     it('should not render publication form if author is not loaded ', () => {
-        const wrapper = setup({author: null});
+        const wrapper = setup({ author: null });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render stepper and a publication form', () => {
-        const wrapper = setup({history: {}, author: {'aut_display_name': 'Fred', 'aut_id': 44}});
+        const wrapper = setup({ history: {}, author: { aut_display_name: 'Fred', aut_id: 44 } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should show confirmation box', () => {
-        const wrapper = setup({history: {}});
+        const wrapper = setup({ history: {} });
         const showConfirmation = jest.fn();
         wrapper.instance().confirmationBox = {
-            showConfirmation: showConfirmation
+            showConfirmation: showConfirmation,
         };
 
         wrapper.instance()._recordSaved();
@@ -35,9 +34,9 @@ describe('Add new record', () => {
     it('should navigate to find publication', () => {
         const navigateToRecordSearch = jest.fn();
         const history = {
-            push: navigateToRecordSearch
+            push: navigateToRecordSearch,
         };
-        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
+        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
         wrapper.instance()._restartWorkflow();
         expect(navigateToRecordSearch).toBeCalled();
     });
@@ -45,9 +44,9 @@ describe('Add new record', () => {
     it('should navigate to my research', () => {
         const navigateToMyResearch = jest.fn();
         const history = {
-            push: navigateToMyResearch
+            push: navigateToMyResearch,
         };
-        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
+        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
         wrapper.instance()._navigateToMyResearch();
         expect(navigateToMyResearch).toBeCalled();
     });
@@ -55,31 +54,34 @@ describe('Add new record', () => {
     it('should restart workflow', () => {
         const navigateToSearch = jest.fn();
         const history = {
-            push: navigateToSearch
+            push: navigateToSearch,
         };
 
-        const wrapper = setup({history: history, actions: {clearNewRecord: jest.fn()}});
+        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
         wrapper.instance()._restartWorkflow();
 
         expect(navigateToSearch).toBeCalled();
     });
 
     it('should render the confirm dialog with an alert for failed file upload', () => {
-        const wrapper = setup({
-            author: {aut_id: 12345, aut_display_name: 'Test'},
-            history: {},
-            newRecordFileUploadingError: true,
-            rawSearchQuery: 'This is a test'
-        }, false);
+        const wrapper = setup(
+            {
+                author: { aut_id: 12345, aut_display_name: 'Test' },
+                history: {},
+                newRecordFileUploadingError: true,
+                rawSearchQuery: 'This is a test',
+            },
+            { isShallow: false }
+        );
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
 
     it('should render the confirm dialog without an alert for a succcessful file upload', () => {
         const wrapper = setup({
-            author: {aut_id: 12345, aut_display_name: 'Test'},
+            author: { aut_id: 12345, aut_display_name: 'Test' },
             history: {},
             newRecordFileUploadingError: false,
-            rawSearchQuery: 'This is a test'
+            rawSearchQuery: 'This is a test',
         });
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
@@ -87,7 +89,7 @@ describe('Add new record', () => {
     it('should render alert about file uploading or issue error', () => {
         const wrapper = setup({
             author: {},
-            newRecordFileUploadingOrIssueError: true
+            newRecordFileUploadingOrIssueError: true,
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

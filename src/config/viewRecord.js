@@ -1,42 +1,43 @@
-import {routes} from 'config';
+import { routes } from 'config';
 
-const prefixFileName = (prefix, fileName, extension) => `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
+const prefixFileName = (prefix, fileName, extension) =>
+    `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
 
 export const viewRecordsConfig = {
     genericDataEmail: 'data@library.uq.edu.au',
     licenseLinks: {
         453608: {
             className: 'cc-by',
-            url: 'http://creativecommons.org/licenses/by/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by/3.0/deed.en_US',
         },
         453609: {
             className: 'cc-by-nd',
-            url: 'http://creativecommons.org/licenses/by-nd/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by-nd/3.0/deed.en_US',
         },
         453610: {
             className: 'cc-by-nc',
-            url: 'http://creativecommons.org/licenses/by-nc/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by-nc/3.0/deed.en_US',
         },
         453611: {
             className: 'cc-by-nc-nd',
-            url: 'http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US',
         },
         453612: {
             className: 'cc-by-nc-sa',
-            url: 'http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US',
         },
         453613: {
             className: 'cc-by-sa',
-            url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US'
+            url: 'http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
         },
         453701: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
+            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
         },
         453702: {
             className: 'uq',
-            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions'
-        }
+            url: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        },
     },
     htmlFields: [
         'rek_transcript',
@@ -46,7 +47,7 @@ export const viewRecordsConfig = {
         'rek_acknowledgements',
         'rek_advisory_statement',
         'rek_related_datasets',
-        'rek_related_publications'
+        'rek_related_publications',
     ],
     // apart from rek_date
     dateFields: [
@@ -58,28 +59,30 @@ export const viewRecordsConfig = {
         'rek_end_date',
         'rek_time_period_start_date',
         'rek_time_period_end_date',
-        'rek_project_start_date'
+        'rek_project_start_date',
     ],
     dateFieldFormat: {
-        'rek_date_available': 'YYYY',
-        'rek_date_photo_taken': 'YYYY'
+        rek_date_available: 'YYYY',
+        rek_date_photo_taken: 'YYYY',
     },
     // some display types have different publication date format
     publicationDateFormat: {
-        'Book': 'YYYY',
+        Book: 'YYYY',
         'Book Chapter': 'YYYY',
         'Conference Paper': 'YYYY',
-        'Data Collection': 'YYYY'
+        'Data Collection': 'YYYY',
     },
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
-            descriptionKeywordsRegex: '(ERA |HERDC|not publicly available|corrected thesis|restricted|lodgement|submission|corrections|staffdata)',
-            collections: ['UQ:413806', 'UQ:357493', 'UQ:211157', 'UQ:342107']
+            descriptionKeywordsRegex:
+                '(ERA |HERDC|not publicly available|corrected thesis|restricted|' +
+                'lodgement|submission|corrections|staffdata)',
+            collections: ['UQ:413806', 'UQ:357493', 'UQ:211157', 'UQ:342107'],
         },
-        thumbnailFileName: (fileName) => prefixFileName('thumbnail', fileName, 'jpg'),
-        previewFileName: (fileName) => prefixFileName('preview', fileName, 'jpg'),
-        webFileName: (fileName) => prefixFileName('web', fileName, 'jpg'),
+        thumbnailFileName: fileName => prefixFileName('thumbnail', fileName, 'jpg'),
+        previewFileName: fileName => prefixFileName('preview', fileName, 'jpg'),
+        webFileName: fileName => prefixFileName('web', fileName, 'jpg'),
     },
     metaTags: [
         {
@@ -88,10 +91,10 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Identifier',
-                    isMultiple: false
-                }
+                    isMultiple: false,
+                },
             ],
-            url: (pid) => routes.pathConfig.records.view(pid, true)
+            url: pid => routes.pathConfig.records.view(pid, true),
         },
         {
             searchKey: 'fez_record_search_key_subject',
@@ -99,9 +102,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: null,
@@ -110,9 +113,9 @@ export const viewRecordsConfig = {
                 {
                     name: 'citation_pdf_url',
                     isMultiple: true,
-                }
+                },
             ],
-            url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName)
+            url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName),
         },
         {
             searchKey: null,
@@ -120,13 +123,13 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Title',
-                    isMultiple: false
+                    isMultiple: false,
                 },
                 {
                     name: 'citation_title',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_contributor',
@@ -134,9 +137,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Contributor',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_author',
@@ -144,13 +147,13 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Creator',
-                    isMultiple: true
+                    isMultiple: true,
                 },
                 {
                     name: 'citation_authors',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_journal_name',
@@ -158,9 +161,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_journal_title',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_issn',
@@ -168,9 +171,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_issn',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: null,
@@ -179,14 +182,14 @@ export const viewRecordsConfig = {
                 {
                     name: 'DC.Date',
                     isMultiple: false,
-                    format: 'YYYY-MM-DD'
+                    format: 'YYYY-MM-DD',
                 },
                 {
                     name: 'citation_date',
                     isMultiple: false,
-                    format: 'YYYY/MM/DD'
-                }
-            ]
+                    format: 'YYYY/MM/DD',
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_start_date',
@@ -195,9 +198,9 @@ export const viewRecordsConfig = {
                 {
                     name: 'citation_start_date',
                     isMultiple: false,
-                    format: 'YYYY/MM/DD'
-                }
-            ]
+                    format: 'YYYY/MM/DD',
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_end_date',
@@ -206,9 +209,9 @@ export const viewRecordsConfig = {
                 {
                     name: 'citation_end_date',
                     isMultiple: false,
-                    format: 'YYYY/MM/DD'
-                }
-            ]
+                    format: 'YYYY/MM/DD',
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_doi',
@@ -216,9 +219,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_doi',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_volume_number',
@@ -226,9 +229,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_volume',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_issue_number',
@@ -236,9 +239,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_issue',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_start_page',
@@ -246,9 +249,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_firstpage',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_end_page',
@@ -256,9 +259,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_lastpage',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_publisher',
@@ -266,13 +269,13 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Publisher',
-                    isMultiple: false
+                    isMultiple: false,
                 },
                 {
                     name: 'citation_publisher',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_language',
@@ -280,9 +283,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_language',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: null,
@@ -290,13 +293,13 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Description',
-                    isMultiple: false
+                    isMultiple: false,
                 },
                 {
                     name: 'citation_abstract',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_keywords',
@@ -304,9 +307,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_keywords',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_conference_name',
@@ -314,9 +317,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_conference',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_coverage_period',
@@ -324,9 +327,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_geographic_area',
@@ -334,9 +337,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'DC.Subject',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_isbn',
@@ -344,9 +347,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_isbn',
-                    isMultiple: true
-                }
-            ]
+                    isMultiple: true,
+                },
+            ],
         },
         {
             searchKey: 'fez_record_search_key_report_number',
@@ -354,9 +357,9 @@ export const viewRecordsConfig = {
             tags: [
                 {
                     name: 'citation_technical_report_number',
-                    isMultiple: false
-                }
-            ]
+                    isMultiple: false,
+                },
+            ],
         },
-    ]
+    ],
 };

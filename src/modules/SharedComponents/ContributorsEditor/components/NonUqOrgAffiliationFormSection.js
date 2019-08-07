@@ -7,7 +7,7 @@ import FormControl from '@material-ui/core/FormControl';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-import {ORG_AFFILIATION_TYPES} from 'config/general';
+import { ORG_AFFILIATION_TYPES } from 'config/general';
 
 export default function NonUqOrgAffiliationFormSection({
     orgAffiliation,
@@ -49,7 +49,7 @@ export default function NonUqOrgAffiliationFormSection({
                         onChange={onOrgTypeChange}
                         disabled={disableOrgTypeEdit}
                         SelectDisplayProps={{
-                            id: 'org-affiliation-type'
+                            id: 'org-affiliation-type',
                         }}
                     >
                         <MenuItem disabled>{locale.fields.organisationType.placeholder}</MenuItem>
@@ -76,12 +76,12 @@ NonUqOrgAffiliationFormSection.defaultProps = {
         fields: {
             organisation: {
                 inputLabel: 'Organisation',
-                placeholder: 'Enter the primary affiliated organisation'
+                placeholder: 'Enter the primary affiliated organisation',
             },
             organisationType: {
                 inputLabel: 'Organisation type',
                 placeholder: 'Select an affiliated organisation type',
-            }
-        }
-    }
+            },
+        },
+    },
 };

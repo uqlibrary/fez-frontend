@@ -3,10 +3,10 @@ import PropTypes from 'prop-types';
 
 import MenuItem from '@material-ui/core/MenuItem';
 
-import {SelectField} from 'modules/SharedComponents/Toolbox/SelectField';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 
-import {validation} from 'config';
-import {TOP_LEVEL_SECURITY_POLICIES} from 'config/general';
+import { validation } from 'config';
+import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 
 export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt, policyList, prompt, ...props }) => (
     <SelectField
@@ -41,7 +41,7 @@ PolicyDropdown.propTypes = {
     fieldName: PropTypes.string,
     fieldLabel: PropTypes.oneOfType([
         PropTypes.string,
-        PropTypes.node
+        PropTypes.node,
     ]),
     displayPrompt: PropTypes.bool,
     policyList: PropTypes.array,
@@ -51,5 +51,5 @@ PolicyDropdown.propTypes = {
 PolicyDropdown.defaultProps = {
     displayPrompt: false,
     policyList: TOP_LEVEL_SECURITY_POLICIES,
-    fieldLabel: 'Record level policy to apply to this PID'
+    fieldLabel: 'Record level policy to apply to this PID',
 };

@@ -1,18 +1,18 @@
 import LicenseSelectorField from './LicenseSelectorField';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         label: 'License selector field',
         input: {
             value: ['test', 'test1'],
-            onChange: jest.fn()
+            onChange: jest.fn(),
         },
         errorText: '',
         error: false,
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(LicenseSelectorField, props, isShallow);
+    return getElement(LicenseSelectorField, props);
 }
 
 describe('LicenseSelectorField component', () => {
@@ -25,8 +25,8 @@ describe('LicenseSelectorField component', () => {
     it('should render error and error message', () => {
         const wrapper = setup({
             meta: {
-                error: 'This field is required'
-            }
+                error: 'This field is required',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

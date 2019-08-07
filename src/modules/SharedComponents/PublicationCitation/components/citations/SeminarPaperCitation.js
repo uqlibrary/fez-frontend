@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class SeminarPaperCitation extends Component {
     static propTypes = {
-        publication: PropTypes.object.isRequired
+        publication: PropTypes.object.isRequired,
     };
 
     constructor(props) {
@@ -15,12 +15,12 @@ export default class SeminarPaperCitation extends Component {
         const record = {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
-            series: this.props.publication.fez_record_search_key_series ?
-                this.props.publication.fez_record_search_key_series.rek_series : null,
-            orgUnit: this.props.publication.fez_record_search_key_org_unit_name ?
-                this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
-            orgName: this.props.publication.fez_record_search_key_org_name ?
-                this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
+            series: this.props.publication.fez_record_search_key_series
+                ? this.props.publication.fez_record_search_key_series.rek_series : null,
+            orgUnit: this.props.publication.fez_record_search_key_org_unit_name
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
+            orgName: this.props.publication.fez_record_search_key_org_name
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
         };
 
         // eSpace citation view for Seminar Paper

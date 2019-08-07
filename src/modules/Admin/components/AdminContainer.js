@@ -30,12 +30,12 @@ const styles = (theme) => ({
         color: theme.palette.secondary.main,
         opacity: 0.66,
         '&:hover': {
-            opacity: 0.87
-        }
+            opacity: 0.87,
+        },
     },
     tabIndicator: {
         height: 4,
-        backgroundColor: theme.palette.primary.main
+        backgroundColor: theme.palette.primary.main,
     },
     badgeMargin: {
         top: 8,
@@ -44,8 +44,8 @@ const styles = (theme) => ({
         height: 12,
         fontSize: 10,
         fontWeight: 'bold',
-        backgroundColor: '#595959'
-    }
+        backgroundColor: '#595959',
+    },
 });
 
 export const AdminContainer = ({
@@ -56,7 +56,7 @@ export const AdminContainer = ({
     disableSubmit,
     handleSubmit,
     // match,
-    history
+    history,
 }) => {
     const [tabbed, setTabbed] = useState(
         Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
@@ -90,7 +90,7 @@ export const AdminContainer = ({
         <TabbedContext.Provider
             value={{
                 tabbed: isMobileView ? false : tabbed,
-                toggleTabbed: handleToggle
+                toggleTabbed: handleToggle,
             }}
         >
             <RecordContext.Provider value={{ record: recordToView }}>
@@ -106,32 +106,32 @@ export const AdminContainer = ({
                     tabs={{
                         admin: {
                             component: AdminSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         identifiers: {
                             component: IdentifiersSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         bibliographic: {
                             component: BibliographicSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         grantInformation: {
                             component: GrantInformationSection,
-                            activated: false
+                            activated: false,
                         },
                         authorDetails: {
                             component: AuthorsSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         files: {
                             component: FilesSection,
-                            activated: false
+                            activated: false,
                         },
                         security: {
                             component: SecuritySection,
-                            activated: true
-                        }
+                            activated: true,
+                        },
                     }}
                 />
             </RecordContext.Provider>
@@ -150,7 +150,7 @@ AdminContainer.propTypes = {
     disableSubmit: PropTypes.any,
     handleSubmit: PropTypes.func,
     match: PropTypes.object,
-    history: PropTypes.object
+    history: PropTypes.object,
 };
 
 export function isChanged(prevProps, nextProps) {

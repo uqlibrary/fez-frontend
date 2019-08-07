@@ -1,25 +1,25 @@
 import { GenericSelectFieldClass } from './GenericSelectField';
 import GenericSelectField from './GenericSelectField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
-        ...testProps
+        ...testProps,
     };
-    return getElement(GenericSelectFieldClass, props, isShallow);
+    return getElement(GenericSelectFieldClass, props);
 }
 
 describe('GenericSelectField', () => {
     describe('should render snapshots for', () => {
         it('no items', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
         it('one item', () => {
             const wrapper = setup({
-                itemsList: ['Item 1']
+                itemsList: ['Item 1'],
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
@@ -27,7 +27,7 @@ describe('GenericSelectField', () => {
         it('loading items', () => {
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
-                itemsLoading: true
+                itemsLoading: true,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
@@ -36,25 +36,23 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
                 itemsLoading: false,
-                hideLabel: true
+                hideLabel: true,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
-
     });
 
     describe('Lifecycle methods', () => {
-
         it('componentWillReceiveProps should call method', () => {
             const testFn = jest.fn();
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
                 selectedValue: 'Item 2',
                 parentItemsId: 1234,
-                loadItemsList: testFn
+                loadItemsList: testFn,
             });
             wrapper.setProps({
-                parentItemsId: 4567
+                parentItemsId: 4567,
             });
             expect(testFn).toHaveBeenCalled();
         });
@@ -65,22 +63,21 @@ describe('GenericSelectField', () => {
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
                 selectedValue: 'Item 2',
                 parentItemsId: 1234,
-                loadItemsList: testFn
+                loadItemsList: testFn,
             });
             wrapper.setProps({
-                parentItemsId: 1234
+                parentItemsId: 1234,
             });
             expect(testFn).not.toHaveBeenCalled();
         });
     });
 
     describe('Methods', () => {
-
         it('loads items list for parent ID 1234', () => {
             const testLoadItemListFn = jest.fn();
             setup({
                 loadItemsList: testLoadItemListFn,
-                parentItemsId: 1234
+                parentItemsId: 1234,
             });
             expect(testLoadItemListFn).toHaveBeenCalledWith(1234);
         });
@@ -90,12 +87,12 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 itemsList: ['Item 1', 'Item 2', 'Item 3'],
                 selectedValue: 'Item 2',
-                onChange: testOnChangeFn
+                onChange: testOnChangeFn,
             });
             wrapper.instance()._itemSelected({
                 target: {
-                    value: 'Item 2'
-                }
+                    value: 'Item 2',
+                },
             });
             expect(testOnChangeFn).toHaveBeenCalled();
         });
@@ -104,11 +101,11 @@ describe('GenericSelectField', () => {
             const testFn = jest.fn();
             const event = {
                 target: {
-                    value: ['one', 'two', 'three']
-                }
+                    value: ['one', 'two', 'three'],
+                },
             };
             const wrapper = setup({
-                onChange: testFn
+                onChange: testFn,
             });
             wrapper.instance()._itemSelected(event);
             expect(testFn).toBeCalledWith(['one', 'two', 'three']);
@@ -118,11 +115,11 @@ describe('GenericSelectField', () => {
             const testFn = jest.fn();
             const event = {
                 target: {
-                    value: [-1]
-                }
+                    value: [-1],
+                },
             };
             const wrapper = setup({
-                onChange: testFn
+                onChange: testFn,
             });
             wrapper.instance()._itemSelected(event);
             expect(testFn).toBeCalledWith('');
@@ -132,11 +129,11 @@ describe('GenericSelectField', () => {
             const testFn = jest.fn();
             const event = {
                 target: {
-                    value: [-1, 'two', 'three']
-                }
+                    value: [-1, 'two', 'three'],
+                },
             };
             const wrapper = setup({
-                onChange: testFn
+                onChange: testFn,
             });
             wrapper.instance()._itemSelected(event);
             expect(testFn).toBeCalledWith(['two', 'three']);
@@ -146,7 +143,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: true,
-                selectedValue: [1, 2, 3]
+                selectedValue: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -155,7 +152,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: false,
-                selectedValue: [1, 2, 3]
+                selectedValue: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -164,7 +161,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: false,
-                selectedValue: [1, 2, 3]
+                selectedValue: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -173,7 +170,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: true,
-                selectedValue: [1, 2, 3]
+                selectedValue: [1, 2, 3],
             });
             expect(wrapper.instance().newValue()).toEqual([1, 2, 3]);
         });
@@ -182,7 +179,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: false,
                 hideLabel: true,
-                selectedValue: null
+                selectedValue: null,
             });
             expect(wrapper.instance().newValue()).toEqual('-1');
         });
@@ -191,7 +188,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: true,
-                selectedValue: null
+                selectedValue: null,
             });
             expect(wrapper.instance().newValue()).toEqual([-1]);
         });
@@ -200,7 +197,7 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 multiple: true,
                 hideLabel: false,
-                selectedValue: null
+                selectedValue: null,
             });
             expect(wrapper.instance().newValue()).toEqual([]);
         });
@@ -209,60 +206,42 @@ describe('GenericSelectField', () => {
             const wrapper = setup({
                 itemsLoading: true,
                 loadingHint: 'Loading',
-                hintText: 'Hint'
+                hintText: 'Hint',
             });
-            expect(
-                wrapper.instance().loadingIndicationText()
-            ).toEqual('Loading');
+            expect(wrapper.instance().loadingIndicationText()).toEqual('Loading');
         });
 
         it('loadingIndicationText', () => {
             const wrapper = setup({
                 itemsLoading: false,
                 loadingHint: 'Loading',
-                hintText: 'Hint'
+                hintText: 'Hint',
             });
-            expect(
-                wrapper.instance().loadingIndicationText()
-            ).toEqual('Hint');
+            expect(wrapper.instance().loadingIndicationText()).toEqual('Hint');
         });
 
         it('renderMenuItems (hideLabel: false)', () => {
             const wrapper = setup({
                 hideLabel: false,
-                itemsList: [
-                    { value: 1, text: 'One' },
-                    { value: 2, text: 'Two' },
-                    { value: 3, text: 'Three' }
-                ]
+                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (hideLabel: true)', () => {
             const wrapper = setup({
                 hideLabel: true,
-                itemsList: [
-                    { value: 1, text: 'One' },
-                    { value: 2, text: 'Two' },
-                    { value: 3, text: 'Three' }
-                ]
+                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (hideLabel: false)', () => {
             const wrapper = setup({
                 hideLabel: false,
-                itemsList: [1, 2, 3]
+                itemsList: [1, 2, 3],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (multiple: true)', () => {
@@ -271,16 +250,14 @@ describe('GenericSelectField', () => {
                 itemsList: [1, 2, 3],
                 selectedValue: [1],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('Shows an error', () => {
             const wrapper = setup({
                 hideLabel: false,
                 itemsList: [1, 2, 3],
-                error: 'This is an error'
+                error: 'This is an error',
             });
             expect(toJson(wrapper)).toMatchSnapshot();
         });
@@ -292,9 +269,9 @@ describe('GenericSelectField', () => {
                 GenericSelectField,
                 {
                     loadItemsList: jest.fn(),
-                    parentItemsId: 1234
+                    parentItemsId: 1234,
                 },
-                false
+                { isShallow: false }
             );
             expect(toJson(wrapper)).toMatchSnapshot();
         });

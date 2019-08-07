@@ -1,22 +1,19 @@
-import {DashboardAuthorDetails} from './DashboardAuthorDetails';
-import {authorDetails} from 'mock/data';
+import { DashboardAuthorDetails } from './DashboardAuthorDetails';
+import { authorDetails } from 'mock/data';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
-        ...testProps
+        values: authorDetails.uqresearcher,
+        ...testProps,
     };
-    return getElement(DashboardAuthorDetails, props, isShallow);
+    return getElement(DashboardAuthorDetails, props);
 }
 
 describe('Dashboard Author Details test', () => {
     it('Render the authors details as expected for a UQ researcher)', () => {
-        const values = {
-            values: {}
-        };
-        values.values = authorDetails.uqresearcher;
-        const wrapper = setup(values);
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

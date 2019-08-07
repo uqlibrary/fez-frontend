@@ -6,7 +6,7 @@ const reloadReducerFromLocalStorage = (reducer = 'form') => (WrappedComponent) =
         constructor(props) {
             super(props);
             this.state = {
-                locallyStoredReducer: null
+                locallyStoredReducer: null,
             };
         }
 
@@ -15,7 +15,7 @@ const reloadReducerFromLocalStorage = (reducer = 'form') => (WrappedComponent) =
                 const locallyStoredReducer = Immutable.Map(JSON.parse(localStorage.getItem(reducer)));
 
                 this.setState({
-                    locallyStoredReducer
+                    locallyStoredReducer,
                 });
 
                 localStorage.removeItem(reducer);

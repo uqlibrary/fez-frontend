@@ -1,6 +1,6 @@
 import React from 'react';
-import {default as txt} from './components';
-import {fileUploaderLocale, CLOSED_ACCESS_ID} from 'modules/SharedComponents/Toolbox/FileUploader';
+import { default as txt } from './components';
+import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
 
 export default {
     cancel: 'Abandon and search again',
@@ -12,11 +12,20 @@ export default {
         help: {
             title: 'Non-traditional research output types',
             text: (
-                <p>For more information about each type, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs">here</a>
+                <p>
+                    For more information about each type, click{' '}
+                    <a
+                        style={{ fontWeight: 700 }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/non-traditional-research-outputs"
+                    >
+                        here
+                    </a>
                 </p>
             ),
-            buttonLabel: 'CLOSE'
-        }
+            buttonLabel: 'CLOSE',
+        },
     },
     publicationSubtype: {
         title: 'Work subtype',
@@ -26,13 +35,25 @@ export default {
     contentIndicators: {
         help: {
             title: 'Content indicators',
-            text: <p>For more information about content indicators, click <a style={{fontWeight: 700}} target="_blank" rel="noreferrer" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators">here</a></p>,
-            buttonLabel: 'CLOSE'
+            text: (
+                <p>
+                    For more information about content indicators, click{' '}
+                    <a
+                        style={{ fontWeight: 700 }}
+                        target="_blank"
+                        rel="noreferrer"
+                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                    >
+                        here
+                    </a>
+                </p>
+            ),
+            buttonLabel: 'CLOSE',
         },
         title: 'Content indicators',
         description: 'You can select multiple (up to 3) content indicators to add more information about your work.',
         fieldLabels: {
-            label: 'Please select relevant indicator(s).'
+            label: 'Please select relevant indicator(s).',
         },
     },
     generic: {
@@ -46,27 +67,27 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of generic document'
+                    placeholder: 'Title of generic document',
                 },
                 publicationPlace: {
                     label: 'Place of publication',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Add a full article abstract here.'
+                    placeholder: 'Add a full article abstract here.',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -79,15 +100,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information'
+                    placeholder: 'Add any additional information',
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter URL for this work'
-                }
-            }
-
-        }
+                    placeholder: 'Enter URL for this work',
+                },
+            },
+        },
     },
     journalArticle: {
         information: {
@@ -100,20 +120,20 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of journal article'
+                    placeholder: 'Title of journal article',
                 },
                 journalTitle: {
                     label: 'Journal name',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
-                subtype: 'Work subtype'
-            }
+                subtype: 'Work subtype',
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -130,9 +150,9 @@ export default {
                 endPage: 'End page',
                 articleNumber: 'Article number',
                 notes: 'Notes (not publicly viewable)',
-                url: 'Link (URL)'
-            }
-        }
+                url: 'Link (URL)',
+            },
+        },
     },
     book: {
         information: {
@@ -151,17 +171,17 @@ export default {
                     title: 'Date published',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 extent: {
                     label: 'Total pages',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
-                }
-            }
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                },
+            },
         },
         authors: txt.components.authors,
         editors: txt.components.editors,
@@ -175,8 +195,8 @@ export default {
             fieldLabels: {
                 articleNumber: 'Article number',
                 notes: 'Notes (not publicly viewable)',
-                url: 'Link (URL)'
-            }
+                url: 'Link (URL)',
+            },
         },
         ntro: {
             title: 'NTRO metadata',
@@ -185,7 +205,7 @@ export default {
             //     text: 'some help',
             //     buttonLabel: 'CLOSE'
             // }
-        }
+        },
     },
     bookChapter: {
         information: {
@@ -205,9 +225,9 @@ export default {
                     title: 'Date published',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         authors: txt.components.authors,
         editors: txt.components.editors,
@@ -223,9 +243,9 @@ export default {
                 startPage: 'Start page',
                 endPage: 'End page',
                 notes: 'Notes (not publicly viewable)',
-                url: 'Link (URL)'
-            }
-        }
+                url: 'Link (URL)',
+            },
+        },
     },
     conferencePaper: {
         information: {
@@ -249,9 +269,9 @@ export default {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         authors: txt.components.authors,
         other: {
@@ -265,9 +285,9 @@ export default {
                 startPage: 'Start page',
                 endPage: 'End page',
                 notes: 'Notes (not publicly viewable)',
-                url: 'Link (URL)'
-            }
-        }
+                url: 'Link (URL)',
+            },
+        },
     },
     researchReport: {
         information: {
@@ -280,39 +300,39 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Type title of research report'
+                    placeholder: 'Type title of research report',
                 },
                 publicationPlace: {
                     label: 'Place of publication',
-                    placeholder: 'Type the place of publication'
+                    placeholder: 'Type the place of publication',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher'
+                    placeholder: 'Type the name of the publisher',
                 },
                 reportNumber: {
                     label: 'Report number',
-                    placeholder: 'Type the report number'
+                    placeholder: 'Type the report number',
                 },
                 date: {
                     title: 'Date published',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 series: {
                     floatingLabelText: 'Series title',
-                    hintText: 'Enter title of series'
+                    hintText: 'Enter title of series',
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages'
+                    placeholder: 'Type total number of pages',
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
-                }
-            }
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
+                },
+            },
         },
         authors: txt.components.authors,
         other: {
@@ -325,18 +345,18 @@ export default {
             fieldLabels: {
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Type an abstract or summary of the work'
+                    placeholder: 'Type an abstract or summary of the work',
                 },
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information here'
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Type URL for this work',
+                },
+            },
+        },
     },
     audioDocument: {
         information: {
@@ -345,41 +365,42 @@ export default {
                 title: 'Audio document information',
                 text: (
                     <React.Fragment>
-                        <p><b>Place of publication:</b> Provide the geographical location for the
-                            publisher
-                            or producer of the work, i.e. city, country</p>
-                        <p><b>Publication date:</b> Provide the date recorded on the work, where
-                            available.
-                            For online recordings or broadcasts, provide the date first publicly presented or
-                            released. </p>
+                        <p>
+                            <b>Place of publication:</b> Provide the geographical location for the publisher or producer
+                            of the work, i.e. city, country
+                        </p>
+                        <p>
+                            <b>Publication date:</b> Provide the date recorded on the work, where available. For online
+                            recordings or broadcasts, provide the date first publicly presented or released.{' '}
+                        </p>
                     </React.Fragment>
                 ),
-                buttonLabel: 'CLOSE'
+                buttonLabel: 'CLOSE',
             },
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of work'
+                    placeholder: 'Title of work',
                 },
                 publicationPlace: {
                     label: 'Place of publication',
-                    placeholder: 'City, Country'
+                    placeholder: 'City, Country',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher or producer of the work.'
+                    placeholder: 'Type the name of the publisher or producer of the work.',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work.'
+                    placeholder: 'Provide an abstract or summary of the work.',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
-            }
+            },
         },
         creator: txt.components.creators,
         contributor: txt.components.contributors,
@@ -398,8 +419,8 @@ export default {
                 url: {
                     label: 'Link',
                     placeholder: 'Enter URL for this work.',
-                }
-            }
+                },
+            },
         },
     },
     patent: {
@@ -418,10 +439,10 @@ export default {
                     title: 'Date patent issued',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
-                patentOwner: 'Patent owner'
-            }
+                patentOwner: 'Patent owner',
+            },
         },
         authors: txt.components.creators,
         other: {
@@ -433,8 +454,8 @@ export default {
             // },
             fieldLabels: {
                 notes: 'Notes (not publicly viewable)',
-                url: 'Enter URL for this patent'
-            }
+                url: 'Enter URL for this patent',
+            },
         },
     },
     seminarPaper: {
@@ -452,23 +473,23 @@ export default {
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, department or centre',
-                    hintText: ''
+                    hintText: '',
                 },
                 orgName: {
                     floatingLabelText: 'Institution',
-                    hintText: ''
+                    hintText: '',
                 },
                 series: {
                     floatingLabelText: 'Series',
-                    hintText: 'Enter seminar series'
+                    hintText: 'Enter seminar series',
                 },
                 seminarDate: {
                     title: 'Seminar date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -485,9 +506,9 @@ export default {
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Enter a valid URL for this work'
-                }
-            }
+                    placeholder: 'Enter a valid URL for this work',
+                },
+            },
         },
     },
     thesis: {
@@ -501,33 +522,33 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     placeholderlabel: 'Title',
-                    placeholder: 'Thesis title'
+                    placeholder: 'Thesis title',
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
                 },
                 orgUnitName: {
                     floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business'
+                    hintText: 'Enrolling unit, eg. School of Business',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 thesisType: {
-                    label: 'Thesis type'
+                    label: 'Thesis type',
                 },
                 author: {
                     label: 'Author name',
-                    placeholder: ''
-                }
-            }
+                    placeholder: '',
+                },
+            },
         },
         supervisors: {
-            ...txt.components.supervisors
+            ...txt.components.supervisors,
         },
         fieldOfResearch: {
             title: 'Field of research',
@@ -536,7 +557,7 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'CLOSE'
             // },
-            description: 'Select up to 3 Field of Research (FoR) codes'
+            description: 'Select up to 3 Field of Research (FoR) codes',
         },
         keywords: {
             title: 'Keywords',
@@ -545,7 +566,8 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'CLOSE'
             // },
-            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
+            description:
+                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
         },
         optional: {
             title: 'Optional information',
@@ -557,22 +579,22 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work'
+                    placeholder: 'Provide an abstract or summary of the work',
                 },
                 notes: {
                     title: 'Additional notes',
                     label: 'Notes (not publicly viewable)',
                     placeholder: 'Provide any additional information',
-                }
-            }
+                },
+            },
         },
     },
     collection: {
@@ -587,33 +609,33 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     placeholderlabel: 'Title',
-                    placeholder: 'Thesis title'
+                    placeholder: 'Thesis title',
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
                 },
                 orgUnitName: {
                     floatingLabelText: 'Enrolling unit',
-                    hintText: 'Enrolling unit, eg. School of Business'
+                    hintText: 'Enrolling unit, eg. School of Business',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 thesisType: {
-                    label: 'Thesis type'
+                    label: 'Thesis type',
                 },
                 author: {
                     label: 'Author name',
-                    placeholder: ''
-                }
-            }
+                    placeholder: '',
+                },
+            },
         },
         supervisors: {
-            ...txt.components.supervisors
+            ...txt.components.supervisors,
         },
         fieldOfResearch: {
             title: 'Field of research',
@@ -622,7 +644,7 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'OK'
             // },
-            description: 'Select up to 3 Field of Research (FoR) codes'
+            description: 'Select up to 3 Field of Research (FoR) codes',
         },
         keywords: {
             title: 'Keywords',
@@ -631,7 +653,8 @@ export default {
             //     text: 'Some help',
             //     buttonLabel: 'OK'
             // },
-            description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.'
+            description:
+                'Add up to 10 individual keywords, or a comma separated list, that describe the content of the thesis.',
         },
         optional: {
             title: 'Optional information',
@@ -643,22 +666,22 @@ export default {
             fieldLabels: {
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work'
+                    placeholder: 'Provide an abstract or summary of the work',
                 },
                 notes: {
                     title: 'Additional notes',
                     label: 'Notes (not publicly viewable)',
                     placeholder: 'Provide any additional information',
-                }
-            }
+                },
+            },
         },
     },
     preprint: {
@@ -672,15 +695,15 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of report'
+                    placeholder: 'Title of report',
                 },
                 date: {
                     title: 'Preprint date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -693,14 +716,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information here'
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Enter URL for this work',
+                },
+            },
+        },
     },
     creativeWork: {
         information: {
@@ -708,43 +731,43 @@ export default {
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',
-                    placeholder: 'Title of creative work'
+                    placeholder: 'Title of creative work',
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Enter place of publication, location or venue'
+                    placeholder: 'Enter place of publication, location or venue',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Enter the name of the publisher or producer'
+                    placeholder: 'Enter the name of the publisher or producer',
                 },
                 doi: {
                     label: 'DOI',
-                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)'
+                    placeholder: 'Enter a valid DOI (eg. 10.4324/9780203118214)',
                 },
                 date: {
                     title: 'Publication/Start date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 enddate: {
                     title: 'End date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 startdate: {
                     title: 'Publication start date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 abstract: {
                     label: 'Abstract/Description',
-                    placeholder: 'Provide an abstract or summary of the work.'
+                    placeholder: 'Provide an abstract or summary of the work.',
                 },
-            }
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -762,8 +785,8 @@ export default {
                 url: {
                     label: 'Link',
                     placeholder: 'Enter a valid URL to the work, or information about this work.',
-                }
-            }
+                },
+            },
         },
     },
     video: {
@@ -773,41 +796,42 @@ export default {
                 title: 'Video information',
                 text: (
                     <div>
-                        <p><b>Place of publication:</b> Type the geographical location for the
-                            publisher
-                            or producer of the work, i.e. city, country</p>
-                        <p><b>Publication date:</b> Type the date recorded on the work, where
-                            available.
-                            For online recordings or broadcasts, enter the date first publicly presented or
-                            released. </p>
+                        <p>
+                            <b>Place of publication:</b> Type the geographical location for the publisher or producer of
+                            the work, i.e. city, country
+                        </p>
+                        <p>
+                            <b>Publication date:</b> Type the date recorded on the work, where available. For online
+                            recordings or broadcasts, enter the date first publicly presented or released.{' '}
+                        </p>
                     </div>
                 ),
-                buttonLabel: 'CLOSE'
+                buttonLabel: 'CLOSE',
             },
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of work'
+                    placeholder: 'Title of work',
                 },
                 publicationPlace: {
                     label: 'Place of publication',
-                    placeholder: 'City, Country'
+                    placeholder: 'City, Country',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher or producer of the work.'
+                    placeholder: 'Type the name of the publisher or producer of the work.',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work.'
+                    placeholder: 'Provide an abstract or summary of the work.',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
-            }
+            },
         },
         creator: txt.components.creators,
         contributor: txt.components.contributors,
@@ -826,8 +850,8 @@ export default {
                 url: {
                     label: 'Link',
                     placeholder: 'Enter URL for this work.',
-                }
-            }
+                },
+            },
         },
     },
     imageDocument: {
@@ -841,17 +865,17 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of image'
+                    placeholder: 'Title of image',
                 },
                 date: {
                     title: 'Date created',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work.'
+                    placeholder: 'Provide an abstract or summary of the work.',
                 },
             },
         },
@@ -871,8 +895,8 @@ export default {
                 url: {
                     label: 'Link',
                     placeholder: 'Enter URL for this work.',
-                }
-            }
+                },
+            },
         },
     },
     design: {
@@ -886,41 +910,41 @@ export default {
             fieldLabels: {
                 articleTitle: {
                     label: 'Title',
-                    placeholder: 'Title of design'
+                    placeholder: 'Title of design',
                 },
                 projectName: {
                     label: 'Project name',
-                    placeholder: 'Title of project'
+                    placeholder: 'Title of project',
                 },
                 projectDescription: {
                     label: 'Project description',
-                    placeholder: 'Provide a summary/description of the project.'
+                    placeholder: 'Provide a summary/description of the project.',
                 },
                 placeOfPublication: {
                     label: 'Place of publication',
-                    placeholder: 'Enter the geographical location for the client, builder or curator of the work.'
+                    placeholder: 'Enter the geographical location for the client, builder or curator of the work.',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Enter the name of the client, builder or curator of the work.'
+                    placeholder: 'Enter the name of the client, builder or curator of the work.',
                 },
                 location: {
                     label: 'Location',
-                    placeholder: 'Type the geographical location for the design itself.'
+                    placeholder: 'Type the geographical location for the design itself.',
                 },
                 date: {
                     title: 'Publication/Start date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 endDate: {
                     title: 'End date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
-            }
+            },
         },
         authors: txt.components.designers,
         optional: {
@@ -938,8 +962,8 @@ export default {
                 url: {
                     label: 'Link',
                     placeholder: 'Enter URL for this work.',
-                }
-            }
+                },
+            },
         },
     },
     newspaperArticle: {
@@ -953,27 +977,27 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Enter article title'
+                    placeholder: 'Enter article title',
                 },
                 newspaperName: {
                     floatingLabelText: 'Newspaper name',
-                    hintText: 'Enter title of the journal'
+                    hintText: 'Enter title of the journal',
                 },
                 date: {
                     title: 'Publication Date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 startPage: {
                     label: 'Start page',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 endPage: {
                     label: 'End page',
-                    placeholder: ''
-                }
-            }
+                    placeholder: '',
+                },
+            },
         },
         authors: txt.components.authors,
         optional: {
@@ -986,14 +1010,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information here'
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Type URL for this work',
+                },
+            },
+        },
     },
     departmentTechnicalReport: {
         information: {
@@ -1006,39 +1030,39 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of report'
+                    placeholder: 'Title of report',
                 },
                 orgName: {
                     floatingLabelText: 'Institution name',
-                    hintText: ''
+                    hintText: '',
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, Institute or Centre',
-                    hintText: ''
+                    hintText: '',
                 },
                 series: {
                     floatingLabelText: 'Series',
-                    placeholder: ''
+                    placeholder: '',
                 },
                 reportNumber: {
                     floatingLabelText: 'Report number',
-                    hintText: ''
+                    hintText: '',
                 },
                 date: {
                     title: 'Date published',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Type total number of pages'
+                    placeholder: 'Type total number of pages',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work.'
-                }
-            }
+                    placeholder: 'Provide an abstract or summary of the work.',
+                },
+            },
         },
         authors: txt.components.authors,
         other: {
@@ -1051,14 +1075,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information here'
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Type URL for this work',
+                },
+            },
+        },
     },
     workingPaper: {
         information: {
@@ -1071,39 +1095,39 @@ export default {
             fieldLabels: {
                 documentTitle: {
                     label: 'Title',
-                    placeholder: 'Title of paper'
+                    placeholder: 'Title of paper',
                 },
                 orgUnitName: {
                     floatingLabelText: 'School, Institute or Centre ',
-                    hintText: ''
+                    hintText: '',
                 },
                 orgName: {
                     floatingLabelText: 'Institution',
-                    hintText: ''
+                    hintText: '',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
+                    year: 'Year',
                 },
                 series: {
                     floatingLabelText: 'Series',
-                    hintText: ''
+                    hintText: '',
                 },
                 paperNumber: {
                     floatingLabelText: 'Paper number',
-                    hintText: ''
+                    hintText: '',
                 },
                 totalPages: {
                     label: 'Total pages',
-                    placeholder: 'Enter total number of pages in the paper.'
+                    placeholder: 'Enter total number of pages in the paper.',
                 },
                 abstract: {
                     label: 'Abstract',
-                    placeholder: 'Provide an abstract or summary of the work.'
-                }
-            }
+                    placeholder: 'Provide an abstract or summary of the work.',
+                },
+            },
         },
         authors: txt.components.authors,
         other: {
@@ -1116,14 +1140,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information here'
+                    placeholder: 'Add any additional information here',
                 },
                 url: {
                     label: 'Link',
-                    placeholder: 'Type URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Type URL for this work',
+                },
+            },
+        },
     },
     conferenceProceedings: {
         information: {
@@ -1136,39 +1160,39 @@ export default {
             fieldLabels: {
                 title: {
                     label: 'Title',
-                    placeholder: 'Proceedings title'
+                    placeholder: 'Proceedings title',
                 },
                 conferenceName: {
                     label: 'Conference name',
-                    placeholder: 'Type the name of conference'
+                    placeholder: 'Type the name of conference',
                 },
                 conferenceLocation: {
                     label: 'Conference location',
-                    placeholder: 'Type the place of conference'
+                    placeholder: 'Type the place of conference',
                 },
                 conferenceDates: {
                     label: 'Conference dates (eg 13-15 December 2011)',
-                    placeholder: 'Type the dates of conference'
+                    placeholder: 'Type the dates of conference',
                 },
                 proceedingsTitle: {
                     label: 'Proceedings title',
-                    placeholder: 'Type the title of proceedings'
+                    placeholder: 'Type the title of proceedings',
                 },
                 publicationPlace: {
                     label: 'Place of publication',
-                    placeholder: 'Type the place of publication'
+                    placeholder: 'Type the place of publication',
                 },
                 publisher: {
                     label: 'Publisher',
-                    placeholder: 'Type the name of the publisher'
+                    placeholder: 'Type the name of the publisher',
                 },
                 date: {
                     title: 'Publication date',
                     day: 'Day',
                     month: 'Month',
-                    year: 'Year'
-                }
-            }
+                    year: 'Year',
+                },
+            },
         },
         editors: txt.components.editors,
         other: {
@@ -1181,14 +1205,14 @@ export default {
             fieldLabels: {
                 notes: {
                     label: 'Notes (not publicly viewable)',
-                    placeholder: 'Add any additional information'
+                    placeholder: 'Add any additional information',
                 },
                 link: {
                     label: 'Link (URL)',
-                    placeholder: 'Enter URL for this work'
-                }
-            }
-        }
+                    placeholder: 'Enter URL for this work',
+                },
+            },
+        },
     },
     fileUpload: {
         title: 'Upload files',
@@ -1202,34 +1226,41 @@ export default {
         confirmationTitle: 'Abandon workflow',
         confirmationMessage: 'Are you sure you want to abandon workflow?',
         cancelButtonLabel: 'No',
-        confirmButtonLabel: 'Yes'
+        confirmButtonLabel: 'Yes',
     },
     validationAlert: {
         type: 'warning',
         title: 'Validation',
-        message: 'Form cannot be submitted until all fields are valid. Please review all input fields.'
+        message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
     },
     errorAlert: {
         type: 'error_outline',
         title: 'Error',
-        message: (message) => (`Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`)
+        message: message =>
+            `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
     },
     progressAlert: {
         type: 'info_outline',
         title: 'Saving',
         message: 'Creating new work is in progress.',
-        showLoader: true
+        showLoader: true,
     },
     successAlert: {
         type: 'done',
         title: 'Success',
-        message: 'New work has been saved successfully.'
+        message: 'New work has been saved successfully.',
     },
     thesisSubmission: {
         hdrTitle: 'Higher degree by research thesis deposit',
         sbsTitle: 'Professional doctorate deposit',
         text: (
-            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+            <span>
+                Required fields are marked with{' '}
+                <span className="requiredField">
+                    <label>&nbsp;</label>
+                </span>
+            </span>
+        ),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1240,18 +1271,25 @@ export default {
             failedAlertLocale: {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
-                message: 'There was an issue uploading your thesis files. You will need to resubmit your thesis by clicking on the \'Resubmit your thesis\' button.',
-                actionButtonLabel: 'RESUBMIT YOUR THESIS'
+                message:
+                    'There was an issue uploading your thesis files. You will need to resubmit your thesis ' +
+                    "by clicking on the 'Resubmit your thesis' button.",
+                actionButtonLabel: 'RESUBMIT YOUR THESIS',
             },
             locale: {
                 instructions: '',
-                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                accessTermsAndConditions:
+                    'I understand that the files indicated above as open access will be submitted as open access ' +
+                    'and will be made publicly available immediately or will be made available on the indicated ' +
+                    'embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+                    ['tooManyFiles']:
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
+                        'File(s) ([fileNames]) will not be uploaded',
+                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
@@ -1259,33 +1297,34 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student
-                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
-                        Document name could be thesis, abstract, and etc.
-                        For example:
+                        Maximum file size is 8GB. <br />
+                        PDF files must be saved using the following naming structure{' '}
+                        <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
+                        be thesis, abstract, and etc. For example:
                         <ul>
                             <li>s1234567_phd_thesis.pdf</li>
                             <li>s1234567_phd_abstract.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br/>
-                        Supplementary video files are to be in WMV or AVI format. <br/>
+                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
-                fileUploadInstruction: (
-                    <p>Click here to select files, or drag files into this area to upload</p>
-                )
+                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
             text: (
                 <div>
-                    <span className="requiredField"><label>&nbsp;</label></span>
+                    <span className="requiredField">
+                        <label>&nbsp;</label>
+                    </span>
                 </div>
-            )
+            ),
         },
-        cancelLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        cancelLink:
+            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
-        afterSubmitLink: 'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
+        afterSubmitLink:
+            'https://my.uq.edu.au/information-and-services/higher-degree-research/my-thesis/2-thesis-submission',
         afterSubmit: 'Return to the Graduate School website',
         afterFailedSubmit: 'Resubmit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
@@ -1294,22 +1333,33 @@ export default {
         afterFailureText: 'There was an issue uploading your thesis files. You will need to resubmit your thesis.',
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
-            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            confirmationMessage:
+                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
             cancelButtonLabel: 'No, continue editing',
-            confirmButtonLabel: 'Yes, deposit thesis'
+            confirmButtonLabel: 'Yes, deposit thesis',
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            confirmationMessage:
+                'Your session has expired and you will now be redirected to the ' +
+                'login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
-            confirmButtonLabel: 'Redirect to login'
+            confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
+        depositFailedMessage: () =>
+            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
+            'and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     sbsSubmission: {
         sbsTitle: 'Professional doctorate deposit',
         text: (
-            <span>Required fields are marked with <span className="requiredField"><label>&nbsp;</label></span></span>),
+            <span>
+                Required fields are marked with{' '}
+                <span className="requiredField">
+                    <label>&nbsp;</label>
+                </span>
+            </span>
+        ),
         fileUpload: {
             title: 'Upload files',
             // help: {
@@ -1323,8 +1373,10 @@ export default {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
-                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored'
+                    ['tooManyFiles']:
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
+                        'File(s) ([fileNames]) will not be uploaded',
+                    ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
@@ -1332,48 +1384,52 @@ export default {
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
                     <div>
-                        Maximum file size is 8GB. <br/>
-                        PDF files must be saved using the following naming structure <b>&lt;student
-                        number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>.
-                        Document name could be thesis, abstract, and etc.
-                        For example:
+                        Maximum file size is 8GB. <br />
+                        PDF files must be saved using the following naming structure{' '}
+                        <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
+                        be thesis, abstract, and etc. For example:
                         <ul>
                             <li>s1234567_pd_abstract.pdf</li>
                             <li>s1234567_pd_totalthesis.pdf</li>
                         </ul>
-                        Supplementary audio files are to be in MP 3 format. <br/>
-                        Supplementary video files are to be in WMV or AVI format. <br/>
+                        Supplementary audio files are to be in MP 3 format. <br />
+                        Supplementary video files are to be in WMV or AVI format. <br />
                     </div>
                 ),
-                fileUploadInstruction: (
-                    <p>Click here to select files, or drag files into this area to upload</p>
-                )
+                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
             text: (
                 <div>
-                    <span className="requiredField"><label>&nbsp;</label></span>
+                    <span className="requiredField">
+                        <label>&nbsp;</label>
+                    </span>
                 </div>
-            )
+            ),
         },
         cancel: 'Cancel',
         submit: 'Deposit your thesis',
         afterSubmitTitle: 'Your thesis has been deposited',
         afterSubmitText: (
-            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email
-                soon.</p>),
+            <p>You have successfully deposited your thesis to UQ eSpace. You wil receive a confirmation email soon.</p>
+        ),
         depositConfirmation: {
             confirmationTitle: 'Thesis deposit',
-            confirmationMessage: 'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
+            confirmationMessage:
+                'You are about to deposit your thesis with attached files. Are you sure you want to proceed?',
             cancelButtonLabel: 'No, continue editing',
-            confirmButtonLabel: 'Yes, deposit thesis'
+            confirmButtonLabel: 'Yes, deposit thesis',
         },
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
-            confirmationMessage: 'Your session has expired and you will now be redirected to the login page and then redeposit your thesis.',
+            confirmationMessage:
+                'Your session has expired and you will now be redirected to the ' +
+                'login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
-            confirmButtonLabel: 'Redirect to login'
+            confirmButtonLabel: 'Redirect to login',
         },
-        depositFailedMessage: () => ('Error has occurred during request and request cannot be processed. Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.')
+        depositFailedMessage: () =>
+            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
+            'and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     addDataset: {
         pageTitle: 'Add data collection',
@@ -1382,67 +1438,73 @@ export default {
                 title: 'Deposit agreement',
                 text: (
                     <div>
-                        <p>1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or
-                            describe it;</p>
+                        <p>
+                            1. I am the creator or co-creator of this dataset, or otherwise authorised to deposit or
+                            describe it;
+                        </p>
                         <p>2. I have permission to include any third-party content contained in the dataset;</p>
                         <p>3. The dataset is original;</p>
                         <p>4. The dataset does not infringe the legal rights of any third-party;</p>
-                        <p>5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual
-                            non-exclusive licence to reproduce it and make it available in any format or language;</p>
-                        <p>6. The dataset's creator(s) moral rights to be associated with the dataset will be respected
-                            by UQeSpace.</p>
+                        <p>
+                            5. I acknowledge that in depositing the dataset, I grant to UQeSpace a perpetual
+                            non-exclusive licence to reproduce it and make it available in any format or language;
+                        </p>
+                        <p>
+                            6. The dataset's creator(s) moral rights to be associated with the dataset will be respected
+                            by UQeSpace.
+                        </p>
                     </div>
-                )
+                ),
             },
             dataset: {
                 title: 'Dataset information',
                 fieldLabels: {
                     datasetTitle: {
                         label: 'Dataset name',
-                        placeholder: 'Type the descriptive name for the dataset'
+                        placeholder: 'Type the descriptive name for the dataset',
                     },
                     description: {
                         label: 'Dataset description',
-                        placeholder: 'Describe the dataset\'s topic(s) and theme(s)'
+                        placeholder: "Describe the dataset's topic(s) and theme(s)",
                     },
                     contactName: {
                         label: 'Contact name',
-                        placeholder: 'Type the name of primary contact for this dataset'
+                        placeholder: 'Type the name of primary contact for this dataset',
                     },
                     contactId: {
                         floatingLabelText: 'Contact name ID',
-                        hintText: 'Type to search ID of primary contact for this dataset'
+                        hintText: 'Type to search ID of primary contact for this dataset',
                     },
                     contactEmail: {
                         label: 'Contact email',
-                        placeholder: 'Type the email address of primary contact for this dataset'
+                        placeholder: 'Type the email address of primary contact for this dataset',
                     },
                     publisher: {
                         label: 'Publisher',
-                        placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace'
+                        placeholder: 'This is where the dataset was originally made available e.g. UQ eSpace',
                     },
                     doi: {
                         label: 'DOI',
-                        placeholder: ' '
+                        placeholder: ' ',
                     },
                     date: {
                         title: 'Publication year',
                         day: 'Day',
                         month: 'Month',
-                        year: 'Year'
+                        year: 'Year',
                     },
                     fieldOfResearchCodes: {
                         title: 'ANZSRC field of research (FoR) codes',
-                        placeholder: ''
-                    }
-                }
+                        placeholder: '',
+                    },
+                },
             },
             creator: {
-                ...txt.components.creators
+                ...txt.components.creators,
             },
             fieldOfResearchCodes: {
                 ...txt.components.fieldOfResearchForm,
-                text: 'Select Field of Research (FoR) codes'
+                text: 'Select Field of Research (FoR) codes',
             },
             accessAndLicensing: {
                 title: 'Access and licensing information',
@@ -1456,90 +1518,100 @@ export default {
                                 <li>Meditated Access</li>
                             </ul>
                             <h3>Licensing and terms of access</h3>
-                            <p>View <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons
-                                Licenses</a> and <a
-                                href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
-                                target="_blank">UQ Terms & Conditions</a></p>
+                            <p>
+                                View{' '}
+                                <a href="https://creativecommons.org/licenses/" target="_blank">
+                                    Creative Commons Licenses
+                                </a>{' '}
+                                and{' '}
+                                <a
+                                    href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
+                                    target="_blank"
+                                >
+                                    UQ Terms & Conditions
+                                </a>
+                            </p>
                         </p>
-                    )
+                    ),
                 },
                 fieldLabels: {
                     accessConditions: {
-                        label: 'Access conditions'
+                        label: 'Access conditions',
                     },
                     licensingAndTermsOfAccess: {
-                        label: 'Licensing and terms of access'
+                        label: 'Licensing and terms of access',
                     },
                     copyrightNotice: {
                         label: 'Copyright notice',
-                        placeholder: 'e.g. 2012, The University of Queensland'
-                    }
-                }
+                        placeholder: 'e.g. 2012, The University of Queensland',
+                    },
+                },
             },
             project: {
                 title: 'Project information',
                 fieldLabels: {
                     projectName: {
                         label: 'Project name',
-                        placeholder: 'Type the name of the project that initiated the dataset'
+                        placeholder: 'Type the name of the project that initiated the dataset',
                     },
                     projectDescription: {
                         label: 'Project description',
-                        placeholder: 'Briefly describe the project, including purpose'
+                        placeholder: 'Briefly describe the project, including purpose',
                     },
                     fundingBody: {
                         label: 'Funding body',
-                        placeholder: 'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC'
+                        placeholder:
+                            'Type the name of the funding body9s) associated with your research e.g. ARC, NHMRC',
                     },
                     grantId: {
                         label: 'Grant IDs',
-                        placeholder: 'e.g. ARC or NHMRC grant number'
-                    }
-                }
+                        placeholder: 'e.g. ARC or NHMRC grant number',
+                    },
+                },
             },
             optionalDatasetDetails: {
                 title: 'Dataset details',
                 fieldLabels: {
                     typeOfData: {
                         label: 'Describe type of data',
-                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video'
+                        placeholder: 'Type of data represented in the dataset e.g. excel file, images, video',
                     },
                     softwareRequired: {
                         label: 'Software required',
-                        placeholder: 'List any software required to view the data'
+                        placeholder: 'List any software required to view the data',
                     },
                     collectionStart: {
                         label: 'Collection start date',
-                        placeholder: 'Date that data started being collected'
+                        placeholder: 'Date that data started being collected',
                     },
                     collectionEnd: {
                         label: 'Collection end date',
-                        placeholder: 'Date that data ceased being collected'
+                        placeholder: 'Date that data ceased being collected',
                     },
                     geographicCoordinates: {
                         label: 'Geographic coordinates',
-                        description: 'Use this tool to specify the geographic co-ordinates the data relates to'
+                        description: 'Use this tool to specify the geographic co-ordinates the data relates to',
                     },
                     relatedDatasets: {
                         title: 'Related datasets/work',
                         inputFieldLabel: 'Dataset/Work title',
-                        inputFieldHint: 'Please type the dataset or work title then select from the list'
-                    }
-                }
+                        inputFieldHint: 'Please type the dataset or work title then select from the list',
+                    },
+                },
             },
             additionalNotes: {
                 title: 'Additional information',
                 fieldLabels: {
                     notes: {
                         label: 'Additional information',
-                        placeholder: 'Additional information related to the dataset'
+                        placeholder: 'Additional information related to the dataset',
                     },
                     links: {
                         label: 'Link to data in external repository',
-                        placeholder: 'Provide the URL to the dataset where stored in another repository'
-                    }
-                }
-            }
+                        placeholder: 'Provide the URL to the dataset where stored in another repository',
+                    },
+                },
+            },
         },
         cancel: 'Cancel',
         submit: 'Submit for approval',
@@ -1553,43 +1625,45 @@ export default {
                         ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector,
                         accessSelectOptionsText: {
                             ...fileUploaderLocale.fileUploadRow.fileUploadRowAccessSelector.accessSelectOptionsText,
-                            [CLOSED_ACCESS_ID]: 'Mediated Access'
-                        }
-                    }
-                }
-            }
-        }
+                            [CLOSED_ACCESS_ID]: 'Mediated Access',
+                        },
+                    },
+                },
+            },
+        },
     },
     addACollection: {
         title: 'Add a missing collection',
         help: {},
         details: {
             title: 'Collection details',
-            help: {}
+            help: {},
         },
         formLabels: {
             ismemberof: {
                 label: 'Select community',
-                placeholder: 'Select a community this collection is a member of'
+                placeholder: 'Select a community this collection is a member of',
             },
             title: {
                 label: 'Title of collection',
-                placeholder: 'Type a title for this collection'
+                placeholder: 'Type a title for this collection',
             },
             description: {
                 label: 'Collection description',
-                placeholder: 'Type a description of this collection.'
+                placeholder: 'Type a description of this collection.',
             },
             keywords: {
-                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the collection.',
+                description:
+                    'Add up to 10 individual keywords, or a comma separated list, ' +
+                    'that describe the content of the collection.',
                 field: {
                     form: {
                         locale: {
                             inputFieldLabel: 'Keywords',
                             inputFieldHint: 'Type keywords',
                             addButtonLabel: 'Add',
-                            id: 'keywords-input'
-                        }
+                            id: 'keywords-input',
+                        },
                     },
                     header: {
                         locale: {
@@ -1600,9 +1674,9 @@ export default {
                                 confirmationTitle: 'Delete all',
                                 confirmationMessage: 'Are you sure you want to delete all keywords?',
                                 cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes'
-                            }
-                        }
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
                     },
                     row: {
                         locale: {
@@ -1613,12 +1687,12 @@ export default {
                                 confirmationTitle: 'Delete keyword',
                                 confirmationMessage: 'Are you sure you want to delete this keyword?',
                                 cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes'
-                            }
-                        }
-                    }
-                }
-            }
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            },
         },
         submit: 'Add collection',
         cancel: 'Return to the homepage',
@@ -1626,34 +1700,39 @@ export default {
         afterSubmitText: 'Your new collection was created successfully.',
         afterSubmitButton: 'Return to the homepage',
         reloadFormButton: 'Add another collection',
-        addFailedMessage: (error) => (`Your attempt to add this collection has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`)
+        addFailedMessage: error =>
+            `Your attempt to add this collection has failed (Error: ${
+                error.message
+            }). Please try again later or contact the eSpace team.`,
     },
     addACommunity: {
         title: 'Add a missing community',
         help: {},
         details: {
             title: 'Community details',
-            help: {}
+            help: {},
         },
         formLabels: {
             title: {
                 label: 'Title of community',
-                placeholder: 'Type a title for this community'
+                placeholder: 'Type a title for this community',
             },
             description: {
                 label: 'Community description',
-                placeholder: 'Type a description of this community.'
+                placeholder: 'Type a description of this community.',
             },
             keywords: {
-                description: 'Add up to 10 individual keywords, or a comma separated list, that describe the content of the community.',
+                description:
+                    'Add up to 10 individual keywords, or a comma separated list, ' +
+                    'that describe the content of the community.',
                 field: {
                     form: {
                         locale: {
                             inputFieldLabel: 'Keywords',
                             inputFieldHint: 'Type keywords',
                             addButtonLabel: 'Add',
-                            id: 'keywords-input'
-                        }
+                            id: 'keywords-input',
+                        },
                     },
                     header: {
                         locale: {
@@ -1664,9 +1743,9 @@ export default {
                                 confirmationTitle: 'Delete all',
                                 confirmationMessage: 'Are you sure you want to delete all keywords?',
                                 cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes'
-                            }
-                        }
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
                     },
                     row: {
                         locale: {
@@ -1677,12 +1756,12 @@ export default {
                                 confirmationTitle: 'Delete keyword',
                                 confirmationMessage: 'Are you sure you want to delete this keyword?',
                                 cancelButtonLabel: 'No',
-                                confirmButtonLabel: 'Yes'
-                            }
-                        }
-                    }
-                }
-            }
+                                confirmButtonLabel: 'Yes',
+                            },
+                        },
+                    },
+                },
+            },
         },
         submit: 'Add community',
         cancel: 'Cancel and return to the homepage',
@@ -1690,6 +1769,9 @@ export default {
         afterSubmitText: 'Your new community was created successfully.',
         afterSubmitButton: 'Return to the homepage',
         AddAnotherButton: 'Add another community',
-        addFailedMessage: (error) => (`Your attempt to add this community has failed (Error: ${error.message}). Please try again later or contact the eSpace team.`)
-    }
+        addFailedMessage: error =>
+            `Your attempt to add this community has failed (Error: ${
+                error.message
+            }). Please try again later or contact the eSpace team.`,
+    },
 };

@@ -1,17 +1,17 @@
 import NewspaperArticleCitation from './NewspaperArticleCitation';
-import {newspaperArticle} from 'mock/data/testing/records';
+import { newspaperArticle } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(NewspaperArticleCitation, props, isShallow);
+    return getElement(NewspaperArticleCitation, props, args);
 }
 
 describe('NewspaperArticleCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -24,8 +24,8 @@ describe('NewspaperArticleCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...newspaperArticle,
-                fez_record_search_key_end_page: {rek_end_page: null}
-            }
+                fez_record_search_key_end_page: { rek_end_page: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

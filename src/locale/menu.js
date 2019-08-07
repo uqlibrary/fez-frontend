@@ -4,69 +4,69 @@ export default {
             primaryText: 'Home',
         },
         prototype: {
-            primaryText: 'Admin form prototype'
+            primaryText: 'Admin form prototype',
         },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email
         },
         myResearch: {
-            primaryText: 'My research'
+            primaryText: 'My research',
         },
         myDatasets: {
-            primaryText: 'My research data'
+            primaryText: 'My research data',
         },
         authorStatistics: {
-            primaryText: 'Author statistics'
+            primaryText: 'Author statistics',
         },
         claimPublication: {
-            primaryText: 'Claim possible work'
+            primaryText: 'Claim possible work',
         },
         incompleteRecords: {
-            primaryText: 'My incomplete works'
+            primaryText: 'My incomplete works',
         },
         addMissingRecord: {
-            primaryText: 'Add a missing work'
+            primaryText: 'Add a missing work',
         },
         addMissingDataset: {
-            primaryText: 'Add a missing dataset'
+            primaryText: 'Add a missing dataset',
         },
         masquerade: {
             primaryText: 'Masquerade',
-            secondaryText: 'as another user'
+            secondaryText: 'as another user',
         },
         search: {
             primaryText: 'Search eSpace',
-            secondaryText: ''
+            secondaryText: '',
         },
         contact: {
             primaryText: 'Contact',
-            secondaryText: ''
+            secondaryText: '',
         },
         thirdPartyLookupTools: {
-            primaryText: 'Lookup Tools'
+            primaryText: 'Lookup Tools',
         },
         legacyEspace: {
-            primaryText: 'Switch to old interface'
+            primaryText: 'Switch to old interface',
         },
         help: {
-            primaryText: 'Help'
+            primaryText: 'Help',
         },
         collectionForm: {
-            primaryText: 'Add a missing collection'
+            primaryText: 'Add a missing collection',
         },
         communityForm: {
-            primaryText: 'Add a missing community'
+            primaryText: 'Add a missing community',
         },
         unpublished: {
-            primaryText: 'Unpublished buffer'
-        }
+            primaryText: 'Unpublished buffer',
+        },
     },
     footer: {
         cricos: {
             prefix: 'CRICOS Provider No: ',
             number: '00025B',
-            link: 'http://www.uq.edu.au/about/cricos-link'
-        }
-    }
+            link: 'http://www.uq.edu.au/about/cricos-link',
+        },
+    },
 };

@@ -1,7 +1,6 @@
 import * as pages from './pages';
 
 describe('Lazy-loaded components', () => {
-
     it('should return skeleton object', () => {
         const expectation = '{"key":null,"ref":null,"props":{"load":{}},"_owner":null,"_store":{}}';
 
@@ -22,5 +21,4 @@ describe('Lazy-loaded components', () => {
         expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
         expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
     });
-
 });

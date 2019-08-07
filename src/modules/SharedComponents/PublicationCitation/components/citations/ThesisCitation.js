@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import * as Partials from './partials';
 
 export default class ThesisCitation extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
-        hideDoiLink: PropTypes.bool
+        hideDoiLink: PropTypes.bool,
     };
 
     constructor(props) {
@@ -17,12 +17,12 @@ export default class ThesisCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             thesisType: this.props.publication.rek_genre_type || null,
-            orgUnit: this.props.publication.fez_record_search_key_org_unit_name ?
-                this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
-            orgName: this.props.publication.fez_record_search_key_org_name ?
-                this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
-            doi: this.props.publication.fez_record_search_key_doi ?
-                this.props.publication.fez_record_search_key_doi.rek_doi : null
+            orgUnit: this.props.publication.fez_record_search_key_org_unit_name
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
+            orgName: this.props.publication.fez_record_search_key_org_name
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
+            doi: this.props.publication.fez_record_search_key_doi
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for Thesis

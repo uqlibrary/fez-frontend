@@ -54,7 +54,7 @@ export const AdminActions = ({ pid }) => {
 };
 
 AdminActions.propTypes = {
-    pid: PropTypes.string
+    pid: PropTypes.string,
 };
 
 export default React.memo(AdminActions);

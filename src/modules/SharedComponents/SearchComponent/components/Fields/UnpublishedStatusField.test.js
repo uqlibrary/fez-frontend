@@ -1,26 +1,25 @@
 import UnpublishedStatusField, { mapStateToProps } from './UnpublishedStatusField';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         onChange: jest.fn(),
-        ...testProps
+        ...testProps,
     };
 
-    return getElement(UnpublishedStatusField, props, isShallow);
-};
+    return getElement(UnpublishedStatusField, props, args);
+}
 
 describe('UnpublishedStatusField component', () => {
-
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render with value selected from redux form Field', () => {
         const wrapper = setup({
             input: {
-                value: 'test'
-            }
+                value: 'test',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -28,15 +27,15 @@ describe('UnpublishedStatusField component', () => {
     it('should render error message from redux form field', () => {
         const wrapper = setup({
             meta: {
-                error: 'This field is required'
-            }
+                error: 'This field is required',
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render error text', () => {
         const wrapper = setup({
-            errorText: 'This field is required'
+            errorText: 'This field is required',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -44,7 +43,7 @@ describe('UnpublishedStatusField component', () => {
     it('should have working helper which sets errorText state', () => {
         const props = {
             error: true,
-            errorText: 'test1'
+            errorText: 'test1',
         };
         const state = {};
         expect(mapStateToProps(state, props)).toMatchSnapshot();

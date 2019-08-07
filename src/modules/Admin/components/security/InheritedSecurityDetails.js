@@ -9,7 +9,7 @@ import PolicyDescription from './PolicyDescription';
 export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
     <Grid item xs={12} style={{
         padding: 24,
-        backgroundColor: 'rgba(0,0,0,0.05)'
+        backgroundColor: 'rgba(0,0,0,0.05)',
     }}>
         <Typography variant="h6" style={{ marginTop: -8 }}>
             {title}
@@ -45,7 +45,7 @@ export const InheritedSecurityDetails = ({ title, collections, parentKey }) => (
 InheritedSecurityDetails.propTypes = {
     title: PropTypes.string.isRequired,
     collections: PropTypes.array.isRequired,
-    parentKey: PropTypes.string.isRequired
+    parentKey: PropTypes.string.isRequired,
 };
 
 export default React.memo(InheritedSecurityDetails);

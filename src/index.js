@@ -3,9 +3,9 @@ import '@babel/polyfill';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {connectRouter} from 'connected-react-router/immutable';
-import {AppContainer} from 'react-hot-loader';
+import { Provider } from 'react-redux';
+import { connectRouter } from 'connected-react-router/immutable';
+import { AppContainer } from 'react-hot-loader';
 import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
 // pick utils
 import MomentUtils from '@date-io/moment';
@@ -15,8 +15,8 @@ import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import rootReducer from './reducer';
 import 'sass/index.scss';
-import {store} from 'config/store';
-import {history} from 'config/history';
+import { store } from 'config/store';
+import { history } from 'config/history';
 
 // Import mock data if required
 if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {

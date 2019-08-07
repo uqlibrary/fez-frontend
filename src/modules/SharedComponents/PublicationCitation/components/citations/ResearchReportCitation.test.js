@@ -1,17 +1,17 @@
 import ResearchReportCitation from './ResearchReportCitation';
-import {researchReport} from 'mock/data/testing/records';
+import { researchReport } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(ResearchReportCitation, props, isShallow);
+    return getElement(ResearchReportCitation, props, args);
 }
 
 describe('ResearchReportCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -29,8 +29,8 @@ describe('ResearchReportCitation renders ', () => {
         const wrapper = setup({
             publication: {
                 ...researchReport,
-                fez_record_search_key_series: {rek_series: null}
-            }
+                fez_record_search_key_series: { rek_series: null },
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
