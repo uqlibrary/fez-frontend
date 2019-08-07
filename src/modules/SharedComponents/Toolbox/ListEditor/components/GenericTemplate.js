@@ -5,5 +5,5 @@ import Typography from '@material-ui/core/Typography';
 export const GenericTemplate = ({ item }) => <Typography variant="body2">{item.value || item}</Typography>;
 
 GenericTemplate.propTypes = {
-    item: PropTypes.string
+    item: PropTypes.string,
 };

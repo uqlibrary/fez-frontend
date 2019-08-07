@@ -9,7 +9,7 @@ export const GroupsWithoutCard = React.memo(({ groups, disabled }) =>
     groups.reduce(
         (fields, group) => [
             ...fields,
-            group.map((field) => <FieldGridItem key={field} field={field} disabled={disabled} group={group} />)
+            group.map((field) => <FieldGridItem key={field} field={field} disabled={disabled} group={group} />),
         ],
         []
     )
@@ -17,7 +17,7 @@ export const GroupsWithoutCard = React.memo(({ groups, disabled }) =>
 
 GroupsWithoutCard.propTypes = {
     groups: PropTypes.array,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export const GroupsWithinCard = React.memo(({ title, groups, disabled }) => {
@@ -36,7 +36,7 @@ export const GroupsWithinCard = React.memo(({ title, groups, disabled }) => {
 GroupsWithinCard.propTypes = {
     title: PropTypes.string,
     groups: PropTypes.array,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export const Section = ({ disabled, cards }) => {
@@ -55,5 +55,5 @@ export const Section = ({ disabled, cards }) => {
 
 Section.propTypes = {
     cards: PropTypes.object,
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };

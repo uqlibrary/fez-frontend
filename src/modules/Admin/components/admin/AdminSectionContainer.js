@@ -18,14 +18,14 @@ const AdminSectionContainer = ({ disabled, formValues }) => {
 
 AdminSectionContainer.propTypes = {
     disabled: PropTypes.bool,
-    formValues: PropTypes.object
+    formValues: PropTypes.object,
 };
 
 const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        formValues: formValues.get('adminSection') || Immutable.Map({})
+        formValues: formValues.get('adminSection') || Immutable.Map({}),
     };
 };
 

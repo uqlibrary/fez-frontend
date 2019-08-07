@@ -10,7 +10,7 @@ import JssProvider from 'react-jss/lib/JssProvider';
 import { createGenerateClassName } from '@material-ui/core/styles';
 const generateClassName = createGenerateClassName({
     dangerouslyUseGlobalCSS: false,
-    productionPrefix: 'uq-espace-'
+    productionPrefix: 'uq-espace-',
 });
 
 // Top level "pages"
@@ -36,7 +36,7 @@ const Root = ({ history }) => {
 };
 
 Root.propTypes = {
-    history: PropTypes.object
+    history: PropTypes.object,
 };
 
 export default Root;

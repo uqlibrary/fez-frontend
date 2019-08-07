@@ -16,5 +16,5 @@ export const LinkInfoTemplate = ({ item }) => (
 );
 
 LinkInfoTemplate.propTypes = {
-    item: PropTypes.object
+    item: PropTypes.object,
 };

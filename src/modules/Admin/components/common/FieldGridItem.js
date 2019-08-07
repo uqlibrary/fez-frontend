@@ -15,5 +15,5 @@ FieldGridItem.propTypes = {
     field: PropTypes.string,
     group: PropTypes.array,
     disabled: PropTypes.bool,
-    childrenItems: PropTypes.array
+    childrenItems: PropTypes.array,
 };

@@ -176,7 +176,7 @@ export const AdminSection = ({ disabled = false }) => {
 // export default React.memo(AdminSection);
 
 AdminSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(AdminSection);

@@ -26,7 +26,7 @@ export const BibliographicSection = ({ disabled = false }) => {
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].bibliographic(
             record.fez_record_search_key_language.length > 1 ||
-				record.fez_record_search_key_language[0].rek_language !== 'eng'
+                record.fez_record_search_key_language[0].rek_language !== 'eng'
         )
     );
 
@@ -151,7 +151,8 @@ export const BibliographicSection = ({ disabled = false }) => {
     //                         <Field
     //                             component={GenericTextField}
     //                             disabled={disabled}
-    //                             name="bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication"
+    //                             name=
+    // "bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication"
     //                             fullWidth
     //                             label="Place of publication"
     //                             placeholder=""
@@ -415,7 +416,7 @@ export const BibliographicSection = ({ disabled = false }) => {
 };
 
 BibliographicSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(BibliographicSection);

@@ -176,7 +176,7 @@ export const IdentifiersSection = ({ disabled = false }) => {
 // export default React.memo(IdentifiersSection);
 
 IdentifiersSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(IdentifiersSection);

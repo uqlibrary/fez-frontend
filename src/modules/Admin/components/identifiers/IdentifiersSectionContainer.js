@@ -18,14 +18,14 @@ const IdentifiersSectionContainer = ({ disabled, formValues }) => {
 
 IdentifiersSectionContainer.propTypes = {
     disabled: PropTypes.bool,
-    formValues: PropTypes.object
+    formValues: PropTypes.object,
 };
 
 const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        formValues: formValues.get('identifiersSection') || Immutable.Map({})
+        formValues: formValues.get('identifiersSection') || Immutable.Map({}),
     };
 };
 

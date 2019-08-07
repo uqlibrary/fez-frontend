@@ -14,7 +14,7 @@ export const AuthorsSection = ({ disabled = false }) => {
 };
 
 AuthorsSection.propTypes = {
-    disabled: PropTypes.bool
+    disabled: PropTypes.bool,
 };
 
 export default React.memo(AuthorsSection);

@@ -18,14 +18,14 @@ const BibliographicSectionContainer = ({ disabled, formValues }) => {
 
 BibliographicSectionContainer.propTypes = {
     disabled: PropTypes.bool,
-    formValues: PropTypes.object
+    formValues: PropTypes.object,
 };
 
 const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,
-        formValues: formValues.get('bibliographicSection') || Immutable.Map({})
+        formValues: formValues.get('bibliographicSection') || Immutable.Map({}),
     };
 };
 

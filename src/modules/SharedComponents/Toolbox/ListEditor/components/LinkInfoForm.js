@@ -14,14 +14,14 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
         const { name, value } = event.target;
         setlinkAndDescription({
             ...linkAndDescription,
-            [name]: value
+            [name]: value,
         });
     };
 
     const resetForm = () => {
         setlinkAndDescription({
             key: null,
-            value: null
+            value: null,
         });
         linkInput.current.value = null;
         descriptionInput.current.value = null;
@@ -32,9 +32,9 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
             // add item if user hits 'enter' key on input field
             if (
                 disabled ||
-				!linkAndDescription.key ||
-				!linkAndDescription.value ||
-				(event && event.key && event.key !== 'Enter')
+                !linkAndDescription.key ||
+                !linkAndDescription.value ||
+                (event && event.key && event.key !== 'Enter')
             ) {
                 return;
             }
@@ -54,7 +54,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
         descriptionInputFieldLabel,
         descriptionInputFieldHint,
         addButtonLabel,
-        id
+        id,
     } = locale;
 
     return (
@@ -71,7 +71,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
                     error={!!errorText}
                     disabled={disabled}
                     inputProps={{
-                        ref: linkInput
+                        ref: linkInput,
                     }}
                 />
             </Grid>
@@ -87,7 +87,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
                     error={!!errorText}
                     disabled={disabled}
                     inputProps={{
-                        ref: descriptionInput
+                        ref: descriptionInput,
                     }}
                 />
             </Grid>
@@ -110,7 +110,7 @@ LinkInfoForm.propTypes = {
     onAdd: PropTypes.func.isRequired,
     locale: PropTypes.object,
     disabled: PropTypes.bool,
-    errorText: PropTypes.string
+    errorText: PropTypes.string,
 };
 
 export default React.memo(LinkInfoForm);
