@@ -1633,11 +1633,8 @@ export default {
                     title: 'Error',
                     message: 'The batch-import request could not be submitted.',
                 },
-                postSubmitConfirmation: {
-                    confirmationTitle: 'CSV Ingest',
-                    confirmationMessage: 'CSV ingest request has been submitted. Would you like to make another?',
-                    cancelButtonLabel: 'No',
-                    confirmButtonLabel: 'Yes',
+                postSubmitPrompt: {
+                    confirmButtonLabel: 'Start another ingest',
                 },
                 details: {
                     community: {

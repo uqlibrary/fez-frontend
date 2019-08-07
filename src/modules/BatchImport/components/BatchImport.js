@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'redux-form/lib/immutable';
 
@@ -9,7 +9,6 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { CommunitiesSelectField, DocumentTypeSingleField } from 'modules/SharedComponents/PublicationSubtype';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
-import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import DirectorySelectField from '../containers/DirectorySelectField';
 import CollectionSelectField from '../containers/CollectionSelectField';
 import { useFormErrorsContext } from 'context';
@@ -36,11 +35,6 @@ export const BatchImport = ({
 
     const { formErrors } = useFormErrorsContext();
 
-    const restartPrompt = useRef(null);
-    const setRestartPrompt = ref => {
-        restartPrompt.current = ref;
-    };
-
     useEffect(() => {
         // Branch tested in cypress
         /* istanbul ignore next */
@@ -48,26 +42,33 @@ export const BatchImport = ({
     }, [communityID, loadItemsList]);
 
     useEffect(() => {
-        // Branch tested in cypress
-        /* istanbul ignore next */
-        submitSucceeded && restartPrompt.current.showConfirmation();
-    }, [submitSucceeded]);
+        const alertProps = validation.getErrorAlertProps({
+            alertLocale: {
+                validationAlert: { ...publicationLocale.validationAlert },
+                progressAlert: { ...batchImportTxt.submitProgressAlert },
+                successAlert: { ...batchImportTxt.submitSuccessAlert },
+                errorAlert: { ...batchImportTxt.submitFailureAlert },
+            },
+            formErrors,
+            submitSucceeded,
+            submitting,
+        });
+        const actionProps = submitSucceeded /* istanbul ignore next */ // Branch tested in cypress
+            ? {
+                actionButtonLabel: batchImportTxt.postSubmitPrompt.confirmButtonLabel,
+                action: reset,
+            }
+            : {};
 
-    useEffect(() => {
         setValidationErrors(
-            validation.getErrorAlertProps({
-                alertLocale: {
-                    validationAlert: { ...publicationLocale.validationAlert },
-                    progressAlert: { ...batchImportTxt.submitProgressAlert },
-                    successAlert: { ...batchImportTxt.submitSuccessAlert },
-                    errorAlert: { ...batchImportTxt.submitFailureAlert },
-                },
-                formErrors,
-                submitSucceeded,
-                submitting,
-            })
+            alertProps /* istanbul ignore next */ // Branch tested in cypress
+                ? {
+                    ...alertProps,
+                    ...actionProps,
+                }
+                : null
         );
-    }, [batchImportTxt, formErrors, submitSucceeded, submitting]);
+    }, [batchImportTxt, formErrors, reset, submitSucceeded, submitting]);
 
     const _abandonImport = () => {
         history.push(pathConfig.index);
@@ -76,12 +77,6 @@ export const BatchImport = ({
     return (
         <StandardPage title={batchImportTxt.title}>
             <form>
-                <ConfirmDialogBox
-                    onRef={setRestartPrompt}
-                    onAction={reset}
-                    onCancelAction={_abandonImport}
-                    locale={batchImportTxt.postSubmitConfirmation}
-                />
                 <Grid container spacing={16}>
                     <Grid item xs={12}>
                         <StandardCard help={batchImportTxt.help}>
@@ -175,7 +170,7 @@ export const BatchImport = ({
                             aria-label={batchImportTxt.formLabels.submitButtonLabel}
                             children={batchImportTxt.formLabels.submitButtonLabel}
                             color="primary"
-                            disabled={submitting || disableSubmit}
+                            disabled={submitting || submitSucceeded || disableSubmit}
                             fullWidth
                             id="submitBatchImport"
                             onClick={handleSubmit}
