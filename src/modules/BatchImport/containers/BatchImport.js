@@ -61,7 +61,9 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => ({
     loadItemsList: communityID => dispatch(actions.collectionsList(communityID)),
-    resetCollectionField: () => dispatch(change(FORM_NAME, 'collection_pid', null)),
+    resetCollectionField: () => {
+        dispatch(change(FORM_NAME, 'collection_pid', null));
+    },
 });
 
 BatchImportContainer = connect(
