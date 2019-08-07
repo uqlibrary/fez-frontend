@@ -5,8 +5,13 @@ import * as actions from 'actions';
 import { withRouter } from 'react-router-dom';
 import deparam from 'can-deparam';
 
-const mapStateToProps = (state, ownProps) => {
-    const searchQuery = deparam(ownProps.location.search.substr(1)) || {};
+export const mapStateToProps = (state, ownProps) => {
+    let searchQuery;
+    try {
+        searchQuery = deparam(ownProps.location.search.substr(1)) || {};
+    } catch (e) {
+        searchQuery = {};
+    }
     const { publicationsList } =
         (!!state && !!state.get('searchRecordsReducer') && state.get('searchRecordsReducer')) || {};
     const isAdvancedSearch =
