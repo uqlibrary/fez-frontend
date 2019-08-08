@@ -1,11 +1,9 @@
 import React, { useState, useCallback } from 'react';
-import { useSelector } from 'react-redux';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import locale from 'locale/pages';
 
-// import { loadRecordToView } from 'actions';
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
@@ -50,22 +48,42 @@ const styles = (theme) => ({
 
 export const AdminContainer = ({
     location,
+    recordToView,
+    loadRecordToView,
+    loadingRecordToView,
     classes,
     submitting,
     submitSucceeded,
     disableSubmit,
     handleSubmit,
-    // match,
+    match,
     history,
 }) => {
     const [tabbed, setTabbed] = useState(
         Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
     );
     const theme = useTheme();
-    const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
+    // const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
     // const dispatch = useDispatch();
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
+
+    /* istanbul ignore next */
+    const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
+
+    // const { recordToView, loadingRecordToView } = useSelector((state) => state.get('viewRecordReducer'));
+
+    // const formErrors = useSelector((state) => getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}));
+    // const dispatch = useDispatch();
+    // const disableSubmit = useRef(formErrors && !(formErrors instanceof Immutable.Map));
+
+    /* istanbul ignore next */
+    /* Enzyme's shallow render doesn't support useEffect hook yet */
+    React.useEffect(() => {
+        if (!!match.params.pid && !!loadRecordToView) {
+            loadRecordToView(match.params.pid);
+        }
+    }, [loadRecordToView]);
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
@@ -74,9 +92,6 @@ export const AdminContainer = ({
     //         dispatch(loadRecordToView(match.params.pid));
     //     }
     // }, []);
-
-    /* istanbul ignore next */
-    const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
 
     const txt = locale.pages.edit;
 
@@ -141,6 +156,7 @@ export const AdminContainer = ({
 
 AdminContainer.propTypes = {
     loadingRecordToView: PropTypes.bool,
+    loadRecordToView: PropTypes.func,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
     location: PropTypes.object,

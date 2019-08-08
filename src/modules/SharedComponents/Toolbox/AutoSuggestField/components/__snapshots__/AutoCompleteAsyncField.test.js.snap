@@ -498,54 +498,104 @@ exports[`AutoCompleteAsyncField component should render 1`] = `
 `;
 
 exports[`AutoCompleteAsyncField component should render a spinner while loading 1`] = `
-<CircularProgress
-  classes={
-    Object {
-      "circle": "MuiCircularProgress-circle-156",
-      "circleDisableShrink": "MuiCircularProgress-circleDisableShrink-159",
-      "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-158",
-      "circleStatic": "MuiCircularProgress-circleStatic-157",
-      "colorPrimary": "MuiCircularProgress-colorPrimary-153",
-      "colorSecondary": "MuiCircularProgress-colorSecondary-154",
-      "indeterminate": "MuiCircularProgress-indeterminate-152",
-      "root": "MuiCircularProgress-root-150",
-      "static": "MuiCircularProgress-static-151",
-      "svg": "MuiCircularProgress-svg-155",
-    }
-  }
-  color="primary"
-  disableShrink={false}
-  size={16}
-  thickness={3.6}
-  value={0}
-  variant="indeterminate"
->
-  <div
-    className="MuiCircularProgress-root-150 MuiCircularProgress-colorPrimary-153 MuiCircularProgress-indeterminate-152"
-    role="progressbar"
-    style={
+Array [
+  <CircularProgress
+    classes={
       Object {
-        "height": 16,
-        "width": 16,
+        "circle": "MuiCircularProgress-circle-156",
+        "circleDisableShrink": "MuiCircularProgress-circleDisableShrink-159",
+        "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-158",
+        "circleStatic": "MuiCircularProgress-circleStatic-157",
+        "colorPrimary": "MuiCircularProgress-colorPrimary-153",
+        "colorSecondary": "MuiCircularProgress-colorSecondary-154",
+        "indeterminate": "MuiCircularProgress-indeterminate-152",
+        "root": "MuiCircularProgress-root-150",
+        "static": "MuiCircularProgress-static-151",
+        "svg": "MuiCircularProgress-svg-155",
       }
     }
+    color="primary"
+    disableShrink={false}
+    size={16}
+    thickness={3.6}
+    value={0}
+    variant="indeterminate"
   >
-    <svg
-      className="MuiCircularProgress-svg-155"
-      viewBox="22 22 44 44"
+    <div
+      className="MuiCircularProgress-root-150 MuiCircularProgress-colorPrimary-153 MuiCircularProgress-indeterminate-152"
+      role="progressbar"
+      style={
+        Object {
+          "height": 16,
+          "width": 16,
+        }
+      }
     >
-      <circle
-        className="MuiCircularProgress-circle-156 MuiCircularProgress-circleIndeterminate-158"
-        cx={44}
-        cy={44}
-        fill="none"
-        r={20.2}
-        strokeWidth={3.6}
-        style={Object {}}
-      />
-    </svg>
-  </div>
-</CircularProgress>
+      <svg
+        className="MuiCircularProgress-svg-155"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle-156 MuiCircularProgress-circleIndeterminate-158"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </CircularProgress>,
+  <CircularProgress
+    classes={
+      Object {
+        "circle": "MuiCircularProgress-circle-156",
+        "circleDisableShrink": "MuiCircularProgress-circleDisableShrink-159",
+        "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-158",
+        "circleStatic": "MuiCircularProgress-circleStatic-157",
+        "colorPrimary": "MuiCircularProgress-colorPrimary-153",
+        "colorSecondary": "MuiCircularProgress-colorSecondary-154",
+        "indeterminate": "MuiCircularProgress-indeterminate-152",
+        "root": "MuiCircularProgress-root-150",
+        "static": "MuiCircularProgress-static-151",
+        "svg": "MuiCircularProgress-svg-155",
+      }
+    }
+    color="primary"
+    disableShrink={false}
+    size={16}
+    thickness={3.6}
+    value={0}
+    variant="indeterminate"
+  >
+    <div
+      className="MuiCircularProgress-root-150 MuiCircularProgress-colorPrimary-153 MuiCircularProgress-indeterminate-152"
+      role="progressbar"
+      style={
+        Object {
+          "height": 16,
+          "width": 16,
+        }
+      }
+    >
+      <svg
+        className="MuiCircularProgress-svg-155"
+        viewBox="22 22 44 44"
+      >
+        <circle
+          className="MuiCircularProgress-circle-156 MuiCircularProgress-circleIndeterminate-158"
+          cx={44}
+          cy={44}
+          fill="none"
+          r={20.2}
+          strokeWidth={3.6}
+          style={Object {}}
+        />
+      </svg>
+    </div>
+  </CircularProgress>,
+]
 `;
 
 exports[`AutoCompleteAsyncField component should render as required field 1`] = `
