@@ -32,8 +32,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     /**
      * Redux-form normalize callback
      */
-    const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
-
+    const overrideSecurityValueNormalizer = (value) => (value ? 0 : 1);
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>
@@ -81,6 +80,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                                     disabled={disabled || (recordType === RECORD_TYPE_COLLECTION && !isSuperAdmin)}
                                     text={{
                                         prompt: text.prompt,
+                                        fieldLabel: text.dataStreamFieldLabel,
                                         selectedTitle: text.dataStreamSelectedTitle,
                                     }}
                                     fieldName="securitySection.rek_datastream_policy"
@@ -132,7 +132,7 @@ SecurityCard.propTypes = {
 };
 
 export function isSame(prevProps, nextProps) {
-    return prevProps.disabled === nextProps.disabled;
+    return prevProps.disabled === nextProps.disabled && prevProps.isSuperAdmin === nextProps.isSuperAdmin;
 }
 
 export default React.memo(SecurityCard, isSame);
