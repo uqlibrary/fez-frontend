@@ -1,19 +1,20 @@
-import React, { useRef, useEffect } from 'react';
-import PropTypes from 'prop-types';
-import { loadRecordToView } from 'actions';
-// import { connect } from 'react-redux';
-import { useSelector, useDispatch } from 'react-redux';
-import { reduxForm, /* getFormValues, */ getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+// import React, { useRef, useEffect } from 'react';
+// import PropTypes from 'prop-types';
+import * as actions from 'actions';
+import { connect } from 'react-redux';
+// import { useSelector, useDispatch } from 'react-redux';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 import { adminUpdate } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
-import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+// import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor } from 'config/adminInterface';
 import { viewRecordsConfig } from 'config';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
-import locale from 'locale/pages';
+// import locale from 'locale/pages';
+import { bindActionCreators } from 'redux';
 
 export const FORM_NAME = 'Prototype';
 
@@ -75,90 +76,135 @@ const PrototypeContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-// const mapStateToProps = (state) => {
-//     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-//     const initialFormValues = null;
+const mapStateToProps = (state) => {
+    const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
+    const recordToView = state.get('viewRecordReducer').recordToView;
+    const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
 
-//     return {
-// formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-// formErrors: formErrors,
-// disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-// ...(!!initialFormValues ? initialFormValues : {})
-// ...ownProps,
-// ...state.get('viewRecordReducer')
+    const initialFormValues = !!recordToView
+        ? {
+            initialValues: {
+                pid: recordToView.rek_pid,
+                publication: recordToView,
+                rek_date: recordToView.rek_date || recordToView.rek_created_date,
+                collection: [],
+                subject: [],
+                adminSection: {
+                    rek_herdc_notes: recordToView.rek_herdc_notes,
+                    fez_internal_notes: { ...recordToView.fez_internal_notes },
+                },
+                identifiersSection:
+                      (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
+                securitySection: {
+                    rek_security_policy: recordToView.rek_security_policy,
+                    ...(recordType === RECORD_TYPE_COLLECTION
+                        ? {
+                            rek_datastream_policy: recordToView.rek_datastream_policy,
+                        }
+                        : {}),
+                    ...(recordType === RECORD_TYPE_RECORD
+                        ? {
+                            rek_security_inherited: recordToView.rek_security_inherited,
+                            dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
+                        }
+                        : {}),
+                },
+                bibliographicSection:
+                      (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
+                authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
+            },
+        }
+        : null;
+
+    return {
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        formErrors: formErrors,
+        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        ...(!!initialFormValues ? initialFormValues : {}),
+        ...state.get('viewRecordReducer'),
+    };
+};
+
+function mapDispatchToProps(dispatch) {
+    const { loadRecordToView } = bindActionCreators(actions, dispatch);
+    return {
+        loadRecordToView,
+    };
+}
+
+const AdminReduxFormContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(PrototypeContainer);
+
+// const getReduxFormInitialValues = (recordToView) => {
+//     console.log('mapStateToProps', recordToView);
+//     const recordType = recordToView.rek_object_type_lookup.toLowerCase();
+//     const initialValues = {
+//         pid: recordToView.rek_pid,
+//         publication: recordToView,
+//         rek_date: recordToView.rek_date || recordToView.rek_created_date,
+//         collection: [],
+//         subject: [],
+//         adminSection: {
+//             rek_herdc_notes: recordToView.rek_herdc_notes,
+//             fez_internal_notes: { ...recordToView.fez_internal_notes },
+//         },
+//         identifiersSection: (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
+//         securitySection: {
+//             rek_security_policy: recordToView.rek_security_policy,
+//             ...(recordType === RECORD_TYPE_COLLECTION
+//                 ? {
+//                     rek_datastream_policy: recordToView.rek_datastream_policy,
+//                 }
+//                 : {}),
+//             ...(recordType === RECORD_TYPE_RECORD
+//                 ? {
+//                     rek_security_inherited: recordToView.rek_security_inherited,
+//                     dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
+//                 }
+//                 : {}),
+//         },
+//         bibliographicSection: (recordType === RECORD_TYPE_RECORD &&
+// getBibliographicInitialValues(recordToView)) || {},
+//         authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
 //     };
+//     return initialValues;
 // };
 
-// PrototypeContainer = connect(mapStateToProps)(PrototypeContainer);
+// export const AdminReduxFormContainer = (props) => {
+//     const { recordToView, loadingRecordToView } = useSelector((state) => state.get('viewRecordReducer'));
 
-const getReduxFormInitialValues = (recordToView) => {
-    console.log('mapStateToProps', recordToView);
-    const recordType = recordToView.rek_object_type_lookup.toLowerCase();
-    const initialValues = {
-        pid: recordToView.rek_pid,
-        publication: recordToView,
-        rek_date: recordToView.rek_date || recordToView.rek_created_date,
-        collection: [],
-        subject: [],
-        adminSection: {
-            rek_herdc_notes: recordToView.rek_herdc_notes,
-            fez_internal_notes: { ...recordToView.fez_internal_notes },
-        },
-        identifiersSection: (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
-        securitySection: {
-            rek_security_policy: recordToView.rek_security_policy,
-            ...(recordType === RECORD_TYPE_COLLECTION
-                ? {
-                    rek_datastream_policy: recordToView.rek_datastream_policy,
-                }
-                : {}),
-            ...(recordType === RECORD_TYPE_RECORD
-                ? {
-                    rek_security_inherited: recordToView.rek_security_inherited,
-                    dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
-                }
-                : {}),
-        },
-        bibliographicSection: (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
-        authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
-    };
-    console.log(initialValues);
-    return initialValues;
-};
+//     const formErrors = useSelector((state) => getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}));
+//     const dispatch = useDispatch();
+//     const disableSubmit = useRef(formErrors && !(formErrors instanceof Immutable.Map));
+//     const initialValues = useRef(null);
 
-export const AdminReduxFormContainer = (props) => {
-    const { recordToView, loadingRecordToView } = useSelector((state) => state.get('viewRecordReducer'));
+//     if (!!recordToView && !initialValues.current) {
+//         initialValues.current = getReduxFormInitialValues(recordToView);
+//     }
 
-    const formErrors = useSelector((state) => getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}));
-    const dispatch = useDispatch();
-    const disableSubmit = useRef(formErrors && !(formErrors instanceof Immutable.Map));
-    const initialValues = useRef(null);
+//     /* istanbul ignore next */
+//     /* Enzyme's shallow render doesn't support useEffect hook yet */
+//     useEffect(() => {
+//         console.log('useEffect');
+//         if (!!props.match.params.pid && !!loadRecordToView) {
+//             dispatch(loadRecordToView(props.match.params.pid));
+//         }
+//     }, []);
 
-    if (!!recordToView && !initialValues.current) {
-        initialValues.current = getReduxFormInitialValues(recordToView);
-    }
+//     console.log('loadingRecordToView', loadingRecordToView);
+//     if (loadingRecordToView) {
+//         return <InlineLoader message={locale.pages.edit.loadingMessage} />;
+//     } else if (!recordToView) {
+//         return <div className="empty" />;
+//     }
 
-    /* istanbul ignore next */
-    /* Enzyme's shallow render doesn't support useEffect hook yet */
-    useEffect(() => {
-        console.log('useEffect');
-        if (!!props.match.params.pid && !!loadRecordToView) {
-            dispatch(loadRecordToView(props.match.params.pid));
-        }
-    }, []);
+//     console.log(initialValues.current);
+//     return <PrototypeContainer {...props} disableSubmit={disableSubmit} initialValues={initialValues.current} />;
+// };
 
-    console.log('loadingRecordToView', loadingRecordToView);
-    if (loadingRecordToView) {
-        return <InlineLoader message={locale.pages.edit.loadingMessage} />;
-    } else if (!recordToView) {
-        return <div className="empty" />;
-    }
-
-    console.log(initialValues.current);
-    return <PrototypeContainer {...props} disableSubmit={disableSubmit} initialValues={initialValues.current} />;
-};
-
-AdminReduxFormContainer.propTypes = {
-    match: PropTypes.object,
-};
+// AdminReduxFormContainer.propTypes = {
+//     match: PropTypes.object,
+// };
 export default withRouter(AdminReduxFormContainer);

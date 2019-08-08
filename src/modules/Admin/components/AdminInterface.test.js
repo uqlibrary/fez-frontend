@@ -11,7 +11,7 @@ jest.mock('js-cookie', () => ({
 
 jest.mock('query-string', () => ({
     parse: jest.fn(() => ({
-        tab: 'files',
+        tab: 'security',
     })),
 }));
 import queryString from 'query-string';
@@ -44,8 +44,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 
@@ -71,8 +71,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 
@@ -80,12 +80,16 @@ describe('AdminInterface component', () => {
 
         const wrapper = setup({
             tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
                 security: {
                     activated: true,
                     component: () => 'SecuritySectionComponent',
                 },
                 files: {
-                    activated: true,
+                    activated: false,
                     component: () => 'FilesSectionComponent',
                 },
             },
@@ -98,8 +102,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 
@@ -112,21 +116,21 @@ describe('AdminInterface component', () => {
                     component: () => 'SecuritySectionComponent',
                 },
                 files: {
-                    activated: true,
+                    activated: false,
                     component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
-                    activated: false,
+                    activated: true,
                     component: () => 'IdentifiersSectionComponent',
                 },
                 admin: {
-                    activated: false,
+                    activated: true,
                     component: () => 'AdminSectionComponent',
                 },
             },
         });
 
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(2);
+        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(3);
         expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
@@ -135,8 +139,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 
@@ -176,8 +180,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 
@@ -213,8 +217,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
-                rek_display_type_lookup: 'Journal Article',
                 rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
 

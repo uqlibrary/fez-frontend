@@ -670,7 +670,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
         }
         variant="h5"
       >
-        UQ:123456 This is test record
+        Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
     </WithStyles(Grid)>
     <Hidden
@@ -721,14 +721,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             variant="scrollable"
           >
             <WithStyles(Tab)
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
+            />
+            <WithStyles(Tab)
               key="security"
               label="Security"
               value="security"
-            />
-            <WithStyles(Tab)
-              key="files"
-              label="Files"
-              value="files"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>

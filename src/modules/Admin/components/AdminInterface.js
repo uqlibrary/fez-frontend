@@ -35,7 +35,8 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     const { tabbed } = useTabbedContext();
     const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(
         location,
-        (record.rek_object_type_lookup.toLowerCase() !== RECORD_TYPE_RECORD && 'security') || 'bibliographic'
+        (((record || {}).rek_object_type_lookup || '').toLowerCase() !== RECORD_TYPE_RECORD && 'security') ||
+            'bibliographic'
     );
 
     const successConfirmationRef = useRef();
