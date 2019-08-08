@@ -57,7 +57,7 @@ printf "\nCode style checks complete.\n"
 
 if ! $PASS; then
   printf "\n\e[31m\e[1mCOMMIT REJECTED.\e[0m \e[31mYour commit contains files that should pass code style checks but do not.\e[0m\n"
-  printf "\nPlease fix code styles and try again. Running '\e[1mnpm run codestyles:fix\e[0m' is a good start."
+  printf "\nPlease fix code styles and try again. Running '\e[1mnpm run codestyles:fix:staged\e[0m' is a good start."
   printf "\nYou can run '\e[1mnpm run eslint\e[0m' to view ESLint code quality issues, if any.\n\n"
   exit 1
 fi
