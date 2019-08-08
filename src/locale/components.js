@@ -1441,28 +1441,28 @@ export default {
             community: {
                 cardTitle: (pid) => (<span><strong>Community</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
-                fieldLabel: '',
+                fieldLabel: 'Override community level policy to apply to this PID',
                 selectedTitle: 'Selected community record security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
             },
             collection: {
                 cardTitle: (pid) => (<span><strong>Collection</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
-                fieldLabel: '',
+                fieldLabel: 'Override collection level policy to apply to this PID',
                 dataStreamFieldLabel: (<span>
-                    Collection policy to apply to the <b>datastream</b> of this PID
+                    Override datastream level policy to apply to the <b>datastream</b> of this PID
                 </span>),
-                selectedTitle: 'Selected collection record security policy details',
+                selectedTitle: 'Current collection level security policy details',
                 dataStreamSelectedTitle: (<span>
-                    Selected collection <b>datastream</b> security policy details
+                    Current collection <b>datastream</b> level security policy details
                 </span>),
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
             },
             record: {
                 cardTitle: (pid) => (<span><strong>Record</strong> level security - {pid}</span>),
                 prompt: 'Select a security policy to apply',
-                fieldLabel: '',
-                dataStreamFieldLabel: '',
+                fieldLabel: 'Override record',
+                dataStreamFieldLabel: 'Override record level policy to apply to this PID',
                 selectedTitle: 'Selected record level security policy details',
                 dataStreamSelectedTitle: 'Selected record level datastream security policy details',
                 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',

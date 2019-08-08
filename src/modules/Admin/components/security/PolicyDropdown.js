@@ -17,32 +17,23 @@ export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt,
         validation={[validation.required]}
         {...props}
     >
-        {
-            displayPrompt &&
+        {displayPrompt && (
             <MenuItem value="" disabled>
                 {prompt}
             </MenuItem>
-        }
-        {
-            policyList.map((policy, index) => (
-                <MenuItem
-                    key={index}
-                    value={policy.value}
-                >
-                    {policy.label}
-                </MenuItem>
-            ))
-        }
+        )}
+        {policyList.map((policy, index) => (
+            <MenuItem key={index} value={policy.value}>
+                {policy.label}
+            </MenuItem>
+        ))}
     </SelectField>
 );
 
 PolicyDropdown.propTypes = {
     disabled: PropTypes.bool,
     fieldName: PropTypes.string,
-    fieldLabel: PropTypes.oneOfType([
-        PropTypes.string,
-        PropTypes.node,
-    ]),
+    fieldLabel: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
     displayPrompt: PropTypes.bool,
     policyList: PropTypes.array,
     prompt: PropTypes.string,

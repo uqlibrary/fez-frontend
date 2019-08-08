@@ -20992,23 +20992,23 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                   Object {
                                                                     "cardTitle": [Function],
                                                                     "dataStreamFieldLabel": <span>
-                                                                      Collection policy to apply to the 
+                                                                      Override datastream level policy to apply to the 
                                                                       <b>
                                                                         datastream
                                                                       </b>
                                                                        of this PID
                                                                     </span>,
                                                                     "dataStreamSelectedTitle": <span>
-                                                                      Selected collection 
+                                                                      Current collection 
                                                                       <b>
                                                                         datastream
                                                                       </b>
-                                                                       security policy details
+                                                                       level security policy details
                                                                     </span>,
                                                                     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.",
-                                                                    "fieldLabel": "",
+                                                                    "fieldLabel": "Override collection level policy to apply to this PID",
                                                                     "prompt": "Select a security policy to apply",
-                                                                    "selectedTitle": "Selected collection record security policy details",
+                                                                    "selectedTitle": "Current collection level security policy details",
                                                                   }
                                                                 }
                                                               >
@@ -21910,7 +21910,7 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                               component={[Function]}
                                                                               disabled={true}
                                                                               displayPrompt={true}
-                                                                              fieldLabel="collection level policy to apply to this PID"
+                                                                              fieldLabel="Override collection level policy to apply to this PID"
                                                                               name="securitySection.rek_security_policy"
                                                                               prompt="Select a security policy to apply"
                                                                             />
@@ -21919,7 +21919,7 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                       </WithStyles(Grid)>
                                                                       <Memo(SelectedSecurityPolicyDescription)
                                                                         selectedPolicyKey={5}
-                                                                        title="Selected collection record security policy details"
+                                                                        title="Current collection level security policy details"
                                                                       >
                                                                         <WithStyles(Grid)
                                                                           item={true}
@@ -22592,7 +22592,7 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                                       }
                                                                                     }
                                                                                   >
-                                                                                    Selected collection record security policy details
+                                                                                    Current collection level security policy details
                                                                                   </h6>
                                                                                 </Typography>
                                                                               </WithStyles(Typography)>
@@ -23146,13 +23146,20 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                 securityPolicy={5}
                                                                 text={
                                                                   Object {
-                                                                    "prompt": "Select a security policy to apply",
-                                                                    "selectedTitle": <span>
-                                                                      Selected collection 
+                                                                    "fieldLabel": <span>
+                                                                      Override datastream level policy to apply to the 
                                                                       <b>
                                                                         datastream
                                                                       </b>
-                                                                       security policy details
+                                                                       of this PID
+                                                                    </span>,
+                                                                    "prompt": "Select a security policy to apply",
+                                                                    "selectedTitle": <span>
+                                                                      Current collection 
+                                                                      <b>
+                                                                        datastream
+                                                                      </b>
+                                                                       level security policy details
                                                                     </span>,
                                                                   }
                                                                 }
@@ -23411,7 +23418,15 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                               component={[Function]}
                                                                               disabled={true}
                                                                               displayPrompt={true}
-                                                                              fieldLabel="collection level policy to apply to this PID"
+                                                                              fieldLabel={
+                                                                                <span>
+                                                                                  Override datastream level policy to apply to the 
+                                                                                  <b>
+                                                                                    datastream
+                                                                                  </b>
+                                                                                   of this PID
+                                                                                </span>
+                                                                              }
                                                                               name="securitySection.rek_datastream_policy"
                                                                               prompt="Select a security policy to apply"
                                                                             />
@@ -23422,11 +23437,11 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                         selectedPolicyKey={5}
                                                                         title={
                                                                           <span>
-                                                                            Selected collection 
+                                                                            Current collection 
                                                                             <b>
                                                                               datastream
                                                                             </b>
-                                                                             security policy details
+                                                                             level security policy details
                                                                           </span>
                                                                         }
                                                                       >
@@ -24102,11 +24117,11 @@ exports[`SecuritySectionContainer should mount with default props 2`] = `
                                                                                     }
                                                                                   >
                                                                                     <span>
-                                                                                      Selected collection 
+                                                                                      Current collection 
                                                                                       <b>
                                                                                         datastream
                                                                                       </b>
-                                                                                       security policy details
+                                                                                       level security policy details
                                                                                     </span>
                                                                                   </h6>
                                                                                 </Typography>

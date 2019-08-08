@@ -24,7 +24,6 @@ exports[`SecuritySelector component should render properly for collection 1`] = 
       component={[Function]}
       disabled={false}
       displayPrompt={true}
-      fieldLabel="collection level policy to apply to this PID"
       prompt="test2"
     />
   </WithStyles(Grid)>
@@ -59,7 +58,6 @@ exports[`SecuritySelector component should render properly for community 1`] = `
       component={[Function]}
       disabled={false}
       displayPrompt={true}
-      fieldLabel="community level policy to apply to this PID"
       prompt="test2"
     />
   </WithStyles(Grid)>
@@ -94,7 +92,6 @@ exports[`SecuritySelector component should render properly for record 1`] = `
       component={[Function]}
       disabled={false}
       displayPrompt={true}
-      fieldLabel="record level policy to apply to this PID"
       prompt="test2"
     />
   </WithStyles(Grid)>
