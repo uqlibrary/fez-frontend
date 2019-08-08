@@ -12,7 +12,7 @@ import {
 import { leftJoin } from 'helpers/general';
 import { locale } from 'locale';
 import { authorAffiliationRequired } from 'config/validation';
-import { default as pagesLocale } from 'locale/pages';
+import { default as pagesLocale } from '../locale';
 import { incompleteRecord } from 'config';
 
 import MyIncompleteRecordForm from './MyIncompleteRecordForm';
@@ -224,7 +224,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
     };
 
     render() {
-        const txt = pagesLocale.pages.incompletePublication;
+        const txt = pagesLocale;
         const { accountAuthorLoading, loadingRecordToFix } = this.props;
 
         // display loading spinner
