@@ -16,7 +16,7 @@ function setup(testProps, isShallow = true) {
 
 describe('ListRowHeader renders ', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup({});
+        const wrapper = setup({ });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -32,9 +32,7 @@ describe('ListRowHeader renders ', () => {
             showConfirmation: showConfirmationFn,
         };
 
-        wrapper
-            .find('WithStyles(IconButton)')
-            .props()
+        wrapper.find('WithStyles(IconButton)').props()
             .onClick();
         expect(showConfirmationFn).toHaveBeenCalled();
     });

@@ -15,7 +15,7 @@ export default class OpenAccessFilter extends PureComponent {
 
     updateFilter = () => {
         this.props.onChange(!this.props.isActive);
-    };
+    }
 
     render() {
         const txt = this.props.locale;

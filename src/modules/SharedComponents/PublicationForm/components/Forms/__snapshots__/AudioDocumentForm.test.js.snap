@@ -149,8 +149,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     add to a list of creators below
                   </b>
@@ -185,8 +184,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     select your name
                   </b>
@@ -252,8 +250,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     add to a list of contributors below
                   </b>
@@ -288,8 +285,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     select your name
                   </b>
@@ -526,8 +522,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     add to a list of creators below
                   </b>
@@ -562,8 +557,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     select your name
                   </b>
@@ -629,8 +623,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     add to a list of contributors below
                   </b>
@@ -665,8 +658,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   
-                  - Please 
+                   - Please 
                   <b>
                     select your name
                   </b>

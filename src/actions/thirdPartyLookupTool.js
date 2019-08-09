@@ -52,7 +52,12 @@ export function loadThirdPartyResults(type, field1, field2) {
                     error.response.data.data.length > 0
                 ) {
                     message = [error.response.data.data];
-                } else if (!!error && !!error.response && !!error.response.data && error.response.data.length > 0) {
+                } else if (
+                    !!error &&
+                    !!error.response &&
+                    !!error.response.data &&
+                    error.response.data.length > 0
+                ) {
                     message = [error.response.data];
                 }
                 dispatch({

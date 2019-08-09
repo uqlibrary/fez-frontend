@@ -29,23 +29,27 @@ export class CustomStepper extends Component {
     };
 
     shouldComponentUpdate(nextProps) {
-        return nextProps.activeStep !== this.props.activeStep || nextProps.steps !== this.props.steps;
+        return nextProps.activeStep !== this.props.activeStep ||
+        nextProps.steps !== this.props.steps;
     }
 
     render() {
         const { activeStep, steps, classes, width } = this.props;
         return (
             <Stepper activeStep={activeStep} className={classes.stepper}>
-                {steps.map((step, index) => {
-                    const label = width !== 'xs' && step.label;
-                    return (
-                        <Step key={`stepper_${index}`}>
-                            <StepLabel className={classes.stepperLabel}>
-                                <span>{label}</span>
-                            </StepLabel>
-                        </Step>
-                    );
-                })}
+                {
+                    steps.map((step, index) => {
+                        const label = width !== 'xs' && step.label;
+                        return (
+                            <Step key={`stepper_${index}`}>
+                                <StepLabel
+                                    className={classes.stepperLabel}>
+                                    <span>{label}</span>
+                                </StepLabel>
+                            </Step>
+                        );
+                    })
+                }
             </Stepper>
         );
     }

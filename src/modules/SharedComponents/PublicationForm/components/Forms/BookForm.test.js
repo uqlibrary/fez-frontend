@@ -24,23 +24,15 @@ describe('BookForm renders ', () => {
 
     it('component with 4 input fields for NTRO', () => {
         const wrapper = setup({ isNtro: true });
-        expect(
-            wrapper
-                .find('NtroFields')
-                .dive()
-                .find('Field').length
-        ).toEqual(5);
+        expect(wrapper.find('NtroFields').dive()
+            .find('Field').length).toEqual(5);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 5 input fields for NTRO with musical composition subtype', () => {
         const wrapper = setup({ isNtro: true, subtype: NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION });
-        expect(
-            wrapper
-                .find('NtroFields')
-                .dive()
-                .find('Field').length
-        ).toEqual(6);
+        expect(wrapper.find('NtroFields').dive()
+            .find('Field').length).toEqual(6);
     });
 
     it('component with all fields disabled', () => {
@@ -53,10 +45,10 @@ describe('BookForm renders ', () => {
     it('component should render contributor assignment', () => {
         const wrapper = setup({
             formValues: {
-                get: key => {
+                get: (key) => {
                     const values = {
-                        editors: [{ selected: true }, { selected: true }],
-                        authors: [{ selected: true }, { selected: true }],
+                        'editors': [{ selected: true }, { selected: true }],
+                        'authors': [{ selected: true }, { selected: true }],
                     };
                     return values[key];
                 },

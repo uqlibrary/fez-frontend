@@ -13,8 +13,7 @@ exports[`Component NtroHeader should render default view 1`] = `
         </p>
         <ol>
           <li>
-            A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
-             
+            A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form. 
             <b>
               This is not for public view.
             </b>

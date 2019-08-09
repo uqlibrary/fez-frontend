@@ -33,26 +33,32 @@ export class FileUploadRowStatus extends PureComponent {
 
         return (
             <Fragment>
-                {!isUploadInProgress && (
+                {
+                    !isUploadInProgress &&
                     <Tooltip title={deleteHint}>
                         <IconButton onClick={this.props.onDelete} disabled={disabled}>
-                            <Delete />
+                            <Delete/>
                         </IconButton>
                     </Tooltip>
-                )}
-                {isUploadInProgress && progress !== 100 && (
+                }
+                {
+                    isUploadInProgress && progress !== 100 &&
                     <Fragment>
-                        <CircularProgress {...progressProps} size={20} thickness={4} />
+                        <CircularProgress
+                            {...progressProps}
+                            size={20}
+                            thickness={4} />
                         <Typography variant="caption" aria-label={progress > 0 ? `${progress}%` : uploadInProgressText}>
                             {progress > 0 ? `${progress}%` : uploadInProgressText}
                         </Typography>
                     </Fragment>
-                )}
-                {isUploadInProgress && progress === 100 && (
+                }
+                {
+                    isUploadInProgress && progress === 100 &&
                     <IconButton>
-                        <Done />
+                        <Done/>
                     </IconButton>
-                )}
+                }
             </Fragment>
         );
     }
@@ -60,7 +66,7 @@ export class FileUploadRowStatus extends PureComponent {
 
 export const mapStateToProps = (state, ownProps) => {
     return {
-        progress: (!!state.get('fileUpload') && state.get('fileUpload')[ownProps.name]) || 0,
+        progress: !!state.get('fileUpload') && state.get('fileUpload')[ownProps.name] || 0,
         isUploadInProgress: !!state.get('fileUpload') && state.get('fileUpload').isUploadInProgress,
     };
 };

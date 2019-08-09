@@ -38,7 +38,7 @@ describe('HelpDrawer snapshots tests', () => {
     it('renders text as react element', () => {
         const wrapper = setup({
             title: 'HelpDrawer title',
-            text: <span>Test text</span>,
+            text: (<span>Test text</span>),
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

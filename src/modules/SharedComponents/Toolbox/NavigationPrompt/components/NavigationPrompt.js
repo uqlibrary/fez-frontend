@@ -29,7 +29,7 @@ export class NavigationPrompt extends PureComponent {
         this.unblock();
     }
 
-    blockNavigation = nextLocation => {
+    blockNavigation = (nextLocation) => {
         if (this.props.when) {
             this.setState({
                 nextLocation: nextLocation,
@@ -41,7 +41,7 @@ export class NavigationPrompt extends PureComponent {
         return this.props.when;
     };
 
-    setNavigationConfirmation = ref => {
+    setNavigationConfirmation = (ref) => {
         this.confirmationBox = ref;
     };
 
@@ -59,7 +59,11 @@ export class NavigationPrompt extends PureComponent {
     };
 
     render() {
-        return <div>{this.props.children(this.setNavigationConfirmation, this._onConfirm, this._onCancel)}</div>;
+        return (
+            <div>
+                {this.props.children(this.setNavigationConfirmation, this._onConfirm, this._onCancel)}
+            </div>
+        );
     }
 }
 

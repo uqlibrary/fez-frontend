@@ -19,9 +19,9 @@ export default function AccessSelectorField(fieldProps) {
                     text: 'Mediated Access',
                 },
             ]}
-            errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
-            error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
-            {...fieldProps}
+            errorText={!!fieldProps.meta && fieldProps.meta.error || ''}
+            error={!!fieldProps.meta && !!fieldProps.meta.error || false}
+            { ...fieldProps }
         />
     );
 }

@@ -48,36 +48,41 @@ export class MyTrendingPublications extends PureComponent {
             return (
                 <Grid container alignItems={'center'}>
                     <Grid item>
-                        <InlineLoader message={txt.loading} />
+                        <InlineLoader message={txt.loading}/>
                     </Grid>
                 </Grid>
             );
         }
-        if (this.props.trendingPublicationsList.length === 0) {
+        if(this.props.trendingPublicationsList.length === 0) {
             return <div className="empty" />;
         }
         return (
             <Grid container spacing={24} id={'myTrendingPublications'}>
                 <Grid item xs={12}>
-                    {this.props.trendingPublicationsList.map(({ key, values }, metricIndex) => {
-                        return (
-                            <Grid container key={metricIndex} spacing={24}>
-                                <Grid item xs>
-                                    <Typography variant={'h6'}>
-                                        <div className={`fez-icon ${key} xxlarge`} />
-                                        {txt.metrics[key].title}
-                                    </Typography>
-                                    <Typography variant={'subtitle1'}>{txt.metrics[key].subtitle}</Typography>
+                    {
+                        this.props.trendingPublicationsList.map(({ key, values }, metricIndex) => {
+                            return (
+                                <Grid container key={metricIndex} spacing={24}>
+                                    <Grid item xs>
+                                        <Typography variant={'h6'}>
+                                            <div className={`fez-icon ${key} xxlarge`}/>
+                                            {txt.metrics[key].title}
+                                        </Typography>
+                                        <Typography variant={'subtitle1'}>{txt.metrics[key].subtitle}</Typography>
+                                    </Grid>
+                                    <Grid item>
+                                        <HelpIcon {...locale.components.trendingPublicationHelp}/>
+                                    </Grid>
+                                    <Grid item xs={12} className={this.props.classes.pubCounts}>
+                                        <PublicationsList
+                                            publicationsList={values}
+                                            showMetrics
+                                        />
+                                    </Grid>
                                 </Grid>
-                                <Grid item>
-                                    <HelpIcon {...locale.components.trendingPublicationHelp} />
-                                </Grid>
-                                <Grid item xs={12} className={this.props.classes.pubCounts}>
-                                    <PublicationsList publicationsList={values} showMetrics />
-                                </Grid>
-                            </Grid>
-                        );
-                    })}
+                            );
+                        })
+                    }
                 </Grid>
             </Grid>
         );
@@ -85,3 +90,4 @@ export class MyTrendingPublications extends PureComponent {
 }
 
 export default withStyles(styles, { withTheme: true })(MyTrendingPublications);
+

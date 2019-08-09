@@ -46,10 +46,9 @@ export class FreeTextFormClass extends Component {
         this.textField = null;
     }
 
-    addItem = event => {
+    addItem = (event) => {
         // add item if user hits 'enter' key on input field
-        if (
-            this.props.disabled ||
+        if (this.props.disabled ||
             this.props.isValid(this.state.itemName) !== '' ||
             (event && event.key && event.key !== 'Enter') ||
             this.state.itemName.length === 0
@@ -72,7 +71,7 @@ export class FreeTextFormClass extends Component {
         }
     };
 
-    onNameChanged = event => {
+    onNameChanged = (event) => {
         this.setState({
             itemName: this.props.normalize(event.target.value),
         });
@@ -80,43 +79,35 @@ export class FreeTextFormClass extends Component {
 
     render() {
         const { classes, locale, errorText, disabled } = this.props;
-        const { inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id } = locale;
-        const inputLength =
-            this.state.itemName &&
-            this.state.itemName.length > this.props.maxInputLength &&
-            `Limited to ${this.props.maxInputLength} characters`;
+        const{ inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id } = locale;
+        const inputLength = this.state.itemName && this.state.itemName.length > this.props.maxInputLength && `Limited to ${this.props.maxInputLength} characters`;
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{ flexGrow: 1 }}>
                     <TextField
                         fullWidth
-                        id={(!!id && id) || ''}
-                        inputRef={node => {
-                            this.textField = node;
-                        }}
+                        id={!!id && id || ''}
+                        inputRef={(node) => { this.textField = node; }}
                         label={inputFieldLabel}
                         placeholder={inputFieldHint}
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
                         onKeyPress={this.addItem}
                         error={!!errorText || this.props.isValid(this.state.itemName) || !!inputLength}
-                        helperText={
-                            this.props.isValid(this.state.itemName) || errorText || inputLength
-                                ? `${!!errorText ? errorText : ''}${!!errorText && !!inputLength ? ' - ' : ''}${
-                                    !!inputLength ? inputLength : ''
-                                }`
-                                : null
-                        }
+                        helperText={this.props.isValid(this.state.itemName) || errorText || inputLength
+                            ? `${!!errorText ? errorText : ''}${!!errorText && !!inputLength ? ' - ' : ''}${!!inputLength ? inputLength : ''}`
+                            : null}
                         disabled={disabled}
                     />
-                    {this.props.remindToAdd &&
+                    {
+                        this.props.remindToAdd &&
                         remindToAdd &&
                         this.state.itemName.length !== 0 &&
-                        !this.props.isValid(this.state.itemName) && (
+                        !this.props.isValid(this.state.itemName) &&
                         <Typography variant="caption" className={classes.remindToAdd}>
                             {remindToAdd}
                         </Typography>
-                    )}
+                    }
                 </Grid>
                 <Grid item xs={12} sm={2}>
                     <Button
@@ -140,5 +131,5 @@ export class FreeTextFormClass extends Component {
 }
 
 const StyledFreeTextFormClass = withStyles(styles, { withTheme: true })(FreeTextFormClass);
-const FreeTextForm = props => <StyledFreeTextFormClass {...props} />;
+const FreeTextForm = (props) => <StyledFreeTextFormClass {...props}/>;
 export default FreeTextForm;

@@ -7,7 +7,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE]: state => ({
+    [actions.APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE]: (state) => ({
         ...state,
         hidePossiblyYourPublicationsLure: true,
     }),
@@ -17,20 +17,24 @@ const handlers = {
         appAlert: action.payload,
     }),
 
-    [actions.APP_ALERT_HIDE]: state => ({
+    [actions.APP_ALERT_HIDE]: (state) => ({
         ...state,
         appAlert: null,
     }),
 
-    [actions.SET_REDIRECT_PATH]: (state, action) => ({
-        ...state,
-        redirectPath: action.payload,
-    }),
+    [actions.SET_REDIRECT_PATH]: (state, action) => (
+        {
+            ...state,
+            redirectPath: action.payload,
+        }
+    ),
 
-    [actions.CLEAR_REDIRECT_PATH]: state => ({
-        ...state,
-        redirectPath: null,
-    }),
+    [actions.CLEAR_REDIRECT_PATH]: (state) => (
+        {
+            ...state,
+            redirectPath: null,
+        }
+    ),
 };
 
 export default function appReducer(state = initialState, action) {

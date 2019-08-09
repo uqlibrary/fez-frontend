@@ -24,34 +24,33 @@ const onSubmit = (values, dispatch, props) => {
         });
 };
 
-const mapStateToProps = state => ({
-    ...state.get('accountReducer'),
-    formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-    initialValues: {
-        aut_id:
-            state.get('accountReducer') && state.get('accountReducer').author
+const mapStateToProps = (state) => (
+    {
+        ...state.get('accountReducer'),
+        formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
+        initialValues: {
+            aut_id: state.get('accountReducer') && state.get('accountReducer').author
                 ? state.get('accountReducer').author.aut_id
                 : '',
-        aut_google_scholar_id:
-            state.get('accountReducer') && state.get('accountReducer').author
+            aut_google_scholar_id: state.get('accountReducer') && state.get('accountReducer').author
                 ? state.get('accountReducer').author.aut_google_scholar_id
                 : '',
-    },
-});
+        },
+    }
+);
 
-const mapDispatchToProps = dispatch => ({
-    actions: bindActionCreators(actions, dispatch),
-});
+const mapDispatchToProps = (dispatch) => (
+    {
+        actions: bindActionCreators(actions, dispatch),
+    }
+);
 
 let GoogleScholarContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
 })(GoogleScholar);
 
-GoogleScholarContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(GoogleScholarContainer);
+GoogleScholarContainer = connect(mapStateToProps, mapDispatchToProps)(GoogleScholarContainer);
 GoogleScholarContainer = withRouter(GoogleScholarContainer);
 
 export default GoogleScholarContainer;

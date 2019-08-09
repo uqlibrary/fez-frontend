@@ -18,7 +18,7 @@ import Typography from '@material-ui/core/Typography';
 export default class ConferenceProceedingsForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
-    };
+    }
 
     constructor(props) {
         super(props);
@@ -44,8 +44,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     rows={1}
                                     {...txt.information.fieldLabels.title}
                                     validate={[validation.required]}
-                                    style={{ marginBottom: '-12px' }}
-                                />
+                                    style={{ marginBottom: '-12px' }} />
                             </Grid>
                         </Grid>
                         <Grid container spacing={16}>
@@ -58,8 +57,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     required
                                     fullWidth
                                     {...txt.information.fieldLabels.conferenceName}
-                                    validate={[validation.required]}
-                                />
+                                    validate={[validation.required]} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -70,8 +68,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     fullWidth
                                     required
                                     validate={[validation.required]}
-                                    {...txt.information.fieldLabels.conferenceLocation}
-                                />
+                                    {...txt.information.fieldLabels.conferenceLocation} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -82,16 +79,14 @@ export default class ConferenceProceedingsForm extends Component {
                                     fullWidth
                                     required
                                     validate={[validation.required]}
-                                    {...txt.information.fieldLabels.conferenceDates}
-                                />
+                                    {...txt.information.fieldLabels.conferenceDates} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial
-                                    required
+                                    allowPartial required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -105,8 +100,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     fullWidth
-                                    {...txt.information.fieldLabels.publisher}
-                                />
+                                    {...txt.information.fieldLabels.publisher} />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -115,8 +109,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     name="fez_record_search_key_place_of_publication.rek_place_of_publication"
                                     type="text"
                                     fullWidth
-                                    {...txt.information.fieldLabels.publicationPlace}
-                                />
+                                    {...txt.information.fieldLabels.publicationPlace} />
                             </Grid>
                         </Grid>
                     </StandardCard>
@@ -131,8 +124,7 @@ export default class ConferenceProceedingsForm extends Component {
                             showContributorAssignment
                             required
                             validate={[validation.editorRequired]}
-                            disabled={this.props.submitting}
-                        />
+                            disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -146,8 +138,7 @@ export default class ConferenceProceedingsForm extends Component {
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                             locale={locale.components.isbnForm.field}
-                            disabled={this.props.submitting}
-                        />
+                            disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -161,8 +152,7 @@ export default class ConferenceProceedingsForm extends Component {
                             maxCount={5}
                             locale={locale.components.issnForm.field}
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
-                            disabled={this.props.submitting}
-                        />
+                            disabled={this.props.submitting} />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -176,8 +166,7 @@ export default class ConferenceProceedingsForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    {...txt.other.fieldLabels.notes}
-                                />
+                                    {...txt.other.fieldLabels.notes}/>
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

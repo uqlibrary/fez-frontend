@@ -18,11 +18,11 @@ export default {
                 activeFilter: 'Show only open access records',
             },
             excludeFacetsList: ['Scopus document type', 'Genre', 'Year published'],
-            renameFacetsList: { 'Display type': 'Work type', Subtype: 'Work subtype' },
+            renameFacetsList: { 'Display type': 'Work type', 'Subtype': 'Work subtype' },
             lookupFacetsList: {
-                Author: 'Author (lookup)',
-                Collection: 'Collection (lookup)',
-                Subject: 'Subject (lookup)',
+                'Author': 'Author (lookup)',
+                'Collection': 'Collection (lookup)',
+                'Subject': 'Subject (lookup)',
             },
             // help: {
             //     title: 'Refining your results',
@@ -96,14 +96,12 @@ export default {
                 },
                 thomson: {
                     title: 'Web of Science citation count',
-                    subtitle:
-                        'The + (plus) value indicates how much the citation count has increased in the last three months.',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 1,
                 },
                 scopus: {
                     title: 'Scopus citation count',
-                    subtitle:
-                        'The + (plus) value indicates how much the citation count has increased in the last three months.',
+                    subtitle: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                     order: 0,
                 },
             },
@@ -118,23 +116,17 @@ export default {
                     </p>
                     <h3>Altmetric score (social media activity)</h3>
                     <p>
-                        The Altmetric score measures social media activity. The + (plus) value shows the increase in
-                        social media activity over time.
+                        The Altmetric score measures social media activity. The + (plus) value shows the increase in social media activity over time.
                     </p>
                     <p>
-                        You can click on the number as a link to see who is citing each publication, or in the case of
-                        Altmetric who is referencing the publication in social media and news outlets.
+                        You can click on the number as a link to see who is citing each publication, or in the
+                        case of Altmetric who is referencing the publication in social media and news outlets.
                     </p>
-                    For more information visit :<br />
-                    <a
-                        href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
+                    For more information visit :<br/>
+                    <a href="https://www.altmetric.com/about-altmetrics/what-are-altmetrics/" target="_blank" rel="noopener noreferrer">
                         https://www.altmetric.com/about-altmetrics/what-are-altmetrics/
                     </a>
-                </React.Fragment>
-            ),
+                </React.Fragment>),
             buttonLabel: 'CLOSE',
         },
         myLatestPublications: {
@@ -149,26 +141,24 @@ export default {
                 message: 'Trending publications are temporarily unavailable',
             },
             altmetric: {
-                title: <span>Trending on Altmetric</span>,
+                title: (<span>Trending on Altmetric</span>),
                 mobileTitle: 'Trending',
                 heading: 'Altmetric score',
                 subHeading: 'The +plus score indicates recent increase in social media activity',
                 order: 0,
             },
             scopus: {
-                title: <span>Trending on Scopus</span>,
+                title: (<span>Trending on Scopus</span>),
                 mobileTitle: 'Scopus',
                 heading: 'Scopus citation count',
-                subHeading:
-                    'The + (plus) value indicates how much the citation count has increased in the last three months.',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 1,
             },
             thomson: {
-                title: <span>Trending on Web of science</span>,
+                title: (<span>Trending on Web of science</span>),
                 mobileTitle: 'WOS',
                 heading: 'Web of Science citation count',
-                subHeading:
-                    'The + (plus) value indicates how much the citation count has increased in the last three months.',
+                subHeading: 'The + (plus) value indicates how much the citation count has increased in the last three months.',
                 order: 2,
             },
             recordsPerSource: 20,
@@ -216,8 +206,7 @@ export default {
                 form: {
                     locale: {
                         inputFieldLabel: 'Funding body',
-                        inputFieldHint:
-                            'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
+                        inputFieldHint: 'Type the name of the funding body(s) associated with your research e.g. ARC, NHMRC',
                         addButtonLabel: 'Add',
                         id: 'funding-body-input',
                     },
@@ -415,11 +404,7 @@ export default {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: 'Add ISBN',
-                        remindToAdd: (
-                            <span>
-                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
-                            </span>
-                        ),
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
                     },
                 },
                 header: {
@@ -464,11 +449,7 @@ export default {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: 'Add ISSN',
-                        remindToAdd: (
-                            <span>
-                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
-                            </span>
-                        ),
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
                     },
                 },
                 header: {
@@ -513,11 +494,7 @@ export default {
                         inputFieldLabel: 'ISMN value',
                         inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
-                        remindToAdd: (
-                            <span>
-                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
-                            </span>
-                        ),
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
                     },
                 },
                 header: {
@@ -562,11 +539,7 @@ export default {
                         inputFieldLabel: 'ISRC value',
                         inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
                         addButtonLabel: <span>Add&nbsp;ISRC</span>,
-                        remindToAdd: (
-                            <span>
-                                Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
-                            </span>
-                        ),
+                        remindToAdd: (<span>Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list</span>),
                     },
                 },
                 header: {
@@ -600,20 +573,11 @@ export default {
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',
-            descriptionAuthorOrEditor:
-                'Please provide a list of authors and then select your name once from the list of authors or editors.',
+            descriptionAuthorOrEditor: 'Please provide a list of authors and then select your name once from the list of authors or editors.',
             help: {
                 title: 'Authors/Designers name',
                 text: (
-                    <p>
-                        For more information about identification of author/creator/designer, click{' '}
-                        <a
-                            target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                        >
-                            here
-                        </a>
-                    </p>
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
                 buttonLabel: 'CLOSE',
             },
@@ -621,21 +585,12 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of authors below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of authors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each author's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: 'Enter each author\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add author',
@@ -645,15 +600,10 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Author's name as published",
+                        nameColumn: 'Author\'s name as published',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -681,16 +631,16 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-author-${index}`,
+                        deleteButtonId: (index) => `delete-author-${index}`,
                     },
                 },
             },
+
         },
         editors: {
             title: 'Editors',
             description: 'Please provide a list of editors and then select your name from the list.',
-            descriptionAuthorOrEditor:
-                'Please provide a list of editors and then select your name once from the list of authors or editors.',
+            descriptionAuthorOrEditor: 'Please provide a list of editors and then select your name once from the list of authors or editors.',
             // help: {
             //     title: 'Editors',
             //     text: 'some help',
@@ -700,20 +650,12 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of editors below</b>, in the format "John Smith".
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of editors below</b>, in the format "John Smith".</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of editors below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of editors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each editor's name as published (eg. John Smith)",
+                        nameAsPublishedLabel: 'Enter each editor\'s name as published (eg. John Smith)',
                         nameAsPublishedHint: 'Type the name in the format eg. "John Smith"',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add editor',
@@ -723,12 +665,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name in the format eg. "John Smith"',
@@ -758,7 +695,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-editor-${index}`,
+                        deleteButtonId: (index) => `delete-editor-${index}`,
                     },
                 },
             },
@@ -770,33 +707,21 @@ export default {
             //     text: 'some help',
             //     buttonLabel: 'CLOSE'
             // },
-            description:
-                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
-            descriptionCreatorOrContributor:
-                'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
+            description: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name from the list.',
+            descriptionCreatorOrContributor: 'Please provide a list of creators (e.g. producer or performer if self-produced) and then select your name once from the list of creators or contributors.',
             field: {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of creators below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of creators below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of creators below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each creator's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: 'Enter each creator\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
-                        creatorRoleLabel: "Enter creator's role",
-                        creatorRoleHint:
-                            'Select role from list or type the role of the creator in relation to the dataset',
+                        creatorRoleLabel: 'Enter creator\'s role',
+                        creatorRoleHint: 'Select role from list or type the role of the creator in relation to the dataset',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add creator',
                         nameAsPublishedFieldId: 'creators-name-as-published-field',
@@ -805,16 +730,11 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Creator's name as published",
-                        roleColumn: "Creator's role",
+                        nameColumn: 'Creator\'s name as published',
+                        roleColumn: 'Creator\'s role',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -841,7 +761,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-creator-${index}`,
+                        deleteButtonId: (index) => `delete-creator-${index}`,
                     },
                 },
             },
@@ -852,15 +772,7 @@ export default {
             help: {
                 title: 'Designers',
                 text: (
-                    <p>
-                        For more information about identification of author/creator/designer, click{' '}
-                        <a
-                            target="_blank"
-                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
-                        >
-                            here
-                        </a>
-                    </p>
+                    <p>For more information about identification of author/creator/designer, click <a target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546">here</a></p>
                 ),
                 buttonLabel: 'CLOSE',
             },
@@ -868,21 +780,12 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of designers below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of designers below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of designers below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each designer's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: 'Enter each designer\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add designer',
@@ -892,12 +795,7 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: 'Designers name as published',
@@ -927,7 +825,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-designer-${index}`,
+                        deleteButtonId: (index) => `delete-designer-${index}`,
                     },
                 },
             },
@@ -944,21 +842,12 @@ export default {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of supervisors below</b>, in the format and order that they
-                                are published.
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of supervisors below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of supervisors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each supervisor's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: 'Enter each supervisor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: '',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add supervisor',
@@ -968,15 +857,10 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Supervisor's name as published",
+                        nameColumn: 'Supervisor\'s name as published',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -1003,7 +887,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-supervisor-${index}`,
+                        deleteButtonId: (index) => `delete-supervisor-${index}`,
                     },
                 },
             },
@@ -1031,7 +915,7 @@ export default {
                     locale: {
                         descriptionStep2: '',
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Supervisor's name",
+                        nameColumn: 'Supervisor\'s name',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -1056,7 +940,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-supervisor-${index}`,
+                        deleteButtonId: (index) => `delete-supervisor-${index}`,
                     },
                 },
             },
@@ -1065,29 +949,19 @@ export default {
             title: 'Contributors',
             help: {
                 title: 'Contributors',
-                text:
-                    'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
+                text: 'This is the contributor, and may be different to the creator, e.g. interviewee, performer (if not self-produced). Type contributors in the order and form they appear on the work or associated material. Examples of associated material are programs or promotional material. Additional boxes will appear for more contributors.',
                 buttonLabel: 'CLOSE',
             },
             field: {
                 form: {
                     locale: {
                         descriptionStep1: (
-                            <div>
-                                <span className="authorSteps" key="step-1">
-                                    Step 1 of 2
-                                </span>{' '}
-                                - Please <b>add to a list of contributors below</b>, in the format and order that they
-                                are published.
-                            </div>
+                            <div><span className="authorSteps" key="step-1">Step 1 of 2</span> - Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
                         ),
                         descriptionStep1NoStep2: (
-                            <div>
-                                Please <b>add to a list of contributors below</b>, in the format and order that they are
-                                published.
-                            </div>
+                            <div>Please <b>add to a list of contributors below</b>, in the format and order that they are published.</div>
                         ),
-                        nameAsPublishedLabel: "Enter each contributor's name as published (eg. Smith, John)",
+                        nameAsPublishedLabel: 'Enter each contributor\'s name as published (eg. Smith, John)',
                         nameAsPublishedHint: 'Type the name exactly as published',
                         identifierLabel: 'UQ identifier (if available)',
                         addButton: 'Add contributor',
@@ -1097,15 +971,10 @@ export default {
                 header: {
                     locale: {
                         descriptionStep2: (
-                            <div>
-                                <span className="authorSteps" key="step-2">
-                                    Step 2 of 2
-                                </span>{' '}
-                                - Please <b>select your name</b> from the list below (if applicable).
-                            </div>
+                            <div><span className="authorSteps" key="step-2">Step 2 of 2</span> - Please <b>select your name</b> from the list below (if applicable).</div>
                         ),
                         contributorAssignmentColumn: 'Select your name',
-                        nameColumn: "Contributor's name as published",
+                        nameColumn: 'Contributor\'s name as published',
                         identifierColumn: 'UQ identifier',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
@@ -1132,7 +1001,7 @@ export default {
                             cancelButtonLabel: 'No',
                             confirmButtonLabel: 'Yes',
                         },
-                        deleteButtonId: index => `delete-contributor-${index}`,
+                        deleteButtonId: (index) => `delete-contributor-${index}`,
                     },
                 },
             },
@@ -1202,7 +1071,10 @@ export default {
                 { value: 'scopus_citation_count', label: 'Scopus citation count' },
                 { value: 'thomson_citation_count', label: 'Web of Science citation count' },
             ],
-            sortDirection: ['Desc', 'Asc'],
+            sortDirection: [
+                'Desc',
+                'Asc',
+            ],
             recordsPerPage: [20, 50, 100],
         },
         newsFeed: {
@@ -1215,26 +1087,13 @@ export default {
                     <React.Fragment>
                         <p>In order to submit this NTRO work type or update an existing NTRO work, you must include:</p>
                         <ol>
-                            <li>
-                                A creator research statement of up to 2000 characters (250 – 300 words) that includes
-                                the background, contribution and significance of the work. It must be substantiated by
-                                the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.{' '}
-                                <b>This is not for public view.</b>
-                            </li>
-                            <li>
-                                An abstract/description of the work, up to 800 characters (approx. 100 words). This is
-                                for public view.
-                            </li>
-                            <li>
-                                At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or
-                                review of the work.
-                            </li>
+                            <li>A creator research statement of up to 2000 characters (250 – 300 words) that includes the background, contribution and significance of the work. It must be substantiated by the 'Major' or ‘Minor’ Scale/Significance option that you select on the form. <b>This is not for public view.</b></li>
+                            <li>An abstract/description of the work, up to 800 characters (approx. 100 words). This is for public view.</li>
+                            <li>At least one evidence file, e.g. a .pdf, .mp4, .tiff or .wav copy, representation or review of the work.</li>
                         </ol>
 
-                        <p>
-                            Note:
-                            <br />A research statement can be updated at any time via the REQUEST CORRECTION button for
-                            the work.
+                        <p>Note:<br/>
+                            A research statement can be updated at any time via the REQUEST CORRECTION button for the work.
                         </p>
                     </React.Fragment>
                 ),
@@ -1245,18 +1104,7 @@ export default {
                     text: (
                         <React.Fragment>
                             <h3>Quality indicators</h3>
-                            <p>
-                                For more information about each quality indicator option, click{' '}
-                                <b>
-                                    <a
-                                        style={{ fontWeight: 700 }}
-                                        target="_blank"
-                                        href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
-                                    >
-                                        here
-                                    </a>
-                                </b>
-                            </p>
+                            <p>For more information about each quality indicator option, click <b><a style={{ fontWeight: 700 }} target="_blank" href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609">here</a></b></p>
                         </React.Fragment>
                     ),
                     buttonLabel: 'CLOSE',
@@ -1265,7 +1113,10 @@ export default {
         },
         export: {
             label: 'Export results',
-            format: [{ value: 'excel', label: 'Excel File' }, { value: 'endnote', label: 'Endnote File' }],
+            format: [
+                { value: 'excel', label: 'Excel File' },
+                { value: 'endnote', label: 'Endnote File' },
+            ],
             filename: {
                 prefix: 'espace_export',
                 dateFormat: 'YYYYMMDDHHmmss',
@@ -1302,11 +1153,11 @@ export default {
                         validation: [],
                         ariaLabel: 'Select a field to search on',
                     },
-                    divider1: {
+                    'divider1': {
                         order: 0.5,
                         type: 'divider',
                     },
-                    all: {
+                    'all': {
                         order: 1,
                         map: '',
                         title: 'Any field',
@@ -1317,7 +1168,7 @@ export default {
                         validation: ['maxLength500'],
                         ariaLabel: 'Type a value to search all fields for',
                     },
-                    rek_title: {
+                    'rek_title': {
                         order: 2,
                         map: 'Title',
                         title: 'Title',
@@ -1327,7 +1178,7 @@ export default {
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a title to search for',
                     },
-                    rek_book_title: {
+                    'rek_book_title': {
                         order: 2.5,
                         map: 'Book title',
                         title: 'Book title for chapters',
@@ -1337,7 +1188,7 @@ export default {
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a book title to search for',
                     },
-                    rek_pid: {
+                    'rek_pid': {
                         order: 9,
                         map: 'PID',
                         title: 'PID',
@@ -1347,7 +1198,7 @@ export default {
                         validation: ['required'],
                         ariaLabel: 'Type a PID to search for',
                     },
-                    rek_author: {
+                    'rek_author': {
                         order: 3,
                         map: 'Author',
                         title: 'Author Name',
@@ -1357,7 +1208,7 @@ export default {
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type an author name to search for',
                     },
-                    rek_contributor: {
+                    'rek_contributor': {
                         order: 5,
                         map: 'Contributor',
                         title: 'Editor/Contributor',
@@ -1367,7 +1218,7 @@ export default {
                         validation: ['required', 'maxLength255'],
                         ariaLabel: 'Type a contributor name to search for',
                     },
-                    rek_series: {
+                    'rek_series': {
                         order: 10,
                         map: 'Series',
                         title: 'Series',
@@ -1377,7 +1228,7 @@ export default {
                         validation: ['required', 'maxLength500'],
                         ariaLabel: 'Type a series name to search for',
                     },
-                    rek_journal_name: {
+                    'rek_journal_name': {
                         order: 11,
                         map: 'Journal name',
                         title: 'Journal name',
@@ -1387,7 +1238,7 @@ export default {
                         validation: ['required', 'maxLength500'],
                         ariaLabel: 'Type a journal name to search for',
                     },
-                    rek_conference_name: {
+                    'rek_conference_name': {
                         order: 12,
                         map: 'Conference name',
                         title: 'Conference Name',
@@ -1397,7 +1248,7 @@ export default {
                         validation: ['required', 'maxLength500'],
                         ariaLabel: 'Type a conference name to search for',
                     },
-                    rek_doi: {
+                    'rek_doi': {
                         order: 8,
                         map: '',
                         title: 'DOI',
@@ -1407,7 +1258,7 @@ export default {
                         validation: ['required', 'doi'],
                         ariaLabel: 'Type a DOI to search for',
                     },
-                    rek_publisher: {
+                    'rek_publisher': {
                         order: 13,
                         map: 'Publisher',
                         title: 'Publisher',
@@ -1417,7 +1268,7 @@ export default {
                         validation: ['required'],
                         ariaLabel: 'Type a publisher to search for',
                     },
-                    rek_ismemberof: {
+                    'rek_ismemberof': {
                         order: 7,
                         map: 'Collection',
                         title: 'Collection',
@@ -1431,7 +1282,7 @@ export default {
                         ariaLabel: 'Select multiple collections to search for',
                         label: 'Collections',
                     },
-                    rek_genre_type: {
+                    'rek_genre_type': {
                         order: 14,
                         map: 'Genre',
                         title: 'Thesis type',
@@ -1442,7 +1293,7 @@ export default {
                         validation: ['required'],
                         ariaLabel: 'Select multiple thesis types to search for',
                     },
-                    rek_author_id: {
+                    'rek_author_id': {
                         order: 4,
                         map: 'Author Id',
                         title: 'Author ID',
@@ -1452,7 +1303,7 @@ export default {
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an author ID to select an author from the list',
                     },
-                    rek_contributor_id: {
+                    'rek_contributor_id': {
                         order: 6,
                         map: 'Contributor Id',
                         title: 'Contributor ID',
@@ -1462,7 +1313,7 @@ export default {
                         validation: ['required', 'maxLength9'],
                         ariaLabel: 'Begin typing an contributor ID to select an author from the list',
                     },
-                    rek_org_unit_name: {
+                    'rek_org_unit_name': {
                         order: 15,
                         map: '',
                         title: 'School, Centre or Institute',
@@ -1472,7 +1323,7 @@ export default {
                         validation: ['required'],
                         ariaLabel: 'Begin typing an school, centre or institute name to select an author from the list',
                     },
-                    rek_display_type: {
+                    'rek_display_type': {
                         order: 20,
                         map: 'Work type',
                         title: 'Work type',
@@ -1482,7 +1333,7 @@ export default {
                         validation: [],
                         ariaLabel: 'Select multiple publications types to search on',
                     },
-                    facet_year_range: {
+                    'facet_year_range': {
                         order: 21,
                         map: '',
                         title: 'Published year range',
@@ -1496,7 +1347,7 @@ export default {
                         invalidText: 'Invalid year range',
                         ariaLabel: 'Add valid year ranges to search between',
                     },
-                    rek_status: {
+                    'rek_status': {
                         order: 16,
                         map: 'Status',
                         title: 'Status',
@@ -1507,7 +1358,7 @@ export default {
                         ariaLabel: 'Select a status to search on',
                         isUnpublishedField: true,
                     },
-                    rek_created_date: {
+                    'rek_created_date': {
                         order: 22,
                         title: 'Created date range',
                         captionTitle: 'Created',
@@ -1516,19 +1367,9 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: value =>
-                            (value.from &&
-                                value.to &&
-                                value.from.isBefore(value.to) && {
-                                title: 'Created',
-                                combiner: 'between',
-                                value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
-                                )}`,
-                            }) ||
-                            null,
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Created', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null),
                     },
-                    rek_updated_date: {
+                    'rek_updated_date': {
                         order: 23,
                         title: 'Updated date range',
                         captionTitle: 'Updated',
@@ -1537,23 +1378,15 @@ export default {
                         ariaLabel: 'Add valid date ranges to search between',
                         isUnpublishedField: true,
                         validation: [],
-                        captionFn: value =>
-                            (value.from &&
-                                value.to &&
-                                value.from.isBefore(value.to) && {
-                                title: 'Updated',
-                                combiner: 'between',
-                                value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
-                                )}`,
-                            }) ||
-                            null,
+                        captionFn: (value) => (value.from && value.to && value.from.isBefore(value.to) && { title: 'Updated', combiner: 'between', value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format('Do MMMM, YYYY')}` } || null),
                     },
                 },
                 openAccess: {
                     title: 'Open access',
                     combiner: 'is',
-                    captionText: <span className="value">open access/full text</span>,
+                    captionText: (
+                        <span className="value">open access/full text</span>
+                    ),
                     ariaLabel: 'Check to search for publications with are only open access / full text',
                 },
                 addField: {
@@ -1572,13 +1405,9 @@ export default {
         },
         whatIsEspace: {
             title: 'What is eSpace?',
-            text: (
-                <span>
-                    The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility
-                    and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search
-                    engines such as Google and Trove...
-                </span>
-            ),
+            text: (<span>
+                The University of Queensland's institutional repository, UQ eSpace, aims to create global visibility and accessibility of UQ’s scholarly research by enhancing discovery of UQ research via search engines such as Google and Trove...
+            </span>),
             readMoreLabel: ' read more',
             readMoreTitle: 'Click to read more about UQ eSpace',
             readMoreLink: '/contact',

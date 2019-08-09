@@ -44,9 +44,7 @@ describe('Dashboard Rsearcher IDs test', () => {
         };
         const wrapper = setup(values);
         wrapper.instance().navigateToRoute(null, 'publons');
-        expect(testFn).toHaveBeenCalledWith(
-            'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons'
-        );
+        expect(testFn).toHaveBeenCalledWith('http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons');
     });
 
     it('Testing clicking on ID internal links', () => {

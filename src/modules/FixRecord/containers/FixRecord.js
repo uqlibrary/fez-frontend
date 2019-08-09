@@ -14,28 +14,40 @@ const onSubmit = (values, dispatch, props) => {
         publication: { ...props.recordToFix },
         author: { ...props.author },
     };
-    return dispatch(data.fixAction === 'unclaim' ? actions.unclaimRecord(data) : actions.fixRecord(data)).catch(
-        error => {
+    return dispatch(data.fixAction === 'unclaim'
+        ? actions.unclaimRecord(data)
+        : actions.fixRecord(data))
+        .catch(error => {
             throw new SubmissionError({ _error: error.message });
-        }
-    );
+        });
 };
 
-const validate = values => {
+const validate = (values) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
 
-    const initialContentIndicators = (
-        (data.publication && data.publication.fez_record_search_key_content_indicator) ||
-        []
-    ).map(item => item.rek_content_indicator);
-    const hasAddedContentIndicators =
+    const initialContentIndicators = ((
+        data.publication &&
+        data.publication.fez_record_search_key_content_indicator
+    ) || []).map(
+        item => item.rek_content_indicator
+    );
+    const hasAddedContentIndicators = (
         data.contentIndicators &&
-        data.contentIndicators.some(indicator => initialContentIndicators.indexOf(indicator) === -1);
+        data.contentIndicators.some(
+            indicator => initialContentIndicators.indexOf(indicator) === -1
+        )
+    );
 
     const hasFiles = data.files && data.files.queue && data.files.queue.length > 0;
     const errors = {};
-    if (data.fixAction === 'fix' && !hasAddedContentIndicators && !data.comments && !data.rek_link && !hasFiles) {
+    if (
+        data.fixAction === 'fix' &&
+        !hasAddedContentIndicators &&
+        !data.comments &&
+        !data.rek_link &&
+        !hasFiles
+    ) {
         errors.fixRecordAnyField = true;
     }
     return errors;
@@ -48,13 +60,13 @@ let FixRecordContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(FixRecord, FORM_NAME));
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const recordToFix = state.get('fixRecordReducer') && state.get('fixRecordReducer').recordToFix;
-    const contentIndicators =
-        (!!recordToFix &&
-            (recordToFix.fez_record_search_key_content_indicator || []).map(item => item.rek_content_indicator)) ||
-        [];
+    const contentIndicators = !!recordToFix &&
+        (recordToFix.fez_record_search_key_content_indicator || []).map(
+            item => item.rek_content_indicator
+        ) || [];
     return {
         ...state.get('fixRecordReducer'),
         ...state.get('accountReducer'),
@@ -74,10 +86,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-FixRecordContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(FixRecordContainer);
+FixRecordContainer = connect(mapStateToProps, mapDispatchToProps)(FixRecordContainer);
 FixRecordContainer = withRouter(FixRecordContainer);
 
 export default FixRecordContainer;

@@ -10,36 +10,40 @@ const initState = {
 function flatten(list) {
     // controlled_vocab.controlled_vocab_children
     return list.map(item => {
-        return [
-            { key: item.controlled_vocab.cvo_id, value: item.controlled_vocab.cvo_title },
-            ...[].concat.apply([], flatten(item.controlled_vocab.controlled_vocab_children)),
-        ];
+        return [{ key: item.controlled_vocab.cvo_id, value: item.controlled_vocab.cvo_title },
+            ...[].concat.apply([], flatten(item.controlled_vocab.controlled_vocab_children))];
     });
 }
 
 const handlers = {
-    [`${actions.VOCABULARIES_LOAD_FAILED}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsLoadingError: true,
-        },
-    }),
-    [`${actions.VOCABULARIES_LOADED}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsList: action.payload.map(item => item.controlled_vocab.cvo_title),
-            itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
-        },
-    }),
-    [`${actions.VOCABULARIES_LOADING}@`]: (state, action) => ({
-        ...state,
-        [actions.getActionSuffix(action.type)]: {
-            ...initState,
-            itemsLoading: true,
-        },
-    }),
+    [`${actions.VOCABULARIES_LOAD_FAILED}@`]: (state, action) => (
+        {
+            ...state,
+            [actions.getActionSuffix(action.type)]: {
+                ...initState,
+                itemsLoadingError: true,
+            },
+        }
+    ),
+    [`${actions.VOCABULARIES_LOADED}@`]: (state, action) => (
+        {
+            ...state,
+            [actions.getActionSuffix(action.type)]: {
+                ...initState,
+                itemsList: action.payload.map(item => (item.controlled_vocab.cvo_title)),
+                itemsKeyValueList: [].concat.apply([], flatten(action.payload)),
+            },
+        }
+    ),
+    [`${actions.VOCABULARIES_LOADING}@`]: (state, action) => (
+        {
+            ...state,
+            [actions.getActionSuffix(action.type)]: {
+                ...initState,
+                itemsLoading: true,
+            },
+        }
+    ),
 };
 
 export default function controlledVocabulariesReducer(state = {}, action) {

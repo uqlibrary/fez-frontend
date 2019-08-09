@@ -43,6 +43,7 @@ describe('ListRow renders ', () => {
         expect(buttonDown.length).toBe(0);
     });
 
+
     it('a row with index and item set calls move down function', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ index: 0, canMoveDown: true, onMoveDown: testFunction }, false);
@@ -71,9 +72,7 @@ describe('ListRow renders ', () => {
             showConfirmation: showConfirmationFn,
         };
 
-        wrapper
-            .find('WithStyles(IconButton)')
-            .props()
+        wrapper.find('WithStyles(IconButton)').props()
             .onClick();
         expect(showConfirmationFn).toHaveBeenCalled();
     });
@@ -85,9 +84,7 @@ describe('ListRow renders ', () => {
             onDelete: onDeleteFn,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('ConfirmDialogBox')
-            .props()
+        wrapper.find('ConfirmDialogBox').props()
             .onAction();
         expect(onDeleteFn).toHaveBeenCalled();
     });
@@ -99,10 +96,7 @@ describe('ListRow renders ', () => {
             canMoveUp: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('WithStyles(IconButton)')
-            .get(0)
-            .props.onClick();
+        wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
         expect(onMoveUpFn).toHaveBeenCalled();
     });
 
@@ -113,10 +107,7 @@ describe('ListRow renders ', () => {
             canMoveDown: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper
-            .find('WithStyles(IconButton)')
-            .get(0)
-            .props.onClick();
+        wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
         expect(onMoveDownFn).toHaveBeenCalled();
     });
 

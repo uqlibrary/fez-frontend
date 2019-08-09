@@ -86,10 +86,7 @@ describe('GrantListEditorRow', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
-        wrapper
-            .find('WithStyles(IconButton)')
-            .get(2)
-            .props.onClick();
+        wrapper.find('WithStyles(IconButton)').get(2).props.onClick();
         expect(showConfirmationFn).toHaveBeenCalled();
     });
 
@@ -103,20 +100,14 @@ describe('GrantListEditorRow', () => {
     it('should move grant up', () => {
         const onMoveUpFn = jest.fn();
         const wrapper = setup({ onMoveUp: onMoveUpFn });
-        wrapper
-            .find('WithStyles(IconButton)')
-            .get(0)
-            .props.onClick();
+        wrapper.find('WithStyles(IconButton)').get(0).props.onClick();
         expect(onMoveUpFn).toHaveBeenCalled();
     });
 
     it('should move grant down', () => {
         const onMoveDownFn = jest.fn();
         const wrapper = setup({ onMoveDown: onMoveDownFn });
-        wrapper
-            .find('WithStyles(IconButton)')
-            .get(1)
-            .props.onClick();
+        wrapper.find('WithStyles(IconButton)').get(1).props.onClick();
         expect(onMoveDownFn).toHaveBeenCalled();
     });
 

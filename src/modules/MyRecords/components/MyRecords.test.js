@@ -165,12 +165,14 @@ describe('MyRecords test', () => {
         const wrapper = setup({ loadingPublicationsList: true });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper.instance().componentWillReceiveProps({
-            loadingPublicationsList: false,
-            publicationsList: [1, 2, 3],
-            history: {},
-            location: {},
-        });
+        wrapper
+            .instance()
+            .componentWillReceiveProps({
+                loadingPublicationsList: false,
+                publicationsList: [1, 2, 3],
+                history: {},
+                location: {},
+            });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 

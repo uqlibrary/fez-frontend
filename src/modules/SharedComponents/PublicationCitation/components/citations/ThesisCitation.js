@@ -18,14 +18,11 @@ export default class ThesisCitation extends Component {
             title: this.props.publication.rek_title,
             thesisType: this.props.publication.rek_genre_type || null,
             orgUnit: this.props.publication.fez_record_search_key_org_unit_name
-                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name
-                : null,
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
             orgName: this.props.publication.fez_record_search_key_org_name
-                ? this.props.publication.fez_record_search_key_org_name.rek_org_name
-                : null,
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
             doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi
-                : null,
+                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
         };
 
         // eSpace citation view for Thesis
@@ -52,7 +49,7 @@ export default class ThesisCitation extends Component {
                 <Partials.CitationView className="citationOrgName" value={record.orgName} />
 
                 {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
             </div>
         );
     }

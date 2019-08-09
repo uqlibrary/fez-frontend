@@ -25709,7 +25709,9 @@ describe('Controlled Vocabularies actions', () => {
     it('dispatches expected actions to load voabularies from API successfully', async() => {
         const testId = 451780;
 
-        mockApi.onGet(repositories.routes.VOCABULARIES_API({ id: testId }).apiUrl).reply(200, returnedApiData);
+        mockApi
+            .onGet(repositories.routes.VOCABULARIES_API({ id: testId }).apiUrl)
+            .reply(200, returnedApiData);
 
         const expectedActions = [
             `${actions.VOCABULARIES_LOADING}@${testId}`,
@@ -25723,7 +25725,9 @@ describe('Controlled Vocabularies actions', () => {
     it('dispatches expected actions to load voabularies from API for anon user', async() => {
         const testId = 451780;
 
-        mockApi.onAny().reply(403);
+        mockApi
+            .onAny()
+            .reply(403);
 
         const expectedActions = [
             `${actions.VOCABULARIES_LOADING}@${testId}`,
@@ -25738,7 +25742,9 @@ describe('Controlled Vocabularies actions', () => {
     it('dispatches expected actions to load voabularies from API with 404 error', async() => {
         const testId = 451780;
 
-        mockApi.onAny().reply(404);
+        mockApi
+            .onAny()
+            .reply(404);
 
         const expectedActions = [
             `${actions.VOCABULARIES_LOADING}@${testId}`,

@@ -10,7 +10,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 
 const SelectFieldWrapper = props => {
     const filteredProps = propFilter({ ...props, forceError: true }, Select.propTypes);
-    filteredProps.onChange = event => props.input.onChange(event.target.value);
+    filteredProps.onChange = (event) => props.input.onChange(event.target.value);
     filteredProps.onBlur = () => props.input.onBlur(props.input.value);
     const error = !!filteredProps.errorText || !!filteredProps.error;
     const helperText = filteredProps.errorText || filteredProps.error || null;
@@ -25,7 +25,10 @@ const SelectFieldWrapper = props => {
                     {...filteredProps}
                     autoWidth
                 />
-                {helperText && <FormHelperText>{helperText}</FormHelperText>}
+                {
+                    helperText &&
+                    <FormHelperText>{helperText}</FormHelperText>
+                }
             </FormControl>
         </React.Fragment>
     );

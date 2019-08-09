@@ -47,8 +47,7 @@ export default {
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
-    validationErrorsSummary: {
-        // appears in footer error block
+    validationErrorsSummary: { // appears in footer error block
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',

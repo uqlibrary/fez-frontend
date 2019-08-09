@@ -3,7 +3,7 @@ import locale from 'locale/components';
 import moment from 'moment';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
-export const getExceptionMessage = format => `Export format ${format} is not supported.`;
+export const getExceptionMessage = (format) => `Export format ${format} is not supported.`;
 
 /**
  * Return a export filename ie. espace_export_<datetime>.xlsx
@@ -11,9 +11,8 @@ export const getExceptionMessage = format => `Export format ${format} is not sup
  * @param format
  * @return {string}
  */
-export const getFileName = extension =>
-    `${locale.components.export.filename.prefix}_${moment()
-        .clone()
+export const getFileName = (extension) =>
+    `${locale.components.export.filename.prefix}_${moment().clone()
         .format(locale.components.export.filename.dateFormat)}.${extension}`;
 
 /**
@@ -29,3 +28,4 @@ export function promptForDownload(format, response) {
 
     FileSaver.saveAs(response, getFileName(EXPORT_FORMAT_TO_EXTENSION[format]));
 }
+

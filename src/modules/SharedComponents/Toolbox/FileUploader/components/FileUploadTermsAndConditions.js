@@ -14,7 +14,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
         disabled: PropTypes.bool,
     };
 
-    _handleChange = event => {
+    _handleChange = (event) => {
         this.props.onAcceptTermsAndConditions(event.target.checked);
     };
 
@@ -49,7 +49,7 @@ export class FileUploadTermsAndConditions extends PureComponent {
     }
 }
 
-const styles = theme => ({
+const styles = (theme) => ({
     root: {
         alignItems: 'flex-start',
         margin: 0,

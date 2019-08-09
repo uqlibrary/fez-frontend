@@ -5,21 +5,22 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.EXPORT_PUBLICATIONS_LOADING]: state => {
+
+    [actions.EXPORT_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             exportPublicationsLoading: true,
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_LOADED]: state => {
+    [actions.EXPORT_PUBLICATIONS_LOADED]: (state) => {
         return {
             ...state,
             exportPublicationsLoading: false,
         };
     },
 
-    [actions.EXPORT_PUBLICATIONS_FAILED]: state => {
+    [actions.EXPORT_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
             exportPublicationsLoading: false,

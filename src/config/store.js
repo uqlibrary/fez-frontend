@@ -9,10 +9,10 @@ import thunk from 'redux-thunk';
 import { publicationEnhancer } from 'middleware';
 import { saveReducerOnSessionExpired } from 'middleware';
 
-export const history =
-    process.env.USE_MOCK || process.env.BRANCH === 'production' || process.env.BRANCH === 'staging'
-        ? createBrowserHistory()
-        : createHashHistory();
+
+export const history = process.env.USE_MOCK || process.env.BRANCH === 'production' || process.env.BRANCH === 'staging'
+    ? createBrowserHistory()
+    : createHashHistory();
 
 export const getStore = (initialState = Immutable.Map()) => {
     const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -21,8 +21,13 @@ export const getStore = (initialState = Immutable.Map()) => {
         connectRouter(history)(rootReducer),
         initialState,
         composeEnhancer(
-            applyMiddleware(routerMiddleware(history), thunk, publicationEnhancer, saveReducerOnSessionExpired)
-        )
+            applyMiddleware(
+                routerMiddleware(history),
+                thunk,
+                publicationEnhancer,
+                saveReducerOnSessionExpired
+            ),
+        ),
     );
 };
 

@@ -78,15 +78,13 @@ export function fixRecord(data) {
         };
     }
 
-    const isAuthorLinked =
-        data.publication.fez_record_search_key_author_id &&
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id &&
         data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(
             authorId => authorId.rek_author_id === data.author.aut_id
         ).length > 0;
 
-    const isContributorLinked =
-        data.publication.fez_record_search_key_contributor_id &&
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id &&
         data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(
             contributorId => contributorId.rek_contributor_id === data.author.aut_id
@@ -94,9 +92,13 @@ export function fixRecord(data) {
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
 
-    const hasAddedContentIndicators =
+    const hasAddedContentIndicators = (
         !!data.contentIndicators &&
-        data.contentIndicators.length > (data.publication.fez_record_search_key_content_indicator || []).length;
+        data.contentIndicators.length > (
+            data.publication.fez_record_search_key_content_indicator ||
+            []
+        ).length
+    );
 
     if (!isAuthorLinked && !isContributorLinked) {
         return dispatch => {
@@ -126,15 +128,21 @@ export function fixRecord(data) {
         const createIssueRequest = transformers.getFixIssueRequest(data);
 
         return Promise.resolve([])
-            .then(() =>
-                hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null
-            )
-            .then(() =>
-                hasFilesToUpload || data.rek_link || hasAddedContentIndicators
+            .then(() => (hasFilesToUpload
+                ? putUploadFiles(
+                    data.publication.rek_pid,
+                    data.files.queue, dispatch
+                )
+                : null
+            ))
+            .then(() => (
+                hasFilesToUpload ||
+                    data.rek_link ||
+                    hasAddedContentIndicators
                     ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
                     : null
-            )
-            .then(() => post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest))
+            ))
+            .then(() => (post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest)))
             .then(responses => {
                 dispatch({
                     type: actions.FIX_RECORD_SUCCESS,
@@ -171,15 +179,13 @@ export function unclaimRecord(data) {
         };
     }
 
-    const isAuthorLinked =
-        data.publication.fez_record_search_key_author_id &&
+    const isAuthorLinked = data.publication.fez_record_search_key_author_id &&
         data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(
             authorId => authorId.rek_author_id === data.author.aut_id
         ).length > 0;
 
-    const isContributorLinked =
-        data.publication.fez_record_search_key_contributor_id &&
+    const isContributorLinked = data.publication.fez_record_search_key_contributor_id &&
         data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(
             contributorId => contributorId.rek_contributor_id === data.author.aut_id
@@ -212,7 +218,7 @@ export function unclaimRecord(data) {
         };
 
         return patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
-            .then(() => post(HIDE_POSSIBLE_RECORD_API(), { pid: data.publication.rek_pid, type: 'H' }))
+            .then(() => (post(HIDE_POSSIBLE_RECORD_API(), { pid: data.publication.rek_pid, type: 'H' })))
             .then(response => {
                 dispatch({
                     type: actions.FIX_RECORD_UNCLAIM_SUCCESS,

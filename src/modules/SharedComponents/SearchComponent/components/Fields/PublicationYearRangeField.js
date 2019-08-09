@@ -32,7 +32,7 @@ export class PublicationYearRangeField extends PureComponent {
         disabled: false,
     };
 
-    setValue = key => event => {
+    setValue = (key) => (event) => {
         const value = event.target.value.toString();
         let intValue = value.replace(/\D/g, '');
         intValue = parseInt(intValue, 10);
@@ -46,7 +46,7 @@ export class PublicationYearRangeField extends PureComponent {
     isInvalidYear = values => {
         const from = values.from;
         const to = values.to;
-        return from > to || from > 9999 || to > 9999;
+        return (from > to || from > 9999 || to > 9999);
     };
 
     render() {
@@ -56,16 +56,12 @@ export class PublicationYearRangeField extends PureComponent {
             <React.Fragment>
                 <Grid container>
                     <Grid item xs={12}>
-                        <InputLabel shrink className={classes.title}>
-                            {txt.title}
-                        </InputLabel>
+                        <InputLabel shrink className={classes.title}>{txt.title}</InputLabel>
                     </Grid>
                 </Grid>
                 <Grid container>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <InputLabel hidden id="from-label">
-                            {txt.fromAria}
-                        </InputLabel>
+                        <InputLabel hidden id="from-label">{txt.fromAria}</InputLabel>
                         <TextField
                             fullWidth
                             id="from"
@@ -82,9 +78,7 @@ export class PublicationYearRangeField extends PureComponent {
                         />
                     </Grid>
                     <Grid item xs={'auto'}>
-                        <InputLabel hidden id="combiner-label">
-                            to
-                        </InputLabel>
+                        <InputLabel hidden id="combiner-label">to</InputLabel>
                         <TextField
                             style={{ width: 24 }}
                             value={' to '}
@@ -96,9 +90,7 @@ export class PublicationYearRangeField extends PureComponent {
                         />
                     </Grid>
                     <Grid item zeroMinWidth style={{ flexGrow: 1, width: 1 }}>
-                        <InputLabel hidden id="to-label">
-                            {txt.toAria}
-                        </InputLabel>
+                        <InputLabel hidden id="to-label">{txt.toAria}</InputLabel>
                         <TextField
                             fullWidth
                             id="to"
@@ -121,3 +113,4 @@ export class PublicationYearRangeField extends PureComponent {
 }
 
 export default withStyles(styles, { withTheme: true })(PublicationYearRangeField);
+

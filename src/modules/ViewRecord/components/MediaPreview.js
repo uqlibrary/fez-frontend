@@ -26,7 +26,7 @@ export default class MediaPreview extends React.Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.previewMediaUrl !== nextProps.previewMediaUrl) {
+        if(this.props.previewMediaUrl !== nextProps.previewMediaUrl) {
             this.setState({
                 videoErrorMsg: null,
                 videoErrorCode: null,
@@ -45,7 +45,7 @@ export default class MediaPreview extends React.Component {
     };
 
     scrollToMedia() {
-        if (((this.mediaPreviewRef || {}).current || {}).scrollIntoView) {
+        if(((this.mediaPreviewRef || {}).current || {}).scrollIntoView) {
             this.mediaPreviewRef.current.scrollIntoView({
                 behavior: 'smooth',
                 block: 'start',
@@ -58,17 +58,14 @@ export default class MediaPreview extends React.Component {
         this.scrollToPreview();
     };
 
-    videoFailed = event => {
-        if (event.message && event.code) {
-            this.setState(
-                {
-                    videoErrorMsg: event.message,
-                    videoErrorCode: event.code,
-                },
-                () => {
-                    this.scrollToPreview();
-                }
-            );
+    videoFailed = (event) => {
+        if(event.message && event.code) {
+            this.setState({
+                videoErrorMsg: event.message,
+                videoErrorCode: event.code,
+            }, () => {
+                this.scrollToPreview();
+            });
         }
     };
 
@@ -91,7 +88,7 @@ export default class MediaPreview extends React.Component {
         );
     };
 
-    render() {
+    render()  {
         const { mediaUrl, previewMediaUrl, mimeType } = this.props;
         const { videoTitle, imageTitle } = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
@@ -100,27 +97,24 @@ export default class MediaPreview extends React.Component {
         return (
             <React.Fragment>
                 <Grid container spacing={0} direction={'row'} style={{ marginTop: 32 }}>
-                    <span ref={this.mediaPreviewRef} />
+                    <span ref={this.mediaPreviewRef}/>
                     <Grid item xs>
-                        <Typography variant={'h6'} component={'h2'}>
-                            {title}
-                        </Typography>
+                        <Typography variant={'h6'} component={'h2'}>{title}</Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item>
-                            <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview} />
+                            <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
                         </Grid>
                     </Hidden>
                 </Grid>
-                {isVideo && this.state.videoErrorMsg && this.state.videoErrorCode && (
-                    <div style={{ marginTop: 12, marginBottom: 12 }}>
-                        <Alert
-                            {...locale.viewRecord.videoFailedAlert}
-                            message={`${locale.viewRecord.videoFailedAlert.message} (${this.state.videoErrorMsg} - ${this.state.videoErrorCode})`}
-                        />
-                    </div>
-                )}
-                {isVideo && !this.state.videoErrorMsg && (
+                {
+                    isVideo && this.state.videoErrorMsg && this.state.videoErrorCode &&
+                        <div style={{ marginTop: 12, marginBottom: 12 }}>
+                            <Alert {...locale.viewRecord.videoFailedAlert} message={`${locale.viewRecord.videoFailedAlert.message} (${this.state.videoErrorMsg} - ${this.state.videoErrorCode})`} />
+                        </div>
+                }
+                {
+                    isVideo && !this.state.videoErrorMsg &&
                     <ReactJWPlayer
                         playerId="previewVideo"
                         playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
@@ -130,23 +124,22 @@ export default class MediaPreview extends React.Component {
                         onMediaError={this.videoFailed}
                         isAutoPlay
                     />
-                )}
-                {isImage && (
-                    <Grid container spacing={32}>
-                        <Grid item xs />
-                        <Grid item xs={'auto'}>
-                            <img
-                                src={previewMediaUrl}
-                                alt={mediaUrl}
-                                onLoad={this.scrollToPreview()}
-                                style={{ border: '5px solid black', maxWidth: '100%' }}
-                            />
+                }
+                {
+                    isImage &&
+                        <Grid container spacing={32}>
+                            <Grid item xs />
+                            <Grid item xs={'auto'}>
+                                <img src={previewMediaUrl}
+                                    alt={mediaUrl}
+                                    onLoad={this.scrollToPreview()}
+                                    style={{ border: '5px solid black', maxWidth: '100%' }} />
+                            </Grid>
+                            <Grid item xs />
                         </Grid>
-                        <Grid item xs />
-                    </Grid>
-                )}
+                }
                 <Hidden smUp>
-                    <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview} />
+                    <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview}/>
                 </Hidden>
             </React.Fragment>
         );

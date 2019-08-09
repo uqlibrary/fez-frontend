@@ -65,14 +65,10 @@ describe('Component NtroFields', () => {
 
     it('should transform ISRC value', () => {
         const wrapper = setup({});
-        const expected = wrapper.instance().transformIsrc(
-            {
-                value: 'fez_test',
-                order: 'fez_test_order',
-            },
-            'ISRC TE-EST-23-12343',
-            1
-        );
+        const expected = wrapper.instance().transformIsrc({
+            value: 'fez_test',
+            order: 'fez_test_order',
+        }, 'ISRC TE-EST-23-12343', 1);
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
             fez_test_order: 2,
@@ -81,14 +77,10 @@ describe('Component NtroFields', () => {
 
     it('should transform ISMN value', () => {
         const wrapper = setup({});
-        const expected = wrapper.instance().transformIsmn(
-            {
-                value: 'fez_test',
-                order: 'fez_test_order',
-            },
-            'ISMN TE-EST-23-12343',
-            1
-        );
+        const expected = wrapper.instance().transformIsmn({
+            value: 'fez_test',
+            order: 'fez_test_order',
+        }, 'ISMN TE-EST-23-12343', 1);
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
             fez_test_order: 2,

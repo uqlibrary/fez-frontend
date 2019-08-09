@@ -1,5 +1,5 @@
-export const getActionSuffix = action => action.substring(action.indexOf('@') + 1, action.length);
-export const getAction = action => action.substring(0, action.indexOf('@') + 1);
+export const getActionSuffix = (action) => (action.substring(action.indexOf('@') + 1, action.length));
+export const getAction = (action) => (action.substring(0, action.indexOf('@') + 1));
 
 // Academic stats
 export const AUTHOR_PUBLICATIONS_STATS_LOADING = 'AUTHOR_PUBLICATIONS_STATS_LOADING';
@@ -119,6 +119,7 @@ export const CREATE_COMMUNITY_SAVING = 'CREATE_COMMUNITY_SAVING';
 export const CREATE_COMMUNITY_FAILED = 'CREATE_COMMUNITY_FAILED';
 export const CREATE_COMMUNITY_SUCCESS = 'CREATE_COMMUNITY_SUCCESS';
 
+
 // View records
 export const VIEW_RECORD_CLEAR = 'VIEW_RECORD_CLEAR';
 
@@ -168,6 +169,7 @@ export const THIRD_PARTY_LOOKUP_TOOL_CLEAR = 'THIRD_PARTY_LOOKUP_TOOL_CLEAR';
 export const THIRD_PARTY_LOOKUP_TOOL_LOADING = 'THIRD_PARTY_LOOKUP_TOOL_LOADING';
 export const THIRD_PARTY_LOOKUP_TOOL_SUCCESS = 'THIRD_PARTY_LOOKUP_TOOL_SUCCESS';
 export const THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED = 'THIRD_PARTY_LOOKUP_TOOL_LOAD_FAILED';
+
 
 // List of all actions loading publications - for middleware
 export const loadPublicationsListActions = new RegExp(`^(\

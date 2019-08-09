@@ -22,7 +22,7 @@ function setup(testProps, isShallow = true) {
 
 describe('Component ContributorRowHeader', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup({});
+        const wrapper = setup({ });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -59,9 +59,7 @@ describe('Component ContributorRowHeader', () => {
 
     it('set confirmation box ref', () => {
         const wrapper = setup({});
-        wrapper
-            .find('ConfirmDialogBox')
-            .props()
+        wrapper.find('ConfirmDialogBox').props()
             .onRef('testRef');
         expect(wrapper.instance().confirmationBox).toBe('testRef');
     });

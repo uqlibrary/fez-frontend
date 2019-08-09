@@ -35,7 +35,7 @@ const handlers = {
         accountAuthorDetailsLoading: false,
     }),
 
-    [actions.CURRENT_AUTHOR_FAILED]: state => ({
+    [actions.CURRENT_AUTHOR_FAILED]: (state) => ({
         ...state,
         author: null,
         accountAuthorLoading: false,
@@ -47,13 +47,13 @@ const handlers = {
         accountAuthorLoading: false,
     }),
 
-    [actions.CURRENT_AUTHOR_LOADING]: state => ({
+    [actions.CURRENT_AUTHOR_LOADING]: (state) => ({
         ...state,
         author: null,
         accountAuthorLoading: true,
     }),
 
-    [actions.CURRENT_AUTHOR_SAVING]: state => ({
+    [actions.CURRENT_AUTHOR_SAVING]: (state) => ({
         ...state,
         accountAuthorSaving: true,
         accountAuthorError: null,
@@ -65,7 +65,7 @@ const handlers = {
         accountAuthorError: action.payload,
     }),
 
-    [actions.CURRENT_AUTHOR_SAVE_RESET]: state => ({
+    [actions.CURRENT_AUTHOR_SAVE_RESET]: (state) => ({
         ...state,
         ...initSavingState,
     }),
@@ -77,7 +77,7 @@ const handlers = {
         accountAuthorError: null,
     }),
 
-    [actions.CURRENT_AUTHOR_DETAILS_FAILED]: state => ({
+    [actions.CURRENT_AUTHOR_DETAILS_FAILED]: (state) => ({
         ...state,
         authorDetails: null,
         accountAuthorDetailsLoading: false,
@@ -89,23 +89,23 @@ const handlers = {
         accountAuthorDetailsLoading: false,
     }),
 
-    [actions.CURRENT_AUTHOR_DETAILS_LOADING]: state => ({
+    [actions.CURRENT_AUTHOR_DETAILS_LOADING]: (state) => ({
         ...state,
         authorDetails: null,
         accountAuthorDetailsLoading: true,
     }),
 
-    [actions.CURRENT_ACCOUNT_SESSION_EXPIRED]: state => ({
+    [actions.CURRENT_ACCOUNT_SESSION_EXPIRED]: (state) => ({
         ...state,
         isSessionExpired: true,
     }),
 
-    [actions.CURRENT_ACCOUNT_SESSION_VALID]: state => ({
+    [actions.CURRENT_ACCOUNT_SESSION_VALID]: (state) => ({
         ...state,
         isSessionExpired: false,
     }),
 
-    [actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG]: state => ({
+    [actions.CLEAR_CURRENT_ACCOUNT_SESSION_FLAG]: (state) => ({
         ...state,
         isSessionExpired: null,
     }),

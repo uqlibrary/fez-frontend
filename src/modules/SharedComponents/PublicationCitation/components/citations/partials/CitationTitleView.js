@@ -19,16 +19,14 @@ export default class CitationTitleView extends PureComponent {
         super(props);
     }
 
-    render() {
+    render()  {
         const { value, className, prefix, suffix } = this.props;
         if (!value) {
-            return <span className={`${className || ''} empty`} />;
+            return (<span className={`${className || ''} empty`} />);
         }
         return (
             <span className={className || ''}>
-                {prefix}
-                {ReactHtmlParser(value)}
-                {suffix === value.slice(-1) ? '' : suffix}
+                {prefix}{ReactHtmlParser(value)}{suffix === value.slice(-1) ? '' : suffix}
             </span>
         );
     }

@@ -6,7 +6,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.TOP_CITED_PUBLICATIONS_LOADING]: state => {
+    [actions.TOP_CITED_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             topCitedPublicationsList: [],
@@ -40,7 +40,7 @@ const handlers = {
         };
     },
 
-    [actions.TOP_CITED_PUBLICATIONS_FAILED]: state => {
+    [actions.TOP_CITED_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
             trendingPublicationsList: [],

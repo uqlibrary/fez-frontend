@@ -8,25 +8,32 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.CREATE_COMMUNITY_SUCCESS]: (state, action) => ({
-        ...initialState,
-        newRecord: action.payload,
-        newCommunitySaving: false,
-        newCommunityError: false,
-    }),
 
-    [actions.CREATE_COMMUNITY_FAILED]: (state, action) => ({
-        ...initialState,
-        newCommunitySaving: false,
-        newCommunityError: true,
-        newCommunityErrorMessage: action.payload,
-    }),
+    [actions.CREATE_COMMUNITY_SUCCESS]: (state, action) => (
+        {
+            ...initialState,
+            newRecord: action.payload,
+            newCommunitySaving: false,
+            newCommunityError: false,
+        }
+    ),
 
-    [actions.CREATE_COMMUNITY_SAVING]: () => ({
-        ...initialState,
-        newCommunitySaving: true,
-        newCommunityError: false,
-    }),
+    [actions.CREATE_COMMUNITY_FAILED]: (state, action) => (
+        {
+            ...initialState,
+            newCommunitySaving: false,
+            newCommunityError: true,
+            newCommunityErrorMessage: action.payload,
+        }
+    ),
+
+    [actions.CREATE_COMMUNITY_SAVING]: () => (
+        {
+            ...initialState,
+            newCommunitySaving: true,
+            newCommunityError: false,
+        }
+    ),
 };
 
 export default function createCommunityReducer(state = initialState, action) {

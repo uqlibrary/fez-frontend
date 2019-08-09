@@ -3,12 +3,19 @@ import React from 'react';
 import AddMissingRecord from './containers/AddMissingRecord';
 import NewRecord from './components/steps/NewRecord';
 import Immutable from 'immutable';
-import { rtlRender, fireEvent, waitForElement, cleanup, withRedux, withRouter } from 'test-utils';
+import {
+    rtlRender,
+    fireEvent,
+    waitForElement,
+    cleanup,
+    withRedux,
+    withRouter
+} from 'test-utils';
 
 const initialState = Immutable.Map({
     accountReducer: {
         account: {
-            id: 'uqresearcher',
+            'id': 'uqresearcher',
             class: ['Campus-MATERHOSP'],
             type: 3,
             homeLib: 'St Lucia',
@@ -23,7 +30,7 @@ const initialState = Immutable.Map({
             hasSession: true,
             tokenBased: false,
             canMasquerade: false,
-            blocked: false,
+            blocked: false
         },
         author: {
             aut_id: 410,
@@ -52,7 +59,7 @@ const initialState = Immutable.Map({
             aut_google_scholar_id: 'kUemDfMAAAAJ',
             aut_rid_last_updated: null,
             aut_publons_id: null,
-            aut_student_username: null,
+            aut_student_username: null
         },
         authorDetails: {
             uqr_id: 14,
@@ -82,55 +89,62 @@ const initialState = Immutable.Map({
                 'ARC Australian Laureate Fellow',
             ],
             espace: {
-                first_year: 1975,
-                last_year: 2018,
-                doc_count: 357,
-            },
+                first_year:1975,
+                last_year:2018,
+                doc_count:357
+            }
         },
         accountLoading: false,
         accountAuthorLoading: false,
         accountAuthorDetailsLoading: false,
         isSessionExpired: null,
         accountAuthorSaving: false,
-        accountAuthorError: null,
-    },
+        accountAuthorError: null
+    }
 });
 
 describe('AddMissingRecord form', () => {
     afterEach(cleanup);
     describe('BookForm:Textbook', () => {
+
         it('should not show submit button when a form is not rendered', () => {
             const route = '/records/add/new';
-            const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
-            );
+            const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
 
             let fragment = asFragment();
 
             fireEvent.click(getByTestId('rek-display-type'));
             waitForElement(() => getByTestId('menu-rek_display_type'));
             fireEvent.click(getByText(/Journal Article/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
         });
 
         it('should  show submit button when a form is rendered', () => {
             const route = '/records/add/new';
-            const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
-            );
+            const {asFragment, getByText, getByTestId} = rtlRender(withRedux(initialState)(withRouter({route})(<AddMissingRecord addRecordStep={NewRecord} />)));
 
             let fragment = asFragment();
 
             fireEvent.click(getByTestId('rek-display-type'));
             waitForElement(() => getByTestId('menu-rek_display_type'));
             fireEvent.click(getByText(/Department Technical Report/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
         });
 
         it('should validate the form and show validation error message correctly for authors/editors field combination', async () => {
             const route = '/records/add/new';
-            const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
+            const {
+                asFragment,
+                getByText,
+                getByTestId
+            } = rtlRender(
+                withRedux(initialState)(
+                    withRouter({route})(
+                        <AddMissingRecord addRecordStep={NewRecord} />
+                    )
+                )
             );
 
             let fragment = asFragment();
@@ -138,32 +152,30 @@ describe('AddMissingRecord form', () => {
             fireEvent.click(getByTestId('rek-display-type'));
             waitForElement(() => getByTestId('menu-rek_display_type'));
             fireEvent.click(getByText(/book/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
             fireEvent.click(getByTestId('rek-subtype'));
             waitForElement(() => getByTestId('menu-rek_subtype'));
             fireEvent.click(getByText(/textbook/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
             expect(getByTestId('submit-work')).toHaveAttribute('disabled');
 
-            fireEvent.change(getByTestId('rek-title'), { target: { value: 'book title' } });
-            fireEvent.change(getByTestId('rek-place-of-publication'), {
-                target: { value: 'test place of publication' },
-            });
-            fireEvent.change(getByTestId('rek-publisher'), { target: { value: 'test publisher' } });
-            fireEvent.change(getByTestId('year'), { target: { value: '2018' } });
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            fireEvent.change(getByTestId('rek-title'), {target: {value: 'book title'}});
+            fireEvent.change(getByTestId('rek-place-of-publication'), {target: {value: 'test place of publication'}});
+            fireEvent.change(getByTestId('rek-publisher'), {target: {value: 'test publisher'}});
+            fireEvent.change(getByTestId('year'), {target: {value: '2018'}});
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
-            fireEvent.change(getByTestId('editors-name-as-published-field'), { target: { value: 'test' } });
+            fireEvent.change(getByTestId('editors-name-as-published-field'), {target: {value: 'test'}});
             fireEvent.click(getByText(/add editor/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
             expect(getByTestId('submit-work')).not.toHaveAttribute('disabled');
 
             fireEvent.click(getByTestId('delete-editor-0'));
             fireEvent.click(getByText(/yes/i));
-            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+            expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
             expect(getByTestId('submit-work')).toHaveAttribute('disabled');
         });
     });

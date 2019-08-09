@@ -1,5 +1,7 @@
 import saveReducerOnSessionExpired from './saveReducerOnSessionExpired';
-import { CURRENT_ACCOUNT_SESSION_EXPIRED } from 'actions/actionTypes';
+import {
+    CURRENT_ACCOUNT_SESSION_EXPIRED,
+} from 'actions/actionTypes';
 import Immutable from 'immutable';
 import { thesisFormData } from 'mock/data/testing/localStorageData';
 
@@ -39,7 +41,12 @@ describe('middleware saveReducerOnSessionExpired', () => {
         const next = jest.fn();
 
         const someReducerData = Immutable.Map({
-            examples: ['test', 'session', 'expired', 'middleware'],
+            examples: [
+                'test',
+                'session',
+                'expired',
+                'middleware',
+            ],
         });
 
         const store = {

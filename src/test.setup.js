@@ -31,12 +31,12 @@ export const setupStoreForMount = () => {
     const initialState = Immutable.Map();
 
     const store = {
-        getState: jest.fn(() => initialState),
+        getState: jest.fn(() => (initialState)),
         dispatch: jest.fn(),
         subscribe: jest.fn(),
     };
     const next = jest.fn();
-    const invoke = action => thunk(store)(next)(action);
+    const invoke = (action) => thunk(store)(next)(action);
     return { store, next, invoke };
 };
 
@@ -53,16 +53,21 @@ const getElement = (component, props, isShallow = true, requiresStore = false, c
     if (isShallow) {
         if (requiresStore) {
             return shallow(
-                <Provider store={setupStoreForMount().store}>{React.createElement(component, props)}</Provider>,
+                <Provider store={setupStoreForMount().store}>
+                    {React.createElement(component, props)}
+                </Provider>,
                 { context }
             );
         } else {
-            return shallow(React.createElement(component, props), { context });
+            return shallow(
+                React.createElement(component, props),
+                { context }
+            );
         }
     }
     return mount(
         <Provider store={setupStoreForMount().store}>
-            <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
+            <MemoryRouter initialEntries={[ { pathname: '/', key: 'testKey' } ]}>
                 <MuiThemeProvider theme={mui1theme}>
                     <MuiPickersUtilsProvider utils={MomentUtils}>
                         {React.createElement(component, props)}

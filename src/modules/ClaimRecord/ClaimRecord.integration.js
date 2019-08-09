@@ -1,17 +1,29 @@
 /* eslint-disable */
 import React from 'react';
 import Immutable from 'immutable';
-import { cleanup, fireEvent, rtlRender, waitForElement, withRedux, withRouter } from 'test-utils';
+import {
+    cleanup,
+    fireEvent,
+    rtlRender,
+    waitForElement,
+    withRedux,
+    withRouter,
+} from 'test-utils';
 
 import { ClaimRecord } from '.';
 import { publicationDetails } from 'mock/data/testing/records';
-import { EXISTING_RECORD_API, RECORDS_ISSUES_API } from 'repositories/routes';
+import {
+    EXISTING_RECORD_API,
+    RECORDS_ISSUES_API,
+} from 'repositories/routes';
 
 const initialState = Immutable.Map({
     accountReducer: {
         account: {
             id: 'uqresearcher',
-            class: ['Campus-MATERHOSP'],
+            'class': [
+                'Campus-MATERHOSP',
+            ],
             type: 3,
             homeLib: 'St Lucia',
             firstName: 'J',
@@ -19,7 +31,9 @@ const initialState = Immutable.Map({
             name: 'J Researcher',
             mail: 'j.Researcher@uq.edu.au',
             barcode: '240675201000000',
-            groups: ['CN=Sci Faculty'],
+            groups: [
+                'CN=Sci Faculty',
+            ],
             classes: [],
             expiryDate: '31-12-19',
             hasSession: true,
@@ -109,7 +123,9 @@ const initialState = Immutable.Map({
     },
 });
 
+
 describe('ClaimRecord form', () => {
+
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
@@ -121,24 +137,34 @@ describe('ClaimRecord form', () => {
     });
 
     it('should allow content indicators to be selected', async () => {
-        mockApi.onAny(EXISTING_RECORD_API({ pid: 'UQ:396321' }).apiUrl).reply(200, { data: publicationDetails });
+        mockApi
+            .onAny(EXISTING_RECORD_API({ pid: 'UQ:396321' }).apiUrl)
+            .reply(200, { data: publicationDetails });
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:396321/fix';
 
-        const { asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />))
+        const {
+            asFragment,
+            getByText,
+            getByTestId
+        } = rtlRender(
+            withRedux(initialState)(
+                withRouter({ route, path })(
+                    <ClaimRecord />
+                )
+            )
         );
 
         let fragment = asFragment();
 
         // Wait till record is loaded
         await waitForElement(() => getByText(publicationDetails.rek_title));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
         // Open Content Indicators dropdown
         fireEvent.click(getByTestId('content-indicators'));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
         /**
          * Selected & disabled items should not be clickable to deselect.
@@ -154,7 +180,7 @@ describe('ClaimRecord form', () => {
 
         // Test if item can be selected
         fireEvent.click(getByText('Case Study'));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
         // Test if item can be deselected
         fireEvent.click(getByText('Case Study'));
@@ -162,6 +188,7 @@ describe('ClaimRecord form', () => {
     });
 
     it('should validate the form where applicable and submit correctly', async () => {
+
         mockApi
             .onAny(EXISTING_RECORD_API({ pid: 'UQ:396321' }).apiUrl)
             .reply(200, { data: publicationDetails })
@@ -171,8 +198,17 @@ describe('ClaimRecord form', () => {
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:396321/fix';
 
-        const { asFragment, getByText, getAllByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />))
+        const {
+            asFragment,
+            getByText,
+            getAllByText,
+            getByTestId
+        } = rtlRender(
+            withRedux(initialState)(
+                withRouter({ route, path })(
+                    <ClaimRecord />
+                )
+            )
         );
 
         // Wait for form to load
@@ -187,14 +223,15 @@ describe('ClaimRecord form', () => {
         // Fill required fields
         fireEvent.click(getAllByText(publicationDetails.fez_record_search_key_author[1].rek_author)[1]);
         fireEvent.click(getByTestId('authorAcceptDeclaration'));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
         // Submit form
         fireEvent.click(getByTestId('claimSubmit'));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
 
         // Wait for confirmation
         await waitForElement(() => getByText('Claim has been submitted'));
-        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+
     });
 });

@@ -43,18 +43,20 @@ describe('Chart component', () => {
                     floating: true,
                     shadow: false,
                 },
-                tooltip: {},
+                tooltip: {
+
+                },
                 plotOptions: {
                     column: {
                         stacking: 'normal',
                     },
                 },
                 series: [
-                    { name: 'Journal Article', data: [] },
-                    { name: 'Conference Paper', data: [] },
-                    { name: 'Book Chapter', data: [] },
-                    { name: 'Book', data: [] },
-                    { name: 'Other', data: [] },
+                    { 'name': 'Journal Article', 'data': [] },
+                    { 'name': 'Conference Paper', 'data': [] },
+                    { 'name': 'Book Chapter', 'data': [] },
+                    { 'name': 'Book', 'data': [] },
+                    { 'name': 'Other', 'data': [] },
                 ],
             },
         });
@@ -112,3 +114,4 @@ describe('Chart component', () => {
         expect(test).toBeCalled();
     });
 });
+

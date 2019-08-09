@@ -5,7 +5,7 @@ import * as actions from 'actions';
 
 import ThirdPartyLookupTool from '../components/ThirdPartyLookupTool';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         ...state.get('thirdPartyLookupToolReducer'),
     };
@@ -17,10 +17,7 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ThirdPartyLookupContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(ThirdPartyLookupTool);
+let ThirdPartyLookupContainer = connect(mapStateToProps, mapDispatchToProps)(ThirdPartyLookupTool);
 ThirdPartyLookupContainer = withRouter(ThirdPartyLookupContainer);
 
 export default ThirdPartyLookupContainer;

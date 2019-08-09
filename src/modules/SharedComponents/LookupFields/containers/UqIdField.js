@@ -4,24 +4,20 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     return {
-        itemsList:
-            state.get('authorsReducer') && state.get('authorsReducer')
-                ? state
-                    .get('authorsReducer')
-                    .authorsList.filter(item => !!item.aut_org_username)
-                    .map(item => ({
-                        value: `${item.aut_title} ${item.aut_display_name} ${
-                            item.aut_org_username ? `(${item.aut_org_username})` : ''
-                        } ${item.aut_student_username ? `(${item.aut_student_username})` : ''}`,
-                        id: item.aut_id,
-                        ...item,
-                    }))
-                : [],
-        itemsListLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
+        itemsList: state.get('authorsReducer') && state.get('authorsReducer')
+            ? state.get('authorsReducer').authorsList
+                .filter(item => !!item.aut_org_username)
+                .map(item => ({
+                    value: `${item.aut_title} ${item.aut_display_name} ${item.aut_org_username ? `(${item.aut_org_username})` : ''} ${item.aut_student_username ? `(${item.aut_student_username})` : ''}`,
+                    id: item.aut_id,
+                    ...item,
+                }))
+            : [],
+        itemsListLoading: state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading || false,
         onChange: props.onChange,
         allowFreeText: false,
         async: true,
-        selectedValue: (!!props.value && { value: props.value }) || '',
+        selectedValue: !!props.value && { value: props.value } || '',
         itemToString: () => '',
         maxResults: 7,
         floatingLabelText: props.floatingLabelText || 'UQ Identifier',
@@ -29,11 +25,9 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
     loadSuggestions: (searchKey, searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
 });
 
-export const UqIdField = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AutoCompleteAsyncField);
+export const UqIdField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+

@@ -4,7 +4,7 @@ import { withRouter } from 'react-router-dom';
 import MyLatestPublications from '../components/MyLatestPublications';
 import * as actions from 'actions';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     return {
         ...state.get('myLatestPublicationsReducer'),
         accountAuthorDetailsLoading: state.get('accountReducer').accountAuthorDetailsLoading,
@@ -17,9 +17,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-const MyLatestPublicationsContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(MyLatestPublications);
+const MyLatestPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(MyLatestPublications);
 
 export default withRouter(MyLatestPublicationsContainer);

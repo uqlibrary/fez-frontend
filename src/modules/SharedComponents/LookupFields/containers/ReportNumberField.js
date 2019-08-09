@@ -6,25 +6,23 @@ const mapStateToProps = (state, props) => {
     const category = 'report_number';
     return {
         category: category,
-        itemsList:
-            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList
-                : [],
+        itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
+            ? state.get('searchKeysReducer')[category].itemsList : [],
         allowFreeText: true,
-        onChange: item => props.input.onChange(item.value),
+        onChange: (item) => props.input.onChange(item.value),
         async: true,
         errorText: props.meta ? props.meta.error : null,
-        selectedValue: (!!props.input && !!props.input.value && { value: props.input.value }) || null,
+        selectedValue: !!props.input && !!props.input.value && { value: props.input.value } || null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: item => (!!item && String(item.value)) || '',
+        itemToString: (item) => !!item && String(item.value) || '',
     };
 };
 
-const mapDispatchToProps = dispatch => ({
-    loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
-});
+const mapDispatchToProps = (dispatch) => (
+    {
+        loadSuggestions: (searchKey, searchQuery = ' ') => dispatch(actions.loadSearchKeyList(searchKey, searchQuery)),
+    }
+);
 
-export const ReportNumberField = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(AutoCompleteAsyncField);
+export const ReportNumberField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
+

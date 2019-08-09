@@ -10,7 +10,10 @@ import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { OrgUnitNameField, FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import {
+    OrgUnitNameField,
+    FilteredFieldOfResearchListField,
+} from 'modules/SharedComponents/LookupFields';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -93,15 +96,26 @@ export default class ThesisSubmission extends Component {
                             {this.props.newRecordFileUploadingOrIssueError ? (
                                 <Grid item xs={12}>
                                     <Alert
-                                        {...formLocale.thesisSubmission.fileUpload.failedAlertLocale}
+                                        {...formLocale.thesisSubmission
+                                            .fileUpload.failedAlertLocale}
                                         action={this.afterFailedSubmit}
                                     />
                                 </Grid>
                             ) : (
-                                <StandardCard title={formLocale.thesisSubmission.afterSubmitTitle}>
+                                <StandardCard
+                                    title={
+                                        formLocale.thesisSubmission
+                                            .afterSubmitTitle
+                                    }
+                                >
                                     <Grid container spacing={24}>
                                         <Grid item xs={12}>
-                                            <Typography>{formLocale.thesisSubmission.afterSubmitText}</Typography>
+                                            <Typography>
+                                                {
+                                                    formLocale.thesisSubmission
+                                                        .afterSubmitText
+                                                }
+                                            </Typography>
                                         </Grid>
                                     </Grid>
                                 </StandardCard>
@@ -113,9 +127,16 @@ export default class ThesisSubmission extends Component {
                         <Grid item>
                             <Button
                                 variant={'contained'}
-                                color={!this.props.newRecordFileUploadingOrIssueError ? 'primary' : 'default'}
+                                color={
+                                    !this.props
+                                        .newRecordFileUploadingOrIssueError
+                                        ? 'primary'
+                                        : 'default'
+                                }
                                 fullWidth
-                                children={formLocale.thesisSubmission.afterSubmit}
+                                children={
+                                    formLocale.thesisSubmission.afterSubmit
+                                }
                                 onClick={this.afterSubmit}
                             />
                         </Grid>
@@ -139,7 +160,9 @@ export default class ThesisSubmission extends Component {
         return (
             <StandardPage
                 title={
-                    this.props.isHdrThesis ? formLocale.thesisSubmission.hdrTitle : formLocale.thesisSubmission.sbsTitle
+                    this.props.isHdrThesis
+                        ? formLocale.thesisSubmission.hdrTitle
+                        : formLocale.thesisSubmission.sbsTitle
                 }
             >
                 <form>
@@ -155,13 +178,19 @@ export default class ThesisSubmission extends Component {
                     />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
-                            <StandardCard title={txt.information.title} help={txt.information.help}>
+                            <StandardCard
+                                title={txt.information.title}
+                                help={txt.information.help}
+                            >
                                 <Grid container spacing={24}>
                                     <Grid item xs={12}>
                                         <Field
                                             component={RichEditorField}
                                             name="thesisTitle"
-                                            title={txt.information.fieldLabels.documentTitle.placeholder}
+                                            title={
+                                                txt.information.fieldLabels
+                                                    .documentTitle.placeholder
+                                            }
                                             disabled={this.props.submitting}
                                             height={50}
                                             validate={[validation.required]}
@@ -175,7 +204,8 @@ export default class ThesisSubmission extends Component {
                                             type="text"
                                             fullWidth
                                             rows={1}
-                                            {...txt.information.fieldLabels.author}
+                                            {...txt.information.fieldLabels
+                                                .author}
                                             required
                                             validate={[validation.required]}
                                         />
@@ -184,7 +214,9 @@ export default class ThesisSubmission extends Component {
                                         <Field
                                             component={ThesisSubtypeField}
                                             id="thesis-subtype"
-                                            itemsList={THESIS_SUBMISSION_SUBTYPES}
+                                            itemsList={
+                                                THESIS_SUBMISSION_SUBTYPES
+                                            }
                                             name="rek_genre_type"
                                             disabled={this.props.submitting}
                                             validate={[validation.required]}
@@ -199,14 +231,18 @@ export default class ThesisSubmission extends Component {
                                             disabled={this.props.submitting}
                                             validate={[validation.required]}
                                             required
-                                            {...txt.information.fieldLabels.orgUnitName}
+                                            {...txt.information.fieldLabels
+                                                .orgUnitName}
                                         />
                                     </Grid>
                                     <Grid item xs={12}>
                                         <Field
                                             component={RichEditorField}
                                             disabled={this.props.submitting}
-                                            title={txt.optional.fieldLabels.abstract.label}
+                                            title={
+                                                txt.optional.fieldLabels
+                                                    .abstract.label
+                                            }
                                             name="thesisAbstract"
                                             validate={[validation.required]}
                                         />
@@ -215,7 +251,10 @@ export default class ThesisSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={txtSupervisors.title} help={txtSupervisors.help}>
+                            <StandardCard
+                                title={txtSupervisors.title}
+                                help={txtSupervisors.help}
+                            >
                                 <Field
                                     component={ContributorsEditorField}
                                     required
@@ -227,7 +266,10 @@ export default class ThesisSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={txtFoR.title} help={txtFoR.help}>
+                            <StandardCard
+                                title={txtFoR.title}
+                                help={txtFoR.help}
+                            >
                                 <Typography>{txtFoR.text}</Typography>
                                 <Field
                                     component={FilteredFieldOfResearchListField}
@@ -243,8 +285,13 @@ export default class ThesisSubmission extends Component {
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
-                            <StandardCard title={txt.keywords.title} help={txt.keywords.help}>
-                                <Typography>{txt.keywords.description}</Typography>
+                            <StandardCard
+                                title={txt.keywords.title}
+                                help={txt.keywords.help}
+                            >
+                                <Typography>
+                                    {txt.keywords.description}
+                                </Typography>
                                 <Field
                                     component={ListEditorField}
                                     name="fez_record_search_key_keywords"
@@ -256,22 +303,33 @@ export default class ThesisSubmission extends Component {
                                         value: 'rek_keywords',
                                         order: 'rek_keywords_order',
                                     }}
-                                    locale={locale.components.keywordsForm.field}
+                                    locale={
+                                        locale.components.keywordsForm.field
+                                    }
                                     disabled={this.props.submitting}
                                 />
                             </StandardCard>
                         </Grid>
                         <Grid item xs={12}>
                             <StandardCard
-                                title={formLocale.thesisSubmission.fileUpload.title}
-                                help={formLocale.thesisSubmission.fileUpload.help}
+                                title={
+                                    formLocale.thesisSubmission.fileUpload.title
+                                }
+                                help={
+                                    formLocale.thesisSubmission.fileUpload.help
+                                }
                             >
                                 <Field
                                     name="files"
                                     component={FileUploadField}
                                     disabled={this.props.submitting}
-                                    locale={formLocale.thesisSubmission.fileUpload.locale}
-                                    defaultQuickTemplateId={this.props.fileAccessId}
+                                    locale={
+                                        formLocale.thesisSubmission.fileUpload
+                                            .locale
+                                    }
+                                    defaultQuickTemplateId={
+                                        this.props.fileAccessId
+                                    }
                                     validate={[validation.fileUploadRequired]}
                                 />
                             </StandardCard>
@@ -302,7 +360,10 @@ export default class ThesisSubmission extends Component {
                                 fullWidth
                                 children={formLocale.thesisSubmission.submit}
                                 onClick={this.deposit}
-                                disabled={this.props.submitting || this.props.disableSubmit}
+                                disabled={
+                                    this.props.submitting ||
+                                    this.props.disableSubmit
+                                }
                             />
                         </Grid>
                     </Grid>

@@ -6,7 +6,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.TRENDING_PUBLICATIONS_LOADING]: state => {
+    [actions.TRENDING_PUBLICATIONS_LOADING]: (state) => {
         return {
             ...state,
             trendingPublicationsList: [],
@@ -40,7 +40,7 @@ const handlers = {
         };
     },
 
-    [actions.TRENDING_PUBLICATIONS_FAILED]: state => {
+    [actions.TRENDING_PUBLICATIONS_FAILED]: (state) => {
         return {
             ...state,
             trendingPublicationsList: [],

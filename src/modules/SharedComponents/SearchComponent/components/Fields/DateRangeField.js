@@ -50,9 +50,7 @@ export class DateRangeField extends PureComponent {
                 this.state.to !== nextState.to ||
                 this.state.error !== nextState.error) &&
             !nextState.error
-        ) {
-            this.props.onChange(nextState);
-        }
+        ) { this.props.onChange(nextState); }
     }
 
     updateDateRangeValue = key => value => {

@@ -8,7 +8,7 @@ import * as actions from 'actions';
 import { FORM_NAME } from '../components/MyIncompleteRecordForm';
 import MyIncompleteRecordContainer from '../components/MyIncompleteRecordContainer';
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
 
     return {
@@ -25,9 +25,6 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let MyIncompleteRecordConnectedContainer = connect(
-    mapStateToProps,
-    mapDispatchToProps
-)(MyIncompleteRecordContainer);
+let MyIncompleteRecordConnectedContainer = connect(mapStateToProps, mapDispatchToProps)(MyIncompleteRecordContainer);
 MyIncompleteRecordConnectedContainer = withRouter(MyIncompleteRecordConnectedContainer);
 export default MyIncompleteRecordConnectedContainer;

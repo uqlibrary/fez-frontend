@@ -66,9 +66,7 @@ describe('Alert component functionality test ', () => {
         const wrapper = setup({ dismissAction: dismissFunc, allowDismiss: true });
         expect(wrapper.find('#dismiss').exists()).toBeTruthy();
         expect(wrapper.find('#dismiss')).toHaveLength(2);
-        wrapper
-            .find('#dismiss')
-            .at(0)
+        wrapper.find('#dismiss').at(0)
             .simulate('click');
         expect(dismissFunc).toHaveBeenCalled();
     });

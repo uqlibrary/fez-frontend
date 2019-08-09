@@ -4,7 +4,7 @@ import { DOCUMENT_TYPES_LOOKUP } from 'config/general';
 import { locale } from 'locale';
 import { withStyles } from '@material-ui/core/styles';
 
-const styles = theme => ({
+const styles = (theme) => ({
     and: {
         ...theme.typography.caption,
     },
@@ -19,6 +19,7 @@ const styles = theme => ({
         ...theme.typography.caption,
         fontWeight: 'bold',
     },
+
 });
 
 export class AdvancedSearchCaption extends PureComponent {
@@ -32,13 +33,11 @@ export class AdvancedSearchCaption extends PureComponent {
     };
 
     static defaultProps = {
-        fieldRows: [
-            {
-                searchField: '0',
-                value: '',
-                label: '',
-            },
-        ],
+        fieldRows: [{
+            searchField: '0',
+            value: '',
+            label: '',
+        }],
         yearFilter: {
             from: null,
             to: null,
@@ -60,25 +59,25 @@ export class AdvancedSearchCaption extends PureComponent {
         });
     }
 
-    getCleanValue = item => {
+    getCleanValue = (item) => {
         // Receives an object in format {title: string, combiner: string, value: string||array}
-        if (Array.isArray(item.value)) {
+        if(Array.isArray(item.value)) {
             const values = [...item.value];
             const lastValue = values.pop();
             return { ...item, value: values.length > 0 ? `${values.join(', ')} or ${lastValue}` : lastValue };
         }
-        if (item.title === 'Any field' && item.value === '') {
+        if(item.title === 'Any field' && item.value === '') {
             return { ...item, value: 'anything' };
         } else {
             return item;
         }
     };
 
-    getSearchFieldData = fieldRows => {
+    getSearchFieldData = (fieldRows) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
         const rows = fieldRows
-            .filter(item => item.searchField !== 'rek_display_type')
-            .map(item => {
+            .filter((item) => item.searchField !== 'rek_display_type')
+            .map((item) => {
                 if (!!txt[item.searchField].captionFn) {
                     return txt[item.searchField].captionFn(item.value);
                 } else {
@@ -92,9 +91,9 @@ export class AdvancedSearchCaption extends PureComponent {
         return rows;
     };
 
-    getDocTypeData = docTypes => {
+    getDocTypeData = (docTypes) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        const converteddocTypes = docTypes.map(item => DOCUMENT_TYPES_LOOKUP[item]);
+        const converteddocTypes = docTypes.map((item) => DOCUMENT_TYPES_LOOKUP[item]);
         const lastItem = converteddocTypes.pop();
         const docsString = converteddocTypes.length > 0 ? `${converteddocTypes.join(', ')} or ${lastItem}` : lastItem;
         return this.getCleanValue({
@@ -104,23 +103,17 @@ export class AdvancedSearchCaption extends PureComponent {
         });
     };
 
-    getOpenAccessData = isOpenAccess => {
+    getOpenAccessData = (isOpenAccess) => {
         const txt = locale.components.searchComponent.advancedSearch.openAccess;
         return isOpenAccess ? { title: '', combiner: txt.combiner, value: txt.captionText } : null;
     };
 
-    getYearFilterData = yearFilter => {
+    getYearFilterData = (yearFilter) => {
         const txt = locale.components.searchComponent.advancedSearch.fieldTypes;
-        return yearFilter.from && yearFilter.to
-            ? {
-                title: txt.facet_year_range.captionTitle,
-                combiner: txt.facet_year_range.combiner,
-                value: `${yearFilter.from} to ${yearFilter.to}`,
-            }
-            : null;
+        return yearFilter.from &&  yearFilter.to ? { title: txt.facet_year_range.captionTitle, combiner: txt.facet_year_range.combiner, value: `${yearFilter.from} to ${yearFilter.to}` } : null;
     };
 
-    updateStateData = props => {
+    updateStateData = (props) => {
         return [
             ...this.getSearchFieldData(props.fieldRows),
             this.getDocTypeData(props.docTypes),
@@ -129,12 +122,12 @@ export class AdvancedSearchCaption extends PureComponent {
         ];
     };
 
-    renderCaptions = items => {
+    renderCaptions = (items) => {
         const { classes } = this.props;
         return items
-            .filter(item => item !== null) // Dont render nulls
-            .filter(item => item.title !== 'Select a field') // Dont render caption for select a field
-            .filter(item => !!item.value) // Dont render caption until it has a value
+            .filter((item) => item !== null) // Dont render nulls
+            .filter((item) => item.title !== 'Select a field') // Dont render caption for select a field
+            .filter((item) => !!item.value) // Dont render caption until it has a value
             .map((item, index) => {
                 return (
                     <span key={index}>

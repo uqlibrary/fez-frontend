@@ -16,8 +16,7 @@ export default class ImageDocumentCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             source: this.props.publication.fez_record_search_key_source
-                ? this.props.publication.fez_record_search_key_source.rek_source
-                : null,
+                ? this.props.publication.fez_record_search_key_source.rek_source : null,
         };
 
         // eSpace citation view for Image Document

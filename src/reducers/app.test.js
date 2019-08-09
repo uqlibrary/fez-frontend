@@ -32,7 +32,10 @@ describe('app reducer', () => {
     });
 
     it('hides app alert', () => {
-        const test = appReducer({ ...initialState, appAlert: 'A test alert' }, { type: actions.APP_ALERT_HIDE });
+        const test = appReducer(
+            { ...initialState, appAlert: 'A test alert' },
+            { type: actions.APP_ALERT_HIDE }
+        );
         expect(test.appAlert).toBeNull;
         expect(test).toEqual(initialState);
     });

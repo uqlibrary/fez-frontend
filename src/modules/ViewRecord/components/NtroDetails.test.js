@@ -524,7 +524,10 @@ describe('NtroDetails ', () => {
             account: { canMasquerade: true },
             publication: {
                 ...ntro,
-                fez_record_search_key_ismn: [{ rek_ismn: 12345 }, { rek_ismn: 67890 }],
+                fez_record_search_key_ismn: [
+                    { rek_ismn: 12345 },
+                    { rek_ismn: 67890 },
+                ],
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -535,7 +538,10 @@ describe('NtroDetails ', () => {
             account: { canMasquerade: true },
             publication: {
                 ...ntro,
-                fez_record_search_key_isrc: [{ rek_isrc: 12345 }, { rek_isrc: 67890 }],
+                fez_record_search_key_isrc: [
+                    { rek_isrc: 12345 },
+                    { rek_isrc: 67890 },
+                ],
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -600,16 +606,12 @@ describe('NtroDetails ', () => {
     });
 
     it('rendered full mount', () => {
-        const wrapper = getElement(
-            NtroDetails,
-            {
-                classes: {},
-                theme: {},
-                publication: ntro,
-                account: { canMasquerade: true },
-            },
-            false
-        );
+        const wrapper = getElement(NtroDetails, {
+            classes: {},
+            theme: {},
+            publication: ntro,
+            account: { canMasquerade: true },
+        }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

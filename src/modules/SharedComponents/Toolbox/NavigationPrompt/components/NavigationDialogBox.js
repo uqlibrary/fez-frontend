@@ -7,14 +7,15 @@ const NavigationDialogBox = ({ when, txt }) => {
     if (!when) return <span />;
     return (
         <NavigationPrompt when={when}>
-            {(_setNavigationConfirmation, _onConfirm, _onCancel) => (
-                <ConfirmDialogBox
-                    onRef={_setNavigationConfirmation}
-                    onAction={_onConfirm}
-                    onCancelAction={_onCancel}
-                    locale={txt}
-                />
-            )}
+            {
+                (_setNavigationConfirmation, _onConfirm, _onCancel) => (
+                    <ConfirmDialogBox
+                        onRef={_setNavigationConfirmation}
+                        onAction={_onConfirm}
+                        onCancelAction={_onCancel}
+                        locale={txt}/>
+                )
+            }
         </NavigationPrompt>
     );
 };

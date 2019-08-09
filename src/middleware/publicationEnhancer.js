@@ -2,7 +2,7 @@ import { loadPublicationsListActions, loadPublicationActions } from 'actions/act
 import { openAccessConfig, viewRecordsConfig } from 'config';
 import moment from 'moment';
 
-export const calculateOpenAccess = record => {
+export const calculateOpenAccess = (record) => {
     const openAccessStatusId = !!record.fez_record_search_key_oa_status
         ? record.fez_record_search_key_oa_status.rek_oa_status
         : null;
@@ -10,22 +10,19 @@ export const calculateOpenAccess = record => {
     if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_DOI) {
         // OA with a possible embargo days - check now vs published date + OA embargo days
         // calculate embargo date
-        const embargoDays =
-            (record.fez_record_search_key_oa_embargo_days &&
-                record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days) ||
+        const embargoDays = record.fez_record_search_key_oa_embargo_days &&
+                record.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days ||
             0;
         const publishedDate = record.rek_date;
         const currentDate = moment().format();
-        const embargoDate = embargoDays
-            ? moment(publishedDate)
-                .add(embargoDays, 'days')
-                .format()
-            : null;
+        const embargoDate = embargoDays ? moment(publishedDate).add(embargoDays, 'days')
+            .format() : null;
         const pastEmgargoDate = !embargoDate || embargoDate < currentDate;
-        const displayEmbargoDate =
-            !!embargoDate && !pastEmgargoDate && embargoDate > currentDate
-                ? moment(embargoDate).format('Do MMMM YYYY')
-                : null;
+        const displayEmbargoDate = (
+            !!embargoDate &&
+            !pastEmgargoDate &&
+            embargoDate > currentDate
+        ) ? moment(embargoDate).format('Do MMMM YYYY') : null;
 
         return {
             isOpenAccess: pastEmgargoDate,
@@ -34,55 +31,47 @@ export const calculateOpenAccess = record => {
         };
     }
 
-    if (
-        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION ||
+    if (openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_PUBLISHER_VERSION ||
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT ||
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_OTHER
     ) {
-        const allFiles =
-            (record.fez_datastream_info || []).length > 0
-                ? record.fez_datastream_info.filter(
-                    item =>
-                        !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          (!item.dsi_label ||
-                              !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
-                              )) &&
-                          item.dsi_state === 'A'
-                )
-                : [];
+        const allFiles = (record.fez_datastream_info || []).length > 0
+            ? record.fez_datastream_info.filter(item => (
+                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+                (!item.dsi_label || !item.dsi_label.match(
+                    new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
+                )) &&
+                item.dsi_state === 'A'
+            ))
+            : [];
 
         const hasFiles = allFiles.length > 0;
         const allEmbargoFiles = hasFiles
-            ? record.fez_datastream_info
-                .filter(
-                    item =>
-                        !!item.dsi_embargo_date &&
-                          moment(item.dsi_embargo_date).isAfter(moment()) &&
-                          !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          (!item.dsi_label ||
-                              !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
-                              )) &&
-                          item.dsi_state === 'A'
-                )
-                .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
+            ? record.fez_datastream_info.filter(item => (
+                !!item.dsi_embargo_date &&
+                moment(item.dsi_embargo_date).isAfter(moment()) &&
+                !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
+                (!item.dsi_label || !item.dsi_label.match(
+                    new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
+                )) &&
+                item.dsi_state === 'A'
+            )).sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];
         // OA with a possible file embargo date
         // OA with a possible file embargo date
         return {
             isOpenAccess: !hasFiles || allFiles.length !== allEmbargoFiles.length,
-            embargoDate:
-                hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
-                    ? moment(allEmbargoFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
-                    : null,
+            embargoDate: hasFiles && allFiles.length > 0 && allFiles.length === allEmbargoFiles.length
+                ? moment(allEmbargoFiles[0].dsi_embargo_date).format('Do MMMM YYYY')
+                : null,
             openAccessStatusId: openAccessStatusId,
         };
     }
 
-    const isOpenAccess =
+    const isOpenAccess = (
         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_PMC ||
-        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI;
+        openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
+    );
 
     return {
         isOpenAccess: isOpenAccess,
@@ -91,19 +80,22 @@ export const calculateOpenAccess = record => {
     };
 };
 
-export const enhancePublication = record => {
+export const enhancePublication = (record) => {
     const dompurify = require('dompurify');
     const cleanTitleConfig = { ALLOWED_TAGS: ['sub', 'sup'] };
     const noHtmlConfig = { ALLOWED_TAGS: [''] };
     const allowedHtmlConfig = {
-        ALLOWED_TAGS: ['p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub'],
+        ALLOWED_TAGS: [
+            'p', 'strong', 'i', 'u', 's', 'strike', 'sup', 'sub', 'em', 'br', 'b', 'sup', 'sub',
+        ],
         ALLOWED_ATTR: [],
     };
 
-    const cleanHtmlIfValid = value =>
+    const cleanHtmlIfValid = (value) => (
         dompurify.sanitize(value, noHtmlConfig).replace(/\s/g, '').length !== 0
             ? dompurify.sanitize(value, allowedHtmlConfig)
-            : null;
+            : null
+    );
 
     return {
         ...record,

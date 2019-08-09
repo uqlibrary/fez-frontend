@@ -32,10 +32,10 @@ describe('AudioDocumentForm renders ', () => {
     it('component should render contributor assignment', () => {
         const wrapper = setup({
             formValues: {
-                get: key => {
+                get: (key) => {
                     const values = {
-                        editors: [{ selected: true }, { selected: true }],
-                        authors: [{ selected: true }, { selected: true }],
+                        'editors': [{ selected: true }, { selected: true }],
+                        'authors': [{ selected: true }, { selected: true }],
                     };
                     return values[key];
                 },

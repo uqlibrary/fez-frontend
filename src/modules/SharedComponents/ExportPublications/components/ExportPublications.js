@@ -13,7 +13,7 @@ export default class ExportPublications extends PureComponent {
         onChange: PropTypes.func,
     };
 
-    formatChanged = event => {
+    formatChanged =  (event) => {
         this.props.onChange(event.target.value);
     };
 
@@ -27,18 +27,15 @@ export default class ExportPublications extends PureComponent {
                     onChange={this.formatChanged}
                     disabled={this.props.disabled}
                     value={this.props.format || -1}
-                    displayEmpty
-                >
-                    <MenuItem key={-1} value={-1} disabled>
-                        Please select
-                    </MenuItem>
-                    {txt.format.map((item, index) => {
-                        return (
-                            <MenuItem key={index} value={item.value}>
-                                {item.label}
-                            </MenuItem>
-                        );
-                    })}
+                    displayEmpty>
+                    <MenuItem key={-1} value={-1} disabled>Please select</MenuItem>
+                    {
+                        txt.format.map((item, index) => {
+                            return (
+                                <MenuItem key={index} value={item.value}>{item.label}</MenuItem>
+                            );
+                        })
+                    }
                 </Select>
             </FormControl>
         );

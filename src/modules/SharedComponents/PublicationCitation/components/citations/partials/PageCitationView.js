@@ -3,7 +3,12 @@ import PropTypes from 'prop-types';
 
 const PageCitationView = ({ publication, searchKey, className = 'citationPage' }) => {
     const page = publication[searchKey.key] ? publication[searchKey.key][searchKey.subkey] : null;
-    return page && <span className={className}>{page}</span>;
+    return (
+        page &&
+        <span className={className}>
+            {page}
+        </span>
+    );
 };
 
 PageCitationView.propTypes = {

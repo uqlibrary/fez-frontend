@@ -19,6 +19,7 @@ function setup(testProps, isShallow = true) {
     return getElement(DepositAgreementField, props, isShallow);
 }
 
+
 describe('Component DepositAgreement', () => {
     it('should render default view', () => {
         const wrapper = setup({});

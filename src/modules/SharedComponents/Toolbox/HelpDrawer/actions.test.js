@@ -1,6 +1,6 @@
 import * as actions from './actions';
 
-describe('HelpDrawer actions tests ', () => {
+describe('HelpDrawer actions tests ', ()=>{
     it('it should create action for open help drawer', () => {
         const payload = {
             title: 'Help',

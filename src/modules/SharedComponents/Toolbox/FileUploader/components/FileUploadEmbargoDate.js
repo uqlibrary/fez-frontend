@@ -7,6 +7,7 @@ import KeyboardArrowRight from '@material-ui/icons/KeyboardArrowRight';
 import Event from '@material-ui/icons/Event';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
+
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
         onChange: PropTypes.func,
@@ -21,7 +22,7 @@ export class FileUploadEmbargoDate extends PureComponent {
         minDate: new Date(),
     };
 
-    _onChange = value => {
+    _onChange = (value) => {
         if (this.props.onChange) this.props.onChange(value);
     };
 
@@ -45,9 +46,9 @@ export class FileUploadEmbargoDate extends PureComponent {
                 keyboard
                 allowKeyboardControl
                 autoOk
-                leftArrowIcon={<KeyboardArrowLeft />}
-                rightArrowIcon={<KeyboardArrowRight />}
-                keyboardIcon={<Event />}
+                leftArrowIcon={<KeyboardArrowLeft/>}
+                rightArrowIcon={<KeyboardArrowRight/>}
+                keyboardIcon={<Event/>}
             />
         );
     }

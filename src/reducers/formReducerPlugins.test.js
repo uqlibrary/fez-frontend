@@ -18,13 +18,13 @@ describe('Form reducer plugin', () => {
 
     const initialState = Map({
         values: Map({
-            rek_title: 'ABC',
-            fez_record_search_key_a: Map({
-                a: 'some value',
+            'rek_title': 'ABC',
+            'fez_record_search_key_a': Map({
+                'a': 'some value',
             }),
         }),
         registeredFields: Map({
-            rek_title: Map({
+            'rek_title': Map({
                 name: 'rek_title',
             }),
             'fez_record_search_key_a.a': Map({
@@ -79,30 +79,28 @@ describe('Form reducer plugin', () => {
         expect(nextState2).toEqual(initialState);
     });
 
-    it('unregisters valid field', () => {
+    it('unregisters valid field', () =>  {
         const expectedState = Map({
-            values: Map({
-                rek_title: 'ABC',
+            'values': Map({
+                'rek_title': 'ABC',
             }),
-            registeredFields: Map({
-                rek_title: Map({
-                    name: 'rek_title',
+            'registeredFields': Map({
+                'rek_title': Map({
+                    'name': 'rek_title',
                 }),
             }),
-            fields: Map({
-                rek_title: Map({
-                    touched: true,
-                    visited: true,
+            'fields': Map({
+                'rek_title': Map({
+                    'touched': true,
+                    'visited': true,
                 }),
             }),
-            initial: Map({
-                rek_title: 'Initial value',
-                currentAuthor: [
-                    {
-                        authorId: 123,
-                        nameAsPublished: 'Test user',
-                    },
-                ],
+            'initial': Map({
+                'rek_title': 'Initial value',
+                'currentAuthor': [{
+                    'authorId': 123,
+                    'nameAsPublished': 'Test user',
+                }],
             }),
         });
 
@@ -123,15 +121,15 @@ describe('Form reducer plugin', () => {
 
     const simpleInitialState = Map({
         values: Map({
-            rek_title: 'ABC',
-            rek_subtype: 'EFG',
+            'rek_title': 'ABC',
+            'rek_subtype': 'EFG',
         }),
     });
 
     it('unsets subtype if display type is updated via code', () => {
         const expectedState = Map({
             values: Map({
-                rek_title: 'ABC',
+                'rek_title': 'ABC',
             }),
         });
 

@@ -55,8 +55,6 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - async loading is not working since chuncks are not saved, navigate directly to required routes
 - `npm run eslint`
   - Runs ESLint on all JavaScript files in the project, with specific exceptions listed in `.eslintignore`.
-- `npm run codestyles:files`
-  - Runs Prettier and ESLint checks on all Javascript files in the project, then lists files with code style issues. Check the other npm scripts for ways to fix the issues automatically if possible.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 

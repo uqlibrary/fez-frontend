@@ -36,7 +36,7 @@ describe('AdvancedSearchRow', () => {
         const testFn = jest.fn();
         const wrapper = setup({ rowIndex: 1, onSearchRowChange: testFn });
         wrapper.instance()._handleSearchFieldChange({ target: { value: 2 } });
-        expect(testFn).toHaveBeenCalledWith(1, { label: '', searchField: 2, value: '' });
+        expect(testFn).toHaveBeenCalledWith(1, { 'label': '', 'searchField': 2, 'value': '' });
     });
 
     it('should handle search field text change', () => {

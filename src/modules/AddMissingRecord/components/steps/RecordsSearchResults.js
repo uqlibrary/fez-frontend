@@ -93,9 +93,7 @@ export default class RecordsSearchResults extends PureComponent {
                     (item.fez_record_search_key_author.length === 0 &&
                         item.fez_record_search_key_contributor_id.length !==
                             item.fez_record_search_key_contributor.length)
-                ) {
-                    return false;
-                }
+                ) { return false; }
 
                 return true;
             })

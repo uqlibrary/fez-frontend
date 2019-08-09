@@ -18,3 +18,4 @@ describe('PartialDateForm component', () => {
         expect(wrapper.instance()._setDate).not.toBeCalled();
     });
 });
+

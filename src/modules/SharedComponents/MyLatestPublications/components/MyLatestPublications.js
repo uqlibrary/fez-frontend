@@ -10,7 +10,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { withStyles } from '@material-ui/core/styles';
 
-export const styles = theme => ({
+export const styles = (theme) => ({
     blueButton: {
         backgroundColor: theme.palette.accent.main,
         color: theme.palette.white.main,
@@ -53,14 +53,16 @@ export class MyLatestPublications extends PureComponent {
         if (this.props.loadingLatestPublications) {
             return (
                 <div className="isLoading is-centered">
-                    <InlineLoader message={txt.loading} />
+                    <InlineLoader message={txt.loading}/>
                 </div>
             );
         }
 
         return (
             <React.Fragment>
-                <PublicationsList publicationsList={this.props.latestPublicationsList} showDefaultActions />
+                <PublicationsList
+                    publicationsList={this.props.latestPublicationsList}
+                    showDefaultActions/>
                 <Grid container>
                     <Grid item xs />
                     <Grid item xs={12} sm="auto">

@@ -16,14 +16,11 @@ export default class SeminarPaperCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series
-                : null,
+                ? this.props.publication.fez_record_search_key_series.rek_series : null,
             orgUnit: this.props.publication.fez_record_search_key_org_unit_name
-                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name
-                : null,
+                ? this.props.publication.fez_record_search_key_org_unit_name.rek_org_unit_name : null,
             orgName: this.props.publication.fez_record_search_key_org_name
-                ? this.props.publication.fez_record_search_key_org_name.rek_org_name
-                : null,
+                ? this.props.publication.fez_record_search_key_org_name.rek_org_name : null,
         };
 
         // eSpace citation view for Seminar Paper
@@ -31,22 +28,23 @@ export default class SeminarPaperCitation extends Component {
         return (
             <div className="citationContent citationSeminarPaper">
                 {/* {Author}*/}
-                <Partials.AuthorsCitationView publication={this.props.publication} />
+                <Partials.AuthorsCitationView publication={this.props.publication}/>
 
                 {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date} />
+                <Partials.DateCitationView date={this.props.publication.rek_date}/>
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title} />
+                <Partials.CitationTitleView className="citationTitle" value={record.title}/>
 
                 {/* {Seminar series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series} />
+                <Partials.CitationView className="citationSeries" value={record.series}/>
 
                 {/* {School, Department or Centre| |,}  - fez_record_search_key_org_unit_name.rek_org_unit_name */}
-                <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix="," />
+                <Partials.CitationView className="citationOrgUnit" value={record.orgUnit} suffix=","/>
 
                 {/* {Institution| |.} - fez_record_search_key_org_name.rek_org_name */}
-                <Partials.CitationView className="citationOrgName" value={record.orgName} />
+                <Partials.CitationView className="citationOrgName" value={record.orgName}/>
+
             </div>
         );
     }

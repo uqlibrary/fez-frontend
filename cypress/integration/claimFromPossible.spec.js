@@ -139,7 +139,7 @@ context('Claim possible work', () => {
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' }
+                { subjectType: 'drag-n-drop' },
             );
         });
         cy.contains('.StandardCard', claimFormLocale.fileUpload.title)

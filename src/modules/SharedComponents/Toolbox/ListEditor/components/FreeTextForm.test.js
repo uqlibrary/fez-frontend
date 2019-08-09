@@ -35,25 +35,21 @@ describe('FreeTextForm tests ', () => {
     });
 
     it('rendering active form full mount', () => {
-        const wrapper = getElement(
-            FreeTextForm,
-            {
-                onAdd: jest.fn(),
-                disabled: false,
-                locale: {
-                    inputFieldLabel: 'Item name',
-                    inputFieldHint: 'Please type the item name',
-                    addButtonLabel: 'Add',
-                },
-                classes: {
-                    remindToAdd: '',
-                },
-                theme: {},
-                errorText: 'This field is required',
-                normalize: value => value,
+        const wrapper = getElement(FreeTextForm, {
+            onAdd: jest.fn(),
+            disabled: false,
+            locale: {
+                inputFieldLabel: 'Item name',
+                inputFieldHint: 'Please type the item name',
+                addButtonLabel: 'Add',
             },
-            false
-        );
+            classes: {
+                remindToAdd: '',
+            },
+            theme: {},
+            errorText: 'This field is required',
+            normalize: value => value,
+        }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -82,7 +78,7 @@ describe('FreeTextForm tests ', () => {
     });
 
     it('setting state', () => {
-        const wrapper = setup({});
+        const wrapper = setup({ });
         expect(wrapper.state().itemName).toBeFalsy();
         wrapper.instance().onNameChanged({ target: { value: 'one' } });
         expect(wrapper.state().itemName).toEqual('one');

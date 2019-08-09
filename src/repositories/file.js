@@ -29,7 +29,7 @@ export function putUploadFile(pid, file, dispatch) {
             return Promise.resolve(uploadResponse);
         })
         .catch(error => {
-            if (process.env.ENABLE_LOG) Raven.captureException(error);
+            if(process.env.ENABLE_LOG) Raven.captureException(error);
             if (fileUploadActions) {
                 dispatch(fileUploadActions.notifyUploadFailed(file.name));
             }

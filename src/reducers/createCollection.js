@@ -8,25 +8,32 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.CREATE_COLLECTION_SUCCESS]: (state, action) => ({
-        ...initialState,
-        newRecord: action.payload,
-        newCollectionSaving: false,
-        newCollectionError: false,
-    }),
 
-    [actions.CREATE_COLLECTION_FAILED]: (state, action) => ({
-        ...initialState,
-        newCollectionSaving: false,
-        newCollectionError: true,
-        newCollectionErrorMessage: action.payload,
-    }),
+    [actions.CREATE_COLLECTION_SUCCESS]: (state, action) => (
+        {
+            ...initialState,
+            newRecord: action.payload,
+            newCollectionSaving: false,
+            newCollectionError: false,
+        }
+    ),
 
-    [actions.CREATE_COLLECTION_SAVING]: () => ({
-        ...initialState,
-        newCollectionSaving: true,
-        newCollectionError: false,
-    }),
+    [actions.CREATE_COLLECTION_FAILED]: (state, action) => (
+        {
+            ...initialState,
+            newCollectionSaving: false,
+            newCollectionError: true,
+            newCollectionErrorMessage: action.payload,
+        }
+    ),
+
+    [actions.CREATE_COLLECTION_SAVING]: () => (
+        {
+            ...initialState,
+            newCollectionSaving: true,
+            newCollectionError: false,
+        }
+    ),
 };
 
 export default function createCollectionReducer(state = initialState, action) {

@@ -8,15 +8,19 @@ import { withStyles } from '@material-ui/core/styles';
 const FileUploadDropzoneStaticContent = ({ locale, classes }) => (
     <Grid container className={classes.dropzone}>
         <Grid item xs={12} sm={6}>
-            <Typography className={classes.heading}>{locale.fileUploadRestrictionHeading}</Typography>
+            <Typography className={classes.heading}>
+                {locale.fileUploadRestrictionHeading}
+            </Typography>
             {locale.fileUploadRestrictions}
         </Grid>
         <Grid item xs={12} sm={6}>
             <Grid container direction="column" alignItems="center" justify="center" className={classes.instructions}>
                 <Grid item>
-                    <CloudUpload className={classes.cloudIcon} />
+                    <CloudUpload className={classes.cloudIcon}/>
                 </Grid>
-                <Grid item>{locale.fileUploadInstruction}</Grid>
+                <Grid item>
+                    {locale.fileUploadInstruction}
+                </Grid>
             </Grid>
         </Grid>
     </Grid>

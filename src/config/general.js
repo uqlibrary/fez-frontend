@@ -2,9 +2,11 @@ import locale from 'locale/components';
 import moment from 'moment';
 const converter = require('number-to-words');
 
-const getValue = value => (typeof value !== 'undefined' && !!value ? value : null);
+const getValue = (value) => (
+    typeof (value) !== 'undefined' && !!value ? value : null
+);
 
-export const numberToWords = value => {
+export const numberToWords = (value) => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
 };
@@ -27,8 +29,7 @@ export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.o
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
-export const GOOGLE_MAPS_API_URL =
-    'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places';
+export const GOOGLE_MAPS_API_URL = 'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places';
 
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -159,7 +160,10 @@ export const RESEARCH_REPORT_NTRO_SUBTYPES = [
     NTRO_SUBTYPE_RREB_OTHER,
 ];
 
-export const NTRO_SUBTYPES = [...CREATIVE_WORK_NTRO_SUBTYPES, ...RESEARCH_REPORT_NTRO_SUBTYPES];
+export const NTRO_SUBTYPES = [
+    ...CREATIVE_WORK_NTRO_SUBTYPES,
+    ...RESEARCH_REPORT_NTRO_SUBTYPES,
+];
 
 export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK]: 'CW1',
@@ -194,7 +198,7 @@ export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
 export const DOCUMENT_TYPE_DESIGN = 'Design';
 export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
-export const publicationTypes = components => [
+export const publicationTypes = (components) => [
     {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
@@ -254,7 +258,13 @@ export const publicationTypes = components => [
         formComponent: components ? components.ConferencePaperForm : null,
         citationComponent: components ? components.ConferencePaperCitation : null,
         hasFormComponent: true,
-        subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
+        subtypes: [
+            'Fully published paper',
+            'Published abstract',
+            'Poster',
+            'Oral presentation',
+            'Other',
+        ],
     },
     {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
@@ -468,82 +478,64 @@ export const QUICK_TEMPLATES = {
     OPEN_ACCESS_ID: 9,
 };
 
-export const THESIS_SUBTYPES = [
-    {
-        value: 'B.A. Thesis',
-        label: 'B.A. Thesis',
-    },
-    {
-        value: 'B.Sc Thesis',
-        label: 'B.Sc Thesis',
-    },
-    {
-        value: "Bachelor's Thesis",
-        label: "Bachelor's Thesis",
-    },
-    {
-        value: 'Higher Doctorate',
-        label: 'Higher Doctorate',
-    },
-    {
-        value: 'Honours Thesis',
-        label: 'Honours Thesis',
-    },
-    {
-        value: 'M.A. Thesis',
-        label: 'M.A. Thesis',
-    },
-    {
-        value: 'M.Sc Thesis',
-        label: 'M.Sc Thesis',
-    },
-    {
-        value: "Master's Thesis",
-        label: "Master's Thesis",
-    },
-    {
-        value: 'MPhil Thesis',
-        label: 'MPhil Thesis',
-    },
-    {
-        value: 'Other',
-        label: 'Other',
-    },
-    {
-        value: 'PhD Thesis',
-        label: 'PhD Thesis',
-    },
-    {
-        value: 'Professional Doctorate',
-        label: 'Professional Doctorate',
-    },
-];
+export const THESIS_SUBTYPES = [{
+    value: 'B.A. Thesis',
+    label: 'B.A. Thesis',
+}, {
+    value: 'B.Sc Thesis',
+    label: 'B.Sc Thesis',
+}, {
+    value: 'Bachelor\'s Thesis',
+    label: 'Bachelor\'s Thesis',
+}, {
+    value: 'Higher Doctorate',
+    label: 'Higher Doctorate',
+}, {
+    value: 'Honours Thesis',
+    label: 'Honours Thesis',
+}, {
+    value: 'M.A. Thesis',
+    label: 'M.A. Thesis',
+}, {
+    value: 'M.Sc Thesis',
+    label: 'M.Sc Thesis',
+}, {
+    value: 'Master\'s Thesis',
+    label: 'Master\'s Thesis',
+}, {
+    value: 'MPhil Thesis',
+    label: 'MPhil Thesis',
+}, {
+    value: 'Other',
+    label: 'Other',
+}, {
+    value: 'PhD Thesis',
+    label: 'PhD Thesis',
+}, {
+    value: 'Professional Doctorate',
+    label: 'Professional Doctorate',
+}];
 
-export const THESIS_SUBMISSION_SUBTYPES = [
-    {
-        value: undefined,
-        text: 'Select a thesis type',
-    },
-    {
-        value: 'MPhil Thesis',
-        text: 'MPhil Thesis',
-    },
-    {
-        value: 'PhD Thesis',
-        text: 'PhD Thesis',
-    },
-    {
-        value: 'Professional Doctorate',
-        text: 'Professional Doctorate',
-    },
-];
+export const THESIS_SUBMISSION_SUBTYPES = [{
+    value: undefined,
+    text: 'Select a thesis type',
+}, {
+    value: 'MPhil Thesis',
+    text: 'MPhil Thesis',
+}, {
+    value: 'PhD Thesis',
+    text: 'PhD Thesis',
+}, {
+    value: 'Professional Doctorate',
+    text: 'Professional Doctorate',
+}];
 
 /**
  * File type to name map
  */
 export const EXPORT_FORMAT_TO_EXTENSION = {
-    excel: 'xlsx',
-    endnote: 'enw',
+    'excel': 'xlsx',
+    'endnote': 'enw',
 };
 
 export const ORG_UNITS_VOCAB_ID = 453703;
@@ -580,6 +572,7 @@ export const NEW_COLLECTION_DEFAULT_VALUES = {
     rek_date: moment().format(),
     fez_record_search_key_keywords: [],
     fez_record_search_key_ismemberof: [],
+
 };
 
 export const NEW_DATASET_DEFAULT_VALUES = {
@@ -597,7 +590,9 @@ export const NEW_DATASET_DEFAULT_VALUES = {
 export const HDR_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
-    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:152694' }],
+    fez_record_search_key_ismemberof: [
+        { rek_ismemberof: 'UQ:152694' },
+    ],
     rek_display_type: PUBLICATION_TYPE_THESIS,
     fileAccessId: 3,
 };
@@ -605,7 +600,9 @@ export const HDR_THESIS_DEFAULT_VALUES = {
 export const SBS_THESIS_DEFAULT_VALUES = {
     rek_object_type: 3,
     rek_status: 3,
-    fez_record_search_key_ismemberof: [{ rek_ismemberof: 'UQ:155729' }],
+    fez_record_search_key_ismemberof: [
+        { rek_ismemberof: 'UQ:155729' },
+    ],
     rek_display_type: PUBLICATION_TYPE_THESIS,
     rek_genre_type: 'Professional Doctorate',
     fileAccessId: 4,
@@ -630,45 +627,37 @@ export const RETRACTED = 7;
 export const SUBMITTED_FOR_APPROVAL = 3;
 export const UNPUBLISHED = 1;
 
-export const UNPUBLISHED_STATUS = [
-    {
-        value: 'Any unpublished',
-        text: 'Any unpublished',
-    },
-    {
-        value: 'In Creation',
-        text: 'In Creation',
-    },
-    {
-        value: 'In Draft',
-        text: 'In Draft',
-    },
-    {
-        value: 'In Review',
-        text: 'In Review',
-    },
-    {
-        value: 'Retracted',
-        text: 'Retracted',
-    },
-    {
-        value: 'Submitted for Approval',
-        text: 'Submitted for Approval',
-    },
-    {
-        value: 'Unpublished',
-        text: 'Unpublished',
-    },
-];
+export const UNPUBLISHED_STATUS = [{
+    value: 'Any unpublished',
+    text: 'Any unpublished',
+}, {
+    value: 'In Creation',
+    text: 'In Creation',
+}, {
+    value: 'In Draft',
+    text: 'In Draft',
+}, {
+    value: 'In Review',
+    text: 'In Review',
+}, {
+    value: 'Retracted',
+    text: 'Retracted',
+}, {
+    value: 'Submitted for Approval',
+    text: 'Submitted for Approval',
+}, {
+    value: 'Unpublished',
+    text: 'Unpublished',
+}];
 
 export const UNPUBLISHED_STATUS_MAP = {
     'Any unpublished': ANY_UNPUBLISHED,
     'In Creation': IN_CREATION,
     'In Draft': IN_DRAFT,
     'In Review': IN_REVIEW,
-    Retracted: RETRACTED,
+    'Retracted': RETRACTED,
     'Submitted for Approval': SUBMITTED_FOR_APPROVAL,
-    Unpublished: UNPUBLISHED,
+    'Unpublished': UNPUBLISHED,
 };
 
 export const UNPUBLISHED_STATUS_TEXT_MAP = {
@@ -707,13 +696,11 @@ export const LICENSES = [
     },
     {
         value: 453611,
-        text:
-            'Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US',
+        text: 'Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US',
     },
     {
         value: 453612,
-        text:
-            'Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US ',
+        text: 'Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US ',
     },
     {
         value: 453613,
@@ -721,13 +708,11 @@ export const LICENSES = [
     },
     {
         value: 453701,
-        text:
-            'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        text: 'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
     {
         value: 453702,
-        text:
-            'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+        text: 'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
 ];
 
@@ -1053,27 +1038,23 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit author affiliations',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit security for selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`,
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Delete selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
+        url: (pid) => `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'More options',
-        url: pid => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
     },
 ];
 

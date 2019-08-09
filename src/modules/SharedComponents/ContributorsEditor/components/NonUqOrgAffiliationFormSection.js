@@ -19,11 +19,12 @@ export default function NonUqOrgAffiliationFormSection({
     disableOrgTypeEdit,
 }) {
     const options = ORG_AFFILIATION_TYPES.map(option => {
-        return option.value !== '454045' ? (
-            <MenuItem value={option.value} key={option.value}>
+        return (option.value !== '454045')
+            ? <MenuItem value={option.value} key={option.value}>
                 {option.text}
             </MenuItem>
-        ) : null;
+            : null
+        ;
     });
 
     return (

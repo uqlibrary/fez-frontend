@@ -17,7 +17,7 @@ export const notifyProgress = (name, progress) => {
     };
 };
 
-export const notifyFileUploadProgress = (name, dispatch) => event => {
+export const notifyFileUploadProgress = (name, dispatch) => (event) => {
     const progress = Math.floor((event.loaded * 100) / event.total);
     dispatch(notifyProgress(name, progress));
 };
@@ -28,7 +28,7 @@ export const notifyFileUploadProgress = (name, dispatch) => event => {
  * @param name
  * @returns {{type: string}}
  */
-export const notifyUploadFailed = name => {
+export const notifyUploadFailed = (name) => {
     return {
         type: `${FILE_UPLOADED_FAILED}@${name}`,
     };
@@ -55,3 +55,4 @@ export const startFileUpload = () => {
         type: FILE_UPLOAD_STARTED,
     };
 };
+

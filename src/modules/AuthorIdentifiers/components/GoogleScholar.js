@@ -45,7 +45,7 @@ export default class GoogleScholar extends PureComponent {
         this.props.actions.resetSavingAuthorState();
     }
 
-    _handleKeyboardFormSubmit = event => {
+    _handleKeyboardFormSubmit = (event) => {
         if (event.key === 'Enter' && !event.shiftKey) {
             event.preventDefault();
             this.props.handleSubmit();
@@ -61,25 +61,26 @@ export default class GoogleScholar extends PureComponent {
         if (submitFailed && error) {
             alertProps = {
                 ...alertLocale.errorAlert,
-                message:
-                    !!alertLocale.errorAlert && alertLocale.errorAlert.message
-                        ? alertLocale.errorAlert.message(error)
-                        : error,
+                message: !!alertLocale.errorAlert && alertLocale.errorAlert.message
+                    ? alertLocale.errorAlert.message(error)
+                    : error,
             };
         } else if (submitting) {
             alertProps = { ...alertLocale.progressAlert };
         }
-        return alertProps ? <Alert {...alertProps} /> : null;
+        return alertProps ? (<Alert {...alertProps} />) : null;
     };
 
     render() {
         // wait for author details to be loaded
-        if (!this.props.author) {
-            return <div />;
+        if(!this.props.author) {
+            return (<div />);
         }
 
         const txt = locale.pages.googleScholarLink;
-        const cardLocale = !this.props.author.aut_google_scholar_id ? txt.add : txt.edit;
+        const cardLocale = !this.props.author.aut_google_scholar_id
+            ? txt.add
+            : txt.edit;
 
         return (
             <StandardPage title={txt.title}>
@@ -97,8 +98,7 @@ export default class GoogleScholar extends PureComponent {
                                             fullWidth
                                             {...txt.labels.googleScholarIdField}
                                             validate={[validation.required, validation.isValidGoogleScholarId]}
-                                            className="requiredField"
-                                        />
+                                            className="requiredField" />
                                     </Grid>
                                 </Grid>
                             </StandardCard>
@@ -121,8 +121,7 @@ export default class GoogleScholar extends PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting}
                                 children={txt.labels.cancel}
-                                onClick={this._navigateToDashboard}
-                            />
+                                onClick={this._navigateToDashboard} />
                         </Grid>
                         <Grid item xs={12} sm={'auto'}>
                             <Button
@@ -131,8 +130,7 @@ export default class GoogleScholar extends PureComponent {
                                 fullWidth
                                 disabled={this.props.submitting || this.props.invalid}
                                 children={txt.labels.submit}
-                                onClick={this.props.handleSubmit}
-                            />
+                                onClick={this.props.handleSubmit} />
                         </Grid>
                     </Grid>
                 </form>

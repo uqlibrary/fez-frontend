@@ -8,7 +8,7 @@ export default class Async extends React.Component {
     };
     componentWillMount = () => {
         this.cancelUpdate = false;
-        this.props.load.then(c => {
+        this.props.load.then((c) => {
             this.C = c;
             if (!this.cancelUpdate) {
                 this.forceUpdate();
@@ -23,9 +23,12 @@ export default class Async extends React.Component {
     render = () => {
         const { componentProps } = this.props;
         if (this.C) {
-            return this.C.default ? <this.C.default {...componentProps} /> : <this.C {...componentProps} />;
+            return this.C.default
+                ? <this.C.default {...componentProps} />
+                : <this.C {...componentProps} />;
         } else {
             return null;
         }
-    };
+    }
 }
+
