@@ -2,9 +2,9 @@ import locale from 'locale/components';
 import moment from 'moment';
 const converter = require('number-to-words');
 
-const getValue = value => (typeof value !== 'undefined' && !!value ? value : null);
+const getValue = (value) => (typeof value !== 'undefined' && !!value ? value : null);
 
-export const numberToWords = value => {
+export const numberToWords = (value) => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
 };
@@ -194,8 +194,8 @@ export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
 export const DOCUMENT_TYPE_DESIGN = 'Design';
 export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
-export const publicationTypes = components => [
-    {
+export const publicationTypes = (components) => ({
+    [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
@@ -203,7 +203,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.AudioDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_BOOK]: {
         id: PUBLICATION_TYPE_BOOK,
         name: DOCUMENT_TYPE_BOOK,
         class: 'Uqlibrary\\FezCore\\Types\\Book',
@@ -224,7 +224,7 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
         name: DOCUMENT_TYPE_BOOK_CHAPTER,
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
@@ -246,7 +246,7 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
         name: 'Conference Paper',
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
@@ -256,7 +256,7 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
     },
-    {
+    [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
         name: 'Conference Proceedings',
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
@@ -264,7 +264,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_CREATIVE_WORK]: {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: DOCUMENT_TYPE_CREATIVE_WORK,
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
@@ -274,14 +274,14 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: CREATIVE_WORK_NTRO_SUBTYPES,
     },
-    {
+    [PUBLICATION_TYPE_DATA_COLLECTION]: {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
         name: 'Data Collection',
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
         citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT]: {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         name: 'Department Technical Report',
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
@@ -289,7 +289,7 @@ export const publicationTypes = components => [
         formComponent: components ? components.DepartmentTechnicalReportForm : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_DESIGN]: {
         id: PUBLICATION_TYPE_DESIGN,
         name: DOCUMENT_TYPE_DESIGN,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
@@ -298,14 +298,14 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
     },
-    {
+    [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
         name: 'Digilib Image',
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
         citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
         name: 'Generic Document',
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
@@ -313,7 +313,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_IMAGE]: {
         id: PUBLICATION_TYPE_IMAGE,
         name: 'Image',
         class: 'Uqlibrary\\FezCore\\Types\\Image',
@@ -321,14 +321,14 @@ export const publicationTypes = components => [
         formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_JOURNAL]: {
         id: PUBLICATION_TYPE_JOURNAL,
         name: 'Journal',
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
         citationComponent: components ? components.JournalCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
         name: DOCUMENT_TYPE_JOURNAL_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
@@ -352,14 +352,14 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_MANUSCRIPT]: {
         id: PUBLICATION_TYPE_MANUSCRIPT,
         name: 'Manuscript',
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
         citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: {
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
         name: 'Newspaper Article',
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
@@ -367,7 +367,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_PATENT]: {
         id: PUBLICATION_TYPE_PATENT,
         name: 'Patent',
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
@@ -375,7 +375,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.PatentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_PREPRINT]: {
         id: PUBLICATION_TYPE_PREPRINT,
         name: 'Preprint',
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
@@ -383,7 +383,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.PreprintCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_RESEARCH_REPORT]: {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: DOCUMENT_TYPE_RESEARCH_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
@@ -392,7 +392,7 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
     },
-    {
+    [PUBLICATION_TYPE_SEMINAR_PAPER]: {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
         name: 'Seminar Paper',
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
@@ -400,7 +400,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_THESIS]: {
         id: PUBLICATION_TYPE_THESIS,
         name: 'Thesis',
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
@@ -408,7 +408,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
         name: 'Video Document',
         class: 'Uqlibrary\\FezCore\\Types\\Video',
@@ -416,7 +416,7 @@ export const publicationTypes = components => [
         citationComponent: components ? components.VideoDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_WORKING_PAPER]: {
         id: PUBLICATION_TYPE_WORKING_PAPER,
         name: 'Working Paper',
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
@@ -424,14 +424,14 @@ export const publicationTypes = components => [
         citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_REFERENCE_ENTRY]: {
         id: PUBLICATION_TYPE_REFERENCE_ENTRY,
         name: 'Reference Entry',
         class: 'Uqlibrary\\FezCore\\Types\\ReferenceEntry',
         citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: false,
     },
-];
+});
 
 export const DOCUMENT_TYPES_LOOKUP = {
     202: 'Generic document',
@@ -1053,27 +1053,27 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid =>
+        url: (pid) =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit author affiliations',
-        url: pid =>
+        url: (pid) =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid => `${APP_URL}records/${pid}/edit`,
+        url: (pid) => `${APP_URL}records/${pid}/edit`,
     },
     {
         label: 'Delete selected record',
-        url: pid =>
+        url: (pid) =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'More options',
-        url: pid => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
     },
 ];
 
