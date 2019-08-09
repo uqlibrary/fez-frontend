@@ -2,12 +2,16 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 import { APP_URL } from 'config';
 import {
+    PrintIcon,
+    ResearchGateIcon,
+    MendeleyIcon,
+} from './Icons';
+import {
+    EmailIcon,
     FacebookIcon,
     TwitterIcon,
-    LinkedinIcon, ResearchGateIcon, MendeleyIcon,
-    EmailIcon,
-    PrintIcon,
-} from './Icons';
+    LinkedinIcon,
+} from 'react-share/lib';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
 
@@ -119,8 +123,9 @@ export class SocialShare extends Component {
                     const Icon = locale[item].icon;
                     return (
                         <Grid item id={item.id} key={index} style={{ marginRight: this.props.spaceBetween }}>
-                            <ExternalLink {...locale[item].link} >
+                            <ExternalLink {...locale[item].link} id={locale[item].id} >
                                 <Icon
+                                    /* istanbul ignore if */
                                     size={this.context.isMobile ? this.props.size * 1.5 : this.props.size}
                                     round={this.props.round}
                                 />
