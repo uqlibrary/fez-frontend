@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
-// import { APP_URL } from 'config';
+import { APP_URL } from 'config';
 import {
     FacebookIcon,
     TwitterIcon,
@@ -20,15 +20,17 @@ export class SocialShare extends Component {
         round: PropTypes.bool,
     };
 
+    static contextTypes = {
+        isMobile: PropTypes.bool,
+    };
+
     static defaultProps = {
         size: 24,
         round: true,
         spaceBetween: 4,
-        // services: ['facebook', 'twitter', 'linkedin', 'researchgate', 'mendeley', 'email', 'print'],
     };
 
     render() {
-        const APP_URL = 'http://espace.library.uq.edu.au';
         const pub = this.props.publication;
         const locale = {
             facebook: {
@@ -114,7 +116,10 @@ export class SocialShare extends Component {
                     return (
                         <Grid item id={item.id} key={index} style={{ marginRight: this.props.spaceBetween }}>
                             <ExternalLink {...locale[item].link} >
-                                <Icon size={this.props.size} round={this.props.round}/>
+                                <Icon
+                                    size={this.context.isMobile ? this.props.size * 1.5 : this.props.size}
+                                    round={this.props.round}
+                                />
                             </ExternalLink>
                         </Grid>
                     );
