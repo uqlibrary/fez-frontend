@@ -36,8 +36,8 @@ Cypress.Commands.add('type_ckeditor', (element, content) => {
 
 Cypress.Commands.add('closeUnsupported', () => {
     cy.get('#unsupportedBrowser.card button')
-        .then(($button) => {
-            // Button is only visible if browser is unsupported.
+        .then($button => {
+        // Button is only visible if browser is unsupported.
             if ($button.filter(':visible').length) {
                 cy.wrap($button)
                     .click();
@@ -45,7 +45,7 @@ Cypress.Commands.add('closeUnsupported', () => {
         });
 });
 
-Cypress.Commands.add('navToHomeFromMenu', (locale) => {
+Cypress.Commands.add('navToHomeFromMenu', locale => {
     const baseUrl = Cypress.config('baseUrl');
 
     // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
@@ -56,7 +56,7 @@ Cypress.Commands.add('navToHomeFromMenu', (locale) => {
         .click();
     // Say yes to 'Are you sure' if it does trigger
     cy.url()
-        .then(($url) => {
+        .then($url => {
             if ($url !== `${baseUrl}/`) {
                 cy.contains(locale.confirmationTitle)
                     .closest('[role="document"]')
