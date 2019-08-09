@@ -30,6 +30,10 @@ export class SocialShare extends Component {
         spaceBetween: 4,
     };
 
+    printPage = () => {
+        window.print();
+    };
+
     render() {
         const pub = this.props.publication;
         const locale = {
@@ -101,7 +105,7 @@ export class SocialShare extends Component {
                 id: 'print',
                 link: {
                     href: '#',
-                    onClick: () => window.print(),
+                    onClick: this.printPage,
                     target: '',
                     title: 'Print this record',
                     openInNewIcon: false,

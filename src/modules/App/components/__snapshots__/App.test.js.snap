@@ -16270,6 +16270,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-227",
                               }
                             }
+                            id="menudrawer"
                             onClose={[Function]}
                             open={false}
                             variant="temporary"
@@ -16292,6 +16293,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 }
                               }
                               elevation={16}
+                              id="menudrawer"
                               onClose={[Function]}
                               open={false}
                               theme={
@@ -16731,6 +16733,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   }
                                 }
                                 className="MuiDrawer-modal-245"
+                                id="menudrawer"
                                 onClose={[Function]}
                                 open={false}
                               >
@@ -16758,6 +16761,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   disablePortal={false}
                                   disableRestoreFocus={false}
                                   hideBackdrop={false}
+                                  id="menudrawer"
                                   keepMounted={false}
                                   manager={
                                     ModalManager {
