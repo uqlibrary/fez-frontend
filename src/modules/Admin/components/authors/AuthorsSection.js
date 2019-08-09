@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
-import { adminInterfaceConfig } from 'config';
+import { adminInterfaceConfig } from 'config/adminInterface';
 
 /* istanbul ignore next */
 export const AuthorsSection = ({ disabled = false }) => {

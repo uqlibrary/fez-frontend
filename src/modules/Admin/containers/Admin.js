@@ -90,8 +90,14 @@ const mapStateToProps = (state) => {
                 collection: [],
                 subject: [],
                 adminSection: {
-                    rek_herdc_notes: recordToView.rek_herdc_notes,
-                    fez_internal_notes: { ...recordToView.fez_internal_notes },
+                    rek_herdc_notes: {
+                        plainText: (recordToView || {}).rek_herdc_notes,
+                        htmlText: (recordToView || {}).rek_herdc_notes,
+                    },
+                    internalNotes: {
+                        plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                        htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                    },
                 },
                 identifiersSection:
                       (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},

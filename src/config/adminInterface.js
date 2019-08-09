@@ -51,10 +51,10 @@ export const fieldConfig = {
             format: (value) => Immutable.Map(value),
         },
     },
-    fez_internal_notes: {
+    internalNotes: {
         component: RichEditorField,
         componentProps: {
-            name: 'adminSection.fez_internal_notes.ain_detail',
+            name: 'adminSection.internalNotes',
             title: 'Internal notes',
             titleProps: {
                 variant: 'caption',
@@ -449,7 +449,7 @@ export const adminInterfaceConfig = {
         admin: () => [
             {
                 groups: [
-                    ['fez_internal_notes'],
+                    ['internalNotes'],
                     ['rek_herdc_notes'],
                     // ['fez_record_search_key_retracted']
                 ],
