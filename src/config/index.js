@@ -19,6 +19,7 @@ export * as routes from './routes';
 export * as openAccessConfig from './openAccess';
 export { default as incompleteRecord } from './incompleteRecord';
 export { viewRecordsConfig } from './viewRecord';
+export { adminInterfaceConfig, valueExtractor, fieldConfig } from './adminInterface';
 export { trendingPublicationsConfig } from './trendingPublications';
 export { claimRecordConfig } from './claimRecord';
 export { mui1theme } from './theme';

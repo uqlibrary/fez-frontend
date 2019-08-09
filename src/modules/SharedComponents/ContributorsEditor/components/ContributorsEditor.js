@@ -64,7 +64,7 @@ export class ContributorsEditor extends PureComponent {
         }
     };
 
-    getContributorsFromProps = props => {
+    getContributorsFromProps = (props) => {
         if (props.input && props.input.name && props.input.value) {
             return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
         }
@@ -72,10 +72,10 @@ export class ContributorsEditor extends PureComponent {
         return [];
     };
 
-    addContributor = contributor => {
+    addContributor = (contributor) => {
         // only unique identifiers can be added
         if (
-            this.state.contributors.filter(item => {
+            this.state.contributors.filter((item) => {
                 return !!contributor.aut_id && item.aut_id === contributor.aut_id;
             }).length > 0
         ) {
@@ -157,7 +157,7 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    assignContributor = index => {
+    assignContributor = (index) => {
         const newContributors = this.state.contributors.map((item, itemIndex) => ({
             ...item,
             selected:
@@ -170,8 +170,8 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    selectContributor = index => {
-        this.setState(prevState => ({
+    selectContributor = (index) => {
+        this.setState((prevState) => ({
             contributors: prevState.contributors.map((contributor, itemIndex) => ({
                 ...contributor,
                 selected: index === itemIndex,
@@ -214,7 +214,7 @@ export class ContributorsEditor extends PureComponent {
             ...this.props,
             isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
-            onSubmit: contributor => onSubmit(contributor, index),
+            onSubmit: (contributor) => onSubmit(contributor, index),
         };
 
         if (this.props.editMode) {
@@ -294,7 +294,7 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-export const mapStateToProps = state => {
+export const mapStateToProps = (state) => {
     return {
         author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
     };

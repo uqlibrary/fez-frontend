@@ -24,7 +24,7 @@ import queryString from 'query-string';
 import { validation } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
-function useQueryStringTabValueState(location, initialValue = 'security') {
+function useQueryStringTabValueState(location, initialValue) {
     const tabValue =
         queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
     return useState(tabValue);
@@ -102,8 +102,13 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                                     <Tabs
                                         value={currentTabValue}
                                         variant="fullWidth"
-                                        style={{ marginRight: -56, marginLeft: -56 }}
-                                        classes={{ indicator: classes.tabIndicator }}
+                                        style={{
+                                            marginRight: -56,
+                                            marginLeft: -56,
+                                        }}
+                                        classes={{
+                                            indicator: classes.tabIndicator,
+                                        }}
                                         onChange={handleTabChange}
                                         variant="scrollable"
                                         scrollButtons="on"

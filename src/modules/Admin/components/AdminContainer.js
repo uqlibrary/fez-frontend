@@ -103,7 +103,12 @@ export const AdminContainer = ({
     }
 
     return (
-        <TabbedContext.Provider value={{ tabbed: isMobileView ? false : tabbed, toggleTabbed: handleToggle }}>
+        <TabbedContext.Provider
+            value={{
+                tabbed: isMobileView ? false : tabbed,
+                toggleTabbed: handleToggle,
+            }}
+        >
             <RecordContext.Provider value={{ record: recordToView }}>
                 <AdminInterface
                     classes={classes}
@@ -115,16 +120,16 @@ export const AdminContainer = ({
                     location={location}
                     history={history}
                     tabs={{
-                        bibliographic: {
-                            component: BibliographicSection,
+                        admin: {
+                            component: AdminSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         identifiers: {
                             component: IdentifiersSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
-                        admin: {
-                            component: AdminSection,
+                        bibliographic: {
+                            component: BibliographicSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         grantInformation: {

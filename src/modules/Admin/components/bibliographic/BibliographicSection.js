@@ -151,9 +151,8 @@ export const BibliographicSection = ({ disabled = false }) => {
     //                         <Field
     //                             component={GenericTextField}
     //                             disabled={disabled}
-    //                             name={`${bibliographicSection
-    // .fez_record_search_key_place_of_publication
-    // .rek_place_of_publication}`}
+    //                             name=
+    // "bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication"
     //                             fullWidth
     //                             label="Place of publication"
     //                             placeholder=""
