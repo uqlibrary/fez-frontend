@@ -4,7 +4,7 @@ import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
@@ -23,6 +23,7 @@ export class ListRow extends PureComponent {
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
         classes: PropTypes.object,
+        itemTemplate: PropTypes.func,
     };
 
     static defaultProps = {
@@ -41,25 +42,25 @@ export class ListRow extends PureComponent {
 
     showConfirmation = () => {
         this.confirmationBox.showConfirmation();
-    }
+    };
 
     deleteRecord = () => {
         if (!this.props.disabled && this.props.onDelete) {
             this.props.onDelete(this.props.item, this.props.index);
         }
-    }
+    };
 
     onMoveUp = () => {
         if (!this.props.disabled && this.props.onMoveUp) {
             this.props.onMoveUp(this.props.item, this.props.index);
         }
-    }
+    };
 
     onMoveDown = () => {
         if (!this.props.disabled && this.props.onMoveDown) {
             this.props.onMoveDown(this.props.item, this.props.index);
         }
-    }
+    };
 
     render() {
         const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
@@ -68,45 +69,42 @@ export class ListRow extends PureComponent {
         return (
             <React.Fragment>
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
+                    onRef={(ref) => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
                 <Grid container alignItems="center" spacing={8} className={classes.row}>
                     <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
-                        <Typography variant="body2">{item.value || item}</Typography>
+                        <this.props.itemTemplate item={item} />
                     </Grid>
-                    {
-                        !hideReorder &&
+                    {!hideReorder && (
                         <Grid item xs={5} sm={5} className={classes.center}>
                             <Grid container justify="flex-end">
-                                {
-                                    canMoveUp &&
+                                {canMoveUp && (
                                     <Grid item>
                                         <Tooltip title={moveUpHint}>
                                             <IconButton onClick={this.onMoveUp} disabled={disabled}>
-                                                <KeyboardArrowUp/>
+                                                <KeyboardArrowUp />
                                             </IconButton>
                                         </Tooltip>
                                     </Grid>
-                                }
-                                {
-                                    canMoveDown &&
+                                )}
+                                {canMoveDown && (
                                     <Grid item>
                                         <Tooltip title={moveDownHint}>
                                             <IconButton onClick={this.onMoveDown} disabled={disabled}>
-                                                <KeyboardArrowDown/>
+                                                <KeyboardArrowDown />
                                             </IconButton>
                                         </Tooltip>
                                     </Grid>
-                                }
+                                )}
                             </Grid>
                         </Grid>
-                    }
+                    )}
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteHint}>
                             <IconButton onClick={this.showConfirmation} disabled={disabled}>
-                                <Delete/>
+                                <Delete />
                             </IconButton>
                         </Tooltip>
                     </Grid>
@@ -121,7 +119,8 @@ const styles = () => ({
         textAlign: 'center',
     },
     row: {
-        marginLeft: 0, marginRight: 0,
+        marginLeft: 0,
+        marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
 });

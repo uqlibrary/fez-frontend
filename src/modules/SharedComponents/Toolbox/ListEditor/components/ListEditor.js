@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
+import { GenericTemplate } from './GenericTemplate';
 
-export default class ListsEditor extends Component {
+export default class ListEditor extends Component {
     static propTypes = {
-        formComponent: PropTypes.func.isRequired,
+        formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
         inputField: PropTypes.oneOfType([
             PropTypes.object, // eg connected auto complete fields
             PropTypes.func,
@@ -25,6 +26,7 @@ export default class ListsEditor extends Component {
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
+        rowItemTemplate: PropTypes.func,
     };
 
     static defaultProps = {
@@ -39,7 +41,8 @@ export default class ListsEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
-        inputNormalizer: value => value,
+        inputNormalizer: (value) => value,
+        rowItemTemplate: GenericTemplate,
     };
 
     constructor(props) {
@@ -51,7 +54,7 @@ export default class ListsEditor extends Component {
             props.input.value.toJS();
 
         this.state = {
-            itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
+            itemList: valueAsJson ? valueAsJson.map((item) => item[props.searchKey.value]) : [],
         };
     }
 
@@ -62,18 +65,19 @@ export default class ListsEditor extends Component {
         }
     }
 
-    transformOutput = items => {
+    transformOutput = (items) => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
 
-    addItem = item => {
+    addItem = (item) => {
+        console.log(item);
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
             (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)
         ) {
-            // If when the item is submitted, there is no maxCount, its not exceeding the maxCount,
-            // is distinct and isnt already in the list...
+            // If when the item is submitted, there is no maxCount,
+            // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
@@ -82,9 +86,10 @@ export default class ListsEditor extends Component {
                 });
             } else if (!!item && item.includes(',') && !item.key && !item.value) {
                 // Item is a string with commas in it - we will strip and separate the values to be individual keywords
-                const commaSepListToArray = item.split(','); // Convert the string to an array of values
+                // Convert the string to an array of values
+                const commaSepListToArray = item.split(',');
                 // Filter out empty array values
-                const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
+                const cleanArray = commaSepListToArray.filter((item) => item.trim() !== '');
                 const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
                 if (totalArray.length > this.props.maxCount) {
                     // If the final list is longer that maxCount, trim it back
@@ -149,6 +154,7 @@ export default class ListsEditor extends Component {
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}
+                itemTemplate={this.props.rowItemTemplate}
             />
         ));
 

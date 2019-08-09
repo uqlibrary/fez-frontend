@@ -25,11 +25,9 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <Component
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
@@ -88,11 +86,9 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <Component
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
@@ -180,11 +176,9 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
       sm={11}
       xs={10}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <Component
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
@@ -232,11 +226,9 @@ exports[`ListRow renders  should move row down 1`] = `
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <Component
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
@@ -310,11 +302,9 @@ exports[`ListRow renders  should move row up 1`] = `
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <Component
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
