@@ -68,7 +68,28 @@ export default class ViewRecord extends PureComponent {
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
                         <PublicationCitation publication={recordToView} hideTitle hideContentIndicators/>
-                        <SocialShare publication={this.props.recordToView} />
+                    </Grid>
+                    <Grid item xs={12}>
+                        <Grid container spacing={16} style={{ marginBottom: 4 }}>
+                            <Grid item xs />
+                            <Grid item>
+                                <SocialShare
+                                    publication={this.props.recordToView}
+                                    services={
+                                        [
+                                            'facebook',
+                                            'twitter',
+                                            'linkedin',
+                                            'researchgate',
+                                            'mendeley',
+                                            'email',
+                                            'print',
+                                        ]
+                                    }
+                                    spaceBetween={4}
+                                />
+                            </Grid>
+                        </Grid>
                     </Grid>
                 </Grid>
                 <Grid container spacing={24}>

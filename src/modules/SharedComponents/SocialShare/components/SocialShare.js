@@ -2,19 +2,11 @@ import React, { Component } from 'react';
 import Grid from '@material-ui/core/Grid';
 // import { APP_URL } from 'config';
 import {
-    // FacebookShareButton,
-    // LinkedinShareButton,
-    // TwitterShareButton,
-    // WhatsappShareButton,
-    // RedditShareButton,
-    // EmailShareButton,
     FacebookIcon,
     TwitterIcon,
-    LinkedinIcon,
-    // WhatsappIcon,
-    // RedditIcon,
-    // EmailIcon,
-
+    LinkedinIcon, ResearchGateIcon, MendeleyIcon,
+    EmailIcon,
+    PrintIcon,
 } from './Icons';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import PropTypes from 'prop-types';
@@ -23,18 +15,16 @@ export class SocialShare extends Component {
     static propTypes = {
         publication: PropTypes.object.isRequired,
         size: PropTypes.number,
-        sharers: PropTypes.array,
+        spaceBetween: PropTypes.number,
+        services: PropTypes.array,
         round: PropTypes.bool,
     };
 
     static defaultProps = {
-        publication: {
-            rek_title: 'Test',
-            rek_pid: 'UQ:26a32ac',
-        },
         size: 24,
         round: true,
-        sharers: ['facebook', 'twitter', 'linkedin'],
+        spaceBetween: 4,
+        // services: ['facebook', 'twitter', 'linkedin', 'researchgate', 'mendeley', 'email', 'print'],
     };
 
     render() {
@@ -45,6 +35,8 @@ export class SocialShare extends Component {
                 id: 'facebook',
                 link: {
                     href: `https://www.facebook.com/sharer/sharer.php?u=${APP_URL}/view/${pub.rek_pid}`,
+                    width: 500,
+                    height: 500,
                     title: 'Share this record on Facebook',
                     openInNewIcon: false,
                 },
@@ -54,6 +46,8 @@ export class SocialShare extends Component {
                 id: 'twitter',
                 link: {
                     href: `https://twitter.com/share?url=${APP_URL}/view/${pub.rek_pid}&text=${pub.rek_title} - `,
+                    width: 500,
+                    height: 300,
                     title: 'Share this record on Twitter',
                     openInNewIcon: false,
                 },
@@ -62,20 +56,63 @@ export class SocialShare extends Component {
             linkedin: {
                 id: 'linkedin',
                 link: {
-                    href: `https://twitter.com/share?url=${APP_URL}/view/${pub.rek_pid}&text=${pub.rek_title} - `,
+                    href: `https://linkedin.com/shareArticle?url=${APP_URL}/view/${pub.rek_pid}`,
+                    width: 500,
+                    height: 500,
                     title: 'Share this record on LinkedIn',
                     openInNewIcon: false,
                 },
                 icon: LinkedinIcon,
             },
+            researchgate: {
+                id: 'researchgate',
+                link: {
+                    href: `https://www.researchgate.net/go.Share.html?url=${APP_URL}/view/${pub.rek_pid}&title=${pub.rek_title}`,
+                    width: 500,
+                    height: 600,
+                    title: 'Share this record on Research Gate',
+                    openInNewIcon: false,
+                },
+                icon: ResearchGateIcon,
+            },
+            mendeley: {
+                id: 'mendeley',
+                link: {
+                    href: `https://profitquery.com/add-to/mendeley/?url=${APP_URL}/view/${pub.rek_pid}`,
+                    width: 500,
+                    height: 500,
+                    title: 'Share this record on Mendeley',
+                    openInNewIcon: false,
+                },
+                icon: MendeleyIcon,
+            },
+            email: {
+                id: 'email',
+                link: {
+                    href: `mailto:?subject=${pub.rek_title}&body=Please review this record in UQ eSpace: ${APP_URL}/view/${pub.rek_pid}`,
+                    title: 'Share this record via Email',
+                    openInNewIcon: false,
+                },
+                icon: EmailIcon,
+            },
+            print: {
+                id: 'print',
+                link: {
+                    href: '#',
+                    onClick: () => window.print(),
+                    target: '',
+                    title: 'Print this record',
+                    openInNewIcon: false,
+                },
+                icon: PrintIcon,
+            },
         };
-
         return (
-            <Grid container spacing={8} style={{ marginTop: 6, marginBottom: 6 }} id="social-share">
-                {this.props.sharers.map((item, index) => {
+            <Grid container spacing={0} id="social-share">
+                {this.props.services && this.props.services.length > 0 && this.props.services.map((item, index) => {
                     const Icon = locale[item].icon;
                     return (
-                        <Grid item id={item.id} key={index}>
+                        <Grid item id={item.id} key={index} style={{ marginRight: this.props.spaceBetween }}>
                             <ExternalLink {...locale[item].link} >
                                 <Icon size={this.props.size} round={this.props.round}/>
                             </ExternalLink>
