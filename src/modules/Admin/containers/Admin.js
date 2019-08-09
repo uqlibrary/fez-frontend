@@ -7,12 +7,40 @@ import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { withRouter } from 'react-router';
 import { bindActionCreators } from 'redux';
 import * as actions from 'actions';
+import { adminInterfaceConfig, valueExtractor } from 'config/adminInterface';
 import { viewRecordsConfig } from 'config';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
 
 export const FORM_NAME = 'Prototype';
 
-export const isFileValid = dataStream => {
+export const getBibliographicInitialValues = (record) =>
+    (adminInterfaceConfig[record.rek_display_type] || {})
+        .bibliographic(
+            record.fez_record_search_key_language.length > 1 ||
+                record.fez_record_search_key_language[0].rek_language !== 'eng'
+        )
+        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+
+export const getIdentifiersInitialValues = (record) =>
+    (adminInterfaceConfig[record.rek_display_type] || {})
+        .identifiers()
+        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+
+export const isFileValid = (dataStream) => {
     const {
         files: { blacklist },
     } = viewRecordsConfig;
@@ -21,7 +49,7 @@ export const isFileValid = dataStream => {
 };
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(adminUpdate(values.toJS())).catch(error => {
+    return dispatch(adminUpdate(values.toJS())).catch((error) => {
         throw new SubmissionError({ _error: error });
     });
 };
@@ -31,7 +59,7 @@ let PrototypeContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
     const recordToView = state.get('viewRecordReducer').recordToView;
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     let initialFormValues = null;
@@ -44,10 +72,17 @@ const mapStateToProps = state => {
                 rek_date: recordToView.rek_date || recordToView.rek_created_date,
                 collection: [],
                 subject: [],
+                adminSection: {
+                    rek_herdc_notes: recordToView.rek_herdc_notes,
+                    fez_internal_notes: { ...recordToView.fez_internal_notes },
+                },
+                identifiersSection: {},
                 securitySection: {
                     rek_security_policy: recordToView.rek_security_policy,
                     ...(recordType === RECORD_TYPE_COLLECTION
-                        ? { rek_datastream_policy: recordToView.rek_datastream_policy }
+                        ? {
+                            rek_datastream_policy: recordToView.rek_datastream_policy,
+                        }
                         : {}),
                     ...(recordType === RECORD_TYPE_RECORD
                         ? {
@@ -56,6 +91,8 @@ const mapStateToProps = state => {
                         }
                         : {}),
                 },
+                bibliographicSection:
+                    (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
             },
         };
     }
@@ -69,7 +106,7 @@ const mapStateToProps = state => {
     };
 };
 
-const mapDispatchToProps = dispatch => ({
+const mapDispatchToProps = (dispatch) => ({
     actions: bindActionCreators(actions, dispatch),
 });
 
