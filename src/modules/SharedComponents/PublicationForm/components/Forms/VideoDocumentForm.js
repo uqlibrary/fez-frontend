@@ -28,9 +28,9 @@ export default class VideoDocumentForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.video;
         const editors = this.props.formValues && this.props.formValues.get('editors');
-        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
-        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
+        const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -74,7 +74,8 @@ export default class VideoDocumentForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}

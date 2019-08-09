@@ -42,7 +42,8 @@ export default class PatentForm extends Component {
                                     multiline
                                     rows={1}
                                     label={txt.information.fieldLabels.title}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -51,14 +52,16 @@ export default class PatentForm extends Component {
                                     name="fez_record_search_key_patent_number.rek_patent_number"
                                     type="text"
                                     fullWidth
-                                    label={txt.information.fieldLabels.patentNumber}/>
+                                    label={txt.information.fieldLabels.patentNumber}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -72,7 +75,8 @@ export default class PatentForm extends Component {
                                     name="fez_record_search_key_country_of_issue.rek_country_of_issue"
                                     type="text"
                                     fullWidth
-                                    label={txt.information.fieldLabels.countryOfOrigin} />
+                                    label={txt.information.fieldLabels.countryOfOrigin}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -81,7 +85,8 @@ export default class PatentForm extends Component {
                                     name="fez_record_search_key_publisher.rek_publisher"
                                     type="text"
                                     fullWidth
-                                    label={txt.information.fieldLabels.patentOwner} />
+                                    label={txt.information.fieldLabels.patentOwner}
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>
@@ -96,7 +101,8 @@ export default class PatentForm extends Component {
                             name="authors"
                             locale={txt.authors.field}
                             disabled={this.props.submitting}
-                            validate={[validation.authorRequired]} />
+                            validate={[validation.authorRequired]}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -111,7 +117,8 @@ export default class PatentForm extends Component {
                                     fullWidth
                                     multiline
                                     rows={1}
-                                    label={txt.other.fieldLabels.notes}/>
+                                    label={txt.other.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

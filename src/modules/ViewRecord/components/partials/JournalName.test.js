@@ -52,29 +52,27 @@ describe('Journal Name Component test ', () => {
         expect(wrapper.instance().getERAYears()).toEqual([]);
 
         // Journal ISSN array is empty - should return empty array
-        expect(wrapper.instance().getERAYears([
-            { fez_journal_issns: [] },
-        ])).toEqual([]);
+        expect(wrapper.instance().getERAYears([{ fez_journal_issns: [] }])).toEqual([]);
 
         // Multiple journals have same ERA year - should only return one entry
-        const arrayWithDuplicates = [{
-            fez_journal_issns: [
-                {
-                    jni_id: 13071,
-                    fez_journal: {
-                        jnl_era_year: 2001,
+        const arrayWithDuplicates = [
+            {
+                fez_journal_issns: [
+                    {
+                        jni_id: 13071,
+                        fez_journal: {
+                            jnl_era_year: 2001,
+                        },
                     },
-                },
-                {
-                    jni_id: 13072,
-                    fez_journal: {
-                        jnl_era_year: 2001,
+                    {
+                        jni_id: 13072,
+                        fez_journal: {
+                            jnl_era_year: 2001,
+                        },
                     },
-                },
-            ],
-        }];
-        expect(
-            wrapper.instance().getERAYears(arrayWithDuplicates)
-        ).toEqual([2001]);
+                ],
+            },
+        ];
+        expect(wrapper.instance().getERAYears(arrayWithDuplicates)).toEqual([2001]);
     });
 });

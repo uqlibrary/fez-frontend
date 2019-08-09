@@ -40,10 +40,7 @@ export class HelpIcon extends Component {
     render() {
         const { classes, tooltip } = this.props;
         return (
-            <Tooltip title={tooltip}
-                placement="bottom-end"
-                TransitionComponent={Fade}
-            >
+            <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
                 <IconButton onClick={this.setDrawerContent}>
                     <HelpOutline className={classes.helpIcon} titleAccess={tooltip} />
                 </IconButton>

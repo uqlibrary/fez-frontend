@@ -434,8 +434,7 @@ context('Data Collection form', () => {
             .type('16', { delay: 1 })
             .clear();
         cy.get('input#keywords-input').type('Keywords 1', { delay: 1 });
-        cy.contains('p', 'Invalid day')
-            .should('not.be.visible');
+        cy.contains('p', 'Invalid day').should('not.be.visible');
 
         // an 31st of april is an invalid date
         cy.contains('span', 'Collection start date')
@@ -455,9 +454,7 @@ context('Data Collection form', () => {
             .find('input#year')
             .type('2000', { delay: 1 });
 
-        cy.contains('p', 'Invalid day')
-            .should('be.visible');
-
+        cy.contains('p', 'Invalid day').should('be.visible');
 
         // now check valid dates
         cy.contains('span', 'Collection start date')
@@ -473,8 +470,7 @@ context('Data Collection form', () => {
             .clear()
             .type('2100', { delay: 1 });
 
-        cy.contains('p', 'Date must be before now')
-            .should('be.visible');
+        cy.contains('p', 'Date must be before now').should('be.visible');
 
         // enter valid year
         cy.contains('span', 'Collection start date')
@@ -483,8 +479,7 @@ context('Data Collection form', () => {
             .clear()
             .type('1976', { delay: 1 });
 
-        cy.contains('p', 'Date must be before now')
-            .should('not.be.visible');
+        cy.contains('p', 'Date must be before now').should('not.be.visible');
 
         cy.get('div.Alert')
             .find('li')
@@ -511,8 +506,7 @@ context('Data Collection form', () => {
             .find('input#year')
             .type('2100', { delay: 1 });
 
-        cy.contains('p', 'Date must be before now')
-            .should('be.visible');
+        cy.contains('p', 'Date must be before now').should('be.visible');
 
         // enter end date before start date and see error
         cy.contains('span', 'Collection end date')
@@ -521,8 +515,7 @@ context('Data Collection form', () => {
             .clear()
             .type('1974', { delay: 1 });
 
-        cy.contains('p', 'Date range is not valid')
-            .should('be.visible');
+        cy.contains('p', 'Date range is not valid').should('be.visible');
 
         // finally, enter valid date
         cy.contains('span', 'Collection end date')
@@ -531,8 +524,7 @@ context('Data Collection form', () => {
             .clear()
             .type('1976', { delay: 1 });
 
-        cy.contains('p', 'Date range is not valid')
-            .should('not.be.visible');
+        cy.contains('p', 'Date range is not valid').should('not.be.visible');
 
         cy.get('div.Alert')
             .find('li')

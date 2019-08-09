@@ -7,7 +7,7 @@ import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 import { routes } from 'config';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         accountLoading: state.get('accountReducer').accountLoading,
         ...state.get('publicationsReducer').datasets,
@@ -24,11 +24,14 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: {
             ...bindActionCreators(actions, dispatch),
-            loadAuthorPublications: (state) => dispatch(actions.searchAuthorPublications(state, 'datasets')),
+            loadAuthorPublications: state => dispatch(actions.searchAuthorPublications(state, 'datasets')),
         },
     };
 }
 
-let ResearchContainer = connect(mapStateToProps, mapDispatchToProps)(MyRecords);
+let ResearchContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(MyRecords);
 ResearchContainer = withRouter(ResearchContainer);
 export default ResearchContainer;

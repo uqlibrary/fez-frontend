@@ -209,7 +209,7 @@ context('Thesis', () => {
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName: fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                { subjectType: 'drag-n-drop' }
             );
         });
         cy.get('button[title="Remove this file"]').click();
@@ -225,7 +225,7 @@ context('Thesis', () => {
         cy.fixture(fileNameTwo).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                { subjectType: 'drag-n-drop' }
             );
         });
         cy.get('button[title="Remove all files from the upload queue"]').click();
@@ -241,20 +241,20 @@ context('Thesis', () => {
         cy.fixture(fileNameThree).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                { subjectType: 'drag-n-drop' }
             );
         });
         cy.get('div.alert-text').should('have.length', 2);
         cy.fixture(fileName).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                { subjectType: 'drag-n-drop' }
             );
         });
         cy.fixture(fileNameTwo).then(fileContent => {
             cy.get('div#FileUploadDropZone').upload(
                 { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
-                { subjectType: 'drag-n-drop' },
+                { subjectType: 'drag-n-drop' }
             );
         });
         // Ready to submit

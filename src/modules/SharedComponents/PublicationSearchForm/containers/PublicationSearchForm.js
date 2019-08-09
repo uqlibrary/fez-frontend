@@ -7,17 +7,19 @@ import { locale } from 'locale';
 
 const FORM_NAME = 'PublicationSearchForm';
 
-const validate = (values) => {
+const validate = values => {
     // reset global errors, eg form submit failure
     stopSubmit(FORM_NAME, null);
 
     const errors = {};
     const fieldValue = values.get('searchQuery');
 
-    if (!validation.required(fieldValue) &&
+    if (
+        !validation.required(fieldValue) &&
         !validation.isValidDOIValue(fieldValue) &&
         !validation.isValidPubMedValue(fieldValue) &&
-        (fieldValue.trim().length === 0 || !validation.isValidPublicationTitle(fieldValue))) {
+        (fieldValue.trim().length === 0 || !validation.isValidPublicationTitle(fieldValue))
+    ) {
         errors.searchQuery = locale.validationErrors.publicationSearch;
     }
     return errors;
@@ -28,7 +30,7 @@ let PublicationSearchFormContainer = reduxForm({
     validate,
 })(PublicationSearchForm);
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
     };

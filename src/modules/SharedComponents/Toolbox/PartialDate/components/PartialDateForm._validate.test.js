@@ -96,14 +96,13 @@ describe('PartialDateForm unit tests', () => {
         expect(futureAllowedDateForm._validate({ day: 10, month: 2, year: 2015 })).toEqual(STATUS_VALID);
     });
 
-
     /**
      * partial future dates
      */
     it('should not allow partial future date if not allowed future date', () => {
-        expect(partialFutureNotAllowedDateForm
-            ._validate({ day: null, month: null, year: 2018 }))
-            .toEqual(STATUS_FUTURE_DATE);
+        expect(partialFutureNotAllowedDateForm._validate({ day: null, month: null, year: 2018 })).toEqual(
+            STATUS_FUTURE_DATE
+        );
     });
     it('should allow partial past date if not allowed future date', () => {
         expect(partialFutureNotAllowedDateForm._validate({ day: null, month: null, year: 2015 })).toEqual(STATUS_VALID);

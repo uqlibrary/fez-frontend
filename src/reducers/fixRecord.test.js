@@ -4,9 +4,9 @@ import { initialState } from './fixRecord';
 
 describe('fixRecord reducer', () => {
     const aMockRecordToFix = {
-        'rek_pid': 'UQ:123456',
-        'rek_title': 'This is a title',
-        'rek_description': 'This is a description.',
+        rek_pid: 'UQ:123456',
+        rek_title: 'This is a title',
+        rek_description: 'This is a description.',
     };
 
     it('returns that the publication data is loading', () => {
