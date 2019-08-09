@@ -293,7 +293,7 @@ describe('Claim publication actions tests ', () => {
                 } catch (e) {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
-            }
+            },
         );
 
         it(
@@ -340,7 +340,7 @@ describe('Claim publication actions tests ', () => {
                 } catch (e) {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
-            }
+            },
         );
 
         it(
@@ -367,7 +367,7 @@ describe('Claim publication actions tests ', () => {
                 } catch (e) {
                     expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
                 }
-            }
+            },
         );
 
         it('dispatched expected actions when claiming a publication', async() => {
@@ -530,7 +530,7 @@ describe('Claim publication actions tests ', () => {
                     ...testClaimRequest,
                     publication,
                     ...files,
-                })
+                }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             expect(testFn).toBeCalledWith(files.files.queue, publication);
@@ -551,7 +551,7 @@ describe('Claim publication actions tests ', () => {
             ];
 
             await mockActionsStore.dispatch(
-                claimActions.claimPublication({ ...testClaimRequest, comments: 'This is a test' })
+                claimActions.claimPublication({ ...testClaimRequest, comments: 'This is a test' }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -571,7 +571,7 @@ describe('Claim publication actions tests ', () => {
             ];
 
             await mockActionsStore.dispatch(
-                claimActions.claimPublication({ ...testClaimRequest, comments: 'This is a test' })
+                claimActions.claimPublication({ ...testClaimRequest, comments: 'This is a test' }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -597,14 +597,14 @@ describe('Claim publication actions tests ', () => {
                     repositories.routes.RECORDS_ISSUES_API({
                         pid: testClaimRequest.publication.rek_pid,
                         fileName: files.files.queue[0].name,
-                    }).apiUrl
+                    }).apiUrl,
                 )
                 .reply(200, {})
                 .onGet(
                     repositories.routes.FILE_UPLOAD_API({
                         pid: testClaimRequest.publication.rek_pid,
                         fileName: files.files.queue[0].name,
-                    }).apiUrl
+                    }).apiUrl,
                 )
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
@@ -642,14 +642,14 @@ describe('Claim publication actions tests ', () => {
                     repositories.routes.RECORDS_ISSUES_API({
                         pid: testClaimRequest.publication.rek_pid,
                         fileName: files.files.queue[0].name,
-                    }).apiUrl
+                    }).apiUrl,
                 )
                 .reply(200, {})
                 .onGet(
                     repositories.routes.FILE_UPLOAD_API({
                         pid: testClaimRequest.publication.rek_pid,
                         fileName: files.files.queue[0].name,
-                    }).apiUrl
+                    }).apiUrl,
                 )
                 .reply(500, {})
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })

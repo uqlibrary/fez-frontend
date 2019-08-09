@@ -6,7 +6,7 @@ import SearchBox from 'react-google-maps/lib/components/places/SearchBox';
 import { compose, lifecycle } from 'recompose';
 import get from 'lodash.get';
 
-export const GoogleMapViewComponent = (props) => {
+export const GoogleMapViewComponent = props => {
     const styles = {
         strokeColor: '#FF0000',
         strokeOpacity: 0.8,
@@ -15,7 +15,7 @@ export const GoogleMapViewComponent = (props) => {
         fillOpacity: 0.35,
     };
     const bounds = new window.google.maps.LatLngBounds();
-    props.geoCoords.map((coord) => {
+    props.geoCoords.map(coord => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
     return (
@@ -26,17 +26,14 @@ export const GoogleMapViewComponent = (props) => {
                     defaultCenter={props.center}
                     ref={props.onMapMounted(bounds, props.geoCoords)}
                 >
-                    {
-                        (props.readOnly || props.isSearch) &&
+                    {(props.readOnly || props.isSearch) &&
                         props.geoCoords.length >= 1 &&
-                        (
-                            props.geoCoords.length > 1
-                                ? <Polygon paths={props.geoCoords} options={styles} />
-                                : <Marker position={props.geoCoords[0]} />
-                        )
-                    }
-                    {
-                        !props.readOnly &&
+                        (props.geoCoords.length > 1 ? (
+                            <Polygon paths={props.geoCoords} options={styles} />
+                        ) : (
+                            <Marker position={props.geoCoords[0]} />
+                        ))}
+                    {!props.readOnly && (
                         <DrawingManager
                             ref={props.onDrawingManagerMounted}
                             defaultDrawingMode={window.google.maps.drawing.OverlayType.MARKER}
@@ -55,9 +52,8 @@ export const GoogleMapViewComponent = (props) => {
                             onPolygonComplete={props.handlePolygonComplete}
                             onRectangleComplete={props.handleRectangleComplete}
                         />
-                    }
-                    {
-                        !props.readOnly &&
+                    )}
+                    {!props.readOnly && (
                         <SearchBox
                             ref={props.onSearchBoxMounted}
                             bounds={props.bounds}
@@ -82,7 +78,7 @@ export const GoogleMapViewComponent = (props) => {
                                 }}
                             />
                         </SearchBox>
-                    }
+                    )}
                 </GoogleMap>
             }
         </div>
@@ -105,12 +101,12 @@ GoogleMapViewComponent.propTypes = {
     handleRectangleComplete: PropTypes.func,
 };
 
-export const getDefaultCenter = (geoCoords) => {
+export const getDefaultCenter = geoCoords => {
     if (geoCoords.length > 0) {
-        const minLngPoint = geoCoords.reduce((min, point) => point.lng < min ? point.lng : min, geoCoords[0].lng);
-        const maxLngPoint = geoCoords.reduce((max, point) => point.lng > max ? point.lng : max, geoCoords[0].lng);
-        const minLatPoint = geoCoords.reduce((min, point) => point.lat < min ? point.lat : min, geoCoords[0].lat);
-        const maxLatPoint = geoCoords.reduce((max, point) => point.lat > max ? point.lat : max, geoCoords[0].lat);
+        const minLngPoint = geoCoords.reduce((min, point) => (point.lng < min ? point.lng : min), geoCoords[0].lng);
+        const maxLngPoint = geoCoords.reduce((max, point) => (point.lng > max ? point.lng : max), geoCoords[0].lng);
+        const minLatPoint = geoCoords.reduce((min, point) => (point.lat < min ? point.lat : min), geoCoords[0].lat);
+        const maxLatPoint = geoCoords.reduce((max, point) => (point.lat > max ? point.lat : max), geoCoords[0].lat);
         return {
             lng: (maxLngPoint + minLngPoint) / 2,
             lat: (minLatPoint + maxLatPoint) / 2,
@@ -130,20 +126,20 @@ const PublicationMap = compose(
         },
         componentWillMount() {
             const refs = {};
-            const geoCoords = !!this.props.coordinates && this.props.coordinates.split(' ').map(item => (
-                {
-                    lng: Number(item.split(',')[0]),
-                    lat: Number(item.split(',')[1]),
-                }
-            )) || [];
+            const geoCoords =
+                (!!this.props.coordinates &&
+                    this.props.coordinates.split(' ').map(item => ({
+                        lng: Number(item.split(',')[0]),
+                        lat: Number(item.split(',')[1]),
+                    }))) ||
+                [];
 
             const defaultCenter = getDefaultCenter(geoCoords);
             const pointZoom = 7;
             const polygonZoom = 13;
 
             const updateState = (geoCoords, currentOverlay) => {
-                !!this.state.currentOverlay &&
-                this.state.currentOverlay.setMap(null);
+                !!this.state.currentOverlay && this.state.currentOverlay.setMap(null);
 
                 this.setState({
                     currentOverlay: currentOverlay,
@@ -196,7 +192,7 @@ const PublicationMap = compose(
                     });
                     refs.map.fitBounds(bounds);
                 },
-                handleRectangleComplete: (rectangle) => {
+                handleRectangleComplete: rectangle => {
                     const ne = rectangle.getBounds().getNorthEast();
                     const sw = rectangle.getBounds().getSouthWest();
                     updateState(
@@ -207,39 +203,33 @@ const PublicationMap = compose(
                             { lat: sw.lat(), lng: ne.lng() },
                             { lat: ne.lat(), lng: ne.lng() },
                         ],
-                        rectangle
+                        rectangle,
                     );
                 },
-                handlePolygonComplete: (polygon) => {
-                    const points = polygon.getPath().getArray()
+                handlePolygonComplete: polygon => {
+                    const points = polygon
+                        .getPath()
+                        .getArray()
                         .map(point => ({ lat: point.lat(), lng: point.lng() }));
-                    updateState(
-                        [...points, points[0]],
-                        polygon
-                    );
+                    updateState([...points, points[0]], polygon);
                 },
-                handleMarkerComplete: (marker) => {
-                    updateState(
-                        [{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }],
-                        marker
-                    );
+                handleMarkerComplete: marker => {
+                    updateState([{ lat: marker.getPosition().lat(), lng: marker.getPosition().lng() }], marker);
                 },
             });
         },
         componentWillUpdate(nextProps, nextState) {
             if (!!this.props.onChange) {
                 this.props.onChange(
-                    nextState.geoCoords.map(
-                        coord => (
-                            `${this.trimCoordinates(coord.lng)},${this.trimCoordinates(coord.lat)}`
-                        )
-                    ).join(' ')
+                    nextState.geoCoords
+                        .map(coord => `${this.trimCoordinates(coord.lng)},${this.trimCoordinates(coord.lat)}`)
+                        .join(' '),
                 );
             }
         },
     }),
     withScriptjs,
-    withGoogleMap
+    withGoogleMap,
 )(GoogleMapViewComponent);
 
 export default PublicationMap;

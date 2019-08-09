@@ -1,4 +1,3 @@
-
 import { reduxForm, SubmissionError, stopSubmit } from 'redux-form/immutable';
 import * as actions from 'actions';
 import MyIncompleteRecord from '../components/MyIncompleteRecord';
@@ -36,18 +35,20 @@ export const validate = (values, props) => {
     stopSubmit(FORM_NAME, null);
     const data = values.toJS();
     const errors = {};
-    if (data.authorsAffiliation &&
-        data.authorsAffiliation
-            .some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))
+    if (
+        data.authorsAffiliation &&
+        data.authorsAffiliation.some(authorAffiliation => authorAffiliationRequired(authorAffiliation, author))
     ) {
         errors.authorsAffiliation = locale.validationErrors.authorsAffiliationIncomplete;
     }
     return errors;
 };
 
-export default confirmDiscardFormChanges(reduxForm({
-    form: FORM_NAME,
-    enableReinitialize: true,
-    validate,
-    onSubmit,
-})(MyIncompleteRecord));
+export default confirmDiscardFormChanges(
+    reduxForm({
+        form: FORM_NAME,
+        enableReinitialize: true,
+        validate,
+        onSubmit,
+    })(MyIncompleteRecord),
+);

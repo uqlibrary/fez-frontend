@@ -19,16 +19,20 @@ function setup(testProps, isShallow = true) {
 
 describe('GrantListEditorForm', () => {
     it('should render default view', () => {
-        const wrapper = getElement(GrantListEditorForm, {
-            onAdd: jest.fn(),
-            errorText: null,
-            locale: { addButton: 'Test' },
-            disabled: false,
-            required: true,
-            hideType: false,
-            classes: {},
-            theme: {},
-        }, false);
+        const wrapper = getElement(
+            GrantListEditorForm,
+            {
+                onAdd: jest.fn(),
+                errorText: null,
+                locale: { addButton: 'Test' },
+                disabled: false,
+                required: true,
+                hideType: false,
+                classes: {},
+                theme: {},
+            },
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

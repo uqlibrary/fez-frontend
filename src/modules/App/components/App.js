@@ -321,7 +321,7 @@ export class AppClass extends PureComponent {
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(
                                         isAuthorizedUser,
-                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage
+                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
                                     )}
                                     signInTooltipText={locale.global.authentication.signInText}
                                     signOutTooltipText={

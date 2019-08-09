@@ -180,6 +180,6 @@ export const transformTrendingPublicationsMetricsData = ({ data }, recordsToDisp
 
     // filter out sources which doesn't have trending publications
     return trendingPublications.filter(
-        trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0
+        trendingPublicationsPerSource => trendingPublicationsPerSource.values.length > 0,
     );
 };

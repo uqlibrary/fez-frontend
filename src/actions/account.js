@@ -58,7 +58,7 @@ export function loadCurrentAccount() {
                     return get(
                         AUTHOR_DETAILS_API({
                             userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username,
-                        })
+                        }),
                     );
                 })
                 .then(authorDetailsResponse => {

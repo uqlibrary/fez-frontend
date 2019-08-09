@@ -18,14 +18,16 @@ export default class CitationView extends PureComponent {
         super(props);
     }
 
-    render()  {
+    render() {
         const { value, className, prefix, suffix } = this.props;
         if (!value) {
-            return (<span className={`${className || ''} empty`} />);
+            return <span className={`${className || ''} empty`} />;
         }
         return (
             <span className={className || ''}>
-                {prefix}{value}{suffix === value.slice(-1) ? '' : suffix}
+                {prefix}
+                {value}
+                {suffix === value.slice(-1) ? '' : suffix}
             </span>
         );
     }

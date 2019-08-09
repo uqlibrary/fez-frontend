@@ -51,7 +51,7 @@ describe('Controlled vocabularies reducer', () => {
 
         const state = controlledVocabulariesReducer(
             {},
-            { type: `${actions.VOCABULARIES_LOADED}@123456`, payload: inputData }
+            { type: `${actions.VOCABULARIES_LOADED}@123456`, payload: inputData },
         );
         expect(state[123456].itemsList).toEqual(expectedData);
         expect(state[123456].itemsLoading).toBeFalsy();

@@ -57,7 +57,7 @@ describe('AuthorLinking', () => {
                     rek_author_id_order: 6,
                 },
             },
-            linkedAuthorIdList
+            linkedAuthorIdList,
         );
 
         expect(preparedOutput).toEqual([
@@ -85,7 +85,7 @@ describe('AuthorLinking', () => {
                     rek_author_id_order: 6,
                 },
             },
-            authorList.map(author => component.instance().transformToAuthorOrderId(0, author, searchKey))
+            authorList.map(author => component.instance().transformToAuthorOrderId(0, author, searchKey)),
         );
 
         expect(preparedOutput).toEqual([
@@ -233,7 +233,7 @@ describe('ContributorLinking', () => {
                         rek_contributor_id_order: 6,
                     },
                 },
-                linkedContributorIdList
+                linkedContributorIdList,
             );
 
             expect(preparedOutput).toEqual([
@@ -292,7 +292,7 @@ describe('ContributorLinking', () => {
                     rek_contributor_id_order: 9,
                 },
             ]);
-        }
+        },
     );
 
     it('should prepare output correctly with empty linked author id list', () => {
@@ -308,8 +308,8 @@ describe('ContributorLinking', () => {
                 },
             },
             contributorList.map(author =>
-                component.instance().transformToAuthorOrderId(0, author, contributorSearchKey)
-            )
+                component.instance().transformToAuthorOrderId(0, author, contributorSearchKey),
+            ),
         );
 
         expect(preparedOutput).toEqual([

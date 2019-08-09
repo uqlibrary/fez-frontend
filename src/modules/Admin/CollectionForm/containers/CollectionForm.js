@@ -14,7 +14,7 @@ const onSubmit = (values, dispatch, props) => {
     return dispatch(createCollection({ ...values.toJS() }, (currentAuthor && currentAuthor.aut_id) || null)).catch(
         error => {
             throw new SubmissionError({ _error: error });
-        }
+        },
     );
 };
 
@@ -41,7 +41,7 @@ const mapDispatchToProps = dispatch => ({
 
 CollectionContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(CollectionContainer);
 
 export default reloadReducerFromLocalStorage()(CollectionContainer);

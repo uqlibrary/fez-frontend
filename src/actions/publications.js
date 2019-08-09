@@ -17,7 +17,7 @@ export function searchLatestPublications() {
                 pageSize: 5,
                 sortBy: 'published_date',
                 sortDirection: 'desc',
-            })
+            }),
         )
             .then(response => {
                 dispatch({
@@ -89,7 +89,7 @@ function searchAuthorPublicationsApiEndpoint(type) {
  */
 export function searchAuthorPublications(
     { page = 1, pageSize = 20, sortBy = 'score', sortDirection = 'Desc', activeFacets = { filters: {}, ranges: {} } },
-    type = 'mine'
+    type = 'mine',
 ) {
     return dispatch => {
         dispatch({ type: `${actions.AUTHOR_PUBLICATIONS_LOADING}@${type}` });
@@ -101,7 +101,7 @@ export function searchAuthorPublications(
                 sortBy: sortBy,
                 sortDirection: sortDirection,
                 facets: activeFacets,
-            })
+            }),
         )
             .then(response => {
                 dispatch({
@@ -179,7 +179,7 @@ export function exportAuthorPublications({
                 sortDirection: sortDirection,
                 facets: activeFacets,
             },
-            'export'
-        )
+            'export',
+        ),
     );
 }

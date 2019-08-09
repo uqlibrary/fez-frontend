@@ -93,13 +93,13 @@ export default class FixRecord extends PureComponent {
             this.props.author,
             this.props.recordToFix,
             'fez_record_search_key_author_id',
-            'rek_author_id'
+            'rek_author_id',
         );
         const isContributorLinked = this.isLoggedInUserLinked(
             this.props.author,
             this.props.recordToFix,
             'fez_record_search_key_contributor_id',
-            'rek_contributor_id'
+            'rek_contributor_id',
         );
 
         return isAuthorLinked || isContributorLinked;

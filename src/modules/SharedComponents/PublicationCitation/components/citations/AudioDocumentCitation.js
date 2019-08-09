@@ -16,11 +16,14 @@ export default class AudioDocumentCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
+                : null,
             doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
             series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series : null,
+                ? this.props.publication.fez_record_search_key_series.rek_series
+                : null,
         };
 
         // eSpace citation view for Audio
@@ -28,22 +31,22 @@ export default class AudioDocumentCitation extends Component {
         return (
             <div className="citationContent citationAudio">
                 {/* {Creator}*/}
-                <Partials.AuthorsCitationView publication={this.props.publication}/>
+                <Partials.AuthorsCitationView publication={this.props.publication} />
 
                 {/* {Publication Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date}/>
+                <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title}/>
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
                 {/* {Publisher| |.}*/}
-                <Partials.CitationView className="citationPublisher" value={record.publisher}/>
+                <Partials.CitationView className="citationPublisher" value={record.publisher} />
 
                 {/* {Series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series}/>
+                <Partials.CitationView className="citationSeries" value={record.series} />
 
                 {/* {doi| doi:|}*/}
-                <Partials.DoiCitationView doi={record.doi}/>
+                <Partials.DoiCitationView doi={record.doi} />
             </div>
         );
     }

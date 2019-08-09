@@ -77,6 +77,6 @@ describe('Component AddMissingRecord', () => {
             };
             setup({ ...props });
             expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
-        }
+        },
     );
 });

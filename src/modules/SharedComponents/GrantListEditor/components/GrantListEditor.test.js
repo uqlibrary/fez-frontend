@@ -49,9 +49,7 @@ describe('GrantListEditor', () => {
     it('should render error from props', () => {
         const wrapper = setup({
             meta: {
-                error: (
-                    <span>Some error</span>
-                ),
+                error: <span>Some error</span>,
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -343,8 +341,8 @@ describe('GrantListEditor', () => {
     it('isFormPopulated() sets state correctly', () => {
         const wrapper = setup({ onChange: jest.fn() });
         wrapper.instance().isFormPopulated(true);
-        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': true, 'grants': [] });
+        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: true, grants: [] });
         wrapper.instance().isFormPopulated(false);
-        expect(wrapper.state()).toEqual({ 'errorMessage': '', 'grantFormPopulated': false, 'grants': [] });
+        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: false, grants: [] });
     });
 });

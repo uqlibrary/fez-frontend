@@ -16,7 +16,8 @@ export default class DigilibImageCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             datePhotoTaken: this.props.publication.fez_record_search_key_date_photo_taken
-                ? this.props.publication.fez_record_search_key_date_photo_taken.rek_date_photo_taken : null,
+                ? this.props.publication.fez_record_search_key_date_photo_taken.rek_date_photo_taken
+                : null,
         };
 
         // eSpace citation view for Digilib Image

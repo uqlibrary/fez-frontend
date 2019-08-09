@@ -152,7 +152,7 @@ describe('SimpleSearchComponent', () => {
         constants.MAX_PUBLIC_SEARCH_TEXT_LENGTH = 5;
         wrapper.update();
         expect(wrapper.instance().searchTextValidationMessage(wrapper.state().searchText)).toEqual(
-            'Must be 5 characters or less'
+            'Must be 5 characters or less',
         );
     });
 

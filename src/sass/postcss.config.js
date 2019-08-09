@@ -3,7 +3,7 @@ module.exports = {
     plugins: {
         'postcss-import': false,
         'postcss-cssnext': false,
-        'autoprefixer': {},
-        'cssnano': false,
+        autoprefixer: {},
+        cssnano: false,
     },
 };

@@ -17,11 +17,15 @@ describe('CitationCounts', () => {
     });
 
     it('should render component with a mock record metrics', () => {
-        const wrapper = setup({ publication: { ...myRecordsList.data[0],
-            fez_record_search_key_oa_embargo_days: {
-                rek_oa_embargo_days: 0,
+        const wrapper = setup({
+            publication: {
+                ...myRecordsList.data[0],
+                fez_record_search_key_oa_embargo_days: {
+                    rek_oa_embargo_days: 0,
+                },
+                rek_created_date: '2019-12-25T00:00:00Z',
             },
-            rek_created_date: '2019-12-25T00:00:00Z' } });
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

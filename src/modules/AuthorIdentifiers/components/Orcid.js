@@ -87,7 +87,7 @@ export default class Orcid extends Component {
             this.props.actions.linkAuthorOrcidId(
                 this.props.account.id,
                 this.props.author.aut_id,
-                this.state.orcidResponse.code
+                this.state.orcidResponse.code,
             );
         }
     }
@@ -147,7 +147,7 @@ export default class Orcid extends Component {
             this.props.actions.linkAuthorOrcidId(
                 nextProps.account.id,
                 nextProps.author.aut_id,
-                this.state.orcidResponse.code
+                this.state.orcidResponse.code,
             );
         }
     }
@@ -216,7 +216,7 @@ export default class Orcid extends Component {
         const isValidOrcidState = this.isValidOrcidState(
             this.props.account,
             this.state.orcidRequest.state,
-            this.state.orcidResponse.state
+            this.state.orcidResponse.state,
         );
 
         return (

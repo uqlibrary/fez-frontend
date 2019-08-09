@@ -9,11 +9,7 @@ import UnpublishedStatusField from './Fields/UnpublishedStatusField';
 export default class AdvancedSearchRowInput extends PureComponent {
     static propTypes = {
         children: PropTypes.func.isRequired,
-        value: PropTypes.oneOfType([
-            PropTypes.string,
-            PropTypes.array,
-            PropTypes.number,
-        ]),
+        value: PropTypes.oneOfType([PropTypes.string, PropTypes.array, PropTypes.number]),
         hintText: PropTypes.string,
         label: PropTypes.any,
         onChange: PropTypes.func,
@@ -50,8 +46,8 @@ export default class AdvancedSearchRowInput extends PureComponent {
             ...this.state,
             inputProps: {
                 ...this.state.inputProps,
-                'error': !!this.runValidationRules(nextProps.value),
-                'errorText': this.runValidationRules(nextProps.value),
+                error: !!this.runValidationRules(nextProps.value),
+                errorText: this.runValidationRules(nextProps.value),
             },
         });
     }
@@ -80,61 +76,61 @@ export default class AdvancedSearchRowInput extends PureComponent {
 
     getInputProps = () => {
         const defaultProps = {
-            'hintText': this.props.inputField.hint,
+            hintText: this.props.inputField.hint,
             'aria-label': this.props.inputField.ariaLabel,
-            'errorText': this.runValidationRules(this.props.value),
-            'error': !!this.runValidationRules(this.props.value),
-            'label': this.props.label,
+            errorText: this.runValidationRules(this.props.value),
+            error: !!this.runValidationRules(this.props.value),
+            label: this.props.label,
         };
 
         const textFieldMui1Props = {
-            'placeholder': this.props.inputField.hint,
-            'id': this.props.inputField.id || this.props.inputField.label || 'textfield',
+            placeholder: this.props.inputField.hint,
+            id: this.props.inputField.id || this.props.inputField.label || 'textfield',
             'aria-label': this.props.inputField.ariaLabel,
-            'error': !!this.runValidationRules(this.props.value),
-            'errorText': this.runValidationRules(this.props.value),
-            'label': this.props.inputField.label,
+            error: !!this.runValidationRules(this.props.value),
+            errorText: this.runValidationRules(this.props.value),
+            label: this.props.inputField.label,
         };
 
         const lookupDefaultProps = {
             ...defaultProps,
-            'value': this.props.label || this.props.value,
+            value: this.props.label || this.props.value,
             'aria-label': this.props.inputField.ariaLabel,
-            'allowFreeText': true,
-            'floatingLabelText': this.props.inputField.ariaLabel,
-            'hideLabel': true,
+            allowFreeText: true,
+            floatingLabelText: this.props.inputField.ariaLabel,
+            hideLabel: true,
         };
 
         const selectDefaultProps = {
             ...defaultProps,
-            'selectedValue': this.props.value,
-            'hintText': this.props.inputField.hint,
-            'onChange': (item) => this.props.onChange(item, item),
+            selectedValue: this.props.value,
+            hintText: this.props.inputField.hint,
+            onChange: item => this.props.onChange(item, item),
             'aria-label': this.props.inputField.ariaLabel,
-            'label': this.props.inputField.label,
-            'style': { marginTop: 0 },
+            label: this.props.inputField.label,
+            style: { marginTop: 0 },
         };
 
         switch (this.props.inputField.type) {
             case 'TextField':
                 return {
                     ...textFieldMui1Props,
-                    'autoComplete': 'search',
-                    'onChange': (event) => this.props.onChange(event.target.value),
-                    'hideLabel': true,
+                    autoComplete: 'search',
+                    onChange: event => this.props.onChange(event.target.value),
+                    hideLabel: true,
                 };
             case 'PublisherLookup':
             case 'OrgUnitLookup':
                 return {
                     ...lookupDefaultProps,
-                    'onChange': (item) => this.props.onChange(item.value, item.value),
+                    onChange: item => this.props.onChange(item.value, item.value),
                 };
             case 'AuthorIdLookup':
             case 'ContributorIdLookup':
                 return {
                     ...lookupDefaultProps,
-                    'label': this.props.label,
-                    'onChange': (item) => {
+                    label: this.props.label,
+                    onChange: item => {
                         if (parseInt(item.id, 10) > 0) {
                             this.props.onChange(item.id, item.value);
                         } else {
@@ -145,40 +141,45 @@ export default class AdvancedSearchRowInput extends PureComponent {
             case 'ThesisTypeLookup':
                 return {
                     ...selectDefaultProps,
-                    'multiple': this.props.inputField.multiple,
-                    'autoWidth': false,
-                    'hideLabel': true,
-                    'displayEmpty': true,
+                    multiple: this.props.inputField.multiple,
+                    autoWidth: false,
+                    hideLabel: true,
+                    displayEmpty: true,
                 };
             case 'CollectionsLookup':
                 return {
                     ...selectDefaultProps,
-                    'loadingHint': this.props.inputField.loadingHint,
-                    'errorHint': this.props.inputField.errorHint,
-                    'multiple': this.props.inputField.multiple,
-                    'onChange': this.props.onChange,
-                    'autoWidth': false,
-                    'hideLabel': true,
-                    'displayEmpty': true,
+                    loadingHint: this.props.inputField.loadingHint,
+                    errorHint: this.props.inputField.errorHint,
+                    multiple: this.props.inputField.multiple,
+                    onChange: this.props.onChange,
+                    autoWidth: false,
+                    hideLabel: true,
+                    displayEmpty: true,
                 };
             case 'StatusLookup':
                 return {
                     ...selectDefaultProps,
-                    'autoWidth': false,
-                    'hideLabel': true,
-                    'displayEmpty': false,
-                    'onChange': (item) => this.props.onChange(item),
+                    autoWidth: false,
+                    hideLabel: true,
+                    displayEmpty: false,
+                    onChange: item => this.props.onChange(item),
                 };
-            default: return {};
+            default:
+                return {};
         }
     };
 
-    runValidationRules = (value) => {
+    runValidationRules = value => {
         const rules = !!this.props.inputField.validation && this.props.inputField.validation;
-        return !!rules &&
-            rules.reduce((errors, rule) => ([...errors, validationRules[rule](value)]), [])
-                .filter(error => error)
-                .join(', ') || undefined;
+        return (
+            (!!rules &&
+                rules
+                    .reduce((errors, rule) => [...errors, validationRules[rule](value)], [])
+                    .filter(error => error)
+                    .join(', ')) ||
+            undefined
+        );
     };
 
     render() {

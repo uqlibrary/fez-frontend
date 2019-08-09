@@ -60,9 +60,13 @@ describe('PublicationCitation ', () => {
     it('should render primary action button', () => {
         const wrapper = setup({});
         expect(wrapper.instance().renderActions([])).toBe(null);
-        expect(wrapper.instance().renderActions([{
-            primary: true,
-        }])).toMatchSnapshot();
+        expect(
+            wrapper.instance().renderActions([
+                {
+                    primary: true,
+                },
+            ]),
+        ).toMatchSnapshot();
     });
 
     it('should render component with custom actions', () => {
@@ -86,11 +90,7 @@ describe('PublicationCitation ', () => {
         });
 
         wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
-            expect(
-                button.getElement().props.children
-            ).toEqual(
-                [customActions[index].label, false]
-            );
+            expect(button.getElement().props.children).toEqual([customActions[index].label, false]);
             button.getElement().props.onClick();
             expect(customActions[index].handleAction).toBeCalled();
         });
@@ -121,13 +121,13 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render component with publication from multiple sources', () => {
-        const publicationWithSources = { ...mockRecordToFix, 'sources': [{ source: 'espace', id: 'UQ:224457' }] };
+        const publicationWithSources = { ...mockRecordToFix, sources: [{ source: 'espace', id: 'UQ:224457' }] };
         const wrapper = setup({ publication: publicationWithSources, showSources: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component without a title', () => {
-        const publicationWithSources = { ...mockRecordToFix, 'sources': [{ source: 'espace', id: 'UQ:224457' }] };
+        const publicationWithSources = { ...mockRecordToFix, sources: [{ source: 'espace', id: 'UQ:224457' }] };
         const wrapper = setup({ publication: publicationWithSources, showSources: true, hideTitle: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -138,11 +138,9 @@ describe('PublicationCitation ', () => {
         });
         const test = jest.spyOn(wrapper.instance(), '_handleDefaultActions');
         wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
-            expect(
-                button.getElement().props.children
-            ).toEqual(
+            expect(button.getElement().props.children).toEqual(
                 // wrapper.instance().defaultActions[index].label
-                [wrapper.instance().defaultActions[index].label, false]
+                [wrapper.instance().defaultActions[index].label, false],
             );
 
             const actionKey = wrapper.instance().defaultActions[index].key;
@@ -210,19 +208,20 @@ describe('PublicationCitation ', () => {
     it('should render component with content indicators', () => {
         const publicationWithContentIndicators = {
             ...mockRecordToFix,
-            'fez_record_search_key_content_indicator': [
+            fez_record_search_key_content_indicator: [
                 {
-                    'rek_content_indicator_id': 1,
-                    'rek_content_indicator': 454079,
-                    'rek_ismemberof': 'UQ:152266',
-                    'rek_content_indicator_order': 1,
-                    'rek_content_indicator_lookup': 'a content indicator',
-                }, {
-                    'rek_content_indicator_id': 2,
-                    'rek_content_indicator': 454080,
-                    'rek_ismemberof': 'UQ:152266',
-                    'rek_content_indicator_order': 2,
-                    'rek_content_indicator_lookup': 'another content indicator',
+                    rek_content_indicator_id: 1,
+                    rek_content_indicator: 454079,
+                    rek_ismemberof: 'UQ:152266',
+                    rek_content_indicator_order: 1,
+                    rek_content_indicator_lookup: 'a content indicator',
+                },
+                {
+                    rek_content_indicator_id: 2,
+                    rek_content_indicator: 454080,
+                    rek_ismemberof: 'UQ:152266',
+                    rek_content_indicator_order: 2,
+                    rek_content_indicator_lookup: 'another content indicator',
                 },
             ],
         };

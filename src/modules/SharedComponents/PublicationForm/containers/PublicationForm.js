@@ -186,7 +186,7 @@ const mapDispatchToProps = dispatch => {
 
 PublicationFormContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PublicationFormContainer);
 
 export default PublicationFormContainer;

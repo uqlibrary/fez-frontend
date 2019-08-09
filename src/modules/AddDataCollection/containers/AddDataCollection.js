@@ -28,7 +28,7 @@ const onSubmit = (values, dispatch, state) => {
     return dispatch(createNewRecord({ ...cleanValues }))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
-            setTimeout(()=>{
+            setTimeout(() => {
                 dispatch(reset(FORM_NAME));
             }, 100);
         })
@@ -37,7 +37,7 @@ const onSubmit = (values, dispatch, state) => {
         });
 };
 
-const validate = (values) => {
+const validate = values => {
     // add only multi field validations
     // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
     // reset global errors, eg form submit failure
@@ -46,17 +46,20 @@ const validate = (values) => {
     const errors = {};
 
     // Check start\end dates are valid
-    const endDate = data.fez_record_search_key_end_date &&
+    const endDate =
+        data.fez_record_search_key_end_date &&
         data.fez_record_search_key_end_date.rek_end_date &&
         moment(data.fez_record_search_key_end_date.rek_end_date, 'YYYY-MM-DD').format();
-    const startDate = data.fez_record_search_key_start_date &&
+    const startDate =
+        data.fez_record_search_key_start_date &&
         data.fez_record_search_key_start_date.rek_start_date &&
         moment(data.fez_record_search_key_start_date.rek_start_date, 'YYYY-MM-DD').format();
 
-    if(!!endDate && !!startDate && startDate > endDate) {
+    if (!!endDate && !!startDate && startDate > endDate) {
         errors.collectionDateRange = locale.validationErrors.collectionDateRange;
     } else {
-        if (!!errors.collectionDateRange) { // cleanup
+        if (!!errors.collectionDateRange) {
+            // cleanup
             delete errors.collectionDateRange;
         }
     }
@@ -93,7 +96,7 @@ function mapDispatchToProps(dispatch) {
 
 let AddDataCollectionForm = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AddDataCollectionContainer);
 AddDataCollectionForm = withRouter(AddDataCollectionForm);
 

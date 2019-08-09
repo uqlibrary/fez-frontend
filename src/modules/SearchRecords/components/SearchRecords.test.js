@@ -129,7 +129,7 @@ describe('SearchRecords page', () => {
                 });
 
                 expect(toJson(wrapper)).toMatchSnapshot();
-            }
+            },
         );
 
         it('activeFacets OA selected (even if there are no results)', () => {
@@ -326,7 +326,7 @@ describe('SearchRecords page', () => {
         const result = wrapper
             .instance()
             .parseSearchQueryStringFromUrl(
-                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata'
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata',
             );
 
         expect(result).toEqual({
@@ -361,7 +361,7 @@ describe('SearchRecords page', () => {
                 .parseSearchQueryStringFromUrl(
                     'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
                         'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5B' +
-                        'title%5D=some+test+data'
+                        'title%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -380,7 +380,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
     it(
@@ -394,7 +394,7 @@ describe('SearchRecords page', () => {
                 .parseSearchQueryStringFromUrl(
                     'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
                         'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5B' +
-                        'title%5D=some+test+data'
+                        'title%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -413,7 +413,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: true,
                 },
             });
-        }
+        },
     );
 
     it('should correctly parse search query string from location search (published year)', () => {
@@ -425,7 +425,7 @@ describe('SearchRecords page', () => {
                 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
                     'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
                     'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&' +
-                    'searchQueryParams%5Btitle%5D=some+test+data'
+                    'searchQueryParams%5Btitle%5D=some+test+data',
             );
 
         expect(result).toEqual({
@@ -460,7 +460,7 @@ describe('SearchRecords page', () => {
                 .parseSearchQueryStringFromUrl(
                     'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5B' +
                         'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data'
+                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -482,7 +482,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
     it(
@@ -496,7 +496,7 @@ describe('SearchRecords page', () => {
                 .parseSearchQueryStringFromUrl(
                     'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
                         'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data'
+                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -518,7 +518,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
     it('should correctly parse search query string from location search & reset sortBy if not in valid values', () => {
@@ -529,7 +529,7 @@ describe('SearchRecords page', () => {
             .parseSearchQueryStringFromUrl(
                 'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5B' +
                     'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
-                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data'
+                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
             );
 
         expect(result).toEqual({
@@ -623,7 +623,7 @@ describe('SearchRecords page', () => {
             test: {},
         });
         expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
         );
 
         // handle fieldType.map being falsy
@@ -633,7 +633,7 @@ describe('SearchRecords page', () => {
             },
         });
         expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
         );
     });
 

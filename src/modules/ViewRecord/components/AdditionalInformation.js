@@ -177,7 +177,7 @@ export class AdditionalInformationClass extends PureComponent {
     renderTitle = () => {
         const { publication } = this.props;
         return this.renderHTML(
-            publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title
+            publication.rek_formatted_title ? publication.rek_formatted_title : publication.rek_title,
         );
     };
 
@@ -284,7 +284,7 @@ export class AdditionalInformationClass extends PureComponent {
     formatPublicationDate = publicationDate => {
         return this.formatDate(
             publicationDate,
-            viewRecordsConfig.publicationDateFormat[this.props.publication.rek_display_type_lookup]
+            viewRecordsConfig.publicationDateFormat[this.props.publication.rek_display_type_lookup],
         );
     };
 

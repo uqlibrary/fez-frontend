@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-const styles = (theme) => ({
+const styles = theme => ({
     gridRow: {
         borderBottom: `1px solid ${theme.palette.secondary.light}`,
     },
@@ -54,59 +54,50 @@ export class PublicationDetailsClass extends PureComponent {
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.publicationDetails}>
-                    {
-                        this.props.publication.rek_display_type_lookup &&
+                    {this.props.publication.rek_display_type_lookup && (
                         <this.ViewRecordRow
                             heading={headings.rek_display_type}
                             data={this.props.publication.rek_display_type_lookup}
                         />
-                    }
-                    {
-                        this.props.publication.rek_subtype &&
-                        <this.ViewRecordRow
-                            heading={headings.rek_subtype}
-                            data={this.props.publication.rek_subtype}
-                        />
-                    }
-                    {
-                        this.props.publication.fez_record_search_key_content_indicator &&
-                        this.props.publication.fez_record_search_key_content_indicator.length > 0 &&
+                    )}
+                    {this.props.publication.rek_subtype && (
+                        <this.ViewRecordRow heading={headings.rek_subtype} data={this.props.publication.rek_subtype} />
+                    )}
+                    {this.props.publication.fez_record_search_key_content_indicator &&
+                        this.props.publication.fez_record_search_key_content_indicator.length > 0 && (
                         <this.ViewRecordRow
                             heading={componentLocale.components.contentIndicators.label}
-                            data={
-                                this.props.publication.fez_record_search_key_content_indicator
-                                    .map(item => item.rek_content_indicator_lookup)
-                                    .join(componentLocale.components.contentIndicators.divider)
-                            }
+                            data={this.props.publication.fez_record_search_key_content_indicator
+                                .map(item => item.rek_content_indicator_lookup)
+                                .join(componentLocale.components.contentIndicators.divider)}
                         />
-                    }
-                    {
-                        this.props.publication.fez_record_search_key_ismemberof &&
-                        this.props.publication.fez_record_search_key_ismemberof.length > 0 &&
+                    )}
+                    {this.props.publication.fez_record_search_key_ismemberof &&
+                        this.props.publication.fez_record_search_key_ismemberof.length > 0 && (
                         <this.ViewRecordRow
                             heading={headings.fez_record_search_key_ismemberof}
-                            data={(
+                            data={
                                 <ul className={this.props.classes.ul}>
-                                    {
-                                        this.props.publication.fez_record_search_key_ismemberof.map(
-                                            (collection, index) => (
-                                                collection.rek_ismemberof &&
-                                                collection.rek_ismemberof_lookup &&
+                                    {this.props.publication.fez_record_search_key_ismemberof.map(
+                                        (collection, index) =>
+                                            collection.rek_ismemberof &&
+                                                collection.rek_ismemberof_lookup && (
                                                 <li key={`collection-${index}`}>
-                                                    <Link to={pathConfig.list.collection(
-                                                        collection.rek_ismemberof,
-                                                        collection.rek_ismemberof_lookup
-                                                    )}>
+                                                    <Link
+                                                        to={pathConfig.list.collection(
+                                                            collection.rek_ismemberof,
+                                                            collection.rek_ismemberof_lookup,
+                                                        )}
+                                                    >
                                                         {collection.rek_ismemberof_lookup}
                                                     </Link>
                                                 </li>
-                                            )
-                                        )
-                                    }
+                                            ),
+                                    )}
                                 </ul>
-                            )}
+                            }
                         />
-                    }
+                    )}
                 </StandardCard>
             </Grid>
         );
@@ -114,6 +105,5 @@ export class PublicationDetailsClass extends PureComponent {
 }
 
 const StyledPublicationDetailsClass = withStyles(styles, { withTheme: true })(PublicationDetailsClass);
-const PublicationDetails = (props) => <StyledPublicationDetailsClass {...props} />;
+const PublicationDetails = props => <StyledPublicationDetailsClass {...props} />;
 export default PublicationDetails;
-

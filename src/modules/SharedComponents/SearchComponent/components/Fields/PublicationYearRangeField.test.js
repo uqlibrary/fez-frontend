@@ -33,7 +33,7 @@ describe('Component PublicationYearRangeField', () => {
             wrapper
                 .find('TextField')
                 .first()
-                .prop('helperText')
+                .prop('helperText'),
         ).toMatchSnapshot();
     });
 

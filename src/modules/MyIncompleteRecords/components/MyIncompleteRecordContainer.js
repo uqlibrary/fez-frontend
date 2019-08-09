@@ -84,13 +84,13 @@ export default class MyIncompleteRecordContainer extends React.Component {
             author,
             recordToFix,
             'fez_record_search_key_author_id',
-            'rek_author_id'
+            'rek_author_id',
         );
         const isContributorLinked = this.isLoggedInUserLinked(
             author,
             recordToFix,
             'fez_record_search_key_contributor_id',
-            'rek_contributor_id'
+            'rek_contributor_id',
         );
 
         return isAuthorLinked || isContributorLinked;
@@ -137,7 +137,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
             .reduce(
                 (authors, affiliationData) =>
                     leftJoin(authors, affiliationData.infoArray, 'rek_author_id_order', affiliationData.key),
-                recordToFix.fez_record_search_key_author_id
+                recordToFix.fez_record_search_key_author_id,
             )
             .map(authorAffiliation => ({
                 affiliation: authorAffiliation.rek_author_affiliation_name === locale.global.orgTitle ? 'UQ' : 'NotUQ',
@@ -189,7 +189,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
             hidePeerReviewActivity: (recordToFix.fez_record_search_key_quality_indicator || []).length !== 0,
             hideExtent:
                 [DOCUMENT_TYPE_BOOK_CHAPTER, DOCUMENT_TYPE_JOURNAL_ARTICLE].includes(
-                    recordToFix.rek_display_type_lookup
+                    recordToFix.rek_display_type_lookup,
                 ) || !!(recordToFix.fez_record_search_key_total_pages || {}).rek_total_pages,
             hideAudienceSize:
                 ![...LP_NTRO_SUBTYPES, ...CPEE_NTRO_SUBTYPES].includes(recordToFix.rek_subtype) ||
@@ -197,7 +197,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
             showSignificance:
                 (recordToFix.fez_record_search_key_significance || []).length === 0 ||
                 recordToFix.fez_record_search_key_significance.filter(
-                    item => item.rek_significance_order === currentAuthorOrder && !item.rek_significance
+                    item => item.rek_significance_order === currentAuthorOrder && !item.rek_significance,
                 ).length > 0,
             showContributionStatement:
                 (recordToFix.fez_record_search_key_creator_contribution_statement || []).length === 0 ||
@@ -206,7 +206,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
                         item.rek_creator_contribution_statement_order === currentAuthorOrder &&
                         (!item.rek_creator_contribution_statement ||
                             item.rek_creator_contribution_statement === '' ||
-                            item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder)
+                            item.rek_creator_contribution_statement === locale.global.defaultAuthorDataPlaceholder),
                 ).length > 0,
         };
     };
