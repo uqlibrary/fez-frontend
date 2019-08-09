@@ -1,5 +1,5 @@
 import SocialShare from './SocialShare';
-import {journalArticle} from 'mock/data/testing/records';
+import { journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
     const props = {
@@ -39,5 +39,4 @@ describe('Component SocialShare', () => {
         expect(global.print).toHaveBeenCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
 });

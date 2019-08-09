@@ -40,5 +40,4 @@ describe('ExternalLink test ', () => {
         link.simulate('click');
         expect(global.open).toHaveBeenCalled();
     });
-
 });
