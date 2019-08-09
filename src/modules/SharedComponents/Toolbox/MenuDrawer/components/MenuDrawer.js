@@ -166,7 +166,7 @@ export class MenuDrawer extends Component {
                         />
                     </ListItem>
                 </span>
-            )
+            ),
         );
 
     render() {

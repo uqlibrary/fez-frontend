@@ -25,9 +25,18 @@ export default {
     title: 'Complete my work',
     help: {
         title: 'Add more information to an existing NTRO',
-        text: (<div>For help, click <a
-            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
-            target="_blank">here</a>.</div>),
+        text: (
+            <div>
+                For help, click{' '}
+                <a
+                    href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                    target="_blank"
+                >
+                    here
+                </a>
+                .
+            </div>
+        ),
         buttonLabel: 'CLOSE',
     },
     submitButtonLabel: 'Complete work',
@@ -44,17 +53,25 @@ export default {
         authors: {
             ...locale.components.authors,
             description: (
-                <span>For each author marked with a <span style={{ color: '#e60000', weight: 'bold' }}>red</span> prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click <b>UPDATE AUTHOR</b>.</span>
+                <span>
+                    For each author marked with a <span style={{ color: '#e60000', weight: 'bold' }}>red</span> prompt,
+                    select the author name at Step 1, add the affiliation information as at time of publication at Step
+                    2, then click <b>UPDATE AUTHOR</b>.
+                </span>
             ),
             field: {
                 ...locale.components.authors.field,
                 form: {
                     locale: {
                         ...locale.components.authors.field.form.locale,
-                        descriptionStep1: (<div>
-                            <span className="authorSteps" key="step-2">Step 2 of 2</span> - <b>Update the
-                            affiliation information</b>.
-                        </div>),
+                        descriptionStep1: (
+                            <div>
+                                <span className="authorSteps" key="step-2">
+                                    Step 2 of 2
+                                </span>{' '}
+                                - <b>Update the affiliation information</b>.
+                            </div>
+                        ),
                         addButton: 'Update author',
                     },
                 },
@@ -62,9 +79,14 @@ export default {
                     ...locale.components.authors.field.header,
                     locale: {
                         ...locale.components.authors.field.header.locale,
-                        descriptionStep2: (<div>
-                            <span className="authorSteps" key="step-1">Step 1 of 2</span> - <b>Select an author</b>.
-                        </div>),
+                        descriptionStep2: (
+                            <div>
+                                <span className="authorSteps" key="step-1">
+                                    Step 1 of 2
+                                </span>{' '}
+                                - <b>Select an author</b>.
+                            </div>
+                        ),
                     },
                 },
                 row: {
@@ -72,7 +94,7 @@ export default {
                     locale: {
                         ...locale.components.authors.field.row.locale,
                         selectHint: 'Select this author ([name]) to update their affiliation data.',
-                        requiredLabel: 'This author\'s data is incomplete.',
+                        requiredLabel: "This author's data is incomplete.",
                     },
                 },
             },
@@ -81,12 +103,14 @@ export default {
             title: 'Upload files',
             locale: {
                 instructions: '',
-                accessTermsAndConditions: 'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                accessTermsAndConditions:
+                    'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
-                    ['tooManyFiles']: 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                    ['tooManyFiles']:
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -100,24 +124,24 @@ export default {
                             <li>begin with a letter and are less than 45 characters long</li>
                             <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
                             <li>
-                                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav”
-                                etc.
+                                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”,
+                                “.tiff”, “.wav” etc.
                             </li>
                             <li>
-                                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g.
-                                “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                two periods are allowed for multipart zip files. Allowed formats for part description
+                                are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
                             </li>
                             <li>are uploaded individually and not inside a folder</li>
                         </ul>
                     </div>
                 ),
-                fileUploadInstruction: (
-                    <p>Click here to select files, or drag files into this area to upload</p>
-                ),
+                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
             },
             text: (
                 <div>
-                    <span className="requiredField"><label>&nbsp;</label></span>
+                    <span className="requiredField">
+                        <label>&nbsp;</label>
+                    </span>
                 </div>
             ),
         },
@@ -134,7 +158,8 @@ export default {
     },
     prompt: {
         title: 'Missing data',
-        message: 'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
+        message:
+            'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
         type: 'info_outline',
     },
     progressAlert: {

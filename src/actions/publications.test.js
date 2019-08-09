@@ -156,7 +156,7 @@ describe('Publications actions', () => {
                 ];
 
                 await mockActionsStore.dispatch(
-                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete'),
                 );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
@@ -180,7 +180,7 @@ describe('Publications actions', () => {
                 ];
 
                 await mockActionsStore.dispatch(
-                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete'),
                 );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
@@ -204,7 +204,7 @@ describe('Publications actions', () => {
                 ];
 
                 await mockActionsStore.dispatch(
-                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete')
+                    publicationsActions.searchAuthorPublications(testRequest, 'incomplete'),
                 );
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
             });
@@ -376,7 +376,7 @@ describe('Publications actions', () => {
 
             publicationsActions.exportAuthorPublications(testRequest);
             expect(exportPublications).toHaveBeenCalledWith(
-                repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export')
+                repositories.routes.CURRENT_USER_RECORDS_API(testRequest, 'export'),
             );
         });
 

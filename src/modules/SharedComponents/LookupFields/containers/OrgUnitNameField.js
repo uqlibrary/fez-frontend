@@ -38,7 +38,7 @@ const mapDispatchToProps = (dispatch, props) => ({
 
 const OrgUnitNameAutoComplete = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);
 
 export function OrgUnitNameField(fieldProps) {

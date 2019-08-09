@@ -533,7 +533,7 @@ describe('Academic data transformers ', () => {
 
                 const result = transformers.transformTrendingPublicationsMetricsData({ data });
                 expect(result).toEqual(expectedMetrics);
-            }
+            },
         );
 
         it(
@@ -612,7 +612,7 @@ describe('Academic data transformers ', () => {
 
                 const result = transformers.transformTrendingPublicationsMetricsData({ data });
                 expect(result).toEqual(expectedMetrics);
-            }
+            },
         );
     });
 

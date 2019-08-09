@@ -133,7 +133,7 @@ export class GrantListEditorRow extends PureComponent {
                             `${grant.grantId}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            ''
+                            '',
                         )}
                     </Grid>
                     <Grid item xs={this.props.width === 'xs' ? 4 : 3}>
@@ -141,7 +141,7 @@ export class GrantListEditorRow extends PureComponent {
                             `${ORG_TYPES_LOOKUP[grant.grantAgencyType] ? ORG_TYPES_LOOKUP[grant.grantAgencyType] : ''}`,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            ''
+                            '',
                         )}
                     </Grid>
                 </Hidden>

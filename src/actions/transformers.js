@@ -42,7 +42,7 @@ const getIssuesRequest = text => ({
 export const getFixIssueRequest = pipe(
     getIssueValues,
     templates.issues.fixRecord,
-    getIssuesRequest
+    getIssuesRequest,
 );
 
 /* getClaimIssueRequest - returns claim record issue request object
@@ -51,7 +51,7 @@ export const getFixIssueRequest = pipe(
 export const getClaimIssueRequest = pipe(
     getIssueValues,
     templates.issues.claimRecord,
-    getIssuesRequest
+    getIssuesRequest,
 );
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
@@ -158,7 +158,7 @@ export const getDatasetCreatorRolesSearchKey = creators => {
                     rek_author_role: item.creatorRole,
                     rek_author_role_order: index + 1,
                 }) ||
-                {}
+                {},
         ),
     };
 };
@@ -204,7 +204,7 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                           (item.hasOwnProperty('authorId') && item.authorId) ||
                           0,
                     rek_author_id_order: index + 1,
-                }
+                },
         ),
     };
 };
@@ -255,7 +255,7 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
                     rek_author_id_order: item.hasOwnProperty('rek_author_id_order')
                         ? item.rek_author_id_order
                         : index + 1,
-                }
+                },
         ),
     };
 };
@@ -293,7 +293,7 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
                     rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order')
                         ? item.rek_contributor_id_order
                         : index + 1,
-                }
+                },
         ),
     };
 };
@@ -346,7 +346,7 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                           (item.hasOwnProperty('authorId') && item.authorId) ||
                           null,
                     rek_contributor_id_order: index + 1,
-                }
+                },
         ),
     };
 };
@@ -534,7 +534,7 @@ export const getContentIndicatorSearchKey = (contentIndicators = []) => {
 
 export const getAuthorOrder = data => {
     const author = data.publication.fez_record_search_key_author_id.filter(
-        authorId => authorId.rek_author_id === data.author.aut_id
+        authorId => authorId.rek_author_id === data.author.aut_id,
     );
 
     // a missing author doesn't actually reach here, but if code is
@@ -586,7 +586,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
             },
             currentAuthorOrder,
             data.initialSignificance,
-            data.significance
+            data.significance,
         ),
         ...getSearchKey(
             {
@@ -598,7 +598,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
             },
             currentAuthorOrder,
             data.initialContributionStatements,
-            (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null
+            (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null,
         ),
     };
 };

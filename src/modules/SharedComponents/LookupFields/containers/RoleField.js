@@ -7,14 +7,16 @@ const mapStateToProps = (state, props) => {
     const category = 'role';
     return {
         category: category,
-        itemsList: state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-            ? state.get('searchKeysReducer')[category].itemsList : [],
+        itemsList:
+            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
+                ? state.get('searchKeysReducer')[category].itemsList
+                : [],
         allowFreeText: true,
-        onChange: (item) => props.onChange(item.value),
+        onChange: item => props.onChange(item.value),
         errorText: null,
         error: props.error,
-        itemToString: (item) => !!item && String(item.value) || '',
-        selectedValue: !!props.value && { value: props.value } || null,
+        itemToString: item => (!!item && String(item.value)) || '',
+        selectedValue: (!!props.value && { value: props.value }) || null,
         openOnFocus: true,
         filter: () => true,
         clearInput: props.clearInput,
@@ -22,11 +24,12 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => (
-    {
-        loadSuggestions: (searchKey) => dispatch({ type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: DATA_COLLECTION_CREATOR_ROLES }),
-    }
-);
+const mapDispatchToProps = dispatch => ({
+    loadSuggestions: searchKey =>
+        dispatch({ type: `${actions.SEARCH_KEY_LOOKUP_LOADED}@${searchKey}`, payload: DATA_COLLECTION_CREATOR_ROLES }),
+});
 
-export const RoleField = connect(mapStateToProps, mapDispatchToProps)(AutoCompleteAsyncField);
-
+export const RoleField = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(AutoCompleteAsyncField);

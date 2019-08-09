@@ -107,7 +107,9 @@ export class ContributorForm extends PureComponent {
                     (contributor.affiliation === 'NotUQ' &&
                         contributor.orgaff.trim().length === 0 &&
                         contributor.orgtype.trim().length === 0)))
-        ) { return; }
+        ) {
+            return;
+        }
 
         // pass on the selected contributor
         this.props.onSubmit({
@@ -146,7 +148,7 @@ export class ContributorForm extends PureComponent {
                 this.state.contributor.nameAsPublished.trim().length !== 0 &&
                     DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
                     this._onSubmit();
-            }
+            },
         );
     };
 
@@ -162,7 +164,7 @@ export class ContributorForm extends PureComponent {
             }),
             () => {
                 this._onSubmit();
-            }
+            },
         );
     };
 
@@ -333,5 +335,5 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(ContributorForm);

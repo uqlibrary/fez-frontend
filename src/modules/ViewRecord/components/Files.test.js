@@ -52,7 +52,7 @@ describe('Files Component ', () => {
                 setHideCulturalSensitivityStatement: jest.fn(),
                 classes: { header: 'header' },
             },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -194,32 +194,32 @@ describe('Files Component ', () => {
                 .instance()
                 .getFileOpenAccessStatus(
                     publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date
-                )
+                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: '1st December 2021', isOpenAccess: false, openAccessStatusId: 453695 });
         expect(
             wrapper
                 .instance()
                 .getFileOpenAccessStatus(
                     publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[1].dsi_embargo_date
-                )
+                    publicationEmbargoOAFile.fez_datastream_info[1].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: '1st November 2021', isOpenAccess: false, openAccessStatusId: 453695 });
         expect(
             wrapper
                 .instance()
                 .getFileOpenAccessStatus(
                     publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[2].dsi_embargo_date
-                )
+                    publicationEmbargoOAFile.fez_datastream_info[2].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
         expect(
             wrapper
                 .instance()
                 .getFileOpenAccessStatus(
                     publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[3].dsi_embargo_date
-                )
+                    publicationEmbargoOAFile.fez_datastream_info[3].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: null, isOpenAccess: true, openAccessStatusId: 453695 });
     });
 
@@ -259,8 +259,8 @@ describe('Files Component ', () => {
                 .instance()
                 .getFileOpenAccessStatus(
                     publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date
-                )
+                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null });
     });
 

@@ -1,1 +1,7 @@
+node_modules
+dist
+coverage
+custom_modules
+cypress/examples
+*.json
 **/mock/data/**/*.js

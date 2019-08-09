@@ -67,16 +67,20 @@ describe('ResearchReportForm renders ', () => {
         };
         const wrapper = setup(testProps);
         expect(wrapper.find('Field').length).toEqual(11);
-        expect(wrapper.find('NtroFields').dive()
-            .find('Field').length).toEqual(6);
+        expect(
+            wrapper
+                .find('NtroFields')
+                .dive()
+                .find('Field').length,
+        ).toEqual(6);
     });
 
     it('should render validation required', () => {
         const wrapper = setup({
             formValues: {
-                get: (key) => {
+                get: key => {
                     const values = {
-                        'rek_subtype': NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
+                        rek_subtype: NTRO_SUBTYPE_RREB_PUBLIC_SECTOR,
                     };
                     return values[key];
                 },

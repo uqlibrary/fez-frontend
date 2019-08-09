@@ -7,10 +7,7 @@ function setup(testProps, isShallow = true) {
         locale: {
             inputLabel: 'Org affiliation',
             placeholder: 'Organisational affiliation at time of publication',
-            options: [
-                { key: 'UQ', value: 'UQ' },
-                { key: 'NotUQ', value: 'Not UQ' },
-            ],
+            options: [{ key: 'UQ', value: 'UQ' }, { key: 'NotUQ', value: 'Not UQ' }],
         },
         ...testProps,
     };

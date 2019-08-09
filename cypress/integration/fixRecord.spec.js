@@ -29,14 +29,16 @@ context('Request correction form', () => {
             // .contains('h3', fixPageLocale.subTitle);
             .contains('h3', 'Work to be amended');
         cy.contains('.StandardCard .publicationCitation h6 a', myRecordsList.data[0].rek_title);
-        cy.get('[class*="PublicationCitation-divider"] + div').contains('Scholarship of Teaching and Learning');
+        cy.get('[class*="PublicationCitation-divider"] + div')
+            .contains('Scholarship of Teaching and Learning');
         cy.contains('Select an action');
         cy.contains('.Alert', 'Validation');
         cy.contains('button', 'Cancel');
     });
 
     it('should show expected fields on confirming authorship', () => {
-        cy.get('#fixAction').click();
+        cy.get('#fixAction')
+            .click();
         cy.get('#menu-fixAction')
             .contains('I am the author')
             .click();
@@ -45,11 +47,13 @@ context('Request correction form', () => {
             .should('contain', fixFormLocale.contentIndicators.title)
             .should('contain', fixFormLocale.comments.title)
             .should('contain', fixFormLocale.fileUpload.title);
-        cy.contains('button', 'Submit').should('be.disabled');
+        cy.contains('button', 'Submit')
+            .should('be.disabled');
     });
 
     it('should show expected message on denying authorship', () => {
-        cy.get('#fixAction').click();
+        cy.get('#fixAction')
+            .click();
         cy.get('#menu-fixAction')
             .contains('I am not the author')
             .click();
@@ -64,18 +68,22 @@ context('Request correction form', () => {
     });
 
     it('allows selection of unselected content indicators, but does not allow deselection of existing', () => {
-        cy.get('#fixAction').click();
+        cy.get('#fixAction')
+            .click();
         cy.get('#menu-fixAction')
             .contains('I am the author')
             .click();
-        cy.contains(fixFormLocale.contentIndicators.title).scrollIntoView();
-        cy.get('#content-indicators').click();
+        cy.contains(fixFormLocale.contentIndicators.title)
+            .scrollIntoView();
+        cy.get('#content-indicators')
+            .click();
         // Click new item in multiselect modal
         cy.get('#menu-')
             .contains('Protocol')
             .click();
         // Click outside the multiselect
-        cy.get('#menu-').click(10, 10);
+        cy.get('#menu-')
+            .click(10, 10);
         cy.get('#content-indicators')
             .contains('Scholarship of Teaching and Learning, Protocol')
             .click();
@@ -84,13 +92,16 @@ context('Request correction form', () => {
             .contains('Scholarship of Teaching and Learning')
             .should('not.be.above');
         // Click outside the multiselect
-        cy.get('#menu-').click(10, 10);
+        cy.get('#menu-')
+            .click(10, 10);
         // Selection has not changed
-        cy.get('#content-indicators').contains('Scholarship of Teaching and Learning, Protocol');
+        cy.get('#content-indicators')
+            .contains('Scholarship of Teaching and Learning, Protocol');
     });
 
     it('will detect and prevent submission of invalid URLs', () => {
-        cy.get('#fixAction').click();
+        cy.get('#fixAction')
+            .click();
         cy.get('#menu-fixAction')
             .contains('I am the author')
             .click();
@@ -101,23 +112,28 @@ context('Request correction form', () => {
             .closest('.StandardCard')
             .contains('URL is not valid');
         // Confirm form submission is disabled until URL is fixed
-        cy.contains('button', 'Submit').should('be.disabled');
+        cy.contains('button', 'Submit')
+            .should('be.disabled');
         cy.contains('.StandardCard', fixFormLocale.comments.title)
             .find('input')
             .type('.com');
-        cy.contains('button', 'Submit').should('be.disabled');
+        cy.contains('button', 'Submit')
+            .should('be.disabled');
         cy.contains('.StandardCard', fixFormLocale.comments.title)
             .find('input')
             .type('{home}{del}{del}https://');
-        cy.contains('button', 'Submit').should('not.be.disabled');
+        cy.contains('button', 'Submit')
+            .should('not.be.disabled');
     });
 
     it('Can choose a content indicator, then submit the form', () => {
-        cy.get('#fixAction').click();
+        cy.get('#fixAction')
+            .click();
         cy.get('#menu-fixAction')
             .contains('I am the author')
             .click();
-        cy.get('#content-indicators').click();
+        cy.get('#content-indicators')
+            .click();
         // Click new item in multiselect modal
         cy.get('#menu-')
             .contains('Protocol')
@@ -131,8 +147,11 @@ context('Request correction form', () => {
         cy.get('[class*="Alert-done"] .alert-text')
             .should('contain', fixFormLocale.successAlert.title)
             .should('contain', fixFormLocale.successAlert.message);
-        cy.contains('h6', fixFormLocale.successWorkflowConfirmation.confirmationTitle).should('have.length', 1);
-        cy.contains('button', fixFormLocale.successWorkflowConfirmation.cancelButtonLabel).click();
-        cy.url().should('equal', `${baseUrl}/dashboard`);
+        cy.contains('h6', fixFormLocale.successWorkflowConfirmation.confirmationTitle)
+            .should('have.length', 1);
+        cy.contains('button', fixFormLocale.successWorkflowConfirmation.cancelButtonLabel)
+            .click();
+        cy.url()
+            .should('equal', `${baseUrl}/dashboard`);
     });
 });

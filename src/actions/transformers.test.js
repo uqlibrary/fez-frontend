@@ -1805,7 +1805,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                         },
                     ],
                 },
-            })
+            }),
         ).toEqual({
             fez_record_search_key_creator_contribution_statement: [
                 {
@@ -1833,7 +1833,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                         },
                     ],
                 },
-            })
+            }),
         ).toEqual({
             fez_record_search_key_creator_contribution_statement: [
                 {
@@ -1859,7 +1859,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                         },
                     ],
                 },
-            })
+            }),
         ).toEqual({
             fez_record_search_key_significance: [
                 {
@@ -1890,7 +1890,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                         },
                     ],
                 },
-            })
+            }),
         ).toEqual({
             fez_record_search_key_significance: [
                 {
@@ -1956,7 +1956,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                             },
                         ],
                     },
-                })
+                }),
             ).toEqual({
                 fez_record_search_key_significance: [
                     {
@@ -1987,7 +1987,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                     },
                 ],
             });
-        }
+        },
     );
 
     it(
@@ -2039,7 +2039,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                             },
                         ],
                     },
-                })
+                }),
             ).toEqual({
                 fez_record_search_key_significance: [
                     {
@@ -2078,7 +2078,7 @@ describe('getSignificanceAndContributionStatementSearchKeys', () => {
                     },
                 ],
             });
-        }
+        },
     );
 });
 

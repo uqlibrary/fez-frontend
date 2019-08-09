@@ -39,7 +39,7 @@ describe('ConfirmDiscardFormChanges', () => {
         const wrapper = setup({});
         const getDiscardFormChangesConfirmationLocale = jest.spyOn(
             wrapper.instance(),
-            'getDiscardFormChangesConfirmationLocale'
+            'getDiscardFormChangesConfirmationLocale',
         );
         wrapper.setProps({
             dirty: true,

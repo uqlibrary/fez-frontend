@@ -21,7 +21,7 @@ describe('File repository tests ', () => {
             .reply(200, 'File has been uploaded');
 
         await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).resolves.toEqual(
-            'File has been uploaded'
+            'File has been uploaded',
         );
     });
 
@@ -35,7 +35,7 @@ describe('File repository tests ', () => {
         const expectedActions = ['APP_ALERT_SHOW', 'FILE_UPLOADED_FAILED@a.txt'];
 
         await expect(putUploadFile('PID:111111', { name: 'a.txt' }, mockActionsStore.dispatch)).rejects.toEqual(
-            locale.global.errorMessages[500]
+            locale.global.errorMessages[500],
         );
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });

@@ -64,7 +64,7 @@ export class NewsFeed extends PureComponent {
             0,
             this.props.newsFeedList.length > this.props.showNewsCount
                 ? this.props.showNewsCount
-                : this.props.newsFeedList.length
+                : this.props.newsFeedList.length,
         );
 
         return (

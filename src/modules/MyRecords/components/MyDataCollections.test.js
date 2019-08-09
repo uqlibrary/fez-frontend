@@ -138,14 +138,12 @@ describe('myDatasets test', () => {
         const wrapper = setup({ loadingPublicationsList: true, publicationsList: [] });
         expect(wrapper.state().hasPublications).toEqual(false);
 
-        wrapper
-            .instance()
-            .componentWillReceiveProps({
-                loadingPublicationsList: false,
-                publicationsList: [1, 2, 3],
-                history: {},
-                location: {},
-            });
+        wrapper.instance().componentWillReceiveProps({
+            loadingPublicationsList: false,
+            publicationsList: [1, 2, 3],
+            history: {},
+            location: {},
+        });
         expect(wrapper.state().hasPublications).toEqual(true);
     });
 
@@ -193,13 +191,11 @@ describe('myDatasets test', () => {
         const testAction = jest.fn();
         const wrapper = setup({ accountLoading: true, actions: { loadAuthorPublications: testAction } });
 
-        wrapper
-            .instance()
-            .componentWillReceiveProps({
-                history: { action: 'PUSH' },
-                location: { pathname: routes.pathConfig.dataset.mine },
-                mine: {},
-            });
+        wrapper.instance().componentWillReceiveProps({
+            history: { action: 'PUSH' },
+            location: { pathname: routes.pathConfig.dataset.mine },
+            mine: {},
+        });
         expect(testAction).not.toHaveBeenCalled();
     });
 });

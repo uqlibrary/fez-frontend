@@ -31,7 +31,7 @@ describe('File Name Component ', () => {
     it('should display file name link', () => {
         const wrapper = setup(
             { allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg' },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
@@ -66,7 +66,7 @@ describe('File Name Component ', () => {
                 previewFileName: 'preview_test.jpg',
                 onFileSelect: onFileSelect,
             },
-            false
+            false,
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -84,7 +84,7 @@ describe('File Name Component ', () => {
                 mimeType: 'image/jpeg',
                 onFileSelect: onFileSelect,
             },
-            false
+            false,
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
