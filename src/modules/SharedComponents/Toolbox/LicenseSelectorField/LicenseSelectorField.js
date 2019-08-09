@@ -10,9 +10,9 @@ export default function LicenseSelectorField(fieldProps) {
             selectedValue={fieldProps.input.value}
             onChange={!!fieldProps.input && fieldProps.input.onChange}
             itemsList={LICENSES}
-            errorText={!!fieldProps.meta && fieldProps.meta.error || ''}
-            error={!!fieldProps.meta && !!fieldProps.meta.error || false}
-            { ...fieldProps }
+            errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
+            error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
+            {...fieldProps}
         />
     );
 }

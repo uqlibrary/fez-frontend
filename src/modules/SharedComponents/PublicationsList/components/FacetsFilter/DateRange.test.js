@@ -73,7 +73,6 @@ describe('Date range ', () => {
         expect(testFn).not.toHaveBeenCalled();
     });
 
-
     it('should not call onChange year range is set', () => {
         const testFn = jest.fn();
         const wrapper = setup({ onChange: testFn, defaultValue: { from: 2000, to: 2010 } });

@@ -4,7 +4,7 @@ import TopCitedPublications from '../components/TopCitedPublications';
 import * as actions from 'actions';
 import { withRouter } from 'react-router-dom';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         ...state.get('topCitedPublicationsReducer'),
     };
@@ -16,7 +16,10 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let TopCitedPublicationsContainer = connect(mapStateToProps, mapDispatchToProps)(TopCitedPublications);
+let TopCitedPublicationsContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(TopCitedPublications);
 TopCitedPublicationsContainer = withRouter(TopCitedPublicationsContainer);
 
 export default TopCitedPublicationsContainer;

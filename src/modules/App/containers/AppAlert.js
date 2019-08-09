@@ -23,20 +23,18 @@ AppAlert.propTypes = {
     appAlert: PropTypes.object,
 };
 
-const mapStateToProps = (state) => (
-    {
-        appAlert: state.get('appReducer') && state.get('appReducer').appAlert
-            ? { ...state.get('appReducer').appAlert }
-            : null,
-    }
-);
+const mapStateToProps = state => ({
+    appAlert:
+        state.get('appReducer') && state.get('appReducer').appAlert ? { ...state.get('appReducer').appAlert } : null,
+});
 
-const mapDispatchToProps = (dispatch) => (
-    {
-        actions: bindActionCreators(actions, dispatch),
-    }
-);
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(actions, dispatch),
+});
 
-const AppAlertContainer = connect(mapStateToProps, mapDispatchToProps)(AppAlert);
+const AppAlertContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(AppAlert);
 
 export default AppAlertContainer;

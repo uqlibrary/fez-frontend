@@ -64,15 +64,18 @@ export default class AddDataCollection extends Component {
         const txt = formLocale.addDataset;
         const txtFoR = componentLocale.components.fieldOfResearchForm;
         const formValues = this.props.formValues && this.props.formValues.toJS();
-        const startDate = formValues &&
+        const startDate =
+            formValues &&
             formValues.fez_record_search_key_start_date &&
             formValues.fez_record_search_key_start_date.rek_start_date;
-        const endDate = formValues &&
+        const endDate =
+            formValues &&
             formValues.fez_record_search_key_end_date &&
             formValues.fez_record_search_key_end_date.rek_end_date;
-        const dateError = !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
-            ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
-            : '';
+        const dateError =
+            !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+                ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
+                : '';
 
         // customise error for data collection submission
         const alertProps = validation.getErrorAlertProps({

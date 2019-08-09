@@ -1,9 +1,8 @@
 import { escapeRegExp } from './FieldOfResearchField';
 
-const failingRegEx = (searchText) => new RegExp(`(?=^[\\d]{4}\\s.+).*${searchText}.*`, 'gi');
+const failingRegEx = searchText => new RegExp(`(?=^[\\d]{4}\\s.+).*${searchText}.*`, 'gi');
 
-const improvedRegEx = (searchText) => new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
-
+const improvedRegEx = searchText => new RegExp(`(?=^[\\d]{4}\\s.+).*${escapeRegExp(searchText)}.*`, 'gi');
 
 describe('FieldOfResearchField ', () => {
     it('should correctly throw exception for invalid regex', () => {

@@ -216,7 +216,9 @@ describe('PublicationsListPaging renders ', () => {
         const testFunction = jest.fn();
         const wrapper = setup({ pagingData: data, onPageChanged: testFunction, isShallow: false });
         const pages = wrapper.find('.paging-button');
-        pages.at(1).props()
+        pages
+            .at(1)
+            .props()
             .onClick();
         expect(testFunction).toBeCalled();
     });

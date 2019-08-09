@@ -9,16 +9,18 @@ class AuthorsPublicationTypesCountChart extends React.Component {
     };
 
     static defaultProps = {
-        series: [{
-            name: 'Publications count by type',
-            data: [
-                ['Journal articles', 200],
-                ['Conference papers', 150],
-                ['Book chapters', 106],
-                ['Books', 30],
-                ['Other', 5],
-            ],
-        }],
+        series: [
+            {
+                name: 'Publications count by type',
+                data: [
+                    ['Journal articles', 200],
+                    ['Conference papers', 150],
+                    ['Book chapters', 106],
+                    ['Books', 30],
+                    ['Other', 5],
+                ],
+            },
+        ],
     };
 
     constructor(props) {
@@ -87,7 +89,10 @@ class AuthorsPublicationTypesCountChart extends React.Component {
 
     render() {
         return (
-            <Chart className={`${this.props.className || ''} authors-publication-types-count-chart`} chartOptions={this.state.options} />
+            <Chart
+                className={`${this.props.className || ''} authors-publication-types-count-chart`}
+                chartOptions={this.state.options}
+            />
         );
     }
 }

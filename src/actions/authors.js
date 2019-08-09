@@ -41,7 +41,7 @@ export function updateCurrentAuthor(authorId, data) {
         dispatch({ type: actions.CURRENT_AUTHOR_SAVING });
 
         return patch(AUTHOR_API({ authorId }), data)
-            .then((response) => {
+            .then(response => {
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
                     payload: response.data,
@@ -82,7 +82,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 
         // get ORCID id for current user
         return get(AUTHOR_ORCID_DETAILS_API({ userId: userId, params: params }))
-            .then((response) => {
+            .then(response => {
                 orcidId = response.orcid;
 
                 // response should contain orcid id
@@ -94,7 +94,7 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
                 const authorPatchRequest = getAuthorIdentifierOrcidPatchRequest(authorId, orcidId, response);
                 return patch(AUTHOR_API({ authorId }), authorPatchRequest);
             })
-            .then((response) => {
+            .then(response => {
                 // author details saved successfully
                 dispatch({
                     type: actions.CURRENT_AUTHOR_SAVED,
@@ -111,9 +111,9 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
 }
 
 /*
-* Dispatch action to notify reducer to clean up current author saving state (eg progress, errors)
-* @returns {action}
-* */
+ * Dispatch action to notify reducer to clean up current author saving state (eg progress, errors)
+ * @returns {action}
+ * */
 export function resetSavingAuthorState() {
     return dispatch => {
         dispatch({ type: actions.CURRENT_AUTHOR_SAVE_RESET });

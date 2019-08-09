@@ -118,12 +118,11 @@ export class PartialDateForm extends Component {
         if (this.props.allowPartial) {
             validationStatus = !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
         } else {
-            validationStatus = !!day && (month !== null) && !!year && moment(state).isValid()
-                ? STATUS_VALID
-                : STATUS_INVALID;
+            validationStatus =
+                !!day && month !== null && !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
         }
 
-        if ((validationStatus === STATUS_VALID) && !!this.props.disableFuture) {
+        if (validationStatus === STATUS_VALID && !!this.props.disableFuture) {
             if (!!this.props.allowPartial) {
                 const yearNow = moment().year();
                 if (state.year > yearNow) {
@@ -144,21 +143,22 @@ export class PartialDateForm extends Component {
         const { day, month, year } = state;
         const { locale } = this.props;
 
-        this.errors.year = this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required' ||
-            !!year && isNaN(year) && locale.validationMessage.year ||
+        this.errors.year =
+            (this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required') ||
+            (!!year && isNaN(year) && locale.validationMessage.year) ||
             '';
 
         if (this.props.allowPartial) {
-            this.errors.month = (year && month < 0) ? locale.validationMessage.month : '';
-            this.errors.day = (day && year && month > -1 && (validationStatus !== STATUS_VALID))
-                ? locale.validationMessage.day
-                : '';
+            this.errors.month = year && month < 0 ? locale.validationMessage.month : '';
+            this.errors.day =
+                day && year && month > -1 && validationStatus !== STATUS_VALID ? locale.validationMessage.day : '';
         } else {
             this.errors.month = month < 0 ? locale.validationMessage.month : '';
             if (validationStatus === STATUS_INVALID) {
-                this.errors.day = ((isNaN(day) && !!this.props.required) || ((month !== null || month > -1) && year))
-                    ? locale.validationMessage.day
-                    : '';
+                this.errors.day =
+                    (isNaN(day) && !!this.props.required) || ((month !== null || month > -1) && year)
+                        ? locale.validationMessage.day
+                        : '';
             } else if (validationStatus === STATUS_FUTURE_DATE) {
                 this.errors.day = locale.validationMessage.future;
             } else {
@@ -172,7 +172,7 @@ export class PartialDateForm extends Component {
 
         this._displayErrors(date, validationStatus);
 
-        return (validationStatus === STATUS_VALID) ? moment(date).format(this.props.dateFormat) : '';
+        return validationStatus === STATUS_VALID ? moment(date).format(this.props.dateFormat) : '';
     };
 
     _isNumber = event => {

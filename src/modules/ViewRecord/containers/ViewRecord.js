@@ -4,7 +4,7 @@ import ViewRecord from '../components/ViewRecord';
 import { withRouter } from 'react-router-dom';
 import * as actions from 'actions';
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     return {
         ...state.get('viewRecordReducer'),
         ...state.get('accountReducer'),
@@ -17,6 +17,9 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-let ViewRecordContainer = connect(mapStateToProps, mapDispatchToProps)(ViewRecord);
+let ViewRecordContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(ViewRecord);
 ViewRecordContainer = withRouter(ViewRecordContainer);
 export default ViewRecordContainer;

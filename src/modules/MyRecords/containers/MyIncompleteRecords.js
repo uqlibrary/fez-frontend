@@ -16,7 +16,7 @@ const mapStateToProps = (state, ownProps) => {
         publicationsListCustomActions: [
             {
                 label: locale.pages.incompletePublications.publicationsList.complete,
-                handleAction: (item) => ownProps.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid)),
+                handleAction: item => ownProps.history.push(routes.pathConfig.records.incompleteFix(item.rek_pid)),
                 primary: true,
             },
         ],
@@ -27,7 +27,7 @@ function mapDispatchToProps(dispatch) {
     return {
         actions: {
             ...bindActionCreators(actions, dispatch),
-            loadAuthorPublications: (state) => dispatch(actions.searchAuthorPublications(state, 'incomplete')),
+            loadAuthorPublications: state => dispatch(actions.searchAuthorPublications(state, 'incomplete')),
         },
     };
 }

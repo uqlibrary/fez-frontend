@@ -25,9 +25,7 @@ describe('PublicationsList', () => {
     it('renders component with custom subset actions', () => {
         const test = [];
         const wrapper = setup({
-            publicationsListSubset: [
-                'test',
-            ],
+            publicationsListSubset: ['test'],
             subsetCustomActions: test,
         });
         expect(

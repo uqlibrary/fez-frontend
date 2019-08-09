@@ -18,17 +18,15 @@ const reactTestingLib = require('react-testing-library');
 
 const { configure } = domTestingLib;
 
-configure((config) => ({
+configure(config => ({
     ...config,
     testIdAttribute: 'id',
 }));
 
-const AllTheProviders = (props) => {
+const AllTheProviders = props => {
     return (
         <MuiThemeProvider theme={mui1theme}>
-            <MuiPickersUtilsProvider utils={MomentUtils}>
-                {props.children}
-            </MuiPickersUtilsProvider>
+            <MuiPickersUtilsProvider utils={MomentUtils}>{props.children}</MuiPickersUtilsProvider>
         </MuiThemeProvider>
     );
 };
@@ -37,20 +35,19 @@ AllTheProviders.propTypes = {
     children: PropTypes.node,
 };
 
-export const rtlRender = (ui, options) =>
-    render(ui, { wrapper: AllTheProviders, ...options });
+export const rtlRender = (ui, options) => render(ui, { wrapper: AllTheProviders, ...options });
 
-export const renderWithRouter = (ui, {
-    route = '/',
-    history = createMemoryHistory({ initialEntries: [route] }),
-} = {}) => {
+export const renderWithRouter = (
+    ui,
+    { route = '/', history = createMemoryHistory({ initialEntries: [route] }) } = {}
+) => {
     return {
         ...rtlRender(<Router history={history}>{ui}</Router>),
         history,
     };
 };
 
-export const renderWithRedux = ({ initialState }) => (render) => {
+export const renderWithRedux = ({ initialState }) => render => {
     return {
         ...render,
         store: getStore({ initialState, history: render.history }),
@@ -60,14 +57,17 @@ export const renderWithRedux = ({ initialState }) => (render) => {
 export const withRouter = ({
     route = '/',
     path = '/',
-    history = createMemoryHistory({ initialEntries: [route] }) } = {}
-) => (WrappedComponent) => {
-    return (<Router history={history}>
-        <Route path={path} children={WrappedComponent} /></Router>);
+    history = createMemoryHistory({ initialEntries: [route] }),
+} = {}) => WrappedComponent => {
+    return (
+        <Router history={history}>
+            <Route path={path} children={WrappedComponent} />
+        </Router>
+    );
 };
 
-export const withRedux = (initialState = Immutable.Map()) => (WrappedComponent) => {
-    return (<Provider store={getStore(initialState)}>{WrappedComponent}</Provider>);
+export const withRedux = (initialState = Immutable.Map()) => WrappedComponent => {
+    return <Provider store={getStore(initialState)}>{WrappedComponent}</Provider>;
 };
 
 module.exports = {

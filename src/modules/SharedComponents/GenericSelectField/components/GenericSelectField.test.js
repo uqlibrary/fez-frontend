@@ -208,9 +208,7 @@ describe('GenericSelectField', () => {
                 loadingHint: 'Loading',
                 hintText: 'Hint',
             });
-            expect(
-                wrapper.instance().loadingIndicationText()
-            ).toEqual('Loading');
+            expect(wrapper.instance().loadingIndicationText()).toEqual('Loading');
         });
 
         it('loadingIndicationText', () => {
@@ -219,37 +217,23 @@ describe('GenericSelectField', () => {
                 loadingHint: 'Loading',
                 hintText: 'Hint',
             });
-            expect(
-                wrapper.instance().loadingIndicationText()
-            ).toEqual('Hint');
+            expect(wrapper.instance().loadingIndicationText()).toEqual('Hint');
         });
 
         it('renderMenuItems (hideLabel: false)', () => {
             const wrapper = setup({
                 hideLabel: false,
-                itemsList: [
-                    { value: 1, text: 'One' },
-                    { value: 2, text: 'Two' },
-                    { value: 3, text: 'Three' },
-                ],
+                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (hideLabel: true)', () => {
             const wrapper = setup({
                 hideLabel: true,
-                itemsList: [
-                    { value: 1, text: 'One' },
-                    { value: 2, text: 'Two' },
-                    { value: 3, text: 'Three' },
-                ],
+                itemsList: [{ value: 1, text: 'One' }, { value: 2, text: 'Two' }, { value: 3, text: 'Three' }],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (hideLabel: false)', () => {
@@ -257,9 +241,7 @@ describe('GenericSelectField', () => {
                 hideLabel: false,
                 itemsList: [1, 2, 3],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('renderMenuItems (multiple: true)', () => {
@@ -268,9 +250,7 @@ describe('GenericSelectField', () => {
                 itemsList: [1, 2, 3],
                 selectedValue: [1],
             });
-            expect(
-                wrapper.instance().renderMenuItems()
-            ).toMatchSnapshot();
+            expect(wrapper.instance().renderMenuItems()).toMatchSnapshot();
         });
 
         it('Shows an error', () => {

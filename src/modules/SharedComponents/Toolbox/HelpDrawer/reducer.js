@@ -1,9 +1,6 @@
 import Immutable from 'immutable';
 
-import {
-    HIDE,
-    SHOW,
-} from './actions';
+import { HIDE, SHOW } from './actions';
 
 const initialState = Immutable.fromJS({
     open: false,

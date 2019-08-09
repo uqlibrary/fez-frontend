@@ -10,13 +10,11 @@ const mapStateToProps = (state, props) => {
         category: category,
         itemsList:
             state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state
-                    .get('searchKeysReducer')
-                    [category].itemsList.map(publication => ({
-                        id: publication.rek_pid,
-                        value: publication.rek_title,
-                        publication: publication,
-                    }))
+                ? state.get('searchKeysReducer')[category].itemsList.map(publication => ({
+                    id: publication.rek_pid,
+                    value: publication.rek_title,
+                    publication: publication,
+                }))
                 : [],
         onChange: item => props.input.onChange(item),
         async: true,

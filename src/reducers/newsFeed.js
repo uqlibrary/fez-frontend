@@ -6,7 +6,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.NEWS_LOADING]: (state) => {
+    [actions.NEWS_LOADING]: state => {
         return {
             ...state,
             ...initialState,
@@ -21,7 +21,7 @@ const handlers = {
         };
     },
 
-    [actions.NEWS_LOAD_FAILED]: (state) => {
+    [actions.NEWS_LOAD_FAILED]: state => {
         return {
             ...state,
             newsFeedList: [],

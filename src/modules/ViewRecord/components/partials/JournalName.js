@@ -49,7 +49,6 @@ export default class JournalName extends PureComponent {
             );
             sherpaRomeoElement = (
                 <span>
-
                     <ExternalLink href={sherpaRomeoLink} aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}>
                         <span className={`sherpaRomeo${sherpaRomeoColor[0].toUpperCase() + sherpaRomeoColor.slice(1)}`}>
                             {viewRecordLocale.viewRecord.linkTexts.journalOpenAccessPolicyLink}

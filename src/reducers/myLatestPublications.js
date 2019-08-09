@@ -7,7 +7,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.LATEST_PUBLICATIONS_LOADING]: (state) => {
+    [actions.LATEST_PUBLICATIONS_LOADING]: state => {
         return {
             ...state,
             latestPublicationsList: [],
@@ -25,7 +25,7 @@ const handlers = {
         };
     },
 
-    [actions.LATEST_PUBLICATIONS_FAILED]: (state) => {
+    [actions.LATEST_PUBLICATIONS_FAILED]: state => {
         return {
             ...state,
             latestPublicationsList: [],
