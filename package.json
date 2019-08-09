@@ -268,7 +268,7 @@
         ],
         "moduleFileExtensions": ["js", "json", "es6"],
         "unmockedModulePathPatterns": ["react", "enzyme"],
-        "collectCoverage": false,
+        "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
@@ -300,69 +300,4 @@
         "setupFilesAfterEnv": ["<rootDir>/src/jest.setup.js"],
         "testURL": "http://fez-staging.library.uq.edu.au"
     }
-  },
-  "jest": {
-    "transform": {
-      ".*": "<rootDir>/node_modules/babel-jest"
-    },
-    "testMatch": [
-      "**/__tests__/**/*.[jt]s?(x)",
-      "**/?(*.)+(spec|test).[jt]s?(x)",
-      "**/?(*.)+(integration).[jt]s?(x)"
-    ],
-    "moduleFileExtensions": [
-      "js",
-      "json",
-      "es6"
-    ],
-    "unmockedModulePathPatterns": [
-      "react",
-      "enzyme"
-    ],
-    "collectCoverage": true,
-    "collectCoverageFrom": [
-      "src/modules/**/*.{js,jsx}",
-      "!src/modules/**/*.integration.{js,jsx}",
-      "!src/**/index.js",
-      "!src/**/containers/*.{js,jsx}",
-      "src/modules/Index/*.{js,jsx}",
-      "src/actions/*.{js,jsx}",
-      "src/helpers/*.{js,jsx}",
-      "src/middleware/*.{js,jsx}",
-      "src/reducers/*.{js,jsx}",
-      "src/repositories/routes.js"
-    ],
-    "coverageReporters": [
-      "html",
-      "text"
-    ],
-    "coverageThreshold": {
-      "global": {
-        "statements": 100,
-        "branches": 100,
-        "functions": 100,
-        "lines": 100
-      }
-    },
-    "modulePaths": [
-      "<rootDir>/src",
-      "<rootDir>/eslint-plugin-uqlibrary",
-      "<rootDir>/utils"
-    ],
-    "moduleNameMapper": {
-      "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
-      "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
-    },
-    "transformIgnorePatterns": [
-      "<rootDir>/node_modules/"
-    ],
-    "setupFiles": [
-      "./src/test.setup.js",
-      "jest-localstorage-mock"
-    ],
-    "setupFilesAfterEnv": [
-      "<rootDir>/src/jest.setup.js"
-    ],
-    "testURL": "http://fez-staging.library.uq.edu.au"
-  }
 }

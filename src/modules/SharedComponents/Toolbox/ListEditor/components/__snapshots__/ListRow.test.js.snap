@@ -25,7 +25,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       sm={6}
       xs={5}
     >
-      <Component
+      <GenericTemplate
         item="one"
       />
     </WithStyles(Grid)>
@@ -86,7 +86,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       sm={6}
       xs={5}
     >
-      <Component
+      <GenericTemplate
         item="one"
       />
     </WithStyles(Grid)>
@@ -176,7 +176,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
       sm={11}
       xs={10}
     >
-      <Component
+      <GenericTemplate
         item="one"
       />
     </WithStyles(Grid)>
@@ -226,7 +226,7 @@ exports[`ListRow renders  should move row down 1`] = `
       sm={6}
       xs={5}
     >
-      <Component
+      <GenericTemplate
         item="one"
       />
     </WithStyles(Grid)>
@@ -302,7 +302,7 @@ exports[`ListRow renders  should move row up 1`] = `
       sm={6}
       xs={5}
     >
-      <Component
+      <GenericTemplate
         item="one"
       />
     </WithStyles(Grid)>
@@ -363,6 +363,7 @@ exports[`ListRow renders  should render default view with styles 1`] = `
   }
   index={0}
   item="one"
+  itemTemplate={[Function]}
   locale={
     Object {
       "deleteHint": "Remove this item",

@@ -9,6 +9,7 @@ import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
 import { withStyles } from '@material-ui/core/styles';
+import { GenericTemplate } from './GenericTemplate';
 
 export class ListRow extends PureComponent {
     static propTypes = {
@@ -38,6 +39,7 @@ export class ListRow extends PureComponent {
                 confirmButtonLabel: 'Yes',
             },
         },
+        itemTemplate: GenericTemplate,
     };
 
     showConfirmation = () => {

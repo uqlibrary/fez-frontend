@@ -567,7 +567,7 @@ exports[`AdminInterface component should render default view as a full form view
       spacing={16}
     >
       <TabContainer
-        currentTab="bibliographic"
+        currentTab="security"
         key="security"
         tabbed={false}
         value="security"
@@ -585,7 +585,7 @@ exports[`AdminInterface component should render default view as a full form view
         </StandardCard>
       </TabContainer>
       <TabContainer
-        currentTab="bibliographic"
+        currentTab="security"
         key="files"
         tabbed={false}
         value="files"

@@ -7246,9 +7246,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       >
                                         <TabContainer
                                           currentTab="bibliographic"
-                                          key="admin"
+                                          key="bibliographic"
                                           tabbed={false}
-                                          value="admin"
+                                          value="bibliographic"
                                         >
                                           <WithStyles(Grid)
                                             item={true}
@@ -7378,12 +7378,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <StandardCard
                                                   primaryHeader={false}
                                                   squareTop={false}
-                                                  title="Admin"
+                                                  title="Bibliographic"
                                                 >
                                                   <WithStyles(Cards)
                                                     primaryHeader={false}
                                                     squareTop={false}
-                                                    title="Admin"
+                                                    title="Bibliographic"
                                                   >
                                                     <Cards
                                                       classes={
@@ -7831,7 +7831,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           },
                                                         }
                                                       }
-                                                      title="Admin"
+                                                      title="Bibliographic"
                                                     >
                                                       <WithStyles(Card)
                                                         className="Cards-card-155 StandardCard"
@@ -7902,7 +7902,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
-                                                                  title="Admin"
+                                                                  title="Bibliographic"
                                                                   titleTypographyProps={
                                                                     Object {
                                                                       "color": "inherit",
@@ -7926,7 +7926,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     component="div"
                                                                     disableTypography={false}
                                                                     style={Object {}}
-                                                                    title="Admin"
+                                                                    title="Bibliographic"
                                                                     titleTypographyProps={
                                                                       Object {
                                                                         "color": "inherit",
@@ -8459,7 +8459,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             <h3
                                                                               className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
                                                                             >
-                                                                              Admin
+                                                                              Bibliographic
                                                                             </h3>
                                                                           </Typography>
                                                                         </WithStyles(Typography)>
@@ -8486,11 +8486,17 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         component={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.memo),
+                                                                            "WrappedComponent": Object {
+                                                                              "$$typeof": Symbol(react.memo),
+                                                                              "compare": null,
+                                                                              "type": [Function],
+                                                                            },
                                                                             "compare": null,
+                                                                            "displayName": "Connect(Component)",
                                                                             "type": [Function],
                                                                           }
                                                                         }
-                                                                        name="adminSection"
+                                                                        name="bibliographicSection"
                                                                       />
                                                                     </div>
                                                                   </CardContent>
@@ -9778,9 +9784,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                         </TabContainer>
                                         <TabContainer
                                           currentTab="bibliographic"
-                                          key="bibliographic"
+                                          key="admin"
                                           tabbed={false}
-                                          value="bibliographic"
+                                          value="admin"
                                         >
                                           <WithStyles(Grid)
                                             item={true}
@@ -9910,12 +9916,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <StandardCard
                                                   primaryHeader={false}
                                                   squareTop={false}
-                                                  title="Bibliographic"
+                                                  title="Admin"
                                                 >
                                                   <WithStyles(Cards)
                                                     primaryHeader={false}
                                                     squareTop={false}
-                                                    title="Bibliographic"
+                                                    title="Admin"
                                                   >
                                                     <Cards
                                                       classes={
@@ -10363,7 +10369,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           },
                                                         }
                                                       }
-                                                      title="Bibliographic"
+                                                      title="Admin"
                                                     >
                                                       <WithStyles(Card)
                                                         className="Cards-card-155 StandardCard"
@@ -10434,7 +10440,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
-                                                                  title="Bibliographic"
+                                                                  title="Admin"
                                                                   titleTypographyProps={
                                                                     Object {
                                                                       "color": "inherit",
@@ -10458,7 +10464,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     component="div"
                                                                     disableTypography={false}
                                                                     style={Object {}}
-                                                                    title="Bibliographic"
+                                                                    title="Admin"
                                                                     titleTypographyProps={
                                                                       Object {
                                                                         "color": "inherit",
@@ -10991,7 +10997,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             <h3
                                                                               className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
                                                                             >
-                                                                              Bibliographic
+                                                                              Admin
                                                                             </h3>
                                                                           </Typography>
                                                                         </WithStyles(Typography)>
@@ -11028,7 +11034,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             "type": [Function],
                                                                           }
                                                                         }
-                                                                        name="bibliographicSection"
+                                                                        name="adminSection"
                                                                       />
                                                                     </div>
                                                                   </CardContent>
