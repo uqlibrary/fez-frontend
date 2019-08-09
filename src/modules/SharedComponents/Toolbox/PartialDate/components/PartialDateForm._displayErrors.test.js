@@ -91,7 +91,7 @@ describe('PartialDateForm unit tests', () => {
         () => {
             partialNotAllowedDateForm._displayErrors({ day: 29, month: 1, year: 2015 }, STATUS_INVALID);
             expect(partialNotAllowedDateForm.errors).toMatchObject({ day: validationMessage.day });
-        }
+        },
     );
 
     // future
