@@ -6,7 +6,7 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
-import { AdminSection } from './AdminSection';
+import AdminSection from './AdminSection';
 
 const AdminSectionContainer = ({ disabled, formValues }) => {
     return (

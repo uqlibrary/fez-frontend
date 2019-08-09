@@ -12,14 +12,15 @@ import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
 
 import SecuritySection from './security/SecuritySectionContainer';
-import IdentifiersSection from './IdentifiersSection';
-import BibliographicSection from './BibliographicSection';
+import IdentifiersSection from './identifiers/IdentifiersSection';
+import BibliographicSection from './bibliographic/BibliographicSection';
 import AdminSection from './admin/AdminSection';
 import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './FilesSection';
 import AuthorDetailsSection from './AuthorDetailsSection';
 
 import { TabbedContext, RecordContext } from 'context';
+import { RECORD_TYPE_RECORD } from 'config/general';
 
 const styles = (theme) => ({
     helpIcon: {
@@ -98,15 +99,15 @@ export const AdminContainer = ({
                     tabs={{
                         bibliographic: {
                             component: BibliographicSection,
-                            activated: false,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         identifiers: {
                             component: IdentifiersSection,
-                            activated: false,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         admin: {
                             component: AdminSection,
-                            activated: false,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         grantInformation: {
                             component: GrantInformationSection,

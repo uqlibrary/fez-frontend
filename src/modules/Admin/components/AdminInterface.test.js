@@ -44,6 +44,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
@@ -69,6 +71,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
@@ -94,6 +98,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
@@ -129,6 +135,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
@@ -168,6 +176,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
@@ -203,6 +213,8 @@ describe('AdminInterface component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_display_type_lookup: 'Journal Article',
+                rek_object_type_lookup: 'Record',
             },
         }));
 
