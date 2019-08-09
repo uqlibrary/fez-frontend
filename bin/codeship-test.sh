@@ -1,8 +1,8 @@
 #!/bin/bash
 
 printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-printf "\n$ npm run codestyles:files\n"
-FILES=$(npm run codestyles:files)
+printf "\n$ prettier-eslint '**/*.js' --list-different -l silent\n"
+FILES=$(prettier-eslint '**/*.js' --list-different -l silent)
 
 if [[ "$?" == 0 ]]; then
     printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
