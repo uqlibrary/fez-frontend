@@ -8,7 +8,7 @@ import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
 import AuthorsSection from './AuthorsSection';
 
-const AuthorsSectionContainer = ({ disabled, formValues }) => {
+export const AuthorsSectionContainer = ({ disabled, formValues }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
             <AuthorsSection disabled={disabled} />
