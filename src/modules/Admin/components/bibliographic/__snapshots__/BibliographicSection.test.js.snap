@@ -1,0 +1,175 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BibliographicSection component should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "rek_title",
+            ],
+            Array [
+              "languages",
+            ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_journal_name",
+            ],
+            Array [
+              "rek_subtype",
+            ],
+          ],
+          "title": "Journal name",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isbn",
+            ],
+          ],
+          "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_place_of_publication",
+              "fez_record_search_key_publisher",
+            ],
+            Array [
+              "fez_record_search_key_volume_number",
+              "fez_record_search_key_issue_number",
+              "fez_record_search_key_article_number",
+            ],
+            Array [
+              "fez_record_search_key_start_page",
+              "fez_record_search_key_end_page",
+              "fez_record_search_key_total_pages",
+            ],
+            Array [
+              "rek_date",
+            ],
+            Array [
+              "rek_description",
+            ],
+          ],
+          "title": "Bibliographic",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_keywords",
+            ],
+          ],
+          "title": "Keywords",
+        },
+        Object {
+          "groups": Array [],
+          "title": "Subject",
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
+
+exports[`BibliographicSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "rek_title",
+            ],
+            Array [
+              "languages",
+            ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_journal_name",
+            ],
+            Array [
+              "rek_subtype",
+            ],
+          ],
+          "title": "Journal name",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isbn",
+            ],
+          ],
+          "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_place_of_publication",
+              "fez_record_search_key_publisher",
+            ],
+            Array [
+              "fez_record_search_key_volume_number",
+              "fez_record_search_key_issue_number",
+              "fez_record_search_key_article_number",
+            ],
+            Array [
+              "fez_record_search_key_start_page",
+              "fez_record_search_key_end_page",
+              "fez_record_search_key_total_pages",
+            ],
+            Array [
+              "rek_date",
+            ],
+            Array [
+              "rek_description",
+            ],
+          ],
+          "title": "Bibliographic",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_keywords",
+            ],
+          ],
+          "title": "Keywords",
+        },
+        Object {
+          "groups": Array [],
+          "title": "Subject",
+        },
+      ],
+    }
+  }
+  disabled={true}
+/>
+`;
