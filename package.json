@@ -176,12 +176,15 @@
     "scripts": {
         "start": "webpack-dev-server",
         "start:mock": "cross-env USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
-        "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
+        "start:url":
+            "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "build:dev": "webpack --config=./webpack.config",
         "build": "webpack -p --config=./webpack-dist.config",
         "analyse": "webpack --config=./webpack-dist.config --profile --json > stats.json",
-        "start:build": "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --disable-host-check",
-        "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
+        "start:build":
+            "cross-env NODE_ENV=production URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config --disable-host-check",
+        "start:build:e2e":
+            "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
         "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.js",
         "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest integration.js --no-coverage",
@@ -195,16 +198,10 @@
         "node": "11.10.1"
     },
     "babel": {
-        "presets": [
-            "@babel/env",
-            "@babel/react"
-        ],
+        "presets": ["@babel/env", "@babel/react"],
         "env": {
             "development": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react"
-                ]
+                "presets": ["@babel/env", "@babel/react"]
             },
             "production": {
                 "presets": [
@@ -237,10 +234,7 @@
                 ]
             },
             "test": {
-                "presets": [
-                    "@babel/env",
-                    "@babel/react"
-                ],
+                "presets": ["@babel/env", "@babel/react"],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -272,16 +266,9 @@
             "**/?(*.)+(spec|test).[jt]s?(x)",
             "**/?(*.)+(integration).[jt]s?(x)"
         ],
-        "moduleFileExtensions": [
-            "js",
-            "json",
-            "es6"
-        ],
-        "unmockedModulePathPatterns": [
-            "react",
-            "enzyme"
-        ],
-        "collectCoverage": true,
+        "moduleFileExtensions": ["js", "json", "es6"],
+        "unmockedModulePathPatterns": ["react", "enzyme"],
+        "collectCoverage": false,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
@@ -294,10 +281,7 @@
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
         ],
-        "coverageReporters": [
-            "html",
-            "text"
-        ],
+        "coverageReporters": ["html", "text"],
         "coverageThreshold": {
             "global": {
                 "statements": 100,
@@ -306,25 +290,14 @@
                 "lines": 100
             }
         },
-        "modulePaths": [
-            "<rootDir>/src",
-            "<rootDir>/eslint-plugin-uqlibrary",
-            "<rootDir>/utils"
-        ],
+        "modulePaths": ["<rootDir>/src", "<rootDir>/eslint-plugin-uqlibrary", "<rootDir>/utils"],
         "moduleNameMapper": {
             "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
             "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
         },
-        "transformIgnorePatterns": [
-            "<rootDir>/node_modules/"
-        ],
-        "setupFiles": [
-            "./src/test.setup.js",
-            "jest-localstorage-mock"
-        ],
-        "setupFilesAfterEnv": [
-            "<rootDir>/src/jest.setup.js"
-        ],
+        "transformIgnorePatterns": ["<rootDir>/node_modules/"],
+        "setupFiles": ["./src/test.setup.js", "jest-localstorage-mock"],
+        "setupFilesAfterEnv": ["<rootDir>/src/jest.setup.js"],
         "testURL": "http://fez-staging.library.uq.edu.au"
     }
 }
