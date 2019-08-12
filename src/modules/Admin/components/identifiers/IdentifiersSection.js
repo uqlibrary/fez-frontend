@@ -19,7 +19,6 @@ import { adminInterfaceConfig } from 'config/adminInterface';
 // import locale from 'locale/components';
 // import { languages } from '../MockData';
 
-/* istanbul ignore next */
 export const IdentifiersSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(adminInterfaceConfig[record.rek_display_type].identifiers());

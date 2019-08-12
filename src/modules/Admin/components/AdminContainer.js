@@ -66,7 +66,6 @@ export const AdminContainer = ({
     // const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
     // const dispatch = useDispatch();
 
-    console.log('loadingRecordToView', loadingRecordToView);
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
