@@ -268,7 +268,7 @@
         ],
         "moduleFileExtensions": ["js", "json", "es6"],
         "unmockedModulePathPatterns": ["react", "enzyme"],
-        "collectCoverage": false,
+        "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
