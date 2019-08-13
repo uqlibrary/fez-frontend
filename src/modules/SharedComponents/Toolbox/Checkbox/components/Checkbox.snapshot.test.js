@@ -23,7 +23,9 @@ describe('Checkbox snapshots tests', () => {
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('WithStyles(Checkbox)').props()
+        wrapper
+            .find('WithStyles(Checkbox)')
+            .props()
             .onChange();
         expect(onChangeFn).toHaveBeenCalled();
     });

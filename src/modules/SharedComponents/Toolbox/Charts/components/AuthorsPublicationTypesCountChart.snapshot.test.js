@@ -11,4 +11,3 @@ describe('AuthorsPublicationTypesCountChart ', () => {
         expect(toJson(app)).toMatchSnapshot();
     });
 });
-

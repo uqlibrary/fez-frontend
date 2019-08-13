@@ -16,13 +16,12 @@ function setup(testProps, isShallow = true) {
 
 describe('SelectfieldWrapper snapshots tests', () => {
     it('renders SelectField component', () => {
-        const props =
-            {
-                name: 'selectfield',
-                type: 'text',
-                fullWidth: true,
-                floatingLabelText: 'This is a test selectfield component',
-            };
+        const props = {
+            name: 'selectfield',
+            type: 'text',
+            fullWidth: true,
+            floatingLabelText: 'This is a test selectfield component',
+        };
 
         const wrapper = setup(props);
         const tree = toJson(wrapper);
@@ -30,12 +29,11 @@ describe('SelectfieldWrapper snapshots tests', () => {
     });
 
     it('renders an error', () => {
-        const props =
-            {
-                name: 'selectfield',
-                error: true,
-                errorText: 'Something bad happened',
-            };
+        const props = {
+            name: 'selectfield',
+            error: true,
+            errorText: 'Something bad happened',
+        };
 
         const wrapper = setup(props);
         const tree = toJson(wrapper);
@@ -53,11 +51,15 @@ describe('SelectfieldWrapper snapshots tests', () => {
             },
         });
 
-        wrapper.find('WithStyles(Select)').props()
+        wrapper
+            .find('WithStyles(Select)')
+            .props()
             .onChange({ target: { value: 'test' } });
         expect(onChangeFn).toHaveBeenCalledWith('test');
 
-        wrapper.find('WithStyles(Select)').props()
+        wrapper
+            .find('WithStyles(Select)')
+            .props()
             .onBlur();
         expect(onBlurFn).toHaveBeenCalledWith('testing');
     });

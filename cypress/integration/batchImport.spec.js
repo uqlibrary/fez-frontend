@@ -32,11 +32,13 @@ context('Batch import', () => {
             .should('contain', locale.formLabels.docType.label)
             .should('contain', locale.formLabels.directory.label);
 
-        cy.get('@formElements').within(() => {
-            initialFieldIDs.forEach(fieldID => {
-                cy.get(`[role="button"]${fieldID}`).should('exist');
+        cy.get('@formElements')
+            .within(() => {
+                initialFieldIDs.forEach(fieldID => {
+                    cy.get(`[role="button"]${fieldID}`)
+                        .should('exist');
+                });
             });
-        });
 
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
@@ -53,7 +55,8 @@ context('Batch import', () => {
     });
 
     it('should show collections filtered by selected community', () => {
-        cy.get('#communityPID').click();
+        cy.get('#communityPID')
+            .click();
         cy.get('#menu-')
             .find('li[role=option]')
             .should('have.length', 4)
@@ -71,20 +74,28 @@ context('Batch import', () => {
 
     it('should have enabled form submit button once all fields have been filled', () => {
         allFieldIDs.forEach(item => {
-            cy.get('.content-container form .Alert .alert-text li').should('exist');
-            cy.get(item).click();
-            cy.get('#menu- li[role=option]:first-of-type').click();
+            cy.get('.content-container form .Alert .alert-text li')
+                .should('exist');
+            cy.get(item)
+                .click();
+            cy.get('#menu- li[role=option]:first-of-type')
+                .click();
         });
-        cy.get('.content-container form .Alert').should('not.exist');
-        cy.get('#submitBatchImport').should('not.be.disabled');
+        cy.get('.content-container form .Alert')
+            .should('not.exist');
+        cy.get('#submitBatchImport')
+            .should('not.be.disabled');
     });
 
     it('should be able to reset the form on successful form submission', () => {
         allFieldIDs.forEach(item => {
-            cy.get(item).click();
-            cy.get('#menu- li[role=option]:first-of-type').click();
+            cy.get(item)
+                .click();
+            cy.get('#menu- li[role=option]:first-of-type')
+                .click();
         });
-        cy.get('#submitBatchImport').click();
+        cy.get('#submitBatchImport')
+            .click();
         cy.get('.content-container form > div > div:nth-of-type(2)')
             .find('.Alert')
             .as('alertBox')
@@ -105,6 +116,7 @@ context('Batch import', () => {
             .find('li')
             .should('have.length', 3);
 
-        cy.get('#submitBatchImport').should('be.disabled');
+        cy.get('#submitBatchImport')
+            .should('be.disabled');
     });
 });

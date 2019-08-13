@@ -200,7 +200,7 @@ describe('AdvancedSearchComponent', () => {
             };
             const wrapper = setup({ ...thisProps });
             expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
-        }
+        },
     );
 
     it('haveAllAdvancedSearchFieldsValidated should allow all field to be empty and empty field', () => {

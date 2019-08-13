@@ -591,7 +591,7 @@ describe('Additional Information Component ', () => {
             isNtro: true,
         });
         expect(
-            toJson(wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null }))
+            toJson(wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null })),
         ).toMatchSnapshot();
     });
     it('getAbstract()', () => {
@@ -603,8 +603,8 @@ describe('Additional Information Component ', () => {
             toJson(
                 wrapper
                     .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null })
-            )
+                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null }),
+            ),
         ).toMatchSnapshot();
     });
 
@@ -617,8 +617,8 @@ describe('Additional Information Component ', () => {
             toJson(
                 wrapper
                     .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' })
-            )
+                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' }),
+            ),
         ).toMatchSnapshot();
     });
 
@@ -631,7 +631,7 @@ describe('Additional Information Component ', () => {
         const wrapper = getElement(
             AdditionalInformation,
             { publication: records.journalArticle, account: { canMasquerade: true } },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

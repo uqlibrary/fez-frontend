@@ -4,13 +4,12 @@ import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField'
 import { publicationTypes } from 'config';
 
 const documentTypeList = () => {
-    return publicationTypes(false)
-        .map((item) => {
-            return {
-                value: item.id,
-                text: item.name,
-            };
-        });
+    return publicationTypes(false).map(item => {
+        return {
+            value: item.id,
+            text: item.name,
+        };
+    });
 };
 const mapStateToProps = (state, props) => {
     return {
@@ -26,10 +25,10 @@ function mapDispatchToProps() {
 
 const SingleDocumentTypeList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
-const _onChange = (fieldProps) => {
+const _onChange = fieldProps => {
     return (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange);
 };
 
@@ -41,10 +40,5 @@ const _onChange = (fieldProps) => {
  * @constructor
  */
 export default function DocumentTypeSingleField(fieldProps) {
-    return (
-        <SingleDocumentTypeList
-            onChange={_onChange(fieldProps)}
-            {...fieldProps}
-        />
-    );
+    return <SingleDocumentTypeList onChange={_onChange(fieldProps)} {...fieldProps} />;
 }

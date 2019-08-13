@@ -28,7 +28,7 @@ function mapDispatchToProps(dispatch) {
 
 const CollectionsList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function CollectionsSelectField(fieldProps) {

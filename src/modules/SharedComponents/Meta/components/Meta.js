@@ -124,7 +124,7 @@ export default class Meta extends PureComponent {
                               this.getMetaTagsForOtherFields(publication[subkey], subkey, url, tag);
 
                         return [...tagsContent, ...(metaTagsContent || [])];
-                    }, [])
+                    }, []),
                 );
                 return metaTags;
             }, [])
@@ -139,7 +139,7 @@ export default class Meta extends PureComponent {
             routesConfig.filter(route =>
                 !!route.regExPath
                     ? new RegExp(route.regExPath, 'i').test(this.props.location.pathname)
-                    : route.path === this.props.location.pathname
+                    : route.path === this.props.location.pathname,
             );
         const pageTitle = !!publication
             ? publication.rek_title

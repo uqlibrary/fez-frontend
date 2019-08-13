@@ -79,6 +79,6 @@ const mapDispatchToProps = dispatch => ({
 
 ThesisSubmissionContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(ThesisSubmissionContainer);
 export default reloadReducerFromLocalStorage()(ThesisSubmissionContainer);

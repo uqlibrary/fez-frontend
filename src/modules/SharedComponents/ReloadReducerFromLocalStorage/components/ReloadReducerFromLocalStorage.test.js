@@ -1,6 +1,5 @@
 import reloadReducerFromLocalStorage from './ReloadReducerFromLocalStorage';
 
-
 function setup(WrappedComponent, testProps, isShallow = true) {
     const props = {
         ...testProps,

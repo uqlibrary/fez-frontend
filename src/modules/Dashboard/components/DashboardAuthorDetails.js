@@ -74,7 +74,7 @@ export class DashboardAuthorDetails extends PureComponent {
                                             this.props.orgUnits[index] &&
                                             `, ${this.props.orgUnits[index]}`}
                                     </Typography>
-                                )
+                                ),
                         )}
                 </Grid>
             </Grid>

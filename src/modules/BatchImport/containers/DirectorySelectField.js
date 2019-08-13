@@ -24,7 +24,7 @@ function mapDispatchToProps(dispatch) {
 
 const DirectoryList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function DirectorySelectField(fieldProps) {

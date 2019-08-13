@@ -77,7 +77,7 @@ const mapDispatchToProps = dispatch => ({
 
 SbsSubmissionContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(SbsSubmissionContainer);
 SbsSubmissionContainer = withRouter(SbsSubmissionContainer);
 export default reloadReducerFromLocalStorage()(SbsSubmissionContainer);

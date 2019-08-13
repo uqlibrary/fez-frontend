@@ -32,10 +32,7 @@ describe('app reducer', () => {
     });
 
     it('hides app alert', () => {
-        const test = appReducer(
-            { ...initialState, appAlert: 'A test alert' },
-            { type: actions.APP_ALERT_HIDE }
-        );
+        const test = appReducer({ ...initialState, appAlert: 'A test alert' }, { type: actions.APP_ALERT_HIDE });
         expect(test.appAlert).toBeNull;
         expect(test).toEqual(initialState);
     });
@@ -54,7 +51,7 @@ describe('app reducer', () => {
     it('clears a redirect', () => {
         const test = appReducer(
             { ...initialState, redirectPath: 'some/redirect/path' },
-            { type: actions.CLEAR_REDIRECT_PATH }
+            { type: actions.CLEAR_REDIRECT_PATH },
         );
         expect(test.redirectPath).toBeNull;
         expect(test).toEqual(initialState);

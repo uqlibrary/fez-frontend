@@ -12,7 +12,7 @@ function setup(testProps) {
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <BatchImport {...testProps} />
             </MemoryRouter>
-        </Provider>
+        </Provider>,
     );
 }
 

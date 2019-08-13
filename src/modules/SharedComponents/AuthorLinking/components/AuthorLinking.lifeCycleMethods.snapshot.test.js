@@ -89,14 +89,12 @@ describe('AuthorLinking', () => {
         };
 
         const wrapper = setup(props);
-        wrapper
-            .instance()
-            ._selectAuthor({
-                rek_author_id: null,
-                rek_author_pid: 'UQ:111111',
-                rek_author: 'Overgaard, Nana H.',
-                rek_author_order: 1,
-            });
+        wrapper.instance()._selectAuthor({
+            rek_author_id: null,
+            rek_author_pid: 'UQ:111111',
+            rek_author: 'Overgaard, Nana H.',
+            rek_author_order: 1,
+        });
         expect(onChange).toHaveBeenCalled();
 
         wrapper.instance()._acceptAuthorLinkingTermsAndConditions();

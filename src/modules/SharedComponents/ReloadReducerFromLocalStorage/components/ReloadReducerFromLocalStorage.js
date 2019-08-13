@@ -1,7 +1,7 @@
 import React from 'react';
 import Immutable from 'immutable';
 
-const reloadReducerFromLocalStorage = (reducer = 'form') => (WrappedComponent) => {
+const reloadReducerFromLocalStorage = (reducer = 'form') => WrappedComponent => {
     class ReloadReducerFromLocalStorage extends React.Component {
         constructor(props) {
             super(props);

@@ -1523,7 +1523,7 @@ export default {
                                 title: 'Created',
                                 combiner: 'between',
                                 value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
+                                    'Do MMMM, YYYY',
                                 )}`,
                             }) ||
                             null,
@@ -1544,7 +1544,7 @@ export default {
                                 title: 'Updated',
                                 combiner: 'between',
                                 value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
+                                    'Do MMMM, YYYY',
                                 )}`,
                             }) ||
                             null,

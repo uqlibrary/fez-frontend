@@ -68,7 +68,7 @@ const mapDispatchToProps = dispatch => ({
 
 BatchImportContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(BatchImportContainer);
 
 export default withRouter(BatchImportContainer);

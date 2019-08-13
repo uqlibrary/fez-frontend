@@ -13,7 +13,7 @@ export function getBatchImportDirectories() {
             error => {
                 dispatch({ type: actions.DIRECTORY_LIST_FAILED, payload: error.message });
                 return Promise.reject(new Error(error.message));
-            }
+            },
         );
     };
 }
@@ -30,7 +30,7 @@ export function createBatchImport(data) {
             error => {
                 dispatch({ type: actions.BATCH_IMPORT_REQUEST_FAILED, payload: error.message });
                 return Promise.reject(new Error(error.message));
-            }
+            },
         );
     };
 }

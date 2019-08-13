@@ -11,10 +11,10 @@ class IndexComponent extends PureComponent {
         return (
             <StandardPage>
                 <Grid container spacing={24}>
-                    <Grid item xs={12} md={8} >
-                        <TopCitedPublications/>
+                    <Grid item xs={12} md={8}>
+                        <TopCitedPublications />
                     </Grid>
-                    <Grid item xs={12} md={4} >
+                    <Grid item xs={12} md={4}>
                         <Grid container spacing={24}>
                             <Grid item xs={12}>
                                 <WhatIsEspace />
@@ -31,5 +31,5 @@ class IndexComponent extends PureComponent {
 }
 
 const StyledIndex = withStyles(null, { withTheme: true })(IndexComponent);
-const Index = (props) => <StyledIndex {...props}/>;
+const Index = props => <StyledIndex {...props} />;
 export default Index;

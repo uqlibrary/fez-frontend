@@ -28,7 +28,9 @@ export default class PublicationSearchForm extends Component {
                 <form onSubmit={this.props.handleSubmit}>
                     <Grid container spacing={16} alignItems={'center'}>
                         <Grid item xs={12}>
-                            <Typography gutterBottom id="search-description">{this.props.locale.text}</Typography>
+                            <Typography gutterBottom id="search-description">
+                                {this.props.locale.text}
+                            </Typography>
                         </Grid>
                         <Grid item xs={12} sm>
                             <Field
@@ -54,8 +56,7 @@ export default class PublicationSearchForm extends Component {
                                 disabled={this.props.invalid}
                             />
                         </Grid>
-                        {
-                            this.props.onSkipSearch &&
+                        {this.props.onSkipSearch && (
                             <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'text'}
@@ -64,7 +65,7 @@ export default class PublicationSearchForm extends Component {
                                     onClick={this.props.onSkipSearch}
                                 />
                             </Grid>
-                        }
+                        )}
                     </Grid>
                 </form>
             </StandardCard>

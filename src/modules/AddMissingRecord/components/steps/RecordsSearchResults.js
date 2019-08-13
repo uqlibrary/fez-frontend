@@ -80,20 +80,22 @@ export default class RecordsSearchResults extends PureComponent {
                     (item.fez_record_search_key_contributor_id.length > 0 &&
                         item.fez_record_search_key_contributor_id.reduce(
                             (total, item) => total || item.rek_contributor_id === 0 || item.rek_contributor_id === null,
-                            false
+                            false,
                         )) ||
                     // If the item has had authors assigned, but have unclaimed/unassigned ie. id = 0 or null
                     (item.fez_record_search_key_author_id.length > 0 &&
                         item.fez_record_search_key_author_id.reduce(
                             (total, item) => total || item.rek_author_id === 0 || item.rek_author_id === null,
-                            false
+                            false,
                         )) ||
                     // If there are no authors, and not all of the contributors have been assigned by count
                     // Edge case for edited book, where there were no authors but had contributors
                     (item.fez_record_search_key_author.length === 0 &&
                         item.fez_record_search_key_contributor_id.length !==
                             item.fez_record_search_key_contributor.length)
-                ) { return false; }
+                ) {
+                    return false;
+                }
 
                 return true;
             })

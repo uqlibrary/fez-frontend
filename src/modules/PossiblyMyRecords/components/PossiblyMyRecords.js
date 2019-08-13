@@ -134,7 +134,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -144,7 +144,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -154,7 +154,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -176,7 +176,7 @@ export default class PossiblyMyRecords extends PureComponent {
             {
                 page: page,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -209,7 +209,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 {this.getAlert(
                     txt.hidePublicationFailedAlert,
                     this.props.hidePublicationFailed,
-                    this.props.hidePublicationFailedErrorMessage
+                    this.props.hidePublicationFailedErrorMessage,
                 )}
 
                 {// first time loading my possible publications - account hasn't
@@ -263,7 +263,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                     {txt.searchResults.text
                                                         .replace(
                                                             '[resultsCount]',
-                                                            this.props.possiblePublicationsList.length
+                                                            this.props.possiblePublicationsList.length,
                                                         )
                                                         .replace('[totalCount]', totalPossiblePubs)}
                                                 </Typography>

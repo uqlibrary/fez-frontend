@@ -52,7 +52,7 @@ describe('Component FileUploader', () => {
                     fileNameRestrictions: FILE_NAME_RESTRICTION,
                 },
             }),
-            false
+            false,
         );
         const tree = toJson(wrapper);
 
@@ -168,7 +168,7 @@ describe('Component FileUploader', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
             expect(wrapper.instance().state.filesInQueue[0].fileData.name).toEqual('a.txt');
             expect(wrapper.instance().state.filesInQueue[1].fileData.name).toEqual('b.txt');
-        }
+        },
     );
 
     it('should set max files error message', () => {
@@ -183,7 +183,7 @@ describe('Component FileUploader', () => {
         wrapper.instance()._handleDroppedFiles(accepted, { tooManyFiles: ['d.txt'] });
         wrapper.update();
         expect(wrapper.state().errorMessage).toEqual(
-            'Maximum number of files (3) has been exceeded. File(s) (d.txt) will not be uploaded'
+            'Maximum number of files (3) has been exceeded. File(s) (d.txt) will not be uploaded',
         );
     });
 
@@ -251,7 +251,7 @@ describe('Component FileUploader', () => {
             expect(wrapper.instance().state.filesInQueue[0].access_condition_id).toEqual(8);
 
             expect(wrapper.state().isTermsAndConditionsAccepted).toBeFalsy();
-        }
+        },
     );
 
     it(
@@ -273,7 +273,7 @@ describe('Component FileUploader', () => {
             wrapper.state().filesInQueue = [fileA, fileB, fileC, fileD];
             wrapper.state().isTermsAndConditionsAccepted = false;
             expect(wrapper.instance().isFileUploadValid(wrapper.state())).toBeFalsy();
-        }
+        },
     );
 
     it('should return true on if all files are closed access', () => {
@@ -333,12 +333,12 @@ describe('Component FileUploader', () => {
                 invalidFileNames: ['web_a.txt'],
                 notFiles: ['someFolder'],
                 tooBigFiles: ['big_file.txt'],
-            })
+            }),
         ).toEqual(
             'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; ' +
                 'File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) ' +
                 'have invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum ' +
-                'allowed upload file size'
+                'allowed upload file size',
         );
     });
 
@@ -351,7 +351,7 @@ describe('Component FileUploader', () => {
                 invalidFileNames: [],
                 notFiles: [],
                 tooBigFiles: [],
-            })
+            }),
         ).toEqual('');
     });
 

@@ -66,7 +66,7 @@ export const BatchImport = ({
                     ...alertProps,
                     ...actionProps,
                 }
-                : null
+                : null,
         );
     }, [batchImportTxt, formErrors, reset, submitSucceeded, submitting]);
 

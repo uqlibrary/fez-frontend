@@ -38,14 +38,9 @@ describe('Export publications actions', () => {
             // mock promptForDownload
             promptForDownload.mockImplementation(() => exportPublicationsFormat);
 
-            mockApi
-                .onGet(requestParams.apiUrl)
-                .reply(200, exportSearchToExcelResponse);
+            mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
 
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.EXPORT_PUBLICATIONS_LOADED,
-            ];
+            const expectedActions = [actions.EXPORT_PUBLICATIONS_LOADING, actions.EXPORT_PUBLICATIONS_LOADED];
 
             await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -57,23 +52,16 @@ describe('Export publications actions', () => {
                 throw 'Error';
             });
 
-            mockApi
-                .onGet(requestParams.apiUrl)
-                .reply(200, exportSearchToExcelResponse);
+            mockApi.onGet(requestParams.apiUrl).reply(200, exportSearchToExcelResponse);
 
-            const expectedActions = [
-                actions.EXPORT_PUBLICATIONS_LOADING,
-                actions.EXPORT_PUBLICATIONS_FAILED,
-            ];
+            const expectedActions = [actions.EXPORT_PUBLICATIONS_LOADING, actions.EXPORT_PUBLICATIONS_FAILED];
 
             await mockActionsStore.dispatch(exportPublicationsActions.exportPublications(requestParams));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
 
         it('dispatches expected actions for anon user', async() => {
-            mockApi
-                .onAny()
-                .reply(403, {});
+            mockApi.onAny().reply(403, {});
 
             const expectedActions = [
                 actions.EXPORT_PUBLICATIONS_LOADING,
@@ -86,9 +74,7 @@ describe('Export publications actions', () => {
         });
 
         it('dispatches expected actions if API fails', async() => {
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             const expectedActions = [
                 actions.EXPORT_PUBLICATIONS_LOADING,

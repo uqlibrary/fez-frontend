@@ -142,7 +142,7 @@ describe('ThesisSubmission test', () => {
             .instance()
             .afterSubmit();
         expect(window.location.assign).toBeCalledWith(
-            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink)
+            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
         );
     });
 

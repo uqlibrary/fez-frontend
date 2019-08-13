@@ -7,7 +7,7 @@ describe('Authors reducer', () => {
         authorsListLoadingError: false,
         authorsList: [],
     };
-    const mockAuthor = { 'aut_id': 410, 'aut_org_username': 'uqifraze' };
+    const mockAuthor = { aut_id: 410, aut_org_username: 'uqifraze' };
 
     it('fails to load data', () => {
         const test = authorsReducer(initialState, { type: actions.AUTHORS_LOAD_FAILED });

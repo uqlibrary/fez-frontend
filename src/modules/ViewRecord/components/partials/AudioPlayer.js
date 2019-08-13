@@ -22,9 +22,7 @@ export default class AudioPlayer extends Component {
     }
 
     audioPlayerPlay = () => {
-        const playPromise = !!this.audioPlayerRef
-            ? this.audioPlayerRef.play()
-            : false;
+        const playPromise = !!this.audioPlayerRef ? this.audioPlayerRef.play() : false;
 
         if (!!playPromise) {
             playPromise.then(() => this.setState({ isPlaying: true }));
@@ -47,7 +45,7 @@ export default class AudioPlayer extends Component {
         const { isPlaying } = this.state;
         return (
             <div>
-                <audio id="audioPlayer" ref={(player) => (this.audioPlayerRef = player)}>
+                <audio id="audioPlayer" ref={player => (this.audioPlayerRef = player)}>
                     <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
                 </audio>
                 <IconButton
@@ -56,7 +54,7 @@ export default class AudioPlayer extends Component {
                     onClick={isPlaying ? this.audioPlayerPause : this.audioPlayerPlay}
                     aria-label={(isPlaying ? controls.pauseAudio : controls.playAudio).replace('[fileName]', fileName)}
                 >
-                    {isPlaying ? <Pause className="pause"/> : <PlayArrow className="play"/>}
+                    {isPlaying ? <Pause className="pause" /> : <PlayArrow className="play" />}
                 </IconButton>
             </div>
         );
