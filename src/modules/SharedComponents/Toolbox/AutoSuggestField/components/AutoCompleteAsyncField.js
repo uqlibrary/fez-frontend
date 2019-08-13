@@ -66,7 +66,7 @@ export class AutoCompleteAsyncField extends Component {
                     .split(' ')
                     .join('|')
                     .replace(/[()]/g, '')})`,
-                'gi'
+                'gi',
             );
             return regex.test(anyKey);
         },
@@ -270,8 +270,8 @@ export class AutoCompleteAsyncField extends Component {
                                                             inputValue,
                                                             isNaN(inputValue)
                                                                 ? suggestion.value
-                                                                : suggestion.id || suggestion.value.toString()
-                                                        )
+                                                                : suggestion.id || suggestion.value.toString(),
+                                                        ),
                                                     )
                                                     .slice(0, maxResults)
                                                     .map((suggestion, index) => {

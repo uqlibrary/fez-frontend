@@ -37,7 +37,7 @@ export default class RichEditor extends PureComponent {
                     height: this.props.height,
                     pasteFilter: 'semantic-content',
                 },
-                (!!this.props.value && this.props.value.get('htmlText')) || null
+                (!!this.props.value && this.props.value.get('htmlText')) || null,
             );
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
@@ -68,7 +68,7 @@ export default class RichEditor extends PureComponent {
                         .getText()
                         .trim(),
                 }
-                : null
+                : null,
         );
     };
 

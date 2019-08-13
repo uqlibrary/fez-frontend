@@ -29,7 +29,7 @@ describe('Grant Information Component ', () => {
                 actions: {},
                 classes: {},
             },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -55,25 +55,25 @@ describe('Grant Information Component ', () => {
             wrapper
                 .find('.header')
                 .at(0)
-                .props().grantAgencyName
+                .props().grantAgencyName,
         ).toEqual('Grant agency');
         expect(
             wrapper
                 .find('.header')
                 .at(0)
-                .props().grantId
+                .props().grantId,
         ).toBeFalsy();
         expect(
             wrapper
                 .find('.header')
                 .at(1)
-                .props().grantAgencyName
+                .props().grantAgencyName,
         ).toEqual('Grant agency');
         expect(
             wrapper
                 .find('.header')
                 .at(1)
-                .props().grantId
+                .props().grantId,
         ).toEqual('Grant ID');
 
         // expect(wrapper.find('.data').at(1).props().grantAgencyName).toEqual(

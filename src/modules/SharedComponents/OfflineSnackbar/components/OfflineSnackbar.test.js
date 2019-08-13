@@ -53,14 +53,14 @@ describe('Component OfflineSnackbar', () => {
         Object.defineProperty(navigator, 'onLine', { value: true, writable: true });
         const wrapper = setup({});
         wrapper.instance().updateOnlineState();
-        expect(wrapper.instance().state).toEqual({ 'online': true, 'open': true });
+        expect(wrapper.instance().state).toEqual({ online: true, open: true });
     });
 
     it('updateOnlineState returns expected state when online', () => {
         Object.defineProperty(navigator, 'onLine', { value: false, writable: true });
         const wrapper = setup({});
         wrapper.instance().updateOnlineState();
-        expect(wrapper.instance().state).toEqual({ 'online': false, 'open': true });
+        expect(wrapper.instance().state).toEqual({ online: false, open: true });
     });
 
     it('updateOnlineState returns expected state when window event offline is fired', () => {
@@ -76,7 +76,7 @@ describe('Component OfflineSnackbar', () => {
         const goOnline = new window.Event('online', { bubbles: true });
         const wrapper = setup();
         document.dispatchEvent(goOnline);
-        expect(wrapper.state()).toEqual({ 'online': true, 'open': true });
+        expect(wrapper.state()).toEqual({ online: true, open: true });
     });
 
     it('should unmount component', () => {

@@ -173,7 +173,8 @@ exports[`ResearchReportForm renders  component 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
+             
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -203,7 +204,8 @@ exports[`ResearchReportForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -238,7 +240,8 @@ exports[`ResearchReportForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -679,7 +682,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
         Object {
           "buttonLabel": "CLOSE",
           "text": <p>
-            For more information about identification of author/creator/designer, click 
+            For more information about identification of author/creator/designer, click
+             
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -709,7 +713,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of authors below
                   </b>
@@ -744,7 +749,8 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>

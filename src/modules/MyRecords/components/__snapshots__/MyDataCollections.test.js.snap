@@ -15,7 +15,8 @@ exports[`myDatasets test renders active filters 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to 
+            We were unable to find any results. You may be able to
+             
             <a
               href="/data-collections/add"
             >
@@ -27,7 +28,8 @@ exports[`myDatasets test renders active filters 1`] = `
         title="No datasets found"
       >
         <div>
-          We were unable to find any results. You may be able to 
+          We were unable to find any results. You may be able to
+           
           <a
             href="/data-collections/add"
           >
@@ -521,7 +523,8 @@ exports[`myDatasets test renders no results 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to 
+            We were unable to find any results. You may be able to
+             
             <a
               href="/data-collections/add"
             >
@@ -533,7 +536,8 @@ exports[`myDatasets test renders no results 1`] = `
         title="No datasets found"
       >
         <div>
-          We were unable to find any results. You may be able to 
+          We were unable to find any results. You may be able to
+           
           <a
             href="/data-collections/add"
           >

@@ -65,8 +65,7 @@ export default class ConfirmDialogBox extends Component {
 
     _onCancelAction() {
         this._hideConfirmation();
-        !!this.props.onCancelAction &&
-        this.props.onCancelAction();
+        !!this.props.onCancelAction && this.props.onCancelAction();
     }
 
     render() {
@@ -81,15 +80,16 @@ export default class ConfirmDialogBox extends Component {
                         children={this.props.locale.confirmButtonLabel}
                         autoFocus
                         color={'primary'}
-                        onClick={this._onAction}/>
-                    {
-                        !this.props.hideCancelButton &&
+                        onClick={this._onAction}
+                    />
+                    {!this.props.hideCancelButton && (
                         <Button
                             variant={'contained'}
                             color={'primary'}
                             children={this.props.locale.cancelButtonLabel}
-                            onClick={this._onCancelAction}/>
-                    }
+                            onClick={this._onCancelAction}
+                        />
+                    )}
                 </DialogActions>
             </Dialog>
         );

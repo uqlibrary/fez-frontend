@@ -408,7 +408,7 @@ describe('searchRecords reducer', () => {
         testCases.map(testCase => {
             const { inputList, idSearchKey, isOnlyForEspace, expectedDuplicates, espaceDuplicates } = testCase;
             expect(getDuplicateList(inputList, idSearchKey, isOnlyForEspace, espaceDuplicates)).toEqual(
-                expectedDuplicates
+                expectedDuplicates,
             );
         });
     });
@@ -423,7 +423,7 @@ describe('searchRecords reducer', () => {
                     idSearchKey: { key: 'fez_record_search_key_isi_loc', value: 'rek_isi_loc' },
                     expectedDuplicates: records.expectedDuplicateListByWOSIdFromEspaceScopusWOSOnlyForEspace.slice(
                         0,
-                        -1
+                        -1,
                     ),
                 },
             ];
@@ -431,10 +431,10 @@ describe('searchRecords reducer', () => {
             testCases.map(testCase => {
                 const { inputList, idSearchKey, expectedDuplicates } = testCase;
                 expect(getEspaceDuplicatePublicationsByIdExceptLastItem(inputList, idSearchKey)).toEqual(
-                    expectedDuplicates
+                    expectedDuplicates,
                 );
             });
-        }
+        },
     );
 
     it('should set search query in state', () => {
@@ -449,7 +449,7 @@ describe('searchRecords reducer', () => {
     it('should reset search query in state', () => {
         const countState = searchRecordsReducer(
             { ...initialState, searchQuery: { all: 'i feel lucky' } },
-            { type: actions.CLEAR_SEARCH_QUERY }
+            { type: actions.CLEAR_SEARCH_QUERY },
         );
         expect(countState.searchQuery).toEqual({});
     });
@@ -462,7 +462,7 @@ describe('searchRecords reducer', () => {
     it('should reset search loading error in state', () => {
         const searchState = searchRecordsReducer(
             { ...initialState, searchLoadingError: true },
-            { payload: { title: 'test search reset error' }, type: actions.SET_SEARCH_QUERY }
+            { payload: { title: 'test search reset error' }, type: actions.SET_SEARCH_QUERY },
         );
         expect(searchState.searchLoadingError).toBeFalsy();
     });

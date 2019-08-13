@@ -28,7 +28,7 @@ describe("Publication's map coordinates", () => {
                     '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
                     '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
             },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -41,7 +41,7 @@ describe("Publication's map coordinates", () => {
                     '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
                 readOnly: true,
             },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -97,7 +97,7 @@ describe("Publication's map coordinates", () => {
                     },
                 ],
             },
-            true
+            true,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
 

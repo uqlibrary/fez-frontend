@@ -45,35 +45,40 @@ export default class SeminarPaperForm extends Component {
                                     rows={1}
                                     {...txt.information.fieldLabels.documentTitle}
                                     required
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={OrgUnitNameField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_org_unit_name.rek_org_unit_name"
-                                    {...txt.information.fieldLabels.orgUnitName} />
+                                    {...txt.information.fieldLabels.orgUnitName}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={OrgNameField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_org_name.rek_org_name"
-                                    {...txt.information.fieldLabels.orgName} />
+                                    {...txt.information.fieldLabels.orgName}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={SeriesField}
                                     disabled={this.props.submitting}
                                     name="fez_record_search_key_series.rek_series"
-                                    {...txt.information.fieldLabels.series} />
+                                    {...txt.information.fieldLabels.series}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.seminarDate.title}
@@ -108,7 +113,8 @@ export default class SeminarPaperForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    {...txt.optional.fieldLabels.notes} />
+                                    {...txt.optional.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -118,7 +124,8 @@ export default class SeminarPaperForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     {...txt.optional.fieldLabels.url}
-                                    validate={[validation.url]} />
+                                    validate={[validation.url]}
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>

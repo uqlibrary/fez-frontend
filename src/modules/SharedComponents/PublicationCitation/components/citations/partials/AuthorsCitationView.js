@@ -159,7 +159,7 @@ export class AuthorsCitationView extends PureComponent {
                 {prefix}
                 {this.renderAuthors(authors, separator, showLink, getLink).slice(
                     0,
-                    hasMoreAuthors && toggleShowMoreLink ? initialNumberOfAuthors : authors.length
+                    hasMoreAuthors && toggleShowMoreLink ? initialNumberOfAuthors : authors.length,
                 )}
                 {hasMoreAuthors && (
                     <span>
@@ -172,7 +172,7 @@ export class AuthorsCitationView extends PureComponent {
                                 toggleShowMoreLink
                                     ? showMoreTitle.replace(
                                         '[numberOfAuthors]',
-                                        `${authors.length - initialNumberOfAuthors}`
+                                        `${authors.length - initialNumberOfAuthors}`,
                                     )
                                     : showLessTitle
                             }
@@ -180,7 +180,7 @@ export class AuthorsCitationView extends PureComponent {
                             {toggleShowMoreLink
                                 ? showMoreLabel.replace(
                                     '[numberOfAuthors]',
-                                    `${authors.length - initialNumberOfAuthors}`
+                                    `${authors.length - initialNumberOfAuthors}`,
                                 )
                                 : showLessLabel}
                         </a>

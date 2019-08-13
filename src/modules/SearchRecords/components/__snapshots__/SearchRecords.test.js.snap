@@ -38,7 +38,7 @@ exports[`SearchRecords page renders error alert if error occurs during search 1`
       xs={12}
     >
       <WithStyles(Alert)
-        message="A UQ eSpace system maintenance outage is scheduled from Friday 2/8/19 (6pm) to Monday 5/8/19 (7:30am). Users will be able to browse but all functionality that requires login will not be available. Apologies for the inconvenience."
+        message="Error has occurred during request and request cannot be processed. Please contact eSpace administrators or try again later."
         pushToTop={true}
         title="Error"
         type="error_outline"

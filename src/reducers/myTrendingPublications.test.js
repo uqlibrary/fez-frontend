@@ -181,7 +181,7 @@ describe('Trending publications reducer', () => {
             {
                 type: `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
                 payload: { data: scopusPubs },
-            }
+            },
         );
 
         expect(test.trendingPublicationsList).toEqual([

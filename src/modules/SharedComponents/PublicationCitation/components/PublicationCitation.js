@@ -260,7 +260,7 @@ export class PublicationCitation extends PureComponent {
                             href={sourceConfig.externalUrl.replace('[id]', source.id)}
                             aria-label={locale.global.linkWillOpenInNewWindow.replace(
                                 '[destination]',
-                                sourceConfig.title
+                                sourceConfig.title,
                             )}
                         >
                             {sourceConfig.title}
@@ -295,11 +295,11 @@ export class PublicationCitation extends PureComponent {
                                         href={recordValue.citation_url}
                                         title={txt.linkWillOpenInNewWindow.replace(
                                             '[destination]',
-                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
                                         )}
                                         aria-label={txt.linkWillOpenInNewWindow.replace(
                                             '[destination]',
-                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
                                         )}
                                         openInNewIcon={false}
                                     >
@@ -369,7 +369,7 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs />
                         </Hidden>
                         {this.renderActions(
-                            this.props.showDefaultActions ? this.defaultActions : this.props.customActions
+                            this.props.showDefaultActions ? this.defaultActions : this.props.customActions,
                         )}
                     </Grid>
                 )}

@@ -17,7 +17,7 @@ const styles = {
 };
 
 export class RighthandCard extends React.Component {
-    static propTypes ={
+    static propTypes = {
         classes: PropTypes.object.isRequired,
         children: PropTypes.any,
         title: PropTypes.string,
@@ -33,14 +33,17 @@ export class RighthandCard extends React.Component {
         return (
             <Grid container>
                 <Grid item xs className={classes.title}>
-                    {title &&
-                    <Typography variant={'h6'} color={'primary'}>{title}</Typography>}
+                    {title && (
+                        <Typography variant={'h6'} color={'primary'}>
+                            {title}
+                        </Typography>
+                    )}
                 </Grid>
-                {help && help.text &&
-                <Grid item>
-                    <HelpIcon {...help}/>
-                </Grid>
-                }
+                {help && help.text && (
+                    <Grid item>
+                        <HelpIcon {...help} />
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <Divider className={classes.divider} />
                 </Grid>
@@ -53,5 +56,5 @@ export class RighthandCard extends React.Component {
 }
 
 const StyledCard = withStyles(styles, { withTheme: true })(RighthandCard);
-const StandardRighthandCard = (props) => <StyledCard {...props}/>;
+const StandardRighthandCard = props => <StyledCard {...props} />;
 export default StandardRighthandCard;

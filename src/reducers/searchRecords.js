@@ -41,7 +41,7 @@ export const getDuplicateList = (
     publicationsList,
     idSearchKey,
     isOnlyForEspace = false,
-    espacePublicationWithDuplicateIds = []
+    espacePublicationWithDuplicateIds = [],
 ) => {
     const idCountHash = getIdCountHash(publicationsList, idSearchKey, isOnlyForEspace);
 
@@ -73,7 +73,7 @@ export const deduplicateResults = list => {
         (publicationsList, idSearchKey) => {
             const espacePublicationWithDuplicateIds = getEspaceDuplicatePublicationsByIdExceptLastItem(
                 publicationsList,
-                idSearchKey
+                idSearchKey,
             );
 
             // get a list of doi/scopus_id/isi_loc counts
@@ -84,7 +84,7 @@ export const deduplicateResults = list => {
                 publicationsList,
                 idSearchKey,
                 false,
-                espacePublicationWithDuplicateIds
+                espacePublicationWithDuplicateIds,
             );
 
             // remove all duplicates from full list of results
@@ -112,7 +112,7 @@ export const deduplicateResults = list => {
                                 const currentItem = { ...list[0] }; // the first item
                                 const currentItemSources = [...currentItem.sources];
                                 const currentItemPriority = Math.min(
-                                    ...currentItemSources.map(source => locale.global.sources[source.source].priority)
+                                    ...currentItemSources.map(source => locale.global.sources[source.source].priority),
                                 ); // returns the lowest valued priority source this record has
                                 // items current source priority
                                 const itemPriority = locale.global.sources[item.sources[0].source].priority;
@@ -143,10 +143,10 @@ export const deduplicateResults = list => {
             return [...espacePublicationWithDuplicateIds, ...highPriorityItem, ...cleanedPublicationsList].sort(
                 (item1, item2) =>
                     locale.global.sources[item1.currentSource].priority -
-                    locale.global.sources[item2.currentSource].priority
+                    locale.global.sources[item2.currentSource].priority,
             );
         },
-        [...list]
+        [...list],
     );
 };
 

@@ -39,7 +39,7 @@ describe('Snapshot tests for full mount StandardPage component', () => {
     it('renders StandardPage with title and  help and content', () => {
         const wrapper = setup2(
             { title: 'Test', children: 'Test', help: { title: 'Test', text: 'Test', buttonLabel: 'Test' } },
-            false
+            false,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

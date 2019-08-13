@@ -95,7 +95,7 @@ export class AuthorLinking extends PureComponent {
         // Transform and cache list to output so component doesn't have to go through transform step every time
         if (linkedAuthorIdList.length === 0) {
             this.listToOutput = authorList.map(author =>
-                this.transformToAuthorOrderId(0, author, this.props.searchKey)
+                this.transformToAuthorOrderId(0, author, this.props.searchKey),
             );
         } else {
             this.listToOutput = linkedAuthorIdList;
@@ -117,7 +117,7 @@ export class AuthorLinking extends PureComponent {
      */
     getAuthorsToRender = (
         { authorList = [], linkedAuthorIdList = [], disabled = false } = {},
-        { selectedAuthor = {} } = {}
+        { selectedAuthor = {} } = {},
     ) => {
         const authors = authorList.map((author, index) => {
             const linked =
@@ -162,7 +162,7 @@ export class AuthorLinking extends PureComponent {
                 rows.push(
                     <Grid container key={i}>
                         {authors.slice(i, i + itemsPerRow)}
-                    </Grid>
+                    </Grid>,
                 );
             }
         }
@@ -204,7 +204,7 @@ export class AuthorLinking extends PureComponent {
         const selectedAuthor = this.transformToAuthorOrderId(
             this.props.loggedInAuthor.aut_id,
             author,
-            this.props.searchKey
+            this.props.searchKey,
         );
         this.setState({
             selectedAuthor: selectedAuthor,

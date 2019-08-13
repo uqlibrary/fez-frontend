@@ -47,7 +47,7 @@ describe('Academic action creators', () => {
 
             await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        },
     );
 
     it('should dispatch 3 actions on error 403 while fetching current author stats data', async() => {
@@ -83,7 +83,7 @@ describe('Academic action creators', () => {
 
             await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        },
     );
 
     it(
@@ -107,7 +107,7 @@ describe('Academic action creators', () => {
 
             await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        },
     );
 
     it(
@@ -131,6 +131,6 @@ describe('Academic action creators', () => {
 
             await mockActionsStore.dispatch(academicActions.loadAuthorPublicationsStats('testuser'));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        },
     );
 });

@@ -302,7 +302,7 @@ describe('AuthorsCitationView test ', () => {
         };
         const wrapper = setup(
             { publication: testObject, prefix: 'Authored by: ', suffix: ' people.', thresholdNumberOfAuthors: 0 },
-            true
+            true,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(true);
@@ -468,7 +468,7 @@ describe('AuthorsCitationView test ', () => {
                 initialNumberOfAuthors: 8,
                 thresholdNumberOfAuthors: 2,
             },
-            true
+            true,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(false);

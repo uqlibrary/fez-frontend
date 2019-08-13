@@ -98,7 +98,7 @@ describe('Component Orcid ', () => {
 
         wrapper.instance().authoriseConfirmationBox._onAction();
         expect(assignFn).toHaveBeenCalledWith(
-            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=5a13512116718ae7fbebaf5ce5fcfa83&show_login=true'
+            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=5a13512116718ae7fbebaf5ce5fcfa83&show_login=true',
         );
 
         wrapper.instance()._showAuthoriseConfirmation(false);
@@ -106,7 +106,7 @@ describe('Component Orcid ', () => {
 
         expect(getOrcidUrl).toHaveBeenCalledWith(false);
         expect(assignFn).toHaveBeenCalledWith(
-            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=5a13512116718ae7fbebaf5ce5fcfa83&show_login=false&family_names=Researcher&given_names=J'
+            'http://orcid.org/oauth/authorize?client_id=12345XYZ&response_type=code&scope=%2Fread-limited%20%2Factivities%2Fupdate%20%2Fperson%2Fupdate&redirect_uri=http%3A%2F%2Ffez-staging.library.uq.edu.au%2Fauthor-identifiers%2Forcid%2Flink&state=5a13512116718ae7fbebaf5ce5fcfa83&show_login=false&family_names=Researcher&given_names=J',
         );
     });
 
@@ -246,7 +246,7 @@ describe('Component Orcid ', () => {
             });
 
             expect(wrapper.instance().props.actions.linkAuthorOrcidId).not.toHaveBeenCalled();
-        }
+        },
     );
 
     it('should display error if ORCID url redirect STATE response is invalid', () => {

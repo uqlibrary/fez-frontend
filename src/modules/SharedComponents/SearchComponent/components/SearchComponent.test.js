@@ -47,7 +47,7 @@ describe('SearchComponent', () => {
                     push: jest.fn(),
                 },
             },
-            true
+            true,
         );
         expect(wrapper.instance().props.updateFacetExcludesFromSearchFields()).toBeUndefined();
     });
@@ -412,7 +412,7 @@ describe('SearchComponent', () => {
                     sortDirection: 'Desc',
                 },
             });
-        }
+        },
     );
 
     it('should handle simple search', () => {
@@ -894,7 +894,7 @@ describe('SearchComponent', () => {
                 wrapper.instance().getFieldRowsFromSearchQuery({
                     rek_status: '',
                     rek_updated_date: '',
-                })
+                }),
             ).toMatchSnapshot();
         });
 
@@ -908,7 +908,7 @@ describe('SearchComponent', () => {
                     rek_updated_date: {
                         notLabel: 'test',
                     },
-                })
+                }),
             ).toMatchSnapshot();
         });
 
@@ -1060,7 +1060,7 @@ describe('SearchComponent', () => {
             expect(
                 wrapper.instance().getSearchQuery({
                     all: 'i feel lucky',
-                })
+                }),
             ).toMatchSnapshot();
         });
     });

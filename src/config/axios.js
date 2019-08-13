@@ -143,5 +143,5 @@ api.interceptors.response.use(
             reportToSentry(error);
             return Promise.reject(error);
         }
-    }
+    },
 );

@@ -99,7 +99,7 @@ export class ContributorsEditor extends PureComponent {
                         const index = this.state.contributors.length - 1;
                         this.assignContributor(index);
                     }
-                }
+                },
             );
         }
     };

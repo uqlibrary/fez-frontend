@@ -7,33 +7,27 @@ const initState = {
 };
 
 const handlers = {
-    [`${actions.SEARCH_KEY_LOOKUP_LOADING}@`]: (state, action) => (
-        {
-            ...state,
-            [`${actions.getActionSuffix(action.type)}`]: {
-                ...initState,
-                itemsLoading: true,
-            },
-        }
-    ),
-    [`${actions.SEARCH_KEY_LOOKUP_LOADED}@`]: (state, action) => (
-        {
-            ...state,
-            [`${actions.getActionSuffix(action.type)}`]: {
-                ...initState,
-                itemsList: action.payload,
-            },
-        }
-    ),
-    [`${actions.SEARCH_KEY_LOOKUP_FAILED}@`]: (state, action) => (
-        {
-            ...state,
-            [`${actions.getActionSuffix(action.type)}`]: {
-                ...initState,
-                itemsLoadingError: true,
-            },
-        }
-    ),
+    [`${actions.SEARCH_KEY_LOOKUP_LOADING}@`]: (state, action) => ({
+        ...state,
+        [`${actions.getActionSuffix(action.type)}`]: {
+            ...initState,
+            itemsLoading: true,
+        },
+    }),
+    [`${actions.SEARCH_KEY_LOOKUP_LOADED}@`]: (state, action) => ({
+        ...state,
+        [`${actions.getActionSuffix(action.type)}`]: {
+            ...initState,
+            itemsList: action.payload,
+        },
+    }),
+    [`${actions.SEARCH_KEY_LOOKUP_FAILED}@`]: (state, action) => ({
+        ...state,
+        [`${actions.getActionSuffix(action.type)}`]: {
+            ...initState,
+            itemsLoadingError: true,
+        },
+    }),
 };
 
 export default function searchKeysReducer(state = {}, action) {

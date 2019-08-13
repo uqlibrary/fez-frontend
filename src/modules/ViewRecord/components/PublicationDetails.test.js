@@ -43,21 +43,26 @@ describe('Publication Details Component ', () => {
     });
 
     it('Renders nothing for no display type lookup', () => {
-        const wrapper = setup({ publication: {
-            ...publicationDetails,
-            rek_display_type_lookup: null,
-        },
+        const wrapper = setup({
+            publication: {
+                ...publicationDetails,
+                rek_display_type_lookup: null,
+            },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('Renders full mount', () => {
-        const wrapper = getElement(PublicationDetails, {
-            publication: {
-                ...publicationDetails,
-                rek_display_type_lookup: null,
+        const wrapper = getElement(
+            PublicationDetails,
+            {
+                publication: {
+                    ...publicationDetails,
+                    rek_display_type_lookup: null,
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -76,7 +76,7 @@ export class PublicationListLoadingProgressClass extends PureComponent {
 }
 
 const StyledPublicationListLoadingProgressClass = withStyles(styles, { withTheme: true })(
-    PublicationListLoadingProgressClass
+    PublicationListLoadingProgressClass,
 );
 const PublicationListLoadingProgress = props => <StyledPublicationListLoadingProgressClass {...props} />;
 export default PublicationListLoadingProgress;

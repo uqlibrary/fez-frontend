@@ -39,9 +39,9 @@ export default class BookForm extends Component {
     render() {
         const txt = formLocale.book;
         const editors = this.props.formValues && this.props.formValues.get('editors');
-        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
-        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
+        const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
         return (
             <Grid container spacing={24}>
                 <Grid item xs={12}>
@@ -60,7 +60,8 @@ export default class BookForm extends Component {
                                     multiline
                                     rows={1}
                                     label={txt.information.fieldLabels.bookTitle}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={!this.props.isNtro ? 4 : 6}>
                                 <Field
@@ -72,7 +73,8 @@ export default class BookForm extends Component {
                                     required
                                     fullWidth
                                     label={txt.information.fieldLabels.publicationPlace}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={!this.props.isNtro ? 4 : 6}>
                                 <Field
@@ -84,10 +86,10 @@ export default class BookForm extends Component {
                                     required
                                     fullWidth
                                     label={txt.information.fieldLabels.publisher}
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
-                            {
-                                !this.props.isNtro &&
+                            {!this.props.isNtro && (
                                 <Grid item xs={12} sm={4}>
                                     <Field
                                         component={TextField}
@@ -99,7 +101,7 @@ export default class BookForm extends Component {
                                         placeholder={txt.information.fieldLabels.extent.placeholder}
                                     />
                                 </Grid>
-                            }
+                            )}
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={TextField}
@@ -116,7 +118,8 @@ export default class BookForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -126,9 +129,7 @@ export default class BookForm extends Component {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.subtype !== SUBTYPE_EDITED_BOOK &&
-                    (!editors || editors.length === 0) &&
+                {this.props.subtype !== SUBTYPE_EDITED_BOOK && (!editors || editors.length === 0) && (
                     <Grid item xs={12}>
                         <StandardCard title={txt.authors.title} help={txt.authors.help}>
                             <Field
@@ -142,9 +143,8 @@ export default class BookForm extends Component {
                             />
                         </StandardCard>
                     </Grid>
-                }
-                {
-                    (!authors || authors.length === 0) &&
+                )}
+                {(!authors || authors.length === 0) && (
                     <Grid item xs={12}>
                         <StandardCard title={txt.editors.title} help={txt.editors.help}>
                             <Field
@@ -153,12 +153,12 @@ export default class BookForm extends Component {
                                 id="editors-name-as-published-field"
                                 name="editors"
                                 locale={txt.editors.field}
-                                disabled={this.props.submitting} />
+                                disabled={this.props.submitting}
+                            />
                         </StandardCard>
                     </Grid>
-                }
-                {
-                    this.props.isNtro &&
+                )}
+                {this.props.isNtro && (
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
@@ -172,7 +172,7 @@ export default class BookForm extends Component {
                         hideOriginalFormat
                         hideAudienceSize
                     />
-                }
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.isbnForm.title} help={locale.components.isbnForm.title.help}>
                         <Typography>{locale.components.isbnForm.text}</Typography>
@@ -184,7 +184,8 @@ export default class BookForm extends Component {
                             maxCount={5}
                             searchKey={{ value: 'rek_isbn', order: 'rek_isbn_order' }}
                             locale={locale.components.isbnForm.field}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -198,7 +199,8 @@ export default class BookForm extends Component {
                             maxCount={5}
                             locale={locale.components.issnForm.field}
                             searchKey={{ value: 'rek_issn', order: 'rek_issn_order' }}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -212,7 +214,8 @@ export default class BookForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    label={txt.optional.fieldLabels.notes}/>
+                                    label={txt.optional.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

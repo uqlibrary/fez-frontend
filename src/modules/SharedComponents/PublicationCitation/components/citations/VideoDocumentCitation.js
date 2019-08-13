@@ -16,7 +16,8 @@ export default class VideoDocumentCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             series: this.props.publication.fez_record_search_key_series
-                ? this.props.publication.fez_record_search_key_series.rek_series : null,
+                ? this.props.publication.fez_record_search_key_series.rek_series
+                : null,
         };
 
         // eSpace citation view for Video
@@ -24,16 +25,16 @@ export default class VideoDocumentCitation extends Component {
         return (
             <div className="citationContent citationVideo">
                 {/* {Creator}*/}
-                <Partials.AuthorsCitationView publication={this.props.publication}/>
+                <Partials.AuthorsCitationView publication={this.props.publication} />
 
                 {/* {Year| (|).} */}
-                <Partials.DateCitationView date={this.props.publication.rek_date}/>
+                <Partials.DateCitationView date={this.props.publication.rek_date} />
 
                 {/* <i>{Title| |.}</i> */}
-                <Partials.CitationTitleView className="citationTitle" value={record.title}/>
+                <Partials.CitationTitleView className="citationTitle" value={record.title} />
 
                 {/* {Series| |.} */}
-                <Partials.CitationView className="citationSeries" value={record.series}/>
+                <Partials.CitationView className="citationSeries" value={record.series} />
             </div>
         );
     }

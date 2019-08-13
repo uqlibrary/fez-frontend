@@ -19,7 +19,7 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 
 import { validation, routes } from 'config';
-import { default as pagesLocale } from 'locale/pages';
+import { default as pagesLocale } from '../locale';
 import { default as formsLocale } from 'locale/forms';
 import { default as viewRecordLocale } from 'locale/viewRecord';
 import { default as alertLocale } from 'locale/publicationForm';
@@ -91,7 +91,7 @@ export class MyIncompleteRecordClass extends PureComponent {
     };
 
     render() {
-        const txt = pagesLocale.pages.incompletePublication;
+        const txt = pagesLocale;
 
         const { recordToFix, ntroFieldProps, isNtro, hasAnyFiles } = this.props;
 

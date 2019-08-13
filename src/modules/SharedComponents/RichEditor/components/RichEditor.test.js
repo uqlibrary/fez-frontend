@@ -34,80 +34,101 @@ describe('RichEditor', () => {
     });
 
     it('should render given title and description', () => {
-        const wrapper = setup({
-            title: 'This is test title',
-            description: 'This is test description',
-        }, false);
+        const wrapper = setup(
+            {
+                title: 'This is test title',
+                description: 'This is test description',
+            },
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render given title and description with error', () => {
-        const wrapper = setup({
-            title: 'This is title with error',
-            description: 'This is description with error',
-            meta: {
-                error: 'This field is required',
+        const wrapper = setup(
+            {
+                title: 'This is title with error',
+                description: 'This is description with error',
+                meta: {
+                    error: 'This field is required',
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render error showing maxValue and instructions', () => {
-        const wrapper = setup({
-            value: Immutable.Map({ htmlText: 'This is test value' }),
-            maxValue: 10,
-            instructions: 'test instructions',
-            meta: {
-                error: 'This field is required',
+        const wrapper = setup(
+            {
+                value: Immutable.Map({ htmlText: 'This is test value' }),
+                maxValue: 10,
+                instructions: 'test instructions',
+                meta: {
+                    error: 'This field is required',
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render maxValue with missing instructions', () => {
-        const wrapper = setup({
-            maxValue: 10,
-        }, false);
+        const wrapper = setup(
+            {
+                maxValue: 10,
+            },
+            false,
+        );
         expect(toJson(wrapper.find('RichEditor WithStyles(Typography) Typography span'))).toMatchSnapshot();
     });
 
     it('should render error showing input length', () => {
-        const wrapper = setup({
-            value: { plainText: 'This is test value', get: jest.fn() },
-            maxValue: 10,
-            instructions: 'test instructions',
-            meta: {
-                error: 'This field is required',
+        const wrapper = setup(
+            {
+                value: { plainText: 'This is test value', get: jest.fn() },
+                maxValue: 10,
+                instructions: 'test instructions',
+                meta: {
+                    error: 'This field is required',
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render error as react children', () => {
-        const wrapper = setup({
-            value: { plainText: 'This is test value', get: jest.fn() },
-            maxValue: 10,
-            instructions: 'test instructions',
-            meta: {
-                error: (
-                    <p>
-                        <span>This field is required</span>
-                    </p>
-                ),
+        const wrapper = setup(
+            {
+                value: { plainText: 'This is test value', get: jest.fn() },
+                maxValue: 10,
+                instructions: 'test instructions',
+                meta: {
+                    error: (
+                        <p>
+                            <span>This field is required</span>
+                        </p>
+                    ),
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render error as one child', () => {
-        const wrapper = setup({
-            value: { plainText: 'This is test value', get: jest.fn() },
-            maxValue: 10,
-            instructions: 'test instructions',
-            meta: {
-                error: (<span>This field is required</span>),
+        const wrapper = setup(
+            {
+                value: { plainText: 'This is test value', get: jest.fn() },
+                maxValue: 10,
+                instructions: 'test instructions',
+                meta: {
+                    error: <span>This field is required</span>,
+                },
             },
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -150,7 +171,7 @@ describe('RichEditor', () => {
                         }),
                     }),
                 },
-                getData: () => (<span>test</span>),
+                getData: () => <span>test</span>,
             },
         });
         expect(onChangeFn).toHaveBeenCalledWith({
@@ -171,7 +192,7 @@ describe('RichEditor', () => {
                         }),
                     }),
                 },
-                getData: () => (<span>test</span>),
+                getData: () => <span>test</span>,
             },
         });
         expect(onChangeFn).toHaveBeenCalledWith(null);
