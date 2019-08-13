@@ -13,7 +13,7 @@ export default {
             title: 'Non-traditional research output types',
             text: (
                 <p>
-                    For more information about each type, click
+                    For more information about each type, click{' '}
                     <a
                         style={{ fontWeight: 700 }}
                         target="_blank"
@@ -37,7 +37,7 @@ export default {
             title: 'Content indicators',
             text: (
                 <p>
-                    For more information about content indicators, click
+                    For more information about content indicators, click{' '}
                     <a
                         style={{ fontWeight: 700 }}
                         target="_blank"
@@ -1299,7 +1299,7 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8GB. <br />
-                        PDF files must be saved using the following naming structure
+                        PDF files must be saved using the following naming structure{' '}
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
                         <ul>
@@ -1386,7 +1386,7 @@ export default {
                 fileUploadRestrictions: (
                     <div>
                         Maximum file size is 8GB. <br />
-                        PDF files must be saved using the following naming structure
+                        PDF files must be saved using the following naming structure{' '}
                         <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document name could
                         be thesis, abstract, and etc. For example:
                         <ul>
@@ -1523,8 +1523,8 @@ export default {
                                 View
                                 <a href="https://creativecommons.org/licenses/" target="_blank">
                                     Creative Commons Licenses
-                                </a>
-                                and
+                                </a>{' '}
+                                and{' '}
                                 <a
                                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                                     target="_blank"
