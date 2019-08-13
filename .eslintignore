@@ -1,6 +1,6 @@
-dist
 node_modules
+dist
 coverage
-**/mock/data/**/*.js
-cypress/examples
 custom_modules
+cypress/examples
+**/mock/data/**/*.js

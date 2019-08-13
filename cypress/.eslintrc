@@ -1,0 +1,10 @@
+{
+    "rules": {
+        "newline-per-chained-call": [
+            2,
+            {
+                "ignoreChainWithDepth": 1
+            }
+        ]
+    }
+}

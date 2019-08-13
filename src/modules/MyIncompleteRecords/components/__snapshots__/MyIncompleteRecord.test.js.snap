@@ -640,7 +640,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -722,7 +722,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -731,9 +731,9 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -757,14 +757,14 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -792,7 +792,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -1553,7 +1553,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -1635,7 +1635,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -1644,9 +1644,9 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -1670,14 +1670,14 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -1705,7 +1705,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -2491,7 +2491,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -2573,7 +2573,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -2582,9 +2582,9 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -2608,14 +2608,14 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -2643,7 +2643,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -2727,25 +2727,24 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
-                  Maximum file size is 8GB. 
-                  <br />
-                  PDF files must be saved using the following naming structure
-                  <b>
-                    &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
-                  </b>
-                  . Document name could be thesis, abstract, and etc. For example:
+                  Please ensure your files:
                   <ul>
                     <li>
-                      s1234567_phd_thesis.pdf
+                      begin with a letter and are less than 45 characters long
                     </li>
                     <li>
-                      s1234567_phd_abstract.pdf
+                      contain only upper and lowercase alphanumeric characters, and underscores
+                    </li>
+                    <li>
+                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                    </li>
+                    <li>
+                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                    </li>
+                    <li>
+                      are uploaded individually and not inside a folder
                     </li>
                   </ul>
-                  Supplementary audio files are to be in MP 3 format. 
-                  <br />
-                  Supplementary video files are to be in WMV or AVI format. 
-                  <br />
                 </div>,
                 "instructions": "",
                 "successMessage": "Successfully added [numberOfFiles] file(s) to upload queue.",
@@ -3479,7 +3478,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -3561,7 +3560,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -3570,9 +3569,9 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -3596,14 +3595,14 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -3631,7 +3630,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -4392,7 +4391,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -4474,7 +4473,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -4483,9 +4482,9 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -4509,14 +4508,14 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -4544,7 +4543,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -5305,7 +5304,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -5387,7 +5386,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -5396,9 +5395,9 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -5422,14 +5421,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -5457,7 +5456,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -6218,7 +6217,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -6300,7 +6299,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -6309,9 +6308,9 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -6335,14 +6334,14 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -6370,7 +6369,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -7137,7 +7136,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -7219,7 +7218,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -7228,9 +7227,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -7254,14 +7253,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -7289,7 +7288,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
@@ -8050,7 +8049,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
               "fields": Object {
                 "abstract": Object {
                   "label": <span>
-                    Abstract/Description* 
+                    Abstract/Description*
                     <span
                       style={
                         Object {
@@ -8132,7 +8131,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
         >
           <WithStyles(Typography)>
             <span>
-              For each author marked with a 
+              For each author marked with a
               <span
                 style={
                   Object {
@@ -8141,9 +8140,9 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                   }
                 }
               >
-                red 
+                red
               </span>
-              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click 
+              prompt, select the author name at Step 1, add the affiliation information as at time of publication at Step 2, then click
               <b>
                 UPDATE AUTHOR
               </b>
@@ -8167,14 +8166,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 2 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Update the affiliation information
                       </b>
                       .
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of authors below
                       </b>
@@ -8202,7 +8201,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       >
                         Step 1 of 2
                       </span>
-                      - 
+                      -
                       <b>
                         Select an author
                       </b>
