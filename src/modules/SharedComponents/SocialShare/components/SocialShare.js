@@ -2,17 +2,8 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import PropTypes from 'prop-types';
 import { APP_URL } from 'config';
-import {
-    PrintIcon,
-    ResearchGateIcon,
-    MendeleyIcon,
-} from './Icons';
-import {
-    EmailIcon,
-    FacebookIcon,
-    TwitterIcon,
-    LinkedinIcon,
-} from 'react-share/lib';
+import { PrintIcon, ResearchGateIcon, MendeleyIcon } from './Icons';
+import { EmailIcon, FacebookIcon, TwitterIcon, LinkedinIcon } from 'react-share/lib';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 
 export const SocialShare = ({ publication, size, spaceBetween, services, round }) => {
@@ -96,20 +87,22 @@ export const SocialShare = ({ publication, size, spaceBetween, services, round }
     };
     return (
         <Grid container spacing={0} id="social-share">
-            {services && services.length > 0 && services.map((item, index) => {
-                const Icon = locale[item].icon;
-                return (
-                    <Grid item id={item.id} key={index} style={{ marginRight: spaceBetween }}>
-                        <ExternalLink {...locale[item].link} id={locale[item].id} >
-                            <Icon
-                                /* istanbul ignore if */
-                                size={size}
-                                round={round}
-                            />
-                        </ExternalLink>
-                    </Grid>
-                );
-            })}
+            {services &&
+                services.length > 0 &&
+                services.map((item, index) => {
+                    const Icon = locale[item].icon;
+                    return (
+                        <Grid item id={item.id} key={index} style={{ marginRight: spaceBetween }}>
+                            <ExternalLink {...locale[item].link} id={locale[item].id}>
+                                <Icon
+                                    /* istanbul ignore if */
+                                    size={size}
+                                    round={round}
+                                />
+                            </ExternalLink>
+                        </Grid>
+                    );
+                })}
         </Grid>
     );
 };

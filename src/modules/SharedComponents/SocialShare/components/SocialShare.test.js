@@ -1,18 +1,10 @@
-import { SocialShare }  from './SocialShare';
+import { SocialShare } from './SocialShare';
 import { journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
     const props = {
         publication: journalArticle,
-        services: [
-            'facebook',
-            'twitter',
-            'linkedin',
-            'researchgate',
-            'mendeley',
-            'email',
-            'print',
-        ],
+        services: ['facebook', 'twitter', 'linkedin', 'researchgate', 'mendeley', 'email', 'print'],
         ...testProps,
     };
     return getElement(SocialShare, props, isShallow, requiresStore, context);
