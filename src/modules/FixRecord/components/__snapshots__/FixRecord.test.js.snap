@@ -1503,6 +1503,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -2683,6 +2684,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -3353,6 +3355,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"

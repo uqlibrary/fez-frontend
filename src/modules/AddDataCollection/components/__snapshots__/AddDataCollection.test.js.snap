@@ -466,7 +466,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   >
                     Creative Commons Licenses
                   </a>
+                   
                   and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -1675,7 +1677,9 @@ exports[`AddDataCollection test should render component with a valid collection 
                   >
                     Creative Commons Licenses
                   </a>
+                   
                   and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -2884,7 +2888,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   >
                     Creative Commons Licenses
                   </a>
+                   
                   and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -4093,7 +4099,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   >
                     Creative Commons Licenses
                   </a>
+                   
                   and
+                   
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
