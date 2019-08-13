@@ -66,15 +66,15 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
         successConfirmationRef.current = node;
     }, []);
 
-    const navigateToSearchResult = useCallback(() => history.go(-1));
+    const navigateToSearchResult = () => history.go(-1);
 
-    const renderTabContainer = useCallback((tab) => (
+    const renderTabContainer = (tab) => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
-    ));
+    );
 
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 

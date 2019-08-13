@@ -16,7 +16,7 @@ import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import GrantInformationSection from './GrantInformationSection';
-import FilesSection from './FilesSection';
+import FilesSection from './files/FilesSection';
 // import AuthorDetailsSection from './authors/AuthorDetailsSection';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 
@@ -83,7 +83,7 @@ export const AdminContainer = ({
         if (!!match.params.pid && !!loadRecordToView) {
             loadRecordToView(match.params.pid);
         }
-    }, [loadRecordToView]);
+    }, [loadRecordToView, match.params.pid]);
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
