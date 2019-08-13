@@ -606,7 +606,7 @@ export default {
                 title: 'Authors/Designers name',
                 text: (
                     <p>
-                        For more information about identification of author/creator/designer, click
+                        For more information about identification of author/creator/designer, click{' '}
                         <a
                             target="_blank"
                             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
@@ -624,7 +624,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of authors below</b>, in the format and order that they are
                                 published.
                             </div>
@@ -648,7 +648,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -703,7 +703,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of editors below</b>, in the format "John Smith".
                             </div>
                         ),
@@ -726,7 +726,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -781,7 +781,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of creators below</b>, in the format and order that they are
                                 published.
                             </div>
@@ -808,7 +808,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -853,7 +853,7 @@ export default {
                 title: 'Designers',
                 text: (
                     <p>
-                        For more information about identification of author/creator/designer, click
+                        For more information about identification of author/creator/designer, click{' '}
                         <a
                             target="_blank"
                             href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
@@ -871,7 +871,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of designers below</b>, in the format and order that they are
                                 published.
                             </div>
@@ -895,7 +895,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -947,7 +947,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of supervisors below</b>, in the format and order that they
                                 are published.
                             </div>
@@ -971,7 +971,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -1076,7 +1076,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-1">
                                     Step 1 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>add to a list of contributors below</b>, in the format and order that they
                                 are published.
                             </div>
@@ -1100,7 +1100,7 @@ export default {
                             <div>
                                 <span className="authorSteps" key="step-2">
                                     Step 2 of 2
-                                </span>
+                                </span>{' '}
                                 - Please <b>select your name</b> from the list below (if applicable).
                             </div>
                         ),
@@ -1218,7 +1218,7 @@ export default {
                             <li>
                                 A creator research statement of up to 2000 characters (250 – 300 words) that includes
                                 the background, contribution and significance of the work. It must be substantiated by
-                                the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.
+                                the 'Major' or ‘Minor’ Scale/Significance option that you select on the form.{' '}
                                 <b>This is not for public view.</b>
                             </li>
                             <li>
@@ -1246,7 +1246,7 @@ export default {
                         <React.Fragment>
                             <h3>Quality indicators</h3>
                             <p>
-                                For more information about each quality indicator option, click
+                                For more information about each quality indicator option, click{' '}
                                 <b>
                                     <a
                                         style={{ fontWeight: 700 }}

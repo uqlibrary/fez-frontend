@@ -149,6 +149,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     add to a list of creators below
@@ -184,6 +185,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     select your name
@@ -250,6 +252,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     add to a list of contributors below
@@ -285,6 +288,7 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     select your name
@@ -522,6 +526,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     add to a list of creators below
@@ -557,6 +562,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     select your name
@@ -623,6 +629,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     add to a list of contributors below
@@ -658,6 +665,7 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     select your name

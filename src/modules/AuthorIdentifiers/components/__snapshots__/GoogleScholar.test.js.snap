@@ -55,6 +55,7 @@ exports[`Component GoogleScholar  should display submission error if saving fail
             </p>
             <p>
               For more information see the
+               
               <a
                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                 target="_blank"
@@ -213,6 +214,7 @@ exports[`Component GoogleScholar  should display submission in progress alert 1`
             </p>
             <p>
               For more information see the
+               
               <a
                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                 target="_blank"
@@ -5170,6 +5172,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                                     </p>
                                                                     <p>
                                                                       For more information see the
+                                                                       
                                                                       <a
                                                                         href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                                                                         target="_blank"
@@ -6928,6 +6931,7 @@ exports[`Component GoogleScholar  should render form if author doesn't have goog
             </p>
             <p>
               For more information see the
+               
               <a
                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                 target="_blank"
@@ -7077,6 +7081,7 @@ exports[`Component GoogleScholar  should render form if author has google schola
             </p>
             <p>
               For more information see the
+               
               <a
                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                 target="_blank"

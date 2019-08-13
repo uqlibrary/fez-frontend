@@ -16,6 +16,7 @@ exports[`myDatasets test renders active filters 1`] = `
         text={
           <div>
             We were unable to find any results. You may be able to
+             
             <a
               href="/data-collections/add"
             >
@@ -28,6 +29,7 @@ exports[`myDatasets test renders active filters 1`] = `
       >
         <div>
           We were unable to find any results. You may be able to
+           
           <a
             href="/data-collections/add"
           >
@@ -522,6 +524,7 @@ exports[`myDatasets test renders no results 1`] = `
         text={
           <div>
             We were unable to find any results. You may be able to
+             
             <a
               href="/data-collections/add"
             >
@@ -534,6 +537,7 @@ exports[`myDatasets test renders no results 1`] = `
       >
         <div>
           We were unable to find any results. You may be able to
+           
           <a
             href="/data-collections/add"
           >

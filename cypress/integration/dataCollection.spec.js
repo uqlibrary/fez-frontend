@@ -545,6 +545,9 @@ context('Data Collection form', () => {
             .find('input#year')
             .type('2000');
 
+        cy.contains('p', 'Invalid day')
+            .should('be.visible');
+
         // now check valid dates
         cy.contains('span', 'Collection start date')
             .parent()

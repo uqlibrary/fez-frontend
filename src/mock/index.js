@@ -210,13 +210,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.lookupToolIncites)
     .onGet(
         new RegExp(
-            escapeRegExp(
-                routes.THIRD_PARTY_LOOKUP_API_2FIELD({
-                    type: 'incites',
-                    field1: '.*',
-                    field2: '.*',
-                }).apiUrl,
-            ),
+            escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_2FIELD({ type: 'incites', field1: '.*', field2: '.*' }).apiUrl),
         ),
     )
     .reply(200, mockData.lookupToolIncites)
@@ -250,10 +244,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(
         new RegExp(
             escapeRegExp(
-                routes.AUTHOR_ORCID_DETAILS_API({
-                    userId: '.*',
-                    params: { code: '.*', redirUri: '.*' },
-                }).apiUrl,
+                routes.AUTHOR_ORCID_DETAILS_API({ userId: '.*', params: { code: '.*', redirUri: '.*' } }).apiUrl,
             ),
         ),
     )

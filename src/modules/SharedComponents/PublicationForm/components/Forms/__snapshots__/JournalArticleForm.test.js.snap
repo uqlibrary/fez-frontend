@@ -94,6 +94,7 @@ exports[`JournalArticleForm renders  component 1`] = `
           "buttonLabel": "CLOSE",
           "text": <p>
             For more information about identification of author/creator/designer, click
+             
             <a
               href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
               target="_blank"
@@ -131,6 +132,7 @@ exports[`JournalArticleForm renders  component 1`] = `
                       >
                         Step 1 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         add to a list of authors below
@@ -166,6 +168,7 @@ exports[`JournalArticleForm renders  component 1`] = `
                       >
                         Step 2 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         select your name

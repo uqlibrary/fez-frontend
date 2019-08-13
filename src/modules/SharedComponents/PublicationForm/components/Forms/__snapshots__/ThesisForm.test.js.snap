@@ -165,6 +165,7 @@ exports[`ThesisForm  should render component 1`] = `
                   >
                     Step 1 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     add to a list of supervisors below
@@ -200,6 +201,7 @@ exports[`ThesisForm  should render component 1`] = `
                   >
                     Step 2 of 2
                   </span>
+                   
                   - Please 
                   <b>
                     select your name

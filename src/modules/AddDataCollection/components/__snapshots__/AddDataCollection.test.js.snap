@@ -356,6 +356,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 1 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         add to a list of creators below
@@ -391,6 +392,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 2 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         select your name
@@ -1563,6 +1565,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       >
                         Step 1 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         add to a list of creators below
@@ -1598,6 +1601,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                       >
                         Step 2 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         select your name
@@ -2770,6 +2774,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       >
                         Step 1 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         add to a list of creators below
@@ -2805,6 +2810,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                       >
                         Step 2 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         select your name
@@ -3977,6 +3983,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 1 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         add to a list of creators below
@@ -4012,6 +4019,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 2 of 2
                       </span>
+                       
                       - Please 
                       <b>
                         select your name

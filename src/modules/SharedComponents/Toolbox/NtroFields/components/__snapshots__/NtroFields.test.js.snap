@@ -264,6 +264,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -821,6 +822,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
             </h3>
             <p>
               For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -1247,6 +1249,7 @@ exports[`Component NtroFields should render default view 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -1804,6 +1807,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             </h3>
             <p>
               For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -2302,6 +2306,7 @@ exports[`Component NtroFields should show significance field even if contributio
             </h3>
             <p>
               For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"

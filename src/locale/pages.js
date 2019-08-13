@@ -75,7 +75,7 @@ export default {
                         </li>
                     </ul>
                     <p>
-                        You can also read the
+                        You can also read the{' '}
                         <a href="https://espace.library.uq.edu.au/view/UQ:295655/eSpaceScopeandPolicy.pdf">
                             UQ eSpace Scope and Policy
                         </a>
@@ -246,8 +246,8 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a work</a> or
-                    <a href={`${pathConfig.records.add.find}`}>adding a missing work</a>.
+                    Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
+                    <a href={pathConfig.records.add.find}>adding a missing work</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -257,9 +257,9 @@ export default {
                 title: 'No works found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to
-                        <a href={`${pathConfig.records.possible}`}>claim works we think may be yours</a> or
-                        <a href={`${pathConfig.records.add.find}`}>add a missing publication</a>
+                        We were unable to find any results. You may be able to{' '}
+                        <a href={pathConfig.records.possible}>claim works we think may be yours</a> or{' '}
+                        <a href={pathConfig.records.add.find}>add a missing publication</a>
                     </div>
                 ),
             },
@@ -279,8 +279,8 @@ export default {
                 title: 'No datasets found',
                 text: (
                     <div>
-                        We were unable to find any results. You may be able to
-                        <a href={`${pathConfig.dataset.add}`}>add a missing dataset</a>.
+                        We were unable to find any results. You may be able to{' '}
+                        <a href={pathConfig.dataset.add}>add a missing dataset</a>.
                     </div>
                 ),
             },
@@ -594,7 +594,7 @@ export default {
                         </p>
                         <p>In order to create a Google Scholar Citation profile, you need a Google Account.</p>
                         <p>
-                            For more information see the
+                            For more information see the{' '}
                             <a
                                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                                 target="_blank"
@@ -611,7 +611,7 @@ export default {
                     <div>
                         <p>Update your Google Scholar ID below.</p>
                         <p>
-                            For more information see the
+                            For more information see the{' '}
                             <a
                                 href="http://guides.library.uq.edu.au/researcher-identifiers/google-scholar-citations-profile"
                                 target="_blank"
@@ -699,19 +699,19 @@ export default {
                             .
                         </p>
                         <p>
-                            You can also import works from your Google Scholar to your ORCID iD.
+                            You can also import works from your Google Scholar to your ORCID iD.{' '}
                             <a
                                 href="http://support.orcid.org/knowledgebase/articles/390530-import-works-from-bibtex-files-website-user"
                                 target="_blank"
                             >
                                 Click here
-                            </a>
+                            </a>{' '}
                             for information
                         </p>
                         <p>
                             There are many other types of work that you may add to your ORCID including artistic
                             performances, stand-alone websites, licenses and datasets. For a full list of works that can
-                            be added,
+                            be added,{' '}
                             <a href="http://members.orcid.org/api/supported-work-types" target="_blank">
                                 click here
                             </a>
@@ -719,7 +719,7 @@ export default {
                         </p>
                         <p>
                             More information about how to add details such as your employment, education, awards and
-                            funding can be found
+                            funding can be found{' '}
                             <a href="http://support.orcid.org/knowledgebase/topics/32827-website-user" target="_blank">
                                 here
                             </a>
@@ -737,10 +737,10 @@ export default {
                         </p>
                         <h3>Do you have more than one ORCID iD?</h3>
                         <p>
-                            If you have more than one ORCID, the
+                            If you have more than one ORCID, the{' '}
                             <a href="http://about.orcid.org/help/contact-us" target="_blank">
                                 ORCID Support team
-                            </a>
+                            </a>{' '}
                             can help with marking one ORCID iD as the primary identifier and deprecate the other ORCID
                             iDs.
                         </p>
