@@ -1,4 +1,4 @@
-import SocialShare from './SocialShare';
+import { SocialShare }  from './SocialShare';
 import { journalArticle } from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
@@ -21,14 +21,6 @@ function setup(testProps, isShallow = true, requiresStore = false, context = {})
 describe('Component SocialShare', () => {
     it('should render component', () => {
         const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render component on mobile', () => {
-        const context = {
-            isMobile: true,
-        };
-        const wrapper = setup({}, true, false, context);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

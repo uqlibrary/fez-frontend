@@ -17,7 +17,7 @@ import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
 import { general } from 'config';
-import SocialShare from 'modules/SharedComponents/SocialShare/components/SocialShare';
+import { SocialShare } from 'modules/SharedComponents/SocialShare';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -69,7 +69,7 @@ export default class ViewRecord extends PureComponent {
                     <Grid item xs={12}>
                         <PublicationCitation publication={recordToView} hideTitle hideContentIndicators/>
                     </Grid>
-                    {this.props.recordToView &&
+                    {!!this.props.recordToView && this.props.recordToView !== {} &&
                         <Grid item xs={12}>
                             <Grid container spacing={16} style={{ marginBottom: 4 }}>
                                 <Grid item xs/>
@@ -88,6 +88,7 @@ export default class ViewRecord extends PureComponent {
                                             ]
                                         }
                                         spaceBetween={4}
+                                        round
                                     />
                                 </Grid>
                             </Grid>

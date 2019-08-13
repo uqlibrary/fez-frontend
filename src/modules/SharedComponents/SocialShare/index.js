@@ -1,1 +1,1 @@
-export { default as SocialShare } from './components/SocialShare';
+export { SocialShare } from './components/SocialShare';
