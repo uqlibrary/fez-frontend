@@ -21,7 +21,7 @@ import AuthorDetailsSection from './AuthorDetailsSection';
 
 import { TabbedContext, RecordContext } from 'context';
 
-const styles = theme => ({
+const styles = (theme) => ({
     helpIcon: {
         color: theme.palette.secondary.main,
         opacity: 0.66,
@@ -70,7 +70,7 @@ export const AdminContainer = ({
         if (!!match.params.pid && !!actions.loadRecordToView) {
             actions.loadRecordToView(match.params.pid);
         }
-    }, []);
+    }, [actions, match.params.pid]);
 
     /* istanbul ignore next */
     const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);

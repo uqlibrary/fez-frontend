@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
@@ -15,36 +15,23 @@ export const AdminActions = ({ pid }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
-    const handleClick = useCallback((event) => {
+    const handleClick = (event) => {
         setAnchorEl(event.currentTarget);
-    });
+    };
 
     /* istanbul ignore next */
-    const handleClose = useCallback(() => {
+    const handleClose = () => {
         setAnchorEl(null);
-    });
+    };
 
     return (
         <React.Fragment>
-            <IconButton
-                id="admin-actions-button"
-                aria-label="More"
-                aria-haspopup="true"
-                onClick={handleClick}
-            >
+            <IconButton id="admin-actions-button" aria-label="More" aria-haspopup="true" onClick={handleClick}>
                 <MoreVertIcon fontSize="small" />
             </IconButton>
-            <Menu
-                id="admin-actions-menu"
-                anchorEl={anchorEl}
-                open={open}
-                onClose={handleClose}
-            >
+            <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
                 {options.map((option, index) => (
-                    <MenuItem
-                        key={index}
-                        onClick={navigateToUrl(option.url(pid), option.inApp && '_self')}
-                    >
+                    <MenuItem key={index} onClick={navigateToUrl(option.url(pid), option.inApp && '_self')}>
                         {option.label}
                     </MenuItem>
                 ))}

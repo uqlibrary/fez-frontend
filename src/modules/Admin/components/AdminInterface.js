@@ -57,19 +57,19 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
-    const setSuccessConfirmationRef = useCallback(node => {
+    const setSuccessConfirmationRef = useCallback((node) => {
         successConfirmationRef.current = node;
     }, []);
 
-    const navigateToSearchResult = useCallback(() => history.go(-1));
+    const navigateToSearchResult = () => history.go(-1);
 
-    const renderTabContainer = useCallback(tab => (
+    const renderTabContainer = (tab) => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
-    ));
+    );
 
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
@@ -106,8 +106,8 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                                         textColor="primary"
                                     >
                                         {Object.keys(tabs)
-                                            .filter(tab => tabs[tab].activated)
-                                            .map(tab => (
+                                            .filter((tab) => tabs[tab].activated)
+                                            .map((tab) => (
                                                 <Tab key={tab} label={txt.current.sections[tab].title} value={tab} />
                                             ))}
                                     </Tabs>
@@ -121,7 +121,7 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                     <Grid container spacing={16}>
                         {!tabbed
                             ? Object.keys(tabs)
-                                .filter(tab => tabs[tab].activated)
+                                .filter((tab) => tabs[tab].activated)
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
                         {alertProps.current && (

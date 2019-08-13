@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -17,8 +17,9 @@ const DataStreamSecurityItem = ({
     inheritedSecurity,
     policyDropdownLabel,
 }) => {
-    const handleDataStreamChange = useCallback((value) => {
-        onSecurityChange(index, (
+    const handleDataStreamChange = (value) => {
+        onSecurityChange(
+            index,
             value === initialDataStream.dsi_security_policy
                 ? initialDataStream
                 : {
@@ -26,21 +27,15 @@ const DataStreamSecurityItem = ({
                     dsi_security_inherited: 0,
                     dsi_security_policy: value,
                 }
-        ));
-    });
+        );
+    };
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
             <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
-                <Link title={dataStream.dsi_dsid}>
-                    {dataStream.dsi_dsid}
-                </Link>
+                <Link title={dataStream.dsi_dsid}>{dataStream.dsi_dsid}</Link>
                 <Typography variant="caption">
-                    {
-                        dataStream.dsi_security_inherited
-                            ? 'Inherited'
-                            : 'Overridden'
-                    }
+                    {dataStream.dsi_security_inherited ? 'Inherited' : 'Overridden'}
                 </Typography>
             </Grid>
             <Grid item xs={12} sm={6}>
@@ -51,7 +46,7 @@ const DataStreamSecurityItem = ({
                     {...{
                         input: {
                             onChange: handleDataStreamChange,
-                            onBlur: /* istanbul ignore next */ () => { },
+                            onBlur: /* istanbul ignore next */ () => {},
                         },
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
@@ -73,8 +68,10 @@ DataStreamSecurityItem.propTypes = {
 };
 
 export function isSame(prevProps, nextProps) {
-    return prevProps.disabled === nextProps.disabled &&
-        prevProps.dataStream.dsi_security_policy === nextProps.dataStream.dsi_security_policy;
+    return (
+        prevProps.disabled === nextProps.disabled &&
+        prevProps.dataStream.dsi_security_policy === nextProps.dataStream.dsi_security_policy
+    );
 }
 
 export default React.memo(DataStreamSecurityItem, isSame);
