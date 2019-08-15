@@ -22,7 +22,7 @@ const options = {
                 '/index.html$',
                 '/contact$',
                 '/view/*',
-                '/data/*?*Signature=*&Key-Pair-Id=*',
+                '/data/*',
                 '/assets/*.svg',
                 '/sitemap/*.xml',
                 '/list-by-year/*.html',
