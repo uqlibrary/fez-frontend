@@ -1059,6 +1059,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -3235,6 +3236,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -5569,6 +5571,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -7017,6 +7020,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -8465,6 +8469,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -9913,6 +9918,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -12419,6 +12425,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -13867,6 +13874,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -15315,6 +15323,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -16776,6 +16785,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -18235,6 +18245,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -19695,6 +19706,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -19960,6 +19972,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
@@ -20210,6 +20223,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               "buttonLabel": "CLOSE",
               "text": <p>
                 For more information about content indicators, click
+                 
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
                   rel="noreferrer"
