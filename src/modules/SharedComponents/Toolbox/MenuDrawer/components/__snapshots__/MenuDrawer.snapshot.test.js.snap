@@ -967,6 +967,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                     "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-3",
                   }
                 }
+                id="menudrawer"
                 variant="temporary"
               >
                 <Drawer
@@ -987,6 +988,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                     }
                   }
                   elevation={16}
+                  id="menudrawer"
                   open={false}
                   theme={
                     Object {
@@ -1425,6 +1427,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                       }
                     }
                     className="MuiDrawer-modal-21"
+                    id="menudrawer"
                     open={false}
                   >
                     <Modal
@@ -1451,6 +1454,7 @@ exports[`MenuDrawer Snapshot should create component 1`] = `
                       disablePortal={false}
                       disableRestoreFocus={false}
                       hideBackdrop={false}
+                      id="menudrawer"
                       keepMounted={false}
                       manager={
                         ModalManager {
