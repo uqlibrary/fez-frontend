@@ -32,7 +32,7 @@ describe('publication enhancer', () => {
                     rek_formatted_title: null,
                 },
                 type: 'FIX_RECORD_LOADED',
-            })
+            }),
         );
     });
 
@@ -115,7 +115,7 @@ describe('publication enhancer', () => {
             expect.objectContaining({
                 payload: expectedPayload,
                 type: 'LATEST_PUBLICATIONS_LOADED',
-            })
+            }),
         );
     });
 
@@ -164,7 +164,7 @@ describe('publication enhancer', () => {
             expect.objectContaining({
                 payload: expectedPayload,
                 type: 'TRENDING_PUBLICATIONS_LOADED@altmetric',
-            })
+            }),
         );
     });
 
@@ -180,7 +180,7 @@ describe('publication enhancer', () => {
             expect.objectContaining({
                 type: 'FIX_RECORD_LOAD_FAILED',
                 payload: publication,
-            })
+            }),
         );
     });
 
@@ -195,7 +195,7 @@ describe('publication enhancer', () => {
             expect.objectContaining({
                 type: 'SEARCH_LOADED',
                 payload: { nothing: 'here' },
-            })
+            }),
         );
     });
 
@@ -615,7 +615,7 @@ describe('publication enhancer', () => {
                         },
                     ],
                 },
-            })
+            }),
         );
     });
 
@@ -642,7 +642,7 @@ describe('publication enhancer', () => {
                         },
                     ],
                 },
-            })
+            }),
         );
     });
 
@@ -666,7 +666,7 @@ describe('publication enhancer', () => {
                     rek_formatted_abstract: null,
                     calculateOpenAccess: expect.any(Function),
                 },
-            })
+            }),
         );
     });
 });

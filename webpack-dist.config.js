@@ -22,16 +22,14 @@ const options = {
                 '/index.html$',
                 '/contact$',
                 '/view/*',
-                '/data/*?*Signature=*&Key-Pair-Id=*',
+                '/data/*',
                 '/assets/*.svg',
                 '/sitemap/*.xml',
                 '/list-by-year/*.html',
                 '/*.js',
                 '/*.css',
             ],
-            disallow: [
-                '/',
-            ],
+            disallow: ['/'],
         },
     ],
     sitemap: 'https://espace.library.uq.edu.au/sitemap/sitemap-index.xml',
@@ -50,7 +48,7 @@ const port = 9000;
 const useMock = (process && process.env && !!process.env.USE_MOCK) || false;
 
 // config for development deployment
-if(config.environment === 'development') {
+if (config.environment === 'development') {
     config.basePath += branch + '/';
 }
 
@@ -102,7 +100,9 @@ const webpackConfig = {
             fingerprints: false,
         }),
         new ProgressBarPlugin({
-            format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
+            format: `  building webpack... [:bar] ${chalk.green.bold(
+                ':percent',
+            )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
         // new ExtractTextPlugin('[name]-[hash].min.css'),
@@ -112,8 +112,8 @@ const webpackConfig = {
 
         // plugin for passing in data to the js, like what NODE_ENV we are in.
         new webpack.DefinePlugin({
-            __DEVELOPMENT__: !process.env.CI_BRANCH,    // always production build on CI
-            'process.env.NODE_ENV': JSON.stringify('production'),       // always production build on CI
+            __DEVELOPMENT__: !process.env.CI_BRANCH, // always production build on CI
+            'process.env.NODE_ENV': JSON.stringify('production'), // always production build on CI
             'process.env.USE_MOCK': JSON.stringify(useMock),
             'process.env.API_URL': JSON.stringify(config.api),
             'process.env.AUTH_LOGIN_URL': JSON.stringify(config.auth_login),
@@ -169,24 +169,14 @@ const webpackConfig = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/,
-                ],
+                exclude: [/node_modules/, /custom_modules/],
                 enforce: 'pre',
                 use: 'eslint-loader',
             },
             {
                 test: /\.js?$/,
-                include: [
-                    resolve(__dirname, 'src'),
-                    resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src'),
-                ],
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/,
-                    '/src/mocks/',
-                ],
+                include: [resolve(__dirname, 'src'), resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src')],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -195,18 +185,14 @@ const webpackConfig = {
                             '@babel/plugin-proposal-export-default-from',
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
-                            ['@babel/plugin-transform-spread', { 'loose': true }],
+                            ['@babel/plugin-transform-spread', { loose: true }],
                         ],
                     },
                 },
             },
             {
                 test: /\.scss/,
-                use: [
-                    MiniCssExtractPlugin.loader,
-                    'css-loader',
-                    'sass-loader',
-                ],
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -227,20 +213,10 @@ const webpackConfig = {
         ],
     },
     resolve: {
-        descriptionFiles: [
-            'package.json',
-        ],
+        descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: [
-            '.jsx',
-            '.js',
-            '.json',
-        ],
-        modules: [
-            'src',
-            'node_modules',
-            'custom_modules',
-        ],
+        extensions: ['.jsx', '.js', '.json'],
+        modules: ['src', 'node_modules', 'custom_modules'],
     },
     performance: {
         maxAssetSize: 1000000,
@@ -256,11 +232,12 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
     // if you need to run this locally, create .sentryclirc and add the variables from the codeship env variables
     // per https://docs.sentry.io/learn/cli/configuration/#configuration-file
     // and comment out the if around this section
-    webpackConfig.plugins.push(new SentryCliPlugin({
-        release: process.env.CI_COMMIT_ID,
-        include: './dist',
-        ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
-    })
+    webpackConfig.plugins.push(
+        new SentryCliPlugin({
+            release: process.env.CI_COMMIT_ID,
+            include: './dist',
+            ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
+        }),
     );
 }
 

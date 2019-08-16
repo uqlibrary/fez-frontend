@@ -5,7 +5,8 @@ function setup(testProps, isShallow = true) {
         classes: {
             fakeTitle: {},
         },
-        ...testProps };
+        ...testProps,
+    };
     return getElement(PartialDateField, props, isShallow);
 }
 

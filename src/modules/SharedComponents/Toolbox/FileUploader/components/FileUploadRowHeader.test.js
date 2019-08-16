@@ -60,7 +60,7 @@ describe('Component FileUploadRowHeader', () => {
 
             const wrapper = setup({ ...props });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should render confirmation on delete all', () => {

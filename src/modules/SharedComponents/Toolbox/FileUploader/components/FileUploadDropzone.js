@@ -81,7 +81,7 @@ export class FileUploadDropzone extends PureComponent {
                     : unique.filesWithSameNameDifferentExt.push(file.name);
                 return unique;
             },
-            { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] }
+            { fileNames: [], incomingFiles: [], filesWithSameNameDifferentExt: [] },
         );
 
         const incomingFilesWithoutDuplicate = incomingFilesWithoutDuplicateFileName.incomingFiles.reduce(
@@ -104,12 +104,12 @@ export class FileUploadDropzone extends PureComponent {
                 fileNames: filesInQueue,
                 incomingFiles: [],
                 filesWithSameNameDifferentExt: [],
-            }
+            },
         );
 
         // Ignore files from incomingFiles which are already in files queue
         const uniqueFiles = incomingFilesWithoutDuplicate.incomingFiles.filter(
-            file => filesInQueue.indexOf(file.name) === -1
+            file => filesInQueue.indexOf(file.name) === -1,
         );
         const duplicateFiles = incomingFilesWithoutDuplicate.incomingFiles
             .filter(file => filesInQueue.indexOf(file.name) >= 0)
@@ -139,7 +139,7 @@ export class FileUploadDropzone extends PureComponent {
                 return new Promise(resolve => {
                     this.readFile(file, errors, resolve);
                 });
-            })
+            }),
         );
     };
 
@@ -192,13 +192,13 @@ export class FileUploadDropzone extends PureComponent {
             // Remove duplicate files from accepted files
             const { uniqueFiles, duplicateFiles, sameFileNameWithDifferentExt } = this.removeDuplicate(
                 validFiles,
-                filesInQueue
+                filesInQueue,
             );
 
             // Remove files exceeding the max number of files allowed
             const { limitedFiles, tooManyFiles } = this.removeTooManyFiles(
                 uniqueFiles,
-                fileUploadLimit - filesInQueue.length
+                fileUploadLimit - filesInQueue.length,
             );
 
             this.props.onDrop(limitedFiles.map(file => ({ fileData: file, name: file.name, size: file.size })), {

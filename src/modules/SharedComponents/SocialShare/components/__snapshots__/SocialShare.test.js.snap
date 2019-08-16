@@ -1,0 +1,393 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component SocialShare should fire print method on click 1`] = `
+<WithStyles(Grid)
+  container={true}
+  id="social-share"
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    key="0"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="facebook"
+      openInNewIcon={false}
+      title="Share this record on Facebook"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="1"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={300}
+      href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au//view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
+      id="twitter"
+      openInNewIcon={false}
+      title="Share this record on Twitter"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="2"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="linkedin"
+      openInNewIcon={false}
+      title="Share this record on LinkedIn"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="3"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={600}
+      href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au//view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+      id="researchgate"
+      openInNewIcon={false}
+      title="Share this record on Research Gate"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="4"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="mendeley"
+      openInNewIcon={false}
+      title="Share this record on Mendeley"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="5"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="email"
+      openInNewIcon={false}
+      title="Share this record via Email"
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="6"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      href="#"
+      id="print"
+      onClick={[Function]}
+      openInNewIcon={false}
+      target=""
+      title="Print this record"
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`Component SocialShare should render component 1`] = `
+<WithStyles(Grid)
+  container={true}
+  id="social-share"
+  spacing={0}
+>
+  <WithStyles(Grid)
+    item={true}
+    key="0"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://www.facebook.com/sharer/sharer.php?u=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="facebook"
+      openInNewIcon={false}
+      title="Share this record on Facebook"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="1"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={300}
+      href="https://twitter.com/share?url=https://fez-staging.library.uq.edu.au//view/UQ:676287&text=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells - "
+      id="twitter"
+      openInNewIcon={false}
+      title="Share this record on Twitter"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="2"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://linkedin.com/shareArticle?url=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="linkedin"
+      openInNewIcon={false}
+      title="Share this record on LinkedIn"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="3"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={600}
+      href="https://www.researchgate.net/go.Share.html?url=https://fez-staging.library.uq.edu.au//view/UQ:676287&title=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells"
+      id="researchgate"
+      openInNewIcon={false}
+      title="Share this record on Research Gate"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="4"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      height={500}
+      href="https://profitquery.com/add-to/mendeley/?url=https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="mendeley"
+      openInNewIcon={false}
+      title="Share this record on Mendeley"
+      width={500}
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="5"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      href="mailto:?subject=TRPC1 is a differential regulator of hypoxia-mediated events and Akt signalling in PTEN-deficient breast cancer cells&body=Please review this record in UQ eSpace: https://fez-staging.library.uq.edu.au//view/UQ:676287"
+      id="email"
+      openInNewIcon={false}
+      title="Share this record via Email"
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    key="6"
+    style={
+      Object {
+        "marginRight": 4,
+      }
+    }
+  >
+    <WithStyles(ExternalLink)
+      href="#"
+      id="print"
+      onClick={[Function]}
+      openInNewIcon={false}
+      target=""
+      title="Print this record"
+    >
+      <Icon
+        borderRadius={0}
+        className=""
+        iconBgStyle={Object {}}
+        logoFillColor="white"
+        round={true}
+        size={24}
+      />
+    </WithStyles(ExternalLink)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

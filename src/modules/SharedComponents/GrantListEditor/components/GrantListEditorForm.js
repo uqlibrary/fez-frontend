@@ -99,7 +99,7 @@ export class GrantListEditorFormClass extends PureComponent {
                 if (this.props.isPopulated) {
                     this.props.isPopulated(!!(this.state.grantAgencyName.trim().length > 0));
                 }
-            }
+            },
         );
     };
 
@@ -112,7 +112,7 @@ export class GrantListEditorFormClass extends PureComponent {
                 if (this.props.isPopulated) {
                     this.props.isPopulated(!!(this.state.grantId.trim().length > 0));
                 }
-            }
+            },
         );
     };
 

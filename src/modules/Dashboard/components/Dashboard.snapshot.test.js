@@ -62,7 +62,7 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('doesn\'t render possibly your publications lure or the add a record lure', () => {
+    it("doesn't render possibly your publications lure or the add a record lure", () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5,
@@ -72,7 +72,7 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('doesn\'t render possibly your publications lure and shows the add a record lure', () => {
+    it("doesn't render possibly your publications lure and shows the add a record lure", () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 0,
@@ -82,17 +82,19 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it("doesn't render either the publications lure or the add a " +
-        'record lure while the pub count is still loading',
-    () => {
-        const wrapper = setup({
-            authorDetails: mock.authorDetails.uqresearcher,
-            possiblyYourPublicationsCount: null,
-            hidePossiblyYourPublicationsLure: false,
-            possiblyYourPublicationsCountLoading: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    it(
+        "doesn't render either the publications lure or the add a " +
+            'record lure while the pub count is still loading',
+        () => {
+            const wrapper = setup({
+                authorDetails: mock.authorDetails.uqresearcher,
+                possiblyYourPublicationsCount: null,
+                hidePossiblyYourPublicationsLure: false,
+                possiblyYourPublicationsCountLoading: true,
+            });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        },
+    );
 
     it("doesn't render the bar/donut graph cards when no data is available", () => {
         const wrapper = setup({
@@ -107,6 +109,7 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -202,6 +205,7 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 10 },
             },
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -282,6 +286,7 @@ describe('Dashboard test', () => {
             loadingPublicationsStats: false,
             publicationsStats: undefined,
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -310,6 +315,7 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 10 },
             },
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -320,7 +326,7 @@ describe('Dashboard test', () => {
                 ],
                 'categories': [1977, 1980, 1982, 1983, 1984, 1985, 1986, 1987, 1988, 1989, 1990, 1991, 1992, 1993, 1994, 1995, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017],
             },
-            /* eslint-disable max-len */
+            /* eslint-enable max-len */
             publicationTypesCount: [
                 ['Journal Article', 278],
                 ['Conference Paper', 42],
@@ -376,31 +382,34 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
     it('Full mount for styles render', () => {
-        const wrapper = getElement(Dashboard, {
-            classes: {},
-            theme: {},
-            account: mock.accounts.uqresearcher,
-            accountAuthorDetailsLoading: false,
-            publicationTotalCount: null,
-            loadingPublicationsByYear: false,
-            hidePossiblyYourPublicationsLure: false,
-            loadingPublicationsStats: false,
-            possiblyYourPublicationsCountLoading: false,
-            actions: {
-                countPossiblyYourPublications: jest.fn(),
-                loadAuthorPublicationsStats: jest.fn(),
-                searchAuthorPublications: jest.fn(),
+        const wrapper = getElement(
+            Dashboard,
+            {
+                classes: {},
+                theme: {},
+                account: mock.accounts.uqresearcher,
+                accountAuthorDetailsLoading: false,
+                publicationTotalCount: null,
+                loadingPublicationsByYear: false,
+                hidePossiblyYourPublicationsLure: false,
+                loadingPublicationsStats: false,
+                possiblyYourPublicationsCountLoading: false,
+                actions: {
+                    countPossiblyYourPublications: jest.fn(),
+                    loadAuthorPublicationsStats: jest.fn(),
+                    searchAuthorPublications: jest.fn(),
+                },
+                incomplete: {
+                    publicationsListPagingData: {},
+                    loadingPublicationsList: false,
+                    publicationsList: [],
+                    publicationsListFacets: {},
+                },
+                history: {},
             },
-            incomplete: {
-                publicationsListPagingData: {},
-                loadingPublicationsList: false,
-                publicationsList: [],
-                publicationsListFacets: {},
-            },
-            history: {},
-        }, false);
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -408,14 +417,14 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             incomplete: {
                 publicationsListPagingData: {
-                    'total': 2,
-                    'took': 30,
-                    'per_page': 20,
-                    'current_page': 1,
-                    'from': 1,
-                    'to': 3,
-                    'data': [1, 2],
-                    'filters': {},
+                    total: 2,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 3,
+                    data: [1, 2],
+                    filters: {},
                 },
             },
             authorDetails: mock.authorDetails.uqresearcher,
@@ -427,14 +436,14 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             incomplete: {
                 publicationsListPagingData: {
-                    'total': 1,
-                    'took': 30,
-                    'per_page': 20,
-                    'current_page': 1,
-                    'from': 1,
-                    'to': 1,
-                    'data': [1],
-                    'filters': {},
+                    total: 1,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 1,
+                    data: [1],
+                    filters: {},
                 },
             },
             authorDetails: mock.authorDetails.uqresearcher,

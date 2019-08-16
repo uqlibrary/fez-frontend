@@ -25,13 +25,13 @@ export default {
         contributorLinking: 'Please select and confirm a contributor',
         authorRequired: (
             <span>
-                Please <b>provide a list of authors/creators</b> of the work and
+                Please <b>provide a list of authors/creators</b> of the work and{' '}
                 <b>select an author/creator or editor/contributor</b> as you
             </span>
         ),
         editorRequired: (
             <span>
-                Please <b>provide a list of editors/contributors</b> of the work and
+                Please <b>provide a list of editors/contributors</b> of the work and{' '}
                 <b>select an editor/contributor or author/creator</b> as you
             </span>
         ),
@@ -47,7 +47,8 @@ export default {
         authorAffiliationIncomplete: 'Please update affiliation data for the selected author',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
-    validationErrorsSummary: { // appears in footer error block
+    validationErrorsSummary: {
+        // appears in footer error block
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',

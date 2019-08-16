@@ -23,7 +23,7 @@ export default class WorkingPaperForm extends Component {
     constructor(props) {
         super(props);
     }
-    getNumbersOnly = (value) => {
+    getNumbersOnly = value => {
         return value.replace(/[^\d]/g, '');
     };
 
@@ -63,7 +63,6 @@ export default class WorkingPaperForm extends Component {
                                     name="fez_record_search_key_org_name.rek_org_name"
                                     disabled={this.props.submitting}
                                     {...txt.information.fieldLabels.orgName}
-
                                 />
                             </Grid>
                             <Grid item xs={12} sm={6}>
@@ -98,7 +97,8 @@ export default class WorkingPaperForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -130,7 +130,8 @@ export default class WorkingPaperForm extends Component {
                             showContributorAssignment
                             required
                             validate={[validation.authorRequired]}
-                            disabled={this.props.submitting} />
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>

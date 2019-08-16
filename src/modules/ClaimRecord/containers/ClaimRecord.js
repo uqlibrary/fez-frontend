@@ -11,10 +11,9 @@ const FORM_NAME = 'ClaimRecord';
 
 const onSubmit = (values, dispatch) => {
     const data = { ...values.toJS() };
-    return dispatch(actions.claimPublication(data))
-        .catch(error => {
-            throw new SubmissionError({ _error: error.message });
-        });
+    return dispatch(actions.claimPublication(data)).catch(error => {
+        throw new SubmissionError({ _error: error.message });
+    });
 };
 
 let ClaimPublicationFormContainer = reduxForm({
@@ -23,15 +22,15 @@ let ClaimPublicationFormContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(ClaimRecord, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const reducerOutput = !!state && state.get('claimPublicationReducer') || {};
-    const contentIndicators = (
-        reducerOutput.fullPublicationToClaim &&
-        (reducerOutput.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
-            item => item.rek_content_indicator
-        )
-    ) || [];
+    const reducerOutput = (!!state && state.get('claimPublicationReducer')) || {};
+    const contentIndicators =
+        (reducerOutput.fullPublicationToClaim &&
+            (reducerOutput.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
+                item => item.rek_content_indicator,
+            )) ||
+        [];
     return {
         fullPublicationToClaim: reducerOutput.fullPublicationToClaim || null,
         fullPublicationToClaimLoading: reducerOutput.fullPublicationToClaimLoading || false,
@@ -55,7 +54,10 @@ function mapDispatchToProps(dispatch) {
     };
 }
 
-ClaimPublicationFormContainer = connect(mapStateToProps, mapDispatchToProps)(ClaimPublicationFormContainer);
+ClaimPublicationFormContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(ClaimPublicationFormContainer);
 ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 
 export default ClaimPublicationFormContainer;

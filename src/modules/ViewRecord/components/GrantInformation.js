@@ -85,7 +85,7 @@ export class GrantInformationClass extends PureComponent {
         return grantAgencies
             .sort(
                 (grantAgency1, grantAgency2) =>
-                    grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order
+                    grantAgency1.rek_grant_agency_order - grantAgency2.rek_grant_agency_order,
             )
             .map((grantAgencyName, index) => {
                 const order = grantAgencyName.rek_grant_agency_order;

@@ -17,6 +17,7 @@ import AvailableVersions from './AvailableVersions';
 import ReactHtmlParser from 'react-html-parser';
 import Grid from '@material-ui/core/Grid';
 import { general } from 'config';
+import { SocialShare } from 'modules/SharedComponents/SocialShare';
 
 export default class ViewRecord extends PureComponent {
     static propTypes = {
@@ -43,44 +44,64 @@ export default class ViewRecord extends PureComponent {
 
     componentWillUnmount() {
         // clear previously selected record
-        !!this.props.actions.clearRecordToView &&
-        this.props.actions.clearRecordToView();
+        !!this.props.actions.clearRecordToView && this.props.actions.clearRecordToView();
     }
 
     render() {
         const txt = locale.pages.viewRecord;
         const { loadingRecordToView, recordToViewError, recordToView } = this.props;
         const isNtro = recordToView && !!general.NTRO_SUBTYPES.includes(recordToView.rek_subtype);
-        if(loadingRecordToView) {
-            return <InlineLoader message={txt.loadingMessage}/>;
-        } else if(recordToViewError) {
+        if (loadingRecordToView) {
+            return <InlineLoader message={txt.loadingMessage} />;
+        } else if (recordToViewError) {
             return (
                 <StandardPage>
                     <Alert message={recordToViewError} />
                 </StandardPage>
             );
-        } else if(!recordToView) {
-            return <div className="empty"/>;
+        } else if (!recordToView) {
+            return <div className="empty" />;
         }
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
-                        <PublicationCitation publication={recordToView} hideTitle hideContentIndicators/>
+                        <PublicationCitation publication={recordToView} hideTitle hideContentIndicators />
                     </Grid>
+                    {!!this.props.recordToView && this.props.recordToView !== {} && (
+                        <Grid item xs={12}>
+                            <Grid container spacing={16} style={{ marginBottom: 4 }}>
+                                <Grid item xs />
+                                <Grid item>
+                                    <SocialShare
+                                        publication={this.props.recordToView}
+                                        services={[
+                                            'facebook',
+                                            'twitter',
+                                            'linkedin',
+                                            'researchgate',
+                                            'mendeley',
+                                            'email',
+                                            'print',
+                                        ]}
+                                        spaceBetween={4}
+                                        round
+                                    />
+                                </Grid>
+                            </Grid>
+                        </Grid>
+                    )}
                 </Grid>
                 <Grid container spacing={24}>
                     <Files
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
-                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
-                    <Links publication={recordToView}/>
+                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
+                    />
+                    <Links publication={recordToView} />
                     <RelatedPublications publication={recordToView} />
                     <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
-                    {
-                        isNtro &&
-                        <NtroDetails publication={recordToView} account={this.props.account}/>
-                    }
+                    {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
                     <GrantInformation publication={recordToView} />
                     <PublicationDetails publication={recordToView} />
                     <AvailableVersions publication={recordToView} />

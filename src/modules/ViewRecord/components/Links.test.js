@@ -226,6 +226,6 @@ describe('Component Links ', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
             // expect(wrapper.find('.noOaIcon').length).toEqual(4);
             // expect(wrapper.find('.openAccess').length).toEqual(1);
-        }
+        },
     );
 });

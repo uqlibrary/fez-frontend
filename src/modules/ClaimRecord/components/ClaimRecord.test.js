@@ -83,7 +83,7 @@ describe('Component ClaimRecord ', () => {
         });
 
         expect(wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel).toBe(
-            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel
+            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
         );
     });
 
@@ -129,7 +129,7 @@ describe('Component ClaimRecord ', () => {
             // // expect(wrapper.find('Alert').length).toEqual(1);
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -177,7 +177,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
@@ -225,7 +225,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -260,7 +260,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -302,7 +302,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should return and render alert message depending on form status', () => {

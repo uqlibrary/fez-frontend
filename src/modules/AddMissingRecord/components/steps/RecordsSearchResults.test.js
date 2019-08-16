@@ -46,7 +46,7 @@ describe('Search record results', () => {
 
             expect(componentDidUpdate).toHaveBeenCalled();
             expect(focusFn).toHaveBeenCalled();
-        }
+        },
     );
 
     it('should call componentDidUpdate lifecycle method and should not focus on create new record button', () => {
@@ -428,7 +428,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -504,7 +504,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -580,10 +580,10 @@ describe('Search record results', () => {
                 {
                     publicationsList: publicationsList,
                 },
-                false
+                false,
             );
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
@@ -643,7 +643,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should not return unclaimablePublicationsList (no pid)', () => {
@@ -791,7 +791,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
-        }
+        },
     );
 
     it('should not return unclaimablePublicationsList (found author ids, but one of them is 0)', () => {
@@ -1074,6 +1074,6 @@ describe('Search record results', () => {
 
             const wrapper = setup({});
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
-        }
+        },
     );
 });

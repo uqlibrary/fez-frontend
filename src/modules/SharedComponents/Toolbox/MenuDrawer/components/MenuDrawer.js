@@ -166,7 +166,7 @@ export class MenuDrawer extends Component {
                         />
                     </ListItem>
                 </span>
-            )
+            ),
         );
 
     render() {
@@ -184,6 +184,7 @@ export class MenuDrawer extends Component {
                     paper: classes.paper,
                     paperAnchorDockedLeft: classes.paperAnchorDockedLeft,
                 }}
+                id="menudrawer"
                 variant={docked ? 'permanent' : 'temporary'}
                 open={drawerOpen}
                 anchor="left"

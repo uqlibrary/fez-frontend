@@ -26,5 +26,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const SeriesField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

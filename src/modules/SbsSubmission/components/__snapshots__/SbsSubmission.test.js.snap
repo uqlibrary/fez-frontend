@@ -483,6 +483,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                   Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>
@@ -995,6 +996,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                   Maximum file size is 8GB. 
                   <br />
                   PDF files must be saved using the following naming structure
+                   
                   <b>
                     &lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf
                   </b>

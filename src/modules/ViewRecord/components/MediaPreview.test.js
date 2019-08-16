@@ -34,13 +34,15 @@ describe('Media Preview Component ', () => {
         global.open = open;
         const wrapper = setup({}, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('Button').first()
+        wrapper
+            .find('Button')
+            .first()
             .find('button')
             .simulate('click');
         expect(open).toHaveBeenCalledTimes(1);
     });
 
-    it('should show the preview onload',  () => {
+    it('should show the preview onload', () => {
         jest.useFakeTimers();
 
         const wrapper = setup({ mimeType: 'image/jpeg' });
@@ -52,7 +54,7 @@ describe('Media Preview Component ', () => {
         expect(scrollToMedia).toHaveBeenCalled();
     });
 
-    it('should call the ref\'s method for scrolling into view', () => {
+    it("should call the ref's method for scrolling into view", () => {
         const wrapper = setup({});
         const testFn = jest.fn();
 

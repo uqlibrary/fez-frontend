@@ -303,7 +303,7 @@ describe('Component PossiblyMyRecords', () => {
                 message: msg => 'Alert: ' + msg,
             },
             true,
-            'test message'
+            'test message',
         );
         expect(test2).toMatchSnapshot();
     });

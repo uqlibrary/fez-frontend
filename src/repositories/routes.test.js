@@ -715,14 +715,14 @@ describe('Backend routes method', () => {
             testCases.map(item => {
                 expect(routes.SEARCH_INTERNAL_RECORDS_API({ ...item.values })).toEqual(item.expected);
             });
-        }
+        },
     );
 
     it('should construct url for SEARCH_AUTHOR_LOOKUP_API', () => {
         expect(
             routes.SEARCH_AUTHOR_LOOKUP_API({
                 searchQuery: 'a,b',
-            })
+            }),
         ).toEqual({
             apiUrl: 'fez-authors/search',
             options: {
@@ -739,7 +739,7 @@ describe('Backend routes method', () => {
             routes.THIRD_PARTY_LOOKUP_API_1FIELD({
                 type: 'test1',
                 field1: 'test2',
-            })
+            }),
         ).toEqual({
             apiUrl: 'tool/lookup/test1/test2',
         });
@@ -751,7 +751,7 @@ describe('Backend routes method', () => {
                 type: 'test1',
                 field1: 'test2',
                 field2: 'test3',
-            })
+            }),
         ).toEqual({
             apiUrl: 'tool/lookup/test1/test2/test3',
         });

@@ -21,10 +21,7 @@ describe('Fix record actions', () => {
                 .onGet(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(200, { data: { ...mockData.mockRecordToFix } });
 
-            const expectedActions = [
-                actions.FIX_RECORD_LOADING,
-                actions.FIX_RECORD_LOADED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_LOADING, actions.FIX_RECORD_LOADED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.loadRecordToFix(testPid));
@@ -35,9 +32,7 @@ describe('Fix record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to fix from API failed', async() => {
-            mockApi
-                .onAny()
-                .reply(500);
+            mockApi.onAny().reply(500);
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
@@ -53,9 +48,7 @@ describe('Fix record actions', () => {
         });
 
         it('dispatches expected actions when loading a record to fix from API for anon user', async() => {
-            mockApi
-                .onAny()
-                .reply(403);
+            mockApi.onAny().reply(403);
 
             const expectedActions = [
                 actions.FIX_RECORD_LOADING,
@@ -69,9 +62,7 @@ describe('Fix record actions', () => {
 
     describe('setting/clearing record to fix action', () => {
         it('dispatches expected actions when setting a loaded record to fix', async() => {
-            const expectedActions = [
-                actions.FIX_RECORD_SET,
-            ];
+            const expectedActions = [actions.FIX_RECORD_SET];
             try {
                 await mockActionsStore.dispatch(fixRecordActions.setFixRecord(mockData.mockRecordToFix));
                 expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -81,9 +72,7 @@ describe('Fix record actions', () => {
         });
 
         it('dispatches expected actions when clearing a loaded record to fix', async() => {
-            const expectedActions = [
-                actions.FIX_RECORD_CLEAR,
-            ];
+            const expectedActions = [actions.FIX_RECORD_CLEAR];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.clearFixRecord());
@@ -98,9 +87,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions with invalid data (missing publication data)', async() => {
             const testInput = { author: '' };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -113,9 +100,7 @@ describe('Fix record actions', () => {
         it('dispatches expected actions with invalid data (missing author data)', async() => {
             const testInput = { publication: '' };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -139,9 +124,7 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -165,9 +148,7 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -192,10 +173,7 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.FIX_RECORD_SUCCESS];
 
             mockApi
                 .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
@@ -241,7 +219,7 @@ describe('Fix record actions', () => {
             mockApi
                 .onGet(repositories.routes.FILE_UPLOAD_API({ pid: testPid, fileName: 'test.txt' }).apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
-                .onPut('s3-ap-southeast-2.amazonaws.com', { 'name': 'test.txt' })
+                .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
                 .reply(200, {})
                 .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(200, { data: { ...mockData.mockRecordToFix } })
@@ -267,10 +245,7 @@ describe('Fix record actions', () => {
                 rek_link: 'http://www.google.com',
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.FIX_RECORD_SUCCESS];
 
             mockApi
                 .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
@@ -297,10 +272,7 @@ describe('Fix record actions', () => {
                 contentIndicators: [],
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_SUCCESS,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.FIX_RECORD_SUCCESS];
 
             mockApi.onAny().reply(200, {});
 
@@ -330,9 +302,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_FAILED,
             ];
 
-            mockApi
-                .onAny()
-                .reply(403, {});
+            mockApi.onAny().reply(403, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -352,15 +322,9 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.APP_ALERT_SHOW,
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.APP_ALERT_SHOW, actions.FIX_RECORD_FAILED];
 
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.fixRecord(testInput));
@@ -377,9 +341,7 @@ describe('Fix record actions', () => {
                 author: {},
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -394,9 +356,7 @@ describe('Fix record actions', () => {
                 publication: {},
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -425,9 +385,7 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_FAILED];
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -457,12 +415,10 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.FIX_RECORD_UNCLAIM_SUCCESS,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.FIX_RECORD_UNCLAIM_SUCCESS];
 
-            mockApi.onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
+            mockApi
+                .onPatch(repositories.routes.EXISTING_RECORD_API({ pid: testPid }).apiUrl)
                 .reply(200, { data: { ...mockData.mockRecordToFix } })
                 .onPost(repositories.routes.HIDE_POSSIBLE_RECORD_API().apiUrl)
                 .reply(200, { data: { pid: testPid } });
@@ -501,9 +457,7 @@ describe('Fix record actions', () => {
                 actions.FIX_RECORD_FAILED,
             ];
 
-            mockApi
-                .onAny()
-                .reply(403, {});
+            mockApi.onAny().reply(403, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));
@@ -533,15 +487,9 @@ describe('Fix record actions', () => {
                 },
             };
 
-            const expectedActions = [
-                actions.FIX_RECORD_PROCESSING,
-                actions.APP_ALERT_SHOW,
-                actions.FIX_RECORD_FAILED,
-            ];
+            const expectedActions = [actions.FIX_RECORD_PROCESSING, actions.APP_ALERT_SHOW, actions.FIX_RECORD_FAILED];
 
-            mockApi
-                .onAny()
-                .reply(500, {});
+            mockApi.onAny().reply(500, {});
 
             try {
                 await mockActionsStore.dispatch(fixRecordActions.unclaimRecord(testInput));

@@ -66,7 +66,8 @@ export default class JournalArticleForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     required
                                     className="requiredHintField"
                                     validate={[validation.required]}
@@ -96,8 +97,7 @@ export default class JournalArticleForm extends Component {
                         </Grid>
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.isNtro &&
+                {this.props.isNtro && (
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
@@ -111,7 +111,7 @@ export default class JournalArticleForm extends Component {
                         hideOriginalFormat
                         hideAudienceSize
                     />
-                }
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={locale.components.issnForm.title} help={locale.components.issnForm.title.help}>
                         <Typography>{locale.components.issnForm.text}</Typography>
@@ -137,15 +137,18 @@ export default class JournalArticleForm extends Component {
                                     type="text"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.optional.fieldLabels.volume}/>
+                                    label={txt.optional.fieldLabels.volume}
+                                />
                             </Grid>
                             <Grid item xs={6} sm={3}>
                                 <Field
                                     component={TextField}
                                     name="fez_record_search_key_issue_number.rek_issue_number"
-                                    type="text" fullWidth
+                                    type="text"
+                                    fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.optional.fieldLabels.issue}/>
+                                    label={txt.optional.fieldLabels.issue}
+                                />
                             </Grid>
 
                             <Grid item xs={6} sm={3}>
@@ -155,7 +158,8 @@ export default class JournalArticleForm extends Component {
                                     type="text"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.optional.fieldLabels.startPage}/>
+                                    label={txt.optional.fieldLabels.startPage}
+                                />
                             </Grid>
                             <Grid item xs={6} sm={3}>
                                 <Field
@@ -164,16 +168,18 @@ export default class JournalArticleForm extends Component {
                                     type="text"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.optional.fieldLabels.endPage}/>
+                                    label={txt.optional.fieldLabels.endPage}
+                                />
                             </Grid>
-                            <Grid item  xs={12}>
+                            <Grid item xs={12}>
                                 <Field
                                     component={TextField}
                                     name="fez_record_search_key_article_number.rek_article_number"
                                     type="text"
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    label={txt.optional.fieldLabels.articleNumber}/>
+                                    label={txt.optional.fieldLabels.articleNumber}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -184,7 +190,8 @@ export default class JournalArticleForm extends Component {
                                     fullWidth
                                     multiline
                                     rows={1}
-                                    label={txt.optional.fieldLabels.notes}/>
+                                    label={txt.optional.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

@@ -37,21 +37,21 @@ describe('Search action creators', () => {
                     pageSize: 5,
                     sortBy: 'score',
                     sortDirection: 'desc',
-                }).options
+                }).options,
             )
             .reply(200, mockData.internalTitleSearchList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleSearchResultsList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleScopusResultsList)
             .onGet(
@@ -62,14 +62,14 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
                     source: 'crossref',
                     searchQuery: testTitleSearchParam,
-                }).options
+                }).options,
             )
             .reply(200, mockData.externalDoiSearchResultList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalPubMedSearchResultsList);
 
@@ -107,21 +107,21 @@ describe('Search action creators', () => {
                     pageSize: 5,
                     sortBy: 'score',
                     sortDirection: 'desc',
-                }).options
+                }).options,
             )
             .reply(200, mockData.internalTitleSearchList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleSearchResultsList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleScopusResultsList)
             .onGet(
@@ -132,14 +132,14 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
                     source: 'crossref',
                     searchQuery: testTitleSearchParam,
-                }).options
+                }).options,
             )
             .reply(200, mockData.externalDoiSearchResultList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(500, {});
 
@@ -178,21 +178,21 @@ describe('Search action creators', () => {
                     pageSize: 5,
                     sortBy: 'score',
                     sortDirection: 'desc',
-                }).options
+                }).options,
             )
             .reply(500, {})
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(500, {})
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(500, {})
             .onGet(
@@ -203,14 +203,14 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
                     source: 'crossref',
                     searchQuery: testTitleSearchParam,
-                }).options
+                }).options,
             )
             .reply(500, {})
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(500, {});
 
@@ -253,21 +253,21 @@ describe('Search action creators', () => {
                     pageSize: 5,
                     sortBy: 'score',
                     sortDirection: 'desc',
-                }).options
+                }).options,
             )
             .reply(200, mockData.internalTitleSearchList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'wos', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleSearchResultsList)
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'scopus', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalTitleScopusResultsList)
             .onGet(
@@ -278,14 +278,14 @@ describe('Search action creators', () => {
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({
                     source: 'crossref',
                     searchQuery: testTitleSearchParam,
-                }).options
+                }).options,
             )
             .reply(200, {})
             .onGet(
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
                     .apiUrl,
                 repositories.routes.SEARCH_EXTERNAL_RECORDS_API({ source: 'pubmed', searchQuery: testTitleSearchParam })
-                    .options
+                    .options,
             )
             .reply(200, mockData.externalPubMedSearchResultsList);
 
@@ -341,7 +341,7 @@ describe('Search action creators', () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).apiUrl,
-                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).options
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'conference', searchKey: 'series' }).options,
             )
             .reply(200, { data: [] });
 
@@ -370,7 +370,7 @@ describe('Search action creators', () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).apiUrl,
-                repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).options
+                repositories.routes.SEARCH_AUTHOR_LOOKUP_API({ searchQuery: 'test', searchKey: 'author' }).options,
             )
             .reply(200, { data: [] });
 
@@ -389,7 +389,7 @@ describe('Search action creators', () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
             )
             .reply(200, mockData.internalTitleSearchList);
 
@@ -405,7 +405,7 @@ describe('Search action creators', () => {
         mockApi
             .onGet(
                 repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).apiUrl,
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(params).options,
             )
             .reply(500, mockData.internalTitleSearchList);
 
@@ -507,7 +507,7 @@ describe('Search action creators', () => {
 
             searchActions.exportEspacePublications(testRequest);
             expect(exportPublications).toHaveBeenCalledWith(
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export')
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'),
             );
         });
     });
@@ -519,7 +519,7 @@ describe('Search action creators', () => {
             };
             searchActions.exportEspacePublications(testRequest);
             expect(exportPublications).toHaveBeenCalledWith(
-                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export')
+                repositories.routes.SEARCH_INTERNAL_RECORDS_API(testRequest, 'export'),
             );
         });
     });

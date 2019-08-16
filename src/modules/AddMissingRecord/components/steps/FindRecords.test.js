@@ -31,11 +31,14 @@ describe('Search record', () => {
 
     it('should handle skip search', () => {
         const pushFn = jest.fn();
-        const wrapper = setup({
-            history: {
-                push: pushFn,
+        const wrapper = setup(
+            {
+                history: {
+                    push: pushFn,
+                },
             },
-        }, true);
+            true,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.props().onSkipSearch();
         expect(pushFn).toHaveBeenCalledWith('/records/add/new');

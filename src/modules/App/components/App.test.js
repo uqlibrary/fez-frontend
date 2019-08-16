@@ -115,7 +115,7 @@ describe('Application component', () => {
             wrapper.instance().redirectToOrcid();
             expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
             expect(testFn2).not.toBeCalled();
-        }
+        },
     );
 
     it('when calling redirectToOrcid, it should redirect appropriately', () => {
@@ -254,7 +254,7 @@ describe('Application component', () => {
             });
             wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should render app for HDR without ORCID ID', () => {
@@ -399,7 +399,7 @@ describe('Application component', () => {
             expect(
                 getWrapper(path.pathname)
                     .instance()
-                    .isPublicPage(menuItems)
+                    .isPublicPage(menuItems),
             ).toEqual(path.isPublic);
         });
     });

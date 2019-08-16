@@ -9,9 +9,7 @@ jest.mock('locale', () => ({
                         value: false,
                     },
                 ],
-                sortDirection: [
-                    false,
-                ],
+                sortDirection: [false],
             },
         },
     },

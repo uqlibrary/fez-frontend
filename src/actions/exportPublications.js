@@ -31,4 +31,3 @@ export function exportPublications(requestParams) {
             });
     };
 }
-

@@ -25,15 +25,13 @@ describe('PublicationsList', () => {
     it('renders component with custom subset actions', () => {
         const test = [];
         const wrapper = setup({
-            publicationsListSubset: [
-                'test',
-            ],
+            publicationsListSubset: ['test'],
             subsetCustomActions: test,
         });
         expect(
             wrapper.instance().renderPublicationCitation(0, {
                 rek_pid: 'test',
-            }).props.customActions
+            }).props.customActions,
         ).toBe(test);
     });
 });

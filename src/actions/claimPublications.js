@@ -66,7 +66,7 @@ export function searchPossiblyYourPublications({
                 pageSize: pageSize,
                 sortBy: sortBy,
                 sortDirection: sortDirection,
-            })
+            }),
         )
             .then(response => {
                 dispatch({
@@ -201,12 +201,12 @@ export function clearClaimPublication() {
 export function claimPublication(data) {
     const isAuthorLinked =
         (data.publication.fez_record_search_key_author_id || []).filter(
-            authorId => authorId.rek_author_id === data.author.aut_id
+            authorId => authorId.rek_author_id === data.author.aut_id,
         ).length > 0;
 
     const isContributorLinked =
         (data.publication.fez_record_search_key_contributor_id || []).filter(
-            authorId => authorId.rek_contributor_id === data.author.aut_id
+            authorId => authorId.rek_contributor_id === data.author.aut_id,
         ).length > 0;
 
     // do not try to claim record if it's internal record and already assigned to the current author
@@ -217,7 +217,7 @@ export function claimPublication(data) {
                 payload: 'Current author has already been assigned to this publication.',
             });
             return Promise.reject(
-                new Error('Current author has already been assigned to this publication as an author or contributor.')
+                new Error('Current author has already been assigned to this publication as an author or contributor.'),
             );
         };
     }
@@ -232,14 +232,14 @@ export function claimPublication(data) {
         if (data.authorLinking && data.authorLinking.authors) {
             recordAuthorsIdSearchKeys = transformers.getRecordAuthorsIdSearchKey(
                 data.authorLinking.authors,
-                data.author.aut_id
+                data.author.aut_id,
             );
         }
 
         if (data.contributorLinking && data.contributorLinking.valid && data.contributorLinking.authors) {
             recordContributorsIdSearchKeys = transformers.getRecordContributorsIdSearchKey(
                 data.contributorLinking.authors,
-                data.author.aut_id
+                data.author.aut_id,
             );
         }
 
@@ -251,7 +251,7 @@ export function claimPublication(data) {
                 ...transformers.getRecordLinkSearchKey(data),
                 ...transformers.getRecordFileAttachmentSearchKey(
                     data.files ? data.files.queue : [],
-                    data.publication
+                    data.publication,
                 ),
                 ...transformers.getExternalSourceIdSearchKeys(data.publication.sources),
                 ...transformers.getContentIndicatorSearchKey(data.contentIndicators || null),
@@ -298,7 +298,7 @@ export function claimPublication(data) {
                 .then(() =>
                     !createRecordRequest
                         ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
-                        : null
+                        : null,
                 )
                 // set save/claim record status if either is a success
                 .then(() => {
@@ -307,19 +307,19 @@ export function claimPublication(data) {
                 })
                 // try to upload files
                 .then(() =>
-                    hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null
+                    hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null,
                 )
                 // patch record with files if file upload has succeeded
                 .then(() =>
                     hasFilesToUpload
                         ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchFilesRecordRequest)
-                        : null
+                        : null,
                 )
                 // send comments or content indicator changes as an issue request
                 .then(() =>
                     createIssueRequest.issue.length
                         ? post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest)
-                        : null
+                        : null,
                 )
                 // finish claim record action
                 .then(() => {

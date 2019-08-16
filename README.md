@@ -45,6 +45,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
     - you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension
     - session token x-uql-token can easily be found by logging in at <https://www.library.uq.edu.au/> and
       observing the header value in Network tab of Inspections
+    - You will also need to run Chrome in no-security mode by adding the alias `alias chrome-no-cors='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=~/chrome-dev-profile > /dev/null 2>&1'` and then running chrome by `chrome-no-cors`.
   - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
 - `npm run start:build`
   - runs production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000/`
@@ -55,6 +56,8 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - async loading is not working since chuncks are not saved, navigate directly to required routes
 - `npm run eslint`
   - Runs ESLint on all JavaScript files in the project, with specific exceptions listed in `.eslintignore`.
+- `npm run codestyles:files`
+  - Runs Prettier and ESLint checks on all Javascript files in the project, then lists files with code style issues. Check the other npm scripts for ways to fix the issues automatically if possible.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 

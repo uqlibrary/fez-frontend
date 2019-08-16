@@ -32,7 +32,7 @@ function mapDispatchToProps(dispatch) {
 
 let ResearchContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(MyRecords);
 ResearchContainer = withRouter(ResearchContainer);
 export default ResearchContainer;

@@ -24,7 +24,7 @@ const mapDispatchToProps = () => {
 
 const ThesisSubtypeList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function ThesisSubtypeField(fieldProps) {

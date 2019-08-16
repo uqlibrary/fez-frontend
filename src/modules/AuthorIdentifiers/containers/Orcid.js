@@ -5,19 +5,18 @@ import * as actions from 'actions';
 
 import Orcid from '../components/Orcid';
 
-const mapStateToProps = (state) => (
-    {
-        ...state.get('accountReducer'),
-    }
-);
+const mapStateToProps = state => ({
+    ...state.get('accountReducer'),
+});
 
-const mapDispatchToProps = (dispatch) => (
-    {
-        actions: bindActionCreators(actions, dispatch),
-    }
-);
+const mapDispatchToProps = dispatch => ({
+    actions: bindActionCreators(actions, dispatch),
+});
 
-let OrcidContainer = connect(mapStateToProps, mapDispatchToProps)(Orcid);
+let OrcidContainer = connect(
+    mapStateToProps,
+    mapDispatchToProps,
+)(Orcid);
 OrcidContainer = withRouter(OrcidContainer);
 
 export default OrcidContainer;

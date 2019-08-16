@@ -45,7 +45,7 @@ describe('PartialDateForm unit tests', () => {
         () => {
             partialAllowedDateForm._displayErrors({ day: 32, month: null, year: null }, STATUS_INVALID);
             expect(partialAllowedDateForm.errors).toMatchObject({});
-        }
+        },
     );
 
     it("should display validation message on day if it's invalid, year touched and allowed partial", () => {
@@ -86,11 +86,12 @@ describe('PartialDateForm unit tests', () => {
     });
 
     it(
-        'should display validation message on day if invalid day and valid month, year present if partial not allowed',
+        'should display validation message on day if invalid day and valid month, ' +
+            'year present if partial not allowed',
         () => {
             partialNotAllowedDateForm._displayErrors({ day: 29, month: 1, year: 2015 }, STATUS_INVALID);
             expect(partialNotAllowedDateForm.errors).toMatchObject({ day: validationMessage.day });
-        }
+        },
     );
 
     // future

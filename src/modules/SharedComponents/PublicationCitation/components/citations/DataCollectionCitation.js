@@ -17,10 +17,12 @@ export default class DataCollectionCitation extends Component {
             id: this.props.publication.rek_pid,
             title: this.props.publication.rek_title,
             publisher: this.props.publication.fez_record_search_key_publisher
-                ? this.props.publication.fez_record_search_key_publisher.rek_publisher : null,
+                ? this.props.publication.fez_record_search_key_publisher.rek_publisher
+                : null,
             collectionType: this.props.publication.rek_display_type_lookup || null,
             doi: this.props.publication.fez_record_search_key_doi
-                ? this.props.publication.fez_record_search_key_doi.rek_doi : null,
+                ? this.props.publication.fez_record_search_key_doi.rek_doi
+                : null,
         };
 
         // eSpace citation view for DataCollection
@@ -44,7 +46,7 @@ export default class DataCollectionCitation extends Component {
                 <Partials.CitationView className="citationCollectionType" value={record.collectionType} />
 
                 {/* {doi| doi:|} */}
-                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink}/>
+                <Partials.DoiCitationView doi={record.doi} hideDoiLink={this.props.hideDoiLink} />
             </div>
         );
     }

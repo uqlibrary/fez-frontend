@@ -5,7 +5,7 @@ jest.mock('redux-form/immutable');
 
 function setup(testProps, isShallow = true) {
     const props = {
-        'array': {
+        array: {
             insert: jest.fn(),
             move: jest.fn(),
             pop: jest.fn(),
@@ -21,8 +21,8 @@ function setup(testProps, isShallow = true) {
         blur: jest.fn(),
         change: jest.fn(),
         clearAsyncError: jest.fn(),
-        'anyTouched': true,
-        'asyncValidating': false,
+        anyTouched: true,
+        asyncValidating: false,
         asyncValidate: jest.fn(),
         clearFields: jest.fn(),
         clearSubmitErrors: jest.fn(),
@@ -35,11 +35,11 @@ function setup(testProps, isShallow = true) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        'dirty': true,
-        'form': 'form',
-        'initialized': false,
-        'invalid': false,
-        'valid': true,
+        dirty: true,
+        form: 'form',
+        initialized: false,
+        invalid: false,
+        valid: true,
         pure: true,
         pristine: true,
         submitting: false,
@@ -75,7 +75,7 @@ describe('Component GoogleScholar ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should render form if author doesn\'t have google scholar id', () => {
+    it("should render form if author doesn't have google scholar id", () => {
         const wrapper = setup({
             author: currentAuthor.uqnoauthid.data,
         });
@@ -118,7 +118,8 @@ describe('Component GoogleScholar ', () => {
     it('should display submission error if saving failed', () => {
         const wrapper = setup({
             author: currentAuthor.uqnoauthid.data,
-            submitFailed: true, error: 'failed!',
+            submitFailed: true,
+            error: 'failed!',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -154,10 +155,13 @@ describe('Component GoogleScholar ', () => {
 
     it('should handle keyboard form submit event', () => {
         const handleSubmitFn = jest.fn();
-        const wrapper = setup({
-            author: currentAuthor.uqnoauthid.data,
-            handleSubmit: handleSubmitFn,
-        }, false);
+        const wrapper = setup(
+            {
+                author: currentAuthor.uqnoauthid.data,
+                handleSubmit: handleSubmitFn,
+            },
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('form').simulate('keyDown', { key: 'Enter' });
         expect(handleSubmitFn).toHaveBeenCalled();

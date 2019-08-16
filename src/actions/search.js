@@ -31,14 +31,14 @@ export function collectionsList() {
                 pageSize: 999,
                 sortBy: 'title',
                 sortDirection: 'asc',
-            })
+            }),
         ).then(
             response => {
                 dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
             },
             error => {
                 dispatch({ type: actions.SEARCH_COLLECTION_FAILED, payload: error.message });
-            }
+            },
         );
     };
 }
@@ -57,14 +57,14 @@ export function communitiesList() {
                 pageSize: 999,
                 sortBy: 'title',
                 sortDirection: 'asc',
-            })
+            }),
         ).then(
             response => {
                 dispatch({ type: `${actions.SEARCH_COMMUNITIES_LOADED}`, payload: response.data });
             },
             error => {
                 dispatch({ type: `${actions.SEARCH_COMMUNITIES_FAILED}`, payload: error.message });
-            }
+            },
         );
     };
 }
@@ -125,7 +125,7 @@ export function searchPublications(searchQuery) {
         });
 
         const searchPromises = Object.keys(locale.global.sources).map(source =>
-            createSearchPromise(source, searchQuery, dispatch)
+            createSearchPromise(source, searchQuery, dispatch),
         );
 
         dispatch({
@@ -178,7 +178,7 @@ export function loadSearchKeyList(searchKey, searchQuery) {
                         type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
                         payload: error.message,
                     });
-                }
+                },
             )
         );
     };
@@ -210,7 +210,7 @@ export function searchEspacePublications(searchParams) {
             SEARCH_INTERNAL_RECORDS_API({
                 ...searchParams,
                 facets: searchParams.activeFacets || {},
-            })
+            }),
         )
             .then(response => {
                 dispatch({
@@ -244,7 +244,7 @@ export function loadPublicationList(searchKey, searchQuery) {
                 sortBy: 'score',
                 sortDirection: 'Desc',
                 facets: {},
-            })
+            }),
         ).then(
             response => {
                 dispatch({
@@ -257,7 +257,7 @@ export function loadPublicationList(searchKey, searchQuery) {
                     type: `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
                     payload: error.message,
                 });
-            }
+            },
         );
     };
 }
@@ -271,7 +271,7 @@ export function loadPublicationList(searchKey, searchQuery) {
  */
 export function exportEspacePublications(searchParams) {
     return exportPublications(
-        SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: searchParams.activeFacets || {} }, 'export')
+        SEARCH_INTERNAL_RECORDS_API({ ...searchParams, facets: searchParams.activeFacets || {} }, 'export'),
     );
 }
 

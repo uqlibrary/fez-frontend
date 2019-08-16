@@ -25,7 +25,7 @@ export default class ThesisForm extends Component {
         super(props);
     }
 
-    getNumbersOnly = (value) => {
+    getNumbersOnly = value => {
         return value.replace(/[^\d]/g, '');
     };
 
@@ -68,7 +68,8 @@ export default class ThesisForm extends Component {
                                     name="fez_record_search_key_org_name.rek_org_name"
                                     required
                                     validate={[validation.required]}
-                                    {...txt.information.fieldLabels.orgName}/>
+                                    {...txt.information.fieldLabels.orgName}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -77,18 +78,21 @@ export default class ThesisForm extends Component {
                                     disabled={this.props.submitting}
                                     validate={[validation.required]}
                                     locale={txt.information.fieldLabels.thesisType}
-                                    required />
+                                    required
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired />
+                                    floatingTitleRequired
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -100,7 +104,8 @@ export default class ThesisForm extends Component {
                                     rows={1}
                                     {...txt.information.fieldLabels.author}
                                     required
-                                    validate={[validation.required]} />
+                                    validate={[validation.required]}
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>
@@ -127,7 +132,8 @@ export default class ThesisForm extends Component {
                             distinctOnly
                             maxCount={3}
                             disabled={this.props.submitting}
-                            locale={locale.components.fieldOfResearchForm.field} />
+                            locale={locale.components.fieldOfResearchForm.field}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>
@@ -141,7 +147,8 @@ export default class ThesisForm extends Component {
                                     type="text"
                                     validate={[validation.doi]}
                                     fullWidth
-                                    {...txt.optional.fieldLabels.doi} />
+                                    {...txt.optional.fieldLabels.doi}
+                                />
                             </Grid>
                             <Grid item xs={12} sm={6}>
                                 <Field
@@ -151,7 +158,8 @@ export default class ThesisForm extends Component {
                                     type="text"
                                     fullWidth
                                     normalize={this.getNumbersOnly}
-                                    {...txt.optional.fieldLabels.totalPages} />
+                                    {...txt.optional.fieldLabels.totalPages}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -161,7 +169,8 @@ export default class ThesisForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    {...txt.optional.fieldLabels.abstract} />
+                                    {...txt.optional.fieldLabels.abstract}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field
@@ -171,7 +180,8 @@ export default class ThesisForm extends Component {
                                     disabled={this.props.submitting}
                                     fullWidth
                                     multiline
-                                    {...txt.optional.fieldLabels.notes} />
+                                    {...txt.optional.fieldLabels.notes}
+                                />
                             </Grid>
                         </Grid>
                     </StandardCard>
