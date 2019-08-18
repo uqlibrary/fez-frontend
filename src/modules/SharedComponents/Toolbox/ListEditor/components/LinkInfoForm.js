@@ -6,20 +6,20 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
 export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
-    const [linkAndDescription, setlinkAndDescription] = useState({ key: null, value: null });
+    const [linkAndDescription, setLinkAndDescription] = useState({ key: null, value: null });
     const linkInput = useRef(null);
     const descriptionInput = useRef(null);
 
     const handleChange = (event) => {
         const { name, value } = event.target;
-        setlinkAndDescription({
+        setLinkAndDescription({
             ...linkAndDescription,
             [name]: value,
         });
     };
 
     const resetForm = () => {
-        setlinkAndDescription({
+        setLinkAndDescription({
             key: null,
             value: null,
         });
@@ -46,8 +46,9 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
             descriptionInput.current.focus();
             // linkInput.current.focus();
         },
-        [linkAndDescription.key, linkAndDescription.value]
+        [disabled, linkAndDescription, onAdd]
     );
+
     const {
         linkInputFieldLabel,
         linkInputFieldHint,

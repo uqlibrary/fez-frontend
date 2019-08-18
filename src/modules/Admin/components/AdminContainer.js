@@ -17,6 +17,7 @@ import BibliographicSection from './bibliographic/BibliographicSectionContainer'
 import AdminSection from './admin/AdminSectionContainer';
 import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './files/FilesSection';
+import AdditionalInformationSection from './additionalInformation/AdditionalInformationSection';
 // import AuthorDetailsSection from './authors/AuthorDetailsSection';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 
@@ -139,9 +140,13 @@ export const AdminContainer = ({
                             component: AuthorsSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
+                        additionalInformation: {
+                            component: AdditionalInformationSection,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
+                        },
                         files: {
                             component: FilesSection,
-                            activated: false,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         security: {
                             component: SecuritySection,

@@ -57,6 +57,18 @@ export const getAuthorsInitialValues = (record) =>
             };
         }, {});
 
+export const getAdditionalInformationValues = (record) =>
+    (adminInterfaceConfig[record.rek_display_type] || {})
+        .additionalInformation()
+        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+
 export const isFileValid = (dataStream) => {
     const {
         files: { blacklist },
@@ -118,6 +130,8 @@ const mapStateToProps = (state) => {
                 bibliographicSection:
                       (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
                 authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
+                additionalInformationSection:
+                      (recordType === RECORD_TYPE_RECORD && getAdditionalInformationValues(recordToView)) || {},
             },
         }
         : null;

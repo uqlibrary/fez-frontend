@@ -12,11 +12,15 @@ import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
+import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
+import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 
 export const fieldConfig = {
     rek_title: {
@@ -157,7 +161,7 @@ export const fieldConfig = {
         componentProps: {
             label: 'Collection',
             placeholder: 'Begin typing to select and add collection(s)',
-            name: 'bibliographicSection.collections',
+            name: 'additionalInformationSection.collections',
         },
     },
     rek_subtype: {
@@ -442,6 +446,36 @@ export const fieldConfig = {
             validate: [validation.authorRequired],
         },
     },
+    files: {
+        component: FileUploadField,
+        componentProps: {
+            name: 'filesSection.files',
+            requireOpenAccessStatus: true,
+        },
+    },
+    contentIndicators: {
+        component: ContentIndicatorsField,
+        componentProps: {
+            name: 'additionalInformationSection.contentIndicators',
+            label: locale.components.contentIndicators.label,
+            multiple: true,
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_herdc_code: {
+        component: HerdcCodeField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_herdc_code.rek_herdc_code',
+            label: 'HERDC code',
+        },
+    },
+    fez_record_search_key_herdc_status: {
+        component: HerdcStatusField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_herdc_status.rek_herdc_status',
+            label: 'HERDC status',
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -554,6 +588,23 @@ export const adminInterfaceConfig = {
             {
                 title: 'Authors',
                 groups: [['authors']],
+            },
+        ],
+        additionalInformation: () => [
+            {
+                title: 'Additional Information',
+                groups: [
+                    ['contentIndicators'],
+                    ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                    // ['fez_record_search_key_institutional_status'],
+                    ['collections'],
+                ],
+            },
+        ],
+        files: () => [
+            {
+                title: 'Files',
+                groups: [['files']],
             },
         ],
     },
@@ -736,5 +787,17 @@ export const valueExtractor = {
                 };
             });
         },
+    },
+    contentIndicators: {
+        getValue: (record) =>
+            (record.fez_record_search_key_content_indicator || {}).map(
+                (contentIndicator) => contentIndicator.rek_content_indicator
+            ),
+    },
+    fez_record_search_key_herdc_code: {
+        getValue: (record) => ({ ...record.fez_record_search_key_herdc_code }),
+    },
+    fez_record_search_key_herdc_status: {
+        getValue: (record) => ({ ...record.fez_record_search_key_herdc_status }),
     },
 };

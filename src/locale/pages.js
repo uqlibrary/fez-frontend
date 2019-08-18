@@ -722,6 +722,9 @@ export default {
                 authorDetails: {
                     title: 'Author details',
                 },
+                additionalInformation: {
+                    title: 'Additional Information',
+                },
                 files: {
                     title: 'Files',
                 },

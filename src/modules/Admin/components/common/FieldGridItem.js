@@ -6,7 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import { fieldConfig } from 'config/adminInterface';
 
 export const FieldGridItem = ({ field, group, disabled }) => (
-    <Grid item xs={12 / group.length}>
+    <Grid item xs={12} md={12 / group.length}>
         <Field disabled={disabled} component={fieldConfig[field].component} {...fieldConfig[field].componentProps} />
     </Grid>
 );
