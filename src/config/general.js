@@ -1292,3 +1292,10 @@ export const HERDC_STATUS = [
     { value: '453220', text: 'Provisional Code' },
     { value: '453221', text: 'Confirmed Code' },
 ];
+
+export const INSTITUTIONAL_STATUS = [
+    { value: null, text: 'Please choose an option' },
+    { value: 'UQ', text: 'UQ' },
+    { value: 'NonUQ', text: 'Non-UQ' },
+    { value: 'Unknown', text: 'Unknown' },
+];

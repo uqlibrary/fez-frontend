@@ -41,6 +41,7 @@ export class AutoCompleteAsyncField extends Component {
         itemsListLoading: PropTypes.bool,
         category: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
         onChange: PropTypes.func,
+        onDelete: PropTypes.func,
         itemToString: PropTypes.func,
         floatingLabelText: PropTypes.string,
         hideLabel: PropTypes.bool,
@@ -89,12 +90,38 @@ export class AutoCompleteAsyncField extends Component {
         ),
     };
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            selectedItem: (props.selectedItem || []).reduce(
+                (items, item) => ({
+                    ...items,
+                    [item.id]: item,
+                }),
+                {}
+            ),
+        };
+    }
+
     componentDidMount() {
         if (!this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category);
         }
     }
 
+    componentWillReceiveProps(newProps) {
+        if ((this.props.selectedItem || []).length !== (newProps.selectedItem || []).length) {
+            this.setState({
+                selectedItem: newProps.selectedItem.reduce(
+                    (items, item) => ({
+                        ...items,
+                        [item.id]: item,
+                    }),
+                    {}
+                ),
+            });
+        }
+    }
     getSuggestions = (event) => {
         if (this.props.async && this.props.loadSuggestions) {
             this.props.loadSuggestions(this.props.category, event.target.value);
@@ -180,16 +207,17 @@ export class AutoCompleteAsyncField extends Component {
 
     handleDelete = (item) => () => {
         this.setState(
-            (state) => {
-                const selectedItem = [...state.selectedItem];
-                selectedItem.splice(selectedItem.indexOf(item), 1);
-                return { selectedItem };
-            },
+            (state) => ({
+                selectedItem: Object.entries(state.selectedItem)
+                    .filter(([key]) => key !== item.id)
+                    .reduce((selectedItem, [key, value]) => ({ ...selectedItem, [key]: value }), {}),
+            }),
             () => {
-                this.props.onChange(this.state.selectedItem);
+                this.props.onDelete(Object.values(this.state.selectedItem));
             }
         );
     };
+
     render() {
         const {
             classes,
@@ -244,15 +272,17 @@ export class AutoCompleteAsyncField extends Component {
                                                 onChange: this.getSuggestions,
                                                 ...(this.props.showChips
                                                     ? {
-                                                        startAdornment: this.props.selectedItem.map((item) => (
-                                                            <Chip
-                                                                key={item.id}
-                                                                tabIndex={-1}
-                                                                label={item.value}
-                                                                className={classes.chip}
-                                                                onDelete={this.handleDelete(item)}
-                                                            />
-                                                        )),
+                                                        startAdornment: Object.values(this.state.selectedItem).map(
+                                                            (item, index) => (
+                                                                <Chip
+                                                                    key={item.id}
+                                                                    tabIndex={-1}
+                                                                    label={item.value}
+                                                                    className={classes.chip}
+                                                                    onDelete={this.handleDelete(item, index)}
+                                                                />
+                                                            )
+                                                        ),
                                                     }
                                                     : {}),
                                             }),

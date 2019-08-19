@@ -4,20 +4,21 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const category = 'collection';
-    console.log(props.input.value);
     return {
         category: category,
         itemsList:
-			state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-			    ? state.get('searchKeysReducer')[category].itemsList.map((collection) => ({
-			        id: collection.rek_pid,
-			        value: collection.rek_title,
-				  }))
-			    : [],
+            state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
+                ? state.get('searchKeysReducer')[category].itemsList.map((collection) => ({
+                    id: collection.rek_pid,
+                    value: collection.rek_title,
+                }))
+                : [],
         onChange: (item) => {
             const items = (!!props.input.value.toJS && props.input.value.toJS()) || props.input.value;
-            console.log(items);
             props.input.onChange([...items, item]);
+        },
+        onDelete: (items) => {
+            props.input.onChange([...items]);
         },
         async: true,
         errorText: props.meta ? props.meta.error : null,

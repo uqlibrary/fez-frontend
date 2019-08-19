@@ -1,4 +1,4 @@
-import HerdcStatusField from './HerdcStatusField';
+import InstitutionalStatusField from './InstitutionalStatusField';
 import Immutable from 'immutable';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -6,10 +6,10 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(HerdcStatusField, props, args);
+    return getElement(InstitutionalStatusField, props, args);
 }
 
-describe('HerdcStatusField component', () => {
+describe('InstitutionalStatusField component', () => {
     it('should render default view', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();

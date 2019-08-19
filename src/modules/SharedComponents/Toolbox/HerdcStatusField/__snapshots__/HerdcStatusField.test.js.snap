@@ -1,0 +1,172 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HerdcStatusField component should render default view 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "Provisional Code",
+        "value": "453220",
+      },
+      Object {
+        "text": "Confirmed Code",
+        "value": "453221",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue={Array []}
+/>
+`;
+
+exports[`HerdcStatusField component should render immutable list as selected value with given field props 1`] = `
+<GenericSelectField
+  error={true}
+  errorText="Test error"
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Immutable.List [
+        "One",
+        "Two",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "Provisional Code",
+        "value": "453220",
+      },
+      Object {
+        "text": "Confirmed Code",
+        "value": "453221",
+      },
+    ]
+  }
+  label="Test label"
+  locale={
+    Object {
+      "label": "Test label",
+    }
+  }
+  meta={
+    Object {
+      "error": "Test error",
+    }
+  }
+  onChange={[MockFunction]}
+  placeholder="Test placeholder"
+  selectedValue={
+    Array [
+      "One",
+      "Two",
+    ]
+  }
+/>
+`;
+
+exports[`HerdcStatusField component should render when given a default value field props 1`] = `
+<GenericSelectField
+  defaultValue="afr"
+  error={false}
+  errorText=""
+  hideLabel={false}
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "Provisional Code",
+        "value": "453220",
+      },
+      Object {
+        "text": "Confirmed Code",
+        "value": "453221",
+      },
+    ]
+  }
+  label="Test label"
+  locale={
+    Object {
+      "label": "Test label",
+    }
+  }
+  placeholder="Test placeholder"
+  selectedValue={
+    Array [
+      "afr",
+    ]
+  }
+/>
+`;
+
+exports[`HerdcStatusField component should render with given field props 1`] = `
+<GenericSelectField
+  error={true}
+  errorText="Test error"
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        "One",
+        "Two",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "Provisional Code",
+        "value": "453220",
+      },
+      Object {
+        "text": "Confirmed Code",
+        "value": "453221",
+      },
+    ]
+  }
+  label="Test label"
+  locale={
+    Object {
+      "label": "Test label",
+    }
+  }
+  meta={
+    Object {
+      "error": "Test error",
+    }
+  }
+  onChange={[MockFunction]}
+  placeholder="Test placeholder"
+  selectedValue={
+    Array [
+      "One",
+      "Two",
+    ]
+  }
+/>
+`;

@@ -14,6 +14,7 @@ import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocT
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
+import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
@@ -159,8 +160,8 @@ export const fieldConfig = {
     collections: {
         component: CollectionField,
         componentProps: {
-            label: 'Collection',
-            placeholder: 'Begin typing to select and add collection(s)',
+            floatingLabelText: 'Collection',
+            hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
         },
     },
@@ -476,6 +477,13 @@ export const fieldConfig = {
             label: 'HERDC status',
         },
     },
+    fez_record_search_key_institutional_status: {
+        component: InstitutionalStatusField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_institutional_status.rek_institutional_status',
+            label: 'Institutional status',
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -594,10 +602,13 @@ export const adminInterfaceConfig = {
             {
                 title: 'Additional Information',
                 groups: [
-                    ['contentIndicators'],
-                    ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                    // ['fez_record_search_key_institutional_status'],
                     ['collections'],
+                    [
+                        'fez_record_search_key_herdc_code',
+                        'fez_record_search_key_herdc_status',
+                        'fez_record_search_key_institutional_status',
+                    ],
+                    ['contentIndicators'],
                 ],
             },
         ],
@@ -799,5 +810,8 @@ export const valueExtractor = {
     },
     fez_record_search_key_herdc_status: {
         getValue: (record) => ({ ...record.fez_record_search_key_herdc_status }),
+    },
+    fez_record_search_key_institutional_status: {
+        getValue: (record) => ({ ...record.fez_record_search_key_institutional_status }),
     },
 };

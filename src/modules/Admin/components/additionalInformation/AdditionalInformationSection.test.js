@@ -1,4 +1,4 @@
-import BibliographicSection from './BibliographicSection';
+import AdditionalInformationSection from './AdditionalInformationSection';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
@@ -8,10 +8,10 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(BibliographicSection, props, args);
+    return getElement(AdditionalInformationSection, props, args);
 }
 
-describe('BibliographicSection component', () => {
+describe('AdditionalInformationSection component', () => {
     it('should render default view', () => {
         useRecordContext.mockImplementation(() => ({
             record: {
