@@ -6,22 +6,22 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
-import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
-import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
-import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
+import { CollectionField } from 'modules/SharedComponents/LookupFields';
+import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
-import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
-import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { CollectionField } from 'modules/SharedComponents/LookupFields';
+import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
+import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
-import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
+import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
+import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
+import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
+import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
 
 export const fieldConfig = {
     rek_title: {
@@ -528,7 +528,7 @@ export const adminInterfaceConfig = {
                 groups: [['links']],
             },
         ],
-        bibliographic: (isLote = false, isNtro = false) => [
+        bibliographic: (isLote = false) => [
             {
                 title: 'Title',
                 groups: [
@@ -568,14 +568,6 @@ export const adminInterfaceConfig = {
                 title: 'ISBN',
                 groups: [['fez_record_search_key_isbn']],
             },
-            ...(isNtro
-                ? [
-                    {
-                        title: 'ISMN',
-                        groups: [['fez_record_search_key_ismn']],
-                    },
-                ]
-                : []),
             {
                 title: 'Bibliographic',
                 groups: [
@@ -634,6 +626,20 @@ export const adminInterfaceConfig = {
             {
                 title: 'Files',
                 groups: [['files']],
+            },
+        ],
+        ntro: () => [
+            {
+                title: 'NTRO',
+                groups: [
+                    ['fez_record_search_key_significance'],
+                    ['fez_record_search_key_creator_contributor_statement'],
+                    ['fez_record_search_key_quality_indicator'],
+                ],
+            },
+            {
+                title: 'ISMN',
+                groups: [['fez_record_search_key_ismn']],
             },
         ],
     },
