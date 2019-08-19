@@ -11,6 +11,12 @@ exports[`AdditionalInformationSection component should render default view 1`] =
               "collections",
             ],
             Array [
+              "rek_subtype",
+            ],
+            Array [
+              "additionalNotes",
+            ],
+            Array [
               "fez_record_search_key_herdc_code",
               "fez_record_search_key_herdc_status",
               "fez_record_search_key_institutional_status",
@@ -37,6 +43,12 @@ exports[`AdditionalInformationSection component should render disabled view 1`] 
           "groups": Array [
             Array [
               "collections",
+            ],
+            Array [
+              "rek_subtype",
+            ],
+            Array [
+              "additionalNotes",
             ],
             Array [
               "fez_record_search_key_herdc_code",

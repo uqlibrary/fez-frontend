@@ -484,6 +484,22 @@ export const fieldConfig = {
             label: 'Institutional status',
         },
     },
+    additionalNotes: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.additionalNotes',
+            title: 'Additional notes',
+            disabled: true,
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: (value) => Immutable.Map(value),
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -603,6 +619,8 @@ export const adminInterfaceConfig = {
                 title: 'Additional Information',
                 groups: [
                     ['collections'],
+                    ['rek_subtype'],
+                    ['additionalNotes'],
                     [
                         'fez_record_search_key_herdc_code',
                         'fez_record_search_key_herdc_status',
@@ -813,5 +831,11 @@ export const valueExtractor = {
     },
     fez_record_search_key_institutional_status: {
         getValue: (record) => ({ ...record.fez_record_search_key_institutional_status }),
+    },
+    additionalNotes: {
+        getValue: (record) => ({
+            plainText: record.fez_record_search_key_notes.rek_notes,
+            htmlText: record.fez_record_search_key_notes.rek_notes,
+        }),
     },
 };
