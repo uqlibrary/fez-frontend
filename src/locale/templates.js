@@ -1,15 +1,18 @@
 export default {
+    // the spacing is to improve readability in the resulting email
     issues: {
         fixRecord: ({ contentIndicators = '', comments = '', link = '', files = '' }) =>
             `\
-        ${comments ? `Added comments: ${comments} \n` : ''}\
-        ${link ? `Added link: ${link} \n` : ''}\
-        ${files ? `Added files: ${files} \n` : ''}\
-        ${contentIndicators ? `Selected Content Indicator(s): ${contentIndicators} \n` : ''}`.trim(),
+        ${comments ? `Added comments: \n          ${comments} \n\n` : ''}\
+        ${link ? `Added link: \n          ${link} \n\n` : ''}\
+        ${files ? `Added files: \n          ${files} \n\n` : ''}\
+        ${contentIndicators ? `Selected Content Indicator(s): \n          ${contentIndicators} \n` : ''}`.trim(),
 
-        claimRecord: ({ contentIndicators = '', comments = '' }) =>
+        claimRecord: ({ contentIndicators = '', comments = '', link = '', files = '' }) =>
             `\
-        ${comments ? `Notes from creator of a claimed record: ${comments} \n` : ''}\
-        ${contentIndicators ? `Selected Content Indicator(s): ${contentIndicators} \n` : ''}`.trim(),
+        ${comments ? `        Notes from creator of a claimed record: \n          ${comments} \n\n` : ''}\
+        ${link ? `Added link: \n          ${link} \n\n` : ''}\
+        ${files ? `Added files: \n          ${files} \n\n` : ''}\
+        ${contentIndicators ? `Selected Content Indicator(s): \n          ${contentIndicators} \n` : ''}`.trim(),
     },
 };
