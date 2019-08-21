@@ -236,11 +236,9 @@ Then:
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
 
-Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
+Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config video=true` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
 
 You can watch video recordings of your test runs and debug the tests via the [Cypress dashboard](https://dashboard.cypress.io). Use username/pass in passwordstate under "GitHub Cypress.io Admin User".
-
-Video recordings are also made during local test runs, but you can pass `--config video=false` to the `cypress` npm commands to disable this for a performance boost.
 
 #### Some tricks and tips
 
