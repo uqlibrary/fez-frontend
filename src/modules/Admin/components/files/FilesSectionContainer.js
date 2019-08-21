@@ -6,12 +6,12 @@ import { getFormValues } from 'redux-form/immutable';
 
 import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
-import AuthorsSection from './AuthorsSection';
+import FilesSection from './FilesSection';
 
 export const FilesSectionContainer = ({ disabled, formValues }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
-            <AuthorsSection disabled={disabled} />
+            <FilesSection disabled={disabled} />
         </FormValuesContext.Provider>
     );
 };

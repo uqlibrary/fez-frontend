@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import locale from 'locale/pages';
+import { NTRO_SUBTYPES } from 'config/general';
 
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -16,8 +17,9 @@ import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import GrantInformationSection from './GrantInformationSection';
-import FilesSection from './files/FilesSection';
-import AdditionalInformationSection from './additionalInformation/AdditionalInformationSection';
+import FilesSection from './files/FilesSectionContainer';
+import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
+import NtroSection from './ntro/NtroSectionContainer';
 // import AuthorDetailsSection from './authors/AuthorDetailsSection';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 
@@ -143,6 +145,12 @@ export const AdminContainer = ({
                         additionalInformation: {
                             component: AdditionalInformationSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
+                        },
+                        ntro: {
+                            component: NtroSection,
+                            activated:
+                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
+                                NTRO_SUBTYPES.includes(recordToView.rek_subtype),
                         },
                         files: {
                             component: FilesSection,

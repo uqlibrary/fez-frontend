@@ -15,11 +15,11 @@ import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusFi
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
+import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
@@ -212,8 +212,6 @@ export const fieldConfig = {
             fullWidth: true,
             label: 'Place of publication',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_publisher: {
@@ -223,8 +221,6 @@ export const fieldConfig = {
             fullWidth: true,
             label: 'Publisher',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_volume_number: {
@@ -296,7 +292,6 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_keywords',
             required: true,
-            validate: [validation.requiredList],
             maxInputLength: 111,
             searchKey: {
                 value: 'rek_keywords',
@@ -849,8 +844,8 @@ export const valueExtractor = {
     },
     additionalNotes: {
         getValue: (record) => ({
-            plainText: record.fez_record_search_key_notes.rek_notes,
-            htmlText: record.fez_record_search_key_notes.rek_notes,
+            plainText: (record.fez_record_search_key_notes || {}).rek_notes,
+            htmlText: (record.fez_record_search_key_notes || {}).rek_notes,
         }),
     },
     significanceAndContributionStatement: {
