@@ -18,6 +18,7 @@ import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEd
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
+import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
@@ -441,6 +442,7 @@ export const fieldConfig = {
             showContributorAssignment: true,
             locale: formLocale.journalArticle.authors.field,
             validate: [validation.authorRequired],
+            editMode: true,
         },
     },
     files: {
@@ -485,7 +487,6 @@ export const fieldConfig = {
         componentProps: {
             name: 'additionalInformationSection.additionalNotes',
             title: 'Additional notes',
-            disabled: true,
             titleProps: {
                 variant: 'caption',
                 style: {
@@ -503,6 +504,14 @@ export const fieldConfig = {
             label: 'Scale/significance of work - Contribution statement',
             placeholder: '',
             locale: locale.components.scaleOfSignificanceListForm.field,
+        },
+    },
+    qualityIndicators: {
+        component: QualityIndicatorField,
+        componentProps: {
+            name: 'ntroSection.qualityIndicators',
+            label: 'Quality indicators',
+            multiple: true,
         },
     },
 };
@@ -636,14 +645,15 @@ export const adminInterfaceConfig = {
         ntro: () => [
             {
                 title: 'Scale/Significance of work & Creator contribution statement',
-                groups: [
-                    ['significanceAndContributionStatement'],
-                    // ['fez_record_search_key_quality_indicator']
-                ],
+                groups: [['significanceAndContributionStatement']],
             },
             {
                 title: 'ISMN',
                 groups: [['fez_record_search_key_ismn']],
+            },
+            {
+                title: 'Quality indicators',
+                groups: [['qualityIndicators']],
             },
         ],
     },
@@ -890,5 +900,8 @@ export const valueExtractor = {
                 };
             });
         },
+    },
+    qualityIndicators: {
+        getValue: (record) => record.fez_record_search_key_quality_indicator.map((item) => item.rek_quality_indicator),
     },
 };

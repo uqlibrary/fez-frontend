@@ -21,6 +21,14 @@ exports[`NtroSection component should render default view 1`] = `
           ],
           "title": "ISMN",
         },
+        Object {
+          "groups": Array [
+            Array [
+              "qualityIndicators",
+            ],
+          ],
+          "title": "Quality indicators",
+        },
       ],
     }
   }
@@ -48,6 +56,14 @@ exports[`NtroSection component should render disabled view 1`] = `
             ],
           ],
           "title": "ISMN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "qualityIndicators",
+            ],
+          ],
+          "title": "Quality indicators",
         },
       ],
     }
