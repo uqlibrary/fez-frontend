@@ -74,7 +74,7 @@ Mock data is provided for all pages and actions under `src/mock/`.
   It does two things:
 
   - Prevent direct commits to the staging branch.
-  - Run eslint automatically before every local commit
+  - Run `prettier-eslint` automatically before every local commit
 
 - Run the following in the project root directory to prevent accidental merges from the staging branch:
 
