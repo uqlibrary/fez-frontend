@@ -3,5 +3,6 @@ dist
 coverage
 custom_modules
 cypress/examples
+cypress/screenshots/
 *.json
 **/mock/data/**/*.js
