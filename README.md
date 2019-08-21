@@ -74,7 +74,7 @@ Mock data is provided for all pages and actions under `src/mock/`.
   It does two things:
 
   - Prevent direct commits to the staging branch.
-  - Run eslint automatically before every local commit
+  - Run `prettier-eslint` automatically before every local commit
 
 - Run the following in the project root directory to prevent accidental merges from the staging branch:
 
@@ -213,7 +213,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run
 `npm test -- -u`.
 
-[Code coverage](http://localhost:3000/coverage/index.html) is available (after running npm run)
+[Code coverage](coverage/index.html) is available (after running `npm test`)
 
 #### Guidelines
 
@@ -236,47 +236,37 @@ Then:
 
 Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
 
-Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --key ###-###-####-#### --parallel` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for
-now until we have API integration with docker, but only in #master.
+Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config video=true` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
 
-You can watch tests run, and debug with video etc via <https://dashboard.cypress.io> (use username/pass in passwordstate
-under "GitHub Cypress.io Admin User").
+You can watch video recordings of your test runs and debug the tests via the [Cypress dashboard](https://dashboard.cypress.io). Use username/pass in passwordstate under "GitHub Cypress.io Admin User".
 
 #### Some tricks and tips
 
-- When simulating clicks on components with animations (ripples and the like) - be sure to `cy.wait(1000);` to wait 1
-  second after the click before posing any expectations
-- When the form you are writing tests for has a dialog box to prevent navigating away before its complete - make sure
-  to add this to the top of your test:
+- When simulating clicks on components with animations (ripples and the like) - you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations.
+- When the form you are writing tests for has a browser alert box to prevent navigating away before its complete, add this to the top of your test to unbind the handler as shown below. The issue might only present itself when trying to do another test by navigating to a new url, which never finishes loading because the browser is waiting for the alert from the previous page to be dismissed, which is actually not visible in Cypress UI!
 
-```javascript
-afterEach(() => {
-  cy.window().then(win => (win.onbeforeunload = undefined));
-});
-```
-
-- When using the MUI dialog confirmation - use :
-
-```javascript
-const baseUrl = Cypress.config("baseUrl");
-
-afterEach(() => {
-  // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
-  cy.get('button[title="Main navigation"]').click();
-  cy.get("#mainMenu .menu-item-container")
-    .contains("Home")
-    .click();
-  // Say yes to 'Are you sure' if it does trigger
-  cy.url().then($url => {
-    if ($url !== `${baseUrl}/`) {
-      cy.contains(locale.conformationTitle)
-        .closest('[role="document"]')
-        .contains(locale.confirmButtonLabel)
-        .click();
-    }
+  ```javascript
+  afterEach(() => {
+    cy.window().then(win => (win.onbeforeunload = undefined));
   });
-});
-```
+  ```
+
+- When using the MUI dialog confirmation, use the following for navigating to the homepage:
+
+  ```javascript
+  cy.navToHomeFromMenu(locale);
+  ```
+
+  where `locale` is:
+
+  ```javascript
+  {
+    confirmationTitle: '(Title of the confirmation dialogue)',
+    confirmButtonLabel: '(Text of the "Yes" button)'
+  }
+  ```
+
+  See `cypress/support/commands.js` to see how that works.
 
 ## Mocking
 
