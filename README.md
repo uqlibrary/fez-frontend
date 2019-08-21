@@ -213,7 +213,7 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run
 `npm test -- -u`.
 
-[Code coverage](http://localhost:3000/coverage/index.html) is available (after running npm run)
+[Code coverage](coverage/index.html) is available (after running `npm test`)
 
 #### Guidelines
 
@@ -258,13 +258,13 @@ afterEach(() => {
 - When using the MUI dialog confirmation - use :
 
 ```javascript
-const baseUrl = Cypress.config("baseUrl");
+const baseUrl = Cypress.config('baseUrl');
 
 afterEach(() => {
   // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
   cy.get('button[title="Main navigation"]').click();
-  cy.get("#mainMenu .menu-item-container")
-    .contains("Home")
+  cy.get('#mainMenu .menu-item-container')
+    .contains('Home')
     .click();
   // Say yes to 'Are you sure' if it does trigger
   cy.url().then($url => {

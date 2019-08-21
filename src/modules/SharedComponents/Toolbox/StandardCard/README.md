@@ -9,7 +9,7 @@ component for a standard card display with help button
 
 ## Usage
 
-### **./App.js
+### \*\*./App.js
 
 ```jsx
 import React from 'react';

@@ -55,19 +55,10 @@ import { PartialDateField } from 'uqlibrary-react-toolbox';
 
 const App = () => (
   <form>
-    <Field
-        name="rek_date"
-        component={ PartialDateField }
-        allowPartial />
-    <Field
-        name="published_date"
-        component={ PartialDateField }
-        dateFormat="DD/MM/YYYY" />
+    <Field name="rek_date" component={PartialDateField} allowPartial />
+    <Field name="published_date" component={PartialDateField} dateFormat="DD/MM/YYYY" />
   </form>
 );
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('app')
-);
+ReactDOM.render(<App />, document.getElementById('app'));
 ```
