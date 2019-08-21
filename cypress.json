@@ -2,7 +2,7 @@
   "baseUrl": "http://localhost:3000",
   "waitForAnimations": true,
   "pageLoadTimeout": 30000,
-  "video": true,
+  "video": false,
   "chromeWebSecurity": false,
   "defaultCommandTimeout": 10000,
   "videoUploadOnPasses": false,

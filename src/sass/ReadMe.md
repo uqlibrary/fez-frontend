@@ -2,18 +2,18 @@
 
 ## Table of Contents
 
-* [Material Design](#material-design)
-* [Grid](#grid)
-* [Typography](#typography)
+- [Material Design](#material-design)
+- [Grid](#grid)
+- [Typography](#typography)
 
 ## Material Design
 
 Fez-frontend is based on Material Design, and while we are using Material UI for React as a component library, not all components are included, or adhere to Google's philosophy or specifications. As Material design is considered a "guide" more than strict rules, we have liberty to add functionality as we see, but it must :
 
-* Adhere as closely as possible to Materual Design specifications
-* Be usable, and have a UX approach
-* Be accessible, and be designed and built for WCAG2.0 AA
-* Be minimal, and not make a simple process more drawn out
+- Adhere as closely as possible to Materual Design specifications
+- Be usable, and have a UX approach
+- Be accessible, and be designed and built for WCAG2.0 AA
+- Be minimal, and not make a simple process more drawn out
 
 ## Grid
 
@@ -25,15 +25,15 @@ We use 16 unit spacing for forms
 
 ```jsx
 <Grid container spacing={16}>
-    <Grid item xs={12}>
-        Form component here
-    </Grid>
-    <Grid item xs={6}>
-        Form component here
-    </Grid>
-    <Grid item xs={6}>
-        Form component here
-    </Grid>
+  <Grid item xs={12}>
+    Form component here
+  </Grid>
+  <Grid item xs={6}>
+    Form component here
+  </Grid>
+  <Grid item xs={6}>
+    Form component here
+  </Grid>
 </Grid>
 ```
 
@@ -43,10 +43,10 @@ To push items right
 
 ```jsx
 <Grid container spacing={16}>
-    <Grid item xs />
-    <Grid item xs={'auto'}>
-        This will display to the right and be as wide as the contents
-    </Grid>
+  <Grid item xs />
+  <Grid item xs={'auto'}>
+    This will display to the right and be as wide as the contents
+  </Grid>
 </Grid>
 ```
 
@@ -54,11 +54,11 @@ To center items,
 
 ```jsx
 <Grid container spacing={16}>
-    <Grid item xs />
-    <Grid item xs={'auto'}>
-        This will in the center of the row and be only as wide as the contents
-    </Grid>
-    <Grid item xs />
+  <Grid item xs />
+  <Grid item xs={'auto'}>
+    This will in the center of the row and be only as wide as the contents
+  </Grid>
+  <Grid item xs />
 </Grid>
 ```
 
@@ -71,25 +71,33 @@ We now use the Material UI v1 general theme typography styles. Below are some sp
 ### Site title
 
 ```jsx
-<Typography variant={'h5'} component={h1}>Title</Typography>
+<Typography variant={'h5'} component={h1}>
+  Title
+</Typography>
 ```
 
 ### Page title
 
 ```jsx
-<Typography variant={'h4'} component={h2}>Page ttle</Typography>
+<Typography variant={'h4'} component={h2}>
+  Page ttle
+</Typography>
 ```
 
 ### Card title
 
 ```jsx
-<Typography variant={'h5'} component={h3}>Card ttle</Typography>
+<Typography variant={'h5'} component={h3}>
+  Card ttle
+</Typography>
 ```
 
 ### Publication titles
 
 ```jsx
-<Typography variant={'h5'} component={'h5'}>Title of publication</Typography>
+<Typography variant={'h5'} component={'h5'}>
+  Title of publication
+</Typography>
 ```
 
 ### Body text

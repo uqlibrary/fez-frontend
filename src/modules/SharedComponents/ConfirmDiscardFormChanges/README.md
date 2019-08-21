@@ -4,7 +4,7 @@ This is an HOC to alert user if the form displayed on the route is dirty and whe
 
 ## Usage
 
-This needs to be used with redux-form ```reduxForm```:
+This needs to be used with redux-form `reduxForm`:
 
 ```javascript
 import {confirmDiscardFormChanges} from '/ConfirmDiscardFormChanges';
