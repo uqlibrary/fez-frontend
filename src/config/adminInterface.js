@@ -15,6 +15,7 @@ import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusFi
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
@@ -500,6 +501,15 @@ export const fieldConfig = {
             format: (value) => Immutable.Map(value),
         },
     },
+    significanceAndContributionStatement: {
+        component: ScaleOfSignificanceListEditorField,
+        componentProps: {
+            name: 'ntroSection.significanceAndContributionStatement',
+            label: 'Scale/significance of work - Contribution statement',
+            placeholder: '',
+            locale: locale.components.scaleOfSignificanceListForm.field,
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -630,11 +640,10 @@ export const adminInterfaceConfig = {
         ],
         ntro: () => [
             {
-                title: 'NTRO',
+                title: 'Scale/Significance of work & Creator contribution statement',
                 groups: [
-                    ['fez_record_search_key_significance'],
-                    ['fez_record_search_key_creator_contributor_statement'],
-                    ['fez_record_search_key_quality_indicator'],
+                    ['significanceAndContributionStatement'],
+                    // ['fez_record_search_key_quality_indicator']
                 ],
             },
             {
@@ -843,5 +852,48 @@ export const valueExtractor = {
             plainText: record.fez_record_search_key_notes.rek_notes,
             htmlText: record.fez_record_search_key_notes.rek_notes,
         }),
+    },
+    significanceAndContributionStatement: {
+        getValue: (record) => {
+            const authors = (record.fez_record_search_key_author || []).reduce(
+                (authorsObject, author) => ({
+                    ...authorsObject,
+                    [author.rek_author_order]: author,
+                }),
+                {}
+            );
+
+            const significanceScales = (record.fez_record_search_key_significance || []).reduce(
+                (significanceScalesObject, significance) => ({
+                    ...significanceScalesObject,
+                    [significance.rek_significance_order]: significance,
+                }),
+                {}
+            );
+
+            const contributionStatements = (record.fez_record_search_key_creator_contribution_statement || []).reduce(
+                (contributionStatementsObject, contributionStatement) => ({
+                    ...contributionStatementsObject,
+                    [contributionStatement.rek_creator_contribution_statement_order]: contributionStatement,
+                }),
+                {}
+            );
+
+            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => {
+                return {
+                    rek_order: order,
+                    rek_value: {
+                        key: (significanceScales[order] || {}).rek_significance || 0,
+                        value: {
+                            plainText:
+                                (contributionStatements[order] || {}).rek_creator_contribution_statement || 'Missing',
+                            htmlText:
+                                (contributionStatements[order] || {}).rek_creator_contribution_statement || 'Missing',
+                        },
+                        author: authors[order],
+                    },
+                };
+            });
+        },
     },
 };

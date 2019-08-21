@@ -615,7 +615,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-413\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56 MuiGrid-grid-md-11-70\\"
 +                     >
 +                       <p
 +                         class=\\"MuiTypography-root-155 MuiTypography-body2-163\\"

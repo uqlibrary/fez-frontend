@@ -22,6 +22,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
@@ -32,6 +33,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -83,6 +85,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
@@ -93,6 +96,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -173,6 +177,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={11}
       sm={11}
       xs={10}
     >
@@ -223,6 +228,7 @@ exports[`ListRow renders  should move row down 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
@@ -233,6 +239,7 @@ exports[`ListRow renders  should move row down 1`] = `
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -299,6 +306,7 @@ exports[`ListRow renders  should move row up 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
@@ -309,6 +317,7 @@ exports[`ListRow renders  should move row up 1`] = `
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >

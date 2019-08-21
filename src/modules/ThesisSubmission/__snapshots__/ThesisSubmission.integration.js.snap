@@ -420,7 +420,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-437\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-10-41 MuiGrid-grid-sm-11-56 MuiGrid-grid-md-11-70\\"
 +                     >
                         <p
 -                               class=\\"MuiFormHelperText-root-306 MuiFormHelperText-error-307\\"
@@ -579,7 +579,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-437\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-9-68\\"
 +                     >
 +                       <p
 +                         class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
@@ -588,7 +588,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                       </p>
 +                     </div>
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 ListRow-center-436\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-2-61 ListRow-center-436\\"
 +                     >
 +                       <div
 +                         class=\\"MuiGrid-container-3 MuiGrid-justify-xs-flex-end-21\\"
@@ -666,7 +666,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-437\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-9-68\\"
 +                     >
 +                       <p
 +                         class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
@@ -675,7 +675,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                       </p>
 +                     </div>
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 ListRow-center-436\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-5-36 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-2-61 ListRow-center-436\\"
 +                     >
 +                       <div
 +                         class=\\"MuiGrid-container-3 MuiGrid-justify-xs-flex-end-21\\"

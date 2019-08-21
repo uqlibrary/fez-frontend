@@ -76,11 +76,11 @@ export class ListRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <Grid container alignItems="center" spacing={8} className={classes.row}>
-                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
                         <this.props.itemTemplate item={item} />
                     </Grid>
                     {!hideReorder && (
-                        <Grid item xs={5} sm={5} className={classes.center}>
+                        <Grid item xs={5} sm={5} md={2} className={classes.center}>
                             <Grid container justify="flex-end">
                                 {canMoveUp && (
                                     <Grid item>

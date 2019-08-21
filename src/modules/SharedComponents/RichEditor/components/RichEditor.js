@@ -18,6 +18,7 @@ export default class RichEditor extends PureComponent {
         titleProps: PropTypes.object,
         description: PropTypes.any,
         inputRef: PropTypes.object,
+        instanceRef: PropTypes.object,
     };
 
     static defaultProps = {
@@ -27,6 +28,7 @@ export default class RichEditor extends PureComponent {
         disabled: false,
         returnSingleValue: false,
         titleProps: {},
+        instanceRef: React.createRef(),
     };
 
     componentDidMount() {
@@ -44,6 +46,7 @@ export default class RichEditor extends PureComponent {
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
         !!this.editorInstance && this.editorInstance.on('change', this.onChange);
+        this.props.instanceRef.current = this.editorInstance;
     }
 
     componentWillReceiveProps(nextProps) {

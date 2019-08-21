@@ -725,6 +725,9 @@ export default {
                 additionalInformation: {
                     title: 'Additional Information',
                 },
+                ntro: {
+                    title: 'NTRO',
+                },
                 files: {
                     title: 'Files',
                 },

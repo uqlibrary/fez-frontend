@@ -610,6 +610,46 @@ export default {
                 },
             },
         },
+        scaleOfSignificanceListForm: {
+            title: 'Manage scale/significance of work and creator contribution statement',
+            field: {
+                form: {
+                    locale: {
+                        significanceInputFieldLabel: 'Scale of significance',
+                        significanceInputFieldHint: 'Please select scale of significance',
+                        contributionStatementInputFieldLabel: 'Creator contribution statement',
+                        contributionStatementFieldHint: 'Enter description',
+                        addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Scale/significance of work - Creator contribution statement',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         authors: {
             title: 'Authors',
             description: 'Please provide a list of authors and then select your name from the list.',

@@ -546,6 +546,35 @@ exports[`RichEditor should render component 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             onChange={[MockFunction]}
             returnSingleValue={false}
             titleProps={Object {}}
@@ -1177,6 +1206,35 @@ exports[`RichEditor should render error as one child 1`] = `
                 "current": <div
                   class=""
                 />,
+              }
+            }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
               }
             }
             instructions="test instructions"
@@ -2899,6 +2957,35 @@ exports[`RichEditor should render error as react children 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -4615,6 +4702,35 @@ exports[`RichEditor should render error showing input length 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -6303,6 +6419,35 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             instructions="test instructions"
             maxValue={10}
             meta={
@@ -7959,6 +8104,35 @@ exports[`RichEditor should render given title and description 1`] = `
                 />,
               }
             }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
+              }
+            }
             onChange={[MockFunction]}
             returnSingleValue={false}
             title="This is test title"
@@ -9568,6 +9742,35 @@ exports[`RichEditor should render given title and description with error 1`] = `
                 "current": <div
                   class=""
                 />,
+              }
+            }
+            instanceRef={
+              Object {
+                "current": Object {
+                  "on": [MockFunction] {
+                    "calls": Array [
+                      Array [
+                        "instanceReady",
+                        [Function],
+                      ],
+                      Array [
+                        "change",
+                        [Function],
+                      ],
+                    ],
+                    "results": Array [
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                      Object {
+                        "type": "return",
+                        "value": undefined,
+                      },
+                    ],
+                  },
+                  "setReadOnly": [MockFunction],
+                },
               }
             }
             meta={

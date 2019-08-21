@@ -69,6 +69,18 @@ export const getAdditionalInformationValues = (record) =>
             };
         }, {});
 
+export const getNtroValues = (record) =>
+    (adminInterfaceConfig[record.rek_display_type] || {})
+        .ntro()
+        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+
 export const isFileValid = (dataStream) => {
     const {
         files: { blacklist },
@@ -132,6 +144,7 @@ const mapStateToProps = (state) => {
                 authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
                 additionalInformationSection:
                       (recordType === RECORD_TYPE_RECORD && getAdditionalInformationValues(recordToView)) || {},
+                ntroSection: (recordType === RECORD_TYPE_RECORD && getNtroValues(recordToView)) || {},
             },
         }
         : null;

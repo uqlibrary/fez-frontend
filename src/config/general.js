@@ -959,6 +959,11 @@ export const SIGNIFICANCE = [
     { text: 'Major', value: SIGNIFICANCE_MAJOR },
 ];
 
+export const SIGNIFICANCE_MAP = {
+    [SIGNIFICANCE_MINOR]: 'Minor',
+    [SIGNIFICANCE_MAJOR]: 'Major',
+};
+
 export const QUALITY_INDICATORS = [
     { value: 453996, text: 'Disseminated via nationally recognised outlet or entity' },
     { value: 453997, text: 'Disseminated via internationally recognised outlet or entity' },
