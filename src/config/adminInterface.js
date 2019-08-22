@@ -1,4 +1,3 @@
-// import React from 'react';
 import { PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 import Immutable from 'immutable';
 
@@ -10,6 +9,7 @@ import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
@@ -514,6 +514,12 @@ export const fieldConfig = {
             multiple: true,
         },
     },
+    grants: {
+        component: GrantListEditorField,
+        componentProps: {
+            name: 'grantInformationSection.grants',
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -654,6 +660,12 @@ export const adminInterfaceConfig = {
             {
                 title: 'Quality indicators',
                 groups: [['qualityIndicators']],
+            },
+        ],
+        grantInformation: () => [
+            {
+                title: 'Grant information',
+                groups: [['grants']],
             },
         ],
     },
@@ -903,5 +915,11 @@ export const valueExtractor = {
     },
     qualityIndicators: {
         getValue: (record) => record.fez_record_search_key_quality_indicator.map((item) => item.rek_quality_indicator),
+    },
+    grantInformation: {
+        getValue: (record) =>
+            record.fez_record_search_key_grant_information.map((item) => {
+                return item;
+            }),
     },
 };

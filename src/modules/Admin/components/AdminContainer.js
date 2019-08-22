@@ -20,7 +20,6 @@ import GrantInformationSection from './GrantInformationSection';
 import FilesSection from './files/FilesSectionContainer';
 import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
 import NtroSection from './ntro/NtroSectionContainer';
-// import AuthorDetailsSection from './authors/AuthorDetailsSection';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 
 import { TabbedContext, RecordContext } from 'context';
@@ -134,10 +133,6 @@ export const AdminContainer = ({
                             component: BibliographicSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
-                        grantInformation: {
-                            component: GrantInformationSection,
-                            activated: false,
-                        },
                         authorDetails: {
                             component: AuthorsSection,
                             activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
@@ -151,6 +146,10 @@ export const AdminContainer = ({
                             activated:
                                 recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
                                 NTRO_SUBTYPES.includes(recordToView.rek_subtype),
+                        },
+                        grantInformation: {
+                            component: GrantInformationSection,
+                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
                         },
                         files: {
                             component: FilesSection,
