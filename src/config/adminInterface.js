@@ -1,7 +1,8 @@
-import { PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 import Immutable from 'immutable';
 
 import { validation } from 'config';
+import { PUBLICATION_TYPE_JOURNAL_ARTICLE, ORG_TYPE_NOT_SET } from 'config/general';
+
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 
@@ -839,14 +840,31 @@ export const valueExtractor = {
                 {}
             );
 
-            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => {
-                return {
-                    nameAsPublished: authors[order].rek_author,
-                    creatorRole: '',
-                    uqIdentifier: `${authorIds[order].rek_author_id}` || '',
-                    authorId: authorIds[order].rek_author_id,
-                };
-            });
+            const authorAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
+                (authorAffiliationsObject, authorAffiliationName) => ({
+                    ...authorAffiliationsObject,
+                    [authorAffiliationName.rek_author_affiliation_name_order]: authorAffiliationName,
+                }),
+                {}
+            );
+
+            const authorAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
+                (authorAffiliationTypesObject, authorAffiliationType) => ({
+                    ...authorAffiliationTypesObject,
+                    [authorAffiliationType.rek_author_affiliation_type_order]: authorAffiliationType,
+                }),
+                {}
+            );
+
+            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
+                nameAsPublished: authors[order].rek_author,
+                creatorRole: '',
+                uqIdentifier: `${authorIds[order].rek_author_id}` || '',
+                authorId: authorIds[order].rek_author_id,
+                orgaff: authorAffiliationNames[order].rek_author_affiliation_name || 'Missing',
+                orgtype: `${authorAffiliationTypes[order].rek_author_affiliation_type}` || '',
+                affiliation: (!!authorIds[order].rek_author_id && 'UQ') || 'NotUQ',
+            }));
         },
     },
     contentIndicators: {
@@ -916,10 +934,35 @@ export const valueExtractor = {
     qualityIndicators: {
         getValue: (record) => record.fez_record_search_key_quality_indicator.map((item) => item.rek_quality_indicator),
     },
-    grantInformation: {
-        getValue: (record) =>
-            record.fez_record_search_key_grant_information.map((item) => {
-                return item;
-            }),
+    grants: {
+        getValue: (record) => {
+            const grantAgencyNames = (record.fez_record_search_key_grant_agency || []).reduce(
+                (grantAgencyNamesObject, grantAgencyName) => ({
+                    ...grantAgencyNamesObject,
+                    [grantAgencyName.rek_grant_agency_order]: grantAgencyName,
+                }),
+                {}
+            );
+            const grantIds = (record.fez_record_search_key_grant_id || []).reduce(
+                (grantIdsObject, grantId) => ({
+                    ...grantIdsObject,
+                    [grantId.rek_grant_id_order]: grantId,
+                }),
+                {}
+            );
+            const grantAgencyTypes = (record.fez_record_search_key_grant_agency_type || []).reduce(
+                (grantAgencyTypesObject, grantAgencyType) => ({
+                    ...grantAgencyTypesObject,
+                    [grantAgencyType.rek_grant_agency_type_order]: grantAgencyType,
+                }),
+                {}
+            );
+
+            return record.fez_record_search_key_grant_agency.map(({ rek_grant_agency_order: order }) => ({
+                grantAgencyName: grantAgencyNames[order].rek_grant_agency,
+                grantId: (grantIds[order] || {}).rek_grant_id || '',
+                grantAgencyType: (grantAgencyTypes[order] || {}).rek_grant_agency_type || ORG_TYPE_NOT_SET,
+            }));
+        },
     },
 };

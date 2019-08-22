@@ -2350,7 +2350,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                     "activated": true,
                     "component": Object {
                       "$$typeof": Symbol(react.memo),
+                      "WrappedComponent": Object {
+                        "$$typeof": Symbol(react.memo),
+                        "compare": null,
+                        "type": [Function],
+                      },
                       "compare": null,
+                      "displayName": "Connect(Component)",
                       "type": [Function],
                     },
                   },
@@ -14865,7 +14871,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         component={
                                                                           Object {
                                                                             "$$typeof": Symbol(react.memo),
+                                                                            "WrappedComponent": Object {
+                                                                              "$$typeof": Symbol(react.memo),
+                                                                              "compare": null,
+                                                                              "type": [Function],
+                                                                            },
                                                                             "compare": null,
+                                                                            "displayName": "Connect(Component)",
                                                                             "type": [Function],
                                                                           }
                                                                         }
@@ -19538,7 +19550,13 @@ exports[`AdminContainer component should render default view 1`] = `
             "activated": true,
             "component": Object {
               "$$typeof": Symbol(react.memo),
+              "WrappedComponent": Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              },
               "compare": null,
+              "displayName": "Connect(Component)",
               "type": [Function],
             },
           },
