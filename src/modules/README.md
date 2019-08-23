@@ -3,14 +3,14 @@
 - UI components
 
 ## Testing
-  
+
 Global test setup is done in /src/test.setup.js:
 
 - getElement - globally available function which creates a shallow or mounted component
 
 Template for modules unit tests:
 
-````javascript
+```javascript
 
 import [COMPONENT_NAME] from './[COMPONENT_NAME]';
 
@@ -63,4 +63,4 @@ describe('Component [COMPONENT_NAME]', () => {
 });
 
 
-````
+```

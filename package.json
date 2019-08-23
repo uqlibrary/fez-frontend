@@ -169,6 +169,7 @@
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-rte": "^0.16.0",
+    "react-share": "^3.0.0",
     "recompose": "^0.30.0",
     "redux": "4.0.0",
     "redux-form": "7.3.0",
@@ -204,7 +205,7 @@
     "cypress:run": "cypress run",
     "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
     "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
-    "test:all": "npm run test && npm run e2e && npm codestyles:check"
+    "test:all": "npm run test && npm run e2e && npm codestyles:files"
   },
   "engines": {
     "npm": "^6.9.0",

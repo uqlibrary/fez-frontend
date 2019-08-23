@@ -302,10 +302,14 @@ describe('getFixIssueRequest test', () => {
 
     it('should create issue request', () => {
         const expected = [
-            'Added comments: Some comments...',
-            'Added link: http://www.test.com',
-            'Added files: 1.jpg, 2.jpg',
-            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
+            'Added comments:',
+            'Some comments...',
+            'Added link:',
+            'http://www.test.com',
+            'Added files:',
+            '1.jpg, 2.jpg',
+            'Selected Content Indicator(s):',
+            `${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
         ];
 
         const result = transformers.getFixIssueRequest(input);
@@ -326,10 +330,14 @@ describe('getFixIssueRequest test', () => {
         };
         const newIndicators = [CONTENT_INDICATORS[1], CONTENT_INDICATORS[2]];
         const expected = [
-            'Added comments: Some comments...',
-            'Added link: http://www.test.com',
-            'Added files: 1.jpg, 2.jpg',
-            `Selected Content Indicator(s): ${newIndicators.map(item => item.text).join('; ')}`,
+            'Added comments:',
+            'Some comments...',
+            'Added link:',
+            'http://www.test.com',
+            'Added files:',
+            '1.jpg, 2.jpg',
+            'Selected Content Indicator(s):',
+            `${newIndicators.map(item => item.text).join('; ')}`,
         ];
 
         const result = transformers.getFixIssueRequest(input2);
@@ -344,10 +352,18 @@ describe('getClaimIssueRequest test', () => {
         const input = { publication: {}, author: {} };
         input.comments = 'Some comments...';
         input.contentIndicators = CONTENT_INDICATORS.map(item => item.value);
+        input.files = { queue: [{ name: '1.jpg' }, { name: '2.jpg' }] };
+        input.rek_link = 'http://www.test.com';
 
         const expected = [
-            'Notes from creator of a claimed record: Some comments...',
-            `Selected Content Indicator(s): ${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
+            'Notes from creator of a claimed record:',
+            'Some comments...',
+            'Added files:',
+            '1.jpg, 2.jpg',
+            'Added link:',
+            'http://www.test.com',
+            'Selected Content Indicator(s):',
+            `${CONTENT_INDICATORS.map(item => item.text).join('; ')}`,
         ];
         const result = transformers.getClaimIssueRequest(input);
         expected.map(item => {
