@@ -78,7 +78,7 @@ export class ContributorRowHeader extends PureComponent {
         return (
             <Fragment>
                 <ConfirmDialogBox
-                    onRef={ref => (this.confirmationBox = ref)}
+                    onRef={(ref) => (this.confirmationBox = ref)}
                     onAction={onDeleteAll}
                     locale={deleteAllConfirmation}
                 />
@@ -97,10 +97,6 @@ export class ContributorRowHeader extends PureComponent {
                     <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
                     {showIdentifierLookup && (
                         <Hidden xsDown>
-                            <ListItemText
-                                secondary={'Affiliation %'}
-                                secondaryTypographyProps={{ variant: 'caption' }}
-                            />
                             <ListItemText
                                 secondary={identifierColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
