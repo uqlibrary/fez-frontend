@@ -1076,4 +1076,15 @@ describe('Search record results', () => {
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
         },
     );
+
+    it('should not show WSoD if no authors/contributors present on the record', () => {
+        const publicationsList = [
+            {
+                rek_pid: 'UQ:255472',
+            },
+        ];
+
+        const wrapper = setup({});
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
+    });
 });
