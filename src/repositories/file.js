@@ -15,10 +15,12 @@ const moment = require('moment');
  */
 export function putUploadFile(pid, file, dispatch) {
     return post(FILE_UPLOAD_API(), {
-        key: `${pid}/${file.name}`,
-        metadata: {
+        Key: `${pid}/${file.name}`,
+        Metadata: {
             dsi_security_policy: file.access_condition_id === 8 ? 1 : 5,
-            dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat),
+            ...(file.access_condition_id === 9
+                ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
+                : {}),
         },
     })
         .then(uploadUrl => {
