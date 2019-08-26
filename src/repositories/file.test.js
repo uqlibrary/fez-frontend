@@ -15,7 +15,7 @@ describe('File repository tests ', () => {
 
     it('uploading a file', async() => {
         mockApi
-            .onGet(repositories.routes.FILE_UPLOAD_API({ pid: 'PID:111111', fileName: 'a.txt' }).apiUrl)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
             .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
             .reply(200, 'File has been uploaded');
@@ -27,7 +27,7 @@ describe('File repository tests ', () => {
 
     it('dispatches an upload failed action for uploading a file', async() => {
         mockApi
-            .onGet(repositories.routes.FILE_UPLOAD_API({ pid: 'PID:111111', fileName: 'a.txt' }).apiUrl)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
             .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
             .reply(500);
