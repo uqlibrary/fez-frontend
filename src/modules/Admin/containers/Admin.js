@@ -93,6 +93,18 @@ export const getGrantInformationValues = (record) =>
             };
         }, {});
 
+export const getFilesValues = (record) =>
+    (adminInterfaceConfig[record.rek_display_type] || {})
+        .files()
+        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .reduce((groups, group) => [...groups, ...group], [])
+        .reduce((initialValue, field) => {
+            return {
+                ...initialValue,
+                [field]: valueExtractor[field].getValue(record),
+            };
+        }, {});
+
 export const isFileValid = (dataStream) => {
     const {
         files: { blacklist },
@@ -159,6 +171,7 @@ const mapStateToProps = (state) => {
                 ntroSection: (recordType === RECORD_TYPE_RECORD && getNtroValues(recordToView)) || {},
                 grantInformationSection:
                       (recordType === RECORD_TYPE_RECORD && getGrantInformationValues(recordToView)) || {},
+                filesSection: (recordType === RECORD_TYPE_RECORD && getFilesValues(recordToView)) || {},
             },
         }
         : null;
