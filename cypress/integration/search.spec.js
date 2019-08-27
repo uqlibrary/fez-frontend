@@ -6,10 +6,12 @@ context('Search', () => {
     const cleanExtraSpaces = $string => $string.replace(/\s+/g, ' ')
         .trim();
 
-    it('Doing a basic search to advanced search', () => {
+    beforeEach(() => {
         cy.visit('/records/search');
         cy.closeUnsupported();
+    });
 
+    it('Doing a basic search to advanced search', () => {
         // Perform a basic search
         cy.get('#simpleSearchField')
             .should(
@@ -108,6 +110,51 @@ context('Search', () => {
         cy.get('.StandardPage > div > div > div:nth-of-type(2)')
             .should('contain', 'Searching for works')
             .contains('Displaying works 1 to 7 of 7 total records.');
+    });
+
+    it('should show appropriate form validation for PID field', () => {
+        const helpMessage = 'Please provide a valid PID (e.g. UQ:129af6)';
+
+        cy.get('button#showAdvancedSearchButton')
+            .click();
+        cy.contains('Select a field')
+            .click();
+        cy.contains('#menu- li', 'PID')
+            .click();
+        cy.get('#textfield-helper-text')
+            .as('helpText')
+            .should('contain', 'This field is required');
+        cy.get('button#advancedSearchButton')
+            .as('searchButton')
+            .should('be.disabled');
+
+        cy.get('[placeholder="Add a PID"]')
+            .as('pidField');
+
+        const invalidPIDs = ['abcd', '_uq:123', 'UQ: 12', 'uq:'];
+
+        invalidPIDs.forEach(invalidPID => {
+            cy.get('@pidField')
+                .clear()
+                .type(invalidPID);
+            cy.get('@helpText')
+                .should('contain', helpMessage);
+            cy.get('@searchButton')
+                .should('be.disabled');
+        });
+
+        cy.get('@pidField')
+            .clear()
+            .type('uq:123');
+        cy.get('@searchButton')
+            .should('not.be.disabled');
+        cy.get('@helpText')
+            .should('not.exist');
+
+        cy.get('#advancedSearchForm .searchQueryCaption')
+            .should($caption => {
+                expect(cleanExtraSpaces($caption.text())).to.equal('PID is uq:123');
+            });
     });
 
     // context('API call tests', () => {

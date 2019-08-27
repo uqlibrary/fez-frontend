@@ -1344,7 +1344,7 @@ export default {
                         combiner: 'is',
                         type: 'TextField',
                         hint: 'Add a PID',
-                        validation: ['required'],
+                        validation: ['required', 'pid'],
                         ariaLabel: 'Type a PID to search for',
                     },
                     rek_author: {
