@@ -857,13 +857,13 @@ export const valueExtractor = {
             );
 
             return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
-                nameAsPublished: authors[order].rek_author,
+                nameAsPublished: (authors[order] || {}).rek_author,
                 creatorRole: '',
-                uqIdentifier: `${authorIds[order].rek_author_id}` || '',
-                authorId: authorIds[order].rek_author_id,
-                orgaff: authorAffiliationNames[order].rek_author_affiliation_name || 'Missing',
-                orgtype: `${authorAffiliationTypes[order].rek_author_affiliation_type}` || '',
-                affiliation: (!!authorIds[order].rek_author_id && 'UQ') || 'NotUQ',
+                uqIdentifier: `${(authorIds[order] || {}).rek_author_id}` || '',
+                authorId: (authorIds[order] || {}).rek_author_id,
+                orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
+                orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type}` || '',
+                affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
             }));
         },
     },
