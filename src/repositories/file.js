@@ -18,7 +18,7 @@ export function putUploadFile(pid, file, dispatch) {
         Key: `${pid}/${file.name}`,
         Metadata: {
             dsi_security_policy: file.access_condition_id === 8 ? 1 : 5,
-            ...(file.access_condition_id === 9
+            ...(file.access_condition_id === 9 && !moment(file.date).isSame(moment(), 'day')
                 ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
                 : {}),
         },
