@@ -15,7 +15,6 @@ export default {
         email: 'Email address is not valid',
         url: 'URL is not valid',
         doi: 'DOI is not valid',
-        pid: 'Please provide a valid PID (e.g. UQ:129af6)',
         forRequired: 'Field of research values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
