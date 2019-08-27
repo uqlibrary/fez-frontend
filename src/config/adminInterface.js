@@ -932,7 +932,9 @@ export const valueExtractor = {
         },
     },
     qualityIndicators: {
-        getValue: (record) => record.fez_record_search_key_quality_indicator.map((item) => item.rek_quality_indicator),
+        getValue: (record) => {
+            return (record.fez_record_search_key_quality_indicator || []).map((item) => item.rek_quality_indicator);
+        },
     },
     grants: {
         getValue: (record) => {
@@ -964,5 +966,8 @@ export const valueExtractor = {
                 grantAgencyType: (grantAgencyTypes[order] || {}).rek_grant_agency_type || ORG_TYPE_NOT_SET,
             }));
         },
+    },
+    files: {
+        getValue: () => ([]),
     },
 };
