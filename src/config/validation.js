@@ -82,6 +82,12 @@ export const isValidPartialDOIValue = value => {
     const isValid = /^10\..*/;
     return isValid.test(value.trim());
 };
+
+export const isValidPid = value => {
+    const isValid = /uq:[a-z0-9]+/i;
+    return isValid.test(value.trim());
+};
+
 export const isValidPublicationTitle = value => {
     const isValid = /.{10,255}$/i;
     return isValid.test(value.trim());
@@ -104,6 +110,7 @@ export const email = value =>
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
+export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
