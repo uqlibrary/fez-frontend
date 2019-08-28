@@ -15,6 +15,6 @@ printf "\nNow running npm v"; npm -v
 printf "\n$ npm cache verify"
 npm cache verify
 
-prinf "\n\n--- INSTALL DEPENDENCIES ---\n"
+printf "\n\n--- INSTALL DEPENDENCIES ---\n"
 echo "$ npm ci"
 npm ci
