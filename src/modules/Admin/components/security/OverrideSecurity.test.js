@@ -1,6 +1,6 @@
 import OverrideSecurity from './OverrideSecurity';
 
-const setup = (testProps) => {
+const setup = testProps => {
     const props = {
         label: 'test',
         input: {

@@ -32,7 +32,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     /**
      * Redux-form normalize callback
      */
-    const overrideSecurityValueNormalizer = (value) => (value ? 0 : 1);
+    const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
     return (
         <Grid container spacing={16}>
             <Grid item xs={12} sm={12}>

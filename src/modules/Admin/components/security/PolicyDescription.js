@@ -4,10 +4,8 @@ import PropTypes from 'prop-types';
 import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 
 export const PolicyDescription = ({ selectedPolicyKey, policyArray }) => {
-    const policyDesc = policyArray.find(
-        policy => policy.value === selectedPolicyKey
-    );
-    return ( policyDesc ? `${policyDesc.name} (${policyDesc.id})` : '');
+    const policyDesc = policyArray.find(policy => policy.value === selectedPolicyKey);
+    return policyDesc ? `${policyDesc.name} (${policyDesc.id})` : '';
 };
 
 PolicyDescription.propTypes = {
@@ -20,4 +18,3 @@ PolicyDescription.defaultProps = {
 };
 
 export default React.memo(PolicyDescription);
-

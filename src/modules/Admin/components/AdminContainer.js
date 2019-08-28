@@ -26,7 +26,7 @@ import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
-const styles = (theme) => ({
+const styles = theme => ({
     helpIcon: {
         color: theme.palette.secondary.main,
         opacity: 0.66,
@@ -63,7 +63,7 @@ export const AdminContainer = ({
     history,
 }) => {
     const [tabbed, setTabbed] = useState(
-        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
+        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
     );
     const theme = useTheme();
     // const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));

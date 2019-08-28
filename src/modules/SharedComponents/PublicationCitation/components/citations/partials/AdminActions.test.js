@@ -1,11 +1,6 @@
 import React from 'react';
 import AdminActions from './AdminActions';
-import {
-    rtlRender,
-    fireEvent,
-    cleanup,
-    waitForElement,
-} from 'test-utils';
+import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
 
 function setup(testProps = {}) {
     // build full props list required by the component

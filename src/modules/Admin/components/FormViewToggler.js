@@ -15,19 +15,11 @@ export const FormViewToggler = React.memo(() => {
         <Grid container direction="row" spacing={0} alignItems="center">
             <Grid item>
                 <Tooltip title={`Switch to ${tabbed ? 'full form' : 'tabbed'} mode`}>
-                    <Switch
-                        color="primary"
-                        checked={tabbed}
-                        onChange={toggleTabbed}
-                        value="tabbed"
-                    />
+                    <Switch color="primary" checked={tabbed} onChange={toggleTabbed} value="tabbed" />
                 </Tooltip>
             </Grid>
             <Grid item>
-                <HelpIcon
-                    IconComponent={Keyboard}
-                    {...txt.pages.edit.help}
-                />
+                <HelpIcon IconComponent={Keyboard} {...txt.pages.edit.help} />
             </Grid>
         </Grid>
     );
