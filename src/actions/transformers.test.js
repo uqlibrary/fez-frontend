@@ -1598,7 +1598,7 @@ describe('getGrantsListSearchKey tests', () => {
                     rek_grant_agency_order: 1,
                 },
                 {
-                    rek_grant_agency: 'testing',
+                    rek_grant_agency: 'Not set',
                     rek_grant_agency_order: 2,
                 },
                 {
@@ -2159,7 +2159,7 @@ describe('getSecuritySectionSearchKeys', () => {
                     },
                 ],
                 rek_security_policy: 1,
-            })
+            }),
         ).toEqual(expected);
     });
 
@@ -2170,7 +2170,7 @@ describe('getSecuritySectionSearchKeys', () => {
         expect(
             transformers.getSecuritySectionSearchKeys({
                 rek_security_policy: 1,
-            })
+            }),
         ).toEqual(expected);
     });
 

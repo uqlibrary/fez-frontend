@@ -112,7 +112,7 @@ export const pathConfig = {
             link: '/author-identifiers/orcid/link',
             absoluteLink: `${window.location.origin}${
                 process.env.BRANCH === 'development' ? window.location.pathname : ''
-            }${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`,
+            }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {

@@ -15,7 +15,7 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => ({
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADING]: state => ({
         ...state,
         loadingPossiblePublicationsList: true,
         possiblePublicationsList: [],
@@ -28,7 +28,7 @@ const handlers = {
         fullPublicationToClaim: null,
     }),
 
-    [actions.PUBLICATION_TO_CLAIM_CLEAR]: (state) => ({
+    [actions.PUBLICATION_TO_CLAIM_CLEAR]: state => ({
         ...state,
         publicationToClaimFileUploadingError: false,
         publicationToClaim: null,
@@ -55,7 +55,7 @@ const handlers = {
         possiblePublicationsFacets: action.payload,
     }),
 
-    [actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => ({
+    [actions.POSSIBLY_YOUR_PUBLICATIONS_FAILED]: state => ({
         ...state,
         loadingPossiblePublicationsList: false,
         possiblePublicationsList: [],
@@ -64,7 +64,7 @@ const handlers = {
         possiblePublicationsPagingData: {},
     }),
 
-    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: (state) => ({
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_LOADING]: state => ({
         ...state,
         loadingPossibleCounts: true,
     }),
@@ -75,7 +75,7 @@ const handlers = {
         possibleCounts: action.payload.total,
     }),
 
-    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED]: (state) => ({
+    [actions.COUNT_POSSIBLY_YOUR_PUBLICATIONS_FAILED]: state => ({
         ...state,
         loadingPossibleCounts: false,
         possibleCounts: 0,
@@ -93,7 +93,7 @@ const handlers = {
         hidePublicationFailedErrorMessage: action.payload,
     }),
 
-    [actions.HIDE_PUBLICATIONS_FAILED_RESET]: (state) => ({
+    [actions.HIDE_PUBLICATIONS_FAILED_RESET]: state => ({
         ...state,
         hidePublicationFailed: false,
         hidePublicationFailedErrorMessage: null,
@@ -105,7 +105,7 @@ const handlers = {
         publicationsClaimedInProgress: [...state.publicationsClaimedInProgress, action.payload.pid],
     }),
 
-    [actions.PUBLICATION_TO_CLAIM_LOADING]: (state) => ({
+    [actions.PUBLICATION_TO_CLAIM_LOADING]: state => ({
         ...state,
         fullPublicationToClaim: null,
         fullPublicationToClaimLoading: true,

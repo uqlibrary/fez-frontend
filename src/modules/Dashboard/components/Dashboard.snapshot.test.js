@@ -383,29 +383,33 @@ describe('Dashboard test', () => {
     });
 
     it('Full mount for styles render', () => {
-        const wrapper = getElement(Dashboard, {
-            classes: {},
-            theme: {},
-            account: mock.accounts.uqresearcher,
-            accountAuthorDetailsLoading: false,
-            publicationTotalCount: null,
-            loadingPublicationsByYear: false,
-            hidePossiblyYourPublicationsLure: false,
-            loadingPublicationsStats: false,
-            possiblyYourPublicationsCountLoading: false,
-            actions: {
-                countPossiblyYourPublications: jest.fn(),
-                loadAuthorPublicationsStats: jest.fn(),
-                searchAuthorPublications: jest.fn(),
+        const wrapper = getElement(
+            Dashboard,
+            {
+                classes: {},
+                theme: {},
+                account: mock.accounts.uqresearcher,
+                accountAuthorDetailsLoading: false,
+                publicationTotalCount: null,
+                loadingPublicationsByYear: false,
+                hidePossiblyYourPublicationsLure: false,
+                loadingPublicationsStats: false,
+                possiblyYourPublicationsCountLoading: false,
+                actions: {
+                    countPossiblyYourPublications: jest.fn(),
+                    loadAuthorPublicationsStats: jest.fn(),
+                    searchAuthorPublications: jest.fn(),
+                },
+                incomplete: {
+                    publicationsListPagingData: {},
+                    loadingPublicationsList: false,
+                    publicationsList: [],
+                    publicationsListFacets: {},
+                },
+                history: {},
             },
-            incomplete: {
-                publicationsListPagingData: {},
-                loadingPublicationsList: false,
-                publicationsList: [],
-                publicationsListFacets: {},
-            },
-            history: {},
-        }, { isShallow: false });
+            { isShallow: false },
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

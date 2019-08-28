@@ -6,7 +6,7 @@ exports[`Component NewsFeed should not render anything while loading 1`] = `""`;
 
 exports[`Component NewsFeed should render news feed 1`] = `
 <StandardCard
-  primaryHeader={true}
+  darkHeader={true}
   title="Latest news"
 >
   <div
@@ -194,7 +194,7 @@ exports[`Component NewsFeed should render news feed 1`] = `
 
 exports[`Component NewsFeed should show new count if above set limit 1`] = `
 <StandardCard
-  primaryHeader={true}
+  darkHeader={true}
   title="Latest news"
 >
   <div

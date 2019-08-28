@@ -379,14 +379,18 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
 
 exports[`ListEditor tests should render input value as itemList for List 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -399,6 +403,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     itemTemplate={[Function]}
@@ -411,6 +416,7 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={1}
     itemTemplate={[Function]}

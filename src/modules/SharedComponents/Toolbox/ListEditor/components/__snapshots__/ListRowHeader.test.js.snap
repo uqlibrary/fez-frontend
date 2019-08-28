@@ -1,7 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListRowHeader renders  header for contributor editor control with delete all disabled 1`] = `
-<Fragment>
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -19,7 +26,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     alignItems="center"
     className=""
     container={true}
-    spacing={8}
+    spacing={16}
   >
     <WithStyles(Grid)
       item={true}
@@ -61,11 +68,18 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRowHeader renders  header for contributor editor control with name and delete all button only 1`] = `
-<Fragment>
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -83,7 +97,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     alignItems="center"
     className=""
     container={true}
-    spacing={8}
+    spacing={16}
   >
     <WithStyles(Grid)
       item={true}
@@ -125,7 +139,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRowHeader renders  should render default view with styles 1`] = `
@@ -155,7 +169,14 @@ exports[`ListRowHeader renders  should render default view with styles 1`] = `
 `;
 
 exports[`ListRowHeader renders  should render larger grid item 1`] = `
-<Fragment>
+<div
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -173,7 +194,7 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     alignItems="center"
     className=""
     container={true}
-    spacing={8}
+    spacing={16}
   >
     <WithStyles(Grid)
       item={true}
@@ -204,5 +225,5 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
