@@ -20,6 +20,7 @@ fi
 set -e
 
 export TZ='Australia/Brisbane'
+printf "Jest v"; jest --version
 
 printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
 # Not running code coverage check for feature branches.
