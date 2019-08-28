@@ -209,7 +209,7 @@
     "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
   },
   "engines": {
-    "npm": "^6.9.0",
+    "npm": "^6",
     "node": "11.10.1"
   },
   "babel": {
