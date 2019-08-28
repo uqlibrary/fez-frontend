@@ -6,15 +6,15 @@ set -e
 printf "Node "; node -v;
 printf "(Codeship default) npm v"; npm -v
 
-echo "--- GET LATEST VERSION OF NPM 6 ---"
+printf "\n\n--- GET LATEST VERSION OF NPM 6 ---\n"
 echo "$ npm install -g npm@6"
 npm install -g npm@6
 
-printf "Now running npm v"; npm -v
+printf "\nNow running npm v"; npm -v
 
-echo "$ npm cache verify"
+printf "\n$ npm cache verify"
 npm cache verify
 
-echo "--- INSTALL DEPENDENCIES ---"
+prinf "\n\n--- INSTALL DEPENDENCIES ---\n"
 echo "$ npm ci"
 npm ci

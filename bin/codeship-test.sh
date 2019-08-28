@@ -20,9 +20,9 @@ fi
 set -e
 
 export TZ='Australia/Brisbane'
-printf "Jest v"; jest --version
 
 printf "\n--- \e[1mRUNNING UNIT TESTS\e[0m ---\n"
+printf "Jest v"; jest --version
 # Not running code coverage check for feature branches.
 # Running in series with `runInBand` to avoid CodeShip VM running out of memory
 if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
