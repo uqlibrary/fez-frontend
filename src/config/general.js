@@ -2,9 +2,9 @@ import locale from 'locale/components';
 import moment from 'moment';
 const converter = require('number-to-words');
 
-const getValue = (value) => (typeof value !== 'undefined' && !!value ? value : null);
+const getValue = value => (typeof value !== 'undefined' && !!value ? value : null);
 
-export const numberToWords = (value) => {
+export const numberToWords = value => {
     const ordinal = converter.toWordsOrdinal(value);
     return ordinal.charAt(0).toUpperCase() + ordinal.slice(1);
 };
@@ -28,7 +28,7 @@ export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XY
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
 export const GOOGLE_MAPS_API_URL =
-    'https://maps.googleapis.com/maps/api/js?key=AIzaSyBHRh9tvaGojdXLq3dnNV3O95LIWGXzznc&v=3.exp&libraries=geometry,drawing,places';
+    'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places';
 
 export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
@@ -194,7 +194,7 @@ export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
 export const DOCUMENT_TYPE_DESIGN = 'Design';
 export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
 
-export const publicationTypes = (components) => ({
+export const publicationTypes = components => ({
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
         name: 'Audio Document',
@@ -1058,27 +1058,27 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: (pid) =>
+        url: pid =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit author affiliations',
-        url: (pid) =>
+        url: pid =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: (pid) => `${APP_URL}records/${pid}/edit`,
+        url: pid => `${APP_URL}records/${pid}/edit`,
     },
     {
         label: 'Delete selected record',
-        url: (pid) =>
+        url: pid =>
             `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
     },
     {
         label: 'More options',
-        url: (pid) => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        url: pid => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
     },
 ];
 

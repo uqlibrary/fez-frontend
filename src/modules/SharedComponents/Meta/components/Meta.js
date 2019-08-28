@@ -90,7 +90,7 @@ export default class Meta extends PureComponent {
         const { name, isMultiple, format } = tag;
         if (!!searchKey && searchKey.length > 0) {
             // If multiple tags allowed then get meta tag for each value
-            // Single meta tag for multiple values separated by semicolon
+            // Otherwise single meta tag for multiple values separated by semicolon
             return isMultiple
                 ? this.getMultipleTagsForMultipleValues(searchKey, subkey, url, tag)
                 : this.getSingleTagForMultipleValues(searchKey, subkey, tag);
@@ -124,7 +124,7 @@ export default class Meta extends PureComponent {
                               this.getMetaTagsForOtherFields(publication[subkey], subkey, url, tag);
 
                         return [...tagsContent, ...(metaTagsContent || [])];
-                    }, [])
+                    }, []),
                 );
                 return metaTags;
             }, [])
@@ -139,7 +139,7 @@ export default class Meta extends PureComponent {
             routesConfig.filter(route =>
                 !!route.regExPath
                     ? new RegExp(route.regExPath, 'i').test(this.props.location.pathname)
-                    : route.path === this.props.location.pathname
+                    : route.path === this.props.location.pathname,
             );
         const pageTitle = !!publication
             ? publication.rek_title

@@ -41,7 +41,7 @@ export default class RichEditor extends PureComponent {
                     height: this.props.height,
                     pasteFilter: 'semantic-content',
                 },
-                (!!this.props.value && this.props.value.get('htmlText')) || null
+                (!!this.props.value && this.props.value.get('htmlText')) || null,
             );
 
         !!this.editorInstance && this.editorInstance.on('instanceReady', this.onInstanceReady);
@@ -59,7 +59,7 @@ export default class RichEditor extends PureComponent {
         this.editorInstance.setReadOnly(!!this.props.disabled);
     };
 
-    onChange = (evt) => {
+    onChange = evt => {
         const textValue = evt.editor.document
             .getBody()
             .getText()
@@ -73,7 +73,7 @@ export default class RichEditor extends PureComponent {
                         .getText()
                         .trim(),
                 }
-                : null
+                : null,
         );
     };
 
@@ -128,6 +128,8 @@ export default class RichEditor extends PureComponent {
                 )}
                 {this.props.maxValue && (
                     <Typography
+                        color="error"
+                        variant="caption"
                         component={'span'}
                         style={{
                             display: 'inline-block',
@@ -135,7 +137,7 @@ export default class RichEditor extends PureComponent {
                         variant="caption"
                         color={this.props.meta && this.props.meta.error && 'error'}
                     >
-                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}{' '}
+                        {inputLength > 0 ? inputLength : 0} characters of {this.props.maxValue}
                         {this.props.instructions || ''}
                     </Typography>
                 )}

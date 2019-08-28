@@ -2,6 +2,7 @@ import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
 import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
+const moment = require('moment');
 
 // Max Length
 export const maxLength = max => value =>
@@ -81,6 +82,12 @@ export const isValidPartialDOIValue = value => {
     const isValid = /^10\..*/;
     return isValid.test(value.trim());
 };
+
+export const isValidPid = value => {
+    const isValid = /uq:[a-z0-9]+/i;
+    return isValid.test(value.trim());
+};
+
 export const isValidPublicationTitle = value => {
     const isValid = /.{10,255}$/i;
     return isValid.test(value.trim());
@@ -103,6 +110,7 @@ export const email = value =>
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
+export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
@@ -135,9 +143,7 @@ export const dateTimeYear = value =>
         ? locale.validationErrors.dateTimeYear
         : undefined;
 export const validFileUpload = value => {
-    return value && value.hasOwnProperty('isValid') && !value.isValid
-        ? locale.validationErrors.fileUpload
-        : undefined;
+    return value && value.hasOwnProperty('isValid') && !value.isValid ? locale.validationErrors.fileUpload : undefined;
 };
 
 export const fileUploadRequired = value => {
@@ -147,17 +153,11 @@ export const fileUploadRequired = value => {
 };
 
 export const fileUploadNotRequiredForMediated = (value, values) => {
-    const accessCondition = values.toJS()
-        .fez_record_search_key_access_conditions;
-    if (
-        !!accessCondition &&
-        accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID
-    ) {
+    const accessCondition = values.toJS().fez_record_search_key_access_conditions;
+    if (!!accessCondition && accessCondition.rek_access_conditions === MEDIATED_ACCESS_ID) {
         return undefined;
     } else {
-        return value === undefined || value.queue.length === 0
-            ? locale.validationErrors.fileUploadRequired
-            : undefined;
+        return value === undefined || value.queue.length === 0 ? locale.validationErrors.fileUploadRequired : undefined;
     }
 };
 
@@ -174,9 +174,7 @@ export const isValidIsbn = subject => {
     // Checks for ISBN-10 or ISBN-13 format
     // https://www.safaribooksonline.com/library/view/regular-expressions-cookbook/9781449327453/ch04s13.html
     const regex = /^(?:ISBN(?:-1[03])?:? )?(?=[0-9X]{10}$|(?=(?:[0-9]+[- ]){3})[- 0-9X]{13}$|97[89][0-9]{10}$|(?=(?:[0-9]+[- ]){4})[- 0-9]{17}$)(?:97[89][- ]?)?[0-9]{1,5}[- ]?[0-9]+[- ]?[0-9]+[- ]?[0-9X]$/;
-    return subject.trim().length === 0 || regex.test(subject)
-        ? ''
-        : locale.validationErrors.isbn;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isbn;
 };
 
 export const checkDigit = subject => {
@@ -198,17 +196,13 @@ export const checkDigit = subject => {
 export const isValidIsmn = subject => {
     // https://www.wikidata.org/wiki/Property:P1208
     // const regex = /^(?:ISMN )?((?:979-0-[\d-]{9}-\d)|(?:M-[\d-]{9}-\d))$/gi;
-    return subject.trim().length === 0 || checkDigit(subject)
-        ? ''
-        : locale.validationErrors.ismn;
+    return subject.trim().length === 0 || checkDigit(subject) ? '' : locale.validationErrors.ismn;
 };
 
 export const isValidIsrc = subject => {
     // https://www.wikidata.org/wiki/Property:P1243
     const regex = /^(?:ISRC )?(?:[A-Z]{2}-[A-Z0-9]{3}-\d{2}-\d{5})$/gi;
-    return subject.trim().length === 0 || regex.test(subject)
-        ? ''
-        : locale.validationErrors.isrc;
+    return subject.trim().length === 0 || regex.test(subject) ? '' : locale.validationErrors.isrc;
 };
 
 export const isValidAuthorLink = link => {
@@ -216,9 +210,7 @@ export const isValidAuthorLink = link => {
 };
 
 export const isValidContributorLink = (link, required = false) => {
-    return required && !(link && link.valid)
-        ? locale.validationErrors.contributorLinking
-        : '';
+    return required && !(link && link.valid) ? locale.validationErrors.contributorLinking : '';
 };
 
 // Google Scholar ID
@@ -232,18 +224,34 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const dateRange = (value, values) => {
-    const lowerInRange = values.toJS().fez_record_search_key_start_date;
-    const higherInRange = values.toJS().fez_record_search_key_end_date;
+    const lowerInRange =
+        !!values.toJS().fez_record_search_key_start_date &&
+        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
+        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!values.toJS().fez_record_search_key_end_date &&
+        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
+        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
 
-    if (
-        !!lowerInRange &&
-        !!higherInRange &&
-        lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)
-    ) {
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.collectionDateRange;
+    }
+
+    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
         return locale.validationErrors.dateRange;
     } else {
         return '';
     }
+};
+
+export const fullDate = state => {
+    const valid = moment(state).isValid();
+
+    if (!valid) {
+        return 'date is not valid';
+    }
+
+    return '';
 };
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);
@@ -291,9 +299,7 @@ export const getErrorAlertProps = ({
             };
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
-            const errorMessagesList = formErrors
-                ? translateFormErrorsToText(formErrors)
-                : null;
+            const errorMessagesList = formErrors ? translateFormErrorsToText(formErrors) : null;
             const message = (
                 <span>
                     {alertLocale.validationAlert.message}

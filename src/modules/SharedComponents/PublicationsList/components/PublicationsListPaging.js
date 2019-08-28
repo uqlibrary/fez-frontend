@@ -74,7 +74,7 @@ export class PublicationsListPaging extends Component {
                 size={'small'}
                 className={`${classNames(
                     this.props.classes.pageButton,
-                    isCurrentPage && this.props.classes.pageButton
+                    isCurrentPage && this.props.classes.pageButton,
                 )} paging-button`}
                 onClick={() => {
                     this.pageChanged(key);

@@ -8,8 +8,8 @@ const mapStateToProps = (state, props) => {
             state.get('authorsReducer') && state.get('authorsReducer')
                 ? state
                     .get('authorsReducer')
-                    .authorsList.filter((item) => !!item.aut_org_username)
-                    .map((item) => ({
+                    .authorsList.filter(item => !!item.aut_org_username)
+                    .map(item => ({
                         value: `${item.aut_title} ${item.aut_display_name} ${
                             item.aut_org_username ? `(${item.aut_org_username})` : ''
                         } ${item.aut_student_username ? `(${item.aut_student_username})` : ''}`,
@@ -29,11 +29,11 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => ({
+const mapDispatchToProps = dispatch => ({
     loadSuggestions: (searchKey, searchQuery = '') => dispatch(actions.searchAuthors(searchQuery)),
 });
 
 export const UqIdField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

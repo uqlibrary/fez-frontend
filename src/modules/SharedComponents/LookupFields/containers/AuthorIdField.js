@@ -39,7 +39,7 @@ const mapDispatchToProps = dispatch => ({
 
 const AuthorIdAutoComplete = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);
 
 export function AuthorIdField(fieldProps) {

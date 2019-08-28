@@ -150,7 +150,7 @@ describe('Component ContributorRow', () => {
                 canMoveUp: true,
                 onMoveUp: testFunction,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
 
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
@@ -171,7 +171,7 @@ describe('Component ContributorRow', () => {
                 canMoveDown: true,
                 onMoveDown: testFunction,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
@@ -193,7 +193,7 @@ describe('Component ContributorRow', () => {
                 showContributorAssignment: true,
                 onSelect: testFunction,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         wrapper.find('ListItem').simulate('click');
         expect(testFunction).toBeCalled;
@@ -206,7 +206,7 @@ describe('Component ContributorRow', () => {
                 index: 0,
                 onDelete: testFunction,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);

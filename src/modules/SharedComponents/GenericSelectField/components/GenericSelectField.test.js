@@ -271,7 +271,7 @@ describe('GenericSelectField', () => {
                     loadItemsList: jest.fn(),
                     parentItemsId: 1234,
                 },
-                { isShallow: false }
+                { isShallow: false },
             );
             expect(toJson(wrapper)).toMatchSnapshot();
         });

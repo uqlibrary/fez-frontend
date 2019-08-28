@@ -41,8 +41,15 @@ export default class ListEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
-        inputNormalizer: (value) => value,
         rowItemTemplate: GenericTemplate,
+        inputNormalizer: value => value,
+        locale: {
+            form: {
+                locale: {
+                    inputFieldLabel: 'NoLabel',
+                },
+            },
+        },
     };
 
     constructor(props) {
@@ -55,7 +62,7 @@ export default class ListEditor extends Component {
             ((props.input || {}).name && props.input.value);
 
         this.state = {
-            itemList: valueAsJson ? valueAsJson.map((item) => item[props.searchKey.value]) : [],
+            itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
     }
 
@@ -66,11 +73,11 @@ export default class ListEditor extends Component {
         }
     }
 
-    transformOutput = (items) => {
+    transformOutput = items => {
         return items.map((item, index) => this.props.transformFunction(this.props.searchKey, item, index));
     };
 
-    addItem = (item) => {
+    addItem = item => {
         if (
             !!item &&
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
@@ -86,10 +93,9 @@ export default class ListEditor extends Component {
                 });
             } else if (!!item && item.includes(',') && !item.key && !item.value) {
                 // Item is a string with commas in it - we will strip and separate the values to be individual keywords
-                // Convert the string to an array of values
-                const commaSepListToArray = item.split(',');
+                const commaSepListToArray = item.split(','); // Convert the string to an array of values
                 // Filter out empty array values
-                const cleanArray = commaSepListToArray.filter((item) => item.trim() !== '');
+                const cleanArray = commaSepListToArray.filter(item => item.trim() !== '');
                 const totalArray = [...this.state.itemList, ...cleanArray]; // Merge into the list
                 if (totalArray.length > this.props.maxCount) {
                     // If the final list is longer that maxCount, trim it back
@@ -141,8 +147,21 @@ export default class ListEditor extends Component {
     };
 
     render() {
+        const componentID = (
+            (this.props.locale.form && this.props.locale.form.title) ||
+            this.props.locale.form.inputFieldLabel ||
+            (this.props.locale.form.locale && this.props.locale.form.locale.inputFieldLabel) ||
+            ''
+        ).replace(/\s+/g, '');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
+                form={
+                    (this.props.locale &&
+                        this.props.locale.form &&
+                        this.props.locale.form.locale &&
+                        this.props.locale.form.locale.inputFieldLabel) ||
+                    'NoLabel'
+                }
                 key={index}
                 index={index}
                 item={item}
@@ -157,9 +176,8 @@ export default class ListEditor extends Component {
                 itemTemplate={this.props.rowItemTemplate}
             />
         ));
-
         return (
-            <div className={this.props.className}>
+            <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     onAdd={this.addItem}

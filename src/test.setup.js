@@ -33,7 +33,7 @@ export const setupStoreForMount = (initialState = Immutable.Map()) => {
         subscribe: jest.fn(),
     };
     const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
+    const invoke = action => thunk(store)(next)(action);
     return { store, next, invoke };
 };
 
@@ -73,7 +73,7 @@ const getElement = (component, props, args = {}) => {
                     </MuiPickersUtilsProvider>
                 </MuiThemeProvider>
             </MemoryRouter>
-        </Provider>
+        </Provider>,
     );
 };
 
@@ -103,4 +103,4 @@ global.setupStoreForMount = setupStoreForMount;
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 
 const MockDate = require('mockdate');
-MockDate.set('1/1/2017');
+MockDate.set('6/30/2017');

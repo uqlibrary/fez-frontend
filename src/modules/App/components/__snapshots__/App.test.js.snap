@@ -170,7 +170,7 @@ exports[`Application component Should display mobile correctly 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -344,6 +344,8 @@ exports[`Application component Should display mobile correctly 1`] = `
   <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
+
+exports[`Application component redirects user to login if going to a secure file url and not user logged in yet 1`] = `<div />`;
 
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
@@ -664,7 +666,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1378,7 +1380,7 @@ exports[`Application component should determine if it has incomplete works from 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -1945,7 +1947,7 @@ exports[`Application component should redirect to login page with correct return
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -2437,7 +2439,7 @@ exports[`Application component should render alert if user is not fez author 1`]
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3147,7 +3149,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -3692,7 +3694,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4196,7 +4198,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -4884,7 +4886,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -5568,7 +5570,7 @@ exports[`Application component should render app for account with fez author wit
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6163,7 +6165,7 @@ exports[`Application component should render application with routing for the us
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6472,7 +6474,7 @@ exports[`Application component should render for anon user 1`] = `
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -6787,7 +6789,7 @@ exports[`Application component should render thesis submission for HDR without m
                   }
                   title="Click to return to the eSpace home page"
                 >
-                  UQ eSpace 
+                  UQ eSpace
                 </a>
               </WithStyles(Typography)>
             </WithStyles(Grid)>
@@ -11185,7 +11187,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       }
                                                                       title="Click to return to the eSpace home page"
                                                                     >
-                                                                      UQ eSpace 
+                                                                      UQ eSpace
                                                                     </a>
                                                                   </h1>
                                                                 </Typography>
@@ -15626,6 +15628,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-222",
                               }
                             }
+                            id="menudrawer"
                             onClose={[Function]}
                             open={false}
                             variant="temporary"
@@ -15649,6 +15652,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 }
                               }
                               elevation={16}
+                              id="menudrawer"
                               onClose={[Function]}
                               open={false}
                               theme={
@@ -16102,7 +16106,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     },
                                   }
                                 }
-                                className="MuiDrawer-root-230 MuiDrawer-modal-241"
+                                className="MuiDrawer-modal-245"
+                                id="menudrawer"
                                 onClose={[Function]}
                                 open={false}
                               >
@@ -16131,6 +16136,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   disablePortal={false}
                                   disableRestoreFocus={false}
                                   hideBackdrop={false}
+                                  id="menudrawer"
                                   keepMounted={false}
                                   manager={
                                     ModalManager {
@@ -20010,7 +20016,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-325 alert-text"
                                                                                                         >
                                                                                                           <b>
-                                                                                                            There has been an error - 
+                                                                                                            There has been an error -
                                                                                                           </b>
                                                                                                           Trending publications are temporarily unavailable
                                                                                                         </div>

@@ -64,8 +64,8 @@ describe('Component AddMissingRecord', () => {
     });
 
     it(
-        'should call back to step [0] (records/add/find) when there ' +
-			'is no rawSearchQuery defined when landing on records/add/results',
+        'should call back to step [0] (records/add/find) when there is no ' +
+            'rawSearchQuery defined when landing on records/add/results',
         () => {
             const testReplace = jest.fn();
             const props = {
@@ -77,6 +77,6 @@ describe('Component AddMissingRecord', () => {
             };
             setup({ ...props });
             expect(testReplace).toBeCalledWith(routes.pathConfig.records.add.find);
-        }
+        },
     );
 });

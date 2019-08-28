@@ -15,7 +15,7 @@ function setup(testProps = {}) {
         },
         theme: {},
         errorText: 'This field is required',
-        normalize: (value) => value,
+        normalize: value => value,
         // isValid: jest.fn(() => ''),
         ...testProps,
     };
@@ -50,9 +50,9 @@ describe('FreeTextForm tests ', () => {
                 },
                 theme: {},
                 errorText: 'This field is required',
-                normalize: (value) => value,
+                normalize: value => value,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

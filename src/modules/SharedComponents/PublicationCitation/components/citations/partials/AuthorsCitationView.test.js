@@ -307,7 +307,7 @@ describe('AuthorsCitationView test ', () => {
                 suffix: ' people.',
                 thresholdNumberOfAuthors: 0,
             },
-            { isShallow: true }
+            { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(true);
@@ -473,7 +473,7 @@ describe('AuthorsCitationView test ', () => {
                 initialNumberOfAuthors: 8,
                 thresholdNumberOfAuthors: 2,
             },
-            { isShallow: true }
+            { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(false);

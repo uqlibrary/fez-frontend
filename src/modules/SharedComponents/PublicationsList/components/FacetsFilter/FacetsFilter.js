@@ -98,11 +98,11 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
-    _handleOpenAccessFilter = (isActive) => {
+    _handleOpenAccessFilter = isActive => {
         if (this.props.disabled) {
             return;
         }
@@ -119,11 +119,11 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
-    _handleYearPublishedRangeFacet = (category) => (range) => {
+    _handleYearPublishedRangeFacet = category => range => {
         if (this.props.disabled) {
             return;
         }
@@ -146,7 +146,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -161,7 +161,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -171,7 +171,7 @@ export default class FacetsFilter extends PureComponent {
             : parseInt(activeFacets.filters[category], 10) === value;
     };
 
-    getNestedListItems = (facetCategory) => {
+    getNestedListItems = facetCategory => {
         return facetCategory.facets.map((item, index) => {
             const isActive = this.isFacetFilterActive(this.state.activeFacets, facetCategory.facetTitle, item.key);
             return (
@@ -189,7 +189,7 @@ export default class FacetsFilter extends PureComponent {
 
     getFacetsToDisplay = (rawFacets, excludeFacetsList, renameFacetsList, lookupFacetsList) => {
         const facetsToDisplay = [];
-        Object.keys(rawFacets).forEach((key) => {
+        Object.keys(rawFacets).forEach(key => {
             const rawFacet = rawFacets[key];
             const rawFacetLookup = rawFacets[`${key} (lookup)`];
 
@@ -233,7 +233,7 @@ export default class FacetsFilter extends PureComponent {
         return facetsToDisplay;
     };
 
-    toggleFacet = (item) => () => {
+    toggleFacet = item => () => {
         this.setState({
             toggledFacets: {
                 ...this.state.toggledFacets,
@@ -242,9 +242,8 @@ export default class FacetsFilter extends PureComponent {
         });
     };
 
-    hasActiveFilters = (activeFacets) =>
-        Object.keys(activeFacets.filters).filter((filter) => !this.props.excludeFacetsList.includes(filter)).length >
-            0 ||
+    hasActiveFilters = activeFacets =>
+        Object.keys(activeFacets.filters).filter(filter => !this.props.excludeFacetsList.includes(filter)).length > 0 ||
         Object.keys(activeFacets.ranges).length > 0 ||
         !!activeFacets.showOpenAccessOnly;
 
@@ -259,7 +258,7 @@ export default class FacetsFilter extends PureComponent {
             this.props.facetsData,
             this.props.excludeFacetsList,
             this.props.renameFacetsList,
-            this.props.lookupFacetsList
+            this.props.lookupFacetsList,
         );
 
         if (facetsToDisplay.length === 0 && !this.state.hasActiveFilters) {
@@ -276,7 +275,7 @@ export default class FacetsFilter extends PureComponent {
         return (
             <div className="facetsFilter">
                 <List component="nav" dense>
-                    {facetsToDisplay.map((item) => {
+                    {facetsToDisplay.map(item => {
                         // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
                         return (
                             <FacetFilterListItem

@@ -27,8 +27,8 @@ describe('Search record results', () => {
     });
 
     it(
-        'should call componentDidUpdate lifecycle method and focus ' +
-			'on create new record button if no publications found',
+        'should call componentDidUpdate lifecycle method and focus on ' +
+            'create new record button if no publications found',
         () => {
             const focusFn = jest.fn();
             const wrapper = setup({
@@ -46,7 +46,7 @@ describe('Search record results', () => {
 
             expect(componentDidUpdate).toHaveBeenCalled();
             expect(focusFn).toHaveBeenCalled();
-        }
+        },
     );
 
     it('should call componentDidUpdate lifecycle method and should not focus on create new record button', () => {
@@ -122,7 +122,7 @@ describe('Search record results', () => {
 
     it(
         'should render a single claimable item with no authors on the record ' +
-			'(record should appear in publicationsList prop)',
+            '(record should appear in publicationsList prop)',
         () => {
             const navigateToClaimPublication = jest.fn();
             const setClaimPublication = jest.fn();
@@ -155,8 +155,8 @@ describe('Search record results', () => {
                     rek_updated_date: '2018-03-07T23:30:00Z',
                     rek_file_downloads: 0,
                     rek_citation:
-						// eslint-disable-next-line max-len
-						' <i><a class="citation_title" title="Click to view Book: Early Onset Scoliosis" href="/view/UQ:795469">Early Onset Scoliosis</a></i>. Edited by <span class="citation_contributor"><span class="citation_contributor">El-Hawary, Ron</span> and <span class="citation_contributor">Eberson, Craig P.</span></span>  <span class="citation_place_of_publication">Cham</span>: <span class="citation_publisher">Springer International Publishing</span>, <span class="citation_date">2018</span>. doi:<span class="citation_doi">10.1007/978-3-319-71580-3</span>',
+                        /* eslint-disable-next-line max-len */
+                        ' <i><a class="citation_title" title="Click to view Book: Early Onset Scoliosis" href="/view/UQ:795469">Early Onset Scoliosis</a></i>. Edited by <span class="citation_contributor"><span class="citation_contributor">El-Hawary, Ron</span> and <span class="citation_contributor">Eberson, Craig P.</span></span>  <span class="citation_place_of_publication">Cham</span>: <span class="citation_publisher">Springer International Publishing</span>, <span class="citation_date">2018</span>. doi:<span class="citation_doi">10.1007/978-3-319-71580-3</span>',
                     rek_genre_xsdmf_id: null,
                     rek_genre: null,
                     rek_genre_type_xsdmf_id: null,
@@ -428,12 +428,12 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
         'should render a single unclaimable item with no authors on the record ' +
-			'(record should appear in publicationsListSubset prop)',
+            '(record should appear in publicationsListSubset prop)',
         () => {
             // const navigateToClaimPublication = jest.fn();
             // const setClaimPublication = jest.fn();
@@ -504,12 +504,12 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
         'should render a single unclaimable item with no authors on the record ' +
-			'(record should appear in publicationsListSubset prop) with full mount',
+            '(record should appear in publicationsListSubset prop) with full mount',
         () => {
             // const navigateToClaimPublication = jest.fn();
             // const setClaimPublication = jest.fn();
@@ -580,15 +580,15 @@ describe('Search record results', () => {
                 {
                     publicationsList: publicationsList,
                 },
-                { isShallow: false }
+                false,
             );
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
         'should render publications list with one publication to be able to claim ' +
-			'(record should not appear in publicationsListSubset prop)',
+            '(record should not appear in publicationsListSubset prop)',
         () => {
             // const navigateToClaimPublication = jest.fn();
             // const setClaimPublication = jest.fn();
@@ -643,7 +643,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should not return unclaimablePublicationsList (no pid)', () => {
@@ -751,8 +751,8 @@ describe('Search record results', () => {
     });
 
     it(
-        'should not return unclaimablePublicationsList (number of authors === 0 AND ' +
-			'number of contributors !== number of contributor_id)',
+        'should not return unclaimablePublicationsList (number of authors === 0 ' +
+            'AND number of contributors !== number of contributor_id)',
         () => {
             // const navigateToClaimPublication = jest.fn();
             // const setClaimPublication = jest.fn();
@@ -791,7 +791,7 @@ describe('Search record results', () => {
                 publicationsList: publicationsList,
             });
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual([]);
-        }
+        },
     );
 
     it('should not return unclaimablePublicationsList (found author ids, but one of them is 0)', () => {
@@ -1019,9 +1019,9 @@ describe('Search record results', () => {
     });
 
     it(
-        'should return one publication in unclaimablePublicationsList (has rek_pid, number ' +
-			'of authors === number of author ids, number of contributors === number of ' +
-			'contributor ids, all author ids > 0, all contributor ids > 0)',
+        'should return one publication in unclaimablePublicationsList (has rek_pid, number of ' +
+            'authors === number of author ids, number of contributors === number of contributos ids, ' +
+            'all author ids > 0, all contributor ids > 0)',
         () => {
             // const navigateToClaimPublication = jest.fn();
             // const setClaimPublication = jest.fn();
@@ -1072,8 +1072,19 @@ describe('Search record results', () => {
                 },
             ];
 
-            const wrapper = setup();
+            const wrapper = setup({});
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
-        }
+        },
     );
+
+    it('should not show WSoD if no authors/contributors present on the record', () => {
+        const publicationsList = [
+            {
+                rek_pid: 'UQ:255472',
+            },
+        ];
+
+        const wrapper = setup({});
+        expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
+    });
 });

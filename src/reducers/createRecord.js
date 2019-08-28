@@ -9,34 +9,26 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.CREATE_RECORD_RESET]: () => (
-        {
-            ...initialState,
-        }
-    ),
+    [actions.CREATE_RECORD_RESET]: () => ({
+        ...initialState,
+    }),
 
-    [actions.CREATE_RECORD_SUCCESS]: (state, action) => (
-        {
-            ...initialState,
-            newRecord: action.payload.newRecord,
-            newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
-        }
-    ),
+    [actions.CREATE_RECORD_SUCCESS]: (state, action) => ({
+        ...initialState,
+        newRecord: action.payload.newRecord,
+        newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
+    }),
 
-    [actions.CREATE_RECORD_FAILED]: (state, action) => (
-        {
-            ...initialState,
-            newRecordError: true,
-            newRecordErrorMessage: action.payload,
-        }
-    ),
+    [actions.CREATE_RECORD_FAILED]: (state, action) => ({
+        ...initialState,
+        newRecordError: true,
+        newRecordErrorMessage: action.payload,
+    }),
 
-    [actions.CREATE_RECORD_SAVING]: () => (
-        {
-            ...initialState,
-            newRecordSaving: true,
-        }
-    ),
+    [actions.CREATE_RECORD_SAVING]: () => ({
+        ...initialState,
+        newRecordSaving: true,
+    }),
 };
 
 export default function createRecordReducer(state = initialState, action) {

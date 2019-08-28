@@ -14,7 +14,6 @@ import { default as formLocale } from 'locale/publicationForm';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 
-
 export default class DepartmentTechnicalReportForm extends Component {
     static propTypes = {
         submitting: PropTypes.bool,
@@ -83,7 +82,8 @@ export default class DepartmentTechnicalReportForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -115,7 +115,8 @@ export default class DepartmentTechnicalReportForm extends Component {
                             showContributorAssignment
                             required
                             validate={[validation.authorRequired]}
-                            disabled={this.props.submitting}/>
+                            disabled={this.props.submitting}
+                        />
                     </StandardCard>
                 </Grid>
                 <Grid item xs={12}>

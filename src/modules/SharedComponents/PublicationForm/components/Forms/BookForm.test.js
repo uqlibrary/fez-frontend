@@ -28,7 +28,7 @@ describe('BookForm renders ', () => {
             wrapper
                 .find('NtroFields')
                 .dive()
-                .find('Field').length
+                .find('Field').length,
         ).toEqual(5);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -39,7 +39,7 @@ describe('BookForm renders ', () => {
             wrapper
                 .find('NtroFields')
                 .dive()
-                .find('Field').length
+                .find('Field').length,
         ).toEqual(6);
     });
 

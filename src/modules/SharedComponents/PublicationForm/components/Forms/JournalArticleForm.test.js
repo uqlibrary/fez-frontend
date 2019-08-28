@@ -35,7 +35,7 @@ describe('JournalArticleForm renders ', () => {
             wrapper
                 .find('NtroFields')
                 .dive()
-                .find('Field').length
+                .find('Field').length,
         ).toEqual(5);
     });
 
@@ -45,7 +45,7 @@ describe('JournalArticleForm renders ', () => {
             wrapper
                 .find('NtroFields')
                 .dive()
-                .find('Field').length
+                .find('Field').length,
         ).toEqual(6);
     });
 });

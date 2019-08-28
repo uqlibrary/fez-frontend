@@ -75,25 +75,28 @@ export default class RecordsSearchResults extends PureComponent {
                     // If the item doesnt have a pid
                     !item.rek_pid ||
                     // If not all of the authors have been assigned by count
-                    item.fez_record_search_key_author_id.length !== item.fez_record_search_key_author.length ||
+                    (item.fez_record_search_key_author_id || []).length !==
+                        (item.fez_record_search_key_author || []).length ||
                     // If the item has had contributors assigned, but have unclaimed/unassigned ie. id = 0 or null
-                    (item.fez_record_search_key_contributor_id.length > 0 &&
+                    ((item.fez_record_search_key_contributor_id || []).length > 0 &&
                         item.fez_record_search_key_contributor_id.reduce(
                             (total, item) => total || item.rek_contributor_id === 0 || item.rek_contributor_id === null,
-                            false
+                            false,
                         )) ||
                     // If the item has had authors assigned, but have unclaimed/unassigned ie. id = 0 or null
-                    (item.fez_record_search_key_author_id.length > 0 &&
+                    ((item.fez_record_search_key_author_id || []).length > 0 &&
                         item.fez_record_search_key_author_id.reduce(
                             (total, item) => total || item.rek_author_id === 0 || item.rek_author_id === null,
-                            false
+                            false,
                         )) ||
                     // If there are no authors, and not all of the contributors have been assigned by count
                     // Edge case for edited book, where there were no authors but had contributors
-                    (item.fez_record_search_key_author.length === 0 &&
-                        item.fez_record_search_key_contributor_id.length !==
-                            item.fez_record_search_key_contributor.length)
-                ) { return false; }
+                    ((item.fez_record_search_key_author || []).length === 0 &&
+                        (item.fez_record_search_key_contributor_id || []).length !==
+                            (item.fez_record_search_key_contributor || []).length)
+                ) {
+                    return false;
+                }
 
                 return true;
             })
@@ -107,6 +110,7 @@ export default class RecordsSearchResults extends PureComponent {
                 label: searchResultsTxt.claim,
                 handleAction: this._claimPublication,
                 primary: true,
+                disabled: this.props.searchLoading,
             },
         ];
 
@@ -144,6 +148,7 @@ export default class RecordsSearchResults extends PureComponent {
                                         </Grid>
                                         <Grid item xs={12}>
                                             <PublicationsList
+                                                publicationsLoading={this.props.searchLoading}
                                                 publicationsList={this.props.publicationsList}
                                                 customActions={actions}
                                                 publicationsListSubset={unclaimablePublicationsList}

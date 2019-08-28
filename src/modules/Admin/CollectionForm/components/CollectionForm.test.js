@@ -35,7 +35,6 @@ function setup(testProps) {
         submit: jest.fn(),
         untouch: jest.fn(),
         clearSubmit: jest.fn(),
-        submitAsSideEffect: false,
         dirty: true,
         form: 'form',
         initialized: false,

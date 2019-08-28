@@ -16,7 +16,7 @@ import { ThirdPartyLookupFormResult } from './ThirdPartyLookupFormResult';
  *          - match the contents of the incites entry
  *          - the secondary field is optional
  *          - add a new form entry below (once we have more than one component
- *            use the default isMinimised value so they load minimised)
+ *          use the default isMinimised value so they load minimised)
  * - create a new api (use FezCoreLookupController) that returns the desired data, with a url of:
  *    tool/lookup/[components.thirdPartyLookupTools.forms.sibling]/[keys to search for]/[possible other field you need]
  *    ie the api url that incites calls is: eg

@@ -31,7 +31,7 @@ describe('GrantListEditorForm', () => {
                 classes: {},
                 theme: {},
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -207,7 +207,7 @@ export class DashboardClass extends PureComponent {
                                         message={txt.incompleteRecordLure.message
                                             .replace(
                                                 '[count]',
-                                                this.props.incomplete.publicationsListPagingData.total
+                                                this.props.incomplete.publicationsListPagingData.total,
                                             )
                                             .replace('[plural]', pluralTextReplacement)
                                             .replace('[verbEnding]', verbEndingTextReplacement)}
@@ -232,7 +232,7 @@ export class DashboardClass extends PureComponent {
                                             title={txt.possiblePublicationsLure.title}
                                             message={txt.possiblePublicationsLure.message.replace(
                                                 '[count]',
-                                                this.props.possiblyYourPublicationsCount
+                                                this.props.possiblyYourPublicationsCount,
                                             )}
                                             type={txt.possiblePublicationsLure.type}
                                             actionButtonLabel={txt.possiblePublicationsLure.actionButtonLabel}

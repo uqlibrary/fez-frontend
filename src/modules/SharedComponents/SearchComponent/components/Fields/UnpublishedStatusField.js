@@ -23,7 +23,7 @@ const mapDispatchToProps = () => {
 
 const UnpublishedStatusList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function UnpublishedStatusField(fieldProps) {

@@ -10,7 +10,7 @@ describe('NavigationPrompt component', () => {
         const testFunction = jest.fn();
         const wrapper = setup(
             { when: true, history: { block: testFunction }, children: jest.fn() },
-            { isShallow: false }
+            { isShallow: false },
         );
         const smallWrapper = wrapper.find('NavigationPrompt');
         expect(toJson(smallWrapper)).toMatchSnapshot();
@@ -100,7 +100,7 @@ describe('NavigationPrompt component', () => {
         const wrapper = setup({
             when: true,
             history: {
-                block: jest.fn((unblock) => {
+                block: jest.fn(unblock => {
                     return () => unblock({ pathname: '/test' });
                 }),
                 push: pushFn,

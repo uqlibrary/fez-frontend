@@ -8,8 +8,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Clear from '@material-ui/icons/Clear';
 import Typography from '@material-ui/core/Typography';
 
-
-const styles = (theme) => ({
+const styles = theme => ({
     listItemGutters: {
         paddingLeft: theme.spacing.unit,
         paddingRight: theme.spacing.unit,
@@ -38,18 +37,12 @@ export function FacetsFilterNestedListItem({ onFacetClick, index, disabled, prim
                 gutters: classes.listItemGutters,
             }}
         >
-            {
-                isActive &&
+            {isActive && (
                 <ListItemIcon>
-                    <Clear disabled={disabled}/>
+                    <Clear disabled={disabled} />
                 </ListItemIcon>
-            }
-            <ListItemText
-                inset
-                className={classes.listText}
-                disableTypography
-                classes={{ inset: classes.inset }}
-            >
+            )}
+            <ListItemText inset className={classes.listText} disableTypography classes={{ inset: classes.inset }}>
                 <Typography variant={'body2'} color={isActive ? 'primary' : 'default'}>
                     {primaryText}
                 </Typography>

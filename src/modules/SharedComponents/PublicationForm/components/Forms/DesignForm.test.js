@@ -34,7 +34,7 @@ describe('DesignForm renders ', () => {
             wrapper
                 .find('NtroFields')
                 .dive()
-                .find('Field').length
+                .find('Field').length,
         ).toEqual(7);
     });
 });

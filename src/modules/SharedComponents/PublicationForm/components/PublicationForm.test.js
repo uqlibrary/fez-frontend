@@ -206,7 +206,7 @@ describe('Component PublicationForm', () => {
             error: 'There is an error',
             formErrors: ['error'],
         });
-        // const getErrorAlertProps = ({
+        // export const getErrorAlertProps = ({
         //     dirty = false,
         //     submitting = false,
         //     error,

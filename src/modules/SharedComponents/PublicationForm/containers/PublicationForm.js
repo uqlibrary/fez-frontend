@@ -26,8 +26,8 @@ const onSubmit = (values, dispatch, state) => {
     // Get the list of redux-form registered fields for the current form
     const formFields = state.registeredFields.toJS();
 
-    // Delete the currentAuthor if there is no author field in the form (potentially
-    // editors only like conference proceedings) and its not a thesis (specific field name)
+    // Delete the currentAuthor if there is no author field in the form
+    // (potentially editors only like conference proceedings) and its not a thesis (specific field name)
     const cleanValues = values.toJS();
     if (!formFields.authors && !formFields['currentAuthor.0.nameAsPublished']) {
         delete cleanValues.currentAuthor;
@@ -44,12 +44,12 @@ const onSubmit = (values, dispatch, state) => {
                 dispatch(reset(FORM_NAME));
             }, 100);
         })
-        .catch((error) => {
+        .catch(error => {
             throw new SubmissionError({ _error: error.message });
         });
 };
 
-const validate = (values) => {
+const validate = values => {
     // add only multi field validations
     // single field validations should be implemented using validate prop: <Field validate={[validation.required]} />
     // reset global errors, eg form submit failure
@@ -69,8 +69,8 @@ const validate = (values) => {
                 (!data.editors && data.authors && data.authors.length === 0) ||
                 (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
                 (data.authors &&
-                    data.authors.filter((item) => item.selected).length === 0 &&
-                    (data.editors && data.editors.filter((item) => item.selected).length === 0))
+                    data.authors.filter(item => item.selected).length === 0 &&
+                    (data.editors && data.editors.filter(item => item.selected).length === 0))
             ) {
                 errors.authors = locale.validationErrors.authorRequired;
                 errors.editors = locale.validationErrors.editorRequired;
@@ -147,7 +147,7 @@ const mapStateToProps = (state, props) => {
         subtypes:
             (!!publicationSubtype &&
                 general.NTRO_SUBTYPES.includes(publicationSubtype) &&
-                subtypes.filter((type) => general.NTRO_SUBTYPES.includes(type))) ||
+                subtypes.filter(type => general.NTRO_SUBTYPES.includes(type))) ||
             subtypes,
         subtype: publicationSubtype,
         formComponent:
@@ -158,7 +158,7 @@ const mapStateToProps = (state, props) => {
         isAuthorSelected:
             (!!formValues &&
                 formValues.get('authors') &&
-                formValues.get('authors').some((object) => {
+                formValues.get('authors').some(object => {
                     return object.selected === true;
                 })) ||
             false,
@@ -169,13 +169,13 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
-        changeDisplayType: (docTypeSubType) => {
+        changeDisplayType: docTypeSubType => {
             dispatch(change(FORM_NAME, 'rek_display_type', docTypeSubType.docTypeId));
             dispatch(change(FORM_NAME, 'rek_subtype', docTypeSubType.subtype));
         },
-        changeFormType: (isNtro) => {
+        changeFormType: isNtro => {
             dispatch(change(FORM_NAME, 'isNtro', isNtro));
         },
     };
@@ -183,7 +183,7 @@ const mapDispatchToProps = (dispatch) => {
 
 PublicationFormContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PublicationFormContainer);
 
 export default PublicationFormContainer;

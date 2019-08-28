@@ -16,7 +16,7 @@ const trendingPubsPayload = [
                 difference: '0.5',
                 created: '1424093618',
                 last_checked: '1511253466',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=3445881',
+                citation_url: 'https://queensland.altmetric.com/details/3445881',
                 rek_pid: 'UQ:242578',
                 rek_date: '2011-05-01 00:00:00',
                 title:
@@ -30,7 +30,7 @@ const trendingPubsPayload = [
                 difference: '3.85',
                 created: '1502853372',
                 last_checked: '1510823330',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=23460021',
+                citation_url: 'https://queensland.altmetric.com/details/23460021',
                 rek_pid: 'UQ:678947',
                 rek_date: '2017-08-03 00:00:00',
                 title:
@@ -44,12 +44,12 @@ const trendingPubsPayload = [
                 difference: '0.25',
                 created: '1372746648',
                 last_checked: '1507654457',
-                citation_url: 'http://www.altmetric.com/details.php?citation_id=888611',
+                citation_url: 'https://queensland.altmetric.com/details/888611',
                 rek_pid: 'UQ:282686',
                 rek_date: '2012-08-01 00:00:00',
                 title:
-                    'BRCA1 R1699Q variant displaying ambiguous functional abrogation confers ' +
-                    'intermediate breast and ovarian cancer risk',
+                    'BRCA1 R1699Q variant displaying ambiguous functional abrogation ' +
+                    'confers intermediate breast and ovarian cancer risk',
                 authors: '...Feng, Bingjian;Healey, Sue;Brown, Melissa A....',
             },
         ],
@@ -81,8 +81,8 @@ const trendingPubsPayload = [
                 rek_pid: 'UQ:348436',
                 rek_date: '2015-01-08 00:00:00',
                 title:
-                    'Fine-scale mapping of the 5q11.2 breast cancer locus reveals at least three ' +
-                    'independent risk variants regulating MAP3K1',
+                    'Fine-scale mapping of the 5q11.2 breast cancer locus reveals at least three independent ' +
+                    'risk variants regulating MAP3K1',
                 authors: '...Ahmed, Shahana;Healey, Catherine S.;Brown, Melissa A....',
             },
             {
@@ -114,8 +114,8 @@ const trendingPubsPayload = [
                 rek_pid: 'UQ:384236',
                 rek_date: '2016-04-04 00:00:00',
                 title:
-                    'MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates ' +
-                    'epithelial and stromal cell compartments of the mouse mammary gland',
+                    'MicroRNA-206 is differentially expressed in Brca1-deficient mice and regulates epithelial' +
+                    ' and stromal cell compartments of the mouse mammary gland',
                 authors: '...Edwards, S. L.;French, J. D.;Brown, M. A.',
             },
             {
@@ -129,9 +129,9 @@ const trendingPubsPayload = [
                 rek_pid: 'UQ:328887',
                 rek_date: '2013-01-01 00:00:00',
                 title:
-                    'Consequences of germline variation disrupting the constitutional translational ' +
-                    'initiation codon start sites of MLH1 and BRCA2: Use of potential alternative start ' +
-                    'sites and implications for predicting variant pathogenicity',
+                    'Consequences of germline variation disrupting the constitutional translational initiation' +
+                    ' codon start sites of MLH1 and BRCA2: Use of potential alternative start sites and ' +
+                    'implications for predicting variant pathogenicity',
                 authors: '...Hopper, John L.;Jenkins, Mark A.;Brown, Melissa A....',
             },
             {
@@ -181,7 +181,7 @@ describe('Trending publications reducer', () => {
             {
                 type: `${actions.TRENDING_PUBLICATIONS_LOADED}@scopus`,
                 payload: { data: scopusPubs },
-            }
+            },
         );
 
         expect(test.trendingPublicationsList).toEqual([

@@ -78,7 +78,7 @@ describe('FacetsFilter ', () => {
                     ranges: {},
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         const category = wrapper.find('FacetsFilterListItem#facet-category-Display-type');
@@ -544,7 +544,9 @@ describe('FacetsFilter ', () => {
         const lookupFacetsList = {};
         const wrapper = setup();
         expect(
-            wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
+            wrapper
+                .instance()
+                .getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList),
         ).toMatchSnapshot();
     });
 
@@ -563,7 +565,9 @@ describe('FacetsFilter ', () => {
 
         const wrapper = setup();
         expect(
-            wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
+            wrapper
+                .instance()
+                .getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList),
         ).toMatchSnapshot();
     });
 
@@ -573,7 +577,9 @@ describe('FacetsFilter ', () => {
         const lookupFacetsList = {};
         const wrapper = setup();
         expect(
-            wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
+            wrapper
+                .instance()
+                .getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList),
         ).toMatchSnapshot();
     });
 
@@ -583,7 +589,9 @@ describe('FacetsFilter ', () => {
         const lookupFacetsList = {};
         const wrapper = setup();
         expect(
-            wrapper.instance().getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList)
+            wrapper
+                .instance()
+                .getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList),
         ).toMatchSnapshot();
     });
 
@@ -623,7 +631,7 @@ describe('FacetsFilter ', () => {
                 },
             });
             expect(toJson(wrapper.instance().getNestedListItems(facetsCategory))).toMatchSnapshot();
-        }
+        },
     );
 
     it('_handleResetClick returns empty state for activeFacets', () => {

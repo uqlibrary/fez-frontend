@@ -45,12 +45,12 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('renders loading component while loading publication data', () => {
-        const wrapper = setup({ loadingPossiblePublicationsList: true });
+        const wrapper = setup({ loadingPossiblePublicationsList: true, loadingPossibleCounts: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders loading screen while loading publication counts', () => {
-        const wrapper = setup({ loadingPossibleCounts: true });
+        const wrapper = setup({ loadingPossibleCounts: true, loadingPossiblePublicationsList: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -303,7 +303,7 @@ describe('Component PossiblyMyRecords', () => {
                 message: msg => 'Alert: ' + msg,
             },
             true,
-            'test message'
+            'test message',
         );
         expect(test2).toMatchSnapshot();
     });

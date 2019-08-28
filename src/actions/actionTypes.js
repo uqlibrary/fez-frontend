@@ -1,5 +1,5 @@
-export const getActionSuffix = (action) => (action.substring(action.indexOf('@') + 1, action.length));
-export const getAction = (action) => (action.substring(0, action.indexOf('@') + 1));
+export const getActionSuffix = action => action.substring(action.indexOf('@') + 1, action.length);
+export const getAction = action => action.substring(0, action.indexOf('@') + 1);
 
 // Academic stats
 export const AUTHOR_PUBLICATIONS_STATS_LOADING = 'AUTHOR_PUBLICATIONS_STATS_LOADING';
@@ -118,7 +118,6 @@ export const SEARCH_COMMUNITIES_FAILED = 'SEARCH_COMMUNITIES_FAILED';
 export const CREATE_COMMUNITY_SAVING = 'CREATE_COMMUNITY_SAVING';
 export const CREATE_COMMUNITY_FAILED = 'CREATE_COMMUNITY_FAILED';
 export const CREATE_COMMUNITY_SUCCESS = 'CREATE_COMMUNITY_SUCCESS';
-
 
 // View records
 export const VIEW_RECORD_CLEAR = 'VIEW_RECORD_CLEAR';

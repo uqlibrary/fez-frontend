@@ -39,7 +39,7 @@ describe('RichEditor', () => {
                 title: 'This is test title',
                 description: 'This is test description',
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -53,7 +53,7 @@ describe('RichEditor', () => {
                     error: 'This field is required',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -68,7 +68,7 @@ describe('RichEditor', () => {
                     error: 'This field is required',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -78,7 +78,7 @@ describe('RichEditor', () => {
             {
                 maxValue: 10,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper.find('RichEditor WithStyles(Typography) Typography span'))).toMatchSnapshot();
     });
@@ -93,7 +93,7 @@ describe('RichEditor', () => {
                     error: 'This field is required',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -112,7 +112,7 @@ describe('RichEditor', () => {
                     ),
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -127,7 +127,7 @@ describe('RichEditor', () => {
                     error: <span>This field is required</span>,
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

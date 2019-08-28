@@ -64,7 +64,7 @@ describe('PublicationCitation ', () => {
                 {
                     primary: true,
                 },
-            ])
+            ]),
         ).toMatchSnapshot();
     });
 
@@ -89,10 +89,34 @@ describe('PublicationCitation ', () => {
         });
 
         wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
-            expect(button.getElement().props.children).toBe(customActions[index].label);
+            expect(button.getElement().props.children).toEqual([customActions[index].label, false]);
             button.getElement().props.onClick();
             expect(customActions[index].handleAction).toBeCalled();
         });
+    });
+
+    it('should render button disabled with spinners on action buttons while loading', () => {
+        const customActions = [
+            {
+                label: 'Claim now',
+                primary: true,
+                handleAction: jest.fn(),
+            },
+            {
+                label: 'Not mine',
+                handleAction: jest.fn(),
+            },
+            {
+                label: 'View stats',
+                handleAction: jest.fn(),
+            },
+        ];
+        const wrapper = setup({
+            showDefaultActions: false,
+            customActions: customActions,
+            publicationsLoading: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with publication from multiple sources', () => {
@@ -113,7 +137,10 @@ describe('PublicationCitation ', () => {
         });
         const test = jest.spyOn(wrapper.instance(), '_handleDefaultActions');
         wrapper.find('WithStyles(Button).publicationAction').forEach((button, index) => {
-            expect(button.getElement().props.children).toBe(wrapper.instance().defaultActions[index].label);
+            expect(button.getElement().props.children).toEqual(
+                // wrapper.instance().defaultActions[index].label
+                [wrapper.instance().defaultActions[index].label, false],
+            );
 
             const actionKey = wrapper.instance().defaultActions[index].key;
             button.getElement().props.onClick();

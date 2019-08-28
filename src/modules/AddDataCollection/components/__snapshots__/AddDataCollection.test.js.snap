@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AddDataCollection test should get save confirmation locale correctly 1`] = `
-<StandardPage>
+<StandardPage
+  title="Add data collection"
+>
   <form>
     <ConfirmDialogBox
       hideCancelButton={false}
@@ -43,6 +45,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       onRef={[Function]}
     />
     <WithStyles(Grid)
+      className="DataCollection"
       container={true}
       spacing={24}
     >
@@ -330,6 +333,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
+        className="Creators"
         item={true}
         xs={12}
       >
@@ -352,14 +356,15 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -387,7 +392,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -454,16 +460,16 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
                   >
                     Creative Commons Licenses
                   </a>
-                   
+
                   and
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -922,6 +928,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                hasError=""
+                id="rek_start_date"
                 name="fez_record_search_key_start_date.rek_start_date"
                 validate={
                   Array [
@@ -950,6 +958,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                hasError=""
+                id="rek_end_date"
                 name="fez_record_search_key_end_date.rek_end_date"
                 validate={
                   Array [
@@ -1209,7 +1219,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
 `;
 
 exports[`AddDataCollection test should render data set form 1`] = `
-<StandardPage>
+<StandardPage
+  title="Add data collection"
+>
   <form>
     <ConfirmDialogBox
       hideCancelButton={false}
@@ -1245,6 +1257,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
       onRef={[Function]}
     />
     <WithStyles(Grid)
+      className="DataCollection"
       container={true}
       spacing={24}
     >
@@ -1532,6 +1545,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
         </StandardCard>
       </WithStyles(Grid)>
       <WithStyles(Grid)
+        className="Creators"
         item={true}
         xs={12}
       >
@@ -1554,14 +1568,15 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 1 of 2
                       </span>
-                       - Please 
+
+                      - Please
                       <b>
                         add to a list of creators below
                       </b>
                       , in the format and order that they are published.
                     </div>,
                     "descriptionStep1NoStep2": <div>
-                      Please 
+                      Please
                       <b>
                         add to a list of creators below
                       </b>
@@ -1589,7 +1604,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                       >
                         Step 2 of 2
                       </span>
-                       - Please 
+
+                      - Please
                       <b>
                         select your name
                       </b>
@@ -1656,16 +1672,16 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 </h3>
                 <p>
                   View
-                   
+
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
                   >
                     Creative Commons Licenses
                   </a>
-                   
+
                   and
-                   
+
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                     target="_blank"
@@ -2124,6 +2140,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                hasError=""
+                id="rek_start_date"
                 name="fez_record_search_key_start_date.rek_start_date"
                 validate={
                   Array [
@@ -2152,6 +2170,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 component={[Function]}
                 disableFuture={true}
                 disabled={false}
+                hasError=""
+                id="rek_end_date"
                 name="fez_record_search_key_end_date.rek_end_date"
                 validate={
                   Array [

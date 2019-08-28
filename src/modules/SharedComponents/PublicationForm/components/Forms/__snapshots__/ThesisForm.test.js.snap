@@ -25,10 +25,10 @@ exports[`ThesisForm  should render component 1`] = `
             component={[Function]}
             disabled={false}
             fullWidth={true}
+            label="Title"
             multiline={true}
             name="rek_title"
             placeholder="Thesis title"
-            placeholderlabel="Title"
             required={true}
             rows={1}
             type="text"
@@ -536,7 +536,8 @@ exports[`ThesisForm  should render component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of supervisors below
                   </b>
@@ -571,7 +572,8 @@ exports[`ThesisForm  should render component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>

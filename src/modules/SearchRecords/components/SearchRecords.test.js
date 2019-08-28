@@ -93,10 +93,8 @@ describe('SearchRecords page', () => {
         expect(testFn).not.toBeCalled();
     });
 
-    it(
-        'should show available filters or selected filters if publicationsListFacets ' +
-            'returned (even if there are no results)',
-        () => {
+    describe('should show available filters or selected filters if', () => {
+        it('publicationsListFacets returned (even if there are no results)', () => {
             const wrapper = setup({
                 publicationsListFacets: {
                     'Some facet': 1,
@@ -109,36 +107,32 @@ describe('SearchRecords page', () => {
             });
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
-    );
+        });
 
-    it(
-        'should show available filters or selected filters if publicationsListFacets ' +
-            'returned (even if there are no results) and should exclude facets from advanced search field',
-        () => {
-            const wrapper = setup({
-                publicationsListFacets: {
-                    'Some facet': 1,
-                    'Another facet': 2,
-                },
-                searchQuery: {
-                    title: 'this is test',
-                },
-                publicationsList: [],
-            });
+        it(
+            'publicationsListFacets returned (even if there are no results) and ' +
+                'should exclude facets from advanced search field',
+            () => {
+                const wrapper = setup({
+                    publicationsListFacets: {
+                        'Some facet': 1,
+                        'Another facet': 2,
+                    },
+                    searchQuery: {
+                        title: 'this is test',
+                    },
+                    publicationsList: [],
+                });
 
-            wrapper.setState({
-                advancedSearchFields: ['Author'],
-            });
+                wrapper.setState({
+                    advancedSearchFields: ['Author'],
+                });
 
-            expect(toJson(wrapper)).toMatchSnapshot();
-        }
-    );
+                expect(toJson(wrapper)).toMatchSnapshot();
+            },
+        );
 
-    it(
-        'should show available filters or selected filters if activeFacets OA selected ' +
-            '(even if there are no results)',
-        () => {
+        it('activeFacets OA selected (even if there are no results)', () => {
             const wrapper = setup({
                 searchQuery: {
                     title: 'this is test',
@@ -150,13 +144,9 @@ describe('SearchRecords page', () => {
             });
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
-    );
+        });
 
-    it(
-        'should show available filters or selected filters if activeFacets filter selected ' +
-            '(even if there are no results)',
-        () => {
+        it('activeFacets filter selected (even if there are no results)', () => {
             const wrapper = setup({
                 searchQuery: {
                     title: 'this is test',
@@ -170,13 +160,9 @@ describe('SearchRecords page', () => {
             });
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
-    );
+        });
 
-    it(
-        'should show available filters or selected filters if activeFacets range selected ' +
-            '(even if there are no results)',
-        () => {
+        it('activeFacets range selected (even if there are no results)', () => {
             const wrapper = setup({
                 searchQuery: {
                     title: 'this is test',
@@ -193,8 +179,8 @@ describe('SearchRecords page', () => {
             });
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
-    );
+        });
+    });
 
     it('should get publications when user clicks back and state is set', () => {
         const testAction = jest.fn();
@@ -340,7 +326,7 @@ describe('SearchRecords page', () => {
         const result = wrapper
             .instance()
             .parseSearchQueryStringFromUrl(
-                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata'
+                'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&searchQueryParams%5Btitle%5D=sometestdata',
             );
 
         expect(result).toEqual({
@@ -373,9 +359,9 @@ describe('SearchRecords page', () => {
             const result = wrapper
                 .instance()
                 .parseSearchQueryStringFromUrl(
-                    'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters' +
-                        '%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&' +
-                        'searchQueryParams%5Btitle%5D=some+test+data'
+                    'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
+                        'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5B' +
+                        'title%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -394,7 +380,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
     it(
@@ -406,9 +392,9 @@ describe('SearchRecords page', () => {
             const result = wrapper
                 .instance()
                 .parseSearchQueryStringFromUrl(
-                    'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters' +
-                        '%5D%5BDisplay+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&' +
-                        'searchQueryParams%5Btitle%5D=some+test+data'
+                    'page=2&pageSize=50&sortBy=published_date&sortDirection=Desc&activeFacets%5Bfilters%5D%5B' +
+                        'Display+type%5D=130&activeFacets%5BshowOpenAccessOnly%5D=true&searchQueryParams%5B' +
+                        'title%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -427,7 +413,7 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: true,
                 },
             });
-        }
+        },
     );
 
     it('should correctly parse search query string from location search (published year)', () => {
@@ -438,8 +424,8 @@ describe('SearchRecords page', () => {
             .parseSearchQueryStringFromUrl(
                 'page=1&pageSize=20&sortBy=published_date&sortDirection=Desc&activeFacets%5B' +
                     'ranges%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5B' +
-                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false' +
-                    '&searchQueryParams%5Btitle%5D=some+test+data'
+                    'Year+published%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&' +
+                    'searchQueryParams%5Btitle%5D=some+test+data',
             );
 
         expect(result).toEqual({
@@ -472,10 +458,9 @@ describe('SearchRecords page', () => {
             const result = wrapper
                 .instance()
                 .parseSearchQueryStringFromUrl(
-                    'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges' +
-                        '%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published' +
-                        '%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5' +
-                        'Btitle%5D=some+test+data'
+                    'page=1&pageSize=2000&sortBy=published_date&sortDirection=Desc&activeFacets%5Branges%5D%5B' +
+                        'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -497,22 +482,21 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
     it(
         'should correctly parse search query string from location search and ' +
             'reset sortDirection if not in valid values (Desc, Asc)',
         () => {
-            const wrapper = setup();
+            const wrapper = setup({});
 
             const result = wrapper
                 .instance()
                 .parseSearchQueryStringFromUrl(
                     'page=1&pageSize=20&sortBy=published_date&sortDirection=esc&activeFacets%5Branges%5D%5B' +
-                        'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto' +
-                        '%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle' +
-                        '%5D=some+test+data'
+                        'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                        '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
                 );
 
             expect(result).toEqual({
@@ -534,45 +518,40 @@ describe('SearchRecords page', () => {
                     showOpenAccessOnly: false,
                 },
             });
-        }
+        },
     );
 
-    it(
-        'should correctly parse search query string from location search and ' +
-            'reset sortBy if not in the valid values',
-        () => {
-            const wrapper = setup();
+    it('should correctly parse search query string from location search & reset sortBy if not in valid values', () => {
+        const wrapper = setup({});
 
-            const result = wrapper
-                .instance()
-                .parseSearchQueryStringFromUrl(
-                    'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges' +
-                        '%5D%5BYear+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published' +
-                        '%5D%5Bto%5D=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams' +
-                        '%5Btitle%5D=some+test+data'
-                );
+        const result = wrapper
+            .instance()
+            .parseSearchQueryStringFromUrl(
+                'page=1&pageSize=100&sortBy=published_date&sortDirection=Asc&activeFacets%5Branges%5D%5B' +
+                    'Year+published%5D%5Bfrom%5D=2008&activeFacets%5Branges%5D%5BYear+published%5D%5Bto%5D' +
+                    '=2023&activeFacets%5BshowOpenAccessOnly%5D=false&searchQueryParams%5Btitle%5D=some+test+data',
+            );
 
-            expect(result).toEqual({
-                page: '1',
-                pageSize: 100,
-                sortBy: 'published_date',
-                sortDirection: 'Asc',
-                searchQueryParams: {
-                    title: 'some test data',
-                },
-                activeFacets: {
-                    filters: {},
-                    ranges: {
-                        'Year published': {
-                            from: '2008',
-                            to: '2023',
-                        },
+        expect(result).toEqual({
+            page: '1',
+            pageSize: 100,
+            sortBy: 'published_date',
+            sortDirection: 'Asc',
+            searchQueryParams: {
+                title: 'some test data',
+            },
+            activeFacets: {
+                filters: {},
+                ranges: {
+                    'Year published': {
+                        from: '2008',
+                        to: '2023',
                     },
-                    showOpenAccessOnly: false,
                 },
-            });
-        }
-    );
+                showOpenAccessOnly: false,
+            },
+        });
+    });
 
     it('renders loading screen while export publications loading', () => {
         const wrapper = setup({ exportPublicationsLoading: true });
@@ -644,7 +623,7 @@ describe('SearchRecords page', () => {
             test: {},
         });
         expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
         );
 
         // handle fieldType.map being falsy
@@ -654,7 +633,7 @@ describe('SearchRecords page', () => {
             },
         });
         expect(wrapper.instance().state.advancedSearchFields.length).toBe(
-            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length
+            locale.pages.searchRecords.facetsFilter.excludeFacetsList.length,
         );
     });
 

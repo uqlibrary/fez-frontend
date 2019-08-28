@@ -10,8 +10,9 @@ import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
 import Chip from '@material-ui/core/Chip';
+import { throttle } from 'throttle-debounce';
 
-export const styles = (theme) => ({
+export const styles = theme => ({
     root: {
         flexGrow: 1,
     },
@@ -72,7 +73,7 @@ export class AutoCompleteAsyncField extends Component {
                     .split(' ')
                     .join('|')
                     .replace(/[()]/g, '')})`,
-                'gi'
+                'gi',
             );
             return regex.test(anyKey);
         },
@@ -98,9 +99,10 @@ export class AutoCompleteAsyncField extends Component {
                     ...items,
                     [item.id]: item,
                 }),
-                {}
+                {},
             ),
         };
+        this.throttledLoadSuggestions = throttle(1000, this.props.loadSuggestions);
     }
 
     componentDidMount() {
@@ -117,14 +119,14 @@ export class AutoCompleteAsyncField extends Component {
                         ...items,
                         [item.id]: item,
                     }),
-                    {}
+                    {},
                 ),
             });
         }
     }
-    getSuggestions = (event) => {
+    getSuggestions = event => {
         if (this.props.async && this.props.loadSuggestions) {
-            this.props.loadSuggestions(this.props.category, event.target.value);
+            this.throttledLoadSuggestions(this.props.category, event.target.value);
         }
     };
 
@@ -132,7 +134,7 @@ export class AutoCompleteAsyncField extends Component {
         return (
             <TextField
                 InputProps={{
-                    inputRef: (node) => {
+                    inputRef: node => {
                         this.textInputRef = node;
                         if (!!this.textInputRef && this.props.openOnFocus) {
                             this.textInputRef.addEventListener('focus', openMenu);
@@ -148,7 +150,7 @@ export class AutoCompleteAsyncField extends Component {
         );
     };
 
-    renderMenuItemComponent = (suggestion) => <this.props.MenuItemComponent suggestion={suggestion} />;
+    renderMenuItemComponent = suggestion => <this.props.MenuItemComponent suggestion={suggestion} />;
 
     renderSuggestion = ({ suggestion, index, itemProps, highlightedIndex, selectedItem }) => {
         const isHighlighted = highlightedIndex === index;
@@ -205,16 +207,16 @@ export class AutoCompleteAsyncField extends Component {
             }
             : () => {};
 
-    handleDelete = (item) => () => {
+    handleDelete = item => () => {
         this.setState(
-            (state) => ({
+            state => ({
                 selectedItem: Object.entries(state.selectedItem)
                     .filter(([key]) => key !== item.id)
                     .reduce((selectedItem, [key, value]) => ({ ...selectedItem, [key]: value }), {}),
             }),
             () => {
                 this.props.onDelete(Object.values(this.state.selectedItem));
-            }
+            },
         );
     };
 
@@ -281,7 +283,7 @@ export class AutoCompleteAsyncField extends Component {
                                                                     className={classes.chip}
                                                                     onDelete={this.handleDelete(item, index)}
                                                                 />
-                                                            )
+                                                            ),
                                                         ),
                                                     }
                                                     : {}),
@@ -303,11 +305,6 @@ export class AutoCompleteAsyncField extends Component {
                                         </Grid>
                                     )}
                                 </Grid>
-                                {itemsListLoading && (
-                                    <Grid item xs={'auto'}>
-                                        <CircularProgress size={16} color="primary" />
-                                    </Grid>
-                                )}
                                 {isOpen && itemsList.length > 0 ? (
                                     <div {...getMenuProps()}>
                                         <Popper
@@ -325,13 +322,13 @@ export class AutoCompleteAsyncField extends Component {
                                                 }}
                                             >
                                                 {itemsList
-                                                    .filter((suggestion) =>
+                                                    .filter(suggestion =>
                                                         this.props.filter(
                                                             inputValue,
                                                             isNaN(inputValue)
                                                                 ? suggestion.value
-                                                                : suggestion.id || suggestion.value.toString()
-                                                        )
+                                                                : suggestion.id || suggestion.value.toString(),
+                                                        ),
                                                     )
                                                     .slice(0, maxResults)
                                                     .map((suggestion, index) => {

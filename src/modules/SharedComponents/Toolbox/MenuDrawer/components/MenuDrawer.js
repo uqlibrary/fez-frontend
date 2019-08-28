@@ -49,8 +49,8 @@ const styles = theme => {
             left: '-2000px',
             outline: 'none',
             background:
-                'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,' +
-                'rgba(255,255,255,0.75) 78%,rgba(255,255,255,0) 100%)',
+                'linear-gradient(to bottom, rgba(255,255,255,0.75) 0%,rgba(255,255,255,0.75) 78%,' +
+                'rgba(255,255,255,0) 100%)',
             filter:
                 'progid:DXImageTransform.Microsoft.gradient( startColorstr="#bfffffff", ' +
                 'endColorstr="#00ffffff",GradientType=0 )',
@@ -166,7 +166,7 @@ export class MenuDrawer extends Component {
                         />
                     </ListItem>
                 </span>
-            )
+            ),
         );
 
     render() {
@@ -184,6 +184,7 @@ export class MenuDrawer extends Component {
                     paper: classes.paper,
                     paperAnchorDockedLeft: classes.paperAnchorDockedLeft,
                 }}
+                id="menudrawer"
                 variant={docked ? 'permanent' : 'temporary'}
                 open={drawerOpen}
                 anchor="left"

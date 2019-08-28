@@ -230,7 +230,7 @@ export const SEARCH_INTERNAL_RECORDS_API = (query, route = 'search') => {
             !!searchQueryParams &&
             Object.keys(searchQueryParams).reduce(
                 (result, key) => formatSearchQueryParams({ result, key, searchQueryParams }),
-                {}
+                {},
             )) ||
         searchQueryParams;
 

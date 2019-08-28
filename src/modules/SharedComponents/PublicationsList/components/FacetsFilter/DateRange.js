@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
@@ -21,7 +20,8 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         defaultValue={from}
                         onChange={setFrom}
                         disabled={disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
@@ -32,15 +32,17 @@ export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, 
                         defaultValue={to}
                         onChange={setTo}
                         disabled={disabled}
-                        fullWidth/>
+                        fullWidth
+                    />
                 </Grid>
                 <Grid item>
                     <Button
                         variant="text"
                         children={locale.rangeSubmitButtonLabel}
                         onClick={setDateRange}
-                        disabled={disabled || (!isNaN(to - from) && (to - from) < 0)}
-                        fullWidth/>
+                        disabled={disabled || (!isNaN(to - from) && to - from < 0)}
+                        fullWidth
+                    />
                 </Grid>
             </Grid>
         </div>
@@ -61,7 +63,7 @@ export const DateRange = ({ disabled, value, open, locale, onChange, onToggle, i
     const [active, setActive] = useState(isActive);
     const [range, setRange] = useState(value);
 
-    const handleChange = (event) => {
+    const handleChange = event => {
         const { name, value } = event.target;
         const intValue = parseInt(value, 10);
         setRange({
@@ -97,24 +99,24 @@ export const DateRange = ({ disabled, value, open, locale, onChange, onToggle, i
             onToggle={onToggle}
             open={open}
         >
-            {
-                !active
-                    ? <DateRangeForm
-                        from={range.from}
-                        to={range.to}
-                        setFrom={handleChange}
-                        setTo={handleChange}
-                        setDateRange={setDateRange}
-                        locale={locale}
-                        disabled={disabled}
-                    />
-                    : <FacetFilterNestedListItem
-                        onFacetClick={removeDateRange}
-                        isActive={active}
-                        primaryText={`${range.from || '*'} - ${range.to || '*'}`}
-                        disabled={disabled}
-                    />
-            }
+            {!active ? (
+                <DateRangeForm
+                    from={range.from}
+                    to={range.to}
+                    setFrom={handleChange}
+                    setTo={handleChange}
+                    setDateRange={setDateRange}
+                    locale={locale}
+                    disabled={disabled}
+                />
+            ) : (
+                <FacetFilterNestedListItem
+                    onFacetClick={removeDateRange}
+                    isActive={active}
+                    primaryText={`${range.from || '*'} - ${range.to || '*'}`}
+                    disabled={disabled}
+                />
+            )}
         </FacetFilterListItem>
     );
 };
@@ -131,8 +133,8 @@ DateRange.propTypes = {
 
 DateRange.defaultProps = {
     value: {
-        from: (new Date()).getFullYear() - 10,
-        to: (new Date()).getFullYear() + 5,
+        from: new Date().getFullYear() - 10,
+        to: new Date().getFullYear() + 5,
     },
     locale: {
         fromFieldLabel: 'From',

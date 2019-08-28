@@ -2338,7 +2338,6 @@ exports[`RichEditor should render error as one child 1`] = `
                   18
                    characters of 
                   10
-                   
                   test instructions
                 </span>
               </Typography>
@@ -4093,7 +4092,6 @@ exports[`RichEditor should render error as react children 1`] = `
                   18
                    characters of 
                   10
-                   
                   test instructions
                 </span>
               </Typography>
@@ -5830,7 +5828,6 @@ exports[`RichEditor should render error showing input length 1`] = `
                   18
                    characters of 
                   10
-                   
                   test instructions
                 </span>
               </Typography>
@@ -7534,7 +7531,6 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
                   0
                    characters of 
                   10
-                   
                   test instructions
                 </span>
               </Typography>
@@ -11369,6 +11365,5 @@ exports[`RichEditor should render maxValue with missing instructions 1`] = `
   0
    characters of 
   10
-   
 </span>
 `;

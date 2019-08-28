@@ -30,7 +30,7 @@ function mapDispatchToProps(dispatch) {
 
 const CommunitiesList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function CommunitiesSelectField(fieldProps) {

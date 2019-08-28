@@ -1,10 +1,10 @@
 // TODO: can load user preferences from cookies or local storage
 // export const APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADING =
-// 'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADING';
+//     'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADING';
 // export const APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADED =
-// 'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADED';
+//     'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_LOADED';
 // export const APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE =
-// 'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE';
+//     'APP_DASHBOARD_POSSIBLY_YOUR_PUBLICATIONS_LURE_HIDE';
 
 import * as actions from './actionTypes';
 
@@ -34,7 +34,7 @@ export function dismissAppAlert() {
  * @param {string} redirectPath
  */
 export function setRedirectPath(redirectPath) {
-    return dispatch => {
+    return (dispatch) => {
         dispatch({
             type: actions.SET_REDIRECT_PATH,
             payload: redirectPath,
@@ -46,7 +46,7 @@ export function setRedirectPath(redirectPath) {
  * Clears redirect path
  */
 export function clearRedirectPath() {
-    return dispatch => {
+    return (dispatch) => {
         dispatch({
             type: actions.CLEAR_REDIRECT_PATH,
         });

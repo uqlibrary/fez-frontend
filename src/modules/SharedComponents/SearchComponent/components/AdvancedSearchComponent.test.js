@@ -180,26 +180,27 @@ describe('AdvancedSearchComponent', () => {
     });
 
     it(
-        'haveAllAdvancedSearchFieldsValidated should return false for ' +
-            'a fieldRow which is longer than the max length',
+        'haveAllAdvancedSearchFieldsValidated should return false ' +
+            'for a fieldRow which is longer than the max length',
         () => {
             const thisProps = {
                 fieldRows: [
                     {
                         searchField: 'rek_title',
                         value:
-                            'OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65sg' +
-                            'JrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGmXWS3' +
-                            '6ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNmjdonoC' +
-                            '3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3RXkDm67F' +
-                            'yYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1aKcsWGxPPIS' +
-                            '4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplncul8TOLV8J',
+                            'OuuCJZb8JA35CrCl1wjx5WzgN2eAMBGryy72EGw7hB98P5P1SRwBDlHz2c1sej4YMIuzwPi3ewpAPiUp65' +
+                            'sgJrL0BIVhr3S1ESxLpPfDlzgMSosPIT5Eq3WytsehVd8T8n5hy4akLPYQ1HTWYbSzvifjw79rbuMdvLGm' +
+                            'XWS36ljaluN6v3sg8gtwUi5owNsuEIPiaOquVkV1k8nqdDx1npntW9fTX0B84UvnzemXIWySCoeiIsZVNm' +
+                            'jdonoC3SYT2dDIddraqgShz256k1ZC56P9M6Zgs9FpmeFUHwEuXHBxcWLmxGfsxpJhNuFNKnELD2rhWYq3' +
+                            'RXkDm67FyYwDX9V8IpMBNfAZi8Bb57VFvFbuGqQo56D99mkTA7SfRoVcbd3mMkSDQdowH8Bpni2EFPdC1a' +
+                            'KcsWGxPPIS4Cr93PVFJFp9X2zSvXGDQ0WRLzINYFUahICxwIkclTK4uc9N3c3Czmy06mchh8aMlHDaplnc' +
+                            'ul8TOLV8J',
                     },
                 ],
             };
             const wrapper = setup({ ...thisProps });
             expect(wrapper.instance().haveAllAdvancedSearchFieldsValidated(thisProps.fieldRows)).toBeFalsy();
-        }
+        },
     );
 
     it('haveAllAdvancedSearchFieldsValidated should allow all field to be empty and empty field', () => {

@@ -1,7 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ListRow renders  a row with index and item and delete button 1`] = `
-<Fragment>
+<div
+  className="ListRow-Form ListRow-Form-one"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -53,6 +61,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       >
         <WithStyles(IconButton)
           disabled={false}
+          id="delete-0"
           onClick={[Function]}
         >
           <pure(DeleteIcon) />
@@ -60,11 +69,19 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRow renders  a row with index and item set, renders reorder buttons, and delete button 1`] = `
-<Fragment>
+<div
+  className="ListRow-Form ListRow-Form-one"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -145,6 +162,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       >
         <WithStyles(IconButton)
           disabled={false}
+          id="delete-0"
           onClick={[Function]}
         >
           <pure(DeleteIcon) />
@@ -152,11 +170,19 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRow renders  should delete row on confirmation 1`] = `
-<Fragment>
+<div
+  className="ListRow-Form ListRow-Form-one"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -196,6 +222,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
       >
         <WithStyles(IconButton)
           disabled={false}
+          id="delete-0"
           onClick={[Function]}
         >
           <pure(DeleteIcon) />
@@ -203,11 +230,19 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRow renders  should move row down 1`] = `
-<Fragment>
+<div
+  className="ListRow-Form ListRow-Form-one"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -274,6 +309,7 @@ exports[`ListRow renders  should move row down 1`] = `
       >
         <WithStyles(IconButton)
           disabled={false}
+          id="delete-0"
           onClick={[Function]}
         >
           <pure(DeleteIcon) />
@@ -281,11 +317,19 @@ exports[`ListRow renders  should move row down 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRow renders  should move row up 1`] = `
-<Fragment>
+<div
+  className="ListRow-Form ListRow-Form-one"
+  style={
+    Object {
+      "flexGrow": 1,
+      "padding": 8,
+    }
+  }
+>
   <ConfirmDialogBox
     hideCancelButton={false}
     locale={
@@ -352,6 +396,7 @@ exports[`ListRow renders  should move row up 1`] = `
       >
         <WithStyles(IconButton)
           disabled={false}
+          id="delete-0"
           onClick={[Function]}
         >
           <pure(DeleteIcon) />
@@ -359,7 +404,7 @@ exports[`ListRow renders  should move row up 1`] = `
       </WithStyles(Tooltip)>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-</Fragment>
+</div>
 `;
 
 exports[`ListRow renders  should render default view with styles 1`] = `
@@ -370,6 +415,7 @@ exports[`ListRow renders  should render default view with styles 1`] = `
       "row": "ListRow-row-2",
     }
   }
+  form="Form"
   index={0}
   item="one"
   itemTemplate={[Function]}

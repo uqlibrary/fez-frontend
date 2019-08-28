@@ -35,7 +35,7 @@ describe('DocumentTypeField component', () => {
             .find('WithStyles(MenuItem)')
             .map(
                 menuItem =>
-                    defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy()
+                    defaultDocTypes.indexOf(menuItem.props.value) > -1 && expect(menuItem.props.checked).toBeTruthy(),
             );
     });
 

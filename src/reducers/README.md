@@ -8,10 +8,10 @@
 - all action types are defined in src/actions/actionTypes.js
 
 ## Testing
-  
+
 Template for reducers unit tests:
 
-````javascript
+```javascript
 import * as actions from 'actions/actionTypes';
 import [REDUCER NAME]Reducer from './[REDUCER NAME]';
 import {initialState} from './[REDUCER NAME]';
@@ -33,4 +33,4 @@ describe('[REDUCER NAME] ', () => {
 
 });
 
-````
+```

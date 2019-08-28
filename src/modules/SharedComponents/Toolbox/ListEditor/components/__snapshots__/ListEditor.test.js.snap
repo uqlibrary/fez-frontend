@@ -2,7 +2,7 @@
 
 exports[`ListEditor tests should add an object item and set state 1`] = `
 <div
-  className="testClass"
+  className="testClass "
 >
   <mockConstructor
     disabled={false}
@@ -18,7 +18,7 @@ exports[`ListEditor tests should add an object item and set state 1`] = `
 
 exports[`ListEditor tests should add an object item and set state 2`] = `
 <div
-  className="testClass"
+  className="testClass "
 >
   <mockConstructor
     disabled={false}
@@ -38,6 +38,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
     canMoveDown={false}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     item={
@@ -57,7 +58,7 @@ exports[`ListEditor tests should add an object item and set state 2`] = `
 
 exports[`ListEditor tests should add item and set state 1`] = `
 <div
-  className="testClass"
+  className="testClass "
 >
   <mockConstructor
     disabled={false}
@@ -73,7 +74,7 @@ exports[`ListEditor tests should add item and set state 1`] = `
 
 exports[`ListEditor tests should add item and set state 2`] = `
 <div
-  className="testClass"
+  className="testClass "
 >
   <mockConstructor
     disabled={false}
@@ -93,6 +94,7 @@ exports[`ListEditor tests should add item and set state 2`] = `
     canMoveDown={false}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     item={
@@ -112,14 +114,18 @@ exports[`ListEditor tests should add item and set state 2`] = `
 
 exports[`ListEditor tests should call default input normaliser function 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <formComponent
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -128,14 +134,18 @@ exports[`ListEditor tests should call default input normaliser function 1`] = `
 
 exports[`ListEditor tests should move down an item 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -148,6 +158,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     item="one"
@@ -161,6 +172,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     canMoveDown={true}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={1}
     item="three"
@@ -174,6 +186,7 @@ exports[`ListEditor tests should move down an item 1`] = `
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={2}
     item="two"
@@ -188,14 +201,18 @@ exports[`ListEditor tests should move down an item 1`] = `
 
 exports[`ListEditor tests should move up an item 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -208,6 +225,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     item="two"
@@ -221,6 +239,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     canMoveDown={true}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={1}
     item="one"
@@ -234,6 +253,7 @@ exports[`ListEditor tests should move up an item 1`] = `
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={2}
     item="three"
@@ -248,14 +268,18 @@ exports[`ListEditor tests should move up an item 1`] = `
 
 exports[`ListEditor tests should process incomplete props without error 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -264,14 +288,18 @@ exports[`ListEditor tests should process incomplete props without error 1`] = `
 
 exports[`ListEditor tests should render full component as disabled 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={true}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -280,14 +308,18 @@ exports[`ListEditor tests should render full component as disabled 1`] = `
 
 exports[`ListEditor tests should render full component with a defined className 1`] = `
 <div
-  className="requiredField"
+  className="requiredField NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -296,14 +328,18 @@ exports[`ListEditor tests should render full component with a defined className 
 
 exports[`ListEditor tests should render input value as itemList 1`] = `
 <div
-  className="testClass"
+  className="testClass NoLabel"
 >
   <mockConstructor
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={Object {}}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -316,6 +352,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     canMoveDown={true}
     canMoveUp={false}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={0}
     itemTemplate={[Function]}
@@ -328,6 +365,7 @@ exports[`ListEditor tests should render input value as itemList 1`] = `
     canMoveDown={false}
     canMoveUp={true}
     disabled={false}
+    form="NoLabel"
     hideReorder={false}
     index={1}
     itemTemplate={[Function]}

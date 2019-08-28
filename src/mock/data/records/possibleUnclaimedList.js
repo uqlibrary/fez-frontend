@@ -650,7 +650,7 @@ export default {
                 "rek_issn_pid": "UQ:678742",
                 "rek_issn": "1756-5901",
                 "rek_issn_order": 1
-            }, {"rek_issn_id": null, "rek_issn_pid": "UQ:678742", "rek_issn": "1756-591X", "rek_issn_order": 2}],
+            }, { "rek_issn_id": null, "rek_issn_pid": "UQ:678742", "rek_issn": "1756-591X", "rek_issn_order": 2 }],
             "fez_record_search_key_issue_number": {
                 "rek_issue_number_id": null,
                 "rek_issue_number_pid": "UQ:678742",
@@ -3102,7 +3102,7 @@ export default {
             "fez_record_search_key_file_hasdatasets": []
         },
         {
-            "rek_pid": "UQ:795332",
+            "rek_pid": "UQ:795333",
             "rek_title_xsdmf_id": null,
             "rek_title": "Book with editors",
             "rek_description_xsdmf_id": null,
@@ -3122,7 +3122,7 @@ export default {
             "rek_updated_date_xsdmf_id": 3678,
             "rek_updated_date": "2018-02-23T04:09:16Z",
             "rek_file_downloads": 0,
-            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795332\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
+            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795333\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
             "rek_genre_xsdmf_id": 7202,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
@@ -3166,21 +3166,21 @@ export default {
             "fez_record_search_key_contributor": [
                 {
                     "rek_contributor_id": 3210317,
-                    "rek_contributor_pid": "UQ:795332",
+                    "rek_contributor_pid": "UQ:795333",
                     "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Editor One",
                     "rek_contributor_order": 1
                 },
                 {
                     "rek_contributor_id": 3210318,
-                    "rek_contributor_pid": "UQ:795332",
+                    "rek_contributor_pid": "UQ:795333",
                     "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Editor Two",
                     "rek_contributor_order": 2
                 },
                 {
                     "rek_contributor_id": 3210319,
-                    "rek_contributor_pid": "UQ:795332",
+                    "rek_contributor_pid": "UQ:795333",
                     "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Editor Three",
                     "rek_contributor_order": 3
@@ -3189,21 +3189,21 @@ export default {
             "fez_record_search_key_contributor_id": [
                 {
                     "rek_contributor_id_id": 2393317,
-                    "rek_contributor_id_pid": "UQ:795332",
+                    "rek_contributor_id_pid": "UQ:795333",
                     "rek_contributor_id_xsdmf_id": 6037,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 1
                 },
                 {
                     "rek_contributor_id_id": 2393318,
-                    "rek_contributor_id_pid": "UQ:795332",
+                    "rek_contributor_id_pid": "UQ:795333",
                     "rek_contributor_id_xsdmf_id": 6037,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 2
                 },
                 {
                     "rek_contributor_id_id": 2393319,
-                    "rek_contributor_id_pid": "UQ:795332",
+                    "rek_contributor_id_pid": "UQ:795333",
                     "rek_contributor_id_xsdmf_id": 6037,
                     "rek_contributor_id": 0,
                     "rek_contributor_id_order": 3
@@ -3229,14 +3229,14 @@ export default {
             "fez_record_search_key_grant_text": [],
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 4927331,
-                "rek_herdc_code_pid": "UQ:795332",
+                "rek_herdc_code_pid": "UQ:795333",
                 "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450005,
                 "rek_herdc_code_lookup": "AX"
             },
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3792087,
-                "rek_herdc_status_pid": "UQ:795332",
+                "rek_herdc_status_pid": "UQ:795333",
                 "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
@@ -3248,7 +3248,7 @@ export default {
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof_id": 12232577,
-                    "rek_ismemberof_pid": "UQ:795332",
+                    "rek_ismemberof_pid": "UQ:795333",
                     "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:218198",
                     "rek_ismemberof_order": 1,
@@ -3267,33 +3267,33 @@ export default {
             "fez_record_search_key_oa_notes": null,
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 531664,
-                "rek_oa_status_pid": "UQ:795332",
+                "rek_oa_status_pid": "UQ:795333",
                 "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4368190,
-                "rek_place_of_publication_pid": "UQ:795332",
+                "rek_place_of_publication_pid": "UQ:795333",
                 "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Test"
             },
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4678329,
-                "rek_publisher_pid": "UQ:795332",
+                "rek_publisher_pid": "UQ:795333",
                 "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Test"
             },
             "fez_record_search_key_pubmed_id": null,
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2721600,
-                "rek_refereed_pid": "UQ:795332",
+                "rek_refereed_pid": "UQ:795333",
                 "rek_refereed_xsdmf_id": 7940,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1468808,
-                "rek_refereed_source_pid": "UQ:795332",
+                "rek_refereed_source_pid": "UQ:795333",
                 "rek_refereed_source_xsdmf_id": 16623,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
@@ -3318,7 +3318,7 @@ export default {
             "fez_record_search_key_file_hasdatasets": []
         },
         {
-            "rek_pid": "UQ:795332",
+            "rek_pid": "UQ:795334",
             "rek_title_xsdmf_id": null,
             "rek_title": "Book with one editor",
             "rek_description_xsdmf_id": null,
@@ -3338,7 +3338,7 @@ export default {
             "rek_updated_date_xsdmf_id": 3678,
             "rek_updated_date": "2018-02-23T04:09:16Z",
             "rek_file_downloads": 0,
-            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795332\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
+            "rek_citation": "<a class=\"citation_author_name\" title=\"Browse by Author Name for Melissa Brown\" href=\"/list/author/Melissa+Brown/\">Melissa Brown</a>, <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Two\" href=\"/list/author/Author+Two/\">Author Two</a> and <a class=\"citation_author_name\" title=\"Browse by Author Name for Author Three\" href=\"/list/author/Author+Three/\">Author Three</a> <i><a class=\"citation_title\" title=\"Click to view Book: Book with authors and editors\" href=\"/view/UQ:795334\">Book with authors and editors</a></i>. Edited by <span class=\"citation_contributor\"><span class=\"citation_contributor\">Editor One</span>, <span class=\"citation_contributor\">Editor Two</span> and <span class=\"citation_contributor\">Editor Three</span></span>  <span class=\"citation_place_of_publication\">Test</span>: <span class=\"citation_publisher\">Test</span>, <span class=\"citation_date\">2018</span>.",
             "rek_genre_xsdmf_id": 7202,
             "rek_genre": "Book",
             "rek_genre_type_xsdmf_id": null,
@@ -3382,7 +3382,7 @@ export default {
             "fez_record_search_key_contributor": [
                 {
                     "rek_contributor_id": 3210317,
-                    "rek_contributor_pid": "UQ:795332",
+                    "rek_contributor_pid": "UQ:795334",
                     "rek_contributor_xsdmf_id": null,
                     "rek_contributor": "Editor One",
                     "rek_contributor_order": 1
@@ -3391,7 +3391,7 @@ export default {
             "fez_record_search_key_contributor_id": [
                 {
                     "rek_contributor_id_id": 2393317,
-                    "rek_contributor_id_pid": "UQ:795332",
+                    "rek_contributor_id_pid": "UQ:795334",
                     "rek_contributor_id_xsdmf_id": 6037,
                     "rek_contributor_id": 410,
                     "rek_contributor_id_order": 1
@@ -3417,14 +3417,14 @@ export default {
             "fez_record_search_key_grant_text": [],
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 4927331,
-                "rek_herdc_code_pid": "UQ:795332",
+                "rek_herdc_code_pid": "UQ:795334",
                 "rek_herdc_code_xsdmf_id": null,
                 "rek_herdc_code": 450005,
                 "rek_herdc_code_lookup": "AX"
             },
             "fez_record_search_key_herdc_status": {
                 "rek_herdc_status_id": 3792087,
-                "rek_herdc_status_pid": "UQ:795332",
+                "rek_herdc_status_pid": "UQ:795334",
                 "rek_herdc_status_xsdmf_id": null,
                 "rek_herdc_status": 453220,
                 "rek_herdc_status_lookup": "Provisional Code"
@@ -3436,7 +3436,7 @@ export default {
             "fez_record_search_key_ismemberof": [
                 {
                     "rek_ismemberof_id": 12232577,
-                    "rek_ismemberof_pid": "UQ:795332",
+                    "rek_ismemberof_pid": "UQ:795334",
                     "rek_ismemberof_xsdmf_id": null,
                     "rek_ismemberof": "UQ:218198",
                     "rek_ismemberof_order": 1,
@@ -3455,33 +3455,33 @@ export default {
             "fez_record_search_key_oa_notes": null,
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 531664,
-                "rek_oa_status_pid": "UQ:795332",
+                "rek_oa_status_pid": "UQ:795334",
                 "rek_oa_status_xsdmf_id": null,
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4368190,
-                "rek_place_of_publication_pid": "UQ:795332",
+                "rek_place_of_publication_pid": "UQ:795334",
                 "rek_place_of_publication_xsdmf_id": null,
                 "rek_place_of_publication": "Test"
             },
             "fez_record_search_key_publisher": {
                 "rek_publisher_id": 4678329,
-                "rek_publisher_pid": "UQ:795332",
+                "rek_publisher_pid": "UQ:795334",
                 "rek_publisher_xsdmf_id": null,
                 "rek_publisher": "Test"
             },
             "fez_record_search_key_pubmed_id": null,
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2721600,
-                "rek_refereed_pid": "UQ:795332",
+                "rek_refereed_pid": "UQ:795334",
                 "rek_refereed_xsdmf_id": 7940,
                 "rek_refereed": 0
             },
             "fez_record_search_key_refereed_source": {
                 "rek_refereed_source_id": 1468808,
-                "rek_refereed_source_pid": "UQ:795332",
+                "rek_refereed_source_pid": "UQ:795334",
                 "rek_refereed_source_xsdmf_id": 16623,
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
@@ -3516,62 +3516,62 @@ export default {
             "Display type": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": 179, "doc_count": 2}]
+                "buckets": [{ "key": 179, "doc_count": 2 }]
             },
             "Keywords": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 5,
-                "buckets": [{"key": "Applied Microbiology and Biotechnology", "doc_count": 1}, {
+                "buckets": [{ "key": "Applied Microbiology and Biotechnology", "doc_count": 1 }, {
                     "key": "Biochemistry",
                     "doc_count": 1
-                }, {"key": "Bioengineering", "doc_count": 1}, {
+                }, { "key": "Bioengineering", "doc_count": 1 }, {
                     "key": "Biomaterials",
                     "doc_count": 1
-                }, {"key": "Biomedical Engineering", "doc_count": 1}]
+                }, { "key": "Biomedical Engineering", "doc_count": 1 }]
             },
             "Scopus document type (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
                 "buckets": []
             },
-            "Subject (lookup)": {"doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": []},
+            "Subject (lookup)": { "doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": [] },
             "Collection (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "Crossref Import", "doc_count": 2}]
+                "buckets": [{ "key": "Crossref Import", "doc_count": 2 }]
             },
             "Year published": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "2017", "doc_count": 2}]
+                "buckets": [{ "key": "2017", "doc_count": 2 }]
             },
             "Author (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "Schenk, Gerhard (Gary)", "doc_count": 1}]
+                "buckets": [{ "key": "Schenk, Gerhard (Gary)", "doc_count": 1 }]
             },
-            "Subject": {"doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": []},
+            "Subject": { "doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": [] },
             "Journal name": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "Metallomics", "doc_count": 1}, {"key": "Nature biotechnology", "doc_count": 1}]
+                "buckets": [{ "key": "Metallomics", "doc_count": 1 }, { "key": "Nature biotechnology", "doc_count": 1 }]
             },
             "Collection": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "UQ:639325", "doc_count": 2}]
+                "buckets": [{ "key": "UQ:639325", "doc_count": 2 }]
             },
             "Author": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": 683, "doc_count": 1}]
+                "buckets": [{ "key": 683, "doc_count": 1 }]
             },
-            "Genre": {"doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": []},
-            "Subtype": {"doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": []},
+            "Genre": { "doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": [] },
+            "Subtype": { "doc_count_error_upper_bound": 0, "sum_other_doc_count": 0, "buckets": [] },
             "Display type (lookup)": {
                 "doc_count_error_upper_bound": 0,
                 "sum_other_doc_count": 0,
-                "buckets": [{"key": "Journal Article", "doc_count": 2}]
+                "buckets": [{ "key": "Journal Article", "doc_count": 2 }]
             }
         }
     }

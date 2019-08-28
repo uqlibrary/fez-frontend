@@ -81,10 +81,7 @@ export class NtroDetailsClass extends PureComponent {
                                     <this.ViewNtroRow
                                         key={index}
                                         heading={`${locale.viewRecord.headings.NTRO.significance}`}
-                                        subheading={`(${
-                                            publication.fez_record_search_key_author[item.rek_significance_order - 1]
-                                                .rek_author
-                                        })`}
+                                        subheading={`(${publication.fez_record_search_key_author[item.rek_significance_order - 1].rek_author})`}
                                         data={
                                             (item.rek_significance !== 0 &&
                                                 item.rek_significance !== '0' &&
@@ -119,11 +116,7 @@ export class NtroDetailsClass extends PureComponent {
                                             publication.fez_record_search_key_author[
                                                 item.rek_creator_contribution_statement_order - 1
                                             ].rek_author
-                                                ? `(${
-                                                    publication.fez_record_search_key_author[
-                                                        item.rek_creator_contribution_statement_order - 1
-                                                    ].rek_author
-                                                })`
+                                                ? `(${publication.fez_record_search_key_author[item.rek_creator_contribution_statement_order - 1].rek_author})`
                                                 : ''
                                         }
                                         data={

@@ -14,12 +14,7 @@ export const getStore = (initialState = Immutable.Map()) => {
         rootReducer,
         initialState,
         composeEnhancer(
-            applyMiddleware(
-                routerMiddleware(history),
-                thunk,
-                publicationEnhancer,
-                saveReducerOnSessionExpired
-            ),
+            applyMiddleware(routerMiddleware(history), thunk, publicationEnhancer, saveReducerOnSessionExpired),
         ),
     );
 };

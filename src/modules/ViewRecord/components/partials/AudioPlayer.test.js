@@ -6,7 +6,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
         pid: testProps.pid || journalArticle.rek_pid,
         fileName:
-			testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
+            testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: testProps.mimeType || 'audio/mp3',
     };
     return getElement(AudioPlayer, props, args);
@@ -62,7 +62,7 @@ describe('Audio Player Component ', () => {
                 fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
                 mimeType: 'audio/mp3',
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         wrapper.setState({ isPlaying: true });
         wrapper.update();

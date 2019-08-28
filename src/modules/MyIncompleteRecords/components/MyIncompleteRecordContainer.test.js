@@ -492,7 +492,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'FezACML_stradbroke_review_1.pdf.xml',
                 dsi_label: 'FezACML security for datastream - stradbroke_review_1.pdf',
                 dsi_state: 'A',
-            })
+            }),
         ).toBeFalsy();
 
         expect(
@@ -501,7 +501,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'review_1.pdf.xml',
                 dsi_label: null,
                 dsi_state: 'A',
-            })
+            }),
         ).toBeTruthy();
 
         expect(
@@ -510,7 +510,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'review_1.pdf.xml',
                 dsi_label: 'not publicly available',
                 dsi_state: 'A',
-            })
+            }),
         ).toBeTruthy();
 
         expect(
@@ -519,7 +519,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'review_1.pdf.xml',
                 dsi_label: 'corrected thesis',
                 dsi_state: 'A',
-            })
+            }),
         ).toBeFalsy();
 
         expect(
@@ -528,7 +528,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'review_1.pdf.xml',
                 dsi_label: 'ERA',
                 dsi_state: 'A',
-            })
+            }),
         ).toBeTruthy();
 
         expect(
@@ -537,7 +537,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_dsid: 'thumbnail_review_1.pdf.xml',
                 dsi_label: 'ERA',
                 dsi_state: 'A',
-            })
+            }),
         ).toBeFalsy();
     });
 });

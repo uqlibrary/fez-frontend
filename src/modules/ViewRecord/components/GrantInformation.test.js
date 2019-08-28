@@ -29,7 +29,7 @@ describe('Grant Information Component ', () => {
                 actions: {},
                 classes: {},
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -55,29 +55,30 @@ describe('Grant Information Component ', () => {
             wrapper
                 .find('.header')
                 .at(0)
-                .props().grantAgencyName
+                .props().grantAgencyName,
         ).toEqual('Grant agency');
         expect(
             wrapper
                 .find('.header')
                 .at(0)
-                .props().grantId
+                .props().grantId,
         ).toBeFalsy();
         expect(
             wrapper
                 .find('.header')
                 .at(1)
-                .props().grantAgencyName
+                .props().grantAgencyName,
         ).toEqual('Grant agency');
         expect(
             wrapper
                 .find('.header')
                 .at(1)
-                .props().grantId
+                .props().grantId,
         ).toEqual('Grant ID');
 
-        // expect(wrapper.find('.data').at(1).props().grantAgencyName)
-        // .toEqual('National Health and Medical Research Council');
+        // expect(wrapper.find('.data').at(1).props().grantAgencyName).toEqual(
+        //     'National Health and Medical Research Council'
+        // );
         // expect(wrapper.find('.data').at(1).props().grantId).toBeFalsy();
         // expect(wrapper.find('.data').at(3).props().grantAgencyName).toEqual('Cancer Council Queensland');
         // expect(wrapper.find('.data').at(3).props().grantId).toEqual('1042819');
@@ -92,7 +93,7 @@ describe('Grant Information Component ', () => {
 
     it('should not break if rek_grant_id is not in the search key', () => {
         const { fez_record_search_key_grant_id: fsrkGrantID, ...journalArticleWithoutRekGrantId } = journalArticle;
-        const fsrkwithouGrantID = fsrkGrantID.map((grantId) => {
+        const fsrkwithouGrantID = fsrkGrantID.map(grantId => {
             delete grantId.rek_grant_id;
             return grantId;
         });

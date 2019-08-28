@@ -16,7 +16,6 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             </h3>
             <p>
               For more information about the research statement, click
-               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -59,7 +58,6 @@ exports[`Component NtroFields should not show NTRO data card in the Ntro fields 
             label={
               <span>
                 Scale/Significance of work*
-                 
                 <span
                   style={
                     Object {
@@ -135,7 +133,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             </h3>
             <p>
               For more information about the research statement, click
-               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -178,7 +175,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             label={
               <span>
                 Scale/Significance of work*
-                 
                 <span
                   style={
                     Object {
@@ -232,7 +228,6 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
-                 
                 <span
                   style={
                     Object {
@@ -268,7 +263,8 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
               Quality indicators
             </h3>
             <p>
-              For more information about each quality indicator option, click 
+              For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -1066,7 +1062,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
             </h3>
             <p>
               For more information about the research statement, click
-               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -1109,7 +1104,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
             label={
               <span>
                 Scale/Significance of work*
-                 
                 <span
                   style={
                     Object {
@@ -1163,7 +1157,6 @@ exports[`Component NtroFields should render contribution statement fields as wel
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
-                 
                 <span
                   style={
                     Object {
@@ -1199,7 +1192,8 @@ exports[`Component NtroFields should render contribution statement fields as wel
               Quality indicators
             </h3>
             <p>
-              For more information about each quality indicator option, click 
+              For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -1996,7 +1990,8 @@ exports[`Component NtroFields should render default view 1`] = `
               Quality indicators
             </h3>
             <p>
-              For more information about each quality indicator option, click 
+              For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -2794,7 +2789,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             </h3>
             <p>
               For more information about the research statement, click
-               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -2837,7 +2831,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             label={
               <span>
                 Scale/Significance of work*
-                 
                 <span
                   style={
                     Object {
@@ -2891,7 +2884,6 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
             title={
               <span>
                 Creator research statement*. Include Background, Contribution and Significance
-                 
                 <span
                   style={
                     Object {
@@ -2927,7 +2919,8 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
               Quality indicators
             </h3>
             <p>
-              For more information about each quality indicator option, click 
+              For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"
@@ -3705,7 +3698,6 @@ exports[`Component NtroFields should show significance field even if contributio
             </h3>
             <p>
               For more information about the research statement, click
-               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836548"
@@ -3748,7 +3740,6 @@ exports[`Component NtroFields should show significance field even if contributio
             label={
               <span>
                 Scale/Significance of work*
-                 
                 <span
                   style={
                     Object {
@@ -3798,7 +3789,8 @@ exports[`Component NtroFields should show significance field even if contributio
               Quality indicators
             </h3>
             <p>
-              For more information about each quality indicator option, click 
+              For more information about each quality indicator option, click
+               
               <b>
                 <a
                   href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836609"

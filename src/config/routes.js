@@ -5,6 +5,7 @@ import { DEFAULT_QUERY_PARAMS } from 'config/general';
 
 const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
+export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
 const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUrl = '/records/search') => {
     const params = {
@@ -76,7 +77,7 @@ export const pathConfig = {
                                 value: author,
                             },
                         },
-                    }
+                    },
             ),
         journalName: journalName => getSearchUrl({ searchQuery: { rek_journal_name: { value: journalName } } }),
         bookTitle: bookTitle => getSearchUrl({ searchQuery: { rek_book_title: { value: bookTitle } } }),
@@ -111,7 +112,7 @@ export const pathConfig = {
             link: '/author-identifiers/orcid/link',
             absoluteLink: `${window.location.origin}${
                 process.env.BRANCH === 'development' ? window.location.pathname : ''
-            }/author-identifiers/orcid/link`,
+            }${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -144,6 +145,7 @@ const flattedPathConfig = [
     '/admin/unpublished',
     '/admin/thirdPartyTools',
     '/admin/prototype',
+    '/view',
     '/author-identifiers/orcid/link',
     '/author-identifiers/google-scholar/link',
 ];
@@ -419,6 +421,9 @@ export const getRoutesConfig = ({
         {
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
+                if (isFileUrl(childProps.location.pathname) && account) {
+                    return components.StandardPage({ ...locale.pages.permissionDeniedOrNotFound });
+                }
                 if (isValidRoute && account) return components.StandardPage({ ...locale.pages.permissionDenied });
                 if (isValidRoute) return components.StandardPage({ ...locale.pages.authenticationRequired });
                 return components.StandardPage({ ...locale.pages.notFound });
@@ -541,7 +546,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 {
                     linkTo: getSearchUrl(
                         { searchQuery: { rek_status: { value: -4 } } },
-                        pathConfig.admin.unpublished
+                        pathConfig.admin.unpublished,
                     ),
                     ...locale.menu.unpublished,
                 },

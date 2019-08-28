@@ -157,7 +157,7 @@ class SearchRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.updateHistoryAndSearch
+            this.updateHistoryAndSearch,
         );
     };
 
@@ -166,7 +166,7 @@ class SearchRecords extends PureComponent {
             {
                 page: page,
             },
-            this.updateHistoryAndSearch
+            this.updateHistoryAndSearch,
         );
     };
 
@@ -176,7 +176,7 @@ class SearchRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.updateHistoryAndSearch
+            this.updateHistoryAndSearch,
         );
     };
 
@@ -186,7 +186,7 @@ class SearchRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.updateHistoryAndSearch
+            this.updateHistoryAndSearch,
         );
     };
 

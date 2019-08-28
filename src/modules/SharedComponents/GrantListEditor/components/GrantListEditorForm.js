@@ -99,7 +99,7 @@ export class GrantListEditorFormClass extends PureComponent {
                 if (this.props.isPopulated) {
                     this.props.isPopulated(!!(this.state.grantAgencyName.trim().length > 0));
                 }
-            }
+            },
         );
     };
 
@@ -112,7 +112,7 @@ export class GrantListEditorFormClass extends PureComponent {
                 if (this.props.isPopulated) {
                     this.props.isPopulated(!!(this.state.grantId.trim().length > 0));
                 }
-            }
+            },
         );
     };
 
@@ -124,10 +124,8 @@ export class GrantListEditorFormClass extends PureComponent {
 
     render() {
         const { disabled } = this.props;
-        // const remindToAdd =
-        //     this.state.grantAgencyName.trim().length > 0 || this.state.grantId.trim().length > 0
-        //         ? this.props.locale.remindToAdd
-        //         : null;
+        // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 ||
+        // this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
         return (
             <React.Fragment>
                 {this.props.locale.description}

@@ -42,7 +42,7 @@ const getIssuesRequest = text => ({
 export const getFixIssueRequest = pipe(
     getIssueValues,
     templates.issues.fixRecord,
-    getIssuesRequest
+    getIssuesRequest,
 );
 
 /* getClaimIssueRequest - returns claim record issue request object
@@ -51,7 +51,7 @@ export const getFixIssueRequest = pipe(
 export const getClaimIssueRequest = pipe(
     getIssueValues,
     templates.issues.claimRecord,
-    getIssuesRequest
+    getIssuesRequest,
 );
 
 /* getRecordLinkSearchKey - returns link object formatted for record request
@@ -158,7 +158,7 @@ export const getDatasetCreatorRolesSearchKey = creators => {
                     rek_author_role: item.creatorRole,
                     rek_author_role_order: index + 1,
                 }) ||
-                {}
+                {},
         ),
     };
 };
@@ -204,7 +204,7 @@ export const getRecordAuthorsIdSearchKey = (authors, defaultAuthorId) => {
                           (item.hasOwnProperty('authorId') && item.authorId) ||
                           0,
                     rek_author_id_order: index + 1,
-                }
+                },
         ),
     };
 };
@@ -255,17 +255,17 @@ export const unclaimRecordAuthorsIdSearchKey = (authors, authorId) => {
                     rek_author_id_order: item.hasOwnProperty('rek_author_id_order')
                         ? item.rek_author_id_order
                         : index + 1,
-                }
+                },
         ),
     };
 };
 
 /* unclaimRecordContributorsIdSearchKey - returns contributors id object formatted for record request
  * @param {array} of objects in format {
-       nameAsPublished: "string",
-       disabled: false,
-       selected: true,
-       contributorId: 410
+ *     nameAsPublished: "string",
+ *     disabled: false,
+ *     selected: true,
+ *     contributorId: 410
  * } or
  * {
  *     rek_contributor_id_id: null,
@@ -293,7 +293,7 @@ export const unclaimRecordContributorsIdSearchKey = (contributors, contributorId
                     rek_contributor_id_order: item.hasOwnProperty('rek_contributor_id_order')
                         ? item.rek_contributor_id_order
                         : index + 1,
-                }
+                },
         ),
     };
 };
@@ -316,8 +316,8 @@ export const getRecordContributorsSearchKey = authors => {
 /* getRecordContributorsIdSearchKey - returns editors id object formatted for record request
  * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410} or
  * {rek_contributor_id: 100, rek_contributor_id_order: 1}
- * @param {number} defaultAuthorId - if of a current user in case authors is empty,
- * return contributors structure with a solo current author id
+ * @param {number} defaultAuthorId - if of a current user in case authors is empty, return contributors
+ * structure with a solo current author id
  * @returns {Object} formatted {fez_record_search_key_contributor_id} for record request
  */
 export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
@@ -346,7 +346,7 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                           (item.hasOwnProperty('authorId') && item.authorId) ||
                           null,
                     rek_contributor_id_order: index + 1,
-                }
+                },
         ),
     };
 };
@@ -534,12 +534,12 @@ export const getContentIndicatorSearchKey = (contentIndicators = []) => {
 
 export const getAuthorOrder = data => {
     const author = data.publication.fez_record_search_key_author_id.filter(
-        authorId => authorId.rek_author_id === data.author.aut_id
+        authorId => authorId.rek_author_id === data.author.aut_id,
     );
 
-    // a missing author doesn't actually reach here, but if code is changed and
-    // that doesnt catch it anymore, -1 here should force handling, rather than
-    // silently introducing bad data
+    // a missing author doesn't actually reach here, but if code is
+    // changed and that doesnt catch it anymore, -1 here should force
+    // handling, rather than silently introducing bad data
     return (author.length > 0 && author[0].rek_author_id_order) || -1;
 };
 
@@ -586,7 +586,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
             },
             currentAuthorOrder,
             data.initialSignificance,
-            data.significance
+            data.significance,
         ),
         ...getSearchKey(
             {
@@ -598,7 +598,7 @@ export const getSignificanceAndContributionStatementSearchKeys = data => {
             },
             currentAuthorOrder,
             data.initialContributionStatements,
-            (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null
+            (data.impactStatement || {}).htmlText || (data.impactStatement || {}).plainText || null,
         ),
     };
 };

@@ -25,7 +25,7 @@ function mapDispatchToProps(dispatch) {
 
 let SearchRecordsContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(SearchRecords);
 SearchRecordsContainer = withRouter(SearchRecordsContainer);
 

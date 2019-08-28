@@ -40,7 +40,6 @@ function setup(testProps, isShallow = true) {
         initialized: false,
         submitFailed: false,
         valid: true,
-        submitAsSideEffect: false,
         pure: true,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
@@ -143,7 +142,7 @@ describe('ThesisSubmission test', () => {
             .instance()
             .afterSubmit();
         expect(window.location.assign).toBeCalledWith(
-            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink)
+            expect.stringContaining(formLocale.thesisSubmission.afterSubmitLink),
         );
     });
 

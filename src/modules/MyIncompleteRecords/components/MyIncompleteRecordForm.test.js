@@ -81,7 +81,7 @@ describe('MyIncompleteRecordForm', () => {
         };
 
         await expect(onSubmit(testValue, dispatch, props)).rejects.toThrow(
-            new SubmissionError('Submit Validation Failed')
+            new SubmissionError('Submit Validation Failed'),
         );
     });
 

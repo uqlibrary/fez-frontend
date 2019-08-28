@@ -62,7 +62,7 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('doesn\'t render possibly your publications lure or the add a record lure', () => {
+    it("doesn't render possibly your publications lure or the add a record lure", () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 5,
@@ -72,7 +72,7 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('doesn\'t render possibly your publications lure and shows the add a record lure', () => {
+    it("doesn't render possibly your publications lure and shows the add a record lure", () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             possiblyYourPublicationsCount: 0,
@@ -82,19 +82,21 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('doesn\'t render either the publications lure or the add a ' +
-        'record lure while the pub count is still loading',
-    () => {
-        const wrapper = setup({
-            authorDetails: mock.authorDetails.uqresearcher,
-            possiblyYourPublicationsCount: null,
-            hidePossiblyYourPublicationsLure: false,
-            possiblyYourPublicationsCountLoading: true,
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
+    it(
+        "doesn't render either the publications lure or the add a " +
+            'record lure while the pub count is still loading',
+        () => {
+            const wrapper = setup({
+                authorDetails: mock.authorDetails.uqresearcher,
+                possiblyYourPublicationsCount: null,
+                hidePossiblyYourPublicationsLure: false,
+                possiblyYourPublicationsCountLoading: true,
+            });
+            expect(toJson(wrapper)).toMatchSnapshot();
+        },
+    );
 
-    it('doesn\'t render the bar/donut graph cards when no data is available', () => {
+    it("doesn't render the bar/donut graph cards when no data is available", () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             publicationsByYear: { series: {} },
@@ -107,6 +109,7 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             authorDetails: mock.authorDetails.uqresearcher,
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -202,6 +205,7 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 10 },
             },
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -282,6 +286,7 @@ describe('Dashboard test', () => {
             loadingPublicationsStats: false,
             publicationsStats: undefined,
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -310,6 +315,7 @@ describe('Dashboard test', () => {
                 scopus_citation_count_i: { count: 10 },
             },
             /* eslint-disable max-len */
+            // prettier-ignore
             publicationsByYear: {
                 'series': [
                     { 'name': 'Journal Article', 'data': [1, 1, 3, 5, 5, 8, 8, 2, 5, 3, 6, 4, 4, 7, 8, 8, 6, 4, 10, 10, 8, 10, 12, 7, 19, 11, 11, 12, 6, 8, 15, 10, 9, 3, 13, 6, 5, 5] },
@@ -376,7 +382,6 @@ describe('Dashboard test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-
     it('Full mount for styles render', () => {
         const wrapper = getElement(Dashboard, {
             classes: {},
@@ -408,14 +413,14 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             incomplete: {
                 publicationsListPagingData: {
-                    'total': 2,
-                    'took': 30,
-                    'per_page': 20,
-                    'current_page': 1,
-                    'from': 1,
-                    'to': 3,
-                    'data': [1, 2],
-                    'filters': {},
+                    total: 2,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 3,
+                    data: [1, 2],
+                    filters: {},
                 },
             },
             authorDetails: mock.authorDetails.uqresearcher,
@@ -427,14 +432,14 @@ describe('Dashboard test', () => {
         const wrapper = setup({
             incomplete: {
                 publicationsListPagingData: {
-                    'total': 1,
-                    'took': 30,
-                    'per_page': 20,
-                    'current_page': 1,
-                    'from': 1,
-                    'to': 1,
-                    'data': [1],
-                    'filters': {},
+                    total: 1,
+                    took: 30,
+                    per_page: 20,
+                    current_page: 1,
+                    from: 1,
+                    to: 1,
+                    data: [1],
+                    filters: {},
                 },
             },
             authorDetails: mock.authorDetails.uqresearcher,

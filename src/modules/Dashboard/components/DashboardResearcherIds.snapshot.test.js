@@ -45,7 +45,7 @@ describe('Dashboard Rsearcher IDs test', () => {
         const wrapper = setup(values);
         wrapper.instance().navigateToRoute(null, 'publons');
         expect(testFn).toHaveBeenCalledWith(
-            'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons'
+            'http://guides.library.uq.edu.au/for-researchers/researcher-identifier/publons',
         );
     });
 

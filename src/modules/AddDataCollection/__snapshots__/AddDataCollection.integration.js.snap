@@ -5,7 +5,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 - First value
 + Second value
 
-@@ -39,11 +39,11 @@
+@@ -44,11 +44,11 @@
                     >
                       <label
                         class=\\"MuiFormControlLabel-root-196 DepositAgreement-root-192\\"
@@ -18,7 +18,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiIconButton-label-217\\"
                           >
                             <svg
-@@ -52,11 +52,11 @@
+@@ -57,11 +57,11 @@
                               focusable=\\"false\\"
                               role=\\"presentation\\"
                               viewBox=\\"0 0 24 24\\"
@@ -31,7 +31,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             <input
                               class=\\"MuiPrivateSwitchBase-input-211\\"
                               data-indeterminate=\\"false\\"
-@@ -71,11 +71,11 @@
+@@ -76,11 +76,11 @@
                         </span>
                         <span
                           class=\\"MuiTypography-root-155 MuiTypography-body2-163 MuiFormControlLabel-label-201\\"
@@ -439,7 +439,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
-@@ -445,17 +537,17 @@
+@@ -450,17 +542,17 @@
                       >
                         <div
                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
@@ -459,7 +459,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             </span>
                           </label>
                         </div>
-@@ -471,14 +563,14 @@
+@@ -476,14 +568,14 @@
                             >
                               <div
                                 class=\\"MuiFormControl-root-230 MuiFormControl-fullWidth-233\\"
@@ -476,7 +476,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                                     label=\\"day\\"
                                     maxlength=\\"2\\"
                                     name=\\"day\\"
-@@ -486,21 +578,16 @@
+@@ -491,21 +583,16 @@
                                     type=\\"text\\"
                                     value=\\"\\"
                                   />
@@ -549,7 +549,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                                   placeholder=\\"Start typing code or field name and select from list\\"
                                   type=\\"text\\"
                                   value=\\"\\"
-                                />
++                               />
 +                             </div>
                             </div>
 -                             <p
@@ -915,7 +915,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 />
 +                               </button>
                               </span>
-+                           </div>
+                            </div>
 +                         </li>
 +                       </ul>
 +                     </div>
@@ -1148,16 +1148,16 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             required=\\"\\"
                             rows=\\"1\\"
 -                         />
-+                         >
-+                           test description
-+                         </textarea>
-                        </div>
+-                       </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-366 MuiFormHelperText-error-367 MuiFormHelperText-required-373\\"
 -                         id=\\"Projectdescription-helper-text\\"
--                       >
+                          >
 -                         This field is required
 -                       </p>
++                           test description
++                         </textarea>
++                       </div>
                       </div>
                     </div>
                     <div
@@ -1216,7 +1216,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-376 alert-text\\"
 -                     >
 -                       <b>
--                         Validation - 
+-                         Validation -
 -                       </b>
 -                       <span>
 -                         Form cannot be submitted until all fields are valid. Please review all input fields.

@@ -222,11 +222,7 @@ exports[`ThesisSubmission test should render hdr thesis submission form 1`] = `
                     },
                   ]
                 }
-                locale={
-                  Object {
-                    "label": "Thesis type",
-                  }
-                }
+                label="Thesis type"
                 name="rek_genre_type"
                 required={true}
                 validate={
@@ -741,11 +737,7 @@ exports[`ThesisSubmission test should render sbs thesis submission form 1`] = `
                     },
                   ]
                 }
-                locale={
-                  Object {
-                    "label": "Thesis type",
-                  }
-                }
+                label="Thesis type"
                 name="rek_genre_type"
                 required={true}
                 validate={

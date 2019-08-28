@@ -25,6 +25,7 @@ export class ListRow extends PureComponent {
         hideReorder: PropTypes.bool,
         classes: PropTypes.object,
         itemTemplate: PropTypes.func,
+        form: PropTypes.string,
     };
 
     static defaultProps = {
@@ -40,6 +41,7 @@ export class ListRow extends PureComponent {
             },
         },
         itemTemplate: GenericTemplate,
+        form: 'Form',
     };
 
     showConfirmation = () => {
@@ -67,11 +69,14 @@ export class ListRow extends PureComponent {
     render() {
         const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
         const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation } = this.props.locale;
-
+        const componentID = this.props.form.replace(/\s+/g, '');
         return (
-            <React.Fragment>
+            <div
+                style={{ flexGrow: 1, padding: 8 }}
+                className={`ListRow-${componentID} ListRow-${componentID}-${item.value || item}`}
+            >
                 <ConfirmDialogBox
-                    onRef={(ref) => (this.confirmationBox = ref)}
+                    onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
@@ -105,13 +110,17 @@ export class ListRow extends PureComponent {
                     )}
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteHint}>
-                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                            <IconButton
+                                onClick={this.showConfirmation}
+                                disabled={disabled}
+                                id={`delete-${this.props.index}`}
+                            >
                                 <Delete />
                             </IconButton>
                         </Tooltip>
                     </Grid>
                 </Grid>
-            </React.Fragment>
+            </div>
         );
     }
 }

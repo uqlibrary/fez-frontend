@@ -38,7 +38,7 @@ export class DocumentTypeField extends PureComponent {
         this.publicationTypes = Object.values(publicationTypes());
     }
 
-    _handleDocTypeChange = (event) => {
+    _handleDocTypeChange = event => {
         this.props.updateDocTypeValues(event.target.value);
     };
 

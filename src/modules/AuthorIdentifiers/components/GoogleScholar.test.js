@@ -160,7 +160,7 @@ describe('Component GoogleScholar ', () => {
                 author: currentAuthor.uqnoauthid.data,
                 handleSubmit: handleSubmitFn,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('form').simulate('keyDown', { key: 'Enter' });

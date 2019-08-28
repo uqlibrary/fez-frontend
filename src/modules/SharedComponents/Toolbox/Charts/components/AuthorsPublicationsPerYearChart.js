@@ -63,9 +63,7 @@ class AuthorsPublicationsPerYearChart extends React.Component {
                         }
                         const name = this.userOptions.name;
                         const extras = (this.userOptions.extraInfoForLegend || '').split(', ');
-                        return extras.join('').length
-                            ? `${name} (${extras.join(', <br />')})`
-                            : name;
+                        return extras.join('').length ? `${name} (${extras.join(', <br />')})` : name;
                     },
                 },
                 series: this.props.series,
@@ -75,7 +73,10 @@ class AuthorsPublicationsPerYearChart extends React.Component {
 
     render() {
         return (
-            <Chart className={`${this.props.className || ''} authors-publications-per-year-chart`} chartOptions={this.state.options} />
+            <Chart
+                className={`${this.props.className || ''} authors-publications-per-year-chart`}
+                chartOptions={this.state.options}
+            />
         );
     }
 }

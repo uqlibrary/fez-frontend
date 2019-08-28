@@ -15,13 +15,15 @@ exports[`MyRecords test component has displayable facets 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to 
+            We were unable to find any results. You may be able to
+             
             <a
               href="/records/possible"
             >
               claim works we think may be yours
             </a>
-             or 
+             or
+             
             <a
               href="/records/add/find"
             >
@@ -32,13 +34,15 @@ exports[`MyRecords test component has displayable facets 1`] = `
         title="No works found"
       >
         <div>
-          We were unable to find any results. You may be able to 
+          We were unable to find any results. You may be able to
+           
           <a
             href="/records/possible"
           >
             claim works we think may be yours
           </a>
-           or 
+           or
+           
           <a
             href="/records/add/find"
           >
@@ -123,13 +127,15 @@ exports[`MyRecords test renders active filters 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to 
+            We were unable to find any results. You may be able to
+             
             <a
               href="/records/possible"
             >
               claim works we think may be yours
             </a>
-             or 
+             or
+             
             <a
               href="/records/add/find"
             >
@@ -140,13 +146,15 @@ exports[`MyRecords test renders active filters 1`] = `
         title="No works found"
       >
         <div>
-          We were unable to find any results. You may be able to 
+          We were unable to find any results. You may be able to
+           
           <a
             href="/records/possible"
           >
             claim works we think may be yours
           </a>
-           or 
+           or
+           
           <a
             href="/records/add/find"
           >
@@ -254,7 +262,8 @@ exports[`MyRecords test renders list of publications no facets 1`] = `
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >
@@ -389,7 +398,8 @@ exports[`MyRecords test renders list of publications with custom actions 1`] = `
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >
@@ -533,7 +543,8 @@ exports[`MyRecords test renders list of publications with facets 1`] = `
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >
@@ -776,7 +787,8 @@ exports[`MyRecords test renders loading screen while export publications loading
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >
@@ -895,7 +907,8 @@ exports[`MyRecords test renders loading screen while loading publications while 
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >
@@ -976,13 +989,15 @@ exports[`MyRecords test renders no results 1`] = `
       <StandardCard
         text={
           <div>
-            We were unable to find any results. You may be able to 
+            We were unable to find any results. You may be able to
+             
             <a
               href="/records/possible"
             >
               claim works we think may be yours
             </a>
-             or 
+             or
+             
             <a
               href="/records/add/find"
             >
@@ -993,13 +1008,15 @@ exports[`MyRecords test renders no results 1`] = `
         title="No works found"
       >
         <div>
-          We were unable to find any results. You may be able to 
+          We were unable to find any results. You may be able to
+           
           <a
             href="/records/possible"
           >
             claim works we think may be yours
           </a>
-           or 
+           or
+           
           <a
             href="/records/add/find"
           >
@@ -1046,7 +1063,8 @@ exports[`MyRecords test should handle export publications 1`] = `
               >
                 claiming a work
               </a>
-               or 
+               or
+               
               <a
                 href="/records/add/find"
               >

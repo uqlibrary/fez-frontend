@@ -312,6 +312,8 @@ $chart-colors: $graph-color-1, $graph-color-2, $graph-color-3, $graph-color-4, $
     .highcharts-legend-box {
       border: 5px solid red;
       fill: $graph-background-color-2 !important;
+      box-shadow: 0 0 20px rgba(30,125,148, 0.75);
+      opacity: 0.75;
       stroke-width: 0;
     }
     .highcharts-legend-item {fill: #FFFFFF !important;

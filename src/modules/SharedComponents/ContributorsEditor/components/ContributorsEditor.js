@@ -64,7 +64,7 @@ export class ContributorsEditor extends PureComponent {
         }
     };
 
-    getContributorsFromProps = (props) => {
+    getContributorsFromProps = props => {
         if (props.input && props.input.name && props.input.value) {
             return props.input.value instanceof Immutable.List ? props.input.value.toJS() : props.input.value;
         }
@@ -72,10 +72,10 @@ export class ContributorsEditor extends PureComponent {
         return [];
     };
 
-    addContributor = (contributor) => {
+    addContributor = contributor => {
         // only unique identifiers can be added
         if (
-            this.state.contributors.filter((item) => {
+            this.state.contributors.filter(item => {
                 return !!contributor.aut_id && item.aut_id === contributor.aut_id;
             }).length > 0
         ) {
@@ -99,7 +99,7 @@ export class ContributorsEditor extends PureComponent {
                         const index = this.state.contributors.length - 1;
                         this.assignContributor(index);
                     }
-                }
+                },
             );
         }
     };
@@ -157,7 +157,7 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    assignContributor = (index) => {
+    assignContributor = index => {
         const newContributors = this.state.contributors.map((item, itemIndex) => ({
             ...item,
             selected:
@@ -170,8 +170,8 @@ export class ContributorsEditor extends PureComponent {
         });
     };
 
-    selectContributor = (index) => {
-        this.setState((prevState) => ({
+    selectContributor = index => {
+        this.setState(prevState => ({
             contributors: prevState.contributors.map((contributor, itemIndex) => ({
                 ...contributor,
                 selected: index === itemIndex,
@@ -187,7 +187,7 @@ export class ContributorsEditor extends PureComponent {
 
         return contributors.map((contributor, index) => (
             <ContributorRow
-                {...locale.row || {}}
+                {...(locale.row || {})}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
@@ -196,6 +196,7 @@ export class ContributorsEditor extends PureComponent {
                 hideDelete={hideDelete}
                 hideReorder={hideReorder}
                 index={index}
+                className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
                 onSelect={this.props.editMode ? this.selectContributor : this.assignContributor}
                 onDelete={this.deleteContributor}
@@ -214,7 +215,7 @@ export class ContributorsEditor extends PureComponent {
             ...this.props,
             isContributorAssigned: !!this.state.contributors.length,
             locale: (this.props.locale.form || {}).locale,
-            onSubmit: (contributor) => onSubmit(contributor, index),
+            onSubmit: contributor => onSubmit(contributor, index),
         };
 
         if (this.props.editMode) {
@@ -258,7 +259,7 @@ export class ContributorsEditor extends PureComponent {
                         <Grid item xs={12}>
                             <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader
-                                    {...this.props.locale.header || {}}
+                                    {...(this.props.locale.header || {})}
                                     disabled={disabled}
                                     hideDelete={hideDelete}
                                     isInfinite={contributors.length > 3}
@@ -271,7 +272,9 @@ export class ContributorsEditor extends PureComponent {
                             </List>
                             <List
                                 classes={{
-                                    root: `${classes.list} ${contributors.length > 3 ? classes.scroll : ''}`,
+                                    root: `ContributorList ${classes.list} ${
+                                        contributors.length > 3 ? classes.scroll : ''
+                                    }`,
                                 }}
                             >
                                 {this.renderContributorRows()}
@@ -294,7 +297,7 @@ export class ContributorsEditor extends PureComponent {
     }
 }
 
-export const mapStateToProps = (state) => {
+export const mapStateToProps = state => {
     return {
         author: state && state.get('accountReducer') ? state.get('accountReducer').author : null,
     };

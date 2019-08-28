@@ -102,7 +102,7 @@ describe('Lookup action creators', () => {
         const expectedActions = [actions.THIRD_PARTY_LOOKUP_TOOL_LOADING, actions.THIRD_PARTY_LOOKUP_TOOL_SUCCESS];
 
         await mockActionsStore.dispatch(
-            thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT', 'key123456789')
+            thirdPartyLookupTool.loadThirdPartyResults('incites', 'dummyUT', 'key123456789'),
         );
         expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
     });

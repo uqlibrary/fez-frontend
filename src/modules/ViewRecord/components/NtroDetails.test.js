@@ -608,7 +608,7 @@ describe('NtroDetails ', () => {
                 publication: ntro,
                 account: { canMasquerade: true },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

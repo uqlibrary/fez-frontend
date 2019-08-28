@@ -15,6 +15,7 @@ const styles = {
         minWidth: 0,
         display: 'inline-block',
         verticalAlign: 'bottom',
+        cursor: 'pointer',
     },
     externalLinkIcon: {
         color: 'inherit',
@@ -31,6 +32,8 @@ export class ExternalLink extends PureComponent {
         openInNewIcon: PropTypes.bool,
         children: PropTypes.any,
         classes: PropTypes.object.isRequired,
+        height: PropTypes.number,
+        width: PropTypes.number,
     };
 
     static defaultProps = {
@@ -45,24 +48,37 @@ export class ExternalLink extends PureComponent {
         super(props);
     }
 
+    openInSizedWindow = (link, width, height) => {
+        return () =>
+            window.open(
+                link,
+                'targetWindow',
+                `toolbar=no, location=no, status=no, menubar=no, scrollbars=no, resizable=yes,
+                width=${width}, height=${height}, top=100, left=100`,
+            );
+    };
+
     render() {
-        const { className, children, openInNewIcon, classes, ...rest } = this.props;
+        const { className, children, openInNewIcon, classes, height, width, ...rest } = this.props;
+        if (!!height && !!width) {
+            rest.onClick = this.openInSizedWindow(rest.href, width, height);
+            delete rest.href;
+            delete rest.target;
+            delete rest.theme;
+            delete rest.rel;
+        }
         return (
-            <a {...rest}
+            <a
+                {...rest}
                 tabIndex="0"
                 title={
                     rest.title ||
-                    (
-                        openInNewIcon &&
-                        locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)
-                    ) ||
+                    (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
                     undefined
                 }
                 className={`${className} ${classes.externalLink}`}
             >
-                {openInNewIcon &&
-                    <OpenInNew className={classes.externalLinkIcon} />
-                }
+                {openInNewIcon && <OpenInNew className={classes.externalLinkIcon} />}
                 {!!children && children}
             </a>
         );

@@ -84,7 +84,7 @@ export class TopCitedPublicationsClass extends PureComponent {
         }
 
         const reorderedItems = this.props.topCitedPublicationsList.sort(
-            (source1, source2) => txt[source1.key].order - txt[source2.key].order
+            (source1, source2) => txt[source1.key].order - txt[source2.key].order,
         );
         return (
             <React.Fragment>
@@ -109,7 +109,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                                             label={this.props.width === 'xs' ? txt[key].mobileTitle : txt[key].title}
                                             value={key}
                                         />
-                                    )
+                                    ),
                             )}
                         </Tabs>
 
@@ -128,7 +128,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                                     >
                                         <Grid item xs>
                                             <Typography key={key} variant={'h6'} color={'primary'}>
-                                                <div key={key} className={`fez-icon ${key} xxlarge`} />{' '}
+                                                <div key={key} className={`fez-icon ${key} xxlarge`} />
                                                 {txt[key].heading}
                                             </Typography>
                                         </Grid>
@@ -144,7 +144,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                                             />
                                         </Grid>
                                     </Grid>
-                                )
+                                ),
                         )}
                     </StandardCard>
                 ) : (

@@ -60,10 +60,14 @@ describe('Cards component', () => {
 
 describe('StandardCard component', () => {
     it('should render StyledCard with same props', () => {
-        const wrapper = getElement(StandardCard, {
-            test1: 'test1value',
-            test2: 'test2value',
-        }, true);
+        const wrapper = getElement(
+            StandardCard,
+            {
+                test1: 'test1value',
+                test2: 'test2value',
+            },
+            true,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

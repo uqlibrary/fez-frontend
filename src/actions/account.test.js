@@ -145,7 +145,7 @@ describe('Account action creators', () => {
 
             await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
-        }
+        },
     );
 
     it('should dispatch expected action when user logs out', () => {

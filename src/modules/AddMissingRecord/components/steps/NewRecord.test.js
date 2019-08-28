@@ -71,7 +71,7 @@ describe('Add new record', () => {
                 newRecordFileUploadingError: true,
                 rawSearchQuery: 'This is a test',
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });

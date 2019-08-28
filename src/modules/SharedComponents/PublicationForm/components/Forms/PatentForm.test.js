@@ -23,7 +23,7 @@ describe('PatentForm renders ', () => {
 
     it('component with all fields disabled', () => {
         const wrapper = setup({ submitting: true });
-        wrapper.find('Field').forEach((field) => {
+        wrapper.find('Field').forEach(field => {
             expect(field.props().disabled).toEqual(true);
         });
     });

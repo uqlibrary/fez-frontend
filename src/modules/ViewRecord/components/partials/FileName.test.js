@@ -9,9 +9,9 @@ function setup(testProps = {}, args = { isShallow: true }) {
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: 'application/pdf',
         mediaUrl:
-			(!!testProps.fileName && `https://espace.library.uq.edu.au/view/UQ:676287/${testProps.fileName}`) || '',
+            (!!testProps.fileName && `https://espace.library.uq.edu.au/view/UQ:676287/${testProps.fileName}`) || '',
         previewMediaUrl:
-			(!!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}`) || '',
+            (!!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}`) || '',
         onFileSelect: jest.fn(),
         allowDownload: false,
         ...rest,
@@ -31,7 +31,7 @@ describe('File Name Component ', () => {
     it('should display file name link', () => {
         const wrapper = setup(
             { allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg' },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
@@ -41,7 +41,7 @@ describe('File Name Component ', () => {
     it('should render audio player', () => {
         const wrapper = setup(
             { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
@@ -69,7 +69,7 @@ describe('File Name Component ', () => {
                 previewFileName: 'preview_test.jpg',
                 onFileSelect: onFileSelect,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -87,7 +87,7 @@ describe('File Name Component ', () => {
                 mimeType: 'image/jpeg',
                 onFileSelect: onFileSelect,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();

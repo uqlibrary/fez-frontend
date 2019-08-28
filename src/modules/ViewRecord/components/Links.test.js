@@ -32,7 +32,7 @@ describe('Component Links ', () => {
                     rek_doi_xsdmf_id: 16514,
                     rek_doi: '10.1016/j.pnsc.2012.12.004',
                 },
-			  }
+            }
             : {}),
         fez_record_search_key_link: [
             {
@@ -141,7 +141,7 @@ describe('Component Links ', () => {
     it('should render list of 3 not OA links and DOI link with OA Embargo date set for OPEN_ACCESS_ID_DOI', () => {
         const wrapper = setup(
             { publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI) },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
@@ -206,8 +206,8 @@ describe('Component Links ', () => {
     });
 
     it(
-        'should render 3 not OA links and DOI not OA and PMC ' +
-			'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
+        'should render 3 not OA links and DOI not OA and PMC always ' +
+            'OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
         () => {
             const pmcProps = {
                 ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),
@@ -229,6 +229,6 @@ describe('Component Links ', () => {
             expect(toJson(wrapper)).toMatchSnapshot();
             // expect(wrapper.find('.noOaIcon').length).toEqual(4);
             // expect(wrapper.find('.openAccess').length).toEqual(1);
-        }
+        },
     );
 });

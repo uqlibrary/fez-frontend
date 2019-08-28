@@ -28,7 +28,7 @@ export default class AddMissingRecord extends PureComponent {
         }
     }
 
-    getStepperIndex = (location) => {
+    getStepperIndex = location => {
         const locationTokens = location.split('/').filter(Boolean);
         if (locationTokens.length !== 3) return 0;
         const configTokens = pathConfig[locationTokens[0]][locationTokens[1]];

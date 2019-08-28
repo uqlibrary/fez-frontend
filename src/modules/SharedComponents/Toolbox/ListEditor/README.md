@@ -7,10 +7,10 @@ data is passed to redux form values in the following format:
 
 ```javascript
 [
-  {value: "item 1", order: 1},
-  {value: "item 2", order: 2},
-  {value: "item 3", order: 3}
-]
+    { value: 'item 1', order: 1 },
+    { value: 'item 2', order: 2 },
+    { value: 'item 3', order: 3 }
+];
 ```
 
 ## Props

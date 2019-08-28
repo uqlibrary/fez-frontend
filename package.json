@@ -111,7 +111,11 @@
         "webpack-bundle-analyzer": "^3.3.2",
         "webpack-cli": "^3.0.8",
         "webpack-dev-server": "^3.1.14",
-        "webpack-pwa-manifest": "^3.7.1"
+        "webpack-pwa-manifest": "^3.7.1",
+        "cypress": "3.3.2",
+        "cypress-file-upload": "^3.2.0",
+        "cypress-plugin-tab": "^1.0.1",
+        "start-server-and-test": "^1.9.1"
     },
     "dependencies": {
         "@babel/polyfill": "^7.4.4",
@@ -171,7 +175,12 @@
         "redux-form": "8.2.2",
         "redux-immutable": "^4.0.0",
         "redux-thunk": "^2.2.0",
-        "timezones.json": "^1.2.1"
+        "timezones.json": "^1.2.1",
+        "cypress-plugin-snapshots": "git://github.com/meinaart/cypress-plugin-snapshots.git#c30b950",
+        "eslint-plugin-react-hooks": "^1.5.0",
+        "react-share": "^3.0.0",
+        "throttle-debounce": "^2.1.0",
+        "wait-on": "^3.2.0"
     },
     "scripts": {
         "start": "webpack-dev-server",
@@ -189,9 +198,22 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.js",
         "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest integration.js --no-coverage",
         "test:watch": "npm run test -- --watch --onlyChanged",
-        "test:update": "npm run test -- --updateSnapshot",
+        "test:update": "npm run test -- --u",
         "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
-        "eslint": "eslint '**/*.js' --quiet"
+        "eslint": "eslint '**/*.js' --quiet",
+        "eslint:fix": "eslint '**/*.js' --quiet --fix",
+        "codestyles:files": "prettier-eslint '**/*.js' --list-different -l silent",
+        "codestyles:fix": "prettier-eslint --write",
+        "codestyles:fix:all": "prettier-eslint '**/*.js' --write",
+        "codestyles:fix:staged":
+            "FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
+        "cypress:open": "cypress open",
+        "cypress:watch": "cypress run --headed",
+        "cypress:run": "cypress run",
+        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
+        "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
+        "test:all": "npm run test && npm run e2e && npm codestyles:files",
+        "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
     },
     "engines": {
         "npm": "^6.9.0",

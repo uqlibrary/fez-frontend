@@ -84,13 +84,13 @@ describe('Component ClaimRecord ', () => {
         });
 
         expect(wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel).toBe(
-            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel
+            locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
         );
     });
 
     it(
-        'should render publication citation, error message if publication has PID ' +
-            'and it was claimed by current author already',
+        'should render publication citation, error message if publication has PID and ' +
+            'it was claimed by current author already',
         () => {
             const props = {
                 initialValues: Immutable.Map({
@@ -130,12 +130,12 @@ describe('Component ClaimRecord ', () => {
             // // expect(wrapper.find('Alert').length).toEqual(1);
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
-        "should render claim form if publication doesn't have a PID but current " +
-            'author was assigned (author linking component should not be rendered)',
+        "should render claim form if publication doesn't have a PID but current author " +
+            'was assigned (author linking component should not be rendered)',
         () => {
             const testArticle = {
                 ...journalArticle,
@@ -178,7 +178,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should render claim form, contributor linking component should not be rendered for Journal Article', () => {
@@ -197,8 +197,8 @@ describe('Component ClaimRecord ', () => {
     });
 
     it(
-        'should render claim form, author linking component should be rendered even if ' +
-            "there's only one author on a publication",
+        "should render claim form, author linking component should be rendered even if there's" +
+            ' only one author on a publication',
         () => {
             const testArticle = {
                 ...journalArticle,
@@ -226,12 +226,12 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
-        'should render claim form, contributor linking component should be rendered even ' +
-            "if there's only one contributor on a publication",
+        "should render claim form, contributor linking component should be rendered even if there's" +
+            ' only one contributor on a publication',
         () => {
             const testArticle = {
                 ...dataCollection,
@@ -261,12 +261,12 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it(
-        'should render claim form, author linking component and contributor linking component ' +
-            'should be rendered even if there are only one author and one contributor on a publication',
+        'should render claim form, author linking component and contributor linking component should be' +
+            ' rendered even if there are only one author and one contributor on a publication',
         () => {
             const testArticle = {
                 ...dataCollection,
@@ -303,7 +303,7 @@ describe('Component ClaimRecord ', () => {
             // expect(wrapper.find('withRouter(Connect(PublicationCitation))').length).toEqual(1);
 
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should return and render alert message depending on form status', () => {

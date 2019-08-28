@@ -24,7 +24,7 @@ function mapDispatchToProps(dispatch) {
 
 let ClaimPublicationContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PossiblyMyRecords);
 ClaimPublicationContainer = withRouter(ClaimPublicationContainer);
 

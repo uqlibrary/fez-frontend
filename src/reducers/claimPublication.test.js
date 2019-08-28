@@ -47,12 +47,13 @@ describe('claimPublication reducer', () => {
     it('returns the record we are setting to claim', () => {
         const test = claimPublicationReducer(initialState, {
             type: actions.PUBLICATION_TO_CLAIM_SET,
-            payload: publicationData,
+            payload: { rek_pid: publicationData.rek_pid },
         });
         expect(test).toEqual({
             ...initialState,
             publicationToClaimFileUploadingError: false,
-            publicationToClaim: publicationData,
+            publicationToClaim: { rek_pid: publicationData.rek_pid },
+            fullPublicationToClaim: null,
         });
     });
 
@@ -62,6 +63,7 @@ describe('claimPublication reducer', () => {
             ...initialState,
             publicationToClaimFileUploadingError: false,
             publicationToClaim: null,
+            fullPublicationToClaim: null,
         });
     });
 
