@@ -3,21 +3,18 @@
 # exit if command returns error (non-zero status)
 set -e
 
-printf "\n--- DISPLAY VERSIONS FOR POSSIBLE DEBUG ---\n"
-printf "\n$ npm -v\n"
-npm -v
+printf "Node "; node -v;
+printf "(Codeship default) npm v"; npm -v
 
-printf "\n$ node -v\n"
-node -v
+printf "\n\n--- GET LATEST VERSION OF NPM 6 ---\n"
+echo "$ npm install -g npm@6"
+npm install -g npm@6
 
-printf "\n--- CLEAR NPM CACHE ---\n"
-printf "\n$ npm cache clear -f\n"
-npm cache clear -f
+printf "\nNow running npm v"; npm -v
 
-printf "\n--- INSTALL NPM ---\n"
-printf "\n$ npm ci\n"
+printf "\n$ npm cache verify"
+npm cache verify
+
+prinf "\n\n--- INSTALL DEPENDENCIES ---\n"
+echo "$ npm ci"
 npm ci
-
-printf "\n--- DISPLAY JEST VERSION FOR POSSIBLE DEBUG ---\n"
-printf "\n$ jest --version\n"
-jest --version
