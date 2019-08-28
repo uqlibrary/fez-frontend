@@ -205,7 +205,8 @@
     "cypress:run": "cypress run",
     "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
     "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
-    "test:all": "npm run test && npm run e2e && npm codestyles:files"
+    "test:all": "npm run test && npm run e2e && npm codestyles:files",
+    "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
   },
   "engines": {
     "npm": "^6.9.0",
