@@ -1,3 +1,4 @@
+export { default as adminEditBookChapter } from './adminEditBookChapter';
 export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
 export { default as communityRecord } from './communityRecord';

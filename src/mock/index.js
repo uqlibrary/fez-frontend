@@ -204,6 +204,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.recordWithoutAuthorIds },
             ...mockData.possibleUnclaimedList.data,
             ...mockData.myRecordsList.data,
+            ...mockData.adminEditBookChapter,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
