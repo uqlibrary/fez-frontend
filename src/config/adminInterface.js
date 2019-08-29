@@ -1,16 +1,25 @@
 import Immutable from 'immutable';
 
 import { validation } from 'config';
-import { PUBLICATION_TYPE_BOOK_CHAPTER, PUBLICATION_TYPE_JOURNAL_ARTICLE, ORG_TYPE_NOT_SET } from 'config/general';
+import { viewRecordsConfig } from 'config';
+import {
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    ORG_TYPE_NOT_SET,
+} from 'config/general';
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
-import { viewRecordsConfig } from 'config';
+
+import moment from 'moment';
 
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+// import { DataStreamSecuritySelector } from '../modules/Admin/components/security/DataStreamSecuritySelector';
+import { DepositAgreementField } from '../modules/AddDataCollection/components/DepositAgreementField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
@@ -24,6 +33,7 @@ import {
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { OverrideSecurity } from '../modules/Admin/components/security/OverrideSecurity';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -628,6 +638,51 @@ export const fieldConfig = {
             canEdit: true,
         },
     },
+    // fez_record_search_key_datastream_policy: {
+    //     component: DataStreamSecuritySelector,
+    //     componentProps: {
+    //         name: 'adminSection.fez_record_search_key_datastream_policy.rek_datastream_policy',
+    //         fullWidth: true,
+    //         label: 'Datastream Policy',
+    //         placeholder: 'Edit Security',
+    //     },
+    // },
+    rek_copyright: {
+        component: DepositAgreementField,
+        componentProps: {
+            name: 'adminSection.rek_copyright',
+            label: 'Copyright Agreement',
+            placeholder: '',
+        },
+    },
+    rek_security_inherited: {
+        component: OverrideSecurity,
+        componentProps: {
+            name: 'adminSection.rek_security_inherited',
+            label: 'Record level security',
+            placeholder: '',
+        },
+    },
+    editors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.editors',
+            showIdentifierLookup: true,
+            showContributorAssignment: true,
+            locale: formLocale.book.editors.field,
+            validate: [validation.authorRequired],
+            editMode: true,
+        },
+    },
+    fez_record_search_key_date_available: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_date_available',
+            label: 'Year Available',
+            required: true,
+            fullWidth: true,
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -775,6 +830,140 @@ export const adminInterfaceConfig = {
             {
                 title: 'Grant information',
                 groups: [['grants']],
+            },
+        ],
+    },
+    [PUBLICATION_TYPE_BOOK]: {
+        admin: () => [
+            {
+                groups: [
+                    ['internalNotes'],
+                    ['rek_herdc_notes'],
+                    // ['fez_record_search_key_retracted']
+                ],
+            },
+        ],
+        identifiers: () => [
+            {
+                title: 'Manage identifiers',
+                groups: [
+                    ['fez_record_search_key_doi'],
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                    ['fez_record_search_key_pubmed_central_id'],
+                ],
+            },
+            {
+                title: 'Manage links',
+                groups: [['links']],
+            },
+        ],
+        bibliographic: (isLote = false) => [
+            {
+                groups: [
+                    ['rek_title'],
+                    ...(isLote
+                        ? [
+                            ['languageOfTitle'],
+                            ['fez_record_search_key_native_script_title'],
+                            ['fez_record_search_key_translated_title'],
+                            ['fez_record_search_key_roman_script_title'],
+                        ]
+                        : []),
+                    ['languages'],
+                ],
+            },
+            {
+                title: 'ISBN',
+                groups: [['fez_record_search_key_isbn']],
+            },
+            {
+                title: 'ISSN',
+                groups: [['fez_record_search_key_issn']],
+            },
+            {
+                title: 'Bibliographic',
+                groups: [
+                    ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                    ['fez_record_search_key_edition'],
+                    ['fez_record_search_key_series'],
+                    ['fez_record_search_key_volume_number'],
+                    [
+                        'fez_record_search_key_start_page',
+                        'fez_record_search_key_end_page',
+                        'fez_record_search_key_total_pages',
+                    ],
+                    [
+                        'rek_date',
+                        // 'rek_date_available',
+                        'fez_record_search_key_date_available',
+                    ],
+                    ['rek_description'],
+                    ['fez_record_search_key_keywords'],
+                    // ['subjects'], // problem
+                    // ['fez_record_search_key_succeeds'],
+                    // ['rek_refereed_source'],
+                ],
+            },
+        ],
+        authors: () => [
+            {
+                title: 'Author',
+                groups: [
+                    ['authors'],
+                    // ['editors'], // white screen
+                ],
+            },
+        ],
+        additionalInformation: () => [
+            {
+                groups: [
+                    ['collections'],
+                    ['rek_subtype'],
+                    ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                    ['fez_record_search_key_institutional_status'],
+                    ['contentIndicators'],
+                    ['additionalNotes'],
+                ],
+            },
+        ],
+        files: () => [
+            {
+                title: 'Files/Access',
+                groups: [
+                    // ['fez_record_search_key_datastream_policy'],
+                    ['files'],
+                    // ['fez_record_search_key_oa_status'],
+                    ['rek_copyright'], // ??? this just gives a red checkbox??
+                ],
+            },
+        ],
+        ntro: () => [
+            {
+                title: 'Scale/Significance of work & Creator contribution statement',
+                groups: [['significanceAndContributionStatement']],
+            },
+            {
+                title: 'ISMN',
+                groups: [['fez_record_search_key_ismn']],
+            },
+            {
+                title: 'Quality indicators',
+                groups: [['qualityIndicators']],
+            },
+        ],
+        grantInformation: () => [
+            {
+                title: 'Grant information',
+                groups: [['grants']],
+            },
+        ],
+        security: () => [
+            {
+                groups: [
+                    ['rek_security_inherited'], // needs work?
+                ],
             },
         ],
     },
@@ -1255,4 +1444,25 @@ export const valueExtractor = {
             return (record.fez_datastream_info || []).filter(validation.isFileValid(viewRecordsConfig, true));
         },
     },
+    fez_record_search_key_oa_status: {
+        getValue: record => ({ ...record.fez_record_search_key_oa_status }),
+    },
+    rek_copyright: {
+        getValue: record => record.rek_copyright,
+    },
+    fez_record_search_key_date_available: {
+        getValue: record => {
+            return (
+                record.fez_record_search_key_date_available &&
+                record.fez_record_search_key_date_available.rek_date_available &&
+                moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
+            );
+        },
+    },
+    // rek_refereed_source: {
+    //     getValue: (record) => ({ ...record.rek_refereed_source_lookup }),
+    // },
+    // fez_record_search_key_datastream_policy: {
+    //     getValue: (record) => ({ ...record.fez_record_search_key_datastream_policy }),
+    // },
 };
