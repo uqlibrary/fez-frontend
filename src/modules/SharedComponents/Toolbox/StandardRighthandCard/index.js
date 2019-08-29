@@ -1,1 +1,1 @@
-export StandardRighthandCard from './components/StandardRighthandCard';
+export { default as StandardRighthandCard } from './components/StandardRighthandCard';
