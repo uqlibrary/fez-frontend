@@ -8,22 +8,22 @@ const mapStateToProps = (state, props) => {
         category: category,
         itemsList:
             state.get('searchKeysReducer') && state.get('searchKeysReducer')[category]
-                ? state.get('searchKeysReducer')[category].itemsList.map((collection) => ({
+                ? state.get('searchKeysReducer')[category].itemsList.map(collection => ({
                     id: collection.rek_pid,
                     value: collection.rek_title,
                 }))
                 : [],
-        onChange: (item) => {
+        onChange: item => {
             const items = (!!props.input.value.toJS && props.input.value.toJS()) || props.input.value;
             props.input.onChange([...items, item]);
         },
-        onDelete: (items) => {
+        onDelete: items => {
             props.input.onChange([...items]);
         },
         async: true,
         errorText: props.meta ? props.meta.error : null,
         error: !!props.meta && !!props.meta.error,
-        itemToString: (item) => (!!item && String(item.value)) || '',
+        itemToString: item => (!!item && String(item.value)) || '',
         selectedValue: null,
         selectedItem: (!!props.input.value.toJS && props.input.value.toJS()) || props.input.value || [],
         maxResults: 20,
@@ -32,7 +32,7 @@ const mapStateToProps = (state, props) => {
     };
 };
 
-const mapDispatchToProps = (dispatch) => {
+const mapDispatchToProps = dispatch => {
     return {
         loadSuggestions: (searchKey, searchQuery = ' ') =>
             dispatch(actions.loadCollectionsList(searchKey, searchQuery)),
@@ -41,5 +41,5 @@ const mapDispatchToProps = (dispatch) => {
 
 export const CollectionField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

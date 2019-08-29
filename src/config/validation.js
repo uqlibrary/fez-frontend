@@ -235,10 +235,6 @@ export const dateRange = (value, values) => {
 
     if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
         return locale.validationErrors.collectionDateRange;
-    }
-
-    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
-        return locale.validationErrors.dateRange;
     } else {
         return '';
     }

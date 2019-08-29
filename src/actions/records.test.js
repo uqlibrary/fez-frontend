@@ -1068,7 +1068,7 @@ describe('Record action creators', () => {
                     securitySection: {
                         rek_security_policy: 2,
                     },
-                })
+                }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -1087,7 +1087,7 @@ describe('Record action creators', () => {
                     securitySection: {
                         rek_security_policy: 2,
                     },
-                })
+                }),
             );
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
         });
@@ -1111,7 +1111,7 @@ describe('Record action creators', () => {
                         securitySection: {
                             rek_security_policy: 2,
                         },
-                    })
+                    }),
                 );
             } catch (exception) {
                 expect(exception.status).toBe(500);

@@ -13,11 +13,11 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
 
-    const handleContributionStatement = useCallback((value) => {
+    const handleContributionStatement = useCallback(value => {
         setContributionStatement(value);
     }, []);
 
-    const handleSignificance = useCallback((value) => {
+    const handleSignificance = useCallback(value => {
         setSignificance(value);
     }, []);
 
@@ -28,7 +28,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
     }, []);
 
     const addItem = useCallback(
-        (event) => {
+        event => {
             // add item if user hits 'enter' key on input field
             if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
                 return;
@@ -39,7 +39,7 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
             // move focus to name as published text field after item was added
         },
         // eslint-disable-next-line react-hooks/exhaustive-deps
-        [disabled, significance, contributionStatement]
+        [disabled, significance, contributionStatement],
     );
 
     const {

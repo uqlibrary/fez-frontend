@@ -33,7 +33,7 @@ describe('AdditionalInformationSectionContainer component', () => {
 
         const wrapper = setup(
             {},
-            { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store }
+            { isShallow: true, requiresStore: true, store: global.setupStoreForMount(Immutable.Map({})).store },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

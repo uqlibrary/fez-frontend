@@ -10,7 +10,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
     const linkInput = useRef(null);
     const descriptionInput = useRef(null);
 
-    const handleChange = (event) => {
+    const handleChange = event => {
         const { name, value } = event.target;
         setLinkAndDescription({
             ...linkAndDescription,
@@ -28,7 +28,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
     };
 
     const addItem = useCallback(
-        (event) => {
+        event => {
             // add item if user hits 'enter' key on input field
             if (
                 disabled ||
@@ -46,7 +46,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
             descriptionInput.current.focus();
             // linkInput.current.focus();
         },
-        [disabled, linkAndDescription, onAdd]
+        [disabled, linkAndDescription, onAdd],
     );
 
     const {

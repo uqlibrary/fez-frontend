@@ -111,7 +111,7 @@ class DownshiftMultiple extends React.Component {
             },
             () => {
                 this.props.onChange(this.state.selectedItem);
-            }
+            },
         );
     };
 
@@ -124,7 +124,7 @@ class DownshiftMultiple extends React.Component {
             },
             () => {
                 this.props.onChange(this.state.selectedItem);
-            }
+            },
         );
     };
 
@@ -205,7 +205,7 @@ class DownshiftMultiple extends React.Component {
                                             itemProps: getItemProps({ item: suggestion.label }),
                                             highlightedIndex,
                                             selectedItem: selectedItem2,
-                                        })
+                                        }),
                                     )}
                                 </Paper>
                             ) : null}

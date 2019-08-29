@@ -20,15 +20,16 @@ function setup(testProps = {}) {
     return shallow(<SecurityCard {...props} />);
 }
 
-
 describe('SecurityCard component', () => {
     it('should render security card correctly for record type', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                dataStreams: new List([{
-                    dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1,
-                }]),
+                dataStreams: new List([
+                    {
+                        dsi_dsid: 'test.txt',
+                        dsi_security_policy: 1,
+                    },
+                ]),
                 rek_security_inherited: 1,
                 rek_security_policy: 5,
                 rek_datastream_policy: 5,
@@ -39,13 +40,15 @@ describe('SecurityCard component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_object_type_lookup: 'Record',
-                fez_record_search_key_ismemberof: [{
-                    rek_ismemberof: 'Test collection',
-                    parent: {
-                        rek_security_policy: 2,
-                        rek_datastream_policy: 1,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: 'Test collection',
+                        parent: {
+                            rek_security_policy: 2,
+                            rek_datastream_policy: 1,
+                        },
                     },
-                }],
+                ],
             },
         }));
 
@@ -70,13 +73,15 @@ describe('SecurityCard component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_object_type_lookup: 'Record',
-                fez_record_search_key_ismemberof: [{
-                    rek_ismemberof: 'Test collection',
-                    parent: {
-                        rek_security_policy: 2,
-                        rek_datastream_policy: 1,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: 'Test collection',
+                        parent: {
+                            rek_security_policy: 2,
+                            rek_datastream_policy: 1,
+                        },
                     },
-                }],
+                ],
             },
         }));
 
@@ -90,10 +95,12 @@ describe('SecurityCard component', () => {
     it('should render security card correctly for record type if user checks override security', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                dataStreams: new List([{
-                    dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1,
-                }]),
+                dataStreams: new List([
+                    {
+                        dsi_dsid: 'test.txt',
+                        dsi_security_policy: 1,
+                    },
+                ]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
                 rek_datastream_policy: 5,
@@ -104,13 +111,15 @@ describe('SecurityCard component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_object_type_lookup: 'Record',
-                fez_record_search_key_ismemberof: [{
-                    rek_ismemberof: 'Test collection',
-                    parent: {
-                        rek_security_policy: 2,
-                        rek_datastream_policy: 1,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: 'Test collection',
+                        parent: {
+                            rek_security_policy: 2,
+                            rek_datastream_policy: 1,
+                        },
                     },
-                }],
+                ],
             },
         }));
 
@@ -171,10 +180,12 @@ describe('SecurityCard component', () => {
     it('should render security card with disabled inputs', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
-                dataStreams: new List([{
-                    dsi_dsid: 'test.txt',
-                    dsi_security_policy: 1,
-                }]),
+                dataStreams: new List([
+                    {
+                        dsi_dsid: 'test.txt',
+                        dsi_security_policy: 1,
+                    },
+                ]),
                 rek_security_inherited: 0,
                 rek_security_policy: 5,
                 rek_datastream_policy: 5,
@@ -185,13 +196,15 @@ describe('SecurityCard component', () => {
             record: {
                 rek_pid: 'UQ:123456',
                 rek_object_type_lookup: 'Record',
-                fez_record_search_key_ismemberof: [{
-                    rek_ismemberof: 'Test collection',
-                    parent: {
-                        rek_security_policy: 2,
-                        rek_datastream_policy: 1,
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof: 'Test collection',
+                        parent: {
+                            rek_security_policy: 2,
+                            rek_datastream_policy: 1,
+                        },
                     },
-                }],
+                ],
             },
         }));
 
@@ -204,17 +217,11 @@ describe('SecurityCard component', () => {
 
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
-            expect(isSame(
-                { disabled: true },
-                { disabled: true }
-            )).toBeTruthy();
+            expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();
         });
 
         it('should return false if props do not match', () => {
-            expect(isSame(
-                { disabled: true },
-                { disabled: false }
-            )).toBeFalsy();
+            expect(isSame({ disabled: true }, { disabled: false })).toBeFalsy();
         });
     });
 });

@@ -39,7 +39,7 @@ export const fieldConfig = {
                 },
             },
             height: 100,
-            format: (value) => Immutable.Map(value),
+            format: value => Immutable.Map(value),
             validate: [validation.required],
         },
     },
@@ -56,7 +56,7 @@ export const fieldConfig = {
                 },
             },
             height: 100,
-            format: (value) => Immutable.Map(value),
+            format: value => Immutable.Map(value),
         },
     },
     internalNotes: {
@@ -71,7 +71,7 @@ export const fieldConfig = {
                 },
             },
             height: 100,
-            format: (value) => Immutable.Map(value),
+            format: value => Immutable.Map(value),
         },
     },
     fez_record_search_key_isi_loc: {
@@ -146,7 +146,7 @@ export const fieldConfig = {
                 },
             },
             height: 100,
-            format: (value) => Immutable.Map(value),
+            format: value => Immutable.Map(value),
             validate: [validation.required],
         },
     },
@@ -495,7 +495,7 @@ export const fieldConfig = {
                 },
             },
             height: 100,
-            format: (value) => Immutable.Map(value),
+            format: value => Immutable.Map(value),
         },
     },
     significanceAndContributionStatement: {
@@ -674,84 +674,84 @@ export const adminInterfaceConfig = {
 
 export const valueExtractor = {
     rek_title: {
-        getValue: (record) => ({
+        getValue: record => ({
             plainText: record.rek_title,
             htmlText: record.rek_formatted_title || record.rek_title,
         }),
     },
     rek_description: {
-        getValue: (record) => ({
+        getValue: record => ({
             plainText: record.rek_description,
             htmlText: record.rek_formatted_abstract || record.rek_description,
         }),
     },
     rek_date: {
-        getValue: (record) => record.rek_date,
+        getValue: record => record.rek_date,
     },
     rek_subtype: {
-        getValue: (record) => record.rek_subtype,
+        getValue: record => record.rek_subtype,
     },
     languages: {
-        getValue: (record) => record.fez_record_search_key_language.map((language) => language.rek_language),
+        getValue: record => record.fez_record_search_key_language.map(language => language.rek_language),
     },
     fez_record_search_key_journal_name: {
-        getValue: (record) => ({ ...record.fez_record_search_key_journal_name }),
+        getValue: record => ({ ...record.fez_record_search_key_journal_name }),
     },
     fez_record_search_key_place_of_publication: {
-        getValue: (record) => ({
+        getValue: record => ({
             ...record.fez_record_search_key_place_of_publication,
         }),
     },
     fez_record_search_key_publisher: {
-        getValue: (record) => ({ ...record.fez_record_search_key_publisher }),
+        getValue: record => ({ ...record.fez_record_search_key_publisher }),
     },
     fez_record_search_key_volume_number: {
-        getValue: (record) => ({ ...record.fez_record_search_key_volume_number }),
+        getValue: record => ({ ...record.fez_record_search_key_volume_number }),
     },
     fez_record_search_key_issue_number: {
-        getValue: (record) => ({ ...record.fez_record_search_key_issue_number }),
+        getValue: record => ({ ...record.fez_record_search_key_issue_number }),
     },
     fez_record_search_key_article_number: {
-        getValue: (record) => ({ ...record.fez_record_search_key_article_number }),
+        getValue: record => ({ ...record.fez_record_search_key_article_number }),
     },
     fez_record_search_key_start_page: {
-        getValue: (record) => ({ ...record.fez_record_search_key_start_page }),
+        getValue: record => ({ ...record.fez_record_search_key_start_page }),
     },
     fez_record_search_key_end_page: {
-        getValue: (record) => ({ ...record.fez_record_search_key_end_page }),
+        getValue: record => ({ ...record.fez_record_search_key_end_page }),
     },
     fez_record_search_key_oa_embargo_days: {
-        getValue: (record) => ({
+        getValue: record => ({
             ...record.fez_record_search_key_oa_embargo_days,
         }),
     },
     fez_record_search_key_total_pages: {
-        getValue: (record) => ({
+        getValue: record => ({
             ...record.fez_record_search_key_total_pages,
         }),
     },
     collections: {
-        getValue: (record) =>
-            record.fez_record_search_key_ismemberof.map((collection) => ({
+        getValue: record =>
+            record.fez_record_search_key_ismemberof.map(collection => ({
                 id: collection.rek_ismemberof,
                 value: collection.rek_ismemberof_lookup,
             })),
     },
     fez_record_search_key_keywords: {
-        getValue: (record) => [...record.fez_record_search_key_keywords],
+        getValue: record => [...record.fez_record_search_key_keywords],
     },
     fez_record_search_key_issn: {
-        getValue: (record) => [...record.fez_record_search_key_issn],
+        getValue: record => [...record.fez_record_search_key_issn],
     },
     fez_record_search_key_isbn: {
-        getValue: (record) => [...record.fez_record_search_key_isbn],
+        getValue: record => [...record.fez_record_search_key_isbn],
     },
     fez_record_search_key_ismn: {
-        getValue: (record) => [...record.fez_record_search_key_ismn],
+        getValue: record => [...record.fez_record_search_key_ismn],
     },
     subjects: {
-        getValue: (record) =>
-            record.fez_record_search_key_subject.map((subject) => ({
+        getValue: record =>
+            record.fez_record_search_key_subject.map(subject => ({
                 rek_value: {
                     key: subject.rek_subject,
                     value: subject.rek_subject_lookup,
@@ -760,76 +760,76 @@ export const valueExtractor = {
             })),
     },
     languageOfJournalName: {
-        getValue: (record) =>
+        getValue: record =>
             record.fez_record_search_key_language_of_journal_name.map(
-                (language) => language.rek_language_of_journal_name
+                language => language.rek_language_of_journal_name,
             ),
     },
     fez_record_search_key_native_script_journal_name: {
-        getValue: (record) =>
+        getValue: record =>
             (record.fez_record_search_key_native_script_journal_name || {}).rek_native_script_journal_name,
     },
     fez_record_search_key_roman_script_journal_name: {
-        getValue: (record) =>
+        getValue: record =>
             (record.fez_record_search_key_roman_script_journal_name || {}).rek_roman_script_journal_name,
     },
     fez_record_search_key_translated_journal_name: {
-        getValue: (record) => (record.fez_record_search_key_translated_journal_name || {}).rek_translated_journal_name,
+        getValue: record => (record.fez_record_search_key_translated_journal_name || {}).rek_translated_journal_name,
     },
     languageOfTitle: {
-        getValue: (record) =>
-            record.fez_record_search_key_language_of_title.map((language) => language.rek_language_of_title),
+        getValue: record =>
+            record.fez_record_search_key_language_of_title.map(language => language.rek_language_of_title),
     },
     fez_record_search_key_native_script_title: {
-        getValue: (record) => (record.fez_record_search_key_native_script_title || {}).rek_native_script_title,
+        getValue: record => (record.fez_record_search_key_native_script_title || {}).rek_native_script_title,
     },
     fez_record_search_key_roman_script_title: {
-        getValue: (record) => (record.fez_record_search_key_roman_script_title || {}).rek_roman_script_title,
+        getValue: record => (record.fez_record_search_key_roman_script_title || {}).rek_roman_script_title,
     },
     fez_record_search_key_translated_title: {
-        getValue: (record) => (record.fez_record_search_key_translated_title || {}).rek_translated_title,
+        getValue: record => (record.fez_record_search_key_translated_title || {}).rek_translated_title,
     },
     fez_record_search_key_doi: {
-        getValue: (record) => ({ ...record.fez_record_search_key_doi }),
+        getValue: record => ({ ...record.fez_record_search_key_doi }),
     },
     fez_record_search_key_isi_loc: {
-        getValue: (record) => ({ ...record.fez_record_search_key_isi_loc }),
+        getValue: record => ({ ...record.fez_record_search_key_isi_loc }),
     },
     fez_record_search_key_scopus_id: {
-        getValue: (record) => ({ ...record.fez_record_search_key_scopus_id }),
+        getValue: record => ({ ...record.fez_record_search_key_scopus_id }),
     },
     fez_record_search_key_pubmed_id: {
-        getValue: (record) => ({ ...record.fez_record_search_key_pubmed_id }),
+        getValue: record => ({ ...record.fez_record_search_key_pubmed_id }),
     },
     rek_wok_doc_type: {
-        getValue: (record) => record.rek_wok_doc_type,
+        getValue: record => record.rek_wok_doc_type,
     },
     rek_scopus_doc_type: {
-        getValue: (record) => record.rek_scopus_doc_type,
+        getValue: record => record.rek_scopus_doc_type,
     },
     rek_pubmed_doc_type: {
-        getValue: (record) => record.rek_pubmed_doc_type,
+        getValue: record => record.rek_pubmed_doc_type,
     },
     links: {
-        getValue: (record) =>
-            (record.fez_record_search_key_link || []).map((link) => ({
+        getValue: record =>
+            (record.fez_record_search_key_link || []).map(link => ({
                 rek_order: link.rek_link_order,
                 rek_value: {
                     key: link.rek_link,
                     value: record.fez_record_search_key_link_description
-                        .filter((description) => description.rek_link_description_order === link.rek_link_order)
+                        .filter(description => description.rek_link_description_order === link.rek_link_order)
                         .reduce((pv, cv) => cv.rek_link_description, ''),
                 },
             })),
     },
     authors: {
-        getValue: (record) => {
+        getValue: record => {
             const authors = (record.fez_record_search_key_author || []).reduce(
                 (authorsObject, author) => ({
                     ...authorsObject,
                     [author.rek_author_order]: author,
                 }),
-                {}
+                {},
             );
 
             const authorIds = (record.fez_record_search_key_author_id || []).reduce(
@@ -837,7 +837,7 @@ export const valueExtractor = {
                     ...authorIdsObject,
                     [authorId.rek_author_id_order]: authorId,
                 }),
-                {}
+                {},
             );
 
             const authorAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
@@ -845,7 +845,7 @@ export const valueExtractor = {
                     ...authorAffiliationsObject,
                     [authorAffiliationName.rek_author_affiliation_name_order]: authorAffiliationName,
                 }),
-                {}
+                {},
             );
 
             const authorAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
@@ -853,7 +853,7 @@ export const valueExtractor = {
                     ...authorAffiliationTypesObject,
                     [authorAffiliationType.rek_author_affiliation_type_order]: authorAffiliationType,
                 }),
-                {}
+                {},
             );
 
             return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
@@ -868,34 +868,34 @@ export const valueExtractor = {
         },
     },
     contentIndicators: {
-        getValue: (record) =>
+        getValue: record =>
             (record.fez_record_search_key_content_indicator || {}).map(
-                (contentIndicator) => contentIndicator.rek_content_indicator
+                contentIndicator => contentIndicator.rek_content_indicator,
             ),
     },
     fez_record_search_key_herdc_code: {
-        getValue: (record) => ({ ...record.fez_record_search_key_herdc_code }),
+        getValue: record => ({ ...record.fez_record_search_key_herdc_code }),
     },
     fez_record_search_key_herdc_status: {
-        getValue: (record) => ({ ...record.fez_record_search_key_herdc_status }),
+        getValue: record => ({ ...record.fez_record_search_key_herdc_status }),
     },
     fez_record_search_key_institutional_status: {
-        getValue: (record) => ({ ...record.fez_record_search_key_institutional_status }),
+        getValue: record => ({ ...record.fez_record_search_key_institutional_status }),
     },
     additionalNotes: {
-        getValue: (record) => ({
+        getValue: record => ({
             plainText: (record.fez_record_search_key_notes || {}).rek_notes,
             htmlText: (record.fez_record_search_key_notes || {}).rek_notes,
         }),
     },
     significanceAndContributionStatement: {
-        getValue: (record) => {
+        getValue: record => {
             const authors = (record.fez_record_search_key_author || []).reduce(
                 (authorsObject, author) => ({
                     ...authorsObject,
                     [author.rek_author_order]: author,
                 }),
-                {}
+                {},
             );
 
             const significanceScales = (record.fez_record_search_key_significance || []).reduce(
@@ -903,7 +903,7 @@ export const valueExtractor = {
                     ...significanceScalesObject,
                     [significance.rek_significance_order]: significance,
                 }),
-                {}
+                {},
             );
 
             const contributionStatements = (record.fez_record_search_key_creator_contribution_statement || []).reduce(
@@ -911,7 +911,7 @@ export const valueExtractor = {
                     ...contributionStatementsObject,
                     [contributionStatement.rek_creator_contribution_statement_order]: contributionStatement,
                 }),
-                {}
+                {},
             );
 
             return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => {
@@ -932,32 +932,32 @@ export const valueExtractor = {
         },
     },
     qualityIndicators: {
-        getValue: (record) => {
-            return (record.fez_record_search_key_quality_indicator || []).map((item) => item.rek_quality_indicator);
+        getValue: record => {
+            return (record.fez_record_search_key_quality_indicator || []).map(item => item.rek_quality_indicator);
         },
     },
     grants: {
-        getValue: (record) => {
+        getValue: record => {
             const grantAgencyNames = (record.fez_record_search_key_grant_agency || []).reduce(
                 (grantAgencyNamesObject, grantAgencyName) => ({
                     ...grantAgencyNamesObject,
                     [grantAgencyName.rek_grant_agency_order]: grantAgencyName,
                 }),
-                {}
+                {},
             );
             const grantIds = (record.fez_record_search_key_grant_id || []).reduce(
                 (grantIdsObject, grantId) => ({
                     ...grantIdsObject,
                     [grantId.rek_grant_id_order]: grantId,
                 }),
-                {}
+                {},
             );
             const grantAgencyTypes = (record.fez_record_search_key_grant_agency_type || []).reduce(
                 (grantAgencyTypesObject, grantAgencyType) => ({
                     ...grantAgencyTypesObject,
                     [grantAgencyType.rek_grant_agency_type_order]: grantAgencyType,
                 }),
-                {}
+                {},
             );
 
             return record.fez_record_search_key_grant_agency.map(({ rek_grant_agency_order: order }) => ({
@@ -968,6 +968,6 @@ export const valueExtractor = {
         },
     },
     files: {
-        getValue: () => ([]),
+        getValue: () => [],
     },
 };
