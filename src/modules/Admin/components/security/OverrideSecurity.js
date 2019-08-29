@@ -5,11 +5,7 @@ import Checkbox from '@material-ui/core/Checkbox';
 
 export const OverrideSecurity = ({ label, input, disabled }) => (
     <FormControlLabel
-        control={<Checkbox
-            disabled={disabled}
-            onChange={input.onChange}
-            checked={input.value === 0}
-        />}
+        control={<Checkbox disabled={disabled} onChange={input.onChange} checked={input.value === 0} />}
         {...{ label }}
     />
 );

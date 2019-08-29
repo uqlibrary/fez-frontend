@@ -18,13 +18,13 @@ import { bindActionCreators } from 'redux';
 
 export const FORM_NAME = 'Prototype';
 
-export const getBibliographicInitialValues = (record) =>
+export const getBibliographicInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .bibliographic(
             record.fez_record_search_key_language.length > 1 ||
-                record.fez_record_search_key_language[0].rek_language !== 'eng'
+                record.fez_record_search_key_language[0].rek_language !== 'eng',
         )
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -33,10 +33,10 @@ export const getBibliographicInitialValues = (record) =>
             };
         }, {});
 
-export const getIdentifiersInitialValues = (record) =>
+export const getIdentifiersInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .identifiers()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -45,10 +45,10 @@ export const getIdentifiersInitialValues = (record) =>
             };
         }, {});
 
-export const getAuthorsInitialValues = (record) =>
+export const getAuthorsInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .authors()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -57,10 +57,10 @@ export const getAuthorsInitialValues = (record) =>
             };
         }, {});
 
-export const getAdditionalInformationValues = (record) =>
+export const getAdditionalInformationValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .additionalInformation()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -69,10 +69,10 @@ export const getAdditionalInformationValues = (record) =>
             };
         }, {});
 
-export const getNtroValues = (record) =>
+export const getNtroValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .ntro()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -81,10 +81,10 @@ export const getNtroValues = (record) =>
             };
         }, {});
 
-export const getGrantInformationValues = (record) =>
+export const getGrantInformationValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .grantInformation()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -93,10 +93,10 @@ export const getGrantInformationValues = (record) =>
             };
         }, {});
 
-export const getFilesValues = (record) =>
+export const getFilesValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .files()
-        .map((card) => card.groups.reduce((groups, group) => [...groups, ...group], []))
+        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
             return {
@@ -105,7 +105,7 @@ export const getFilesValues = (record) =>
             };
         }, {});
 
-export const isFileValid = (dataStream) => {
+export const isFileValid = dataStream => {
     const {
         files: { blacklist },
     } = viewRecordsConfig;
@@ -114,7 +114,7 @@ export const isFileValid = (dataStream) => {
 };
 
 const onSubmit = (values, dispatch) => {
-    return dispatch(adminUpdate(values.toJS())).catch((error) => {
+    return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
@@ -124,7 +124,7 @@ const PrototypeContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
     const recordToView = state.get('viewRecordReducer').recordToView;
     const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
@@ -194,7 +194,7 @@ function mapDispatchToProps(dispatch) {
 
 const AdminReduxFormContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PrototypeContainer);
 
 // const getReduxFormInitialValues = (recordToView) => {

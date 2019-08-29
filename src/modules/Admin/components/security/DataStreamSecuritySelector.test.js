@@ -1,11 +1,6 @@
 import React from 'react';
 import DataStreamSecuritySelector, { isSame } from './DataStreamSecuritySelector';
-import {
-    rtlRender,
-    fireEvent,
-    cleanup,
-    waitForElement,
-} from 'test-utils';
+import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -19,25 +14,29 @@ function setup(testProps = {}) {
         },
         meta: {
             initial: {
-                toJS: () => ([]),
+                toJS: () => [],
             },
         },
         text: {
             overridePrompt: 'Override datastream security policy',
         },
-        collections: [{
-            parent: {
-                rek_datastream_policy: 3,
+        collections: [
+            {
+                parent: {
+                    rek_datastream_policy: 3,
+                },
             },
-        }, {
-            parent: {
-                rek_datastream_policy: 5,
+            {
+                parent: {
+                    rek_datastream_policy: 5,
+                },
             },
-        }, {
-            parent: {
-                rek_datastream_policy: 1,
+            {
+                parent: {
+                    rek_datastream_policy: 1,
+                },
             },
-        }],
+        ],
         ...testProps,
     };
     return rtlRender(<DataStreamSecuritySelector {...props} />);
@@ -50,10 +49,12 @@ describe('DataStreamSecuritySelector component', () => {
         const { asFragment, getByText } = setup({
             meta: {
                 initial: {
-                    toJS: () => ([{
-                        dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1,
-                    }]),
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'test.txt',
+                            dsi_security_policy: 1,
+                        },
+                    ],
                 },
             },
         });
@@ -67,17 +68,19 @@ describe('DataStreamSecuritySelector component', () => {
         const { asFragment, getByText, getByTestId } = setup({
             meta: {
                 initial: {
-                    toJS: () => ([{
-                        dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1,
-                    }]),
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'test.txt',
+                            dsi_security_policy: 1,
+                        },
+                    ],
                 },
             },
         });
 
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
         const menu = await waitForElement(() => getByTestId('menu-test.txt'));
 
         fireEvent.click(getByText(/public/i, menu));
@@ -90,38 +93,37 @@ describe('DataStreamSecuritySelector component', () => {
         const { asFragment } = setup({
             meta: {
                 initial: {
-                    toJS: () => ([{
-                        dsi_dsid: 'test.txt',
-                        dsi_security_policy: 1,
-                    }]),
+                    toJS: () => [
+                        {
+                            dsi_dsid: 'test.txt',
+                            dsi_security_policy: 1,
+                        },
+                    ],
                 },
             },
-            collections: [{
-                parent: {
-                    rek_datastream_policy: 1,
+            collections: [
+                {
+                    parent: {
+                        rek_datastream_policy: 1,
+                    },
                 },
-            }, {
-                rek_pid: 'UQ:111111',
-            }],
+                {
+                    rek_pid: 'UQ:111111',
+                },
+            ],
         });
 
         let fragment = asFragment();
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
     });
 
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
-            expect(isSame(
-                { disabled: true },
-                { disabled: true }
-            )).toBeTruthy();
+            expect(isSame({ disabled: true }, { disabled: true })).toBeTruthy();
         });
 
         it('should return false if props do not match', () => {
-            expect(isSame(
-                { disabled: true },
-                { disabled: false }
-            )).toBeFalsy();
+            expect(isSame({ disabled: true }, { disabled: false })).toBeFalsy();
         });
     });
 });
