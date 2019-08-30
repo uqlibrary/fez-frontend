@@ -771,9 +771,7 @@ export const adminInterfaceConfig = {
             },
             {
                 title: 'Manage links',
-                groups: [
-                    ['links'],
-                ],
+                groups: [['links']],
             },
         ],
         bibliographic: (isLote = false) => [
@@ -793,15 +791,11 @@ export const adminInterfaceConfig = {
             },
             {
                 title: 'ISBN',
-                groups: [
-                    ['fez_record_search_key_isbn'],
-                ],
+                groups: [['fez_record_search_key_isbn']],
             },
             {
                 title: 'ISSN',
-                groups: [
-                    ['fez_record_search_key_issn'],
-                ],
+                groups: [['fez_record_search_key_issn']],
             },
             {
                 title: 'Bibliographic',
@@ -842,10 +836,7 @@ export const adminInterfaceConfig = {
                 groups: [
                     ['collections'],
                     ['rek_subtype'],
-                    [
-                        'fez_record_search_key_herdc_code',
-                        'fez_record_search_key_herdc_status',
-                    ],
+                    ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                     ['fez_record_search_key_institutional_status'],
                     ['contentIndicators'],
                     ['additionalNotes'],
@@ -1192,31 +1183,33 @@ export const valueExtractor = {
         getValue: () => [],
     },
     fez_record_search_key_oa_status: {
-        getValue: (record) => ({ ...record.fez_record_search_key_oa_status }),
+        getValue: record => ({ ...record.fez_record_search_key_oa_status }),
     },
     rek_copyright: {
-        getValue: (record) => record.rek_copyright,
+        getValue: record => record.rek_copyright,
     },
     fez_record_search_key_pubmed_central_id: {
-        getValue: (record) => ({ ...record.rek_pubmed_central_id }),
+        getValue: record => ({ ...record.rek_pubmed_central_id }),
     },
     fez_record_search_key_date_available: {
-        getValue: (record) => {
-            return record.fez_record_search_key_date_available &&
+        getValue: record => {
+            return (
+                record.fez_record_search_key_date_available &&
                 record.fez_record_search_key_date_available.rek_date_available &&
-                moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY');
+                moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
+            );
         },
     },
     // rek_refereed_source: {
     //     getValue: (record) => ({ ...record.rek_refereed_source_lookup }),
     // },
     fez_record_search_key_edition: {
-        getValue: (record) => ({ ...record.fez_record_search_key_edition }),
+        getValue: record => ({ ...record.fez_record_search_key_edition }),
     },
     // fez_record_search_key_datastream_policy: {
     //     getValue: (record) => ({ ...record.fez_record_search_key_datastream_policy }),
     // },
     fez_record_search_key_series: {
-        getValue: (record) => ({ ...record.fez_record_search_key_series }),
+        getValue: record => ({ ...record.fez_record_search_key_series }),
     },
 };
