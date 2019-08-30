@@ -1189,7 +1189,11 @@ export const valueExtractor = {
         getValue: record => record.rek_copyright,
     },
     fez_record_search_key_pubmed_central_id: {
-        getValue: record => ({ ...record.rek_pubmed_central_id }),
+        getValue: record => {
+            return record.fez_record_search_key_pubmed_central_id
+                ? record.fez_record_search_key_pubmed_central_id
+                : null;
+        },
     },
     fez_record_search_key_date_available: {
         getValue: record => {
