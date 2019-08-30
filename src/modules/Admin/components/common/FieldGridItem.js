@@ -9,6 +9,10 @@ import { useRecordContext } from 'context';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { record } = useRecordContext();
+    if (!fieldConfig[field]) {
+        console.warn('No field config found for', field);
+        return '';
+    }
     return (
         <Grid item xs={12} md={12 / group.length}>
             <Field
