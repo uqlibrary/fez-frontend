@@ -12,6 +12,7 @@ import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDisca
 import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor } from 'config/adminInterface';
 import { viewRecordsConfig } from 'config';
+import { isFileValid } from 'config/validation';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
 // import locale from 'locale/pages';
 import { bindActionCreators } from 'redux';
@@ -105,14 +106,6 @@ export const getFilesValues = record =>
             };
         }, {});
 
-export const isFileValid = dataStream => {
-    const {
-        files: { blacklist },
-    } = viewRecordsConfig;
-
-    return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
-};
-
 const onSubmit = (values, dispatch) => {
     return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
@@ -159,7 +152,9 @@ const mapStateToProps = state => {
                     ...(recordType === RECORD_TYPE_RECORD
                         ? {
                             rek_security_inherited: recordToView.rek_security_inherited,
-                            dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
+                            dataStreams: (recordToView.fez_datastream_info || []).filter(
+                                isFileValid(viewRecordsConfig, true),
+                            ),
                         }
                         : {}),
                 },
