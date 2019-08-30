@@ -19,9 +19,9 @@ export {
     record,
     recordsTypeList,
     recordWithDatastreams,
-    recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    lookupToolIncites
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
