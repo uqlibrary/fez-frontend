@@ -10,8 +10,9 @@ import moment from 'moment';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-// import { DataStreamSecuritySelector } from '../modules/Admin/components/security/DataStreamSecuritySelector';
-import { DepositAgreementField } from '../modules/AddDataCollection/components/DepositAgreementField';
+// import { DataStreamSecuritySelector } from 'modules/Admin/components/security/DataStreamSecuritySelector';
+// import { DepositAgreementField } from 'modules/AddDataCollection/components/DepositAgreementField';
+import { DepositAgreementField } from 'modules/AddDataCollection/DepositAgreementField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
@@ -23,7 +24,7 @@ import {
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { OverrideSecurity } from '../modules/Admin/components/security/OverrideSecurity';
+import { OverrideSecurity } from 'modules/Admin/components/security/OverrideSecurity';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -766,7 +767,6 @@ export const adminInterfaceConfig = {
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
                     ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
                     ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
-                    ['fez_record_search_key_pubmed_central_id'],
                 ],
             },
             {
@@ -817,7 +817,6 @@ export const adminInterfaceConfig = {
                     ['rek_description'],
                     ['fez_record_search_key_keywords'],
                     // ['subjects'], // problem
-                    // ['fez_record_search_key_succeeds'],
                     // ['rek_refereed_source'],
                 ],
             },
@@ -1189,11 +1188,7 @@ export const valueExtractor = {
         getValue: record => record.rek_copyright,
     },
     fez_record_search_key_pubmed_central_id: {
-        getValue: record => {
-            return record.fez_record_search_key_pubmed_central_id
-                ? record.fez_record_search_key_pubmed_central_id
-                : null;
-        },
+        getValue: record => (record.fez_record_search_key_pubmed_central_id || {}).rek_pubmed_central_id,
     },
     fez_record_search_key_date_available: {
         getValue: record => {
