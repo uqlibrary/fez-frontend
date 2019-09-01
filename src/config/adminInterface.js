@@ -19,8 +19,7 @@ import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 // import { DataStreamSecuritySelector } from 'modules/Admin/components/security/DataStreamSecuritySelector';
-// import { DepositAgreementField } from 'modules/AddDataCollection/components/DepositAgreementField';
-import { DepositAgreementField } from 'modules/AddDataCollection/DepositAgreementField';
+// import { DepositAgreementField } from 'modules/AddDataCollection';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
@@ -648,14 +647,14 @@ export const fieldConfig = {
     //         placeholder: 'Edit Security',
     //     },
     // },
-    rek_copyright: {
-        component: DepositAgreementField,
-        componentProps: {
-            name: 'adminSection.rek_copyright',
-            label: 'Copyright Agreement',
-            placeholder: '',
-        },
-    },
+    // rek_copyright: {
+    //     component: DepositAgreementField, // ??? this just gives a red checkbox??
+    //     componentProps: {
+    //         name: 'adminSection.rek_copyright',
+    //         label: 'Copyright Agreement',
+    //         placeholder: '',
+    //     },
+    // },
     rek_security_inherited: {
         component: OverrideSecurity,
         componentProps: {
@@ -934,7 +933,7 @@ export const adminInterfaceConfig = {
                     // ['fez_record_search_key_datastream_policy'],
                     ['files'],
                     // ['fez_record_search_key_oa_status'],
-                    ['rek_copyright'], // ??? this just gives a red checkbox??
+                    // ['rek_copyright'],
                 ],
             },
         ],
@@ -1449,6 +1448,9 @@ export const valueExtractor = {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
+    // rek_copyright: {
+    //     getValue: record => record.rek_copyright,
+    // },
     fez_record_search_key_date_available: {
         getValue: record => {
             return (
