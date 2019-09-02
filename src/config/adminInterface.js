@@ -5,7 +5,9 @@ import { PUBLICATION_TYPE_JOURNAL_ARTICLE, ORG_TYPE_NOT_SET } from 'config/gener
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
+import { viewRecordsConfig } from 'config';
 
+import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -521,6 +523,12 @@ export const fieldConfig = {
             name: 'grantInformationSection.grants',
         },
     },
+    fez_datastream_info: {
+        component: AttachedFilesField,
+        componentProps: {
+            name: 'filesSection.fez_datastream_info',
+        },
+    },
 };
 
 export const adminInterfaceConfig = {
@@ -644,6 +652,9 @@ export const adminInterfaceConfig = {
             },
         ],
         files: () => [
+            {
+                groups: [['fez_datastream_info']],
+            },
             {
                 title: 'Files',
                 groups: [['files']],
@@ -860,7 +871,7 @@ export const valueExtractor = {
                 nameAsPublished: (authors[order] || {}).rek_author,
                 creatorRole: '',
                 uqIdentifier: `${(authorIds[order] || {}).rek_author_id}` || '',
-                authorId: (authorIds[order] || {}).rek_author_id,
+                authorId: (authorIds[order] || {}).rek_author_id || 0,
                 orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
                 orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type}` || '',
                 affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
@@ -969,5 +980,10 @@ export const valueExtractor = {
     },
     files: {
         getValue: () => [],
+    },
+    fez_datastream_info: {
+        getValue: record => {
+            return (record.fez_datastream_info || []).filter(validation.isFileValid(viewRecordsConfig, true));
+        },
     },
 };
