@@ -20,7 +20,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { formValues } = useFormValuesContext();
 
     const recordType = record.rek_object_type_lookup.toLowerCase();
-    const { admin, ...rest } = locale.components.securitySection;
+    const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
     const dataStreams = !!(formValues.dataStreams || {}).toJS ? formValues.dataStreams.toJS() : formValues.dataStreams;
@@ -35,9 +35,6 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
     return (
         <Grid container spacing={16}>
-            <Grid item xs={12} sm={12}>
-                <Alert type="warning" title={admin.warning.title} message={admin.warning.message} />
-            </Grid>
             <Grid item xs={12}>
                 <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader>
                     <Grid container spacing={16}>

@@ -1604,11 +1604,6 @@ export default {
                         dataStream: 'Data Stream',
                     },
                 },
-                warning: {
-                    message:
-                        "This section is to be handled by admins only - changes made to these sections may inadvertantly hide or show records in error - please make sure you know what you're doing.",
-                    title: 'Warning',
-                },
             },
             community: {
                 cardTitle: pid => (
@@ -1619,8 +1614,7 @@ export default {
                 prompt: 'Select a security policy to apply',
                 fieldLabel: 'Override community level policy to apply to this PID',
                 selectedTitle: 'Selected community record security policy details',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+                description: '',
             },
             collection: {
                 cardTitle: pid => (
@@ -1641,8 +1635,7 @@ export default {
                         Current collection <b>datastream</b> level security policy details
                     </span>
                 ),
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+                description: '',
             },
             record: {
                 cardTitle: pid => (
@@ -1655,8 +1648,7 @@ export default {
                 dataStreamFieldLabel: 'Override record level policy to apply to this PID',
                 selectedTitle: 'Selected record level security policy details',
                 dataStreamSelectedTitle: 'Selected record level datastream security policy details',
-                description:
-                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum.',
+                description: '',
                 dataStream: {
                     cardTitle: pid => (
                         <span>
