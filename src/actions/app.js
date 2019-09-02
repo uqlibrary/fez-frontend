@@ -34,7 +34,7 @@ export function dismissAppAlert() {
  * @param {string} redirectPath
  */
 export function setRedirectPath(redirectPath) {
-    return (dispatch) => {
+    return dispatch => {
         dispatch({
             type: actions.SET_REDIRECT_PATH,
             payload: redirectPath,
@@ -46,7 +46,7 @@ export function setRedirectPath(redirectPath) {
  * Clears redirect path
  */
 export function clearRedirectPath() {
-    return (dispatch) => {
+    return dispatch => {
         dispatch({
             type: actions.CLEAR_REDIRECT_PATH,
         });
