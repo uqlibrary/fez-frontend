@@ -68,7 +68,7 @@ export class Thumbnail extends Component {
             return (
                 <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false}>
                     <Img
-                        crossorigin="anonymous"
+                        crossOrigin="anonymous"
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
                         loader={<CircularProgress size={15} thickness={1} />}
