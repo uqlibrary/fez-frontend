@@ -9,11 +9,6 @@ export default {
             journalOpenAccessPolicyLink: "Check publisher's open access policy",
             eraJournalListed: '(ERA [year] Journal(s) Listed)',
         },
-        imageFailedAlert: {
-            type: 'error',
-            title: 'IMAGE FAILED TO LOAD',
-            message: 'Please click the download/open in a new window link above to open the original file format.',
-        },
         sections: {
             publicationDetails: 'Type & Collection',
             grantInformation: 'Grant information',
@@ -34,14 +29,14 @@ export default {
                 embargoDate: 'Open access after [embargoDate]',
                 size: 'Size',
                 culturalSensitivityStatement:
-                    'Cultural Sensitivity Statement - ' +
-                    'Be advised that some files may contain content which is of a sensitive' +
-                    ' nature to some cultures or tastes.',
+                    'Cultural Sensitivity Statement - Be advised that some files may contain content which is ' +
+                    'of a sensitive nature to some cultures or tastes.',
                 linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
                 preview: {
                     videoTitle: 'Video preview',
                     imageTitle: 'Image preview',
-                    openInNewWindow: 'Open/Download file in a new window',
+                    openOriginal: 'Open original file in a new window',
+                    openWeb: 'Open web version file in a new window',
                     close: 'Close',
                 },
             },
@@ -52,12 +47,12 @@ export default {
                     description: 'Description',
                     oaStatus: ' ',
                 },
-                securityLocked: 'You do not have access to this file',
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 doiDescription: 'Full text from publisher',
                 openAccessLabel: 'Open Access - [oa_status] - Free to read',
                 openAccessEmbargoedLabel: '[oa_status] - Open access after [embargo_date]',
+                securityLocked: 'You do not have access to this file',
                 labelNoOpenAccessLookup: 'Open Access - Embargo applies',
                 labelOpenAccessNoStatus: 'Open Access - Free to read',
                 labelClosedAccess: 'Closed access',
@@ -2574,6 +2569,11 @@ export default {
         videoFailedAlert: {
             type: 'error',
             title: 'VIDEO PLAYER ERROR',
+            message: 'Please click the download/open in a new window link above to open the original file format.',
+        },
+        imageFailedAlert: {
+            type: 'error',
+            title: 'IMAGE FAILED TO LOAD',
             message: 'Please click the download/open in a new window link above to open the original file format.',
         },
     },
