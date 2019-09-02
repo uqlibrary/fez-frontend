@@ -1,6 +1,6 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
-    adminEditBookChapter,
+    adminEditBookChapterList,
     collections,
     communityRecord,
     collectionRecord,

@@ -194,9 +194,12 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
+            { ...mockData.adminEditBookChapterList.data[0] },
+            { ...mockData.adminEditBookChapterList.data[1] },
             { ...mockData.incompleteNTROrecordUqrdav10 },
             { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.incompleteNTROrecord },
+            { ...mockData.incompleteNTROlist.data[0] },
             { ...mockData.incompleteNTROlist.data[1] },
             { ...mockData.incompleteNTROlist.data[2] },
             { ...mockTestingData.dataCollection },
@@ -204,7 +207,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.recordWithoutAuthorIds },
             ...mockData.possibleUnclaimedList.data,
             ...mockData.myRecordsList.data,
-            ...mockData.adminEditBookChapter,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
