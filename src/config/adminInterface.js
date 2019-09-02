@@ -822,15 +822,11 @@ export const adminInterfaceConfig = {
         authors: () => [
             {
                 title: 'Author',
-                groups: [
-                    ['authors'],
-                ],
+                groups: [['authors']],
             },
             {
                 title: 'Editor',
-                groups: [
-                    ['editors'],
-                ],
+                groups: [['editors']],
             },
         ],
         additionalInformation: () => [
