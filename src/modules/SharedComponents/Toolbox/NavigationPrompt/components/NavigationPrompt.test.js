@@ -100,7 +100,7 @@ describe('NavigationPrompt component', () => {
         const wrapper = setup({
             when: true,
             history: {
-                block: jest.fn((unblock) => {
+                block: jest.fn(unblock => {
                     return () => unblock({ pathname: '/test' });
                 }),
                 push: pushFn,

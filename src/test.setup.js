@@ -35,7 +35,7 @@ export const setupStoreForMount = () => {
         subscribe: jest.fn(),
     };
     const next = jest.fn();
-    const invoke = (action) => thunk(store)(next)(action);
+    const invoke = action => thunk(store)(next)(action);
     return { store, next, invoke };
 };
 

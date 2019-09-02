@@ -32,7 +32,7 @@ describe('Component Links ', () => {
                     rek_doi_xsdmf_id: 16514,
                     rek_doi: '10.1016/j.pnsc.2012.12.004',
                 },
-			  }
+            }
             : {}),
         fez_record_search_key_link: [
             {
@@ -207,7 +207,7 @@ describe('Component Links ', () => {
 
     it(
         'should render 3 not OA links and DOI not OA and PMC ' +
-			'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
+            'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
         () => {
             const pmcProps = {
                 ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),

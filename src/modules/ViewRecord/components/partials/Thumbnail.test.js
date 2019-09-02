@@ -62,7 +62,7 @@ describe('Thumbnail component', () => {
             },
         ];
 
-        variants.forEach((variant) => {
+        variants.forEach(variant => {
             const wrapper = setup({
                 fileName: variant.fileName,
                 mimeType: variant.mimeType,

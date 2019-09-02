@@ -92,7 +92,7 @@ describe('Grant Information Component ', () => {
 
     it('should not break if rek_grant_id is not in the search key', () => {
         const { fez_record_search_key_grant_id: fsrkGrantID, ...journalArticleWithoutRekGrantId } = journalArticle;
-        const fsrkwithouGrantID = fsrkGrantID.map((grantId) => {
+        const fsrkwithouGrantID = fsrkGrantID.map(grantId => {
             delete grantId.rek_grant_id;
             return grantId;
         });

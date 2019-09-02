@@ -43,15 +43,15 @@ export default class CommunityForm extends Component {
 
     cancelSubmit = () => {
         window.location.assign(pathConfig.index);
-    }
+    };
 
     afterSubmit = () => {
         window.location.assign(pathConfig.index);
-    }
+    };
 
     reloadForm = () => {
         location.reload();
-    }
+    };
 
     render() {
         const txt = formLocale.addACommunity;
@@ -66,21 +66,14 @@ export default class CommunityForm extends Component {
                         </Grid>
                     </Grid>
                     <Grid container spacing={16}>
-                        <Grid item xs/>
+                        <Grid item xs />
                         <Grid item>
-                            <Button
-                                variant={'contained'}
-                                fullWidth
-                                onClick={this.afterSubmit}>
+                            <Button variant={'contained'} fullWidth onClick={this.afterSubmit}>
                                 {txt.afterSubmitButton}
                             </Button>
                         </Grid>
                         <Grid item>
-                            <Button
-                                variant={'contained'}
-                                color={'primary'}
-                                fullWidth
-                                onClick={this.reloadForm}>
+                            <Button variant={'contained'} color={'primary'} fullWidth onClick={this.reloadForm}>
                                 {txt.AddAnotherButton}
                             </Button>
                         </Grid>
@@ -99,13 +92,15 @@ export default class CommunityForm extends Component {
                     ...formLocale.errorAlert,
                     message: formLocale.addACommunity.addFailedMessage,
                 },
-            } });
+            },
+        });
         return (
             <StandardPage title={txt.title}>
                 <form>
                     <NavigationDialogBox
                         when={this.props.dirty && !this.props.submitSucceeded}
-                        txt={txt.cancelWorkflowConfirmation}/>
+                        txt={txt.cancelWorkflowConfirmation}
+                    />
                     <Grid container spacing={24}>
                         <Grid item xs={12}>
                             <Grid item xs={12}>
@@ -148,18 +143,17 @@ export default class CommunityForm extends Component {
                                                 maxInputLength={111}
                                                 searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
                                                 locale={txt.formLabels.keywords.field}
-                                                disabled={this.props.submitting}/>
+                                                disabled={this.props.submitting}
+                                            />
                                         </Grid>
-
                                     </Grid>
                                 </StandardCard>
                             </Grid>
-                            {
-                                alertProps &&
+                            {alertProps && (
                                 <Grid item xs={12}>
                                     <Alert {...alertProps} />
                                 </Grid>
-                            }
+                            )}
                         </Grid>
 
                         <Grid container spacing={16}>
@@ -169,7 +163,8 @@ export default class CommunityForm extends Component {
                                     variant={'contained'}
                                     fullWidth
                                     disabled={this.props.submitting}
-                                    onClick={this.cancelSubmit}>
+                                    onClick={this.cancelSubmit}
+                                >
                                     {txt.cancel}
                                 </Button>
                             </Grid>
@@ -180,11 +175,11 @@ export default class CommunityForm extends Component {
                                     color={'primary'}
                                     fullWidth
                                     onClick={this.props.handleSubmit}
-                                    disabled={this.props.submitting || this.props.disableSubmit}>
+                                    disabled={this.props.submitting || this.props.disableSubmit}
+                                >
                                     {txt.submit}
                                 </Button>
                             </Grid>
-
                         </Grid>
                     </Grid>
                 </form>

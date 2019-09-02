@@ -26,9 +26,9 @@ export default class AudioDocumentForm extends Component {
         // path to the locale data for each of the sections
         const txt = formLocale.audioDocument;
         const editors = this.props.formValues && this.props.formValues.get('editors');
-        const editorSelected = !!editors && editors.filter((editor) => editor.selected).length > 0;
+        const editorSelected = !!editors && editors.filter(editor => editor.selected).length > 0;
         const authors = this.props.formValues && this.props.formValues.get('authors');
-        const authorSelected = !!authors && authors.filter((author) => author.selected).length > 0;
+        const authorSelected = !!authors && authors.filter(author => author.selected).length > 0;
         return (
             <Grid container spacing={16}>
                 <Grid item xs={12}>
@@ -72,7 +72,8 @@ export default class AudioDocumentForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     required
                                     className="requiredHintField"
                                     validate={[validation.required]}

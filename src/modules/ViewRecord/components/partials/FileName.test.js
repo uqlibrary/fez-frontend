@@ -9,9 +9,9 @@ function setup(testProps = {}, args = { isShallow: true }) {
         fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: 'application/pdf',
         mediaUrl:
-			(!!testProps.fileName && `https://espace.library.uq.edu.au/view/UQ:676287/${testProps.fileName}`) || '',
+            (!!testProps.fileName && `https://espace.library.uq.edu.au/view/UQ:676287/${testProps.fileName}`) || '',
         previewMediaUrl:
-			(!!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}`) || '',
+            (!!previewFileName && `https://espace.library.uq.edu.au/view/UQ:676287/${previewFileName}`) || '',
         onFileSelect: jest.fn(),
         allowDownload: false,
         ...rest,

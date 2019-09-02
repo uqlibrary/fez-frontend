@@ -173,7 +173,7 @@ describe('AutoCompleteAsyncField component', () => {
 
     it(
         'should test stateReducer function correctly when free text input is ' +
-			'not allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
+            'not allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
         () => {
             const wrapper = setup({ required: true });
             const result = wrapper

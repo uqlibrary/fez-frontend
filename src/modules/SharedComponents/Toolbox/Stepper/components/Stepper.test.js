@@ -10,11 +10,7 @@ function setup(testProps, isShallow = true) {
 }
 
 describe('Add record stepper tests', () => {
-    const steps = [
-        { label: 'Step 1' },
-        { label: 'Step 2' },
-        { label: 'Step 3' },
-    ];
+    const steps = [{ label: 'Step 1' }, { label: 'Step 2' }, { label: 'Step 3' }];
 
     it('should render steps with specific active step', () => {
         let values;

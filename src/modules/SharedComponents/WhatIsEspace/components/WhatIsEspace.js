@@ -14,16 +14,12 @@ export default class WhatIsEspace extends PureComponent {
             <StandardCard title={txt.title} primaryHeader>
                 <Typography variant={'body2'}>
                     {txt.text}
-                    {
-                        txt.readMoreLink.indexOf('http') === -1 &&
-                        <Link to={txt.readMoreLink}>{txt.readMoreLabel}</Link>
-                    }
-                    {
-                        txt.readMoreLink.indexOf('http') >= 0 &&
+                    {txt.readMoreLink.indexOf('http') === -1 && <Link to={txt.readMoreLink}>{txt.readMoreLabel}</Link>}
+                    {txt.readMoreLink.indexOf('http') >= 0 && (
                         <ExternalLink href={txt.readMoreLink} title={txt.readMoreTitle} aria-label={txt.readMoreTitle}>
                             {txt.readMoreLabel}
                         </ExternalLink>
-                    }
+                    )}
                 </Typography>
             </StandardCard>
         );

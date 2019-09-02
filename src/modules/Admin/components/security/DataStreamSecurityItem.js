@@ -17,7 +17,7 @@ const DataStreamSecurityItem = ({
     inheritedSecurity,
     policyDropdownLabel,
 }) => {
-    const handleDataStreamChange = (value) => {
+    const handleDataStreamChange = value => {
         onSecurityChange(
             index,
             value === initialDataStream.dsi_security_policy

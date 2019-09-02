@@ -5,18 +5,20 @@ import PageCitationView from './PageCitationView';
 const hasPageKey = (publication, key, subkey) => publication[key] && publication[key][subkey];
 
 const PageRangeCitationView = ({ publication, searchKey, className, prefix, suffix }) => {
-    const startPage = hasPageKey(publication, searchKey.startPage.key, searchKey.startPage.subkey) &&
-        <PageCitationView publication={publication} searchKey={searchKey.startPage} className="citationStartPage"/>;
-    const endPage = hasPageKey(publication, searchKey.endPage.key, searchKey.endPage.subkey) &&
-        <PageCitationView publication={publication} searchKey={searchKey.endPage} className="citationEndPage"/>;
+    const startPage = hasPageKey(publication, searchKey.startPage.key, searchKey.startPage.subkey) && (
+        <PageCitationView publication={publication} searchKey={searchKey.startPage} className="citationStartPage" />
+    );
+    const endPage = hasPageKey(publication, searchKey.endPage.key, searchKey.endPage.subkey) && (
+        <PageCitationView publication={publication} searchKey={searchKey.endPage} className="citationEndPage" />
+    );
 
     return (
         <span className={`${className}${!startPage && !endPage ? ' empty' : ''}`}>
-            {(startPage || endPage) ? prefix : ' '}
+            {startPage || endPage ? prefix : ' '}
             {startPage}
-            {(startPage && endPage) && '-'}
+            {startPage && endPage && '-'}
             {endPage}
-            {(startPage || endPage) ? suffix : ' '}
+            {startPage || endPage ? suffix : ' '}
         </span>
     );
 };

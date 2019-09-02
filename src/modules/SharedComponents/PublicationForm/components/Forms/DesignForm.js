@@ -97,7 +97,8 @@ export default class DesignForm extends Component {
                                     component={PartialDateField}
                                     disabled={this.props.submitting}
                                     name="rek_date"
-                                    allowPartial required
+                                    allowPartial
+                                    required
                                     className="requiredHintField"
                                     validate={[validation.required]}
                                     floatingTitle={txt.information.fieldLabels.date.title}
@@ -121,8 +122,7 @@ export default class DesignForm extends Component {
                         />
                     </StandardCard>
                 </Grid>
-                {
-                    this.props.isNtro &&
+                {this.props.isNtro && (
                     <NtroFields
                         submitting={this.props.submitting}
                         showContributionStatement={this.props.isAuthorSelected}
@@ -134,7 +134,7 @@ export default class DesignForm extends Component {
                         hideEndPage
                         hideAudienceSize
                     />
-                }
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.optional.title} help={txt.optional.help}>
                         <Grid container spacing={16}>
@@ -147,7 +147,8 @@ export default class DesignForm extends Component {
                                     fullWidth
                                     multiline
                                     rows={1}
-                                    {...txt.optional.fieldLabels.notes}/>
+                                    {...txt.optional.fieldLabels.notes}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 <Field

@@ -31,8 +31,8 @@ export const DataStreamSecuritySelector = ({
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
     const [mostSecureParentDatastreamSecurity] = useState(() =>
         collections
-            .map((collection) => collection.parent)
-            .filter((parent) => parent)
+            .map(collection => collection.parent)
+            .filter(parent => parent)
             .reduce((value, item) => {
                 if (!value || item.rek_datastream_policy < value) return item.rek_datastream_policy;
                 else return value;

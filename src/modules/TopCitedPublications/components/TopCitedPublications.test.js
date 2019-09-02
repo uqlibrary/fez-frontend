@@ -40,7 +40,8 @@ describe('Component TopCitedPublications', () => {
         const wrapper = setup({
             topCitedPublicationsList: [],
             loadingTopCitedPublications: false,
-            actions: { searchTopCitedPublications: testFn } });
+            actions: { searchTopCitedPublications: testFn },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

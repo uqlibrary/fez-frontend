@@ -54,23 +54,14 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/,
-                ],
+                exclude: [/node_modules/, /custom_modules/],
                 enforce: 'pre',
                 use: 'eslint-loader',
             },
             {
                 test: /\.js?$/,
-                include: [
-                    path.resolve(__dirname, 'src'),
-                ],
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/,
-                    '/src/mocks/',
-                ],
+                include: [path.resolve(__dirname, 'src')],
+                exclude: [/node_modules/, /custom_modules/, '/src/mocks/'],
                 use: {
                     loader: 'babel-loader',
                     options: {
@@ -79,27 +70,19 @@ module.exports = {
                             '@babel/plugin-proposal-export-default-from',
                             '@babel/plugin-proposal-class-properties',
                             '@babel/plugin-syntax-dynamic-import',
-                            ['@babel/plugin-transform-spread', { 'loose': true }],
+                            ['@babel/plugin-transform-spread', { loose: true }],
                         ],
                     },
                 },
             },
             {
                 test: /\.json$/,
-                exclude: [
-                    /node_modules/,
-                    /custom_modules/,
-                ],
-                use: [
-                    'json-loader',
-                ],
+                exclude: [/node_modules/, /custom_modules/],
+                use: ['json-loader'],
             },
             {
                 test: /\.css/,
-                use: [
-                    'style-loader',
-                    'css-loader',
-                ],
+                use: ['style-loader', 'css-loader'],
             },
             {
                 test: /\.scss|\.styl/,
@@ -107,12 +90,7 @@ module.exports = {
                     path.resolve(__dirname, 'src'),
                     path.resolve(__dirname, 'node_modules/uqlibrary-react-toolbox/src'),
                 ],
-                use: [
-                    'style-loader',
-                    'css-loader',
-                    'postcss-loader',
-                    'sass-loader',
-                ],
+                use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
             },
             {
                 test: /\.(jpe?g|png|gif|svg)$/i,
@@ -136,7 +114,9 @@ module.exports = {
             template: path.join(__dirname, 'public', 'index.html'),
         }),
         new ProgressBarPlugin({
-            format: `  building webpack... [:bar] ${chalk.green.bold(':percent')} (It took :elapsed seconds to build)\n`,
+            format: `  building webpack... [:bar] ${chalk.green.bold(
+                ':percent'
+            )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
         new InjectPreloader(),
@@ -146,9 +126,7 @@ module.exports = {
         new webpack.LoaderOptionsPlugin({
             options: {
                 sassLoader: {
-                    includePaths: [
-                        path.resolve(__dirname, './src'),
-                    ],
+                    includePaths: [path.resolve(__dirname, './src')],
                     outputStyle: 'expanded',
                     sourceMap: true,
                 },
@@ -176,20 +154,10 @@ module.exports = {
         }),
     ],
     resolve: {
-        descriptionFiles: [
-            'package.json',
-        ],
+        descriptionFiles: ['package.json'],
         enforceExtension: false,
-        extensions: [
-            '.jsx',
-            '.js',
-            '.json',
-        ],
-        modules: [
-            'src',
-            'node_modules',
-            'custom_modules',
-        ],
+        extensions: ['.jsx', '.js', '.json'],
+        modules: ['src', 'node_modules', 'custom_modules'],
     },
     optimization: {
         splitChunks: {

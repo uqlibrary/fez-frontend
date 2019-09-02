@@ -22,18 +22,20 @@ export default class Masquerade extends PureComponent {
         };
     }
 
-    _masqueradeAs = (event) => {
-        if (event && event.key && (event.key !== 'Enter') || this.state.userName.length === 0) return;
+    _masqueradeAs = event => {
+        if ((event && event.key && event.key !== 'Enter') || this.state.userName.length === 0) return;
 
         this.setState({
             loading: true,
         });
 
         const redirectUrl = `${window.location.protocol}//${window.location.hostname}${routes.pathConfig.dashboard}`;
-        window.location.assign(`https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`);
+        window.location.assign(
+            `https://auth.library.uq.edu.au/masquerade?user=${this.state.userName}&return=${window.btoa(redirectUrl)}`
+        );
     };
 
-    _usernameChanged = (event) => {
+    _usernameChanged = event => {
         this.setState({
             userName: event.target.value,
         });
@@ -65,7 +67,8 @@ export default class Masquerade extends PureComponent {
                                 color="primary"
                                 children={txt.labels.submit}
                                 disabled={this.state.loading}
-                                onClick={this._masqueradeAs} />
+                                onClick={this._masqueradeAs}
+                            />
                         </Grid>
                     </Grid>
                 </StandardCard>

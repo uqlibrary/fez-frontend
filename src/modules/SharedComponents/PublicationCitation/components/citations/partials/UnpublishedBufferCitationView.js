@@ -13,7 +13,9 @@ export const UnpublishedBufferCitationView = ({ publication }) => {
         <Grid container alignItems="center">
             <Grid item xs="auto" style={{ flexGrow: 1 }}>
                 <Typography variant="caption">
-                    <i><CitationView suffix=", " value={publication.rek_status_lookup} /></i>
+                    <i>
+                        <CitationView suffix=", " value={publication.rek_status_lookup} />
+                    </i>
                     <DateCitationView
                         isLocalised
                         format={GENERIC_DATE_FORMAT}

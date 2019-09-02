@@ -21,7 +21,7 @@ import AuthorDetailsSection from './AuthorDetailsSection';
 
 import { TabbedContext, RecordContext } from 'context';
 
-const styles = (theme) => ({
+const styles = theme => ({
     helpIcon: {
         color: theme.palette.secondary.main,
         opacity: 0.66,

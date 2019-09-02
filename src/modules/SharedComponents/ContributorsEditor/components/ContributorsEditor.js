@@ -187,7 +187,7 @@ export class ContributorsEditor extends PureComponent {
 
         return contributors.map((contributor, index) => (
             <ContributorRow
-                {...locale.row || {}}
+                {...(locale.row || {})}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
@@ -258,7 +258,7 @@ export class ContributorsEditor extends PureComponent {
                         <Grid item xs={12}>
                             <List style={{ marginBottom: 0 }}>
                                 <ContributorRowHeader
-                                    {...this.props.locale.header || {}}
+                                    {...(this.props.locale.header || {})}
                                     disabled={disabled}
                                     hideDelete={hideDelete}
                                     isInfinite={contributors.length > 3}

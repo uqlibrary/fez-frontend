@@ -1,11 +1,6 @@
 import React from 'react';
 import DataStreamSecurityItem, { isSame } from './DataStreamSecurityItem';
-import {
-    rtlRender,
-    fireEvent,
-    cleanup,
-    waitForElement,
-} from 'test-utils';
+import { rtlRender, fireEvent, cleanup, waitForElement } from 'test-utils';
 
 function setup(testProps = {}) {
     const props = {
@@ -62,7 +57,7 @@ describe('DataStreamSecurityItem component', () => {
 
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
         const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
 
         fireEvent.click(getByText(/public/i, menu));
@@ -80,7 +75,7 @@ describe('DataStreamSecurityItem component', () => {
 
         let fragment = asFragment();
         fireEvent.click(getByText(/administrator/i));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
         const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
 
         fireEvent.click(getByText(/Theses Assessors/i, menu));
@@ -89,17 +84,21 @@ describe('DataStreamSecurityItem component', () => {
 
     describe('isSame callback function', () => {
         it('should return true if current props are same as previous props', () => {
-            expect(isSame(
-                { disabled: true, dataStream: { dsi_security_policy: 2 } },
-                { disabled: true, dataStream: { dsi_security_policy: 2 } }
-            )).toBeTruthy();
+            expect(
+                isSame(
+                    { disabled: true, dataStream: { dsi_security_policy: 2 } },
+                    { disabled: true, dataStream: { dsi_security_policy: 2 } }
+                )
+            ).toBeTruthy();
         });
 
         it('should return false if props do not match', () => {
-            expect(isSame(
-                { disabled: true, dataStream: { dsi_security_policy: 2 } },
-                { disabled: false, dataStream: { dsi_security_policy: 2 } }
-            )).toBeFalsy();
+            expect(
+                isSame(
+                    { disabled: true, dataStream: { dsi_security_policy: 2 } },
+                    { disabled: false, dataStream: { dsi_security_policy: 2 } }
+                )
+            ).toBeFalsy();
         });
     });
 });

@@ -271,7 +271,7 @@ function setup(testProps = {}) {
                     0,
                 ],
                 extraInfoForLegend:
-					'Thesis, Working Paper, Audio Document, Generic Document, Book Chapter, Newspaper Article',
+                    'Thesis, Working Paper, Audio Document, Generic Document, Book Chapter, Newspaper Article',
             },
         ],
         categories: [

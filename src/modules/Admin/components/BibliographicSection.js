@@ -16,22 +16,23 @@ import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FormValuesContext } from 'context';
 
 import { validation } from 'config';
-import {
-    subjects, subtypes, languages,
-} from './MockData';
+import { subjects, subtypes, languages } from './MockData';
 
 /* istanbul ignore next */
 export const BibliographicSection = ({ disabled = false }) => (
     <Grid container spacing={8}>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Formatted title</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>
+                Formatted title
+            </Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="title"
                 height={100}
                 format={value => Immutable.Map(value)}
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12}>
             <Field
@@ -42,22 +43,21 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Author affiliation full address"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12}>
-            <Field
-                component={SelectField}
-                disabled={disabled}
-                name="language"
-                label="Language"
-                required
-                placeholder="">
-                <MenuItem value="" disabled>Please select a language</MenuItem>
-                {
-                    languages.map((item, index) => {
-                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                    })
-                }
+            <Field component={SelectField} disabled={disabled} name="language" label="Language" required placeholder="">
+                <MenuItem value="" disabled>
+                    Please select a language
+                </MenuItem>
+                {languages.map((item, index) => {
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
+                })}
             </Field>
         </Grid>
         <Grid item xs={12} sm={4}>
@@ -69,7 +69,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Native title"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -80,7 +81,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Roman script title"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -89,7 +91,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="translatedTitle"
                 fullWidth
                 label="Translated title"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -100,7 +103,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Journal name"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -111,7 +115,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="ISSN"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -122,7 +127,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="ISBN"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -133,7 +139,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Place of publication"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -144,7 +151,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="Publisher"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -155,7 +163,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="ERA journal list match"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -166,7 +175,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="ERA journal ID"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={6}>
             <Field
@@ -184,12 +194,18 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="subtype"
                 label="eSpace subtype"
                 required
-                placeholder="">
-                <MenuItem value="" disabled>Select a document subtype</MenuItem>
-                {
-                    subtypes.map((item, index) => {
-                        return <MenuItem key={index} value={item.value}>{item.label}</MenuItem>;
-                    })}
+                placeholder=""
+            >
+                <MenuItem value="" disabled>
+                    Select a document subtype
+                </MenuItem>
+                {subtypes.map((item, index) => {
+                    return (
+                        <MenuItem key={index} value={item.value}>
+                            {item.label}
+                        </MenuItem>
+                    );
+                })}
             </Field>
         </Grid>
         <Grid item xs={12} sm={8}>
@@ -201,7 +217,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 label="DOI"
                 placeholder=""
                 required
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -210,7 +227,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="doiembargodays"
                 fullWidth
                 label="DOI Embargo days"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -219,7 +237,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="volume"
                 fullWidth
                 label="Volume"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -228,7 +247,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="issue"
                 fullWidth
                 label="Issue"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -237,7 +257,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="articlenumber"
                 fullWidth
                 label="Article number"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -246,7 +267,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="startpage"
                 fullWidth
                 label="Start page"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -255,7 +277,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="endpage"
                 fullWidth
                 label="End page"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12} sm={4}>
             <Field
@@ -264,7 +287,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                 name="totalpages"
                 fullWidth
                 label="Total pages"
-                placeholder="" />
+                placeholder=""
+            />
         </Grid>
         <Grid item xs={12}>
             <FormValuesContext.Consumer>
@@ -276,7 +300,8 @@ export const BibliographicSection = ({ disabled = false }) => (
                         initialValue={formValues.get('subject')}
                         placeholder="Begin typing to select and add subject(s)"
                         optionsList={subjects}
-                        name="subject" />
+                        name="subject"
+                    />
                 )}
             </FormValuesContext.Consumer>
         </Grid>
@@ -296,17 +321,21 @@ export const BibliographicSection = ({ disabled = false }) => (
                             addButtonLabel: 'Add',
                         },
                     },
-                }} />
+                }}
+            />
         </Grid>
         <Grid item xs={12}>
-            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>Formatted abstract</Typography>
+            <Typography variant="caption" component="span" style={{ opacity: 0.66 }}>
+                Formatted abstract
+            </Typography>
             <Field
                 component={RichEditorField}
                 disabled={disabled}
                 name="abstract"
                 height={100}
                 format={value => Immutable.Map(value)}
-                validate={[validation.required]} />
+                validate={[validation.required]}
+            />
         </Grid>
     </Grid>
 );

@@ -32,4 +32,3 @@ describe('PartialDateForm component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
-

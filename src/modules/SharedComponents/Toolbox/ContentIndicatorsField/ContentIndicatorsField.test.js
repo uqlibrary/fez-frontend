@@ -44,7 +44,7 @@ describe('ContentIndicatorsField component', () => {
                 initial: Immutable.List([CONTENT_INDICATORS[1].value, CONTENT_INDICATORS[2].value]),
             },
         };
-        const expected = CONTENT_INDICATORS.map((item) => ({
+        const expected = CONTENT_INDICATORS.map(item => ({
             ...item,
             disabled: false,
         }));

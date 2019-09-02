@@ -50,7 +50,7 @@ describe('Component FileUploadRowHeader', () => {
 
     it(
         'should render without access condition even if requireAccessCondition ' +
-			'true but default access condition is provided',
+            'true but default access condition is provided',
         () => {
             const props = {
                 requireOpenAccessStatus: true,

@@ -1,28 +1,17 @@
 /* eslint-disable */
 import React from 'react';
 import Immutable from 'immutable';
-import {
-    cleanup,
-    fireEvent,
-    rtlRender,
-    waitForElement,
-    withRedux,
-    withRouter
-} from 'test-utils';
+import { cleanup, fireEvent, rtlRender, waitForElement, withRedux, withRouter } from 'test-utils';
 
 import { FixRecord } from '.';
 import { mockRecordToFix } from 'mock/data/testing/records';
-import {
-    EXISTING_RECORD_API,
- } from 'repositories/routes';
+import { EXISTING_RECORD_API } from 'repositories/routes';
 
 const initialState = Immutable.Map({
     accountReducer: {
         account: {
             id: 'uqresearcher',
-            'class': [
-                'Campus-MATERHOSP',
-            ],
+            class: ['Campus-MATERHOSP'],
             type: 3,
             homeLib: 'St Lucia',
             firstName: 'J',
@@ -30,9 +19,7 @@ const initialState = Immutable.Map({
             name: 'J Researcher',
             mail: 'j.Researcher@uq.edu.au',
             barcode: '240675201000000',
-            groups: [
-                'CN=Sci Faculty',
-            ],
+            groups: ['CN=Sci Faculty'],
             classes: [],
             expiryDate: '31-12-19',
             hasSession: true,
@@ -117,9 +104,7 @@ const initialState = Immutable.Map({
     },
 });
 
-
 describe('FixRecord form', () => {
-
     beforeEach(() => {
         mockActionsStore = setupStoreForActions();
         mockApi = setupMockAdapter();
@@ -131,43 +116,32 @@ describe('FixRecord form', () => {
     });
 
     it('should allow content indicators to be selected', async () => {
-        mockApi
-            .onAny(EXISTING_RECORD_API({ pid: 'UQ:41878' }).apiUrl)
-            .reply(200, { data: mockRecordToFix })
-        ;
+        mockApi.onAny(EXISTING_RECORD_API({ pid: 'UQ:41878' }).apiUrl).reply(200, { data: mockRecordToFix });
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:41878/fix';
 
-        const {
-            asFragment,
-            getByText,
-            getByTestId
-        } = rtlRender(
-            withRedux(initialState)(
-                withRouter({ route, path })(
-                    <FixRecord />
-                )
-            )
+        const { asFragment, getByText, getByTestId } = rtlRender(
+            withRedux(initialState)(withRouter({ route, path })(<FixRecord />))
         );
 
         let fragment = asFragment();
 
         // Wait till record is loaded
         await waitForElement(() => getByText('Work to be amended'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         // Open action dropdown
         fireEvent.click(getByTestId('fixAction'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         // Choose option to fix record
         fireEvent.click(getByText(/I am the author/));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         // Open Content Indicators dropdown
         fireEvent.click(getByTestId('content-indicators'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         /**
          * Selected & disabled items should not be clickable to deselect.
@@ -183,7 +157,7 @@ describe('FixRecord form', () => {
 
         // Test if item can be selected
         fireEvent.click(getByText('Case Study'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         // Test if item can be deselected
         fireEvent.click(getByText('Case Study'));
@@ -191,25 +165,13 @@ describe('FixRecord form', () => {
     });
 
     it('should validate the form where applicable and submit correctly', async () => {
-
-        mockApi
-            .onAny()
-            .reply(200, { data: mockRecordToFix })
-        ;
+        mockApi.onAny().reply(200, { data: mockRecordToFix });
 
         const path = '/records/:pid(UQ:[a-z0-9]+)/fix';
         const route = '/records/UQ:41878/fix';
 
-        const {
-            asFragment,
-            getByText,
-            getByTestId
-        } = rtlRender(
-            withRedux(initialState)(
-                withRouter({ route, path })(
-                    <FixRecord />
-                )
-            )
+        const { asFragment, getByText, getByTestId } = rtlRender(
+            withRedux(initialState)(withRouter({ route, path })(<FixRecord />))
         );
 
         await waitForElement(() => getByText('Work to be amended'));
@@ -222,10 +184,9 @@ describe('FixRecord form', () => {
 
         // Select unselected item and submit
         fireEvent.click(getByTestId('fixSubmit'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         await waitForElement(() => getByText('Your request has been submitted'));
-        expect(fragment).toMatchDiffSnapshot(fragment = asFragment());
-
+        expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
     });
 });

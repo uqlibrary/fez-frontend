@@ -186,7 +186,7 @@ describe('SimpleSearchComponent', () => {
             onSearchTextChange: () => {},
         });
         const defaultPropMethodNames = ['onSearch', 'onToggleSearchMode', 'onInvalidSearch'];
-        defaultPropMethodNames.forEach((methodName) => {
+        defaultPropMethodNames.forEach(methodName => {
             expect(wrapper.instance().props[methodName]()).toBeUndefined();
         });
     });

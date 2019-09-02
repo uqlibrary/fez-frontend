@@ -43,8 +43,7 @@ export default class ViewRecord extends PureComponent {
 
     componentWillUnmount() {
         // clear previously selected record
-        !!this.props.actions.clearRecordToView &&
-            this.props.actions.clearRecordToView();
+        !!this.props.actions.clearRecordToView && this.props.actions.clearRecordToView();
     }
 
     render() {
@@ -78,14 +77,12 @@ export default class ViewRecord extends PureComponent {
                     <Files
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
-                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement} />
+                        setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
+                    />
                     <Links publication={recordToView} />
                     <RelatedPublications publication={recordToView} />
                     <AdditionalInformation publication={recordToView} account={this.props.account} isNtro={isNtro} />
-                    {
-                        isNtro &&
-                        <NtroDetails publication={recordToView} account={this.props.account} />
-                    }
+                    {isNtro && <NtroDetails publication={recordToView} account={this.props.account} />}
                     <GrantInformation publication={recordToView} />
                     <PublicationDetails publication={recordToView} />
                     <AvailableVersions publication={recordToView} />

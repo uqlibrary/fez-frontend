@@ -54,4 +54,3 @@ describe('PartialDateForm unit tests', () => {
         expect(partialNotAllowedDateForm._validate({ day: 10, month: 2, year: 2015 })).toBeTruthy();
     });
 });
-

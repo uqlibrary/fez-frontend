@@ -9,7 +9,7 @@ jest.mock('redux-form/immutable', () => ({
         }))
     ),
     Field: jest.fn(() => {
-        const Dummy = (props) => <div {...props} />;
+        const Dummy = props => <div {...props} />;
         return Dummy;
     }),
 }));

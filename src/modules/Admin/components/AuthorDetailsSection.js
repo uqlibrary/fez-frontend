@@ -44,11 +44,14 @@ const authorRecColumns = [
     },
 ];
 const authorRecData = [
-    ['John Smith', 'UQ12345', <TextField
-        fullWidth
-        placeholder="1% - 100%"
-        autoComplete="off"
-    />, <IconButton style={{ float: 'right', marginRight: -24 }}><PersonAdd /></IconButton>],
+    [
+        'John Smith',
+        'UQ12345',
+        <TextField fullWidth placeholder="1% - 100%" autoComplete="off" />,
+        <IconButton style={{ float: 'right', marginRight: -24 }}>
+            <PersonAdd />
+        </IconButton>,
+    ],
 ];
 
 /* istanbul ignore next */
@@ -90,11 +93,7 @@ export const AuthorDetailsSection = ({ disabled = false }) => (
         </Grid>
         <Grid item xs={12}>
             <StandardCard title="Author affiliation recommendations">
-                <MUIDataTable
-                    data={authorRecData}
-                    columns={authorRecColumns}
-                    options={authorRecOptions}
-                />
+                <MUIDataTable data={authorRecData} columns={authorRecColumns} options={authorRecOptions} />
             </StandardCard>
         </Grid>
     </React.Fragment>

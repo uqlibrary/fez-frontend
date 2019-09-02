@@ -6,10 +6,7 @@ export default class LookupForm extends Component {
         onAdd: PropTypes.func.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        inputField: PropTypes.oneOfType([
-            PropTypes.object,
-            PropTypes.func,
-        ]),
+        inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
         errorText: PropTypes.string,
     };
 
@@ -18,21 +15,20 @@ export default class LookupForm extends Component {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name, then select from the list',
         },
-    }
+    };
 
     constructor(props) {
         super(props);
     }
 
-    addKeyValueItem = (item) => {
+    addKeyValueItem = item => {
         this.props.onAdd(item);
-    }
+    };
 
     render() {
         return (
             <React.Fragment>
-                {
-                    this.props.inputField &&
+                {this.props.inputField && (
                     <this.props.inputField
                         input={{ onChange: this.props.onAdd }}
                         floatingLabelText={this.props.locale.inputFieldLabel}
@@ -41,7 +37,7 @@ export default class LookupForm extends Component {
                         errorText={this.props.errorText}
                         className="mui-long-labels-fix"
                     />
-                }
+                )}
             </React.Fragment>
         );
     }

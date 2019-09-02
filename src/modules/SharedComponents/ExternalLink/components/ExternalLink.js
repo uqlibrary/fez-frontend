@@ -48,21 +48,17 @@ export class ExternalLink extends PureComponent {
     render() {
         const { className, children, openInNewIcon, classes, ...rest } = this.props;
         return (
-            <a {...rest}
+            <a
+                {...rest}
                 tabIndex="0"
                 title={
                     rest.title ||
-                    (
-                        openInNewIcon &&
-                        locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)
-                    ) ||
+                    (openInNewIcon && locale.global.linkWillOpenInNewWindow.replace('[destination]', rest.href)) ||
                     undefined
                 }
                 className={`${className} ${classes.externalLink}`}
             >
-                {openInNewIcon &&
-                    <OpenInNew className={classes.externalLinkIcon} />
-                }
+                {openInNewIcon && <OpenInNew className={classes.externalLinkIcon} />}
                 {!!children && children}
             </a>
         );

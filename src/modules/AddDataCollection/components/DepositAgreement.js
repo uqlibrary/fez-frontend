@@ -14,7 +14,7 @@ export class DepositAgreement extends PureComponent {
         disabled: PropTypes.bool,
     };
 
-    _handleChange = (event) => {
+    _handleChange = event => {
         this.props.onChange(event.target.checked ? 'on' : 'off');
     };
 
@@ -51,7 +51,7 @@ export class DepositAgreement extends PureComponent {
     }
 }
 
-export const styles = (theme) => ({
+export const styles = theme => ({
     root: {
         alignItems: 'flex-start',
         margin: 0,
@@ -66,7 +66,7 @@ export const styles = (theme) => ({
         color: (theme.status || {}).danger || '',
     },
     checkboxChecked: {
-        color: !!theme.palette && `${theme.palette.primary.main} !important` || '',
+        color: (!!theme.palette && `${theme.palette.primary.main} !important`) || '',
     },
 });
 

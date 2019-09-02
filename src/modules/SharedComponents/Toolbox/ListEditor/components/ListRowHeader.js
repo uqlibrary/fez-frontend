@@ -37,7 +37,7 @@ export class ListRowHeader extends Component {
 
     showConfirmation = () => {
         this.confirmationBox.showConfirmation();
-    }
+    };
 
     setConfirmationRef = ref => (this.confirmationBox = ref);
 
@@ -53,19 +53,18 @@ export class ListRowHeader extends Component {
                     locale={deleteAllConfirmation}
                 />
                 <Grid container alignItems="center" spacing={8} className={classes.header}>
-                    <Grid item  xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
+                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
                         <Typography variant="caption">{nameColumn}</Typography>
                     </Grid>
-                    {
-                        !hideReorder &&
+                    {!hideReorder && (
                         <Grid item xs={5} sm={5} className={classes.right}>
                             <Typography variant="caption">{reorderColumn}</Typography>
                         </Grid>
-                    }
+                    )}
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteAll}>
                             <IconButton onClick={this.showConfirmation} disabled={disabled}>
-                                <DeleteForever/>
+                                <DeleteForever />
                             </IconButton>
                         </Tooltip>
                     </Grid>
@@ -83,10 +82,10 @@ const styles = () => ({
         textAlign: 'center',
     },
     header: {
-        marginLeft: 0, marginRight: 0,
+        marginLeft: 0,
+        marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
-
 });
 
 export default withStyles(styles)(ListRowHeader);
