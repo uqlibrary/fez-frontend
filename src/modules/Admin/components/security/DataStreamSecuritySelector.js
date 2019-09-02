@@ -36,7 +36,7 @@ export const DataStreamSecuritySelector = ({
             .reduce((value, item) => {
                 if (!value || item.rek_datastream_policy < value) return item.rek_datastream_policy;
                 else return value;
-            }, null)
+            }, null),
     );
 
     const handleDataStreamSecurityChange = useCallback((index, dataStream) => {

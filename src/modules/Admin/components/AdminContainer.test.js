@@ -118,8 +118,8 @@ describe('AdminContainer component', () => {
             expect(
                 isChanged(
                     { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
-                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false }
-                )
+                    { disableSubmit: false, recordToView: { pid: 1 }, loadRecordToView: false },
+                ),
             ).toBeTruthy();
         });
 
@@ -127,8 +127,8 @@ describe('AdminContainer component', () => {
             expect(
                 isChanged(
                     { disableSubmit: false, loadRecordToView: false },
-                    { disableSubmit: false, loadRecordToView: false }
-                )
+                    { disableSubmit: false, loadRecordToView: false },
+                ),
             ).toBeTruthy();
         });
     });

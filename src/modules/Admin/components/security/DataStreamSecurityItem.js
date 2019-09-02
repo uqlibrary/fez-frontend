@@ -26,7 +26,7 @@ const DataStreamSecurityItem = ({
                     ...dataStream,
                     dsi_security_inherited: 0,
                     dsi_security_policy: value,
-                }
+                },
         );
     };
 

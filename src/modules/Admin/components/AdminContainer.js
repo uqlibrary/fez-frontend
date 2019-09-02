@@ -58,7 +58,7 @@ export const AdminContainer = ({
     history,
 }) => {
     const [tabbed, setTabbed] = useState(
-        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed')
+        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
     );
     const theme = useTheme();
 

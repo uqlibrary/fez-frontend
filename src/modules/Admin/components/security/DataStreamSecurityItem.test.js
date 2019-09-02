@@ -87,8 +87,8 @@ describe('DataStreamSecurityItem component', () => {
             expect(
                 isSame(
                     { disabled: true, dataStream: { dsi_security_policy: 2 } },
-                    { disabled: true, dataStream: { dsi_security_policy: 2 } }
-                )
+                    { disabled: true, dataStream: { dsi_security_policy: 2 } },
+                ),
             ).toBeTruthy();
         });
 
@@ -96,8 +96,8 @@ describe('DataStreamSecurityItem component', () => {
             expect(
                 isSame(
                     { disabled: true, dataStream: { dsi_security_policy: 2 } },
-                    { disabled: false, dataStream: { dsi_security_policy: 2 } }
-                )
+                    { disabled: false, dataStream: { dsi_security_policy: 2 } },
+                ),
             ).toBeFalsy();
         });
     });

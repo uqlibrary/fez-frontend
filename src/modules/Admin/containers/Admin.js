@@ -75,7 +75,7 @@ const mapDispatchToProps = dispatch => ({
 
 PrototypeContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PrototypeContainer);
 
 export default withRouter(PrototypeContainer);
