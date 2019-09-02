@@ -33,7 +33,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                           Work type
                           <span
                             class=\\"MuiFormLabel-asterisk-617\\"
-@@ -239,43 +239,1089 @@
+@@ -239,19 +239,138 @@
                               class=\\"MuiSelect-select-619 MuiSelect-selectMenu-622 MuiInputBase-input-648 MuiInput-input-633\\"
                               id=\\"rek-display-type\\"
                               role=\\"button\\"
@@ -171,19 +171,16 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                           <input
 +                             style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
-+                             value=\\"\\"
-+                           />
-+                           <svg
-+                             aria-hidden=\\"true\\"
-+                             class=\\"MuiSvgIcon-root-586 MuiSelect-icon-624\\"
-+                             focusable=\\"false\\"
-+                             role=\\"presentation\\"
-+                             viewBox=\\"0 0 24 24\\"
-+                           >
-+                             <path
-+                               d=\\"M7 10l5 5 5-5z\\"
-+                             />
-+                           </svg>
+                              value=\\"\\"
+                            />
+                            <svg
+                              aria-hidden=\\"true\\"
+@@ -262,20 +381,948 @@
+                            >
+                              <path
+                                d=\\"M7 10l5 5 5-5z\\"
+                              />
+                            </svg>
 +                         </div>
 +                       </div>
 +                     </div>
@@ -323,10 +320,10 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   </div>
 +                                 </div>
 +                               </div>
-+                             </div>
-+                           </div>
-+                         </div>
-+                       </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                       >
@@ -497,14 +494,14 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       label=\\"Report number\\"
 +                                       placeholder=\\"\\"
 +                                       type=\\"text\\"
-                                        value=\\"\\"
++                                       value=\\"\\"
 +                                     />
 +                                   </div>
 +                                 </div>
-+                               </div>
-+                             </div>
-+                           </div>
-+                         </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
 +                       </div>
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
@@ -527,8 +524,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                  *
 +                               </span>
 +                             </label>
-+                           </div>
-+                           <div
+                            </div>
+                            <div
 +                             class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                           >
 +                             <div
@@ -591,16 +588,16 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       placeholder=\\"Month\\"
 +                                       type=\\"hidden\\"
 +                                       value=\\"-1\\"
-                                      />
-                                      <svg
-                                        aria-hidden=\\"true\\"
-                                        class=\\"MuiSvgIcon-root-586 MuiSelect-icon-624\\"
-                                        focusable=\\"false\\"
-                                        role=\\"presentation\\"
-                                        viewBox=\\"0 0 24 24\\"
-                                      >
-                                        <path
-                                          d=\\"M7 10l5 5 5-5z\\"
++                                     />
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-586 MuiSelect-icon-624\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M7 10l5 5 5-5z\\"
 +                                       />
 +                                     </svg>
 +                                   </div>
@@ -711,11 +708,11 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                             />
 +                             <path
 +                               d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
-                              />
++                             />
 +                             <title>
 +                               Click for more information
 +                             </title>
-                            </svg>
++                           </svg>
 +                         </span>
 +                         <span
 +                           class=\\"MuiTouchRipple-root-718\\"
@@ -738,12 +735,12 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please
++                          - Please 
 +                         <b>
 +                           add to a list of authors below
 +                         </b>
 +                         , in the format and order that they are published.
-                        </div>
++                       </div>
 +                       <div
 +                         class=\\"MuiGrid-container-378 MuiGrid-spacing-xs-8-400\\"
 +                         style=\\"margin-top: 8px;\\"
@@ -783,9 +780,9 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                 type=\\"text\\"
 +                                 value=\\"\\"
 +                               />
-                              </div>
-                            </div>
-                          </div>
++                             </div>
++                           </div>
++                         </div>
 +                         <div
 +                           class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                           style=\\"margin-bottom: 8px;\\"
@@ -803,25 +800,25 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                               Add author
 +                             </span>
 +                           </button>
-                          </div>
-                        </div>
++                         </div>
++                       </div>
 +                       <span
 +                         class=\\"MuiTypography-root-475 MuiTypography-caption-485 MuiTypography-colorError-509\\"
 +                       >
-+                         Please
++                         Please 
 +                         <b>
 +                           provide a list of authors/creators
 +                         </b>
-+                          of the work and
++                          of the work and 
 +                         <b>
 +                           select an author/creator or editor/contributor
 +                         </b>
 +                          as you
 +                       </span>
-                      </div>
++                     </div>
 +                   </div>
 +                 </div>
-                </div>
++               </div>
 +               <div
 +                 class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +               >
@@ -839,8 +836,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                       >
 +                         Other details
 +                       </h3>
-                      </div>
-                    </div>
++                     </div>
++                   </div>
 +                   <div
 +                     class=\\"MuiCardContent-root-595\\"
 +                   >
@@ -861,7 +858,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                           >
 +                             Notes (not publicly viewable)
 +                           </label>
-                            <div
++                           <div
 +                             class=\\"MuiInputBase-root-638 MuiInput-root-625 MuiInput-underline-629 MuiInputBase-fullWidth-647 MuiInput-fullWidth-632 MuiInputBase-formControl-639 MuiInput-formControl-626 MuiInputBase-multiline-646 MuiInput-multiline-631\\"
 +                           >
 +                             <div
@@ -1098,7 +1095,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                       class=\\"MuiGrid-item-379 MuiGrid-grid-xs-true-406 Alert-text-778 alert-text\\"
 +                     >
 +                       <b>
-+                         Validation -
++                         Validation - 
 +                       </b>
 +                       <span>
 +                         Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -1127,7 +1124,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
             <div
               class=\\"MuiGrid-item-379 MuiGrid-grid-xs-true-406\\"
             />
-@@ -293,10 +1339,28 @@
+@@ -293,10 +1340,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -1557,22 +1554,20 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                             <svg
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-1000 MuiSelect-icon-1038\\"
-@@ -320,14 +439,1093 @@
-                              role=\\"presentation\\"
-                              viewBox=\\"0 0 24 24\\"
+@@ -322,20 +441,1104 @@
                             >
                               <path
                                 d=\\"M7 10l5 5 5-5z\\"
-+                             />
-+                           </svg>
+                              />
+                            </svg>
 +                         </div>
-+                       </div>
-+                     </div>
-+                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 +           <div
 +             class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832\\"
 +           >
@@ -1596,9 +1591,9 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       >
 +                         Book information
 +                       </h3>
-+                     </div>
-+                   </div>
-+                   <div
+                      </div>
+                    </div>
+                    <div
 +                     class=\\"MuiCardContent-root-1009\\"
 +                   >
 +                     <div
@@ -1995,7 +1990,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please
++                          - Please 
 +                         <b>
 +                           add to a list of authors below
 +                         </b>
@@ -2065,11 +2060,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       <span
 +                         class=\\"MuiTypography-root-889 MuiTypography-caption-899 MuiTypography-colorError-923\\"
 +                       >
-+                         Please
++                         Please 
 +                         <b>
 +                           provide a list of authors/creators
 +                         </b>
-+                          of the work and
++                          of the work and 
 +                         <b>
 +                           select an author/creator or editor/contributor
 +                         </b>
@@ -2108,7 +2103,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         >
 +                           Step 1 of 2
 +                         </span>
-+                          - Please
++                          - Please 
 +                         <b>
 +                           add to a list of editors below
 +                         </b>
@@ -2172,11 +2167,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       <span
 +                         class=\\"MuiTypography-root-889 MuiTypography-caption-899 MuiTypography-colorError-923\\"
 +                       >
-+                         Please
++                         Please 
 +                         <b>
 +                           provide a list of editors/contributors
 +                         </b>
-+                          of the work and
++                          of the work and 
 +                         <b>
 +                           select an editor/contributor or author/creator
 +                         </b>
@@ -2453,7 +2448,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                               name=\\"rek_link\\"
 +                               type=\\"text\\"
 +                               value=\\"\\"
-                              />
++                             />
 +                           </div>
 +                         </div>
 +                       </div>
@@ -2556,11 +2551,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   <path
 +                                     d=\\"M0 0h24v24H0z\\"
 +                                     fill=\\"none\\"
-                                    />
++                                   />
 +                                   <path
 +                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
 +                                   />
-                                  </svg>
++                                 </svg>
 +                               </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-793\\"
@@ -2569,7 +2564,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   Click here to select files, or drag files into this area to upload
 +                                 </p>
 +                               </div>
-                              </div>
++                             </div>
 +                           </div>
 +                         </div>
 +                         <input
@@ -2621,12 +2616,12 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
 +                         />
 +                       </svg>
-                      </div>
++                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820 Alert-text-1182 alert-text\\"
 +                     >
 +                       <b>
-+                         Validation -
++                         Validation - 
 +                       </b>
 +                       <span>
 +                         Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -2651,12 +2646,20 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           </li>
 +                         </ul>
 +                       </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-@@ -353,10 +1551,28 @@
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++         </div>
++         <div
+            class=\\"MuiGrid-container-792 MuiGrid-spacing-xs-24-816\\"
+          >
+            <div
+              class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820\\"
+            />
+@@ -353,10 +1556,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -2921,7 +2924,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         label=\\"year\\"
                                         maxlength=\\"4\\"
                                         name=\\"year\\"
-@@ -1507,22 +1483,10 @@
+@@ -1512,22 +1488,10 @@
                             <li>
                               Author/creator names are required
                             </li>
@@ -3006,7 +3009,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           >
                             Step 1 of 2
                           </span>
-                           - Please
+                           - Please 
                           <b>
 -                           add to a list of authors below
 +                           add to a list of editors below
@@ -3093,14 +3096,14 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         class=\\"MuiTypography-root-889 MuiTypography-caption-899 MuiTypography-colorError-923\\"
 +                                 class=\\"authorSteps\\"
                                 >
--                         Please
+-                         Please 
 -                         <b>
 -                           provide a list of authors/creators
 -                         </b>
--                          of the work and
+-                          of the work and 
 +                                 Step 2 of 2
 +                               </span>
-+                                - Please
++                                - Please 
                                 <b>
 -                           select an author/creator or editor/contributor
 +                                 select your name
@@ -3208,7 +3211,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                         </title>
 +                                       </svg>
                                       </span>
--                          - Please
+-                          - Please 
 -                         <b>
 -                           add to a list of editors below
 -                         </b>
@@ -3222,7 +3225,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             </li>
 +                           </ul>
 +                           <ul
-+                             class=\\"MuiList-root-1141 Connect-ContributorsEditor--list-1168  MuiList-padding-1142\\"
++                             class=\\"MuiList-root-1141 ContributorList Connect-ContributorsEditor--list-1168  MuiList-padding-1142\\"
 +                           >
 +                             <li
 +                               class=\\"MuiListItem-container-1149\\"
@@ -3354,11 +3357,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                       <span
 -                         class=\\"MuiTypography-root-889 MuiTypography-caption-899 MuiTypography-colorError-923\\"
 -                       >
--                         Please
+-                         Please 
 -                         <b>
 -                           provide a list of editors/contributors
 -                         </b>
--                          of the work and
+-                          of the work and 
 -                         <b>
 -                           select an editor/contributor or author/creator
 -                         </b>
@@ -3374,7 +3377,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                 >
                   <div
                     class=\\"MuiPaper-root-949 MuiPaper-elevation1-952 MuiPaper-rounded-950 MuiCard-root-948 Cards-card-943 StandardCard\\"
-@@ -1426,70 +1477,12 @@
+@@ -1431,70 +1482,12 @@
                             autocomplete=\\"off\\"
                             id=\\"Uploader\\"
                             multiple=\\"\\"
@@ -3427,7 +3430,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                       class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820 Alert-text-1182 alert-text\\"
 -                     >
 -                       <b>
--                         Validation -
+-                         Validation - 
 -                       </b>
 -                       <span>
 -                         Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -3445,7 +3448,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1521,22 +1514,24 @@
+@@ -1526,22 +1519,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832 MuiGrid-grid-sm-auto-833\\"
@@ -3560,7 +3563,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           >
                             Step 1 of 2
                           </span>
-                           - Please
+                           - Please 
                           <b>
 -                           add to a list of editors below
 +                           add to a list of authors below
@@ -3649,12 +3652,12 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                         >
 -                                 Step 2 of 2
 -                               </span>
--                                - Please
-+                         Please
+-                                - Please 
++                         Please 
 +                         <b>
 +                           provide a list of authors/creators
 +                         </b>
-+                          of the work and
++                          of the work and 
                           <b>
 -                                 select your name
 +                           select an author/creator or editor/contributor
@@ -3767,7 +3770,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     />
 -                                   </button>
 -                                 </span>
-+                          - Please
++                          - Please 
 +                         <b>
 +                           add to a list of editors below
 +                         </b>
@@ -3776,7 +3779,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                             </li>
 -                           </ul>
 -                           <ul
--                             class=\\"MuiList-root-1141 Connect-ContributorsEditor--list-1168  MuiList-padding-1142\\"
+-                             class=\\"MuiList-root-1141 ContributorList Connect-ContributorsEditor--list-1168  MuiList-padding-1142\\"
 -                           >
 -                             <li
 -                               class=\\"MuiListItem-container-1149\\"
@@ -3909,11 +3912,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       <span
 +                         class=\\"MuiTypography-root-889 MuiTypography-caption-899 MuiTypography-colorError-923\\"
 +                       >
-+                         Please
++                         Please 
 +                         <b>
 +                           provide a list of editors/contributors
 +                         </b>
-+                          of the work and
++                          of the work and 
 +                         <b>
 +                           select an editor/contributor or author/creator
 +                         </b>
@@ -3924,7 +3927,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1485,12 +1434,70 @@
+@@ -1490,12 +1439,70 @@
                     </div>
                   </div>
                 </div>
@@ -3969,7 +3972,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820 Alert-text-1232 alert-text\\"
 +                     >
 +                       <b>
-+                         Validation -
++                         Validation - 
 +                       </b>
 +                       <span>
 +                         Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -3995,7 +3998,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820\\"
             />
-@@ -1514,24 +1521,22 @@
+@@ -1519,24 +1526,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832 MuiGrid-grid-sm-auto-833\\"

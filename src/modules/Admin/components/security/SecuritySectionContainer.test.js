@@ -6,7 +6,7 @@ jest.mock('redux-form/immutable', () => ({
     getFormValues: jest.fn(() =>
         jest.fn(() => ({
             get: jest.fn(() => ({ toJS: jest.fn(() => ({})) })),
-        }))
+        })),
     ),
     Field: jest.fn(() => {
         const Dummy = props => <div {...props} />;
@@ -100,7 +100,7 @@ describe('SecuritySectionContainer', () => {
                     authorDetails: {
                         is_super_administrator: true,
                     },
-                })
+                }),
             ),
         };
 
@@ -122,7 +122,7 @@ describe('SecuritySectionContainer', () => {
             {
                 isSuperAdmin: false,
             },
-            { isShallow: false, store: store }
+            { isShallow: false, store: store },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

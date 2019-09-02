@@ -116,7 +116,7 @@ describe('SearchComponent', () => {
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
             actions: { searchEspacePublications: testMethod },
-            history: { push: testHistoryPushMehtod },
+            history: { push: testHistoryPushMethod },
         });
 
         const searchQuery = {
@@ -158,7 +158,7 @@ describe('SearchComponent', () => {
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
             actions: { searchEspacePublications: testMethod },
-            history: { push: testHistoryPushMehtod },
+            history: { push: testHistoryPushMethod },
             location: { pathname: '/admin/unpublished' },
             isAdmin: true,
             isUnpublishedBufferPage: true,
@@ -219,7 +219,7 @@ describe('SearchComponent', () => {
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
             actions: { searchEspacePublications: testMethod },
-            history: { push: testHistoryPushMehtod },
+            history: { push: testHistoryPushMethod },
         });
 
         wrapper.state().advancedSearch = {
@@ -416,7 +416,7 @@ describe('SearchComponent', () => {
         const testHistoryPushMethod = jest.fn();
         const wrapper = setup({
             actions: { searchEspacePublications: testMethod },
-            history: { push: testHistoryPushMehtod },
+            history: { push: testHistoryPushMethod },
         });
 
         wrapper.state().simpleSearch = {

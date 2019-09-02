@@ -144,8 +144,10 @@ export default class ListsEditor extends Component {
     render() {
         const componentID = (
             (this.props.locale.form && this.props.locale.form.title) ||
-            this.props.locale.form.inputFieldLabel ||
-            (this.props.locale.form.locale && this.props.locale.form.locale.inputFieldLabel) ||
+            (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
+            (this.props.locale.form &&
+                this.props.locale.form.locale &&
+                this.props.locale.form.locale.inputFieldLabel) ||
             ''
         ).replace(/\s+/g, '');
         const renderListsRows = this.state.itemList.map((item, index) => (
