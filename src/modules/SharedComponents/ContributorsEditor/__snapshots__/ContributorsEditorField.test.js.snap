@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ContributorsEditorField should render default component 1`] = `
+<WithStyles(Connect(ContributorsEditor))
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
