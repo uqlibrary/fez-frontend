@@ -43,7 +43,8 @@ exports[`Media Preview Component  should render component 1`] = `
         <Component
           close="Close"
           imageTitle="Image preview"
-          openInNewWindow="Open/Download file in a new window"
+          openOriginal="Open original file in a new window"
+          openWeb="Open web version file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -65,7 +66,8 @@ exports[`Media Preview Component  should render component 1`] = `
     <Component
       close="Close"
       imageTitle="Image preview"
-      openInNewWindow="Open/Download file in a new window"
+      openOriginal="Open original file in a new window"
+      openWeb="Open web version file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
@@ -1958,7 +1960,8 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                                 <Component
                                   close="Close"
                                   imageTitle="Image preview"
-                                  openInNewWindow="Open/Download file in a new window"
+                                  openOriginal="Open original file in a new window"
+                                  openWeb="Open web version file in a new window"
                                   videoTitle="Video preview"
                                 >
                                   <div
@@ -2317,7 +2320,9 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open original file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -2579,7 +2584,9 @@ exports[`Media Preview Component  should render component with a PDF 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open web version file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -5774,7 +5781,8 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                 <Component
                                   close="Close"
                                   imageTitle="Image preview"
-                                  openInNewWindow="Open/Download file in a new window"
+                                  openOriginal="Open original file in a new window"
+                                  openWeb="Open web version file in a new window"
                                   videoTitle="Video preview"
                                 >
                                   <div
@@ -6133,7 +6141,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open original file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -6395,7 +6405,9 @@ exports[`Media Preview Component  should render component with image 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open web version file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -9600,7 +9612,8 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                 <Component
                                   close="Close"
                                   imageTitle="Image preview"
-                                  openInNewWindow="Open/Download file in a new window"
+                                  openOriginal="Open original file in a new window"
+                                  openWeb="Open web version file in a new window"
                                   videoTitle="Video preview"
                                 >
                                   <div
@@ -9959,7 +9972,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open original file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -10221,7 +10236,9 @@ exports[`Media Preview Component  should render component with video 1`] = `
                                                         >
                                                           <span
                                                             className="MuiButton-label-134"
-                                                          />
+                                                          >
+                                                            Open web version file in a new window
+                                                          </span>
                                                           <WithStyles(TouchRipple)
                                                             center={false}
                                                             innerRef={[Function]}
@@ -11115,7 +11132,8 @@ exports[`Media Preview Component  should render when scrolled to a loaded video 
         <Component
           close="Close"
           imageTitle="Image preview"
-          openInNewWindow="Open/Download file in a new window"
+          openOriginal="Open original file in a new window"
+          openWeb="Open web version file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -11176,7 +11194,8 @@ exports[`Media Preview Component  should render when scrolled to a loaded video 
     <Component
       close="Close"
       imageTitle="Image preview"
-      openInNewWindow="Open/Download file in a new window"
+      openOriginal="Open original file in a new window"
+      openWeb="Open web version file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
@@ -11226,7 +11245,8 @@ exports[`Media Preview Component  should render when video fails 1`] = `
         <Component
           close="Close"
           imageTitle="Image preview"
-          openInNewWindow="Open/Download file in a new window"
+          openOriginal="Open original file in a new window"
+          openWeb="Open web version file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -11262,7 +11282,8 @@ exports[`Media Preview Component  should render when video fails 1`] = `
     <Component
       close="Close"
       imageTitle="Image preview"
-      openInNewWindow="Open/Download file in a new window"
+      openOriginal="Open original file in a new window"
+      openWeb="Open web version file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
@@ -11312,7 +11333,8 @@ exports[`Media Preview Component  should render when video fails 2`] = `
         <Component
           close="Close"
           imageTitle="Image preview"
-          openInNewWindow="Open/Download file in a new window"
+          openOriginal="Open original file in a new window"
+          openWeb="Open web version file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -11348,7 +11370,8 @@ exports[`Media Preview Component  should render when video fails 2`] = `
     <Component
       close="Close"
       imageTitle="Image preview"
-      openInNewWindow="Open/Download file in a new window"
+      openOriginal="Open original file in a new window"
+      openWeb="Open web version file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
@@ -11398,7 +11421,8 @@ exports[`Media Preview Component  should render when video fails with no error c
         <Component
           close="Close"
           imageTitle="Image preview"
-          openInNewWindow="Open/Download file in a new window"
+          openOriginal="Open original file in a new window"
+          openWeb="Open web version file in a new window"
           videoTitle="Video preview"
         />
       </WithStyles(Grid)>
@@ -11459,7 +11483,8 @@ exports[`Media Preview Component  should render when video fails with no error c
     <Component
       close="Close"
       imageTitle="Image preview"
-      openInNewWindow="Open/Download file in a new window"
+      openOriginal="Open original file in a new window"
+      openWeb="Open web version file in a new window"
       videoTitle="Video preview"
     />
   </Hidden>
