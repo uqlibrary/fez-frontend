@@ -70,6 +70,10 @@ export const AdminContainer = ({
         if (!!match.params.pid && !!actions.loadRecordToView) {
             actions.loadRecordToView(match.params.pid);
         }
+
+        return () => {
+            actions.clearRecordToView();
+        };
     }, [actions, match.params.pid]);
 
     /* istanbul ignore next */
