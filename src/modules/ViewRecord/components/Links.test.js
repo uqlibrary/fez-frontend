@@ -139,10 +139,7 @@ describe('Component Links ', () => {
     });
 
     it('should render list of 3 not OA links and DOI link with OA Embargo date set for OPEN_ACCESS_ID_DOI', () => {
-        const wrapper = setup(
-            { publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI) },
-            false,
-        );
+        const wrapper = setup({ publication: getPublication(365, openAccessConfig.OPEN_ACCESS_ID_DOI) }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.noOaIcon').length).toEqual(3);
         expect(wrapper.find('.openAccessEmbargoed').length).toEqual(1);

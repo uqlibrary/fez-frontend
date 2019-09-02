@@ -38,10 +38,7 @@ describe('File Name Component ', () => {
     });
 
     it('should render audio player', () => {
-        const wrapper = setup(
-            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' },
-            false,
-        );
+        const wrapper = setup({ allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
