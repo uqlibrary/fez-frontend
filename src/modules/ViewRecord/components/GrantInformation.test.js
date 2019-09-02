@@ -2,7 +2,7 @@ import { journalArticle } from 'mock/data/testing/records';
 import { GrantInformationClass } from './GrantInformation';
 import GrantInformation from './GrantInformation';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const props = {
         publication: journalArticle,
         history: { push: jest.fn() },
@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
 
 describe('Grant Information Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('#grantInformation').length).toEqual(1);
     });

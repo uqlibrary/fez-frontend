@@ -395,7 +395,7 @@ export const ntro = {
     ],
 };
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const props = {
         classes: {},
         theme: {},
@@ -408,7 +408,7 @@ function setup(testProps, isShallow = true) {
 
 describe('NtroDetails ', () => {
     it('renders component as expected', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

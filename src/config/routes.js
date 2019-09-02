@@ -2,7 +2,7 @@ import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
-
+import { AUTH_URL_LOGIN } from 'config';
 const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
@@ -24,6 +24,11 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
     }
 
     return `${searchUrl}?${param(params)}`;
+};
+
+const isAdmin = account => {
+    return account.canMasquerade;
+    // return account.is_administrator || account.is_super_administrator;
 };
 
 export const pathConfig = {
@@ -57,6 +62,7 @@ export const pathConfig = {
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
+        // url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
@@ -97,17 +103,23 @@ export const pathConfig = {
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
+        community: '/admin/community',
+        collection: '/admin/collection',
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
+        edit: pid => `/admin/edit/${pid}`,
+        editCommunity: pid => `/communities/${pid}/edit`,
+        editCollection: pid => `/collections/${pid}/edit`,
+        editRecord: pid => `/records/${pid}/edit`,
     },
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
             absoluteLink: `${window.location.origin}${
                 process.env.BRANCH === 'development' ? window.location.pathname : ''
-            }${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`,
+            }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -124,30 +136,35 @@ export const pathConfig = {
 // a duplicate list of routes for
 const flattedPathConfig = [
     '/',
-    '/dashboard',
+    '/admin/collection',
+    '/admin/community',
+    '/admin/masquerade',
+    '/admin/thirdPartyTools',
+    '/admin/unpublished',
+    '/author-identifiers/google-scholar/link',
+    '/author-identifiers/orcid/link',
     '/contact',
-    '/rhdsubmission',
-    '/sbslodge_new',
-    '/records/search',
+    '/dashboard',
+    '/records/add/find',
+    '/records/add/new',
+    '/records/add/results',
+    '/records/claim',
+    '/records/incomplete',
     '/records/mine',
     '/records/possible',
-    '/records/incomplete',
-    '/records/claim',
-    '/records/add/find',
-    '/records/add/results',
-    '/records/add/new',
+    '/records/search',
+    '/rhdsubmission',
+    '/sbslodge_new',
     '/view',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
 ];
+
+const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin',
+    digiteam: 'digiteam',
 };
 
 export const getRoutesConfig = ({
@@ -351,8 +368,50 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
+                {
+                    path: pathConfig.admin.community,
+                    component: components.CommunityForm,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.community.title,
+                },
+                {
+                    path: pathConfig.admin.collection,
+                    component: components.CollectionForm,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.collection.title,
+                },
+                {
+                    path: pathConfig.admin.edit(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.record.title,
+                },
+                {
+                    path: pathConfig.admin.editCommunity(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.community.title,
+                },
+                {
+                    path: pathConfig.admin.editCollection(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.collection.title,
+                },
+                {
+                    path: pathConfig.admin.editRecord(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.record.title,
+                },
                 {
                     path: pathConfig.admin.masquerade,
                     component: components.Masquerade,
@@ -360,6 +419,10 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.pages.masquerade.title,
                 },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
                 {
                     path: pathConfig.admin.unpublished,
                     render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
@@ -380,11 +443,20 @@ export const getRoutesConfig = ({
         {
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
-                if (isFileUrl(childProps.location.pathname) && account) {
-                    return components.StandardPage({ ...locale.pages.permissionDeniedOrNotFound });
+                const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
+                if ((isValidRoute || isValidFileRoute) && account) {
+                    return components.StandardPage({ ...locale.pages.permissionDenied });
                 }
-                if (isValidRoute && account) return components.StandardPage({ ...locale.pages.permissionDenied });
-                if (isValidRoute) return components.StandardPage({ ...locale.pages.authenticationRequired });
+                if ((isValidRoute || isValidFileRoute) && !account) {
+                    if (
+                        process.env.NODE_ENV !== 'test' &&
+                        process.env.NODE_ENV !== 'development' &&
+                        process.env.NODE_ENV !== 'local'
+                    ) {
+                        window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                    }
+                    return components.StandardPage({ ...locale.pages.authenticationRequired });
+                }
                 return components.StandardPage({ ...locale.pages.notFound });
             },
             pageTitle: locale.pages.notFound.title,
@@ -487,12 +559,24 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
+                {
+                    linkTo: pathConfig.admin.community,
+                    ...locale.menu.communityForm,
+                },
+                {
+                    linkTo: pathConfig.admin.collection,
+                    ...locale.menu.collectionForm,
+                },
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,
                 },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
                 {
                     // maybe this should be in some admin bit? tbd
                     linkTo: pathConfig.admin.thirdPartyTools,
@@ -509,6 +593,10 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
                 },
+            ]
+            : []),
+        ...(account && (account.canMasquerade || isAdmin(account))
+            ? [
                 {
                     divider: true,
                     path: '/234234234242',

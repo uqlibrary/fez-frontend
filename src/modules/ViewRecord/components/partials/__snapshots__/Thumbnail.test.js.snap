@@ -1,45 +1,91 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 1`] = `
-<WithStyles(ExternalLink)
-  href="/test/mediaUrl"
-  openInNewIcon={false}
-  title="video.mp4"
+<a
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
 >
-  <img
-    alt="thumbnail.jpg"
-    className=""
-    onError={[Function]}
-    src="/test/thumbnail/mediaUrl"
+  <pure(LockIcon)
+    color="secondary"
   />
-</WithStyles(ExternalLink)>
+</a>
 `;
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 2`] = `
-<pure(BrokenImageIcon)
-  color="secondary"
-/>
+<a
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
+>
+  <pure(LockIcon)
+    color="secondary"
+  />
+</a>
 `;
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 3`] = `
-<WithStyles(ExternalLink)
-  href="/test/mediaUrl"
-  openInNewIcon={false}
-  title="file.random"
+<a
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
 >
-  <img
-    alt="thumbnail.jpg"
-    className=""
-    onError={[Function]}
-    src="/test/thumbnail/mediaUrl"
+  <pure(LockIcon)
+    color="secondary"
   />
-</WithStyles(ExternalLink)>
+</a>
 `;
 
 exports[`Thumbnail component should render <ExternalLink> or <BrokenImage> for specific mime types 4`] = `
-<pure(BrokenImageIcon)
-  color="secondary"
-/>
+<a
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of /test/mediaUrl"
+>
+  <pure(LockIcon)
+    color="secondary"
+  />
+</a>
+`;
+
+exports[`Thumbnail component should render FLV files as a thumbnail only for specific mime types 1`] = `
+<a
+  onClick={[Function]}
+  onKeyPress={[Function]}
+  title="Click to open a preview of video.flv"
+>
+  <pure(LockIcon)
+    color="secondary"
+  />
+</a>
+`;
+
+exports[`Thumbnail component should render PDF files as a thumbnail only plus link to original 1`] = `
+<WithStyles(ExternalLink)
+  href="pdf.jpg"
+  openInNewIcon={false}
+  title="original.pdf"
+>
+  <Img
+    alt="thumbnail.jpg"
+    className=""
+    container={[Function]}
+    crossorigin="anonymous"
+    decode={true}
+    loader={
+      <WithStyles(CircularProgress)
+        size={15}
+        thickness={1}
+      />
+    }
+    src="/test/thumbnail/mediaUrl"
+    unloader={
+      <pure(BrokenImageIcon)
+        color="secondary"
+      />
+    }
+  />
+</WithStyles(ExternalLink)>
 `;
 
 exports[`Thumbnail component should show a broken thumbnail icon when the thumbnail wont load. 1`] = `
@@ -48,7 +94,7 @@ exports[`Thumbnail component should show a broken thumbnail icon when the thumbn
   onKeyPress={[Function]}
   title="Click to open a preview of /test/mediaUrl"
 >
-  <pure(BrokenImageIcon)
+  <pure(LockIcon)
     color="secondary"
   />
 </a>
@@ -60,7 +106,7 @@ exports[`Thumbnail component should show a broken thumbnail icon when the thumbn
   onKeyPress={[Function]}
   title=""
 >
-  <pure(BrokenImageIcon)
+  <pure(LockIcon)
     color="secondary"
   />
 </a>

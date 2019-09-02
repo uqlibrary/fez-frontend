@@ -11,6 +11,8 @@ import ReactJWPlayer from 'react-jw-player';
 export default class MediaPreview extends React.Component {
     static propTypes = {
         mediaUrl: PropTypes.string.isRequired,
+        fileName: PropTypes.string.isRequired,
+        webMediaUrl: PropTypes.string,
         previewMediaUrl: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
         onClose: PropTypes.func.isRequired,
@@ -22,6 +24,7 @@ export default class MediaPreview extends React.Component {
         this.state = {
             videoErrorMsg: null,
             videoErrorCode: null,
+            imageError: null,
         };
     }
 
@@ -30,12 +33,17 @@ export default class MediaPreview extends React.Component {
             this.setState({
                 videoErrorMsg: null,
                 videoErrorCode: null,
+                imageError: null,
             });
         }
     }
 
     openFileInNewWindow = () => {
-        window.open(this.props.mediaUrl);
+        window.open(this.props.fileName);
+    };
+
+    openWebFileInNewWindow = () => {
+        window.open(this.props.webMediaUrl);
     };
 
     scrollToPreview = () => {
@@ -72,15 +80,38 @@ export default class MediaPreview extends React.Component {
         }
     };
 
-    MediaPreviewButtons = ({ openInNewWindow, close }) => {
+    imageFailed = () => {
+        this.setState(
+            {
+                imageError: true,
+            },
+            () => {
+                this.scrollToPreview();
+            },
+        );
+        return null;
+    };
+
+    MediaPreviewButtons = ({ openOriginal, openWeb, close }) => {
         return (
             <div style={{ padding: 8 }}>
                 <Grid container spacing={16} justify="flex-end" direction="row">
-                    <Grid item xs={12} sm="auto">
-                        <Button variant="contained" onClick={this.openFileInNewWindow} color="primary" fullWidth>
-                            {openInNewWindow}
-                        </Button>
-                    </Grid>
+                    {this.props.mediaUrl && (
+                        <Grid item xs={12} sm="auto">
+                            <Button variant="contained" onClick={this.openFileInNewWindow} color="primary" fullWidth>
+                                {openOriginal}
+                            </Button>
+                        </Grid>
+                    )}
+
+                    {this.props.webMediaUrl && (
+                        <Grid item xs={12} sm="auto">
+                            <Button variant="contained" onClick={this.openWebFileInNewWindow} color="primary" fullWidth>
+                                {openWeb}
+                            </Button>
+                        </Grid>
+                    )}
+
                     <Grid item xs={12} sm="auto">
                         <Button variant="contained" onClick={this.props.onClose} fullWidth>
                             {close}
@@ -95,7 +126,7 @@ export default class MediaPreview extends React.Component {
         const { mediaUrl, previewMediaUrl, mimeType } = this.props;
         const { videoTitle, imageTitle } = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
-        const isImage = mimeType.indexOf('image') >= 0;
+        const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
         return (
             <React.Fragment>
@@ -120,18 +151,40 @@ export default class MediaPreview extends React.Component {
                         />
                     </div>
                 )}
+                {isPreviewable && this.state.imageError && (
+                    <div style={{ marginTop: 12, marginBottom: 12 }}>
+                        <Alert
+                            {...locale.viewRecord.imageFailedAlert}
+                            message={locale.viewRecord.imageFailedAlert.message}
+                        />
+                    </div>
+                )}
                 {isVideo && !this.state.videoErrorMsg && (
                     <ReactJWPlayer
                         playerId="previewVideo"
                         playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-                        file={previewMediaUrl}
                         onVideoLoad={this.videoLoaded}
                         onSetupError={this.videoFailed}
                         onMediaError={this.videoFailed}
                         isAutoPlay
+                        file={previewMediaUrl}
+                        // TODO : Was put in for cloudfront not liking 'range' in request headers
+                        // playlist={
+                        //     [{
+                        //         sources: [
+                        //             {
+                        //                 file: previewMediaUrl,
+                        //                 onXhrOpen: (xhr, url) => {
+                        //                     console.log(url);
+                        //                     xhr.setRequestHeader('Range', '');
+                        //                 },
+                        //             },
+                        //         ],
+                        //     }]
+                        // }
                     />
                 )}
-                {isImage && (
+                {isPreviewable && !this.state.imageError && (
                     <Grid container spacing={32}>
                         <Grid item xs />
                         <Grid item xs={'auto'}>
@@ -139,7 +192,8 @@ export default class MediaPreview extends React.Component {
                                 src={previewMediaUrl}
                                 alt={mediaUrl}
                                 onLoad={this.scrollToPreview()}
-                                style={{ border: '5px solid black', maxWidth: '100%' }}
+                                style={{ border: '5px solid black', maxWidth: '100%', marginTop: 32, marginBottom: 32 }}
+                                onError={this.imageFailed}
                             />
                         </Grid>
                         <Grid item xs />

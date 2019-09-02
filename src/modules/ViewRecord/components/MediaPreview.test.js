@@ -1,45 +1,71 @@
 import MediaPreview from './MediaPreview';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const props = {
-        ...testProps,
+        fileName: testProps.fileName || 'https://test.com/test.jpg',
         mediaUrl: testProps.mediaUrl || 'https://test.com/test.jpg',
+        webMediaUrl: testProps.mediaUrl || 'https://test.com/web_test.jpg',
         previewMediaUrl: testProps.previewMediaUrl || 'https://test.com/preview_test.jpg',
         mimeType: testProps.mimeType || 'text/plain',
         onClose: testProps.closeAction || jest.fn(),
+        ...testProps,
     };
     return getElement(MediaPreview, props, isShallow);
 }
 
 describe('Media Preview Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with image', () => {
         const wrapper = setup({ mimeType: 'image/jpeg' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Button').length).toEqual(2);
+        expect(wrapper.find('Button').length).toEqual(3);
     });
 
     it('should render component with video', () => {
         const wrapper = setup({ mimeType: 'video/mp4' }, false);
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Button').length).toEqual(2);
+        expect(wrapper.find('Button').length).toEqual(3);
+    });
+
+    it('should render component with a PDF', () => {
+        const wrapper = setup(
+            {
+                fileName: 'test.pdf',
+                mediaUrl: 'test_t.pdf',
+                webMediaUrl: 'web_test_t.pdf',
+                previewMediaUrl: 'preview_test_t.pdf',
+                mimeType: 'application/pdf',
+            },
+            false,
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Button').length).toEqual(3);
     });
 
     it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;
-        const wrapper = setup({}, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const wrapper = setup({ webMediaUrl: 'web_test_t.jpg', mediaUrl: 'test.jpg' }, false);
         wrapper
             .find('Button')
-            .first()
+            .at(0)
             .find('button')
             .simulate('click');
-        expect(open).toHaveBeenCalledTimes(1);
+        wrapper
+            .find('Button')
+            .at(1)
+            .find('button')
+            .simulate('click');
+        wrapper
+            .find('Button')
+            .at(2)
+            .find('button')
+            .simulate('click');
+        expect(open).toHaveBeenCalledTimes(2);
     });
 
     it('should show the preview onload', () => {
@@ -55,7 +81,7 @@ describe('Media Preview Component ', () => {
     });
 
     it("should call the ref's method for scrolling into view", () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testFn = jest.fn();
 
         wrapper.instance().mediaPreviewRef = undefined;
@@ -106,6 +132,14 @@ describe('Media Preview Component ', () => {
         const wrapper = setup({ mimeType: 'video/mp4' });
         const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
         wrapper.instance().videoFailed({ message: 'test failure', code: 12345 });
+        expect(scrollToPreview).toBeCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render when video fails', () => {
+        const wrapper = setup({ mimeType: 'image/jpeg' });
+        const scrollToPreview = jest.spyOn(wrapper.instance(), 'scrollToPreview');
+        wrapper.instance().imageFailed();
         expect(scrollToPreview).toBeCalled();
         expect(toJson(wrapper)).toMatchSnapshot();
     });

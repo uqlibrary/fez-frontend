@@ -9,6 +9,11 @@ export default {
             journalOpenAccessPolicyLink: "Check publisher's open access policy",
             eraJournalListed: '(ERA [year] Journal(s) Listed)',
         },
+        imageFailedAlert: {
+            type: 'error',
+            title: 'IMAGE FAILED TO LOAD',
+            message: 'Please click the download/open in a new window link above to open the original file format.',
+        },
         sections: {
             publicationDetails: 'Type & Collection',
             grantInformation: 'Grant information',
@@ -47,6 +52,7 @@ export default {
                     description: 'Description',
                     oaStatus: ' ',
                 },
+                securityLocked: 'You do not have access to this file',
                 linkMissingDescription: 'No description available',
                 linkMissingDescriptionTitle: 'Click to open link in a new window',
                 doiDescription: 'Full text from publisher',

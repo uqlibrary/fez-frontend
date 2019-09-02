@@ -1,7 +1,7 @@
 import React from 'react';
 import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './PublicationMap';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, isShallow) {
     const props = {
         ...testProps,
         googleMapURL:
@@ -22,27 +22,21 @@ describe("Publication's map coordinates", () => {
     });
 
     it('should mount component', () => {
-        const wrapper = setup(
-            {
-                coordinates:
-                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
-                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
-            },
-            false,
-        );
+        const wrapper = setup({
+            coordinates:
+                '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should mount component in readonly mode', () => {
-        const wrapper = setup(
-            {
-                coordinates:
-                    '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
-                    '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
-                readOnly: true,
-            },
-            false,
-        );
+        const wrapper = setup({
+            coordinates:
+                '153.021781,-27.489337 152.988274,-27.489337 152.988274,' +
+                '-27.509529 153.021781,-27.509529 153.021781,-27.489337',
+            readOnly: true,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

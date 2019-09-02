@@ -1,15 +1,19 @@
 import ViewRecord from './ViewRecord';
 import { mockRecordToFix, ntro } from 'mock/data/testing/records';
+import { default as record } from 'mock/data/records/record';
+import { accounts } from 'mock/data/account';
 import * as records from 'mock/data/testing/records';
 
 function setup(testProps, isShallow = true) {
     const props = {
-        ...testProps,
         match: testProps.match || { params: { pid: 'UQ:12344' } },
         actions: testProps.actions || {
             loadRecordToView: jest.fn(),
             clearRecordToView: jest.fn(),
         },
+        // account: testProps.account || accounts.uqresearcher,
+        // author: testProps.author || currentAuthor.uqresearcher,
+        ...testProps,
     };
     return getElement(ViewRecord, props, isShallow);
 }
@@ -17,6 +21,11 @@ function setup(testProps, isShallow = true) {
 describe('Component ViewRecord ', () => {
     it('should render default props', () => {
         const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default props with admin menu', () => {
+        const wrapper = setup({ account: { canMasquerade: true } });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -97,6 +106,45 @@ describe('Component ViewRecord ', () => {
             },
         });
         expect(wrapper.find('NtroDetails').length).toBe(1);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render record view', () => {
+        const author = {
+            aut_id: 410,
+            aut_org_username: 'uqresearcher',
+            aut_org_staff_id: '0001952',
+            aut_org_student_id: null,
+            aut_email: '',
+            aut_display_name: 'Researcher, J',
+            aut_fname: 'J',
+            aut_mname: '',
+            aut_lname: 'Researcher',
+            aut_title: 'Professor',
+            aut_position: '',
+            aut_homepage_link: '',
+            aut_created_date: null,
+            aut_update_date: '2017-07-23',
+            aut_external_id: '0000040357',
+            aut_ref_num: '',
+            aut_researcher_id: 'A-1137-2007',
+            aut_scopus_id: '35478294000',
+            aut_is_scopus_id_authenticated: 1,
+            aut_mypub_url: '',
+            aut_rid_password: '',
+            aut_people_australia_id: '',
+            aut_description: '',
+            aut_orcid_id: '0000-0001-1111-1111',
+            aut_google_scholar_id: 'kUemDfMAAAAJ',
+            aut_rid_last_updated: '2013-05-17',
+            aut_publons_id: null,
+            aut_student_username: null,
+        };
+        const wrapper = setup({
+            account: { ...accounts.uqresearcher },
+            author: { ...author },
+            recordToView: { ...record },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

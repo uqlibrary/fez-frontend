@@ -2,7 +2,7 @@ import { publicationDetails } from 'mock/data/testing/records';
 import { PublicationDetailsClass } from './PublicationDetails';
 import PublicationDetails from './PublicationDetails';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const props = {
         ...testProps,
         publication: testProps.publication || publicationDetails,
@@ -15,7 +15,7 @@ function setup(testProps, isShallow = true) {
 
 describe('Publication Details Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

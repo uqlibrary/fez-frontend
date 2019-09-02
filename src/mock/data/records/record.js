@@ -199,7 +199,7 @@ export default {
             "rek_author_id_id": 27973929,
             "rek_author_id_pid": "UQ:396321",
             "rek_author_id_xsdmf_id": 6346,
-            "rek_author_id": 4101,
+            "rek_author_id": 4102,
             "rek_author_id_order": 2
         }, {
             "rek_author_id_id": 27973930,
@@ -386,6 +386,8 @@ export default {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 97786
         },
         {
@@ -397,6 +399,8 @@ export default {
             "dsi_mimetype": "text/xml",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 757
         },
         {
@@ -408,6 +412,8 @@ export default {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 65857
         },
         {
@@ -419,6 +425,8 @@ export default {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 3952
         },
         {
@@ -430,6 +438,8 @@ export default {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 97345
         },
         {
@@ -441,6 +451,8 @@ export default {
             "dsi_mimetype": "audio/mpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1,
             "dsi_size": 16806028
         },
         {
@@ -452,6 +464,8 @@ export default {
             "dsi_mimetype": "video/mp4",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 29808623
         },
         {
@@ -463,6 +477,8 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 186680
         },
         {
@@ -474,6 +490,8 @@ export default {
             "dsi_mimetype": "video/x-flv",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1,
             "dsi_size": 34896360
         },
         {
@@ -485,17 +503,21 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 1,
             "dsi_size": 186680
         },
         {
             "dsi_pid": "UQ:681794",
             "dsi_dsid": "n3rd_Iteration.pdf",
-            "dsi_embargo_date": '2018-11-11',
+            "dsi_embargo_date": '2021-11-11',
             "dsi_open_access": null,
             "dsi_label": "iteration file",
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "A",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 186680
         },
         {
@@ -507,6 +529,8 @@ export default {
             "dsi_mimetype": "application/pdf",
             "dsi_copyright": null,
             "dsi_state": "D",
+            "dsi_security_inherited": 1,
+            "dsi_security_policy": 5,
             "dsi_size": 186680
         },
     ],

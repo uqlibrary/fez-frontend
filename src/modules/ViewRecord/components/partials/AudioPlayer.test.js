@@ -1,7 +1,7 @@
 import { journalArticle } from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const props = {
         ...testProps,
         pid: testProps.pid || journalArticle.rek_pid,
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
 
 describe('Audio Player Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set playing state via audioPlayerPlay()', async() => {
-        const wrapper = setup({}, true);
+        const wrapper = setup();
 
         // Without promise
         wrapper.instance().audioPlayerPlay();
@@ -49,7 +49,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should play audio', () => {
-        const shallowWrapper = setup({});
+        const shallowWrapper = setup();
         shallowWrapper.setState({ isPlaying: true });
         expect(toJson(shallowWrapper)).toMatchSnapshot();
     });
@@ -83,7 +83,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should set component state to playing', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({ isPlaying: true });
         expect(toJson(wrapper)).toMatchSnapshot();

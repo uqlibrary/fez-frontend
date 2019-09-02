@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ExternalLink from 'modules/SharedComponents/ExternalLink/components/ExternalLink';
 import BrokenImage from '@material-ui/icons/BrokenImage';
+import Lock from '@material-ui/icons/Lock';
 import { withStyles } from '@material-ui/core/styles';
 import locale from 'locale/pages';
+import Img from 'react-image';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const styles = () => ({
     image: {
@@ -15,14 +18,19 @@ export const styles = () => ({
     brokenImage: {
         opacity: 0.5,
     },
+    lockIcon: {
+        opacity: 0.5,
+    },
 });
 
 export class Thumbnail extends Component {
     static propTypes = {
-        mediaUrl: PropTypes.string.isRequired,
-        previewMediaUrl: PropTypes.string.isRequired,
-        thumbnailMediaUrl: PropTypes.string.isRequired,
-        thumbnailFileName: PropTypes.string.isRequired,
+        mediaUrl: PropTypes.string,
+        webMediaUrl: PropTypes.string,
+        previewMediaUrl: PropTypes.string,
+        thumbnailMediaUrl: PropTypes.string,
+        thumbnailFileName: PropTypes.string,
+        securityStatus: PropTypes.bool,
         fileName: PropTypes.string,
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func,
@@ -36,52 +44,63 @@ export class Thumbnail extends Component {
         };
     }
 
-    showPreview = (mediaUrl, previewMediaUrl, mimeType) => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => e => {
         e.preventDefault();
-        this.props.onClick(mediaUrl, previewMediaUrl, mimeType);
-    };
-
-    imageError = () => {
-        this.setState({
-            thumbnailError: true,
-        });
+        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
     };
 
     render() {
         const txt = locale.pages.viewRecord;
-        const { mediaUrl, thumbnailMediaUrl, thumbnailFileName, previewMediaUrl, fileName, mimeType } = this.props;
-
-        // TODO revert once videos are transcoded to open format #158519502
-        if (fileName && (mimeType.indexOf('video') >= 0 || mimeType.indexOf('octet-stream') >= 0)) {
-            return !this.state.thumbnailError ? (
+        const {
+            mediaUrl,
+            thumbnailMediaUrl,
+            thumbnailFileName,
+            previewMediaUrl,
+            webMediaUrl,
+            fileName,
+            mimeType,
+            securityStatus,
+        } = this.props;
+        if (
+            (fileName && mimeType.indexOf('pdf') >= 0) ||
+            (mimeType.indexOf('octet-stream') >= 0 && mediaUrl.indexOf('flv') >= 0)
+        ) {
+            return (
                 <ExternalLink href={mediaUrl} title={fileName} openInNewIcon={false}>
-                    <img
+                    <Img
+                        crossorigin="anonymous"
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
-                        onError={this.imageError}
+                        loader={<CircularProgress size={15} thickness={1} />}
+                        unloader={<BrokenImage color={'secondary'} />}
                         className={this.props.classes.image}
                     />
                 </ExternalLink>
-            ) : (
-                <BrokenImage color={'secondary'} />
             );
         }
-
         return (
             <a
-                onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                title={(mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)) || ''}
+                onClick={this.showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus)}
+                onKeyPress={this.showPreview(
+                    fileName,
+                    mediaUrl,
+                    previewMediaUrl,
+                    mimeType,
+                    webMediaUrl,
+                    securityStatus,
+                )}
+                title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
             >
-                {!this.state.thumbnailError ? (
-                    <img
+                {this.props.securityStatus ? (
+                    <Img
                         src={thumbnailMediaUrl}
                         alt={thumbnailFileName}
-                        onError={this.imageError}
+                        loader={<CircularProgress size={15} thickness={1} />}
+                        unloader={<BrokenImage color={'secondary'} />}
                         className={this.props.classes.image}
                     />
                 ) : (
-                    <BrokenImage color={'secondary'} className={this.props.classes.brokenImage} />
+                    <Lock color={'secondary'} className={this.props.classes.lockIcon} />
                 )}
             </a>
         );

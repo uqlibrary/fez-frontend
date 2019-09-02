@@ -25,12 +25,12 @@ describe('Routes method', () => {
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(17);
+        expect(testRoutes.length).toEqual(19);
     });
 
     it('should return a list of menus including incomplete menu item for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, false, true);
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(20);
     });
 
     it('should return a list of routes for anon user', () => {
@@ -43,10 +43,10 @@ describe('Routes method', () => {
         expect(testRoutes.length).toEqual(23);
     });
 
-    it('should return a list of routes for user who can masquerade', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqstaff });
-        expect(testRoutes.length).toEqual(26);
-    });
+    // it('should return a list of routes for user who can masquerade', () => {
+    //     const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqstaff });
+    //     expect(testRoutes.length).toEqual(34);
+    // });
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({
@@ -110,7 +110,7 @@ describe('Routes method', () => {
             },
         };
         renderPage(props);
-        expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDeniedOrNotFound);
+        expect(testComponent).toHaveBeenCalledWith(locale.pages.permissionDenied);
     });
 
     it('should render not found page', () => {

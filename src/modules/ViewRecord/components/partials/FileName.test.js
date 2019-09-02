@@ -1,7 +1,7 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { FileName } from './FileName';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, isShallow = true) {
     const { previewFileName, ...rest } = testProps;
     const props = {
         classes: {},
@@ -18,7 +18,6 @@ function setup(testProps, isShallow = true) {
     };
     return getElement(FileName, props, isShallow);
 }
-
 describe('File Name Component ', () => {
     it('should render component and display file name only', () => {
         const wrapper = setup({}, false);
@@ -39,7 +38,10 @@ describe('File Name Component ', () => {
     });
 
     it('should render audio player', () => {
-        const wrapper = setup({ allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' }, false);
+        const wrapper = setup(
+            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' },
+            false,
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
@@ -93,7 +95,7 @@ describe('File Name Component ', () => {
     });
 
     it('should detect videos from mime type', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test1 = wrapper.instance().isVideo('video/mp4');
         expect(test1).toBe(true);
         const test2 = wrapper.instance().isVideo('audio/mp3');

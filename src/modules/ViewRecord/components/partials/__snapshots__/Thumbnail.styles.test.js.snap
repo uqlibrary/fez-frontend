@@ -11,5 +11,8 @@ Object {
     },
     "width": "100%",
   },
+  "lockIcon": Object {
+    "opacity": 0.5,
+  },
 }
 `;

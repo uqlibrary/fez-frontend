@@ -3,7 +3,7 @@ import { journalArticle } from 'mock/data/testing/records';
 
 let testJournalArticle = JSON.parse(JSON.stringify(journalArticle));
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, isShallow) {
     const props = {
         ...testProps,
         publication: testProps.publication || testJournalArticle,
@@ -18,7 +18,7 @@ describe('Journal Name Component test ', () => {
     });
 
     it('should render with journal article', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
@@ -31,7 +31,7 @@ describe('Journal Name Component test ', () => {
 
     it('should render without era journal listed', () => {
         delete testJournalArticle.fez_record_search_key_issn[0].fez_journal_issns;
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.eraYearListed').length).toEqual(0);
     });
@@ -40,13 +40,13 @@ describe('Journal Name Component test ', () => {
         delete testJournalArticle.fez_record_search_key_issn[0].rek_issn_lookup;
         delete testJournalArticle.fez_record_search_key_issn[0].fez_sherpa_romeo;
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(0);
     });
 
     it('should have getERAYears return ERA years appropriately', () => {
-        const wrapper = setup({}, true);
+        const wrapper = setup({}, { isShallow: true });
 
         // Using arguments - should return empty array
         expect(wrapper.instance().getERAYears()).toEqual([]);

@@ -5,10 +5,10 @@ export const accounts = {
         "class": ["libstaff", "IS_CURRENT"],
         "type": 18,
         "homeLib": "St Lucia",
-        "firstName": "J",
+        "firstName": "UQ",
         "lastName": "Staff",
-        "name": "J STAFF",
-        "mail": "j.staff@example.uq.edu.au",
+        "name": "UQ STAFF",
+        "mail": "uq.staff@example.uq.edu.au",
         "barcode": "111111111111111",
         "groups": ["DC=uq,DC=edu,DC=au"],
         "classes": [],
@@ -17,7 +17,9 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": true,
         "canMasqueradeType": "readonly",
-        "blocked": false
+        "blocked": false,
+        "is_administrator": 1,
+        "is_super_administrator": 1,
     },
     // student
     s1111111: {
@@ -56,7 +58,9 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": false,
-        "blocked": false
+        "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
     },
     // rhd student
     s2222222: {
@@ -75,7 +79,9 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": false,
-        "blocked": false
+        "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
     },
     // researchers
     uqresearcher: {
@@ -94,7 +100,9 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": false,
-        "blocked": false
+        "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
     },
     // researcher without orcid
     uqnoauthid: {
@@ -113,6 +121,26 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": false,
+        "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
+    },
+    digiteamMember: {
+        'id': 'digiteamMember',
+        "class": ["Campus-STLUCIA"],
+        "type": 3,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "Researcher",
+        "name": "J Researcher",
+        "mail": "j.Researcher@uq.edu.au",
+        "barcode": "240675201000000",
+        "groups": ["CN=lib_digistore_users,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au"],
+        "classes": [],
+        "expiryDate": "31-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": true,
         "blocked": false
     },
     // expired session
@@ -679,7 +707,6 @@ export const uqrdav10 = {
             'CN=lib_libshare_ro,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_www,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_UQLCompAccess,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
-            'CN=lib_dev,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_libapi_MembershipAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_libapi_LiaisonAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_www_cleanup,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
@@ -807,7 +834,6 @@ export const uqagrinb = {
             'CN=lib_libshare_ro,OU=lib-libshare-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_www,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_UQLCompAccess,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
-            'CN=lib_dev,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_libapi_MembershipAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_libapi_LiaisonAdmins,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=lib_www_cleanup,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',

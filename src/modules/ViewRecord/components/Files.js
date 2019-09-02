@@ -32,21 +32,29 @@ const styles = theme => ({
     fileIcon: {
         opacity: 0.5,
     },
+    thumbIconCentered: {
+        textAlign: 'center',
+    },
 });
 
 export class FilesClass extends Component {
     static propTypes = {
+        account: PropTypes.object.isRequired,
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
         setHideCulturalSensitivityStatement: PropTypes.func,
         classes: PropTypes.object,
+        isAdmin: PropTypes.bool,
+        isAuthor: PropTypes.bool,
     };
 
     constructor(props) {
         super(props);
         this.state = {
             preview: {
+                fileName: null,
                 mediaUrl: null,
+                webMediaUrl: null,
                 previewMediaUrl: null,
                 mimeType: null,
             },
@@ -61,16 +69,20 @@ export class FilesClass extends Component {
         previewFileName,
         allowDownload,
         downloadableFileName = null,
+        webFileName,
+        securityStatus,
     ) => {
         if (allowDownload && thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
-                mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
-                previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
-                thumbnailMediaUrl: this.getUrl(pid, thumbnailFileName),
+                mediaUrl: this.getUrl(pid, fileName),
+                webMediaUrl: webFileName ? this.getUrl(pid, webFileName) : null,
+                previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : null,
+                thumbnailMediaUrl: thumbnailFileName && this.getUrl(pid, thumbnailFileName),
                 fileName: downloadableFileName || fileName,
                 thumbnailFileName,
                 onClick: this.showPreview,
+                securityStatus: securityStatus,
             };
             return <Thumbnail {...thumbnailProps} />;
         } else if (mimeType.indexOf('audio') >= 0) {
@@ -89,21 +101,29 @@ export class FilesClass extends Component {
     hidePreview = () => {
         this.setState({
             preview: {
+                fileName: null,
                 mediaUrl: null,
+                webMediaUrl: null,
                 previewMediaUrl: null,
                 mimeType: null,
+                securityStatus: null,
             },
         });
     };
 
-    showPreview = (mediaUrl, previewMediaUrl, mimeType) => {
-        this.setState({
-            preview: {
-                mediaUrl: mediaUrl,
-                previewMediaUrl: previewMediaUrl,
-                mimeType: mimeType,
-            },
-        });
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => {
+        if (securityStatus) {
+            this.setState({
+                preview: {
+                    fileName: fileName,
+                    mediaUrl: mediaUrl,
+                    webMediaUrl: webMediaUrl,
+                    previewMediaUrl: previewMediaUrl,
+                    mimeType: mimeType,
+                    securityStatus: securityStatus,
+                },
+            });
+        }
     };
 
     formatBytes = bytes => {
@@ -117,7 +137,8 @@ export class FilesClass extends Component {
         return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
     };
 
-    getFileOpenAccessStatus = (publication, embargoDate) => {
+    getFileOpenAccessStatus = (publication, dataStream) => {
+        const embargoDate = dataStream.dsi_embargo_date;
         const openAccessStatusId =
             (!!publication.fez_record_search_key_oa_status &&
                 publication.fez_record_search_key_oa_status.rek_oa_status) ||
@@ -129,13 +150,19 @@ export class FilesClass extends Component {
                 isOpenAccess: false,
                 embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
                 openAccessStatusId: openAccessStatusId,
+                securityStatus: this.getSecurityAccess(dataStream),
             };
         }
         return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     };
 
+    getSecurityAccess = dataStream => {
+        const { isAdmin, isAuthor } = this.props;
+        return !!((!isAdmin && dataStream.dsi_security_policy === 5) || isAdmin || isAuthor);
+    };
+
     getUrl = (pid, fileName) => {
-        return fileName && routes.pathConfig.file.url(pid, fileName);
+        return pid && fileName && routes.pathConfig.file.url(pid, fileName);
     };
 
     searchByKey = (list, key, value) => {
@@ -146,12 +173,89 @@ export class FilesClass extends Component {
         const {
             files: { blacklist },
         } = viewRecordsConfig;
-
         return (
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
+            !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
             (!dataStream.dsi_label ||
                 !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
             dataStream.dsi_state === 'A'
+        );
+    };
+
+    checkArrayForObjectValue = value => {
+        const datastream = this.props.publication.fez_datastream_info;
+        let resolvedFilename = null;
+        for (let i = 0; i < datastream.length; i++) {
+            if (datastream[i].dsi_dsid === value) {
+                resolvedFilename = datastream[i].dsi_dsid;
+            }
+        }
+        return resolvedFilename;
+    };
+
+    untranscodedItem = filename => {
+        let file = null;
+        if (filename.indexOf('_xt') >= 0) {
+            file = filename
+                .replace('_xt', '')
+                .split('.')
+                .slice(0, -1)
+                .join('.');
+        } else {
+            file = filename
+                .split('.')
+                .slice(0, -1)
+                .join('.');
+        }
+        return file;
+    };
+
+    checkForThumbnail = filename => {
+        const file = this.untranscodedItem(filename);
+        return (
+            this.checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`) ||
+            this.checkArrayForObjectValue(`thumbnail_${file}_override_t.jpg`) ||
+            this.checkArrayForObjectValue(`thumbnail_${file}_t.jpg`) ||
+            this.checkArrayForObjectValue(`thumbnail_${file}.jpg`) ||
+            this.checkArrayForObjectValue(`${file}_t.jpg`) ||
+            null
+        );
+    };
+
+    checkForPreview = filename => {
+        const file = this.untranscodedItem(filename);
+        return (
+            this.checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`) ||
+            this.checkArrayForObjectValue(`preview_${file}_override_t.jpg`) ||
+            this.checkArrayForObjectValue(`preview_${file}_t.jpg`) ||
+            this.checkArrayForObjectValue(`preview_${file}.jpg`) ||
+            this.checkArrayForObjectValue(`${file}_t.jpg`) ||
+            this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`) ||
+            this.checkArrayForObjectValue(`preview_${file}_override_t.mp4`) ||
+            this.checkArrayForObjectValue(`preview_${file}_t.mp4`) ||
+            this.checkArrayForObjectValue(`${file}_t.mp4`) ||
+            this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`) ||
+            this.checkArrayForObjectValue(`preview_${file}_override_t.mp3`) ||
+            this.checkArrayForObjectValue(`preview_${file}_t.mp3`) ||
+            this.checkArrayForObjectValue(`${file}_t.mp3`) ||
+            null
+        );
+    };
+
+    checkForWeb = filename => {
+        const file = this.untranscodedItem(filename);
+        return (
+            this.checkArrayForObjectValue(`web_${file}_compressed_t.jpg`) ||
+            this.checkArrayForObjectValue(`web_${file}_override_t.jpg`) ||
+            this.checkArrayForObjectValue(`web_${file}_t.jpg`) ||
+            this.checkArrayForObjectValue(`web_${file}.jpg`) ||
+            this.checkArrayForObjectValue(`web_${file}_compressed_t.mp4`) ||
+            this.checkArrayForObjectValue(`web_${file}_override_t.mp4`) ||
+            this.checkArrayForObjectValue(`web_${file}_t.mp4`) ||
+            this.checkArrayForObjectValue(`web_${file}_compressed_t.mp3`) ||
+            this.checkArrayForObjectValue(`web_${file}_override_t.mp3`) ||
+            this.checkArrayForObjectValue(`web_${file}_t.mp3`) ||
+            null
         );
     };
 
@@ -162,44 +266,45 @@ export class FilesClass extends Component {
         const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
             files.blacklist.collections.includes(collection.rek_ismemberof),
         );
-
         return !containBlacklistCollections && !!dataStreams && dataStreams.length > 0
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
-                const thumbnailDataStream = this.searchByKey(
-                    dataStreams,
-                    'dsi_dsid',
-                    files.thumbnailFileName(fileName),
-                );
-                const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.previewFileName(fileName));
-                const downloadableDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.webFileName(fileName));
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-                const thumbnailFileName = !!thumbnailDataStream && thumbnailDataStream.dsi_dsid;
-                const previewFileName = !!previewDataStream && previewDataStream.dsi_dsid;
-                const downloadableFileName = !!downloadableDataStream && downloadableDataStream.dsi_dsid;
-                const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
+                const thumbnailFileName = this.checkForThumbnail(fileName);
+                const previewFileName = this.checkForPreview(fileName);
+                const downloadableFileName = this.checkForWeb(fileName);
+                const webFileName = this.checkForWeb(fileName);
+                const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
+                const securityAccess = this.getSecurityAccess(dataStream);
 
                 return {
                     pid: pid,
                     fileName: fileName,
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
-                    thumbnailFileName: thumbnailFileName,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                    allowDownload:
+                          ((openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate) &&
+                              this.getSecurityAccess(dataStream)) ||
+                          this.props.isAuthor ||
+                          this.props.isAdmin,
                     icon: this.renderFileIcon(
                         pid,
                         mimeType,
                         fileName,
                         thumbnailFileName,
                         previewFileName,
-                        openAccessStatus.isOpenAccess,
+                        openAccessStatus.isOpenAccess || this.props.isAuthor || this.props.isAdmin,
                         downloadableFileName,
+                        webFileName,
+                        securityAccess,
                     ),
                     openAccessStatus: openAccessStatus,
-                    previewMediaUrl: this.getUrl(pid, previewFileName || fileName),
+                    previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : this.getUrl(pid, fileName),
+                    webMediaUrl: downloadableFileName ? this.getUrl(pid, downloadableFileName) : null,
                     mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
+                    securityStatus: this.getSecurityAccess(dataStream),
                 };
             })
             : [];
@@ -285,7 +390,7 @@ export class FilesClass extends Component {
                                 wrap={'nowrap'}
                                 className={this.props.classes.header}
                             >
-                                <Grid item xs={1}>
+                                <Grid item xs={1} className={this.props.classes.thumbIconCentered}>
                                     {item.icon}
                                 </Grid>
                                 <Grid item sm={4} className={this.props.classes.dataWrapper}>
@@ -307,7 +412,10 @@ export class FilesClass extends Component {
                                 </Hidden>
                                 <Hidden xsDown>
                                     <Grid item sm style={{ textAlign: 'right' }}>
-                                        <OpenAccessIcon {...item.openAccessStatus} />
+                                        <OpenAccessIcon
+                                            {...item.openAccessStatus}
+                                            securityStatus={item.securityStatus}
+                                        />
                                     </Grid>
                                 </Hidden>
                             </Grid>
@@ -315,7 +423,9 @@ export class FilesClass extends Component {
                     ))}
                     {this.state.preview.mediaUrl && this.state.preview.mimeType && (
                         <MediaPreview
+                            fileName={this.getUrl(publication.rek_pid, this.state.preview.fileName)}
                             mediaUrl={this.state.preview.mediaUrl}
+                            webMediaUrl={this.state.preview.webMediaUrl}
                             previewMediaUrl={this.state.preview.previewMediaUrl}
                             mimeType={this.state.preview.mimeType}
                             onClose={this.hidePreview}

@@ -523,7 +523,7 @@ exports[`Audio Player Component  should pause audio 1`] = `
                 id="audioPlayer"
               >
                 <source
-                  src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+                  src="UQ676287_OA.pdf"
                   type="audio/mp3"
                 />
               </audio>
@@ -731,7 +731,7 @@ exports[`Audio Player Component  should play audio 1`] = `
     id="audioPlayer"
   >
     <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      src="UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -1256,7 +1256,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
                 id="audioPlayer"
               >
                 <source
-                  src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+                  src="UQ676287_OA.pdf"
                   type="audio/mp3"
                 />
               </audio>
@@ -1464,7 +1464,7 @@ exports[`Audio Player Component  should render component 1`] = `
     id="audioPlayer"
   >
     <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      src="UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -1492,7 +1492,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
     id="audioPlayer"
   >
     <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      src="UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
@@ -1520,7 +1520,7 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
     id="audioPlayer"
   >
     <source
-      src="http://localhost/view/UQ:676287/UQ676287_OA.pdf"
+      src="UQ676287_OA.pdf"
       type="audio/mp3"
     />
   </audio>
