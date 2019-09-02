@@ -15,6 +15,7 @@ import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
+import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
@@ -436,12 +437,10 @@ export const fieldConfig = {
         },
     },
     fez_record_search_key_refereed_source: {
-        component: GenericTextField,
+        component: RefereedSourceField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source',
-            fullWidth: true,
             label: 'Refereed Source',
-            placeholder: '',
         },
     },
     languageOfJournalName: {
