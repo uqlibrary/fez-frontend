@@ -555,6 +555,16 @@ export const fieldConfig = {
             editMode: true,
         },
     },
+    editors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.editors',
+            showIdentifierLookup: true,
+            locale: formLocale.book.editors.field,
+            validate: [validation.authorRequired],
+            editMode: true,
+        },
+    },
     files: {
         component: FileUploadField,
         componentProps: {
@@ -661,17 +671,6 @@ export const fieldConfig = {
             name: 'adminSection.rek_security_inherited',
             label: 'Record level security',
             placeholder: '',
-        },
-    },
-    editors: {
-        component: ContributorsEditorField,
-        componentProps: {
-            name: 'authorsSection.editors',
-            showIdentifierLookup: true,
-            showContributorAssignment: true,
-            locale: formLocale.book.editors.field,
-            validate: [validation.authorRequired],
-            editMode: true,
         },
     },
     fez_record_search_key_date_available: {
@@ -910,7 +909,12 @@ export const adminInterfaceConfig = {
                 title: 'Author',
                 groups: [
                     ['authors'],
-                    // ['editors'], // white screen
+                ],
+            },
+            {
+                title: 'Editor',
+                groups: [
+                    ['editors'],
                 ],
             },
         ],
@@ -1331,6 +1335,32 @@ export const valueExtractor = {
                 orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
                 orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type}` || '',
                 affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
+            }));
+        },
+    },
+    editors: {
+        getValue: record => {
+            const contributors = (record.fez_record_search_key_contributor || []).reduce(
+                (contributorsObject, contributor) => ({
+                    ...contributorsObject,
+                    [contributor.rek_contributor_order]: contributor,
+                }),
+                {},
+            );
+
+            const contributorIds = (record.fez_record_search_key_contributor_id || []).reduce(
+                (contributorIdsObject, contributorId) => ({
+                    ...contributorIdsObject,
+                    [contributorId.rek_contributor_id_order]: contributorId,
+                }),
+                {},
+            );
+
+            return (record.fez_record_search_key_contributor || []).map(({ rek_contributor_order: order }) => ({
+                nameAsPublished: (contributors[order] || {}).rek_contributor,
+                creatorRole: '',
+                uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id}` || '',
+                authorId: (contributorIds[order] || {}).rek_contributor_id,
             }));
         },
     },
