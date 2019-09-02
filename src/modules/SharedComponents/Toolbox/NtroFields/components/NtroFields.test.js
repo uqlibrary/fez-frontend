@@ -71,7 +71,7 @@ describe('Component NtroFields', () => {
                 order: 'fez_test_order',
             },
             'ISRC TE-EST-23-12343',
-            1
+            1,
         );
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',
@@ -87,7 +87,7 @@ describe('Component NtroFields', () => {
                 order: 'fez_test_order',
             },
             'ISMN TE-EST-23-12343',
-            1
+            1,
         );
         expect(expected).toEqual({
             fez_test: 'TE-EST-23-12343',

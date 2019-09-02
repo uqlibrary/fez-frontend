@@ -66,7 +66,7 @@ describe('StandardCard component', () => {
                 test1: 'test1value',
                 test2: 'test2value',
             },
-            true
+            true,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

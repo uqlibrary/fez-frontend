@@ -31,5 +31,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const RoleField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

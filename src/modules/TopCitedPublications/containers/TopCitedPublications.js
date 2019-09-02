@@ -18,7 +18,7 @@ function mapDispatchToProps(dispatch) {
 
 let TopCitedPublicationsContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(TopCitedPublications);
 TopCitedPublicationsContainer = withRouter(TopCitedPublicationsContainer);
 

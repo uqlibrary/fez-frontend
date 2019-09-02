@@ -93,7 +93,7 @@ export default class MyRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -102,7 +102,7 @@ export default class MyRecords extends PureComponent {
             {
                 page: page,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -112,7 +112,7 @@ export default class MyRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -122,14 +122,14 @@ export default class MyRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
     hasDisplayableFilters = activeFilters => {
         return (
             Object.keys(activeFilters).filter(
-                filter => !this.props.localePages.facetsFilter.excludeFacetsList.includes(filter)
+                filter => !this.props.localePages.facetsFilter.excludeFacetsList.includes(filter),
             ).length > 0
         );
     };
@@ -255,7 +255,7 @@ export default class MyRecords extends PureComponent {
                             </Grid>
                         )}
                     {// show available filters or selected filters (even if there are no results)
-                    // prettier-ignore
+                    /* prettier-ignore */
                         ((
                             this.props.publicationsListFacets &&
                             Object.keys(this.props.publicationsListFacets).length > 0

@@ -16,7 +16,6 @@ import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
-import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { default as Divider } from 'modules/SharedComponents/Toolbox/Divider';
@@ -25,11 +24,13 @@ import { routes, validation } from 'config';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
+import { default as publicationForm } from 'locale/publicationForm';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import DepositAgreementField from './DepositAgreementField';
+import moment from 'moment';
 
 export default class AddDataCollection extends Component {
     static propTypes = {
@@ -62,6 +63,19 @@ export default class AddDataCollection extends Component {
     render() {
         const txt = formLocale.addDataset;
         const txtFoR = componentLocale.components.fieldOfResearchForm;
+        const formValues = this.props.formValues && this.props.formValues.toJS();
+        const startDate =
+            formValues &&
+            formValues.fez_record_search_key_start_date &&
+            formValues.fez_record_search_key_start_date.rek_start_date;
+        const endDate =
+            formValues &&
+            formValues.fez_record_search_key_end_date &&
+            formValues.fez_record_search_key_end_date.rek_end_date;
+        const dateError =
+            !!startDate && !!endDate && moment(startDate).format() > moment(endDate).format()
+                ? txt.information.optionalDatasetDetails.fieldLabels.collectionStart.rangeError
+                : '';
 
         // customise error for data collection submission
         const alertProps = validation.getErrorAlertProps({
@@ -86,7 +100,7 @@ export default class AddDataCollection extends Component {
             </Grid>
         );
         return (
-            <StandardPage title={formLocale.pageTitle}>
+            <StandardPage title={publicationForm.addDataset.pageTitle}>
                 <form>
                     <ConfirmDialogBox
                         onRef={this._handleRef}
@@ -94,7 +108,7 @@ export default class AddDataCollection extends Component {
                         onCancelAction={this._restartWorkflow}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid container spacing={24}>
+                    <Grid container spacing={24} className={'DataCollection'}>
                         <Grid item xs={12}>
                             <StandardCard title={txt.information.agreement.title}>
                                 <Grid container spacing={24}>
@@ -226,7 +240,7 @@ export default class AddDataCollection extends Component {
                                 />
                             </StandardCard>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xs={12} className={'Creators'}>
                             <StandardCard title={txt.information.creator.title}>
                                 <Field
                                     component={ContributorsEditorField}
@@ -386,12 +400,14 @@ export default class AddDataCollection extends Component {
                                             {txt.information.optionalDatasetDetails.fieldLabels.collectionStart.label}
                                         </Typography>
                                         <Field
-                                            component={DatePickerField}
+                                            component={PartialDateField}
                                             disableFuture
                                             autoOk
                                             name="fez_record_search_key_start_date.rek_start_date"
+                                            id="rek_start_date"
                                             disabled={this.props.submitting}
                                             validate={[validation.dateRange]}
+                                            hasError={dateError}
                                         />
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
@@ -399,12 +415,14 @@ export default class AddDataCollection extends Component {
                                             {txt.information.optionalDatasetDetails.fieldLabels.collectionEnd.label}
                                         </Typography>
                                         <Field
-                                            component={DatePickerField}
+                                            component={PartialDateField}
                                             disableFuture
                                             autoOk
                                             name="fez_record_search_key_end_date.rek_end_date"
+                                            id="rek_end_date"
                                             disabled={this.props.submitting}
                                             validate={[validation.dateRange]}
+                                            hasError={dateError}
                                         />
                                     </Grid>
                                 </Grid>

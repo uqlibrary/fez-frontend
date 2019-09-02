@@ -82,14 +82,14 @@ export function fixRecord(data) {
         data.publication.fez_record_search_key_author_id &&
         data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(
-            authorId => authorId.rek_author_id === data.author.aut_id
+            authorId => authorId.rek_author_id === data.author.aut_id,
         ).length > 0;
 
     const isContributorLinked =
         data.publication.fez_record_search_key_contributor_id &&
         data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(
-            contributorId => contributorId.rek_contributor_id === data.author.aut_id
+            contributorId => contributorId.rek_contributor_id === data.author.aut_id,
         ).length > 0;
 
     const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
@@ -127,12 +127,12 @@ export function fixRecord(data) {
 
         return Promise.resolve([])
             .then(() =>
-                hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null
+                hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, data.files.queue, dispatch) : null,
             )
             .then(() =>
                 hasFilesToUpload || data.rek_link || hasAddedContentIndicators
                     ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest)
-                    : null
+                    : null,
             )
             .then(() => post(RECORDS_ISSUES_API({ pid: data.publication.rek_pid }), createIssueRequest))
             .then(responses => {
@@ -175,14 +175,14 @@ export function unclaimRecord(data) {
         data.publication.fez_record_search_key_author_id &&
         data.publication.fez_record_search_key_author_id.length > 0 &&
         data.publication.fez_record_search_key_author_id.filter(
-            authorId => authorId.rek_author_id === data.author.aut_id
+            authorId => authorId.rek_author_id === data.author.aut_id,
         ).length > 0;
 
     const isContributorLinked =
         data.publication.fez_record_search_key_contributor_id &&
         data.publication.fez_record_search_key_contributor_id.length > 0 &&
         data.publication.fez_record_search_key_contributor_id.filter(
-            contributorId => contributorId.rek_contributor_id === data.author.aut_id
+            contributorId => contributorId.rek_contributor_id === data.author.aut_id,
         ).length > 0;
 
     if (!isAuthorLinked && !isContributorLinked) {
@@ -203,11 +203,11 @@ export function unclaimRecord(data) {
             rek_pid: data.publication.rek_pid,
             ...transformers.unclaimRecordAuthorsIdSearchKey(
                 data.publication.fez_record_search_key_author_id,
-                data.author.aut_id
+                data.author.aut_id,
             ),
             ...transformers.unclaimRecordContributorsIdSearchKey(
                 data.publication.fez_record_search_key_contributor_id,
-                data.author.aut_id
+                data.author.aut_id,
             ),
         };
 

@@ -62,7 +62,7 @@ describe('ContributorsEditor', () => {
             },
             () => {
                 expect(wrapper.instance().render()).toMatchSnapshot();
-            }
+            },
         );
     });
 
@@ -423,14 +423,14 @@ describe('ContributorsEditor', () => {
         expect(
             mapStateToProps({
                 get: testFunction,
-            })
+            }),
         ).toEqual({
             author: 'test',
         });
         expect(
             mapStateToProps({
                 get: () => false,
-            })
+            }),
         ).toEqual({
             author: null,
         });

@@ -27,7 +27,7 @@ function mapDispatchToProps(dispatch) {
 
 let MyIncompleteRecordConnectedContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(MyIncompleteRecordContainer);
 MyIncompleteRecordConnectedContainer = withRouter(MyIncompleteRecordConnectedContainer);
 export default MyIncompleteRecordConnectedContainer;

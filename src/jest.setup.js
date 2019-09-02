@@ -16,7 +16,7 @@ const extensions = {
         return {
             message: () =>
                 `received actions don't match expected actions [${actions.map(
-                    action => action.type
+                    action => action.type,
                 )}] vs [${expectedActions.map(action => action)}]`,
             pass: pass,
         };
@@ -37,7 +37,7 @@ const extensions = {
         return {
             message: () =>
                 `received actions don't match expected actions [${actions.map(
-                    action => action.type
+                    action => action.type,
                 )}] vs [${expectedActions.map(action => action)}]`,
             pass: pass,
         };

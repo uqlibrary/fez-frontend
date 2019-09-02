@@ -53,7 +53,7 @@ export default {
                 openAccessLockedLabel: 'Open Access - [oa_status] - Embargoed until [embargo_date]',
                 statsLabel: 'View full statistics',
                 altmetric: {
-                    externalUrl: 'http://www.altmetric.com/details.php?citation_id=[id]',
+                    externalUrl: 'https://queensland.altmetric.com/details/[id]',
                     title: 'Altmetric',
                 },
                 google: {
@@ -1344,7 +1344,7 @@ export default {
                         combiner: 'is',
                         type: 'TextField',
                         hint: 'Add a PID',
-                        validation: ['required'],
+                        validation: ['required', 'pid'],
                         ariaLabel: 'Type a PID to search for',
                     },
                     rek_author: {
@@ -1523,7 +1523,7 @@ export default {
                                 title: 'Created',
                                 combiner: 'between',
                                 value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
+                                    'Do MMMM, YYYY',
                                 )}`,
                             }) ||
                             null,
@@ -1544,7 +1544,7 @@ export default {
                                 title: 'Updated',
                                 combiner: 'between',
                                 value: `${value.from.format('Do MMMM, YYYY')} and ${value.to.format(
-                                    'Do MMMM, YYYY'
+                                    'Do MMMM, YYYY',
                                 )}`,
                             }) ||
                             null,

@@ -145,7 +145,7 @@ describe('Component ContributorForm', () => {
             });
             wrapper.instance()._onSubmit({ key: 'Enter' });
             expect(onAddFn).not.toBeCalled();
-        }
+        },
     );
 
     it('should set creator role', () => {
@@ -269,12 +269,12 @@ describe('Component ContributorForm', () => {
         expect(
             mapStateToProps({
                 get: testFunction,
-            })
+            }),
         ).toEqual({ authorsList });
         expect(
             mapStateToProps({
                 get: () => false,
-            })
+            }),
         ).toEqual({
             authorsList: [],
         });
@@ -289,7 +289,7 @@ describe('Component ContributorForm', () => {
             wrapper
                 .find('#creatorRoleField')
                 .parent()
-                .prop('md')
+                .prop('md'),
         ).toBe(3);
     });
 

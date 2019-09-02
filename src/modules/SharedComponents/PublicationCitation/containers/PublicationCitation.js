@@ -14,7 +14,7 @@ const mapDispatchToProps = dispatch => ({
 
 let PublicationCitationContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(PublicationCitation);
 PublicationCitationContainer = withRouter(PublicationCitationContainer);
 export default PublicationCitationContainer;

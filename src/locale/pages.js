@@ -8,8 +8,10 @@ import locale from 'locale/components';
 
 NOTE:
 - text can be either plain text, eg text: 'Some text to display' or
-- text can be formatted HTML text, eg text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
-IMPORTANT: if currently text contains placeholders, eg any characters in square brackets, eg [noOfResults] it cannot be formatted with HTML tags’
+- text can be formatted HTML text, eg
+    text: (<div>Click here to search google: <a href='google.com'>search google</a></div>)
+IMPORTANT: if currently text contains placeholders, eg any characters in square brackets,
+eg [noOfResults] it cannot be formatted with HTML tags’
 
 - help objects have the following shape:
 help: {
@@ -21,7 +23,7 @@ help: {
 - if help is not required, delete help: {} fully (including closing '},')
 
 */
-
+/* eslint-disable max-len */
 export default {
     pages: {
         index: {
@@ -137,6 +139,14 @@ export default {
                 </StandardCard>
             ),
         },
+        permissionDeniedOrNotFound: {
+            title: 'Permissions denied or file not found',
+            children: (
+                <StandardCard>
+                    <p>The requested file could not be found or is available to authorised users only.</p>
+                </StandardCard>
+            ),
+        },
         thesisSubmissionDenied: {
             title: 'Thesis deposit access denied',
             children: (
@@ -170,7 +180,7 @@ export default {
                     researcherIsNotLinked: 'You are not linked to [resource] - Click for more information',
                     orcidUrlPrefix: process.env.ORCID_URL ? `${process.env.ORCID_URL}/` : 'https://orcid.org/',
                     orcidLinkPrefix: ' orcid.org/',
-                    orcidlinkLabel: 'Click to visit your ORCId profile',
+                    orcidlinkLabel: 'Click to visit your ORCID profile',
                     titles: {
                         publons: 'Publons',
                         scopus: 'Scopus',
@@ -662,7 +672,7 @@ export default {
                         </p>
                         <p>
                             ORCID records hold only non-sensitive information such as name, email, organisation and
-                            research activities. Plus, you can control who sees information in your ORCID iD via
+                            research activities. Plus, you can control who sees information in your ORCID iD via{' '}
                             <a
                                 href="http://support.orcid.org/knowledgebase/articles/124518-orcid-privacy-settings"
                                 target="_blank"
@@ -680,7 +690,7 @@ export default {
                         <p>
                             Import your research outputs from your Scopus Author Identifier and ResearcherID – you can
                             do this on the ORCID site with the Search and Link tool under Add works. For more
-                            information
+                            information{' '}
                             <a
                                 href="http://support.orcid.org/knowledgebase/articles/188278-link-works-website-user"
                                 target="_blank"

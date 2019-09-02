@@ -19,7 +19,7 @@ function mapDispatchToProps(dispatch) {
 
 let ViewRecordContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(ViewRecord);
 ViewRecordContainer = withRouter(ViewRecordContainer);
 export default ViewRecordContainer;

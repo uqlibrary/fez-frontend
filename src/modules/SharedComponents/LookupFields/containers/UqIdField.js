@@ -35,5 +35,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const UqIdField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

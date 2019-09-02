@@ -22,7 +22,7 @@ describe('MyIncompleteRecord form', () => {
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:352045/incomplete';
         const { container, asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState(uqrdav10))(withRouter({ route, path })(<MyIncompleteRecord />))
+            withRedux(initialState(uqrdav10))(withRouter({ route, path })(<MyIncompleteRecord />)),
         );
 
         const submitButton = await waitForElement(() => getByTestId('update-my-work'));
@@ -91,7 +91,7 @@ describe('MyIncompleteRecord form', () => {
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:716942/incomplete';
         const { container, asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState(uqagrinb))(withRouter({ route, path })(<MyIncompleteRecord />))
+            withRedux(initialState(uqagrinb))(withRouter({ route, path })(<MyIncompleteRecord />)),
         );
 
         const submitButton = await waitForElement(() => getByTestId('update-my-work'));
@@ -159,7 +159,7 @@ describe('MyIncompleteRecord form', () => {
         const path = '/records/:pid(UQ:[a-z0-9]+)/incomplete';
         const route = '/records/UQ:716942/incomplete';
         const { container, asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState(uqagrinb))(withRouter({ route, path })(<MyIncompleteRecord />))
+            withRedux(initialState(uqagrinb))(withRouter({ route, path })(<MyIncompleteRecord />)),
         );
 
         const submitButton = await waitForElement(() => getByTestId('update-my-work'));

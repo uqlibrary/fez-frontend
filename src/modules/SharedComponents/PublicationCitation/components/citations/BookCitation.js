@@ -37,7 +37,13 @@ export default class BookCitation extends Component {
         };
 
         // eSpace citation view for Book
+        // {Author}{Publication Year| (|).}<i>{Title| |.}</i>{Edition| | ed.}
+        // {Place of Publication| |:} {Publisher| |.} {doi| doi:|}
         // Edited Book (subtype: Edited Book)
+        // {Editor|| ed.}{Publication Year| (|).}<i>{Title| |.}</i>{Edition| | ed.}
+        // {Series Title| |,}{Place of Publication| |:}{Publisher| |.}
+        // {doi| doi:|}
+
         return (
             <div className="citationContent citationBook">
                 {/* {Author} */}

@@ -34,7 +34,7 @@ const mapDispatchToProps = dispatch => ({
 
 const AppAlertContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AppAlert);
 
 export default AppAlertContainer;

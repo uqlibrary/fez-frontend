@@ -127,7 +127,7 @@ describe('ClaimRecord form', () => {
         const route = '/records/UQ:396321/fix';
 
         const { asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />))
+            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />)),
         );
 
         let fragment = asFragment();
@@ -172,7 +172,7 @@ describe('ClaimRecord form', () => {
         const route = '/records/UQ:396321/fix';
 
         const { asFragment, getByText, getAllByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />))
+            withRedux(initialState)(withRouter({ route, path })(<ClaimRecord />)),
         );
 
         // Wait for form to load

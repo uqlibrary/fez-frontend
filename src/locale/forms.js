@@ -18,8 +18,8 @@ export default {
             authorLinking: {
                 title: 'Author linking',
                 text:
-                    'We were unable to automatically detect who you are from the list of authors on this work. ' +
-                    'Please select your name from the list below: ',
+                    'We were unable to automatically detect who you are from the list of authors ' +
+                    'on this work. Please select your name from the list below: ',
                 // help: {
                 //     title: 'Author linking',
                 //     text: '...',
@@ -29,8 +29,8 @@ export default {
             contributorLinking: {
                 title: 'Editor linking',
                 text:
-                    'We were unable to automatically detect who you are from the list of editors on this work. ' +
-                    'Please select your name from the list below: ',
+                    'We were unable to automatically detect who you are from the list of editors ' +
+                    'on this work. Please select your name from the list below: ',
                 // help: {
                 //     title: 'Editor linking',
                 //     text: '...',
@@ -57,9 +57,9 @@ export default {
                 },
                 title: 'Optional: Content Indicators',
                 description:
-                    'You can select multiple (of 3 available) content indicators to add more information about ' +
-                    'your work, but you cannot remove indicators already selected. To amend existing information, ' +
-                    'suggest a correction below.',
+                    'You can select multiple (of 3 available) content indicators to add more information ' +
+                    'about your work, but you cannot remove indicators already selected. To amend existing ' +
+                    'information, suggest a correction below.',
                 label: 'Please select relevant indicator(s).',
             },
             comments: {
@@ -99,8 +99,8 @@ export default {
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
                     message:
-                        'Retry uploading files and/or posting edits/changes/comments about this claim via ' +
-                        '"Fix record" screen or contact eSpace administrators.',
+                        'Retry uploading files and/or posting edits/changes/comments about this ' +
+                        'claim via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Claim more publications',
@@ -117,10 +117,10 @@ export default {
                 title: 'Error',
                 message: message =>
                     `Error has occurred during request and request cannot be processed. ${message}` +
-                    ' Please contact eSpace administrators or try again later.',
+                    'Please contact eSpace administrators or try again later.',
                 incompleteData:
-                    'The selected source has incomplete data. You will need to ADD A MISSING RECORD ' +
-                    'and enter the information manually.',
+                    'The selected source has incomplete data. You will need to ADD A MISSING ' +
+                    'RECORD and enter the information manually.',
             },
             progressAlert: {
                 type: 'info_outline',

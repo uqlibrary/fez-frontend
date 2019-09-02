@@ -35,8 +35,8 @@ function mapDispatchToProps(dispatch) {
 const incompleteResearchContainer = withRouter(
     connect(
         mapStateToProps,
-        mapDispatchToProps
-    )(MyRecords)
+        mapDispatchToProps,
+    )(MyRecords),
 );
 
 export default incompleteResearchContainer;

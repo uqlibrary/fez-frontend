@@ -9,7 +9,7 @@ const HelpIconContainer = connect(
         return {
             onClick: (title, text, buttonLabel) => dispatch(show(title, text, buttonLabel)),
         };
-    }
+    },
 )(HelpIcon);
 
 export default HelpIconContainer;

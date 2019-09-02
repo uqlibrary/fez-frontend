@@ -124,8 +124,8 @@ export default class PossiblyMyRecords extends PureComponent {
     };
 
     _claimPublication = item => {
-        this.props.history.push(pathConfig.records.claim);
         this.props.actions.setClaimPublication(item);
+        this.props.history.push(pathConfig.records.claim);
     };
 
     _facetsChanged = activeFacets => {
@@ -134,7 +134,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 activeFacets: activeFacets,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -144,7 +144,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 sortBy: sortBy,
                 sortDirection: sortDirection,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -154,7 +154,7 @@ export default class PossiblyMyRecords extends PureComponent {
                 pageSize: pageSize,
                 page: 1,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -176,7 +176,7 @@ export default class PossiblyMyRecords extends PureComponent {
             {
                 page: page,
             },
-            this.pushPageHistory
+            this.pushPageHistory,
         );
     };
 
@@ -209,11 +209,11 @@ export default class PossiblyMyRecords extends PureComponent {
                 {this.getAlert(
                     txt.hidePublicationFailedAlert,
                     this.props.hidePublicationFailed,
-                    this.props.hidePublicationFailedErrorMessage
+                    this.props.hidePublicationFailedErrorMessage,
                 )}
 
-                {// first time loading my possible publications - account hasn't been loaded or
-                // any my publications haven't been loaded
+                {// first time loading my possible publications - account hasn't
+                // been loaded or any my publications haven't been loaded
                     !this.state.hasPublications &&
                     (this.props.loadingPossiblePublicationsList || this.props.loadingPossibleCounts) && (
                         <Grid container>
@@ -263,7 +263,7 @@ export default class PossiblyMyRecords extends PureComponent {
                                                     {txt.searchResults.text
                                                         .replace(
                                                             '[resultsCount]',
-                                                            this.props.possiblePublicationsList.length
+                                                            this.props.possiblePublicationsList.length,
                                                         )
                                                         .replace('[totalCount]', totalPossiblePubs)}
                                                 </Typography>
@@ -301,6 +301,10 @@ export default class PossiblyMyRecords extends PureComponent {
                                                 )}
                                                 <Grid item xs>
                                                     <PublicationsList
+                                                        publicationsLoading={
+                                                            this.props.loadingPossiblePublicationsList ||
+                                                                this.props.loadingPossibleCounts
+                                                        }
                                                         publicationsList={this.props.possiblePublicationsList}
                                                         publicationsListSubset={
                                                             this.props.publicationsClaimedInProgress

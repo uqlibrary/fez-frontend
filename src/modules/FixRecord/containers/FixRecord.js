@@ -17,7 +17,7 @@ const onSubmit = (values, dispatch, props) => {
     return dispatch(data.fixAction === 'unclaim' ? actions.unclaimRecord(data) : actions.fixRecord(data)).catch(
         error => {
             throw new SubmissionError({ _error: error.message });
-        }
+        },
     );
 };
 
@@ -76,7 +76,7 @@ function mapDispatchToProps(dispatch) {
 
 FixRecordContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(FixRecordContainer);
 FixRecordContainer = withRouter(FixRecordContainer);
 

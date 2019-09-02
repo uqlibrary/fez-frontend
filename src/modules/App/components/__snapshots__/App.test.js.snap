@@ -271,6 +271,11 @@ exports[`Application component Should display mobile correctly 1`] = `
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -344,6 +349,8 @@ exports[`Application component Should display mobile correctly 1`] = `
   <WithStyles(OfflineSnackbar) />
 </WithStyles(Grid)>
 `;
+
+exports[`Application component redirects user to login if going to a secure file url and not user logged in yet 1`] = `<div />`;
 
 exports[`Application component redirects user to login if not Authorized 1`] = `<div />`;
 
@@ -802,6 +809,11 @@ exports[`Application component should determine if it has incomplete works from 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -1516,6 +1528,11 @@ exports[`Application component should determine if it has incomplete works from 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2046,6 +2063,11 @@ exports[`Application component should redirect to login page with correct return
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -2571,6 +2593,11 @@ exports[`Application component should render alert if user is not fez author 1`]
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -3802,6 +3829,11 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -5018,6 +5050,11 @@ exports[`Application component should render app for account with fez author wit
       alignItems="center"
       container={true}
       justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
     >
       <WithStyles(Grid)
         item={true}
@@ -15625,6 +15662,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "paperAnchorDockedLeft": "MenuDrawer-paperAnchorDockedLeft-222",
                               }
                             }
+                            id="menudrawer"
                             onClose={[Function]}
                             open={false}
                             variant="temporary"
@@ -15648,6 +15686,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 }
                               }
                               elevation={16}
+                              id="menudrawer"
                               onClose={[Function]}
                               open={false}
                               theme={
@@ -16102,6 +16141,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   }
                                 }
                                 className="MuiDrawer-root-230 MuiDrawer-modal-241"
+                                id="menudrawer"
                                 onClose={[Function]}
                                 open={false}
                               >
@@ -16130,6 +16170,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   disablePortal={false}
                                   disableRestoreFocus={false}
                                   hideBackdrop={false}
+                                  id="menudrawer"
                                   keepMounted={false}
                                   manager={
                                     ModalManager {

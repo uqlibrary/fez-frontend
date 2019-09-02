@@ -52,7 +52,7 @@ describe('FreeTextForm tests ', () => {
                 errorText: 'This field is required',
                 normalize: value => value,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

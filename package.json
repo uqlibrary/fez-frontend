@@ -71,6 +71,9 @@
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
+        "cypress": "3.3.2",
+        "cypress-file-upload": "^3.2.0",
+        "cypress-plugin-tab": "^1.0.1",
         "dom-testing-library": "^3.17.1",
         "enzyme": "^3.9.0",
         "enzyme-adapter-react-16": "1.13.2",
@@ -106,6 +109,7 @@
         "sass-loader": "^7.0.0",
         "sinon": "5.0.2",
         "snapshot-diff": "^0.5.1",
+        "start-server-and-test": "^1.9.1",
         "string-to-arraybuffer": "^1.0.0",
         "strip-loader": "^0.1.2",
         "style-loader": "^0.21.0",
@@ -131,6 +135,7 @@
         "can-param": "^1.0.4",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
+        "cypress-plugin-snapshots": "git://github.com/meinaart/cypress-plugin-snapshots.git#c30b950",
         "deep-diff": "^1.0.2",
         "dompurify": "^1.0.4",
         "downshift": "^2.2.0",
@@ -169,12 +174,15 @@
         "react-router": "^5.0.1",
         "react-router-dom": "^5.0.1",
         "react-rte": "^0.16.0",
+        "react-share": "^3.0.0",
         "recompose": "^0.30.0",
         "redux": "4.0.0",
         "redux-form": "8.2.2",
         "redux-immutable": "^4.0.0",
         "redux-thunk": "^2.2.0",
-        "timezones.json": "^1.2.1"
+        "throttle-debounce": "^2.1.0",
+        "timezones.json": "^1.2.1",
+        "wait-on": "^3.2.0"
     },
     "scripts": {
         "start": "webpack-dev-server",
@@ -196,17 +204,30 @@
         "codestyles:files": "prettier-eslint '**/*.js' --list-different -l silent",
         "codestyles:fix": "prettier-eslint --write",
         "codestyles:fix:all": "prettier-eslint '**/*.js' --write",
-        "codestyles:fix:staged": "FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write"
+        "codestyles:fix:staged": "FILES=$(git diff --cached --name-only --diff-filter=ACM | grep \".jsx\\{0,1\\}$\"); npx prettier-eslint $FILES --write",
+        "cypress:open": "cypress open",
+        "cypress:watch": "cypress run --headed",
+        "cypress:run": "cypress run",
+        "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
+        "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
+        "test:all": "npm run test && npm run e2e && npm codestyles:files",
+        "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
     },
     "engines": {
-        "npm": "^6.9.0",
+        "npm": "^6",
         "node": "11.10.1"
     },
     "babel": {
-        "presets": ["@babel/env", "@babel/react"],
+        "presets": [
+            "@babel/env",
+            "@babel/react"
+        ],
         "env": {
             "development": {
-                "presets": ["@babel/env", "@babel/react"]
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ]
             },
             "production": {
                 "presets": [
@@ -239,7 +260,10 @@
                 ]
             },
             "test": {
-                "presets": ["@babel/env", "@babel/react"],
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -268,11 +292,18 @@
         },
         "testMatch": [
             "**/__tests__/**/*.[jt]s?(x)",
-            "**/?(*.)+(spec|test).[jt]s?(x)",
+            "**/?(*.)+(test).[jt]s?(x)",
             "**/?(*.)+(integration).[jt]s?(x)"
         ],
-        "moduleFileExtensions": ["js", "json", "es6"],
-        "unmockedModulePathPatterns": ["react", "enzyme"],
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "es6"
+        ],
+        "unmockedModulePathPatterns": [
+            "react",
+            "enzyme"
+        ],
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
@@ -286,7 +317,10 @@
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
         ],
-        "coverageReporters": ["html", "text"],
+        "coverageReporters": [
+            "html",
+            "text"
+        ],
         "coverageThreshold": {
             "global": {
                 "statements": 100,
@@ -295,14 +329,25 @@
                 "lines": 100
             }
         },
-        "modulePaths": ["<rootDir>/src", "<rootDir>/eslint-plugin-uqlibrary", "<rootDir>/utils"],
+        "modulePaths": [
+            "<rootDir>/src",
+            "<rootDir>/eslint-plugin-uqlibrary",
+            "<rootDir>/utils"
+        ],
         "moduleNameMapper": {
             "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
             "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
         },
-        "transformIgnorePatterns": ["<rootDir>/node_modules/"],
-        "setupFiles": ["./src/test.setup.js", "jest-localstorage-mock"],
-        "setupFilesAfterEnv": ["<rootDir>/src/jest.setup.js"],
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ],
+        "setupFiles": [
+            "./src/test.setup.js",
+            "jest-localstorage-mock"
+        ],
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/jest.setup.js"
+        ],
         "testURL": "http://fez-staging.library.uq.edu.au"
     }
 }

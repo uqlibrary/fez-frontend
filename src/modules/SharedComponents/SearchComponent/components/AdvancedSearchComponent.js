@@ -111,7 +111,7 @@ export class AdvancedSearchComponent extends PureComponent {
             fieldRows
                 .reduce((errors, item) => {
                     const newErrors = fieldTypes[item.searchField].validation.map(rule =>
-                        validationRules[rule](item.value)
+                        validationRules[rule](item.value),
                     );
                     return [...errors, ...newErrors];
                 }, [])

@@ -132,9 +132,11 @@ export class ThirdPartyLookupForm extends PureComponent {
                                     !!txt.thisForm.secondaryField && (
                                         <div>
                                             <h4>{txt.thisForm.secondaryField.heading}</h4>
-                                            {/* prettier-ignore */}
+                                            { /* prettier-ignore */ }
                                             <p>{
-                                                txt.thisForm.secondaryField.tip ? txt.thisForm.secondaryField.tip : ''
+                                                txt.thisForm.secondaryField.tip
+                                                    ? txt.thisForm.secondaryField.tip
+                                                    : ''
                                             }</p>
                                             <TextField
                                                 fullWidth

@@ -50,5 +50,5 @@ export default confirmDiscardFormChanges(
         enableReinitialize: true,
         validate,
         onSubmit,
-    })(MyIncompleteRecord)
+    })(MyIncompleteRecord),
 );

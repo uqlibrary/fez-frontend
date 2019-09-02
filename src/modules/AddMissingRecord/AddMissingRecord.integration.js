@@ -102,7 +102,7 @@ describe('AddMissingRecord form', () => {
         it('should not show submit button when a form is not rendered', () => {
             const route = '/records/add/new';
             const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
+                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />)),
             );
 
             let fragment = asFragment();
@@ -116,7 +116,7 @@ describe('AddMissingRecord form', () => {
         it('should  show submit button when a form is rendered', () => {
             const route = '/records/add/new';
             const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
+                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />)),
             );
 
             let fragment = asFragment();
@@ -130,7 +130,7 @@ describe('AddMissingRecord form', () => {
         it('should validate the form and show validation error message correctly for authors/editors field combination', async () => {
             const route = '/records/add/new';
             const { asFragment, getByText, getByTestId } = rtlRender(
-                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />))
+                withRedux(initialState)(withRouter({ route })(<AddMissingRecord addRecordStep={NewRecord} />)),
             );
 
             let fragment = asFragment();

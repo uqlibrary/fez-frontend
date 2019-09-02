@@ -61,7 +61,7 @@ describe('Publication Details Component ', () => {
                     rek_display_type_lookup: null,
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

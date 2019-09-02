@@ -74,10 +74,10 @@ describe('Component FileUploadDropzone', () => {
     });
 
     it(
-        'should remove files with same filename but different extension from ' +
-            'dropped incoming files and already queued files',
+        'should remove files with same filename but different extension ' +
+            'from dropped incoming files and already queued files',
         () => {
-            const wrapper = setup();
+            const wrapper = setup({});
 
             const queuedFiles = ['c.txt', 'd.txt', 'b.txt'];
             const files = [getMockFile('a.txt'), getMockFile('a.doc'), getMockFile('b.txt')];
@@ -93,7 +93,7 @@ describe('Component FileUploadDropzone', () => {
 
             expect(sameFileNameWithDifferentExt.length).toEqual(1);
             expect(sameFileNameWithDifferentExt).toEqual(['a.doc']);
-        }
+        },
     );
 
     it(
@@ -115,7 +115,7 @@ describe('Component FileUploadDropzone', () => {
             expect(duplicateFiles).toEqual(['d.txt', 'b.txt']);
 
             expect(sameFileNameWithDifferentExt.length).toEqual(0);
-        }
+        },
     );
 
     it('should not remove any files if there are no duplicate files', () => {
@@ -292,7 +292,7 @@ describe('Component FileUploadDropzone', () => {
 
         const accepted = [fileG, fileA, fileH, fileI];
         wrapper.instance().removeDroppedFolders = jest.fn(
-            (accepted, {}) => new Promise(resolve => resolve([fileG, fileA, fileH, fileI]))
+            (accepted, {}) => new Promise(resolve => resolve([fileG, fileA, fileH, fileI])),
         );
 
         await wrapper.instance()._onDrop(accepted, []);

@@ -49,8 +49,11 @@ export class FileUploader extends PureComponent {
     }
 
     componentWillUpdate(nextProps, nextState) {
-        this.props.onChange &&
-            this.props.onChange({ queue: nextState.filesInQueue, isValid: this.isFileUploadValid(nextState) });
+        !!this.props.onChange &&
+            this.props.onChange({
+                queue: nextState.filesInQueue,
+                isValid: this.isFileUploadValid(nextState),
+            });
     }
 
     componentWillUnmount() {
@@ -206,7 +209,7 @@ export class FileUploader extends PureComponent {
             files.filter(
                 file =>
                     file.hasOwnProperty(config.FILE_META_KEY_ACCESS_CONDITION) &&
-                    file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID
+                    file[config.FILE_META_KEY_ACCESS_CONDITION] === config.OPEN_ACCESS_ID,
             ).length > 0
         );
     };
@@ -244,7 +247,7 @@ export class FileUploader extends PureComponent {
                     validation[errorCode]
                         .replace('[numberOfFiles]', fileNames.length)
                         .replace('[fileNames]', fileNames.join(', '))
-                        .replace('[maxNumberOfFiles]', `${this.props.fileRestrictionsConfig.fileUploadLimit}`)
+                        .replace('[maxNumberOfFiles]', `${this.props.fileRestrictionsConfig.fileUploadLimit}`),
                 );
             }
         });
@@ -353,5 +356,5 @@ const mapDispatchToProps = dispatch => {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(FileUploader);

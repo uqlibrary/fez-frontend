@@ -17,9 +17,9 @@ export default {
         </span>
     ),
     accessTermsAndConditions:
-        'I understand that the files indicated above as open access will be submitted as open access and ' +
-        'will be made publicly available immediately or will be made available on the indicated embargo date.  ' +
-        'All other files submitted will be accessible by UQ eSpace administrators.',
+        'I understand that the files indicated above as open access will be submitted as open access ' +
+        'and will be made publicly available immediately or will be made available on the indicated ' +
+        'embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
     validation: {
         ['notFiles']: 'Invalid files ([fileNames])',
         ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',

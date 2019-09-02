@@ -29,7 +29,7 @@ function mapDispatchToProps(dispatch) {
 
 let DashboardContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(Dashboard);
 DashboardContainer = withRouter(DashboardContainer);
 

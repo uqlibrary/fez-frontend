@@ -25,7 +25,6 @@ exports[`AudioDocumentForm renders  component 1`] = `
                 Publication date:
               </b>
                Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released.
-               
             </p>
           </React.Fragment>,
           "title": "Audio document information",
@@ -150,7 +149,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of creators below
                   </b>
@@ -185,7 +185,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -251,7 +252,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of contributors below
                   </b>
@@ -286,7 +288,8 @@ exports[`AudioDocumentForm renders  component 1`] = `
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -399,7 +402,6 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                 Publication date:
               </b>
                Provide the date recorded on the work, where available. For online recordings or broadcasts, provide the date first publicly presented or released.
-               
             </p>
           </React.Fragment>,
           "title": "Audio document information",
@@ -524,7 +526,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of creators below
                   </b>
@@ -559,7 +562,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>
@@ -625,7 +629,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 1 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     add to a list of contributors below
                   </b>
@@ -660,7 +665,8 @@ exports[`AudioDocumentForm renders  component should render contributor assignme
                   >
                     Step 2 of 2
                   </span>
-                   - Please 
+                   
+                  - Please 
                   <b>
                     select your name
                   </b>

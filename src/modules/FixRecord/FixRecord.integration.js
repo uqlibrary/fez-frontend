@@ -122,7 +122,7 @@ describe('FixRecord form', () => {
         const route = '/records/UQ:41878/fix';
 
         const { asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<FixRecord />))
+            withRedux(initialState)(withRouter({ route, path })(<FixRecord />)),
         );
 
         let fragment = asFragment();
@@ -171,7 +171,7 @@ describe('FixRecord form', () => {
         const route = '/records/UQ:41878/fix';
 
         const { asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route, path })(<FixRecord />))
+            withRedux(initialState)(withRouter({ route, path })(<FixRecord />)),
         );
 
         await waitForElement(() => getByText('Work to be amended'));

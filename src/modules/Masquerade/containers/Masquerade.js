@@ -19,7 +19,7 @@ function mapDispatchToProps(dispatch) {
 
 let MasqueradeContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(Masquerade);
 MasqueradeContainer = withRouter(MasqueradeContainer);
 

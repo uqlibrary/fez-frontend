@@ -6,8 +6,9 @@ import { pathConfig } from 'config/routes';
 
 NOTE:
 - text can be either plain text, eg text: 'Some text to display' or
-- text can be formatted HTML text, eg text: (<div>Click here to search google:
-    <a href='google.com'>search google</a></div>)
+- text can be formatted HTML text, eg text: (
+    <div>Click here to search google: <a href='google.com'>search google</a></div>
+)
 IMPORTANT: if currently text contains placeholders, eg any characters in square brackets,
 eg [noOfResults] it cannot be formatted with HTML tags’
 

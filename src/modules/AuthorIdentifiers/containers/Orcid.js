@@ -15,7 +15,7 @@ const mapDispatchToProps = dispatch => ({
 
 let OrcidContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(Orcid);
 OrcidContainer = withRouter(OrcidContainer);
 

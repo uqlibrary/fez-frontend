@@ -103,7 +103,7 @@ export class AdvancedSearchRow extends PureComponent {
                                         error={!!this.selectFieldValidation()}
                                         aria-label={txt.selectAria.replace(
                                             '[current_selection]',
-                                            txt.fieldTypes[this.props.searchField].title
+                                            txt.fieldTypes[this.props.searchField].title,
                                         )}
                                     >
                                         {Object.keys(txt.fieldTypes)
@@ -111,11 +111,11 @@ export class AdvancedSearchRow extends PureComponent {
                                             .filter(
                                                 item =>
                                                     !txt.fieldTypes[item].isUnpublishedField ||
-                                                    this.props.showUnpublishedFields
+                                                    this.props.showUnpublishedFields,
                                             )
                                             .sort(
                                                 (item1, item2) =>
-                                                    txt.fieldTypes[item1].order - txt.fieldTypes[item2].order
+                                                    txt.fieldTypes[item1].order - txt.fieldTypes[item2].order,
                                             )
                                             .map((item, index) => {
                                                 if (txt.fieldTypes[item].type === 'divider') {

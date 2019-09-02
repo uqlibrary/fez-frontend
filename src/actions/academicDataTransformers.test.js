@@ -339,8 +339,8 @@ describe('Academic data transformers ', () => {
 
     describe('transformTrendingPublicationsMetricsData', () => {
         it(
-            'should transform trending publications response in correct ' +
-                'order if more than one metrics data returned from api',
+            'should transform trending publications response in correct order ' +
+                'if more than one metrics data returned from api',
             () => {
                 const data = [
                     {
@@ -351,7 +351,7 @@ describe('Academic data transformers ', () => {
                             fez_altmetric: {
                                 as_score: 3,
                                 as_3m: 3,
-                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                             },
                         },
                     },
@@ -363,7 +363,7 @@ describe('Academic data transformers ', () => {
                             fez_altmetric: {
                                 as_score: 10,
                                 as_3m: 4,
-                                as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                             },
                         },
                         fez_record_search_key_isi_loc: {
@@ -462,7 +462,7 @@ describe('Academic data transformers ', () => {
                                     fez_altmetric: {
                                         as_score: 10,
                                         as_3m: 4,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                        as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                     },
                                 },
                                 fez_record_search_key_isi_loc: {
@@ -492,7 +492,7 @@ describe('Academic data transformers ', () => {
                                     fez_altmetric: {
                                         as_score: 10,
                                         as_3m: 4,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                        as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                     },
                                 },
                                 fez_record_search_key_isi_loc: {
@@ -505,7 +505,7 @@ describe('Academic data transformers ', () => {
                                 metricData: {
                                     count: 10,
                                     difference: 4,
-                                    citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    citation_url: 'https://queensland.altmetric.com/details/3638458',
                                     source: 'altmetric',
                                 },
                             },
@@ -517,13 +517,13 @@ describe('Academic data transformers ', () => {
                                     fez_altmetric: {
                                         as_score: 3,
                                         as_3m: 3,
-                                        as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                        as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                     },
                                 },
                                 metricData: {
                                     count: 3,
                                     difference: 3,
-                                    citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    citation_url: 'https://queensland.altmetric.com/details/3638458',
                                     source: 'altmetric',
                                 },
                             },
@@ -533,7 +533,7 @@ describe('Academic data transformers ', () => {
 
                 const result = transformers.transformTrendingPublicationsMetricsData({ data });
                 expect(result).toEqual(expectedMetrics);
-            }
+            },
         );
 
         it(
@@ -612,7 +612,7 @@ describe('Academic data transformers ', () => {
 
                 const result = transformers.transformTrendingPublicationsMetricsData({ data });
                 expect(result).toEqual(expectedMetrics);
-            }
+            },
         );
     });
 
@@ -727,7 +727,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 3,
                             as_3m: 0,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                 },
@@ -739,7 +739,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 10,
                             as_3m: 0,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                     fez_record_search_key_isi_loc: {
@@ -838,7 +838,7 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 10,
                                     as_3m: 0,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             fez_record_search_key_isi_loc: {
@@ -873,7 +873,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 3,
                             as_3m: 3,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                 },
@@ -885,7 +885,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 10,
                             as_3m: 4,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                     fez_record_search_key_isi_loc: {
@@ -959,7 +959,7 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 10,
                                     as_3m: 4,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             fez_record_search_key_isi_loc: {
@@ -972,7 +972,7 @@ describe('Academic data transformers ', () => {
                             metricData: {
                                 count: 10,
                                 difference: 4,
-                                citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 source: 'altmetric',
                             },
                         },
@@ -984,13 +984,13 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 3,
                                     as_3m: 3,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             metricData: {
                                 count: 3,
                                 difference: 3,
-                                citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 source: 'altmetric',
                             },
                         },
@@ -1012,7 +1012,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 3,
                             as_3m: 3,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                 },
@@ -1024,7 +1024,7 @@ describe('Academic data transformers ', () => {
                         fez_altmetric: {
                             as_score: 10,
                             as_3m: 4,
-                            as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                            as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                         },
                     },
                     fez_record_search_key_isi_loc: {
@@ -1093,7 +1093,7 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 10,
                                     as_3m: 4,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             fez_record_search_key_isi_loc: {
@@ -1123,7 +1123,7 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 10,
                                     as_3m: 4,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             fez_record_search_key_isi_loc: {
@@ -1136,7 +1136,7 @@ describe('Academic data transformers ', () => {
                             metricData: {
                                 count: 10,
                                 difference: 4,
-                                citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 source: 'altmetric',
                             },
                         },
@@ -1148,13 +1148,13 @@ describe('Academic data transformers ', () => {
                                 fez_altmetric: {
                                     as_score: 3,
                                     as_3m: 3,
-                                    as_citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                    as_citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 },
                             },
                             metricData: {
                                 count: 3,
                                 difference: 3,
-                                citation_url: 'http://www.altmetric.com/details.php?citation_id=3638458',
+                                citation_url: 'https://queensland.altmetric.com/details/3638458',
                                 source: 'altmetric',
                             },
                         },

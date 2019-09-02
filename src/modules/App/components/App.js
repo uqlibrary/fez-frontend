@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { Route, Switch } from 'react-router';
 import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT, APP_URL } from 'config';
 import locale from 'locale/global';
+import { isFileUrl } from 'config/routes';
 
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
@@ -220,7 +221,7 @@ export class AppClass extends PureComponent {
         const showMenu = !isThesisSubmissionPage;
 
         const containerStyle = this.state.docked && !isThesisSubmissionPage ? { paddingLeft: 260 } : {};
-        if (!isAuthorizedUser && isThesisSubmissionPage) {
+        if (!isAuthorizedUser && (isThesisSubmissionPage || isFileUrl(this.props.location.pathname))) {
             this.redirectUserToLogin()();
             return <div />;
         }
@@ -321,7 +322,7 @@ export class AppClass extends PureComponent {
                                     isAuthorizedUser={isAuthorizedUser}
                                     onClick={this.redirectUserToLogin(
                                         isAuthorizedUser,
-                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage
+                                        isAuthorizedUser && !isHdrStudent && isThesisSubmissionPage,
                                     )}
                                     signInTooltipText={locale.global.authentication.signInText}
                                     signOutTooltipText={
@@ -366,7 +367,13 @@ export class AppClass extends PureComponent {
                         locale={locale.global.sessionExpiredConfirmation}
                     />
                     {userStatusAlert && (
-                        <Grid container alignContent="center" justify="center" alignItems="center">
+                        <Grid
+                            container
+                            alignContent="center"
+                            justify="center"
+                            alignItems="center"
+                            style={{ marginBottom: 12 }}
+                        >
                             <Grid item className={classes.layoutCard} style={{ marginTop: 0, marginBottom: 0 }}>
                                 <Alert {...userStatusAlert} />
                             </Grid>

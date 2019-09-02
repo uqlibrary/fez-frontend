@@ -88,7 +88,7 @@ describe('AutoCompleteAsyncField component', () => {
                     },
                 ],
             },
-            { isShallow: false }
+            { isShallow: false },
         );
 
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -146,7 +146,7 @@ describe('AutoCompleteAsyncField component', () => {
             .instance()
             .stateReducer(
                 { inputValue: 'Test' },
-                { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' }
+                { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' },
             );
         expect(result).toEqual({
             inputValue: 'Test',
@@ -162,7 +162,7 @@ describe('AutoCompleteAsyncField component', () => {
             .instance()
             .stateReducer(
                 { inputValue: 'Test' },
-                { type: Downshift.stateChangeTypes.itemMouseEnter, a: 'test', b: 'testing' }
+                { type: Downshift.stateChangeTypes.itemMouseEnter, a: 'test', b: 'testing' },
             );
         expect(result).toEqual({
             type: Downshift.stateChangeTypes.itemMouseEnter,
@@ -172,15 +172,15 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it(
-        'should test stateReducer function correctly when free text input is ' +
-            'not allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
+        'should test stateReducer function correctly when free text input is not ' +
+            'allowed on blurInput/clickItem/keyDownEnter/mouseUp event',
         () => {
             const wrapper = setup({ required: true });
             const result = wrapper
                 .instance()
                 .stateReducer(
                     { inputValue: 'Test' },
-                    { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' }
+                    { type: Downshift.stateChangeTypes.blurInput, a: 'test', b: 'testing' },
                 );
             expect(result).toEqual({
                 inputValue: '',
@@ -193,7 +193,7 @@ describe('AutoCompleteAsyncField component', () => {
                 .instance()
                 .stateReducer(
                     { inputValue: 'Test' },
-                    { type: Downshift.stateChangeTypes.clickItem, a: 'test', b: 'testing' }
+                    { type: Downshift.stateChangeTypes.clickItem, a: 'test', b: 'testing' },
                 );
             expect(result1).toEqual({
                 inputValue: '',
@@ -206,7 +206,7 @@ describe('AutoCompleteAsyncField component', () => {
                 .instance()
                 .stateReducer(
                     { inputValue: 'Test' },
-                    { type: Downshift.stateChangeTypes.keyDownEnter, a: 'test', b: 'testing' }
+                    { type: Downshift.stateChangeTypes.keyDownEnter, a: 'test', b: 'testing' },
                 );
             expect(result2).toEqual({
                 inputValue: '',
@@ -219,7 +219,7 @@ describe('AutoCompleteAsyncField component', () => {
                 .instance()
                 .stateReducer(
                     { inputValue: 'Test' },
-                    { type: Downshift.stateChangeTypes.mouseUp, a: 'test', b: 'testing' }
+                    { type: Downshift.stateChangeTypes.mouseUp, a: 'test', b: 'testing' },
                 );
             expect(result3).toEqual({
                 inputValue: '',
@@ -232,14 +232,14 @@ describe('AutoCompleteAsyncField component', () => {
                 .instance()
                 .stateReducer(
                     { inputValue: 'Test' },
-                    { type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing' }
+                    { type: Downshift.stateChangeTypes.blurButton, a: 'test', b: 'testing' },
                 );
             expect(result4).toEqual({
                 type: Downshift.stateChangeTypes.blurButton,
                 a: 'test',
                 b: 'testing',
             });
-        }
+        },
     );
 
     it('should render default MenuItemComponent', () => {
@@ -352,8 +352,8 @@ describe('AutoCompleteAsyncField component', () => {
                 SecondRenderedChildren.find('WithStyles(MenuItem)')
                     .dive()
                     .find('MenuItemComponent')
-                    .dive()
-            )
+                    .dive(),
+            ),
         ).toMatchSnapshot();
         expect(
             toJson(
@@ -362,8 +362,8 @@ describe('AutoCompleteAsyncField component', () => {
                     .find('TextFieldWrapper')
                     .dive()
                     .find('TextField')
-                    .dive()
-            )
+                    .dive(),
+            ),
         ).toMatchSnapshot();
 
         const childrens3 = childrenFn({

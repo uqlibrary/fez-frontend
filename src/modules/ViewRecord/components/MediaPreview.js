@@ -67,7 +67,7 @@ export default class MediaPreview extends React.Component {
                 },
                 () => {
                     this.scrollToPreview();
-                }
+                },
             );
         }
     };

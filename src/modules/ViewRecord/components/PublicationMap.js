@@ -19,7 +19,7 @@ export const GoogleMapViewComponent = props => {
         bounds.extend(new window.google.maps.LatLng(coord.lat, coord.lng));
     });
     return (
-        <div>
+        <div id="googleMap">
             {
                 <GoogleMap
                     defaultZoom={props.zoom}
@@ -203,7 +203,7 @@ const PublicationMap = compose(
                             { lat: sw.lat(), lng: ne.lng() },
                             { lat: ne.lat(), lng: ne.lng() },
                         ],
-                        rectangle
+                        rectangle,
                     );
                 },
                 handlePolygonComplete: polygon => {
@@ -223,13 +223,13 @@ const PublicationMap = compose(
                 this.props.onChange(
                     nextState.geoCoords
                         .map(coord => `${this.trimCoordinates(coord.lng)},${this.trimCoordinates(coord.lat)}`)
-                        .join(' ')
+                        .join(' '),
                 );
             }
         },
     }),
     withScriptjs,
-    withGoogleMap
+    withGoogleMap,
 )(GoogleMapViewComponent);
 
 export default PublicationMap;

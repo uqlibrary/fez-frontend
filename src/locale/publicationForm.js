@@ -371,7 +371,7 @@ export default {
                         </p>
                         <p>
                             <b>Publication date:</b> Provide the date recorded on the work, where available. For online
-                            recordings or broadcasts, provide the date first publicly presented or released.{' '}
+                            recordings or broadcasts, provide the date first publicly presented or released.
                         </p>
                     </React.Fragment>
                 ),
@@ -521,7 +521,7 @@ export default {
             // },
             fieldLabels: {
                 documentTitle: {
-                    placeholderlabel: 'Title',
+                    label: 'Title',
                     placeholder: 'Thesis title',
                 },
                 orgName: {
@@ -802,7 +802,7 @@ export default {
                         </p>
                         <p>
                             <b>Publication date:</b> Type the date recorded on the work, where available. For online
-                            recordings or broadcasts, enter the date first publicly presented or released.{' '}
+                            recordings or broadcasts, enter the date first publicly presented or released.
                         </p>
                     </div>
                 ),
@@ -1255,7 +1255,7 @@ export default {
         sbsTitle: 'Professional doctorate deposit',
         text: (
             <span>
-                Required fields are marked with{' '}
+                Required fields are marked with
                 <span className="requiredField">
                     <label>&nbsp;</label>
                 </span>
@@ -1272,23 +1272,24 @@ export default {
                 type: 'error',
                 title: 'FILE UPLOAD ERROR',
                 message:
-                    'There was an issue uploading your thesis files. You will need to resubmit your thesis ' +
-                    "by clicking on the 'Resubmit your thesis' button.",
+                    'There was an issue uploading your thesis files. You will need to resubmit ' +
+                    "your thesis by clicking on the 'Resubmit your thesis' button.",
                 actionButtonLabel: 'RESUBMIT YOUR THESIS',
             },
             locale: {
                 instructions: '',
                 accessTermsAndConditions:
-                    'I understand that the files indicated above as open access will be submitted as open access ' +
-                    'and will be made publicly available immediately or will be made available on the indicated ' +
-                    'embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                    'I understand that the files indicated above as open access will be submitted ' +
+                    'as open access and will be made publicly available immediately or will be made ' +
+                    'available on the indicated embargo date.  All other files submitted will be ' +
+                    'accessible by UQ eSpace administrators.',
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                     ['tooManyFiles']:
-                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. ' +
-                        'File(s) ([fileNames]) will not be uploaded',
+                        'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ' +
+                        '([fileNames]) will not be uploaded',
                     ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
                 },
                 successTitle: 'Success',
@@ -1341,20 +1342,20 @@ export default {
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
             confirmationMessage:
-                'Your session has expired and you will now be redirected to the ' +
-                'login page and then redeposit your thesis.',
+                'Your session has expired and you will now be redirected ' +
+                'to the login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
         depositFailedMessage: () =>
-            'Error has occurred during request and request cannot be processed. Check your internet connection ' +
-            'and TRY AGAIN or contact UQ Graduate School administrators.',
+            'Error has occurred during request and request cannot be processed. ' +
+            'Check your internet connection and TRY AGAIN or contact UQ Graduate School administrators.',
     },
     sbsSubmission: {
         sbsTitle: 'Professional doctorate deposit',
         text: (
             <span>
-                Required fields are marked with{' '}
+                Required fields are marked with
                 <span className="requiredField">
                     <label>&nbsp;</label>
                 </span>
@@ -1422,8 +1423,8 @@ export default {
         sessionExpiredConfirmation: {
             confirmationTitle: 'Session Expired',
             confirmationMessage:
-                'Your session has expired and you will now be redirected to the ' +
-                'login page and then redeposit your thesis.',
+                'Your session has expired and you will now be redirected ' +
+                'to the login page and then redeposit your thesis.',
             cancelButtonLabel: 'Cancel',
             confirmButtonLabel: 'Redirect to login',
         },
@@ -1519,7 +1520,7 @@ export default {
                             </ul>
                             <h3>Licensing and terms of access</h3>
                             <p>
-                                View{' '}
+                                View
                                 <a href="https://creativecommons.org/licenses/" target="_blank">
                                     Creative Commons Licenses
                                 </a>{' '}
@@ -1583,10 +1584,17 @@ export default {
                     collectionStart: {
                         label: 'Collection start date',
                         placeholder: 'Date that data started being collected',
+                        name: 'fez_record_search_key_start_date.rek_start_date',
+                        rangeError: 'Date range is not valid',
                     },
                     collectionEnd: {
                         label: 'Collection end date',
                         placeholder: 'Date that data ceased being collected',
+                        name: 'fez_record_search_key_end_date.rek_end_date',
+                        id: 'rek_end_date',
+                    },
+                    collectionValidationMessage: {
+                        day: 'Invalid date',
                     },
                     geographicCoordinates: {
                         label: 'Geographic coordinates',

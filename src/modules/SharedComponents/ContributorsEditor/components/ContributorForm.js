@@ -148,7 +148,7 @@ export class ContributorForm extends PureComponent {
                 this.state.contributor.nameAsPublished.trim().length !== 0 &&
                     DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
                     this._onSubmit();
-            }
+            },
         );
     };
 
@@ -164,7 +164,7 @@ export class ContributorForm extends PureComponent {
             }),
             () => {
                 this._onSubmit();
-            }
+            },
         );
     };
 
@@ -335,5 +335,5 @@ function mapDispatchToProps(dispatch) {
 
 export default connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(ContributorForm);

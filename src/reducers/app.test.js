@@ -51,7 +51,7 @@ describe('app reducer', () => {
     it('clears a redirect', () => {
         const test = appReducer(
             { ...initialState, redirectPath: 'some/redirect/path' },
-            { type: actions.CLEAR_REDIRECT_PATH }
+            { type: actions.CLEAR_REDIRECT_PATH },
         );
         expect(test.redirectPath).toBeNull;
         expect(test).toEqual(initialState);

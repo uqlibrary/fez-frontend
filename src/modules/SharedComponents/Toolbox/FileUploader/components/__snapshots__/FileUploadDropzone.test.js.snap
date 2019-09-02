@@ -804,6 +804,7 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
                       >
                         <div
+                          id="FileUploadDropZone"
                           onKeyPress={[Function]}
                           tabIndex="0"
                         >
@@ -2239,6 +2240,7 @@ exports[`Component FileUploadDropzone should render component with default props
     xs={12}
   >
     <div
+      id="FileUploadDropZone"
       onKeyPress={[Function]}
       tabIndex="0"
     >
@@ -3068,6 +3070,7 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
                       >
                         <div
+                          id="FileUploadDropZone"
                           onKeyPress={[Function]}
                           tabIndex="0"
                         >

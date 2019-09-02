@@ -50,7 +50,7 @@ let GoogleScholarContainer = reduxForm({
 
 GoogleScholarContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GoogleScholarContainer);
 GoogleScholarContainer = withRouter(GoogleScholarContainer);
 

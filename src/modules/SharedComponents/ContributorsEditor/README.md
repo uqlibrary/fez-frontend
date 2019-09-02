@@ -15,12 +15,14 @@ Data is passed to redux form values in the following format:
 If showIdentifierLookup is set to true, and user has looked up author from a list data is presented in the following format:
 
 ```javascript
-[{
-  ...author, // all author details from back end {aut_id, aut_title, aut_lname, etc...}
-  nameAsPublished: "A. Smith",
-  selected: false,
-  authorId: null
-}]
+[
+  {
+    ...author, // all author details from back end {aut_id, aut_title, aut_lname, etc...}
+    nameAsPublished: 'A. Smith',
+    selected: false,
+    authorId: null,
+  },
+];
 ```
 
 - User will not be able to link their author id to a listed author with not their identifier;
@@ -51,7 +53,7 @@ To be parsed to request:
 - author: PropTypes.object - current author object (comes from redux store)
 - onChange: PropTypes.func - required function for reduxForm Field
 - locale: PropTypes.object - text labels for the control
-  
+
 ## Usage
 
 ### ./App.js

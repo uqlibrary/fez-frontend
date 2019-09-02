@@ -182,7 +182,7 @@ export class ContributorRow extends PureComponent {
                         contributor.nameAsPublished,
                         contributorOrder,
                         `${classes.primary} ${selectedClass}`,
-                        `${selectedClass}`
+                        `${selectedClass}`,
                     )}
                 </Grid>
                 {!!contributor.aut_title && (
@@ -192,7 +192,7 @@ export class ContributorRow extends PureComponent {
                             `${locale.global.orgTitle} (${contributor.aut_org_username ||
                                 contributor.aut_student_username})`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                         )}
                     </Grid>
                 )}
@@ -204,7 +204,7 @@ export class ContributorRow extends PureComponent {
                                 `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
                                 ''}`,
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                         )}
                     </Grid>
                 )}
@@ -214,7 +214,7 @@ export class ContributorRow extends PureComponent {
                             contributor.creatorRole,
                             '',
                             `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`
+                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                         )}
                     </Grid>
                 )}

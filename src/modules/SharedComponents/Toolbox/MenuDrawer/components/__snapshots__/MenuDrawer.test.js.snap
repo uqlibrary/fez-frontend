@@ -12,6 +12,7 @@ exports[`Component MenuDrawer should render empty drawer 1`] = `
       "paperAnchorDockedLeft": undefined,
     }
   }
+  id="menudrawer"
   onClose={[MockFunction]}
   open={false}
   variant="temporary"
@@ -28,6 +29,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider 1`
       "paperAnchorDockedLeft": undefined,
     }
   }
+  id="menudrawer"
   onClose={[MockFunction]}
   open={true}
   variant="temporary"
@@ -172,6 +174,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       "paperAnchorDockedLeft": undefined,
     }
   }
+  id="menudrawer"
   onClose={[MockFunction]}
   open={true}
   variant="permanent"
@@ -334,6 +337,7 @@ exports[`Component MenuDrawer should render opened drawer with menus, divider an
       "paperAnchorDockedLeft": undefined,
     }
   }
+  id="menudrawer"
   onClose={[MockFunction]}
   open={true}
   variant="permanent"

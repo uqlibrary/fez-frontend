@@ -17,7 +17,7 @@ describe('NavigationDialogBox component', () => {
                     confirmButtonLabel: 'Yes',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         const smallWrapper = wrapper.find('NavigationDialogBox');
         expect(toJson(smallWrapper)).toMatchSnapshot();

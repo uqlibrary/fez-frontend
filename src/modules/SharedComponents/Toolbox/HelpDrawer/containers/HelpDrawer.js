@@ -11,7 +11,7 @@ const HelpDrawerContainer = connect(
         return {
             hide: () => dispatch(hide()),
         };
-    }
+    },
 )(HelpDrawer);
 
 export default HelpDrawerContainer;

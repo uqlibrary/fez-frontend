@@ -23,7 +23,7 @@ function mapDispatchToProps(dispatch) {
 
 let AddMissingRecordContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AddMissingRecord);
 AddMissingRecordContainer = withRouter(AddMissingRecordContainer);
 

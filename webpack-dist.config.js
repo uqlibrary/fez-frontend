@@ -22,7 +22,7 @@ const options = {
                 '/index.html$',
                 '/contact$',
                 '/view/*',
-                '/data/*?*Signature=*&Key-Pair-Id=*',
+                '/data/*',
                 '/assets/*.svg',
                 '/sitemap/*.xml',
                 '/list-by-year/*.html',
@@ -101,7 +101,7 @@ const webpackConfig = {
         }),
         new ProgressBarPlugin({
             format: `  building webpack... [:bar] ${chalk.green.bold(
-                ':percent'
+                ':percent',
             )} (It took :elapsed seconds to build)\n`,
             clear: false,
         }),
@@ -237,7 +237,7 @@ if (!!process.env.SENTRY_AUTH_TOKEN) {
             release: process.env.CI_COMMIT_ID,
             include: './dist',
             ignore: ['node_modules', 'webpack-dist.config.js', 'custom_modules'],
-        })
+        }),
     );
 }
 

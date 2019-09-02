@@ -25,12 +25,14 @@ const handlers = {
         ...state,
         publicationToClaimFileUploadingError: false,
         publicationToClaim: action.payload,
+        fullPublicationToClaim: null,
     }),
 
     [actions.PUBLICATION_TO_CLAIM_CLEAR]: state => ({
         ...state,
         publicationToClaimFileUploadingError: false,
         publicationToClaim: null,
+        fullPublicationToClaim: null,
     }),
 
     [actions.POSSIBLY_YOUR_PUBLICATIONS_LOADED]: (state, action) => ({

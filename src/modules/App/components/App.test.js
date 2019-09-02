@@ -98,7 +98,50 @@ describe('Application component', () => {
             wrapper.instance().redirectToOrcid();
             expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
             expect(testFn2).not.toBeCalled();
-        }
+        },
+    );
+    // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
+    // A user will only get to the fez-frontend app for a file if they are not logged in and
+    // the file is not public, or they are logged in and the the file requires higher privs e.g. needs admin,
+    // but they are a student.
+    it('redirects user to login if going to a secure file url and not user logged in yet', () => {
+        const wrapper = setup({});
+        const redirectUserToLogin = jest.spyOn(wrapper.instance(), 'redirectUserToLogin');
+        wrapper.setProps({ accountLoading: true, account: null, location: { pathname: '/view/UQ:1/test.pdf' } });
+        expect(redirectUserToLogin).not.toHaveBeenCalled();
+
+        wrapper.setProps({ accountLoading: false, account: null, location: { pathname: '/view/UQ:1/test.pdf' } });
+        expect(redirectUserToLogin).toHaveBeenCalled();
+        wrapper.update();
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should assign the correct ref to setSessionExpiredConfirmation', () => {
+        const wrapper = setup({});
+
+        wrapper.instance().setSessionExpiredConfirmation('hello');
+        expect(wrapper.instance().sessionExpiredConfirmationBox).toEqual('hello');
+    });
+
+    it(
+        'when calling redirectToOrcid, it should redirect appropriately ' +
+            'if user already received an orcid response',
+        () => {
+            const testFn = jest.fn();
+            const testFn2 = jest.fn();
+            delete global.window.location;
+            global.window.location = {
+                href: 'http://fez-staging.library.uq.edu.au?code=010101',
+                search: '?code=010101',
+                assign: testFn,
+            };
+            const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
+
+            wrapper.instance().redirectToOrcid();
+            expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+            expect(testFn2).not.toBeCalled();
+        },
     );
 
     it('when calling redirectToOrcid, it should redirect appropriately', () => {
@@ -222,8 +265,8 @@ describe('Application component', () => {
     });
 
     it(
-        'should render app for account with fez author without ORCID ID should not ' +
-            'display ORCID warning on thesis submission page',
+        'should render app for account with fez author without ORCID ID should ' +
+            'not display ORCID warning on thesis submission page',
         () => {
             const wrapper = setup({
                 location: {
@@ -237,7 +280,7 @@ describe('Application component', () => {
             });
             wrapper.instance().theme = { palette: { white: { main: '#FFFFFF' } } };
             expect(toJson(wrapper)).toMatchSnapshot();
-        }
+        },
     );
 
     it('should render app for HDR without ORCID ID', () => {
@@ -382,7 +425,7 @@ describe('Application component', () => {
             expect(
                 getWrapper(path.pathname)
                     .instance()
-                    .isPublicPage(menuItems)
+                    .isPublicPage(menuItems),
             ).toEqual(path.isPublic);
         });
     });

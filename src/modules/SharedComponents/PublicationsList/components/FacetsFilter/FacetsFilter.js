@@ -98,7 +98,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -119,7 +119,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -146,7 +146,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -161,7 +161,7 @@ export default class FacetsFilter extends PureComponent {
             },
             () => {
                 this.props.onFacetsChanged(this.state.activeFacets);
-            }
+            },
         );
     };
 
@@ -264,7 +264,7 @@ export default class FacetsFilter extends PureComponent {
             this.props.facetsData,
             this.props.excludeFacetsList,
             this.props.renameFacetsList,
-            this.props.lookupFacetsList
+            this.props.lookupFacetsList,
         );
 
         if (facetsToDisplay.length === 0 && !this.state.hasActiveFilters) {

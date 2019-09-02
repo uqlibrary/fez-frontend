@@ -403,7 +403,7 @@ describe('ThesisSubmission form', () => {
             .reply(200, searchKeyList.author)
             .onGet(
                 repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'sch', searchKey: 'org_unit_name' }).apiUrl,
-                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'sch', searchKey: 'org_unit_name' }).options
+                repositories.routes.SEARCH_KEY_LOOKUP_API({ searchQuery: 'sch', searchKey: 'org_unit_name' }).options,
             )
             .reply(200, {
                 data: [
@@ -417,7 +417,7 @@ describe('ThesisSubmission form', () => {
 
         const route = '/rhdsubmission';
         const { container, asFragment, getByText, getByTestId } = rtlRender(
-            withRedux(initialState)(withRouter({ route })(<ThesisSubmission />))
+            withRedux(initialState)(withRouter({ route })(<ThesisSubmission />)),
         );
         const firstRender = asFragment();
 

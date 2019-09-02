@@ -184,7 +184,7 @@ describe('Additional Information Component ', () => {
             rek_updated_date: '2015-07-31T07:33:09Z',
             rek_file_downloads: 342,
             rek_citation:
-                // eslint-disable-next-line max-len
+                /* eslint-disable-next-line max-len */
                 '<a class="author_id_link" title="Browse by Author ID for Webster-Mannison, Marci" href="/list/author_id/75912/">Webster-Mannison, Marci</a> (<span class="citation_date">2006</span>) <a class="citation_title" title="Click to view Creative Work: Sustainable home Brisbane" href="/view/UQ:177836">Sustainable home Brisbane</a>. <span class="citation_place_of_publication">St Lucia, Brisbane, QLD, Australia</span>, <span class="citation_publisher">School of Architecture, The University of Queensland</span>.',
             rek_genre_xsdmf_id: 11991,
             rek_genre: 'Creative Work',
@@ -194,7 +194,7 @@ describe('Additional Information Component ', () => {
             rek_formatted_title: null,
             rek_formatted_abstract_xsdmf_id: 12036,
             rek_formatted_abstract:
-                // eslint-disable-next-line max-len
+                /* eslint-disable-next-line max-len */
                 "<b>Research Background:</b> 35,000 to 40,000 new dwellings per year are built in Queensland making it an imperative to incorporate sustainability into the design. The Queensland Government's Sustainable Homes program provides communities with unique display homes which exemplify their regional climatic context and environmental, social and economic sustainability.<br /><b><br />Research Contribution:</b> The Sustainable Home Brisbane, Seventeen Mile Rocks was part of the Queensland Government Sustainable Homes program, and addresses the need to provide industry, government, community groups, and the public an opportunity to learn about sustainable housing design and living.<br /><br />The home demonstrates cost-effective environmental features and practices in its construction and operation. The approaches to integrated water management involving significant rainwater collection and treatment for potable use, greywater treatment and biofiltration and energy efficiency through passive solar design, the unique passive air cooling and heating system and the use of solar energy are highly innovative and replicable. The Sustainable Home Brisbane sets a benchmark for future housing design in subtropical Queensland.<br /><b><br />Research Significance:</b> The significance of this research is evidenced by the project winning the Royal Australian Institute of Australia (RAIA Qld Chapter) Architecture Award, Regional Commendation, Brisbane Sustainable Home, 2007, the Housing Industry Association (HIA) Greensmart Building of the Year, 2006, the HIA Greensmart Water Efficiency Award, 2006 and the Brisbane/Gold Coast HIA GreenSmart Energy Efficient Housing Award. Furthermore, the significant interest in this project is evidenced by the number of visitors during the public display period.<br />",
             rek_depositor_affiliation_xsdmf_id: 11881,
             rek_depositor_affiliation: 888,
@@ -591,7 +591,7 @@ describe('Additional Information Component ', () => {
             isNtro: true,
         });
         expect(
-            toJson(wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null }))
+            toJson(wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null })),
         ).toMatchSnapshot();
     });
     it('getAbstract()', () => {
@@ -603,8 +603,8 @@ describe('Additional Information Component ', () => {
             toJson(
                 wrapper
                     .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null })
-            )
+                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null }),
+            ),
         ).toMatchSnapshot();
     });
 
@@ -617,8 +617,8 @@ describe('Additional Information Component ', () => {
             toJson(
                 wrapper
                     .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' })
-            )
+                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' }),
+            ),
         ).toMatchSnapshot();
     });
 
@@ -631,7 +631,7 @@ describe('Additional Information Component ', () => {
         const wrapper = getElement(
             AdditionalInformation,
             { publication: records.journalArticle, account: { canMasquerade: true } },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

@@ -86,13 +86,13 @@ export class PublicationDetailsClass extends PureComponent {
                                                     <Link
                                                         to={pathConfig.list.collection(
                                                             collection.rek_ismemberof,
-                                                            collection.rek_ismemberof_lookup
+                                                            collection.rek_ismemberof_lookup,
                                                         )}
                                                     >
                                                         {collection.rek_ismemberof_lookup}
                                                     </Link>
                                                 </li>
-                                            )
+                                            ),
                                     )}
                                 </ul>
                             }

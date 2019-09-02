@@ -34,7 +34,7 @@ const render = () => {
                 </Provider>
             </AppContainer>
         </AppErrorBoundary>,
-        document.getElementById('react-root')
+        document.getElementById('react-root'),
     );
 };
 

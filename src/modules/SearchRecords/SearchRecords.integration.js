@@ -22,7 +22,7 @@ describe('SearchRecords', () => {
         const route = '/records/search';
         const initialState = Immutable.Map({});
         const { asFragment, getByText, getByTestId, getByLabelText } = rtlRender(
-            withRedux(initialState)(withRouter({ route })(<SearchRecords />))
+            withRedux(initialState)(withRouter({ route })(<SearchRecords />)),
         );
 
         const testSearchParam = 'vaccination';
@@ -72,7 +72,7 @@ describe('SearchRecords', () => {
         const route = '/records/search';
         const initialState = Immutable.Map({});
         const { asFragment, getByText, getByTestId, getByPlaceholderText } = rtlRender(
-            withRedux(initialState)(withRouter({ route })(<SearchRecords />))
+            withRedux(initialState)(withRouter({ route })(<SearchRecords />)),
         );
 
         const simpleSearchTestParam = 'vaccination';

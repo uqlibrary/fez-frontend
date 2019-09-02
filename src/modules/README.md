@@ -10,7 +10,7 @@ Global test setup is done in /src/test.setup.js:
 
 Template for modules unit tests:
 
-````javascript
+```javascript
 
 import [COMPONENT_NAME] from './[COMPONENT_NAME]';
 
@@ -67,4 +67,4 @@ describe('Component [COMPONENT_NAME]', () => {
 });
 
 
-````
+```

@@ -24,5 +24,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const PublisherField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

@@ -31,7 +31,7 @@ describe('PublicationsList', () => {
         expect(
             wrapper.instance().renderPublicationCitation(0, {
                 rek_pid: 'test',
-            }).props.customActions
+            }).props.customActions,
         ).toBe(test);
     });
 });

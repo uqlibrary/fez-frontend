@@ -338,8 +338,8 @@ describe('AddDataCollection form', () => {
         waitForElement(() => getByTestId('menu-'));
         fireEvent.click(
             getByText(
-                /Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i
-            )
+                /Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i,
+            ),
         );
 
         fireEvent.change(getByTestId('Projectname'), { target: { value: 'test project' } });

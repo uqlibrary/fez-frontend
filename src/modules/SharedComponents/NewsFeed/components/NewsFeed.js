@@ -64,11 +64,11 @@ export class NewsFeed extends PureComponent {
             0,
             this.props.newsFeedList.length > this.props.showNewsCount
                 ? this.props.showNewsCount
-                : this.props.newsFeedList.length
+                : this.props.newsFeedList.length,
         );
 
         return (
-            <StandardCard title={txt.title} primaryHeader>
+            <StandardCard title={txt.title} darkHeader>
                 {!this.props.loadingNewsFeedList &&
                     subNewsFeed.map((newsItem, index) => (
                         <div style={{ padding: '8px 0px' }} key={index}>
@@ -95,7 +95,7 @@ export class NewsFeed extends PureComponent {
                                 </Grid>
                                 <Grid item xs>
                                     <Typography variant={'body2'}>
-                                        <b>{newsItem.nws_title}</b>{' '}
+                                        <b>{newsItem.nws_title}</b>
                                         {ReactHtmlParser(dompurify.sanitize(newsItem.nws_message, allowedHtmlConfig))}
                                     </Typography>
                                 </Grid>

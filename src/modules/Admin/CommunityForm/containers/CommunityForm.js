@@ -14,7 +14,7 @@ const onSubmit = (values, dispatch, props) => {
     return dispatch(createCommunity({ ...values.toJS() }, (currentAuthor && currentAuthor.aut_id) || null)).catch(
         error => {
             throw new SubmissionError({ _error: error });
-        }
+        },
     );
 };
 
@@ -41,7 +41,7 @@ const mapDispatchToProps = dispatch => ({
 
 CommunityContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(CommunityContainer);
 
 export default reloadReducerFromLocalStorage()(CommunityContainer);

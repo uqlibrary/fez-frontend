@@ -25,7 +25,7 @@ const mapDispatchToProps = dispatch => {
 
 const PublicationSubtypeList = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(GenericSelectField);
 
 export default function PublicationSubtypeField(fieldProps) {

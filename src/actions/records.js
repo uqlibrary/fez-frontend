@@ -26,10 +26,10 @@ export function createNewRecord(data) {
             ...JSON.parse(JSON.stringify(data)),
             ...transformers.getRecordLinkSearchKey(data),
             ...transformers.getRecordAuthorsSearchKey(
-                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null,
             ),
             ...transformers.getRecordAuthorsIdSearchKey(
-                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null
+                data.authors || (data.currentAuthor && [data.currentAuthor[0]]) || null,
             ),
             ...transformers.getRecordContributorsSearchKey(data.editors),
             ...transformers.getRecordContributorsIdSearchKey(data.editors),
@@ -83,14 +83,14 @@ export function createNewRecord(data) {
             })
             .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() =>
-                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord,
             )
             .then(() =>
                 data.comments
                     ? post(RECORDS_ISSUES_API({ pid: newRecord.rek_pid }), {
                         issue: 'Notes from creator of the new record: ' + data.comments,
                     })
-                    : newRecord
+                    : newRecord,
             )
             .then(response => {
                 dispatch({
@@ -171,8 +171,9 @@ export function createNewRecord(data) {
 //                 return post(NEW_RECORD_API(), recordRequest);
 //             })
 //             .then(response => {
-//                 // if(process.env.ENABLE_LOG) Raven.captureException('THESIS CREATED',
-//                 // {message: 'Thesis created successfully'});
+//                 // if(process.env.ENABLE_LOG) {
+//                 //     Raven.captureException('THESIS CREATED', {message: 'Thesis created successfully'});
+//                 // }
 //                 dispatch({
 //                     type: actions.CREATE_RECORD_SUCCESS,
 //                     payload: {
@@ -238,11 +239,7 @@ export function submitThesis(data) {
 
         let newRecord = null;
         const hasFilesToUpload = data.files && data.files.queue && data.files.queue.length > 0;
-        const recordPatch = hasFilesToUpload
-            ? {
-                ...transformers.getRecordFileAttachmentSearchKey(data.files.queue),
-            }
-            : null;
+        const recordPatch = hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(data.files.queue) : null;
 
         return post(NEW_RECORD_API(), recordRequest)
             .then(response => {
@@ -252,7 +249,7 @@ export function submitThesis(data) {
             })
             .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, data.files.queue, dispatch) : newRecord))
             .then(() =>
-                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord
+                hasFilesToUpload ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), recordPatch) : newRecord,
             )
             .then(response => {
                 /* istanbul ignore next */
@@ -282,7 +279,7 @@ export function submitThesis(data) {
                         /* istanbul ignore next */
                         () => {
                             return Promise.resolve(newRecord);
-                        }
+                        },
                     );
                 }
 
@@ -412,8 +409,8 @@ export function adminUpdate(data) {
                     EXISTING_RECORD_API({
                         pid: data.publication.rek_pid,
                     }),
-                    patchRecordRequest
-                )
+                    patchRecordRequest,
+                ),
             )
             .then(responses => {
                 dispatch({

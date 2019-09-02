@@ -188,7 +188,7 @@ export default class ThesisSubmission extends Component {
                                             name="rek_genre_type"
                                             disabled={this.props.submitting}
                                             validate={[validation.required]}
-                                            locale={txt.information.fieldLabels.thesisType}
+                                            {...txt.information.fieldLabels.thesisType}
                                             required
                                         />
                                     </Grid>
@@ -252,7 +252,10 @@ export default class ThesisSubmission extends Component {
                                     maxCount={10}
                                     validate={[validation.requiredList]}
                                     maxInputLength={111}
-                                    searchKey={{ value: 'rek_keywords', order: 'rek_keywords_order' }}
+                                    searchKey={{
+                                        value: 'rek_keywords',
+                                        order: 'rek_keywords_order',
+                                    }}
                                     locale={locale.components.keywordsForm.field}
                                     disabled={this.props.submitting}
                                 />

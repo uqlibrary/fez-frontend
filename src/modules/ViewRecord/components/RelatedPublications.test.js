@@ -26,7 +26,7 @@ describe('Related publications Component ', () => {
                 publication: dataCollection,
                 title: 'Title',
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -48,7 +48,7 @@ describe('Related publications Component ', () => {
             {
                 rek_has_related_datasets_lookup: ' ',
                 rek_has_related_datasets_order: 4,
-            }
+            },
         );
         const wrapper = setup({ publication: publication });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -63,7 +63,7 @@ describe('Related publications Component ', () => {
                 title: 'A test Title',
                 showPublicationTitle: true,
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -81,7 +81,7 @@ describe('Related publications Component ', () => {
                     order: 'rek_isderivationof_order',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -99,7 +99,7 @@ describe('Related publications Component ', () => {
                     order: 'rek_isderivationof_order',
                 },
             },
-            { isShallow: false }
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

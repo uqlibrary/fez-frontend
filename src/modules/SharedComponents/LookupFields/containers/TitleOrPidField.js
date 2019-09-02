@@ -38,5 +38,5 @@ const mapDispatchToProps = dispatch => {
 
 export const TitleOrPidField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

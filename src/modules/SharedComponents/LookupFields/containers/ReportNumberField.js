@@ -26,5 +26,5 @@ const mapDispatchToProps = dispatch => ({
 
 export const ReportNumberField = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(AutoCompleteAsyncField);

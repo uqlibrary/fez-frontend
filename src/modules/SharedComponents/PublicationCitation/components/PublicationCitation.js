@@ -39,6 +39,7 @@ import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
 import AdminActions from './citations/partials/AdminActions';
+import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const styles = theme => ({
     divider: {
@@ -73,6 +74,7 @@ export const styles = theme => ({
 export class PublicationCitation extends PureComponent {
     static propTypes = {
         publication: PropTypes.object.isRequired,
+        publicationsLoading: PropTypes.bool,
         showDefaultActions: PropTypes.bool,
         showSources: PropTypes.bool,
         customActions: PropTypes.array,
@@ -204,9 +206,43 @@ export class PublicationCitation extends PureComponent {
                 return (
                     <Grid item xs={12} sm="auto" key={`action_key_${index}`}>
                         {action.primary ? (
-                            <Button classes={{ label: pid, root: pid }} variant="contained" {...buttonProps} />
+                            <Button
+                                disabled={!!this.props.publicationsLoading}
+                                classes={{ label: pid, root: pid }}
+                                variant="contained"
+                                {...buttonProps}
+                            >
+                                {action.label}
+                                {!!this.props.publicationsLoading && (
+                                    <CircularProgress
+                                        size={12}
+                                        style={{ marginLeft: 12, marginTop: -2 }}
+                                        thickness={3}
+                                        color={'secondary'}
+                                        variant={'indeterminate'}
+                                        aria-label="Waiting for records to finish loading"
+                                    />
+                                )}
+                            </Button>
                         ) : (
-                            <Button classes={{ label: pid, root: pid }} variant="text" {...buttonProps} />
+                            <Button
+                                disabled={!!this.props.publicationsLoading}
+                                classes={{ label: pid, root: pid }}
+                                variant="text"
+                                {...buttonProps}
+                            >
+                                {action.label}
+                                {!!this.props.publicationsLoading && (
+                                    <CircularProgress
+                                        size={12}
+                                        style={{ marginLeft: 12, marginTop: -2 }}
+                                        thickness={3}
+                                        color={'secondary'}
+                                        variant={'indeterminate'}
+                                        aria-label="Waiting for records to finish loading"
+                                    />
+                                )}
+                            </Button>
                         )}
                     </Grid>
                 );
@@ -227,7 +263,7 @@ export class PublicationCitation extends PureComponent {
                             href={sourceConfig.externalUrl.replace('[id]', source.id)}
                             aria-label={locale.global.linkWillOpenInNewWindow.replace(
                                 '[destination]',
-                                sourceConfig.title
+                                sourceConfig.title,
                             )}
                         >
                             {sourceConfig.title}
@@ -243,7 +279,7 @@ export class PublicationCitation extends PureComponent {
         const txt = locale.components.publicationCitation;
         const recordValue = this.props.showMetrics && this.props.publication.metricData;
         return (
-            <React.Fragment>
+            <div className="publicationCitation">
                 <Grid container spacing={0}>
                     <Grid item xs>
                         <Grid container spacing={0}>
@@ -262,11 +298,11 @@ export class PublicationCitation extends PureComponent {
                                         href={recordValue.citation_url}
                                         title={txt.linkWillOpenInNewWindow.replace(
                                             '[destination]',
-                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
                                         )}
                                         aria-label={txt.linkWillOpenInNewWindow.replace(
                                             '[destination]',
-                                            txt.myTrendingPublications.sourceTitles[recordValue.source]
+                                            txt.myTrendingPublications.sourceTitles[recordValue.source],
                                         )}
                                         openInNewIcon={false}
                                     >
@@ -352,7 +388,7 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs />
                         </Hidden>
                         {this.renderActions(
-                            this.props.showDefaultActions ? this.defaultActions : this.props.customActions
+                            this.props.showDefaultActions ? this.defaultActions : this.props.customActions,
                         )}
                     </Grid>
                 )}
@@ -371,7 +407,7 @@ export class PublicationCitation extends PureComponent {
                         </Typography>
                     </Grid>
                 )}
-            </React.Fragment>
+            </div>
         );
     }
 }

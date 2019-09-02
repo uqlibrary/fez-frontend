@@ -44,7 +44,7 @@ describe('viewRecord reducer', () => {
     it("should return a record to be viewed and keep hidden cultural statemet if it's hidden", () => {
         const test = viewRecordReducer(
             { ...initialState, hideCulturalSensitivityStatement: true },
-            { type: actions.VIEW_RECORD_LOADED, payload: mockRecord }
+            { type: actions.VIEW_RECORD_LOADED, payload: mockRecord },
         );
         expect(test.loadingRecordToView).toBeFalsy();
         expect(test.hideCulturalSensitivityStatement).toEqual(true);

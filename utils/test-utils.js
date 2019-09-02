@@ -39,7 +39,7 @@ export const rtlRender = (ui, options) => render(ui, { wrapper: AllTheProviders,
 
 export const renderWithRouter = (
     ui,
-    { route = '/', history = createMemoryHistory({ initialEntries: [route] }) } = {}
+    { route = '/', history = createMemoryHistory({ initialEntries: [route] }) } = {},
 ) => {
     return {
         ...rtlRender(<Router history={history}>{ui}</Router>),

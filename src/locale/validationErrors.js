@@ -3,8 +3,8 @@ import React from 'react';
 export default {
     validationErrors: {
         publicationSearch:
-            'Type a valid publication DOI (e.g. 10.1163/9789004326828), Pubmed ID (e.g. 28131963) ' +
-            'or the title (min 10 characters) of the publication',
+            'Type a valid publication DOI (e.g. 10.1163/9789004326828), ' +
+            'Pubmed ID (e.g. 28131963) or the title (min 10 characters) of the publication',
         isbn: 'ISBN value is not valid',
         issn: 'ISSN value is not valid',
         ismn: 'ISMN value is not valid',
@@ -15,6 +15,7 @@ export default {
         email: 'Email address is not valid',
         url: 'URL is not valid',
         doi: 'DOI is not valid',
+        pid: 'Please provide a valid PID (e.g. UQ:129af6)',
         forRequired: 'Field of research values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
@@ -39,6 +40,7 @@ export default {
         googleScholarId: 'Please provide a valid 12 character Google Scholar ID',
         advancedSearchSelectionRequired: 'Please select a field to search',
         dateRange: 'Please provide a valid start/end date range',
+        collectionDateRange: 'Please provide a valid start/end Collection Date range',
         pageRange: 'Please provide a valid start/end page range',
         remindToAdd: 'Please remember to click ADD to add this item to your list',
         requireChecked: 'Please accept deposit agreement',
@@ -47,6 +49,7 @@ export default {
         grants: 'You must click ADD GRANT to enter the value to the grants list',
     },
     validationErrorsSummary: {
+        // appears in footer error block
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',
@@ -94,6 +97,7 @@ export default {
         impactStatement: 'Creator research statement is required',
         significance: 'Scale/Significance of work is required',
         dateRange: 'Publication start/end dates are invalid',
+        collectionDateRange: 'Collection start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
         community: 'You must select a community',

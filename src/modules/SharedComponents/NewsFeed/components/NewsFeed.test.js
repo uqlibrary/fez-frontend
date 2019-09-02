@@ -15,8 +15,8 @@ function setup(testProps = {}) {
                 nws_title: 'Outage',
                 nws_status: 'active',
                 nws_message:
-                    'There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to upgrade ' +
-                    'the eSpace database. Apologies for this inconvenience.',
+                    'There will be a 30 minute outage from 12:00-12:30pm on Wednesday 22/8/17 to ' +
+                    'upgrade the eSpace database. Apologies for this inconvenience.',
                 nws_admin_only: 0,
             },
             {
@@ -26,9 +26,9 @@ function setup(testProps = {}) {
                 nws_title: 'Statistics',
                 nws_status: 'active',
                 nws_message:
-                    'The file download and page view statistics for publications in eSpace currently may ' +
-                    'not be accurate and are being reviewed by our development team. Until this issue is ' +
-                    'resolved eSpace statistics should not be considered reliable.',
+                    'The file download and page view statistics for publications in eSpace currently ' +
+                    'may not be accurate and are being reviewed by our development team. Until this ' +
+                    'issue is resolved eSpace statistics should not be considered reliable.',
                 nws_admin_only: 0,
             },
             {

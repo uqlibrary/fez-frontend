@@ -28,7 +28,7 @@ const mapStateToProps = state => {
     const contentIndicators =
         (reducerOutput.fullPublicationToClaim &&
             (reducerOutput.fullPublicationToClaim.fez_record_search_key_content_indicator || []).map(
-                item => item.rek_content_indicator
+                item => item.rek_content_indicator,
             )) ||
         [];
     return {
@@ -56,7 +56,7 @@ function mapDispatchToProps(dispatch) {
 
 ClaimPublicationFormContainer = connect(
     mapStateToProps,
-    mapDispatchToProps
+    mapDispatchToProps,
 )(ClaimPublicationFormContainer);
 ClaimPublicationFormContainer = withRouter(ClaimPublicationFormContainer);
 

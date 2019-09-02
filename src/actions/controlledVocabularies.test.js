@@ -13,6 +13,7 @@ describe('Controlled Vocabularies actions', () => {
     });
 
     /* eslint-disable max-len */
+    /* prettier-ignore */
     const returnedApiData = {
         total: 22,
         data: [
@@ -108,8 +109,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451804,
                                         controlled_vocab: {
                                             cvo_id: 451804,
-                                            cvo_title:
-                                                '010104 Combinatorics and Discrete Mathematics (excl. Physical Combinatorics)',
+                                            cvo_title: '010104 Combinatorics and Discrete Mathematics (excl. Physical Combinatorics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010104',
@@ -163,8 +163,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451807,
                                         controlled_vocab: {
                                             cvo_id: 451807,
-                                            cvo_title:
-                                                '010107 Mathematical Logic, Set Theory, Lattices and Universal Algebra',
+                                            cvo_title: '010107 Mathematical Logic, Set Theory, Lattices and Universal Algebra',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010107',
@@ -200,8 +199,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451809,
                                         controlled_vocab: {
                                             cvo_id: 451809,
-                                            cvo_title:
-                                                '010109 Ordinary Differential Equations, Difference Equations and Dynamical Systems',
+                                            cvo_title: '010109 Ordinary Differential Equations, Difference Equations and Dynamical Systems',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010109',
@@ -346,8 +344,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451817,
                                         controlled_vocab: {
                                             cvo_id: 451817,
-                                            cvo_title:
-                                                '010203 Calculus of Variations, Systems Theory and Control Theory',
+                                            cvo_title: '010203 Calculus of Variations, Systems Theory and Control Theory',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010203',
@@ -492,8 +489,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451825,
                                         controlled_vocab: {
                                             cvo_id: 451825,
-                                            cvo_title:
-                                                '010302 Numerical Solution of Differential and Integral Equations',
+                                            cvo_title: '010302 Numerical Solution of Differential and Integral Equations',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010302',
@@ -529,8 +525,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451827,
                                         controlled_vocab: {
                                             cvo_id: 451827,
-                                            cvo_title:
-                                                '010399 Numerical and Computational Mathematics not elsewhere classified',
+                                            cvo_title: '010399 Numerical and Computational Mathematics not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010399',
@@ -748,8 +743,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451839,
                                         controlled_vocab: {
                                             cvo_id: 451839,
-                                            cvo_title:
-                                                '010503 Mathematical Aspects of Classical Mechanics, Quantum Mechanics and Quantum Information Theory',
+                                            cvo_title: '010503 Mathematical Aspects of Classical Mechanics, Quantum Mechanics and Quantum Information Theory',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010503',
@@ -785,8 +779,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451841,
                                         controlled_vocab: {
                                             cvo_id: 451841,
-                                            cvo_title:
-                                                '010505 Mathematical Aspects of Quantum and Conformal Field Theory, Quantum Gravity and String Theory',
+                                            cvo_title: '010505 Mathematical Aspects of Quantum and Conformal Field Theory, Quantum Gravity and String Theory',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010505',
@@ -804,8 +797,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451842,
                                         controlled_vocab: {
                                             cvo_id: 451842,
-                                            cvo_title:
-                                                '010506 Statistical Mechanics, Physical Combinatorics and Mathematical Aspects of Condensed Matter',
+                                            cvo_title: '010506 Statistical Mechanics, Physical Combinatorics and Mathematical Aspects of Condensed Matter',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '010506',
@@ -1096,8 +1088,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451858,
                                         controlled_vocab: {
                                             cvo_id: 451858,
-                                            cvo_title:
-                                                '020199 Astronomical and Space Sciences not elsewhere classified',
+                                            cvo_title: '020199 Astronomical and Space Sciences not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '020199',
@@ -1206,8 +1197,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451864,
                                         controlled_vocab: {
                                             cvo_id: 451864,
-                                            cvo_title:
-                                                '020299 Atomic, Molecular, Nuclear, Particle and Plasma Physics not elsewhere classified',
+                                            cvo_title: '020299 Atomic, Molecular, Nuclear, Particle and Plasma Physics not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '020299',
@@ -1389,8 +1379,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451874,
                                         controlled_vocab: {
                                             cvo_id: 451874,
-                                            cvo_title:
-                                                '020403 Condensed Matter Modelling and Density Functional Theory',
+                                            cvo_title: '020403 Condensed Matter Modelling and Density Functional Theory',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '020403',
@@ -1408,8 +1397,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451875,
                                         controlled_vocab: {
                                             cvo_id: 451875,
-                                            cvo_title:
-                                                '020404 Electronic and Magnetic Properties of Condensed Matter; Superconductivity',
+                                            cvo_title: '020404 Electronic and Magnetic Properties of Condensed Matter; Superconductivity',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '020404',
@@ -1918,8 +1906,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451903,
                                         controlled_vocab: {
                                             cvo_id: 451903,
-                                            cvo_title:
-                                                '030105 Instrumental Methods (excl. Immunological and Bioassay Methods)',
+                                            cvo_title: '030105 Instrumental Methods (excl. Immunological and Bioassay Methods)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030105',
@@ -1937,8 +1924,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451904,
                                         controlled_vocab: {
                                             cvo_id: 451904,
-                                            cvo_title:
-                                                '030106 Quality Assurance, Chemometrics, Traceability and Metrological Chemistry',
+                                            cvo_title: '030106 Quality Assurance, Chemometrics, Traceability and Metrological Chemistry',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030106',
@@ -2318,8 +2304,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451925,
                                         controlled_vocab: {
                                             cvo_id: 451925,
-                                            cvo_title:
-                                                '030399 Macromolecular and Materials Chemistry not elsewhere classified',
+                                            cvo_title: '030399 Macromolecular and Materials Chemistry not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030399',
@@ -2410,8 +2395,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451930,
                                         controlled_vocab: {
                                             cvo_id: 451930,
-                                            cvo_title:
-                                                '030404 Cheminformatics and Quantitative Structure-Activity Relationships',
+                                            cvo_title: '030404 Cheminformatics and Quantitative Structure-Activity Relationships',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030404',
@@ -2465,8 +2449,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451933,
                                         controlled_vocab: {
                                             cvo_id: 451933,
-                                            cvo_title:
-                                                '030499 Medicinal and Biomolecular Chemistry not elsewhere classified',
+                                            cvo_title: '030499 Medicinal and Biomolecular Chemistry not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030499',
@@ -2865,8 +2848,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451955,
                                         controlled_vocab: {
                                             cvo_id: 451955,
-                                            cvo_title:
-                                                '030799 Theoretical and Computational Chemistry not elsewhere classified',
+                                            cvo_title: '030799 Theoretical and Computational Chemistry not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '030799',
@@ -3501,8 +3483,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 451990,
                                         controlled_vocab: {
                                             cvo_id: 451990,
-                                            cvo_title:
-                                                '040311 Stratigraphy (incl. Biostratigraphy and Sequence Stratigraphy)',
+                                            cvo_title: '040311 Stratigraphy (incl. Biostratigraphy and Sequence Stratigraphy)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '040311',
@@ -4009,8 +3990,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452018,
                                         controlled_vocab: {
                                             cvo_id: 452018,
-                                            cvo_title:
-                                                '040699 Physical Geography and Environmental Geoscience not elsewhere classified',
+                                            cvo_title: '040699 Physical Geography and Environmental Geoscience not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '040699',
@@ -4212,8 +4192,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452029,
                                         controlled_vocab: {
                                             cvo_id: 452029,
-                                            cvo_title:
-                                                '050201 Aboriginal and Torres Strait Islander Environmental Knowledge',
+                                            cvo_title: '050201 Aboriginal and Torres Strait Islander Environmental Knowledge',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '050201',
@@ -4411,8 +4390,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452040,
                                         controlled_vocab: {
                                             cvo_id: 452040,
-                                            cvo_title:
-                                                '050299 Environmental Science and Management not elsewhere classified',
+                                            cvo_title: '050299 Environmental Science and Management not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '050299',
@@ -4722,8 +4700,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452057,
                                         controlled_vocab: {
                                             cvo_id: 452057,
-                                            cvo_title:
-                                                '060106 Cellular Interactions (incl. Adhesion, Matrix, Cell Wall)',
+                                            cvo_title: '060106 Cellular Interactions (incl. Adhesion, Matrix, Cell Wall)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '060106',
@@ -4777,8 +4754,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452060,
                                         controlled_vocab: {
                                             cvo_id: 452060,
-                                            cvo_title:
-                                                '060109 Proteomics and Intermolecular Interactions (excl. Medical Proteomics)',
+                                            cvo_title: '060109 Proteomics and Intermolecular Interactions (excl. Medical Proteomics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '060109',
@@ -5411,8 +5387,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452096,
                                         controlled_vocab: {
                                             cvo_id: 452096,
-                                            cvo_title:
-                                                '060405 Gene Expression (incl. Microarray and other genome-wide approaches)',
+                                            cvo_title: '060405 Gene Expression (incl. Microarray and other genome-wide approaches)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '060405',
@@ -5538,8 +5513,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452103,
                                         controlled_vocab: {
                                             cvo_id: 452103,
-                                            cvo_title:
-                                                '060412 Quantitative Genetics (incl. Disease and Trait Mapping Genetics)',
+                                            cvo_title: '060412 Quantitative Genetics (incl. Disease and Trait Mapping Genetics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '060412',
@@ -6410,8 +6384,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452152,
                                         controlled_vocab: {
                                             cvo_id: 452152,
-                                            cvo_title:
-                                                '070199 Agriculture, Land and Farm Management not elsewhere classified',
+                                            cvo_title: '070199 Agriculture, Land and Farm Management not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '070199',
@@ -6719,8 +6692,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452170,
                                         controlled_vocab: {
                                             cvo_id: 452170,
-                                            cvo_title:
-                                                '070307 Crop and Pasture Post Harvest Technologies (incl. Transportation and Storage)',
+                                            cvo_title: '070307 Crop and Pasture Post Harvest Technologies (incl. Transportation and Storage)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '070307',
@@ -6883,8 +6855,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452179,
                                         controlled_vocab: {
                                             cvo_id: 452179,
-                                            cvo_title:
-                                                '070406 Post-Harvest Fisheries Technologies (incl. Transportation)',
+                                            cvo_title: '070406 Post-Harvest Fisheries Technologies (incl. Transportation)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '070406',
@@ -7192,8 +7163,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452196,
                                         controlled_vocab: {
                                             cvo_id: 452196,
-                                            cvo_title:
-                                                '070603 Horticultural Crop Protection (Pests, Diseases and Weeds)',
+                                            cvo_title: '070603 Horticultural Crop Protection (Pests, Diseases and Weeds)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '070603',
@@ -7229,8 +7199,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452198,
                                         controlled_vocab: {
                                             cvo_id: 452198,
-                                            cvo_title:
-                                                '070605 Post Harvest Horticultural Technologies (incl. Transportation and Storage)',
+                                            cvo_title: '070605 Post Harvest Horticultural Technologies (incl. Transportation and Storage)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '070605',
@@ -7538,8 +7507,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452215,
                                         controlled_vocab: {
                                             cvo_id: 452215,
-                                            cvo_title:
-                                                '079901 Agricultural Hydrology (Drainage, Flooding, Irrigation, Quality, etc.)',
+                                            cvo_title: '079901 Agricultural Hydrology (Drainage, Flooding, Irrigation, Quality, etc.)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '079901',
@@ -7575,8 +7543,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452217,
                                         controlled_vocab: {
                                             cvo_id: 452217,
-                                            cvo_title:
-                                                '079999 Agricultural and Veterinary Sciences not elsewhere classified',
+                                            cvo_title: '079999 Agricultural and Veterinary Sciences not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '079999',
@@ -7830,8 +7797,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452231,
                                         controlled_vocab: {
                                             cvo_id: 452231,
-                                            cvo_title:
-                                                '080199 Artificial Intelligence and Image Processing not elsewhere classified',
+                                            cvo_title: '080199 Artificial Intelligence and Image Processing not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080199',
@@ -7958,8 +7924,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452238,
                                         controlled_vocab: {
                                             cvo_id: 452238,
-                                            cvo_title:
-                                                '080299 Computation Theory and Mathematics not elsewhere classified',
+                                            cvo_title: '080299 Computation Theory and Mathematics not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080299',
@@ -8431,8 +8396,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452264,
                                         controlled_vocab: {
                                             cvo_id: 452264,
-                                            cvo_title:
-                                                '080601 Aboriginal and Torres Strait Islander Information and Knowledge Systems',
+                                            cvo_title: '080601 Aboriginal and Torres Strait Islander Information and Knowledge Systems',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080601',
@@ -8630,8 +8594,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452275,
                                         controlled_vocab: {
                                             cvo_id: 452275,
-                                            cvo_title:
-                                                '080612 Interorganisational Information Systems and Web Services',
+                                            cvo_title: '080612 Interorganisational Information Systems and Web Services',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080612',
@@ -8722,8 +8685,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452280,
                                         controlled_vocab: {
                                             cvo_id: 452280,
-                                            cvo_title:
-                                                '080701 Aboriginal and Torres Strait Islander Knowledge Management',
+                                            cvo_title: '080701 Aboriginal and Torres Strait Islander Knowledge Management',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080701',
@@ -8849,8 +8811,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452287,
                                         controlled_vocab: {
                                             cvo_id: 452287,
-                                            cvo_title:
-                                                '080708 Records and Information Management (excl. Business Records and Information Management)',
+                                            cvo_title: '080708 Records and Information Management (excl. Business Records and Information Management)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080708',
@@ -8886,8 +8847,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452289,
                                         controlled_vocab: {
                                             cvo_id: 452289,
-                                            cvo_title:
-                                                '080799 Library and Information Studies not elsewhere classified',
+                                            cvo_title: '080799 Library and Information Studies not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '080799',
@@ -8924,8 +8884,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452291,
                                         controlled_vocab: {
                                             cvo_id: 452291,
-                                            cvo_title:
-                                                '089999 Information and Computing Sciences not elsewhere classified',
+                                            cvo_title: '089999 Information and Computing Sciences not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '089999',
@@ -9162,8 +9121,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452304,
                                         controlled_vocab: {
                                             cvo_id: 452304,
-                                            cvo_title:
-                                                '090201 Automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)',
+                                            cvo_title: '090201 Automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090201',
@@ -9489,8 +9447,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452322,
                                         controlled_vocab: {
                                             cvo_id: 452322,
-                                            cvo_title:
-                                                '090405 Non-automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)',
+                                            cvo_title: '090405 Non-automotive Combustion and Fuel Engineering (incl. Alternative/Renewable Fuels)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090405',
@@ -9924,8 +9881,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452346,
                                         controlled_vocab: {
                                             cvo_id: 452346,
-                                            cvo_title:
-                                                '090606 Photonics and Electro-Optical Engineering (excl. Communications)',
+                                            cvo_title: '090606 Photonics and Electro-Optical Engineering (excl. Communications)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090606',
@@ -9943,8 +9899,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452347,
                                         controlled_vocab: {
                                             cvo_id: 452347,
-                                            cvo_title:
-                                                '090607 Power and Energy Systems Engineering (excl. Renewable Power)',
+                                            cvo_title: '090607 Power and Energy Systems Engineering (excl. Renewable Power)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090607',
@@ -9962,8 +9917,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452348,
                                         controlled_vocab: {
                                             cvo_id: 452348,
-                                            cvo_title:
-                                                '090608 Renewable Power and Energy Systems Engineering (excl. Solar Cells)',
+                                            cvo_title: '090608 Renewable Power and Energy Systems Engineering (excl. Solar Cells)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090608',
@@ -9999,8 +9953,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452350,
                                         controlled_vocab: {
                                             cvo_id: 452350,
-                                            cvo_title:
-                                                '090699 Electrical and Electronic Engineering not elsewhere classified',
+                                            cvo_title: '090699 Electrical and Electronic Engineering not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '090699',
@@ -10508,8 +10461,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452378,
                                         controlled_vocab: {
                                             cvo_id: 452378,
-                                            cvo_title:
-                                                '091006 Manufacturing Processes and Technologies (excl. Textiles)',
+                                            cvo_title: '091006 Manufacturing Processes and Technologies (excl. Textiles)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091006',
@@ -10527,8 +10479,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452379,
                                         controlled_vocab: {
                                             cvo_id: 452379,
-                                            cvo_title:
-                                                '091007 Manufacturing Robotics and Mechatronics (excl. Automotive Mechatronics)',
+                                            cvo_title: '091007 Manufacturing Robotics and Mechatronics (excl. Automotive Mechatronics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091007',
@@ -10582,8 +10533,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452382,
                                         controlled_vocab: {
                                             cvo_id: 452382,
-                                            cvo_title:
-                                                '091010 Packaging, Storage and Transportation (excl. Food and Agricultural Products)',
+                                            cvo_title: '091010 Packaging, Storage and Transportation (excl. Food and Agricultural Products)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091010',
@@ -11036,8 +10986,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452407,
                                         controlled_vocab: {
                                             cvo_id: 452407,
-                                            cvo_title:
-                                                '091301 Acoustics and Noise Control (excl. Architectural Acoustics)',
+                                            cvo_title: '091301 Acoustics and Noise Control (excl. Architectural Acoustics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091301',
@@ -11362,8 +11311,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452425,
                                         controlled_vocab: {
                                             cvo_id: 452425,
-                                            cvo_title:
-                                                '091499 Resources Engineering and Extractive Metallurgy not elsewhere classified',
+                                            cvo_title: '091499 Resources Engineering and Extractive Metallurgy not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091499',
@@ -11490,8 +11438,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452432,
                                         controlled_vocab: {
                                             cvo_id: 452432,
-                                            cvo_title:
-                                                '091506 Nuclear Engineering (incl. Fuel Enrichment and Waste Processing and Storage)',
+                                            cvo_title: '091506 Nuclear Engineering (incl. Fuel Enrichment and Waste Processing and Storage)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '091506',
@@ -11674,8 +11621,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452442,
                                         controlled_vocab: {
                                             cvo_id: 452442,
-                                            cvo_title:
-                                                '100101 Agricultural Biotechnology Diagnostics (incl. Biosensors)',
+                                            cvo_title: '100101 Agricultural Biotechnology Diagnostics (incl. Biosensors)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100101',
@@ -11711,8 +11657,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452444,
                                         controlled_vocab: {
                                             cvo_id: 452444,
-                                            cvo_title:
-                                                '100103 Agricultural Molecular Engineering of Nucleic Acids and Proteins',
+                                            cvo_title: '100103 Agricultural Molecular Engineering of Nucleic Acids and Proteins',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100103',
@@ -11929,8 +11874,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452456,
                                         controlled_vocab: {
                                             cvo_id: 452456,
-                                            cvo_title:
-                                                '100204 Environmental Biotechnology Diagnostics (incl. Biosensors)',
+                                            cvo_title: '100204 Environmental Biotechnology Diagnostics (incl. Biosensors)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100204',
@@ -11966,8 +11910,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452458,
                                         controlled_vocab: {
                                             cvo_id: 452458,
-                                            cvo_title:
-                                                '100206 Environmental Molecular Engineering of Nucleic Acids and Proteins',
+                                            cvo_title: '100206 Environmental Molecular Engineering of Nucleic Acids and Proteins',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100206',
@@ -12112,8 +12055,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452466,
                                         controlled_vocab: {
                                             cvo_id: 452466,
-                                            cvo_title:
-                                                '100306 Industrial Molecular Engineering of Nucleic Acids and Proteins',
+                                            cvo_title: '100306 Industrial Molecular Engineering of Nucleic Acids and Proteins',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100306',
@@ -12204,8 +12146,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452471,
                                         controlled_vocab: {
                                             cvo_id: 452471,
-                                            cvo_title:
-                                                '100403 Medical Molecular Engineering of Nucleic Acids and Proteins',
+                                            cvo_title: '100403 Medical Molecular Engineering of Nucleic Acids and Proteins',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100403',
@@ -12223,8 +12164,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452472,
                                         controlled_vocab: {
                                             cvo_id: 452472,
-                                            cvo_title:
-                                                '100404 Regenerative Medicine (incl. Stem Cells and Tissue Engineering)',
+                                            cvo_title: '100404 Regenerative Medicine (incl. Stem Cells and Tissue Engineering)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100404',
@@ -12568,8 +12508,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452491,
                                         controlled_vocab: {
                                             cvo_id: 452491,
-                                            cvo_title:
-                                                '100605 Performance Evaluation; Testing and Simulation of Reliability',
+                                            cvo_title: '100605 Performance Evaluation; Testing and Simulation of Reliability',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '100605',
@@ -13059,8 +12998,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452518,
                                         controlled_vocab: {
                                             cvo_id: 452518,
-                                            cvo_title:
-                                                '110106 Medical Biochemistry: Proteins and Peptides (incl. Medical Proteomics)',
+                                            cvo_title: '110106 Medical Biochemistry: Proteins and Peptides (incl. Medical Proteomics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110106',
@@ -13096,8 +13034,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452520,
                                         controlled_vocab: {
                                             cvo_id: 452520,
-                                            cvo_title:
-                                                '110199 Medical Biochemistry and Metabolomics not elsewhere classified',
+                                            cvo_title: '110199 Medical Biochemistry and Metabolomics not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110199',
@@ -13188,8 +13125,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452525,
                                         controlled_vocab: {
                                             cvo_id: 452525,
-                                            cvo_title:
-                                                '110299 Cardiovascular Medicine and Haematology not elsewhere classified',
+                                            cvo_title: '110299 Cardiovascular Medicine and Haematology not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110299',
@@ -13731,8 +13667,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452555,
                                         controlled_vocab: {
                                             cvo_id: 452555,
-                                            cvo_title:
-                                                '110403 Traditional Aboriginal and Torres Strait Islander Medicine and Treatments',
+                                            cvo_title: '110403 Traditional Aboriginal and Torres Strait Islander Medicine and Treatments',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110403',
@@ -13786,8 +13721,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452558,
                                         controlled_vocab: {
                                             cvo_id: 452558,
-                                            cvo_title:
-                                                '110499 Complementary and Alternative Medicine not elsewhere classified',
+                                            cvo_title: '110499 Complementary and Alternative Medicine not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110499',
@@ -14095,8 +14029,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452575,
                                         controlled_vocab: {
                                             cvo_id: 452575,
-                                            cvo_title:
-                                                '110699 Human Movement and Sports Science not elsewhere classified',
+                                            cvo_title: '110699 Human Movement and Sports Science not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110699',
@@ -14151,8 +14084,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452578,
                                         controlled_vocab: {
                                             cvo_id: 452578,
-                                            cvo_title:
-                                                '110702 Applied Immunology (incl. Antibody Engineering, Xenotransplantation and T-cell Therapies)',
+                                            cvo_title: '110702 Applied Immunology (incl. Antibody Engineering, Xenotransplantation and T-cell Therapies)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '110702',
@@ -14895,8 +14827,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452619,
                                         controlled_vocab: {
                                             cvo_id: 452619,
-                                            cvo_title:
-                                                '111204 Cancer Therapy (excl. Chemotherapy and Radiation Therapy)',
+                                            cvo_title: '111204 Cancer Therapy (excl. Chemotherapy and Radiation Therapy)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '111204',
@@ -15204,8 +15135,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452636,
                                         controlled_vocab: {
                                             cvo_id: 452636,
-                                            cvo_title:
-                                                '111499 Paediatrics and Reproductive Medicine not elsewhere classified',
+                                            cvo_title: '111499 Paediatrics and Reproductive Medicine not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '111499',
@@ -15350,8 +15280,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452644,
                                         controlled_vocab: {
                                             cvo_id: 452644,
-                                            cvo_title:
-                                                '111599 Pharmacology and Pharmaceutical Sciences not elsewhere classified',
+                                            cvo_title: '111599 Pharmacology and Pharmaceutical Sciences not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '111599',
@@ -15803,8 +15732,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452669,
                                         controlled_vocab: {
                                             cvo_id: 452669,
-                                            cvo_title:
-                                                '111799 Public Health and Health Services not elsewhere classified',
+                                            cvo_title: '111799 Public Health and Health Services not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '111799',
@@ -15951,8 +15879,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452677,
                                         controlled_vocab: {
                                             cvo_id: 452677,
-                                            cvo_title:
-                                                '120104 Architectural Science and Technology (incl. Acoustics, Lighting, Structure and Ecologically Sustainable Design)',
+                                            cvo_title: '120104 Architectural Science and Technology (incl. Acoustics, Lighting, Structure and Ecologically Sustainable Design)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '120104',
@@ -16460,8 +16387,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452705,
                                         controlled_vocab: {
                                             cvo_id: 452705,
-                                            cvo_title:
-                                                '120502 History and Theory of the Built Environment (excl. Architecture)',
+                                            cvo_title: '120502 History and Theory of the Built Environment (excl. Architecture)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '120502',
@@ -16861,8 +16787,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452727,
                                         controlled_vocab: {
                                             cvo_id: 452727,
-                                            cvo_title:
-                                                '130201 Creative Arts, Media and Communication Curriculum and Pedagogy',
+                                            cvo_title: '130201 Creative Arts, Media and Communication Curriculum and Pedagogy',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130201',
@@ -16898,8 +16823,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452729,
                                         controlled_vocab: {
                                             cvo_id: 452729,
-                                            cvo_title:
-                                                '130203 Economics, Business and Management Curriculum and Pedagogy',
+                                            cvo_title: '130203 Economics, Business and Management Curriculum and Pedagogy',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130203',
@@ -16917,8 +16841,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452730,
                                         controlled_vocab: {
                                             cvo_id: 452730,
-                                            cvo_title:
-                                                '130204 English and Literacy Curriculum and Pedagogy (excl. LOTE, ESL and TESOL)',
+                                            cvo_title: '130204 English and Literacy Curriculum and Pedagogy (excl. LOTE, ESL and TESOL)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130204',
@@ -16936,8 +16859,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452731,
                                         controlled_vocab: {
                                             cvo_id: 452731,
-                                            cvo_title:
-                                                '130205 Humanities and Social Sciences Curriculum and Pedagogy (excl. Economics, Business and Management)',
+                                            cvo_title: '130205 Humanities and Social Sciences Curriculum and Pedagogy (excl. Economics, Business and Management)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130205',
@@ -16973,8 +16895,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452733,
                                         controlled_vocab: {
                                             cvo_id: 452733,
-                                            cvo_title:
-                                                '130207 LOTE, ESL and TESOL Curriculum and Pedagogy (excl. Maori)',
+                                            cvo_title: '130207 LOTE, ESL and TESOL Curriculum and Pedagogy (excl. Maori)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130207',
@@ -17028,8 +16949,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452736,
                                         controlled_vocab: {
                                             cvo_id: 452736,
-                                            cvo_title:
-                                                '130210 Physical Education and Development Curriculum and Pedagogy',
+                                            cvo_title: '130210 Physical Education and Development Curriculum and Pedagogy',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130210',
@@ -17065,8 +16985,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452738,
                                         controlled_vocab: {
                                             cvo_id: 452738,
-                                            cvo_title:
-                                                '130212 Science, Technology and Engineering Curriculum and Pedagogy',
+                                            cvo_title: '130212 Science, Technology and Engineering Curriculum and Pedagogy',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130212',
@@ -17084,8 +17003,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452739,
                                         controlled_vocab: {
                                             cvo_id: 452739,
-                                            cvo_title:
-                                                '130213 Vocational Education and Training Curriculum and Pedagogy',
+                                            cvo_title: '130213 Vocational Education and Training Curriculum and Pedagogy',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130213',
@@ -17248,8 +17166,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452748,
                                         controlled_vocab: {
                                             cvo_id: 452748,
-                                            cvo_title:
-                                                '130307 Ethnic Education (excl. Aboriginal and Torres Strait Islander, Maori and Pacific Peoples)',
+                                            cvo_title: '130307 Ethnic Education (excl. Aboriginal and Torres Strait Islander, Maori and Pacific Peoples)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130307',
@@ -17303,8 +17220,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452751,
                                         controlled_vocab: {
                                             cvo_id: 452751,
-                                            cvo_title:
-                                                '130310 Maori Education (excl. Early Childhood and Primary Education)',
+                                            cvo_title: '130310 Maori Education (excl. Early Childhood and Primary Education)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130310',
@@ -17358,8 +17274,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452754,
                                         controlled_vocab: {
                                             cvo_id: 452754,
-                                            cvo_title:
-                                                '130313 Teacher Education and Professional Development of Educators',
+                                            cvo_title: '130313 Teacher Education and Professional Development of Educators',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130313',
@@ -17377,8 +17292,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452755,
                                         controlled_vocab: {
                                             cvo_id: 452755,
-                                            cvo_title:
-                                                '130399 Specialist Studies in Education not elsewhere classified',
+                                            cvo_title: '130399 Specialist Studies in Education not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '130399',
@@ -18322,8 +18236,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452807,
                                         controlled_vocab: {
                                             cvo_id: 452807,
-                                            cvo_title:
-                                                '150199 Accounting, Auditing and Accountability not elsewhere classified',
+                                            cvo_title: '150199 Accounting, Auditing and Accountability not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '150199',
@@ -18450,8 +18363,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452814,
                                         controlled_vocab: {
                                             cvo_id: 452814,
-                                            cvo_title:
-                                                '150299 Banking, Finance and Investment not elsewhere classified',
+                                            cvo_title: '150299 Banking, Finance and Investment not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '150299',
@@ -18488,8 +18400,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452816,
                                         controlled_vocab: {
                                             cvo_id: 452816,
-                                            cvo_title:
-                                                '150301 Business Information Management (incl. Records, Knowledge and Information Management, and Intelligence)',
+                                            cvo_title: '150301 Business Information Management (incl. Records, Knowledge and Information Management, and Intelligence)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '150301',
@@ -18923,8 +18834,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452840,
                                         controlled_vocab: {
                                             cvo_id: 452840,
-                                            cvo_title:
-                                                '150503 Marketing Management (incl. Strategy and Customer Relations)',
+                                            cvo_title: '150503 Marketing Management (incl. Strategy and Customer Relations)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '150503',
@@ -19250,8 +19160,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452858,
                                         controlled_vocab: {
                                             cvo_id: 452858,
-                                            cvo_title:
-                                                '150799 Transportation and Freight Services not elsewhere classified',
+                                            cvo_title: '150799 Transportation and Freight Services not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '150799',
@@ -19288,8 +19197,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452860,
                                         controlled_vocab: {
                                             cvo_id: 452860,
-                                            cvo_title:
-                                                '159999 Commerce, Management, Tourism and Services not elsewhere classified',
+                                            cvo_title: '159999 Commerce, Management, Tourism and Services not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '159999',
@@ -19472,8 +19380,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452870,
                                         controlled_vocab: {
                                             cvo_id: 452870,
-                                            cvo_title:
-                                                '160202 Correctional Theory, Offender Treatment and Rehabilitation',
+                                            cvo_title: '160202 Correctional Theory, Offender Treatment and Rehabilitation',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '160202',
@@ -20415,8 +20322,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452922,
                                         controlled_vocab: {
                                             cvo_id: 452922,
-                                            cvo_title:
-                                                '160801 Applied Sociology, Program Evaluation and Social Impact Assessment',
+                                            cvo_title: '160801 Applied Sociology, Program Evaluation and Social Impact Assessment',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '160801',
@@ -20651,8 +20557,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452935,
                                         controlled_vocab: {
                                             cvo_id: 452935,
-                                            cvo_title:
-                                                '169902 Studies of Aboriginal and Torres Strait Islander Society',
+                                            cvo_title: '169902 Studies of Aboriginal and Torres Strait Islander Society',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '169902',
@@ -20706,7 +20611,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452938,
                                         controlled_vocab: {
                                             cvo_id: 452938,
-                                            cvo_title: "169905 Studies of Pacific Peoples' Societies",
+                                            cvo_title: '169905 Studies of Pacific Peoples\' Societies',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '169905',
@@ -20780,8 +20685,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452942,
                                         controlled_vocab: {
                                             cvo_id: 452942,
-                                            cvo_title:
-                                                '170101 Biological Psychology (Neuropsychology, Psychopharmacology, Physiological Psychology)',
+                                            cvo_title: '170101 Biological Psychology (Neuropsychology, Psychopharmacology, Physiological Psychology)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '170101',
@@ -21124,8 +21028,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452961,
                                         controlled_vocab: {
                                             cvo_id: 452961,
-                                            cvo_title:
-                                                '170204 Linguistic Processes (incl. Speech Production and Comprehension)',
+                                            cvo_title: '170204 Linguistic Processes (incl. Speech Production and Comprehension)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '170204',
@@ -21198,8 +21101,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 452965,
                                         controlled_vocab: {
                                             cvo_id: 452965,
-                                            cvo_title:
-                                                '179999 Psychology and Cognitive Sciences not elsewhere classified',
+                                            cvo_title: '179999 Psychology and Cognitive Sciences not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '179999',
@@ -22124,8 +22026,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453016,
                                         controlled_vocab: {
                                             cvo_id: 453016,
-                                            cvo_title:
-                                                '190299 Film, Television and Digital Media not elsewhere classified',
+                                            cvo_title: '190299 Film, Television and Digital Media not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '190299',
@@ -22216,8 +22117,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453021,
                                         controlled_vocab: {
                                             cvo_id: 453021,
-                                            cvo_title:
-                                                '190399 Journalism and Professional Writing not elsewhere classified',
+                                            cvo_title: '190399 Journalism and Professional Writing not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '190399',
@@ -22434,8 +22334,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453033,
                                         controlled_vocab: {
                                             cvo_id: 453033,
-                                            cvo_title:
-                                                '190499 Performing Arts and Creative Writing not elsewhere classified',
+                                            cvo_title: '190499 Performing Arts and Creative Writing not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '190499',
@@ -22581,8 +22480,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453041,
                                         controlled_vocab: {
                                             cvo_id: 453041,
-                                            cvo_title:
-                                                '199999 Studies in Creative Arts and Writing not elsewhere classified',
+                                            cvo_title: '199999 Studies in Creative Arts and Writing not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '199999',
@@ -22710,8 +22608,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453048,
                                         controlled_vocab: {
                                             cvo_id: 453048,
-                                            cvo_title:
-                                                '200105 Organisational, Interpersonal and Intercultural Communication',
+                                            cvo_title: '200105 Organisational, Interpersonal and Intercultural Communication',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '200105',
@@ -22729,8 +22626,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453049,
                                         controlled_vocab: {
                                             cvo_id: 453049,
-                                            cvo_title:
-                                                '200199 Communication and Media Studies not elsewhere classified',
+                                            cvo_title: '200199 Communication and Media Studies not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '200199',
@@ -23561,8 +23457,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453095,
                                         controlled_vocab: {
                                             cvo_id: 453095,
-                                            cvo_title:
-                                                '200406 Language in Time and Space (incl. Historical Linguistics, Dialectology)',
+                                            cvo_title: '200406 Language in Time and Space (incl. Historical Linguistics, Dialectology)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '200406',
@@ -23598,8 +23493,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453097,
                                         controlled_vocab: {
                                             cvo_id: 453097,
-                                            cvo_title:
-                                                '200408 Linguistic Structures (incl. Grammar, Phonology, Lexicon, Semantics)',
+                                            cvo_title: '200408 Linguistic Structures (incl. Grammar, Phonology, Lexicon, Semantics)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '200408',
@@ -23672,8 +23566,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453101,
                                         controlled_vocab: {
                                             cvo_id: 453101,
-                                            cvo_title:
-                                                '200502 Australian Literature (excl. Aboriginal and Torres Strait Islander Literature)',
+                                            cvo_title: '200502 Australian Literature (excl. Aboriginal and Torres Strait Islander Literature)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '200502',
@@ -24160,8 +24053,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453128,
                                         controlled_vocab: {
                                             cvo_id: 453128,
-                                            cvo_title:
-                                                '209999 Language, Communication and Culture not elsewhere classified',
+                                            cvo_title: '209999 Language, Communication and Culture not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '209999',
@@ -24271,8 +24163,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453134,
                                         controlled_vocab: {
                                             cvo_id: 453134,
-                                            cvo_title:
-                                                '210104 Archaeology of Australia (excl. Aboriginal and Torres Strait Islander)',
+                                            cvo_title: '210104 Archaeology of Australia (excl. Aboriginal and Torres Strait Islander)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '210104',
@@ -24308,8 +24199,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453136,
                                         controlled_vocab: {
                                             cvo_id: 453136,
-                                            cvo_title:
-                                                '210106 Archaeology of New Guinea and Pacific Islands (excl. New Zealand)',
+                                            cvo_title: '210106 Archaeology of New Guinea and Pacific Islands (excl. New Zealand)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '210106',
@@ -24581,8 +24471,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453151,
                                         controlled_vocab: {
                                             cvo_id: 453151,
-                                            cvo_title:
-                                                '210303 Australian History (excl. Aboriginal and Torres Strait Islander History)',
+                                            cvo_title: '210303 Australian History (excl. Aboriginal and Torres Strait Islander History)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '210303',
@@ -24654,8 +24543,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453155,
                                         controlled_vocab: {
                                             cvo_id: 453155,
-                                            cvo_title:
-                                                '210307 European History (excl. British, Classical Greek and Roman)',
+                                            cvo_title: '210307 European History (excl. British, Classical Greek and Roman)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '210307',
@@ -24910,8 +24798,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453169,
                                         controlled_vocab: {
                                             cvo_id: 453169,
-                                            cvo_title:
-                                                '220103 Ethical Use of New Technology (e.g. Nanotechnology, Biotechnology)',
+                                            cvo_title: '220103 Ethical Use of New Technology (e.g. Nanotechnology, Biotechnology)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220103',
@@ -25128,8 +25015,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453181,
                                         controlled_vocab: {
                                             cvo_id: 453181,
-                                            cvo_title:
-                                                '220206 History and Philosophy of Science (incl. Non-historical Philosophy of Science)',
+                                            cvo_title: '220206 History and Philosophy of Science (incl. Non-historical Philosophy of Science)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220206',
@@ -25219,8 +25105,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453186,
                                         controlled_vocab: {
                                             cvo_id: 453186,
-                                            cvo_title:
-                                                '220299 History and Philosophy of Specific Fields not elsewhere classified',
+                                            cvo_title: '220299 History and Philosophy of Specific Fields not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220299',
@@ -25437,8 +25322,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453198,
                                         controlled_vocab: {
                                             cvo_id: 453198,
-                                            cvo_title:
-                                                '220311 Philosophical Psychology (incl. Moral Psychology and Philosophy of Action)',
+                                            cvo_title: '220311 Philosophical Psychology (incl. Moral Psychology and Philosophy of Action)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220311',
@@ -25528,8 +25412,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453203,
                                         controlled_vocab: {
                                             cvo_id: 453203,
-                                            cvo_title:
-                                                '220316 Philosophy of Specific Cultures (incl. Comparative Philosophy)',
+                                            cvo_title: '220316 Philosophy of Specific Cultures (incl. Comparative Philosophy)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220316',
@@ -25638,8 +25521,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453209,
                                         controlled_vocab: {
                                             cvo_id: 453209,
-                                            cvo_title:
-                                                '220401 Christian Studies (incl. Biblical Studies and Church History)',
+                                            cvo_title: '220401 Christian Studies (incl. Biblical Studies and Church History)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220401',
@@ -25747,8 +25629,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453215,
                                         controlled_vocab: {
                                             cvo_id: 453215,
-                                            cvo_title:
-                                                '220407 Studies in Religious Traditions (excl. Eastern, Jewish, Christian and Islamic Traditions)',
+                                            cvo_title: '220407 Studies in Religious Traditions (excl. Eastern, Jewish, Christian and Islamic Traditions)',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '220407',
@@ -25803,8 +25684,7 @@ describe('Controlled Vocabularies actions', () => {
                                         cvr_child_cvo_id: 453218,
                                         controlled_vocab: {
                                             cvo_id: 453218,
-                                            cvo_title:
-                                                '229999 Philosophy and Religious Studies not elsewhere classified',
+                                            cvo_title: '229999 Philosophy and Religious Studies not elsewhere classified',
                                             cvo_desc: '',
                                             cvo_image_filename: null,
                                             cvo_external_id: '229999',

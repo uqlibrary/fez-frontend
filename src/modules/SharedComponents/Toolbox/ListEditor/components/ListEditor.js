@@ -40,6 +40,13 @@ export default class ListsEditor extends Component {
             [searchKey.order]: index + 1,
         }),
         inputNormalizer: value => value,
+        locale: {
+            form: {
+                locale: {
+                    inputFieldLabel: 'NoLabel',
+                },
+            },
+        },
     };
 
     constructor(props) {
@@ -49,7 +56,6 @@ export default class ListsEditor extends Component {
             (props.input || {}).name &&
             typeof (props.input.value || {}).toJS === 'function' &&
             props.input.value.toJS();
-
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
@@ -72,8 +78,8 @@ export default class ListsEditor extends Component {
             (this.props.maxCount === 0 || this.state.itemList.length < this.props.maxCount) &&
             (!this.props.distinctOnly || this.state.itemList.indexOf(item) === -1)
         ) {
-            // If when the item is submitted, there is no maxCount, its not exceeding the maxCount,
-            // is distinct and isnt already in the list...
+            // If when the item is submitted, there is no maxCount,
+            // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
@@ -136,8 +142,21 @@ export default class ListsEditor extends Component {
     };
 
     render() {
+        const componentID = (
+            (this.props.locale.form && this.props.locale.form.title) ||
+            this.props.locale.form.inputFieldLabel ||
+            (this.props.locale.form.locale && this.props.locale.form.locale.inputFieldLabel) ||
+            ''
+        ).replace(/\s+/g, '');
         const renderListsRows = this.state.itemList.map((item, index) => (
             <ListRow
+                form={
+                    (this.props.locale &&
+                        this.props.locale.form &&
+                        this.props.locale.form.locale &&
+                        this.props.locale.form.locale.inputFieldLabel) ||
+                    'NoLabel'
+                }
                 key={index}
                 index={index}
                 item={item}
@@ -151,9 +170,8 @@ export default class ListsEditor extends Component {
                 disabled={this.props.disabled}
             />
         ));
-
         return (
-            <div className={this.props.className}>
+            <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
                     onAdd={this.addItem}

@@ -60,7 +60,7 @@ export class FilesClass extends Component {
         thumbnailFileName,
         previewFileName,
         allowDownload,
-        downloadableFileName = null
+        downloadableFileName = null,
     ) => {
         if (allowDownload && thumbnailFileName) {
             const thumbnailProps = {
@@ -160,7 +160,7 @@ export class FilesClass extends Component {
         const { files } = viewRecordsConfig;
         // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
         const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof)
+            files.blacklist.collections.includes(collection.rek_ismemberof),
         );
 
         return !containBlacklistCollections && !!dataStreams && dataStreams.length > 0
@@ -170,7 +170,7 @@ export class FilesClass extends Component {
                 const thumbnailDataStream = this.searchByKey(
                     dataStreams,
                     'dsi_dsid',
-                    files.thumbnailFileName(fileName)
+                    files.thumbnailFileName(fileName),
                 );
                 const previewDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.previewFileName(fileName));
                 const downloadableDataStream = this.searchByKey(dataStreams, 'dsi_dsid', files.webFileName(fileName));
@@ -195,7 +195,7 @@ export class FilesClass extends Component {
                         thumbnailFileName,
                         previewFileName,
                         openAccessStatus.isOpenAccess,
-                        downloadableFileName
+                        downloadableFileName,
                     ),
                     openAccessStatus: openAccessStatus,
                     previewMediaUrl: this.getUrl(pid, previewFileName || fileName),

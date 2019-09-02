@@ -6092,12 +6092,12 @@ exports[`Dashboard Rsearcher IDs test Full mount render to test withStyles/Theme
                             className="MuiGrid-item-4"
                           >
                             <a
-                              aria-label="Click to visit your ORCId profile"
+                              aria-label="Click to visit your ORCID profile"
                               href="https://orcid.org/0000-0001-1111-1111"
                               id="orcid"
                               tabIndex="0"
                               target="_blank"
-                              title="Click to visit your ORCId profile"
+                              title="Click to visit your ORCID profile"
                             >
                               <WithStyles(Typography)
                                 className="DashboardResearcherIdsClass-orcidLink-2"
@@ -6763,12 +6763,12 @@ exports[`Dashboard Rsearcher IDs test Render the authors Researcher IDs as expec
     item={true}
   >
     <a
-      aria-label="Click to visit your ORCId profile"
+      aria-label="Click to visit your ORCID profile"
       href="https://orcid.org/0000-0001-1111-1111"
       id="orcid"
       tabIndex="0"
       target="_blank"
-      title="Click to visit your ORCId profile"
+      title="Click to visit your ORCID profile"
     >
       <WithStyles(Typography)
         variant="caption"
@@ -6911,12 +6911,12 @@ exports[`Dashboard Rsearcher IDs test Testing orcid caption 1`] = `
     item={true}
   >
     <a
-      aria-label="Click to visit your ORCId profile"
+      aria-label="Click to visit your ORCID profile"
       href="https://orcid.org/0000-0001-1111-1111"
       id="orcid"
       tabIndex="0"
       target="_blank"
-      title="Click to visit your ORCId profile"
+      title="Click to visit your ORCID profile"
     >
       <WithStyles(Typography)
         variant="caption"

@@ -23,6 +23,7 @@ export class ListRow extends PureComponent {
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
         classes: PropTypes.object,
+        form: PropTypes.string,
     };
 
     static defaultProps = {
@@ -37,6 +38,7 @@ export class ListRow extends PureComponent {
                 confirmButtonLabel: 'Yes',
             },
         },
+        form: 'Form',
     };
 
     showConfirmation = () => {
@@ -64,9 +66,12 @@ export class ListRow extends PureComponent {
     render() {
         const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
         const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation } = this.props.locale;
-
+        const componentID = this.props.form.replace(/\s+/g, '');
         return (
-            <React.Fragment>
+            <div
+                style={{ flexGrow: 1, padding: 8 }}
+                className={`ListRow-${componentID} ListRow-${componentID}-${item.value || item}`}
+            >
                 <ConfirmDialogBox
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this.deleteRecord}
@@ -102,13 +107,17 @@ export class ListRow extends PureComponent {
                     )}
                     <Grid item xs={2} sm={1} className={classes.center}>
                         <Tooltip title={deleteHint}>
-                            <IconButton onClick={this.showConfirmation} disabled={disabled}>
+                            <IconButton
+                                onClick={this.showConfirmation}
+                                disabled={disabled}
+                                id={`delete-${this.props.index}`}
+                            >
                                 <Delete />
                             </IconButton>
                         </Tooltip>
                     </Grid>
                 </Grid>
-            </React.Fragment>
+            </div>
         );
     }
 }
@@ -118,8 +127,6 @@ const styles = () => ({
         textAlign: 'center',
     },
     row: {
-        marginLeft: 0,
-        marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
 });

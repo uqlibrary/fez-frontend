@@ -46,9 +46,9 @@ export const calculateOpenAccess = record => {
                         !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
                           (!item.dsi_label ||
                               !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
+                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'),
                               )) &&
-                          item.dsi_state === 'A'
+                          item.dsi_state === 'A',
                 )
                 : [];
 
@@ -62,9 +62,9 @@ export const calculateOpenAccess = record => {
                           !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
                           (!item.dsi_label ||
                               !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi')
+                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'),
                               )) &&
-                          item.dsi_state === 'A'
+                          item.dsi_state === 'A',
                 )
                 .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))
             : [];

@@ -2,6 +2,7 @@ import React from 'react';
 import locale from 'locale/validationErrors';
 import Immutable from 'immutable';
 import { ORG_TYPE_NOT_SET, MEDIATED_ACCESS_ID } from 'config/general';
+const moment = require('moment');
 
 // Max Length
 export const maxLength = max => value =>
@@ -81,6 +82,12 @@ export const isValidPartialDOIValue = value => {
     const isValid = /^10\..*/;
     return isValid.test(value.trim());
 };
+
+export const isValidPid = value => {
+    const isValid = /^uq:[a-z0-9]+$/i;
+    return isValid.test(value.trim());
+};
+
 export const isValidPublicationTitle = value => {
     const isValid = /.{10,255}$/i;
     return isValid.test(value.trim());
@@ -103,6 +110,7 @@ export const email = value =>
 export const url = value =>
     value && !/^(http[s]?|ftp[s]?)(:\/\/){1}(.*)$/i.test(value) ? locale.validationErrors.url : maxLength2000(value);
 export const doi = value => (!!value && !isValidDOIValue(value) ? locale.validationErrors.doi : undefined);
+export const pid = value => (!!value && !isValidPid(value) ? locale.validationErrors.pid : undefined);
 export const forRequired = itemList =>
     !itemList || itemList.length === 0 ? locale.validationErrors.forRequired : undefined;
 
@@ -216,14 +224,30 @@ export const isValidGoogleScholarId = id => {
 };
 
 export const dateRange = (value, values) => {
-    const lowerInRange = values.toJS().fez_record_search_key_start_date;
-    const higherInRange = values.toJS().fez_record_search_key_end_date;
+    const lowerInRange =
+        !!values.toJS().fez_record_search_key_start_date &&
+        !!values.toJS().fez_record_search_key_start_date.rek_start_date &&
+        moment(values.toJS().fez_record_search_key_start_date.rek_start_date);
+    const higherInRange =
+        !!values.toJS().fez_record_search_key_end_date &&
+        !!values.toJS().fez_record_search_key_end_date.rek_end_date &&
+        moment(values.toJS().fez_record_search_key_end_date.rek_end_date);
 
-    if (!!lowerInRange && !!higherInRange && lowerInRange.rek_start_date.isAfter(higherInRange.rek_end_date)) {
-        return locale.validationErrors.dateRange;
-    } else {
-        return '';
+    if (!!lowerInRange && !!higherInRange && lowerInRange.isAfter(higherInRange)) {
+        return locale.validationErrors.collectionDateRange;
     }
+
+    return '';
+};
+
+export const fullDate = state => {
+    const valid = moment(state).isValid();
+
+    if (!valid) {
+        return 'date is not valid';
+    }
+
+    return '';
 };
 
 export const grantFormIsPopulated = value => (value === true ? locale.validationErrors.grants : undefined);

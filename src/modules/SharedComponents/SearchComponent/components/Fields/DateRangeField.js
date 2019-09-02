@@ -71,7 +71,7 @@ export class DateRangeField extends PureComponent {
                         error: undefined,
                     });
                 }
-            }
+            },
         );
     };
 

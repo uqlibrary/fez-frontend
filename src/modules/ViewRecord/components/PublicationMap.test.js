@@ -1,11 +1,11 @@
 import React from 'react';
 import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './PublicationMap';
 
-function setup(testProps = {}, args = { isShallow: false }) {
+function setup(testProps, args = { isShallow: false }) {
     const props = {
         ...testProps,
         googleMapURL:
-            'https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6bOdtlpxFXCj3vrhZkdeSS27HZha7U4&v=3.exp&libraries=geometry,drawing,places',
+            'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places',
         loadingElement: <div />,
     };
     return getElement(PublicationMap, props, args);
@@ -56,7 +56,7 @@ describe("Publication's map coordinates", () => {
                 LatLngBounds: () => ({}),
             },
         };
-        const wrapper = setup({}, true);
+        const wrapper = setup({}, { isShallow: true });
         const geoCoords = [{ lat: 153.021781, lng: -27.489337 }, { lat: 153.021781, lng: -27.489337 }];
         wrapper.setState({ geoCoords });
         expect(wrapper.state().geoCoords).toBe(geoCoords);
@@ -91,7 +91,7 @@ describe("Publication's map coordinates", () => {
                     },
                 ],
             },
-            true
+            { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
 
