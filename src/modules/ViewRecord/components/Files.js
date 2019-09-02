@@ -273,7 +273,7 @@ export class FilesClass extends Component {
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
                 const thumbnailFileName = this.checkForThumbnail(fileName);
                 const previewFileName = this.checkForPreview(fileName);
-                const downloadableFileName = this.checkForWeb(fileName);
+                const downloadableFileName = fileName;
                 const webFileName = this.checkForWeb(fileName);
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
                 const securityAccess = this.getSecurityAccess(dataStream);
@@ -302,8 +302,8 @@ export class FilesClass extends Component {
                     ),
                     openAccessStatus: openAccessStatus,
                     previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : this.getUrl(pid, fileName),
-                    webMediaUrl: downloadableFileName ? this.getUrl(pid, downloadableFileName) : null,
-                    mediaUrl: this.getUrl(pid, downloadableFileName || fileName),
+                    webMediaUrl: this.getUrl(pid, downloadableFileName),
+                    mediaUrl: this.getUrl(pid, downloadableFileName),
                     securityStatus: this.getSecurityAccess(dataStream),
                 };
             })

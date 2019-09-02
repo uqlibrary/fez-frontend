@@ -113,7 +113,7 @@ export default class ViewRecord extends PureComponent {
                         isAdmin={
                             !!(
                                 (this.props.account && this.props.account.is_administrator) ||
-                                this.props.account.canMasquerade
+                                (this.props.account && this.props.account.canMasquerade)
                             )
                         }
                         isAuthor={!!isAuthor}

@@ -131,7 +131,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -152,7 +152,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -163,7 +163,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -176,7 +176,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -425,7 +425,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -514,7 +514,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
 </WithStyles(Grid)>
 `;
 
-exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":false}]"`;
+exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":false}]"`;
 
 exports[`Files Component  should not render component with no files 1`] = `""`;
 
@@ -649,7 +649,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -670,7 +670,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -681,7 +681,7 @@ exports[`Files Component  should not render cultural message 1`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -694,7 +694,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -914,7 +914,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -935,7 +935,7 @@ exports[`Files Component  should not render cultural message 2`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -946,7 +946,7 @@ exports[`Files Component  should not render cultural message 2`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -959,7 +959,7 @@ exports[`Files Component  should not render cultural message 2`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1185,7 +1185,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -1206,7 +1206,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -1217,7 +1217,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -1230,7 +1230,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1501,7 +1501,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_1.mov"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_1.mov"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1653,7 +1653,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_2.mov"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_2.mov"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1805,7 +1805,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_3.mov"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_3.mov"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1957,7 +1957,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_4.mov"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_4.mov"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2109,7 +2109,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_5.mov"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_5.mov"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2245,7 +2245,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/ch7409_report.pdf"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:185044/ch7409_report.pdf"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2494,7 +2494,7 @@ exports[`Files Component  should render an image as the original filename with n
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
             securityStatus={false}
-            webMediaUrl={null}
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2714,7 +2714,7 @@ exports[`Files Component  should render component 1`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -2735,7 +2735,7 @@ exports[`Files Component  should render component 1`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -2746,7 +2746,7 @@ exports[`Files Component  should render component 1`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -2759,7 +2759,7 @@ exports[`Files Component  should render component 1`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -11738,7 +11738,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                           className="MuiGrid-item-6 MuiGrid-grid-xs-1-34 FilesClass-thumbIconCentered-4"
                                                         >
                                                           <WithStyles(Thumbnail)
-                                                            fileName="web_image.jpg"
+                                                            fileName="image.jpg"
                                                             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                             mimeType="image/jpeg"
                                                             onClick={[Function]}
@@ -11756,7 +11756,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                   "lockIcon": "Thumbnail-lockIcon-178",
                                                                 }
                                                               }
-                                                              fileName="web_image.jpg"
+                                                              fileName="image.jpg"
                                                               mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                               mimeType="image/jpeg"
                                                               onClick={[Function]}
@@ -11981,7 +11981,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             fileName="image.jpg"
                                                             icon={
                                                               <WithStyles(Thumbnail)
-                                                                fileName="web_image.jpg"
+                                                                fileName="image.jpg"
                                                                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                                 mimeType="image/jpeg"
                                                                 onClick={[Function]}
@@ -11992,7 +11992,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                                                               />
                                                             }
-                                                            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                                                            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                             mimeType="image/jpeg"
                                                             onFileSelect={[Function]}
                                                             openAccessStatus={
@@ -12005,7 +12005,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             pid="UQ:676287"
                                                             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
                                                             securityStatus={true}
-                                                            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                                                            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                           >
                                                             <FileName
                                                               allowDownload={true}
@@ -12019,7 +12019,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                               fileName="image.jpg"
                                                               icon={
                                                                 <WithStyles(Thumbnail)
-                                                                  fileName="web_image.jpg"
+                                                                  fileName="image.jpg"
                                                                   mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                                   mimeType="image/jpeg"
                                                                   onClick={[Function]}
@@ -12030,7 +12030,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                   webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                                                                 />
                                                               }
-                                                              mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                                                              mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                               mimeType="image/jpeg"
                                                               onFileSelect={[Function]}
                                                               openAccessStatus={
@@ -12462,7 +12462,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                   },
                                                                 }
                                                               }
-                                                              webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+                                                              webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
                                                             >
                                                               <WithStyles(Grid)
                                                                 alignItems="center"
@@ -17750,7 +17750,7 @@ exports[`Files Component  should render cultural message 1`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -17771,7 +17771,7 @@ exports[`Files Component  should render cultural message 1`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -17782,7 +17782,7 @@ exports[`Files Component  should render cultural message 1`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -17795,7 +17795,7 @@ exports[`Files Component  should render cultural message 1`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18015,7 +18015,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -18036,7 +18036,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -18047,7 +18047,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -18060,7 +18060,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18280,7 +18280,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -18301,7 +18301,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -18312,7 +18312,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -18325,7 +18325,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18545,7 +18545,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -18566,7 +18566,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -18577,7 +18577,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -18590,7 +18590,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18810,7 +18810,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -18831,7 +18831,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -18842,7 +18842,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -18855,7 +18855,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19075,7 +19075,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -19096,7 +19096,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -19107,7 +19107,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -19120,7 +19120,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19340,7 +19340,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           xs={1}
         >
           <WithStyles(Thumbnail)
-            fileName="web_image.jpg"
+            fileName="image.jpg"
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onClick={[Function]}
@@ -19361,7 +19361,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             fileName="image.jpg"
             icon={
               <WithStyles(Thumbnail)
-                fileName="web_image.jpg"
+                fileName="image.jpg"
                 mediaUrl="http://localhost/view/UQ:676287/image.jpg"
                 mimeType="image/jpeg"
                 onClick={[Function]}
@@ -19372,7 +19372,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -19385,7 +19385,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19621,7 +19621,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
                 color="secondary"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -19635,7 +19635,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19871,7 +19871,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
                 color="secondary"
               />
             }
-            mediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
             mimeType="image/jpeg"
             onFileSelect={[Function]}
             openAccessStatus={
@@ -19885,7 +19885,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
             securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden

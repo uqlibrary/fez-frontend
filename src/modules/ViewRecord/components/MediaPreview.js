@@ -123,11 +123,12 @@ export default class MediaPreview extends React.Component {
     };
 
     render() {
-        const { mediaUrl, previewMediaUrl, mimeType } = this.props;
+        const { fileName, mediaUrl, previewMediaUrl, mimeType } = this.props;
         const { videoTitle, imageTitle } = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
+        console.log(fileName, this.props);
         return (
             <React.Fragment>
                 <Grid container spacing={0} direction={'row'} style={{ marginTop: 32 }}>
