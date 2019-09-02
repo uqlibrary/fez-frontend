@@ -600,12 +600,7 @@ describe('Claim publication actions tests ', () => {
                     }).apiUrl,
                 )
                 .reply(200, {})
-                .onGet(
-                    repositories.routes.FILE_UPLOAD_API({
-                        pid: testClaimRequest.publication.rek_pid,
-                        fileName: files.files.queue[0].name,
-                    }).apiUrl,
-                )
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
                 .reply(500, {});
@@ -645,12 +640,7 @@ describe('Claim publication actions tests ', () => {
                     }).apiUrl,
                 )
                 .reply(200, {})
-                .onGet(
-                    repositories.routes.FILE_UPLOAD_API({
-                        pid: testClaimRequest.publication.rek_pid,
-                        fileName: files.files.queue[0].name,
-                    }).apiUrl,
-                )
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(500, {})
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
                 .reply(200, {});

@@ -111,7 +111,7 @@ export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies/${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 
 // file uploading apis
-export const FILE_UPLOAD_API = ({ pid, fileName }) => ({ apiUrl: `file/upload/presigned/${pid}/${fileName}` });
+export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
 
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });

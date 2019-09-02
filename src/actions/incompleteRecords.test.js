@@ -312,7 +312,7 @@ describe('updateIncompleteRecord actions', () => {
         ];
 
         mockApi
-            .onGet(repositories.routes.FILE_UPLOAD_API({ pid: testPid, fileName: 'test.txt' }).apiUrl)
+            .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
             .reply(200, 's3-ap-southeast-2.amazonaws.com')
             .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
             .reply(200, {})
