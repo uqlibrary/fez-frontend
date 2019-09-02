@@ -1,5 +1,6 @@
 export { default as adminEditBookChapter } from './adminEditBookChapter';
 export { default as adminEditBookChapterList } from './adminEditBookChapterList';
+export { default as adminEditConferencePaperList } from './adminEditConferencePaperList';
 export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
 export { default as communityRecord } from './communityRecord';

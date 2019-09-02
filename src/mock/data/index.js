@@ -2,6 +2,7 @@ export { accounts, authorsSearch, currentAuthor, authorDetails } from './account
 export {
     adminEditBookChapter,
     adminEditBookChapterList,
+    adminEditConferencePaperList,
     collections,
     communityRecord,
     collectionRecord,

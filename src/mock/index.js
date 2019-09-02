@@ -196,6 +196,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         const mockRecords = [
             { ...mockData.adminEditBookChapterList.data[0] },
             { ...mockData.adminEditBookChapterList.data[1] },
+            { ...mockData.adminEditConferencePaperList.data[0] },
             { ...mockData.incompleteNTROrecordUqrdav10 },
             { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.incompleteNTROrecord },
@@ -205,9 +206,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
-            ...mockData.possibleUnclaimedList.data,
             ...mockData.myRecordsList.data,
-            ...mockData.adminEditBookChapter,
+            ...mockData.possibleUnclaimedList.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
