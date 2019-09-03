@@ -1,7 +1,12 @@
 import Immutable from 'immutable';
 
 import { validation } from 'config';
-import { ORG_TYPE_NOT_SET, PUBLICATION_TYPE_BOOK, PUBLICATION_TYPE_BOOK_CHAPTER, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
+import {
+    ORG_TYPE_NOT_SET,
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+} from 'config/general';
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
@@ -630,33 +635,6 @@ export const fieldConfig = {
         component: GrantListEditorField,
         componentProps: {
             name: 'grantInformationSection.grants',
-        },
-    },
-    fez_record_search_key_pubmed_central_id: {
-        component: GenericTextField,
-        componentProps: {
-            name: 'identifiersSection.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
-            fullWidth: true,
-            label: 'PMC ID',
-            placeholder: '',
-        },
-    },
-    fez_record_search_key_series: {
-        component: GenericTextField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_series.rek_series',
-            fullWidth: true,
-            label: 'Series',
-            placeholder: '',
-        },
-    },
-    fez_record_search_key_edition: {
-        component: GenericTextField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_edition.rek_edition',
-            fullWidth: true,
-            label: 'Edition',
-            placeholder: '',
         },
     },
     fez_datastream_info: {
