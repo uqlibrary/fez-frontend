@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`FileUploadField method should return <FileUploader> 1`] = `
-<Memo(ConnectFunction)
+<Memo(Connect(FileUploader))
   input={
     Object {
       "onChange": [MockFunction],
