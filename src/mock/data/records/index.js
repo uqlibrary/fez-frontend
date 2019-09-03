@@ -1,3 +1,4 @@
+export { default as adminEditBookChapterList } from './adminEditBookChapterList';
 export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
 export { default as communityRecord } from './communityRecord';
@@ -19,6 +20,7 @@ export { default as recordsTypeList } from './recordsTypeList';
 export { default as recordWithDatastreams } from './recordWithDatastreams';
 export { default as recordWithoutAuthorIds } from './recordWithoutAuthorIds';
 export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbnail';
+export { default as lookupToolIncites } from './lookupToolIncites';
 export { default as UQ352045 } from './incompleteNTRORecordUQ352045';
 export { default as UQ716942uqagrinb } from './incompleteNTRORecordUQ716942_uqagrinb';
 export { default as UQ716942uqagrinbGrants } from './incompleteNTRORecordUQ716942_uqagrinb_grants';

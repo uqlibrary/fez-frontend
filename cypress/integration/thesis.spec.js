@@ -137,6 +137,7 @@ context('Thesis', () => {
         // Field of Research
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000);
         cy.get('li[id="Fieldofresearch-item-0"]')
             .click();
         cy.get('.alert-text')

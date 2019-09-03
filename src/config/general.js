@@ -1304,3 +1304,14 @@ export const INSTITUTIONAL_STATUS = [
     { value: 'NonUQ', text: 'Non-UQ' },
     { value: 'Unknown', text: 'Unknown' },
 ];
+
+export const REFEREED_SOURCES = [
+    { value: '453638', text: 'Not yet assessed' },
+    { value: '453635', text: 'Ulrichs' },
+    { value: '453634', text: 'Thomson Reuters' },
+    { value: '453632', text: 'ERA Journal List 2012' },
+    { value: '453631', text: 'ERA Journal List 2015' },
+    { value: '453633', text: 'ERA Journal List 2010' },
+    { value: '453636', text: 'Other' },
+    { value: '453637', text: 'Not peer reviewed' },
+];
