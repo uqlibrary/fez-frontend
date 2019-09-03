@@ -28,7 +28,6 @@ import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSub
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
