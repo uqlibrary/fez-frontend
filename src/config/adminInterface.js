@@ -12,19 +12,22 @@ import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
-import { LinkInfoListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
+import {
+    LinkInfoListEditorField,
+    ListEditorField,
+    ScaleOfSignificanceListEditorField,
+} from 'modules/SharedComponents/Toolbox/ListEditor';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
-import { ScaleOfSignificanceListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
@@ -426,14 +429,15 @@ export const fieldConfig = {
         },
     },
     subjects: {
-        component: ListEditorField,
+        component: FilteredFieldOfResearchListField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_subject',
+            name: 'bibliographicSection.subjects',
             searchKey: {
                 value: 'rek_subject',
                 order: 'rek_subject_order',
             },
             locale: locale.components.subjectForm.field,
+            distinctOnly: true,
         },
     },
     fez_record_search_key_refereed_source: {
@@ -718,9 +722,7 @@ export const adminInterfaceConfig = {
             },
             {
                 title: 'Subject',
-                groups: [
-                    // ['fez_record_search_key_for_codes']
-                ],
+                groups: [['subjects']],
             },
         ],
         authors: () => [
