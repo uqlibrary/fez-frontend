@@ -118,7 +118,7 @@ export const fieldConfig = {
         component: WoSDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_wok_doc_type',
-            label: 'WoS Doc Type(s)',
+            label: 'WoS doc type(s)',
             placeholder: '',
         },
     },
@@ -126,7 +126,7 @@ export const fieldConfig = {
         component: ScopusDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_scopus_doc_type',
-            label: 'Scopus Doc Type(s)',
+            label: 'Scopus doc type(s)',
             placeholder: '',
         },
     },
@@ -134,7 +134,7 @@ export const fieldConfig = {
         component: PubmedDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_pubmed_doc_type',
-            label: 'PubMed Doc Type(s)',
+            label: 'PubMed doc type(s)',
             placeholder: '',
         },
     },
@@ -167,8 +167,8 @@ export const fieldConfig = {
         component: GenericTextField,
         componentProps: {
             name: 'bibliogrphicSection.rek_date',
-            label: 'Publication Date',
-            placeholder: 'Date of Publication',
+            label: 'Publication date',
+            placeholder: 'Date of publication',
             required: true,
             fullWidth: true,
         },
@@ -176,7 +176,7 @@ export const fieldConfig = {
     collections: {
         component: CollectionField,
         componentProps: {
-            floatingLabelText: 'Member of Collections',
+            floatingLabelText: 'Member of collections',
             hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
         },
@@ -185,7 +185,7 @@ export const fieldConfig = {
         component: PublicationSubtypeField,
         componentProps: {
             name: 'bibliographicSection.rek_subtype',
-            label: 'Work Sub-Type',
+            label: 'Work sub-type',
             required: true,
             placeholder: '',
         },
@@ -216,7 +216,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_book_title.rek_book_title',
             fullWidth: true,
-            label: 'Book Title',
+            label: 'Book title',
             placeholder: '',
             required: true,
             validate: [validation.required],
@@ -227,7 +227,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title',
             fullWidth: true,
-            label: 'Native Script Book Title',
+            label: 'Native script book title',
             placeholder: '',
             validate: [validation.required],
         },
@@ -237,7 +237,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_roman_script_book_title.rek_roman_script_book_title',
             fullWidth: true,
-            label: 'Roman Script Book Title',
+            label: 'Roman script book title',
             placeholder: '',
             validate: [validation.required],
         },
@@ -247,7 +247,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_translated_book_title.rek_translated_book_title',
             fullWidth: true,
-            label: 'Translated Book Title',
+            label: 'Translated book title',
             placeholder: '',
             validate: [validation.required],
         },
@@ -266,7 +266,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication',
             fullWidth: true,
-            label: 'Place of Publication',
+            label: 'Place of publication',
             placeholder: '',
         },
     },
@@ -275,7 +275,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_publisher.rek_publisher',
             fullWidth: true,
-            label: 'Publisher Name',
+            label: 'Publisher name',
             placeholder: '',
         },
     },
@@ -304,7 +304,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
             fullWidth: true,
-            label: 'Article Number',
+            label: 'Article number',
             placeholder: '',
         },
     },
@@ -313,7 +313,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_start_page.rek_start_page',
             fullWidth: true,
-            label: 'Start Page',
+            label: 'Start page',
             placeholder: '',
         },
     },
@@ -322,7 +322,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_end_page.rek_end_page',
             fullWidth: true,
-            label: 'End Page',
+            label: 'End page',
             placeholder: '',
         },
     },
@@ -331,7 +331,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days',
             fullWidth: true,
-            label: 'DOI Embargo days',
+            label: 'DOI embargo days',
             placeholder: '',
             required: true,
             validate: [validation.required],
@@ -412,7 +412,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_chapter_number.rek_chapter_number',
             fullWidth: true,
-            label: 'Chapter Number',
+            label: 'Chapter number',
             placeholder: '',
         },
     },
@@ -421,7 +421,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_total_pages.rek_total_pages',
             fullWidth: true,
-            label: 'Total Pages / Extent',
+            label: 'Total pages / Extent',
             placeholder: '',
         },
     },
@@ -440,7 +440,7 @@ export const fieldConfig = {
         component: RefereedSourceField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source',
-            label: 'Refereed Source',
+            label: 'Refereed source',
         },
     },
     languageOfJournalName: {
@@ -458,7 +458,7 @@ export const fieldConfig = {
         component: LanguageField,
         componentProps: {
             name: 'bibliographicSection.languageOfBookTitle',
-            label: 'Language of Book Title',
+            label: 'Language of book title',
             placeholder: '',
             multiple: true,
             validate: [validation.required],
@@ -496,7 +496,7 @@ export const fieldConfig = {
         component: LanguageField,
         componentProps: {
             name: 'bibliographicSection.languageOfTitle',
-            label: 'Language of Title',
+            label: 'Language of title',
             placeholder: '',
             required: true,
             multiple: true,
@@ -507,7 +507,7 @@ export const fieldConfig = {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_native_script_title.rek_native_script_title',
-            label: 'Native Script Title',
+            label: 'Native script title',
             placeholder: '',
             fullWidth: true,
         },
@@ -516,7 +516,7 @@ export const fieldConfig = {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_roman_script_title.rek_roman_script_title',
-            label: 'Roman Script Title',
+            label: 'Roman script title',
             placeholder: '',
             fullWidth: true,
         },
@@ -525,7 +525,7 @@ export const fieldConfig = {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_translated_title.rek_translated_title',
-            label: 'Translated Title',
+            label: 'Translated title',
             placeholder: '',
             fullWidth: true,
         },
@@ -561,21 +561,21 @@ export const fieldConfig = {
         component: HerdcCodeField,
         componentProps: {
             name: 'additionalInformationSection.fez_record_search_key_herdc_code.rek_herdc_code',
-            label: 'Category Code',
+            label: 'Category code',
         },
     },
     fez_record_search_key_herdc_status: {
         component: HerdcStatusField,
         componentProps: {
             name: 'additionalInformationSection.fez_record_search_key_herdc_status.rek_herdc_status',
-            label: 'Category Code Status',
+            label: 'Category code status',
         },
     },
     fez_record_search_key_institutional_status: {
         component: InstitutionalStatusField,
         componentProps: {
             name: 'additionalInformationSection.fez_record_search_key_institutional_status.rek_institutional_status',
-            label: 'Institutional Status',
+            label: 'Institutional status',
         },
     },
     additionalNotes: {
@@ -638,7 +638,7 @@ export const adminInterfaceConfig = {
         ],
         identifiers: () => [
             {
-                title: 'Manage Identifiers',
+                title: 'Manage identifiers',
                 groups: [
                     ['fez_record_search_key_doi'],
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
@@ -731,7 +731,7 @@ export const adminInterfaceConfig = {
         ],
         additionalInformation: () => [
             {
-                title: 'Additional Information',
+                title: 'Additional information',
                 groups: [
                     ['collections'],
                     ['rek_subtype'],
@@ -783,7 +783,7 @@ export const adminInterfaceConfig = {
         ],
         identifiers: () => [
             {
-                title: 'Manage Identifiers',
+                title: 'Manage identifiers',
                 groups: [
                     ['fez_record_search_key_doi'],
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
@@ -793,13 +793,13 @@ export const adminInterfaceConfig = {
                 ],
             },
             {
-                title: 'Manage Links',
+                title: 'Manage links',
                 groups: [['links']],
             },
         ],
         bibliographic: (isLote = false) => [
             {
-                title: 'Book Chapter Title',
+                title: 'Book chapter title',
                 groups: [
                     ['rek_title'],
                     ...(isLote
@@ -813,7 +813,7 @@ export const adminInterfaceConfig = {
                 ],
             },
             {
-                title: 'Book Title',
+                title: 'Book title',
                 groups: [
                     ['fez_record_search_key_book_title'],
                     ...(isLote
@@ -827,7 +827,7 @@ export const adminInterfaceConfig = {
                 ],
             },
             {
-                title: 'Language of Work',
+                title: 'Language of work',
                 groups: [['languages']],
             },
             {
@@ -865,7 +865,7 @@ export const adminInterfaceConfig = {
                 groups: [['subjects']],
             },
             {
-                title: 'Refereed Source',
+                title: 'Refereed source',
                 groups: [['fez_record_search_key_refereed_source']],
             },
         ],
@@ -877,7 +877,7 @@ export const adminInterfaceConfig = {
         ],
         additionalInformation: () => [
             {
-                title: 'Additional Information',
+                title: 'Additional information',
                 groups: [
                     ['collections'],
                     ['rek_subtype'],
@@ -899,7 +899,7 @@ export const adminInterfaceConfig = {
         ],
         ntro: () => [
             {
-                title: 'Scale/Significance of Work & Creator Research Statement',
+                title: 'Scale/Significance of work & Creator research statement',
                 groups: [['significanceAndContributionStatement']],
             },
             {
@@ -907,7 +907,7 @@ export const adminInterfaceConfig = {
                 groups: [['fez_record_search_key_ismn']],
             },
             {
-                title: 'Quality Indicators',
+                title: 'Quality indicators',
                 groups: [['qualityIndicators']],
             },
         ],

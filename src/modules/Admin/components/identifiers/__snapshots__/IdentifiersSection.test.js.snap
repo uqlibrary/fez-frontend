@@ -23,7 +23,7 @@ exports[`IdentifiersSection component should render default view 1`] = `
               "rek_pubmed_doc_type",
             ],
           ],
-          "title": "Manage Identifiers",
+          "title": "Manage identifiers",
         },
         Object {
           "groups": Array [
@@ -63,7 +63,7 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
               "rek_pubmed_doc_type",
             ],
           ],
-          "title": "Manage Identifiers",
+          "title": "Manage identifiers",
         },
         Object {
           "groups": Array [
