@@ -24,8 +24,8 @@ import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import { isFileValid } from 'config/validation';
 import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
-import OpenAccessIcon from 'modules/SharedComponents/partials/OpenAccessIcon';
 import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
+import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 
 const useStyles = makeStyles(
     theme => ({
