@@ -77,7 +77,11 @@ exports[`BibliographicSection component should render default view 1`] = `
           "title": "Keywords",
         },
         Object {
-          "groups": Array [],
+          "groups": Array [
+            Array [
+              "fieldOfResearch",
+            ],
+          ],
           "title": "Subject",
         },
       ],
@@ -164,7 +168,11 @@ exports[`BibliographicSection component should render disabled view 1`] = `
           "title": "Keywords",
         },
         Object {
-          "groups": Array [],
+          "groups": Array [
+            Array [
+              "fieldOfResearch",
+            ],
+          ],
           "title": "Subject",
         },
       ],
