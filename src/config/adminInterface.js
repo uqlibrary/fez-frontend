@@ -84,6 +84,15 @@ export const fieldConfig = {
             fullWidth: true,
         },
     },
+    fez_record_search_key_date_recorded: {
+        component: GenericTextField, //  PartialDateField ?
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_date_recorded',
+            label: 'Date recorded',
+            required: true,
+            fullWidth: true,
+        },
+    },
     fez_record_search_key_isi_loc: {
         component: GenericTextField,
         componentProps: {
@@ -747,7 +756,7 @@ export const adminInterfaceConfig = {
                 groups: [
                     ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                     ['fez_record_search_key_series', 'rek_date'],
-                    ['fez_record_search_key_date_available'],
+                    ['fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
                     ['rek_description'],
                 ],
             },
@@ -766,11 +775,11 @@ export const adminInterfaceConfig = {
         ],
         authors: () => [
             {
-                title: 'Authors',
+                title: 'Creators',
                 groups: [['authors']],
             },
             {
-                title: 'Editors',
+                title: 'Contributors',
                 groups: [['editors']],
             },
         ],
@@ -827,6 +836,15 @@ export const valueExtractor = {
                 record.fez_record_search_key_date_available &&
                 record.fez_record_search_key_date_available.rek_date_available &&
                 moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
+            );
+        },
+    },
+    fez_record_search_key_date_recorded: {
+        getValue: record => {
+            return (
+                record.fez_record_search_key_date_recorded &&
+                record.fez_record_search_key_date_recorded.rek_date_recorded &&
+                moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format('D/M/YYYY')
             );
         },
     },
