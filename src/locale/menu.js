@@ -3,9 +3,6 @@ export default {
         index: {
             primaryText: 'Home',
         },
-        prototype: {
-            primaryText: 'Admin form prototype',
-        },
         myDashboard: {
             primaryText: 'My dashboard',
             // secondaryText is set to user's email

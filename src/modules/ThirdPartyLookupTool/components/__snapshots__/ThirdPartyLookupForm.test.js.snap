@@ -701,7 +701,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Hide form for this form"
+            tooltip="Test hide this form"
           >
             <pure(KeyboardArrowUpIcon) />
           </WithStyles(IconButton)>

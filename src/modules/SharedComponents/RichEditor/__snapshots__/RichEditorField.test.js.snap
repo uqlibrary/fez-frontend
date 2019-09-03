@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RichEditorField should render default component 1`] = `
+<RichEditor
+  className=""
+  disabled={false}
+  height={100}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  inputRef={
+    Object {
+      "current": null,
+    }
+  }
+  instanceRef={
+    Object {
+      "current": null,
+    }
+  }
+  onChange={[MockFunction]}
+  returnSingleValue={false}
+  titleProps={Object {}}
+  value=""
+/>
+`;
