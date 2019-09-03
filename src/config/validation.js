@@ -311,3 +311,10 @@ export const getErrorAlertProps = ({
     }
     return alertProps;
 };
+
+export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream =>
+    !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
+    dataStream.dsi_state === 'A' &&
+    (isAdmin ||
+        !dataStream.dsi_label ||
+        !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')));

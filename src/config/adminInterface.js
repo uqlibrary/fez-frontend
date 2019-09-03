@@ -1,21 +1,23 @@
 import Immutable from 'immutable';
 
 import { validation } from 'config';
-import { ORG_TYPE_NOT_SET, PUBLICATION_TYPE_BOOK, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
+import { ORG_TYPE_NOT_SET, PUBLICATION_TYPE_BOOK, PUBLICATION_TYPE_BOOK_CHAPTER, PUBLICATION_TYPE_JOURNAL_ARTICLE } from 'config/general';
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import moment from 'moment';
+import { viewRecordsConfig } from 'config';
 
+import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-// import { DataStreamSecuritySelector } from 'modules/Admin/components/security/DataStreamSecuritySelector';
-// import { DepositAgreementField } from 'modules/AddDataCollection';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
+import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import {
@@ -47,6 +49,7 @@ export const fieldConfig = {
             height: 100,
             format: value => Immutable.Map(value),
             validate: [validation.required],
+            required: true,
         },
     },
     rek_herdc_notes: {
@@ -107,11 +110,20 @@ export const fieldConfig = {
             placeholder: '',
         },
     },
+    fez_record_search_key_pubmed_central_id: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'identifiersSection.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
+            fullWidth: true,
+            label: 'PMC ID',
+            placeholder: '',
+        },
+    },
     rek_wok_doc_type: {
         component: WoSDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_wok_doc_type',
-            label: 'WoS Doc Type',
+            label: 'WoS doc type(s)',
             placeholder: '',
         },
     },
@@ -119,7 +131,7 @@ export const fieldConfig = {
         component: ScopusDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_scopus_doc_type',
-            label: 'Scopus Doc Type',
+            label: 'Scopus doc type(s)',
             placeholder: '',
         },
     },
@@ -127,7 +139,7 @@ export const fieldConfig = {
         component: PubmedDocTypesField,
         componentProps: {
             name: 'identifiersSection.rek_pubmed_doc_type',
-            label: 'PubMed Doc Type',
+            label: 'PubMed doc type(s)',
             placeholder: '',
         },
     },
@@ -144,7 +156,7 @@ export const fieldConfig = {
         component: RichEditorField,
         componentProps: {
             name: 'bibliographicSection.rek_description',
-            title: 'Formatted abstract',
+            title: 'Abstract/ Description',
             titleProps: {
                 variant: 'caption',
                 style: {
@@ -169,7 +181,7 @@ export const fieldConfig = {
     collections: {
         component: CollectionField,
         componentProps: {
-            floatingLabelText: 'Collection',
+            floatingLabelText: 'Member of collections',
             hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
         },
@@ -178,7 +190,7 @@ export const fieldConfig = {
         component: PublicationSubtypeField,
         componentProps: {
             name: 'bibliographicSection.rek_subtype',
-            label: 'eSpace subtype',
+            label: 'Work sub-type',
             required: true,
             placeholder: '',
         },
@@ -201,6 +213,47 @@ export const fieldConfig = {
             label: 'Journal name',
             placeholder: '',
             required: true,
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_book_title: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_book_title.rek_book_title',
+            fullWidth: true,
+            label: 'Book title',
+            placeholder: '',
+            required: true,
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_native_script_book_title: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title',
+            fullWidth: true,
+            label: 'Native script book title',
+            placeholder: '',
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_roman_script_book_title: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_roman_script_book_title.rek_roman_script_book_title',
+            fullWidth: true,
+            label: 'Roman script book title',
+            placeholder: '',
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_translated_book_title: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_translated_book_title.rek_translated_book_title',
+            fullWidth: true,
+            label: 'Translated book title',
+            placeholder: '',
             validate: [validation.required],
         },
     },
@@ -227,7 +280,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_publisher.rek_publisher',
             fullWidth: true,
-            label: 'Publisher',
+            label: 'Publisher name',
             placeholder: '',
         },
     },
@@ -238,8 +291,6 @@ export const fieldConfig = {
             fullWidth: true,
             label: 'Volume',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_issue_number: {
@@ -258,7 +309,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
             fullWidth: true,
-            label: 'Article Number',
+            label: 'Article number',
             placeholder: '',
         },
     },
@@ -269,8 +320,6 @@ export const fieldConfig = {
             fullWidth: true,
             label: 'Start page',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_end_page: {
@@ -280,8 +329,6 @@ export const fieldConfig = {
             fullWidth: true,
             label: 'End page',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_oa_embargo_days: {
@@ -289,7 +336,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days',
             fullWidth: true,
-            label: 'DOI Embargo days',
+            label: 'DOI embargo days',
             placeholder: '',
             required: true,
             validate: [validation.required],
@@ -347,21 +394,59 @@ export const fieldConfig = {
             locale: locale.components.ismnForm.field,
         },
     },
+    fez_record_search_key_edition: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_edition.rek_edition',
+            fullWidth: true,
+            label: 'Edition',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_series: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_series.rek_series',
+            fullWidth: true,
+            label: 'Series',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_chapter_number: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_chapter_number.rek_chapter_number',
+            fullWidth: true,
+            label: 'Chapter number',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_total_pages: {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_total_pages.rek_total_pages',
             fullWidth: true,
-            label: 'Total pages',
+            label: 'Total pages / Extent',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     subjects: {
-        component: '',
+        component: FilteredFieldOfResearchListField,
         componentProps: {
-            name: '',
+            name: 'bibliographicSection.subjects',
+            searchKey: {
+                value: 'rek_subject',
+                order: 'rek_subject_order',
+            },
+            locale: locale.components.subjectForm.field,
+            distinctOnly: true,
+        },
+    },
+    fez_record_search_key_refereed_source: {
+        component: RefereedSourceField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source',
+            label: 'Refereed source',
         },
     },
     languageOfJournalName: {
@@ -371,6 +456,16 @@ export const fieldConfig = {
             label: 'Language of journal name',
             placeholder: '',
             required: true,
+            multiple: true,
+            validate: [validation.required],
+        },
+    },
+    languageOfBookTitle: {
+        component: LanguageField,
+        componentProps: {
+            name: 'bibliographicSection.languageOfBookTitle',
+            label: 'Language of book title',
+            placeholder: '',
             multiple: true,
             validate: [validation.required],
         },
@@ -482,14 +577,14 @@ export const fieldConfig = {
         component: HerdcCodeField,
         componentProps: {
             name: 'additionalInformationSection.fez_record_search_key_herdc_code.rek_herdc_code',
-            label: 'HERDC code',
+            label: 'Category code',
         },
     },
     fez_record_search_key_herdc_status: {
         component: HerdcStatusField,
         componentProps: {
             name: 'additionalInformationSection.fez_record_search_key_herdc_status.rek_herdc_status',
-            label: 'HERDC status',
+            label: 'Category code status',
         },
     },
     fez_record_search_key_institutional_status: {
@@ -564,23 +659,13 @@ export const fieldConfig = {
             placeholder: '',
         },
     },
-    // fez_record_search_key_datastream_policy: {
-    //     component: DataStreamSecuritySelector,
-    //     componentProps: {
-    //         name: 'adminSection.fez_record_search_key_datastream_policy.rek_datastream_policy',
-    //         fullWidth: true,
-    //         label: 'Datastream Policy',
-    //         placeholder: 'Edit Security',
-    //     },
-    // },
-    // rek_copyright: {
-    //     component: DepositAgreementField, // ??? this just gives a red checkbox??
-    //     componentProps: {
-    //         name: 'adminSection.rek_copyright',
-    //         label: 'Copyright Agreement',
-    //         placeholder: '',
-    //     },
-    // },
+    fez_datastream_info: {
+        component: AttachedFilesField,
+        componentProps: {
+            name: 'filesSection.fez_datastream_info',
+            locale: { ...locale.components.attachedFiles, title: 'Attached files' },
+        },
+    },
     rek_security_inherited: {
         component: OverrideSecurity,
         componentProps: {
@@ -613,7 +698,7 @@ export const adminInterfaceConfig = {
         ],
         identifiers: () => [
             {
-                title: 'Manager identifiers',
+                title: 'Manage identifiers',
                 groups: [
                     ['fez_record_search_key_doi'],
                     ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
@@ -693,9 +778,7 @@ export const adminInterfaceConfig = {
             },
             {
                 title: 'Subject',
-                groups: [
-                    // ['fez_record_search_key_for_codes']
-                ],
+                groups: [['subjects']],
             },
         ],
         authors: () => [
@@ -706,7 +789,7 @@ export const adminInterfaceConfig = {
         ],
         additionalInformation: () => [
             {
-                title: 'Additional Information',
+                title: 'Additional information',
                 groups: [
                     ['collections'],
                     ['rek_subtype'],
@@ -721,6 +804,9 @@ export const adminInterfaceConfig = {
             },
         ],
         files: () => [
+            {
+                groups: [['fez_datastream_info']],
+            },
             {
                 title: 'Files',
                 groups: [['files']],
@@ -873,6 +959,149 @@ export const adminInterfaceConfig = {
             },
         ],
     },
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: {
+        admin: () => [
+            {
+                groups: [['internalNotes']],
+            },
+        ],
+        identifiers: () => [
+            {
+                title: 'Manage identifiers',
+                groups: [
+                    ['fez_record_search_key_doi'],
+                    ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                    ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                    ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
+                    ['fez_record_search_key_pubmed_central_id'],
+                ],
+            },
+            {
+                title: 'Manage links',
+                groups: [['links']],
+            },
+        ],
+        bibliographic: (isLote = false) => [
+            {
+                title: 'Book chapter title',
+                groups: [
+                    ['rek_title'],
+                    ...(isLote
+                        ? [
+                            ['fez_record_search_key_native_script_title'],
+                            ['fez_record_search_key_roman_script_title'],
+                            ['fez_record_search_key_translated_title'],
+                            ['languageOfTitle'],
+                        ]
+                        : []),
+                ],
+            },
+            {
+                title: 'Book title',
+                groups: [
+                    ['fez_record_search_key_book_title'],
+                    ...(isLote
+                        ? [
+                            ['fez_record_search_key_native_script_book_title'],
+                            ['fez_record_search_key_roman_script_book_title'],
+                            ['fez_record_search_key_translated_book_title'],
+                            ['languageOfBookTitle'],
+                        ]
+                        : []),
+                ],
+            },
+            {
+                title: 'Language of work',
+                groups: [['languages']],
+            },
+            {
+                title: 'ISBN',
+                groups: [['fez_record_search_key_isbn']],
+            },
+            {
+                title: 'ISSN',
+                groups: [['fez_record_search_key_issn']],
+            },
+            {
+                title: 'Publication',
+                groups: [
+                    ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                    ['fez_record_search_key_edition', 'fez_record_search_key_series'],
+                    ['fez_record_search_key_volume_number', 'fez_record_search_key_chapter_number'],
+                    [
+                        'fez_record_search_key_start_page',
+                        'fez_record_search_key_total_pages',
+                        'fez_record_search_key_end_page',
+                    ],
+                    ['rek_date'],
+                ],
+            },
+            {
+                title: 'Abstract/Description',
+                groups: [['rek_description']],
+            },
+            {
+                title: 'Keyword(s)',
+                groups: [['fez_record_search_key_keywords']],
+            },
+            {
+                title: 'Subject',
+                groups: [['subjects']],
+            },
+            {
+                title: 'Refereed source',
+                groups: [['fez_record_search_key_refereed_source']],
+            },
+        ],
+        authors: () => [
+            {
+                title: 'Authors',
+                groups: [['authors']],
+            },
+        ],
+        additionalInformation: () => [
+            {
+                title: 'Additional information',
+                groups: [
+                    ['collections'],
+                    ['rek_subtype'],
+                    [
+                        'fez_record_search_key_herdc_code',
+                        'fez_record_search_key_herdc_status',
+                        'fez_record_search_key_institutional_status',
+                    ],
+                    ['contentIndicators'],
+                    ['additionalNotes'],
+                ],
+            },
+        ],
+        files: () => [
+            {
+                title: 'Files',
+                groups: [['files']],
+            },
+        ],
+        ntro: () => [
+            {
+                title: 'Scale/Significance of work & Creator research statement',
+                groups: [['significanceAndContributionStatement']],
+            },
+            {
+                title: 'ISMN',
+                groups: [['fez_record_search_key_ismn']],
+            },
+            {
+                title: 'Quality indicators',
+                groups: [['qualityIndicators']],
+            },
+        ],
+        grantInformation: () => [
+            {
+                title: 'Grant information',
+                groups: [['grants']],
+            },
+        ],
+    },
 };
 
 export const valueExtractor = {
@@ -899,6 +1128,9 @@ export const valueExtractor = {
     },
     fez_record_search_key_journal_name: {
         getValue: record => ({ ...record.fez_record_search_key_journal_name }),
+    },
+    fez_record_search_key_book_title: {
+        getValue: record => ({ ...record.fez_record_search_key_book_title }),
     },
     fez_record_search_key_place_of_publication: {
         getValue: record => ({
@@ -952,6 +1184,15 @@ export const valueExtractor = {
     fez_record_search_key_ismn: {
         getValue: record => [...record.fez_record_search_key_ismn],
     },
+    fez_record_search_key_edition: {
+        getValue: record => ({ ...record.fez_record_search_key_edition }),
+    },
+    fez_record_search_key_series: {
+        getValue: record => ({ ...record.fez_record_search_key_series }),
+    },
+    fez_record_search_key_chapter_number: {
+        getValue: record => ({ ...record.fez_record_search_key_chapter_number }),
+    },
     subjects: {
         getValue: record =>
             record.fez_record_search_key_subject.map(subject => ({
@@ -962,6 +1203,9 @@ export const valueExtractor = {
                 rek_order: subject.rek_subject_order,
             })),
     },
+    fez_record_search_key_refereed_source: {
+        getValue: record => ({ ...record.fez_record_search_key_refereed_source }),
+    },
     languageOfJournalName: {
         getValue: record =>
             record.fez_record_search_key_language_of_journal_name.map(
@@ -969,15 +1213,26 @@ export const valueExtractor = {
             ),
     },
     fez_record_search_key_native_script_journal_name: {
-        getValue: record =>
-            (record.fez_record_search_key_native_script_journal_name || {}).rek_native_script_journal_name,
+        getValue: record => ({ ...record.fez_record_search_key_native_script_journal_name }),
     },
     fez_record_search_key_roman_script_journal_name: {
-        getValue: record =>
-            (record.fez_record_search_key_roman_script_journal_name || {}).rek_roman_script_journal_name,
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_journal_name }),
     },
     fez_record_search_key_translated_journal_name: {
-        getValue: record => (record.fez_record_search_key_translated_journal_name || {}).rek_translated_journal_name,
+        getValue: record => ({ ...record.fez_record_search_key_translated_journal_name }),
+    },
+    languageOfBookTitle: {
+        getValue: record =>
+            record.fez_record_search_key_language_of_book_title.map(language => language.rek_language_of_book_title),
+    },
+    fez_record_search_key_native_script_book_title: {
+        getValue: record => ({ ...record.fez_record_search_key_native_script_book_title }),
+    },
+    fez_record_search_key_roman_script_book_title: {
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_book_title }),
+    },
+    fez_record_search_key_translated_book_title: {
+        getValue: record => ({ ...record.fez_record_search_key_translated_book_title }),
     },
     languageOfTitle: {
         getValue: record =>
@@ -1003,6 +1258,9 @@ export const valueExtractor = {
     },
     fez_record_search_key_pubmed_id: {
         getValue: record => ({ ...record.fez_record_search_key_pubmed_id }),
+    },
+    fez_record_search_key_pubmed_central_id: {
+        getValue: record => ({ ...record.fez_record_search_key_pubmed_central_id }),
     },
     rek_wok_doc_type: {
         getValue: record => record.rek_wok_doc_type,
@@ -1063,7 +1321,7 @@ export const valueExtractor = {
                 nameAsPublished: (authors[order] || {}).rek_author,
                 creatorRole: '',
                 uqIdentifier: `${(authorIds[order] || {}).rek_author_id}` || '',
-                authorId: (authorIds[order] || {}).rek_author_id,
+                authorId: (authorIds[order] || {}).rek_author_id || 0,
                 orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
                 orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type}` || '',
                 affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
@@ -1199,15 +1457,17 @@ export const valueExtractor = {
     files: {
         getValue: () => [],
     },
+    fez_datastream_info: {
+        getValue: record => {
+            return (record.fez_datastream_info || []).filter(validation.isFileValid(viewRecordsConfig, true));
+        },
+    },
     fez_record_search_key_oa_status: {
         getValue: record => ({ ...record.fez_record_search_key_oa_status }),
     },
     // rek_copyright: {
     //     getValue: record => record.rek_copyright,
     // },
-    fez_record_search_key_pubmed_central_id: {
-        getValue: record => (record.fez_record_search_key_pubmed_central_id || {}).rek_pubmed_central_id,
-    },
     fez_record_search_key_date_available: {
         getValue: record => {
             return (
@@ -1216,17 +1476,5 @@ export const valueExtractor = {
                 moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
             );
         },
-    },
-    // rek_refereed_source: {
-    //     getValue: (record) => ({ ...record.rek_refereed_source_lookup }),
-    // },
-    fez_record_search_key_edition: {
-        getValue: record => ({ ...record.fez_record_search_key_edition }),
-    },
-    // fez_record_search_key_datastream_policy: {
-    //     getValue: (record) => ({ ...record.fez_record_search_key_datastream_policy }),
-    // },
-    fez_record_search_key_series: {
-        getValue: record => ({ ...record.fez_record_search_key_series }),
     },
 };

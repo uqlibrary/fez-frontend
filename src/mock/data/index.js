@@ -1,6 +1,7 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
     adminEditBookChapter,
+    adminEditBookChapterList,
     collections,
     communityRecord,
     collectionRecord,
@@ -23,6 +24,7 @@ export {
     recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    lookupToolIncites
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
