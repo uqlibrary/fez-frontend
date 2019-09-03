@@ -872,13 +872,6 @@ export const adminInterfaceConfig = {
                 groups: [['grants']],
             },
         ],
-        security: () => [
-            {
-                groups: [
-                    ['rek_security_inherited'], // needs work?
-                ],
-            },
-        ],
     },
 };
 
