@@ -181,9 +181,10 @@ const mapStateToProps = state => {
 };
 
 function mapDispatchToProps(dispatch) {
-    const { loadRecordToView } = bindActionCreators(actions, dispatch);
+    const { loadRecordToView, clearRecordToView } = bindActionCreators(actions, dispatch);
     return {
         loadRecordToView,
+        clearRecordToView,
     };
 }
 

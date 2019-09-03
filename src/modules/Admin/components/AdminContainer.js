@@ -54,6 +54,7 @@ export const AdminContainer = ({
     recordToView,
     loadRecordToView,
     loadingRecordToView,
+    clearRecordToView,
     classes,
     submitting,
     submitSucceeded,
@@ -86,7 +87,11 @@ export const AdminContainer = ({
         if (!!match.params.pid && !!loadRecordToView) {
             loadRecordToView(match.params.pid);
         }
-    }, [loadRecordToView, match.params.pid]);
+
+        return () => {
+            clearRecordToView();
+        };
+    }, [loadRecordToView, clearRecordToView, match.params.pid]);
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
@@ -170,6 +175,7 @@ export const AdminContainer = ({
 AdminContainer.propTypes = {
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
+    clearRecordToView: PropTypes.func,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
     location: PropTypes.object,

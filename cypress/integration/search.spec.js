@@ -113,6 +113,8 @@ context('Search', () => {
     });
 
     it('should show appropriate form validation for PID field', () => {
+        const helpMessage = 'Please provide a valid PID (e.g. UQ:129af6)';
+
         cy.get('button#showAdvancedSearchButton')
             .click();
         cy.contains('Select a field')
@@ -127,24 +129,27 @@ context('Search', () => {
             .should('be.disabled');
 
         cy.get('[placeholder="Add a PID"]')
-            .as('pidField')
-            .type('abcd');
-        cy.get('@helpText')
-            .should('contain', 'Please provide a valid PID (e.g. UQ:129af6)');
-        cy.get('@searchButton')
-            .should('be.disabled');
+            .as('pidField');
+
+        const invalidPIDs = ['abcd', '_uq:123', 'UQ: 12', 'uq:'];
+
+        invalidPIDs.forEach(invalidPID => {
+            cy.get('@pidField')
+                .clear()
+                .type(invalidPID);
+            cy.get('@helpText')
+                .should('contain', helpMessage);
+            cy.get('@searchButton')
+                .should('be.disabled');
+        });
 
         cy.get('@pidField')
-            .type('{selectall}{del}uq:');
-        cy.get('@helpText')
-            .should('contain', 'Please provide a valid PID (e.g. UQ:129af6)');
-        cy.get('@searchButton')
-            .should('be.disabled');
-
-        cy.get('@pidField')
-            .type('{end}123');
+            .clear()
+            .type('uq:123');
         cy.get('@searchButton')
             .should('not.be.disabled');
+        cy.get('@helpText')
+            .should('not.exist');
 
         cy.get('#advancedSearchForm .searchQueryCaption')
             .should($caption => {
