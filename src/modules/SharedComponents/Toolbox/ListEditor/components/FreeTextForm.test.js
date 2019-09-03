@@ -1,7 +1,7 @@
 import { FreeTextFormClass } from './FreeTextForm';
 import FreeTextForm from './FreeTextForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onAdd: jest.fn(),
         disabled: false,
@@ -19,12 +19,12 @@ function setup(testProps, isShallow = true) {
         // isValid: jest.fn(() => ''),
         ...testProps,
     };
-    return getElement(FreeTextFormClass, props, isShallow);
+    return getElement(FreeTextFormClass, props);
 }
 
 describe('FreeTextForm tests ', () => {
     it('rendering active form', () => {
-        const wrapper1 = setup({});
+        const wrapper1 = setup();
         expect(toJson(wrapper1)).toMatchSnapshot();
         const wrapper2 = setup({
             errorText: '',
@@ -52,7 +52,7 @@ describe('FreeTextForm tests ', () => {
                 errorText: 'This field is required',
                 normalize: value => value,
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -82,14 +82,14 @@ describe('FreeTextForm tests ', () => {
     });
 
     it('setting state', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().itemName).toBeFalsy();
         wrapper.instance().onNameChanged({ target: { value: 'one' } });
         expect(wrapper.state().itemName).toEqual('one');
     });
 
     it('rendering reminder to add input', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setProps({
             locale: {
                 remindToAdd: 'reminder text',
@@ -104,7 +104,7 @@ describe('FreeTextForm tests ', () => {
     });
 
     it('should not add item if state is not set', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().addItem({ key: 'Enter' });
         expect(wrapper.instance().props.onAdd).not.toBeCalled();
     });

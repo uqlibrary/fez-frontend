@@ -1,8 +1,8 @@
 import NavigationDialogBox from './NavigationDialogBox';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = { ...testProps };
-    return getElement(NavigationDialogBox, props, isShallow);
+    return getElement(NavigationDialogBox, props, args);
 }
 
 describe('NavigationDialogBox component', () => {
@@ -17,7 +17,7 @@ describe('NavigationDialogBox component', () => {
                     confirmButtonLabel: 'Yes',
                 },
             },
-            false,
+            { isShallow: false },
         );
         const smallWrapper = wrapper.find('NavigationDialogBox');
         expect(toJson(smallWrapper)).toMatchSnapshot();

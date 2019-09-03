@@ -1,6 +1,6 @@
 import { DepositAgreement, styles } from './DepositAgreement';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         disabled: false,
         isDepositAgreementAccepted: false,
@@ -14,7 +14,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(DepositAgreement, props, isShallow);
+    return getElement(DepositAgreement, props);
 }
 
 describe('Component DepositAgreement', () => {

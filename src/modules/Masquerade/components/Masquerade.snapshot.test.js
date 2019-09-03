@@ -1,6 +1,6 @@
 import Masquerade from './Masquerade';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         author: testProps.author || null,
         actions: testProps.actions || {},
@@ -10,13 +10,12 @@ function setup(testProps, isShallow = true) {
         account: testProps.account || {},
         ...testProps,
     };
-    return getElement(Masquerade, props, isShallow);
+    return getElement(Masquerade, props);
 }
 
 describe('Component Masquerade', () => {
     it('Should render form as expected', () => {
-        const props = {};
-        const wrapper = setup({ ...props });
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -24,7 +23,7 @@ describe('Component Masquerade', () => {
         const props = {
             account: { canMasqueradeType: 'readonly' },
         };
-        const wrapper = setup({ ...props });
+        const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

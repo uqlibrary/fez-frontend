@@ -1,6 +1,6 @@
 import { NewsFeed } from './NewsFeed';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         actions: {
@@ -45,7 +45,7 @@ function setup(testProps, isShallow = true) {
         ],
         ...testProps,
     };
-    return getElement(NewsFeed, props, isShallow);
+    return getElement(NewsFeed, props);
 }
 
 describe('Component NewsFeed', () => {
@@ -60,7 +60,7 @@ describe('Component NewsFeed', () => {
     });
 
     it('should render news feed', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

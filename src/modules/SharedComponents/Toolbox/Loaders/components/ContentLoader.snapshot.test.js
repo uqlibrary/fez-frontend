@@ -1,8 +1,8 @@
 import ContentLoader from './ContentLoader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = { ...testProps };
-    return getElement(ContentLoader, props, isShallow);
+    return getElement(ContentLoader, props);
 }
 
 describe('ContentLoader snapshots tests', () => {

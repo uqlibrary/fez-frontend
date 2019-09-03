@@ -3,7 +3,7 @@ import { MyTrendingPublications } from './MyTrendingPublications';
 import { transformTrendingPublicationsMetricsData } from 'actions/academicDataTransformers';
 import mui1theme from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: mui1theme,
@@ -12,7 +12,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(MyTrendingPublications, props, isShallow);
+    return getElement(MyTrendingPublications, props);
 }
 
 describe('Component MyTrendingPublications', () => {

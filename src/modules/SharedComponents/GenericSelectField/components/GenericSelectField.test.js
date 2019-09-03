@@ -1,19 +1,19 @@
 import { GenericSelectFieldClass } from './GenericSelectField';
 import GenericSelectField from './GenericSelectField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
         ...testProps,
     };
-    return getElement(GenericSelectFieldClass, props, isShallow);
+    return getElement(GenericSelectFieldClass, props);
 }
 
 describe('GenericSelectField', () => {
     describe('should render snapshots for', () => {
         it('no items', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(toJson(wrapper)).toMatchSnapshot();
         });
 
@@ -271,7 +271,7 @@ describe('GenericSelectField', () => {
                     loadItemsList: jest.fn(),
                     parentItemsId: 1234,
                 },
-                false,
+                { isShallow: false },
             );
             expect(toJson(wrapper)).toMatchSnapshot();
         });

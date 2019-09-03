@@ -1,7 +1,7 @@
 import OpenAccessIcon from './OpenAccessIcon';
 import { openAccessConfig } from 'config';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         isOpenAccess: false,
         embargoDate: null,
@@ -9,7 +9,7 @@ function setup(testProps, isShallow = false) {
         showEmbargoText: false,
         ...testProps,
     };
-    return getElement(OpenAccessIcon, props, isShallow);
+    return getElement(OpenAccessIcon, props, args);
 }
 
 describe('Journal Name Component test ', () => {
@@ -32,7 +32,7 @@ describe('Journal Name Component test ', () => {
     });
 
     it('should render closed access', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

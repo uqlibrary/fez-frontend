@@ -1,6 +1,6 @@
 import PublicationSearchForm from './PublicationSearchForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -38,6 +38,7 @@ function setup(testProps, isShallow = true) {
         initialized: false,
         invalid: false,
         pristine: false,
+        submitAsSideEffect: false,
         submitting: false,
         submitFailed: false,
         submitSucceeded: false,
@@ -56,12 +57,12 @@ function setup(testProps, isShallow = true) {
         pure: true,
         ...testProps,
     };
-    return getElement(PublicationSearchForm, props, isShallow);
+    return getElement(PublicationSearchForm, props);
 }
 
 describe('PublicationSearchForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
     });

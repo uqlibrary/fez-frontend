@@ -60,6 +60,7 @@ a {
   width: 100%;
   height: calc(100% - 75px);
   overflow-y: auto;
+  overflow-x: hidden;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;

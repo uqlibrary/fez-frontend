@@ -3,12 +3,12 @@ jest.dontMock('./ResearchReportForm');
 import ResearchReportForm from './ResearchReportForm';
 import { NTRO_SUBTYPE_RREB_PUBLIC_SECTOR } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(ResearchReportForm, props, isShallow);
+    return getElement(ResearchReportForm, props);
 }
 
 describe('ResearchReportForm renders ', () => {

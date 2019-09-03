@@ -1,7 +1,7 @@
 import { GrantListEditorFormClass } from './GrantListEditorForm';
 import GrantListEditorForm from './GrantListEditorForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         onAdd: jest.fn(),
         errorText: null,
@@ -14,7 +14,7 @@ function setup(testProps, isShallow = true) {
         isPopulated: testProps.isPopulated || undefined,
         ...testProps,
     };
-    return getElement(GrantListEditorFormClass, props, isShallow);
+    return getElement(GrantListEditorFormClass, props, args);
 }
 
 describe('GrantListEditorForm', () => {
@@ -31,13 +31,13 @@ describe('GrantListEditorForm', () => {
                 classes: {},
                 theme: {},
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render default view', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -62,7 +62,7 @@ describe('GrantListEditorForm', () => {
             grantId: '1234',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(FormHelperText)').length).toEqual(1);
+        expect(wrapper.find('WithStyles(WithFormControlContext(FormHelperText))').length).toEqual(1);
     });
 
     it('should add grant and pass isPopulated info', () => {

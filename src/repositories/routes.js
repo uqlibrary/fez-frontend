@@ -115,12 +115,14 @@ export const FILE_UPLOAD_API = ({ pid, fileName }) => ({ apiUrl: `file/upload/pr
 
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });
-export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
-export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
 export const NEW_COLLECTION_API = () => ({ apiUrl: 'collections' });
 
 export const NEW_COMMUNITY_API = () => ({ apiUrl: 'communities' });
+
+export const EXISTING_RECORD_API = ({ pid }) => ({ apiUrl: `records/${pid}` });
+
+export const RECORDS_ISSUES_API = ({ pid }) => ({ apiUrl: `records/${pid}/issues` });
 
 // search/list records apis
 export const POSSIBLE_RECORDS_API = values => ({

@@ -1,0 +1,724 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SecurityCard component should not render data stream security selector for the record if no datastreams found 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Record
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_security_policy"
+            title="Inherited security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`SecurityCard component should render security card correctly for collection with data stream selector for collection 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Collection
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={true}
+            fieldName="securitySection.rek_security_policy"
+            recordType="collection"
+            securityPolicy={5}
+            text={
+              Object {
+                "cardTitle": [Function],
+                "dataStreamFieldLabel": <span>
+                  Override datastream level policy to apply to the 
+                  <b>
+                    datastream
+                  </b>
+                   of this PID
+                </span>,
+                "dataStreamSelectedTitle": <span>
+                  Current collection 
+                  <b>
+                    datastream
+                  </b>
+                   level security policy details
+                </span>,
+                "description": "",
+                "fieldLabel": "Override collection level policy to apply to this PID",
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Current collection level security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={true}
+            fieldName="securitySection.rek_datastream_policy"
+            recordType="collection"
+            securityPolicy={5}
+            text={
+              Object {
+                "fieldLabel": <span>
+                  Override datastream level policy to apply to the 
+                  <b>
+                    datastream
+                  </b>
+                   of this PID
+                </span>,
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": <span>
+                  Current collection 
+                  <b>
+                    datastream
+                  </b>
+                   level security policy details
+                </span>,
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`SecurityCard component should render security card correctly for community 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Community
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_security_policy"
+            recordType="community"
+            securityPolicy={5}
+            text={
+              Object {
+                "cardTitle": [Function],
+                "description": "",
+                "fieldLabel": "Override community level policy to apply to this PID",
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected community record security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`SecurityCard component should render security card correctly for record type 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Record
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_security_policy"
+            title="Inherited security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Datastream
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_datastream_policy"
+            title="Inherited datastream security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": [Function],
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            name="securitySection.dataStreams"
+            text={
+              Object {
+                "cardTitle": [Function],
+                "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                "overridePrompt": "Override datastream security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`SecurityCard component should render security card correctly for record type if user checks override security 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Record
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_security_policy"
+            title="Inherited security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={false}
+            fieldName="securitySection.rek_security_policy"
+            recordType="record"
+            securityPolicy={5}
+            text={
+              Object {
+                "cardTitle": [Function],
+                "dataStream": Object {
+                  "cardTitle": [Function],
+                  "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                  "overridePrompt": "Override datastream security policy details",
+                },
+                "dataStreamFieldLabel": "Override record level policy to apply to this PID",
+                "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+                "description": "",
+                "fieldLabel": "Override record",
+                "inheritedPolicy": Object {
+                  "dataStream": Object {
+                    "title": "Inherited datastream security policy details",
+                  },
+                  "record": Object {
+                    "title": "Inherited security policy details",
+                  },
+                },
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected record level security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Datastream
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_datastream_policy"
+            title="Inherited datastream security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": [Function],
+                "type": [Function],
+              }
+            }
+            disabled={false}
+            name="securitySection.dataStreams"
+            text={
+              Object {
+                "cardTitle": [Function],
+                "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                "overridePrompt": "Override datastream security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
+
+exports[`SecurityCard component should render security card with disabled inputs 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Record
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_security_policy"
+            title="Inherited security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": null,
+                "type": [Function],
+              }
+            }
+            disabled={true}
+            label="Override inherited security (detailed below)"
+            name="securitySection.rek_security_inherited"
+            normalize={[Function]}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(SecuritySelector)
+            disabled={true}
+            fieldName="securitySection.rek_security_policy"
+            recordType="record"
+            securityPolicy={5}
+            text={
+              Object {
+                "cardTitle": [Function],
+                "dataStream": Object {
+                  "cardTitle": [Function],
+                  "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                  "overridePrompt": "Override datastream security policy details",
+                },
+                "dataStreamFieldLabel": "Override record level policy to apply to this PID",
+                "dataStreamSelectedTitle": "Selected record level datastream security policy details",
+                "description": "",
+                "fieldLabel": "Override record",
+                "inheritedPolicy": Object {
+                  "dataStream": Object {
+                    "title": "Inherited datastream security policy details",
+                  },
+                  "record": Object {
+                    "title": "Inherited security policy details",
+                  },
+                },
+                "prompt": "Select a security policy to apply",
+                "selectedTitle": "Selected record level security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    xs={12}
+  >
+    <StandardCard
+      accentHeader={true}
+      title={
+        <span>
+          <strong>
+            Datastream
+          </strong>
+           level security - 
+          UQ:123456
+        </span>
+      }
+    >
+      <WithStyles(Grid)
+        container={true}
+        spacing={8}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Memo(InheritedSecurityDetails)
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            parentKey="rek_datastream_policy"
+            title="Inherited datastream security policy details"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <Field
+            collections={
+              Array [
+                Object {
+                  "parent": Object {
+                    "rek_datastream_policy": 1,
+                    "rek_security_policy": 2,
+                  },
+                  "rek_ismemberof": "Test collection",
+                },
+              ]
+            }
+            component={
+              Object {
+                "$$typeof": Symbol(react.memo),
+                "compare": [Function],
+                "type": [Function],
+              }
+            }
+            disabled={true}
+            name="securitySection.dataStreams"
+            text={
+              Object {
+                "cardTitle": [Function],
+                "overridePolicyPrompt": "Security policy for this file to override inheritance",
+                "overridePrompt": "Override datastream security policy details",
+              }
+            }
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </StandardCard>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

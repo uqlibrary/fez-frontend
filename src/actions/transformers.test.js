@@ -833,6 +833,14 @@ describe('getDatasetCreatorRolesSearchKey tests', () => {
         expect(transformers.getDatasetCreatorRolesSearchKey()).toEqual({});
     });
 
+    it('should return empty object in entry if creatorRole key is not set for it', () => {
+        const input = [{ test: 'test1' }];
+        const expected = {
+            fez_record_search_key_author_role: [{}],
+        };
+        expect(transformers.getDatasetCreatorRolesSearchKey(input)).toEqual(expected);
+    });
+
     it('should return search key with data', () => {
         const input = [
             { creatorRole: 'Investigator' },
@@ -1574,7 +1582,6 @@ describe('getGrantsListSearchKey tests', () => {
                 grantId: 'test123',
             },
             {
-                grantAgencyName: 'testing',
                 grantId: 'testing123',
                 grantAgencyType: '12345',
             },
@@ -1591,7 +1598,7 @@ describe('getGrantsListSearchKey tests', () => {
                     rek_grant_agency_order: 1,
                 },
                 {
-                    rek_grant_agency: 'testing',
+                    rek_grant_agency: 'Not set',
                     rek_grant_agency_order: 2,
                 },
                 {
@@ -2117,5 +2124,57 @@ describe('getExternalSourceIdSearchKeys', () => {
             },
         };
         expect(transformers.getExternalSourceIdSearchKeys(data)).toEqual(expected);
+    });
+});
+
+describe('getSecuritySectionSearchKeys', () => {
+    it('should return formatted search keys with datastreams for admin update', () => {
+        const expected = {
+            rek_security_policy: 1,
+            fez_datastream_info: [
+                {
+                    dsi_dsid: 'test.png',
+                    dsi_security_policy: 2,
+                    dsi_security_inherited: 1,
+                },
+                {
+                    dsi_dsid: 'test1.txt',
+                    dsi_security_policy: 3,
+                    dsi_security_inherited: 0,
+                },
+            ],
+        };
+        expect(
+            transformers.getSecuritySectionSearchKeys({
+                dataStreams: [
+                    {
+                        dsi_dsid: 'test.png',
+                        dsi_security_policy: 2,
+                        dsi_security_inherited: 1,
+                    },
+                    {
+                        dsi_dsid: 'test1.txt',
+                        dsi_security_policy: 3,
+                        dsi_security_inherited: 0,
+                    },
+                ],
+                rek_security_policy: 1,
+            }),
+        ).toEqual(expected);
+    });
+
+    it('should return formatted search keys without for admin update', () => {
+        const expected = {
+            rek_security_policy: 1,
+        };
+        expect(
+            transformers.getSecuritySectionSearchKeys({
+                rek_security_policy: 1,
+            }),
+        ).toEqual(expected);
+    });
+
+    it('should return empty object', () => {
+        expect(transformers.getSecuritySectionSearchKeys()).toEqual({});
     });
 });

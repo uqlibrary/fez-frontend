@@ -14,13 +14,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadTermsAndConditions, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploadTermsAndConditions, getProps(testProps));
 }
 
 describe('Component FileUploadTermsAndConditions', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

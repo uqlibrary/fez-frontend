@@ -6,7 +6,7 @@ export default class LookupForm extends Component {
         onAdd: PropTypes.func.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
-        inputField: PropTypes.func,
+        inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
         errorText: PropTypes.string,
     };
 

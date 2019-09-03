@@ -1,6 +1,6 @@
 import { ContributorRowHeader, styles } from './ContributorRowHeader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         showIdentifierLookup: false,
@@ -17,12 +17,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(ContributorRowHeader, props, isShallow);
+    return getElement(ContributorRowHeader, props);
 }
 
 describe('Component ContributorRowHeader', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -51,14 +51,14 @@ describe('Component ContributorRowHeader', () => {
 
     it('triggers the confirmation box', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = { showConfirmation: testFunction };
         wrapper.instance()._showConfirmation();
         expect(testFunction).toHaveBeenCalled;
     });
 
     it('set confirmation box ref', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper
             .find('ConfirmDialogBox')
             .props()

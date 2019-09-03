@@ -24,7 +24,6 @@ export default class JournalCitation extends Component {
         };
 
         // eSpace citation view for Journal
-        // {Title of journal}{Publication Year| (|).}{Volume number| |}{Issue number| (|)}.
         return (
             <div className="citationContent citationJournal">
                 {/* {Title of journal} */}

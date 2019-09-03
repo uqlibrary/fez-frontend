@@ -1,17 +1,17 @@
 import JournalArticleCitation from './JournalArticleCitation';
 import { journalArticle } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(JournalArticleCitation, props, isShallow);
+    return getElement(JournalArticleCitation, props, args);
 }
 
 describe('JournalArticleCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

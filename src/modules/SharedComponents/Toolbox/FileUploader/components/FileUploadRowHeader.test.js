@@ -22,13 +22,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadRowHeader, getProps(testProps), isShallow);
+function setup(testProps = {}, args = {}) {
+    return getElement(FileUploadRowHeader, getProps(testProps), args);
 }
 
 describe('Component FileUploadRowHeader', () => {
     it('should render with default setup', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -70,7 +70,7 @@ describe('Component FileUploadRowHeader', () => {
             locale: locale,
         };
 
-        const wrapper = setup({ ...props }, false);
+        const wrapper = setup({ ...props }, { isShallow: false });
         const tightWrapper = wrapper.find('FileUploadRowHeader');
         tightWrapper.instance()._showConfirmation();
         wrapper.update();

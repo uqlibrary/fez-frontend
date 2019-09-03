@@ -1,7 +1,7 @@
 import AuthorsPublicationsPerYearChart from './AuthorsPublicationsPerYearChart';
 // import currentAuthorStats from 'mock';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         className: 'barChart',
         /* eslint-disable max-len */
@@ -19,7 +19,7 @@ function setup(testProps, isShallow = true) {
         yAxisTitle: 'Total publications',
         ...testProps,
     };
-    return getElement(AuthorsPublicationsPerYearChart, props, isShallow);
+    return getElement(AuthorsPublicationsPerYearChart, props);
 }
 
 describe('AuthorsPublicationsPerYearChart ', () => {
@@ -36,7 +36,7 @@ describe('AuthorsPublicationsPerYearChart ', () => {
     });
 
     it('labelFormatter', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().options.legend.labelFormatter()).toBe('');
         const scope1 = {
             userOptions: {

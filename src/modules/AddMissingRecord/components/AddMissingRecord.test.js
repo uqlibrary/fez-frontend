@@ -2,7 +2,7 @@ import React from 'react';
 import AddMissingRecord from './AddMissingRecord';
 import * as routes from '../../../config/routes';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
 
@@ -18,7 +18,7 @@ function setup(testProps, isShallow = true) {
             push: jest.fn(),
         },
     };
-    return getElement(AddMissingRecord, props, isShallow);
+    return getElement(AddMissingRecord, props);
 }
 
 describe('Component AddMissingRecord', () => {

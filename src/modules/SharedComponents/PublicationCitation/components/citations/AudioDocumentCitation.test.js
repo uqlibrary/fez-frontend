@@ -1,17 +1,17 @@
 import AudioDocumentCitation from './AudioDocumentCitation';
 import { audioDocument } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(AudioDocumentCitation, props, isShallow);
+    return getElement(AudioDocumentCitation, props, args);
 }
 
 describe('AudioDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

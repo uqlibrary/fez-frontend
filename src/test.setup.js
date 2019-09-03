@@ -15,11 +15,10 @@ import MockAdapter from 'axios-mock-adapter';
 import { mui1theme } from 'config';
 import { api, sessionApi } from 'config/axios';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
 
-jest.mock('material-ui-pickers/utils/moment-utils');
-
-import MomentUtils from 'material-ui-pickers/utils/moment-utils';
+jest.mock('@date-io/moment');
+import MomentUtils from '@date-io/moment';
 
 const setupStoreForActions = () => {
     const middlewares = [thunk];
@@ -49,19 +48,26 @@ const setupSessionMockAdapter = () => {
 };
 
 // get a mounted or shallow element
-const getElement = (component, props, isShallow = true, requiresStore = false, context = {}) => {
+const getElement = (component, props, args = {}) => {
+    const { isShallow, requiresStore, context, store } = {
+        isShallow: true,
+        requiresStore: false,
+        context: {},
+        store: setupStoreForMount().store,
+        ...args,
+    };
+
     if (isShallow) {
         if (requiresStore) {
-            return shallow(
-                <Provider store={setupStoreForMount().store}>{React.createElement(component, props)}</Provider>,
-                { context },
-            );
+            return shallow(<Provider store={store}>{React.createElement(component, props)}</Provider>, {
+                context,
+            });
         } else {
             return shallow(React.createElement(component, props), { context });
         }
     }
     return mount(
-        <Provider store={setupStoreForMount().store}>
+        <Provider store={store}>
             <MemoryRouter initialEntries={[{ pathname: '/', key: 'testKey' }]}>
                 <MuiThemeProvider theme={mui1theme}>
                     <MuiPickersUtilsProvider utils={MomentUtils}>
@@ -94,6 +100,7 @@ global.setupMockAdapter = setupMockAdapter;
 global.setupSessionMockAdapter = setupSessionMockAdapter;
 global.mockApi = setupMockAdapter();
 global.mockSessionApi = setupSessionMockAdapter();
+global.setupStoreForMount = setupStoreForMount();
 
 jest.spyOn(Date, 'now').mockImplementation(() => 1451606400000);
 

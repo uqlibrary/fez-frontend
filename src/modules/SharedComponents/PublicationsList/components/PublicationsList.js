@@ -8,6 +8,7 @@ export default class PublicationsList extends PureComponent {
         publicationsListSubset: PropTypes.array,
         subsetCustomActions: PropTypes.array,
         customActions: PropTypes.array,
+        showAdminActions: PropTypes.bool,
         showDefaultActions: PropTypes.bool,
         showSources: PropTypes.bool,
         showMetrics: PropTypes.bool,
@@ -21,6 +22,7 @@ export default class PublicationsList extends PureComponent {
     static defaultProps = {
         publicationsListSubset: [],
         subsetCustomActions: [],
+        showAdminActions: false,
         showSources: false,
         showDefaultActions: false,
         showSourceCountIcon: false,
@@ -41,6 +43,7 @@ export default class PublicationsList extends PureComponent {
                         : this.props.subsetCustomActions
                 }
                 showSources={this.props.showSources}
+                showAdminActions={this.props.showAdminActions}
                 showDefaultActions={this.props.showDefaultActions}
                 showMetrics={this.props.showMetrics}
                 showSourceCountIcon={this.props.showSourceCountIcon}

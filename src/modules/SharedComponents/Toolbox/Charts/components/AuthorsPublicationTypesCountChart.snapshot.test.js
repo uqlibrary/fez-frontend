@@ -1,8 +1,8 @@
 import AuthorsPublicationTypesCountChart from './AuthorsPublicationTypesCountChart';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = { ...testProps };
-    return getElement(AuthorsPublicationTypesCountChart, props, isShallow);
+    return getElement(AuthorsPublicationTypesCountChart, props);
 }
 
 describe('AuthorsPublicationTypesCountChart ', () => {

@@ -1,13 +1,13 @@
 import RecordsSearchResults from './RecordsSearchResults';
 import { accounts } from 'mock/data/account';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         history: {},
         account: accounts.uqresearcher || testProps.account || {},
         ...testProps,
     };
-    return getElement(RecordsSearchResults, props, isShallow);
+    return getElement(RecordsSearchResults, props, args);
 }
 
 describe('Search record results', () => {
@@ -580,7 +580,7 @@ describe('Search record results', () => {
                 {
                     publicationsList: publicationsList,
                 },
-                false,
+                { isShallow: false },
             );
             expect(toJson(wrapper)).toMatchSnapshot();
         },
@@ -1072,7 +1072,7 @@ describe('Search record results', () => {
                 },
             ];
 
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
         },
     );
@@ -1084,7 +1084,7 @@ describe('Search record results', () => {
             },
         ];
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
     });
 });

@@ -1,0 +1,52 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SelectedSecurityPolicyDescription component should render properly 1`] = `
+<WithStyles(Grid)
+  item={true}
+  style={
+    Object {
+      "backgroundColor": "rgba(0,0,0,0.05)",
+      "marginTop": 12,
+      "padding": 24,
+    }
+  }
+  xs={12}
+>
+  <WithStyles(Typography)
+    style={
+      Object {
+        "marginTop": -8,
+      }
+    }
+    variant="h6"
+  >
+    test
+  </WithStyles(Typography)>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+    style={
+      Object {
+        "marginTop": 8,
+      }
+    }
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={2}
+    >
+      <b>
+        Name (ID):
+      </b>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={10}
+    >
+      <Memo(PolicyDescription)
+        selectedPolicyKey={2}
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

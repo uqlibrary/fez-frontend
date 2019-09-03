@@ -1,9 +1,10 @@
 import orange from '@material-ui/core/colors/orange';
 import red from '@material-ui/core/colors/red';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
+import createPalette from '@material-ui/core/styles/createPalette';
 
 export const mui1theme = createMuiTheme({
-    palette: {
+    palette: createPalette({
         primary: {
             light: '#962A8B',
             main: '#51247A',
@@ -51,7 +52,7 @@ export const mui1theme = createMuiTheme({
             main: '#c80000',
             dark: '#790000',
         },
-    },
+    }),
     status: {
         danger: red[500],
         warning: orange[500],
@@ -70,6 +71,21 @@ export const mui1theme = createMuiTheme({
                 overflow: 'hidden',
                 width: '100%',
                 textOverflow: 'ellipsis',
+            },
+        },
+        MuiMenuItem: {
+            root: {
+                '&$selected': {
+                    backgroundColor: '#4085C6 !important',
+                    color: '#FFFFFF',
+                },
+            },
+        },
+        MUIDataTable: {
+            paper: {
+                boxShadow: 'none',
+                padding: 0,
+                margin: 0,
             },
         },
     },

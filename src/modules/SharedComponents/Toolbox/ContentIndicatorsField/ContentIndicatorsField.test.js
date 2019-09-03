@@ -2,17 +2,17 @@ import Immutable from 'immutable';
 import { ContentIndicatorsField, getContentIndicators, showContentIndicatorsField } from './ContentIndicatorsField';
 import { CONTENT_INDICATORS, PUBLICATION_TYPE_THESIS } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(ContentIndicatorsField, props, isShallow);
+    return getElement(ContentIndicatorsField, props);
 }
 
 describe('ContentIndicatorsField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

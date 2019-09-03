@@ -77,7 +77,7 @@ export class ListRow extends PureComponent {
                     onAction={this.deleteRecord}
                     locale={deleteRecordConfirmation}
                 />
-                <Grid container alignItems="center" spacing={16} className={classes.row}>
+                <Grid container alignItems="center" spacing={8} className={classes.row}>
                     <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
                         <Typography variant="body2">{item.value || item}</Typography>
                     </Grid>

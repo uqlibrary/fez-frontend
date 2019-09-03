@@ -1,4 +1,6 @@
 import { combineReducers } from 'redux-immutable';
+import { connectRouter } from 'connected-react-router/immutable';
+import { history } from 'config/history';
 
 // Load reducers
 import { reducer as formReducer } from 'redux-form/immutable';
@@ -14,6 +16,7 @@ const rootReducer = combineReducers({
     }),
     helpDrawer: helpDrawerReducer,
     fileUpload: fileUploadReducer,
+    router: connectRouter(history),
     ...reducers,
 });
 

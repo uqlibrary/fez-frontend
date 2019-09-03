@@ -2,7 +2,7 @@ import myDatasets from './MyRecords';
 import { routes } from 'config';
 import { locale } from 'locale';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         actions: {
             loadAuthorPublications: jest.fn(),
@@ -24,7 +24,7 @@ function setup(testProps, isShallow = true) {
         publicationsListFacets: {},
         ...testProps,
     };
-    return getElement(myDatasets, props, isShallow);
+    return getElement(myDatasets, props);
 }
 
 describe('myDatasets test', () => {
@@ -46,7 +46,7 @@ describe('myDatasets test', () => {
     });
 
     it('renders no results', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

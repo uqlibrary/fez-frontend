@@ -8,12 +8,12 @@ jest.mock('actions', () => ({
         data.author.aut_id === 410 ? Promise.resolve() : Promise.reject(Error('Some error')),
 }));
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(MyIncompleteRecordForm, props, isShallow);
+    return getElement(MyIncompleteRecordForm, props);
 }
 
 describe('MyIncompleteRecordForm', () => {

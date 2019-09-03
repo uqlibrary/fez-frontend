@@ -4,10 +4,10 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -36,7 +36,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with Not UQ s
     >
       Not UQ
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -44,10 +44,10 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -76,7 +76,7 @@ exports[`OrgAffiliationTypeSelector tests  should render component with UQ selec
     >
       Not UQ
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -84,10 +84,10 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Org affiliation
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     SelectDisplayProps={
       Object {
         "id": "org-affiliation-selector",
@@ -116,6 +116,6 @@ exports[`OrgAffiliationTypeSelector tests  should render component with default 
     >
       Not UQ
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;

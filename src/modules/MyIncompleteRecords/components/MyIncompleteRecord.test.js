@@ -2,7 +2,7 @@ import { MyIncompleteRecordClass, styles } from './MyIncompleteRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import { routes } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         submitting: false,
         invalid: false,
         submitSucceeded: false,
+        submitAsSideEffect: false,
 
         recordToFix: null,
         isAuthorLinked: true,
@@ -61,7 +62,7 @@ function setup(testProps, isShallow = true) {
         publicationToFixFileUploadingError: false,
         ...testProps,
     };
-    return getElement(MyIncompleteRecordClass, props, isShallow);
+    return getElement(MyIncompleteRecordClass, props);
 }
 
 describe('Component MyIncompleteRecord', () => {

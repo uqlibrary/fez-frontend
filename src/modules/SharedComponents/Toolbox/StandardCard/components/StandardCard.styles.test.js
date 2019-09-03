@@ -13,6 +13,9 @@ describe('AppLoader component', () => {
                 primary: {
                     main: 'test3',
                 },
+                accent: {
+                    main: 'test4',
+                },
             },
         };
         expect(styles(theme)).toMatchSnapshot();

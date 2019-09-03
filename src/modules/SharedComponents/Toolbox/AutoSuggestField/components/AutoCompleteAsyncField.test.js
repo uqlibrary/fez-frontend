@@ -1,7 +1,7 @@
 import { AutoCompleteAsyncField, styles } from './AutoCompleteAsyncField';
 import Downshift from 'downshift';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         itemsList: [],
         itemsListLoading: false,
@@ -28,22 +28,22 @@ function setup(testProps, isShallow = true) {
         openOnFocus: false,
         ...testProps,
     };
-    return getElement(AutoCompleteAsyncField, props, isShallow);
+    return getElement(AutoCompleteAsyncField, props, args);
 }
 
 describe('AutoCompleteAsyncField component', () => {
     it('should render', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render with disabled flag set to true', () => {
-        const wrapper = setup({ disabled: true }, false);
+        const wrapper = setup({ disabled: true }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render as required field', () => {
-        const wrapper = setup({ required: true }, false);
+        const wrapper = setup({ required: true }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -53,13 +53,13 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render a spinner while loading', () => {
-        const wrapper = setup({ itemsListLoading: true }, false);
+        const wrapper = setup({ itemsListLoading: true }, { isShallow: false });
         expect(toJson(wrapper.find('CircularProgress'))).toMatchSnapshot();
     });
 
     it('should render autosuggest field and call action creator', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({ loadSuggestions: testFunction, async: false }, false);
+        const wrapper = setup({ loadSuggestions: testFunction, async: false }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(testFunction).toBeCalled();
     });
@@ -88,7 +88,7 @@ describe('AutoCompleteAsyncField component', () => {
                     },
                 ],
             },
-            false,
+            { isShallow: false },
         );
 
         expect(toJson(wrapper)).toMatchSnapshot();

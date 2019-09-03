@@ -1,6 +1,6 @@
 import { AuthorLinking } from './AuthorLinking';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         classes: {
             infiniteContainer: 'infiniteContainer',
@@ -8,7 +8,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AuthorLinking, props, isShallow);
+    return getElement(AuthorLinking, props);
 }
 
 describe('AuthorLinking', () => {

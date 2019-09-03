@@ -1,17 +1,17 @@
 import LanguageField from './LanguageField';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(LanguageField, props, isShallow);
+    return getElement(LanguageField, props);
 }
 
 describe('LanguageField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

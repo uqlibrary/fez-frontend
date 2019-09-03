@@ -1,7 +1,7 @@
 import { FileUploadEmbargoDate } from './FileUploadEmbargoDate';
 import FileUploadEmbargoDateWithStyles from './FileUploadEmbargoDate';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         minDate: new Date('2016'),
         value: new Date('2016'),
@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(FileUploadEmbargoDate, props, isShallow);
+    return getElement(FileUploadEmbargoDate, props);
 }
 
 describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance()._onChange();
     });

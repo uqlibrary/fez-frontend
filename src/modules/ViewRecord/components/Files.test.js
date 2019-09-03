@@ -2,7 +2,7 @@ import { journalArticle } from 'mock/data/testing/records';
 import Files from './Files';
 import { FilesClass } from './Files';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         theme: {},
         publication: journalArticle,
@@ -11,7 +11,7 @@ function setup(testProps, isShallow = true) {
         classes: { header: 'header' },
         ...testProps,
     };
-    return getElement(FilesClass, props, isShallow);
+    return getElement(FilesClass, props, args);
 }
 
 describe('Files Component ', () => {
@@ -25,7 +25,7 @@ describe('Files Component ', () => {
     });
 
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -52,7 +52,7 @@ describe('Files Component ', () => {
                 setHideCulturalSensitivityStatement: jest.fn(),
                 classes: { header: 'header' },
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -87,14 +87,14 @@ describe('Files Component ', () => {
     });
 
     it('should render bytes correctly', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().formatBytes(0)).toEqual('0 Bytes');
         expect(wrapper.instance().formatBytes(1024)).toEqual('1 KB');
         expect(wrapper.instance().formatBytes(1048576)).toEqual('1 MB');
     });
 
     it('should render icon for mimeType', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         wrapper.instance().renderFileIcon('UQ:1', 'blablabla');
         wrapper.update();
@@ -124,7 +124,7 @@ describe('Files Component ', () => {
     });
 
     it('should set state on showPreview', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const mediaUrl = 'mediaUrl';
         const previewMediaUrl = 'previewMediaUrl';
         const mimeType = 'image/jpeg';
@@ -188,7 +188,7 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper
                 .instance()
@@ -224,7 +224,7 @@ describe('Files Component ', () => {
     });
 
     it('should clean up state on hidePreview', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const mediaUrl = 'mediaUrl';
         const previewMediaUrl = 'previewMediaUrl';
         const mimeType = 'image/jpeg';
@@ -253,7 +253,7 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(
             wrapper
                 .instance()
@@ -347,7 +347,7 @@ describe('Files Component ', () => {
             },
         ];
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().searchByKey(fezDatastreamInfo, 'dsi_dsid', thumbnailFileName)).toEqual({
             dsi_pid: 'UQ:107683',
             dsi_dsid: 'thumbnail_AL_LH_01.jpg',

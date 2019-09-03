@@ -2,22 +2,22 @@ jest.dontMock('./ImageDocumentForm');
 
 import ImageDocumentForm from './ImageDocumentForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(ImageDocumentForm, props, isShallow);
+    return getElement(ImageDocumentForm, props);
 }
 
 describe('ImageDocumentForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 6 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(6);
     });
 

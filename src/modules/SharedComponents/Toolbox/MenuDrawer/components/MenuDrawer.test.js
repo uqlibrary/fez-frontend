@@ -22,7 +22,7 @@ const defaultLocale = {
     closeMenuLabel: 'Close menu',
 };
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {},
@@ -36,12 +36,12 @@ function setup(testProps, isShallow = true) {
         drawerOpen: testProps.drawerOpen || false,
         docked: testProps.docked || false,
     };
-    return getElement(MenuDrawer, props, isShallow);
+    return getElement(MenuDrawer, props);
 }
 
 describe('Component MenuDrawer', () => {
     it('should render empty drawer', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
@@ -78,7 +78,7 @@ describe('Component MenuDrawer', () => {
     });
 
     it('should have working method for navigating to links', () => {
-        const wrapper1 = setup({});
+        const wrapper1 = setup();
         const test1 = jest.spyOn(wrapper1.instance().props, 'onToggleDrawer');
         wrapper1.instance().navigateToLink(null, undefined);
         expect(test1).toBeCalled();
@@ -95,7 +95,7 @@ describe('Component MenuDrawer', () => {
     });
 
     it('should have working method for skipping menu items', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.spyOn(wrapper.instance(), 'focusOnElementId');
         wrapper.instance().skipMenuItems();
         expect(test).toBeCalledWith('afterMenuDrawer');
@@ -108,7 +108,7 @@ describe('Component MenuDrawer', () => {
             test = true;
         };
         document.getElementById = jasmine.createSpy('HTML Element').and.returnValue(dummyElement);
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().focusOnElementId('anything');
         expect(test).toBe(true);
     });

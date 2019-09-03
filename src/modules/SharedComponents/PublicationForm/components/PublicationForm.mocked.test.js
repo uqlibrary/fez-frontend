@@ -9,7 +9,7 @@ jest.mock('config/general', () => ({
     },
 }));
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         anyTouched: true,
         asyncValidate: jest.fn(),
@@ -37,6 +37,7 @@ function setup(testProps, isShallow = true) {
         reset: jest.fn(),
         resetSection: jest.fn(),
         submit: jest.fn(),
+        submitAsSideEffect: false,
         submitFailed: false,
         submitSucceeded: false,
         submitting: testProps.submitting || false,
@@ -45,12 +46,12 @@ function setup(testProps, isShallow = true) {
         valid: true,
         ...testProps,
     };
-    return getElement(PublicationForm, props, isShallow);
+    return getElement(PublicationForm, props);
 }
 
 describe('Component PublicationForm', () => {
     it('should render properly with non-matching doctype data arrays', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -2,7 +2,7 @@ import FixRecord from './FixRecord';
 import { mockRecordToFix } from 'mock/data/testing/records';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -41,6 +41,7 @@ function setup(testProps, isShallow = true) {
         valid: true,
         pure: true,
         pristine: true,
+        submitAsSideEffect: false,
         submitting: false,
         invalid: false,
         submitSucceeded: false,
@@ -64,7 +65,7 @@ function setup(testProps, isShallow = true) {
         publicationToFixFileUploadingError: testProps.publicationToFixFileUploadingError || false,
         ...testProps,
     };
-    return getElement(FixRecord, props, isShallow);
+    return getElement(FixRecord, props);
 }
 
 describe('Component FixRecord', () => {

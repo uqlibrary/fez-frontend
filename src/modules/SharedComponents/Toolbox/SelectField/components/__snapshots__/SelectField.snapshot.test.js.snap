@@ -10,10 +10,10 @@ exports[`SelectfieldWrapper snapshots tests renders SelectField component 1`] = 
       }
     }
   >
-    <WithStyles(InputLabel)
+    <WithStyles(WithFormControlContext(InputLabel))
       id="undefined-label"
     />
-    <WithStyles(Select)
+    <WithStyles(WithFormControlContext(Select))
       autoWidth={true}
       error={false}
       floatingLabelText="This is a test selectfield component"
@@ -44,10 +44,10 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       }
     }
   >
-    <WithStyles(InputLabel)
+    <WithStyles(WithFormControlContext(InputLabel))
       id="undefined-label"
     />
-    <WithStyles(Select)
+    <WithStyles(WithFormControlContext(Select))
       autoWidth={true}
       error={true}
       floatingLabelText="test selectfield component"
@@ -64,9 +64,9 @@ exports[`SelectfieldWrapper snapshots tests renders an error 1`] = `
       onChange={[Function]}
       type="text"
     />
-    <WithStyles(FormHelperText)>
+    <WithStyles(WithFormControlContext(FormHelperText))>
       Something bad happened
-    </WithStyles(FormHelperText)>
+    </WithStyles(WithFormControlContext(FormHelperText))>
   </WithStyles(FormControl)>
 </Fragment>
 `;

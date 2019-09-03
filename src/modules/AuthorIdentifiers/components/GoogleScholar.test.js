@@ -3,7 +3,7 @@ import { currentAuthor } from 'mock/data/account';
 
 jest.mock('redux-form/immutable');
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -64,7 +64,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(GoogleScholar, props, isShallow);
+    return getElement(GoogleScholar, props, args);
 }
 
 describe('Component GoogleScholar ', () => {
@@ -133,13 +133,13 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should redirect to dashboard if user is not an author', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillMount();
         expect(wrapper.instance().props.history.push).toHaveBeenCalled();
     });
 
     it('should not redirect to dashboard if submit success state has not changed', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillReceiveProps({
             submitSucceeded: wrapper.instance().props.submitSucceeded,
         });
@@ -148,7 +148,7 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should reset author update state when component is unmounted', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().componentWillUnmount();
         expect(wrapper.instance().props.actions.resetSavingAuthorState).toHaveBeenCalled();
     });
@@ -160,7 +160,7 @@ describe('Component GoogleScholar ', () => {
                 author: currentAuthor.uqnoauthid.data,
                 handleSubmit: handleSubmitFn,
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.find('form').simulate('keyDown', { key: 'Enter' });
@@ -172,7 +172,7 @@ describe('Component GoogleScholar ', () => {
     });
 
     it('should get correct alert message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const alert1 = wrapper.instance().getAlert({});
         expect(alert1).toBeNull();
         const Alert = wrapper.instance().getAlert({

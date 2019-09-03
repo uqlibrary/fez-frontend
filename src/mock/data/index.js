@@ -1,11 +1,8 @@
-export {
-    accounts,
-    authorsSearch,
-    currentAuthor,
-    authorDetails
-} from './account';
+export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
     collections,
+    communityRecord,
+    collectionRecord,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
     externalTitleScopusResultsList,
@@ -16,22 +13,20 @@ export {
     incompleteNTROrecordUqsbutl1,
     internalTitleSearchList,
     internalTitleSearchListNoResults,
-    MyDatasetList,
     myRecordsList,
+    MyDatasetList,
     possibleUnclaimedList,
     record,
     recordsTypeList,
+    recordWithDatastreams,
     recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
 } from './records';
+
 export { vocabulariesList } from './vocabularies';
 export { quickTemplates } from './acml';
-export {
-    hindexResponse,
-    trendingPublications,
-    currentAuthorStats
-} from './academicStats';
+export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';

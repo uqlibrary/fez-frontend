@@ -20,6 +20,11 @@ describe('Component ViewRecord ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render default props with admin menu', () => {
+        const wrapper = setup({ account: { canMasquerade: true } });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render loader', () => {
         const wrapper = setup({ loadingRecordToView: true });
         expect(toJson(wrapper)).toMatchSnapshot();

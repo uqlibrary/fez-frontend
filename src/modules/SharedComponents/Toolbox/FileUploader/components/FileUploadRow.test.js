@@ -1,6 +1,6 @@
 import { FileUploadRow } from './FileUploadRow';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         index: 0,
         uploadedFile: { name: 'a.txt', size: 100 },
@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(FileUploadRow, props, isShallow);
+    return getElement(FileUploadRow, props);
 }
 
 describe('FileUploadRow', () => {
     it('renders with uploaded file', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });

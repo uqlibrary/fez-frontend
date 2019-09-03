@@ -1,11 +1,11 @@
 import GrantListEditorField from './GrantListEditorField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(GrantListEditorField, props, isShallow);
+    return getElement(GrantListEditorField, props);
 }
 
 describe('GrantListEditorField', () => {

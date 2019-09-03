@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`StandardCard component renders with custom colours and full height 1`] = `
+exports[`Cards component renders with custom colours and full height 1`] = `
 <WithStyles(Card)
   className="undefined StandardCard"
   style={
@@ -15,7 +15,12 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
     action={false}
     classes={
       Object {
-        "root": "purple",
+        "root": "#555",
+      }
+    }
+    style={
+      Object {
+        "backgroundColor": "#ccc",
       }
     }
     title="card title"
@@ -33,22 +38,22 @@ exports[`StandardCard component renders with custom colours and full height 1`] 
 </WithStyles(Card)>
 `;
 
-exports[`StandardCard component renders with title and help button 1`] = `
+exports[`Cards component renders with square top and accent header 1`] = `
 <WithStyles(Card)
-  className="testClass StandardCard"
+  className="undefined StandardCard"
   style={Object {}}
 >
   <WithStyles(CardHeader)
-    action={
-      <Connect(WithStyles(HelpIcon))
-        buttonLabel="OK"
-        text="help text"
-        title="help"
-      />
-    }
+    action={false}
     classes={
       Object {
-        "root": "",
+        "root": "#333",
+      }
+    }
+    style={
+      Object {
+        "borderTopLeftRadius": 0,
+        "borderTopRightRadius": 0,
       }
     }
     title="card title"
@@ -66,18 +71,25 @@ exports[`StandardCard component renders with title and help button 1`] = `
 </WithStyles(Card)>
 `;
 
-exports[`StandardCard component renders with title and no help icon 1`] = `
+exports[`Cards component renders with title and help button 1`] = `
 <WithStyles(Card)
   className="testClass StandardCard"
   style={Object {}}
 >
   <WithStyles(CardHeader)
-    action={false}
+    action={
+      <Memo(ConnectFunction)
+        buttonLabel="OK"
+        text="help text"
+        title="help"
+      />
+    }
     classes={
       Object {
-        "root": "",
+        "root": undefined,
       }
     }
+    style={Object {}}
     title="card title"
     titleTypographyProps={
       Object {
@@ -91,4 +103,39 @@ exports[`StandardCard component renders with title and no help icon 1`] = `
     className=""
   />
 </WithStyles(Card)>
+`;
+
+exports[`Cards component renders with title and no help icon 1`] = `
+<WithStyles(Card)
+  className="testClass StandardCard"
+  style={Object {}}
+>
+  <WithStyles(CardHeader)
+    action={false}
+    classes={
+      Object {
+        "root": undefined,
+      }
+    }
+    style={Object {}}
+    title="card title"
+    titleTypographyProps={
+      Object {
+        "color": "inherit",
+        "component": "h3",
+        "variant": "h5",
+      }
+    }
+  />
+  <WithStyles(CardContent)
+    className=""
+  />
+</WithStyles(Card)>
+`;
+
+exports[`StandardCard component should render StyledCard with same props 1`] = `
+<WithStyles(Cards)
+  test1="test1value"
+  test2="test2value"
+/>
 `;

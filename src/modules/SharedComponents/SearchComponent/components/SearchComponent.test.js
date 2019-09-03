@@ -1,7 +1,7 @@
 import SearchComponent from './SearchComponent';
 import moment from 'moment';
 
-function setup(testProps, isShallow = true, requiresStore = false, context = {}) {
+function setup(testProps = {}, args = {}) {
     const props = {
         searchQueryParams: {},
 
@@ -30,25 +30,21 @@ function setup(testProps, isShallow = true, requiresStore = false, context = {})
         ...testProps,
     };
 
-    return getElement(SearchComponent, props, isShallow, requiresStore, context);
+    return getElement(SearchComponent, props, args);
 }
 
 describe('SearchComponent', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should set default prop method as expected', () => {
-        const wrapper = getElement(
-            SearchComponent,
-            {
-                history: {
-                    push: jest.fn(),
-                },
+        const wrapper = getElement(SearchComponent, {
+            history: {
+                push: jest.fn(),
             },
-            true,
-        );
+        });
         expect(wrapper.instance().props.updateFacetExcludesFromSearchFields()).toBeUndefined();
     });
 
@@ -69,7 +65,7 @@ describe('SearchComponent', () => {
 
     it('should toggle search to minimised view of advanced search', () => {
         // componentWillReceiveProps
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance().componentWillReceiveProps({
             searchQueryParams: {
@@ -92,7 +88,7 @@ describe('SearchComponent', () => {
         const context = {
             isMobile: true,
         };
-        const wrapper = setup(props, true, false, context);
+        const wrapper = setup(props, { context });
         wrapper.setProps({
             isAdvancedSearchMinimised: true,
         });
@@ -101,7 +97,7 @@ describe('SearchComponent', () => {
 
     it('should display simple search with query string', () => {
         // componentWillReceiveProps
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance().componentWillReceiveProps({
             searchQueryParams: {
@@ -452,7 +448,7 @@ describe('SearchComponent', () => {
     });
 
     it('should show a snackbar error for input being too long', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._displaySnackbar('Must be 5 characters or less');
         expect(wrapper.state().snackbarMessage).toEqual('Must be 5 characters or less');
         expect(wrapper.state().snackbarOpen).toBe(true);
@@ -556,7 +552,7 @@ describe('SearchComponent', () => {
     });
 
     it('should handle simple search text change', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -873,14 +869,14 @@ describe('SearchComponent', () => {
 
     describe('getFieldRowsFromSearchQuery', () => {
         it('should get default field if search query params not set (undefined)', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery(undefined);
 
             expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
         });
 
         it('should get default field if search query params not set (empty object)', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({});
 
             expect(fieldRows).toEqual([{ searchField: '0', value: '', label: '' }]);
@@ -913,7 +909,7 @@ describe('SearchComponent', () => {
         });
 
         it('should get field rows from search query params', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const fieldRows = wrapper.instance().getFieldRowsFromSearchQuery({
                 all: 'test',
                 rek_title: 'some title',
@@ -979,7 +975,7 @@ describe('SearchComponent', () => {
 
     describe('getDateRangeFromSearchQuery', () => {
         it('should get date range from search query', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const dateRange = wrapper.instance().getDateRangeFromSearchQuery({
                 rek_created_date: { label: '[31/01/2019 to 12/02/2019]' },
                 rek_updated_date: { label: '[31/01/2019 to 12/02/2019]' },
@@ -997,7 +993,7 @@ describe('SearchComponent', () => {
         });
 
         it('should not get date range from search query', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const dateRange = wrapper.instance().getDateRangeFromSearchQuery({
                 rek_created_date: '[31/01/2019 to 12/02/2019]',
                 rek_updated_date: '[31/01/2019 to 12/02/2019]',
@@ -1011,19 +1007,19 @@ describe('SearchComponent', () => {
 
     describe('parseDateRange', () => {
         it('should return date range', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(wrapper.instance().parseDateRange('[31/01/2019 to 12/02/2019]')).toMatchSnapshot();
         });
 
         it('should return empty object in case of invalid input', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(wrapper.instance().parseDateRange('')).toEqual({});
         });
     });
 
     describe('getDocTypesFromSearchQuery', () => {
         it('should get doc types from search query', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const docTypes = wrapper.instance().getDocTypesFromSearchQuery({
                 rek_display_type: [345, 373],
             });
@@ -1033,7 +1029,7 @@ describe('SearchComponent', () => {
 
     describe('getYearRangeFromActiveFacets', () => {
         it('should get year range from active facets', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             const yearRange = wrapper.instance().getYearRangeFromActiveFacets({
                 ranges: {
                     'Year published': {
@@ -1051,7 +1047,7 @@ describe('SearchComponent', () => {
 
     describe('getSearchQuery', () => {
         it('should construct search query', () => {
-            const wrapper = setup({});
+            const wrapper = setup();
             wrapper.setState({
                 advancedSearch: {
                     isOpenAccess: true,

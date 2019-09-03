@@ -3,7 +3,7 @@ import Immutable from 'immutable';
 import { JournalArticleForm, BookForm, GenericDocumentForm, ResearchReportForm } from './Forms';
 import { validation } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         submitSucceeded: false,
         valid: true,
         pure: true,
+        submitAsSideEffect: false,
         // above are common immutable default props
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         onFormCancel: testProps.onFormCancel || jest.fn(),
@@ -57,12 +58,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(PublicationForm, props, isShallow);
+    return getElement(PublicationForm, props);
 }
 
 describe('Component PublicationForm', () => {
     it('should render component initialised with just one field - publication type', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Field').length).toEqual(1);
     });

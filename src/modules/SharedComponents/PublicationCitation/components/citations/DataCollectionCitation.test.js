@@ -1,17 +1,17 @@
 import DataCollectionCitation from './DataCollectionCitation';
 import { dataCollection } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(DataCollectionCitation, props, isShallow);
+    return getElement(DataCollectionCitation, props, args);
 }
 
 describe('DataCollectionCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
