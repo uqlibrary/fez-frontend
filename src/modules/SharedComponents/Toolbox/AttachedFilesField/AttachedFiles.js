@@ -1,13 +1,18 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import locale from 'locale/viewRecord';
+import viewRecordLocale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { makeStyles } from '@material-ui/styles';
 import { useRecordContext } from 'context';
+import { useIsAdmin } from 'hooks';
+
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import Delete from '@material-ui/icons/Delete';
 
 import moment from 'moment';
 import VolumeUp from '@material-ui/icons/VolumeUp';
@@ -135,11 +140,11 @@ const FileIcon = ({
     }
 };
 
-const getFileData = (publication, dataStreams) => {
+const getFileData = (publication, dataStreams, isAdmin) => {
     const { files } = viewRecordsConfig;
 
     return !!dataStreams && dataStreams.length > 0
-        ? dataStreams.filter(isFileValid(viewRecordsConfig)).map(dataStream => {
+        ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
             const pid = dataStream.dsi_pid;
             const fileName = dataStream.dsi_dsid;
             const thumbnailDataStream = searchByKey(dataStreams, 'dsi_dsid', files.thumbnailFileName(fileName));
@@ -180,13 +185,18 @@ export const AttachedFiles = ({
     dataStreams,
     hideCulturalSensitivityStatement,
     setHideCulturalSensitivityStatement,
+    disabled,
+    deleteHint,
+    onDelete,
+    locale,
 }) => {
     const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
-    const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    const isAdmin = useIsAdmin();
 
-    const fileData = getFileData(record, dataStreams);
+    const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
+    const fileData = getFileData(record, dataStreams, isAdmin);
     if (fileData.length === 0) return null;
     let hasVideo = false;
     fileData.map(item => {
@@ -194,17 +204,18 @@ export const AttachedFiles = ({
             hasVideo = true;
         }
     });
+    const onFileDelete = index => () => onDelete(index);
 
     return (
         <Grid item xs={12}>
-            <StandardCard title={locale.viewRecord.sections.files.title}>
+            <StandardCard title={locale.title}>
                 {!!record.fez_record_search_key_advisory_statement && !hideCulturalSensitivityStatement && (
                     <Alert
                         allowDismiss
                         type={'info'}
                         message={
                             record.fez_record_search_key_advisory_statement.rek_advisory_statement ||
-                            locale.viewRecord.sections.files.culturalSensitivityStatement
+                            locale.culturalSensitivityStatement
                         }
                         dismissAction={setHideCulturalSensitivityStatement}
                     />
@@ -212,9 +223,9 @@ export const AttachedFiles = ({
                 {isFireFox && hasVideo && (
                     <Alert
                         allowDismiss
-                        type={locale.viewRecord.fireFoxAlert.type}
-                        title={locale.viewRecord.fireFoxAlert.title}
-                        message={locale.viewRecord.fireFoxAlert.message}
+                        type={viewRecordLocale.viewRecord.fireFoxAlert.type}
+                        title={viewRecordLocale.viewRecord.fireFoxAlert.title}
+                        message={viewRecordLocale.viewRecord.fireFoxAlert.message}
                     />
                 )}
                 <div style={{ padding: 8 }}>
@@ -224,20 +235,20 @@ export const AttachedFiles = ({
                         </Grid>
                         <Grid item sm={4}>
                             <Typography variant="caption" gutterBottom>
-                                {locale.viewRecord.sections.files.fileName}
+                                {locale.fileName}
                             </Typography>
                         </Grid>
                         <Hidden xsDown>
                             <Grid item sm={4}>
                                 <Typography variant="caption" gutterBottom>
-                                    {locale.viewRecord.sections.files.description}
+                                    {locale.description}
                                 </Typography>
                             </Grid>
                         </Hidden>
                         <Hidden smDown>
                             <Grid item md={2}>
                                 <Typography variant="caption" gutterBottom>
-                                    {locale.viewRecord.sections.files.size}
+                                    {locale.size}
                                 </Typography>
                             </Grid>
                         </Hidden>
@@ -282,6 +293,15 @@ export const AttachedFiles = ({
                                     <OpenAccessIcon {...item.openAccessStatus} />
                                 </Grid>
                             </Hidden>
+                            {isAdmin && (
+                                <Grid item xs style={{ textAlign: 'right' }}>
+                                    <Tooltip title={deleteHint}>
+                                        <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                            <Delete />
+                                        </IconButton>
+                                    </Tooltip>
+                                </Grid>
+                            )}
                         </Grid>
                     </div>
                 ))}
@@ -295,8 +315,14 @@ AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
     hideCulturalSensitivityStatement: PropTypes.bool,
     setHideCulturalSensitivityStatement: PropTypes.func,
-    classes: PropTypes.object,
+    disabled: PropTypes.bool,
+    deleteHint: PropTypes.string,
+    onDelete: PropTypes.func,
+    locale: PropTypes.object,
 };
 
+AttachedFiles.defaultProps = {
+    deleteHint: 'Remove this file',
+};
 const Files = props => <AttachedFiles {...props} />;
 export default Files;

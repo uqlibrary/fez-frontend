@@ -1793,5 +1793,21 @@ export default {
             label: 'Content Indicators',
             divider: ', ',
         },
+        attachedFiles: {
+            title: 'Files',
+            fileName: 'File name',
+            description: 'Description',
+            embargoDate: 'Open access after [embargoDate]',
+            size: 'Size',
+            culturalSensitivityStatement:
+                'Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes.',
+            linkTitle: 'Click to open this file in a new window - [filename] - [description] - [size]',
+            preview: {
+                videoTitle: 'Video preview',
+                imageTitle: 'Image preview',
+                openInNewWindow: 'Open/Download file in a new window',
+                close: 'Close',
+            },
+        },
     },
 };
