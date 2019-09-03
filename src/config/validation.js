@@ -84,7 +84,7 @@ export const isValidPartialDOIValue = value => {
 };
 
 export const isValidPid = value => {
-    const isValid = /uq:[a-z0-9]+/i;
+    const isValid = /^uq:[a-z0-9]+$/i;
     return isValid.test(value.trim());
 };
 

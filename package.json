@@ -139,7 +139,6 @@
         "deep-diff": "^1.0.2",
         "dompurify": "^1.0.4",
         "downshift": "^2.2.0",
-        "eslint-plugin-react-hooks": "^1.5.0",
         "file-saver": "^2.0.2",
         "highcharts": "^6.0.2",
         "highcharts-exporting": "^0.1.2",
@@ -198,7 +197,7 @@
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.js",
         "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest integration.js --no-coverage",
         "test:watch": "npm run test -- --watch --onlyChanged",
-        "test:update": "npm run test -- --u",
+        "test:update": "npm run test -- --updateSnapshot",
         "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
         "eslint": "eslint '**/*.js' --quiet",
         "eslint:fix": "eslint '**/*.js' --quiet --fix",
@@ -215,7 +214,7 @@
         "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
     },
     "engines": {
-        "npm": "^6.9.0",
+        "npm": "^6",
         "node": "11.10.1"
     },
     "babel": {

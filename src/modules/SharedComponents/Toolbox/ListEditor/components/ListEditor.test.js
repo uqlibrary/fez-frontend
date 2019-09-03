@@ -178,7 +178,8 @@ describe('ListEditor tests', () => {
 
     it('should call default input normaliser function', () => {
         const wrapper = setup({
-            formComponent: () => <div />,
+            formComponent: () => React.createElement('div', {}),
+            locale: {},
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         const result = wrapper

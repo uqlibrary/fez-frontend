@@ -25,12 +25,12 @@ describe('Routes method', () => {
 
     it('should return a list of menus for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff);
-        expect(testRoutes.length).toEqual(18);
+        expect(testRoutes.length).toEqual(17);
     });
 
     it('should return a list of menus including incomplete menu item for user who can masquerade', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, false, true);
-        expect(testRoutes.length).toEqual(19);
+        expect(testRoutes.length).toEqual(18);
     });
 
     it('should return a list of routes for anon user', () => {
@@ -45,7 +45,7 @@ describe('Routes method', () => {
 
     it('should return a list of routes for user who can masquerade', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqstaff });
-        expect(testRoutes.length).toEqual(31);
+        expect(testRoutes.length).toEqual(30);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {

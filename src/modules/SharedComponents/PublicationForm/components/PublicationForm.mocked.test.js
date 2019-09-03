@@ -37,6 +37,7 @@ function setup(testProps = {}) {
         reset: jest.fn(),
         resetSection: jest.fn(),
         submit: jest.fn(),
+        submitAsSideEffect: false,
         submitFailed: false,
         submitSucceeded: false,
         submitting: testProps.submitting || false,
