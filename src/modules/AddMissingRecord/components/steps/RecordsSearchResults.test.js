@@ -580,7 +580,7 @@ describe('Search record results', () => {
                 {
                     publicationsList: publicationsList,
                 },
-                false,
+                { isShallow: false },
             );
             expect(toJson(wrapper)).toMatchSnapshot();
         },
@@ -1072,7 +1072,7 @@ describe('Search record results', () => {
                 },
             ];
 
-            const wrapper = setup({});
+            const wrapper = setup();
             expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
         },
     );
@@ -1084,7 +1084,7 @@ describe('Search record results', () => {
             },
         ];
 
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().getUnclaimablePublicationsList(publicationsList)).toEqual(['UQ:255472']);
     });
 });

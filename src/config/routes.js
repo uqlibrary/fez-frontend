@@ -101,7 +101,6 @@ export const pathConfig = {
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
-        prototype: '/admin/prototype',
         edit: pid => `/admin/edit/${pid}`,
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
@@ -144,7 +143,6 @@ const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/thirdPartyTools',
-    '/admin/prototype',
     '/view',
     '/author-identifiers/orcid/link',
     '/author-identifiers/google-scholar/link',
@@ -360,13 +358,6 @@ export const getRoutesConfig = ({
         ...(account && account.canMasquerade
             ? [
                 {
-                    path: pathConfig.admin.prototype,
-                    component: components.Prototype,
-                    exact: true,
-                    access: [roles.admin],
-                    pageTitle: locale.pages.prototype.title,
-                },
-                {
                     path: pathConfig.admin.edit(pid),
                     component: components.Admin,
                     exact: true,
@@ -530,10 +521,6 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
             : []),
         ...(account && account.canMasquerade
             ? [
-                {
-                    linkTo: pathConfig.admin.prototype,
-                    ...locale.menu.prototype,
-                },
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,

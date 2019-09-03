@@ -38,6 +38,7 @@ function setup(testProps = {}) {
         initialized: false,
         invalid: false,
         pristine: false,
+        submitAsSideEffect: false,
         submitting: false,
         submitFailed: false,
         submitSucceeded: false,
