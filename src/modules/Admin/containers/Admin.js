@@ -10,7 +10,7 @@ import AdminContainer from '../components/AdminContainer';
 // import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
-import { adminInterfaceConfig, valueExtractor } from 'config/adminInterface';
+import { adminInterfaceConfig, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';

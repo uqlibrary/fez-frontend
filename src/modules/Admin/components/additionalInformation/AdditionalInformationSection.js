@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import PropTypes from 'prop-types';
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
-import { adminInterfaceConfig } from 'config/adminInterface';
+import { adminInterfaceConfig } from 'config/admin';
 
 /* istanbul ignore next */
 export const AdditionalInformationSection = ({ disabled = false }) => {
