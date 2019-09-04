@@ -22,7 +22,6 @@ import {
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
-import { OverrideSecurity } from 'modules/Admin/components/security/OverrideSecurity';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -645,14 +644,6 @@ export default {
     //         placeholder: '',
     //     },
     // },
-    rek_security_inherited: {
-        component: OverrideSecurity,
-        componentProps: {
-            name: 'adminSection.rek_security_inherited',
-            label: 'Record level security',
-            placeholder: '',
-        },
-    },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {
