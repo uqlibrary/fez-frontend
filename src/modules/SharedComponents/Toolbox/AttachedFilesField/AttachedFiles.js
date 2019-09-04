@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+
 import viewRecordLocale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -14,7 +16,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
 
-import moment from 'moment';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
@@ -26,6 +27,7 @@ import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
 import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
+import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
 
 const useStyles = makeStyles(
     theme => ({
@@ -176,6 +178,7 @@ const getFileData = (publication, dataStreams, isAdmin) => {
                 openAccessStatus,
                 previewMediaUrl: getUrl(pid, previewFileName || fileName),
                 mediaUrl: getUrl(pid, downloadableFileName || fileName),
+                embargoDate: dataStream.dsi_embargo_date,
             };
         })
         : [];
@@ -188,7 +191,9 @@ export const AttachedFiles = ({
     disabled,
     deleteHint,
     onDelete,
+    onDateChange,
     locale,
+    canEdit,
 }) => {
     const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
@@ -205,6 +210,7 @@ export const AttachedFiles = ({
         }
     });
     const onFileDelete = index => () => onDelete(index);
+    const onEmbargoDateChange = index => value => onDateChange(value, index);
 
     return (
         <Grid item xs={12}>
@@ -233,13 +239,13 @@ export const AttachedFiles = ({
                         <Grid item xs={1}>
                             &nbsp;
                         </Grid>
-                        <Grid item sm={4}>
+                        <Grid item sm={3}>
                             <Typography variant="caption" gutterBottom>
                                 {locale.fileName}
                             </Typography>
                         </Grid>
                         <Hidden xsDown>
-                            <Grid item sm={4}>
+                            <Grid item sm={3}>
                                 <Typography variant="caption" gutterBottom>
                                     {locale.description}
                                 </Typography>
@@ -255,6 +261,16 @@ export const AttachedFiles = ({
                         <Hidden xsDown>
                             <Grid item sm />
                         </Hidden>
+                        {isAdmin && canEdit && (
+                            <React.Fragment>
+                                <Grid item xs={2}>
+                                    <Typography variant="caption" gutterBottom>
+                                        {locale.embargoDateLabel || 'Embargo date'}
+                                    </Typography>
+                                </Grid>
+                                <Grid item xs />
+                            </React.Fragment>
+                        )}
                     </Grid>
                 </div>
                 {fileData.map((item, index) => (
@@ -271,11 +287,11 @@ export const AttachedFiles = ({
                             <Grid item xs={1}>
                                 <FileIcon {...item.iconProps} showPreview={showPreview} />
                             </Grid>
-                            <Grid item sm={4} className={classes.dataWrapper}>
+                            <Grid item sm={3} className={classes.dataWrapper}>
                                 <FileName {...item} onFileSelect={showPreview} />
                             </Grid>
                             <Hidden xsDown>
-                                <Grid item sm={4} className={classes.dataWrapper}>
+                                <Grid item sm={3} className={classes.dataWrapper}>
                                     <Typography variant="body2" noWrap>
                                         {item.description}
                                     </Typography>
@@ -293,14 +309,25 @@ export const AttachedFiles = ({
                                     <OpenAccessIcon {...item.openAccessStatus} />
                                 </Grid>
                             </Hidden>
-                            {isAdmin && (
-                                <Grid item xs style={{ textAlign: 'right' }}>
-                                    <Tooltip title={deleteHint}>
-                                        <IconButton onClick={onFileDelete(index)} disabled={disabled}>
-                                            <Delete />
-                                        </IconButton>
-                                    </Tooltip>
-                                </Grid>
+                            {isAdmin && canEdit && (
+                                <React.Fragment>
+                                    <Grid item xs={2}>
+                                        {!!item.openAccessStatus.embargoDate && (
+                                            <FileUploadEmbargoDate
+                                                value={new Date(item.embargoDate)}
+                                                onChange={onEmbargoDateChange(index)}
+                                                disabled={disabled}
+                                            />
+                                        )}
+                                    </Grid>
+                                    <Grid item xs style={{ textAlign: 'right' }}>
+                                        <Tooltip title={deleteHint}>
+                                            <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                                <Delete />
+                                            </IconButton>
+                                        </Tooltip>
+                                    </Grid>
+                                </React.Fragment>
                             )}
                         </Grid>
                     </div>
@@ -318,11 +345,14 @@ AttachedFiles.propTypes = {
     disabled: PropTypes.bool,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
+    onDateChange: PropTypes.func,
     locale: PropTypes.object,
+    canEdit: PropTypes.bool,
 };
 
 AttachedFiles.defaultProps = {
     deleteHint: 'Remove this file',
+    canEdit: false,
 };
 const Files = props => <AttachedFiles {...props} />;
 export default Files;
