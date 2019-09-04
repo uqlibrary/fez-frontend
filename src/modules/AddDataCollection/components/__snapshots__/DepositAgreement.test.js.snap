@@ -43,7 +43,7 @@ Object {
 `;
 
 exports[`Component DepositAgreement should render checked if deposit agreement accepted 1`] = `
-<WithStyles(FormControlLabel)
+<WithStyles(WithFormControlContext(FormControlLabel))
   classes={
     Object {
       "root": undefined,
@@ -80,7 +80,7 @@ exports[`Component DepositAgreement should render checked if deposit agreement a
 `;
 
 exports[`Component DepositAgreement should render default view 1`] = `
-<WithStyles(FormControlLabel)
+<WithStyles(WithFormControlContext(FormControlLabel))
   classes={
     Object {
       "root": undefined,

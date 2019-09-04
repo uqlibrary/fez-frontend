@@ -2,7 +2,7 @@ import SbsSubmission from './SbsSubmission';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -41,6 +41,7 @@ function setup(testProps, isShallow = true) {
         submitFailed: false,
         valid: true,
         pure: true,
+        submitAsSideEffect: false,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         submitting: testProps.submitting || false, // : PropTypes.bool
@@ -57,7 +58,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(SbsSubmission, props, isShallow);
+    return getElement(SbsSubmission, props);
 }
 
 describe('SbsSubmission test', () => {
@@ -118,7 +119,7 @@ describe('SbsSubmission test', () => {
     });
 
     it('should display successfull submission screen', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setProps({ submitSucceeded: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -135,7 +136,7 @@ describe('SbsSubmission test', () => {
 
     it('should display confirmation box before submission', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().depositConfirmationBox = { showConfirmation: testMethod };
         wrapper.instance().openDepositConfirmation();
         expect(testMethod).toHaveBeenCalled();
@@ -143,7 +144,7 @@ describe('SbsSubmission test', () => {
 
     it('should display confirmation box after submission', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().openDepositConfirmation = testMethod;
         wrapper.setProps({ isSessionValid: true, submitting: false });
         wrapper.update();
@@ -159,7 +160,7 @@ describe('SbsSubmission test', () => {
 
     it('cancelSubmit() method', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         delete global.window.location;
         global.window.location = { reload: testMethod };
         wrapper.instance().cancelSubmit();
@@ -168,7 +169,7 @@ describe('SbsSubmission test', () => {
 
     it('setDepositConfirmation(ref) method', () => {
         const ref = 'Hello';
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setDepositConfirmation(ref);
         expect(wrapper.instance().depositConfirmationBox).toEqual(ref);
     });

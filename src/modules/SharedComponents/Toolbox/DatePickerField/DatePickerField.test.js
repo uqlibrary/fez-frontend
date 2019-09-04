@@ -1,10 +1,10 @@
 import DatePickerField from './DatePickerField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
-    return getElement(DatePickerField, props, isShallow);
+    return getElement(DatePickerField, props);
 }
 
 describe('DatePickerField snapshots tests', () => {

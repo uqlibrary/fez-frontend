@@ -1,15 +1,15 @@
 import IndexComponent from './Index';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
     };
-    return getElement(IndexComponent, props, isShallow);
+    return getElement(IndexComponent, props, args);
 }
 
 describe('Index page', () => {
     it('should render placeholders', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

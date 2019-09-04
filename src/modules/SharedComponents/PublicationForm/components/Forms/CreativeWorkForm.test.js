@@ -3,23 +3,23 @@ jest.dontMock('./CreativeWorkForm');
 import CreativeWorkForm from './CreativeWorkForm';
 import { NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-    return getElement(CreativeWorkForm, props, isShallow);
+    return getElement(CreativeWorkForm, props);
 }
 
 describe('CreativeWorkForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 10 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(10);
     });
 

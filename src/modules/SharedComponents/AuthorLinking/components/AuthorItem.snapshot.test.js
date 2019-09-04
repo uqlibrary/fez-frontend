@@ -1,21 +1,20 @@
 import { AuthorItem, styles } from './AuthorItem';
 
-const getProps = (testProps = {}) => ({
-    author: { rek_author: 'Test user' },
-    index: 0,
-    onAuthorSelected: undefined,
-    type: 'author',
-    classes: {
-        authorLinkIcon: 'authorLinkIcon',
-        buttonBase: 'buttonBase',
-        authorOrder: 'authorOrder',
-    },
-    ...testProps,
-});
-
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
+    const props = {
+        author: { rek_author: 'Test user' },
+        index: 0,
+        onAuthorSelected: undefined,
+        type: 'author',
+        classes: {
+            authorLinkIcon: 'authorLinkIcon',
+            buttonBase: 'buttonBase',
+            authorOrder: 'authorOrder',
+        },
+        ...testProps,
+    };
     // build full props list required by the component
-    return getElement(AuthorItem, getProps(testProps), isShallow);
+    return getElement(AuthorItem, props);
 }
 
 describe('AuthorItem renders ', () => {

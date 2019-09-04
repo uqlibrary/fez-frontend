@@ -1,7 +1,7 @@
 import OpenAccessIcon from './OpenAccessIcon';
 import { openAccessConfig } from 'config';
 
-function setup(testProps = {}, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         isOpenAccess: testProps.isOpenAccess || false,
         embargoDate: testProps.embargoDate || null,
@@ -9,7 +9,7 @@ function setup(testProps = {}, isShallow = false) {
         showEmbargoText: testProps.showEmbargoText || false,
         ...testProps,
     };
-    return getElement(OpenAccessIcon, props, isShallow);
+    return getElement(OpenAccessIcon, props, args);
 }
 
 describe('Journal Name Component test ', () => {

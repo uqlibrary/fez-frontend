@@ -1,17 +1,17 @@
 import ExportPublications from './ExportPublications';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         format: testProps.format,
         ...testProps,
     };
-    return getElement(ExportPublications, props, isShallow);
+    return getElement(ExportPublications, props);
 }
 
 describe('Export Publications renders', () => {
     it('component with all fields enabled', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('SelectField').length).toBe(1);
     });
@@ -28,7 +28,7 @@ describe('Export Publications renders', () => {
         const mockOnChange = jest.fn();
         const wrapper = setup({ onChange: mockOnChange });
         expect(toJson(wrapper)).toMatchSnapshot();
-        wrapper.find('WithStyles(Select)').simulate('change', { target: { value: expected } });
+        wrapper.find('WithStyles(WithFormControlContext(Select))').simulate('change', { target: { value: expected } });
         expect(mockOnChange.mock.calls.length).toBe(1);
     });
 

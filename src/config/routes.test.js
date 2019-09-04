@@ -43,10 +43,10 @@ describe('Routes method', () => {
         expect(testRoutes.length).toEqual(23);
     });
 
-    // it('should return a list of routes for user who can masquerade', () => {
-    //     const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqstaff });
-    //     expect(testRoutes.length).toEqual(34);
-    // });
+    it('should return a list of routes for user who can masquerade', () => {
+        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqstaff });
+        expect(testRoutes.length).toEqual(32);
+    });
 
     it('should return a list of routes for hdr student without ORCID', () => {
         const testRoutes = routes.getRoutesConfig({

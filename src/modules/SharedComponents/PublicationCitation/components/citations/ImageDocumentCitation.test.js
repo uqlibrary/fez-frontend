@@ -1,17 +1,17 @@
 import ImageDocumentCitation from './ImageDocumentCitation';
 import { imageDocument } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(ImageDocumentCitation, props, isShallow);
+    return getElement(ImageDocumentCitation, props, args);
 }
 
 describe('ImageDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1,37 +1,37 @@
 import { OfflineSnackbar, styles } from './OfflineSnackbar';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(OfflineSnackbar, props, isShallow);
+    return getElement(OfflineSnackbar, props);
 }
 
 describe('Component OfflineSnackbar', () => {
     it('renders hidden (open: false) snackbar', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setState({ open: false, online: true, hasDisconnected: false });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders offline snackbar', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setState({ open: true, online: false });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('renders back online snackbar', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setState({ open: true, online: true });
         wrapper.update();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('handleRequestClose returns expected state', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         wrapper.instance().setState({ open: true });
         wrapper.update();
@@ -45,20 +45,20 @@ describe('Component OfflineSnackbar', () => {
     });
 
     it('renderMessage returns expected message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().renderMessage('message', 'icon')).toMatchSnapshot();
     });
 
     it('updateOnlineState returns expected state when online', () => {
         Object.defineProperty(navigator, 'onLine', { value: true, writable: true });
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().updateOnlineState();
         expect(wrapper.instance().state).toEqual({ online: true, open: true });
     });
 
     it('updateOnlineState returns expected state when online', () => {
         Object.defineProperty(navigator, 'onLine', { value: false, writable: true });
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().updateOnlineState();
         expect(wrapper.instance().state).toEqual({ online: false, open: true });
     });
@@ -80,7 +80,7 @@ describe('Component OfflineSnackbar', () => {
     });
 
     it('should unmount component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();
         expect(componentWillUnmount).toHaveBeenCalled();

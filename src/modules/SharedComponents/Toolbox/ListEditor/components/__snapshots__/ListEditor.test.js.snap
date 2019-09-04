@@ -112,18 +112,14 @@ exports[`ListEditor tests should add item and set state 2`] = `
 
 exports[`ListEditor tests should call default input normaliser function 1`] = `
 <div
-  className="testClass NoLabel"
+  className="testClass "
 >
   <formComponent
     disabled={false}
     errorText=""
     inputField={[MockFunction]}
     isValid={[MockFunction]}
-    locale={
-      Object {
-        "inputFieldLabel": "NoLabel",
-      }
-    }
+    locale={Object {}}
     normalize={[Function]}
     onAdd={[Function]}
   />
@@ -319,6 +315,26 @@ exports[`ListEditor tests should render full component with a defined className 
 `;
 
 exports[`ListEditor tests should render input value as itemList 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+  />
+</div>
+`;
+
+exports[`ListEditor tests should render input value as itemList for List 1`] = `
 <div
   className="testClass NoLabel"
 >

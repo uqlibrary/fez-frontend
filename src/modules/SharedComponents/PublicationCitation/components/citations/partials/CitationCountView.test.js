@@ -1,6 +1,6 @@
 import CitationCountView from './CitationCountView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
@@ -9,7 +9,7 @@ function setup(testProps, isShallow = true) {
         link: testProps.link,
         title: testProps.title,
     };
-    return getElement(CitationCountView, props, isShallow);
+    return getElement(CitationCountView, props);
 }
 
 describe('CitationCountView test ', () => {

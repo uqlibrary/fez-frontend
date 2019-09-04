@@ -269,7 +269,7 @@ exports[`AuthorLinking should maintain question if onchange prop is missing 2`] 
       </Infinite>
     </WithStyles(Grid)>
   </WithStyles(Grid)>
-  <WithStyles(FormControlLabel)
+  <WithStyles(WithFormControlContext(FormControlLabel))
     classes={
       Object {
         "root": undefined,

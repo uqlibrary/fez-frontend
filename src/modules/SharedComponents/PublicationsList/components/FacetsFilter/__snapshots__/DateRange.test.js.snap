@@ -1,153 +1,779 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Date range  should call onChange when year range is reset 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiButtonBase-root-1108 MuiListItem-root-1096 MuiListItem-default-1099 MuiListItem-gutters-1104 FacetsFilterListItem-listItemGutters-1094 MuiListItem-button-1105"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemText-root-1111"
+    >
+      <p
+        class="MuiTypography-root-1117 MuiTypography-body2-1125 MuiTypography-colorTextPrimary-1149 FacetsFilterListItem-listText-1095"
+      >
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-1153"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-1171"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container-1162 MuiCollapse-entered-1163"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-1164"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-1165"
+      >
+        <div
+          style="padding: 8px;"
+        >
+          <div
+            class="MuiGrid-container-1178 MuiGrid-spacing-xs-16-1201 MuiGrid-wrap-xs-nowrap-1184 MuiGrid-align-items-xs-flex-end-1188"
+          >
+            <div
+              class="MuiGrid-item-1179 MuiGrid-grid-xs-4-1210"
+            >
+              <div
+                class="MuiFormControl-root-1275 MuiFormControl-fullWidth-1278"
+              >
+                <label
+                  class="MuiFormLabel-root-1290 MuiInputLabel-root-1279 MuiInputLabel-formControl-1284 MuiInputLabel-animated-1287"
+                  data-shrink="false"
+                  for="from"
+                >
+                  From
+                </label>
+                <div
+                  class="MuiInputBase-root-1310 MuiInput-root-1297 MuiInput-underline-1301 MuiInputBase-fullWidth-1319 MuiInput-fullWidth-1304 MuiInputBase-formControl-1311 MuiInput-formControl-1298"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-1320 MuiInput-input-1305 MuiInputBase-inputType-1323 MuiInput-inputType-1308"
+                    id="from"
+                    name="from"
+                    type="number"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-1179 MuiGrid-grid-xs-4-1210"
+            >
+              <div
+                class="MuiFormControl-root-1275 MuiFormControl-fullWidth-1278"
+              >
+                <label
+                  class="MuiFormLabel-root-1290 MuiInputLabel-root-1279 MuiInputLabel-formControl-1284 MuiInputLabel-animated-1287"
+                  data-shrink="false"
+                  for="to"
+                >
+                  To
+                </label>
+                <div
+                  class="MuiInputBase-root-1310 MuiInput-root-1297 MuiInput-underline-1301 MuiInputBase-fullWidth-1319 MuiInput-fullWidth-1304 MuiInputBase-formControl-1311 MuiInput-formControl-1298"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-1320 MuiInput-input-1305 MuiInputBase-inputType-1323 MuiInput-inputType-1308"
+                    id="to"
+                    name="to"
+                    type="number"
+                    value=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-1179"
+            >
+              <button
+                class="MuiButtonBase-root-1108 MuiButton-root-1327 MuiButton-text-1329 MuiButton-flat-1332 MuiButton-fullWidth-1352"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-1328"
+                >
+                  Go
+                </span>
+                <span
+                  class="MuiTouchRipple-root-1171"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
 exports[`Date range  should render component with values set 1`] = `
-<Memo(WithStyles(FacetsFilterListItem))
-  facetTitle="Date range"
-  key="date-range"
-  onToggle={[MockFunction]}
-  open={null}
->
-  <Memo(WithStyles(FacetsFilterNestedListItem))
-    isActive={true}
-    onFacetClick={[Function]}
-    primaryText="2010 - 2016"
-  />
-</Memo(WithStyles(FacetsFilterListItem))>
+<DocumentFragment>
+  <div
+    class="MuiButtonBase-root-348 MuiListItem-root-336 MuiListItem-default-339 MuiListItem-gutters-344 FacetsFilterListItem-listItemGutters-334 MuiListItem-button-345"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemText-root-351"
+    >
+      <p
+        class="MuiTypography-root-357 MuiTypography-body2-365 MuiTypography-colorTextPrimary-389 FacetsFilterListItem-listText-335"
+      >
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-393"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-581"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container-402 MuiCollapse-entered-403"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-404"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-405"
+      >
+        <div
+          style="padding: 8px;"
+        >
+          <div
+            class="MuiGrid-container-406 MuiGrid-spacing-xs-16-429 MuiGrid-wrap-xs-nowrap-412 MuiGrid-align-items-xs-flex-end-416"
+          >
+            <div
+              class="MuiGrid-item-407 MuiGrid-grid-xs-4-438"
+            >
+              <div
+                class="MuiFormControl-root-503 MuiFormControl-fullWidth-506"
+              >
+                <label
+                  class="MuiFormLabel-root-518 MuiFormLabel-filled-522 MuiInputLabel-root-507 MuiInputLabel-formControl-512 MuiInputLabel-animated-515 MuiInputLabel-shrink-514"
+                  data-shrink="true"
+                  for="from"
+                >
+                  From
+                </label>
+                <div
+                  class="MuiInputBase-root-538 MuiInput-root-525 MuiInput-underline-529 MuiInputBase-fullWidth-547 MuiInput-fullWidth-532 MuiInputBase-formControl-539 MuiInput-formControl-526"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-548 MuiInput-input-533 MuiInputBase-inputType-551 MuiInput-inputType-536"
+                    id="from"
+                    name="from"
+                    type="number"
+                    value="2010"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-407 MuiGrid-grid-xs-4-438"
+            >
+              <div
+                class="MuiFormControl-root-503 MuiFormControl-fullWidth-506"
+              >
+                <label
+                  class="MuiFormLabel-root-518 MuiFormLabel-filled-522 MuiInputLabel-root-507 MuiInputLabel-formControl-512 MuiInputLabel-animated-515 MuiInputLabel-shrink-514"
+                  data-shrink="true"
+                  for="to"
+                >
+                  To
+                </label>
+                <div
+                  class="MuiInputBase-root-538 MuiInput-root-525 MuiInput-underline-529 MuiInputBase-fullWidth-547 MuiInput-fullWidth-532 MuiInputBase-formControl-539 MuiInput-formControl-526"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-548 MuiInput-input-533 MuiInputBase-inputType-551 MuiInput-inputType-536"
+                    id="to"
+                    name="to"
+                    type="number"
+                    value="2016"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-407"
+            >
+              <button
+                class="MuiButtonBase-root-348 MuiButton-root-555 MuiButton-text-557 MuiButton-flat-560 MuiButton-fullWidth-580"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-556"
+                >
+                  Go
+                </span>
+                <span
+                  class="MuiTouchRipple-root-581"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Date range  should render date range form with default value 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiButtonBase-root-94 MuiListItem-root-82 MuiListItem-default-85 MuiListItem-gutters-90 FacetsFilterListItem-listItemGutters-80 MuiListItem-button-91"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemText-root-97"
+    >
+      <p
+        class="MuiTypography-root-103 MuiTypography-body2-111 MuiTypography-colorTextPrimary-135 FacetsFilterListItem-listText-81"
+      >
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-139"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-327"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container-148 MuiCollapse-entered-149"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-150"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-151"
+      >
+        <div
+          style="padding: 8px;"
+        >
+          <div
+            class="MuiGrid-container-152 MuiGrid-spacing-xs-16-175 MuiGrid-wrap-xs-nowrap-158 MuiGrid-align-items-xs-flex-end-162"
+          >
+            <div
+              class="MuiGrid-item-153 MuiGrid-grid-xs-4-184"
+            >
+              <div
+                class="MuiFormControl-root-249 MuiFormControl-fullWidth-252"
+              >
+                <label
+                  class="MuiFormLabel-root-264 MuiFormLabel-filled-268 MuiInputLabel-root-253 MuiInputLabel-formControl-258 MuiInputLabel-animated-261 MuiInputLabel-shrink-260"
+                  data-shrink="true"
+                  for="from"
+                >
+                  From
+                </label>
+                <div
+                  class="MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-294 MuiInput-input-279 MuiInputBase-inputType-297 MuiInput-inputType-282"
+                    id="from"
+                    name="from"
+                    type="number"
+                    value="2007"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-153 MuiGrid-grid-xs-4-184"
+            >
+              <div
+                class="MuiFormControl-root-249 MuiFormControl-fullWidth-252"
+              >
+                <label
+                  class="MuiFormLabel-root-264 MuiFormLabel-filled-268 MuiInputLabel-root-253 MuiInputLabel-formControl-258 MuiInputLabel-animated-261 MuiInputLabel-shrink-260"
+                  data-shrink="true"
+                  for="to"
+                >
+                  To
+                </label>
+                <div
+                  class="MuiInputBase-root-284 MuiInput-root-271 MuiInput-underline-275 MuiInputBase-fullWidth-293 MuiInput-fullWidth-278 MuiInputBase-formControl-285 MuiInput-formControl-272"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-294 MuiInput-input-279 MuiInputBase-inputType-297 MuiInput-inputType-282"
+                    id="to"
+                    name="to"
+                    type="number"
+                    value="2022"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-153"
+            >
+              <button
+                class="MuiButtonBase-root-94 MuiButton-root-301 MuiButton-text-303 MuiButton-flat-306 MuiButton-fullWidth-326"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-302"
+                >
+                  Go
+                </span>
+                <span
+                  class="MuiTouchRipple-root-327"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Date range  should render disabled component 1`] = `
-<Memo(WithStyles(FacetsFilterListItem))
-  disabled={true}
-  facetTitle="Date range"
-  key="date-range"
-  onToggle={[MockFunction]}
-  open={null}
->
+<DocumentFragment>
   <div
-    style={
-      Object {
-        "padding": 8,
-      }
-    }
+    class="MuiButtonBase-root-602 MuiButtonBase-disabled-603 MuiListItem-root-590 MuiListItem-default-593 MuiListItem-gutters-598 FacetsFilterListItem-listItemGutters-588 MuiListItem-disabled-596 MuiListItem-button-599"
+    role="button"
+    tabindex="-1"
   >
-    <WithStyles(Grid)
-      alignItems="flex-end"
-      container={true}
-      spacing={16}
-      wrap="nowrap"
+    <div
+      class="MuiListItemText-root-605"
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={4}
+      <p
+        class="MuiTypography-root-611 MuiTypography-body2-619 MuiTypography-colorTextPrimary-643 FacetsFilterListItem-listText-589"
       >
-        <TextField
-          disabled={true}
-          fullWidth={true}
-          label="From"
-          onChange={[Function]}
-          required={false}
-          select={false}
-          type="number"
-          value={2007}
-          variant="standard"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={4}
-      >
-        <TextField
-          disabled={true}
-          fullWidth={true}
-          label="To"
-          onChange={[Function]}
-          required={false}
-          select={false}
-          type="number"
-          value={2022}
-          variant="standard"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-      >
-        <WithStyles(Button)
-          disabled={true}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="text"
-        >
-          Go
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-647"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
   </div>
-</Memo(WithStyles(FacetsFilterListItem))>
+  <div
+    class="MuiCollapse-container-656 MuiCollapse-entered-657"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-658"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-659"
+      >
+        <div
+          style="padding: 8px;"
+        >
+          <div
+            class="MuiGrid-container-660 MuiGrid-spacing-xs-16-683 MuiGrid-wrap-xs-nowrap-666 MuiGrid-align-items-xs-flex-end-670"
+          >
+            <div
+              class="MuiGrid-item-661 MuiGrid-grid-xs-4-692"
+            >
+              <div
+                class="MuiFormControl-root-757 MuiFormControl-fullWidth-760"
+              >
+                <label
+                  class="MuiFormLabel-root-772 MuiFormLabel-disabled-774 MuiInputLabel-disabled-763 MuiFormLabel-filled-776 MuiInputLabel-root-761 MuiInputLabel-formControl-766 MuiInputLabel-animated-769 MuiInputLabel-shrink-768"
+                  data-shrink="true"
+                  for="from"
+                >
+                  From
+                </label>
+                <div
+                  class="MuiInputBase-root-792 MuiInput-root-779 MuiInput-underline-783 MuiInputBase-disabled-795 MuiInput-disabled-782 MuiInputBase-fullWidth-801 MuiInput-fullWidth-786 MuiInputBase-formControl-793 MuiInput-formControl-780"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-802 MuiInput-input-787 MuiInputBase-disabled-795 MuiInput-disabled-782 MuiInputBase-inputType-805 MuiInput-inputType-790"
+                    disabled=""
+                    id="from"
+                    name="from"
+                    type="number"
+                    value="2007"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-661 MuiGrid-grid-xs-4-692"
+            >
+              <div
+                class="MuiFormControl-root-757 MuiFormControl-fullWidth-760"
+              >
+                <label
+                  class="MuiFormLabel-root-772 MuiFormLabel-disabled-774 MuiInputLabel-disabled-763 MuiFormLabel-filled-776 MuiInputLabel-root-761 MuiInputLabel-formControl-766 MuiInputLabel-animated-769 MuiInputLabel-shrink-768"
+                  data-shrink="true"
+                  for="to"
+                >
+                  To
+                </label>
+                <div
+                  class="MuiInputBase-root-792 MuiInput-root-779 MuiInput-underline-783 MuiInputBase-disabled-795 MuiInput-disabled-782 MuiInputBase-fullWidth-801 MuiInput-fullWidth-786 MuiInputBase-formControl-793 MuiInput-formControl-780"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-802 MuiInput-input-787 MuiInputBase-disabled-795 MuiInput-disabled-782 MuiInputBase-inputType-805 MuiInput-inputType-790"
+                    disabled=""
+                    id="to"
+                    name="to"
+                    type="number"
+                    value="2022"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-661"
+            >
+              <button
+                class="MuiButtonBase-root-602 MuiButtonBase-disabled-603 MuiButton-root-809 MuiButton-text-811 MuiButton-flat-814 MuiButton-disabled-829 MuiButton-fullWidth-834"
+                disabled=""
+                tabindex="-1"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-810"
+                >
+                  Go
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;
 
 exports[`Date range  should render empty component 1`] = `
-<Memo(WithStyles(FacetsFilterListItem))
-  facetTitle="Date range"
-  key="date-range"
-  onToggle={[MockFunction]}
-  open={null}
->
+<DocumentFragment>
   <div
-    style={
-      Object {
-        "padding": 8,
-      }
-    }
+    class="MuiButtonBase-root-15 MuiListItem-root-3 MuiListItem-default-6 MuiListItem-gutters-11 FacetsFilterListItem-listItemGutters-1 MuiListItem-button-12"
+    role="button"
+    tabindex="0"
   >
-    <WithStyles(Grid)
-      alignItems="flex-end"
-      container={true}
-      spacing={16}
-      wrap="nowrap"
+    <div
+      class="MuiListItemText-root-18"
     >
-      <WithStyles(Grid)
-        item={true}
-        xs={4}
+      <p
+        class="MuiTypography-root-24 MuiTypography-body2-32 MuiTypography-colorTextPrimary-56 FacetsFilterListItem-listText-2"
       >
-        <TextField
-          fullWidth={true}
-          label="From"
-          onChange={[Function]}
-          required={false}
-          select={false}
-          type="number"
-          value={2007}
-          variant="standard"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={4}
-      >
-        <TextField
-          fullWidth={true}
-          label="To"
-          onChange={[Function]}
-          required={false}
-          select={false}
-          type="number"
-          value={2022}
-          variant="standard"
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-      >
-        <WithStyles(Button)
-          disabled={false}
-          fullWidth={true}
-          onClick={[Function]}
-          variant="text"
-        >
-          Go
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-60"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M16.59 8.59L12 13.17 7.41 8.59 6 10l6 6 6-6z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-73"
+    />
   </div>
-</Memo(WithStyles(FacetsFilterListItem))>
+</DocumentFragment>
+`;
+
+exports[`Date range  should set state values via props 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiButtonBase-root-849 MuiListItem-root-837 MuiListItem-default-840 MuiListItem-gutters-845 FacetsFilterListItem-listItemGutters-835 MuiListItem-button-846"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemText-root-852"
+    >
+      <p
+        class="MuiTypography-root-858 MuiTypography-body2-866 MuiTypography-colorTextPrimary-890 FacetsFilterListItem-listText-836"
+      >
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-894"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-1082"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container-903 MuiCollapse-entered-904"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-905"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-906"
+      >
+        <div
+          style="padding: 8px;"
+        >
+          <div
+            class="MuiGrid-container-907 MuiGrid-spacing-xs-16-930 MuiGrid-wrap-xs-nowrap-913 MuiGrid-align-items-xs-flex-end-917"
+          >
+            <div
+              class="MuiGrid-item-908 MuiGrid-grid-xs-4-939"
+            >
+              <div
+                class="MuiFormControl-root-1004 MuiFormControl-fullWidth-1007"
+              >
+                <label
+                  class="MuiFormLabel-root-1019 MuiFormLabel-filled-1023 MuiInputLabel-root-1008 MuiInputLabel-formControl-1013 MuiInputLabel-animated-1016 MuiInputLabel-shrink-1015"
+                  data-shrink="true"
+                  for="from"
+                >
+                  From
+                </label>
+                <div
+                  class="MuiInputBase-root-1039 MuiInput-root-1026 MuiInput-underline-1030 MuiInputBase-fullWidth-1048 MuiInput-fullWidth-1033 MuiInputBase-formControl-1040 MuiInput-formControl-1027"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-1049 MuiInput-input-1034 MuiInputBase-inputType-1052 MuiInput-inputType-1037"
+                    id="from"
+                    name="from"
+                    type="number"
+                    value="2010"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-908 MuiGrid-grid-xs-4-939"
+            >
+              <div
+                class="MuiFormControl-root-1004 MuiFormControl-fullWidth-1007"
+              >
+                <label
+                  class="MuiFormLabel-root-1019 MuiFormLabel-filled-1023 MuiInputLabel-root-1008 MuiInputLabel-formControl-1013 MuiInputLabel-animated-1016 MuiInputLabel-shrink-1015"
+                  data-shrink="true"
+                  for="to"
+                >
+                  To
+                </label>
+                <div
+                  class="MuiInputBase-root-1039 MuiInput-root-1026 MuiInput-underline-1030 MuiInputBase-fullWidth-1048 MuiInput-fullWidth-1033 MuiInputBase-formControl-1040 MuiInput-formControl-1027"
+                >
+                  <input
+                    aria-invalid="false"
+                    class="MuiInputBase-input-1049 MuiInput-input-1034 MuiInputBase-inputType-1052 MuiInput-inputType-1037"
+                    id="to"
+                    name="to"
+                    type="number"
+                    value="2015"
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              class="MuiGrid-item-908"
+            >
+              <button
+                class="MuiButtonBase-root-849 MuiButton-root-1056 MuiButton-text-1058 MuiButton-flat-1061 MuiButton-fullWidth-1081"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiButton-label-1057"
+                >
+                  Go
+                </span>
+                <span
+                  class="MuiTouchRipple-root-1082"
+                />
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Date range  should set state values via props 2`] = `
+<DocumentFragment>
+  <div
+    class="MuiButtonBase-root-849 MuiListItem-root-837 MuiListItem-default-840 MuiListItem-gutters-845 FacetsFilterListItem-listItemGutters-835 MuiListItem-button-846"
+    role="button"
+    tabindex="0"
+  >
+    <div
+      class="MuiListItemText-root-852"
+    >
+      <p
+        class="MuiTypography-root-858 MuiTypography-body2-866 MuiTypography-colorTextPrimary-890 FacetsFilterListItem-listText-836"
+      >
+        Date range
+      </p>
+    </div>
+    <svg
+      aria-hidden="true"
+      class="MuiSvgIcon-root-894"
+      focusable="false"
+      role="presentation"
+      viewBox="0 0 24 24"
+    >
+      <path
+        d="M12 8l-6 6 1.41 1.41L12 10.83l4.59 4.58L18 14z"
+      />
+      <path
+        d="M0 0h24v24H0z"
+        fill="none"
+      />
+    </svg>
+    <span
+      class="MuiTouchRipple-root-1082"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container-903 MuiCollapse-entered-904"
+    style="min-height: 0px;"
+  >
+    <div
+      class="MuiCollapse-wrapper-905"
+    >
+      <div
+        class="MuiCollapse-wrapperInner-906"
+      >
+        <div
+          class="MuiButtonBase-root-849 MuiListItem-root-837 MuiListItem-default-840 MuiListItem-gutters-845 FacetsFilterNestedListItem-listItemGutters-1089 MuiListItem-button-846"
+          role="button"
+          tabindex="0"
+        >
+          <div
+            class="MuiListItemIcon-root-1093"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root-894"
+              focusable="false"
+              role="presentation"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+              />
+              <path
+                d="M0 0h24v24H0z"
+                fill="none"
+              />
+            </svg>
+          </div>
+          <div
+            class="MuiListItemText-root-852 MuiListItemText-inset-853 FacetsFilterNestedListItem-inset-1091 FacetsFilterNestedListItem-listText-1090"
+          >
+            <p
+              class="MuiTypography-root-858 MuiTypography-body2-866 MuiTypography-colorPrimary-888"
+            >
+              2010 - 2020
+            </p>
+          </div>
+          <span
+            class="MuiTouchRipple-root-1082"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
 `;

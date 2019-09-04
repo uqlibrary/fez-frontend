@@ -1,6 +1,6 @@
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         affiliation: '',
         onAffiliationChange: jest.fn(),
@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(OrgAffiliationTypeSelector, props, isShallow);
+    return getElement(OrgAffiliationTypeSelector, props);
 }
 
 describe('OrgAffiliationTypeSelector tests ', () => {
     it('should render component with default values', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

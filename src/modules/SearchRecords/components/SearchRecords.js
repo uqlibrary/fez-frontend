@@ -336,6 +336,9 @@ class SearchRecords extends PureComponent {
                                     this.props.publicationsList.length > 0 && (
                                         <div style={{ marginTop: 16 }}>
                                             <PublicationsList
+                                                showAdminActions={
+                                                    this.props.isAdmin || this.props.isUnpublishedBufferPage
+                                                }
                                                 showUnpublishedBufferFields={this.props.isUnpublishedBufferPage}
                                                 publicationsList={this.props.publicationsList}
                                             />
@@ -350,29 +353,30 @@ class SearchRecords extends PureComponent {
                                 </StandardCard>
                             </Grid>
                         )}
-                    {/* prettier-ignore */
+                    {// prettier-ignore
                         this.props.publicationsListFacets &&
-                        Object.keys(this.props.publicationsListFacets).length !== 0 &&
-                        <Hidden smDown>
-                            <Grid item md={3}>
-                                <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
-                                    <FacetsFilter
-                                        facetsData={this.props.publicationsListFacets}
-                                        onFacetsChanged={this.facetsChanged}
-                                        activeFacets={this.state.activeFacets}
-                                        disabled={isLoadingOrExporting}
-                                        excludeFacetsList={
-                                            (this.state.advancedSearchFields.length &&
+                        Object.keys(this.props.publicationsListFacets).length !== 0 && (
+                            <Hidden smDown>
+                                <Grid item md={3}>
+                                    <StandardRighthandCard title={txt.facetsFilter.title} help={txt.facetsFilter.help}>
+                                        <FacetsFilter
+                                            facetsData={this.props.publicationsListFacets}
+                                            onFacetsChanged={this.facetsChanged}
+                                            activeFacets={this.state.activeFacets}
+                                            disabled={isLoadingOrExporting}
+                                            excludeFacetsList={
+                                                (this.state.advancedSearchFields.length &&
                                                 this.state.advancedSearchFields) ||
                                             locale.pages.searchRecords.facetsFilter.excludeFacetsList
-                                        }
-                                        renameFacetsList={txt.facetsFilter.renameFacetsList}
-                                        lookupFacetsList={txt.facetsFilter.lookupFacetsList}
-                                        showOpenAccessFilter
-                                    />
-                                </StandardRighthandCard>
-                            </Grid>
-                        </Hidden>}
+                                            }
+                                            renameFacetsList={txt.facetsFilter.renameFacetsList}
+                                            lookupFacetsList={txt.facetsFilter.lookupFacetsList}
+                                            showOpenAccessFilter
+                                        />
+                                    </StandardRighthandCard>
+                                </Grid>
+                            </Hidden>
+                        )}
                 </Grid>
             </StandardPage>
         );

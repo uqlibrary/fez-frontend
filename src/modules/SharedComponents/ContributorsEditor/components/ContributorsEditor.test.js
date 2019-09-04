@@ -3,7 +3,7 @@ import { authorsSearch } from 'mock/data';
 import Immutable from 'immutable';
 import React from 'react';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         author: { aut_id: 1 },
         classes: {
@@ -12,7 +12,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(ContributorsEditor, props, isShallow);
+    return getElement(ContributorsEditor, props, args);
 }
 
 describe('ContributorsEditor', () => {
@@ -32,7 +32,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('renders full component with NTRO fields', () => {
-        const wrapper = setup({ isNtro: true }, false);
+        const wrapper = setup({ isNtro: true }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -67,14 +67,14 @@ describe('ContributorsEditor', () => {
     });
 
     it('appends a contributor to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({ displayName: 'J.Smith' });
         expect(wrapper.state().contributors.length).toEqual(1);
     });
 
     it('appends a contributor with identifier to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
             displayName: 'J.Smith',
@@ -85,7 +85,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('appends a contributor with duplicate identifier to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().contributors.length).toEqual(0);
         wrapper.instance().addContributor({
             displayName: 'J.Smith',
@@ -112,7 +112,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('updates a contributor', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             contributors: [
                 {
@@ -189,7 +189,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('deletes a contributor from the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             contributors: [{}, {}, {}],
             isCurrentAuthorSelected: true,
@@ -200,7 +200,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('deletes all contributors from a list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             contributors: [
                 { nameAsPublished: 'One', disabled: false },
@@ -216,7 +216,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('moves up a contributor', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             contributors: [{ displayName: 1 }, { displayName: 2 }, { displayName: 3 }],
         });
@@ -228,7 +228,7 @@ describe('ContributorsEditor', () => {
     });
 
     it('moves down a contributor', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({
             contributors: [{ displayName: 1 }, { displayName: 2 }, { displayName: 3 }],
         });

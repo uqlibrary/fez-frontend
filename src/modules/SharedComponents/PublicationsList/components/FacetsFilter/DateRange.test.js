@@ -1,14 +1,15 @@
+import React from 'react';
 import DateRange from './DateRange';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         onChange: testProps.onChange || jest.fn(),
-        value: testProps.value || { from: null, to: null },
         open: testProps.open || null,
         onToggle: testProps.onToggle || jest.fn(),
         ...testProps,
     };
-    return getElement(DateRange, props, isShallow);
+    return rtlRender(<DateRange {...props} />);
 }
 
 describe('Date range ', () => {
@@ -22,83 +23,136 @@ describe('Date range ', () => {
     });
 
     it('should render empty component', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { asFragment } = setup({});
+        expect(asFragment()).toMatchSnapshot();
+    });
+
+    it('should render date range form with default value', () => {
+        const { asFragment } = setup({ open: true });
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render component with values set', () => {
-        const wrapper = setup({ value: { from: 2010, to: 2016 } });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        const { asFragment } = setup({
+            open: true,
+            value: {
+                from: 2010,
+                to: 2016,
+            },
+        });
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('should render disabled component', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
-
-        wrapper.find('.facetsYearCategory').forEach(item => {
-            expect(item.props().disabled).toEqual(true);
-        });
+        const { asFragment } = setup({ open: true, disabled: true });
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('should set state values via props', () => {
-        const wrapper = setup({ value: { from: 2010, to: 2015 }, defaultValue: { from: null, to: null } });
-        expect(wrapper.state().from).toEqual(2010);
-        expect(wrapper.state().to).toEqual(2015);
-        expect(wrapper.state().isActive).toBeTruthy();
+        const onChange = jest.fn();
+        const { asFragment, getByLabelText, getByText } = setup({
+            open: true,
+            value: {
+                from: 2010,
+                to: 2015,
+            },
+            onChange,
+        });
 
-        wrapper.instance().componentWillReceiveProps({ value: { to: null, from: null } });
-        expect(wrapper.state().from).toEqual(null);
-        expect(wrapper.state().to).toEqual(null);
-        expect(wrapper.state().isActive).toBeFalsy();
-
-        wrapper.instance().componentWillReceiveProps({ value: { to: 2010, from: null } });
-        expect(wrapper.state().from).toEqual(null);
-        expect(wrapper.state().to).toEqual(2010);
-        expect(wrapper.state().isActive).toBeTruthy();
+        expect(asFragment()).toMatchSnapshot();
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '2010', name: 'from' } });
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '2020', name: 'to' } });
+        fireEvent.click(getByText(/go/i));
+        expect(onChange).toHaveBeenCalledWith({
+            from: 2010,
+            to: 2020,
+        });
+        expect(asFragment()).toMatchSnapshot();
     });
 
     it('should call onChange when year range is reset', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn, value: { from: 2010, to: 2018 } });
-        wrapper.instance().removeDateRange();
-        wrapper.update();
-        expect(testFn).toHaveBeenCalledWith({ from: null, to: null });
+        const { asFragment, getByText } = setup({
+            onChange: testFn,
+            open: true,
+            isActive: true,
+            value: {
+                from: 2010,
+                to: 2018,
+            },
+        });
+
+        fireEvent.click(getByText(/2010 - 2018/i));
+        expect(testFn).toHaveBeenCalledWith({
+            from: null,
+            to: null,
+        });
+        expect(asFragment()).toMatchSnapshot();
+    });
+    it('should call onChange when from value is deleted and submitted range', () => {
+        const testFn = jest.fn();
+        const { getByText, getByLabelText } = setup({
+            onChange: testFn,
+            open: true,
+            isActive: false,
+            value: {
+                from: 2010,
+                to: 2018,
+            },
+        });
+
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '', name: 'from' } });
+        fireEvent.click(getByText(/go/i));
+
+        expect(testFn).toHaveBeenCalledWith({
+            from: null,
+            to: 2018,
+        });
+        expect(getByText('* - 2018')).toBeInTheDocument();
     });
 
-    it('should not call onChange year range is not set', () => {
+    it('should call onChange when to value is deleted and submitted range', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn, value: { from: null, to: null } });
-        wrapper.instance().removeDateRange();
-        wrapper.update();
-        expect(testFn).not.toHaveBeenCalled();
+        const { getByText, getByLabelText } = setup({
+            onChange: testFn,
+            open: true,
+            isActive: false,
+            value: {
+                from: 2010,
+                to: 2018,
+            },
+        });
+
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '', name: 'to' } });
+        fireEvent.click(getByText(/go/i));
+
+        expect(testFn).toHaveBeenCalledWith({
+            from: 2010,
+            to: null,
+        });
+        expect(getByText('2010 - *')).toBeInTheDocument();
     });
 
-    it('should not call onChange year range is set', () => {
+    it('should call onChange when from and to values deleted and submitted range', () => {
         const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn, defaultValue: { from: 2000, to: 2010 } });
+        const { getByText, getByLabelText } = setup({
+            onChange: testFn,
+            open: true,
+            isActive: false,
+            value: {
+                from: 2010,
+                to: 2018,
+            },
+        });
 
-        wrapper.instance().setDateRange();
-        wrapper.update();
-        expect(testFn).toHaveBeenCalledWith({ from: 2000, to: 2010 });
+        fireEvent.change(getByLabelText(/from/i), { target: { value: '', name: 'from' } });
+        fireEvent.change(getByLabelText(/to/i), { target: { value: '', name: 'to' } });
+        fireEvent.click(getByText(/go/i));
 
-        wrapper.instance().setDateRange();
-        wrapper.update();
-        expect(testFn).toHaveBeenCalledWith({ from: 2000, to: 2010 });
-    });
-
-    it('should not call onChange year range is set', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onChange: testFn });
-        wrapper.instance().setValue('from')({ target: { value: null } });
-        wrapper.instance().setValue('to')({ target: { value: '2015' } });
-        wrapper.instance().setDateRange();
-        wrapper.update();
-        expect(testFn).toHaveBeenCalledWith({ from: null, to: 2015 });
-
-        wrapper.instance().setValue('from')({ target: { value: 2000 } });
-        wrapper.instance().setValue('to')({ target: { value: null } });
-        wrapper.instance().setDateRange();
-        wrapper.update();
-        expect(testFn).toHaveBeenCalledWith({ from: 2000, to: null });
+        expect(testFn).toHaveBeenCalledWith({
+            from: null,
+            to: null,
+        });
+        expect(getByText('* - *')).toBeInTheDocument();
     });
 });

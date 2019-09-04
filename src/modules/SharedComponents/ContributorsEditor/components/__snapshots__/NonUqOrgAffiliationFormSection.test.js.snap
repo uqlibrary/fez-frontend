@@ -28,10 +28,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
       fullWidth={true}
       required={true}
     >
-      <WithStyles(InputLabel)>
+      <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
+      </WithStyles(WithFormControlContext(InputLabel))>
+      <WithStyles(WithFormControlContext(Select))
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -93,7 +93,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with both
         >
           Other
         </WithStyles(MenuItem)>
-      </WithStyles(Select)>
+      </WithStyles(WithFormControlContext(Select))>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -127,10 +127,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
       fullWidth={true}
       required={true}
     >
-      <WithStyles(InputLabel)>
+      <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
+      </WithStyles(WithFormControlContext(InputLabel))>
+      <WithStyles(WithFormControlContext(Select))
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -192,7 +192,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with defa
         >
           Other
         </WithStyles(MenuItem)>
-      </WithStyles(Select)>
+      </WithStyles(WithFormControlContext(Select))>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -226,10 +226,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       fullWidth={true}
       required={true}
     >
-      <WithStyles(InputLabel)>
+      <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
+      </WithStyles(WithFormControlContext(InputLabel))>
+      <WithStyles(WithFormControlContext(Select))
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -291,7 +291,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         >
           Other
         </WithStyles(MenuItem)>
-      </WithStyles(Select)>
+      </WithStyles(WithFormControlContext(Select))>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>
@@ -325,10 +325,10 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
       fullWidth={true}
       required={true}
     >
-      <WithStyles(InputLabel)>
+      <WithStyles(WithFormControlContext(InputLabel))>
         Organisation type
-      </WithStyles(InputLabel)>
-      <WithStyles(Select)
+      </WithStyles(WithFormControlContext(InputLabel))>
+      <WithStyles(WithFormControlContext(Select))
         SelectDisplayProps={
           Object {
             "id": "org-affiliation-type",
@@ -390,7 +390,7 @@ exports[`NonUqOrgAffiliationFormSection tests  should render component with orga
         >
           Other
         </WithStyles(MenuItem)>
-      </WithStyles(Select)>
+      </WithStyles(WithFormControlContext(Select))>
     </WithStyles(FormControl)>
   </WithStyles(Grid)>
 </WithStyles(Grid)>

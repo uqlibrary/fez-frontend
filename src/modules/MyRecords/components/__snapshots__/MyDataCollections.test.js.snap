@@ -134,6 +134,7 @@ exports[`myDatasets test renders list of publications no facets 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
+              showAdminActions={false}
               showDefaultActions={true}
               showMetrics={false}
               showSourceCountIcon={false}
@@ -257,6 +258,7 @@ exports[`myDatasets test renders list of publications with facets 1`] = `
                 ]
               }
               publicationsListSubset={Array []}
+              showAdminActions={false}
               showDefaultActions={true}
               showMetrics={false}
               showSourceCountIcon={false}

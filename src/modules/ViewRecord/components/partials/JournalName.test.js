@@ -3,12 +3,12 @@ import { journalArticle } from 'mock/data/testing/records';
 
 let testJournalArticle = JSON.parse(JSON.stringify(journalArticle));
 
-function setup(testProps = {}, isShallow) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || testJournalArticle,
     };
-    return getElement(JournalName, props, isShallow);
+    return getElement(JournalName, props, args);
 }
 
 describe('Journal Name Component test ', () => {

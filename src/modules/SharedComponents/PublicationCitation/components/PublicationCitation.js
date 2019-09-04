@@ -38,6 +38,7 @@ import ThesisCitation from './citations/ThesisCitation';
 import NewspaperArticleCitation from './citations/NewspaperArticleCitation';
 import DataCollectionCitation from './citations/DataCollectionCitation';
 import { UnpublishedBufferCitationView } from './citations/partials/UnpublishedBufferCitationView';
+import AdminActions from './citations/partials/AdminActions';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 export const styles = theme => ({
@@ -81,6 +82,7 @@ export class PublicationCitation extends PureComponent {
         history: PropTypes.object.isRequired,
         actions: PropTypes.object.isRequired,
         hideTitle: PropTypes.bool,
+        showAdminActions: PropTypes.bool,
         showMetrics: PropTypes.bool,
         showSourceCountIcon: PropTypes.bool,
         showUnpublishedBufferFields: PropTypes.bool,
@@ -94,6 +96,7 @@ export class PublicationCitation extends PureComponent {
     };
 
     static defaultProps = {
+        showAdminActions: false,
         showDefaultActions: false,
         showSources: false,
         showSourceCountIcon: false,
@@ -340,12 +343,33 @@ export class PublicationCitation extends PureComponent {
                             <Grid item xs={12} className={classes.citationText}>
                                 {this.renderCitation(this.props.publication.rek_display_type)}
                             </Grid>
-                            {!this.props.hideCitationCounts && (
-                                <Grid item xs={12} className={classes.citationCounts}>
-                                    <CitationCounts
-                                        publication={this.props.publication}
-                                        hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}
-                                    />
+                            {this.props.showUnpublishedBufferFields && (
+                                <Grid item xs={12}>
+                                    <UnpublishedBufferCitationView publication={this.props.publication} />
+                                </Grid>
+                            )}
+                            {(!this.props.hideCitationCounts || this.props.showAdminActions) && (
+                                <Grid item xs={12}>
+                                    <Grid container alignItems="center">
+                                        {!this.props.hideCitationCounts && (
+                                            <Grid
+                                                item
+                                                xs="auto"
+                                                className={classes.citationCounts}
+                                                style={{ flexGrow: 1 }}
+                                            >
+                                                <CitationCounts
+                                                    publication={this.props.publication}
+                                                    hideViewFullStatisticsLink={this.props.hideViewFullStatisticsLink}
+                                                />
+                                            </Grid>
+                                        )}
+                                        {this.props.showAdminActions && (
+                                            <Grid item>
+                                                <AdminActions pid={this.props.publication.rek_pid} />
+                                            </Grid>
+                                        )}
+                                    </Grid>
                                 </Grid>
                             )}
                             {this.props.showSources && this.props.publication.sources && (
@@ -353,11 +377,6 @@ export class PublicationCitation extends PureComponent {
                                     <Typography gutterBottom variant="caption">
                                         {this.renderSources()}
                                     </Typography>
-                                </Grid>
-                            )}
-                            {this.props.showUnpublishedBufferFields && (
-                                <Grid item xs={12}>
-                                    <UnpublishedBufferCitationView publication={this.props.publication} />
                                 </Grid>
                             )}
                         </Grid>

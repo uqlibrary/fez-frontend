@@ -4,7 +4,7 @@ import { journalArticle, dataCollection } from 'mock/data/testing/records';
 import { validation } from 'config';
 import locale from 'locale/forms';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -44,6 +44,7 @@ function setup(testProps, isShallow = true) {
         submitSucceeded: false,
         valid: true,
         pure: true,
+        submitAsSideEffect: false,
         pristine: true,
         submitting: false,
         initialValues:
@@ -61,12 +62,12 @@ function setup(testProps, isShallow = true) {
         publicationToClaimFileUploadingError: testProps.publicationToClaimFileUploadingError || false,
         ...testProps,
     };
-    return getElement(ClaimRecord, props, isShallow);
+    return getElement(ClaimRecord, props);
 }
 
 describe('Component ClaimRecord ', () => {
     it('should render claim publication form', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(5);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -388,7 +389,7 @@ describe('Component ClaimRecord ', () => {
     });
 
     it('should set local variables', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ selectedRecordAction: 'unclaim' });
         wrapper.instance()._setSuccessConfirmation('successBox');
         wrapper.update();
@@ -403,7 +404,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should display confirmation box after successful submission', () => {
         const testMethod = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().successConfirmationBox = { showConfirmation: testMethod };
         wrapper.instance().componentWillReceiveProps({ submitSucceeded: true });
         expect(testMethod).toHaveBeenCalled();
@@ -457,7 +458,7 @@ describe('Component ClaimRecord ', () => {
     });
 
     it('should render navigation prompt', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper.setProps({ dirty: true });
@@ -477,7 +478,7 @@ describe('Component ClaimRecord ', () => {
 
     it('should handle default form submit', () => {
         const preventDefaultFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper
             .find('form')
             .props()

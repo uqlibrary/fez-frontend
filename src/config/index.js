@@ -22,3 +22,4 @@ export { viewRecordsConfig } from './viewRecord';
 export { trendingPublicationsConfig } from './trendingPublications';
 export { claimRecordConfig } from './claimRecord';
 export { mui1theme } from './theme';
+export { history } from './history';

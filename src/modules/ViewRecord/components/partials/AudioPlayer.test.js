@@ -1,7 +1,7 @@
 import { journalArticle } from 'mock/data/testing/records';
 import AudioPlayer from './AudioPlayer';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
         pid: testProps.pid || journalArticle.rek_pid,
@@ -9,7 +9,7 @@ function setup(testProps = {}, isShallow = true) {
             testProps.fileName || journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
         mimeType: testProps.mimeType || 'audio/mp3',
     };
-    return getElement(AudioPlayer, props, isShallow);
+    return getElement(AudioPlayer, props, args);
 }
 
 describe('Audio Player Component ', () => {
@@ -38,7 +38,7 @@ describe('Audio Player Component ', () => {
     });
 
     it('should play audio via button click', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         const element = wrapper.find('PlayArrowIcon.play');
         const audio = wrapper.find('audio');
@@ -62,7 +62,7 @@ describe('Audio Player Component ', () => {
                 fileName: journalArticle.fez_record_search_key_file_attachment_name[2].rek_file_attachment_name,
                 mimeType: 'audio/mp3',
             },
-            false,
+            { isShallow: false },
         );
         wrapper.setState({ isPlaying: true });
         wrapper.update();

@@ -1,11 +1,11 @@
 import { AuthButton } from '../components/AuthButton';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {},
     };
-    return getElement(AuthButton, props, isShallow);
+    return getElement(AuthButton, props);
 }
 
 describe('AuthButton snapshots test', () => {

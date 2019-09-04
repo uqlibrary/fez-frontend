@@ -1,6 +1,6 @@
 import { AuthorsCitationView } from './AuthorsCitationView';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         classes: {},
         publication: testProps.publication || {}, // : PropTypes.object.isRequired,
@@ -12,12 +12,12 @@ function setup(testProps, isShallow = false) {
         showLink: testProps.showLink || false,
         ...testProps,
     };
-    return getElement(AuthorsCitationView, props, isShallow);
+    return getElement(AuthorsCitationView, props, args);
 }
 
 describe('AuthorsCitationView test ', () => {
     it('should render component with no authors', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('.empty').length).toEqual(1);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -93,7 +93,7 @@ describe('AuthorsCitationView test ', () => {
                 },
             ],
         };
-        const wrapper = setup({ publication: testObject, showLink: true }, false);
+        const wrapper = setup({ publication: testObject, showLink: true });
         expect(wrapper.find('CitationView').get(0).props.suffix).toEqual('');
         expect(wrapper.find('CitationView').get(1).props.prefix).toEqual(', ');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -301,8 +301,13 @@ describe('AuthorsCitationView test ', () => {
             ],
         };
         const wrapper = setup(
-            { publication: testObject, prefix: 'Authored by: ', suffix: ' people.', thresholdNumberOfAuthors: 0 },
-            true,
+            {
+                publication: testObject,
+                prefix: 'Authored by: ',
+                suffix: ' people.',
+                thresholdNumberOfAuthors: 0,
+            },
+            { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(true);
@@ -468,7 +473,7 @@ describe('AuthorsCitationView test ', () => {
                 initialNumberOfAuthors: 8,
                 thresholdNumberOfAuthors: 2,
             },
-            true,
+            { isShallow: true },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.state().hasMoreAuthors).toEqual(false);

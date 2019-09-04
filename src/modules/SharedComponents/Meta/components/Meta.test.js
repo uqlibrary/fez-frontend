@@ -2,7 +2,7 @@ import * as records from 'mock/data/testing/records';
 import Meta from './Meta';
 import { routes } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         routesConfig: [
             {
@@ -21,7 +21,7 @@ function setup(testProps, isShallow = true) {
         location: { pathname: '/view/UQ:1234' },
         ...testProps,
     };
-    return getElement(Meta, props, isShallow);
+    return getElement(Meta, props);
 }
 
 describe('Meta Component ', () => {

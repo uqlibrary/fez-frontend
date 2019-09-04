@@ -144,17 +144,32 @@ export default class Meta extends PureComponent {
         const pageTitle = !!publication
             ? publication.rek_title
             : filteredRoutes.length > 0 && filteredRoutes[0].pageTitle;
+        const linkProps = !!publication
+            ? {
+                link: [
+                    {
+                        rel: 'schema.DC',
+                        href: 'http://purl.org/DC/elements/1.0/',
+                    },
+                ],
+            }
+            : {};
+        const metaTagsProps =
+            (metaTags.length > 0 && {
+                meta: metaTags.map((tag, index) => ({
+                    key: `${tag.name}-${index}`,
+                    ...tag,
+                    ...(tag.name === 'DC.Identifier' ? { scheme: 'URI' } : {}),
+                })),
+            }) ||
+            {};
+
         return (
-            <Helmet>
-                <title>{`${pageTitle ? `${pageTitle} - ` : ''}${locale.global.title}`}</title>
-                {!!publication && <link rel="schema.DC" href="http://purl.org/DC/elements/1.0/" />}
-                {metaTags &&
-                    metaTags.map((metaTag, index) => {
-                        const { name } = metaTag;
-                        const scheme = name === 'DC.Identifier' ? { scheme: 'URI' } : {};
-                        return <meta key={`${name}-${index}`} {...metaTag} {...scheme} />;
-                    })}
-            </Helmet>
+            <Helmet
+                title={`${pageTitle ? `${pageTitle} - ` : ''}${locale.global.title}`}
+                {...linkProps}
+                {...metaTagsProps}
+            />
         );
     }
 }

@@ -2,22 +2,22 @@ jest.dontMock('./DesignForm');
 
 import DesignForm from './DesignForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(DesignForm, props, isShallow);
+    return getElement(DesignForm, props);
 }
 
 describe('DesignForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 9 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(9);
     });
 

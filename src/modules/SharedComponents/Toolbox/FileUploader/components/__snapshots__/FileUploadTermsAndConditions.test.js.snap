@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Component FileUploadTermsAndConditions should render checked if terms and conditions accepted 1`] = `
-<WithStyles(FormControlLabel)
+<WithStyles(WithFormControlContext(FormControlLabel))
   classes={
     Object {
       "root": undefined,
@@ -34,7 +34,7 @@ exports[`Component FileUploadTermsAndConditions should render checked if terms a
 `;
 
 exports[`Component FileUploadTermsAndConditions should render default view 1`] = `
-<WithStyles(FormControlLabel)
+<WithStyles(WithFormControlContext(FormControlLabel))
   classes={
     Object {
       "root": undefined,

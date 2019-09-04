@@ -26,7 +26,7 @@ exports[`Component ThirdPartyLookupForm should display form in minimised view 1`
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Form
           </WithStyles(Typography)>
@@ -73,7 +73,7 @@ exports[`Component ThirdPartyLookupForm should display form without a secondary 
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Incites
           </WithStyles(Typography)>
@@ -152,7 +152,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action 1`] = `
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Lookup Action Fired
           </WithStyles(Typography)>
@@ -231,7 +231,7 @@ exports[`Component ThirdPartyLookupForm should fire the lookup action when there
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Lookup Action Fired7
           </WithStyles(Typography)>
@@ -328,7 +328,7 @@ exports[`Component ThirdPartyLookupForm should show form with non-minimised form
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Form
           </WithStyles(Typography)>
@@ -423,7 +423,7 @@ exports[`Component ThirdPartyLookupForm should submit if fields are valid where 
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Incites
           </WithStyles(Typography)>
@@ -502,7 +502,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 1`] 
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Form
           </WithStyles(Typography)>
@@ -549,7 +549,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 2`] 
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Form
           </WithStyles(Typography)>
@@ -644,7 +644,7 @@ exports[`Component ThirdPartyLookupForm should toggle nested items on click 3`] 
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             Test Form
           </WithStyles(Typography)>
@@ -691,7 +691,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             this form
           </WithStyles(Typography)>
@@ -701,7 +701,7 @@ exports[`Component ThirdPartyLookupForm should use defaults when locale values a
         >
           <WithStyles(IconButton)
             onClick={[Function]}
-            tooltip="Hide form for this form"
+            tooltip="Test hide this form"
           >
             <pure(KeyboardArrowUpIcon) />
           </WithStyles(IconButton)>
@@ -788,7 +788,7 @@ exports[`Component ThirdPartyLookupForm should use locale values when provided 1
           }
         >
           <WithStyles(Typography)
-            variant="headline"
+            variant="h5"
           >
             this form
           </WithStyles(Typography)>

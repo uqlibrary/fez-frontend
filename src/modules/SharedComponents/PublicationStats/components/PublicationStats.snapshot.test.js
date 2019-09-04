@@ -2,13 +2,13 @@ import { formattedData } from 'mock/data/testing/publicationStats';
 import { PublicationStats } from './PublicationStats';
 import PublicationStatsWithStyles from './PublicationStats';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(PublicationStats, props, isShallow);
+    return getElement(PublicationStats, props);
 }
 
 describe('PublicationStats component', () => {
@@ -18,7 +18,7 @@ describe('PublicationStats component', () => {
     });
 
     it('should render an empty component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

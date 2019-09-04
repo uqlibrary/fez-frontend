@@ -1,7 +1,7 @@
 import React from 'react';
 import LookupForm from './LookupForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         inputField: () => <span />,
@@ -9,12 +9,12 @@ function setup(testProps, isShallow = true) {
         isValid: testProps.isValid || jest.fn(() => ''), // PropTypes.func,
         disabled: testProps.disabled,
     };
-    return getElement(LookupForm, props, isShallow);
+    return getElement(LookupForm, props);
 }
 
 describe('LookupForm tests ', () => {
     it('should render lookup form', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1,13 +1,13 @@
 import { PublicationYearRangeField, styles } from './PublicationYearRangeField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         updateYearRangeFilter: jest.fn(),
         classes: {},
         ...testProps,
     };
-    return getElement(PublicationYearRangeField, props, isShallow);
+    return getElement(PublicationYearRangeField, props);
 }
 
 describe('Component PublicationYearRangeField', () => {
@@ -80,7 +80,7 @@ describe('Component PublicationYearRangeField', () => {
     });
 
     it('should test invalid year properly', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = wrapper.instance().isInvalidYear;
         expect(test({ from: 1, to: 0 })).toBe(true);
         expect(test({ from: 10000, to: 10001 })).toBe(true);

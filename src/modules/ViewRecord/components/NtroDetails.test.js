@@ -395,7 +395,7 @@ export const ntro = {
     ],
 };
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: {},
         theme: {},
@@ -403,7 +403,7 @@ function setup(testProps = {}, isShallow = true) {
         account: testProps.account || { canMasquerade: true },
         ...testProps,
     };
-    return getElement(NtroDetailsClass, props, isShallow);
+    return getElement(NtroDetailsClass, props, args);
 }
 
 describe('NtroDetails ', () => {
@@ -608,7 +608,7 @@ describe('NtroDetails ', () => {
                 publication: ntro,
                 account: { canMasquerade: true },
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

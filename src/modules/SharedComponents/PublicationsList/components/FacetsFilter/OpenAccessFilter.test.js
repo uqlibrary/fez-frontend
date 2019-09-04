@@ -1,6 +1,6 @@
 import OpenAccessFilter from './OpenAccessFilter';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onChange: jest.fn(),
         isActive: true,
@@ -9,7 +9,7 @@ function setup(testProps, isShallow = true) {
         onToggle: jest.fn(),
         ...testProps,
     };
-    return getElement(OpenAccessFilter, props, isShallow);
+    return getElement(OpenAccessFilter, props);
 }
 
 describe('OpenAccessFilter ', () => {

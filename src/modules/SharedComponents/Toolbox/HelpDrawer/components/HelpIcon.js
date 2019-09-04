@@ -26,10 +26,12 @@ export class HelpIcon extends Component {
         tooltip: PropTypes.string,
         onClick: PropTypes.func,
         classes: PropTypes.object,
+        IconComponent: PropTypes.oneOfType([PropTypes.func, PropTypes.element]),
     };
 
     static defaultProps = {
         tooltip: 'Click for more information',
+        IconComponent: HelpOutline,
     };
 
     setDrawerContent = () => {
@@ -38,11 +40,11 @@ export class HelpIcon extends Component {
     };
 
     render() {
-        const { classes, tooltip } = this.props;
+        const { classes, tooltip, IconComponent } = this.props;
         return (
             <Tooltip title={tooltip} placement="bottom-end" TransitionComponent={Fade}>
                 <IconButton onClick={this.setDrawerContent}>
-                    <HelpOutline className={classes.helpIcon} titleAccess={tooltip} />
+                    <IconComponent className={classes.helpIcon} titleAccess={tooltip} />
                 </IconButton>
             </Tooltip>
         );

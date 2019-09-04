@@ -1,6 +1,6 @@
 import MediaPreview from './MediaPreview';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         fileName: testProps.fileName || 'https://test.com/test.jpg',
         mediaUrl: testProps.mediaUrl || 'https://test.com/test.jpg',
@@ -10,7 +10,7 @@ function setup(testProps = {}, isShallow = true) {
         onClose: testProps.closeAction || jest.fn(),
         ...testProps,
     };
-    return getElement(MediaPreview, props, isShallow);
+    return getElement(MediaPreview, props, args);
 }
 
 describe('Media Preview Component ', () => {
@@ -20,28 +20,13 @@ describe('Media Preview Component ', () => {
     });
 
     it('should render component with image', () => {
-        const wrapper = setup({ mimeType: 'image/jpeg' }, false);
+        const wrapper = setup({ mimeType: 'image/jpeg' }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Button').length).toEqual(3);
     });
 
     it('should render component with video', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' }, false);
-        expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('Button').length).toEqual(3);
-    });
-
-    it('should render component with a PDF', () => {
-        const wrapper = setup(
-            {
-                fileName: 'test.pdf',
-                mediaUrl: 'test_t.pdf',
-                webMediaUrl: 'web_test_t.pdf',
-                previewMediaUrl: 'preview_test_t.pdf',
-                mimeType: 'application/pdf',
-            },
-            false,
-        );
+        const wrapper = setup({ mimeType: 'video/mp4' }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Button').length).toEqual(3);
     });
@@ -49,7 +34,7 @@ describe('Media Preview Component ', () => {
     it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;
-        const wrapper = setup({ webMediaUrl: 'web_test_t.jpg', mediaUrl: 'test.jpg' }, false);
+        const wrapper = setup({ webMediaUrl: 'web_test_t.jpg', mediaUrl: 'test.jpg' }, { isShallow: false });
         wrapper
             .find('Button')
             .at(0)

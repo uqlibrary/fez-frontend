@@ -631,7 +631,7 @@ describe('Additional Information Component ', () => {
         const wrapper = getElement(
             AdditionalInformation,
             { publication: records.journalArticle, account: { canMasquerade: true } },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

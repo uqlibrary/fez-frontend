@@ -11,7 +11,7 @@ export default class WhatIsEspace extends PureComponent {
     render() {
         const txt = locale.components.whatIsEspace;
         return (
-            <StandardCard title={txt.title} darkHeader>
+            <StandardCard title={txt.title} primaryHeader>
                 <Typography variant={'body2'}>
                     {txt.text}
                     {txt.readMoreLink.indexOf('http') === -1 && <Link to={txt.readMoreLink}>{txt.readMoreLabel}</Link>}

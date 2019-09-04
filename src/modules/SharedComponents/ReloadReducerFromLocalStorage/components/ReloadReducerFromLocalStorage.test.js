@@ -1,11 +1,11 @@
 import reloadReducerFromLocalStorage from './ReloadReducerFromLocalStorage';
 
-function setup(WrappedComponent, testProps, isShallow = true) {
+function setup(WrappedComponent, testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(WrappedComponent, props, isShallow);
+    return getElement(WrappedComponent, props);
 }
 
 describe('ReloadReducerFromLocalStorage component', () => {

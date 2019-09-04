@@ -26,7 +26,7 @@ import { mui1theme as theme } from 'config';
 const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
-            margin: '-16px -24px',
+            margin: '-16px -16px',
         },
         [theme.breakpoints.down('xs')]: {
             margin: -16,
@@ -297,7 +297,7 @@ export class DashboardClass extends PureComponent {
                                     classes={{ indicator: classes.tabIndicator }}
                                     value={this.state.dashboardPubsTabs}
                                     onChange={this.handleTabChange}
-                                    fullWidth
+                                    variant="fullWidth"
                                     centered
                                 >
                                     {this.props.showLatestPublicationsTab && (

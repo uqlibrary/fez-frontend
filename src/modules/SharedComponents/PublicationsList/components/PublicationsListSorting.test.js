@@ -1,7 +1,7 @@
 import { PublicationsListSorting } from './PublicationsListSorting';
 import { EXPORT_FORMAT_TO_EXTENSION } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         pagingData: {
@@ -21,7 +21,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(PublicationsListSorting, props, isShallow);
+    return getElement(PublicationsListSorting, props);
 }
 
 describe('PublicationsListSorting renders ', () => {
@@ -37,7 +37,7 @@ describe('PublicationsListSorting renders ', () => {
     });
 
     it('component with non-empty paging data', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('.publicationsListSorting.empty').length).toBe(0);
         // const pages = wrapper.find('SelectField');

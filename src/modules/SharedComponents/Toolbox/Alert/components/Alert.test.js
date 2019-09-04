@@ -1,6 +1,6 @@
 import { Alert } from './Alert';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: {},
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
         showLoader: testProps.showLoader || false,
         ...testProps,
     };
-    return getElement(Alert, props, isShallow);
+    return getElement(Alert, props);
 }
 
 describe('Alert component functionality test ', () => {
     it('matches snapshot', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1,0 +1,138 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LicenseSelectorField component should render default view 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        "test",
+        "test1",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US",
+        "value": 453608,
+      },
+      Object {
+        "text": "Creative Commons Attribution no derivatives http://creativecommons.org/licenses/by-nd/3.0/deed.en_US",
+        "value": 453609,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial http://creativecommons.org/licenses/by-nc/3.0/deed.en_US",
+        "value": 453610,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US",
+        "value": 453611,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US ",
+        "value": 453612,
+      },
+      Object {
+        "text": "Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
+        "value": 453613,
+      },
+      Object {
+        "text": "UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "value": 453701,
+      },
+      Object {
+        "text": "UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "value": 453702,
+      },
+    ]
+  }
+  label="License selector field"
+  locale={
+    Object {
+      "label": "License selector field",
+    }
+  }
+  onChange={[MockFunction]}
+  selectedValue={
+    Array [
+      "test",
+      "test1",
+    ]
+  }
+/>
+`;
+
+exports[`LicenseSelectorField component should render error and error message 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        "test",
+        "test1",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US",
+        "value": 453608,
+      },
+      Object {
+        "text": "Creative Commons Attribution no derivatives http://creativecommons.org/licenses/by-nd/3.0/deed.en_US",
+        "value": 453609,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial http://creativecommons.org/licenses/by-nc/3.0/deed.en_US",
+        "value": 453610,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial no derivatives http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US",
+        "value": 453611,
+      },
+      Object {
+        "text": "Creative Commons Attribution noncommercial share alike http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_US ",
+        "value": 453612,
+      },
+      Object {
+        "text": "Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US",
+        "value": 453613,
+      },
+      Object {
+        "text": "UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "value": 453701,
+      },
+      Object {
+        "text": "UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "value": 453702,
+      },
+    ]
+  }
+  label="License selector field"
+  locale={
+    Object {
+      "label": "License selector field",
+    }
+  }
+  meta={
+    Object {
+      "error": "This field is required",
+    }
+  }
+  onChange={[MockFunction]}
+  selectedValue={
+    Array [
+      "test",
+      "test1",
+    ]
+  }
+/>
+`;

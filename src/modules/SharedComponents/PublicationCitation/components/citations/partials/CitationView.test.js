@@ -1,6 +1,6 @@
 import CitationView from './CitationView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
@@ -9,12 +9,12 @@ function setup(testProps, isShallow = true) {
         value: testProps.value,
         className: testProps.className || '',
     };
-    return getElement(CitationView, props, isShallow);
+    return getElement(CitationView, props);
 }
 
 describe('CitationView test ', () => {
     it('should render component with empty span', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

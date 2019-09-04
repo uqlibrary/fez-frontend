@@ -1,24 +1,23 @@
 import { PublicationCitation, styles } from './PublicationCitation';
 import { mockRecordToFix } from 'mock/data/testing/records';
 
-const getProps = (testProps = {}) => ({
-    classes: {},
-    publication: mockRecordToFix,
-    history: { push: jest.fn() },
-    actions: {
-        setRecordToView: jest.fn(),
-    },
-    hideLinks: false,
-    ...testProps,
-});
-
-function setup(testProps, isShallow = true) {
-    return getElement(PublicationCitation, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    const props = {
+        classes: {},
+        publication: mockRecordToFix,
+        history: { push: jest.fn() },
+        actions: {
+            setRecordToView: jest.fn(),
+        },
+        hideLinks: false,
+        ...testProps,
+    };
+    return getElement(PublicationCitation, props);
 }
 
 describe('PublicationCitation ', () => {
     it('should render component with default item', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -58,7 +57,7 @@ describe('PublicationCitation ', () => {
     });
 
     it('should render primary action button', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().renderActions([])).toBe(null);
         expect(
             wrapper.instance().renderActions([
@@ -201,8 +200,13 @@ describe('PublicationCitation ', () => {
     });
 
     it('should return message indicating unavailability of citation display', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().renderCitation(null)).toMatchSnapshot();
+    });
+
+    it('should show admin actions on unpublished buffer/search records page for admins', () => {
+        const wrapper = setup({ showAdminActions: true, hideCitationCounts: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with content indicators', () => {

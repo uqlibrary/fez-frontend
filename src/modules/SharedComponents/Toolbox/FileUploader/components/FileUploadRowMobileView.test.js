@@ -19,13 +19,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadRowMobileView, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploadRowMobileView, getProps(testProps));
 }
 
 describe('Component FileUploadRowMobileView', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

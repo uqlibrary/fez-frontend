@@ -1,6 +1,6 @@
 import { InlineLoader } from './InlineLoader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {
@@ -10,7 +10,7 @@ function setup(testProps, isShallow = true) {
             },
         },
     };
-    return getElement(InlineLoader, props, isShallow);
+    return getElement(InlineLoader, props);
 }
 
 describe('Component InlineLoader', () => {

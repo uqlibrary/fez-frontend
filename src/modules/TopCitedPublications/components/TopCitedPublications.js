@@ -16,7 +16,7 @@ import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 export const styles = theme => ({
     tabs: {
         [theme.breakpoints.up('sm')]: {
-            margin: '-16px -24px 0px -24px',
+            margin: '-16px -16px 0px -16px',
         },
         [theme.breakpoints.down('xs')]: {
             margin: '-16px -16px 0px -16px',
@@ -95,7 +95,7 @@ export class TopCitedPublicationsClass extends PureComponent {
                             classes={{ indicator: classes.tabIndicator }}
                             value={this.state.topCitedTab}
                             onChange={this.handleTabChange}
-                            fullWidth
+                            variant="fullWidth"
                             centered
                         >
                             {/* Tabs */}

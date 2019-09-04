@@ -1,12 +1,12 @@
 import { Alert } from '../components/Alert';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         classes: {},
         ...testProps,
     };
-    return getElement(Alert, props, isShallow);
+    return getElement(Alert, props);
 }
 
 describe('Alert snapshots test', () => {

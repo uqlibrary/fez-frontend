@@ -1,17 +1,17 @@
 import { departmentTechnicalReport } from '../../../../../mock/data/testing/records';
 import DepartmentTechnicalReportCitation from './DepartmentTechnicalReportCitation';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(DepartmentTechnicalReportCitation, props, isShallow);
+    return getElement(DepartmentTechnicalReportCitation, props, args);
 }
 
 describe('DepartmentTechnicalReportCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

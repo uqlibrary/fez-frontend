@@ -95,7 +95,7 @@ const authorProps = {
     disabled: false,
 };
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         loggedInAuthor: testProps.author || { aut_id: 410 },
         linkedAuthorIdList: testProps.linkedAuthorIdList || null,
@@ -103,7 +103,7 @@ function setup(testProps, isShallow = true) {
         authorList: testProps.authorList || [],
         ...testProps,
     };
-    return getElement(AuthorLinking, props, isShallow);
+    return getElement(AuthorLinking, props);
 }
 
 describe('AuthorLinking', () => {

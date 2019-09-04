@@ -1,23 +1,23 @@
 jest.dontMock('./ConferencePaperForm');
 import ConferencePaperForm from './ConferencePaperForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
         subtypeVocabId: testProps.subtypeVocabId || 0, // : PropTypes.number
     };
-    return getElement(ConferencePaperForm, props, isShallow);
+    return getElement(ConferencePaperForm, props);
 }
 
 describe('ConferencePaperForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 16 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(16);
     });
 

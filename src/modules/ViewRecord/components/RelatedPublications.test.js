@@ -2,14 +2,14 @@ import { dataCollection, recordWithRelatedItems } from 'mock/data/testing/record
 import { RelatedPublicationsClass } from './RelatedPublications';
 import RelatedPublications from './RelatedPublications';
 
-function setup(testProps = {}, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         classes: { list: 'list', data: 'data' },
         publication: testProps.publication || dataCollection,
         title: testProps.title || '',
         ...testProps,
     };
-    return getElement(RelatedPublicationsClass, props, isShallow);
+    return getElement(RelatedPublicationsClass, props, args);
 }
 
 describe('Related publications Component ', () => {
@@ -26,7 +26,7 @@ describe('Related publications Component ', () => {
                 publication: dataCollection,
                 title: 'Title',
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -63,7 +63,7 @@ describe('Related publications Component ', () => {
                 title: 'A test Title',
                 showPublicationTitle: true,
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -81,7 +81,7 @@ describe('Related publications Component ', () => {
                     order: 'rek_isderivationof_order',
                 },
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
@@ -99,7 +99,7 @@ describe('Related publications Component ', () => {
                     order: 'rek_isderivationof_order',
                 },
             },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

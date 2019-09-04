@@ -4,7 +4,7 @@ import { accounts } from 'mock/data';
 import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT } from 'config';
 import mui1theme from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {},
@@ -31,7 +31,7 @@ function setup(testProps, isShallow = true) {
             };
         };
 
-    return getElement(AppClass, props, isShallow);
+    return getElement(AppClass, props);
 }
 
 beforeAll(() => {
@@ -62,7 +62,7 @@ describe('Application component', () => {
     });
 
     it('redirects user to login if not Authorized', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const redirectUserToLogin = jest.spyOn(wrapper.instance(), 'redirectUserToLogin');
         wrapper.setProps({ accountLoading: true, account: null, location: { pathname: '/rhdsubmission' } });
         expect(redirectUserToLogin).not.toHaveBeenCalled();
@@ -74,6 +74,32 @@ describe('Application component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should assign the correct ref to setSessionExpiredConfirmation', () => {
+        const wrapper = setup();
+
+        wrapper.instance().setSessionExpiredConfirmation('hello');
+        expect(wrapper.instance().sessionExpiredConfirmationBox).toEqual('hello');
+    });
+
+    it(
+        'when calling redirectToOrcid, it should redirect appropriately ' +
+            'if user already received an orcid response',
+        () => {
+            const testFn = jest.fn();
+            const testFn2 = jest.fn();
+            delete global.window.location;
+            global.window.location = {
+                href: 'http://fez-staging.library.uq.edu.au?code=010101',
+                search: '?code=010101',
+                assign: testFn,
+            };
+            const wrapper = setup({ history: { push: testFn2, location: { pathname: 'test' } } });
+
+            wrapper.instance().redirectToOrcid();
+            expect(testFn).toBeCalledWith('http://fez-staging.library.uq.edu.au/author-identifiers/orcid/link');
+            expect(testFn2).not.toBeCalled();
+        },
+    );
     // If the system is behind Lambda@Edge scripts then public users will go straight through to public files.
     // A user will only get to the fez-frontend app for a file if they are not logged in and
     // the file is not public, or they are logged in and the the file requires higher privs e.g. needs admin,
@@ -135,7 +161,7 @@ describe('Application component', () => {
     });
 
     it('should call componentWillUnmount', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();
         expect(componentWillUnmount).toHaveBeenCalled();
@@ -153,7 +179,7 @@ describe('Application component', () => {
 
     it('Should get the childContext correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.instance().getChildContext()).toEqual({
             isMobile: false,
             selectFieldMobileOverrides: {
@@ -167,7 +193,7 @@ describe('Application component', () => {
 
     it('Should display mobile correctly', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ isMobile: true });
         wrapper.instance().getChildContext();
         wrapper.update();
@@ -178,7 +204,7 @@ describe('Application component', () => {
         window.location.assign = jest.fn();
 
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance().redirectUserToLogin(true, true)();
         const currentUrl = window.btoa(window.location.href);
@@ -331,7 +357,7 @@ describe('Application component', () => {
     });
 
     it('should toggleDrawer', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().menuDrawerOpen).toBeFalsy();
         wrapper.instance().toggleDrawer();
         expect(wrapper.state().menuDrawerOpen).toBeTruthy();
@@ -482,7 +508,7 @@ describe('Testing wrapped App component', () => {
                 },
             },
         };
-        const wrapper = getElement(App, wrappedProps, false);
+        const wrapper = getElement(App, wrappedProps, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
