@@ -78,7 +78,7 @@ exports[`Cards component renders with title and help button 1`] = `
 >
   <WithStyles(CardHeader)
     action={
-      <Memo(ConnectFunction)
+      <Memo(Connect(WithStyles(HelpIcon)))
         buttonLabel="OK"
         text="help text"
         title="help"

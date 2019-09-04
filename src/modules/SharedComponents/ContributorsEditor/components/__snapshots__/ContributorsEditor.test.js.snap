@@ -3787,7 +3787,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
 `;
 
 exports[`ContributorsEditor returns contributor form with expected props 1`] = `
-<Memo(ConnectFunction)
+<Memo(Connect(ContributorForm))
   author={
     Object {
       "aut_id": 1,
@@ -3819,7 +3819,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
 `;
 
 exports[`ContributorsEditor returns contributor form with expected props 2`] = `
-<Memo(ConnectFunction)
+<Memo(Connect(ContributorForm))
   author={
     Object {
       "aut_id": 1,

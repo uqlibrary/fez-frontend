@@ -393,10 +393,7 @@ describe('Files Component ', () => {
         expect(
             wrapper
                 .instance()
-                .getFileOpenAccessStatus(
-                    publicationEmbargoOAFile,
-                    publicationEmbargoOAFile.fez_datastream_info[0],
-                ),
+                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0]),
         ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null });
     });
 
@@ -2202,6 +2199,7 @@ describe('Files Component ', () => {
             rek_scopus_doc_type_lookup: null,
             rek_pubmed_doc_type_lookup: null,
         };
+
         Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
         const wrapper = setup({ publication: pub });
         // wrapper.instance().hasVideo === true;
