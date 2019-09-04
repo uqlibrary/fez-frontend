@@ -533,6 +533,7 @@ export const fieldConfig = {
         componentProps: {
             name: 'filesSection.fez_datastream_info',
             locale: { ...locale.components.attachedFiles, title: 'Attached files' },
+            canEdit: true,
         },
     },
 };
