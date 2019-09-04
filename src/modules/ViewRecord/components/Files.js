@@ -4,11 +4,9 @@ import locale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { withStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-
 import moment from 'moment';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
@@ -20,6 +18,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
+import ReactHtmlParser from 'react-html-parser';
 
 const styles = theme => ({
     header: {
@@ -329,10 +328,9 @@ export class FilesClass extends Component {
                         <Alert
                             allowDismiss
                             type={'info'}
-                            message={
-                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement ||
-                                    locale.viewRecord.sections.files.culturalSensitivityStatement
-                            }
+                            message={ReactHtmlParser(
+                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                            )}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}
                         />
                     )}
