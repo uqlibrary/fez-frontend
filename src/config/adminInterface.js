@@ -1471,12 +1471,6 @@ export const valueExtractor = {
     fez_record_search_key_oa_status: {
         getValue: record => ({ ...record.fez_record_search_key_oa_status }),
     },
-    rek_copyright: {
-        getValue: record => record.rek_copyright,
-    },
-    // rek_copyright: {
-    //     getValue: record => record.rek_copyright,
-    // },
     fez_record_search_key_date_available: {
         getValue: record => {
             return (
@@ -1486,10 +1480,4 @@ export const valueExtractor = {
             );
         },
     },
-    // rek_refereed_source: {
-    //     getValue: (record) => ({ ...record.rek_refereed_source_lookup }),
-    // },
-    // fez_record_search_key_datastream_policy: {
-    //     getValue: (record) => ({ ...record.fez_record_search_key_datastream_policy }),
-    // },
 };
