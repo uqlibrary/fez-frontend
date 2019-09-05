@@ -56,16 +56,14 @@ export default {
                 [
                     'fez_record_search_key_edition',
                     'fez_record_search_key_series',
-                    'fez_record_search_key_volume_number'],
+                    'fez_record_search_key_volume_number',
+                ],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                [
-                    'rek_date',
-                    'fez_record_search_key_date_available',
-                ],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_refereed_source'],
                 ['rek_description'],
             ],
