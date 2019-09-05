@@ -42,20 +42,21 @@ export default {
             ],
         },
         {
-            title: 'ISBN',
-            groups: [['fez_record_search_key_isbn']],
-        },
-        {
             title: 'ISSN',
             groups: [['fez_record_search_key_issn']],
+        },
+        {
+            title: 'ISBN',
+            groups: [['fez_record_search_key_isbn']],
         },
         {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_edition'],
-                ['fez_record_search_key_series'],
-                ['fez_record_search_key_volume_number'],
+                [
+                    'fez_record_search_key_edition',
+                    'fez_record_search_key_series',
+                    'fez_record_search_key_volume_number'],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
@@ -63,23 +64,28 @@ export default {
                 ],
                 [
                     'rek_date',
-                    // 'rek_date_available',
                     'fez_record_search_key_date_available',
                 ],
+                ['fez_record_search_key_refereed_source'],
                 ['rek_description'],
-                ['fez_record_search_key_keywords'],
-                ['subjects'],
-                ['rek_refereed_source'],
             ],
+        },
+        {
+            title: 'Keywords',
+            groups: [['fez_record_search_key_keywords']],
+        },
+        {
+            title: 'Subject',
+            groups: [['subjects']],
         },
     ],
     authors: () => [
         {
-            title: 'Author',
+            title: 'Authors',
             groups: [['authors']],
         },
         {
-            title: 'Editor',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
@@ -88,10 +94,13 @@ export default {
             groups: [
                 ['collections'],
                 ['rek_subtype'],
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status'],
-                ['contentIndicators'],
                 ['additionalNotes'],
+                [
+                    'fez_record_search_key_herdc_code',
+                    'fez_record_search_key_herdc_status',
+                    'fez_record_search_key_institutional_status',
+                ],
+                ['contentIndicators'],
             ],
         },
     ],
