@@ -372,4 +372,7 @@ export default {
             );
         },
     },
+    rek_copyright: {
+        getValue: record => record.rek_copyright,
+    },
 };
