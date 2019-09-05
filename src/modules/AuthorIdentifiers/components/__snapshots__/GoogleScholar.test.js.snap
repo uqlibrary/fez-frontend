@@ -3027,7 +3027,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                           >
                                                             <WithStyles(CardHeader)
                                                               action={
-                                                                <Memo(Connect(WithStyles(HelpIcon)))
+                                                                <Memo(ConnectFunction)
                                                                   buttonLabel="CLOSE"
                                                                   text={
                                                                     <div>
@@ -3073,7 +3073,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                                                             >
                                                               <CardHeader
                                                                 action={
-                                                                  <Memo(Connect(WithStyles(HelpIcon)))
+                                                                  <Memo(ConnectFunction)
                                                                     buttonLabel="CLOSE"
                                                                     text={
                                                                       <div>
