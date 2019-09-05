@@ -723,18 +723,6 @@ export default {
             placeholder: '',
         },
     },
-    fez_record_search_key_wok_doc_types: {
-        component: ListEditorField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_wok_doc_types',
-            title: 'Wok doc types',
-            searchKey: {
-                value: 'rek_wok_doc_types',
-                order: 'rek_wok_doc_types_order',
-            },
-            locale: locale.components.wokDocTypesForm.field,
-        },
-    },
     fez_record_search_key_acknowledgements: {
         component: GenericTextField,
         componentProps: {

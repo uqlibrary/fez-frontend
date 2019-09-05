@@ -22,7 +22,6 @@ export default {
         },
         {
             groups: [
-                ['fez_record_search_key_wok_doc_types'],
                 ['fez_record_search_key_identifiers'],
                 ['fez_record_search_key_location'],
             ],
