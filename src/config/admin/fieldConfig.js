@@ -169,11 +169,12 @@ export default {
     rek_date: {
         component: GenericTextField,
         componentProps: {
-            name: 'bibliogrphicSection.rek_date',
-            label: 'Publication date',
-            placeholder: 'Date of publication',
+            name: 'bibliographicSection.rek_date',
+            label: 'Publication year',
+            placeholder: 'Publication year',
             required: true,
             fullWidth: true,
+            validate: [validation.required, validation.dateTimeYear],
         },
     },
     collections: {
@@ -648,9 +649,9 @@ export default {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_date_available',
-            label: 'Year Available',
-            required: true,
+            label: 'Year available',
             fullWidth: true,
+            validation: [validation.dateTimeYear],
         },
     },
     fez_record_search_key_isderivationof: {
