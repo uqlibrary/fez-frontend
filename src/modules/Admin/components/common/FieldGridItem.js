@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Field } from 'redux-form/immutable';
 
 import Grid from '@material-ui/core/Grid';
-import { fieldConfig } from 'config/adminInterface';
+import { fieldConfig } from 'config/admin';
 import { NTRO_SUBTYPES } from 'config/general';
 import { useRecordContext } from 'context';
 

@@ -18,7 +18,7 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 // import locale from 'locale/components';
 // import { languages } from '../MockData';
-import { adminInterfaceConfig } from 'config/adminInterface';
+import { adminInterfaceConfig } from 'config/admin';
 
 /* istanbul ignore next */
 export const BibliographicSection = ({ disabled = false }) => {

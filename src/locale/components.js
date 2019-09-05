@@ -1287,6 +1287,8 @@ export default {
                 },
                 row: {
                     locale: {
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',

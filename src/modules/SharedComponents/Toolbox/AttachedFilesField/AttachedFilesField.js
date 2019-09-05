@@ -1,5 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
+import locale from 'locale/global';
 import { AttachedFiles } from './AttachedFiles';
 
 export const AttachedFilesField = ({ input, ...props }) => {
@@ -9,12 +11,27 @@ export const AttachedFilesField = ({ input, ...props }) => {
         index => {
             const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
             setDataStreams(newDataStreams);
-            onChange(newDataStreams);
         },
-        [dataStreams, setDataStreams, onChange],
+        [dataStreams, setDataStreams],
     );
 
-    return <AttachedFiles onDelete={handleDelete} dataStreams={dataStreams} {...props} />;
+    const handleDateChange = useCallback(
+        (value, index) => {
+            const newDataStreams = [
+                ...dataStreams.slice(0, index),
+                { ...dataStreams[index], dsi_embargo_date: moment(value).format(locale.global.embargoDateFormat) },
+                ...dataStreams.slice(index + 1),
+            ];
+            setDataStreams(newDataStreams);
+        },
+        [dataStreams, setDataStreams],
+    );
+
+    useEffect(() => onChange(dataStreams), [onChange, dataStreams]);
+
+    return (
+        <AttachedFiles onDelete={handleDelete} onDateChange={handleDateChange} dataStreams={dataStreams} {...props} />
+    );
 };
 
 AttachedFilesField.propTypes = {
