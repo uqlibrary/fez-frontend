@@ -154,7 +154,7 @@ export default {
         component: RichEditorField,
         componentProps: {
             name: 'bibliographicSection.rek_description',
-            title: 'Abstract/Description',
+            title: 'Abstract / Description',
             titleProps: {
                 variant: 'caption',
                 style: {
@@ -604,6 +604,21 @@ export default {
             format: value => Immutable.Map(value),
         },
     },
+    fez_record_search_key_transcript: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_transcript',
+            title: 'Transcript',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
     significanceAndContributionStatement: {
         component: ScaleOfSignificanceListEditorField,
         componentProps: {
@@ -663,6 +678,97 @@ export default {
                 form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
             },
             height: 50,
+        },
+    },
+    fez_record_search_key_location: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_location',
+            title: 'Identifiers',
+            searchKey: {
+                value: 'rek_location',
+                order: 'rek_location_order',
+            },
+            locale: locale.components.locationForm.field,
+        },
+    },
+    fez_record_search_key_identifiers: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_identifiers',
+            title: 'Identifiers',
+            searchKey: {
+                value: 'rek_identifier',
+                order: 'rek_identifier_order',
+            },
+            locale: locale.components.identifierForm.field,
+        },
+    },
+    fez_record_search_key_source: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_source.rek_source',
+            fullWidth: true,
+            label: 'Source',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_rights: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_rights.rek_rights',
+            fullWidth: true,
+            label: 'Rights',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_wok_doc_types: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_wok_doc_types',
+            title: 'Wok doc types',
+            searchKey: {
+                value: 'rek_wok_doc_types',
+                order: 'rek_wok_doc_types_order',
+            },
+            locale: locale.components.wokDocTypesForm.field,
+        },
+    },
+    fez_record_search_key_acknowledgements: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
+            fullWidth: true,
+            label: 'Acknowledgements',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_length: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_length.rek_length',
+            fullWidth: true,
+            label: 'Length',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_license: {
+        // TODO this needs a component to let the user select the lookup value
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_license',
+            label: 'License',
+            required: true,
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_original_format: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
+            fullWidth: true,
+            label: 'Original format',
+            placeholder: '',
         },
     },
 };
