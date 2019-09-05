@@ -84,6 +84,7 @@ export default {
                 // ['rek_refereed_source'],
                 // ['fez_record_search_key_succeeds'],
                 ['rek_description'],
+                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
