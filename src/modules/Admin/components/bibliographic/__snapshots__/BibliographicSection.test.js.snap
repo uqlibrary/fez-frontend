@@ -63,6 +63,12 @@ exports[`BibliographicSection component should render default view 1`] = `
               "rek_date",
             ],
             Array [
+              "fez_record_search_key_date_available",
+            ],
+            Array [
+              "fez_record_search_key_refereed_source",
+            ],
+            Array [
               "rek_description",
             ],
           ],
@@ -152,6 +158,12 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             ],
             Array [
               "rek_date",
+            ],
+            Array [
+              "fez_record_search_key_date_available",
+            ],
+            Array [
+              "fez_record_search_key_refereed_source",
             ],
             Array [
               "rek_description",
