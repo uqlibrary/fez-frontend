@@ -10,7 +10,7 @@ import AdminContainer from '../components/AdminContainer';
 // import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
-import { adminInterfaceConfig, valueExtractor } from 'config/adminInterface';
+import { adminInterfaceConfig, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
@@ -23,7 +23,8 @@ export const getBibliographicInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .bibliographic(
             record.fez_record_search_key_language.length > 1 ||
-                record.fez_record_search_key_language[0].rek_language !== 'eng',
+                (record.fez_record_search_key_language.length === 1 &&
+                    record.fez_record_search_key_language[0].rek_language !== 'eng'),
         )
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])

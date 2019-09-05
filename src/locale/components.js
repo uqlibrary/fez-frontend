@@ -1270,6 +1270,7 @@ export default {
                     locale: {
                         inputFieldLabel: 'Begin typing to select and add subject(s)',
                         inputFieldHint: 'Start typing code or field name and select from list',
+                        addButtonLabel: <span>Add&nbsp;Subject</span>,
                     },
                 },
                 header: {

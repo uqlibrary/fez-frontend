@@ -18,7 +18,7 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 // import locale from 'locale/components';
 // import { languages } from '../MockData';
-import { adminInterfaceConfig } from 'config/adminInterface';
+import { adminInterfaceConfig } from 'config/admin';
 
 /* istanbul ignore next */
 export const BibliographicSection = ({ disabled = false }) => {
@@ -26,7 +26,8 @@ export const BibliographicSection = ({ disabled = false }) => {
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].bibliographic(
             record.fez_record_search_key_language.length > 1 ||
-                record.fez_record_search_key_language[0].rek_language !== 'eng',
+                (record.fez_record_search_key_language.length === 1 &&
+                    record.fez_record_search_key_language[0].rek_language !== 'eng'),
         ),
     );
 
