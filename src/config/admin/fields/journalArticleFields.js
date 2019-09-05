@@ -81,8 +81,6 @@ export default {
                 ],
                 ['rek_date'],
                 // ['rek_date_available'],
-                // ['rek_refereed_source'],
-                // ['fez_record_search_key_succeeds'],
                 ['rek_description'],
                 ['fez_record_search_key_refereed_source'],
             ],
@@ -94,6 +92,10 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
+        },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
         },
     ],
     authors: () => [

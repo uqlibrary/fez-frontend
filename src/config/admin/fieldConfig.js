@@ -16,6 +16,7 @@ import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
+import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import {
@@ -650,6 +651,17 @@ export default {
             label: 'Year Available',
             required: true,
             fullWidth: true,
+        },
+    },
+    fez_record_search_key_isderivationof: {
+        component: RelatedDatasetAndPublicationListField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_isderivationof',
+            searchKey: { value: 'rek_isderivationof', order: 'rek_isderivationof_order' },
+            locale: {
+                form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+            },
+            height: 50,
         },
     },
 };

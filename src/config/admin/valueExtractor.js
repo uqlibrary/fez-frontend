@@ -375,4 +375,17 @@ export default {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
+    fez_record_search_key_advisory_statement: {
+        getValue: record => ({ ...record.fez_record_search_key_advisory_statement }),
+    },
+    fez_record_search_key_isderivationof: {
+        getValue: record =>
+            (record.fez_record_search_key_isderivationof || []).map(derivation => ({
+                rek_isderivationof: {
+                    id: derivation.rek_isderivationof,
+                    value: derivation.rek_isderivationof_lookup,
+                },
+                rek_isderivationof_order: derivation.rek_isderivationof_order,
+            })),
+    },
 };

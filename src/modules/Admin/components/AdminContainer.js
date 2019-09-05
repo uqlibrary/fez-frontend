@@ -120,7 +120,6 @@ export const AdminContainer = ({
                 <AdminInterface
                     classes={classes}
                     handleSubmit={handleSubmit}
-                    record={recordToView}
                     submitting={submitting}
                     submitSucceeded={submitSucceeded}
                     disableSubmit={disableSubmit}
