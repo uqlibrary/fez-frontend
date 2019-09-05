@@ -19,6 +19,7 @@ import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSo
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
+import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
 import {
     LinkInfoListEditorField,
     ListEditorField,
@@ -684,7 +685,7 @@ export default {
         component: ListEditorField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_location',
-            title: 'Identifiers',
+            title: 'Locations',
             searchKey: {
                 value: 'rek_location',
                 order: 'rek_location_order',
@@ -753,8 +754,7 @@ export default {
         },
     },
     fez_record_search_key_license: {
-        // TODO this needs a component to let the user select the lookup value
-        component: GenericTextField,
+        component: LicenseSelectorField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_license',
             label: 'License',
