@@ -21,10 +21,7 @@ export default {
             groups: [['links']],
         },
         {
-            groups: [
-                ['fez_record_search_key_identifiers'],
-                ['fez_record_search_key_location'],
-            ],
+            groups: [['fez_record_search_key_identifiers'], ['fez_record_search_key_location']],
         },
     ],
     bibliographic: (isLote = false) => [
@@ -55,6 +52,7 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['rek_description'],
                 ['fez_record_search_key_transcript'],
+                ['fez_record_search_key_refereed_source', 'fez_record_search_key_alternate_genre'],
             ],
         },
         {
@@ -65,14 +63,6 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
-        {
-            title: 'Refereed Source',
-            groups: [['fez_record_search_key_refereed_source']],
-        },
-        // {
-        //     title: 'Alternative genre',
-        //     groups: [['fez_record_search_key_alternate_genre']], // new
-        // },
     ],
     authors: () => [
         {

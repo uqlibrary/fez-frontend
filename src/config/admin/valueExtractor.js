@@ -390,4 +390,7 @@ export default {
                 rek_isderivationof_order: derivation.rek_isderivationof_order,
             })),
     },
+    fez_record_search_key_alternate_genre: {
+        getValue: record => ({ ...record.fez_record_search_key_alternate_genre }),
+    },
 };

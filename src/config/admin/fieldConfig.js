@@ -5,6 +5,7 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 
+import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
@@ -757,6 +758,13 @@ export default {
             fullWidth: true,
             label: 'Original format',
             placeholder: '',
+        },
+    },
+    fez_record_search_key_alternate_genre: {
+        component: AlternateGenreField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_alternate_genre.rek_alternate_genre',
+            label: 'Genre',
         },
     },
 };

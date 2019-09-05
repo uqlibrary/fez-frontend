@@ -1315,3 +1315,13 @@ export const REFEREED_SOURCES = [
     { value: '453636', text: 'Other' },
     { value: '453637', text: 'Not peer reviewed' },
 ];
+
+export const ALTERNATE_GENRE = [
+    { value: null, text: 'Please choose an option' },
+    { value: '453663', text: 'Conversation' },
+    { value: '453664', text: 'Culture, stories, people' },
+    { value: '453665', text: 'Session organisation' },
+    { value: '453666', text: 'Song' },
+    { value: '453667', text: 'Traditional language sentence' },
+    { value: '453668', text: 'Traditional language word' },
+];
