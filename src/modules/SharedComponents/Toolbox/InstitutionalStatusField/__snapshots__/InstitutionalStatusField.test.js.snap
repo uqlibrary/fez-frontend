@@ -13,15 +13,15 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
       },
       Object {
         "text": "UQ",
-        "value": "UQ",
+        "value": "453223",
       },
       Object {
         "text": "Non-UQ",
-        "value": "NonUQ",
+        "value": "453224",
       },
       Object {
         "text": "Unknown",
-        "value": "Unknown",
+        "value": "453225",
       },
     ]
   }
@@ -56,15 +56,15 @@ exports[`InstitutionalStatusField component should render immutable list as sele
       },
       Object {
         "text": "UQ",
-        "value": "UQ",
+        "value": "453223",
       },
       Object {
         "text": "Non-UQ",
-        "value": "NonUQ",
+        "value": "453224",
       },
       Object {
         "text": "Unknown",
-        "value": "Unknown",
+        "value": "453225",
       },
     ]
   }
@@ -104,15 +104,15 @@ exports[`InstitutionalStatusField component should render when given a default v
       },
       Object {
         "text": "UQ",
-        "value": "UQ",
+        "value": "453223",
       },
       Object {
         "text": "Non-UQ",
-        "value": "NonUQ",
+        "value": "453224",
       },
       Object {
         "text": "Unknown",
-        "value": "Unknown",
+        "value": "453225",
       },
     ]
   }
@@ -153,15 +153,15 @@ exports[`InstitutionalStatusField component should render with given field props
       },
       Object {
         "text": "UQ",
-        "value": "UQ",
+        "value": "453223",
       },
       Object {
         "text": "Non-UQ",
-        "value": "NonUQ",
+        "value": "453224",
       },
       Object {
         "text": "Unknown",
-        "value": "Unknown",
+        "value": "453225",
       },
     ]
   }

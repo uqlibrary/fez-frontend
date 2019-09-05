@@ -372,4 +372,45 @@ export default {
             );
         },
     },
+    fez_record_search_key_identifiers: {
+        getValue: record => [...record.fez_record_search_key_identifiers],
+    },
+    fez_record_search_key_source: {
+        getValue: record => ({ ...record.fez_record_search_key_source }),
+    },
+    fez_record_search_key_rights: {
+        getValue: record => ({ ...record.fez_record_search_key_rights }),
+    },
+    fez_record_search_key_location: {
+        getValue: record => [...record.fez_record_search_key_location],
+    },
+    fez_record_search_key_wok_doc_types: {
+        getValue: record => [...record.fez_record_search_key_wok_doc_types],
+    },
+    fez_record_search_key_acknowledgements: {
+        getValue: record => ({ ...record.fez_record_search_key_acknowledgements }),
+    },
+    fez_record_search_key_length: {
+        getValue: record => ({ ...record.fez_record_search_key_length }),
+    },
+    fez_record_search_key_license: {
+        // TODO: make a component to display this
+        getValue: record => {
+            return (
+                record.fez_record_search_key_license && record.fez_record_search_key_license.rek_license
+                // record.fez_record_search_key_license.rek_license_lookup
+            );
+        },
+    },
+    fez_record_search_key_original_format: {
+        getValue: record => ({ ...record.fez_record_search_key_original_format }),
+    },
+    fez_record_search_key_transcript: {
+        getValue: record => {
+            return {
+                plainText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+                htmlText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+            };
+        },
+    },
 };
