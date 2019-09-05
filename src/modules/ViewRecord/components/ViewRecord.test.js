@@ -11,8 +11,8 @@ function setup(testProps, isShallow = true) {
             loadRecordToView: jest.fn(),
             clearRecordToView: jest.fn(),
         },
-        account: testProps.account || accounts.uqresearcher,
-        author: testProps.author || testProps.uqresearcher,
+        // account: testProps.account || accounts.uqresearcher,
+        // author: testProps.author || currentAuthor.uqresearcher,
         ...testProps,
     };
     return getElement(ViewRecord, props, isShallow);

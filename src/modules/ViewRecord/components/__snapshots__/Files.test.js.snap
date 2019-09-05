@@ -136,7 +136,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -147,6 +147,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -157,7 +158,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -175,8 +176,8 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -255,7 +256,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -404,6 +405,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -424,8 +426,8 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -504,7 +506,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -514,7 +516,257 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
 </WithStyles(Grid)>
 `;
 
-exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":false},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":false}]"`;
+exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true}]"`;
+
+exports[`Files Component  should not render audio files with _xt in their filename 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard
+    title="Files"
+  >
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          >
+            File name
+          </WithStyles(Typography)>
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            >
+              Size
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        className="header"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <pure(VolumeUpIcon)
+            color="secondary"
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+        >
+          <WithStyles(FileName)
+            allowDownload={true}
+            calculatedSize="95.49 KB"
+            description="testing image description"
+            fileName="audio.wav"
+            icon={
+              <pure(VolumeUpIcon)
+                color="secondary"
+              />
+            }
+            mediaUrl="http://localhost/view/UQ:676287/audio.wav"
+            mimeType="audio/wav"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": null,
+                "isOpenAccess": true,
+                "openAccessStatusId": 453695,
+              }
+            }
+            pid="UQ:676287"
+            previewMediaUrl="http://localhost/view/UQ:676287/audio.wav"
+            securityStatus={true}
+            webMediaUrl={null}
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={4}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              testing image description
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              95.49 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              embargoDate={null}
+              isOpenAccess={true}
+              openAccessStatusId={453695}
+              securityStatus={true}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
 
 exports[`Files Component  should not render component with no files 1`] = `""`;
 
@@ -654,7 +906,7 @@ exports[`Files Component  should not render cultural message 1`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -665,6 +917,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -675,7 +928,7 @@ exports[`Files Component  should not render cultural message 1`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -693,8 +946,8 @@ exports[`Files Component  should not render cultural message 1`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -773,7 +1026,7 @@ exports[`Files Component  should not render cultural message 1`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -919,7 +1172,7 @@ exports[`Files Component  should not render cultural message 2`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -930,6 +1183,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -940,7 +1194,7 @@ exports[`Files Component  should not render cultural message 2`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -958,8 +1212,8 @@ exports[`Files Component  should not render cultural message 2`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1038,7 +1292,7 @@ exports[`Files Component  should not render cultural message 2`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -1059,7 +1313,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
     <WithStyles(Alert)
       allowDismiss={true}
       dismissAction={[MockFunction]}
-      message={Array []}
+      message="Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes."
       type="info"
     />
     <div
@@ -1190,7 +1444,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -1201,6 +1455,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -1211,7 +1466,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -1229,8 +1484,8 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1309,7 +1564,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -1461,7 +1716,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             mimeType="video/quicktime"
             onClick={[Function]}
             previewMediaUrl={null}
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
             webMediaUrl={null}
@@ -1472,6 +1727,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="2.86 MB"
             description="Movie 1"
             fileName="CH7409_movie_1.mov"
@@ -1482,7 +1738,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
                 mimeType="video/quicktime"
                 onClick={[Function]}
                 previewMediaUrl={null}
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_CH7409_movie_1.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg"
                 webMediaUrl={null}
@@ -1500,8 +1756,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_1.mov"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_1.mov"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1580,7 +1836,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -1613,7 +1869,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             mimeType="video/quicktime"
             onClick={[Function]}
             previewMediaUrl={null}
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
             webMediaUrl={null}
@@ -1624,6 +1880,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="2.62 MB"
             description="Movie 2"
             fileName="CH7409_movie_2.mov"
@@ -1634,7 +1891,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
                 mimeType="video/quicktime"
                 onClick={[Function]}
                 previewMediaUrl={null}
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_CH7409_movie_2.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg"
                 webMediaUrl={null}
@@ -1652,8 +1909,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_2.mov"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_2.mov"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1732,7 +1989,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -1765,7 +2022,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             mimeType="video/quicktime"
             onClick={[Function]}
             previewMediaUrl={null}
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
             webMediaUrl={null}
@@ -1776,6 +2033,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="2.86 MB"
             description="Movie 3"
             fileName="CH7409_movie_3.mov"
@@ -1786,7 +2044,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
                 mimeType="video/quicktime"
                 onClick={[Function]}
                 previewMediaUrl={null}
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_CH7409_movie_3.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg"
                 webMediaUrl={null}
@@ -1804,8 +2062,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_3.mov"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_3.mov"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -1884,7 +2142,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -1917,7 +2175,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             mimeType="video/quicktime"
             onClick={[Function]}
             previewMediaUrl={null}
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
             webMediaUrl={null}
@@ -1928,6 +2186,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="4.29 MB"
             description="Movie 4"
             fileName="CH7409_movie_4.mov"
@@ -1938,7 +2197,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
                 mimeType="video/quicktime"
                 onClick={[Function]}
                 previewMediaUrl={null}
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_CH7409_movie_4.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg"
                 webMediaUrl={null}
@@ -1956,8 +2215,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_4.mov"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_4.mov"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2036,7 +2295,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -2069,7 +2328,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             mimeType="video/quicktime"
             onClick={[Function]}
             previewMediaUrl={null}
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
             webMediaUrl={null}
@@ -2080,6 +2339,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="1.12 MB"
             description="Movie 5"
             fileName="CH7409_movie_5.mov"
@@ -2090,7 +2350,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
                 mimeType="video/quicktime"
                 onClick={[Function]}
                 previewMediaUrl={null}
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_CH7409_movie_5.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg"
                 webMediaUrl={null}
@@ -2108,8 +2368,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_5.mov"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/CH7409_movie_5.mov"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2188,7 +2448,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -2224,6 +2484,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="6.67 MB"
             description="Technical report PDF file"
             fileName="ch7409_report.pdf"
@@ -2244,8 +2505,8 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
             }
             pid="UQ:185044"
             previewMediaUrl="http://localhost/view/UQ:185044/ch7409_report.pdf"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:185044/ch7409_report.pdf"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2324,7 +2585,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453697}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -2473,6 +2734,7 @@ exports[`Files Component  should render an image as the original filename with n
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -2493,8 +2755,8 @@ exports[`Files Component  should render an image as the original filename with n
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl={null}
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2573,7 +2835,7 @@ exports[`Files Component  should render an image as the original filename with n
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -2719,7 +2981,7 @@ exports[`Files Component  should render component 1`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -2730,6 +2992,7 @@ exports[`Files Component  should render component 1`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -2740,7 +3003,7 @@ exports[`Files Component  should render component 1`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -2758,8 +3021,8 @@ exports[`Files Component  should render component 1`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -2838,7 +3101,7 @@ exports[`Files Component  should render component 1`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -12181,7 +12444,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             pid="UQ:676287"
                                                             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
                                                             securityStatus={true}
-                                                            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                                                            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                                                           >
                                                             <FileName
                                                               allowDownload={true}
@@ -12653,7 +12916,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                                   },
                                                                 }
                                                               }
-                                                              webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                                                              webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
                                                             >
                                                               <WithStyles(Grid)
                                                                 alignItems="center"
@@ -17516,11 +17779,7 @@ exports[`Files Component  should render cultural message 1`] = `
     <WithStyles(Alert)
       allowDismiss={true}
       dismissAction={[MockFunction]}
-      message={
-        Array [
-          "hello",
-        ]
-      }
+      message="hello"
       type="info"
     />
     <div
@@ -17651,7 +17910,7 @@ exports[`Files Component  should render cultural message 1`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -17662,6 +17921,7 @@ exports[`Files Component  should render cultural message 1`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -17672,7 +17932,7 @@ exports[`Files Component  should render cultural message 1`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -17690,8 +17950,8 @@ exports[`Files Component  should render cultural message 1`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -17770,7 +18030,7 @@ exports[`Files Component  should render cultural message 1`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -17916,7 +18176,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -17927,6 +18187,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -17937,7 +18198,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -17955,8 +18216,8 @@ exports[`Files Component  should render icon for mimeType 1`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18035,7 +18296,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -18181,7 +18442,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18192,6 +18453,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -18202,7 +18464,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18220,8 +18482,8 @@ exports[`Files Component  should render icon for mimeType 2`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18300,7 +18562,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -18446,7 +18708,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18457,6 +18719,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -18467,7 +18730,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18485,8 +18748,8 @@ exports[`Files Component  should render icon for mimeType 3`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18565,7 +18828,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -18711,7 +18974,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18722,6 +18985,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -18732,7 +18996,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18750,8 +19014,8 @@ exports[`Files Component  should render icon for mimeType 4`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -18830,7 +19094,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -18976,7 +19240,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -18987,6 +19251,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -18997,7 +19262,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -19015,8 +19280,8 @@ exports[`Files Component  should render icon for mimeType 5`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19095,7 +19360,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -19241,7 +19506,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             mimeType="image/jpeg"
             onClick={[Function]}
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
+            securityStatus={true}
             thumbnailFileName="thumbnail_image.jpg"
             thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
             webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -19252,6 +19517,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
@@ -19262,7 +19528,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
                 mimeType="image/jpeg"
                 onClick={[Function]}
                 previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-                securityStatus={false}
+                securityStatus={true}
                 thumbnailFileName="thumbnail_image.jpg"
                 thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
                 webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
@@ -19280,8 +19546,8 @@ exports[`Files Component  should render icon for mimeType 6`] = `
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19360,7 +19626,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
               embargoDate={null}
               isOpenAccess={true}
               openAccessStatusId={453695}
-              securityStatus={false}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -19500,8 +19766,16 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           item={true}
           xs={1}
         >
-          <pure(ImageIcon)
-            color="secondary"
+          <WithStyles(Thumbnail)
+            fileName="image.jpg"
+            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            mimeType="image/jpeg"
+            onClick={[Function]}
+            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_image.jpg"
+            thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <WithStyles(Grid)
@@ -19509,12 +19783,21 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           sm={4}
         >
           <WithStyles(FileName)
+            allowDownload={true}
             calculatedSize="95.49 KB"
             description="testing image description"
             fileName="image.jpg"
             icon={
-              <pure(ImageIcon)
-                color="secondary"
+              <WithStyles(Thumbnail)
+                fileName="image.jpg"
+                mediaUrl="http://localhost/view/UQ:676287/image.jpg"
+                mimeType="image/jpeg"
+                onClick={[Function]}
+                previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
+                securityStatus={true}
+                thumbnailFileName="thumbnail_image.jpg"
+                thumbnailMediaUrl="http://localhost/view/UQ:676287/thumbnail_image.jpg"
+                webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
               />
             }
             mediaUrl="http://localhost/view/UQ:676287/image.jpg"
@@ -19522,15 +19805,16 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             onFileSelect={[Function]}
             openAccessStatus={
               Object {
-                "embargoDate": null,
+                "embargoDate": "1st December 2050",
                 "isOpenAccess": false,
-                "openAccessStatusId": null,
+                "openAccessStatusId": 453695,
+                "securityStatus": true,
               }
             }
             pid="UQ:676287"
             previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
+            securityStatus={true}
+            webMediaUrl="http://localhost/view/UQ:676287/web_image.jpg"
           />
         </WithStyles(Grid)>
         <Hidden
@@ -19606,10 +19890,10 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
             }
           >
             <WithStyles(OpenAccessIcon)
-              embargoDate={null}
+              embargoDate="1st December 2050"
               isOpenAccess={false}
-              openAccessStatusId={null}
-              securityStatus={false}
+              openAccessStatusId={453695}
+              securityStatus={true}
             />
           </WithStyles(Grid)>
         </Hidden>
@@ -19619,251 +19903,4 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
 </WithStyles(Grid)>
 `;
 
-exports[`Files Component  should show embargoed files to admins and not non-admins 2`] = `
-<WithStyles(Grid)
-  item={true}
-  xs={12}
->
-  <StandardCard
-    title="Files"
-  >
-    <div
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        spacing={16}
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={1}
-        >
-           
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={4}
-        >
-          <WithStyles(Typography)
-            gutterBottom={true}
-            variant="caption"
-          >
-            File name
-          </WithStyles(Typography)>
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={true}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={4}
-          >
-            <WithStyles(Typography)
-              gutterBottom={true}
-              variant="caption"
-            >
-              Description
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </Hidden>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            md={2}
-          >
-            <WithStyles(Typography)
-              gutterBottom={true}
-              variant="caption"
-            >
-              Size
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </Hidden>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={true}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={true}
-          />
-        </Hidden>
-      </WithStyles(Grid)>
-    </div>
-    <div
-      key="0"
-      style={
-        Object {
-          "padding": 8,
-        }
-      }
-    >
-      <WithStyles(Grid)
-        alignItems="center"
-        className="header"
-        container={true}
-        direction="row"
-        key="file-0"
-        spacing={16}
-        wrap="nowrap"
-      >
-        <WithStyles(Grid)
-          item={true}
-          xs={1}
-        >
-          <pure(ImageIcon)
-            color="secondary"
-          />
-        </WithStyles(Grid)>
-        <WithStyles(Grid)
-          item={true}
-          sm={4}
-        >
-          <WithStyles(FileName)
-            calculatedSize="95.49 KB"
-            description="testing image description"
-            fileName="image.jpg"
-            icon={
-              <pure(ImageIcon)
-                color="secondary"
-              />
-            }
-            mediaUrl="http://localhost/view/UQ:676287/image.jpg"
-            mimeType="image/jpeg"
-            onFileSelect={[Function]}
-            openAccessStatus={
-              Object {
-                "embargoDate": null,
-                "isOpenAccess": false,
-                "openAccessStatusId": null,
-              }
-            }
-            pid="UQ:676287"
-            previewMediaUrl="http://localhost/view/UQ:676287/preview_image.jpg"
-            securityStatus={false}
-            webMediaUrl="http://localhost/view/UQ:676287/image.jpg"
-          />
-        </WithStyles(Grid)>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={true}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={4}
-          >
-            <WithStyles(Typography)
-              noWrap={true}
-              variant="body2"
-            >
-              testing image description
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </Hidden>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={true}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={false}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={2}
-          >
-            <WithStyles(Typography)
-              noWrap={true}
-              variant="body2"
-            >
-              95.49 KB
-            </WithStyles(Typography)>
-          </WithStyles(Grid)>
-        </Hidden>
-        <Hidden
-          implementation="js"
-          lgDown={false}
-          lgUp={false}
-          mdDown={false}
-          mdUp={false}
-          smDown={false}
-          smUp={false}
-          xlDown={false}
-          xlUp={false}
-          xsDown={true}
-          xsUp={false}
-        >
-          <WithStyles(Grid)
-            item={true}
-            sm={true}
-            style={
-              Object {
-                "textAlign": "right",
-              }
-            }
-          >
-            <WithStyles(OpenAccessIcon)
-              embargoDate={null}
-              isOpenAccess={false}
-              openAccessStatusId={null}
-              securityStatus={false}
-            />
-          </WithStyles(Grid)>
-        </Hidden>
-      </WithStyles(Grid)>
-    </div>
-  </StandardCard>
-</WithStyles(Grid)>
-`;
+exports[`Files Component  should show embargoed files to admins and not non-admins 2`] = `""`;

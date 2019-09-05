@@ -2,11 +2,11 @@ import { journalArticle } from 'mock/data/testing/records';
 import Files from './Files';
 import { FilesClass } from './Files';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps, args = { isShallow: true }) {
     const props = {
         theme: {},
-        account: { canMasquerade: true },
-        publication: journalArticle,
+        isAdmin: testProps.isAdmin || true,
+        publication: testProps.publication || journalArticle,
         hideCulturalSensitivityStatement: false,
         setHideCulturalSensitivityStatement: jest.fn(),
         classes: { header: 'header' },
@@ -26,7 +26,7 @@ describe('Files Component ', () => {
     });
 
     it('should render component', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -126,14 +126,14 @@ describe('Files Component ', () => {
     });
 
     it('should render bytes correctly', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(wrapper.instance().formatBytes(0)).toEqual('0 Bytes');
         expect(wrapper.instance().formatBytes(1024)).toEqual('1 KB');
         expect(wrapper.instance().formatBytes(1048576)).toEqual('1 MB');
     });
 
     it('should render icon for mimeType', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
 
         wrapper.instance().renderFileIcon('UQ:1', 'blablabla');
         wrapper.update();
@@ -163,7 +163,7 @@ describe('Files Component ', () => {
     });
 
     it('should set state on showPreview', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
         const fileName = 'fileName';
         const mediaUrl = 'mediaUrl';
         const previewMediaUrl = 'previewMediaUrl';
@@ -233,7 +233,7 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup({});
+        const wrapper = setup({ isAdmin: false });
         expect(
             wrapper
                 .instance()
@@ -377,7 +377,7 @@ describe('Files Component ', () => {
             rek_pid: 'pid:111',
             fez_datastream_info: [
                 {
-                    dsi_pid: 'UQ:357538 test test test test',
+                    dsi_pid: 'UQ:357538',
                     dsi_dsid: 'UQ357538_OA.pdf',
                     dsi_embargo_date: '2021-12-01',
                     dsi_open_access: null,
@@ -389,11 +389,14 @@ describe('Files Component ', () => {
                 },
             ],
         };
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(
             wrapper
                 .instance()
-                .getFileOpenAccessStatus(publicationEmbargoOAFile, publicationEmbargoOAFile.fez_datastream_info[0]),
+                .getFileOpenAccessStatus(
+                    publicationEmbargoOAFile,
+                    publicationEmbargoOAFile.fez_datastream_info[0].dsi_embargo_date,
+                ),
         ).toEqual({ embargoDate: null, isOpenAccess: false, openAccessStatusId: null });
     });
 
@@ -1156,25 +1159,229 @@ describe('Files Component ', () => {
                     rek_ismemberof_order: 5,
                 },
             ],
+            fez_record_search_key_issn: [
+                {
+                    rek_issn_id: 5382905,
+                    rek_issn_pid: 'UQ:676287',
+                    rek_issn_xsdmf_id: null,
+                    rek_issn: '1477-9137',
+                    rek_issn_order: 1,
+                    fez_journal_issns: [
+                        {
+                            jni_id: 13071,
+                            jni_jnl_id: 7538,
+                            jni_issn: '1477-9137',
+                            jni_issn_order: 2,
+                            fez_journal: {
+                                jnl_id: 7538,
+                                jnl_journal_name: 'Journal of Cell Science',
+                                jnl_era_id: 2234,
+                                jnl_era_year: 2010,
+                                jnl_created_date: '2010-11-19 00:00:00',
+                                jnl_updated_date: '2010-11-19 00:00:00',
+                                jnl_rank: 'A',
+                                jnl_foreign_name: null,
+                            },
+                        },
+                    ],
+                    fez_sherpa_romeo: {
+                        srm_id: 13764,
+                        srm_issn: '1477-9137',
+                        srm_xml:
+                            '<?xml version="1.0" encoding="ISO-8859-1" ?>\n<!DOCTYPE romeoapi SYSTEM "http://www.sherpa.ac.uk/romeo/romeoapi293.dtd">\n<romeoapi version="2.9.9">\n  <header>\n    <parameters>\n      <parameter source="specified">\n        <parametername>issn</parametername>\n        <parametervalue>1477-9137</parametervalue>\n      </parameter>\n      <parameter source="specified">\n        <parametername>versions</parametername>\n        <parametervalue>all</parametervalue>\n      </parameter>\n      <parameter source="default">\n        <parametername>showfunder</parametername>\n        <parametervalue>none</parametervalue>\n      </parameter>\n      <parameter source="default">\n        <parametername>fIDnum</parametername>\n        <parametervalue>|</parametervalue>\n      </parameter>\n      <parameter source="default">\n        <parametername>la</parametername>\n        <parametervalue>en</parametervalue>\n      </parameter>\n    </parameters>\n    <numhits>1</numhits>\n    <apicontrol>journal</apicontrol>\n    <outcome>singleJournal</outcome>\n    <message />\n    <licence>SHERPA/RoMEO data is available for re-use under a Creative Commons Attribution-Non-Commercial-Share Alike 2.5 licence. For more details, please see the \'conditions for re-use\' at the &lt;licenceurl /&gt;, and linked-to from the SHERPA/RoMEO home page.</licence>\n    <licenceurl>http://www.sherpa.ac.uk/romeoreuse.html</licenceurl>\n    <disclaimer>All SHERPA/RoMEO information is correct to the best of our knowledge but should not be relied upon for legal advice. SHERPA cannot be held responsible for the re-use of RoMEO data, or for alternative interpretations which are derived from this information.</disclaimer>\n    <timestamp>30-Sep-2017:19:26:17</timestamp>\n  </header>\n  <journals>\n    <journal>\n      <jtitle>Journal of Cell Science</jtitle>\n      <issn>0021-9533</issn>\n      <zetocpub>Company of Biologists</zetocpub>\n      <romeopub>Company of Biologists</romeopub>\n    </journal>\n  </journals>\n  <publishers>\n    <publisher id="29">\n      <name>Company of Biologists</name>\n      <alias />\n      <homeurl>http://www.biologists.com/web/index.shtml</homeurl>\n      <preprints>\n        <prearchiving>can</prearchiving>\n        <prerestrictions />\n      </preprints>\n      <postprints>\n        <postarchiving>can</postarchiving>\n        <postrestrictions />\n      </postprints>\n      <pdfversion>\n        <pdfarchiving>can</pdfarchiving>\n        <pdfrestrictions />\n      </pdfversion>\n      <conditions>\n        <condition>On author\'s personal website immediately</condition>\n        <condition>On institutional repository or PubMed Central after a &lt;num&gt;12&lt;/num&gt; &lt;period units=&quot;month&quot;&gt;months&lt;/period&gt; embargo period or as mandated</condition>\n        <condition>Authors retain copyright</condition>\n        <condition>Publisher\'s version/PDF may be used</condition>\n        <condition>Must link to publisher version</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher will automatically deposit in PMC for authors funded by RCUK, HHMI, NIH, MRC, Wellcome Trust for release 6 or 12 months after publication</condition>\n        <condition>Non-commercial use</condition>\n        <condition>Publisher last contacted on 30/03/2016</condition>\n      </conditions>\n      <mandates />\n      <paidaccess>\n        <paidaccessurl>http://jcs.biologists.org/content/rights-permissions</paidaccessurl>\n        <paidaccessname>Open Access</paidaccessname>\n        <paidaccessnotes>A paid open access option is available for this journal.</paidaccessnotes>\n      </paidaccess>\n      <copyrightlinks>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Cell Science Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jcs.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n        <copyrightlink>\n          <copyrightlinktext>Journal of Experimental Biology Policy</copyrightlinktext>\n          <copyrightlinkurl>http://jeb.biologists.org/content/rights-permissions</copyrightlinkurl>\n        </copyrightlink>\n      </copyrightlinks>\n      <romeocolour>green</romeocolour>\n      <dateadded>2004-01-10 00:00:00</dateadded>\n      <dateupdated>2016-04-12 16:14:47</dateupdated>\n    </publisher>\n  </publishers>\n</romeoapi>\n',
+                        srm_journal_name: 'Journal of Cell Science',
+                        srm_colour: 'green',
+                        srm_date_updated: '2017-09-30 18:26:18',
+                    },
+                    rek_issn_lookup: 'green',
+                },
+            ],
+            fez_record_search_key_issue_number: {
+                rek_issue_number_id: null,
+                rek_issue_number_pid: 'UQ:676287',
+                rek_issue_number: '14',
+            },
+            fez_record_search_key_job_number: null,
+            fez_record_search_key_journal_name: {
+                rek_journal_name_id: null,
+                rek_journal_name_pid: 'UQ:676287',
+                rek_journal_name: 'Journal of Cell Science',
+            },
+            fez_record_search_key_keywords: [
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'Akt',
+                    rek_keywords_order: 1,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'Breast cancer',
+                    rek_keywords_order: 2,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'Ca2+',
+                    rek_keywords_order: 3,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'Hypoxia',
+                    rek_keywords_order: 4,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'PTEN',
+                    rek_keywords_order: 5,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'Signal transduction',
+                    rek_keywords_order: 6,
+                },
+                {
+                    rek_keywords_id: null,
+                    rek_keywords_pid: 'UQ:676287',
+                    rek_keywords: 'TRPC1',
+                    rek_keywords_order: 7,
+                },
+            ],
+            fez_record_search_key_language: [
+                {
+                    rek_language_id: null,
+                    rek_language_pid: 'UQ:676287',
+                    rek_language: 'eng',
+                    rek_language_order: 1,
+                },
+            ],
+            fez_record_search_key_language_of_book_title: [],
+            fez_record_search_key_language_of_journal_name: [],
+            fez_record_search_key_language_of_proceedings_title: [],
+            fez_record_search_key_language_of_title: [],
+            fez_record_search_key_length: null,
+            fez_record_search_key_license: null,
+            fez_record_search_key_link: [],
+            fez_record_search_key_link_description: [],
+            fez_record_search_key_location: [],
+            fez_record_search_key_native_script_book_title: null,
+            fez_record_search_key_native_script_conference_name: null,
+            fez_record_search_key_native_script_journal_name: null,
+            fez_record_search_key_native_script_proceedings_title: null,
+            fez_record_search_key_native_script_title: null,
+            fez_record_search_key_newspaper: null,
+            fez_record_search_key_notes: null,
+            fez_record_search_key_oa_embargo_days: null,
+            fez_record_search_key_oa_notes: null,
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: null,
+                rek_oa_status_pid: 'UQ:676287',
+                rek_oa_status: 453695,
+            },
+            fez_record_search_key_org_name: null,
+            fez_record_search_key_org_unit_name: null,
+            fez_record_search_key_original_format: null,
+            fez_record_search_key_parent_publication: null,
+            fez_record_search_key_patent_number: null,
+            fez_record_search_key_period: [],
+            fez_record_search_key_place_of_publication: {
+                rek_place_of_publication_id: null,
+                rek_place_of_publication_pid: 'UQ:676287',
+                rek_place_of_publication: 'Cambridge, United Kingdom',
+            },
+            fez_record_search_key_proceedings_title: null,
+            fez_record_search_key_project_description: null,
+            fez_record_search_key_project_id: null,
+            fez_record_search_key_project_name: null,
+            fez_record_search_key_project_start_date: null,
+            fez_record_search_key_publisher: {
+                rek_publisher_id: null,
+                rek_publisher_pid: 'UQ:676287',
+                rek_publisher: 'Company of Biologists',
+            },
+            fez_record_search_key_pubmed_id: {
+                rek_pubmed_id_id: null,
+                rek_pubmed_id_pid: 'UQ:676287',
+                rek_pubmed_id: '28559303',
+            },
+            fez_record_search_key_refereed: { rek_refereed_id: null, rek_refereed_pid: 'UQ:676287', rek_refereed: 1 },
+            fez_record_search_key_refereed_source: {
+                rek_refereed_source_id: null,
+                rek_refereed_source_pid: 'UQ:676287',
+                rek_refereed_source: 453635,
+            },
+            fez_record_search_key_related_datasets: null,
+            fez_record_search_key_related_publications: null,
+            fez_record_search_key_report_number: null,
+            fez_record_search_key_retracted: {
+                rek_retracted_id: null,
+                rek_retracted_pid: 'UQ:676287',
+                rek_retracted: 0,
+            },
+            fez_record_search_key_rights: null,
+            fez_record_search_key_roman_script_book_title: null,
+            fez_record_search_key_roman_script_conference_name: null,
+            fez_record_search_key_roman_script_journal_name: null,
+            fez_record_search_key_roman_script_proceedings_title: null,
+            fez_record_search_key_roman_script_title: null,
+            fez_record_search_key_scale: null,
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id_id: null,
+                rek_scopus_id_pid: 'UQ:676287',
+                rek_scopus_id: '2-s2.0-85024119372',
+            },
+            fez_record_search_key_section: null,
+            fez_record_search_key_seo_code: [],
+            fez_record_search_key_series: null,
+            fez_record_search_key_software_required: [],
+            fez_record_search_key_source: null,
+            fez_record_search_key_start_date: null,
+            fez_record_search_key_start_page: {
+                rek_start_page_id: null,
+                rek_start_page_pid: 'UQ:676287',
+                rek_start_page: '2292',
+            },
+            fez_record_search_key_structural_systems: [],
+            fez_record_search_key_style: [],
+            fez_record_search_key_subcategory: [],
+            fez_record_search_key_subject: [],
+            fez_record_search_key_supervisor: [],
+            fez_record_search_key_supervisor_id: [],
+            fez_record_search_key_surrounding_features: [],
+            fez_record_search_key_time_period_end_date: null,
+            fez_record_search_key_time_period_start_date: null,
+            fez_record_search_key_total_chapters: null,
+            fez_record_search_key_total_pages: {
+                rek_total_pages_id: null,
+                rek_total_pages_pid: 'UQ:676287',
+                rek_total_pages: '14',
+            },
+            fez_record_search_key_transcript: null,
+            fez_record_search_key_translated_book_title: null,
+            fez_record_search_key_translated_conference_name: null,
+            fez_record_search_key_translated_journal_name: null,
+            fez_record_search_key_translated_newspaper: null,
+            fez_record_search_key_translated_proceedings_title: null,
+            fez_record_search_key_translated_title: null,
+            fez_record_search_key_type_of_data: [],
+            fez_record_search_key_volume_number: {
+                rek_volume_number_id: null,
+                rek_volume_number_pid: 'UQ:676287',
+                rek_volume_number: '130',
+            },
+            rek_display_type_lookup: 'Journal Article',
         };
+        /* eslint-enable max-len */
 
-        const wrapper = setup({ publication: publication, account: { canMasquerade: true } });
+        const wrapper = setup({ publication: publication, isAdmin: true });
         expect(toJson(wrapper)).toMatchSnapshot();
-        const wrapper2 = setup({ publication: publication, account: { canMasquerade: false } });
+        const wrapper2 = setup({ publication: publication, isAdmin: false });
         expect(toJson(wrapper2)).toMatchSnapshot();
         expect(toJson(wrapper)).not.toEqual(toJson(wrapper2));
-    });
-
-    it('should clean up state on hidePreview', () => {
-        const wrapper = setup();
-        const mediaUrl = 'mediaUrl';
-        const previewMediaUrl = 'previewMediaUrl';
-        const mimeType = 'image/jpeg';
-        wrapper.instance().showPreview(mediaUrl, previewMediaUrl, mimeType);
-        wrapper.instance().hidePreview();
-        expect(wrapper.state().preview.previewMediaUrl).toEqual(null);
-        expect(wrapper.state().preview.mediaUrl).toEqual(null);
-        expect(wrapper.state().preview.mimeType).toEqual(null);
     });
 
     it('should correctly get dataStream item for thumbnail and preview images', () => {
@@ -1260,7 +1467,7 @@ describe('Files Component ', () => {
             },
         ];
 
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(wrapper.instance().searchByKey(fezDatastreamInfo, 'dsi_dsid', thumbnailFileName)).toEqual({
             dsi_pid: 'UQ:107683',
             dsi_dsid: 'thumbnail_AL_LH_01.jpg',
@@ -2199,7 +2406,6 @@ describe('Files Component ', () => {
             rek_scopus_doc_type_lookup: null,
             rek_pubmed_doc_type_lookup: null,
         };
-
         Object.defineProperty(window.navigator, 'userAgent', { value: 'FireFox' });
         const wrapper = setup({ publication: pub });
         // wrapper.instance().hasVideo === true;
@@ -3085,6 +3291,42 @@ describe('Files Component ', () => {
             },
         };
         const wrapper = setup(data);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not render audio files with _xt in their filename', () => {
+        /* eslint-disable max-len */
+        // prettier-ignore
+        const publication = {
+            ...journalArticle,
+            fez_datastream_info: [
+                {
+                    dsi_pid: 'UQ:792099',
+                    dsi_dsid: 'audio.wav',
+                    dsi_embargo_date: null,
+                    dsi_open_access: null,
+                    dsi_label: 'testing image description',
+                    dsi_mimetype: 'audio/wav',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 97786,
+                },
+                {
+                    dsi_pid: 'UQ:792099',
+                    dsi_dsid: 'audiotest_xt.mp3',
+                    dsi_embargo_date: null,
+                    dsi_open_access: null,
+                    dsi_label: 'testing image description',
+                    dsi_mimetype: 'audio/wav',
+                    dsi_copyright: null,
+                    dsi_state: 'A',
+                    dsi_size: 97786,
+                },
+            ],
+        };
+        /* eslint-enable max-len */
+
+        const wrapper = setup({ publication: publication, isAdmin: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

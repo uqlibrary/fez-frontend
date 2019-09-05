@@ -4,9 +4,11 @@ import locale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { withStyles } from '@material-ui/core/styles';
+
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
+
 import moment from 'moment';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
@@ -18,7 +20,6 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
-import ReactHtmlParser from 'react-html-parser';
 
 const styles = theme => ({
     header: {
@@ -38,7 +39,6 @@ const styles = theme => ({
 
 export class FilesClass extends Component {
     static propTypes = {
-        account: PropTypes.object.isRequired,
         publication: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
         setHideCulturalSensitivityStatement: PropTypes.func,
@@ -67,7 +67,6 @@ export class FilesClass extends Component {
         thumbnailFileName,
         previewFileName,
         allowDownload,
-        downloadableFileName = null,
         webFileName,
         securityStatus,
     ) => {
@@ -78,7 +77,7 @@ export class FilesClass extends Component {
                 webMediaUrl: webFileName ? this.getUrl(pid, webFileName) : null,
                 previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : null,
                 thumbnailMediaUrl: thumbnailFileName && this.getUrl(pid, thumbnailFileName),
-                fileName: downloadableFileName || fileName,
+                fileName: fileName,
                 thumbnailFileName,
                 onClick: this.showPreview,
                 securityStatus: securityStatus,
@@ -157,7 +156,7 @@ export class FilesClass extends Component {
 
     getSecurityAccess = dataStream => {
         const { isAdmin, isAuthor } = this.props;
-        return !!((!isAdmin && dataStream.dsi_security_policy === 5) || isAdmin || isAuthor);
+        return !!(dataStream.dsi_security_policy === 5 || isAdmin || isAuthor);
     };
 
     getUrl = (pid, fileName) => {
@@ -173,8 +172,10 @@ export class FilesClass extends Component {
             files: { blacklist },
         } = viewRecordsConfig;
         return (
+            this.getSecurityAccess(dataStream) &&
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
+            !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
             (!dataStream.dsi_label ||
                 !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
             dataStream.dsi_state === 'A'
@@ -213,7 +214,6 @@ export class FilesClass extends Component {
         const file = this.untranscodedItem(filename);
         return (
             this.checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`thumbnail_${file}_override_t.jpg`) ||
             this.checkArrayForObjectValue(`thumbnail_${file}_t.jpg`) ||
             this.checkArrayForObjectValue(`thumbnail_${file}.jpg`) ||
             this.checkArrayForObjectValue(`${file}_t.jpg`) ||
@@ -225,16 +225,13 @@ export class FilesClass extends Component {
         const file = this.untranscodedItem(filename);
         return (
             this.checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`preview_${file}_override_t.jpg`) ||
             this.checkArrayForObjectValue(`preview_${file}_t.jpg`) ||
             this.checkArrayForObjectValue(`preview_${file}.jpg`) ||
             this.checkArrayForObjectValue(`${file}_t.jpg`) ||
             this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`) ||
-            this.checkArrayForObjectValue(`preview_${file}_override_t.mp4`) ||
             this.checkArrayForObjectValue(`preview_${file}_t.mp4`) ||
             this.checkArrayForObjectValue(`${file}_t.mp4`) ||
             this.checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`) ||
-            this.checkArrayForObjectValue(`preview_${file}_override_t.mp3`) ||
             this.checkArrayForObjectValue(`preview_${file}_t.mp3`) ||
             this.checkArrayForObjectValue(`${file}_t.mp3`) ||
             null
@@ -245,14 +242,11 @@ export class FilesClass extends Component {
         const file = this.untranscodedItem(filename);
         return (
             this.checkArrayForObjectValue(`web_${file}_compressed_t.jpg`) ||
-            this.checkArrayForObjectValue(`web_${file}_override_t.jpg`) ||
             this.checkArrayForObjectValue(`web_${file}_t.jpg`) ||
             this.checkArrayForObjectValue(`web_${file}.jpg`) ||
             this.checkArrayForObjectValue(`web_${file}_compressed_t.mp4`) ||
-            this.checkArrayForObjectValue(`web_${file}_override_t.mp4`) ||
             this.checkArrayForObjectValue(`web_${file}_t.mp4`) ||
             this.checkArrayForObjectValue(`web_${file}_compressed_t.mp3`) ||
-            this.checkArrayForObjectValue(`web_${file}_override_t.mp3`) ||
             this.checkArrayForObjectValue(`web_${file}_t.mp3`) ||
             null
         );
@@ -272,7 +266,6 @@ export class FilesClass extends Component {
                 const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
                 const thumbnailFileName = this.checkForThumbnail(fileName);
                 const previewFileName = this.checkForPreview(fileName);
-                const downloadableFileName = fileName;
                 const webFileName = this.checkForWeb(fileName);
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
                 const securityAccess = this.getSecurityAccess(dataStream);
@@ -295,14 +288,13 @@ export class FilesClass extends Component {
                         thumbnailFileName,
                         previewFileName,
                         openAccessStatus.isOpenAccess || this.props.isAuthor || this.props.isAdmin,
-                        downloadableFileName,
                         webFileName,
                         securityAccess,
                     ),
                     openAccessStatus: openAccessStatus,
                     previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : this.getUrl(pid, fileName),
-                    webMediaUrl: this.getUrl(pid, downloadableFileName),
-                    mediaUrl: this.getUrl(pid, downloadableFileName),
+                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName) : null,
+                    mediaUrl: this.getUrl(pid, fileName),
                     securityStatus: this.getSecurityAccess(dataStream),
                 };
             })
@@ -328,9 +320,10 @@ export class FilesClass extends Component {
                         <Alert
                             allowDismiss
                             type={'info'}
-                            message={ReactHtmlParser(
-                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
-                            )}
+                            message={
+                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement ||
+                                    locale.viewRecord.sections.files.culturalSensitivityStatement
+                            }
                             dismissAction={this.props.setHideCulturalSensitivityStatement}
                         />
                     )}

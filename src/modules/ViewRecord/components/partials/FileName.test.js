@@ -18,6 +18,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
     };
     return getElement(FileName, props, args);
 }
+
 describe('File Name Component ', () => {
     it('should render component and display file name only', () => {
         const wrapper = setup({}, { isShallow: false });

@@ -31,6 +31,21 @@ describe('Media Preview Component ', () => {
         expect(wrapper.find('Button').length).toEqual(3);
     });
 
+    it('should render component with a PDF', () => {
+        const wrapper = setup(
+            {
+                fileName: 'test.pdf',
+                mediaUrl: 'test_t.pdf',
+                webMediaUrl: 'web_test_t.pdf',
+                previewMediaUrl: 'preview_test_t.pdf',
+                mimeType: 'application/pdf',
+            },
+            { isShallow: false },
+        );
+        expect(toJson(wrapper)).toMatchSnapshot();
+        expect(wrapper.find('Button').length).toEqual(3);
+    });
+
     it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;

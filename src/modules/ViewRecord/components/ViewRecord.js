@@ -77,7 +77,7 @@ export default class ViewRecord extends PureComponent {
                             publication={recordToView}
                             hideTitle
                             hideContentIndicators
-                            showAdminActions={this.props.account && this.props.account.canMasquerade}
+                            showAdminActions={(this.props.account || {}).canMasquerade}
                         />
                     </Grid>
                     {!!this.props.recordToView && this.props.recordToView !== {} && (
@@ -110,12 +110,7 @@ export default class ViewRecord extends PureComponent {
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
-                        isAdmin={
-                            !!(
-                                (this.props.account && this.props.account.is_administrator) ||
-                                (this.props.account && this.props.account.canMasquerade)
-                            )
-                        }
+                        isAdmin={!!(this.props.account && this.props.account.is_administrator)}
                         isAuthor={!!isAuthor}
                     />
                     <Links publication={recordToView} />

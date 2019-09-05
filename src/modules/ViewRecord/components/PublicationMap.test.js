@@ -1,7 +1,7 @@
 import React from 'react';
 import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './PublicationMap';
 
-function setup(testProps, args = { isShallow: false }) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         googleMapURL:
@@ -56,7 +56,7 @@ describe("Publication's map coordinates", () => {
                 LatLngBounds: () => ({}),
             },
         };
-        const wrapper = setup({}, { isShallow: true });
+        const wrapper = setup({}, true);
         const geoCoords = [{ lat: 153.021781, lng: -27.489337 }, { lat: 153.021781, lng: -27.489337 }];
         wrapper.setState({ geoCoords });
         expect(wrapper.state().geoCoords).toBe(geoCoords);
@@ -91,7 +91,7 @@ describe("Publication's map coordinates", () => {
                     },
                 ],
             },
-            { isShallow: true },
+            true,
         );
         expect(toJson(wrapper)).toMatchSnapshot();
 
