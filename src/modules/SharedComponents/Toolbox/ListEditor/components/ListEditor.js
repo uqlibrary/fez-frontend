@@ -60,7 +60,6 @@ export default class ListEditor extends Component {
                 typeof (props.input.value || {}).toJS === 'function' &&
                 props.input.value.toJS()) ||
             ((props.input || {}).name && props.input.value);
-
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
