@@ -16,7 +16,9 @@ export default {
         }),
     },
     rek_date: {
-        getValue: record => record.rek_date,
+        getValue: record => {
+            return record.rek_date && record.rek_date && moment(record.rek_date).format('YYYY');
+        },
     },
     rek_subtype: {
         getValue: record => record.rek_subtype,

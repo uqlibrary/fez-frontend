@@ -168,7 +168,12 @@ export default {
             "fez_record_search_key_corresponding_organisation": [],
             "fez_record_search_key_creator_contribution_statement": [],
             "fez_record_search_key_datastream_policy": null,
-            "fez_record_search_key_date_available": null,
+            "fez_record_search_key_date_available": {
+                "rek_date_available_id": 1,
+                "rek_date_available_pid": "UQ:173575",
+                "rek_date_available_xsdmf_id": null,
+                "rek_date_available": "2009-04-02T15:47:51Z"
+            },
             "fez_record_search_key_doi": null,
             "fez_record_search_key_edition": null,
             "fez_record_search_key_end_page": {
