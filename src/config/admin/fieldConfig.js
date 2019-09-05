@@ -430,10 +430,6 @@ export default {
         component: FilteredFieldOfResearchListField,
         componentProps: {
             name: 'bibliographicSection.subjects',
-            searchKey: {
-                value: 'rek_subject',
-                order: 'rek_subject_order',
-            },
             locale: locale.components.subjectForm.field,
             distinctOnly: true,
         },
