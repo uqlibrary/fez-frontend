@@ -1,12 +1,12 @@
 import AlternateGenreField from './AlternateGenreField';
 import Immutable from 'immutable';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(AlternateGenreField, props, args);
+    return getElement(AlternateGenreField, props);
 }
 
 describe('AlternateGenreField component', () => {

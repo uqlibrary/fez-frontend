@@ -52,7 +52,7 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['rek_description'],
                 ['fez_record_search_key_transcript'],
-                ['fez_record_search_key_refereed_source', 'fez_record_search_key_alternate_genre'],
+                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
@@ -62,6 +62,10 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
+        },
+        {
+            title: 'Alternate Genres',
+            groups: [['fez_record_search_key_alternate_genre']],
         },
     ],
     authors: () => [

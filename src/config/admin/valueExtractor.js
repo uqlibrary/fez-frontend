@@ -391,7 +391,7 @@ export default {
             })),
     },
     fez_record_search_key_alternate_genre: {
-        getValue: record => ({ ...record.fez_record_search_key_alternate_genre }),
+        getValue: record => record.fez_record_search_key_alternate_genre.map(genre => genre.rek_alternate_genre),
     },
     fez_record_search_key_location: {
         getValue: record => [...record.fez_record_search_key_location],
@@ -406,7 +406,7 @@ export default {
         getValue: record => (record.fez_record_search_key_rights || {}).rek_rights,
     },
     fez_record_search_key_acknowledgements: {
-        getValue: record => (record.fez_record_search_key_acknowledgements || {}).rek_acknowledgements,
+        getValue: record => ({ ...record.fez_record_search_key_acknowledgements }),
     },
     fez_record_search_key_length: {
         getValue: record => (record.fez_record_search_key_length || {}).rek_length,
