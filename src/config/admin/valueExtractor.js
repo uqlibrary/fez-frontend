@@ -393,4 +393,34 @@ export default {
     fez_record_search_key_alternate_genre: {
         getValue: record => ({ ...record.fez_record_search_key_alternate_genre }),
     },
+    fez_record_search_key_location: {
+        getValue: record => [...record.fez_record_search_key_location],
+    },
+    fez_record_search_key_identifiers: {
+        getValue: record => [...record.fez_record_search_key_identifiers],
+    },
+    fez_record_search_key_source: {
+        getValue: record => (record.fez_record_search_key_source || {}).rek_source,
+    },
+    fez_record_search_key_rights: {
+        getValue: record => (record.fez_record_search_key_rights || {}).rek_rights,
+    },
+    fez_record_search_key_acknowledgements: {
+        getValue: record => (record.fez_record_search_key_acknowledgements || {}).rek_acknowledgements,
+    },
+    fez_record_search_key_length: {
+        getValue: record => (record.fez_record_search_key_length || {}).rek_length,
+    },
+    fez_record_search_key_license: {
+        getValue: record => ({ ...record.fez_record_search_key_license }),
+    },
+    fez_record_search_key_original_format: {
+        getValue: record => (record.fez_record_search_key_original_format || {}).rek_original_format,
+    },
+    fez_record_search_key_transcript: {
+        getValue: record => ({
+            plainText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+            htmlText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+        }),
+    },
 };
