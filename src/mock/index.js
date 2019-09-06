@@ -197,6 +197,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.adminEditBookChapterList.data[0] },
             { ...mockData.adminEditBookChapterList.data[1] },
             { ...mockData.adminEditConferencePaperList.data[0] },
+            { ...mockData.adminEditVideoList.data[0] },
             { ...mockData.incompleteNTROrecordUqrdav10 },
             { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.incompleteNTROrecord },
