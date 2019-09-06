@@ -674,6 +674,16 @@ export default {
             validation: [validation.dateTimeYear],
         },
     },
+    fez_record_search_key_date_recorded: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_date_recorded',
+            label: 'Year recorded',
+            fullWidth: true,
+            validation: [validation.dateTimeYear],
+        },
+    },
+
     // fez_record_search_key_isderivationof: {
     //     component: RelatedDatasetAndPublicationListField,
     //     componentProps: {

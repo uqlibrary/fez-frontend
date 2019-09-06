@@ -43,7 +43,7 @@ export default {
                 ['fez_record_search_key_series', 'rek_date'],
                 [
                     'fez_record_search_key_date_available',
-                    // 'fez_record_search_key_date_recorded'
+                    'fez_record_search_key_date_recorded',
                 ],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'fez_record_search_key_original_format'],

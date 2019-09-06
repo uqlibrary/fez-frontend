@@ -374,6 +374,15 @@ export default {
             );
         },
     },
+    fez_record_search_key_date_recorded: {
+        getValue: record => {
+            return (
+                record.fez_record_search_key_date_recorded &&
+                record.fez_record_search_key_date_recorded.rek_date_recorded &&
+                moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format('YYYY')
+            );
+        },
+    },
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
