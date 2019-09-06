@@ -176,6 +176,7 @@ export default {
             placeholder: 'Publication year',
             required: true,
             fullWidth: true,
+            validate: [validation.required, validation.dateTimeYear],
         },
     },
     collections: {
@@ -184,6 +185,7 @@ export default {
             floatingLabelText: 'Member of collections',
             hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
+            validate: [validation.required],
         },
     },
     rek_subtype: {
@@ -748,8 +750,6 @@ export default {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_license',
             label: 'License',
-            required: true,
-            fullWidth: true,
         },
     },
     fez_record_search_key_original_format: {
