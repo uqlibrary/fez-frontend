@@ -663,14 +663,6 @@ export default {
     // ' awaiting redesign of the deposit process].',
     //     },
     // },
-    // rek_copyright: {
-    //     component: DepositAgreementField, // ??? this just gives a red checkbox??
-    //     componentProps: {
-    //         name: 'adminSection.rek_copyright',
-    //         label: 'Copyright Agreement',
-    //         placeholder: '',
-    //     },
-    // },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {

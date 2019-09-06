@@ -400,22 +400,26 @@ export default {
         getValue: record => [...record.fez_record_search_key_identifiers],
     },
     fez_record_search_key_source: {
-        getValue: record => (record.fez_record_search_key_source || {}).rek_source,
+        getValue: record => ({ ...record.fez_record_search_key_source }),
+        // getValue: record => (record.fez_record_search_key_source || {}).rek_source,
     },
     fez_record_search_key_rights: {
-        getValue: record => (record.fez_record_search_key_rights || {}).rek_rights,
+        getValue: record => ({ ...record.fez_record_search_key_rights }),
+        // getValue: record => (record.fez_record_search_key_rights || {}).rek_rights,
     },
     fez_record_search_key_acknowledgements: {
         getValue: record => ({ ...record.fez_record_search_key_acknowledgements }),
     },
     fez_record_search_key_length: {
-        getValue: record => (record.fez_record_search_key_length || {}).rek_length,
+        getValue: record => ({ ...record.fez_record_search_key_length }),
+        // getValue: record => (record.fez_record_search_key_length || {}).rek_length,
     },
     fez_record_search_key_license: {
         getValue: record => ({ ...record.fez_record_search_key_license }),
     },
     fez_record_search_key_original_format: {
-        getValue: record => (record.fez_record_search_key_original_format || {}).rek_original_format,
+        getValue: record => ({ ...record.fez_record_search_key_original_format }),
+        // getValue: record => (record.fez_record_search_key_original_format || {}).rek_original_format,
     },
     fez_record_search_key_transcript: {
         getValue: record => ({
