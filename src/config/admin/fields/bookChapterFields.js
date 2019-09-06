@@ -30,10 +30,10 @@ export default {
                 ['rek_title'],
                 ...(isLote
                     ? [
+                        ['languageOfTitle'],
                         ['fez_record_search_key_native_script_title'],
                         ['fez_record_search_key_roman_script_title'],
                         ['fez_record_search_key_translated_title'],
-                        ['languageOfTitle'],
                     ]
                     : []),
             ],
@@ -44,10 +44,10 @@ export default {
                 ['fez_record_search_key_book_title'],
                 ...(isLote
                     ? [
+                        ['languageOfBookTitle'],
                         ['fez_record_search_key_native_script_book_title'],
                         ['fez_record_search_key_roman_script_book_title'],
                         ['fez_record_search_key_translated_book_title'],
-                        ['languageOfBookTitle'],
                     ]
                     : []),
             ],
