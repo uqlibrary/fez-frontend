@@ -30,6 +30,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         editMode: PropTypes.bool,
+        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -44,6 +45,7 @@ export class ContributorsEditor extends PureComponent {
         showIdentifierLookup: false,
         showRoleInput: false,
         editMode: false,
+        canEdit: false,
     };
 
     constructor(props) {
@@ -52,7 +54,6 @@ export class ContributorsEditor extends PureComponent {
             contributors: this.getContributorsFromProps(props),
             errorMessage: '',
             isCurrentAuthorSelected: false,
-            showIdentifierLookup: false,
             contributorIndexSelectedToEdit: null,
         };
     }
@@ -181,13 +182,14 @@ export class ContributorsEditor extends PureComponent {
     };
 
     renderContributorRows = () => {
-        const { disabled, hideDelete, hideReorder, showContributorAssignment, locale } = this.props;
+        const { canEdit, disabled, hideDelete, hideReorder, showContributorAssignment, locale } = this.props;
 
         const { contributors, isCurrentAuthorSelected } = this.state;
 
         return contributors.map((contributor, index) => (
             <ContributorRow
                 {...(locale.row || {})}
+                canEdit={canEdit}
                 canMoveDown={index !== contributors.length - 1}
                 canMoveUp={index !== 0}
                 contributor={contributor}
@@ -198,7 +200,8 @@ export class ContributorsEditor extends PureComponent {
                 index={index}
                 className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
-                onSelect={this.props.editMode ? this.selectContributor : this.assignContributor}
+                onSelect={this.assignContributor}
+                onEdit={this.selectContributor}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
@@ -218,7 +221,7 @@ export class ContributorsEditor extends PureComponent {
             onSubmit: contributor => onSubmit(contributor, index),
         };
 
-        if (this.props.editMode) {
+        if (this.props.canEdit) {
             formProps.contributor = this.state.contributors[index];
             formProps.disableNameAsPublished = true;
             formProps.enableUqIdentifierOnAffiliationChange = false;

@@ -39,6 +39,7 @@ describe('ContributorsEditor', () => {
     it('renders component in edit mode', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
             locale: {
                 form: {
                     locale: {
@@ -150,6 +151,7 @@ describe('ContributorsEditor', () => {
     it('chooses a contributor to edit', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
         });
         wrapper.setState({
             contributors: [
@@ -253,6 +255,7 @@ describe('ContributorsEditor', () => {
     it('returns array of contributor rows in edit mode with selectContributor select handler', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
         });
         const testFn = jest.fn();
         wrapper.instance().selectContributor = testFn;
@@ -275,6 +278,7 @@ describe('ContributorsEditor', () => {
 
         wrapper.setProps({
             editMode: true,
+            canEdit: true,
             locale: {
                 form: {
                     locale: {

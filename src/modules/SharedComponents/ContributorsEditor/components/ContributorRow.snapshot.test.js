@@ -24,6 +24,7 @@ function setup(testProps = {}, args = {}) {
         },
         width: 'md',
         required: false,
+        canEdit: false,
         ...testProps,
     };
     return getElement(ContributorRow, props, args);

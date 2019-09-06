@@ -539,6 +539,7 @@ export default {
             locale: formLocale.journalArticle.authors.field,
             validate: [validation.authorRequired],
             editMode: true,
+            canEdit: true,
         },
     },
     editors: {

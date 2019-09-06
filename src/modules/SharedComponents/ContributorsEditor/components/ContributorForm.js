@@ -261,6 +261,7 @@ export class ContributorForm extends PureComponent {
                         (this.props.enableUqIdentifierOnAffiliationChange && contributor.affiliation === 'UQ')) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
+                                key={contributor.authorId}
                                 disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
                                 value={contributor.uqIdentifier || ''}

@@ -18,6 +18,7 @@ import Hidden from '@material-ui/core/Hidden';
 import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
 import Delete from '@material-ui/icons/Delete';
+import Edit from '@material-ui/icons/Edit';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
@@ -68,6 +69,7 @@ export const styles = theme => ({
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         canMoveDown: PropTypes.bool,
         canMoveUp: PropTypes.bool,
         classes: PropTypes.object,
@@ -79,6 +81,7 @@ export class ContributorRow extends PureComponent {
         locale: PropTypes.object,
         onSelect: PropTypes.func,
         onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
         showContributorAssignment: PropTypes.bool,
@@ -87,6 +90,7 @@ export class ContributorRow extends PureComponent {
     };
 
     static defaultProps = {
+        canEdit: false,
         locale: {
             suffix: ' listed contributor',
             moveUpHint: 'Move record up the order',
@@ -149,6 +153,11 @@ export class ContributorRow extends PureComponent {
         if (!disabled && !!onSelect) {
             onSelect(index);
         }
+    };
+
+    _handleEdit = () => {
+        const { canEdit, index } = this.props;
+        canEdit && !!this.props.onEdit && this.props.onEdit(index);
     };
 
     getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
@@ -235,6 +244,7 @@ export class ContributorRow extends PureComponent {
 
         const {
             contributor,
+            canEdit,
             canMoveDown,
             canMoveUp,
             disabled,
@@ -328,6 +338,25 @@ export class ContributorRow extends PureComponent {
                                         aria-label={moveDownHint}
                                     >
                                         <KeyboardArrowDown classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
+                            </Tooltip>
+                        )}
+                        {canEdit && (
+                            <Tooltip
+                                title={deleteHint}
+                                disableFocusListener={disabled || hideDelete}
+                                disableHoverListener={disabled || hideDelete}
+                                disableTouchListener={disabled || hideDelete}
+                            >
+                                <span>
+                                    <IconButton
+                                        aria-label={deleteHint}
+                                        onClick={this._handleEdit}
+                                        disabled={disabled}
+                                        id={deleteButtonId(index)}
+                                    >
+                                        <Edit classes={{ root: `${selectedClass}` }} />
                                     </IconButton>
                                 </span>
                             </Tooltip>
