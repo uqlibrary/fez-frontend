@@ -72,9 +72,6 @@ export default {
                 value: collection.rek_ismemberof_lookup,
             })),
     },
-    fez_record_search_key_keywords: {
-        getValue: record => [...record.fez_record_search_key_keywords],
-    },
     fez_record_search_key_issn: {
         getValue: record => [...record.fez_record_search_key_issn],
     },
@@ -405,8 +402,11 @@ export default {
     fez_record_search_key_location: {
         getValue: record => [...record.fez_record_search_key_location],
     },
-    fez_record_search_key_identifiers: {
-        getValue: record => [...record.fez_record_search_key_identifiers],
+    fez_record_search_key_identifier: {
+        getValue: record => [...record.fez_record_search_key_identifier],
+    },
+    fez_record_search_key_keywords: {
+        getValue: record => [...record.fez_record_search_key_keywords],
     },
     fez_record_search_key_source: {
         getValue: record => ({ ...record.fez_record_search_key_source }),

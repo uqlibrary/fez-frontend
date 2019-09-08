@@ -344,19 +344,6 @@ export default {
             validate: [validation.required],
         },
     },
-    fez_record_search_key_keywords: {
-        component: ListEditorField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_keywords',
-            required: true,
-            maxInputLength: 111,
-            searchKey: {
-                value: 'rek_keywords',
-                order: 'rek_keywords_order',
-            },
-            locale: locale.components.keywordsForm.field,
-        },
-    },
     fez_record_search_key_issn: {
         component: ListEditorField,
         componentProps: {
@@ -707,10 +694,23 @@ export default {
             locale: locale.components.locationForm.field,
         },
     },
-    fez_record_search_key_identifiers: {
+    fez_record_search_key_keywords: {
         component: ListEditorField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_identifiers',
+            name: 'bibliographicSection.fez_record_search_key_keywords',
+            required: true,
+            maxInputLength: 111,
+            searchKey: {
+                value: 'rek_keywords',
+                order: 'rek_keywords_order',
+            },
+            locale: locale.components.keywordsForm.field,
+        },
+    },
+    fez_record_search_key_identifier: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_identifier',
             title: 'Identifiers',
             searchKey: {
                 value: 'rek_identifier',

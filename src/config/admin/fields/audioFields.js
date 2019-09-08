@@ -21,7 +21,12 @@ export default {
             groups: [['links']],
         },
         {
-            groups: [['fez_record_search_key_identifiers'], ['fez_record_search_key_location']],
+            title: 'Identifiers',
+            groups: [['fez_record_search_key_identifier']],
+        },
+        {
+            title: 'Locations',
+            groups: [['fez_record_search_key_location']],
         },
     ],
     bibliographic: (isLote = false) => [
