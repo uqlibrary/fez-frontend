@@ -71,6 +71,9 @@ exports[`BibliographicSection component should render default view 1`] = `
             Array [
               "rek_description",
             ],
+            Array [
+              "fez_record_search_key_refereed_source",
+            ],
           ],
           "title": "Bibliographic",
         },
@@ -89,6 +92,14 @@ exports[`BibliographicSection component should render default view 1`] = `
             ],
           ],
           "title": "Subject",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isderivationof",
+            ],
+          ],
+          "title": "Related publications",
         },
       ],
     }
@@ -168,6 +179,9 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             Array [
               "rek_description",
             ],
+            Array [
+              "fez_record_search_key_refereed_source",
+            ],
           ],
           "title": "Bibliographic",
         },
@@ -186,6 +200,14 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             ],
           ],
           "title": "Subject",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isderivationof",
+            ],
+          ],
+          "title": "Related publications",
         },
       ],
     }

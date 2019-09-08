@@ -9,12 +9,14 @@ import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFil
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
+import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
+import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import {
@@ -167,11 +169,12 @@ export default {
     rek_date: {
         component: GenericTextField,
         componentProps: {
-            name: 'bibliogrphicSection.rek_date',
-            label: 'Publication date',
-            placeholder: 'Date of publication',
+            name: 'bibliographicSection.rek_date',
+            label: 'Publication year',
+            placeholder: 'Publication year',
             required: true,
             fullWidth: true,
+            validate: [validation.required, validation.dateTimeYear],
         },
     },
     collections: {
@@ -632,21 +635,34 @@ export default {
             canEdit: true,
         },
     },
-    // rek_copyright: {
-    //     component: DepositAgreementField, // ??? this just gives a red checkbox??
-    //     componentProps: {
-    //         name: 'adminSection.rek_copyright',
-    //         label: 'Copyright Agreement',
-    //         placeholder: '',
-    //     },
-    // },
+    rek_copyright: {
+        component: CopyrightAgreementField,
+        componentProps: {
+            name: 'filesSection.rek_copyright',
+            label: 'Copyright Agreement',
+            placeholder: '',
+            copyrightAgreement:
+                'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
+        },
+    },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_date_available',
-            label: 'Year Available',
-            required: true,
+            label: 'Year available',
             fullWidth: true,
+            validation: [validation.dateTimeYear],
+        },
+    },
+    fez_record_search_key_isderivationof: {
+        component: RelatedDatasetAndPublicationListField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_isderivationof',
+            searchKey: { value: 'rek_isderivationof', order: 'rek_isderivationof_order' },
+            locale: {
+                form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+            },
+            height: 50,
         },
     },
 };

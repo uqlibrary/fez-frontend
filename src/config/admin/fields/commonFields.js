@@ -7,6 +7,10 @@ export default {
             title: 'Files',
             groups: [['files']],
         },
+        {
+            title: 'Copyright agreement',
+            groups: [['rek_copyright']],
+        },
     ],
     grantInformation: () => [
         {

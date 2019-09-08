@@ -16,7 +16,9 @@ export default {
         }),
     },
     rek_date: {
-        getValue: record => record.rek_date,
+        getValue: record => {
+            return record.rek_date && record.rek_date && moment(record.rek_date).format('YYYY');
+        },
     },
     rek_subtype: {
         getValue: record => record.rek_subtype,
@@ -371,5 +373,21 @@ export default {
                 moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
             );
         },
+    },
+    rek_copyright: {
+        getValue: record => record.rek_copyright,
+    },
+    fez_record_search_key_advisory_statement: {
+        getValue: record => ({ ...record.fez_record_search_key_advisory_statement }),
+    },
+    fez_record_search_key_isderivationof: {
+        getValue: record =>
+            (record.fez_record_search_key_isderivationof || []).map(derivation => ({
+                rek_isderivationof: {
+                    id: derivation.rek_isderivationof,
+                    value: derivation.rek_isderivationof_lookup,
+                },
+                rek_isderivationof_order: derivation.rek_isderivationof_order,
+            })),
     },
 };

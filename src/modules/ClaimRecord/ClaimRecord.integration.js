@@ -185,7 +185,7 @@ describe('ClaimRecord form', () => {
         let fragment = asFragment();
 
         // Fill required fields
-        fireEvent.click(getAllByText(publicationDetails.fez_record_search_key_author[1].rek_author)[1]);
+        fireEvent.click(getAllByText(publicationDetails.fez_record_search_key_author[7].rek_author)[0]);
         fireEvent.click(getByTestId('authorAcceptDeclaration'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
