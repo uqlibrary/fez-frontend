@@ -10,7 +10,7 @@ import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFil
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-// import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
+import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
@@ -648,18 +648,18 @@ export default {
             canEdit: true,
         },
     },
-    // rek_copyright: {
-    //     component: CopyrightAgreementField,
-    //     componentProps: {
-    //         name: 'filesSection.rek_copyright',
-    //         label: 'Copyright Agreement',
-    //         placeholder: '',
-    //         copyrightAgreement:
-    // 'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate' +
-    // ' the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure' +
-    // ' awaiting redesign of the deposit process].',
-    //     },
-    // },
+    rek_copyright: {
+        component: CopyrightAgreementField,
+        componentProps: {
+            name: 'filesSection.rek_copyright',
+            label: 'Copyright Agreement',
+            placeholder: '',
+            copyrightAgreement:
+    'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate' +
+    ' the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure' +
+    ' awaiting redesign of the deposit process].',
+        },
+    },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {
