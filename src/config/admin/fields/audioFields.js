@@ -86,7 +86,12 @@ export default {
             groups: [['collections']],
         },
         {
-            groups: [['additionalNotes'], ['fez_record_search_key_institutional_status'], ['contentIndicators']],
+            groups: [
+                ['additionalNotes'],
+                ['fez_record_search_key_institutional_status'],
+                ['contentIndicators'],
+                ['fez_record_search_key_oa_status'],
+            ],
         },
     ],
     ntro: () => [],

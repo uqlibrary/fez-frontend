@@ -1325,3 +1325,15 @@ export const ALTERNATE_GENRE = [
     { value: '453667', text: 'Traditional language sentence' },
     { value: '453668', text: 'Traditional language word' },
 ];
+
+export const OA_STATUS = [
+    { value: '453692', text: 'Not yet assessed' },
+    { value: '453693', text: 'DOI' },
+    { value: '453694', text: 'Link (no DOI)' },
+    { value: '453695', text: 'File (Publisher version)' },
+    { value: '453696', text: 'File (Author Post-print)' },
+    { value: '453697', text: 'Other' },
+    { value: '453698', text: 'Not Open Access' },
+    { value: '453700', text: 'Mediated Access' },
+    { value: '453954', text: 'PMC' },
+];

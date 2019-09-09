@@ -383,6 +383,9 @@ export default {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
+    rek_herdc_notes: {
+        getValue: record => record.rek_herdc_notes,
+    },
     fez_record_search_key_advisory_statement: {
         getValue: record => ({ ...record.fez_record_search_key_advisory_statement }),
     },

@@ -26,6 +26,7 @@ import {
     ListEditorField,
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
+import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -579,6 +580,13 @@ export default {
             label: 'Institutional status',
         },
     },
+    fez_record_search_key_oa_status: {
+        component: OAStatusField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_oa_status.rek_oa_status',
+            label: 'OA status',
+        },
+    },
     additionalNotes: {
         component: RichEditorField,
         componentProps: {
@@ -683,7 +691,7 @@ export default {
     fez_record_search_key_location: {
         component: ListEditorField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_location',
+            name: 'identifiersSection.fez_record_search_key_location',
             title: 'Locations',
             searchKey: {
                 value: 'rek_location',
@@ -708,7 +716,7 @@ export default {
     fez_record_search_key_identifier: {
         component: ListEditorField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_identifier',
+            name: 'identifiersSection.fez_record_search_key_identifier',
             title: 'Identifiers',
             searchKey: {
                 value: 'rek_identifier',
