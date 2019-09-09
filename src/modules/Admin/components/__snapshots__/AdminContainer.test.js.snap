@@ -11647,12 +11647,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <StandardCard
                                                   primaryHeader={false}
                                                   squareTop={false}
-                                                  title="Additional Information"
+                                                  title="Additional information"
                                                 >
                                                   <WithStyles(Cards)
                                                     primaryHeader={false}
                                                     squareTop={false}
-                                                    title="Additional Information"
+                                                    title="Additional information"
                                                   >
                                                     <Cards
                                                       classes={
@@ -12100,7 +12100,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           },
                                                         }
                                                       }
-                                                      title="Additional Information"
+                                                      title="Additional information"
                                                     >
                                                       <WithStyles(Card)
                                                         className="Cards-card-155 StandardCard"
@@ -12171,7 +12171,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
-                                                                  title="Additional Information"
+                                                                  title="Additional information"
                                                                   titleTypographyProps={
                                                                     Object {
                                                                       "color": "inherit",
@@ -12195,7 +12195,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     component="div"
                                                                     disableTypography={false}
                                                                     style={Object {}}
-                                                                    title="Additional Information"
+                                                                    title="Additional information"
                                                                     titleTypographyProps={
                                                                       Object {
                                                                         "color": "inherit",
@@ -12728,7 +12728,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             <h3
                                                                               className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
                                                                             >
-                                                                              Additional Information
+                                                                              Additional information
                                                                             </h3>
                                                                           </Typography>
                                                                         </WithStyles(Typography)>
@@ -12916,12 +12916,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <StandardCard
                                                   primaryHeader={false}
                                                   squareTop={false}
-                                                  title="Grant Information"
+                                                  title="Grant information"
                                                 >
                                                   <WithStyles(Cards)
                                                     primaryHeader={false}
                                                     squareTop={false}
-                                                    title="Grant Information"
+                                                    title="Grant information"
                                                   >
                                                     <Cards
                                                       classes={
@@ -13369,7 +13369,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           },
                                                         }
                                                       }
-                                                      title="Grant Information"
+                                                      title="Grant information"
                                                     >
                                                       <WithStyles(Card)
                                                         className="Cards-card-155 StandardCard"
@@ -13440,7 +13440,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   }
                                                                   style={Object {}}
-                                                                  title="Grant Information"
+                                                                  title="Grant information"
                                                                   titleTypographyProps={
                                                                     Object {
                                                                       "color": "inherit",
@@ -13464,7 +13464,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     component="div"
                                                                     disableTypography={false}
                                                                     style={Object {}}
-                                                                    title="Grant Information"
+                                                                    title="Grant information"
                                                                     titleTypographyProps={
                                                                       Object {
                                                                         "color": "inherit",
@@ -13997,7 +13997,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             <h3
                                                                               className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
                                                                             >
-                                                                              Grant Information
+                                                                              Grant information
                                                                             </h3>
                                                                           </Typography>
                                                                         </WithStyles(Typography)>
