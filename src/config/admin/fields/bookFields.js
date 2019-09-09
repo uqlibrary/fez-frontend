@@ -69,7 +69,7 @@ export default {
                 ['rek_description'],
                 ['fez_record_search_key_keywords'],
                 ['subjects'],
-                ['rek_refereed_source'],
+                ['fez_record_search_key_refereed_source'],
             ],
         },
     ],
