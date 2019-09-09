@@ -211,6 +211,120 @@ export default {
                 },
             },
         },
+        wokDocTypesForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'WokDocTypes',
+                        inputFieldHint: 'Type WokDocTypes',
+                        addButtonLabel: 'Add',
+                        id: 'WokDocTypes-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'WokDocTypes',
+                        reorderColumn: 'Reorder WokDocTypes',
+                        deleteAll: 'Remove all WokDocTypes',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all WokDocTypes?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move WokDocTypes up the order',
+                        moveDownHint: 'Move WokDocTypes down the order',
+                        deleteHint: 'Remove this WokDocTypes',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete WokDocTypes',
+                            confirmationMessage: 'Are you sure you want to delete this WokDocTypes?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        identifierForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Identifier',
+                        inputFieldHint: 'Type Identifier',
+                        addButtonLabel: 'Add',
+                        id: 'Identifier-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Identifier',
+                        reorderColumn: 'Reorder Identifier',
+                        deleteAll: 'Remove all Identifier',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Identifier?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Identifier up the order',
+                        moveDownHint: 'Move Identifier down the order',
+                        deleteHint: 'Remove this Identifier',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Identifier',
+                            confirmationMessage: 'Are you sure you want to delete this Identifier?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        locationForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Location',
+                        inputFieldHint: 'Type Location',
+                        addButtonLabel: 'Add',
+                        id: 'Identifier-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Location',
+                        reorderColumn: 'Reorder Location',
+                        deleteAll: 'Remove all Location',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Location?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Location up the order',
+                        moveDownHint: 'Move Location down the order',
+                        deleteHint: 'Remove this Location',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Location',
+                            confirmationMessage: 'Are you sure you want to delete this Location?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         fundingBodyForm: {
             field: {
                 form: {

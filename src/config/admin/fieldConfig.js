@@ -5,20 +5,22 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 
+import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
-import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
+// import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
-import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
+// import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
+import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
 import {
     LinkInfoListEditorField,
     ListEditorField,
@@ -154,7 +156,7 @@ export default {
         component: RichEditorField,
         componentProps: {
             name: 'bibliographicSection.rek_description',
-            title: 'Abstract/Description',
+            title: 'Abstract / Description',
             titleProps: {
                 variant: 'caption',
                 style: {
@@ -183,6 +185,7 @@ export default {
             floatingLabelText: 'Member of collections',
             hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
+            validate: [validation.required],
         },
     },
     rek_subtype: {
@@ -339,19 +342,6 @@ export default {
             placeholder: '',
             required: true,
             validate: [validation.required],
-        },
-    },
-    fez_record_search_key_keywords: {
-        component: ListEditorField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_keywords',
-            required: true,
-            maxInputLength: 111,
-            searchKey: {
-                value: 'rek_keywords',
-                order: 'rek_keywords_order',
-            },
-            locale: locale.components.keywordsForm.field,
         },
     },
     fez_record_search_key_issn: {
@@ -604,6 +594,21 @@ export default {
             format: value => Immutable.Map(value),
         },
     },
+    fez_record_search_key_transcript: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_transcript',
+            title: 'Transcript',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
     significanceAndContributionStatement: {
         component: ScaleOfSignificanceListEditorField,
         componentProps: {
@@ -635,16 +640,18 @@ export default {
             canEdit: true,
         },
     },
-    rek_copyright: {
-        component: CopyrightAgreementField,
-        componentProps: {
-            name: 'filesSection.rek_copyright',
-            label: 'Copyright Agreement',
-            placeholder: '',
-            copyrightAgreement:
-                'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
-        },
-    },
+    // rek_copyright: {
+    //     component: CopyrightAgreementField,
+    //     componentProps: {
+    //         name: 'filesSection.rek_copyright',
+    //         label: 'Copyright Agreement',
+    //         placeholder: '',
+    //         copyrightAgreement:
+    // 'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate' +
+    // ' the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure' +
+    // ' awaiting redesign of the deposit process].',
+    //     },
+    // },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {
@@ -654,15 +661,122 @@ export default {
             validation: [validation.dateTimeYear],
         },
     },
-    fez_record_search_key_isderivationof: {
-        component: RelatedDatasetAndPublicationListField,
+    fez_record_search_key_date_recorded: {
+        component: GenericTextField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_isderivationof',
-            searchKey: { value: 'rek_isderivationof', order: 'rek_isderivationof_order' },
-            locale: {
-                form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+            name: 'bibliographicSection.fez_record_search_key_date_recorded',
+            label: 'Year recorded',
+            fullWidth: true,
+            validation: [validation.dateTimeYear],
+        },
+    },
+
+    // fez_record_search_key_isderivationof: {
+    //     component: RelatedDatasetAndPublicationListField,
+    //     componentProps: {
+    //         name: 'bibliographicSection.fez_record_search_key_isderivationof',
+    //         searchKey: { value: 'rek_isderivationof', order: 'rek_isderivationof_order' },
+    //         locale: {
+    //             form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+    //         },
+    //         height: 50,
+    //     },
+    // },
+    fez_record_search_key_location: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_location',
+            title: 'Locations',
+            searchKey: {
+                value: 'rek_location',
+                order: 'rek_location_order',
             },
-            height: 50,
+            locale: locale.components.locationForm.field,
+        },
+    },
+    fez_record_search_key_keywords: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_keywords',
+            required: true,
+            maxInputLength: 111,
+            searchKey: {
+                value: 'rek_keywords',
+                order: 'rek_keywords_order',
+            },
+            locale: locale.components.keywordsForm.field,
+        },
+    },
+    fez_record_search_key_identifier: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_identifier',
+            title: 'Identifiers',
+            searchKey: {
+                value: 'rek_identifier',
+                order: 'rek_identifier_order',
+            },
+            locale: locale.components.identifierForm.field,
+        },
+    },
+    fez_record_search_key_source: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_source.rek_source',
+            fullWidth: true,
+            label: 'Source',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_rights: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_rights.rek_rights',
+            fullWidth: true,
+            label: 'Rights',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_acknowledgements: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
+            fullWidth: true,
+            label: 'Acknowledgements',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_length: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_length.rek_length',
+            fullWidth: true,
+            label: 'Length',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_license: {
+        component: LicenseSelectorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+            label: 'License',
+        },
+    },
+    fez_record_search_key_original_format: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
+            fullWidth: true,
+            label: 'Original format',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_alternate_genre: {
+        component: AlternateGenreField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_alternate_genre',
+            label: 'Alternate genre',
+            multiple: true,
         },
     },
 };
