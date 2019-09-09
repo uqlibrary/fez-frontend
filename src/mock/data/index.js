@@ -3,6 +3,7 @@ export {
     adminEditBookChapter,
     adminEditBookChapterList,
     adminEditConferencePaperList,
+    adminEditPatentList,
     adminEditVideoList,
     collections,
     communityRecord,
