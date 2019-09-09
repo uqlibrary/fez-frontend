@@ -80,7 +80,7 @@ export const viewRecordsConfig = {
     files: {
         blacklist: {
             namePrefixRegex: '^(FezACML|stream|web_|thumbnail_|preview_|presmd)',
-            nameSuffixRegex: '(_t|_compressed).',
+            nameSuffixRegex: '(_t\\.|_compressed\\.)',
             descriptionKeywordsRegex:
                 '(ERA |HERDC|not publicly available|corrected thesis|' +
                 'restricted|lodgement|submission|corrections|staffdata)',
