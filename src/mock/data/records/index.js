@@ -2,6 +2,7 @@ export { default as adminEditBookChapter } from './adminEditBookChapter';
 export { default as adminEditBookChapterList } from './adminEditBookChapterList';
 export { default as adminEditConferencePaperList } from './adminEditConferencePaperList';
 export { default as adminEditPatentList } from './adminEditPatentList';
+export { default as adminEditSeminarPaperList } from './adminEditSeminarPaperList';
 export { default as adminEditVideoList } from './adminEditVideoList';
 export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
