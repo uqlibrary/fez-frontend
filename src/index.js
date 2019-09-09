@@ -6,16 +6,17 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { connectRouter } from 'connected-react-router/immutable';
 import { AppContainer } from 'react-hot-loader';
-import MuiPickersUtilsProvider from 'material-ui-pickers/utils/MuiPickersUtilsProvider';
+import MuiPickersUtilsProvider from 'material-ui-pickers/MuiPickersUtilsProvider';
 // pick utils
-import MomentUtils from 'material-ui-pickers/utils/moment-utils';
+import MomentUtils from '@date-io/moment';
 
 // Internal
 import Root from './Root';
 import AppErrorBoundary from './AppErrorBoundary';
 import rootReducer from './reducer';
 import 'sass/index.scss';
-import { store, history } from 'config/store';
+import { store } from 'config/store';
+import { history } from 'config/history';
 
 // Import mock data if required
 if (process.env.BRANCH !== 'production' && process.env.USE_MOCK) {

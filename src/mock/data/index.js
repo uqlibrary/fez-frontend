@@ -1,13 +1,10 @@
+export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
-    accounts,
-    authorsSearch,
-    currentAuthor,
-    authorDetails
-} from './account';
-export {
-    communitySearchList,
+    collectionRecord,
     collections,
     collectionsByCommunity,
+    communityRecord,
+    communitySearchList,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
     externalTitleScopusResultsList,
@@ -24,16 +21,14 @@ export {
     possibleUnclaimedList,
     record,
     recordsTypeList,
+    recordWithDatastreams,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
 } from './records';
+
 export { vocabulariesList } from './vocabularies';
 export { quickTemplates } from './acml';
-export {
-    hindexResponse,
-    trendingPublications,
-    currentAuthorStats
-} from './academicStats';
+export { hindexResponse, trendingPublications, currentAuthorStats } from './academicStats';
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';

@@ -1,14 +1,17 @@
 import { NavigationPrompt } from './NavigationPrompt';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = { ...testProps };
-    return getElement(NavigationPrompt, props, isShallow);
+    return getElement(NavigationPrompt, props, args);
 }
 
 describe('NavigationPrompt component', () => {
     it('should render', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({ when: true, history: { block: testFunction }, children: jest.fn() }, false);
+        const wrapper = setup(
+            { when: true, history: { block: testFunction }, children: jest.fn() },
+            { isShallow: false },
+        );
         const smallWrapper = wrapper.find('NavigationPrompt');
         expect(toJson(smallWrapper)).toMatchSnapshot();
         expect(testFunction).toBeCalled();

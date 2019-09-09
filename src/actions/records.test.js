@@ -1049,6 +1049,78 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('adminUpdate()', () => {
+        const testInput = {
+            pid: 'UQ:396321',
+        };
+        it('dispatches expected actions on successful update', async() => {
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
+
+            mockApi.onPatch(url).reply(200, { data: record });
+
+            const expectedActions = [actions.ADMIN_UPDATE_WORK_PROCESSING, actions.ADMIN_UPDATE_WORK_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.adminUpdate({
+                    publication: {
+                        rek_pid: 'UQ:396321',
+                    },
+                    securitySection: {
+                        rek_security_policy: 2,
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on missing data in response', async() => {
+            const url = repositories.routes.EXISTING_RECORD_API(testInput).apiUrl;
+            mockApi.onPatch(url).reply(200, {});
+
+            const expectedActions = [actions.ADMIN_UPDATE_WORK_PROCESSING, actions.ADMIN_UPDATE_WORK_SUCCESS];
+
+            await mockActionsStore.dispatch(
+                recordActions.adminUpdate({
+                    publication: {
+                        rek_pid: 'UQ:396321',
+                    },
+                    securitySection: {
+                        rek_security_policy: 2,
+                    },
+                }),
+            );
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+
+        it('dispatches expected actions on network failure', async() => {
+            mockApi.onAny().reply(500);
+
+            const expectedActions = [
+                actions.ADMIN_UPDATE_WORK_PROCESSING,
+                actions.APP_ALERT_SHOW,
+                actions.ADMIN_UPDATE_WORK_FAILED,
+            ];
+
+            let requestFailed = false;
+            try {
+                await mockActionsStore.dispatch(
+                    recordActions.adminUpdate({
+                        publication: {
+                            rek_pid: 'UQ:396321',
+                        },
+                        securitySection: {
+                            rek_security_policy: 2,
+                        },
+                    }),
+                );
+            } catch (exception) {
+                expect(exception.status).toBe(500);
+                expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+                requestFailed = true;
+            }
+            expect(requestFailed).toBe(true);
+        });
+    });
     describe('createCollection()', () => {
         it('dispatches expected actions on successful save', async() => {
             const testInput = {

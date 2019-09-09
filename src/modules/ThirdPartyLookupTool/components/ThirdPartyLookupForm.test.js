@@ -292,7 +292,13 @@ describe('Component ThirdPartyLookupForm', () => {
 
     it('should use defaults when locale values are not provided', () => {
         const testProps = {
-            // locale: {},
+            locale: {
+                title: 'Test',
+                tooltip: {
+                    show: 'Test show',
+                    hide: 'Test hide',
+                },
+            },
             localeform: {
                 apiType: 'dummytest',
                 primaryField: {

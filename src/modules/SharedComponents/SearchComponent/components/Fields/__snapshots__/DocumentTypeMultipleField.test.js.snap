@@ -52,10 +52,10 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Work type
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     aria-label="Select multiple publications types to search on"
     disabled={false}
     fullWidth={true}
@@ -477,7 +477,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
     >
       Reference Entry
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -485,10 +485,10 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Work type
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     aria-label="Select multiple publications types to search on"
     disabled={true}
     fullWidth={true}
@@ -910,7 +910,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
     >
       Reference Entry
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -918,10 +918,10 @@ exports[`DocumentTypeMultipleField component should render with given document t
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)>
+  <WithStyles(WithFormControlContext(InputLabel))>
     Work type
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     aria-label="Select multiple publications types to search on"
     disabled={false}
     fullWidth={true}
@@ -1348,6 +1348,6 @@ exports[`DocumentTypeMultipleField component should render with given document t
     >
       Reference Entry
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;

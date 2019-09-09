@@ -1,6 +1,6 @@
 import { DocumentTypeMultipleField, styles } from './DocumentTypeMultipleField';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         docTypes: [],
         updateDocTypeValues: jest.fn(),
@@ -10,19 +10,19 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(DocumentTypeMultipleField, props, isShallow);
+    return getElement(DocumentTypeMultipleField, props);
 }
 
 describe('DocumentTypeMultipleField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render disabled view', () => {
         const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
-        expect(wrapper.find('WithStyles(Select)').props().disabled).toBeTruthy();
+        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').props().disabled).toBeTruthy();
     });
 
     it('should render with given document types selected by default', () => {
@@ -45,7 +45,7 @@ describe('DocumentTypeMultipleField component', () => {
             updateDocTypeValues: updateDocTypeValuesFn,
         });
         wrapper
-            .find('WithStyles(Select)')
+            .find('WithStyles(WithFormControlContext(Select))')
             .props()
             .onChange({ target: { value: 316 } });
         expect(updateDocTypeValuesFn).toHaveBeenCalledWith(316);
@@ -79,6 +79,6 @@ describe('DocumentTypeMultipleField component', () => {
         const wrapper = setup({
             docTypes: null,
         });
-        expect(wrapper.find('WithStyles(Select)').prop('value')).toBe('0');
+        expect(wrapper.find('WithStyles(WithFormControlContext(Select))').prop('value')).toBe('0');
     });
 });

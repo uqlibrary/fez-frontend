@@ -1,17 +1,17 @@
 import CreativeWorkCitation from './CreativeWorkCitation';
 import { creativeWork } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(CreativeWorkCitation, props, isShallow);
+    return getElement(CreativeWorkCitation, props, args);
 }
 
 describe('CreativeWorkCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

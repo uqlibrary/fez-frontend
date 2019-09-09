@@ -1,6 +1,6 @@
 import AdvancedSearchRowInput from './AdvancedSearchRowInput';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         children: jest.fn(),
         inputField: {
@@ -12,12 +12,12 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(AdvancedSearchRowInput, props, isShallow);
+    return getElement(AdvancedSearchRowInput, props);
 }
 
 describe('AdvancedSearchRowInput', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -347,7 +347,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('AuthorIdField').simulate('change', { id: '1234', value: 'Test value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -371,7 +371,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('AuthorIdField').simulate('change', { id: 'test', value: 'Test value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -395,7 +395,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('OrgUnitNameField').simulate('change', { id: '1245', value: 'Test Value' });
             expect(onChangeFn).toHaveBeenCalled();
@@ -418,7 +418,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('UnpublishedStatusField').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
@@ -441,7 +441,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('CollectionsSelectField').simulate('change', 'Test Value');
             expect(onChangeFn).toHaveBeenCalled();
@@ -465,7 +465,7 @@ describe('AdvancedSearchRowInput', () => {
         });
 
         const childrenFn = jest.fn((InputComponent, inputProps) => {
-            const wrapper = getElement(InputComponent, inputProps, true, true);
+            const wrapper = getElement(InputComponent, inputProps, { requiresStore: true });
             expect(toJson(wrapper)).toMatchSnapshot();
             wrapper.find('ThesisSubtypeField').simulate('change', 'Test');
             expect(onChangeFn).toHaveBeenCalled();

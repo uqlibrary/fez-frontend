@@ -9,7 +9,13 @@ Object {
   "cardContentNoPadding": Object {
     "padding": 0,
   },
-  "cardHeaderPurple": Object {
+  "cardHeaderAccent": Object {
+    "backgroundColor": "test4",
+    "borderRadius": "4px 4px 0px 0px",
+    "color": "test2",
+    "padding": "12px 24px",
+  },
+  "cardHeaderPrimary": Object {
     "backgroundColor": "test3",
     "borderRadius": "4px 4px 0px 0px",
     "color": "test2",

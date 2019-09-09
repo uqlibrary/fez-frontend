@@ -1,7 +1,7 @@
 import { ContributorForm, mapStateToProps } from './ContributorForm';
 import ConnectedContributorForm from './ContributorForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         authorsList: [],
         onSubmit: jest.fn(),
@@ -15,12 +15,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(ContributorForm, props, isShallow);
+    return getElement(ContributorForm, props);
 }
 
 describe('Component ContributorForm', () => {
     it('should render display name field only', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -195,7 +195,7 @@ describe('Component ContributorForm', () => {
     });
 
     it('should display org affiliation selector if affiliation is NotUQ', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(0);
         wrapper.setState({
@@ -252,7 +252,7 @@ describe('Component ContributorForm', () => {
     });
 
     it('should render connected component', () => {
-        const wrapper = getElement(ConnectedContributorForm, { onSubmit: jest.fn() }, false);
+        const wrapper = getElement(ConnectedContributorForm, { onSubmit: jest.fn() }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -281,13 +281,10 @@ describe('Component ContributorForm', () => {
     });
 
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
-        const wrapper = setup(
-            {
-                showRoleInput: true,
-                showIdentifierLookup: true,
-            },
-            true,
-        );
+        const wrapper = setup({
+            showRoleInput: true,
+            showIdentifierLookup: true,
+        });
         expect(
             wrapper
                 .find('#creatorRoleField')

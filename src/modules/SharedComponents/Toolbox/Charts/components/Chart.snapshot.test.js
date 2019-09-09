@@ -1,12 +1,12 @@
 import Chart from './Chart';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     // build full props list required by the component
     const props = {
         chartOptions: {},
         ...testProps,
     };
-    return getElement(Chart, props, isShallow);
+    return getElement(Chart, props);
 }
 
 describe('Chart component', () => {
@@ -64,12 +64,12 @@ describe('Chart component', () => {
     it('should set printMedia property', () => {
         const test = jest.fn();
         window.matchMedia = test;
-        setup({});
+        setup();
         expect(test).toBeCalled();
     });
 
     it('componentDidMount', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().printMedia = {
             addListener: test,
@@ -80,7 +80,7 @@ describe('Chart component', () => {
     });
 
     it('componentDidUpdate', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
             update: test,
@@ -90,7 +90,7 @@ describe('Chart component', () => {
     });
 
     it('componentWillUnmount', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
             destroy: test,
@@ -103,7 +103,7 @@ describe('Chart component', () => {
     });
 
     it('reflowChart', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test = jest.fn();
         wrapper.instance().chart = {
             reflow: test,

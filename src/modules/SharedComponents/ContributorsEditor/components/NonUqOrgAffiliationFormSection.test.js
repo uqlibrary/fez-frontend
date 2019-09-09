@@ -1,6 +1,6 @@
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         orgAffiliation: testProps.orgAffiliation || '',
         orgType: testProps.orgType || '',
@@ -19,12 +19,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(NonUqOrgAffiliationFormSection, props, isShallow);
+    return getElement(NonUqOrgAffiliationFormSection, props);
 }
 
 describe('NonUqOrgAffiliationFormSection tests ', () => {
     it('should render component with defaults', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

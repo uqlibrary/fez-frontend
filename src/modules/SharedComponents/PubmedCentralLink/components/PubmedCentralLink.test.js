@@ -1,16 +1,16 @@
 import PubmedCentralLink from './PubmedCentralLink';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         pubmedCentralId: testProps.pubmedCentralId,
     };
 
-    return getElement(PubmedCentralLink, props, isShallow);
+    return getElement(PubmedCentralLink, props);
 }
 
 describe('PubmedCentralLink test ', () => {
     it('should render component with empty span', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

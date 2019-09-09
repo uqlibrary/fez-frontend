@@ -1,17 +1,17 @@
 import EditorsCitationView from './EditorsCitationView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(EditorsCitationView, props, isShallow);
+    return getElement(EditorsCitationView, props);
 }
 
 describe('EditorsCitationView test ', () => {
     it('should render component with no contributors', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -1,7 +1,7 @@
 import { ListRowHeader } from './ListRowHeader';
 import ListRowHeaderWithStyles from './ListRowHeader';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         onDeleteAll: jest.fn(),
         disabled: false,
@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(ListRowHeader, props, isShallow);
+    return getElement(ListRowHeader, props);
 }
 
 describe('ListRowHeader renders ', () => {
     it('header for contributor editor control with name and delete all button only', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -27,7 +27,7 @@ describe('ListRowHeader renders ', () => {
 
     it('should show confirmation box', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = {
             showConfirmation: showConfirmationFn,
         };
@@ -46,7 +46,7 @@ describe('ListRowHeader renders ', () => {
 
     it('should set confirmation ref', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().setConfirmationRef({
             showConfirmation: showConfirmationFn,
         });

@@ -1,7 +1,7 @@
 import * as pages from './pages';
 
-describe('Pages component', () => {
-    it('FixRecord', () => {
+describe('Lazy-loaded components', () => {
+    it('should return skeleton object', () => {
         const expectation = '{"key":null,"ref":null,"props":{"load":{}},"_owner":null,"_store":{}}';
 
         expect(JSON.stringify(pages.FixRecord())).toEqual(expectation);
@@ -16,6 +16,8 @@ describe('Pages component', () => {
         expect(JSON.stringify(pages.ViewRecord())).toEqual(expectation);
         expect(JSON.stringify(pages.AddDataCollection())).toEqual(expectation);
         expect(JSON.stringify(pages.ThirdPartyLookupTool())).toEqual(expectation);
+        expect(JSON.stringify(pages.Prototype())).toEqual(expectation);
+        expect(JSON.stringify(pages.Admin())).toEqual(expectation);
         expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
         expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
         expect(JSON.stringify(pages.BatchImport())).toEqual(expectation);

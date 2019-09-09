@@ -2,7 +2,7 @@ import React from 'react';
 import { HelpDrawer } from './HelpDrawer';
 import HelpDrawerWithStyles from './HelpDrawer';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         classes: {},
         theme: { palette: { white: { main: '#FFFFFF' } } },
@@ -13,7 +13,7 @@ function setup(testProps, isShallow = true) {
         buttonLabel: 'Test OK',
         ...testProps,
     };
-    return getElement(HelpDrawer, props, isShallow);
+    return getElement(HelpDrawer, props);
 }
 
 describe('HelpDrawer snapshots tests', () => {

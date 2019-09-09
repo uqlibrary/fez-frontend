@@ -5,9 +5,9 @@ import PropTypes from 'prop-types';
 // MUI1
 import { mui1theme } from 'config';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import ThemeProvider from '@material-ui/styles/ThemeProvider';
 import JssProvider from 'react-jss/lib/JssProvider';
 import { createGenerateClassName } from '@material-ui/core/styles';
-
 const generateClassName = createGenerateClassName({
     dangerouslyUseGlobalCSS: false,
     productionPrefix: 'uq-espace-',
@@ -22,11 +22,13 @@ const Root = ({ history }) => {
         <ConnectedRouter history={history}>
             <ScrollToTop>
                 <JssProvider generateClassName={generateClassName}>
-                    <MuiThemeProvider theme={mui1theme}>
-                        <Switch>
-                            <Route component={App} />
-                        </Switch>
-                    </MuiThemeProvider>
+                    <ThemeProvider theme={mui1theme}>
+                        <MuiThemeProvider theme={mui1theme}>
+                            <Switch>
+                                <Route component={App} />
+                            </Switch>
+                        </MuiThemeProvider>
+                    </ThemeProvider>
                 </JssProvider>
             </ScrollToTop>
         </ConnectedRouter>

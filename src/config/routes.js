@@ -106,13 +106,17 @@ export const pathConfig = {
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
+        edit: pid => `/admin/edit/${pid}`,
+        editCommunity: pid => `/communities/${pid}/edit`,
+        editCollection: pid => `/collections/${pid}/edit`,
+        editRecord: pid => `/records/${pid}/edit`,
     },
     authorIdentifiers: {
         orcid: {
             link: '/author-identifiers/orcid/link',
             absoluteLink: `${window.location.origin}${
                 process.env.BRANCH === 'development' ? window.location.pathname : ''
-            }${!!window.location.hash ? '#' : ''}/author-identifiers/orcid/link`,
+            }/author-identifiers/orcid/link`,
             // unlink: '/author-identifiers/orcid/link'
         },
         googleScholar: {
@@ -363,6 +367,34 @@ export const getRoutesConfig = ({
             : []),
         ...(account && (account.canMasquerade || isAdmin(account))
             ? [
+                {
+                    path: pathConfig.admin.edit(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.record.title,
+                },
+                {
+                    path: pathConfig.admin.editCommunity(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.community.title,
+                },
+                {
+                    path: pathConfig.admin.editCollection(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.collection.title,
+                },
+                {
+                    path: pathConfig.admin.editRecord(pid),
+                    component: components.Admin,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.edit.record.title,
+                },
                 {
                     path: pathConfig.admin.masquerade,
                     component: components.Masquerade,

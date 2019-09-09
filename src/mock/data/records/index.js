@@ -1,5 +1,7 @@
+export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
 export { default as collectionsByCommunity } from './collectionsByCommunity';
+export { default as communityRecord } from './communityRecord';
 export { default as communitySearchList } from './communitySearchList';
 export { default as externalDoiSearchResultList } from './externalDoiSearchResultList';
 export { default as externalPubMedSearchResultsList } from './externalPubMedSearchResultsList';
@@ -17,6 +19,7 @@ export { default as myRecordsList } from './myRecordsList';
 export { default as possibleUnclaimedList } from './possibleUnclaimedList';
 export { default as record } from './record';
 export { default as recordsTypeList } from './recordsTypeList';
+export { default as recordWithDatastreams } from './recordWithDatastreams';
 export { default as recordWithoutAuthorIds } from './recordWithoutAuthorIds';
 export { default as recordWithTiffAndThumbnail } from './recordWithTiffAndThumbnail';
 export { default as UQ352045 } from './incompleteNTRORecordUQ352045';

@@ -1063,8 +1063,8 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     },
     {
         label: 'Edit security for selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=230&href=%2Fmy_fez_traditional.php`,
+        inApp: true,
+        url: pid => `${APP_URL}records/${pid}/edit`,
     },
     {
         label: 'Delete selected record',
@@ -1115,6 +1115,11 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
     },
 ];
 
+export const DATA_STREAM_SECURITY_POLICIES = TOP_LEVEL_SECURITY_POLICIES;
+
+export const RECORD_TYPE_COMMUNITY = 'community';
+export const RECORD_TYPE_COLLECTION = 'collection';
+export const RECORD_TYPE_RECORD = 'record';
 export const CONTENT_INDICATORS_DOCTYPE_BLACKLIST = [
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_THESIS,

@@ -1,7 +1,8 @@
 import React from 'react';
 import ListEditor from './ListEditor';
+import { List } from 'immutable';
 
-function setup(testProps) {
+function setup(testProps = {}) {
     const props = {
         className: 'testClass', // : PropTypes.string,
         searchKey: { value: 'value', order: 'order' }, // : PropTypes.object.isRequired,
@@ -30,14 +31,14 @@ describe('ListEditor tests', () => {
     });
 
     it('should render an item to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().itemList.length).toEqual(0);
         wrapper.instance().addItem('one');
         expect(wrapper.state().itemList.length).toEqual(1);
     });
 
     it('should render an object item to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().itemList.length).toEqual(0);
         wrapper.instance().addItem({ id: 'test', value: 'test value' });
         expect(wrapper.state().itemList.length).toEqual(1);
@@ -53,7 +54,7 @@ describe('ListEditor tests', () => {
     });
 
     it('should not add null item to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.state().itemList.length).toEqual(0);
         wrapper.instance().addItem(undefined);
         wrapper.instance().addItem(null);
@@ -62,7 +63,7 @@ describe('ListEditor tests', () => {
     });
 
     it('should delete an item from the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ itemList: ['one', 'two', 'three'] });
         expect(wrapper.state().itemList.length).toEqual(3);
         wrapper.instance().deleteItem('one', 0);
@@ -70,7 +71,7 @@ describe('ListEditor tests', () => {
     });
 
     it('should delete all items from a list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ itemList: ['one', 'two', 'three'] });
         expect(wrapper.state().itemList.length).toEqual(3);
         wrapper.instance().deleteAllItems();
@@ -78,7 +79,7 @@ describe('ListEditor tests', () => {
     });
 
     it('should move up an item', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ itemList: ['one', 'two', 'three'] });
         expect(wrapper.state().itemList.length).toEqual(3);
         expect(wrapper.state().itemList[1]).toEqual('two');
@@ -90,7 +91,7 @@ describe('ListEditor tests', () => {
     });
 
     it('should move down an item', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.setState({ itemList: ['one', 'two', 'three'] });
         expect(wrapper.state().itemList.length).toEqual(3);
         expect(wrapper.state().itemList[1]).toEqual('two');
@@ -116,16 +117,31 @@ describe('ListEditor tests', () => {
         const wrapper = setup({
             input: {
                 name: 'test',
-                value: {
-                    toJS: () => [
-                        {
-                            rek_value: 'test 1',
-                        },
-                        {
-                            rek_value: 'test 2',
-                        },
-                    ],
-                },
+                value: [
+                    {
+                        rek_value: 'test 1',
+                    },
+                    {
+                        rek_value: 'test 2',
+                    },
+                ],
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render input value as itemList for List', () => {
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: new List([
+                    {
+                        rek_value: 'test 1',
+                    },
+                    {
+                        rek_value: 'test 2',
+                    },
+                ]),
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -162,7 +178,8 @@ describe('ListEditor tests', () => {
 
     it('should call default input normaliser function', () => {
         const wrapper = setup({
-            formComponent: () => <div />,
+            formComponent: () => React.createElement('div', {}),
+            locale: {},
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         const result = wrapper

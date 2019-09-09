@@ -1,7 +1,7 @@
 import { ListRow } from './ListRow';
 import ListRowWithStyles from './ListRow';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = {}) {
     const props = {
         index: 0,
         item: 'one',
@@ -14,7 +14,7 @@ function setup(testProps, isShallow = true) {
         classes: { center: 'center', right: 'right' },
         ...testProps,
     };
-    return getElement(ListRow, props, isShallow);
+    return getElement(ListRow, props, args);
 }
 
 describe('ListRow renders ', () => {
@@ -24,7 +24,7 @@ describe('ListRow renders ', () => {
     });
 
     it('a row with index and item and delete button', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -35,7 +35,7 @@ describe('ListRow renders ', () => {
 
     it('a row with index and item set calls move up function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({ canMoveUp: true, onMoveUp: testFunction }, false);
+        const wrapper = setup({ canMoveUp: true, onMoveUp: testFunction }, { isShallow: false });
         const button = wrapper.find('pure(KeyboardArrowUpIcon)');
         expect(button.length).toBe(1);
 
@@ -45,7 +45,7 @@ describe('ListRow renders ', () => {
 
     it('a row with index and item set calls move down function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({ index: 0, canMoveDown: true, onMoveDown: testFunction }, false);
+        const wrapper = setup({ index: 0, canMoveDown: true, onMoveDown: testFunction }, { isShallow: false });
 
         const button = wrapper.find('pure(KeyboardArrowDownIcon)');
         expect(button.length).toBe(1);
@@ -56,7 +56,7 @@ describe('ListRow renders ', () => {
 
     it('a row with index and item set calls delete function', () => {
         const testFunction = jest.fn();
-        const wrapper = setup({ index: 0, onDelete: testFunction }, false);
+        const wrapper = setup({ index: 0, onDelete: testFunction }, { isShallow: false });
 
         const button = wrapper.find('pure(DeleteIcon)');
         expect(button.length).toBe(1);

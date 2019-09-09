@@ -2,14 +2,14 @@ import { DashboardResearcherIdsClass } from './DashboardResearcherIds';
 import Dashboard from './DashboardResearcherIds';
 import { currentAuthor } from 'mock/data';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     // build full props list required by the component
     const props = {
         classes: {},
         theme: {},
         ...testProps,
     };
-    return getElement(DashboardResearcherIdsClass, props, isShallow);
+    return getElement(DashboardResearcherIdsClass, props);
 }
 
 describe('Dashboard Rsearcher IDs test', () => {
@@ -142,7 +142,7 @@ describe('Dashboard Rsearcher IDs test', () => {
             },
             authenticated: { publons: true, researcher: true, scopus: true, google_scholar: true, orcid: true },
         };
-        const wrapper = getElement(Dashboard, values, false);
+        const wrapper = getElement(Dashboard, values, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

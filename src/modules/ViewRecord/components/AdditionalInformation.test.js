@@ -2,7 +2,7 @@ import * as records from 'mock/data/testing/records';
 import { AdditionalInformationClass } from './AdditionalInformation';
 import AdditionalInformation from './AdditionalInformation';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         classes: {
@@ -16,7 +16,7 @@ function setup(testProps, isShallow = true) {
             rek_formatted_abstract: 'This is a&nbsp;test',
         },
     };
-    return getElement(AdditionalInformationClass, props, isShallow);
+    return getElement(AdditionalInformationClass, props);
 }
 
 describe('Additional Information Component ', () => {
@@ -26,7 +26,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with journal article', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         // expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
@@ -581,7 +581,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('renderLicense()', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper.instance().renderLicense(1, null))).toMatchSnapshot();
     });
 
@@ -623,7 +623,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('renderMap()', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper.instance().renderMap([]))).toMatchSnapshot();
     });
 
@@ -631,7 +631,7 @@ describe('Additional Information Component ', () => {
         const wrapper = getElement(
             AdditionalInformation,
             { publication: records.journalArticle, account: { canMasquerade: true } },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

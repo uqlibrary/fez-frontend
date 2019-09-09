@@ -1,17 +1,17 @@
 import GenericDocumentCitation from './GenericDocumentCitation';
 import { generic } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(GenericDocumentCitation, props, isShallow);
+    return getElement(GenericDocumentCitation, props, args);
 }
 
 describe('GenericDocumentCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

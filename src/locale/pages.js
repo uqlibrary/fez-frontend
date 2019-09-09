@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from 'config/routes';
@@ -800,6 +801,96 @@ export default {
         unpublished: {
             title: 'Unpublished buffer',
         },
+        prototype: {
+            title: 'Admin prototype',
+        },
+        edit: {
+            sections: {
+                identifiers: {
+                    title: 'Identifiers',
+                },
+                bibliographic: {
+                    title: 'Bibliographic',
+                },
+                admin: {
+                    title: 'Admin',
+                },
+                grantInformation: {
+                    title: 'Grant Information',
+                },
+                authorDetails: {
+                    title: 'Author details',
+                },
+                files: {
+                    title: 'Files',
+                },
+                security: {
+                    title: 'Security',
+                },
+            },
+            help: {
+                tooltip: 'Learn about keyboard shortcuts',
+                title: 'Keyboard shortcuts',
+                text: (
+                    <div>
+                        <br />
+                        <h3>Tab navigation</h3>
+                        <p>
+                            To navigate tabs while in tabbed mode, hold CTRL and SHIFT and use the LEFT and RIGHT arrow
+                            keys.
+                        </p>
+                        <h3>Form style</h3>
+                        <p>
+                            To switch between tabbed or full form mode, hold CTRL and SHIFT and use the UP and DOWN
+                            arrow keys.
+                        </p>
+                        <p>
+                            Your preference is saved as a cookie on this browser and it will remember your preference.
+                        </p>
+                    </div>
+                ),
+                buttonLabel: 'Got it',
+            },
+            loadingMessage: 'Loading record',
+            community: {
+                title: 'Edit community',
+                loadingMessage: 'Loading community',
+            },
+            collection: {
+                title: 'Edit collection',
+                loadingMessage: 'Loading collection',
+            },
+            record: {
+                title: 'Edit record',
+                loadingMessage: 'Loading record',
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Work has been updated',
+                confirmationMessage: 'Work has been updated',
+                cancelButtonLabel: 'Cancel',
+                confirmButtonLabel: 'Edit another work',
+            },
+            alerts: {
+                errorAlert: {
+                    type: 'error_outline',
+                    title: 'Error',
+                    message: message =>
+                        `Error has occurred during request and request cannot be processed. ${message} Please contact eSpace administrators or try again later.`,
+                },
+                successAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'Work has been saved successfully',
+                    allowDismiss: true,
+                },
+                progressAlert: {
+                    type: 'info_outline',
+                    title: 'Saving',
+                    message: 'Request is being processed.',
+                    showLoader: true,
+                },
+            },
+        },
         incompletePublications: {
             pageTitle: 'My incomplete works',
             recordCount: 'Displaying works [recordsFrom] to [recordsTo] of [recordsTotal] total works. ',
@@ -822,6 +913,154 @@ export default {
         },
         incompletePublication: {
             title: 'Complete my work',
+            help: {
+                title: 'Add more information to an existing NTRO',
+                text: (
+                    <div>
+                        For help, click{' '}
+                        <a
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/add-missing-ntro-information"
+                            target="_blank"
+                        >
+                            here
+                        </a>
+                        .
+                    </div>
+                ),
+                buttonLabel: 'CLOSE',
+            },
+            submitButtonLabel: 'Complete work',
+            cancelButtonLabel: 'Cancel and return to my incomplete works list',
+            fields: {
+                notes: {
+                    title: 'Notes',
+                    label: 'Notes for this work',
+                    placeholder: 'Add any other notes or comments about this work to send to the eSpace team.',
+                },
+                grants: {
+                    title: 'Grant information',
+                },
+                authors: {
+                    ...locale.components.authors,
+                    description: (
+                        <span>
+                            For each author marked with a <span style={{ color: '#e60000', weight: 'bold' }}>red</span>{' '}
+                            prompt, select the author name at Step 1, add the affiliation information as at time of
+                            publication at Step 2, then click <b>UPDATE AUTHOR</b>.
+                        </span>
+                    ),
+                    field: {
+                        ...locale.components.authors.field,
+                        form: {
+                            locale: {
+                                ...locale.components.authors.field.form.locale,
+                                descriptionStep1: (
+                                    <div>
+                                        <span className="authorSteps" key="step-2">
+                                            Step 2 of 2
+                                        </span>{' '}
+                                        - <b>Update the affiliation information</b>.
+                                    </div>
+                                ),
+                                addButton: 'Update author',
+                            },
+                        },
+                        header: {
+                            ...locale.components.authors.field.header,
+                            locale: {
+                                ...locale.components.authors.field.header.locale,
+                                descriptionStep2: (
+                                    <div>
+                                        <span className="authorSteps" key="step-1">
+                                            Step 1 of 2
+                                        </span>{' '}
+                                        - <b>Select an author</b>.
+                                    </div>
+                                ),
+                            },
+                        },
+                        row: {
+                            ...locale.components.authors.field.row,
+                            locale: {
+                                ...locale.components.authors.field.row.locale,
+                                selectHint: 'Select this author ([name]) to update their affiliation data.',
+                                requiredLabel: "This author's data is incomplete.",
+                            },
+                        },
+                    },
+                },
+                fileUpload: {
+                    title: 'Upload files',
+                    locale: {
+                        instructions: '',
+                        accessTermsAndConditions:
+                            'I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.',
+                        validation: {
+                            ['notFiles']: 'Invalid files ([fileNames])',
+                            ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                            ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
+                            ['tooManyFiles']:
+                                'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
+                            ['duplicateFiles']: 'File(s) ([fileNames]) are duplicates and have been ignored',
+                        },
+                        successTitle: 'Success',
+                        successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
+                        errorTitle: 'Upload Errors',
+                        fileUploadRestrictionHeading: 'File upload restrictions',
+                        fileUploadRestrictions: (
+                            <div>
+                                Maximum file size is 8GB. <br />
+                                PDF files must be saved using the following naming structure{' '}
+                                <b>&lt;student number&gt;_&lt;degree type&gt;_&lt;document name&gt;.pdf</b>. Document
+                                name could be thesis, abstract, and etc. For example:
+                                <ul>
+                                    <li>s1234567_phd_thesis.pdf</li>
+                                    <li>s1234567_phd_abstract.pdf</li>
+                                </ul>
+                                Supplementary audio files are to be in MP 3 format. <br />
+                                Supplementary video files are to be in WMV or AVI format. <br />
+                            </div>
+                        ),
+                        fileUploadInstruction: (
+                            <p>Click here to select files, or drag files into this area to upload</p>
+                        ),
+                    },
+                    text: (
+                        <div>
+                            <span className="requiredField">
+                                <label>&nbsp;</label>
+                            </span>
+                        </div>
+                    ),
+                },
+            },
+            successWorkflowConfirmation: {
+                confirmationTitle: 'Your work has been updated',
+                fileFailConfirmationAlert: {
+                    title: 'UPLOAD FAILED',
+                    message: 'File upload and/or notes post failed',
+                    type: 'warning',
+                },
+                cancelButtonLabel: 'Complete another work',
+                confirmButtonLabel: 'Go to my dashboard',
+            },
+            prompt: {
+                title: 'Missing data',
+                message:
+                    'follow the red prompts to add missing information. You can also provide additional grant details or include notes to the eSpace team.',
+                type: 'info_outline',
+            },
+            progressAlert: {
+                type: 'info_outline',
+                title: 'Saving',
+                message: 'Updating work is in progress.',
+                showLoader: true,
+            },
+            successAlert: {
+                type: 'done',
+                title: 'Success',
+                message: 'New information has been saved successfully.',
+            },
         },
     },
 };

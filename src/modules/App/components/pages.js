@@ -29,6 +29,10 @@ export const ThirdPartyLookupTool = () => (
     <Async load={import('modules/ThirdPartyLookupTool/containers/ThirdPartyLookupTool')} />
 );
 export const BatchImport = () => <Async load={import('modules/BatchImport/containers/BatchImport')} />;
+export const Prototype = () => <Async load={import('modules/Admin/containers/Admin')} />;
+export const Admin = componentProps => (
+    <Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />
+);
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';

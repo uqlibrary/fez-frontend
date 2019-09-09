@@ -1,8 +1,8 @@
 import CitationTitleView from './CitationTitleView';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = { ...testProps };
-    return getElement(CitationTitleView, props, isShallow);
+    return getElement(CitationTitleView, props);
 }
 
 describe('CitationTitleView partial', () => {
@@ -17,7 +17,7 @@ describe('CitationTitleView partial', () => {
     });
 
     it('should render properly with empty props', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

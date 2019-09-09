@@ -1,6 +1,6 @@
 import { GrantListEditorRow, styles } from './GrantListEditorRow';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         index: 0,
         grant: {},
@@ -15,12 +15,12 @@ function setup(testProps, isShallow = true) {
         width: 'md',
         ...testProps,
     };
-    return getElement(GrantListEditorRow, props, isShallow);
+    return getElement(GrantListEditorRow, props);
 }
 
 describe('GrantListEditorRow', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -72,14 +72,14 @@ describe('GrantListEditorRow', () => {
     });
 
     it('should set confirmation box ref', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().handleConfirmationBoxRef('test');
         expect(wrapper.instance().confirmationBox).toEqual('test');
     });
 
     it('should show confirmation box', () => {
         const showConfirmationFn = jest.fn();
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().confirmationBox = {
             showConfirmation: showConfirmationFn,
         };

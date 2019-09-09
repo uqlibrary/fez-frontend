@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`OverrideSecurity component should render properly 1`] = `
+<WithStyles(WithFormControlContext(FormControlLabel))
+  control={
+    <WithStyles(Checkbox)
+      checked={false}
+      onChange={[MockFunction]}
+    />
+  }
+  label="test"
+/>
+`;

@@ -66,7 +66,12 @@ export default class ViewRecord extends PureComponent {
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{ marginTop: -24 }}>
                     <Grid item xs={12}>
-                        <PublicationCitation publication={recordToView} hideTitle hideContentIndicators />
+                        <PublicationCitation
+                            publication={recordToView}
+                            hideTitle
+                            hideContentIndicators
+                            showAdminActions={(this.props.account || {}).canMasquerade}
+                        />
                     </Grid>
                     {!!this.props.recordToView && this.props.recordToView !== {} && (
                         <Grid item xs={12}>

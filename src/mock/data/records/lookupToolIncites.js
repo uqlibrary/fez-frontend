@@ -1,4 +1,4 @@
-export const lookupToolIncites = [
+export default [
     {
         "IS_INTERNATIONAL_COLLAB": "0",
         "ARTICLE_TYPE": "M",
@@ -17,5 +17,3 @@ export const lookupToolIncites = [
         "TOT_CITES": "0"
     }
 ];
-
-export default lookupToolIncites;

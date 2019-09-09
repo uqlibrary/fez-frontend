@@ -1,7 +1,7 @@
 import PossiblyMyRecords from './PossiblyMyRecords';
 import { routes } from 'config';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         possiblePublicationsList: testProps.possiblePublicationsList || [],
         possiblePublicationsFacets: testProps.possiblePublicationsFacets || {},
@@ -30,7 +30,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(PossiblyMyRecords, props, isShallow);
+    return getElement(PossiblyMyRecords, props);
 }
 
 describe('Component PossiblyMyRecords', () => {
@@ -40,7 +40,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('renders no results', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -126,7 +126,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should set ref for confirmation box', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._setHideConfirmationBox(1);
         expect(wrapper.instance().hideConfirmationBox).toEqual(1);
     });
@@ -164,7 +164,7 @@ describe('Component PossiblyMyRecords', () => {
 
     it('sets the state when confirming an item to be hidden', () => {
         const pubToHide = { test: 'This is a test' };
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().hideConfirmationBox = { showConfirmation: jest.fn() };
         wrapper.instance()._confirmHidePublication(pubToHide);
         expect(wrapper.state().publicationToHide).toEqual(pubToHide);
@@ -172,7 +172,7 @@ describe('Component PossiblyMyRecords', () => {
 
     it('sets the state for activeFacets', () => {
         const facetActive = { test: 'This is a test' };
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance()._facetsChanged(facetActive);
         expect(wrapper.state().activeFacets).toEqual(facetActive);
     });
@@ -261,7 +261,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should push sorted state into page history', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
         wrapper.instance().sortByChanged('test1', 'test2');
         const newState = wrapper.state();
@@ -271,7 +271,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should push changed page into state and page history', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
         wrapper.instance().pageChanged('test');
         const newState = wrapper.state();
@@ -280,7 +280,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should push changed page size into state and page history', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const pushFn = jest.spyOn(wrapper.instance(), 'pushPageHistory');
         wrapper.instance().pageSizeChanged('test');
         const newState = wrapper.state();
@@ -290,7 +290,7 @@ describe('Component PossiblyMyRecords', () => {
     });
 
     it('should generate <Alert> when appropriate', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testFn = wrapper.instance().getAlert;
 
         expect(testFn({})).toBeNull();

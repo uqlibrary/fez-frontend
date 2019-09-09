@@ -1344,7 +1344,7 @@ export default {
                         combiner: 'is',
                         type: 'TextField',
                         hint: 'Add a PID',
-                        validation: ['required'],
+                        validation: ['required', 'pid'],
                         ariaLabel: 'Type a PID to search for',
                     },
                     rek_author: {
@@ -1585,6 +1585,89 @@ export default {
         },
         fileUploader: {
             label: 'Click here to select files, or drag files into this area to upload',
+        },
+        securitySection: {
+            admin: {
+                field: {
+                    label: 'Use this interface as a...',
+                    menuItemText: {
+                        superAdmin: 'Super admin',
+                        admin: 'Admin',
+                    },
+                },
+                typeField: {
+                    label: 'Preview form for...',
+                    menuItemText: {
+                        community: 'Community',
+                        collection: 'Collection',
+                        record: 'Record',
+                        dataStream: 'Data Stream',
+                    },
+                },
+            },
+            community: {
+                cardTitle: pid => (
+                    <span>
+                        <strong>Community</strong> level security - {pid}
+                    </span>
+                ),
+                prompt: 'Select a security policy to apply',
+                fieldLabel: 'Override community level policy to apply to this PID',
+                selectedTitle: 'Selected community record security policy details',
+                description: '',
+            },
+            collection: {
+                cardTitle: pid => (
+                    <span>
+                        <strong>Collection</strong> level security - {pid}
+                    </span>
+                ),
+                prompt: 'Select a security policy to apply',
+                fieldLabel: 'Override collection level policy to apply to this PID',
+                dataStreamFieldLabel: (
+                    <span>
+                        Override datastream level policy to apply to the <b>datastream</b> of this PID
+                    </span>
+                ),
+                selectedTitle: 'Current collection level security policy details',
+                dataStreamSelectedTitle: (
+                    <span>
+                        Current collection <b>datastream</b> level security policy details
+                    </span>
+                ),
+                description: '',
+            },
+            record: {
+                cardTitle: pid => (
+                    <span>
+                        <strong>Record</strong> level security - {pid}
+                    </span>
+                ),
+                prompt: 'Select a security policy to apply',
+                fieldLabel: 'Override record',
+                dataStreamFieldLabel: 'Override record level policy to apply to this PID',
+                selectedTitle: 'Selected record level security policy details',
+                dataStreamSelectedTitle: 'Selected record level datastream security policy details',
+                description: '',
+                dataStream: {
+                    cardTitle: pid => (
+                        <span>
+                            <strong>Datastream</strong> level security - {pid}
+                        </span>
+                    ),
+                    overridePrompt: 'Override datastream security policy details',
+                    overridePolicyPrompt: 'Security policy for this file to override inheritance',
+                },
+                inheritedPolicy: {
+                    record: {
+                        title: 'Inherited security policy details',
+                    },
+                    dataStream: {
+                        title: 'Inherited datastream security policy details',
+                    },
+                },
+            },
+            submit: 'Submit',
         },
         contentIndicators: {
             label: 'Content Indicators',

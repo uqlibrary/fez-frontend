@@ -377,3 +377,56 @@ export function clearNewRecord() {
         });
     };
 }
+
+const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
+const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
+
+/**
+ * Update work request for admins: patch record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminUpdate(data) {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_UPDATE_WORK_PROCESSING,
+        });
+
+        // delete extra form values from request object
+        const keys = ['pid', 'recordType', 'publication', 'securitySection', 'collection', 'subject'];
+
+        // if user updated NTRO data - update record
+        let patchRecordRequest = null;
+        patchRecordRequest = {
+            ...sanitiseData(data, makeReplacer(keys)),
+            ...transformers.getSecuritySectionSearchKeys(data.securitySection),
+        };
+
+        return Promise.resolve([])
+            .then(() =>
+                patch(
+                    EXISTING_RECORD_API({
+                        pid: data.publication.rek_pid,
+                    }),
+                    patchRecordRequest,
+                ),
+            )
+            .then(responses => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_WORK_SUCCESS,
+                    payload: {
+                        pid: data.publication.rek_pid,
+                    },
+                });
+                return Promise.resolve(responses);
+            })
+            .catch(error => {
+                dispatch({
+                    type: actions.ADMIN_UPDATE_WORK_FAILED,
+                    payload: error.message,
+                });
+                return Promise.reject(error);
+            });
+    };
+}

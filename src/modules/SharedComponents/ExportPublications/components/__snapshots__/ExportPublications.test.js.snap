@@ -4,12 +4,12 @@ exports[`Export Publications renders component with all fields enabled 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)
+  <WithStyles(WithFormControlContext(InputLabel))
     shrink={true}
   >
     Export results
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     displayEmpty={true}
     id="exportPublicationsFormat"
     onChange={[Function]}
@@ -34,7 +34,7 @@ exports[`Export Publications renders component with all fields enabled 1`] = `
     >
       Endnote File
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -42,12 +42,12 @@ exports[`Export Publications renders component with field selected 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)
+  <WithStyles(WithFormControlContext(InputLabel))
     shrink={true}
   >
     Export results
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     displayEmpty={true}
     id="exportPublicationsFormat"
     onChange={[Function]}
@@ -72,7 +72,7 @@ exports[`Export Publications renders component with field selected 1`] = `
     >
       Endnote File
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;
 
@@ -80,12 +80,12 @@ exports[`Export Publications renders component with rendered field selected 1`] 
 <WithStyles(FormControl)
   fullWidth={true}
 >
-  <WithStyles(InputLabel)
+  <WithStyles(WithFormControlContext(InputLabel))
     shrink={true}
   >
     Export results
-  </WithStyles(InputLabel)>
-  <WithStyles(Select)
+  </WithStyles(WithFormControlContext(InputLabel))>
+  <WithStyles(WithFormControlContext(Select))
     displayEmpty={true}
     id="exportPublicationsFormat"
     onChange={[Function]}
@@ -110,6 +110,6 @@ exports[`Export Publications renders component with rendered field selected 1`] 
     >
       Endnote File
     </WithStyles(MenuItem)>
-  </WithStyles(Select)>
+  </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
 `;

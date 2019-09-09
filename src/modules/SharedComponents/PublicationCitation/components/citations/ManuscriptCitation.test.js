@@ -1,17 +1,17 @@
 import ManuscriptCitation from './ManuscriptCitation';
 import { manuscript } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(ManuscriptCitation, props, isShallow);
+    return getElement(ManuscriptCitation, props, args);
 }
 
 describe('ManuscriptCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

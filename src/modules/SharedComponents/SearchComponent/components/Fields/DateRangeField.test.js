@@ -3,7 +3,7 @@ import { DateRangeField } from './DateRangeField';
 import moment from 'moment';
 import { GENERIC_DATE_FORMAT } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         searchKey: 'test_search_key',
         disabled: false,
@@ -18,7 +18,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(DateRangeField, props, isShallow);
+    return getElement(DateRangeField, props);
 }
 
 describe('DateRangeField component', () => {
@@ -29,7 +29,7 @@ describe('DateRangeField component', () => {
     });
 
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -48,7 +48,7 @@ describe('DateRangeField component', () => {
     });
 
     it('should update on receiving new state', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.setState({
             from: '01/01/1970',
@@ -59,7 +59,7 @@ describe('DateRangeField component', () => {
     });
 
     it('should update date range value', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const componentWillUpdate = jest.spyOn(wrapper.instance(), 'componentWillUpdate');
         wrapper
             .find('DatePickerField')

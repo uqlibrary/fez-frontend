@@ -740,8 +740,35 @@ exports[`Search record results should render a single unclaimable item with no a
   store={
     Object {
       "dispatch": [MockFunction],
-      "getState": [MockFunction],
-      "subscribe": [MockFunction],
+      "getState": [MockFunction] {
+        "calls": Array [
+          Array [],
+          Array [],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+        ],
+      },
+      "subscribe": [MockFunction] {
+        "calls": Array [
+          Array [
+            [Function],
+          ],
+        ],
+        "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
+        ],
+      },
     }
   }
 >
@@ -787,7 +814,7 @@ exports[`Search record results should render a single unclaimable item with no a
         }
       }
     >
-      <MuiThemeProvider
+      <MuiThemeProviderOld
         theme={
           Object {
             "breakpoints": Object {
@@ -835,12 +862,27 @@ exports[`Search record results should render a single unclaimable item with no a
               },
             },
             "overrides": Object {
+              "MUIDataTable": Object {
+                "paper": Object {
+                  "boxShadow": "none",
+                  "margin": 0,
+                  "padding": 0,
+                },
+              },
               "MuiFormLabel": Object {
                 "root": Object {
                   "overflow": "hidden",
                   "textOverflow": "ellipsis",
                   "whiteSpace": "nowrap",
                   "width": "100%",
+                },
+              },
+              "MuiMenuItem": Object {
+                "root": Object {
+                  "&$selected": Object {
+                    "backgroundColor": "#4085C6 !important",
+                    "color": "#FFFFFF",
+                  },
                 },
               },
             },
@@ -939,30 +981,30 @@ exports[`Search record results should render a single unclaimable item with no a
             "props": Object {},
             "shadows": Array [
               "none",
-              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
             ],
             "shape": Object {
               "borderRadius": 4,
@@ -1032,7 +1074,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "buttonNext": Object {
@@ -1041,7 +1083,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 "fontSize": "0.875rem",
                 "fontWeight": 400,
                 "letterSpacing": "0.02857em",
-                "lineHeight": 1.5,
+                "lineHeight": 1.75,
                 "textTransform": "uppercase",
               },
               "caption": Object {
@@ -1518,12 +1560,27 @@ exports[`Search record results should render a single unclaimable item with no a
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -1622,30 +1679,30 @@ exports[`Search record results should render a single unclaimable item with no a
                             "props": Object {},
                             "shadows": Array [
                               "none",
-                              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                             ],
                             "shape": Object {
                               "borderRadius": 4,
@@ -1715,7 +1772,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 "fontSize": "0.875rem",
                                 "fontWeight": 400,
                                 "letterSpacing": "0.02857em",
-                                "lineHeight": 1.5,
+                                "lineHeight": 1.75,
                                 "textTransform": "uppercase",
                               },
                               "buttonNext": Object {
@@ -1724,7 +1781,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 "fontSize": "0.875rem",
                                 "fontWeight": 400,
                                 "letterSpacing": "0.02857em",
-                                "lineHeight": 1.5,
+                                "lineHeight": 1.75,
                                 "textTransform": "uppercase",
                               },
                               "caption": Object {
@@ -2239,8 +2296,9 @@ exports[`Search record results should render a single unclaimable item with no a
                                       Object {
                                         "card": "Cards-card-98",
                                         "cardContentNoPadding": "Cards-cardContentNoPadding-99",
-                                        "cardHeaderPurple": "Cards-cardHeaderPurple-100",
-                                        "fullHeight": "Cards-fullHeight-101",
+                                        "cardHeaderAccent": "Cards-cardHeaderAccent-101",
+                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-100",
+                                        "fullHeight": "Cards-fullHeight-102",
                                       }
                                     }
                                     resultsText="Top [noOfResults] potential match(es) displayed for \\"[searchQuery]\\"."
@@ -2321,12 +2379,27 @@ exports[`Search record results should render a single unclaimable item with no a
                                           },
                                         },
                                         "overrides": Object {
+                                          "MUIDataTable": Object {
+                                            "paper": Object {
+                                              "boxShadow": "none",
+                                              "margin": 0,
+                                              "padding": 0,
+                                            },
+                                          },
                                           "MuiFormLabel": Object {
                                             "root": Object {
                                               "overflow": "hidden",
                                               "textOverflow": "ellipsis",
                                               "whiteSpace": "nowrap",
                                               "width": "100%",
+                                            },
+                                          },
+                                          "MuiMenuItem": Object {
+                                            "root": Object {
+                                              "&$selected": Object {
+                                                "backgroundColor": "#4085C6 !important",
+                                                "color": "#FFFFFF",
+                                              },
                                             },
                                           },
                                         },
@@ -2425,30 +2498,30 @@ exports[`Search record results should render a single unclaimable item with no a
                                         "props": Object {},
                                         "shadows": Array [
                                           "none",
-                                          "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                          "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                          "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                          "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                          "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                          "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                          "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                          "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                          "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                          "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                          "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                          "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                          "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                          "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                          "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                          "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                          "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                          "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                          "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                          "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                          "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                          "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                          "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                          "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                          "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                          "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                          "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                          "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                          "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                          "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                          "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                          "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                          "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                          "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                         ],
                                         "shape": Object {
                                           "borderRadius": 4,
@@ -2518,7 +2591,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             "fontSize": "0.875rem",
                                             "fontWeight": 400,
                                             "letterSpacing": "0.02857em",
-                                            "lineHeight": 1.5,
+                                            "lineHeight": 1.75,
                                             "textTransform": "uppercase",
                                           },
                                           "buttonNext": Object {
@@ -2527,7 +2600,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                             "fontSize": "0.875rem",
                                             "fontWeight": 400,
                                             "letterSpacing": "0.02857em",
-                                            "lineHeight": 1.5,
+                                            "lineHeight": 1.75,
                                             "textTransform": "uppercase",
                                           },
                                           "caption": Object {
@@ -2703,48 +2776,48 @@ exports[`Search record results should render a single unclaimable item with no a
                                         className="Cards-card-98 StandardCard"
                                         classes={
                                           Object {
-                                            "root": "MuiCard-root-102",
+                                            "root": "MuiCard-root-103",
                                           }
                                         }
                                         raised={false}
                                         style={Object {}}
                                       >
                                         <WithStyles(Paper)
-                                          className="MuiCard-root-102 Cards-card-98 StandardCard"
+                                          className="MuiCard-root-103 Cards-card-98 StandardCard"
                                           elevation={1}
                                           style={Object {}}
                                         >
                                           <Paper
-                                            className="MuiCard-root-102 Cards-card-98 StandardCard"
+                                            className="MuiCard-root-103 Cards-card-98 StandardCard"
                                             classes={
                                               Object {
-                                                "elevation0": "MuiPaper-elevation0-105",
-                                                "elevation1": "MuiPaper-elevation1-106",
-                                                "elevation10": "MuiPaper-elevation10-115",
-                                                "elevation11": "MuiPaper-elevation11-116",
-                                                "elevation12": "MuiPaper-elevation12-117",
-                                                "elevation13": "MuiPaper-elevation13-118",
-                                                "elevation14": "MuiPaper-elevation14-119",
-                                                "elevation15": "MuiPaper-elevation15-120",
-                                                "elevation16": "MuiPaper-elevation16-121",
-                                                "elevation17": "MuiPaper-elevation17-122",
-                                                "elevation18": "MuiPaper-elevation18-123",
-                                                "elevation19": "MuiPaper-elevation19-124",
-                                                "elevation2": "MuiPaper-elevation2-107",
-                                                "elevation20": "MuiPaper-elevation20-125",
-                                                "elevation21": "MuiPaper-elevation21-126",
-                                                "elevation22": "MuiPaper-elevation22-127",
-                                                "elevation23": "MuiPaper-elevation23-128",
-                                                "elevation24": "MuiPaper-elevation24-129",
-                                                "elevation3": "MuiPaper-elevation3-108",
-                                                "elevation4": "MuiPaper-elevation4-109",
-                                                "elevation5": "MuiPaper-elevation5-110",
-                                                "elevation6": "MuiPaper-elevation6-111",
-                                                "elevation7": "MuiPaper-elevation7-112",
-                                                "elevation8": "MuiPaper-elevation8-113",
-                                                "elevation9": "MuiPaper-elevation9-114",
-                                                "root": "MuiPaper-root-103",
-                                                "rounded": "MuiPaper-rounded-104",
+                                                "elevation0": "MuiPaper-elevation0-106",
+                                                "elevation1": "MuiPaper-elevation1-107",
+                                                "elevation10": "MuiPaper-elevation10-116",
+                                                "elevation11": "MuiPaper-elevation11-117",
+                                                "elevation12": "MuiPaper-elevation12-118",
+                                                "elevation13": "MuiPaper-elevation13-119",
+                                                "elevation14": "MuiPaper-elevation14-120",
+                                                "elevation15": "MuiPaper-elevation15-121",
+                                                "elevation16": "MuiPaper-elevation16-122",
+                                                "elevation17": "MuiPaper-elevation17-123",
+                                                "elevation18": "MuiPaper-elevation18-124",
+                                                "elevation19": "MuiPaper-elevation19-125",
+                                                "elevation2": "MuiPaper-elevation2-108",
+                                                "elevation20": "MuiPaper-elevation20-126",
+                                                "elevation21": "MuiPaper-elevation21-127",
+                                                "elevation22": "MuiPaper-elevation22-128",
+                                                "elevation23": "MuiPaper-elevation23-129",
+                                                "elevation24": "MuiPaper-elevation24-130",
+                                                "elevation3": "MuiPaper-elevation3-109",
+                                                "elevation4": "MuiPaper-elevation4-110",
+                                                "elevation5": "MuiPaper-elevation5-111",
+                                                "elevation6": "MuiPaper-elevation6-112",
+                                                "elevation7": "MuiPaper-elevation7-113",
+                                                "elevation8": "MuiPaper-elevation8-114",
+                                                "elevation9": "MuiPaper-elevation9-115",
+                                                "root": "MuiPaper-root-104",
+                                                "rounded": "MuiPaper-rounded-105",
                                               }
                                             }
                                             component="div"
@@ -2753,16 +2826,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                             style={Object {}}
                                           >
                                             <div
-                                              className="MuiPaper-root-103 MuiPaper-elevation1-106 MuiPaper-rounded-104 MuiCard-root-102 Cards-card-98 StandardCard"
+                                              className="MuiPaper-root-104 MuiPaper-elevation1-107 MuiPaper-rounded-105 MuiCard-root-103 Cards-card-98 StandardCard"
                                               style={Object {}}
                                             >
                                               <WithStyles(CardHeader)
                                                 action={false}
                                                 classes={
                                                   Object {
-                                                    "root": "",
+                                                    "root": undefined,
                                                   }
                                                 }
+                                                style={Object {}}
                                                 title="Possible matches found"
                                                 titleTypographyProps={
                                                   Object {
@@ -2776,16 +2850,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   action={false}
                                                   classes={
                                                     Object {
-                                                      "action": "MuiCardHeader-action-132",
-                                                      "avatar": "MuiCardHeader-avatar-131",
-                                                      "content": "MuiCardHeader-content-133",
-                                                      "root": "MuiCardHeader-root-130",
-                                                      "subheader": "MuiCardHeader-subheader-135",
-                                                      "title": "MuiCardHeader-title-134",
+                                                      "action": "MuiCardHeader-action-133",
+                                                      "avatar": "MuiCardHeader-avatar-132",
+                                                      "content": "MuiCardHeader-content-134",
+                                                      "root": "MuiCardHeader-root-131",
+                                                      "subheader": "MuiCardHeader-subheader-136",
+                                                      "title": "MuiCardHeader-title-135",
                                                     }
                                                   }
                                                   component="div"
                                                   disableTypography={false}
+                                                  style={Object {}}
                                                   title="Possible matches found"
                                                   titleTypographyProps={
                                                     Object {
@@ -2796,13 +2871,14 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   }
                                                 >
                                                   <div
-                                                    className="MuiCardHeader-root-130"
+                                                    className="MuiCardHeader-root-131"
+                                                    style={Object {}}
                                                   >
                                                     <div
-                                                      className="MuiCardHeader-content-133"
+                                                      className="MuiCardHeader-content-134"
                                                     >
                                                       <WithStyles(Typography)
-                                                        className="MuiCardHeader-title-134"
+                                                        className="MuiCardHeader-title-135"
                                                         color="inherit"
                                                         component="h3"
                                                         internalDeprecatedVariant={true}
@@ -2810,44 +2886,45 @@ exports[`Search record results should render a single unclaimable item with no a
                                                       >
                                                         <Typography
                                                           align="inherit"
-                                                          className="MuiCardHeader-title-134"
+                                                          className="MuiCardHeader-title-135"
                                                           classes={
                                                             Object {
-                                                              "alignCenter": "MuiTypography-alignCenter-159",
-                                                              "alignJustify": "MuiTypography-alignJustify-161",
-                                                              "alignLeft": "MuiTypography-alignLeft-158",
-                                                              "alignRight": "MuiTypography-alignRight-160",
-                                                              "body1": "MuiTypography-body1-145",
-                                                              "body2": "MuiTypography-body2-144",
-                                                              "button": "MuiTypography-button-147",
-                                                              "caption": "MuiTypography-caption-146",
-                                                              "colorError": "MuiTypography-colorError-170",
-                                                              "colorInherit": "MuiTypography-colorInherit-165",
-                                                              "colorPrimary": "MuiTypography-colorPrimary-166",
-                                                              "colorSecondary": "MuiTypography-colorSecondary-167",
-                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary-168",
-                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary-169",
-                                                              "display1": "MuiTypography-display1-140",
-                                                              "display2": "MuiTypography-display2-139",
-                                                              "display3": "MuiTypography-display3-138",
-                                                              "display4": "MuiTypography-display4-137",
-                                                              "gutterBottom": "MuiTypography-gutterBottom-163",
-                                                              "h1": "MuiTypography-h1-148",
-                                                              "h2": "MuiTypography-h2-149",
-                                                              "h3": "MuiTypography-h3-150",
-                                                              "h4": "MuiTypography-h4-151",
-                                                              "h5": "MuiTypography-h5-152",
-                                                              "h6": "MuiTypography-h6-153",
-                                                              "headline": "MuiTypography-headline-141",
-                                                              "noWrap": "MuiTypography-noWrap-162",
-                                                              "overline": "MuiTypography-overline-156",
-                                                              "paragraph": "MuiTypography-paragraph-164",
-                                                              "root": "MuiTypography-root-136",
-                                                              "srOnly": "MuiTypography-srOnly-157",
-                                                              "subheading": "MuiTypography-subheading-143",
-                                                              "subtitle1": "MuiTypography-subtitle1-154",
-                                                              "subtitle2": "MuiTypography-subtitle2-155",
-                                                              "title": "MuiTypography-title-142",
+                                                              "alignCenter": "MuiTypography-alignCenter-160",
+                                                              "alignJustify": "MuiTypography-alignJustify-162",
+                                                              "alignLeft": "MuiTypography-alignLeft-159",
+                                                              "alignRight": "MuiTypography-alignRight-161",
+                                                              "body1": "MuiTypography-body1-146",
+                                                              "body2": "MuiTypography-body2-145",
+                                                              "button": "MuiTypography-button-148",
+                                                              "caption": "MuiTypography-caption-147",
+                                                              "colorError": "MuiTypography-colorError-171",
+                                                              "colorInherit": "MuiTypography-colorInherit-166",
+                                                              "colorPrimary": "MuiTypography-colorPrimary-167",
+                                                              "colorSecondary": "MuiTypography-colorSecondary-168",
+                                                              "colorTextPrimary": "MuiTypography-colorTextPrimary-169",
+                                                              "colorTextSecondary": "MuiTypography-colorTextSecondary-170",
+                                                              "display1": "MuiTypography-display1-141",
+                                                              "display2": "MuiTypography-display2-140",
+                                                              "display3": "MuiTypography-display3-139",
+                                                              "display4": "MuiTypography-display4-138",
+                                                              "gutterBottom": "MuiTypography-gutterBottom-164",
+                                                              "h1": "MuiTypography-h1-149",
+                                                              "h2": "MuiTypography-h2-150",
+                                                              "h3": "MuiTypography-h3-151",
+                                                              "h4": "MuiTypography-h4-152",
+                                                              "h5": "MuiTypography-h5-153",
+                                                              "h6": "MuiTypography-h6-154",
+                                                              "headline": "MuiTypography-headline-142",
+                                                              "inline": "MuiTypography-inline-172",
+                                                              "noWrap": "MuiTypography-noWrap-163",
+                                                              "overline": "MuiTypography-overline-157",
+                                                              "paragraph": "MuiTypography-paragraph-165",
+                                                              "root": "MuiTypography-root-137",
+                                                              "srOnly": "MuiTypography-srOnly-158",
+                                                              "subheading": "MuiTypography-subheading-144",
+                                                              "subtitle1": "MuiTypography-subtitle1-155",
+                                                              "subtitle2": "MuiTypography-subtitle2-156",
+                                                              "title": "MuiTypography-title-143",
                                                             }
                                                           }
                                                           color="inherit"
@@ -2874,6 +2951,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                               "title": "h2",
                                                             }
                                                           }
+                                                          inline={false}
                                                           internalDeprecatedVariant={true}
                                                           noWrap={false}
                                                           paragraph={false}
@@ -2924,12 +3002,27 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                 },
                                                               },
                                                               "overrides": Object {
+                                                                "MUIDataTable": Object {
+                                                                  "paper": Object {
+                                                                    "boxShadow": "none",
+                                                                    "margin": 0,
+                                                                    "padding": 0,
+                                                                  },
+                                                                },
                                                                 "MuiFormLabel": Object {
                                                                   "root": Object {
                                                                     "overflow": "hidden",
                                                                     "textOverflow": "ellipsis",
                                                                     "whiteSpace": "nowrap",
                                                                     "width": "100%",
+                                                                  },
+                                                                },
+                                                                "MuiMenuItem": Object {
+                                                                  "root": Object {
+                                                                    "&$selected": Object {
+                                                                      "backgroundColor": "#4085C6 !important",
+                                                                      "color": "#FFFFFF",
+                                                                    },
                                                                   },
                                                                 },
                                                               },
@@ -3028,30 +3121,30 @@ exports[`Search record results should render a single unclaimable item with no a
                                                               "props": Object {},
                                                               "shadows": Array [
                                                                 "none",
-                                                                "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                                                "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                                                "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                                                "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                                                "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                                                "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                                                "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                                                "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                                                "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                                                "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                                                "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                                                "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                                                "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                                                "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                                                "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                                                "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                                                "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                                                "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                                                "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                                                "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                                                "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                                                "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                                                "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                                                "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                                                "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                                                "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                                                "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                                                "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                                                "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                                                "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                                                "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                                                "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                                                "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                                                "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                                                "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                                                "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                                                "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                                                "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                                                "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                                                "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                                                "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                                                "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                                               ],
                                                               "shape": Object {
                                                                 "borderRadius": 4,
@@ -3121,7 +3214,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                   "fontSize": "0.875rem",
                                                                   "fontWeight": 400,
                                                                   "letterSpacing": "0.02857em",
-                                                                  "lineHeight": 1.5,
+                                                                  "lineHeight": 1.75,
                                                                   "textTransform": "uppercase",
                                                                 },
                                                                 "buttonNext": Object {
@@ -3130,7 +3223,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                   "fontSize": "0.875rem",
                                                                   "fontWeight": 400,
                                                                   "letterSpacing": "0.02857em",
-                                                                  "lineHeight": 1.5,
+                                                                  "lineHeight": 1.75,
                                                                   "textTransform": "uppercase",
                                                                 },
                                                                 "caption": Object {
@@ -3299,7 +3392,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                           variant="h5"
                                                         >
                                                           <h3
-                                                            className="MuiTypography-root-136 MuiTypography-h5-152 MuiTypography-colorInherit-165 MuiCardHeader-title-134"
+                                                            className="MuiTypography-root-137 MuiTypography-h5-153 MuiTypography-colorInherit-166 MuiCardHeader-title-135"
                                                           >
                                                             Possible matches found
                                                           </h3>
@@ -3316,13 +3409,13 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   className=""
                                                   classes={
                                                     Object {
-                                                      "root": "MuiCardContent-root-171",
+                                                      "root": "MuiCardContent-root-173",
                                                     }
                                                   }
                                                   component="div"
                                                 >
                                                   <div
-                                                    className="MuiCardContent-root-171"
+                                                    className="MuiCardContent-root-173"
                                                   >
                                                     <WithStyles(Grid)
                                                       container={true}
@@ -4418,32 +4511,32 @@ exports[`Search record results should render a single unclaimable item with no a
                                             <Button
                                               classes={
                                                 Object {
-                                                  "colorInherit": "MuiButton-colorInherit-193",
-                                                  "contained": "MuiButton-contained-183",
-                                                  "containedPrimary": "MuiButton-containedPrimary-184",
-                                                  "containedSecondary": "MuiButton-containedSecondary-185",
-                                                  "disabled": "MuiButton-disabled-192",
-                                                  "extendedFab": "MuiButton-extendedFab-190",
-                                                  "fab": "MuiButton-fab-189",
-                                                  "flat": "MuiButton-flat-177",
-                                                  "flatPrimary": "MuiButton-flatPrimary-178",
-                                                  "flatSecondary": "MuiButton-flatSecondary-179",
-                                                  "focusVisible": "MuiButton-focusVisible-191",
-                                                  "fullWidth": "MuiButton-fullWidth-197",
-                                                  "label": "MuiButton-label-173",
-                                                  "mini": "MuiButton-mini-194",
-                                                  "outlined": "MuiButton-outlined-180",
-                                                  "outlinedPrimary": "MuiButton-outlinedPrimary-181",
-                                                  "outlinedSecondary": "MuiButton-outlinedSecondary-182",
-                                                  "raised": "MuiButton-raised-186",
-                                                  "raisedPrimary": "MuiButton-raisedPrimary-187",
-                                                  "raisedSecondary": "MuiButton-raisedSecondary-188",
-                                                  "root": "MuiButton-root-172",
-                                                  "sizeLarge": "MuiButton-sizeLarge-196",
-                                                  "sizeSmall": "MuiButton-sizeSmall-195",
-                                                  "text": "MuiButton-text-174",
-                                                  "textPrimary": "MuiButton-textPrimary-175",
-                                                  "textSecondary": "MuiButton-textSecondary-176",
+                                                  "colorInherit": "MuiButton-colorInherit-195",
+                                                  "contained": "MuiButton-contained-185",
+                                                  "containedPrimary": "MuiButton-containedPrimary-186",
+                                                  "containedSecondary": "MuiButton-containedSecondary-187",
+                                                  "disabled": "MuiButton-disabled-194",
+                                                  "extendedFab": "MuiButton-extendedFab-192",
+                                                  "fab": "MuiButton-fab-191",
+                                                  "flat": "MuiButton-flat-179",
+                                                  "flatPrimary": "MuiButton-flatPrimary-180",
+                                                  "flatSecondary": "MuiButton-flatSecondary-181",
+                                                  "focusVisible": "MuiButton-focusVisible-193",
+                                                  "fullWidth": "MuiButton-fullWidth-199",
+                                                  "label": "MuiButton-label-175",
+                                                  "mini": "MuiButton-mini-196",
+                                                  "outlined": "MuiButton-outlined-182",
+                                                  "outlinedPrimary": "MuiButton-outlinedPrimary-183",
+                                                  "outlinedSecondary": "MuiButton-outlinedSecondary-184",
+                                                  "raised": "MuiButton-raised-188",
+                                                  "raisedPrimary": "MuiButton-raisedPrimary-189",
+                                                  "raisedSecondary": "MuiButton-raisedSecondary-190",
+                                                  "root": "MuiButton-root-174",
+                                                  "sizeLarge": "MuiButton-sizeLarge-198",
+                                                  "sizeSmall": "MuiButton-sizeSmall-197",
+                                                  "text": "MuiButton-text-176",
+                                                  "textPrimary": "MuiButton-textPrimary-177",
+                                                  "textSecondary": "MuiButton-textSecondary-178",
                                                 }
                                               }
                                               color="default"
@@ -4458,22 +4551,22 @@ exports[`Search record results should render a single unclaimable item with no a
                                               variant="text"
                                             >
                                               <WithStyles(ButtonBase)
-                                                className="MuiButton-root-172 MuiButton-text-174 MuiButton-flat-177 MuiButton-fullWidth-197"
+                                                className="MuiButton-root-174 MuiButton-text-176 MuiButton-flat-179 MuiButton-fullWidth-199"
                                                 component="button"
                                                 disabled={false}
                                                 focusRipple={true}
-                                                focusVisibleClassName="MuiButton-focusVisible-191"
+                                                focusVisibleClassName="MuiButton-focusVisible-193"
                                                 onClick={[Function]}
                                                 type="button"
                                               >
                                                 <ButtonBase
                                                   centerRipple={false}
-                                                  className="MuiButton-root-172 MuiButton-text-174 MuiButton-flat-177 MuiButton-fullWidth-197"
+                                                  className="MuiButton-root-174 MuiButton-text-176 MuiButton-flat-179 MuiButton-fullWidth-199"
                                                   classes={
                                                     Object {
-                                                      "disabled": "MuiButtonBase-disabled-199",
-                                                      "focusVisible": "MuiButtonBase-focusVisible-200",
-                                                      "root": "MuiButtonBase-root-198",
+                                                      "disabled": "MuiButtonBase-disabled-201",
+                                                      "focusVisible": "MuiButtonBase-focusVisible-202",
+                                                      "root": "MuiButtonBase-root-200",
                                                     }
                                                   }
                                                   component="button"
@@ -4481,16 +4574,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   disableTouchRipple={false}
                                                   disabled={false}
                                                   focusRipple={true}
-                                                  focusVisibleClassName="MuiButton-focusVisible-191"
+                                                  focusVisibleClassName="MuiButton-focusVisible-193"
                                                   onClick={[Function]}
                                                   tabIndex="0"
                                                   type="button"
                                                 >
                                                   <button
-                                                    className="MuiButtonBase-root-198 MuiButton-root-172 MuiButton-text-174 MuiButton-flat-177 MuiButton-fullWidth-197"
+                                                    className="MuiButtonBase-root-200 MuiButton-root-174 MuiButton-text-176 MuiButton-flat-179 MuiButton-fullWidth-199"
                                                     disabled={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
+                                                    onContextMenu={[Function]}
                                                     onFocus={[Function]}
                                                     onKeyDown={[Function]}
                                                     onKeyUp={[Function]}
@@ -4504,41 +4598,46 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     type="button"
                                                   >
                                                     <span
-                                                      className="MuiButton-label-173"
+                                                      className="MuiButton-label-175"
                                                     >
                                                       Abandon and search again
                                                     </span>
-                                                    <WithStyles(TouchRipple)
-                                                      center={false}
-                                                      innerRef={[Function]}
+                                                    <NoSsr
+                                                      defer={false}
+                                                      fallback={null}
                                                     >
-                                                      <TouchRipple
+                                                      <WithStyles(TouchRipple)
                                                         center={false}
-                                                        classes={
-                                                          Object {
-                                                            "child": "MuiTouchRipple-child-205",
-                                                            "childLeaving": "MuiTouchRipple-childLeaving-206",
-                                                            "childPulsate": "MuiTouchRipple-childPulsate-207",
-                                                            "ripple": "MuiTouchRipple-ripple-202",
-                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate-204",
-                                                            "rippleVisible": "MuiTouchRipple-rippleVisible-203",
-                                                            "root": "MuiTouchRipple-root-201",
-                                                          }
-                                                        }
+                                                        innerRef={[Function]}
                                                       >
-                                                        <TransitionGroup
-                                                          childFactory={[Function]}
-                                                          className="MuiTouchRipple-root-201"
-                                                          component="span"
-                                                          enter={true}
-                                                          exit={true}
+                                                        <TouchRipple
+                                                          center={false}
+                                                          classes={
+                                                            Object {
+                                                              "child": "MuiTouchRipple-child-207",
+                                                              "childLeaving": "MuiTouchRipple-childLeaving-208",
+                                                              "childPulsate": "MuiTouchRipple-childPulsate-209",
+                                                              "ripple": "MuiTouchRipple-ripple-204",
+                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-206",
+                                                              "rippleVisible": "MuiTouchRipple-rippleVisible-205",
+                                                              "root": "MuiTouchRipple-root-203",
+                                                            }
+                                                          }
                                                         >
-                                                          <span
-                                                            className="MuiTouchRipple-root-201"
-                                                          />
-                                                        </TransitionGroup>
-                                                      </TouchRipple>
-                                                    </WithStyles(TouchRipple)>
+                                                          <TransitionGroup
+                                                            childFactory={[Function]}
+                                                            className="MuiTouchRipple-root-203"
+                                                            component="span"
+                                                            enter={true}
+                                                            exit={true}
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root-203"
+                                                            />
+                                                          </TransitionGroup>
+                                                        </TouchRipple>
+                                                      </WithStyles(TouchRipple)>
+                                                    </NoSsr>
                                                   </button>
                                                 </ButtonBase>
                                               </WithStyles(ButtonBase)>
@@ -4684,32 +4783,32 @@ exports[`Search record results should render a single unclaimable item with no a
                                               buttonRef={[Function]}
                                               classes={
                                                 Object {
-                                                  "colorInherit": "MuiButton-colorInherit-193",
-                                                  "contained": "MuiButton-contained-183",
-                                                  "containedPrimary": "MuiButton-containedPrimary-184",
-                                                  "containedSecondary": "MuiButton-containedSecondary-185",
-                                                  "disabled": "MuiButton-disabled-192",
-                                                  "extendedFab": "MuiButton-extendedFab-190",
-                                                  "fab": "MuiButton-fab-189",
-                                                  "flat": "MuiButton-flat-177",
-                                                  "flatPrimary": "MuiButton-flatPrimary-178",
-                                                  "flatSecondary": "MuiButton-flatSecondary-179",
-                                                  "focusVisible": "MuiButton-focusVisible-191",
-                                                  "fullWidth": "MuiButton-fullWidth-197",
-                                                  "label": "MuiButton-label-173",
-                                                  "mini": "MuiButton-mini-194",
-                                                  "outlined": "MuiButton-outlined-180",
-                                                  "outlinedPrimary": "MuiButton-outlinedPrimary-181",
-                                                  "outlinedSecondary": "MuiButton-outlinedSecondary-182",
-                                                  "raised": "MuiButton-raised-186",
-                                                  "raisedPrimary": "MuiButton-raisedPrimary-187",
-                                                  "raisedSecondary": "MuiButton-raisedSecondary-188",
-                                                  "root": "MuiButton-root-172",
-                                                  "sizeLarge": "MuiButton-sizeLarge-196",
-                                                  "sizeSmall": "MuiButton-sizeSmall-195",
-                                                  "text": "MuiButton-text-174",
-                                                  "textPrimary": "MuiButton-textPrimary-175",
-                                                  "textSecondary": "MuiButton-textSecondary-176",
+                                                  "colorInherit": "MuiButton-colorInherit-195",
+                                                  "contained": "MuiButton-contained-185",
+                                                  "containedPrimary": "MuiButton-containedPrimary-186",
+                                                  "containedSecondary": "MuiButton-containedSecondary-187",
+                                                  "disabled": "MuiButton-disabled-194",
+                                                  "extendedFab": "MuiButton-extendedFab-192",
+                                                  "fab": "MuiButton-fab-191",
+                                                  "flat": "MuiButton-flat-179",
+                                                  "flatPrimary": "MuiButton-flatPrimary-180",
+                                                  "flatSecondary": "MuiButton-flatSecondary-181",
+                                                  "focusVisible": "MuiButton-focusVisible-193",
+                                                  "fullWidth": "MuiButton-fullWidth-199",
+                                                  "label": "MuiButton-label-175",
+                                                  "mini": "MuiButton-mini-196",
+                                                  "outlined": "MuiButton-outlined-182",
+                                                  "outlinedPrimary": "MuiButton-outlinedPrimary-183",
+                                                  "outlinedSecondary": "MuiButton-outlinedSecondary-184",
+                                                  "raised": "MuiButton-raised-188",
+                                                  "raisedPrimary": "MuiButton-raisedPrimary-189",
+                                                  "raisedSecondary": "MuiButton-raisedSecondary-190",
+                                                  "root": "MuiButton-root-174",
+                                                  "sizeLarge": "MuiButton-sizeLarge-198",
+                                                  "sizeSmall": "MuiButton-sizeSmall-197",
+                                                  "text": "MuiButton-text-176",
+                                                  "textPrimary": "MuiButton-textPrimary-177",
+                                                  "textSecondary": "MuiButton-textSecondary-178",
                                                 }
                                               }
                                               color="primary"
@@ -4725,23 +4824,23 @@ exports[`Search record results should render a single unclaimable item with no a
                                             >
                                               <WithStyles(ButtonBase)
                                                 buttonRef={[Function]}
-                                                className="MuiButton-root-172 MuiButton-contained-183 MuiButton-containedPrimary-184 MuiButton-raised-186 MuiButton-raisedPrimary-187 MuiButton-fullWidth-197"
+                                                className="MuiButton-root-174 MuiButton-contained-185 MuiButton-containedPrimary-186 MuiButton-raised-188 MuiButton-raisedPrimary-189 MuiButton-fullWidth-199"
                                                 component="button"
                                                 disabled={false}
                                                 focusRipple={true}
-                                                focusVisibleClassName="MuiButton-focusVisible-191"
+                                                focusVisibleClassName="MuiButton-focusVisible-193"
                                                 onClick={[Function]}
                                                 type="button"
                                               >
                                                 <ButtonBase
                                                   buttonRef={[Function]}
                                                   centerRipple={false}
-                                                  className="MuiButton-root-172 MuiButton-contained-183 MuiButton-containedPrimary-184 MuiButton-raised-186 MuiButton-raisedPrimary-187 MuiButton-fullWidth-197"
+                                                  className="MuiButton-root-174 MuiButton-contained-185 MuiButton-containedPrimary-186 MuiButton-raised-188 MuiButton-raisedPrimary-189 MuiButton-fullWidth-199"
                                                   classes={
                                                     Object {
-                                                      "disabled": "MuiButtonBase-disabled-199",
-                                                      "focusVisible": "MuiButtonBase-focusVisible-200",
-                                                      "root": "MuiButtonBase-root-198",
+                                                      "disabled": "MuiButtonBase-disabled-201",
+                                                      "focusVisible": "MuiButtonBase-focusVisible-202",
+                                                      "root": "MuiButtonBase-root-200",
                                                     }
                                                   }
                                                   component="button"
@@ -4749,16 +4848,17 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   disableTouchRipple={false}
                                                   disabled={false}
                                                   focusRipple={true}
-                                                  focusVisibleClassName="MuiButton-focusVisible-191"
+                                                  focusVisibleClassName="MuiButton-focusVisible-193"
                                                   onClick={[Function]}
                                                   tabIndex="0"
                                                   type="button"
                                                 >
                                                   <button
-                                                    className="MuiButtonBase-root-198 MuiButton-root-172 MuiButton-contained-183 MuiButton-containedPrimary-184 MuiButton-raised-186 MuiButton-raisedPrimary-187 MuiButton-fullWidth-197"
+                                                    className="MuiButtonBase-root-200 MuiButton-root-174 MuiButton-contained-185 MuiButton-containedPrimary-186 MuiButton-raised-188 MuiButton-raisedPrimary-189 MuiButton-fullWidth-199"
                                                     disabled={false}
                                                     onBlur={[Function]}
                                                     onClick={[Function]}
+                                                    onContextMenu={[Function]}
                                                     onFocus={[Function]}
                                                     onKeyDown={[Function]}
                                                     onKeyUp={[Function]}
@@ -4772,41 +4872,46 @@ exports[`Search record results should render a single unclaimable item with no a
                                                     type="button"
                                                   >
                                                     <span
-                                                      className="MuiButton-label-173"
+                                                      className="MuiButton-label-175"
                                                     >
                                                       Create a new eSpace record
                                                     </span>
-                                                    <WithStyles(TouchRipple)
-                                                      center={false}
-                                                      innerRef={[Function]}
+                                                    <NoSsr
+                                                      defer={false}
+                                                      fallback={null}
                                                     >
-                                                      <TouchRipple
+                                                      <WithStyles(TouchRipple)
                                                         center={false}
-                                                        classes={
-                                                          Object {
-                                                            "child": "MuiTouchRipple-child-205",
-                                                            "childLeaving": "MuiTouchRipple-childLeaving-206",
-                                                            "childPulsate": "MuiTouchRipple-childPulsate-207",
-                                                            "ripple": "MuiTouchRipple-ripple-202",
-                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate-204",
-                                                            "rippleVisible": "MuiTouchRipple-rippleVisible-203",
-                                                            "root": "MuiTouchRipple-root-201",
-                                                          }
-                                                        }
+                                                        innerRef={[Function]}
                                                       >
-                                                        <TransitionGroup
-                                                          childFactory={[Function]}
-                                                          className="MuiTouchRipple-root-201"
-                                                          component="span"
-                                                          enter={true}
-                                                          exit={true}
+                                                        <TouchRipple
+                                                          center={false}
+                                                          classes={
+                                                            Object {
+                                                              "child": "MuiTouchRipple-child-207",
+                                                              "childLeaving": "MuiTouchRipple-childLeaving-208",
+                                                              "childPulsate": "MuiTouchRipple-childPulsate-209",
+                                                              "ripple": "MuiTouchRipple-ripple-204",
+                                                              "ripplePulsate": "MuiTouchRipple-ripplePulsate-206",
+                                                              "rippleVisible": "MuiTouchRipple-rippleVisible-205",
+                                                              "root": "MuiTouchRipple-root-203",
+                                                            }
+                                                          }
                                                         >
-                                                          <span
-                                                            className="MuiTouchRipple-root-201"
-                                                          />
-                                                        </TransitionGroup>
-                                                      </TouchRipple>
-                                                    </WithStyles(TouchRipple)>
+                                                          <TransitionGroup
+                                                            childFactory={[Function]}
+                                                            className="MuiTouchRipple-root-203"
+                                                            component="span"
+                                                            enter={true}
+                                                            exit={true}
+                                                          >
+                                                            <span
+                                                              className="MuiTouchRipple-root-203"
+                                                            />
+                                                          </TransitionGroup>
+                                                        </TouchRipple>
+                                                      </WithStyles(TouchRipple)>
+                                                    </NoSsr>
                                                   </button>
                                                 </ButtonBase>
                                               </WithStyles(ButtonBase)>
@@ -4903,12 +5008,27 @@ exports[`Search record results should render a single unclaimable item with no a
                               },
                             },
                             "overrides": Object {
+                              "MUIDataTable": Object {
+                                "paper": Object {
+                                  "boxShadow": "none",
+                                  "margin": 0,
+                                  "padding": 0,
+                                },
+                              },
                               "MuiFormLabel": Object {
                                 "root": Object {
                                   "overflow": "hidden",
                                   "textOverflow": "ellipsis",
                                   "whiteSpace": "nowrap",
                                   "width": "100%",
+                                },
+                              },
+                              "MuiMenuItem": Object {
+                                "root": Object {
+                                  "&$selected": Object {
+                                    "backgroundColor": "#4085C6 !important",
+                                    "color": "#FFFFFF",
+                                  },
                                 },
                               },
                             },
@@ -5007,30 +5127,30 @@ exports[`Search record results should render a single unclaimable item with no a
                             "props": Object {},
                             "shadows": Array [
                               "none",
-                              "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                              "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                              "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                              "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                              "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                              "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                              "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                              "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                              "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                              "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                              "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                              "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                              "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                              "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                              "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                              "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                              "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                              "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                              "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                              "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                              "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                              "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                              "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                              "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                              "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                              "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                              "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                              "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                              "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                              "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                              "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                              "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                              "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                              "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                             ],
                             "shape": Object {
                               "borderRadius": 4,
@@ -5100,7 +5220,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 "fontSize": "0.875rem",
                                 "fontWeight": 400,
                                 "letterSpacing": "0.02857em",
-                                "lineHeight": 1.5,
+                                "lineHeight": 1.75,
                                 "textTransform": "uppercase",
                               },
                               "buttonNext": Object {
@@ -5109,7 +5229,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                 "fontSize": "0.875rem",
                                 "fontWeight": 400,
                                 "letterSpacing": "0.02857em",
-                                "lineHeight": 1.5,
+                                "lineHeight": 1.75,
                                 "textTransform": "uppercase",
                               },
                               "caption": Object {
@@ -5428,8 +5548,8 @@ exports[`Search record results should render a single unclaimable item with no a
                                     <RighthandCard
                                       classes={
                                         Object {
-                                          "divider": "RighthandCard-divider-209",
-                                          "title": "RighthandCard-title-208",
+                                          "divider": "RighthandCard-divider-211",
+                                          "title": "RighthandCard-title-210",
                                         }
                                       }
                                       theme={
@@ -5479,12 +5599,27 @@ exports[`Search record results should render a single unclaimable item with no a
                                             },
                                           },
                                           "overrides": Object {
+                                            "MUIDataTable": Object {
+                                              "paper": Object {
+                                                "boxShadow": "none",
+                                                "margin": 0,
+                                                "padding": 0,
+                                              },
+                                            },
                                             "MuiFormLabel": Object {
                                               "root": Object {
                                                 "overflow": "hidden",
                                                 "textOverflow": "ellipsis",
                                                 "whiteSpace": "nowrap",
                                                 "width": "100%",
+                                              },
+                                            },
+                                            "MuiMenuItem": Object {
+                                              "root": Object {
+                                                "&$selected": Object {
+                                                  "backgroundColor": "#4085C6 !important",
+                                                  "color": "#FFFFFF",
+                                                },
                                               },
                                             },
                                           },
@@ -5583,30 +5718,30 @@ exports[`Search record results should render a single unclaimable item with no a
                                           "props": Object {},
                                           "shadows": Array [
                                             "none",
-                                            "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                            "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                            "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                            "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                            "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                            "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                            "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                            "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                            "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                            "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                            "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                            "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                            "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                            "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                            "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                            "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                            "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                            "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                            "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                            "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                            "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                            "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                            "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                            "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                            "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                            "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                            "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                            "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                            "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                            "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                            "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                            "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                            "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                            "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                            "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                            "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                            "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                            "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                            "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                            "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                            "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                            "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                           ],
                                           "shape": Object {
                                             "borderRadius": 4,
@@ -5676,7 +5811,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                               "fontSize": "0.875rem",
                                               "fontWeight": 400,
                                               "letterSpacing": "0.02857em",
-                                              "lineHeight": 1.5,
+                                              "lineHeight": 1.75,
                                               "textTransform": "uppercase",
                                             },
                                             "buttonNext": Object {
@@ -5685,7 +5820,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                               "fontSize": "0.875rem",
                                               "fontWeight": 400,
                                               "letterSpacing": "0.02857em",
-                                              "lineHeight": 1.5,
+                                              "lineHeight": 1.75,
                                               "textTransform": "uppercase",
                                             },
                                             "caption": Object {
@@ -5978,14 +6113,14 @@ exports[`Search record results should render a single unclaimable item with no a
                                             className="MuiGrid-container-1"
                                           >
                                             <WithStyles(Grid)
-                                              className="RighthandCard-title-208"
+                                              className="RighthandCard-title-210"
                                               item={true}
                                               xs={true}
                                             >
                                               <Grid
                                                 alignContent="stretch"
                                                 alignItems="stretch"
-                                                className="RighthandCard-title-208"
+                                                className="RighthandCard-title-210"
                                                 classes={
                                                   Object {
                                                     "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
@@ -6102,7 +6237,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                 zeroMinWidth={false}
                                               >
                                                 <div
-                                                  className="MuiGrid-item-2 MuiGrid-grid-xs-true-29 RighthandCard-title-208"
+                                                  className="MuiGrid-item-2 MuiGrid-grid-xs-true-29 RighthandCard-title-210"
                                                 >
                                                   <WithStyles(Typography)
                                                     color="primary"
@@ -6112,41 +6247,42 @@ exports[`Search record results should render a single unclaimable item with no a
                                                       align="inherit"
                                                       classes={
                                                         Object {
-                                                          "alignCenter": "MuiTypography-alignCenter-159",
-                                                          "alignJustify": "MuiTypography-alignJustify-161",
-                                                          "alignLeft": "MuiTypography-alignLeft-158",
-                                                          "alignRight": "MuiTypography-alignRight-160",
-                                                          "body1": "MuiTypography-body1-145",
-                                                          "body2": "MuiTypography-body2-144",
-                                                          "button": "MuiTypography-button-147",
-                                                          "caption": "MuiTypography-caption-146",
-                                                          "colorError": "MuiTypography-colorError-170",
-                                                          "colorInherit": "MuiTypography-colorInherit-165",
-                                                          "colorPrimary": "MuiTypography-colorPrimary-166",
-                                                          "colorSecondary": "MuiTypography-colorSecondary-167",
-                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-168",
-                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-169",
-                                                          "display1": "MuiTypography-display1-140",
-                                                          "display2": "MuiTypography-display2-139",
-                                                          "display3": "MuiTypography-display3-138",
-                                                          "display4": "MuiTypography-display4-137",
-                                                          "gutterBottom": "MuiTypography-gutterBottom-163",
-                                                          "h1": "MuiTypography-h1-148",
-                                                          "h2": "MuiTypography-h2-149",
-                                                          "h3": "MuiTypography-h3-150",
-                                                          "h4": "MuiTypography-h4-151",
-                                                          "h5": "MuiTypography-h5-152",
-                                                          "h6": "MuiTypography-h6-153",
-                                                          "headline": "MuiTypography-headline-141",
-                                                          "noWrap": "MuiTypography-noWrap-162",
-                                                          "overline": "MuiTypography-overline-156",
-                                                          "paragraph": "MuiTypography-paragraph-164",
-                                                          "root": "MuiTypography-root-136",
-                                                          "srOnly": "MuiTypography-srOnly-157",
-                                                          "subheading": "MuiTypography-subheading-143",
-                                                          "subtitle1": "MuiTypography-subtitle1-154",
-                                                          "subtitle2": "MuiTypography-subtitle2-155",
-                                                          "title": "MuiTypography-title-142",
+                                                          "alignCenter": "MuiTypography-alignCenter-160",
+                                                          "alignJustify": "MuiTypography-alignJustify-162",
+                                                          "alignLeft": "MuiTypography-alignLeft-159",
+                                                          "alignRight": "MuiTypography-alignRight-161",
+                                                          "body1": "MuiTypography-body1-146",
+                                                          "body2": "MuiTypography-body2-145",
+                                                          "button": "MuiTypography-button-148",
+                                                          "caption": "MuiTypography-caption-147",
+                                                          "colorError": "MuiTypography-colorError-171",
+                                                          "colorInherit": "MuiTypography-colorInherit-166",
+                                                          "colorPrimary": "MuiTypography-colorPrimary-167",
+                                                          "colorSecondary": "MuiTypography-colorSecondary-168",
+                                                          "colorTextPrimary": "MuiTypography-colorTextPrimary-169",
+                                                          "colorTextSecondary": "MuiTypography-colorTextSecondary-170",
+                                                          "display1": "MuiTypography-display1-141",
+                                                          "display2": "MuiTypography-display2-140",
+                                                          "display3": "MuiTypography-display3-139",
+                                                          "display4": "MuiTypography-display4-138",
+                                                          "gutterBottom": "MuiTypography-gutterBottom-164",
+                                                          "h1": "MuiTypography-h1-149",
+                                                          "h2": "MuiTypography-h2-150",
+                                                          "h3": "MuiTypography-h3-151",
+                                                          "h4": "MuiTypography-h4-152",
+                                                          "h5": "MuiTypography-h5-153",
+                                                          "h6": "MuiTypography-h6-154",
+                                                          "headline": "MuiTypography-headline-142",
+                                                          "inline": "MuiTypography-inline-172",
+                                                          "noWrap": "MuiTypography-noWrap-163",
+                                                          "overline": "MuiTypography-overline-157",
+                                                          "paragraph": "MuiTypography-paragraph-165",
+                                                          "root": "MuiTypography-root-137",
+                                                          "srOnly": "MuiTypography-srOnly-158",
+                                                          "subheading": "MuiTypography-subheading-144",
+                                                          "subtitle1": "MuiTypography-subtitle1-155",
+                                                          "subtitle2": "MuiTypography-subtitle2-156",
+                                                          "title": "MuiTypography-title-143",
                                                         }
                                                       }
                                                       color="primary"
@@ -6172,6 +6308,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                           "title": "h2",
                                                         }
                                                       }
+                                                      inline={false}
                                                       noWrap={false}
                                                       paragraph={false}
                                                       theme={
@@ -6221,12 +6358,27 @@ exports[`Search record results should render a single unclaimable item with no a
                                                             },
                                                           },
                                                           "overrides": Object {
+                                                            "MUIDataTable": Object {
+                                                              "paper": Object {
+                                                                "boxShadow": "none",
+                                                                "margin": 0,
+                                                                "padding": 0,
+                                                              },
+                                                            },
                                                             "MuiFormLabel": Object {
                                                               "root": Object {
                                                                 "overflow": "hidden",
                                                                 "textOverflow": "ellipsis",
                                                                 "whiteSpace": "nowrap",
                                                                 "width": "100%",
+                                                              },
+                                                            },
+                                                            "MuiMenuItem": Object {
+                                                              "root": Object {
+                                                                "&$selected": Object {
+                                                                  "backgroundColor": "#4085C6 !important",
+                                                                  "color": "#FFFFFF",
+                                                                },
                                                               },
                                                             },
                                                           },
@@ -6325,30 +6477,30 @@ exports[`Search record results should render a single unclaimable item with no a
                                                           "props": Object {},
                                                           "shadows": Array [
                                                             "none",
-                                                            "0px 1px 3px 0px rgba(0, 0, 0, 0.2),0px 1px 1px 0px rgba(0, 0, 0, 0.14),0px 2px 1px -1px rgba(0, 0, 0, 0.12)",
-                                                            "0px 1px 5px 0px rgba(0, 0, 0, 0.2),0px 2px 2px 0px rgba(0, 0, 0, 0.14),0px 3px 1px -2px rgba(0, 0, 0, 0.12)",
-                                                            "0px 1px 8px 0px rgba(0, 0, 0, 0.2),0px 3px 4px 0px rgba(0, 0, 0, 0.14),0px 3px 3px -2px rgba(0, 0, 0, 0.12)",
-                                                            "0px 2px 4px -1px rgba(0, 0, 0, 0.2),0px 4px 5px 0px rgba(0, 0, 0, 0.14),0px 1px 10px 0px rgba(0, 0, 0, 0.12)",
-                                                            "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 5px 8px 0px rgba(0, 0, 0, 0.14),0px 1px 14px 0px rgba(0, 0, 0, 0.12)",
-                                                            "0px 3px 5px -1px rgba(0, 0, 0, 0.2),0px 6px 10px 0px rgba(0, 0, 0, 0.14),0px 1px 18px 0px rgba(0, 0, 0, 0.12)",
-                                                            "0px 4px 5px -2px rgba(0, 0, 0, 0.2),0px 7px 10px 1px rgba(0, 0, 0, 0.14),0px 2px 16px 1px rgba(0, 0, 0, 0.12)",
-                                                            "0px 5px 5px -3px rgba(0, 0, 0, 0.2),0px 8px 10px 1px rgba(0, 0, 0, 0.14),0px 3px 14px 2px rgba(0, 0, 0, 0.12)",
-                                                            "0px 5px 6px -3px rgba(0, 0, 0, 0.2),0px 9px 12px 1px rgba(0, 0, 0, 0.14),0px 3px 16px 2px rgba(0, 0, 0, 0.12)",
-                                                            "0px 6px 6px -3px rgba(0, 0, 0, 0.2),0px 10px 14px 1px rgba(0, 0, 0, 0.14),0px 4px 18px 3px rgba(0, 0, 0, 0.12)",
-                                                            "0px 6px 7px -4px rgba(0, 0, 0, 0.2),0px 11px 15px 1px rgba(0, 0, 0, 0.14),0px 4px 20px 3px rgba(0, 0, 0, 0.12)",
-                                                            "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 12px 17px 2px rgba(0, 0, 0, 0.14),0px 5px 22px 4px rgba(0, 0, 0, 0.12)",
-                                                            "0px 7px 8px -4px rgba(0, 0, 0, 0.2),0px 13px 19px 2px rgba(0, 0, 0, 0.14),0px 5px 24px 4px rgba(0, 0, 0, 0.12)",
-                                                            "0px 7px 9px -4px rgba(0, 0, 0, 0.2),0px 14px 21px 2px rgba(0, 0, 0, 0.14),0px 5px 26px 4px rgba(0, 0, 0, 0.12)",
-                                                            "0px 8px 9px -5px rgba(0, 0, 0, 0.2),0px 15px 22px 2px rgba(0, 0, 0, 0.14),0px 6px 28px 5px rgba(0, 0, 0, 0.12)",
-                                                            "0px 8px 10px -5px rgba(0, 0, 0, 0.2),0px 16px 24px 2px rgba(0, 0, 0, 0.14),0px 6px 30px 5px rgba(0, 0, 0, 0.12)",
-                                                            "0px 8px 11px -5px rgba(0, 0, 0, 0.2),0px 17px 26px 2px rgba(0, 0, 0, 0.14),0px 6px 32px 5px rgba(0, 0, 0, 0.12)",
-                                                            "0px 9px 11px -5px rgba(0, 0, 0, 0.2),0px 18px 28px 2px rgba(0, 0, 0, 0.14),0px 7px 34px 6px rgba(0, 0, 0, 0.12)",
-                                                            "0px 9px 12px -6px rgba(0, 0, 0, 0.2),0px 19px 29px 2px rgba(0, 0, 0, 0.14),0px 7px 36px 6px rgba(0, 0, 0, 0.12)",
-                                                            "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 20px 31px 3px rgba(0, 0, 0, 0.14),0px 8px 38px 7px rgba(0, 0, 0, 0.12)",
-                                                            "0px 10px 13px -6px rgba(0, 0, 0, 0.2),0px 21px 33px 3px rgba(0, 0, 0, 0.14),0px 8px 40px 7px rgba(0, 0, 0, 0.12)",
-                                                            "0px 10px 14px -6px rgba(0, 0, 0, 0.2),0px 22px 35px 3px rgba(0, 0, 0, 0.14),0px 8px 42px 7px rgba(0, 0, 0, 0.12)",
-                                                            "0px 11px 14px -7px rgba(0, 0, 0, 0.2),0px 23px 36px 3px rgba(0, 0, 0, 0.14),0px 9px 44px 8px rgba(0, 0, 0, 0.12)",
-                                                            "0px 11px 15px -7px rgba(0, 0, 0, 0.2),0px 24px 38px 3px rgba(0, 0, 0, 0.14),0px 9px 46px 8px rgba(0, 0, 0, 0.12)",
+                                                            "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                                            "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                                            "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                                            "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                                            "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                                            "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                                            "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                                            "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                                            "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                                            "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                                            "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                                            "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                                            "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                                            "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                                            "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                                            "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                                            "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                                            "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                                            "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                                            "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                                            "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
                                                           ],
                                                           "shape": Object {
                                                             "borderRadius": 4,
@@ -6418,7 +6570,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                               "fontSize": "0.875rem",
                                                               "fontWeight": 400,
                                                               "letterSpacing": "0.02857em",
-                                                              "lineHeight": 1.5,
+                                                              "lineHeight": 1.75,
                                                               "textTransform": "uppercase",
                                                             },
                                                             "buttonNext": Object {
@@ -6427,7 +6579,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                               "fontSize": "0.875rem",
                                                               "fontWeight": 400,
                                                               "letterSpacing": "0.02857em",
-                                                              "lineHeight": 1.5,
+                                                              "lineHeight": 1.75,
                                                               "textTransform": "uppercase",
                                                             },
                                                             "caption": Object {
@@ -6596,7 +6748,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                       variant="h6"
                                                     >
                                                       <h6
-                                                        className="MuiTypography-root-136 MuiTypography-h6-153 MuiTypography-colorPrimary-166"
+                                                        className="MuiTypography-root-137 MuiTypography-h6-154 MuiTypography-colorPrimary-167"
                                                       >
                                                         Repository search
                                                       </h6>
@@ -6731,25 +6883,26 @@ exports[`Search record results should render a single unclaimable item with no a
                                                   className="MuiGrid-item-2 MuiGrid-grid-xs-12-41"
                                                 >
                                                   <WithStyles(Divider)
-                                                    className="RighthandCard-divider-209"
+                                                    className="RighthandCard-divider-211"
                                                   >
                                                     <Divider
                                                       absolute={false}
-                                                      className="RighthandCard-divider-209"
+                                                      className="RighthandCard-divider-211"
                                                       classes={
                                                         Object {
-                                                          "absolute": "MuiDivider-absolute-211",
-                                                          "inset": "MuiDivider-inset-212",
-                                                          "light": "MuiDivider-light-213",
-                                                          "root": "MuiDivider-root-210",
+                                                          "absolute": "MuiDivider-absolute-213",
+                                                          "inset": "MuiDivider-inset-214",
+                                                          "light": "MuiDivider-light-215",
+                                                          "middle": "MuiDivider-middle-216",
+                                                          "root": "MuiDivider-root-212",
                                                         }
                                                       }
                                                       component="hr"
-                                                      inset={false}
                                                       light={false}
+                                                      variant="fullWidth"
                                                     >
                                                       <hr
-                                                        className="MuiDivider-root-210 RighthandCard-divider-209"
+                                                        className="MuiDivider-root-212 RighthandCard-divider-211"
                                                       />
                                                     </Divider>
                                                   </WithStyles(Divider)>
@@ -6918,7 +7071,7 @@ exports[`Search record results should render a single unclaimable item with no a
             </WithStyles(Grid)>
           </RecordsSearchResults>
         </MuiPickersUtilsProvider>
-      </MuiThemeProvider>
+      </MuiThemeProviderOld>
     </Router>
   </MemoryRouter>
 </Provider>

@@ -223,8 +223,8 @@ export default class NtroFields extends React.PureComponent {
                                         <Grid item xs={12}>
                                             { /* prettier-ignore */ }
                                             <Typography>
-                                                {contributionStatement.fields.scaleOfWork.description}
-                                            </Typography>
+	                                            {contributionStatement.fields.scaleOfWork.description}
+	                                        </Typography>
                                             <Field
                                                 component={SelectField}
                                                 disabled={this.props.submitting}

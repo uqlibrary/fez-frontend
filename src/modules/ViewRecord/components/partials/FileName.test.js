@@ -1,7 +1,7 @@
 import { journalArticle } from 'mock/data/testing/records';
 import { FileName } from './FileName';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const { previewFileName, ...rest } = testProps;
     const props = {
         classes: {},
@@ -16,12 +16,12 @@ function setup(testProps, isShallow = true) {
         allowDownload: false,
         ...rest,
     };
-    return getElement(FileName, props, isShallow);
+    return getElement(FileName, props, args);
 }
 
 describe('File Name Component ', () => {
     it('should render component and display file name only', () => {
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
         expect(wrapper.find('FileName a').length).toEqual(0);
@@ -31,7 +31,7 @@ describe('File Name Component ', () => {
     it('should display file name link', () => {
         const wrapper = setup(
             { allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg' },
-            false,
+            { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName').length).toEqual(1);
@@ -39,7 +39,10 @@ describe('File Name Component ', () => {
     });
 
     it('should render audio player', () => {
-        const wrapper = setup({ allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' }, false);
+        const wrapper = setup(
+            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' },
+            { isShallow: false },
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('FileName audio').length).toEqual(1);
     });
@@ -66,7 +69,7 @@ describe('File Name Component ', () => {
                 previewFileName: 'preview_test.jpg',
                 onFileSelect: onFileSelect,
             },
-            false,
+            { isShallow: false },
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -84,7 +87,7 @@ describe('File Name Component ', () => {
                 mimeType: 'image/jpeg',
                 onFileSelect: onFileSelect,
             },
-            false,
+            { isShallow: false },
         );
         const element = wrapper.find('FileName a');
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -93,7 +96,7 @@ describe('File Name Component ', () => {
     });
 
     it('should detect videos from mime type', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const test1 = wrapper.instance().isVideo('video/mp4');
         expect(test1).toBe(true);
         const test2 = wrapper.instance().isVideo('audio/mp3');

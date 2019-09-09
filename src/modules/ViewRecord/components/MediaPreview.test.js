@@ -1,6 +1,6 @@
 import MediaPreview from './MediaPreview';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
         mediaUrl: testProps.mediaUrl || 'https://test.com/test.jpg',
@@ -8,23 +8,23 @@ function setup(testProps, isShallow = true) {
         mimeType: testProps.mimeType || 'text/plain',
         onClose: testProps.closeAction || jest.fn(),
     };
-    return getElement(MediaPreview, props, isShallow);
+    return getElement(MediaPreview, props, args);
 }
 
 describe('Media Preview Component ', () => {
     it('should render component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should render component with image', () => {
-        const wrapper = setup({ mimeType: 'image/jpeg' }, false);
+        const wrapper = setup({ mimeType: 'image/jpeg' }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Button').length).toEqual(2);
     });
 
     it('should render component with video', () => {
-        const wrapper = setup({ mimeType: 'video/mp4' }, false);
+        const wrapper = setup({ mimeType: 'video/mp4' }, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('Button').length).toEqual(2);
     });
@@ -32,7 +32,7 @@ describe('Media Preview Component ', () => {
     it('should call open new window on touch tap', () => {
         const open = jest.fn();
         global.open = open;
-        const wrapper = setup({}, false);
+        const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper
             .find('Button')
@@ -55,7 +55,7 @@ describe('Media Preview Component ', () => {
     });
 
     it("should call the ref's method for scrolling into view", () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         const testFn = jest.fn();
 
         wrapper.instance().mediaPreviewRef = undefined;

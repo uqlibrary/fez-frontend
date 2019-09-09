@@ -13,6 +13,7 @@ const styles = theme => ({
         padding: 0,
     },
     layoutTitle: {
+        overflowWrap: 'break-word !important',
         maxWidth: 1200,
         width: '90%',
         margin: '12px auto',

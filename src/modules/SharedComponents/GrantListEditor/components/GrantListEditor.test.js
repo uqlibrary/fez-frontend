@@ -2,7 +2,7 @@ import React from 'react';
 import { GrantListEditor, styles } from './GrantListEditor';
 import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         disabled: false,
         meta: {},
@@ -14,12 +14,12 @@ function setup(testProps, isShallow = true) {
         hideType: false,
         ...testProps,
     };
-    return getElement(GrantListEditor, props, isShallow);
+    return getElement(GrantListEditor, props);
 }
 
 describe('GrantListEditor', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -79,7 +79,7 @@ describe('GrantListEditor', () => {
     });
 
     it('should update with error message', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
 
         expect(toJson(wrapper)).toMatchSnapshot();
 
@@ -139,7 +139,7 @@ describe('GrantListEditor', () => {
     });
 
     it('should add grant to the list', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         wrapper.instance().addGrant({
             grantAgencyName: 'Test',
             grantId: '123',

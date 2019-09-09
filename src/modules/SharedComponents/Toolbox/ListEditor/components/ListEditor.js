@@ -6,7 +6,10 @@ import ListRow from './ListRow';
 export default class ListsEditor extends Component {
     static propTypes = {
         formComponent: PropTypes.func.isRequired,
-        inputField: PropTypes.func, // eg connected auto complete fields
+        inputField: PropTypes.oneOfType([
+            PropTypes.object, // eg connected auto complete fields
+            PropTypes.func,
+        ]),
         className: PropTypes.string,
         searchKey: PropTypes.object.isRequired,
         maxCount: PropTypes.number,
@@ -141,8 +144,10 @@ export default class ListsEditor extends Component {
     render() {
         const componentID = (
             (this.props.locale.form && this.props.locale.form.title) ||
-            this.props.locale.form.inputFieldLabel ||
-            (this.props.locale.form.locale && this.props.locale.form.locale.inputFieldLabel) ||
+            (this.props.locale.form && this.props.locale.form.inputFieldLabel) ||
+            (this.props.locale.form &&
+                this.props.locale.form.locale &&
+                this.props.locale.form.locale.inputFieldLabel) ||
             ''
         ).replace(/\s+/g, '');
         const renderListsRows = this.state.itemList.map((item, index) => (
@@ -173,8 +178,8 @@ export default class ListsEditor extends Component {
                     inputField={this.props.inputField}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
-                    locale={{ ...(this.props.locale && this.props.locale.form && this.props.locale.form) }}
-                    {...(this.props.locale && this.props.locale.form && this.props.locale.form)}
+                    locale={{ ...(this.props.locale && this.props.locale.form ? this.props.locale.form : {}) }}
+                    {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
                     isValid={this.props.isValid}
                     disabled={
                         this.props.disabled ||

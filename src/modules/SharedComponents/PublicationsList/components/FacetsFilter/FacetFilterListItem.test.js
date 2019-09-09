@@ -1,6 +1,6 @@
 import FacetFilterListItem from './FacetFilterListItem';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         key: '0',
         facetTitle: 'Test title',
@@ -11,12 +11,12 @@ function setup(testProps, isShallow = true) {
         onToggle: jest.fn(),
         ...testProps,
     };
-    return getElement(FacetFilterListItem, props, isShallow);
+    return getElement(FacetFilterListItem, props);
 }
 
 describe('Facet filter list item ', () => {
     it('should render empty component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

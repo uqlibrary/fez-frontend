@@ -1,7 +1,7 @@
 import Immutable from 'immutable';
 import CreativeWorkForm from './CreativeWorkForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -55,7 +55,7 @@ function setup(testProps, isShallow = true) {
         },
         ...testProps,
     };
-    return getElement(CreativeWorkForm, props, isShallow);
+    return getElement(CreativeWorkForm, props);
 }
 
 describe('CreativeWorkForm validation ', () => {

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import TextField from '@material-ui/core/TextField';
@@ -7,135 +7,142 @@ import Grid from '@material-ui/core/Grid';
 import FacetFilterListItem from './FacetFilterListItem';
 import FacetFilterNestedListItem from './FacetFilterNestedListItem';
 
-export default class DateRange extends React.Component {
-    static propTypes = {
-        onChange: PropTypes.func.isRequired,
-        disabled: PropTypes.bool,
-        value: PropTypes.object,
-        defaultValue: PropTypes.object,
-        open: PropTypes.bool,
-        locale: PropTypes.object,
-        onToggle: PropTypes.func.isRequired,
-    };
-
-    static defaultProps = {
-        value: {
-            from: null,
-            to: null,
-        },
-        defaultValue: {
-            from: new Date().getFullYear() - 10,
-            to: new Date().getFullYear() + 5,
-        },
-        locale: {
-            fromFieldLabel: 'From',
-            toFieldLabel: 'To',
-            rangeSubmitButtonLabel: 'Go',
-            displayTitle: 'Date range',
-        },
-    };
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            from: this.props.value.from || this.props.defaultValue.from,
-            to: this.props.value.to || this.props.defaultValue.to,
-            isActive: !!this.props.value.from || !!this.props.value.to,
-        };
-    }
-
-    componentWillReceiveProps(nextProps) {
-        this.setState({
-            ...this.state,
-            from: nextProps.value.from || this.props.defaultValue.from,
-            to: nextProps.value.to || this.props.defaultValue.to,
-            isActive: !!nextProps.value.from || !!nextProps.value.to,
-        });
-    }
-
-    setValue = key => event => {
-        const intValue = parseInt(event.target.value, 10);
-        this.setState({
-            [key]: isNaN(intValue) || intValue < 0 || intValue > 9999 ? undefined : intValue,
-        });
-    };
-
-    setDateRange = () => {
-        this.setState({ isActive: true });
-        const isFromYearSet = !isNaN(parseInt(this.state.from, 10));
-        const isToYearSet = !isNaN(parseInt(this.state.to, 10));
-
-        this.props.onChange({ from: isFromYearSet ? this.state.from : null, to: isToYearSet ? this.state.to : null });
-    };
-
-    renderDateRangeForm = () => (
+export const DateRangeForm = ({ from, to, setFrom, setTo, setDateRange, locale, disabled }) => {
+    return (
         <div style={{ padding: 8 }}>
             <Grid container spacing={16} wrap={'nowrap'} alignItems={'flex-end'}>
                 <Grid item xs={4}>
                     <TextField
                         type="number"
-                        label={this.props.locale.fromFieldLabel}
-                        value={this.state.from}
-                        onChange={this.setValue('from')}
-                        disabled={this.props.disabled}
+                        name="from"
+                        id="from"
+                        label={locale.fromFieldLabel}
+                        defaultValue={from}
+                        onChange={setFrom}
+                        disabled={disabled}
                         fullWidth
                     />
                 </Grid>
                 <Grid item xs={4}>
                     <TextField
                         type="number"
-                        label={this.props.locale.toFieldLabel}
-                        value={this.state.to}
-                        onChange={this.setValue('to')}
-                        disabled={this.props.disabled}
+                        name="to"
+                        id="to"
+                        label={locale.toFieldLabel}
+                        defaultValue={to}
+                        onChange={setTo}
+                        disabled={disabled}
                         fullWidth
                     />
                 </Grid>
                 <Grid item>
                     <Button
-                        variant={'text'}
-                        children={this.props.locale.rangeSubmitButtonLabel}
-                        onClick={this.setDateRange}
-                        disabled={
-                            this.props.disabled ||
-                            (!isNaN(this.state.to - this.state.from) && this.state.to - this.state.from < 0)
-                        }
+                        variant="text"
+                        children={locale.rangeSubmitButtonLabel}
+                        onClick={setDateRange}
+                        disabled={disabled || (!isNaN(to - from) && to - from < 0)}
                         fullWidth
                     />
                 </Grid>
             </Grid>
         </div>
     );
+};
 
-    removeDateRange = () => {
-        if (this.state.isActive) {
-            this.setState({ isActive: false });
-            this.props.onChange({ from: null, to: null });
-        }
+DateRangeForm.propTypes = {
+    from: PropTypes.number,
+    to: PropTypes.number,
+    setFrom: PropTypes.func,
+    setTo: PropTypes.func,
+    setDateRange: PropTypes.func,
+    disabled: PropTypes.bool,
+    locale: PropTypes.object,
+};
+
+export const DateRange = ({ disabled, value, open, locale, onChange, onToggle, isActive }) => {
+    const [active, setActive] = useState(isActive);
+    const [range, setRange] = useState(value);
+
+    const handleChange = event => {
+        const { name, value } = event.target;
+        const intValue = parseInt(value, 10);
+        setRange({
+            ...range,
+            [name]: isNaN(intValue) || !intValue || intValue < 0 || intValue > 9999 ? undefined : intValue,
+        });
     };
 
-    render() {
-        const txt = this.props.locale;
-        const isActive = this.state.isActive;
-        return (
-            <FacetFilterListItem
-                key="date-range"
-                facetTitle={txt.displayTitle}
-                disabled={this.props.disabled}
-                onToggle={this.props.onToggle}
-                open={this.props.open}
-            >
-                {!isActive ? (
-                    this.renderDateRangeForm()
-                ) : (
-                    <FacetFilterNestedListItem
-                        onFacetClick={this.removeDateRange}
-                        isActive={isActive}
-                        primaryText={`${this.state.from || '*'} - ${this.state.to || '*'}`}
-                        disabled={this.props.disabled}
-                    />
-                )}
-            </FacetFilterListItem>
-        );
-    }
-}
+    const setDateRange = () => {
+        setActive(true);
+        const isFromYearSet = !isNaN(parseInt(range.from, 10));
+        const isToYearSet = !isNaN(parseInt(range.to, 10));
+
+        onChange({ from: isFromYearSet ? range.from : null, to: isToYearSet ? range.to : null });
+    };
+
+    const removeDateRange = () => {
+        setActive(false);
+        setRange({
+            from: null,
+            to: null,
+        });
+
+        onChange({ from: null, to: null });
+    };
+
+    const txt = locale;
+    return (
+        <FacetFilterListItem
+            key="date-range"
+            facetTitle={txt.displayTitle}
+            disabled={disabled}
+            onToggle={onToggle}
+            open={open}
+        >
+            {!active ? (
+                <DateRangeForm
+                    from={range.from}
+                    to={range.to}
+                    setFrom={handleChange}
+                    setTo={handleChange}
+                    setDateRange={setDateRange}
+                    locale={locale}
+                    disabled={disabled}
+                />
+            ) : (
+                <FacetFilterNestedListItem
+                    onFacetClick={removeDateRange}
+                    isActive={active}
+                    primaryText={`${range.from || '*'} - ${range.to || '*'}`}
+                    disabled={disabled}
+                />
+            )}
+        </FacetFilterListItem>
+    );
+};
+
+DateRange.propTypes = {
+    onChange: PropTypes.func.isRequired,
+    disabled: PropTypes.bool,
+    value: PropTypes.object,
+    open: PropTypes.bool,
+    isActive: PropTypes.bool,
+    locale: PropTypes.object,
+    onToggle: PropTypes.func.isRequired,
+};
+
+DateRange.defaultProps = {
+    value: {
+        from: new Date().getFullYear() - 10,
+        to: new Date().getFullYear() + 5,
+    },
+    locale: {
+        fromFieldLabel: 'From',
+        toFieldLabel: 'To',
+        rangeSubmitButtonLabel: 'Go',
+        displayTitle: 'Date range',
+    },
+    isActive: false,
+};
+
+export default React.memo(DateRange);

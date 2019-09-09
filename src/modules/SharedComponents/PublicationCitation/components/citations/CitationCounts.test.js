@@ -2,17 +2,17 @@ jest.dontMock('./CitationCounts');
 import CitationCounts from './CitationCounts';
 import { myRecordsList } from 'mock/data';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         publication: testProps.publication || {},
         ...testProps,
     };
-    return getElement(CitationCounts, props, isShallow);
+    return getElement(CitationCounts, props, args);
 }
 
 describe('CitationCounts', () => {
     it('should render component with no metrics', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

@@ -271,6 +271,13 @@ export default class FacetsFilter extends PureComponent {
             return <span className="facetsFilter empty" />;
         }
 
+        const dataRangeValueProps = this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory)
+            ? {
+                value: this.state.activeFacets.ranges[yearPublishedCategory],
+                isActive: true,
+            }
+            : {};
+
         return (
             <div className="facetsFilter">
                 <List component="nav" dense>
@@ -297,11 +304,12 @@ export default class FacetsFilter extends PureComponent {
                     })}
                     {this.props.excludeFacetsList.indexOf('Published year range') === -1 && (
                         <DateRange
-                            value={
-                                this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory)
-                                    ? this.state.activeFacets.ranges[yearPublishedCategory]
-                                    : {}
-                            }
+                            // value={
+                            //     this.state.activeFacets.ranges.hasOwnProperty(yearPublishedCategory)
+                            //         ? this.state.activeFacets.ranges[yearPublishedCategory]
+                            //         : {}
+                            // }
+                            {...dataRangeValueProps}
                             disabled={this.props.disabled}
                             onChange={this._handleYearPublishedRangeFacet(yearPublishedCategory)}
                             locale={yearPublishedFacet}

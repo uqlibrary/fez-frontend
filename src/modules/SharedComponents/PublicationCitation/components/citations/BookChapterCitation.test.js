@@ -1,17 +1,17 @@
 import BookChapterCitation from './BookChapterCitation';
 import { bookChapter } from 'mock/data/testing/records';
 
-function setup(testProps, isShallow = false) {
+function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
         publication: testProps.publication || {},
     };
-    return getElement(BookChapterCitation, props, isShallow);
+    return getElement(BookChapterCitation, props, args);
 }
 
 describe('BookChapterCitation renders ', () => {
     it('component with empty publication', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

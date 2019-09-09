@@ -3,22 +3,22 @@ jest.dontMock('./JournalArticleForm');
 import JournalArticleForm from './JournalArticleForm';
 import { NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION } from 'config/general';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
         submitting: testProps.submitting || false, // : PropTypes.bool,
     };
-    return getElement(JournalArticleForm, props, isShallow);
+    return getElement(JournalArticleForm, props);
 }
 
 describe('JournalArticleForm renders ', () => {
     it('component', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('component with 11 input fields', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(wrapper.find('Field').length).toEqual(12);
     });
 

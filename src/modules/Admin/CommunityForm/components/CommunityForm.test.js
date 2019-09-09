@@ -2,7 +2,7 @@ import CommunityForm from './CommunityForm';
 import Immutable from 'immutable';
 import { default as formLocale } from 'locale/publicationForm';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps) {
     const props = {
         array: {
             insert: jest.fn(),
@@ -41,6 +41,7 @@ function setup(testProps, isShallow = true) {
         submitFailed: false,
         valid: true,
         pure: true,
+        submitAsSideEffect: false,
         // common immutable props above
         formValues: testProps.initialValues ? Immutable.Map(testProps.initialValues) : Immutable.Map({}),
         submitting: testProps.submitting || false, // : PropTypes.bool
@@ -57,7 +58,7 @@ function setup(testProps, isShallow = true) {
         ...testProps,
     };
 
-    return getElement(CommunityForm, props, isShallow);
+    return getElement(CommunityForm, props);
 }
 
 describe('Collection form test', () => {

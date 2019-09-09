@@ -18,13 +18,13 @@ const getProps = (testProps = {}) => ({
     ...testProps,
 });
 
-function setup(testProps, isShallow = true) {
-    return getElement(FileUploadRowDefaultView, getProps(testProps), isShallow);
+function setup(testProps = {}) {
+    return getElement(FileUploadRowDefaultView, getProps(testProps));
 }
 
 describe('Component FileUploadRowDefaultView', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

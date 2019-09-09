@@ -74,6 +74,7 @@ export class AppClass extends PureComponent {
     static propTypes = {
         account: PropTypes.object,
         author: PropTypes.object,
+        authorDetails: PropTypes.object,
         accountLoading: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
         isSessionExpired: PropTypes.bool,
