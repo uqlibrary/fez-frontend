@@ -1300,9 +1300,9 @@ export const HERDC_STATUS = [
 
 export const INSTITUTIONAL_STATUS = [
     { value: null, text: 'Please choose an option' },
-    { value: 'UQ', text: 'UQ' },
-    { value: 'NonUQ', text: 'Non-UQ' },
-    { value: 'Unknown', text: 'Unknown' },
+    { value: '453223', text: 'UQ' },
+    { value: '453224', text: 'Non-UQ' },
+    { value: '453225', text: 'Unknown' },
 ];
 
 export const REFEREED_SOURCES = [
