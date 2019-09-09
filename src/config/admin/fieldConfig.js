@@ -185,6 +185,8 @@ export default {
             floatingLabelText: 'Member of collections',
             hintText: 'Begin typing to select and add collection(s)',
             name: 'additionalInformationSection.collections',
+            required: true,
+            fullwidth: true,
             validate: [validation.required],
         },
     },
