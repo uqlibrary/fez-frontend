@@ -1335,5 +1335,5 @@ export const OA_STATUS = [
     { value: '453697', text: 'Other' },
     { value: '453698', text: 'Not Open Access' },
     { value: '453700', text: 'Mediated Access' },
-    { value: '453954', text: 'PMC'  },
+    { value: '453954', text: 'PMC' },
 ];

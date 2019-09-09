@@ -117,7 +117,7 @@ export default {
                     'fez_record_search_key_herdc_status',
                     'fez_record_search_key_institutional_status',
                 ],
-                ['contentIndicators'],
+                ['contentIndicators', 'fez_record_search_key_oa_status'],
             ],
         },
     ],

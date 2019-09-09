@@ -3,7 +3,7 @@ import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField'
 import { OA_STATUS } from 'config/general';
 import Immutable from 'immutable';
 
-export default function OAStatus(fieldProps) {
+export default function OAStatusField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField

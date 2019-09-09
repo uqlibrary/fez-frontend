@@ -1,4 +1,4 @@
-import OAStatus from './OAStatus';
+import OAStatusField from './OAStatusField';
 import Immutable from 'immutable';
 
 function setup(testProps = {}) {
@@ -6,7 +6,7 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(OAStatus, props);
+    return getElement(OAStatusField, props);
 }
 
 describe('OAStatus component', () => {
