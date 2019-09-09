@@ -100,7 +100,7 @@ describe('Files Component ', () => {
         const wrapper = setup({
             publication: {
                 ...journalArticle,
-                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello<br/> there' },
             },
             hideCulturalSensitivityStatement: true,
         });
@@ -116,6 +116,17 @@ describe('Files Component ', () => {
             hideCulturalSensitivityStatement: false,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should strip HTML from a string containing HTML', () => {
+        const wrapper = setup({
+            publication: {
+                ...journalArticle,
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'hello' },
+            },
+            hideCulturalSensitivityStatement: false,
+        });
+        expect(wrapper.instance().stripHtml('hello<br/> there')).toEqual('hello there');
     });
 
     it('should not render component with no files', () => {

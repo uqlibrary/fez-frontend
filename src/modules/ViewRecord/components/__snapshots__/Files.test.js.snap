@@ -1313,7 +1313,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
     <WithStyles(Alert)
       allowDismiss={true}
       dismissAction={[MockFunction]}
-      message="Cultural Sensitivity Statement - Be advised that some files may contain content which is of a sensitive nature to some cultures or tastes."
+      message=""
       type="info"
     />
     <div

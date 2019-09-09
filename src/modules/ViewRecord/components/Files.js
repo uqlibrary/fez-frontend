@@ -4,11 +4,9 @@ import locale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { withStyles } from '@material-ui/core/styles';
-
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
-
 import moment from 'moment';
 import VolumeUp from '@material-ui/icons/VolumeUp';
 import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
@@ -301,6 +299,12 @@ export class FilesClass extends Component {
             : [];
     };
 
+    stripHtml = html => {
+        const temporalDivElement = document.createElement('div');
+        temporalDivElement.innerHTML = html;
+        return temporalDivElement.textContent || temporalDivElement.innerText || '';
+    };
+
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
@@ -320,10 +324,9 @@ export class FilesClass extends Component {
                         <Alert
                             allowDismiss
                             type={'info'}
-                            message={
-                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement ||
-                                    locale.viewRecord.sections.files.culturalSensitivityStatement
-                            }
+                            message={this.stripHtml(
+                                publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                            )}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}
                         />
                     )}
