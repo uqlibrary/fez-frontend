@@ -56,10 +56,16 @@ export default {
                 ['fez_record_search_key_series'],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
-                ['fez_record_search_key_keywords'],
-                ['subjects'],
                 ['fez_record_search_key_refereed_source'],
             ],
+        },
+        {
+            title: 'Keywords',
+            groups: [['fez_record_search_key_keywords']],
+        },
+        {
+            title: 'Subjects',
+            groups: [['subjects']],
         },
     ],
     authors: () => [
