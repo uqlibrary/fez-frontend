@@ -1,9 +1,9 @@
 import Checkbox from './Checkbox';
 import filterProps from '../../helpers/_filterProps';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = filterProps(testProps, Checkbox.propTypes);
-    return getElement(Checkbox, { ...props, ...testProps });
+    return getElement(Checkbox, { ...props, ...testProps }, args);
 }
 
 describe('Checkbox snapshots tests', () => {
@@ -16,15 +16,17 @@ describe('Checkbox snapshots tests', () => {
 
     it('should call onChange function', () => {
         const onChangeFn = jest.fn();
-        const wrapper = setup({
-            label: 'This is a test',
-            input: {
-                onChange: onChangeFn,
+        const wrapper = setup(
+            {
+                label: 'This is a test',
+                input: {
+                    onChange: onChangeFn,
+                },
             },
-        });
-        expect(toJson(wrapper)).toMatchSnapshot();
+            { isShallow: false },
+        );
         wrapper
-            .find('WithStyles(Checkbox)')
+            .find('Checkbox')
             .props()
             .onChange();
         expect(onChangeFn).toHaveBeenCalled();

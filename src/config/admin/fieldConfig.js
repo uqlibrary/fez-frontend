@@ -7,10 +7,12 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
+import { Checkbox } from 'modules/SharedComponents/Toolbox/Checkbox';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
+import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
@@ -82,6 +84,13 @@ export default {
             },
             height: 100,
             format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_retracted: {
+        component: Checkbox,
+        componentProps: {
+            name: 'adminSection.fez_record_search_key_retracted.rek_retracted',
+            label: 'Retracted',
         },
     },
     fez_record_search_key_isi_loc: {
@@ -166,18 +175,17 @@ export default {
             },
             height: 100,
             format: value => Immutable.Map(value),
-            validate: [validation.required],
         },
     },
     rek_date: {
-        component: GenericTextField,
+        component: DatePickerField,
         componentProps: {
             name: 'bibliographicSection.rek_date',
-            label: 'Publication year',
-            placeholder: 'Publication year',
+            label: 'Publication date',
+            placeholder: 'Publication date',
             required: true,
             fullWidth: true,
-            validate: [validation.required, validation.dateTimeYear],
+            validate: [validation.required],
         },
     },
     collections: {
@@ -198,6 +206,7 @@ export default {
             label: 'Work sub-type',
             required: true,
             placeholder: '',
+            validate: [validation.required],
         },
     },
     languages: {
@@ -205,7 +214,6 @@ export default {
         componentProps: {
             name: 'bibliographicSection.languages',
             label: 'Language',
-            required: true,
             placeholder: '',
             multiple: true,
         },
@@ -232,6 +240,26 @@ export default {
             validate: [validation.required],
         },
     },
+    fez_record_search_key_conference_name: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_conference_name.rek_conference_name',
+            fullWidth: true,
+            label: 'Conference name',
+            placeholder: 'Conference name',
+            required: true,
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_proceedings_title: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_proceedings_title.rek_proceedings_title',
+            fullWidth: true,
+            label: 'Proceedings title',
+            placeholder: 'Proceedings title',
+        },
+    },
     fez_record_search_key_native_script_book_title: {
         component: GenericTextField,
         componentProps: {
@@ -239,7 +267,6 @@ export default {
             fullWidth: true,
             label: 'Native script book title',
             placeholder: '',
-            validate: [validation.required],
         },
     },
     fez_record_search_key_roman_script_book_title: {
@@ -249,7 +276,6 @@ export default {
             fullWidth: true,
             label: 'Roman script book title',
             placeholder: '',
-            validate: [validation.required],
         },
     },
     fez_record_search_key_translated_book_title: {
@@ -259,7 +285,66 @@ export default {
             fullWidth: true,
             label: 'Translated book title',
             placeholder: '',
-            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_native_script_conference_name: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name',
+            fullWidth: true,
+            label: 'Native script conference name',
+            placeholder: 'Native script conference name',
+        },
+    },
+    fez_record_search_key_roman_script_conference_name: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name',
+            fullWidth: true,
+            label: 'Roman script conference name',
+            placeholder: 'Roman script conference name',
+        },
+    },
+    fez_record_search_key_translated_conference_name: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name',
+            fullWidth: true,
+            label: 'Translated conference name',
+            placeholder: 'Translated conference name',
+        },
+    },
+    fez_record_search_key_native_script_proceedings_title: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title',
+            fullWidth: true,
+            label: 'Native script proceedings title',
+            placeholder: 'Native script proceedings title',
+        },
+    },
+    fez_record_search_key_roman_script_proceedings_title: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title',
+            fullWidth: true,
+            label: 'Roman script proceedings title',
+            placeholder: 'Roman script proceedings title',
+        },
+    },
+    fez_record_search_key_translated_proceedings_title: {
+        component: GenericTextField,
+        componentProps: {
+            name:
+                'bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title',
+            fullWidth: true,
+            label: 'Translated proceedings title',
+            placeholder: 'Translated proceedings title',
         },
     },
     fez_record_search_key_doi: {
@@ -305,8 +390,6 @@ export default {
             fullWidth: true,
             label: 'Issue',
             placeholder: '',
-            required: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_article_number: {
@@ -345,6 +428,18 @@ export default {
             placeholder: '',
             required: true,
             validate: [validation.required],
+        },
+    },
+    fez_record_search_key_keywords: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_keywords',
+            maxInputLength: 111,
+            searchKey: {
+                value: 'rek_keywords',
+                order: 'rek_keywords_order',
+            },
+            locale: locale.components.keywordsForm.field,
         },
     },
     fez_record_search_key_issn: {
@@ -443,9 +538,7 @@ export default {
             name: 'bibliographicSection.languageOfJournalName',
             label: 'Language of journal name',
             placeholder: '',
-            required: true,
             multiple: true,
-            validate: [validation.required],
         },
     },
     languageOfBookTitle: {
@@ -455,6 +548,37 @@ export default {
             label: 'Language of book title',
             placeholder: '',
             multiple: true,
+        },
+    },
+    languageOfConferenceName: {
+        component: LanguageField,
+        componentProps: {
+            name: 'bibliographicSection.languageOfConferenceName',
+            label: 'Language of conference name',
+            placeholder: 'Language of conference name',
+            multiple: true,
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_conference_location: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_conference_location.rek_conference_location',
+            label: 'Conference location',
+            placeholder: 'Conference location',
+            required: true,
+            fullWidth: true,
+            validate: [validation.required],
+        },
+    },
+    fez_record_search_key_conference_dates: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_conference_dates.rek_conference_dates',
+            label: 'Conference dates',
+            placeholder: 'Conference dates',
+            required: true,
+            fullWidth: true,
             validate: [validation.required],
         },
     },
@@ -492,9 +616,7 @@ export default {
             name: 'bibliographicSection.languageOfTitle',
             label: 'Language of title',
             placeholder: '',
-            required: true,
             multiple: true,
-            validate: [validation.required],
         },
     },
     fez_record_search_key_native_script_title: {
@@ -700,19 +822,6 @@ export default {
                 order: 'rek_location_order',
             },
             locale: locale.components.locationForm.field,
-        },
-    },
-    fez_record_search_key_keywords: {
-        component: ListEditorField,
-        componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_keywords',
-            required: true,
-            maxInputLength: 111,
-            searchKey: {
-                value: 'rek_keywords',
-                order: 'rek_keywords_order',
-            },
-            locale: locale.components.keywordsForm.field,
         },
     },
     fez_record_search_key_identifier: {

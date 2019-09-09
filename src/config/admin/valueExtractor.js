@@ -16,9 +16,7 @@ export default {
         }),
     },
     rek_date: {
-        getValue: record => {
-            return record.rek_date && record.rek_date && moment(record.rek_date).format('YYYY');
-        },
+        getValue: record => record.rek_date,
     },
     rek_subtype: {
         getValue: record => record.rek_subtype,
@@ -31,6 +29,18 @@ export default {
     },
     fez_record_search_key_book_title: {
         getValue: record => ({ ...record.fez_record_search_key_book_title }),
+    },
+    fez_record_search_key_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_name }),
+    },
+    fez_record_search_key_conference_location: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_location }),
+    },
+    fez_record_search_key_conference_dates: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_dates }),
+    },
+    fez_record_search_key_proceedings_title: {
+        getValue: record => ({ ...record.fez_record_search_key_proceedings_title }),
     },
     fez_record_search_key_place_of_publication: {
         getValue: record => ({
@@ -130,6 +140,27 @@ export default {
     },
     fez_record_search_key_translated_book_title: {
         getValue: record => ({ ...record.fez_record_search_key_translated_book_title }),
+    },
+    languageOfConferenceName: {
+        getValue: record =>
+            record.fez_record_search_key_language_of_conference_name.map(
+                language => language.rek_language_of_conference_name,
+            ),
+    },
+    fez_record_search_key_native_script_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_native_script_conference_name }),
+    },
+    fez_record_search_key_roman_script_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_conference_name }),
+    },
+    fez_record_search_key_translated_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_translated_conference_name }),
+    },
+    languageOfProceedingsTitle: {
+        getValue: record =>
+            record.fez_record_search_key_language_of_proceedings_title.map(
+                language => language.rek_language_of_proceedings_title,
+            ),
     },
     languageOfTitle: {
         getValue: record =>

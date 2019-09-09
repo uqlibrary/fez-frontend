@@ -1,55 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Checkbox snapshots tests renders Checkbox component 1`] = `
-<div
-  className={Object {}}
-  style={
-    Object {
-      "position": "relative",
-      "width": "100%",
-    }
+<WithStyles(WithFormControlContext(FormControlLabel))
+  control={
+    <WithStyles(Checkbox)
+      error={false}
+      label="This is a test checkbox component"
+      onChange={[Function]}
+    />
   }
->
-  <WithStyles(Checkbox)
-    error={false}
-    label="This is a test checkbox component"
-    onChange={[Function]}
-  />
-</div>
-`;
-
-exports[`Checkbox snapshots tests should call onChange function 1`] = `
-<div
-  className={Object {}}
-  style={
-    Object {
-      "position": "relative",
-      "width": "100%",
-    }
-  }
->
-  <WithStyles(Checkbox)
-    error={false}
-    label="This is a test"
-    onChange={[Function]}
-  />
-</div>
+  label="This is a test checkbox component"
+/>
 `;
 
 exports[`Checkbox snapshots tests should render correct class for error 1`] = `
-<div
-  className="error-checkbox"
-  style={
-    Object {
-      "position": "relative",
-      "width": "100%",
-    }
+<WithStyles(WithFormControlContext(FormControlLabel))
+  control={
+    <WithStyles(Checkbox)
+      error={false}
+      label="This is a test"
+      onChange={[Function]}
+    />
   }
->
-  <WithStyles(Checkbox)
-    error={false}
-    label="This is a test"
-    onChange={[Function]}
-  />
-</div>
+  label="This is a test"
+/>
 `;
