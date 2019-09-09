@@ -6,6 +6,7 @@ export {
     adminEditPatentList,
     adminEditSeminarPaperList,
     adminEditVideoList,
+    adminEditWorkingPaperList,
     collections,
     communityRecord,
     collectionRecord,
