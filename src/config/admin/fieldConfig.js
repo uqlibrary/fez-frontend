@@ -535,10 +535,7 @@ export default {
         componentProps: {
             name: 'authorsSection.authors',
             showIdentifierLookup: true,
-            showContributorAssignment: true,
             locale: formLocale.journalArticle.authors.field,
-            validate: [validation.authorRequired],
-            editMode: true,
             canEdit: true,
         },
     },
