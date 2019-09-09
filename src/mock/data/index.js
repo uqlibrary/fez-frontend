@@ -5,6 +5,7 @@ export {
     adminEditConferencePaperList,
     adminEditPatentList,
     adminEditSeminarPaperList,
+    adminEditThesisList,
     adminEditVideoList,
     adminEditWorkingPaperList,
     collections,
