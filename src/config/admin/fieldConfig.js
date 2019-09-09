@@ -655,9 +655,9 @@ export default {
             label: 'Copyright Agreement',
             placeholder: '',
             copyrightAgreement:
-    'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate' +
-    ' the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure' +
-    ' awaiting redesign of the deposit process].',
+                'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate' +
+                ' the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure' +
+                ' awaiting redesign of the deposit process].',
         },
     },
     fez_record_search_key_date_available: {
@@ -693,7 +693,7 @@ export default {
     fez_record_search_key_location: {
         component: ListEditorField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_location',
+            name: 'identifiersSection.fez_record_search_key_location',
             title: 'Locations',
             searchKey: {
                 value: 'rek_location',
@@ -718,7 +718,7 @@ export default {
     fez_record_search_key_identifier: {
         component: ListEditorField,
         componentProps: {
-            name: 'bibliographicSection.fez_record_search_key_identifier',
+            name: 'identifiersSection.fez_record_search_key_identifier',
             title: 'Identifiers',
             searchKey: {
                 value: 'rek_identifier',
