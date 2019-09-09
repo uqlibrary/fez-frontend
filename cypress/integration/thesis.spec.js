@@ -137,6 +137,7 @@ context('Thesis', () => {
         // Field of Research
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('li[id="Fieldofresearch-item-0"]')
             .click();
         cy.get('.alert-text')
@@ -157,6 +158,7 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -180,6 +182,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('li[id="Fieldofresearch-item-0"]')
             .click();
         cy.get('.alert-text')
