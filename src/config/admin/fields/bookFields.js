@@ -69,6 +69,10 @@ export default {
             ],
         },
         {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
+        {
             title: 'Keywords',
             groups: [['fez_record_search_key_keywords']],
         },
