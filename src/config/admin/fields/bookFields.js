@@ -7,7 +7,6 @@ export default {
             groups: [
                 ['internalNotes'],
                 ['rek_herdc_notes'],
-                // ['fez_record_search_key_retracted']
             ],
         },
     ],
