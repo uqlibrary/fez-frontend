@@ -816,13 +816,13 @@ export default {
                     title: 'Admin',
                 },
                 grantInformation: {
-                    title: 'Grant Information',
+                    title: 'Grant information',
                 },
                 authorDetails: {
                     title: 'Author details',
                 },
                 additionalInformation: {
-                    title: 'Additional Information',
+                    title: 'Additional information',
                 },
                 ntro: {
                     title: 'NTRO',
