@@ -788,7 +788,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_date_available',
             label: 'Year available',
             fullWidth: true,
-            validation: [validation.dateTimeYear],
+            validate: [validation.dateTimeYear],
         },
     },
     fez_record_search_key_date_recorded: {
@@ -797,7 +797,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_date_recorded',
             label: 'Year recorded',
             fullWidth: true,
-            validation: [validation.dateTimeYear],
+            validate: [validation.dateTimeYear],
         },
     },
 
