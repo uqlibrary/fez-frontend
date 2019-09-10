@@ -18,7 +18,7 @@ export default {
             ],
         },
         {
-            title: 'Manage Links',
+            title: 'Manage links',
             groups: [['links']],
         },
     ],

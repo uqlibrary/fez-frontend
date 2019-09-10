@@ -82,7 +82,7 @@ export default {
     ],
     additionalInformation: () => [
         {
-            title: 'Member of Collections',
+            title: 'Member of collections',
             groups: [['collections']],
         },
         {
