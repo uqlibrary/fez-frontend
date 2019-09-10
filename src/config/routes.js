@@ -3,6 +3,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
+import { createHash } from 'crypto';
 const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
@@ -61,7 +62,17 @@ export const pathConfig = {
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
-        url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
+        url: (pid, fileName, checksum = '') => {
+            let version = '';
+            if (checksum) {
+                const versionHash = createHash('md5')
+                    .update(`${fileName}${checksum}`)
+                    .digest('hex');
+                version = `?version=${versionHash}`;
+            }
+
+            return `${fullPath}/view/${pid}/${fileName}${version}`;
+        },
         // url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
