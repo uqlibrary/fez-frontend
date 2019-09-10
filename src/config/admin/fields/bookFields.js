@@ -4,10 +4,7 @@ export default {
     ...commonFields,
     admin: () => [
         {
-            groups: [
-                ['internalNotes'],
-                ['rek_herdc_notes'],
-            ],
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     identifiers: () => [
@@ -62,14 +59,9 @@ export default {
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['rek_date'],
-                ['fez_record_search_key_refereed_source', 'fez_record_search_key_date_available'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
             ],
-        },
-        {
-            title: 'Related publications', // Succeeds
-            groups: [['fez_record_search_key_isderivationof']],
         },
         {
             title: 'Keywords',
@@ -78,6 +70,14 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
+        },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
+        {
+            title: 'Refereed source',
+            groups: [['fez_record_search_key_refereed_source']],
         },
     ],
     authors: () => [
