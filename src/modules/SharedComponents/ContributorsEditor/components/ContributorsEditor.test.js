@@ -36,6 +36,11 @@ describe('ContributorsEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders full component for admin user', () => {
+        const wrapper = setup({ showContributorAssignment: false, canEdit: true }, { isShallow: false });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders component in edit mode', () => {
         const wrapper = setup({
             editMode: true,
@@ -110,25 +115,6 @@ describe('ContributorsEditor', () => {
         });
         expect(wrapper.state().contributors.length).toEqual(1);
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
-    });
-
-    it('updates a contributor', () => {
-        const wrapper = setup();
-        wrapper.setState({
-            contributors: [
-                {
-                    test: 'value1',
-                },
-                {
-                    test: 'value2',
-                },
-                {
-                    test: 'value3',
-                },
-            ],
-        });
-        wrapper.instance().updateContributor({ test: 'value4' }, 1);
-        expect(wrapper.state().contributors[1].test).toBe('value4');
     });
 
     it('assigns a contributor to current author', async() => {
@@ -258,7 +244,7 @@ describe('ContributorsEditor', () => {
             canEdit: true,
         });
         const testFn = jest.fn();
-        wrapper.instance().selectContributor = testFn;
+        wrapper.instance().assignContributor = testFn;
         wrapper.setState({
             contributors: [
                 {
@@ -274,7 +260,10 @@ describe('ContributorsEditor', () => {
             contributors: [{ nameAsPublished: 1 }],
         });
         const testFn = jest.fn();
-        expect(wrapper.instance().renderContributorForm(testFn, 0)).toMatchSnapshot();
+
+        wrapper.instance().addContributor = testFn;
+
+        expect(wrapper.instance().renderContributorForm()).toMatchSnapshot();
 
         wrapper.setProps({
             editMode: true,
@@ -292,14 +281,14 @@ describe('ContributorsEditor', () => {
                 },
             },
         });
-        const contributorForm = wrapper.instance().renderContributorForm(testFn, 0);
+        const contributorForm = wrapper.instance().renderContributorForm();
         expect(contributorForm).toMatchSnapshot();
 
         const testObj = {
             nameAsPublished: 2,
         };
         contributorForm.props.onSubmit(testObj);
-        expect(testFn).toBeCalledWith(testObj, 0);
+        expect(testFn).toBeCalledWith(testObj);
     });
 
     // Tests for infinite scroll appear or not

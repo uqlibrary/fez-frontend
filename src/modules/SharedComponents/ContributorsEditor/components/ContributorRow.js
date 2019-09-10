@@ -96,6 +96,7 @@ export class ContributorRow extends PureComponent {
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
+            editHint: 'Edit this record',
             selectHint: 'Select this record ([name]) to assign it to you',
             lockedTooltip: 'You are not able to edit this row',
             deleteRecordConfirmation: {
@@ -104,7 +105,8 @@ export class ContributorRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
             },
-            deleteButtonId: index => `delete-record-${index}`,
+            deleteButtonId: 'delete-record',
+            editButtonId: 'edit-record',
         },
         hideReorder: false,
         hideDelete: false,
@@ -237,9 +239,11 @@ export class ContributorRow extends PureComponent {
             moveUpHint,
             moveDownHint,
             deleteHint,
+            editHint,
             selectHint,
             lockedTooltip,
             deleteButtonId,
+            editButtonId,
         } = this.props.locale;
 
         const {
@@ -344,17 +348,17 @@ export class ContributorRow extends PureComponent {
                         )}
                         {canEdit && (
                             <Tooltip
-                                title={deleteHint}
-                                disableFocusListener={disabled || hideDelete}
-                                disableHoverListener={disabled || hideDelete}
-                                disableTouchListener={disabled || hideDelete}
+                                title={editHint}
+                                disableFocusListener={disabled}
+                                disableHoverListener={disabled}
+                                disableTouchListener={disabled}
                             >
                                 <span>
                                     <IconButton
-                                        aria-label={deleteHint}
+                                        aria-label={editHint}
                                         onClick={this._handleEdit}
                                         disabled={disabled}
-                                        id={deleteButtonId(index)}
+                                        id={`${editButtonId}-${index}`}
                                     >
                                         <Edit classes={{ root: `${selectedClass}` }} />
                                     </IconButton>
@@ -372,7 +376,7 @@ export class ContributorRow extends PureComponent {
                                     aria-label={deleteHint}
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
-                                    id={deleteButtonId(index)}
+                                    id={`${deleteButtonId}-${index}`}
                                 >
                                     <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>

@@ -2460,7 +2460,9 @@ exports[`Component ContributorRow should render with missing aria label if selec
         <span>
           <WithStyles(IconButton)
             disabled={false}
-            id="delete-record-0"
+            id="function deleteButtonId() {
+          return 'delete-record-0';
+        }-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)
