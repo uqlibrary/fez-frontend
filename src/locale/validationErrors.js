@@ -51,6 +51,7 @@ export default {
     },
     validationErrorsSummary: {
         // appears in footer error block
+        rek_display_type: 'Work type is required',
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',

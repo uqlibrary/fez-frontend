@@ -102,6 +102,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
+        add: '/admin/add/',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -357,6 +358,13 @@ export const getRoutesConfig = ({
             : []),
         ...(account && account.canMasquerade
             ? [
+                {
+                    path: pathConfig.admin.add,
+                    component: components.AdminAdd,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.adminAdd.title,
+                },
                 {
                     path: pathConfig.admin.edit(pid),
                     component: components.Admin,
