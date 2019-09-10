@@ -199,6 +199,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
+            ...mockData.adminEditAudioList.data,
             ...mockData.adminEditBookChapterList.data,
             ...mockData.adminEditConferencePaperList.data,
             ...mockData.adminEditPatentList.data,

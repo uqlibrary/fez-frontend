@@ -1,5 +1,6 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
+    adminEditAudioList,
     adminEditBookChapterList,
     adminEditConferencePaperList,
     adminEditPatentList,
