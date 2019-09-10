@@ -61,7 +61,6 @@ export default {
                 ],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
-                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
@@ -75,6 +74,10 @@ export default {
         {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
+        },
+        {
+            title: 'Refereed source',
+            groups: [['fez_record_search_key_refereed_source']],
         },
     ],
     authors: () => [
