@@ -84,7 +84,6 @@ export class ContributorRow extends PureComponent {
         onEdit: PropTypes.func,
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
-        showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
         required: PropTypes.bool,
     };
@@ -259,7 +258,6 @@ export class ContributorRow extends PureComponent {
             index,
         } = this.props;
 
-        const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
         const ariaLabel =
@@ -271,7 +269,7 @@ export class ContributorRow extends PureComponent {
         const rowIcon = () => {
             if (contributor.selected) {
                 return <Person />;
-            } else if (this.props.disabled || !enableSelect) {
+            } else if (this.props.disabled || contributor.disabled) {
                 return lockedTooltip ? (
                     <Tooltip title={lockedTooltip}>
                         <Lock />
@@ -295,13 +293,13 @@ export class ContributorRow extends PureComponent {
                     divider
                     classes={{
                         root: `${classes.listItem || ''} ${(required && classes.highlighted) ||
-                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!enableSelect &&
+                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!contributor.disabled &&
                             classes.disabledListItem) ||
                             ''}`.trim(),
                     }}
-                    onClick={enableSelect ? this._onSelect : () => {}}
-                    tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
-                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => {}}
+                    onClick={this._onSelect}
+                    tabIndex={contributor.disabled || this.props.disabled ? -1 : 0}
+                    onKeyDown={contributor.disabled ? this._onSelectKeyboard : () => {}}
                     aria-label={ariaLabel}
                     id={`contributor-editor-row-${this.props.index}`}
                 >
@@ -349,15 +347,15 @@ export class ContributorRow extends PureComponent {
                         {canEdit && (
                             <Tooltip
                                 title={editHint}
-                                disableFocusListener={disabled}
-                                disableHoverListener={disabled}
-                                disableTouchListener={disabled}
+                                disableFocusListener={disabled || !!contributor.disabled}
+                                disableHoverListener={disabled || !!contributor.disabled}
+                                disableTouchListener={disabled || !!contributor.disabled}
                             >
                                 <span>
                                     <IconButton
                                         aria-label={editHint}
                                         onClick={this._handleEdit}
-                                        disabled={disabled}
+                                        disabled={disabled || !!contributor.disabled}
                                         id={`${editButtonId}-${index}`}
                                     >
                                         <Edit classes={{ root: `${selectedClass}` }} />

@@ -95,7 +95,10 @@ export class ContributorsEditor extends PureComponent {
                     ...this.state.contributors.slice(0, index),
                     {
                         ...contributor,
-                        disabled: !!parseInt(contributor.uqIdentifier, 10),
+                        disabled:
+                            this.props.editMode &&
+                            !isContributorACurrentAuthor &&
+                            !!parseInt(contributor.uqIdentifier, 10),
                         selected: isContributorACurrentAuthor,
                         authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
                         required: false,
@@ -174,9 +177,9 @@ export class ContributorsEditor extends PureComponent {
     };
 
     renderContributorRows = () => {
-        const { canEdit, disabled, hideDelete, hideReorder, showContributorAssignment, locale } = this.props;
+        const { canEdit, disabled, hideDelete, hideReorder, locale } = this.props;
 
-        const { contributors, isCurrentAuthorSelected } = this.state;
+        const { contributors } = this.state;
 
         return contributors.map((contributor, index) => (
             <ContributorRow
@@ -192,14 +195,11 @@ export class ContributorsEditor extends PureComponent {
                 index={index}
                 className={'ContributorRow'}
                 key={`ContributorRow_${index}`}
-                onSelect={this.assignContributor}
+                onSelect={!canEdit ? this.assignContributor : null}
                 onEdit={this.selectContributor}
                 onDelete={this.deleteContributor}
                 onMoveDown={this.moveDownContributor}
                 onMoveUp={this.moveUpContributor}
-                showContributorAssignment={
-                    showContributorAssignment && !isCurrentAuthorSelected && contributor.disabled !== true
-                }
                 required={contributor.required}
             />
         ));

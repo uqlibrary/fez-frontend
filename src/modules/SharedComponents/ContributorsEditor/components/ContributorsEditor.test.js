@@ -227,32 +227,40 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors[1].displayName).toEqual(3);
     });
 
-    it('passes showContributorAssignment prop to ContributorRow as expected', () => {
-        const wrapper = setup({
-            showContributorAssignment: true,
-        });
-        wrapper.setState({
-            isCurrentAuthorSelected: false,
-            contributors: [{ nameAsPublished: 1 }],
-        });
-        expect(wrapper.instance().renderContributorRows()[0].props.showContributorAssignment).toBe(true);
-    });
-
     it('returns array of contributor rows in edit mode with selectContributor select handler', () => {
         const wrapper = setup({
             editMode: true,
             canEdit: true,
         });
         const testFn = jest.fn();
-        wrapper.instance().assignContributor = testFn;
+        wrapper.instance().selectContributor = testFn;
         wrapper.setState({
             contributors: [
                 {
+                    disabled: false,
                     nameAsPublished: 1,
                 },
             ],
         });
-        expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(testFn);
+        expect(wrapper.instance().renderContributorRows()[0].props.onEdit).toBe(testFn);
+    });
+
+    it('should not be able to select contributor in edit mode', () => {
+        const wrapper = setup({
+            editMode: true,
+            canEdit: true,
+        });
+        const testFn = jest.fn();
+        wrapper.instance().selectContributor = testFn;
+        wrapper.setState({
+            contributors: [
+                {
+                    disabled: false,
+                    nameAsPublished: 1,
+                },
+            ],
+        });
+        expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(null);
     });
 
     it('returns contributor form with expected props', () => {

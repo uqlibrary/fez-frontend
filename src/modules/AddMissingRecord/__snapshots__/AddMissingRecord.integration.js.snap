@@ -3233,7 +3233,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         class=\\"MuiGrid-container-793 MuiGrid-spacing-xs-8-815\\"
 -                         style=\\"margin-top: 8px;\\"
 +                                 aria-label=\\"Select this editor (test) to assign it as you\\"
-+                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
++                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216   WithTheme-WithWidth-ContributorRow---disabledListItem-1217 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
 +                                 id=\\"contributor-editor-row-0\\"
 +                                 tabindex=\\"0\\"
                                 >
@@ -3384,8 +3384,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                               >
                                 <div
                                   aria-label=\\"Select this editor (test) to assign it as you\\"
--                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
-+                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216  WithTheme-WithWidth-ContributorRow---rowSelected-1219 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
+-                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216   WithTheme-WithWidth-ContributorRow---disabledListItem-1217 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
++                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216  WithTheme-WithWidth-ContributorRow---rowSelected-1219 WithTheme-WithWidth-ContributorRow---disabledListItem-1217 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
                                   id=\\"contributor-editor-row-0\\"
                                   tabindex=\\"0\\"
                                 >
@@ -3881,7 +3881,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                             >
                         <div
 -                                 aria-label=\\"Select this editor (test) to assign it as you\\"
--                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216  WithTheme-WithWidth-ContributorRow---rowSelected-1219 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
+-                                 class=\\"MuiListItem-root-1149 WithTheme-WithWidth-ContributorRow---listItem-1216  WithTheme-WithWidth-ContributorRow---rowSelected-1219 WithTheme-WithWidth-ContributorRow---disabledListItem-1217 MuiListItem-default-1152 MuiListItem-gutters-1157 MuiListItem-divider-1156 MuiListItem-secondaryAction-1159\\"
 -                                 id=\\"contributor-editor-row-0\\"
 -                                 tabindex=\\"0\\"
 +                         class=\\"MuiGrid-container-793 MuiGrid-spacing-xs-8-815\\"

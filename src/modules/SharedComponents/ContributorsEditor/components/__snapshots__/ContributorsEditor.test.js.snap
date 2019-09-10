@@ -53,8 +53,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={true}
@@ -75,8 +74,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={true}
@@ -97,8 +95,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -159,8 +156,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={true}
@@ -181,8 +177,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={true}
@@ -203,8 +198,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
       </WithStyles(List)>
       <div
@@ -330,7 +324,6 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -351,7 +344,6 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -372,7 +364,6 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -458,7 +449,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -479,7 +469,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -500,7 +489,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -521,7 +509,6 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -581,8 +568,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
           onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
-          onSelect={[Function]}
-          showContributorAssignment={false}
+          onSelect={null}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -5672,7 +5658,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -5693,7 +5678,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>
@@ -5791,7 +5775,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
         <WithStyles(WithTheme(WithWidth(ContributorRow)))
           canEdit={false}
@@ -5812,7 +5795,6 @@ exports[`ContributorsEditor should get contributors from props and input value s
           onMoveDown={[Function]}
           onMoveUp={[Function]}
           onSelect={[Function]}
-          showContributorAssignment={false}
         />
       </WithStyles(List)>
     </WithStyles(Grid)>

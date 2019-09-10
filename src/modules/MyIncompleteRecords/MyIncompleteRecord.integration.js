@@ -119,6 +119,7 @@ describe('MyIncompleteRecord form', () => {
         expect(getByTestId('delete-author-1')).toHaveAttribute('disabled');
         expect(getByTestId('delete-author-2')).toHaveAttribute('disabled');
         expect(getByTestId('delete-author-3')).toHaveAttribute('disabled');
+        expect(getByTestId('edit-author-0')).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('edit-author-0'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
