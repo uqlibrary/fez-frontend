@@ -862,10 +862,9 @@ export default {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
             fullWidth: true,
-            multiline: true,
             label: 'Acknowledgements',
-            placeholder: '',
             multiline: true,
+            placeholder: '',
         },
     },
     fez_record_search_key_length: {
@@ -899,6 +898,14 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_alternate_genre',
             label: 'Alternate genre',
             multiple: true,
+        },
+    },
+    rek_genre: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.rek_genre',
+            fullWidth: true,
+            label: 'Type',
         },
     },
 };
