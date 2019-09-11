@@ -32,17 +32,7 @@ export default {
     bibliographic: (isLote = false) => [
         {
             title: 'Book title',
-            groups: [
-                ['rek_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfTitle'],
-                        ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_roman_script_title'],
-                        ['fez_record_search_key_translated_title'],
-                    ]
-                    : []),
-            ],
+            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
             title: 'Language of work',
