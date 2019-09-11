@@ -10,11 +10,16 @@ exports[`BibliographicSection component should render default view 1`] = `
             Array [
               "rek_title",
             ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
             Array [
               "languages",
             ],
           ],
-          "title": "Title",
+          "title": "Language of work",
         },
         Object {
           "groups": Array [
@@ -30,18 +35,18 @@ exports[`BibliographicSection component should render default view 1`] = `
         Object {
           "groups": Array [
             Array [
-              "fez_record_search_key_issn",
-            ],
-          ],
-          "title": "ISSN",
-        },
-        Object {
-          "groups": Array [
-            Array [
               "fez_record_search_key_isbn",
             ],
           ],
           "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
         },
         Object {
           "groups": Array [
@@ -61,15 +66,13 @@ exports[`BibliographicSection component should render default view 1`] = `
             ],
             Array [
               "rek_date",
-            ],
-            Array [
               "fez_record_search_key_date_available",
             ],
             Array [
-              "fez_record_search_key_refereed_source",
+              "rek_description",
             ],
             Array [
-              "rek_description",
+              "fez_record_search_key_refereed_source",
             ],
           ],
           "title": "Bibliographic",
@@ -80,7 +83,7 @@ exports[`BibliographicSection component should render default view 1`] = `
               "fez_record_search_key_keywords",
             ],
           ],
-          "title": "Keywords",
+          "title": "Keyword(s)",
         },
         Object {
           "groups": Array [
@@ -115,11 +118,16 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             Array [
               "rek_title",
             ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
             Array [
               "languages",
             ],
           ],
-          "title": "Title",
+          "title": "Language of work",
         },
         Object {
           "groups": Array [
@@ -135,18 +143,18 @@ exports[`BibliographicSection component should render disabled view 1`] = `
         Object {
           "groups": Array [
             Array [
-              "fez_record_search_key_issn",
-            ],
-          ],
-          "title": "ISSN",
-        },
-        Object {
-          "groups": Array [
-            Array [
               "fez_record_search_key_isbn",
             ],
           ],
           "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
         },
         Object {
           "groups": Array [
@@ -166,15 +174,13 @@ exports[`BibliographicSection component should render disabled view 1`] = `
             ],
             Array [
               "rek_date",
-            ],
-            Array [
               "fez_record_search_key_date_available",
             ],
             Array [
-              "fez_record_search_key_refereed_source",
+              "rek_description",
             ],
             Array [
-              "rek_description",
+              "fez_record_search_key_refereed_source",
             ],
           ],
           "title": "Bibliographic",
@@ -185,7 +191,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
               "fez_record_search_key_keywords",
             ],
           ],
-          "title": "Keywords",
+          "title": "Keyword(s)",
         },
         Object {
           "groups": Array [
