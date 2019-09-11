@@ -79,7 +79,7 @@ export default {
         },
         {
             title: 'Contributors',
-            groups: [['contributors']],
+            groups: [['editors']],
         },
     ],
     additionalInformation: () => [
