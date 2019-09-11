@@ -865,7 +865,6 @@ export default {
             label: 'Acknowledgements',
             multiline: true,
             placeholder: '',
-            multiline: true,
         },
     },
     fez_record_search_key_length: {
