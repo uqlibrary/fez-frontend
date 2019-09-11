@@ -29,35 +29,22 @@ const mapStateToProps = state => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
 
     const displayType = selector(state, 'rek_display_type');
-    const publicationSubtype = selector(state, 'rek_subtype');
 
     const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms })[displayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
     const subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
+    const publicationSubtype = hasSubtypes ? selector(state, 'rek_subtype') : null;
 
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
-
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
         hasDefaultDocTypeSubType = true;
         docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
     }
-    console.log(
-        'SUBTYPES',
-        (!!publicationSubtype &&
-            !!subtypes &&
-            general.NTRO_SUBTYPES.includes(publicationSubtype) &&
-            subtypes.filter(type => general.NTRO_SUBTYPES.includes(type))) ||
-            subtypes ||
-            null,
-    );
     return {
         formValues: formValues,
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
-        initialValues: {
-            rek_pid: 'UQ:12345',
-        },
         hasSubtypes: hasSubtypes,
         hasDefaultDocTypeSubType: hasDefaultDocTypeSubType,
         docTypeSubTypeCombo: docTypeSubTypeCombo,

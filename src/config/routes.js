@@ -102,7 +102,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
-        add: '/admin/add/',
+        add: '/admin/add/step1',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -144,6 +144,7 @@ const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/thirdPartyTools',
+    '/admin/add/step1',
     '/view',
     '/author-identifiers/orcid/link',
     '/author-identifiers/google-scholar/link',
@@ -532,6 +533,10 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,
+                },
+                {
+                    linkTo: pathConfig.admin.add,
+                    ...locale.menu.adminAdd,
                 },
                 {
                     // maybe this should be in some admin bit? tbd
