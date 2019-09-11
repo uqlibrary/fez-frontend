@@ -33,6 +33,7 @@ exports[`AdditionalInformationSection component should render default view 1`] =
               "additionalNotes",
             ],
           ],
+          "title": "Additional information",
         },
       ],
     }
@@ -74,6 +75,7 @@ exports[`AdditionalInformationSection component should render disabled view 1`] 
               "additionalNotes",
             ],
           ],
+          "title": "Additional information",
         },
       ],
     }

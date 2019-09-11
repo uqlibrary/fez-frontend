@@ -24,7 +24,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Conference title',
+            title: 'Title of paper',
             groups: [
                 ['rek_title'],
                 ...(isLote
@@ -57,7 +57,7 @@ export default {
         },
         {
             title: 'Conference details',
-            groups: [['fez_record_search_key_conference_location'], ['fez_record_search_key_conference_dates']],
+            groups: [['fez_record_search_key_conference_location', 'fez_record_search_key_conference_dates']],
         },
         {
             title: 'Proceedings title',
@@ -88,35 +88,29 @@ export default {
             ],
         },
         {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
-        },
-        {
             title: 'ISBN',
             groups: [['fez_record_search_key_isbn']],
         },
         {
-            title: 'Article',
-            groups: [['fez_record_search_key_article_number'], ['fez_record_search_key_series']],
+            title: 'ISSN',
+            groups: [['fez_record_search_key_issn']],
         },
         {
-            title: 'Publication',
+            title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                 ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
+                ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['fez_record_search_key_chapter_number'],
-                ['rek_date'],
-                ['fez_record_search_key_date_available'],
+                ['fez_record_search_key_article_number', 'fez_record_search_key_chapter_number'],
+                ['rek_date', 'fez_record_search_key_date_available'],
+                ['rek_description'],
+                ['fez_record_search_key_refereed_source'],
             ],
-        },
-        {
-            title: 'Abstract/Description',
-            groups: [['rek_description']],
         },
         {
             title: 'Keyword(s)',
@@ -130,29 +124,29 @@ export default {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
-        {
-            title: 'Refereed source',
-            groups: [['fez_record_search_key_refereed_source']],
-        },
     ],
     authors: () => [
         {
             title: 'Authors',
             groups: [['authors']],
         },
+        {
+            title: 'Editors',
+            groups: [['editors']],
+        },
     ],
     additionalInformation: () => [
         {
+            title: 'Member of collections',
+            groups: [['collections']],
+        },
+        {
             title: 'Additional information',
             groups: [
-                ['collections'],
                 ['rek_subtype'],
-                [
-                    'fez_record_search_key_herdc_code',
-                    'fez_record_search_key_herdc_status',
-                    'fez_record_search_key_institutional_status',
-                ],
-                ['contentIndicators'],
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                ['fez_record_search_key_institutional_status', 'contentIndicators'],
+                ['fez_record_search_key_oa_status'],
                 ['additionalNotes'],
             ],
         },

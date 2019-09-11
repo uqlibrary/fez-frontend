@@ -57,12 +57,12 @@ export default {
             ],
         },
         {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
-        },
-        {
             title: 'ISBN',
             groups: [['fez_record_search_key_isbn']],
+        },
+        {
+            title: 'ISSN',
+            groups: [['fez_record_search_key_issn']],
         },
         {
             title: 'Bibliographic',
@@ -79,11 +79,9 @@ export default {
                     'fez_record_search_key_total_pages',
                 ],
                 ['rek_date', 'fez_record_search_key_date_available'],
+                ['rek_description'],
+                ['fez_record_search_key_refereed_source'],
             ],
-        },
-        {
-            title: 'Abstract / Description',
-            groups: [['rek_description']],
         },
         {
             title: 'Keyword(s)',
@@ -96,10 +94,6 @@ export default {
         {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
-        },
-        {
-            title: 'Refereed source',
-            groups: [['fez_record_search_key_refereed_source']],
         },
     ],
     authors: () => [
@@ -114,6 +108,7 @@ export default {
             groups: [['collections']],
         },
         {
+            title: 'Additional information',
             groups: [
                 ['rek_subtype'],
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],

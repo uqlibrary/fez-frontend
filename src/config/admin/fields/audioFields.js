@@ -68,11 +68,10 @@ export default {
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
+                ['rek_description'],
+                ['fez_record_search_key_alternate_genre'],
+                ['fez_record_search_key_refereed_source'],
             ],
-        },
-        {
-            title: 'Abstract / Description',
-            groups: [['rek_description']],
         },
         {
             title: 'Keyword(s)',
@@ -81,14 +80,6 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
-        },
-        {
-            title: 'Alternate genres',
-            groups: [['fez_record_search_key_alternate_genre']],
-        },
-        {
-            title: 'Refereed source',
-            groups: [['fez_record_search_key_refereed_source']],
         },
     ],
     authors: () => [
@@ -107,6 +98,7 @@ export default {
             groups: [['collections']],
         },
         {
+            title: 'Additional information',
             groups: [
                 ['fez_record_search_key_institutional_status'],
                 ['contentIndicators'],
