@@ -466,4 +466,7 @@ export default {
             htmlText: (record.fez_record_search_key_transcript || {}).rek_transcript,
         }),
     },
+    rek_genre: {
+        getValue: record => record.rek_genre,
+    },
 };
