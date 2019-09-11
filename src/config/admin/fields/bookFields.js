@@ -77,10 +77,6 @@ export default {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
-        {
-            title: 'Refereed source',
-            groups: [['fez_record_search_key_refereed_source']],
-        },
     ],
     authors: () => [
         {
