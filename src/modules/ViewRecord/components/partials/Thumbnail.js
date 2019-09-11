@@ -35,6 +35,7 @@ export class Thumbnail extends Component {
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func,
         classes: PropTypes.object.isRequired,
+        checksum: PropTypes.string,
     };
 
     constructor(props) {
@@ -44,9 +45,9 @@ export class Thumbnail extends Component {
         };
     }
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => e => {
         e.preventDefault();
-        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum);
     };
 
     render() {
@@ -60,6 +61,7 @@ export class Thumbnail extends Component {
             fileName,
             mimeType,
             securityStatus,
+            checksum,
         } = this.props;
         if (
             (fileName && mimeType.indexOf('pdf') >= 0) ||
@@ -80,7 +82,15 @@ export class Thumbnail extends Component {
         }
         return (
             <a
-                onClick={this.showPreview(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus)}
+                onClick={this.showPreview(
+                    fileName,
+                    mediaUrl,
+                    previewMediaUrl,
+                    mimeType,
+                    webMediaUrl,
+                    securityStatus,
+                    checksum,
+                )}
                 onKeyPress={this.showPreview(
                     fileName,
                     mediaUrl,
@@ -88,6 +98,7 @@ export class Thumbnail extends Component {
                     mimeType,
                     webMediaUrl,
                     securityStatus,
+                    checksum,
                 )}
                 title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
             >

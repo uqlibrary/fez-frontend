@@ -2891,6 +2891,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 3000090,
+                    dsi_checksum: 'a6a6d6qs6dq6wsdqwd',
                 },
                 {
                     dsi_pid: 'UQ:185044',

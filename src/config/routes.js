@@ -4,7 +4,7 @@ import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
 import { createHash } from 'crypto';
-const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
+export const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
@@ -30,6 +30,16 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
 const isAdmin = account => {
     return account.canMasquerade;
     // return account.is_administrator || account.is_super_administrator;
+};
+
+export const getDatastreamVersionQueryString = (fileName, checksum) => {
+    if (!checksum.trim()) {
+        return '';
+    }
+
+    return createHash('md5')
+        .update(`${fileName}${checksum.trim()}`)
+        .digest('hex');
 };
 
 export const pathConfig = {
@@ -63,17 +73,13 @@ export const pathConfig = {
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName, checksum = '') => {
-            let version = '';
-            if (checksum) {
-                const versionHash = createHash('md5')
-                    .update(`${fileName}${checksum}`)
-                    .digest('hex');
-                version = `?version=${versionHash}`;
+            let version = getDatastreamVersionQueryString(fileName, checksum);
+            if (version) {
+                version = `?dsi_version=${version}`;
             }
 
             return `${fullPath}/view/${pid}/${fileName}${version}`;
         },
-        // url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {

@@ -136,6 +136,7 @@ export const viewRecordsConfig = {
                     isMultiple: true,
                 },
             ],
+            // TODO add dsi_checksum as a third param, if this function ever gets used in the future
             url: (pid, fileName) => routes.pathConfig.file.url(pid, fileName),
         },
         {

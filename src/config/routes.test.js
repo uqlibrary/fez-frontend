@@ -138,4 +138,20 @@ describe('Routes method', () => {
         const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, false, true);
         expect(testMenuItems.length).toEqual(13);
     });
+
+    it('file.url should without checksum', () => {
+        const pid = 'UQ:12345';
+        const filename = 'image.jpg';
+        const url = routes.pathConfig.file.url(pid, filename);
+        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}`);
+    });
+
+    it('file.url should with checksum', () => {
+        const pid = 'UQ:12345';
+        const filename = 'image.jpg';
+        const checksum = 'a5a5d5qwe5dq5f5qefqe';
+        const versionHash = routes.getDatastreamVersionQueryString(filename, checksum);
+        const url = routes.pathConfig.file.url(pid, filename, checksum);
+        expect(url).toEqual(`${routes.fullPath}/view/${pid}/${filename}?dsi_version=${versionHash}`);
+    });
 });

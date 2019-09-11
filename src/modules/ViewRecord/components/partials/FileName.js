@@ -27,6 +27,7 @@ export class FileName extends PureComponent {
         allowDownload: PropTypes.bool,
         securityStatus: PropTypes.bool,
         classes: PropTypes.object,
+        checksum: PropTypes.string,
     };
 
     isAudio = mimeType => {
@@ -45,9 +46,9 @@ export class FileName extends PureComponent {
         return this.isImage(mimeType) || this.isVideo(mimeType);
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => e => {
         e.preventDefault();
-        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
+        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum);
     };
 
     render() {
@@ -60,13 +61,14 @@ export class FileName extends PureComponent {
             webMediaUrl,
             previewMediaUrl,
             securityStatus,
+            checksum,
         } = this.props;
         return (
             <Grid container alignItems="center" wrap="nowrap">
                 <Grid item xs>
                     {allowDownload && !this.canShowPreview(mimeType) && (
                         <ExternalLink
-                            href={pathConfig.file.url(pid, fileName)}
+                            href={pathConfig.file.url(pid, fileName, checksum)}
                             title={fileName}
                             className={this.props.classes.filename}
                             openInNewIcon
@@ -84,6 +86,7 @@ export class FileName extends PureComponent {
                                     mimeType,
                                     webMediaUrl,
                                     securityStatus,
+                                    checksum,
                                 )}
                                 onKeyPress={this.showPreview(
                                     fileName,
@@ -92,6 +95,7 @@ export class FileName extends PureComponent {
                                     mimeType,
                                     webMediaUrl,
                                     securityStatus,
+                                    checksum,
                                 )}
                                 className={this.props.classes.filename}
                             >
@@ -106,7 +110,7 @@ export class FileName extends PureComponent {
                         {allowDownload && this.isAudio(this.props.mimeType) && (
                             <AudioPlayer
                                 pid={pid}
-                                fileName={previewMediaUrl || pathConfig.file.url(pid, fileName)}
+                                fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksum)}
                                 mimeType={mimeType}
                             />
                         )}
