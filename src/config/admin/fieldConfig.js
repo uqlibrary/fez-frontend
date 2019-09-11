@@ -661,8 +661,7 @@ export default {
             name: 'authorsSection.editors',
             showIdentifierLookup: true,
             locale: formLocale.book.editors.field,
-            validate: [validation.authorRequired],
-            editMode: true,
+            canEdit: true,
         },
     },
     files: {
