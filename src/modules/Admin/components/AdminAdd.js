@@ -118,7 +118,6 @@ export default class CollectionForm extends Component {
                 },
             },
         });
-        console.log('Form values: ', JSON.stringify(this.props.formValues));
         return (
             <StandardPage title={txt.title}>
                 <form>
