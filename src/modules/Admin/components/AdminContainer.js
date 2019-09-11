@@ -154,7 +154,9 @@ export const AdminContainer = ({
                         },
                         grantInformation: {
                             component: GrantInformationSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
+                            activated:
+                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
+                                recordToView.rek_display_type !== 374,
                         },
                         files: {
                             component: FilesSection,
