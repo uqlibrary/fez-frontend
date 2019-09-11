@@ -11,7 +11,7 @@ exports[`NtroSection component should render default view 1`] = `
               "significanceAndContributionStatement",
             ],
           ],
-          "title": "Scale/Significance of work & Creator contribution statement",
+          "title": "Scale/Significance of work & Creator research statement",
         },
         Object {
           "groups": Array [
@@ -47,7 +47,7 @@ exports[`NtroSection component should render disabled view 1`] = `
               "significanceAndContributionStatement",
             ],
           ],
-          "title": "Scale/Significance of work & Creator contribution statement",
+          "title": "Scale/Significance of work & Creator research statement",
         },
         Object {
           "groups": Array [

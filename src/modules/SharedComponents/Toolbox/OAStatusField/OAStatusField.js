@@ -1,15 +1,15 @@
 import React from 'react';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { QUALITY_INDICATORS } from 'config/general';
+import { OA_STATUS } from 'config/general';
 import Immutable from 'immutable';
 
-export default function QualityIndicatorField(fieldProps) {
+export default function OAStatusField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField
-            itemsList={QUALITY_INDICATORS}
+            itemsList={OA_STATUS}
             hideLabel={false}
-            locale={{ label: fieldProps.label, placeholder: fieldProps.placeholder }}
+            locale={{ label: fieldProps.label }}
             selectedValue={
                 input instanceof Immutable.List
                     ? input.toJS()

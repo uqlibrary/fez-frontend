@@ -281,7 +281,7 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 - staff/not author user: <http://localhost:3000/?user=uqstaff>
 - undegrad student user: <http://localhost:3000/?user=s1111111>
 - postgrad student user: <http://localhost:3000/?user=s2222222>
-- RHD submission form: <http://localhost:3000/rhdsubmission?>user=s2222222
+- RHD submission form: <http://localhost:3000/rhdsubmission?user=s2222222>
 - user with expired token: <http://localhost:3000/?user=uqexpired>
 
 ## Reviewing

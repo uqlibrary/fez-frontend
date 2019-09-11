@@ -1,15 +1,15 @@
 import React from 'react';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { QUALITY_INDICATORS } from 'config/general';
+import { ALTERNATE_GENRE } from 'config/general';
 import Immutable from 'immutable';
 
-export default function QualityIndicatorField(fieldProps) {
+export default function AlternateGenreField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField
-            itemsList={QUALITY_INDICATORS}
+            itemsList={ALTERNATE_GENRE}
             hideLabel={false}
-            locale={{ label: fieldProps.label, placeholder: fieldProps.placeholder }}
+            locale={{ label: fieldProps.label }}
             selectedValue={
                 input instanceof Immutable.List
                     ? input.toJS()

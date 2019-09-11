@@ -1,4 +1,11 @@
+export { default as adminEditAudioList } from './adminEditAudioList';
 export { default as adminEditBookChapterList } from './adminEditBookChapterList';
+export { default as adminEditConferencePaperList } from './adminEditConferencePaperList';
+export { default as adminEditPatentList } from './adminEditPatentList';
+export { default as adminEditSeminarPaperList } from './adminEditSeminarPaperList';
+export { default as adminEditThesisList } from './adminEditThesisList';
+export { default as adminEditVideoList } from './adminEditVideoList';
+export { default as adminEditWorkingPaperList } from './adminEditWorkingPaperList';
 export { default as collectionRecord } from './collectionRecord';
 export { default as collections } from './collections';
 export { default as communityRecord } from './communityRecord';

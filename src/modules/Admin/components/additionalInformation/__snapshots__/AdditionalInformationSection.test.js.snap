@@ -10,19 +10,27 @@ exports[`AdditionalInformationSection component should render default view 1`] =
             Array [
               "collections",
             ],
+          ],
+          "title": "Member of collections",
+        },
+        Object {
+          "groups": Array [
             Array [
               "rek_subtype",
             ],
             Array [
-              "additionalNotes",
-            ],
-            Array [
               "fez_record_search_key_herdc_code",
               "fez_record_search_key_herdc_status",
-              "fez_record_search_key_institutional_status",
             ],
             Array [
+              "fez_record_search_key_institutional_status",
               "contentIndicators",
+            ],
+            Array [
+              "fez_record_search_key_oa_status",
+            ],
+            Array [
+              "additionalNotes",
             ],
           ],
           "title": "Additional information",
@@ -44,19 +52,27 @@ exports[`AdditionalInformationSection component should render disabled view 1`] 
             Array [
               "collections",
             ],
+          ],
+          "title": "Member of collections",
+        },
+        Object {
+          "groups": Array [
             Array [
               "rek_subtype",
             ],
             Array [
-              "additionalNotes",
-            ],
-            Array [
               "fez_record_search_key_herdc_code",
               "fez_record_search_key_herdc_status",
-              "fez_record_search_key_institutional_status",
             ],
             Array [
+              "fez_record_search_key_institutional_status",
               "contentIndicators",
+            ],
+            Array [
+              "fez_record_search_key_oa_status",
+            ],
+            Array [
+              "additionalNotes",
             ],
           ],
           "title": "Additional information",

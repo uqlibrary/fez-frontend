@@ -1,17 +1,17 @@
-import QualityIndicatorField from './QualityIndicatorField';
+import AlternateGenreField from './AlternateGenreField';
 import Immutable from 'immutable';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(QualityIndicatorField, props, args);
+    return getElement(AlternateGenreField, props);
 }
 
-describe('QualityIndicatorField component', () => {
+describe('AlternateGenreField component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

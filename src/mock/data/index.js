@@ -1,6 +1,13 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
+    adminEditAudioList,
     adminEditBookChapterList,
+    adminEditConferencePaperList,
+    adminEditPatentList,
+    adminEditSeminarPaperList,
+    adminEditThesisList,
+    adminEditVideoList,
+    adminEditWorkingPaperList,
     collections,
     communityRecord,
     collectionRecord,

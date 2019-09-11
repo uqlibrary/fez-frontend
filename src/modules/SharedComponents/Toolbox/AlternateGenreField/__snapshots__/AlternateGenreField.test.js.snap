@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`InstitutionalStatusField component should render default view 1`] = `
+exports[`AlternateGenreField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
@@ -12,16 +12,28 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
         "value": null,
       },
       Object {
-        "text": "UQ",
-        "value": "453223",
+        "text": "Conversation",
+        "value": "453663",
       },
       Object {
-        "text": "Non-UQ",
-        "value": "453224",
+        "text": "Culture, stories, people",
+        "value": "453664",
       },
       Object {
-        "text": "Unknown",
-        "value": "453225",
+        "text": "Session organisation",
+        "value": "453665",
+      },
+      Object {
+        "text": "Song",
+        "value": "453666",
+      },
+      Object {
+        "text": "Traditional language sentence",
+        "value": "453667",
+      },
+      Object {
+        "text": "Traditional language word",
+        "value": "453668",
       },
     ]
   }
@@ -34,7 +46,7 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
 />
 `;
 
-exports[`InstitutionalStatusField component should render immutable list as selected value with given field props 1`] = `
+exports[`AlternateGenreField component should render immutable list as selected value with given field props 1`] = `
 <GenericSelectField
   error={true}
   errorText="Test error"
@@ -55,16 +67,28 @@ exports[`InstitutionalStatusField component should render immutable list as sele
         "value": null,
       },
       Object {
-        "text": "UQ",
-        "value": "453223",
+        "text": "Conversation",
+        "value": "453663",
       },
       Object {
-        "text": "Non-UQ",
-        "value": "453224",
+        "text": "Culture, stories, people",
+        "value": "453664",
       },
       Object {
-        "text": "Unknown",
-        "value": "453225",
+        "text": "Session organisation",
+        "value": "453665",
+      },
+      Object {
+        "text": "Song",
+        "value": "453666",
+      },
+      Object {
+        "text": "Traditional language sentence",
+        "value": "453667",
+      },
+      Object {
+        "text": "Traditional language word",
+        "value": "453668",
       },
     ]
   }
@@ -90,7 +114,7 @@ exports[`InstitutionalStatusField component should render immutable list as sele
 />
 `;
 
-exports[`InstitutionalStatusField component should render when given a default value field props 1`] = `
+exports[`AlternateGenreField component should render when given a default value field props 1`] = `
 <GenericSelectField
   defaultValue="afr"
   error={false}
@@ -103,16 +127,28 @@ exports[`InstitutionalStatusField component should render when given a default v
         "value": null,
       },
       Object {
-        "text": "UQ",
-        "value": "453223",
+        "text": "Conversation",
+        "value": "453663",
       },
       Object {
-        "text": "Non-UQ",
-        "value": "453224",
+        "text": "Culture, stories, people",
+        "value": "453664",
       },
       Object {
-        "text": "Unknown",
-        "value": "453225",
+        "text": "Session organisation",
+        "value": "453665",
+      },
+      Object {
+        "text": "Song",
+        "value": "453666",
+      },
+      Object {
+        "text": "Traditional language sentence",
+        "value": "453667",
+      },
+      Object {
+        "text": "Traditional language word",
+        "value": "453668",
       },
     ]
   }
@@ -131,7 +167,7 @@ exports[`InstitutionalStatusField component should render when given a default v
 />
 `;
 
-exports[`InstitutionalStatusField component should render with given field props 1`] = `
+exports[`AlternateGenreField component should render with given field props 1`] = `
 <GenericSelectField
   error={true}
   errorText="Test error"
@@ -152,16 +188,28 @@ exports[`InstitutionalStatusField component should render with given field props
         "value": null,
       },
       Object {
-        "text": "UQ",
-        "value": "453223",
+        "text": "Conversation",
+        "value": "453663",
       },
       Object {
-        "text": "Non-UQ",
-        "value": "453224",
+        "text": "Culture, stories, people",
+        "value": "453664",
       },
       Object {
-        "text": "Unknown",
-        "value": "453225",
+        "text": "Session organisation",
+        "value": "453665",
+      },
+      Object {
+        "text": "Song",
+        "value": "453666",
+      },
+      Object {
+        "text": "Traditional language sentence",
+        "value": "453667",
+      },
+      Object {
+        "text": "Traditional language word",
+        "value": "453668",
       },
     ]
   }

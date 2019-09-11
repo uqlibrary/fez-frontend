@@ -24,7 +24,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Title',
+            title: 'Title of paper',
             groups: [
                 ['rek_title'],
                 ...(isLote
@@ -42,6 +42,38 @@ export default {
             groups: [['languages']],
         },
         {
+            title: 'Conference name',
+            groups: [
+                ['fez_record_search_key_conference_name'],
+                ...(isLote
+                    ? [
+                        ['languageOfConferenceTitle'],
+                        ['fez_record_search_key_native_script_conference_name'],
+                        ['fez_record_search_key_roman_script_conference_name'],
+                        ['fez_record_search_key_translated_conference_name'],
+                    ]
+                    : []),
+            ],
+        },
+        {
+            title: 'Conference details',
+            groups: [['fez_record_search_key_conference_location', 'fez_record_search_key_conference_dates']],
+        },
+        {
+            title: 'Proceedings title',
+            groups: [
+                ['fez_record_search_key_proceedings_title'],
+                ...(isLote
+                    ? [
+                        ['languageOfProceedingsTitle'],
+                        ['fez_record_search_key_native_script_proceedings_title'],
+                        ['fez_record_search_key_roman_script_proceedings_title'],
+                        ['fez_record_search_key_translated_proceedings_title'],
+                    ]
+                    : []),
+            ],
+        },
+        {
             title: 'Journal name',
             groups: [
                 ['fez_record_search_key_journal_name'],
@@ -53,7 +85,6 @@ export default {
                         ['fez_record_search_key_roman_script_journal_name'],
                     ]
                     : []),
-                ['rek_subtype'],
             ],
         },
         {
@@ -68,16 +99,14 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                [
-                    'fez_record_search_key_volume_number',
-                    'fez_record_search_key_issue_number',
-                    'fez_record_search_key_article_number',
-                ],
+                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
+                ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
+                ['fez_record_search_key_article_number', 'fez_record_search_key_chapter_number'],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_refereed_source'],
@@ -100,6 +129,10 @@ export default {
         {
             title: 'Authors',
             groups: [['authors']],
+        },
+        {
+            title: 'Editors',
+            groups: [['editors']],
         },
     ],
     additionalInformation: () => [

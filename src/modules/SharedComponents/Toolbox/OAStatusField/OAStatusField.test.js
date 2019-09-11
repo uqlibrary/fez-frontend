@@ -1,17 +1,17 @@
-import QualityIndicatorField from './QualityIndicatorField';
+import OAStatusField from './OAStatusField';
 import Immutable from 'immutable';
 
-function setup(testProps = {}, args = { isShallow: true }) {
+function setup(testProps = {}) {
     const props = {
         ...testProps,
     };
 
-    return getElement(QualityIndicatorField, props, args);
+    return getElement(OAStatusField, props);
 }
 
-describe('QualityIndicatorField component', () => {
+describe('OAStatus component', () => {
     it('should render default view', () => {
-        const wrapper = setup({});
+        const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

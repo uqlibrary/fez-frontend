@@ -30,6 +30,18 @@ export default {
     fez_record_search_key_book_title: {
         getValue: record => ({ ...record.fez_record_search_key_book_title }),
     },
+    fez_record_search_key_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_name }),
+    },
+    fez_record_search_key_conference_location: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_location }),
+    },
+    fez_record_search_key_conference_dates: {
+        getValue: record => ({ ...record.fez_record_search_key_conference_dates }),
+    },
+    fez_record_search_key_proceedings_title: {
+        getValue: record => ({ ...record.fez_record_search_key_proceedings_title }),
+    },
     fez_record_search_key_place_of_publication: {
         getValue: record => ({
             ...record.fez_record_search_key_place_of_publication,
@@ -69,9 +81,6 @@ export default {
                 id: collection.rek_ismemberof,
                 value: collection.rek_ismemberof_lookup,
             })),
-    },
-    fez_record_search_key_keywords: {
-        getValue: record => [...record.fez_record_search_key_keywords],
     },
     fez_record_search_key_issn: {
         getValue: record => [...record.fez_record_search_key_issn],
@@ -131,6 +140,27 @@ export default {
     },
     fez_record_search_key_translated_book_title: {
         getValue: record => ({ ...record.fez_record_search_key_translated_book_title }),
+    },
+    languageOfConferenceName: {
+        getValue: record =>
+            record.fez_record_search_key_language_of_conference_name.map(
+                language => language.rek_language_of_conference_name,
+            ),
+    },
+    fez_record_search_key_native_script_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_native_script_conference_name }),
+    },
+    fez_record_search_key_roman_script_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_conference_name }),
+    },
+    fez_record_search_key_translated_conference_name: {
+        getValue: record => ({ ...record.fez_record_search_key_translated_conference_name }),
+    },
+    languageOfProceedingsTitle: {
+        getValue: record =>
+            record.fez_record_search_key_language_of_proceedings_title.map(
+                language => language.rek_language_of_proceedings_title,
+            ),
     },
     languageOfTitle: {
         getValue: record =>
@@ -372,8 +402,20 @@ export default {
             );
         },
     },
+    fez_record_search_key_date_recorded: {
+        getValue: record => {
+            return (
+                record.fez_record_search_key_date_recorded &&
+                record.fez_record_search_key_date_recorded.rek_date_recorded &&
+                moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format('YYYY')
+            );
+        },
+    },
     rek_copyright: {
         getValue: record => record.rek_copyright,
+    },
+    rek_herdc_notes: {
+        getValue: record => record.rek_herdc_notes,
     },
     fez_record_search_key_advisory_statement: {
         getValue: record => ({ ...record.fez_record_search_key_advisory_statement }),
@@ -387,5 +429,41 @@ export default {
                 },
                 rek_isderivationof_order: derivation.rek_isderivationof_order,
             })),
+    },
+    fez_record_search_key_alternate_genre: {
+        getValue: record => record.fez_record_search_key_alternate_genre.map(genre => genre.rek_alternate_genre),
+    },
+    fez_record_search_key_location: {
+        getValue: record => [...record.fez_record_search_key_location],
+    },
+    fez_record_search_key_identifier: {
+        getValue: record => [...record.fez_record_search_key_identifier],
+    },
+    fez_record_search_key_keywords: {
+        getValue: record => [...record.fez_record_search_key_keywords],
+    },
+    fez_record_search_key_source: {
+        getValue: record => ({ ...record.fez_record_search_key_source }),
+    },
+    fez_record_search_key_rights: {
+        getValue: record => ({ ...record.fez_record_search_key_rights }),
+    },
+    fez_record_search_key_acknowledgements: {
+        getValue: record => ({ ...record.fez_record_search_key_acknowledgements }),
+    },
+    fez_record_search_key_length: {
+        getValue: record => ({ ...record.fez_record_search_key_length }),
+    },
+    fez_record_search_key_license: {
+        getValue: record => ({ ...record.fez_record_search_key_license }),
+    },
+    fez_record_search_key_original_format: {
+        getValue: record => ({ ...record.fez_record_search_key_original_format }),
+    },
+    fez_record_search_key_transcript: {
+        getValue: record => ({
+            plainText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+            htmlText: (record.fez_record_search_key_transcript || {}).rek_transcript,
+        }),
     },
 };

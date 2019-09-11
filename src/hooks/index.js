@@ -3,7 +3,7 @@ import { publicationTypes } from 'config';
 
 export const usePublicationSubtype = (displayType = null) => {
     const { record } = useRecordContext();
-    return publicationTypes()[displayType || record.rek_display_type].subtypes;
+    return publicationTypes()[displayType || record.rek_display_type].subtypes || [];
 };
 
 export const useIsAdmin = () => {

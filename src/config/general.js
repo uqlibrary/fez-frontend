@@ -1300,9 +1300,9 @@ export const HERDC_STATUS = [
 
 export const INSTITUTIONAL_STATUS = [
     { value: null, text: 'Please choose an option' },
-    { value: 'UQ', text: 'UQ' },
-    { value: 'NonUQ', text: 'Non-UQ' },
-    { value: 'Unknown', text: 'Unknown' },
+    { value: '453223', text: 'UQ' },
+    { value: '453224', text: 'Non-UQ' },
+    { value: '453225', text: 'Unknown' },
 ];
 
 export const REFEREED_SOURCES = [
@@ -1314,4 +1314,26 @@ export const REFEREED_SOURCES = [
     { value: '453633', text: 'ERA Journal List 2010' },
     { value: '453636', text: 'Other' },
     { value: '453637', text: 'Not peer reviewed' },
+];
+
+export const ALTERNATE_GENRE = [
+    { value: null, text: 'Please choose an option' },
+    { value: '453663', text: 'Conversation' },
+    { value: '453664', text: 'Culture, stories, people' },
+    { value: '453665', text: 'Session organisation' },
+    { value: '453666', text: 'Song' },
+    { value: '453667', text: 'Traditional language sentence' },
+    { value: '453668', text: 'Traditional language word' },
+];
+
+export const OA_STATUS = [
+    { value: '453692', text: 'Not yet assessed' },
+    { value: '453693', text: 'DOI' },
+    { value: '453694', text: 'Link (no DOI)' },
+    { value: '453695', text: 'File (Publisher version)' },
+    { value: '453696', text: 'File (Author Post-print)' },
+    { value: '453697', text: 'Other' },
+    { value: '453698', text: 'Not Open Access' },
+    { value: '453700', text: 'Mediated Access' },
+    { value: '453954', text: 'PMC' },
 ];
