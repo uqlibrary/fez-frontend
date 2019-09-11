@@ -4,6 +4,7 @@ import {
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
@@ -13,6 +14,7 @@ import {
     bookFields,
     conferencePaperFields,
     journalArticleFields,
+    manuscriptFields,
     videoFields,
 } from './fields';
 
@@ -22,5 +24,6 @@ export default {
     [PUBLICATION_TYPE_BOOK]: bookFields,
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: conferencePaperFields,
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: journalArticleFields,
+    [PUBLICATION_TYPE_MANUSCRIPT]: manuscriptFields,
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: videoFields,
 };
