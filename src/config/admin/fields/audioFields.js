@@ -62,14 +62,14 @@ export default {
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                 ['fez_record_search_key_series'],
                 ['rek_date', 'fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
+                ['rek_description'],
                 ['fez_record_search_key_acknowledgements'],
-                ['fez_record_search_key_length', 'fez_record_search_key_original_format'],
+                ['fez_record_search_key_length', 'rek_genre'],
+                ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_license'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
-                ['rek_description'],
-                ['fez_record_search_key_alternate_genre'],
                 ['fez_record_search_key_refereed_source'],
             ],
         },
@@ -80,6 +80,10 @@ export default {
         {
             title: 'Subject',
             groups: [['subjects']],
+        },
+        {
+            title: 'Alternate Genre(s)',
+            groups: [['fez_record_search_key_alternate_genre']],
         },
     ],
     authors: () => [
@@ -100,10 +104,8 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status'],
-                ['contentIndicators'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
-                ['fez_record_search_key_oa_status'],
             ],
         },
     ],
