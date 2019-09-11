@@ -213,8 +213,8 @@ export default {
         component: LanguageField,
         componentProps: {
             name: 'bibliographicSection.languages',
-            label: 'Language',
-            placeholder: '',
+            label: 'Language of work',
+            placeholder: 'Language of work',
             multiple: true,
         },
     },
@@ -859,6 +859,7 @@ export default {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
             fullWidth: true,
+            multiline: true,
             label: 'Acknowledgements',
             placeholder: '',
         },

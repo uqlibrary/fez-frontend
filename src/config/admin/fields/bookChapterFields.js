@@ -4,7 +4,7 @@ export default {
     ...commonFields,
     admin: () => [
         {
-            groups: [['internalNotes']],
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     identifiers: () => [
@@ -64,18 +64,25 @@ export default {
             groups: [['fez_record_search_key_issn']],
         },
         {
-            title: 'Publication',
+            title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_edition', 'fez_record_search_key_series'],
-                ['fez_record_search_key_volume_number', 'fez_record_search_key_chapter_number'],
-                ['fez_record_search_key_start_page', 'fez_record_search_key_total_pages'],
-                ['fez_record_search_key_end_page'],
+                [
+                    'fez_record_search_key_edition',
+                    'fez_record_search_key_volume_number',
+                    'fez_record_search_key_chapter_number',
+                ],
+                ['fez_record_search_key_series'],
+                [
+                    'fez_record_search_key_start_page',
+                    'fez_record_search_key_end_page',
+                    'fez_record_search_key_total_pages',
+                ],
                 ['rek_date', 'fez_record_search_key_date_available'],
             ],
         },
         {
-            title: 'Abstract/Description',
+            title: 'Abstract / Description',
             groups: [['rek_description']],
         },
         {
@@ -87,7 +94,7 @@ export default {
             groups: [['subjects']],
         },
         {
-            title: 'Succeeds',
+            title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
         {
@@ -100,19 +107,21 @@ export default {
             title: 'Authors',
             groups: [['authors']],
         },
+        {
+            title: 'Editors',
+            groups: [['editors']],
+        },
     ],
     additionalInformation: () => [
         {
-            title: 'Additional information',
+            title: 'Member of collections',
+            groups: [['collections']],
+        },
+        {
             groups: [
-                ['collections'],
                 ['rek_subtype'],
-                [
-                    'fez_record_search_key_herdc_code',
-                    'fez_record_search_key_herdc_status',
-                    'fez_record_search_key_institutional_status',
-                ],
-                ['contentIndicators'],
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                ['fez_record_search_key_institutional_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

@@ -4,7 +4,7 @@ export default {
     ...commonFields,
     admin: () => [
         {
-            groups: [['internalNotes'], ['fez_record_search_key_retracted']],
+            groups: [['internalNotes'], ['rek_herdc_notes'], ['fez_record_search_key_retracted']],
         },
     ],
     identifiers: () => [
@@ -127,7 +127,7 @@ export default {
             groups: [['subjects']],
         },
         {
-            title: 'Succeeds',
+            title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
         },
         {

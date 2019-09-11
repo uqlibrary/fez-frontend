@@ -25,13 +25,28 @@ export default {
             groups: [['fez_record_search_key_identifier']],
         },
         {
-            title: 'Locations',
+            title: 'Location',
             groups: [['fez_record_search_key_location']],
         },
     ],
     bibliographic: (isLote = false) => [
         {
-            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : []), ['languages']],
+            title: 'Book title',
+            groups: [
+                ['rek_title'],
+                ...(isLote
+                    ? [
+                        ['languageOfTitle'],
+                        ['fez_record_search_key_native_script_title'],
+                        ['fez_record_search_key_roman_script_title'],
+                        ['fez_record_search_key_translated_title'],
+                    ]
+                    : []),
+            ],
+        },
+        {
+            title: 'Language of work',
+            groups: [['languages']],
         },
         {
             title: 'ISBN',
@@ -45,20 +60,22 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_series', 'rek_date'],
-                ['fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
+                ['fez_record_search_key_series'],
+                ['rek_date', 'fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'fez_record_search_key_original_format'],
                 ['fez_record_search_key_license'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
-                ['rek_description'],
                 ['fez_record_search_key_transcript'],
-                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
-            title: 'Keywords',
+            title: 'Abstract / Description',
+            groups: [['rek_description']],
+        },
+        {
+            title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
         },
         {
@@ -66,8 +83,12 @@ export default {
             groups: [['subjects']],
         },
         {
-            title: 'Alternate Genres',
+            title: 'Alternate genres',
             groups: [['fez_record_search_key_alternate_genre']],
+        },
+        {
+            title: 'Refereed source',
+            groups: [['fez_record_search_key_refereed_source']],
         },
     ],
     authors: () => [
@@ -87,9 +108,9 @@ export default {
         },
         {
             groups: [
-                ['additionalNotes'],
                 ['fez_record_search_key_institutional_status'],
                 ['contentIndicators'],
+                ['additionalNotes'],
                 ['fez_record_search_key_oa_status'],
             ],
         },
