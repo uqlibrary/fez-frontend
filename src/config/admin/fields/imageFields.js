@@ -19,15 +19,21 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : []), ['languages']],
+            title: 'Book title',
+            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
+        },
+        {
+            title: 'Language of work',
+            groups: [['languages']],
         },
         {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['rek_date', 'fez_record_search_key_date_available', 'fez_record_search_key_original_format'],
-                ['rek_description'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_series'],
+                ['fez_record_search_key_original_format'],
+                ['rek_description'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_license'],
@@ -36,7 +42,7 @@ export default {
             ],
         },
         {
-            title: 'Keywords',
+            title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
         },
         {
@@ -60,13 +66,14 @@ export default {
     ],
     additionalInformation: () => [
         {
-            title: 'Member of Collections',
+            title: 'Member of collections',
             groups: [['collections']],
         },
         {
+            title: 'Additional information',
             groups: [
-                ['additionalNotes'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                ['additionalNotes'],
             ],
         },
     ],

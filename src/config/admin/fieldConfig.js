@@ -865,7 +865,6 @@ export default {
             label: 'Acknowledgements',
             multiline: true,
             placeholder: '',
-            multiline: true,
         },
     },
     fez_record_search_key_length: {
@@ -890,6 +889,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
             fullWidth: true,
             label: 'Original format',
+            multiline: true,
             placeholder: '',
         },
     },
