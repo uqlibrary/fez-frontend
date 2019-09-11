@@ -353,6 +353,9 @@ export default {
     },
     grants: {
         getValue: record => {
+            if (!record.fez_record_search_key_grant_agency) {
+                return [];
+            }
             const grantAgencyNames = (record.fez_record_search_key_grant_agency || []).reduce(
                 (grantAgencyNamesObject, grantAgencyName) => ({
                     ...grantAgencyNamesObject,
