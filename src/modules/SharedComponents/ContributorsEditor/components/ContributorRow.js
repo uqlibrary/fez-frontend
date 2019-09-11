@@ -17,6 +17,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
+import HowToRegIcon from '@material-ui/icons/HowToReg';
 import Delete from '@material-ui/icons/Delete';
 import Edit from '@material-ui/icons/Edit';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
@@ -86,6 +87,7 @@ export class ContributorRow extends PureComponent {
         onMoveUp: PropTypes.func,
         width: PropTypes.string,
         required: PropTypes.bool,
+        enableSelect: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -110,6 +112,7 @@ export class ContributorRow extends PureComponent {
         hideReorder: false,
         hideDelete: false,
         required: false,
+        enableSelect: false,
     };
 
     constructor(props) {
@@ -150,8 +153,8 @@ export class ContributorRow extends PureComponent {
     };
 
     _select = () => {
-        const { disabled, onSelect, index } = this.props;
-        if (!disabled && !!onSelect) {
+        const { disabled, onSelect, index, enableSelect } = this.props;
+        if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
     };
@@ -267,9 +270,15 @@ export class ContributorRow extends PureComponent {
             '';
 
         const rowIcon = () => {
-            if (contributor.selected) {
+            if (parseInt(contributor.uqIdentifier, 10)) {
+                return <HowToRegIcon />;
+            } else if (contributor.selected) {
                 return <Person />;
-            } else if (this.props.disabled || contributor.disabled) {
+            } else if (
+                disabled ||
+                contributor.disabled ||
+                (disabled && contributor.disabled && !this.props.enableSelect)
+            ) {
                 return lockedTooltip ? (
                     <Tooltip title={lockedTooltip}>
                         <Lock />

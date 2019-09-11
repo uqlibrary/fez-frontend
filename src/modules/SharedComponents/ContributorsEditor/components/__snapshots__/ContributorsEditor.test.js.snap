@@ -45,6 +45,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -66,6 +67,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
@@ -87,6 +89,7 @@ exports[`ContributorsEditor chooses a contributor to edit 1`] = `
               "selected": false,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
@@ -148,6 +151,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": false,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -169,6 +173,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": true,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
@@ -190,6 +195,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
               "selected": false,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
@@ -315,6 +321,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 1,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -335,6 +342,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 2,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
@@ -355,6 +363,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
               "nameAsPublished": 3,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
@@ -440,6 +449,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 1,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -460,6 +470,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 2,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
@@ -480,6 +491,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 3,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={2}
@@ -500,6 +512,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
               "displayName": 4,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={3}
@@ -561,6 +574,7 @@ exports[`ContributorsEditor renders component in edit mode 1`] = `
               "selected": true,
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -5649,6 +5663,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 1",
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -5669,6 +5684,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 2",
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
@@ -5766,6 +5782,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 1",
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={0}
@@ -5786,6 +5803,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
               "displayName": "test 2",
             }
           }
+          enableSelect={false}
           hideDelete={false}
           hideReorder={false}
           index={1}
