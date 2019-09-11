@@ -497,6 +497,7 @@ export default {
             fullWidth: true,
             label: 'Series',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_chapter_number: {
@@ -843,6 +844,7 @@ export default {
             fullWidth: true,
             label: 'Source',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_rights: {
@@ -852,6 +854,7 @@ export default {
             fullWidth: true,
             label: 'Rights',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_acknowledgements: {
