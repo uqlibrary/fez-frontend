@@ -30,8 +30,8 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['rek_date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_series'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_original_format'],
                 ['rek_description'],
                 ['fez_record_search_key_rights'],
@@ -61,7 +61,7 @@ export default {
         },
         {
             title: 'Contributors',
-            groups: [['editors']],
+            groups: [['contributors']],
         },
     ],
     additionalInformation: () => [

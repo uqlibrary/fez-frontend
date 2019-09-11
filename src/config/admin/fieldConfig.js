@@ -665,6 +665,15 @@ export default {
             canEdit: true,
         },
     },
+    contributors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.editors',
+            showIdentifierLookup: true,
+            locale: formLocale.audioDocument.contributor.field,
+            canEdit: true,
+        },
+    },
     files: {
         component: FileUploadField,
         componentProps: {

@@ -282,6 +282,32 @@ export default {
             }));
         },
     },
+    contributors: {
+        getValue: record => {
+            const contributors = (record.fez_record_search_key_contributor || []).reduce(
+                (contributorsObject, contributor) => ({
+                    ...contributorsObject,
+                    [contributor.rek_contributor_order]: contributor,
+                }),
+                {},
+            );
+
+            const contributorIds = (record.fez_record_search_key_contributor_id || []).reduce(
+                (contributorIdsObject, contributorId) => ({
+                    ...contributorIdsObject,
+                    [contributorId.rek_contributor_id_order]: contributorId,
+                }),
+                {},
+            );
+
+            return (record.fez_record_search_key_contributor || []).map(({ rek_contributor_order: order }) => ({
+                nameAsPublished: (contributors[order] || {}).rek_contributor,
+                creatorRole: '',
+                uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id}` || '',
+                authorId: (contributorIds[order] || {}).rek_contributor_id,
+            }));
+        },
+    },
     contentIndicators: {
         getValue: record =>
             (record.fez_record_search_key_content_indicator || {}).map(
