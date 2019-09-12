@@ -14,6 +14,7 @@ import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/Copyri
 import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
@@ -896,6 +897,15 @@ export default {
             name: 'bibliographicSection.rek_genre',
             fullWidth: true,
             label: 'Type',
+        },
+    },
+    geoCoordinates: {
+        component: GeoCoordinatesField,
+        componentProps: {
+            name: 'bibliographicSection.geoCoordinates',
+            fullWidth: true,
+            label: 'Geographic area',
+            isSearch: true,
         },
     },
 };
