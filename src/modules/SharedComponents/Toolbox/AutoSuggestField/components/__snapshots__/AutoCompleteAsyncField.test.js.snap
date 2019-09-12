@@ -452,6 +452,9 @@ Object {
     "position": "relative",
   },
   "inputRoot": Object {
+    "flexWrap": "wrap",
+  },
+  "noWrap": Object {
     "flexWrap": "unset",
   },
   "paper": Object {

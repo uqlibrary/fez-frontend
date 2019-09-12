@@ -30,6 +30,9 @@ export const styles = theme => ({
         zIndex: 999,
     },
     inputRoot: {
+        flexWrap: 'wrap',
+    },
+    noWrap: {
         flexWrap: 'unset',
     },
     chip: {
@@ -148,7 +151,7 @@ export class AutoCompleteAsyncField extends Component {
                         }
                     },
                     classes: {
-                        root: classes.inputRoot,
+                        root: !!(inputProps || {}).endAdornment ? classes.noWrap : classes.inputRoot,
                     },
                     ...inputProps,
                 }}
