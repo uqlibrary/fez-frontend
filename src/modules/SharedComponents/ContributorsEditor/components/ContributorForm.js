@@ -168,6 +168,21 @@ export class ContributorForm extends PureComponent {
         );
     };
 
+    _onUQIdentifierCleared = () => {
+        this.setState(
+            prevState => ({
+                ...prevState,
+                contributor: {
+                    ...prevState.contributor,
+                    uqIdentifier: '0',
+                },
+            }),
+            () => {
+                this._onSubmit();
+            },
+        );
+    };
+
     handleAffiliationChange = event => {
         const affiliation = event.target.value;
         this.setState(prevState => ({
@@ -264,6 +279,8 @@ export class ContributorForm extends PureComponent {
                                 key={contributor.authorId}
                                 disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
+                                onClear={this._onUQIdentifierCleared}
+                                showClear={!!parseInt(contributor.uqIdentifier, 10)}
                                 value={contributor.uqIdentifier || ''}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"

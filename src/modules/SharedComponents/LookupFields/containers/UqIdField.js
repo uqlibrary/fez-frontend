@@ -19,6 +19,7 @@ const mapStateToProps = (state, props) => {
                 : [],
         itemsListLoading: (state.get('authorsReducer') && state.get('authorsReducer').authorsListLoading) || false,
         onChange: props.onChange,
+        onClear: props.onClear,
         allowFreeText: false,
         async: true,
         selectedValue: (!!props.value && { value: props.value }) || '',

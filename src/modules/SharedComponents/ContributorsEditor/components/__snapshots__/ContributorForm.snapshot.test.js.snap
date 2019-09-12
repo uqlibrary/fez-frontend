@@ -2010,6 +2010,8 @@ exports[`Component ContributorForm should render display name field and identifi
         hintText="Type UQ author name to search"
         id="identifierField"
         onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
         value=""
       />
     </WithStyles(Grid)>
