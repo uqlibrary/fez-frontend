@@ -3,7 +3,7 @@ import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
-const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
+const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
