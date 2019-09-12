@@ -202,7 +202,7 @@ export default {
     rek_subtype: {
         component: PublicationSubtypeField,
         componentProps: {
-            name: 'bibliographicSection.rek_subtype',
+            name: 'additionalInformationSection.rek_subtype',
             label: 'Work sub-type',
             required: true,
             placeholder: '',
@@ -497,6 +497,7 @@ export default {
             fullWidth: true,
             label: 'Series',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_chapter_number: {
@@ -840,6 +841,7 @@ export default {
             fullWidth: true,
             label: 'Source',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_rights: {
@@ -849,6 +851,7 @@ export default {
             fullWidth: true,
             label: 'Rights',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_acknowledgements: {
@@ -856,8 +859,8 @@ export default {
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
             fullWidth: true,
-            multiline: true,
             label: 'Acknowledgements',
+            multiline: true,
             placeholder: '',
         },
     },
@@ -883,6 +886,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
             fullWidth: true,
             label: 'Original format',
+            multiline: true,
             placeholder: '',
         },
     },
@@ -892,6 +896,14 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_alternate_genre',
             label: 'Alternate genre',
             multiple: true,
+        },
+    },
+    rek_genre: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.rek_genre',
+            fullWidth: true,
+            label: 'Type',
         },
     },
 };
