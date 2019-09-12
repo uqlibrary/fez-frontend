@@ -5,8 +5,14 @@ Webpack loader is added to import CKEditor as a module (from <https://www.fomfus
 
 ## Build details
 
-This package is manually built on CKEditor website (CKEditor4 doesn't properly support proper JS modules/npm install)
-Steps to build requied CKEditor:
+This package is custom built using the CKEditor website (CKEditor4 doesn't properly support proper JS modules/npm install)
+
+### Update using current config
+
+- Follow the link in line 19 of `ckeditor_build/build-config.js` to download the latest version of our custom build.
+- Replace all contents of `ckeditor_build` with the contents of `ckeditor` directory in the downloaded zip file.
+
+### Steps to build required CKEditor manually
 
 - Navigate to <https://ckeditor.com/cke4/builder>
 - 1.Select preset: Basic
@@ -37,8 +43,7 @@ Steps to build requied CKEditor:
   - Skin: Moono-Lisa
 - 3.Finalize and download: English only
 - Download Optimized package
-- Compare it to /custom_modules/ckeditor/ckeditor_build/* to make sure update is valid and no plugins are missing (build-config.js)
-- Replace all contents of ckeditor_build with new package
+- Compare it to `custom_modules/ckeditor/ckeditor_build/*` to make sure update is valid and no plugins are missing (build-config.js)
 
 ## Known issues
 
