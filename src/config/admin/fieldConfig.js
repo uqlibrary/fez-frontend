@@ -7,7 +7,6 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
-import { Checkbox } from 'modules/SharedComponents/Toolbox/Checkbox';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -84,13 +83,6 @@ export default {
             },
             height: 100,
             format: value => Immutable.Map(value),
-        },
-    },
-    fez_record_search_key_retracted: {
-        component: Checkbox,
-        componentProps: {
-            name: 'adminSection.fez_record_search_key_retracted.rek_retracted',
-            label: 'Retracted',
         },
     },
     fez_record_search_key_isi_loc: {
