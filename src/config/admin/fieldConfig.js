@@ -202,7 +202,7 @@ export default {
     rek_subtype: {
         component: PublicationSubtypeField,
         componentProps: {
-            name: 'bibliographicSection.rek_subtype',
+            name: 'additionalInformationSection.rek_subtype',
             label: 'Work sub-type',
             required: true,
             placeholder: '',
