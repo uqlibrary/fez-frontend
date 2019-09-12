@@ -23,7 +23,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Book title',
+            title: 'Journal title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
