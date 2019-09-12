@@ -48,6 +48,10 @@ export default {
             ],
         },
         {
+            title: 'Geographic area',
+            groups: [['geoCoordinates']],
+        },
+        {
             title: 'Keywords',
             groups: [['fez_record_search_key_keywords']],
         },

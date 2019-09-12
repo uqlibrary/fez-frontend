@@ -472,4 +472,10 @@ export default {
     rek_genre: {
         getValue: record => record.rek_genre,
     },
+    geoCoordinates: {
+        getValue: record =>
+            record.fez_record_search_key_geographic_area &&
+            record.fez_record_search_key_geographic_area.length > 0 &&
+            record.fez_record_search_key_geographic_area[0].rek_geographic_area,
+    },
 };
