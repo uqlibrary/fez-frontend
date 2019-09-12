@@ -6,6 +6,7 @@ import {
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
+    PUBLICATION_TYPE_PREPRINT,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 
@@ -17,6 +18,7 @@ import {
     imageFields,
     journalArticleFields,
     manuscriptFields,
+    preprintFields,
     videoFields,
 } from './fields';
 
@@ -28,5 +30,6 @@ export default {
     [PUBLICATION_TYPE_IMAGE]: imageFields,
     [PUBLICATION_TYPE_JOURNAL_ARTICLE]: journalArticleFields,
     [PUBLICATION_TYPE_MANUSCRIPT]: manuscriptFields,
+    [PUBLICATION_TYPE_PREPRINT]: preprintFields,
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: videoFields,
 };
