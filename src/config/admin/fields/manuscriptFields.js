@@ -52,7 +52,7 @@ export default {
             groups: [['geoCoordinates']],
         },
         {
-            title: 'Keywords',
+            title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
         },
         {
