@@ -2,11 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['rek_herdc_notes']],
-        },
-    ],
     identifiers: () => [
         {
             title: 'Manage identifiers',
