@@ -175,6 +175,8 @@ export class ContributorForm extends PureComponent {
                 contributor: {
                     ...prevState.contributor,
                     uqIdentifier: '0',
+                    authorId: 0,
+                    affiliation: 'NotUQ',
                 },
             }),
             () => {
@@ -230,7 +232,6 @@ export class ContributorForm extends PureComponent {
         } = this.props;
 
         const { contributor } = this.state;
-
         const description = showContributorAssignment ? locale.descriptionStep1 : locale.descriptionStep1NoStep2;
         const buttonDisabled =
             disabled ||
@@ -243,7 +244,7 @@ export class ContributorForm extends PureComponent {
             <React.Fragment>
                 {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    {isNtro && (
+                    {(isNtro || !!contributor.affiliation) && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
                                 affiliation={contributor.affiliation}
