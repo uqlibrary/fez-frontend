@@ -60,7 +60,7 @@ export default class ViewRecord extends PureComponent {
                     <Alert message={recordToViewError} />
                 </StandardPage>
             );
-        } else if (!recordToView) {
+        } else if (!recordToView || !recordToView.rek_pid) {
             return <div className="empty" />;
         }
         const isAuthor =
