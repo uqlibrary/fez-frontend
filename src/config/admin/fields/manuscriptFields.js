@@ -62,11 +62,11 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Authors',
+            title: 'Creators',
             groups: [['authors']],
         },
         {
-            title: 'Editors',
+            title: 'Contributors',
             groups: [['editors']],
         },
     ],
@@ -77,7 +77,7 @@ export default {
         },
         {
             title: 'Additional information',
-            groups: [['rek_subtype'], ['fez_record_search_key_original_format']],
+            groups: [['rek_subtype'], ['fez_record_search_key_oa_status'], ['fez_record_search_key_original_format']],
         },
     ],
     ntro: () => [],
