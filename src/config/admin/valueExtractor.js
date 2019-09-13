@@ -278,7 +278,7 @@ export default {
                 nameAsPublished: (contributors[order] || {}).rek_contributor,
                 creatorRole: '',
                 uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id}` || '',
-                authorId: (contributorIds[order] || {}).rek_contributor_id,
+                authorId: (contributorIds[order] || {}).rek_contributor_id || 0,
             }));
         },
     },
