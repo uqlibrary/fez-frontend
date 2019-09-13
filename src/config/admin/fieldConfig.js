@@ -554,6 +554,16 @@ export default {
             fullWidth: true,
         },
     },
+    languageOfProceedingsTitle: {
+        component: LanguageField,
+        componentProps: {
+            name: 'bibliographicSection.languageOfProceedingsTitle',
+            label: 'Language of proceedings title',
+            placeholder: 'Language of proceedings title',
+            multiple: true,
+            fullWidth: true,
+        },
+    },
     fez_record_search_key_conference_location: {
         component: GenericTextField,
         componentProps: {
