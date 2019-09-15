@@ -42,11 +42,7 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                [
-                    'fez_record_search_key_volume_number',
-                    'fez_record_search_key_issue_number',
-                    'fez_record_search_key_article_number',
-                ],
+                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
                 ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
@@ -69,11 +65,7 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Creators',
-            groups: [['authors']],
-        },
-        {
-            title: 'Contributors',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
