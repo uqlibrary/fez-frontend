@@ -97,13 +97,13 @@ export default {
         },
     ],
     ntro: () => [
-        // {
-        //     title: 'Scale/Significance of work & Creator research statement',
-        //     groups: [['significanceAndContributionStatement']],
-        // },
-        // {
-        //     title: 'Quality indicators',
-        //     groups: [['qualityIndicators']],
-        // },
+        {
+            title: 'Scale/Significance of work & Creator research statement',
+            groups: [['significanceAndContributionStatement']],
+        },
+        {
+            title: 'Quality indicators',
+            groups: [['qualityIndicators']],
+        },
     ],
 };
