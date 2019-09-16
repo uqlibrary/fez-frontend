@@ -478,4 +478,13 @@ export default {
             record.fez_record_search_key_geographic_area.length > 0 &&
             record.fez_record_search_key_geographic_area[0].rek_geographic_area,
     },
+    fez_record_search_key_org_name: {
+        getValue: record => ({ ...record.fez_record_search_key_org_name }),
+    },
+    fez_record_search_key_org_unit_name: {
+        getValue: record => ({ ...record.fez_record_search_key_org_unit_name }),
+    },
+    fez_record_search_key_report_number: {
+        getValue: record => ({ ...record.fez_record_search_key_report_number }),
+    },
 };

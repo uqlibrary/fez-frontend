@@ -908,4 +908,31 @@ export default {
             isSearch: true,
         },
     },
+    fez_record_search_key_org_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Institution',
+            name: 'additionalInformationSection.fez_record_search_key_org_name.rek_org_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_org_unit_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'School, Department, or Centre',
+            name: 'additionalInformationSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_report_number: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Report number',
+            name: 'additionalInformationSection.fez_record_search_key_report_number.rek_report_number',
+            placeholder: '',
+        },
+    },
 };

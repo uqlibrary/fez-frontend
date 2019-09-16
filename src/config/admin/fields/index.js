@@ -8,3 +8,4 @@ export { default as journalArticleFields } from './journalArticleFields';
 export { default as journalFields } from './journalFields';
 export { default as manuscriptFields } from './manuscriptFields';
 export { default as videoFields } from './videoFields';
+export { default as workingPaperFields } from './workingPaperFields';
