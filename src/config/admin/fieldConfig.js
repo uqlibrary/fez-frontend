@@ -5,9 +5,10 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 
+import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
-import { CollectionField } from 'modules/SharedComponents/LookupFields';
+import { CollectionField, AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
@@ -791,7 +792,6 @@ export default {
             validate: [validation.dateTimeYear],
         },
     },
-
     fez_record_search_key_isderivationof: {
         component: RelatedDatasetAndPublicationListField,
         componentProps: {
@@ -906,6 +906,151 @@ export default {
             fullWidth: true,
             label: 'Geographic area',
             isSearch: true,
+        },
+    },
+    fez_record_search_key_access_conditions: {
+        component: AccessSelectorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_access_conditions.rek_access_conditions',
+            id: 'data-collection-access-selector',
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.accessAndLicensing.fieldLabels.accessConditions,
+        },
+    },
+    fez_record_search_key_type_of_data: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_type_of_data',
+            searchKey: {
+                value: 'rek_type_of_data',
+                order: 'rek_type_of_data_order',
+            },
+            locale: locale.components.typeOfDataForm.field,
+        },
+    },
+    fez_record_search_key_software_required: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_software_required',
+            searchKey: {
+                value: 'rek_software_required',
+                order: 'rek_software_required_order',
+            },
+            locale: locale.components.softwareRequiredForm.field,
+        },
+    },
+    fez_record_search_key_related_datasets: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_related_datasets',
+            title: 'Related datasets',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_related_publications: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_related_publications',
+            title: 'Related publications',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_isdatasetof: {
+        component: RelatedDatasetAndPublicationListField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_isdatasetof',
+            searchKey: { value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' },
+            locale: {
+                form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+            },
+        },
+        height: 50,
+    },
+    contactName: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.contactName',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactName,
+        },
+    },
+    contactNameId: {
+        component: AuthorIdField,
+        componentProps: {
+            name: 'additionalInformationSection.contactNameId',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
+        },
+    },
+    contactEmail: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.contactEmail',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required, validation.email],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactEmail,
+        },
+    },
+    fez_record_search_key_project_name: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_project_name',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.project.fieldLabels.projectName,
+        },
+    },
+    fez_record_search_key_project_description: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_project_description',
+            title: formLocale.addDataset.information.project.fieldLabels.projectDescription.label,
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            fullWidth: true,
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_start_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_start_date',
+            label: 'Start date',
+            placeholder: 'Start date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_end_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_end_date',
+            label: 'End date',
+            placeholder: 'End date',
+            fullWidth: true,
         },
     },
 };
