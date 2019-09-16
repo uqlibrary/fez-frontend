@@ -26,9 +26,6 @@ exports[`BibliographicSection component should render default view 1`] = `
             Array [
               "fez_record_search_key_journal_name",
             ],
-            Array [
-              "rek_subtype",
-            ],
           ],
           "title": "Journal name",
         },
@@ -133,9 +130,6 @@ exports[`BibliographicSection component should render disabled view 1`] = `
           "groups": Array [
             Array [
               "fez_record_search_key_journal_name",
-            ],
-            Array [
-              "rek_subtype",
             ],
           ],
           "title": "Journal name",

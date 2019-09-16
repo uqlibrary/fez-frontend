@@ -48,7 +48,6 @@ export default {
                         ['fez_record_search_key_roman_script_journal_name'],
                     ]
                     : []),
-                ['rek_subtype'],
             ],
         },
         {
