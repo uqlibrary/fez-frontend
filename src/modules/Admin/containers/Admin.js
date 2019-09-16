@@ -22,9 +22,10 @@ export const FORM_NAME = 'Prototype';
 export const getBibliographicInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
         .bibliographic(
-            record.fez_record_search_key_language.length > 1 ||
-                (record.fez_record_search_key_language.length === 1 &&
-                    record.fez_record_search_key_language[0].rek_language !== 'eng'),
+            record.fez_record_search_key_language &&
+                (record.fez_record_search_key_language.length > 1 ||
+                    (record.fez_record_search_key_language.length === 1 &&
+                        record.fez_record_search_key_language[0].rek_language !== 'eng')),
         )
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
