@@ -858,6 +858,7 @@ export default {
                 buttonLabel: 'Got it',
             },
             loadingMessage: 'Loading record',
+            retractedMessage: 'This article has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',

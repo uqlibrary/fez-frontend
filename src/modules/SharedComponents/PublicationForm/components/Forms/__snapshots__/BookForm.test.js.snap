@@ -228,7 +228,7 @@ exports[`BookForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -236,6 +236,8 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -325,7 +327,7 @@ exports[`BookForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -333,6 +335,8 @@ exports[`BookForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -1110,7 +1114,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1118,6 +1122,8 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -1207,7 +1213,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1215,6 +1221,8 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -1640,7 +1648,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1648,6 +1656,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -1737,7 +1747,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -1745,6 +1755,8 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -2312,7 +2324,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2320,6 +2332,8 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",
@@ -2760,7 +2774,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-author",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2768,6 +2782,8 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-author",
+                "editHint": "Edit this item",
                 "lockedTooltip": "You are not able to edit this row",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
@@ -2857,7 +2873,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-editor",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -2865,6 +2881,8 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-editor",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this editor ([name]) to assign it as you",

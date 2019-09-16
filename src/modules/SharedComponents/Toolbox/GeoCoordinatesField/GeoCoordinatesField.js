@@ -10,6 +10,7 @@ export default function GeoCoordinatesField(fieldProps) {
             loadingElement={<div className="googleMap loading" />}
             containerElement={<div style={{ height: '400px' }} />}
             mapElement={<div style={{ height: '100%' }} />}
+            coordinates={fieldProps.input.value}
             {...fieldProps}
         />
     );

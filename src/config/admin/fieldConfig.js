@@ -7,7 +7,6 @@ import { default as formLocale } from 'locale/publicationForm';
 
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
-import { Checkbox } from 'modules/SharedComponents/Toolbox/Checkbox';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -15,11 +14,10 @@ import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/Copyri
 import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
-import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
-import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
@@ -32,6 +30,8 @@ import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
 import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
+import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
+import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -84,13 +84,6 @@ export default {
             },
             height: 100,
             format: value => Immutable.Map(value),
-        },
-    },
-    fez_record_search_key_retracted: {
-        component: Checkbox,
-        componentProps: {
-            name: 'adminSection.fez_record_search_key_retracted.rek_retracted',
-            label: 'Retracted',
         },
     },
     fez_record_search_key_isi_loc: {
@@ -202,7 +195,7 @@ export default {
     rek_subtype: {
         component: PublicationSubtypeField,
         componentProps: {
-            name: 'bibliographicSection.rek_subtype',
+            name: 'additionalInformationSection.rek_subtype',
             label: 'Work sub-type',
             required: true,
             placeholder: '',
@@ -213,8 +206,8 @@ export default {
         component: LanguageField,
         componentProps: {
             name: 'bibliographicSection.languages',
-            label: 'Language',
-            placeholder: '',
+            label: 'Language of work',
+            placeholder: 'Language of work',
             multiple: true,
         },
     },
@@ -497,6 +490,7 @@ export default {
             fullWidth: true,
             label: 'Series',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_chapter_number: {
@@ -651,10 +645,8 @@ export default {
         componentProps: {
             name: 'authorsSection.authors',
             showIdentifierLookup: true,
-            showContributorAssignment: true,
             locale: formLocale.journalArticle.authors.field,
-            validate: [validation.authorRequired],
-            editMode: true,
+            canEdit: true,
         },
     },
     editors: {
@@ -663,8 +655,7 @@ export default {
             name: 'authorsSection.editors',
             showIdentifierLookup: true,
             locale: formLocale.book.editors.field,
-            validate: [validation.authorRequired],
-            editMode: true,
+            canEdit: true,
         },
     },
     files: {
@@ -788,7 +779,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_date_available',
             label: 'Year available',
             fullWidth: true,
-            validation: [validation.dateTimeYear],
+            validate: [validation.dateTimeYear],
         },
     },
     fez_record_search_key_date_recorded: {
@@ -797,7 +788,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_date_recorded',
             label: 'Year recorded',
             fullWidth: true,
-            validation: [validation.dateTimeYear],
+            validate: [validation.dateTimeYear],
         },
     },
 
@@ -843,6 +834,7 @@ export default {
             fullWidth: true,
             label: 'Source',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_rights: {
@@ -852,6 +844,7 @@ export default {
             fullWidth: true,
             label: 'Rights',
             placeholder: '',
+            multiline: true,
         },
     },
     fez_record_search_key_acknowledgements: {
@@ -860,6 +853,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements',
             fullWidth: true,
             label: 'Acknowledgements',
+            multiline: true,
             placeholder: '',
         },
     },
@@ -885,6 +879,7 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_original_format.rek_original_format',
             fullWidth: true,
             label: 'Original format',
+            multiline: true,
             placeholder: '',
         },
     },
@@ -894,6 +889,23 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_alternate_genre',
             label: 'Alternate genre',
             multiple: true,
+        },
+    },
+    rek_genre: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.rek_genre',
+            fullWidth: true,
+            label: 'Type',
+        },
+    },
+    geoCoordinates: {
+        component: GeoCoordinatesField,
+        componentProps: {
+            name: 'bibliographicSection.geoCoordinates',
+            fullWidth: true,
+            label: 'Geographic area',
+            isSearch: true,
         },
     },
 };

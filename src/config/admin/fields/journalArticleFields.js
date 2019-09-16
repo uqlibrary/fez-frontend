@@ -4,11 +4,7 @@ export default {
     ...commonFields,
     admin: () => [
         {
-            groups: [
-                ['internalNotes'],
-                ['rek_herdc_notes'],
-                // ['fez_record_search_key_retracted']
-            ],
+            groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
     identifiers: () => [
@@ -35,12 +31,15 @@ export default {
                     ? [
                         ['languageOfTitle'],
                         ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_translated_title'],
                         ['fez_record_search_key_roman_script_title'],
+                        ['fez_record_search_key_translated_title'],
                     ]
                     : []),
-                ['languages'],
             ],
+        },
+        {
+            title: 'Language of work',
+            groups: [['languages']],
         },
         {
             title: 'Journal name',
@@ -58,12 +57,12 @@ export default {
             ],
         },
         {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
-        },
-        {
             title: 'ISBN',
             groups: [['fez_record_search_key_isbn']],
+        },
+        {
+            title: 'ISSN',
+            groups: [['fez_record_search_key_issn']],
         },
         {
             title: 'Bibliographic',
@@ -79,15 +78,13 @@ export default {
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['rek_date'],
-                ['fez_record_search_key_date_available'],
-                ['fez_record_search_key_refereed_source'],
-                // ['fez_record_search_key_succeeds'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
+                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
-            title: 'Keywords',
+            title: 'Keyword(s)',
             groups: [['fez_record_search_key_keywords']],
         },
         {
@@ -107,23 +104,23 @@ export default {
     ],
     additionalInformation: () => [
         {
+            title: 'Member of collections',
+            groups: [['collections']],
+        },
+        {
             title: 'Additional information',
             groups: [
-                ['collections'],
                 ['rek_subtype'],
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                ['fez_record_search_key_institutional_status', 'contentIndicators'],
+                ['fez_record_search_key_oa_status'],
                 ['additionalNotes'],
-                [
-                    'fez_record_search_key_herdc_code',
-                    'fez_record_search_key_herdc_status',
-                    'fez_record_search_key_institutional_status',
-                ],
-                ['contentIndicators', 'fez_record_search_key_oa_status'],
             ],
         },
     ],
     ntro: () => [
         {
-            title: 'Scale/Significance of work & Creator contribution statement',
+            title: 'Scale/Significance of work & Creator research statement',
             groups: [['significanceAndContributionStatement']],
         },
         {
