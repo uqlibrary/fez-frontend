@@ -24,6 +24,7 @@ function setup(testProps = {}, args = {}) {
         },
         width: 'md',
         required: false,
+        canEdit: false,
         ...testProps,
     };
     return getElement(ContributorRow, props, args);
@@ -224,6 +225,7 @@ describe('Component ContributorRow', () => {
                 selected: false,
                 nameAsPublished: 'J. Smith',
             },
+            enableSelect: true,
             onSelect: testFunction,
         });
         wrapper.instance()._select();
@@ -241,6 +243,7 @@ describe('Component ContributorRow', () => {
         const testObj = {
             index: 0,
             disabled: false,
+            enableSelect: true,
             contributor: {
                 selected: true,
                 nameAsPublished: 'J. Smith',

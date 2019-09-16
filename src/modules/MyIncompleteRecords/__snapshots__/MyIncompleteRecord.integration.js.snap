@@ -79,7 +79,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1716,13 +1709,10 @@
+@@ -1862,13 +1855,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -167,7 +167,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49\\"
                     >
-@@ -1712,13 +1705,10 @@
+@@ -1858,13 +1851,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -256,7 +256,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                   </div>
                 </div>
               </div>
-@@ -1705,13 +1699,10 @@
+@@ -1851,13 +1845,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -283,8 +283,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           >
                             <div
                               aria-label=\\"Select this author (Topology) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
-+                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 WithTheme-WithWidth-ContributorRow---rowSelected-387 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
+-                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386  WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
++                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 WithTheme-WithWidth-ContributorRow---rowSelected-387 WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
                               id=\\"contributor-editor-row-0\\"
                               tabindex=\\"0\\"
                             >
@@ -361,7 +361,20 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1586,10 +1584,231 @@
+@@ -1157,11 +1155,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166\\"
++                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1732,10 +1730,231 @@
                                 </button>
                               </span>
                             </div>
@@ -606,8 +619,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                           >
                             <div
                               aria-label=\\"Select this author (Topology) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 WithTheme-WithWidth-ContributorRow---rowSelected-387 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
-+                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
+-                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 WithTheme-WithWidth-ContributorRow---rowSelected-387 WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
++                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384   WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
                               id=\\"contributor-editor-row-0\\"
                               tabindex=\\"0\\"
                             >
@@ -639,7 +652,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-383\\"
                               >
-@@ -1050,27 +1052,38 @@
+@@ -1050,30 +1052,41 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-376\\"
@@ -675,12 +688,15 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                   >
 +                                     Organisation type: Government
 +                                   </span>
-+                                 </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
++                           </div>
                             <div
                               class=\\"MuiListItemSecondaryAction-root-382\\"
+                            >
+                              <span
+                                class=\\"\\"
 @@ -1088,11 +1101,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
@@ -707,7 +723,20 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1584,231 +1597,10 @@
+@@ -1155,11 +1168,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                                     class=\\"MuiSvgIcon-root-166\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1730,231 +1743,10 @@
                                 </button>
                               </span>
                             </div>
@@ -946,20 +975,257 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1156,11 +1156,11 @@
+@@ -1191,16 +1191,16 @@
                           <li
                             class=\\"MuiListItem-container-365\\"
                           >
                             <div
                               aria-label=\\"Select this author (Davidson, Robert) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
-+                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
+-                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386  WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
++                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384  WithTheme-WithWidth-ContributorRow---rowSelected-387 WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
                               id=\\"contributor-editor-row-1\\"
                               tabindex=\\"0\\"
                             >
                               <div
+-                               class=\\"MuiListItemIcon-root-408\\"
++                               class=\\"MuiListItemIcon-root-408 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                              >
+                                <svg
+                                  aria-hidden=\\"true\\"
+                                  class=\\"MuiSvgIcon-root-166\\"
+                                  focusable=\\"false\\"
+@@ -1230,30 +1230,41 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-376\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390  MuiTypography-body2-116 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-body2-116 MuiTypography-noWrap-134\\"
+                                    >
+                                      Davidson, Robert
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-108 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
+                                    >
+                                      Second  listed author
+                                    </span>
+                                  </div>
+                                </div>
+                                <div
+                                  class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-376\\"
+-                                 />
++                                 >
++                                   <p
++                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-body2-116 MuiTypography-noWrap-134\\"
++                                   >
++                                     The University of Queensland
++                                   </p>
++                                   <span
++                                     class=\\"MuiTypography-root-108  WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
++                                   >
++                                     Organisation type: University
++                                   </span>
+                                  </div>
+                                </div>
+                              </div>
++                           </div>
+                            <div
+                              class=\\"MuiListItemSecondaryAction-root-382\\"
+                            >
+                              <span
+                                class=\\"\\"
+@@ -1268,11 +1279,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166\\"
++                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1299,11 +1310,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166\\"
++                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1331,11 +1342,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166\\"
++                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1366,11 +1377,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166\\"
++                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path"
+`;
+
+exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work - Music should allow user to update work 7`] = `
+"Snapshot Diff:
+Compared values have no visual difference."
+`;
+
+exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work - Music should allow user to update work 8`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -1191,16 +1191,16 @@
+                          <li
+                            class=\\"MuiListItem-container-365\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (Davidson, Robert) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384  WithTheme-WithWidth-ContributorRow---rowSelected-387 WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
++                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384   WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
+                              id=\\"contributor-editor-row-1\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
+-                               class=\\"MuiListItemIcon-root-408 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                               class=\\"MuiListItemIcon-root-408\\"
+                              >
+                                <svg
+                                  aria-hidden=\\"true\\"
+                                  class=\\"MuiSvgIcon-root-166\\"
+                                  focusable=\\"false\\"
+@@ -1230,16 +1230,16 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-376\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-body2-116 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390  MuiTypography-body2-116 MuiTypography-noWrap-134\\"
+                                    >
+                                      Davidson, Robert
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
+                                    >
+                                      Second  listed author
+                                    </span>
+                                  </div>
+                                </div>
+@@ -1248,16 +1248,16 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-376\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390 WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-body2-116 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390  MuiTypography-body2-116 MuiTypography-noWrap-134\\"
+                                    >
+                                      The University of Queensland
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-108  WithTheme-WithWidth-ContributorRow---selected-388 MuiTypography-caption-118 MuiTypography-noWrap-134\\"
++                                     class=\\"MuiTypography-root-108   MuiTypography-caption-118 MuiTypography-noWrap-134\\"
+                                    >
+                                      Organisation type: University
+                                    </span>
+                                  </div>
+                                </div>
+@@ -1279,11 +1279,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                                     class=\\"MuiSvgIcon-root-166\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1310,11 +1310,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                                     class=\\"MuiSvgIcon-root-166\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1342,11 +1342,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                                     class=\\"MuiSvgIcon-root-166\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1377,11 +1377,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-162\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-166 WithTheme-WithWidth-ContributorRow---selected-388\\"
++                                     class=\\"MuiSvgIcon-root-166\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1595,11 +1595,11 @@
+                          <li
+                            class=\\"MuiListItem-container-365\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (The Brodsky Quartet) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386  WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
++                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384   WithTheme-WithWidth-ContributorRow---disabledListItem-385 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
+                              id=\\"contributor-editor-row-3\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
                                 class=\\"MuiListItemIcon-root-408\\"
-@@ -1207,11 +1207,22 @@
+@@ -1646,11 +1646,22 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
                                 >
@@ -982,60 +1248,8 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               </div>
                             </div>
                             <div
-                              class=\\"MuiListItemSecondaryAction-root-382\\""
-`;
-
-exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work - Music should allow user to update work 7`] = `
-"Snapshot Diff:
-Compared values have no visual difference."
-`;
-
-exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work - Music should allow user to update work 8`] = `
-"Snapshot Diff:
-- First value
-+ Second value
-
-@@ -1484,11 +1484,11 @@
-                          <li
-                            class=\\"MuiListItem-container-365\\"
-                          >
-                            <div
-                              aria-label=\\"Select this author (The Brodsky Quartet) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 WithTheme-WithWidth-ContributorRow---highlighted-386 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
-+                             class=\\"MuiListItem-root-364 WithTheme-WithWidth-ContributorRow---listItem-384 MuiListItem-default-367 MuiListItem-gutters-372 MuiListItem-divider-371 MuiListItem-secondaryAction-374\\"
-                              id=\\"contributor-editor-row-3\\"
-                              tabindex=\\"0\\"
-                            >
-                              <div
-                                class=\\"MuiListItemIcon-root-408\\"
-@@ -1535,14 +1535,25 @@
-                                <div
-                                  class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
-                                >
-                                  <div
-                                    class=\\"MuiListItemText-root-376\\"
--                                 />
-+                                 >
-+                                   <p
-+                                     class=\\"MuiTypography-root-108 WithTheme-WithWidth-ContributorRow---primary-390  MuiTypography-body2-116 MuiTypography-noWrap-134\\"
-+                                   >
-+                                     The University of Queensland
-+                                   </p>
-+                                   <span
-+                                     class=\\"MuiTypography-root-108   MuiTypography-caption-118 MuiTypography-noWrap-134\\"
-+                                   >
-+                                     Organisation type: University
-+                                   </span>
-                                  </div>
-                                </div>
-                              </div>
-+                           </div>
-                            <div
                               class=\\"MuiListItemSecondaryAction-root-382\\"
-                            >
-                              <span
-                                class=\\"\\"
-@@ -1610,15 +1621,10 @@
+@@ -1756,15 +1767,10 @@
                             </div>
                           </li>
                         </ul>
@@ -1051,7 +1265,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
               </div>
             </div>
             <div
-@@ -1716,13 +1722,10 @@
+@@ -1862,13 +1868,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -1281,7 +1495,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1505,11 +1514,11 @@
+@@ -1651,11 +1660,11 @@
                         </b>
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -1914,7 +2128,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1464,66 +1795,11 @@
+@@ -1610,66 +1941,11 @@
                     </div>
                   </div>
                 </div>
@@ -1981,7 +2195,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
           >
             <div
               class=\\"MuiGrid-item-833 MuiGrid-grid-xs-true-860\\"
-@@ -1548,21 +1824,23 @@
+@@ -1694,21 +1970,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-833 MuiGrid-grid-xs-12-872 MuiGrid-grid-md-auto-887\\"
@@ -2089,7 +2303,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1888,13 +1881,10 @@
+@@ -2034,13 +2027,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -2163,7 +2377,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454 MuiGrid-grid-sm-6-462\\"
                     >
-@@ -1884,13 +1877,10 @@
+@@ -2030,13 +2023,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2251,7 +2465,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454 MuiGrid-grid-sm-6-462\\"
                     >
-@@ -1877,13 +1870,10 @@
+@@ -2023,13 +2016,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2340,7 +2554,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -1870,13 +1864,10 @@
+@@ -2016,13 +2010,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2366,20 +2580,44 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1184,11 +1184,11 @@
+@@ -1221,16 +1221,16 @@
                           <li
                             class=\\"MuiListItem-container-778\\"
                           >
                             <div
                               aria-label=\\"Select this author (Grinberg, Anna) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
-+                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
+-                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799  WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
++                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797  WithTheme-WithWidth-ContributorRow---rowSelected-800 WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
                               id=\\"contributor-editor-row-1\\"
                               tabindex=\\"0\\"
                             >
                               <div
-                                class=\\"MuiListItemIcon-root-826\\"
-@@ -1235,11 +1235,22 @@
+-                               class=\\"MuiListItemIcon-root-826\\"
++                               class=\\"MuiListItemIcon-root-826 WithTheme-WithWidth-ContributorRow---selected-801\\"
+                              >
+                                <svg
+                                  aria-hidden=\\"true\\"
+                                  class=\\"MuiSvgIcon-root-579\\"
+                                  focusable=\\"false\\"
+@@ -1260,30 +1260,41 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-789\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803  MuiTypography-body2-529 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-body2-529 MuiTypography-noWrap-547\\"
+                                    >
+                                      Grinberg, Anna
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-521 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
+                                    >
+                                      Second  listed author
+                                    </span>
+                                  </div>
+                                </div>
                                 <div
                                   class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454 MuiGrid-grid-sm-5-461\\"
                                 >
@@ -2388,21 +2626,76 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 -                                 />
 +                                 >
 +                                   <p
-+                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803  MuiTypography-body2-529 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-body2-529 MuiTypography-noWrap-547\\"
 +                                   >
 +                                     The University of Queensland
 +                                   </p>
 +                                   <span
-+                                     class=\\"MuiTypography-root-521   MuiTypography-caption-531 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521  WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
 +                                   >
 +                                     Organisation type: University
 +                                   </span>
-+                                 </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
++                           </div>
                             <div
-                              class=\\"MuiListItemSecondaryAction-root-795\\""
+                              class=\\"MuiListItemSecondaryAction-root-795\\"
+                            >
+                              <span
+                                class=\\"\\"
+@@ -1298,11 +1309,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579\\"
++                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1329,11 +1340,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579\\"
++                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1361,11 +1372,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579\\"
++                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1396,11 +1407,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579\\"
++                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path"
 `;
 
 exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of Creative Work - Music should allow user to update work 7`] = `
@@ -2410,20 +2703,129 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1354,11 +1354,11 @@
+@@ -1221,16 +1221,16 @@
+                          <li
+                            class=\\"MuiListItem-container-778\\"
+                          >
+                            <div
+                              aria-label=\\"Select this author (Grinberg, Anna) to update their affiliation data.\\"
+-                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797  WithTheme-WithWidth-ContributorRow---rowSelected-800 WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
++                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797   WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
+                              id=\\"contributor-editor-row-1\\"
+                              tabindex=\\"0\\"
+                            >
+                              <div
+-                               class=\\"MuiListItemIcon-root-826 WithTheme-WithWidth-ContributorRow---selected-801\\"
++                               class=\\"MuiListItemIcon-root-826\\"
+                              >
+                                <svg
+                                  aria-hidden=\\"true\\"
+                                  class=\\"MuiSvgIcon-root-579\\"
+                                  focusable=\\"false\\"
+@@ -1260,16 +1260,16 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-789\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-body2-529 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803  MuiTypography-body2-529 MuiTypography-noWrap-547\\"
+                                    >
+                                      Grinberg, Anna
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
+                                    >
+                                      Second  listed author
+                                    </span>
+                                  </div>
+                                </div>
+@@ -1278,16 +1278,16 @@
+                                >
+                                  <div
+                                    class=\\"MuiListItemText-root-789\\"
+                                  >
+                                    <p
+-                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803 WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-body2-529 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521 WithTheme-WithWidth-ContributorRow---primary-803  MuiTypography-body2-529 MuiTypography-noWrap-547\\"
+                                    >
+                                      The University of Queensland
+                                    </p>
+                                    <span
+-                                     class=\\"MuiTypography-root-521  WithTheme-WithWidth-ContributorRow---selected-801 MuiTypography-caption-531 MuiTypography-noWrap-547\\"
++                                     class=\\"MuiTypography-root-521   MuiTypography-caption-531 MuiTypography-noWrap-547\\"
+                                    >
+                                      Organisation type: University
+                                    </span>
+                                  </div>
+                                </div>
+@@ -1309,11 +1309,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
++                                     class=\\"MuiSvgIcon-root-579\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1340,11 +1340,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
++                                     class=\\"MuiSvgIcon-root-579\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1372,11 +1372,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
++                                     class=\\"MuiSvgIcon-root-579\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1407,11 +1407,11 @@
+                                  <span
+                                    class=\\"MuiIconButton-label-575\\"
+                                  >
+                                    <svg
+                                      aria-hidden=\\"true\\"
+-                                     class=\\"MuiSvgIcon-root-579 WithTheme-WithWidth-ContributorRow---selected-801\\"
++                                     class=\\"MuiSvgIcon-root-579\\"
+                                      focusable=\\"false\\"
+                                      role=\\"presentation\\"
+                                      viewBox=\\"0 0 24 24\\"
+                                    >
+                                      <path
+@@ -1430,11 +1430,11 @@
                           <li
                             class=\\"MuiListItem-container-778\\"
                           >
                             <div
                               aria-label=\\"Select this author (Healey, Christopher ) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
-+                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
+-                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799  WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
++                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797   WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
                               id=\\"contributor-editor-row-2\\"
                               tabindex=\\"0\\"
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-826\\"
-@@ -1405,11 +1405,22 @@
+@@ -1481,11 +1481,22 @@
                                 <div
                                   class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454 MuiGrid-grid-sm-5-461\\"
                                 >
@@ -2454,20 +2856,20 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1524,11 +1524,11 @@
+@@ -1635,11 +1635,11 @@
                           <li
                             class=\\"MuiListItem-container-778\\"
                           >
                             <div
                               aria-label=\\"Select this author (Tomlinson, Vanessa ) to update their affiliation data.\\"
--                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
-+                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
+-                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797 WithTheme-WithWidth-ContributorRow---highlighted-799  WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
++                             class=\\"MuiListItem-root-777 WithTheme-WithWidth-ContributorRow---listItem-797   WithTheme-WithWidth-ContributorRow---disabledListItem-798 MuiListItem-default-780 MuiListItem-gutters-785 MuiListItem-divider-784 MuiListItem-secondaryAction-787\\"
                               id=\\"contributor-editor-row-3\\"
                               tabindex=\\"0\\"
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-826\\"
-@@ -1575,14 +1575,25 @@
+@@ -1686,14 +1686,25 @@
                                 <div
                                   class=\\"MuiGrid-item-415 MuiGrid-grid-xs-12-454 MuiGrid-grid-sm-5-461\\"
                                 >
@@ -2494,7 +2896,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <span
                                 class=\\"\\"
-@@ -1650,15 +1661,10 @@
+@@ -1796,15 +1807,10 @@
                             </div>
                           </li>
                         </ul>
@@ -2510,7 +2912,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1881,13 +1887,10 @@
+@@ -2027,13 +2033,10 @@
                           Validation - 
                         </b>
                         <span>

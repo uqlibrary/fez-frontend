@@ -9,7 +9,10 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Popper from '@material-ui/core/Popper';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import Grid from '@material-ui/core/Grid';
+import InputAdornment from '@material-ui/core/InputAdornment';
+import IconButton from '@material-ui/core/IconButton';
 import Chip from '@material-ui/core/Chip';
+import Clear from '@material-ui/icons/Clear';
 import { throttle } from 'throttle-debounce';
 
 export const styles = theme => ({
@@ -28,6 +31,9 @@ export const styles = theme => ({
     },
     inputRoot: {
         flexWrap: 'wrap',
+    },
+    noWrap: {
+        flexWrap: 'unset',
     },
     chip: {
         margin: `${theme.spacing.unit / 2}px ${theme.spacing.unit / 4}px`,
@@ -61,6 +67,8 @@ export class AutoCompleteAsyncField extends Component {
         MenuItemComponent: PropTypes.func,
         showChips: PropTypes.bool,
         selectedItem: PropTypes.array,
+        onClear: PropTypes.func,
+        showClear: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -89,6 +97,8 @@ export class AutoCompleteAsyncField extends Component {
                 }}
             />
         ),
+        onClear: () => {},
+        showClear: false,
     };
 
     constructor(props) {
@@ -141,7 +151,7 @@ export class AutoCompleteAsyncField extends Component {
                         }
                     },
                     classes: {
-                        root: classes.inputRoot,
+                        root: !!(inputProps || {}).endAdornment ? classes.noWrap : classes.inputRoot,
                     },
                     ...inputProps,
                 }}
@@ -284,6 +294,20 @@ export class AutoCompleteAsyncField extends Component {
                                                                     onDelete={this.handleDelete(item, index)}
                                                                 />
                                                             ),
+                                                        ),
+                                                    }
+                                                    : {}),
+                                                ...(this.props.showClear
+                                                    ? {
+                                                        endAdornment: (
+                                                            <InputAdornment position="end">
+                                                                <IconButton
+                                                                    aria-label="Clear"
+                                                                    onClick={this.props.onClear}
+                                                                >
+                                                                    <Clear />
+                                                                </IconButton>
+                                                            </InputAdornment>
                                                         ),
                                                     }
                                                     : {}),

@@ -20,18 +20,10 @@ export default {
             title: 'Manage links',
             groups: [['links']],
         },
-        {
-            title: 'Identifiers',
-            groups: [['fez_record_search_key_identifier']],
-        },
-        {
-            title: 'Location',
-            groups: [['fez_record_search_key_location']],
-        },
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Book title',
+            title: 'Journal title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
@@ -50,22 +42,17 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
                 ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
+                [
+                    'fez_record_search_key_start_page',
+                    'fez_record_search_key_end_page',
+                    'fez_record_search_key_total_pages',
+                ],
+                ['rek_date'],
                 ['rek_description'],
-                ['fez_record_search_key_acknowledgements'],
-                ['fez_record_search_key_length', 'rek_genre'],
-                ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_license'],
-                ['fez_record_search_key_source'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_transcript'],
-                ['fez_record_search_key_refereed_source', 'fez_record_search_key_alternate_genre'],
+                ['fez_record_search_key_refereed_source'],
             ],
-        },
-        {
-            title: 'Geographic area',
-            groups: [['geoCoordinates']],
         },
         {
             title: 'Keyword(s)',
@@ -78,11 +65,7 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Creators',
-            groups: [['authors']],
-        },
-        {
-            title: 'Contributors',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
@@ -94,6 +77,8 @@ export default {
         {
             title: 'Additional information',
             groups: [
+                ['rek_subtype'],
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],

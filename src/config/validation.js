@@ -139,7 +139,7 @@ export const dateTimeDay = value =>
         ? locale.validationErrors.dateTimeDay
         : undefined;
 export const dateTimeYear = value =>
-    !value || value.length === 0 || isNaN(value) || parseInt(value, 10) > new Date().getFullYear()
+    value && value.length > 0 && (isNaN(value) || parseInt(value, 10) > new Date().getFullYear())
         ? locale.validationErrors.dateTimeYear
         : undefined;
 export const validFileUpload = value => {

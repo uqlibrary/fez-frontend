@@ -36,9 +36,15 @@ describe('ContributorsEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('renders full component for admin user', () => {
+        const wrapper = setup({ showContributorAssignment: false, canEdit: true }, { isShallow: false });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('renders component in edit mode', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
             locale: {
                 form: {
                     locale: {
@@ -111,25 +117,6 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
     });
 
-    it('updates a contributor', () => {
-        const wrapper = setup();
-        wrapper.setState({
-            contributors: [
-                {
-                    test: 'value1',
-                },
-                {
-                    test: 'value2',
-                },
-                {
-                    test: 'value3',
-                },
-            ],
-        });
-        wrapper.instance().updateContributor({ test: 'value4' }, 1);
-        expect(wrapper.state().contributors[1].test).toBe('value4');
-    });
-
     it('assigns a contributor to current author', async() => {
         const wrapper = setup({
             author: {
@@ -150,6 +137,7 @@ describe('ContributorsEditor', () => {
     it('chooses a contributor to edit', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
         });
         wrapper.setState({
             contributors: [
@@ -239,31 +227,40 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().contributors[1].displayName).toEqual(3);
     });
 
-    it('passes showContributorAssignment prop to ContributorRow as expected', () => {
-        const wrapper = setup({
-            showContributorAssignment: true,
-        });
-        wrapper.setState({
-            isCurrentAuthorSelected: false,
-            contributors: [{ nameAsPublished: 1 }],
-        });
-        expect(wrapper.instance().renderContributorRows()[0].props.showContributorAssignment).toBe(true);
-    });
-
     it('returns array of contributor rows in edit mode with selectContributor select handler', () => {
         const wrapper = setup({
             editMode: true,
+            canEdit: true,
         });
         const testFn = jest.fn();
         wrapper.instance().selectContributor = testFn;
         wrapper.setState({
             contributors: [
                 {
+                    disabled: false,
                     nameAsPublished: 1,
                 },
             ],
         });
-        expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(testFn);
+        expect(wrapper.instance().renderContributorRows()[0].props.onEdit).toBe(testFn);
+    });
+
+    it('should not be able to select contributor in edit mode', () => {
+        const wrapper = setup({
+            editMode: true,
+            canEdit: true,
+        });
+        const testFn = jest.fn();
+        wrapper.instance().selectContributor = testFn;
+        wrapper.setState({
+            contributors: [
+                {
+                    disabled: false,
+                    nameAsPublished: 1,
+                },
+            ],
+        });
+        expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(null);
     });
 
     it('returns contributor form with expected props', () => {
@@ -271,10 +268,14 @@ describe('ContributorsEditor', () => {
             contributors: [{ nameAsPublished: 1 }],
         });
         const testFn = jest.fn();
-        expect(wrapper.instance().renderContributorForm(testFn, 0)).toMatchSnapshot();
+
+        wrapper.instance().addContributor = testFn;
+
+        expect(wrapper.instance().renderContributorForm()).toMatchSnapshot();
 
         wrapper.setProps({
             editMode: true,
+            canEdit: true,
             locale: {
                 form: {
                     locale: {
@@ -288,14 +289,14 @@ describe('ContributorsEditor', () => {
                 },
             },
         });
-        const contributorForm = wrapper.instance().renderContributorForm(testFn, 0);
+        const contributorForm = wrapper.instance().renderContributorForm();
         expect(contributorForm).toMatchSnapshot();
 
         const testObj = {
             nameAsPublished: 2,
         };
         contributorForm.props.onSubmit(testObj);
-        expect(testFn).toBeCalledWith(testObj, 0);
+        expect(testFn).toBeCalledWith(testObj);
     });
 
     // Tests for infinite scroll appear or not

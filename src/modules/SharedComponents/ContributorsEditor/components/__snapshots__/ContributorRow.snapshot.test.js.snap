@@ -187,7 +187,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -209,11 +209,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="You are not able to edit this row"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -352,7 +348,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -374,11 +370,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="You are not able to edit this row"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -481,7 +473,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -503,11 +495,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="You are not able to edit this row"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -815,7 +803,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -940,7 +928,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -1065,7 +1053,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -1087,11 +1075,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="You are not able to edit this row"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -1230,7 +1214,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -1379,7 +1363,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -1688,7 +1672,7 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -1983,7 +1967,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -2005,11 +1989,7 @@ exports[`Component ContributorRow should render row as required 1`] = `
           }
         }
       >
-        <WithStyles(Tooltip)
-          title="You are not able to edit this row"
-        >
-          <pure(LockIcon) />
-        </WithStyles(Tooltip)>
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -2381,7 +2361,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
     id="contributor-editor-row-0"
     onClick={[Function]}
     onKeyDown={[Function]}
-    tabIndex={-1}
+    tabIndex={0}
   >
     <Hidden
       implementation="js"
@@ -2403,7 +2383,7 @@ exports[`Component ContributorRow should render with missing aria label if selec
           }
         }
       >
-        <pure(LockIcon) />
+        <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
     <WithStyles(Grid)
@@ -2460,7 +2440,9 @@ exports[`Component ContributorRow should render with missing aria label if selec
         <span>
           <WithStyles(IconButton)
             disabled={false}
-            id="delete-record-0"
+            id="function deleteButtonId() {
+          return 'delete-record-0';
+        }-0"
             onClick={[Function]}
           >
             <pure(DeleteIcon)

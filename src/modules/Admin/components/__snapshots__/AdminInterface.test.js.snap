@@ -65,6 +65,20 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -228,6 +242,20 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -391,6 +419,20 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -554,6 +596,20 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"
@@ -692,6 +748,20 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <Memo() />
       </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
       <WithStyles(Grid)
         container={true}
         direction="row"

@@ -181,7 +181,7 @@ exports[`PatentForm renders  component 1`] = `
             },
             "row": Object {
               "locale": Object {
-                "deleteButtonId": [Function],
+                "deleteButtonId": "delete-creator",
                 "deleteHint": "Remove this item",
                 "deleteRecordConfirmation": Object {
                   "cancelButtonLabel": "No",
@@ -189,6 +189,8 @@ exports[`PatentForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editButtonId": "edit-creator",
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
                 "selectHint": "Select this creator ([name]) to assign it as you",

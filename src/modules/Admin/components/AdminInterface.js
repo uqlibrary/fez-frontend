@@ -98,6 +98,21 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                         <Grid item xs="auto">
                             <FormViewToggler />
                         </Grid>
+                    </Hidden>
+                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                        <Grid
+                            container
+                            alignContent="center"
+                            justify="center"
+                            alignItems="center"
+                            style={{ marginBottom: 12 }}
+                        >
+                            <Grid item xs={12}>
+                                <Alert message={txt.current.retractedMessage} type="warning" />
+                            </Grid>
+                        </Grid>
+                    )}
+                    <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
                                 <Grid item xs={12}>

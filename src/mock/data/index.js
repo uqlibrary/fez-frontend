@@ -1,8 +1,9 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
-    adminEditBookChapter,
+    adminEditAudioList,
     adminEditBookChapterList,
     adminEditConferencePaperList,
+    adminEditManuscriptList,
     adminEditPatentList,
     adminEditSeminarPaperList,
     adminEditThesisList,
@@ -27,7 +28,6 @@ export {
     record,
     recordsTypeList,
     recordWithDatastreams,
-    recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
     lookupToolIncites
