@@ -1053,4 +1053,22 @@ export default {
             fullWidth: true,
         },
     },
+    fez_record_search_key_time_period_start_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_time_period_start_date',
+            label: 'Time period start date',
+            placeholder: 'Time period start date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_time_period_end_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_time_period_end_date',
+            label: 'Time period end date',
+            placeholder: 'Time period end date',
+            fullWidth: true,
+        },
+    },
 };
