@@ -126,9 +126,9 @@ const mapStateToProps = state => {
     const initialFormValues = !!recordToView
         ? {
             initialValues: {
-                pid: recordToView.rek_pid,
-                publication: recordToView,
-                rek_date: recordToView.rek_date || recordToView.rek_created_date,
+                pid: recordToView.rek_pid || null,
+                publication: recordToView || null,
+                rek_date: recordToView.rek_date || recordToView.rek_created_date || null,
                 collection: [],
                 subject: [],
                 adminSection: {

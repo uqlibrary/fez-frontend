@@ -102,7 +102,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
-        add: '/admin/add/step1',
+        add: '/admin/add/',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -144,7 +144,7 @@ const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/unpublished',
     '/admin/thirdPartyTools',
-    '/admin/add/step1',
+    '/admin/add',
     '/view',
     '/author-identifiers/orcid/link',
     '/author-identifiers/google-scholar/link',
@@ -361,7 +361,7 @@ export const getRoutesConfig = ({
             ? [
                 {
                     path: pathConfig.admin.add,
-                    component: components.AdminAdd,
+                    component: components.Admin,
                     exact: true,
                     access: [roles.admin],
                     pageTitle: locale.pages.adminAdd.title,

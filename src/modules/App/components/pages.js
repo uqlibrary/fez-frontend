@@ -32,9 +32,6 @@ export const Prototype = () => <Async load={import('modules/Admin/containers/Adm
 export const Admin = componentProps => (
     <Async load={import('modules/Admin/containers/Admin')} componentProps={componentProps} />
 );
-export const AdminAdd = componentProps => (
-    <Async load={import('modules/Admin/containers/AdminAdd')} componentProps={componentProps} />
-);
 
 // always load components
 export { AddMissingRecord, FindRecords, RecordsSearchResults, NewRecord } from 'modules/AddMissingRecord';
