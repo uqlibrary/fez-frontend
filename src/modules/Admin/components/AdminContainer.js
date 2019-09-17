@@ -156,7 +156,10 @@ export const AdminContainer = ({
                             component: GrantInformationSection,
                             activated:
                                 recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                recordToView.rek_display_type !== 374,
+                                // Blacklist types without grant info
+                                // 374: Manuscript
+                                // 187: Thesis
+                                ![374, 187].includes(recordToView.rek_display_type),
                         },
                         files: {
                             component: FilesSection,
