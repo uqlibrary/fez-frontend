@@ -14,7 +14,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Book title',
+            title: 'Title',
             groups: [
                 ['rek_title'],
                 ...(isLote
@@ -78,10 +78,8 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status'],
-                ['contentIndicators'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
-                ['fez_record_search_key_oa_status'],
             ],
         },
     ],
