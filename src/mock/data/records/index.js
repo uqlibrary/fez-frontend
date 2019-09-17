@@ -1,6 +1,7 @@
 export { default as adminEditAudioList } from './adminEditAudioList';
 export { default as adminEditBookChapterList } from './adminEditBookChapterList';
 export { default as adminEditConferencePaperList } from './adminEditConferencePaperList';
+export { default as adminEditConferenceProceedingsList } from './adminEditConferenceProceedingsList';
 export { default as adminEditManuscriptList } from './adminEditManuscriptList';
 export { default as adminEditPatentList } from './adminEditPatentList';
 export { default as adminEditSeminarPaperList } from './adminEditSeminarPaperList';
