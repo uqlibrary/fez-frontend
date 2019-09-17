@@ -200,7 +200,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.incompleteNTROlist.data[1] },
             { ...mockData.incompleteNTROlist.data[2] },
             { ...mockTestingData.dataCollection },
-            { ...mockData.recordWithMap },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
             ...mockData.possibleUnclaimedList.data,
