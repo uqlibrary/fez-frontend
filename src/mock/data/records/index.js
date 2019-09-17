@@ -25,6 +25,7 @@ export { default as publicationTypeListConferenceProceedings } from './publicati
 export { default as publicationTypeListCreativeWork } from './publicationTypeListCreativeWork';
 export { default as publicationTypeListDataCollection } from './publicationTypeListDataCollection';
 export { default as publicationTypeListDepartmentTechnicalReport } from './publicationTypeListDepartmentTechnicalReport';
+export { default as publicationTypeListDesign } from './publicationTypeListDesign';
 export { default as publicationTypeListDigilibImage } from './publicationTypeListDigilibImage';
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
