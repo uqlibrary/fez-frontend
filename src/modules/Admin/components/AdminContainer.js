@@ -8,15 +8,13 @@ import { NTRO_SUBTYPES } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
 import { unstable_useMediaQuery as useMediaQuery } from '@material-ui/core/useMediaQuery';
-
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import AdminInterface from './AdminInterface';
-
 import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
-// import GrantInformationSection from './GrantInformationSection';
+import AdminSectionContainer from './add/AddSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformaionSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
 import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
@@ -51,7 +49,8 @@ const styles = theme => ({
 
 export const AdminContainer = ({
     location,
-    recordToView,
+    formValues,
+    recordToView = {},
     loadRecordToView,
     loadingRecordToView,
     clearRecordToView,
@@ -102,78 +101,115 @@ export const AdminContainer = ({
     // }, []);
 
     const txt = locale.pages.edit;
-
-    if (loadingRecordToView) {
+    if (!!match.params.pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!recordToView) {
-        return <div className="empty" />;
     }
-
+    console.log('formValues', JSON.stringify(formValues));
     return (
-        <TabbedContext.Provider
-            value={{
-                tabbed: isMobileView ? false : tabbed,
-                toggleTabbed: handleToggle,
-            }}
-        >
-            <RecordContext.Provider value={{ record: recordToView }}>
-                <AdminInterface
-                    classes={classes}
-                    handleSubmit={handleSubmit}
-                    submitting={submitting}
-                    submitSucceeded={submitSucceeded}
-                    disableSubmit={disableSubmit}
-                    location={location}
-                    history={history}
-                    tabs={{
-                        admin: {
-                            component: AdminSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        identifiers: {
-                            component: IdentifiersSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        bibliographic: {
-                            component: BibliographicSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        authorDetails: {
-                            component: AuthorsSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        additionalInformation: {
-                            component: AdditionalInformationSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        ntro: {
-                            component: NtroSection,
-                            activated:
-                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                NTRO_SUBTYPES.includes(recordToView.rek_subtype),
-                        },
-                        grantInformation: {
-                            component: GrantInformationSection,
-                            activated:
-                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                recordToView.rek_display_type !== 374,
-                        },
-                        files: {
-                            component: FilesSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        security: {
-                            component: SecuritySection,
-                            activated: true,
-                        },
+        <React.Fragment>
+            {!match.params.pid && !recordToView && <AdminSectionContainer formValues={formValues} />}
+            {!!match.params.pid && recordToView && (
+                <TabbedContext.Provider
+                    value={{
+                        tabbed: isMobileView ? false : tabbed,
+                        toggleTabbed: handleToggle,
                     }}
-                />
-            </RecordContext.Provider>
-        </TabbedContext.Provider>
+                >
+                    <RecordContext.Provider value={{ record: recordToView }}>
+                        <AdminInterface
+                            classes={classes}
+                            handleSubmit={handleSubmit}
+                            submitting={submitting}
+                            submitSucceeded={submitSucceeded}
+                            disableSubmit={disableSubmit}
+                            location={location}
+                            history={history}
+                            tabs={{
+                                admin: {
+                                    component: AdminSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                identifiers: {
+                                    component: IdentifiersSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                bibliographic: {
+                                    component: BibliographicSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                authorDetails: {
+                                    component: AuthorsSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                additionalInformation: {
+                                    component: AdditionalInformationSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                ntro: {
+                                    component: NtroSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD &&
+                                            NTRO_SUBTYPES.includes(recordToView.rek_subtype)),
+                                },
+                                grantInformation: {
+                                    component: GrantInformationSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD &&
+                                            recordToView.rek_display_type !== 374),
+                                },
+                                files: {
+                                    component: FilesSection,
+                                    activated:
+                                        (recordToView &&
+                                            recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
+                                        (formValues.rek_display_type &&
+                                            formValues.rek_display_type.toLowerCase() === RECORD_TYPE_RECORD),
+                                },
+                                security: {
+                                    component: SecuritySection,
+                                    activated: true,
+                                },
+                            }}
+                        />
+                    </RecordContext.Provider>
+                </TabbedContext.Provider>
+            )}
+        </React.Fragment>
     );
 };
 
 AdminContainer.propTypes = {
+    publicationSubtypeItems: PropTypes.array,
+    hasSubtypes: PropTypes.bool,
+    hasDefaultDocTypeSubType: PropTypes.bool,
+    formValues: PropTypes.object,
+    formErrors: PropTypes.object,
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     clearRecordToView: PropTypes.func,
