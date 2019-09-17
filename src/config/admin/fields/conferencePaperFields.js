@@ -2,11 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
     identifiers: () => [
         {
             title: 'Manage identifiers',
@@ -47,7 +42,7 @@ export default {
                 ['fez_record_search_key_conference_name'],
                 ...(isLote
                     ? [
-                        ['languageOfConferenceTitle'],
+                        ['languageOfConferenceName'],
                         ['fez_record_search_key_native_script_conference_name'],
                         ['fez_record_search_key_roman_script_conference_name'],
                         ['fez_record_search_key_translated_conference_name'],
@@ -145,8 +140,7 @@ export default {
             groups: [
                 ['rek_subtype'],
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'contentIndicators'],
-                ['fez_record_search_key_oa_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

@@ -5,50 +5,24 @@ export default {
     identifiers: () => [
         {
             title: 'Manage identifiers',
-            groups: [['rek_wok_doc_type'], ['rek_scopus_doc_type'], ['rek_pubmed_doc_type']],
+            groups: [['rek_wok_doc_type', 'rek_scopus_doc_type', 'rek_pubmed_doc_type']],
         },
         {
             title: 'Manage links',
             groups: [['links']],
         },
     ],
-    bibliographic: (isLote = false) => [
+    bibliographic: () => [
         {
             title: 'Title',
-            groups: [
-                ['rek_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfTitle'],
-                        ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_roman_script_title'],
-                        ['fez_record_search_key_translated_title'],
-                    ]
-                    : []),
-            ],
-        },
-        {
-            title: 'Language of work',
-            groups: [['languages']],
-        },
-        {
-            title: 'ISBN',
-            groups: [['fez_record_search_key_isbn']],
-        },
-        {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
+            groups: [['rek_title']],
         },
         {
             title: 'Bibliographic',
             groups: [
-                ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available'],
+                ['fez_record_search_key_publisher'],
+                ['rek_date', 'fez_record_search_key_refereed_source'],
                 ['rek_description'],
-                ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_refereed_source'],
             ],
         },
         {
@@ -78,6 +52,7 @@ export default {
         {
             title: 'Additional information',
             groups: [
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],

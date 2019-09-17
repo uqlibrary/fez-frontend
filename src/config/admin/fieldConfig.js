@@ -368,6 +368,15 @@ export default {
             placeholder: '',
         },
     },
+    patentOwner: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.patentOwner',
+            fullWidth: true,
+            label: 'Patent owner',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_volume_number: {
         component: GenericTextField,
         componentProps: {
@@ -392,6 +401,15 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
             fullWidth: true,
             label: 'Article number',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_patent_number: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_patent_number.rek_patent_number',
+            fullWidth: true,
+            label: 'Patent number',
             placeholder: '',
         },
     },
@@ -551,6 +569,16 @@ export default {
             name: 'bibliographicSection.languageOfConferenceName',
             label: 'Language of conference name',
             placeholder: 'Language of conference name',
+            multiple: true,
+            fullWidth: true,
+        },
+    },
+    languageOfProceedingsTitle: {
+        component: LanguageField,
+        componentProps: {
+            name: 'bibliographicSection.languageOfProceedingsTitle',
+            label: 'Language of proceedings title',
+            placeholder: 'Language of proceedings title',
             multiple: true,
             fullWidth: true,
         },
@@ -1069,6 +1097,33 @@ export default {
             label: 'Time period end date',
             placeholder: 'Time period end date',
             fullWidth: true,
+        },
+    },
+    fez_record_search_key_org_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Institution',
+            name: 'additionalInformationSection.fez_record_search_key_org_name.rek_org_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_org_unit_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'School, Department, or Centre',
+            name: 'additionalInformationSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_report_number: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Report number',
+            name: 'additionalInformationSection.fez_record_search_key_report_number.rek_report_number',
+            placeholder: '',
         },
     },
 };

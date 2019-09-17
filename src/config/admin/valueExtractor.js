@@ -50,6 +50,9 @@ export default {
     fez_record_search_key_publisher: {
         getValue: record => ({ ...record.fez_record_search_key_publisher }),
     },
+    patentOwner: {
+        getValue: record => record.fez_record_search_key_publisher.rek_publisher,
+    },
     fez_record_search_key_volume_number: {
         getValue: record => ({ ...record.fez_record_search_key_volume_number }),
     },
@@ -58,6 +61,9 @@ export default {
     },
     fez_record_search_key_article_number: {
         getValue: record => ({ ...record.fez_record_search_key_article_number }),
+    },
+    fez_record_search_key_patent_number: {
+        getValue: record => ({ ...record.fez_record_search_key_patent_number }),
     },
     fez_record_search_key_start_page: {
         getValue: record => ({ ...record.fez_record_search_key_start_page }),
@@ -547,5 +553,14 @@ export default {
     },
     fez_record_search_key_time_period_end_date: {
         getValue: record => (record.fez_record_search_key_time_period_end_date || {}).rek_time_period_end_date,
+    },
+    fez_record_search_key_org_name: {
+        getValue: record => ({ ...record.fez_record_search_key_org_name }),
+    },
+    fez_record_search_key_org_unit_name: {
+        getValue: record => ({ ...record.fez_record_search_key_org_unit_name }),
+    },
+    fez_record_search_key_report_number: {
+        getValue: record => ({ ...record.fez_record_search_key_report_number }),
     },
 };

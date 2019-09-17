@@ -5,7 +5,11 @@ export default {
     identifiers: () => [
         {
             title: 'Manage identifiers',
-            groups: [['rek_wok_doc_type', 'rek_scopus_doc_type']],
+            groups: [
+                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                ['rek_pubmed_doc_type'],
+            ],
         },
         {
             title: 'Manage links',
@@ -14,7 +18,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Title',
+            title: 'Title of journal',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
@@ -22,23 +26,28 @@ export default {
             groups: [['languages']],
         },
         {
+            title: 'ISBN',
+            groups: [['fez_record_search_key_isbn']],
+        },
+        {
+            title: 'ISSN',
+            groups: [['fez_record_search_key_issn']],
+        },
+        {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
                 ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available'],
-                ['fez_record_search_key_original_format'],
+                [
+                    'fez_record_search_key_start_page',
+                    'fez_record_search_key_end_page',
+                    'fez_record_search_key_total_pages',
+                ],
+                ['rek_date'],
                 ['rek_description'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_source'],
-                ['fez_record_search_key_license'],
                 ['fez_record_search_key_refereed_source'],
-                ['fez_record_search_key_acknowledgements'],
             ],
-        },
-        {
-            title: 'Geographic area',
-            groups: [['geoCoordinates']],
         },
         {
             title: 'Keyword(s)',
@@ -48,18 +57,10 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
-        {
-            title: 'Related publications', // Succeeds
-            groups: [['fez_record_search_key_isderivationof']],
-        },
     ],
     authors: () => [
         {
-            title: 'Creators',
-            groups: [['authors']],
-        },
-        {
-            title: 'Contributors',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
@@ -71,7 +72,9 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                ['rek_subtype'],
+                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

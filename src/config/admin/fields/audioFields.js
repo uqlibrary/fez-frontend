@@ -2,11 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
     identifiers: () => [
         {
             title: 'Manage identifiers',
@@ -31,7 +26,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Book title',
+            title: 'Title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {

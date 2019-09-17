@@ -2,11 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
     identifiers: () => [
         {
             title: 'Manage identifiers',
@@ -116,7 +111,7 @@ export default {
             groups: [
                 ['rek_subtype'],
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'contentIndicators'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

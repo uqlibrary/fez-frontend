@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 
 import locale from 'locale/pages';
-import { NTRO_SUBTYPES } from 'config/general';
+import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
 
 import { withStyles } from '@material-ui/core/styles';
 import useTheme from '@material-ui/styles/useTheme';
@@ -156,7 +156,10 @@ export const AdminContainer = ({
                             component: GrantInformationSection,
                             activated:
                                 recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                recordToView.rek_display_type !== 374,
+                                // Blacklist types without grant info
+                                ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                    recordToView.rek_display_type,
+                                ),
                         },
                         files: {
                             component: FilesSection,

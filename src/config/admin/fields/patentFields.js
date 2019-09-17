@@ -5,7 +5,11 @@ export default {
     identifiers: () => [
         {
             title: 'Manage identifiers',
-            groups: [['rek_wok_doc_type', 'rek_scopus_doc_type']],
+            groups: [
+                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
+                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
+                ['rek_pubmed_doc_type'],
+            ],
         },
         {
             title: 'Manage links',
@@ -14,7 +18,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Title',
+            title: 'Patent title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
@@ -24,21 +28,14 @@ export default {
         {
             title: 'Bibliographic',
             groups: [
-                ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                ['patentOwner'],
                 ['fez_record_search_key_series'],
+                ['fez_record_search_key_article_number', 'fez_record_search_key_patent_number'],
                 ['rek_date', 'fez_record_search_key_date_available'],
-                ['fez_record_search_key_original_format'],
                 ['rek_description'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_source'],
-                ['fez_record_search_key_license'],
+                ['rek_genre'],
                 ['fez_record_search_key_refereed_source'],
-                ['fez_record_search_key_acknowledgements'],
             ],
-        },
-        {
-            title: 'Geographic area',
-            groups: [['geoCoordinates']],
         },
         {
             title: 'Keyword(s)',
@@ -59,7 +56,7 @@ export default {
             groups: [['authors']],
         },
         {
-            title: 'Contributors',
+            title: 'Editors',
             groups: [['editors']],
         },
     ],
@@ -71,7 +68,7 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },

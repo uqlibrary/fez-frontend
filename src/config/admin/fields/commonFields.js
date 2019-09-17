@@ -1,4 +1,9 @@
 export default {
+    admin: () => [
+        {
+            groups: [['internalNotes'], ['rek_herdc_notes']],
+        },
+    ],
     files: () => [
         {
             groups: [['fez_datastream_info']],
