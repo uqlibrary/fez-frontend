@@ -14,7 +14,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Book title',
+            title: 'Title',
             groups: [
                 ['rek_title'],
                 ...(isLote
