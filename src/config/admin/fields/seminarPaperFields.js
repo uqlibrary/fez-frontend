@@ -76,8 +76,7 @@ export default {
             title: 'Additional information',
             groups: [
                 ['rek_subtype'],
-                ['fez_record_search_key_institutional_status', 'contentIndicators'],
-                ['fez_record_search_key_oa_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },
