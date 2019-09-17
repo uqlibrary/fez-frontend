@@ -2,28 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    identifiers: () => [
-        {
-            title: 'Manage identifiers',
-            groups: [
-                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
-                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                ['rek_pubmed_doc_type'],
-            ],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-        {
-            title: 'Identifiers',
-            groups: [['fez_record_search_key_identifier']],
-        },
-        {
-            title: 'Location',
-            groups: [['fez_record_search_key_location']],
-        },
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -59,7 +37,7 @@ export default {
             ],
         },
         {
-            title: 'Geographic area',
+            title: 'Geographic co-ordinates',
             groups: [['geoCoordinates']],
         },
         {

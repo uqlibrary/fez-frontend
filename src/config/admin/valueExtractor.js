@@ -430,6 +430,9 @@ export default {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
+    depositAgreement: {
+        getValue: record => record.rek_copyright,
+    },
     rek_herdc_notes: {
         getValue: record => record.rek_herdc_notes,
     },

@@ -2,26 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
-    identifiers: () => [
-        {
-            title: 'Manage identifiers',
-            groups: [
-                ['fez_record_search_key_doi'],
-                ['rek_wok_doc_type'],
-                ['rek_scopus_doc_type'],
-                ['rek_pubmed_doc_type'],
-            ],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Dataset name',
@@ -50,6 +30,10 @@ export default {
                 ['fez_record_search_key_related_publications'],
                 ['fez_record_search_key_related_datasets'],
             ],
+        },
+        {
+            title: 'Geographic co-ordinates',
+            groups: [['geoCoordinates']],
         },
         {
             title: 'Keyword(s)',
@@ -104,10 +88,6 @@ export default {
         {
             title: 'Project information',
             groups: [['fez_record_search_key_project_name'], ['fez_record_search_key_project_description']],
-        },
-        {
-            title: 'Geographic co-ordinates',
-            groups: [['geoCoordinates']],
         },
     ],
     ntro: () => [],

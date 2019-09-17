@@ -13,7 +13,12 @@ import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
+import {
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_RECORD,
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_SEMINAR_PAPER,
+} from 'config/general';
 // import locale from 'locale/pages';
 import { bindActionCreators } from 'redux';
 
@@ -38,7 +43,12 @@ export const getBibliographicInitialValues = record =>
 
 export const getIdentifiersInitialValues = record =>
     (adminInterfaceConfig[record.rek_display_type] || {})
-        .identifiers()
+        .identifiers({
+            displayLocation: [PUBLICATION_TYPE_AUDIO_DOCUMENT, PUBLICATION_TYPE_SEMINAR_PAPER].includes(
+                record.rek_display_type,
+            ),
+            displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
+        })
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
