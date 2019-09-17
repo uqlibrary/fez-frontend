@@ -367,6 +367,15 @@ export default {
             placeholder: '',
         },
     },
+    patentOwner: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.patentOwner',
+            fullWidth: true,
+            label: 'Patent owner',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_volume_number: {
         component: GenericTextField,
         componentProps: {
@@ -391,6 +400,15 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
             fullWidth: true,
             label: 'Article number',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_patent_number: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_patent_number.rek_patent_number',
+            fullWidth: true,
+            label: 'Patent number',
             placeholder: '',
         },
     },

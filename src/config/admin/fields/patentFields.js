@@ -18,7 +18,7 @@ export default {
     ],
     bibliographic: (isLote = false) => [
         {
-            title: 'Title of journal',
+            title: 'Patent title',
             groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
@@ -26,26 +26,14 @@ export default {
             groups: [['languages']],
         },
         {
-            title: 'ISBN',
-            groups: [['fez_record_search_key_isbn']],
-        },
-        {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
-        },
-        {
             title: 'Bibliographic',
             groups: [
-                ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
+                ['patentOwner'],
                 ['fez_record_search_key_series'],
-                [
-                    'fez_record_search_key_start_page',
-                    'fez_record_search_key_end_page',
-                    'fez_record_search_key_total_pages',
-                ],
-                ['rek_date'],
+                ['fez_record_search_key_article_number', 'fez_record_search_key_patent_number'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
+                ['rek_genre'],
                 ['fez_record_search_key_refereed_source'],
             ],
         },
@@ -57,8 +45,16 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
     ],
     authors: () => [
+        {
+            title: 'Creators',
+            groups: [['authors']],
+        },
         {
             title: 'Editors',
             groups: [['editors']],
@@ -72,8 +68,6 @@ export default {
         {
             title: 'Additional information',
             groups: [
-                ['rek_subtype'],
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],

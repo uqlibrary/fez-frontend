@@ -15,29 +15,24 @@ export default {
             title: 'Manage links',
             groups: [['links']],
         },
-    ],
-    bibliographic: (isLote = false) => [
         {
-            title: 'Title of journal',
-            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
+            title: 'Location',
+            groups: [['fez_record_search_key_location']],
+        },
+    ],
+    bibliographic: () => [
+        {
+            title: 'Title',
+            groups: [['rek_title']],
         },
         {
             title: 'Language of work',
             groups: [['languages']],
         },
         {
-            title: 'ISBN',
-            groups: [['fez_record_search_key_isbn']],
-        },
-        {
-            title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
-        },
-        {
             title: 'Bibliographic',
             groups: [
-                ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
+                ['fez_record_search_key_publisher'],
                 ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
@@ -57,8 +52,16 @@ export default {
             title: 'Subject',
             groups: [['subjects']],
         },
+        {
+            title: 'Related publications', // Succeeds
+            groups: [['fez_record_search_key_isderivationof']],
+        },
     ],
     authors: () => [
+        {
+            title: 'Authors',
+            groups: [['authors']],
+        },
         {
             title: 'Editors',
             groups: [['editors']],
@@ -73,7 +76,6 @@ export default {
             title: 'Additional information',
             groups: [
                 ['rek_subtype'],
-                ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
