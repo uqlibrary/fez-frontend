@@ -26,7 +26,7 @@ export function putUploadFile(pid, file, dispatch) {
         .then(uploadUrl => {
             const options = {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
+                    'Content-Type': file.fileData && file.fileData.type ? file.fileData.type : 'multipart/form-data',
                 },
                 onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
                 cancelToken: generateCancelToken().token,
