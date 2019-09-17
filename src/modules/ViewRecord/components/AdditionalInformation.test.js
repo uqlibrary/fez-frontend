@@ -580,6 +580,15 @@ describe('Additional Information Component ', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should skip render of date if it has a placeholder value', () => {
+        const publication = {
+            rek_date: '1000-01-01T00:00:00Z',
+            rek_display_type_lookup: 'Journal Article',
+        };
+        const wrapper = setup({ publication });
+        expect(wrapper.instance().renderColumns()).toMatchSnapshot();
+    });
+
     it('renderLicense()', () => {
         const wrapper = setup();
         expect(toJson(wrapper.instance().renderLicense(1, null))).toMatchSnapshot();
