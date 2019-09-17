@@ -3963,34 +3963,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                                         ],
                                                                       }
                                                                     }
-                                                                    load={
-                                                                      Promise {
-                                                                        "_a": undefined,
-                                                                        "_c": Array [
-                                                                          OwnPromiseCapability {
-                                                                            "domain": null,
-                                                                            "fail": false,
-                                                                            "ok": [Function],
-                                                                            "promise": Promise {
-                                                                              "_a": undefined,
-                                                                              "_c": Array [],
-                                                                              "_d": false,
-                                                                              "_h": 0,
-                                                                              "_n": false,
-                                                                              "_s": 0,
-                                                                              "_v": undefined,
-                                                                            },
-                                                                            "reject": [Function],
-                                                                            "resolve": [Function],
-                                                                          },
-                                                                        ],
-                                                                        "_d": false,
-                                                                        "_h": 0,
-                                                                        "_n": false,
-                                                                        "_s": 0,
-                                                                        "_v": undefined,
-                                                                      }
-                                                                    }
+                                                                    load={Promise {}}
                                                                   />
                                                                 </PublicationsList>
                                                               </div>
@@ -7070,34 +7043,7 @@ exports[`Search record results should render a single unclaimable item with no a
                                                           "loadingPublicationSources": Object {},
                                                         }
                                                       }
-                                                      load={
-                                                        Promise {
-                                                          "_a": undefined,
-                                                          "_c": Array [
-                                                            OwnPromiseCapability {
-                                                              "domain": null,
-                                                              "fail": false,
-                                                              "ok": [Function],
-                                                              "promise": Promise {
-                                                                "_a": undefined,
-                                                                "_c": Array [],
-                                                                "_d": false,
-                                                                "_h": 0,
-                                                                "_n": false,
-                                                                "_s": 0,
-                                                                "_v": undefined,
-                                                              },
-                                                              "reject": [Function],
-                                                              "resolve": [Function],
-                                                            },
-                                                          ],
-                                                          "_d": false,
-                                                          "_h": 0,
-                                                          "_n": false,
-                                                          "_s": 0,
-                                                          "_v": undefined,
-                                                        }
-                                                      }
+                                                      load={Promise {}}
                                                     />
                                                   </PublicationListLoadingProgress>
                                                 </div>
