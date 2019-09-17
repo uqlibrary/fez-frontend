@@ -11,6 +11,7 @@ import {
     PUBLICATION_TYPE_PATENT,
     PUBLICATION_TYPE_PREPRINT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
+    PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
 } from 'config/general';
@@ -28,6 +29,7 @@ import {
     patentFields,
     preprintFields,
     seminarPaperFields,
+    thesisFields,
     videoFields,
     workingPaperFields,
 } from './fields';
@@ -45,6 +47,7 @@ export default {
     [PUBLICATION_TYPE_PATENT]: patentFields,
     [PUBLICATION_TYPE_PREPRINT]: preprintFields,
     [PUBLICATION_TYPE_SEMINAR_PAPER]: seminarPaperFields,
+    [PUBLICATION_TYPE_THESIS]: thesisFields,
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: videoFields,
     [PUBLICATION_TYPE_WORKING_PAPER]: workingPaperFields,
 };
