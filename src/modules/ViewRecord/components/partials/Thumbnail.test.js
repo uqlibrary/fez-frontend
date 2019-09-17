@@ -33,13 +33,6 @@ describe('Thumbnail component', () => {
         expect(onClick).toHaveBeenCalledTimes(1);
     });
 
-    it('should set thumbnail error state on calling imageError()', () => {
-        const wrapper = setup();
-        wrapper.state().thumbnailError = false;
-        wrapper.instance().imageError();
-        expect(wrapper.state().thumbnailError).toBe(true);
-    });
-
     it('should show a broken thumbnail icon when the thumbnail wont load.', () => {
         const wrapper = setup();
         wrapper.instance().setState({ thumbnailError: true });
@@ -75,5 +68,25 @@ describe('Thumbnail component', () => {
 
             expect(toJson(wrapper)).toMatchSnapshot();
         });
+    });
+
+    it('should render FLV files as a thumbnail only for specific mime types', () => {
+        const wrapper = setup({
+            fileName: 'video.mov',
+            mediaUrl: 'video.flv',
+            mimeType: 'video/mov',
+            thumbnailError: false,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render PDF files as a thumbnail only plus link to original', () => {
+        const wrapper = setup({
+            fileName: 'original.pdf',
+            mediaUrl: 'pdf.jpg',
+            mimeType: 'application/pdf',
+            thumbnailError: false,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

@@ -31,13 +31,9 @@ exports[`Collection form test should display successfull submission screen 1`] =
               <Field
                 component={[Function]}
                 disabled={false}
-                locale={
-                  Object {
-                    "label": "Select community",
-                    "placeholder": "Select a community this collection is a member of",
-                  }
-                }
+                label="Select community"
                 name="fez_record_search_key_ismemberof"
+                placeholder="Select a community this collection is a member of"
                 required={true}
                 validate={
                   Array [
@@ -133,13 +129,9 @@ exports[`Collection form test should render form with only the community dropdow
               <Field
                 component={[Function]}
                 disabled={false}
-                locale={
-                  Object {
-                    "label": "Select community",
-                    "placeholder": "Select a community this collection is a member of",
-                  }
-                }
+                label="Select community"
                 name="fez_record_search_key_ismemberof"
+                placeholder="Select a community this collection is a member of"
                 required={true}
                 validate={
                   Array [
@@ -281,13 +273,9 @@ exports[`Collection form test should render the full form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
-                locale={
-                  Object {
-                    "label": "Select community",
-                    "placeholder": "Select a community this collection is a member of",
-                  }
-                }
+                label="Select community"
                 name="fez_record_search_key_ismemberof"
+                placeholder="Select a community this collection is a member of"
                 required={true}
                 validate={
                   Array [

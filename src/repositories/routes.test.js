@@ -619,8 +619,8 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for FILE_UPLOAD_API', () => {
-        expect(routes.FILE_UPLOAD_API({ pid: '12345', fileName: 'test.jpg' })).toEqual({
-            apiUrl: 'file/upload/presigned/12345/test.jpg',
+        expect(routes.FILE_UPLOAD_API()).toEqual({
+            apiUrl: 'file/upload/presigned',
         });
     });
 
