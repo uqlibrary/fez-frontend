@@ -27,8 +27,7 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
 };
 
 const isAdmin = account => {
-    return account.canMasquerade;
-    // return account.is_administrator || account.is_super_administrator;
+    return account && (account.canMasquerade || account.is_administrator || account.is_super_administrator);
 };
 
 export const pathConfig = {
@@ -62,7 +61,6 @@ export const pathConfig = {
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
         url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
-        // url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
@@ -131,6 +129,9 @@ export const pathConfig = {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    digiteam: {
+        batchImport: '/batch-import',
+    },
 };
 
 // a duplicate list of routes for
@@ -143,16 +144,21 @@ const flattedPathConfig = [
     '/admin/unpublished',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
+    '/batch-import',
     '/contact',
     '/dashboard',
+    '/contact',
+    '/rhdsubmission',
+    '/sbslodge_new',
+    '/records/search',
+    '/records/mine',
+    '/records/possible',
+    '/records/incomplete',
+    '/records/claim',
     '/records/add/find',
+    '/records/add/results',
     '/records/add/new',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
     '/view',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
 ];
 
 const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
@@ -434,6 +440,13 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.components.thirdPartyLookupTools.title,
                 },
+                {
+                    path: pathConfig.digiteam.batchImport,
+                    component: components.BatchImport,
+                    exact: true,
+                    access: [roles.digiteam],
+                    pageTitle: locale.components.digiTeam.batchImport.title,
+                },
             ]
             : []),
         ...publicPages,
@@ -589,6 +602,14 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 {
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
+                },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
+                {
+                    linkTo: pathConfig.digiteam.batchImport,
+                    ...locale.menu.digiteam.batchImport,
                 },
             ]
             : []),

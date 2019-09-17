@@ -288,10 +288,17 @@ export const getErrorAlertProps = ({
         alertProps = { ...alertLocale.successAlert };
     } else {
         if (error) {
+            let message = error;
+            if (alertLocale.errorAlert.message) {
+                message =
+                    typeof alertLocale.errorAlert.message === 'function'
+                        ? alertLocale.errorAlert.message(error)
+                        : alertLocale.errorAlert.message;
+            }
             // error is set by submit failed, it's reset once form is re-validated (updated for re-submit)
             alertProps = {
                 ...alertLocale.errorAlert,
-                message: alertLocale.errorAlert.message ? alertLocale.errorAlert.message(error) : error,
+                message: message,
             };
         } else if (formErrors && formErrors.size === undefined) {
             // formErrors is set by form validation or validate method, it's reset once form is re-validated
