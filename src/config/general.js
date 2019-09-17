@@ -366,15 +366,6 @@ export const publicationTypes = components => ({
         formComponent: components ? components.NewspaperArticleForm : null,
         citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true,
-        subtypes: [
-            'Article (original research)',
-            'Creative work',
-            'Critical review of research, literature review, critical commentary',
-            'Discussion - responses, round table/panel discussions, Q&A, reply',
-            'Editorial',
-            'Letter to editor, brief commentary or brief communication',
-            'Other',
-        ],
     },
     [PUBLICATION_TYPE_PATENT]: {
         id: PUBLICATION_TYPE_PATENT,
