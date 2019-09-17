@@ -114,7 +114,7 @@ context('Data Collection form', () => {
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
             .find('input#day')
-            .type('16', { delay: 1 });
+            .type('16');
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 8);
@@ -131,7 +131,7 @@ context('Data Collection form', () => {
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
             .find('input#year')
-            .type('1976', { delay: 1 });
+            .type('1976');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
         cy.get('div.Alert')
@@ -519,10 +519,10 @@ context('Data Collection form', () => {
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#day')
-            .type('16', { delay: 1 })
+            .type('16')
             .clear();
         cy.get('input#keywords-input')
-            .type('Keywords 1', { delay: 1 });
+            .type('Keywords 1');
         cy.contains('p', 'Invalid day')
             .should('not.be.visible');
 
@@ -530,7 +530,7 @@ context('Data Collection form', () => {
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#day')
-            .type('31', { delay: 1 });
+            .type('31');
 
         cy.contains('span', 'Collection start date')
             .parent()
@@ -543,7 +543,7 @@ context('Data Collection form', () => {
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#year')
-            .type('2000', { delay: 1 });
+            .type('2000');
 
         cy.contains('p', 'Invalid day')
             .should('be.visible');
@@ -553,14 +553,14 @@ context('Data Collection form', () => {
             .parent()
             .find('input#day')
             .clear()
-            .type('16', { delay: 1 });
+            .type('16');
 
         // enter future date and see error
         cy.contains('span', 'Collection start date')
             .parent()
             .find('input#year')
             .clear()
-            .type('2100', { delay: 1 });
+            .type('2100');
 
         cy.contains('p', 'Date must be before now')
             .should('be.visible');
@@ -570,7 +570,7 @@ context('Data Collection form', () => {
             .parent()
             .find('input#year')
             .clear()
-            .type('1976', { delay: 1 });
+            .type('1976');
 
         cy.contains('p', 'Date must be before now')
             .should('not.be.visible');
@@ -586,7 +586,7 @@ context('Data Collection form', () => {
         cy.contains('span', 'Collection end date')
             .parent()
             .find('input#day')
-            .type('16', { delay: 1 });
+            .type('16');
 
         cy.contains('span', 'Collection end date')
             .parent()
@@ -600,7 +600,7 @@ context('Data Collection form', () => {
         cy.contains('span', 'Collection end date')
             .parent()
             .find('input#year')
-            .type('2100', { delay: 1 });
+            .type('2100');
 
         cy.contains('p', 'Date must be before now')
             .should('be.visible');
@@ -610,7 +610,7 @@ context('Data Collection form', () => {
             .parent()
             .find('input#year')
             .clear()
-            .type('1974', { delay: 1 });
+            .type('1974');
 
         cy.contains('p', 'Date range is not valid')
             .should('be.visible');
@@ -620,7 +620,7 @@ context('Data Collection form', () => {
             .parent()
             .find('input#year')
             .clear()
-            .type('1976', { delay: 1 });
+            .type('1976');
 
         cy.contains('p', 'Date range is not valid')
             .should('not.be.visible');

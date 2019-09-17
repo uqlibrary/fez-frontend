@@ -1,7 +1,12 @@
 import { routes } from 'config';
 
-const prefixFileName = (prefix, fileName, extension) =>
-    `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}.${extension}`;
+const prefixFileNameSuffix = (prefix = '', fileName, suffix = '', extension) =>
+    `${prefix}${prefix !== '' ? '_' : ''}${fileName.substr(0, fileName.lastIndexOf('.'))}${
+        suffix !== '' ? '_' : ''
+    }${suffix}.${extension}`;
+
+// const prefixFileNameSuffix = (prefix, suffix, fileName, extension) =>
+//     `${prefix}_${fileName.substr(0, fileName.lastIndexOf('.'))}_${suffix}.${extension}`;
 
 export const viewRecordsConfig = {
     genericDataEmail: 'data@library.uq.edu.au',
@@ -74,15 +79,31 @@ export const viewRecordsConfig = {
     },
     files: {
         blacklist: {
-            namePrefixRegex: '^(FezACML|stream|web|thumbnail|preview|presmd)',
+            namePrefixRegex: '^(FezACML|stream|web_|thumbnail_|preview_|presmd)',
+            nameSuffixRegex: '(_t\\.|_compressed\\.)',
             descriptionKeywordsRegex:
                 '(ERA |HERDC|not publicly available|corrected thesis|' +
                 'restricted|lodgement|submission|corrections|staffdata)',
             collections: ['UQ:413806', 'UQ:357493', 'UQ:211157', 'UQ:342107'],
         },
-        thumbnailFileName: fileName => prefixFileName('thumbnail', fileName, 'jpg'),
-        previewFileName: fileName => prefixFileName('preview', fileName, 'jpg'),
-        webFileName: fileName => prefixFileName('web', fileName, 'jpg'),
+        thumbnailFileName: fileName => [
+            prefixFileNameSuffix('thumbnail', fileName, 'compressed_t', 'jpg'),
+            prefixFileNameSuffix('thumbnail', fileName, 'override_t', 'jpg'),
+            prefixFileNameSuffix('thumbnail', fileName, 't', 'jpg'),
+            prefixFileNameSuffix('thumbnail', fileName, '', 'jpg'),
+        ],
+        previewFileName: fileName => [
+            prefixFileNameSuffix('preview', fileName, 'compressed_t', 'jpg'),
+            prefixFileNameSuffix('preview', fileName, 'override_t', 'jpg'),
+            prefixFileNameSuffix('preview', fileName, 't', 'jpg'),
+            prefixFileNameSuffix('preview', fileName, '', 'jpg'),
+        ],
+        webFileName: fileName => [
+            prefixFileNameSuffix('web', fileName, 'compressed_t', 'jpg'),
+            prefixFileNameSuffix('web', fileName, 'override_t', 'jpg'),
+            prefixFileNameSuffix('web', fileName, 't', 'jpg'),
+            prefixFileNameSuffix('web', fileName, '', 'jpg'),
+        ],
     },
     metaTags: [
         {

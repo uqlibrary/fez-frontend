@@ -14,20 +14,9 @@ import { reloadReducerFromLocalStorage } from 'modules/SharedComponents/ReloadRe
 const FORM_NAME = 'SbsSubmission';
 
 const onSubmit = (values, dispatch, props) => {
-    return dispatch(submitThesis({ ...values.toJS() }, props.author))
-        .then(() => {
-            // console.log(record);
-            // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            // setTimeout(()=>{
-            //     dispatch(reset(FORM_NAME));
-            // }, 100);
-        })
-        .catch(error => {
-            throw new SubmissionError({ _error: error });
-        });
+    return dispatch(submitThesis({ ...values.toJS() }, props.author)).catch(error => {
+        throw new SubmissionError({ _error: error });
+    });
 };
 
 let SbsSubmissionContainer = reduxForm({

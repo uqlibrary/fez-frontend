@@ -1,7 +1,9 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
     collections,
+    collectionsByCommunity,
     communityRecord,
+    communitySearchList,
     collectionRecord,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
@@ -19,9 +21,9 @@ export {
     record,
     recordsTypeList,
     recordWithDatastreams,
-    recordWithMap,
     recordWithoutAuthorIds,
     recordWithTiffAndThumbnail,
+    lookupToolIncites
 } from './records';
 
 export { vocabulariesList } from './vocabularies';
@@ -30,3 +32,4 @@ export { hindexResponse, trendingPublications, currentAuthorStats } from './acad
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
+export { batchImportDirectories } from './batchImportDirectories';

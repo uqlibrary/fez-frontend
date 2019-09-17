@@ -18,7 +18,11 @@ export const styles = theme => ({
     },
 });
 
-export class DocumentTypeField extends PureComponent {
+/**
+ * allow the user to select MULTIPLE document types
+ * (see DocumentTypeSingleField for selecting SINGLE document type)
+ */
+export class DocumentTypeMultipleField extends PureComponent {
     static propTypes = {
         docTypes: PropTypes.array,
         updateDocTypeValues: PropTypes.func,
@@ -83,4 +87,4 @@ export class DocumentTypeField extends PureComponent {
         );
     }
 }
-export default withStyles(styles, { withTheme: true })(DocumentTypeField);
+export default withStyles(styles, { withTheme: true })(DocumentTypeMultipleField);

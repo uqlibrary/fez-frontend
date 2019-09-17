@@ -1,6 +1,6 @@
 # Fez frontend
 
-[![Codeship Status for uqlibrary/fez-frontend](https://app.codeship.com/projects/5f018a50-f4f8-0134-5dd6-4eabb52e4bf9/status?branch=master)](https://app.codeship.com/projects/141087)
+[![Codeship Status for uqlibrary/fez-frontend](https://app.codeship.com/projects/5f018a50-f4f8-0134-5dd6-4eabb52e4bf9/status?branch=master)](https://app.codeship.com/projects/210111)
 [![Dependency Status](https://david-dm.org/uqlibrary/fez-frontend.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 [![Dev Dependency Status](https://david-dm.org/uqlibrary/fez-frontend/dev-status.svg)](https://david-dm.org/uqlibrary/fez-frontend)
 
@@ -38,15 +38,24 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - runs `http://localhost:3000/`
   - uses mock data from src/mock
 - `npm run start:url`
+
   - runs `http://dev-espace.library.uq.edu.au:3000/` (add `dev-espace.library.uq.edu.au` to your /etc/hosts)
   - uses staging data from the aws api (ie <https://api.library.uq.edu.au/staging/>) as a backend
   - to use logged in: `SESSION_COOKIE_NAME='mysessiontoken' npm run start:url`
+
     - ie specify a session token using SESSION_COOKIE_NAME environment variable
-    - you may need to block CORS errors - eg with Moesif Origin & CORS Changer Chrome Extension
+    - you may need to block CORS errors - eg with [Allow CORS: Access-Control-Allow-Origin](https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf) Chrome Extension, or by launching the browser with CORS disabled.
+
+      ```sh
+      google-chrome --disable-web-security --user-data-dir=/tmp/chrome-dev
+      ```
+
     - session token x-uql-token can easily be found by logging in at <https://www.library.uq.edu.au/> and
       observing the header value in Network tab of Inspections
     - You will also need to run Chrome in no-security mode by adding the alias `alias chrome-no-cors='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=~/chrome-dev-profile > /dev/null 2>&1'` and then running chrome by `chrome-no-cors`.
+
   - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
+
 - `npm run start:build`
   - runs production build version on `http://dev-espace.library.uq.edu.au:9000/` and `http://localhost:9000/`
   - uses PRODUCTION DATA from the aws api (ie <https://api.library.uq.edu.au/v1/>) as a backend!! Careful!!

@@ -1318,8 +1318,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -1763,18 +1763,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
-                                className="wosCitationCount CitationCountView-citationCount-99"
+                                className="wosCitationCount CitationCountView-citationCount-101"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  className="wosCitationCount CitationCountView-citationCount-99"
+                                  className="wosCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -2219,7 +2219,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="wosCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -2664,7 +2664,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon wos large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -2682,8 +2682,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={0}
@@ -3127,18 +3127,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-99"
+                                className="scopusCitationCount CitationCountView-citationCount-101"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-99"
+                                  className="scopusCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -3583,7 +3583,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="scopusCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -4028,7 +4028,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       0
                                     </span>
@@ -4046,8 +4046,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -4491,18 +4491,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-99"
+                                className="altmetricCitationCount CitationCountView-citationCount-101"
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-99"
+                                  className="altmetricCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/12345"
@@ -4947,7 +4947,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="altmetricCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -5392,7 +5392,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -5410,8 +5410,8 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -5855,18 +5855,18 @@ exports[`CitationCounts should not render View full statistics link on public pa
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-99"
+                                className="googleCitationCount CitationCountView-citationCount-101"
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-99"
+                                  className="googleCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -6311,7 +6311,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="googleCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -6756,7 +6756,7 @@ exports[`CitationCounts should not render View full statistics link on public pa
                                       className="fez-icon google large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -6765,15 +6765,24 @@ exports[`CitationCounts should not render View full statistics link on public pa
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <OpenAccessIcon
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            showEmbargoText={false}
-                          >
-                            <span
-                              className="noOaIcon"
-                            />
-                          </OpenAccessIcon>
+                          <WithStyles(OpenAccessIcon)>
+                            <OpenAccessIcon
+                              classes={
+                                Object {
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-99",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-100",
+                                }
+                              }
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
+                          </WithStyles(OpenAccessIcon)>
                         </div>
                       </Grid>
                     </WithStyles(Grid)>
@@ -10500,8 +10509,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={0}
@@ -10945,18 +10954,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-99"
+                                className="scopusCitationCount CitationCountView-citationCount-101"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-99"
+                                  className="scopusCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
@@ -11401,7 +11410,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="scopusCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85026774540&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -11846,7 +11855,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       0
                                     </span>
@@ -11864,8 +11873,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -12309,18 +12318,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-99"
+                                className="altmetricCitationCount CitationCountView-citationCount-101"
                                 href="https://queensland.altmetric.com/details/23535331"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-99"
+                                  className="altmetricCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/23535331"
@@ -12765,7 +12774,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="altmetricCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://queensland.altmetric.com/details/23535331"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -13210,7 +13219,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -13228,8 +13237,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={null}
@@ -13673,18 +13682,18 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-99"
+                                className="googleCitationCount CitationCountView-citationCount-101"
                                 href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-99"
+                                  className="googleCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
@@ -14129,7 +14138,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="googleCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://scholar.google.com/scholar?q=intitle:ENA/VASP%20proteins%20regulate%20exocytosis%20by%20mediating%20myosin%20VI-dependent%20recruitment%20of%20secretory%20granules%20to%20the%20cortical%20actin%20network"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -14578,15 +14587,24 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <OpenAccessIcon
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            showEmbargoText={false}
-                          >
-                            <span
-                              className="noOaIcon"
-                            />
-                          </OpenAccessIcon>
+                          <WithStyles(OpenAccessIcon)>
+                            <OpenAccessIcon
+                              classes={
+                                Object {
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-99",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-100",
+                                }
+                              }
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
+                          </WithStyles(OpenAccessIcon)>
                         </div>
                       </Grid>
                     </WithStyles(Grid)>
@@ -14723,8 +14741,8 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-101",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                  "externalLink": "ExternalLink-externalLink-103",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
@@ -15168,7 +15186,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                               title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-101"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-103"
                                 href="https://app.library.uq.edu.au/#/authors/view/UQ:67abc8"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
@@ -15610,27 +15628,27 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                 title="ENA/VASP proteins regulate exocytosis by mediating myosin VI-dependent recruitment of secretory granules to the cortical actin network"
                               >
                                 <pure(OpenInNewIcon)
-                                  className="ExternalLink-externalLinkIcon-102"
+                                  className="ExternalLink-externalLinkIcon-104"
                                 >
                                   <OpenInNewIcon
-                                    className="ExternalLink-externalLinkIcon-102"
+                                    className="ExternalLink-externalLinkIcon-104"
                                   >
                                     <WithStyles(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-102"
+                                      className="ExternalLink-externalLinkIcon-104"
                                     >
                                       <SvgIcon
-                                        className="ExternalLink-externalLinkIcon-102"
+                                        className="ExternalLink-externalLinkIcon-104"
                                         classes={
                                           Object {
-                                            "colorAction": "MuiSvgIcon-colorAction-106",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled-108",
-                                            "colorError": "MuiSvgIcon-colorError-107",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary-104",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary-105",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-109",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-111",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-110",
-                                            "root": "MuiSvgIcon-root-103",
+                                            "colorAction": "MuiSvgIcon-colorAction-108",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled-110",
+                                            "colorError": "MuiSvgIcon-colorError-109",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary-106",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary-107",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-111",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-113",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-112",
+                                            "root": "MuiSvgIcon-root-105",
                                           }
                                         }
                                         color="inherit"
@@ -15640,7 +15658,7 @@ exports[`CitationCounts should render component with a mock record metrics 1`] =
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          className="MuiSvgIcon-root-103 ExternalLink-externalLinkIcon-102"
+                                          className="MuiSvgIcon-root-105 ExternalLink-externalLinkIcon-104"
                                           focusable="false"
                                           role="presentation"
                                           viewBox="0 0 24 24"
@@ -17601,8 +17619,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={0}
@@ -18046,18 +18064,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Web of science will open in a new window"
-                                className="wosCitationCount CitationCountView-citationCount-99"
+                                className="wosCitationCount CitationCountView-citationCount-101"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                 openInNewIcon={false}
                                 title="Full citation in Web of science will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Web of science will open in a new window"
-                                  className="wosCitationCount CitationCountView-citationCount-99"
+                                  className="wosCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
@@ -18502,7 +18520,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Web of science will open in a new window"
-                                    className="wosCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="wosCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=12345&SrcAuth=uqueensland"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -18947,7 +18965,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon wos large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       0
                                     </span>
@@ -18965,8 +18983,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -19410,18 +19428,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Scopus will open in a new window"
-                                className="scopusCitationCount CitationCountView-citationCount-99"
+                                className="scopusCitationCount CitationCountView-citationCount-101"
                                 href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                 openInNewIcon={false}
                                 title="Full citation in Scopus will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Scopus will open in a new window"
-                                  className="scopusCitationCount CitationCountView-citationCount-99"
+                                  className="scopusCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
@@ -19866,7 +19884,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Scopus will open in a new window"
-                                    className="scopusCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="scopusCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=12345&origin=inward"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -20311,7 +20329,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon scopus large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -20329,8 +20347,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -20774,18 +20792,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Altmetric will open in a new window"
-                                className="altmetricCitationCount CitationCountView-citationCount-99"
+                                className="altmetricCitationCount CitationCountView-citationCount-101"
                                 href="https://queensland.altmetric.com/details/12345"
                                 openInNewIcon={false}
                                 title="Full citation in Altmetric will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Altmetric will open in a new window"
-                                  className="altmetricCitationCount CitationCountView-citationCount-99"
+                                  className="altmetricCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://queensland.altmetric.com/details/12345"
@@ -21230,7 +21248,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Altmetric will open in a new window"
-                                    className="altmetricCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="altmetricCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://queensland.altmetric.com/details/12345"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -21675,7 +21693,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon altmetric large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -21693,8 +21711,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             <CitationCountView
                               classes={
                                 Object {
-                                  "citationCount": "CitationCountView-citationCount-99",
-                                  "citationCountNumber": "CitationCountView-citationCountNumber-100",
+                                  "citationCount": "CitationCountView-citationCount-101",
+                                  "citationCountNumber": "CitationCountView-citationCountNumber-102",
                                 }
                               }
                               count={1}
@@ -22138,18 +22156,18 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                             >
                               <WithStyles(ExternalLink)
                                 aria-label="Full citation in Google scholar will open in a new window"
-                                className="googleCitationCount CitationCountView-citationCount-99"
+                                className="googleCitationCount CitationCountView-citationCount-101"
                                 href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                 openInNewIcon={false}
                                 title="Full citation in Google scholar will open in a new window"
                               >
                                 <ExternalLink
                                   aria-label="Full citation in Google scholar will open in a new window"
-                                  className="googleCitationCount CitationCountView-citationCount-99"
+                                  className="googleCitationCount CitationCountView-citationCount-101"
                                   classes={
                                     Object {
-                                      "externalLink": "ExternalLink-externalLink-101",
-                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                      "externalLink": "ExternalLink-externalLink-103",
+                                      "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                     }
                                   }
                                   href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
@@ -22594,7 +22612,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 >
                                   <a
                                     aria-label="Full citation in Google scholar will open in a new window"
-                                    className="googleCitationCount CitationCountView-citationCount-99 ExternalLink-externalLink-101"
+                                    className="googleCitationCount CitationCountView-citationCount-101 ExternalLink-externalLink-103"
                                     href="https://scholar.google.com/scholar?q=intitle:This%20is%20test%20title"
                                     rel="noopener noreferrer"
                                     tabIndex="0"
@@ -23039,7 +23057,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       className="fez-icon google large"
                                     />
                                     <span
-                                      className="CitationCountView-citationCountNumber-100"
+                                      className="CitationCountView-citationCountNumber-102"
                                     >
                                       1
                                     </span>
@@ -23048,15 +23066,24 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               </WithStyles(ExternalLink)>
                             </CitationCountView>
                           </WithStyles(CitationCountView)>
-                          <OpenAccessIcon
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            showEmbargoText={false}
-                          >
-                            <span
-                              className="noOaIcon"
-                            />
-                          </OpenAccessIcon>
+                          <WithStyles(OpenAccessIcon)>
+                            <OpenAccessIcon
+                              classes={
+                                Object {
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-99",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-100",
+                                }
+                              }
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
+                          </WithStyles(OpenAccessIcon)>
                         </div>
                       </Grid>
                     </WithStyles(Grid)>
@@ -23193,8 +23220,8 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               className="CitationCounts-statsLink-1"
                               classes={
                                 Object {
-                                  "externalLink": "ExternalLink-externalLink-101",
-                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-102",
+                                  "externalLink": "ExternalLink-externalLink-103",
+                                  "externalLinkIcon": "ExternalLink-externalLinkIcon-104",
                                 }
                               }
                               href="https://app.library.uq.edu.au/#/authors/view/pid:111"
@@ -23638,7 +23665,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                               title="This is test title"
                             >
                               <a
-                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-101"
+                                className="CitationCounts-statsLink-1 ExternalLink-externalLink-103"
                                 href="https://app.library.uq.edu.au/#/authors/view/pid:111"
                                 rel="noopener noreferrer"
                                 tabIndex="0"
@@ -24080,27 +24107,27 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                 title="This is test title"
                               >
                                 <pure(OpenInNewIcon)
-                                  className="ExternalLink-externalLinkIcon-102"
+                                  className="ExternalLink-externalLinkIcon-104"
                                 >
                                   <OpenInNewIcon
-                                    className="ExternalLink-externalLinkIcon-102"
+                                    className="ExternalLink-externalLinkIcon-104"
                                   >
                                     <WithStyles(SvgIcon)
-                                      className="ExternalLink-externalLinkIcon-102"
+                                      className="ExternalLink-externalLinkIcon-104"
                                     >
                                       <SvgIcon
-                                        className="ExternalLink-externalLinkIcon-102"
+                                        className="ExternalLink-externalLinkIcon-104"
                                         classes={
                                           Object {
-                                            "colorAction": "MuiSvgIcon-colorAction-106",
-                                            "colorDisabled": "MuiSvgIcon-colorDisabled-108",
-                                            "colorError": "MuiSvgIcon-colorError-107",
-                                            "colorPrimary": "MuiSvgIcon-colorPrimary-104",
-                                            "colorSecondary": "MuiSvgIcon-colorSecondary-105",
-                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-109",
-                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-111",
-                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-110",
-                                            "root": "MuiSvgIcon-root-103",
+                                            "colorAction": "MuiSvgIcon-colorAction-108",
+                                            "colorDisabled": "MuiSvgIcon-colorDisabled-110",
+                                            "colorError": "MuiSvgIcon-colorError-109",
+                                            "colorPrimary": "MuiSvgIcon-colorPrimary-106",
+                                            "colorSecondary": "MuiSvgIcon-colorSecondary-107",
+                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-111",
+                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-113",
+                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-112",
+                                            "root": "MuiSvgIcon-root-105",
                                           }
                                         }
                                         color="inherit"
@@ -24110,7 +24137,7 @@ exports[`CitationCounts should render component with all metrics 1`] = `
                                       >
                                         <svg
                                           aria-hidden="true"
-                                          className="MuiSvgIcon-root-103 ExternalLink-externalLinkIcon-102"
+                                          className="MuiSvgIcon-root-105 ExternalLink-externalLinkIcon-104"
                                           focusable="false"
                                           role="presentation"
                                           viewBox="0 0 24 24"
@@ -25996,15 +26023,24 @@ exports[`CitationCounts should render component with no metrics 1`] = `
                         <div
                           className="MuiGrid-item-3 MuiGrid-grid-xs-12-42 MuiGrid-grid-sm-auto-43"
                         >
-                          <OpenAccessIcon
-                            embargoDate={null}
-                            isOpenAccess={false}
-                            showEmbargoText={false}
-                          >
-                            <span
-                              className="noOaIcon"
-                            />
-                          </OpenAccessIcon>
+                          <WithStyles(OpenAccessIcon)>
+                            <OpenAccessIcon
+                              classes={
+                                Object {
+                                  "badgeStyle": "OpenAccessIcon-badgeStyle-99",
+                                  "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-100",
+                                }
+                              }
+                              embargoDate={null}
+                              isOpenAccess={false}
+                              securityStatus={true}
+                              showEmbargoText={false}
+                            >
+                              <span
+                                className="noOaIcon"
+                              />
+                            </OpenAccessIcon>
+                          </WithStyles(OpenAccessIcon)>
                         </div>
                       </Grid>
                     </WithStyles(Grid)>
@@ -26767,8 +26803,15 @@ exports[`CitationCounts should render component with no metrics 1`] = `
 
 exports[`CitationCounts should render open access icon when required 1`] = `
 <OpenAccessIcon
+  classes={
+    Object {
+      "badgeStyle": "OpenAccessIcon-badgeStyle-99",
+      "embargoedBadgeStyle": "OpenAccessIcon-embargoedBadgeStyle-100",
+    }
+  }
   embargoDate={null}
   isOpenAccess={false}
+  securityStatus={true}
   showEmbargoText={false}
 >
   <span
