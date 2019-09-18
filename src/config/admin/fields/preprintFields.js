@@ -11,8 +11,9 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_publisher'],
-                ['rek_date', 'fez_record_search_key_refereed_source'],
+                ['rek_date'],
                 ['rek_description'],
+                ['fez_record_search_key_refereed_source'],
             ],
         },
         {

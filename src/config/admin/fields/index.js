@@ -3,6 +3,7 @@ export { default as bookChapterFields } from './bookChapterFields';
 export { default as bookFields } from './bookFields';
 export { default as conferencePaperFields } from './conferencePaperFields';
 export { default as conferenceProceedingsFields } from './conferenceProceedingsFields';
+export { default as creativeWorkFields } from './creativeWorkFields';
 export { default as dataCollectionFields } from './dataCollectionFields';
 export { default as departmentTechnicalReportFields } from './departmentTechnicalReportFields';
 export { default as imageFields } from './imageFields';
