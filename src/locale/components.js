@@ -2433,5 +2433,96 @@ export default {
                 },
             },
         },
+        photographers: {
+            title: 'Photographers',
+            description: 'Please provide a list of photographers and then select your name from the list.',
+            descriptionAuthorOrEditor:
+                'Please provide a list of photographers and then select your name once from the list of photographer.',
+            help: {
+                title: "Photographer's name",
+                text: (
+                    <p>
+                        For more information about identification of photographer, click{' '}
+                        <a
+                            target="_blank"
+                            href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/ntro-submission-requirements#s-lg-box-20836546"
+                        >
+                            here
+                        </a>
+                    </p>
+                ),
+                buttonLabel: 'CLOSE',
+            },
+            field: {
+                form: {
+                    locale: {
+                        descriptionStep1: (
+                            <div>
+                                <span className="authorSteps" key="step-1">
+                                    Step 1 of 2
+                                </span>{' '}
+                                - Please <b>add to a list of photographers below</b>, in the format and order that they
+                                are published.
+                            </div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>
+                                Please <b>add to a list of photographers below</b>, in the format and order that they
+                                are published.
+                            </div>
+                        ),
+                        nameAsPublishedLabel: "Enter each photographer's name as published (eg. Smith, John)",
+                        nameAsPublishedHint: 'Type the name exactly as published',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add photographer',
+                        nameAsPublishedFieldId: 'photographers-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        descriptionStep2: (
+                            <div>
+                                <span className="authorSteps" key="step-2">
+                                    Step 2 of 2
+                                </span>{' '}
+                                - Please <b>select your name</b> from the list below (if applicable).
+                            </div>
+                        ),
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: "Photographer's name as published",
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        lockedTooltip: 'You are not able to edit this row',
+                        suffix: ' listed photographer',
+                        unselectedHint: 'Select this to confirm [identifier] is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this photographer ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                        deleteButtonId: 'delete-photographer',
+                        editButtonId: 'edit-photographer',
+                    },
+                },
+            },
+        },
     },
 };

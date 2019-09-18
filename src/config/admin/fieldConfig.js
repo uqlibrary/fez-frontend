@@ -1131,4 +1131,13 @@ export default {
             canEdit: true,
         },
     },
+    photographers: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.photographers',
+            showIdentifierLookup: true,
+            locale: locale.components.photographers.field,
+            canEdit: true,
+        },
+    },
 };

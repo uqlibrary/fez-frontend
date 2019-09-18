@@ -561,4 +561,49 @@ export default {
             }));
         },
     },
+    photographers: {
+        getValue: record => {
+            const photographers = (record.fez_record_search_key_author || []).reduce(
+                (photographersObject, photographer) => ({
+                    ...photographersObject,
+                    [photographer.rek_author_order]: photographer,
+                }),
+                {},
+            );
+
+            const photographerIds = (record.fez_record_search_key_photographer_id || []).reduce(
+                (photographerIdsObject, photographerId) => ({
+                    ...photographerIdsObject,
+                    [photographerId.rek_author_id_order]: photographerId,
+                }),
+                {},
+            );
+
+            const photographerAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
+                (photographerAffiliationsObject, photographerAffiliationName) => ({
+                    ...photographerAffiliationsObject,
+                    [photographerAffiliationName.rek_author_affiliation_name_order]: photographerAffiliationName,
+                }),
+                {},
+            );
+
+            const photographerAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
+                (photographerAffiliationTypesObject, photographerAffiliationType) => ({
+                    ...photographerAffiliationTypesObject,
+                    [photographerAffiliationType.rek_author_affiliation_type_order]: photographerAffiliationType,
+                }),
+                {},
+            );
+
+            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
+                nameAsPublished: (photographers[order] || {}).rek_author,
+                creatorRole: '',
+                uqIdentifier: `${(photographerIds[order] || {}).rek_author_id || 0}`,
+                authorId: (photographerIds[order] || {}).rek_author_id || 0,
+                orgaff: (photographerAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
+                orgtype: `${(photographerAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
+                affiliation: (!!(photographerIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
+            }));
+        },
+    },
 };
