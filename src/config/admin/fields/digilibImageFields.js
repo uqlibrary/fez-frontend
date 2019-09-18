@@ -34,11 +34,15 @@ export default {
     ],
     authors: () => [
         {
-            title: 'Authors',
+            title: 'Architects',
+            groups: [['architects']],
+        },
+        {
+            title: 'Photographers',
             groups: [['authors']],
         },
         {
-            title: 'Editors',
+            title: 'Other contributors',
             groups: [['editors']],
         },
     ],
@@ -70,7 +74,6 @@ export default {
                 ['fez_record_search_key_construction_date'],
                 ['fez_record_search_key_alternative_title'],
                 ['fez_record_search_key_architectural_features'],
-                ['architects'],
             ],
         },
     ],

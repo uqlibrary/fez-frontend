@@ -1113,7 +1113,7 @@ export default {
     architects: {
         component: ContributorsEditorField,
         componentProps: {
-            name: 'additionalInformationSection.architects',
+            name: 'authorsSection.architects',
             showIdentifierLookup: true,
             locale: locale.components.architects.field,
             canEdit: true,
