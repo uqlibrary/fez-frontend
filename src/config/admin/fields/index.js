@@ -3,6 +3,7 @@ export { default as bookChapterFields } from './bookChapterFields';
 export { default as bookFields } from './bookFields';
 export { default as conferencePaperFields } from './conferencePaperFields';
 export { default as conferenceProceedingsFields } from './conferenceProceedingsFields';
+export { default as digilibImageFields } from './digilibImageFields';
 export { default as imageFields } from './imageFields';
 export { default as journalArticleFields } from './journalArticleFields';
 export { default as journalFields } from './journalFields';

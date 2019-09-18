@@ -1940,5 +1940,460 @@ export default {
                 close: 'Close',
             },
         },
+        periodForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Period',
+                        inputFieldHint: 'Type Period',
+                        addButtonLabel: 'Add',
+                        id: 'Period-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Periods',
+                        reorderColumn: 'Reorder Periods',
+                        deleteAll: 'Remove all Periods',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Periods?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Period up the order',
+                        moveDownHint: 'Move Period down the order',
+                        deleteHint: 'Remove this Period',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Period',
+                            confirmationMessage: 'Are you sure you want to delete this Period?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        structuralSystemsForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Structural systems',
+                        inputFieldHint: 'Type Structural system Name',
+                        addButtonLabel: 'Add',
+                        id: 'Structural-Systems-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Structural systems',
+                        reorderColumn: 'Reorder Structural systems',
+                        deleteAll: 'Remove all Structural systems',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Structural systems?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Structural system up the order',
+                        moveDownHint: 'Move Structural system down the order',
+                        deleteHint: 'Remove this Structural system',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Structural system',
+                            confirmationMessage: 'Are you sure you want to delete this Structural system?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        styleForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Style',
+                        inputFieldHint: 'Type Style name',
+                        addButtonLabel: 'Add',
+                        id: 'Style-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Styles',
+                        reorderColumn: 'Reorder Styles',
+                        deleteAll: 'Remove all Styles',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Styles?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Style up the order',
+                        moveDownHint: 'Move Style down the order',
+                        deleteHint: 'Remove this Style',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Style',
+                            confirmationMessage: 'Are you sure you want to delete this Style?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        subcategoryForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Subcategory',
+                        inputFieldHint: 'Type Subcategory name',
+                        addButtonLabel: 'Add',
+                        id: 'Subcategory-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Subcategories',
+                        reorderColumn: 'Reorder Subcategories',
+                        deleteAll: 'Remove all Subcategories',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Subcategories?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Subcategory up the order',
+                        moveDownHint: 'Move Subcategory down the order',
+                        deleteHint: 'Remove this Subcategory',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Subcategory',
+                            confirmationMessage: 'Are you sure you want to delete this Subcategory?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        surroundingFeaturesForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Surrounding features',
+                        inputFieldHint: 'Type Surrounding feature name',
+                        addButtonLabel: 'Add',
+                        id: 'Surrounding-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Surrounding features',
+                        reorderColumn: 'Reorder Surrounding features',
+                        deleteAll: 'Remove all Surrounding features',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Surrounding features?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Surrounding feature up the order',
+                        moveDownHint: 'Move Surrounding feature down the order',
+                        deleteHint: 'Remove this Surrounding feature',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Surrounding feature',
+                            confirmationMessage: 'Are you sure you want to delete this Surrounding feature?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        interiorFeaturesForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Interior features',
+                        inputFieldHint: 'Type Interior feature name',
+                        addButtonLabel: 'Add',
+                        id: 'Interior-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Interior features',
+                        reorderColumn: 'Reorder Interior features',
+                        deleteAll: 'Remove all Interior features',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Interior features?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Interior feature up the order',
+                        moveDownHint: 'Move Interior feature down the order',
+                        deleteHint: 'Remove this Interior feature',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Interior feature',
+                            confirmationMessage: 'Are you sure you want to delete this Interior feature?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        buildingMaterialsForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Building materials',
+                        inputFieldHint: 'Type Building material name',
+                        addButtonLabel: 'Add',
+                        id: 'Interior-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Building materials',
+                        reorderColumn: 'Reorder Building materials',
+                        deleteAll: 'Remove all Building materials',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Building materials?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Building material up the order',
+                        moveDownHint: 'Move Building material down the order',
+                        deleteHint: 'Remove this Building material',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Building material',
+                            confirmationMessage: 'Are you sure you want to delete this Building material?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        conditionForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Conditions',
+                        inputFieldHint: 'Type Condition name',
+                        addButtonLabel: 'Add',
+                        id: 'Interior-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Conditions',
+                        reorderColumn: 'Reorder Conditions',
+                        deleteAll: 'Remove all Conditions',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Conditions?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Condition up the order',
+                        moveDownHint: 'Move Condition down the order',
+                        deleteHint: 'Remove this Condition',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Condition',
+                            confirmationMessage: 'Are you sure you want to delete this Condition?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        alternativeTitleForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Alternative titles',
+                        inputFieldHint: 'Type Alternative title',
+                        addButtonLabel: 'Add',
+                        id: 'Interior-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Alternative titles',
+                        reorderColumn: 'Reorder Alternative titles',
+                        deleteAll: 'Remove all Alternative titles',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Alternative titles?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Alternative title up the order',
+                        moveDownHint: 'Move Alternative title down the order',
+                        deleteHint: 'Remove this Alternative title',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Alternative title',
+                            confirmationMessage: 'Are you sure you want to delete this Alternative title?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        architecturalFeaturesForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Architectural features',
+                        inputFieldHint: 'Type Architectural feature',
+                        addButtonLabel: 'Add',
+                        id: 'Interior-feature-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Architectural features',
+                        reorderColumn: 'Reorder Architectural features',
+                        deleteAll: 'Remove all Architectural features',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Architectural features?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Architectural feature up the order',
+                        moveDownHint: 'Move Architectural feature down the order',
+                        deleteHint: 'Remove this Architectural feature',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Architectural feature',
+                            confirmationMessage: 'Are you sure you want to delete this Architectural feature?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
+        architects: {
+            title: 'Architects',
+            help: {
+                title: 'Architects',
+                text:
+                    'Type architects in the order and form they appear on the work or associated material. Additional boxes will appear for more architects.',
+                buttonLabel: 'CLOSE',
+            },
+            field: {
+                form: {
+                    locale: {
+                        descriptionStep1: (
+                            <div>
+                                Please <b>add to a list of architects below</b>, in the format and order that they are
+                                published.
+                            </div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>
+                                Please <b>add to a list of architects below</b>, in the format and order that they are
+                                published.
+                            </div>
+                        ),
+                        nameAsPublishedLabel: "Enter each architect's name as published (eg. Smith, John)",
+                        nameAsPublishedHint: 'Type the name exactly as published',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add architect',
+                        nameAsPublishedFieldId: 'architects-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        descriptionStep2: (
+                            <div>
+                                <span className="authorSteps" key="step-2">
+                                    Step 2 of 2
+                                </span>{' '}
+                                - Please <b>select your name</b> from the list below (if applicable).
+                            </div>
+                        ),
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: "Architect's name as published",
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed architect',
+                        unselectedHint: 'Select this to confirm this architect is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this architect ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                        deleteButtonId: 'delete-architect',
+                        editButtonId: 'edit-architect',
+                    },
+                },
+            },
+        },
     },
 };

@@ -493,4 +493,69 @@ export default {
     fez_record_search_key_report_number: {
         getValue: record => ({ ...record.fez_record_search_key_report_number }),
     },
+    fez_record_search_key_period: {
+        getValue: record => [...record.fez_record_search_key_period],
+    },
+    fez_record_search_key_structural_systems: {
+        getValue: record => [...record.fez_record_search_key_structural_systems],
+    },
+    fez_record_search_key_style: {
+        getValue: record => [...record.fez_record_search_key_style],
+    },
+    fez_record_search_key_subcategory: {
+        getValue: record => [...record.fez_record_search_key_subcategory],
+    },
+    fez_record_search_key_surrounding_features: {
+        getValue: record => [...record.fez_record_search_key_surrounding_features],
+    },
+    fez_record_search_key_interior_features: {
+        getValue: record => [...record.fez_record_search_key_interior_features],
+    },
+    fez_record_search_key_date_photo_taken: {
+        getValue: record => ({ ...record.fez_record_search_key_date_photo_taken }),
+    },
+    fez_record_search_key_date_scanned: {
+        getValue: record => ({ ...record.fez_record_search_key_date_scanned }),
+    },
+    fez_record_search_key_building_materials: {
+        getValue: record => [...record.fez_record_search_key_building_materials],
+    },
+    fez_record_search_key_condition: {
+        getValue: record => [...record.fez_record_search_key_condition],
+    },
+    fez_record_search_key_construction_date: {
+        getValue: record => ({ ...record.fez_record_search_key_construction_date }),
+    },
+    fez_record_search_key_alternative_title: {
+        getValue: record => [...record.fez_record_search_key_alternative_title],
+    },
+    fez_record_search_key_architectural_features: {
+        getValue: record => [...record.fez_record_search_key_architectural_features],
+    },
+    architects: {
+        getValue: record => {
+            const architects = (record.fez_record_search_key_architect_name || []).reduce(
+                (architectsObject, architect) => ({
+                    ...architectsObject,
+                    [architect.rek_architect_name_order]: architect,
+                }),
+                {},
+            );
+
+            const architectIds = (record.fez_record_search_key_architect_id || []).reduce(
+                (architectIdsObject, architectId) => ({
+                    ...architectIdsObject,
+                    [architectId.rek_architect_id_order]: architectId,
+                }),
+                {},
+            );
+
+            return (record.fez_record_search_key_architect_name || []).map(({ rek_architect_name_order: order }) => ({
+                nameAsPublished: (architects[order] || {}).rek_architect_name,
+                creatorRole: '',
+                uqIdentifier: `${(architectIds[order] || {}).rek_architect_id || 0}`,
+                authorId: (architectIds[order] || {}).rek_architect_id || 0,
+            }));
+        },
+    },
 };
