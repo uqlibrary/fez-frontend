@@ -1135,4 +1135,40 @@ export default {
             placeholder: '',
         },
     },
+    fez_record_search_key_parent_publication: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Parent Publication',
+            name: 'additionalInformationSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_newspaper: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Newspaper',
+            name: 'additionalInformationSection.fez_record_search_key_newspaper.rek_newspaper',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_section: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Section',
+            name: 'additionalInformationSection.fez_record_search_key_section.rek_section',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_translated_newspaper: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Translated newspaper',
+            name: 'additionalInformationSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
+            placeholder: '',
+        },
+    },
 };
