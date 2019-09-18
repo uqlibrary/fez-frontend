@@ -1082,6 +1082,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             locale={
               Object {
                 "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -2294,6 +2296,8 @@ exports[`AddDataCollection test should render component with a valid collection 
             locale={
               Object {
                 "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -3506,6 +3510,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
             locale={
               Object {
                 "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -4718,6 +4724,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
             locale={
               Object {
                 "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload

@@ -581,6 +581,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                  "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                  "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
                     Click here to select files, or drag files into this area to upload
@@ -1708,6 +1710,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 locale={
                   Object {
                     "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                    "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                    "delayNotice": "Notice",
                     "errorTitle": "Upload Errors",
                     "fileUploadInstruction": <p>
                       Click here to select files, or drag files into this area to upload
@@ -1802,6 +1806,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   locale={
                     Object {
                       "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                      "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                      "delayNotice": "Notice",
                       "errorTitle": "Upload Errors",
                       "fileUploadInstruction": <p>
                         Click here to select files, or drag files into this area to upload
@@ -2180,6 +2186,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       locale={
                                         Object {
                                           "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                                          "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                          "delayNotice": "Notice",
                                           "errorTitle": "Upload Errors",
                                           "fileUploadInstruction": <p>
                                             Click here to select files, or drag files into this area to upload
@@ -2272,6 +2280,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         locale={
                                           Object {
                                             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                                            "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                            "delayNotice": "Notice",
                                             "errorTitle": "Upload Errors",
                                             "fileUploadInstruction": <p>
                                               Click here to select files, or drag files into this area to upload
@@ -4347,6 +4357,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                  "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                  "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
                     Click here to select files, or drag files into this area to upload
@@ -5474,6 +5486,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 locale={
                   Object {
                     "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                    "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                    "delayNotice": "Notice",
                     "errorTitle": "Upload Errors",
                     "fileUploadInstruction": <p>
                       Click here to select files, or drag files into this area to upload
@@ -5568,6 +5582,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   locale={
                     Object {
                       "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                      "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                      "delayNotice": "Notice",
                       "errorTitle": "Upload Errors",
                       "fileUploadInstruction": <p>
                         Click here to select files, or drag files into this area to upload
@@ -5946,6 +5962,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       locale={
                                         Object {
                                           "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                                          "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                          "delayNotice": "Notice",
                                           "errorTitle": "Upload Errors",
                                           "fileUploadInstruction": <p>
                                             Click here to select files, or drag files into this area to upload
@@ -6038,6 +6056,8 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         locale={
                                           Object {
                                             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+                                            "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                            "delayNotice": "Notice",
                                             "errorTitle": "Upload Errors",
                                             "fileUploadInstruction": <p>
                                               Click here to select files, or drag files into this area to upload
@@ -7533,6 +7553,8 @@ exports[`Component FileUploader should render default component 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -7634,6 +7656,8 @@ exports[`Component FileUploader should render disabled component 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -7734,6 +7758,8 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -7839,6 +7865,8 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -7926,6 +7954,19 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -8077,6 +8118,8 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8164,6 +8207,19 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -8261,6 +8317,8 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8361,6 +8419,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8466,6 +8526,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8553,6 +8615,19 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -8704,6 +8779,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8809,6 +8886,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -8896,6 +8975,19 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -9048,6 +9140,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -9135,6 +9229,19 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -9289,6 +9396,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -9376,6 +9485,19 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -9540,6 +9662,8 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -9627,6 +9751,19 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {
@@ -9786,6 +9923,8 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -9891,6 +10030,8 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
+        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
           Click here to select files, or drag files into this area to upload
@@ -9978,6 +10119,19 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     title="Success"
     type="done"
   />
+  <div
+    style={
+      Object {
+        "marginTop": 6,
+      }
+    }
+  >
+    <WithStyles(Alert)
+      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
+      title="Notice"
+      type="warning"
+    />
+  </div>
   <div
     style={
       Object {

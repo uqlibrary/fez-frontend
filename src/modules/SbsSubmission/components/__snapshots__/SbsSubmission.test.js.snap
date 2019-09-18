@@ -845,6 +845,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
             disabled={false}
             locale={
               Object {
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload
@@ -1729,6 +1731,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
             disabled={false}
             locale={
               Object {
+                "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
                   Click here to select files, or drag files into this area to upload

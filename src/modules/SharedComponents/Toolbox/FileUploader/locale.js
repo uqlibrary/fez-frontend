@@ -34,6 +34,8 @@ export default {
     errorTitle: 'Upload Errors',
     successTitle: 'Success',
     successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
+    delayNotice: 'Notice',
+    delayMessage: 'During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.',
     fileUploadRestrictionHeading: 'File upload restrictions',
     fileUploadRestrictions: (
         <div>

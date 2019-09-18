@@ -260,7 +260,7 @@ export class FileUploader extends PureComponent {
         const { maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions } = this.props.fileRestrictionsConfig;
         const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
         const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
-        const { errorTitle, successTitle, successMessage } = this.props.locale;
+        const { errorTitle, successTitle, successMessage, delayNotice, delayMessage } = this.props.locale;
 
         const instructionsDisplay = instructions
             .replace('[fileUploadLimit]', fileUploadLimit)
@@ -306,11 +306,16 @@ export class FileUploader extends PureComponent {
                     onDrop={this._handleDroppedFiles}
                 />
                 {filesInQueue.length > 0 && (
-                    <Alert
-                        title={successTitle}
-                        message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
-                        type="done"
-                    />
+                    <Fragment>
+                        <Alert
+                            title={successTitle}
+                            message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
+                            type="done"
+                        />
+                        <div style={{ marginTop: 6 }}>
+                            <Alert title={delayNotice} message={delayMessage} type="warning" />
+                        </div>
+                    </Fragment>
                 )}
                 {errorMessage.length > 0 && <Alert title={errorTitle} message={errorMessage} type="error" />}
                 {filesInQueue.length > 0 && (
