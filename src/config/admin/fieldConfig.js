@@ -963,6 +963,15 @@ export default {
             placeholder: '',
         },
     },
+    fez_record_search_key_parent_publication: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Parent Publication',
+            name: 'additionalInformationSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_newspaper: {
         component: GenericTextField,
         componentProps: {

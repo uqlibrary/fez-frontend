@@ -10,6 +10,7 @@ export { default as manuscriptFields } from './manuscriptFields';
 export { default as newspaperArticleFields } from './newspaperArticleFields';
 export { default as patentFields } from './patentFields';
 export { default as preprintFields } from './preprintFields';
+export { default as researchReportFields } from './researchReportFields';
 export { default as seminarPaperFields } from './seminarPaperFields';
 export { default as thesisFields } from './thesisFields';
 export { default as videoFields } from './videoFields';
