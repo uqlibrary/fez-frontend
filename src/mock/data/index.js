@@ -3,6 +3,8 @@ export {
     adminEditAudioList,
     adminEditBookChapterList,
     adminEditConferencePaperList,
+    adminEditConferenceProceedingsList,
+    adminEditCreativeWorkList,
     adminEditManuscriptList,
     adminEditPatentList,
     adminEditSeminarPaperList,

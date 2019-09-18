@@ -4,16 +4,18 @@ import { validation } from 'config';
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
+import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
 
+import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
-import { CollectionField } from 'modules/SharedComponents/LookupFields';
+import { CollectionField, AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
@@ -367,6 +369,15 @@ export default {
             placeholder: '',
         },
     },
+    patentOwner: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.patentOwner',
+            fullWidth: true,
+            label: 'Patent owner',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_volume_number: {
         component: GenericTextField,
         componentProps: {
@@ -391,6 +402,15 @@ export default {
             name: 'bibliographicSection.fez_record_search_key_article_number.rek_article_number',
             fullWidth: true,
             label: 'Article number',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_patent_number: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_patent_number.rek_patent_number',
+            fullWidth: true,
+            label: 'Patent number',
             placeholder: '',
         },
     },
@@ -512,11 +532,12 @@ export default {
         },
     },
     subjects: {
-        component: FilteredFieldOfResearchListField,
+        component: FieldOfResearchListField,
         componentProps: {
             name: 'bibliographicSection.subjects',
             locale: locale.components.subjectForm.field,
             distinctOnly: true,
+            category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
         },
     },
     fez_record_search_key_refereed_source: {
@@ -550,6 +571,16 @@ export default {
             name: 'bibliographicSection.languageOfConferenceName',
             label: 'Language of conference name',
             placeholder: 'Language of conference name',
+            multiple: true,
+            fullWidth: true,
+        },
+    },
+    languageOfProceedingsTitle: {
+        component: LanguageField,
+        componentProps: {
+            name: 'bibliographicSection.languageOfProceedingsTitle',
+            label: 'Language of proceedings title',
+            placeholder: 'Language of proceedings title',
             multiple: true,
             fullWidth: true,
         },
@@ -773,6 +804,15 @@ export default {
                 'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
         },
     },
+    depositAgreement: {
+        component: CopyrightAgreementField,
+        componentProps: {
+            name: 'filesSection.depositAgreement',
+            label: 'Deposit agreement',
+            placeholder: '',
+            copyrightAgreement: formLocale.addDataset.information.agreement.text,
+        },
+    },
     fez_record_search_key_date_available: {
         component: GenericTextField,
         componentProps: {
@@ -791,7 +831,6 @@ export default {
             validate: [validation.dateTimeYear],
         },
     },
-
     fez_record_search_key_isderivationof: {
         component: RelatedDatasetAndPublicationListField,
         componentProps: {
@@ -906,6 +945,232 @@ export default {
             fullWidth: true,
             label: 'Geographic area',
             isSearch: true,
+        },
+    },
+    fez_record_search_key_access_conditions: {
+        component: AccessSelectorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_access_conditions.rek_access_conditions',
+            id: 'data-collection-access-selector',
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.accessAndLicensing.fieldLabels.accessConditions,
+        },
+    },
+    fez_record_search_key_type_of_data: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_type_of_data',
+            searchKey: {
+                value: 'rek_type_of_data',
+                order: 'rek_type_of_data_order',
+            },
+            locale: locale.components.typeOfDataForm.field,
+        },
+    },
+    fez_record_search_key_software_required: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_software_required',
+            searchKey: {
+                value: 'rek_software_required',
+                order: 'rek_software_required_order',
+            },
+            locale: locale.components.softwareRequiredForm.field,
+        },
+    },
+    fez_record_search_key_related_datasets: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_related_datasets',
+            title: 'Related datasets',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_related_publications: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_related_publications',
+            title: 'Related publications',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_isdatasetof: {
+        component: RelatedDatasetAndPublicationListField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_isdatasetof',
+            searchKey: { value: 'rek_isdatasetof', order: 'rek_isdatasetof_order' },
+            locale: {
+                form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
+            },
+        },
+        height: 50,
+    },
+    contactName: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.contactName',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactName,
+        },
+    },
+    contactNameId: {
+        component: AuthorIdField,
+        componentProps: {
+            name: 'additionalInformationSection.contactNameId',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
+        },
+    },
+    contactEmail: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.contactEmail',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required, validation.email],
+            ...formLocale.addDataset.information.dataset.fieldLabels.contactEmail,
+        },
+    },
+    fez_record_search_key_project_name: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_project_name',
+            fullWidth: true,
+            required: true,
+            validate: [validation.required],
+            ...formLocale.addDataset.information.project.fieldLabels.projectName,
+        },
+    },
+    fez_record_search_key_project_description: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_project_description',
+            title: formLocale.addDataset.information.project.fieldLabels.projectDescription.label,
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            fullWidth: true,
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
+    fez_record_search_key_start_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_start_date',
+            label: 'Start date',
+            placeholder: 'Start date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_end_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_end_date',
+            label: 'End date',
+            placeholder: 'End date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_time_period_start_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_time_period_start_date',
+            label: 'Time period start date',
+            placeholder: 'Time period start date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_time_period_end_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_time_period_end_date',
+            label: 'Time period end date',
+            placeholder: 'Time period end date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_org_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Institution',
+            name: 'additionalInformationSection.fez_record_search_key_org_name.rek_org_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_org_unit_name: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'School, Department, or Centre',
+            name: 'additionalInformationSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_report_number: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Report number',
+            name: 'additionalInformationSection.fez_record_search_key_report_number.rek_report_number',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_parent_publication: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Parent Publication',
+            name: 'additionalInformationSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_newspaper: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Newspaper',
+            name: 'additionalInformationSection.fez_record_search_key_newspaper.rek_newspaper',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_section: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Section',
+            name: 'additionalInformationSection.fez_record_search_key_section.rek_section',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_translated_newspaper: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Translated newspaper',
+            name: 'additionalInformationSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
+            placeholder: '',
         },
     },
 };

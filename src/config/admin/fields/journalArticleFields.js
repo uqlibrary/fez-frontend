@@ -2,26 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    admin: () => [
-        {
-            groups: [['internalNotes'], ['rek_herdc_notes']],
-        },
-    ],
-    identifiers: () => [
-        {
-            title: 'Manage identifiers',
-            groups: [
-                ['fez_record_search_key_doi'],
-                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
-                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                ['fez_record_search_key_pubmed_id', 'rek_pubmed_doc_type'],
-            ],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -53,7 +33,6 @@ export default {
                         ['fez_record_search_key_roman_script_journal_name'],
                     ]
                     : []),
-                ['rek_subtype'],
             ],
         },
         {
@@ -112,8 +91,7 @@ export default {
             groups: [
                 ['rek_subtype'],
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
-                ['fez_record_search_key_institutional_status', 'contentIndicators'],
-                ['fez_record_search_key_oa_status'],
+                ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
             ],
         },
