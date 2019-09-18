@@ -16,7 +16,6 @@ import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
-// import GrantInformationSection from './GrantInformationSection';
 import GrantInformationSection from './grantInformation/GrantInformaionSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
 import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
@@ -67,19 +66,11 @@ export const AdminContainer = ({
         Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
     );
     const theme = useTheme();
-    // const { loadingRecordToView, recordToView } = useSelector((state) => state.get('viewRecordReducer'));
-    // const dispatch = useDispatch();
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
     const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
-
-    // const { recordToView, loadingRecordToView } = useSelector((state) => state.get('viewRecordReducer'));
-
-    // const formErrors = useSelector((state) => getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}));
-    // const dispatch = useDispatch();
-    // const disableSubmit = useRef(formErrors && !(formErrors instanceof Immutable.Map));
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
@@ -92,14 +83,6 @@ export const AdminContainer = ({
             clearRecordToView();
         };
     }, [loadRecordToView, clearRecordToView, match.params.pid]);
-
-    /* istanbul ignore next */
-    /* Enzyme's shallow render doesn't support useEffect hook yet */
-    // useEffect(() => {
-    //     if (!!match.params.pid && !!loadRecordToView) {
-    //         dispatch(loadRecordToView(match.params.pid));
-    //     }
-    // }, []);
 
     const txt = locale.pages.edit;
 
