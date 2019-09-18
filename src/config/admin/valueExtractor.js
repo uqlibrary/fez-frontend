@@ -493,4 +493,13 @@ export default {
     fez_record_search_key_report_number: {
         getValue: record => ({ ...record.fez_record_search_key_report_number }),
     },
+    fez_record_search_key_newspaper: {
+        getValue: record => ({ ...record.fez_record_search_key_newspaper }),
+    },
+    fez_record_search_key_section: {
+        getValue: record => ({ ...record.fez_record_search_key_section }),
+    },
+    fez_record_search_key_translated_newspaper: {
+        getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
+    },
 };

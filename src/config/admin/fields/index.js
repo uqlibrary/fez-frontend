@@ -7,6 +7,7 @@ export { default as imageFields } from './imageFields';
 export { default as journalArticleFields } from './journalArticleFields';
 export { default as journalFields } from './journalFields';
 export { default as manuscriptFields } from './manuscriptFields';
+export { default as newspaperArticleFields } from './newspaperArticleFields';
 export { default as patentFields } from './patentFields';
 export { default as preprintFields } from './preprintFields';
 export { default as seminarPaperFields } from './seminarPaperFields';
