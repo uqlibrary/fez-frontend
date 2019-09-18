@@ -1047,7 +1047,7 @@ export default {
     fez_record_search_key_date_scanned: {
         component: DatePickerField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_date_scanned.rek_date_photo_scanned',
+            name: 'additionalInformationSection.fez_record_search_key_date_scanned.rek_date_scanned',
             label: 'Date photo scanned',
             placeholder: 'Date photo scanned',
             fullWidth: true,
