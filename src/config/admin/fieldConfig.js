@@ -4,6 +4,7 @@ import { validation } from 'config';
 
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
+import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/general';
 
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
@@ -14,7 +15,7 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { FilteredFieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
+import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
@@ -531,11 +532,12 @@ export default {
         },
     },
     subjects: {
-        component: FilteredFieldOfResearchListField,
+        component: FieldOfResearchListField,
         componentProps: {
             name: 'bibliographicSection.subjects',
             locale: locale.components.subjectForm.field,
             distinctOnly: true,
+            category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
         },
     },
     fez_record_search_key_refereed_source: {
