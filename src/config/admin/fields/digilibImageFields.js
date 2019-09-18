@@ -70,6 +70,7 @@ export default {
                 ['fez_record_search_key_date_photo_taken'],
                 ['fez_record_search_key_date_scanned'],
                 ['fez_record_search_key_building_materials'],
+                ['fez_record_search_key_category'],
                 ['fez_record_search_key_condition'],
                 ['fez_record_search_key_construction_date'],
                 ['fez_record_search_key_alternative_title'],

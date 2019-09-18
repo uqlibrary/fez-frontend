@@ -520,6 +520,9 @@ export default {
     fez_record_search_key_building_materials: {
         getValue: record => [...record.fez_record_search_key_building_materials],
     },
+    fez_record_search_key_category: {
+        getValue: record => [...record.fez_record_search_key_category],
+    },
     fez_record_search_key_condition: {
         getValue: record => [...record.fez_record_search_key_condition],
     },

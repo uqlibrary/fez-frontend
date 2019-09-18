@@ -2054,6 +2054,44 @@ export default {
                 },
             },
         },
+        categoryForm: {
+            field: {
+                form: {
+                    locale: {
+                        inputFieldLabel: 'Category',
+                        inputFieldHint: 'Type Category name',
+                        addButtonLabel: 'Add',
+                        id: 'Category-input',
+                    },
+                },
+                header: {
+                    locale: {
+                        nameColumn: 'Categories',
+                        reorderColumn: 'Reorder Categories',
+                        deleteAll: 'Remove all Categories',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all Categories?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        moveUpHint: 'Move Category up the order',
+                        moveDownHint: 'Move Category down the order',
+                        deleteHint: 'Remove this Category',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete Category',
+                            confirmationMessage: 'Are you sure you want to delete this Category?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+            },
+        },
         subcategoryForm: {
             field: {
                 form: {

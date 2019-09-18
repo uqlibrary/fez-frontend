@@ -1065,6 +1065,18 @@ export default {
             locale: locale.components.buildingMaterialsForm.field,
         },
     },
+    fez_record_search_key_category: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_category',
+            title: 'Category',
+            searchKey: {
+                value: 'rek_category',
+                order: 'rek_category_order',
+            },
+            locale: locale.components.categoryForm.field,
+        },
+    },
     fez_record_search_key_condition: {
         component: ListEditorField,
         componentProps: {
