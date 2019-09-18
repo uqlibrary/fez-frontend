@@ -973,6 +973,16 @@ export default {
             placeholder: '',
         },
     },
+    physicalDescription: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.physicalDescription',
+            fullWidth: true,
+            label: 'Physical description',
+            multiline: true,
+            placeholder: '',
+        },
+    },
     fez_record_search_key_alternate_genre: {
         component: AlternateGenreField,
         componentProps: {

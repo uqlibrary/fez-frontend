@@ -23,6 +23,7 @@ export default {
                 ],
                 ['rek_date'],
                 ['rek_description'],
+                ['physicalDescription'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_acknowledgements'],
