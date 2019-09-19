@@ -227,6 +227,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.adminEditConferencePaperList.data,
             ...mockData.adminEditConferenceProceedingsList.data,
             ...mockData.adminEditCreativeWorkList.data,
+            ...mockData.adminEditDataCollectionList.data,
             ...mockData.adminEditManuscriptList.data,
             ...mockData.adminEditPatentList.data,
             ...mockData.adminEditSeminarPaperList.data,
