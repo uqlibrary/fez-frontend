@@ -41,19 +41,36 @@ if [[ ! -x "$FORMATTER" ]]; then
   exit 1
 fi
 
-for FILE in $STAGED_FILES
-do
-  "$FORMATTER" "$FILE" --list-different -l silent > /dev/null
+FILE_COUNT=$(echo "$STAGED_FILES" | wc -l)
+SECONDS=0
 
-  if [[ "$?" == 0 ]]; then
-    printf "\e[92mPass: $FILE\e[0m\n"
-  else
-    printf "\e[31mFail: $FILE\e[0m\n"
+echo "$FILE_COUNT staged file(s) need to be checked for code styles."
+
+if [[ $FILE_COUNT > 30 ]]; then
+  printf "Large number of changes detected. Checking all files instead.\n\n\e[31m"
+  "$FORMATTER" '**/*.js' --list-different -l silent
+  if [[ "$?" != 0 ]]; then
     PASS=false
+    printf "\nFile(s) above failed code style checks!"
+  else
+    printf "\033[2A"
   fi
-done
+  printf "\e[0m\n"
+else
+  for FILE in $STAGED_FILES
+  do
+    "$FORMATTER" "$FILE" --list-different -l silent > /dev/null
 
-printf "\nCode style checks complete.\n"
+    if [[ "$?" == 0 ]]; then
+      printf "\e[92mPass: $FILE\e[0m\n"
+    else
+      printf "\e[31mFail: $FILE\e[0m\n"
+      PASS=false
+    fi
+  done
+fi
+
+printf "\nCode style checks completed in $SECONDS seconds.\n"
 
 if ! $PASS; then
   printf "\n\e[31m\e[1mCOMMIT REJECTED.\e[0m \e[31mYour commit contains files that should pass code style checks but do not.\e[0m\n"
@@ -71,6 +88,7 @@ fi
 #   exit 2
 # else
 
-printf "\n\e[92mNo issues found. Proceeding with commit...\e[0m\n\n"
+printf "\n\e[92mNo issues found. Good job!\e[0m\n"
+echo "Proceeding with commit..."
 
 # fi
