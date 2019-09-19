@@ -235,6 +235,7 @@ export default {
                 },
             },
             'Audio Document': {
+                rek_date: 'Date',
                 fez_record_search_key_author: 'Creator(s)',
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_location: 'Place of recording',
@@ -296,6 +297,7 @@ export default {
                 fez_record_search_key_subject: 'Research fields, Courses and Disciplines',
             },
             Image: {
+                rek_date: 'Date',
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_contributor: 'Contributor',
                 fez_record_search_key_rights: 'Rights',
@@ -342,6 +344,7 @@ export default {
                 fez_record_search_key_translated_title: 'Translated thesis title',
             },
             'Video Document': {
+                rek_date: 'Date',
                 fez_record_search_key_original_format: 'Format',
                 fez_record_search_key_author: 'Creator',
                 fez_record_search_key_rights: 'Rights',
