@@ -11670,7 +11670,7 @@ exports[`Media Preview Component  should render when video fails 2`] = `
     }
   >
     <WithStyles(Alert)
-      message="Please click the download/open in a new window link above to open the original file format."
+      message="You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format."
       title="IMAGE FAILED TO LOAD"
       type="error"
     />

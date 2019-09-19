@@ -2574,7 +2574,9 @@ export default {
         imageFailedAlert: {
             type: 'error',
             title: 'IMAGE FAILED TO LOAD',
-            message: 'Please click the download/open in a new window link above to open the original file format.',
+            message:
+                'You may need to log in to view the preview and original files. Please click the download/open' +
+                ' in a new window link above to open the original file format.',
         },
     },
 };

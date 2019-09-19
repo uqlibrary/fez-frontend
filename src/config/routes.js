@@ -27,7 +27,7 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
 };
 
 const isAdmin = account => {
-    return account && (account.canMasquerade || account.is_administrator || account.is_super_administrator);
+    return account && account.canMasquerade;
 };
 
 export const pathConfig = {

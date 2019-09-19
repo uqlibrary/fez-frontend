@@ -253,7 +253,7 @@ describe('Files Component ', () => {
             embargoDate: '1st December 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: false,
+            securityStatus: true,
         });
         expect(
             wrapper
@@ -263,7 +263,7 @@ describe('Files Component ', () => {
             embargoDate: '1st November 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: false,
+            securityStatus: true,
         });
         expect(
             wrapper

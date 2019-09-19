@@ -69,12 +69,7 @@ export default class ViewRecord extends PureComponent {
             !!recordToView.fez_record_search_key_author_id.some(authors => {
                 return parseInt(authors.rek_author_id, 10) === parseInt(this.props.author.aut_id, 10);
             });
-        const isAdmin = !!(
-            this.props.account &&
-            (this.props.account.is_administrator ||
-                this.props.account.canMasquerade ||
-                this.props.account.is_super_administrator)
-        );
+        const isAdmin = !!(this.props.account && this.props.account.canMasquerade);
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{ marginTop: -24 }}>
