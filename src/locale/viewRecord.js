@@ -253,6 +253,7 @@ export default {
             },
             'Conference Paper': {
                 rek_date: 'Publication year',
+                rek_description: 'Abstract',
                 rek_title: 'Title of paper',
                 fez_record_search_key_translated_title: 'Translated title of paper',
             },
@@ -287,6 +288,7 @@ export default {
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)',
+                fez_record_search_key_original_format: 'Physical description',
             },
             'Digilib Image': {
                 fez_record_search_key_author: 'Photographer(s)',
@@ -541,10 +543,10 @@ export default {
                     field: 'fez_record_search_key_edition',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_isbn',
                     order: 13,
@@ -708,6 +710,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2,
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5,
                 },
                 {
                     field: 'fez_record_search_key_language_of_title',
@@ -1371,10 +1377,10 @@ export default {
                     field: 'fez_record_search_key_source',
                     order: 23,
                 },
-                // {
-                //     field: 'fez_record_search_key_original_format',
-                //     order: 24
-                // },
+                {
+                    field: 'fez_record_search_key_original_format',
+                    order: 24,
+                },
                 {
                     field: 'fez_record_search_key_scale',
                     order: 25,
