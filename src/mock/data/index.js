@@ -12,6 +12,7 @@ export {
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
     publicationTypeListPreprint,
+    publicationTypeListResearchReport,
     publicationTypeListSeminarPaper,
     publicationTypeListThesis,
     publicationTypeListVideo,

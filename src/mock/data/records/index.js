@@ -10,6 +10,7 @@ export { default as publicationTypeListManuscript } from './publicationTypeListM
 export { default as publicationTypeListNewspaperArticle } from './publicationTypeListNewspaperArticle';
 export { default as publicationTypeListPatent } from './publicationTypeListPatent';
 export { default as publicationTypeListPreprint } from './publicationTypeListPreprint';
+export { default as publicationTypeListResearchReport } from './publicationTypeListResearchReport';
 export { default as publicationTypeListSeminarPaper } from './publicationTypeListSeminarPaper';
 export { default as publicationTypeListThesis } from './publicationTypeListThesis';
 export { default as publicationTypeListVideo } from './publicationTypeListVideo';
