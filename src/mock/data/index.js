@@ -5,6 +5,7 @@ export {
     adminEditConferencePaperList,
     adminEditConferenceProceedingsList,
     adminEditCreativeWorkList,
+    adminEditDataCollectionList,
     adminEditManuscriptList,
     adminEditPatentList,
     adminEditSeminarPaperList,
@@ -12,7 +13,9 @@ export {
     adminEditVideoList,
     adminEditWorkingPaperList,
     collections,
+    collectionsByCommunity,
     communityRecord,
+    communitySearchList,
     collectionRecord,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
@@ -41,3 +44,4 @@ export { hindexResponse, trendingPublications, currentAuthorStats } from './acad
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
+export { batchImportDirectories } from './batchImportDirectories';

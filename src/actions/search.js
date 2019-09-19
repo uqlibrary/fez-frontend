@@ -6,6 +6,7 @@ import {
     SEARCH_EXTERNAL_RECORDS_API,
     SEARCH_KEY_LOOKUP_API,
     SEARCH_AUTHOR_LOOKUP_API,
+    COLLECTIONS_BY_COMMUNITY_LOOKUP_API,
 } from 'repositories/routes';
 import { exportPublications } from './exportPublications';
 
@@ -17,22 +18,28 @@ function getSearch(source, searchQuery) {
     }
 }
 
+export const getCollectionsListAPI = parentPid => {
+    if (parentPid !== null) {
+        return COLLECTIONS_BY_COMMUNITY_LOOKUP_API({ communityPid: parentPid });
+    }
+    return SEARCH_INTERNAL_RECORDS_API({
+        searchMode: 'advanced',
+        searchQueryParams: { rek_object_type: 2 },
+        pageSize: 999,
+        sortBy: 'title',
+        sortDirection: 'asc',
+    });
+};
+
 /**
- * loadCollectionsList - returns records for a list of all collections in eSpace
+ * collectionsList - returns records for a list of collections in eSpace
+ * either all collections, or restricted by parent-community
  * @returns {Promise}
  */
-export function collectionsList() {
+export function collectionsList(parentPid = null) {
     return dispatch => {
         dispatch({ type: actions.SEARCH_COLLECTION_LOADING });
-        return get(
-            SEARCH_INTERNAL_RECORDS_API({
-                searchMode: 'advanced',
-                searchQueryParams: { rek_object_type: 2 },
-                pageSize: 999,
-                sortBy: 'title',
-                sortDirection: 'asc',
-            }),
-        ).then(
+        return get(getCollectionsListAPI(parentPid)).then(
             response => {
                 dispatch({ type: actions.SEARCH_COLLECTION_LOADED, payload: response.data });
             },
@@ -49,7 +56,7 @@ export function collectionsList() {
  */
 export function communitiesList() {
     return dispatch => {
-        dispatch({ type: `${actions.SEARCH_COMMUNITIES_LOADING}` });
+        dispatch({ type: actions.SEARCH_COMMUNITIES_LOADING });
         return get(
             SEARCH_INTERNAL_RECORDS_API({
                 searchMode: 'advanced',
@@ -60,10 +67,10 @@ export function communitiesList() {
             }),
         ).then(
             response => {
-                dispatch({ type: `${actions.SEARCH_COMMUNITIES_LOADED}`, payload: response.data });
+                dispatch({ type: actions.SEARCH_COMMUNITIES_LOADED, payload: response.data });
             },
             error => {
-                dispatch({ type: `${actions.SEARCH_COMMUNITIES_FAILED}`, payload: error.message });
+                dispatch({ type: actions.SEARCH_COMMUNITIES_FAILED, payload: error.message });
             },
         );
     };

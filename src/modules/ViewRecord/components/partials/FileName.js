@@ -6,10 +6,12 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core';
+import { pathConfig } from 'config/routes';
 
 export const styles = theme => ({
     filename: {
         ...theme.typography.body2,
+        cursor: 'pointer',
     },
 });
 
@@ -19,9 +21,11 @@ export class FileName extends PureComponent {
         fileName: PropTypes.string.isRequired,
         mimeType: PropTypes.string.isRequired,
         mediaUrl: PropTypes.string.isRequired,
+        webMediaUrl: PropTypes.string,
         previewMediaUrl: PropTypes.string.isRequired,
         onFileSelect: PropTypes.func.isRequired,
         allowDownload: PropTypes.bool,
+        securityStatus: PropTypes.bool,
         classes: PropTypes.object,
     };
 
@@ -34,27 +38,35 @@ export class FileName extends PureComponent {
     };
 
     isImage = mimeType => {
-        return mimeType.indexOf('image') === 0;
+        return mimeType.indexOf('image') >= 0;
     };
 
     canShowPreview = mimeType => {
-        return this.isImage(mimeType) || this.isVideo(mimeType);
+        return (this.isImage(mimeType) || this.isVideo(mimeType)) && !!this.props.previewMediaUrl;
     };
 
-    showPreview = (mediaUrl, previewMediaUrl, mimeType) => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => e => {
         e.preventDefault();
-        this.props.onFileSelect(mediaUrl, previewMediaUrl, mimeType);
+        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus);
     };
 
     render() {
-        const { pid, fileName, allowDownload, mimeType, mediaUrl, previewMediaUrl } = this.props;
-
+        const {
+            pid,
+            fileName,
+            allowDownload,
+            mimeType,
+            mediaUrl,
+            webMediaUrl,
+            previewMediaUrl,
+            securityStatus,
+        } = this.props;
         return (
             <Grid container alignItems="center" wrap="nowrap">
                 <Grid item xs>
                     {allowDownload && !this.canShowPreview(mimeType) && (
                         <ExternalLink
-                            href={mediaUrl}
+                            href={pathConfig.file.url(pid, fileName)}
                             title={fileName}
                             className={this.props.classes.filename}
                             openInNewIcon
@@ -65,9 +77,23 @@ export class FileName extends PureComponent {
                     {allowDownload && this.canShowPreview(mimeType) && (
                         <Typography variant="body2">
                             <a
-                                onClick={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                                onKeyPress={this.showPreview(mediaUrl, previewMediaUrl, mimeType)}
-                                className={'fileName'}
+                                onClick={this.showPreview(
+                                    fileName,
+                                    mediaUrl,
+                                    previewMediaUrl,
+                                    mimeType,
+                                    webMediaUrl,
+                                    securityStatus,
+                                )}
+                                onKeyPress={this.showPreview(
+                                    fileName,
+                                    mediaUrl,
+                                    previewMediaUrl,
+                                    mimeType,
+                                    webMediaUrl,
+                                    securityStatus,
+                                )}
+                                className={this.props.classes.filename}
                             >
                                 {fileName}
                             </a>
@@ -78,7 +104,11 @@ export class FileName extends PureComponent {
                 <Hidden xsDown>
                     <Grid item sm>
                         {allowDownload && this.isAudio(this.props.mimeType) && (
-                            <AudioPlayer pid={pid} fileName={fileName} mimeType={mimeType} />
+                            <AudioPlayer
+                                pid={pid}
+                                fileName={previewMediaUrl || pathConfig.file.url(pid, fileName)}
+                                mimeType={mimeType}
+                            />
                         )}
                     </Grid>
                 </Hidden>

@@ -9,19 +9,9 @@ import GoogleScholar from '../components/GoogleScholar';
 const FORM_NAME = 'GoogleScholar';
 
 const onSubmit = (values, dispatch, props) => {
-    return dispatch(actions.updateCurrentAuthor(props.author.aut_id, values.toJS()))
-        .then(() => {
-            // once this promise is resolved form is submitted successfully and will call parent container
-            // reported bug to redux-form:
-            // reset form after success action was dispatched:
-            // componentWillUnmount cleans up form, but then onSubmit success sets it back to active
-            // setTimeout(()=>{
-            //     dispatch(reset(FORM_NAME));
-            // }, 100);
-        })
-        .catch(error => {
-            throw new SubmissionError({ _error: error.message });
-        });
+    return dispatch(actions.updateCurrentAuthor(props.author.aut_id, values.toJS())).catch(error => {
+        throw new SubmissionError({ _error: error.message });
+    });
 };
 
 const mapStateToProps = state => ({

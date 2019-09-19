@@ -206,8 +206,8 @@ describe('Component Links ', () => {
     });
 
     it(
-        'should render 3 not OA links and DOI not OA and PMC always ' +
-            'OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
+        'should render 3 not OA links and DOI not OA and PMC ' +
+            'always OA link for OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT',
         () => {
             const pmcProps = {
                 ...getPublication(0, openAccessConfig.OPEN_ACCESS_ID_FILE_AUTHOR_POSTPRINT),

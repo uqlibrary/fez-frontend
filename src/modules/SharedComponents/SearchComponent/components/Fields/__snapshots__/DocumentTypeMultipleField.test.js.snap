@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DocumentTypeField component should have a proper style generator 1`] = `
+exports[`DocumentTypeMultipleField component should have a proper style generator 1`] = `
 Object {
   "selectedMenuItem": Object {
     "backgroundColor": "test2 !important",
@@ -16,7 +16,7 @@ Object {
 }
 `;
 
-exports[`DocumentTypeField component should have a proper style generator 2`] = `
+exports[`DocumentTypeMultipleField component should have a proper style generator 2`] = `
 Object {
   "selectedMenuItem": Object {
     "backgroundColor": " !important",
@@ -32,7 +32,7 @@ Object {
 }
 `;
 
-exports[`DocumentTypeField component should have a proper style generator 3`] = `
+exports[`DocumentTypeMultipleField component should have a proper style generator 3`] = `
 Object {
   "selectedMenuItem": Object {
     "backgroundColor": " !important",
@@ -48,7 +48,7 @@ Object {
 }
 `;
 
-exports[`DocumentTypeField component should render default view 1`] = `
+exports[`DocumentTypeMultipleField component should render default view 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
@@ -481,7 +481,7 @@ exports[`DocumentTypeField component should render default view 1`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`DocumentTypeField component should render disabled view 1`] = `
+exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >
@@ -914,7 +914,7 @@ exports[`DocumentTypeField component should render disabled view 1`] = `
 </WithStyles(FormControl)>
 `;
 
-exports[`DocumentTypeField component should render with given document types selected by default 1`] = `
+exports[`DocumentTypeMultipleField component should render with given document types selected by default 1`] = `
 <WithStyles(FormControl)
   fullWidth={true}
 >

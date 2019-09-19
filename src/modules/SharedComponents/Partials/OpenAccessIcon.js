@@ -2,34 +2,64 @@ import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import { locale } from 'locale';
 import { openAccessConfig } from 'config';
+import Badge from '@material-ui/core/Badge';
+import AccessTime from '@material-ui/icons/AccessTime';
+import Lock from '@material-ui/icons/Lock';
+import Tooltip from '@material-ui/core/Tooltip';
+import Fade from '@material-ui/core/Fade';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class OpenAccessIcon extends PureComponent {
+const styles = theme => ({
+    badgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4 },
+    embargoedBadgeStyle: { width: 12, height: 12, marginLeft: -4, marginTop: 4, color: theme.palette.secondary.main },
+});
+
+export class OpenAccessIcon extends PureComponent {
     static propTypes = {
         isOpenAccess: PropTypes.bool,
         embargoDate: PropTypes.string,
         openAccessStatusId: PropTypes.number,
         showEmbargoText: PropTypes.bool,
+        securityStatus: PropTypes.bool,
+        classes: PropTypes.object,
     };
     static defaultProps = {
         isOpenAccess: false,
         embargoDate: null,
         showEmbargoText: false,
+        securityStatus: true,
     };
 
     render() {
         const txt = locale.viewRecord.sections.links;
-        if (this.props.isOpenAccess && !this.props.embargoDate) {
+        const classes = this.props.classes;
+        if (!this.props.securityStatus) {
+            return (
+                <Fragment>
+                    <Tooltip title={txt.securityLocked} placement="left" TransitionComponent={Fade}>
+                        <Badge
+                            badgeContent={<Lock fontSize="small" color="secondary" className={classes.badgeStyle} />}
+                        >
+                            <span
+                                className="fez-icon openAccessLocked large"
+                                role="img"
+                                aria-label={txt.securityLocked}
+                            />
+                        </Badge>
+                    </Tooltip>
+                </Fragment>
+            );
+        } else if (this.props.isOpenAccess && !this.props.embargoDate) {
             const openAccessTitle =
                 this.props.openAccessStatusId !== openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI
                     ? txt.openAccessLabel.replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId])
                     : txt.labelOpenAccessNoStatus;
             return (
-                <span
-                    className="fez-icon openAccess large"
-                    role="img"
-                    aria-label={openAccessTitle}
-                    title={openAccessTitle}
-                />
+                <Fragment>
+                    <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                        <span className="fez-icon openAccess large" role="img" aria-label={openAccessTitle} />
+                    </Tooltip>
+                </Fragment>
             );
         } else if (!this.props.isOpenAccess && this.props.embargoDate) {
             const openAccessTitle = txt.openAccessEmbargoedLabel
@@ -42,15 +72,20 @@ export default class OpenAccessIcon extends PureComponent {
                             {txt.embargoedUntil.replace('[embargo_date]', this.props.embargoDate)}
                         </span>
                     )}
-                    <span
-                        className="fez-icon openAccessEmbargoed large"
-                        role="img"
-                        title={openAccessTitle}
-                        aria-label={openAccessTitle}
-                    />
+                    <Badge badgeContent={<AccessTime fontSize="small" className={classes.embargoedBadgeStyle} />}>
+                        <Tooltip title={openAccessTitle} placement="left" TransitionComponent={Fade}>
+                            <span
+                                className="fez-icon openAccessEmbargoed large"
+                                role="img"
+                                aria-label={openAccessTitle}
+                            />
+                        </Tooltip>
+                    </Badge>
                 </Fragment>
             );
         }
         return <span className="noOaIcon" />;
     }
 }
+
+export default withStyles(styles)(OpenAccessIcon);

@@ -3,10 +3,10 @@ import { openAccessConfig } from 'config';
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
-        isOpenAccess: false,
-        embargoDate: null,
-        openAccessStatusId: 1234,
-        showEmbargoText: false,
+        isOpenAccess: testProps.isOpenAccess || false,
+        embargoDate: testProps.embargoDate || null,
+        openAccessStatusId: testProps.openAccessStatusId || 1234,
+        showEmbargoText: testProps.showEmbargoText || false,
         ...testProps,
     };
     return getElement(OpenAccessIcon, props, args);
@@ -41,6 +41,25 @@ describe('Journal Name Component test ', () => {
             embargoDate: '2019-01-01',
             openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
             showEmbargoText: true,
+            securityStatus: true,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render locked', () => {
+        const wrapper = setup({
+            openAccessStatusId: openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI,
+            securityStatus: false,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render no icon', () => {
+        const wrapper = setup({
+            isOpenAccess: null,
+            openAccessStatusId: null,
+            embargoDate: null,
+            securityStatus: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

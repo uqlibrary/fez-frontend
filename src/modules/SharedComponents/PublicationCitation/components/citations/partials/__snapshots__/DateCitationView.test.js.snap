@@ -68,6 +68,12 @@ exports[`DateCitationView test should render component with just the year in bra
 </span>
 `;
 
+exports[`DateCitationView test should render empty component with a placeholder date 1`] = `
+<span
+  className="citationDate empty"
+/>
+`;
+
 exports[`DateCitationView test should render empty component with no date 1`] = `
 <span
   className="citationDate empty"
