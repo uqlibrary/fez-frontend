@@ -9,6 +9,7 @@ export {
     publicationTypeListImage,
     publicationTypeListJournal,
     publicationTypeListManuscript,
+    publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
     publicationTypeListPreprint,
     publicationTypeListSeminarPaper,

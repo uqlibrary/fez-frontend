@@ -231,6 +231,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListImage.data,
             ...mockData.publicationTypeListJournal.data,
             ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
             ...mockData.publicationTypeListPatent.data,
             ...mockData.publicationTypeListPreprint.data,
             ...mockData.publicationTypeListSeminarPaper.data,
