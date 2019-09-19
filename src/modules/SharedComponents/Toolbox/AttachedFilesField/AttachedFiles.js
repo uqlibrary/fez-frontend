@@ -7,7 +7,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { makeStyles } from '@material-ui/styles';
 import { useRecordContext } from 'context';
-import { useIsAdmin } from 'hooks';
+import { useIsAdmin, useIsAuthor } from 'hooks';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -41,43 +41,36 @@ const useStyles = makeStyles(
         fileIcon: {
             opacity: 0.5,
         },
+        thumbIconCentered: {
+            textAlign: 'center',
+        },
     }),
     { withTheme: true },
 );
 
 const initialPreviewState = {
+    fileName: null,
     mediaUrl: null,
     previewMediaUrl: null,
     mimeType: null,
+    webMediaUrl: null,
 };
 
 export const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = (mediaUrl, previewMediaUrl, mimeType) => {
-        setPreview({
-            mediaUrl: mediaUrl,
-            previewMediaUrl: previewMediaUrl,
-            mimeType: mimeType,
-        });
+    const showPreview = (...args) => {
+        setPreview({ ...args });
     };
 
     const hidePreview = () => {
-        setPreview({
-            mediaUrl: null,
-            previewMediaUrl: null,
-            mimeType: null,
-        });
+        setPreview(initialPreviewState);
     };
 
     return [preview, showPreview, hidePreview];
 };
 
 const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
-
-const searchByKey = (list, key, value) => {
-    return list && list.filter(item => item[key] === value)[0];
-};
 
 const formatBytes = bytes => {
     if (bytes === 0) {
@@ -91,7 +84,13 @@ const formatBytes = bytes => {
     return parseFloat((bytes / Math.pow(k, index)).toFixed(decimals)) + ' ' + sizes[index];
 };
 
-const getFileOpenAccessStatus = (publication, embargoDate) => {
+const getSecurityAccess = () => {
+    // const { isAdmin, isAuthor } = this.props;
+    return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
+};
+
+const getFileOpenAccessStatus = (publication, dataStream) => {
+    const embargoDate = dataStream.dsi_embargo_date;
     const openAccessStatusId =
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
         null;
@@ -102,6 +101,7 @@ const getFileOpenAccessStatus = (publication, embargoDate) => {
             isOpenAccess: false,
             embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
             openAccessStatusId: openAccessStatusId,
+            securityStatus: getSecurityAccess(),
         };
     }
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
@@ -114,19 +114,22 @@ const FileIcon = ({
     thumbnailFileName,
     previewFileName,
     allowDownload,
-    downloadableFileName,
+    webFileName,
+    securityStatus,
     showPreview,
 }) => {
     const classes = useStyles();
     if (allowDownload && thumbnailFileName) {
         const thumbnailProps = {
             mimeType,
-            mediaUrl: getUrl(pid, downloadableFileName || fileName),
+            mediaUrl: getUrl(pid, fileName || fileName),
+            webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
             previewMediaUrl: getUrl(pid, previewFileName || fileName),
             thumbnailMediaUrl: getUrl(pid, thumbnailFileName),
-            fileName: downloadableFileName || fileName,
+            fileName: fileName,
             thumbnailFileName,
             onClick: showPreview,
+            securityStatus: securityStatus,
         };
         return <Thumbnail {...thumbnailProps} />;
     } else if (mimeType.indexOf('audio') >= 0) {
@@ -142,21 +145,89 @@ const FileIcon = ({
     }
 };
 
-const getFileData = (publication, dataStreams, isAdmin) => {
-    const { files } = viewRecordsConfig;
+const checkArrayForObjectValue = value => {
+    const datastream = this.props.publication.fez_datastream_info;
+    let resolvedFilename = null;
+    for (let i = 0; i < datastream.length; i++) {
+        if (datastream[i].dsi_dsid === value) {
+            resolvedFilename = datastream[i].dsi_dsid;
+        }
+    }
+    return resolvedFilename;
+};
 
+const untranscodedItem = filename => {
+    let file = null;
+    if (filename.indexOf('_xt') >= 0) {
+        file = filename
+            .replace('_xt', '')
+            .split('.')
+            .slice(0, -1)
+            .join('.');
+    } else {
+        file = filename
+            .split('.')
+            .slice(0, -1)
+            .join('.');
+    }
+    return file;
+};
+
+const checkForThumbnail = filename => {
+    const file = untranscodedItem(filename);
+    return (
+        checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`) ||
+        checkArrayForObjectValue(`thumbnail_${file}_t.jpg`) ||
+        checkArrayForObjectValue(`thumbnail_${file}.jpg`) ||
+        checkArrayForObjectValue(`${file}_t.jpg`) ||
+        null
+    );
+};
+
+const checkForPreview = filename => {
+    const file = untranscodedItem(filename);
+    return (
+        checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`) ||
+        checkArrayForObjectValue(`preview_${file}_t.jpg`) ||
+        checkArrayForObjectValue(`preview_${file}.jpg`) ||
+        checkArrayForObjectValue(`${file}_t.jpg`) ||
+        checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`) ||
+        checkArrayForObjectValue(`preview_${file}_t.mp4`) ||
+        checkArrayForObjectValue(`${file}_t.mp4`) ||
+        checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`) ||
+        checkArrayForObjectValue(`preview_${file}_t.mp3`) ||
+        checkArrayForObjectValue(`${file}_t.mp3`) ||
+        null
+    );
+};
+
+const checkForWeb = filename => {
+    const file = untranscodedItem(filename);
+    return (
+        checkArrayForObjectValue(`web_${file}_compressed_t.jpg`) ||
+        checkArrayForObjectValue(`web_${file}_t.jpg`) ||
+        checkArrayForObjectValue(`web_${file}.jpg`) ||
+        checkArrayForObjectValue(`web_${file}_compressed_t.mp4`) ||
+        checkArrayForObjectValue(`web_${file}_t.mp4`) ||
+        checkArrayForObjectValue(`web_${file}_compressed_t.mp3`) ||
+        checkArrayForObjectValue(`web_${file}_t.mp3`) ||
+        null
+    );
+};
+
+const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
             const pid = dataStream.dsi_pid;
             const fileName = dataStream.dsi_dsid;
-            const thumbnailDataStream = searchByKey(dataStreams, 'dsi_dsid', files.thumbnailFileName(fileName));
-            const previewDataStream = searchByKey(dataStreams, 'dsi_dsid', files.previewFileName(fileName));
-            const downloadableDataStream = searchByKey(dataStreams, 'dsi_dsid', files.webFileName(fileName));
             const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
-            const thumbnailFileName = !!thumbnailDataStream && thumbnailDataStream.dsi_dsid;
-            const previewFileName = !!previewDataStream && previewDataStream.dsi_dsid;
-            const downloadableFileName = !!downloadableDataStream && downloadableDataStream.dsi_dsid;
-            const openAccessStatus = getFileOpenAccessStatus(publication, dataStream.dsi_embargo_date);
+
+            const thumbnailFileName = checkForThumbnail(fileName);
+            const previewFileName = checkForPreview(fileName);
+            const webFileName = checkForWeb(fileName);
+
+            const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
+            const securityAccess = getSecurityAccess(dataStream);
 
             return {
                 pid,
@@ -172,12 +243,15 @@ const getFileData = (publication, dataStreams, isAdmin) => {
                     fileName,
                     thumbnailFileName,
                     previewFileName,
-                    allowDownload: openAccessStatus.isOpenAccess,
-                    downloadableFileName,
+                    allowDownload: openAccessStatus.isOpenAccess || isAuthor || isAdmin,
+                    webFileName,
+                    securityAccess,
                 },
                 openAccessStatus,
-                previewMediaUrl: getUrl(pid, previewFileName || fileName),
-                mediaUrl: getUrl(pid, downloadableFileName || fileName),
+                previewMediaUrl: previewFileName ? getUrl(pid, previewFileName) : getUrl(pid, fileName),
+                webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
+                mediaUrl: getUrl(pid, fileName),
+                securityStatus: getSecurityAccess(dataStream),
                 embargoDate: dataStream.dsi_embargo_date,
             };
         })
@@ -199,9 +273,10 @@ export const AttachedFiles = ({
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
     const isAdmin = useIsAdmin();
+    const isAuthor = useIsAuthor();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
-    const fileData = getFileData(record, dataStreams, isAdmin);
+    const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
     let hasVideo = false;
     fileData.map(item => {
@@ -218,7 +293,7 @@ export const AttachedFiles = ({
                 {!!record.fez_record_search_key_advisory_statement && !hideCulturalSensitivityStatement && (
                     <Alert
                         allowDismiss
-                        type={'info'}
+                        type="info"
                         message={
                             record.fez_record_search_key_advisory_statement.rek_advisory_statement ||
                             locale.culturalSensitivityStatement
@@ -226,14 +301,7 @@ export const AttachedFiles = ({
                         dismissAction={setHideCulturalSensitivityStatement}
                     />
                 )}
-                {isFireFox && hasVideo && (
-                    <Alert
-                        allowDismiss
-                        type={viewRecordLocale.viewRecord.fireFoxAlert.type}
-                        title={viewRecordLocale.viewRecord.fireFoxAlert.title}
-                        message={viewRecordLocale.viewRecord.fireFoxAlert.message}
-                    />
-                )}
+                {isFireFox && hasVideo && <Alert allowDismiss {...viewRecordLocale.viewRecord.fireFoxAlert} />}
                 <div style={{ padding: 8 }}>
                     <Grid container direction="row" alignItems="center" spacing={16} className={classes.header}>
                         <Grid item xs={1}>
@@ -284,7 +352,7 @@ export const AttachedFiles = ({
                             wrap={'nowrap'}
                             className={classes.header}
                         >
-                            <Grid item xs={1}>
+                            <Grid item xs={1} className={classes.thumbIconCentered}>
                                 <FileIcon {...item.iconProps} showPreview={showPreview} />
                             </Grid>
                             <Grid item sm={3} className={classes.dataWrapper}>
@@ -306,7 +374,7 @@ export const AttachedFiles = ({
                             </Hidden>
                             <Hidden xsDown>
                                 <Grid item sm style={{ textAlign: 'right' }}>
-                                    <OpenAccessIcon {...item.openAccessStatus} />
+                                    <OpenAccessIcon {...item.openAccessStatus} securityStatus={item.securityStatus} />
                                 </Grid>
                             </Hidden>
                             {isAdmin && canEdit && (

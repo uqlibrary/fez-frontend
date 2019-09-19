@@ -321,6 +321,8 @@ export const getErrorAlertProps = ({
 
 export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataStream =>
     !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
+    !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
+    !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
     dataStream.dsi_state === 'A' &&
     (isAdmin ||
         !dataStream.dsi_label ||
