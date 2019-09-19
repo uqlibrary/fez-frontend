@@ -8,7 +8,7 @@ context('Thesis', () => {
     afterEach(() => {
         // Add this when we have a dialog when navigating away from a form
         cy.window()
-            .then((win) => (win.onbeforeunload = undefined));
+            .then(win => (win.onbeforeunload = undefined));
     });
 
     it('Submitting a thesis successfully', () => {
@@ -249,7 +249,7 @@ context('Thesis', () => {
         // Files?
         const fileName = 'test.jpg';
         cy.fixture(fileName)
-            .then((fileContent) => {
+            .then(fileContent => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileName, mimeType: 'image/jpg' },
@@ -268,7 +268,7 @@ context('Thesis', () => {
 
         const fileNameTwo = 'test_two.jpg';
         cy.fixture(fileNameTwo)
-            .then((fileContent) => {
+            .then(fileContent => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
@@ -287,7 +287,7 @@ context('Thesis', () => {
 
         const fileNameThree = 'test three.jpg';
         cy.fixture(fileNameThree)
-            .then((fileContent) => {
+            .then(fileContent => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
@@ -297,7 +297,7 @@ context('Thesis', () => {
         cy.get('div.alert-text')
             .should('have.length', 2);
         cy.fixture(fileName)
-            .then((fileContent) => {
+            .then(fileContent => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName, mimeType: 'image/jpg' },
@@ -305,7 +305,7 @@ context('Thesis', () => {
                     );
             });
         cy.fixture(fileNameTwo)
-            .then((fileContent) => {
+            .then(fileContent => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
