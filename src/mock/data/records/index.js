@@ -7,6 +7,7 @@ export { default as publicationTypeListCreativeWork } from './publicationTypeLis
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';
 export { default as publicationTypeListPatent } from './publicationTypeListPatent';
+export { default as publicationTypeListPreprint } from './publicationTypeListPreprint';
 export { default as publicationTypeListSeminarPaper } from './publicationTypeListSeminarPaper';
 export { default as publicationTypeListThesis } from './publicationTypeListThesis';
 export { default as publicationTypeListVideo } from './publicationTypeListVideo';
