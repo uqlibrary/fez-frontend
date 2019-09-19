@@ -581,7 +581,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -1710,7 +1710,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 locale={
                   Object {
                     "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                    "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                    "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                     "delayNotice": "Notice",
                     "errorTitle": "Upload Errors",
                     "fileUploadInstruction": <p>
@@ -1806,7 +1806,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   locale={
                     Object {
                       "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                      "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                      "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                       "delayNotice": "Notice",
                       "errorTitle": "Upload Errors",
                       "fileUploadInstruction": <p>
@@ -2186,7 +2186,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       locale={
                                         Object {
                                           "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                                          "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                          "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                                           "delayNotice": "Notice",
                                           "errorTitle": "Upload Errors",
                                           "fileUploadInstruction": <p>
@@ -2280,7 +2280,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         locale={
                                           Object {
                                             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                                            "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                            "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                                             "delayNotice": "Notice",
                                             "errorTitle": "Upload Errors",
                                             "fileUploadInstruction": <p>
@@ -4357,7 +4357,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
               locale={
                 Object {
                   "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                  "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                  "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
@@ -5486,7 +5486,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                 locale={
                   Object {
                     "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                    "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                    "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                     "delayNotice": "Notice",
                     "errorTitle": "Upload Errors",
                     "fileUploadInstruction": <p>
@@ -5582,7 +5582,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   locale={
                     Object {
                       "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                      "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                      "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                       "delayNotice": "Notice",
                       "errorTitle": "Upload Errors",
                       "fileUploadInstruction": <p>
@@ -5962,7 +5962,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       locale={
                                         Object {
                                           "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                                          "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                          "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                                           "delayNotice": "Notice",
                                           "errorTitle": "Upload Errors",
                                           "fileUploadInstruction": <p>
@@ -6056,7 +6056,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         locale={
                                           Object {
                                             "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-                                            "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+                                            "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
                                             "delayNotice": "Notice",
                                             "errorTitle": "Upload Errors",
                                             "fileUploadInstruction": <p>
@@ -7553,7 +7553,7 @@ exports[`Component FileUploader should render default component 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -7656,7 +7656,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -7758,7 +7758,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -7865,7 +7865,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -7949,23 +7949,40 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -8118,7 +8135,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8202,23 +8219,40 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 1 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 1 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -8317,7 +8351,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8419,7 +8453,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8526,7 +8560,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8610,23 +8644,40 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -8779,7 +8830,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8886,7 +8937,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -8970,23 +9021,40 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -9140,7 +9208,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -9224,23 +9292,40 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -9396,7 +9481,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -9480,23 +9565,40 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -9662,7 +9764,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -9746,23 +9848,40 @@ exports[`Component FileUploader should render rows for uploaded files with acces
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={
@@ -9923,7 +10042,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -10030,7 +10149,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     locale={
       Object {
         "accessTermsAndConditions": "I understand that the files indicated above as open access will be submitted as open access and will be made publicly available immediately or will be made available on the indicated embargo date.  All other files submitted will be accessible by UQ eSpace administrators.",
-        "delayMessage": "During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.",
+        "delayMessage": "During peak times, there may be a delay before newly uploaded files appear on the record.",
         "delayNotice": "Notice",
         "errorTitle": "Upload Errors",
         "fileUploadInstruction": <p>
@@ -10114,23 +10233,40 @@ exports[`Component FileUploader should render rows for uploaded files with defau
     maxSize={1000}
     onDrop={[Function]}
   />
-  <WithStyles(Alert)
-    message="Successfully added 2 file(s) to upload queue."
-    title="Success"
-    type="done"
-  />
   <div
     style={
       Object {
-        "marginTop": 6,
+        "flexGrow": 1,
+        "padding": 8,
       }
     }
   >
-    <WithStyles(Alert)
-      message="During peak times, newly uploaded files may not be attached to the record for up to 60 minutes."
-      title="Notice"
-      type="warning"
-    />
+    <WithStyles(Grid)
+      container={true}
+      display="column"
+      spacing={16}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="Successfully added 2 file(s) to upload queue."
+          title="Success"
+          type="done"
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Alert)
+          message="During peak times, there may be a delay before newly uploaded files appear on the record."
+          title="Notice"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </div>
   <div
     style={

@@ -1296,7 +1296,7 @@ export default {
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
                 delayMessage:
-                    'During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.',
+                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (
@@ -1386,7 +1386,7 @@ export default {
                 successMessage: 'Successfully added [numberOfFiles] file(s) to upload queue.',
                 delayNotice: 'Notice',
                 delayMessage:
-                    'During peak times, newly uploaded files may not be attached to the record for up to 60 minutes.',
+                    'During peak times, there may be a delay before newly uploaded files appear on the record.',
                 errorTitle: 'Upload Errors',
                 fileUploadRestrictionHeading: 'File upload restrictions',
                 fileUploadRestrictions: (

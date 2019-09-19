@@ -306,16 +306,20 @@ export class FileUploader extends PureComponent {
                     onDrop={this._handleDroppedFiles}
                 />
                 {filesInQueue.length > 0 && (
-                    <Fragment>
-                        <Alert
-                            title={successTitle}
-                            message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
-                            type="done"
-                        />
-                        <div style={{ marginTop: 6 }}>
-                            <Alert title={delayNotice} message={delayMessage} type="warning" />
-                        </div>
-                    </Fragment>
+                    <div style={{ flexGrow: 1, padding: 8 }}>
+                        <Grid container display="column" spacing={16}>
+                            <Grid item xs={12}>
+                                <Alert
+                                    title={successTitle}
+                                    message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
+                                    type="done"
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <Alert title={delayNotice} message={delayMessage} type="warning" />
+                            </Grid>
+                        </Grid>
+                    </div>
                 )}
                 {errorMessage.length > 0 && <Alert title={errorTitle} message={errorMessage} type="error" />}
                 {filesInQueue.length > 0 && (
