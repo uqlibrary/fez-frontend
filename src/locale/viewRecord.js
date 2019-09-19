@@ -347,6 +347,7 @@ export default {
                 rek_date: 'Date',
                 fez_record_search_key_original_format: 'Format',
                 fez_record_search_key_author: 'Creator(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_rights: 'Rights',
             },
             'Working Paper': {},
