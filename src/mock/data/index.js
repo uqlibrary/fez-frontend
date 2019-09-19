@@ -1,6 +1,7 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
     publicationTypeListAudio,
+    publicationTypeListBook,
     publicationTypeListBookChapter,
     publicationTypeListConferencePaper,
     publicationTypeListConferenceProceedings,

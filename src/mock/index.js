@@ -223,6 +223,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
             ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
             ...mockData.publicationTypeListBookChapter.data,
             ...mockData.publicationTypeListConferencePaper.data,
             ...mockData.publicationTypeListConferenceProceedings.data,

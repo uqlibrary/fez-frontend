@@ -1,4 +1,5 @@
 export { default as publicationTypeListAudio } from './publicationTypeListAudio';
+export { default as publicationTypeListBook } from './publicationTypeListBook';
 export { default as publicationTypeListBookChapter } from './publicationTypeListBookChapter';
 export { default as publicationTypeListConferencePaper } from './publicationTypeListConferencePaper';
 export { default as publicationTypeListConferenceProceedings } from './publicationTypeListConferenceProceedings';
