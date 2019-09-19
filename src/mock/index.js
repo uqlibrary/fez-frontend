@@ -248,7 +248,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('/') + 1);
+        const vocabId = config.url.substring(config.url.indexOf('=') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(
