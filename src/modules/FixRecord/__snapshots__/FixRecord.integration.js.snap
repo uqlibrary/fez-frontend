@@ -511,11 +511,13 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                           aria-hidden=\\"true\\"
                           class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                           focusable=\\"false\\"
-@@ -309,15 +306,351 @@
+@@ -307,21 +304,365 @@
+                        >
+                          <path
                             d=\\"M7 10l5 5 5-5z\\"
                           />
                         </svg>
-                      </div>
++                     </div>
                     </div>
 +                 </div>
 +               </div>
@@ -539,7 +541,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                   >
 +                     Content Indicators
 +                   </h3>
-+                 </div>
+                  </div>
 +                 <div
 +                   class=\\"MuiCardHeader-action-343\\"
 +                 >
@@ -762,110 +764,122 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                 <div>
 +                   Upload an Open Access file, HERDC evidence or an NTRO Research Statement
 +                 </div>
-+                 <p
-+                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
-+                 >
-+                   You may add up to 10 files (max 8GB each)
-                  </p>
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
++                     >
++                       You may add up to 10 files (max 8GB each)
+                      </p>
 +                     <div
-+                       id=\\"FileUploadDropZone\\"
-+                       tabindex=\\"0\\"
++                       class=\\"MuiGrid-container-3\\"
 +                     >
 +                       <div
-+                         aria-disabled=\\"false\\"
-+                         class=\\"\\"
-+                         style=\\"position: relative; padding: 0px;\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-549\\"
++                           id=\\"FileUploadDropZone\\"
++                           tabindex=\\"0\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-+                           >
-+                             <p
-+                               class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-550\\"
-+                             >
-+                               File upload restrictions
-+                             </p>
-+                             <div>
-+                               Please ensure your files:
-+                               <ul>
-+                                 <li>
-+                                   begin with a letter and are less than 45 characters long
-+                                 </li>
-+                                 <li>
-+                                   contain only upper and lowercase alphanumeric characters, and underscores
-+                                 </li>
-+                                 <li>
-+                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-+                                 </li>
-+                                 <li>
-+                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                 </li>
-+                                 <li>
-+                                   are uploaded individually and not inside a folder
-+                                 </li>
-+                               </ul>
-+                             </div>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                             aria-disabled=\\"false\\"
++                             class=\\"\\"
++                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-551\\"
++                               class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-549\\"
 +                             >
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <svg
-+                                   aria-hidden=\\"true\\"
-+                                   class=\\"MuiSvgIcon-root-362 FileUploadDropzoneStaticContent-cloudIcon-552\\"
-+                                   focusable=\\"false\\"
-+                                   role=\\"presentation\\"
-+                                   viewBox=\\"0 0 24 24\\"
++                                 <p
++                                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-550\\"
 +                                 >
-+                                   <path
-+                                     d=\\"M0 0h24v24H0z\\"
-+                                     fill=\\"none\\"
-+                                   />
-+                                   <path
-+                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
-+                                   />
-+                                 </svg>
++                                   File upload restrictions
++                                 </p>
++                                 <div>
++                                   Please ensure your files:
++                                   <ul>
++                                     <li>
++                                       begin with a letter and are less than 45 characters long
++                                     </li>
++                                     <li>
++                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                     </li>
++                                     <li>
++                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                     </li>
++                                     <li>
++                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                     </li>
++                                     <li>
++                                       are uploaded individually and not inside a folder
++                                     </li>
++                                   </ul>
++                                 </div>
 +                               </div>
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <p>
-+                                   Click here to select files, or drag files into this area to upload
-+                                 </p>
++                                 <div
++                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-551\\"
++                                 >
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-362 FileUploadDropzoneStaticContent-cloudIcon-552\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M0 0h24v24H0z\\"
++                                         fill=\\"none\\"
++                                       />
++                                       <path
++                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                       />
++                                     </svg>
+                                    </div>
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <p>
++                                       Click here to select files, or drag files into this area to upload
++                                     </p>
++                                   </div>
++                                 </div>
 +                               </div>
 +                             </div>
++                             <input
++                               aria-label=\\"Upload files\\"
++                               autocomplete=\\"off\\"
++                               id=\\"Uploader\\"
++                               multiple=\\"\\"
++                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                               type=\\"file\\"
++                             />
 +                           </div>
 +                         </div>
-+                         <input
-+                           aria-label=\\"Upload files\\"
-+                           autocomplete=\\"off\\"
-+                           id=\\"Uploader\\"
-+                           multiple=\\"\\"
-+                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-+                           type=\\"file\\"
-+                         />
 +                       </div>
 +                     </div>
 +                   </div>
                   </div>
                 </div>
               </div>
-            </div>
++           </div>
             <div
-@@ -361,11 +694,15 @@
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+                class=\\"Alert\\"
+@@ -361,11 +702,15 @@
                         <b>
                           Validation - 
                         </b>
@@ -882,7 +896,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                     </div>
                   </div>
                 </div>
-@@ -392,10 +729,27 @@
+@@ -392,10 +737,27 @@
                   Cancel
                 </span>
                 <span
@@ -957,7 +971,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -652,67 +652,12 @@
+@@ -660,67 +660,12 @@
                     </div>
                   </div>
                 </div>
@@ -1025,7 +1039,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -736,21 +681,23 @@
+@@ -744,21 +689,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1078,7 +1092,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -652,12 +652,67 @@
+@@ -660,12 +660,67 @@
                     </div>
                   </div>
                 </div>
@@ -1146,7 +1160,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -681,23 +736,21 @@
+@@ -689,23 +744,21 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1293,32 +1307,32 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -566,11 +566,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"false\\"
-+                         aria-disabled=\\"true\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -572,11 +572,11 @@
                           <div
-                            class=\\"MuiGrid-container-569 FileUploadDropzoneStaticContent-dropzone-1115\\"
-@@ -640,10 +640,11 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
-+                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -652,52 +653,100 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"false\\"
++                             aria-disabled=\\"true\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-569 FileUploadDropzoneStaticContent-dropzone-1115\\"
+@@ -646,10 +646,11 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
++                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -660,52 +661,100 @@
                     </div>
                   </div>
                 </div>
@@ -1562,32 +1576,32 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -566,11 +566,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"true\\"
-+                         aria-disabled=\\"false\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -572,11 +572,11 @@
                           <div
-                            class=\\"MuiGrid-container-569 FileUploadDropzoneStaticContent-dropzone-1115\\"
-@@ -640,11 +640,10 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
--                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -661,48 +660,44 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"true\\"
++                             aria-disabled=\\"false\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-569 FileUploadDropzoneStaticContent-dropzone-1115\\"
+@@ -646,11 +646,10 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
+-                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -669,48 +668,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1651,7 +1665,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                   </div>
                 </div>
               </div>
-@@ -716,37 +711,41 @@
+@@ -724,37 +719,41 @@
             />
             <div
               class=\\"MuiGrid-item-570\\"
