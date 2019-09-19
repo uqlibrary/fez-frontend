@@ -216,11 +216,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                         >
 +                           <div
 +                             class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-center-11\\"
-                            >
-                              <div
++                           >
++                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-389\\"
-+                             >
-+                               <div
+                              >
+                                <div
                                   class=\\"MuiGrid-container-3\\"
 +                               >
 +                                 <div
@@ -292,7 +292,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Google scholar will open in a new window\\"
-+                                   >
+                                    >
 +                                     <span
 +                                       class=\\"fez-icon google large\\"
 +                                     />
@@ -301,7 +301,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     class=\\"noOaIcon\\"
 +                                   />
 +                                 </div>
-+                                 <div
+                                  <div
 +                                   class=\\"MuiGrid-item-4\\"
 +                                 >
 +                                   <a
@@ -319,7 +319,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
-                                      >
++                                     >
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
 +                                         fill=\\"none\\"
@@ -344,9 +344,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                   <hr
 +                     class=\\"MuiDivider-root-409 PublicationCitation-divider-386\\"
 +                   />
-                    <div
-                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                    >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
 +                     <span
 +                       class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                     >
@@ -363,11 +363,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             </div>
 +           </div>
 +           <span />
-            <div
++           <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
 -             style=\\"padding: 8px;\\"
-+             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+           >
-+             <div
 +               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
 +             >
 +               <div
@@ -467,59 +467,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 -                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
 -                 style=\\"text-align: center;\\"
 +                                 class=\\"MuiGrid-container-3\\"
-+                               >
-+                                 <div
-+                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
-+                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
-+                                     disabled=\\"\\"
-+                                     tabindex=\\"-1\\"
-+                                     type=\\"button\\"
-+                                   >
-+                                     <span
-+                                       class=\\"MuiButton-label-521\\"
-+                                     >
-+                                       <svg
-+                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
-+                                         focusable=\\"false\\"
-+                                         role=\\"presentation\\"
-+                                         viewBox=\\"0 0 24 24\\"
-+                                       >
-+                                         <path
-+                                           d=\\"M0 0h24v24H0z\\"
-+                                           fill=\\"none\\"
-+                                         />
-+                                         <path
-+                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
-+                                         />
-+                                       </svg>
-+                                       Al-Ejeh, Fares
-+                                     </span>
-+                                   </button>
-+                                 </div>
-+                                 <div
-+                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
-+                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-                                    >
-+                                     Second  listed author
-+                                   </span>
-+                                 </div>
-+                               </div>
-+                             </div>
-                              <div
+                                >
+                                  <div
 -                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
 -                   role=\\"progressbar\\"
 -                   style=\\"width: 18px; height: 18px;\\"
-+                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
-+                             >
-+                               <div
-+                                 class=\\"MuiGrid-container-3\\"
-+                               >
-+                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
@@ -554,7 +506,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
                                           />
                                         </svg>
-+                                       Saunus, Jodi M.
++                                       Al-Ejeh, Fares
 +                                     </span>
 +                                   </button>
 +                                 </div>
@@ -564,15 +516,66 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
 +                                   >
++                                     Second  listed author
++                                   </span>
+                                  </div>
+                                </div>
++                             </div>
+                              <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                                  >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
+                                      <span
+-                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-                   style=\\"font-size: 1.33rem;\\"
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Saunus, Jodi M.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
+                                    >
+-                   Loading record to claim
 +                                     Third  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
-                              </div>
-                            </div>
-                            <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
++                             </div>
++                           </div>
++                           <div
 +                             class=\\"MuiGrid-container-3\\"
 +                           >
 +                             <div
@@ -589,10 +592,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
-                                    >
-                                      <span
--                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
--                   style=\\"font-size: 1.33rem;\\"
++                                   >
++                                     <span
 +                                       class=\\"MuiButton-label-521\\"
 +                                     >
 +                                       <svg
@@ -601,8 +602,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
-                                        >
--                   Loading record to claim
++                                       >
 +                                         <path
 +                                           d=\\"M0 0h24v24H0z\\"
 +                                           fill=\\"none\\"
@@ -1304,10 +1304,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       </div>
 +                     </div>
 +                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 +           <div
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
@@ -1326,7 +1326,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     Optional: Suggest changes or add links to this work
 +                   </h3>
                   </div>
-                </div>
++               </div>
 +               <div
 +                 class=\\"MuiCardContent-root-385\\"
 +               >
@@ -1360,9 +1360,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           name=\\"comments\\"
 +                           rows=\\"3\\"
 +                         />
-                        </div>
-                      </div>
-                    </div>
++                       </div>
++                     </div>
++                   </div>
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
@@ -1420,101 +1420,109 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +               <div
 +                 class=\\"MuiCardContent-root-385\\"
 +               >
-+                 <p
-+                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
-+                 >
-+                   You may add up to 10 files (max 8GB each)
-+                 </p>
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
++                     >
++                       You may add up to 10 files (max 8GB each)
++                     </p>
 +                     <div
-+                       id=\\"FileUploadDropZone\\"
-+                       tabindex=\\"0\\"
++                       class=\\"MuiGrid-container-3\\"
 +                     >
 +                       <div
-+                         aria-disabled=\\"false\\"
-+                         class=\\"\\"
-+                         style=\\"position: relative; padding: 0px;\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-516\\"
++                           id=\\"FileUploadDropZone\\"
++                           tabindex=\\"0\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-+                           >
-+                             <p
-+                               class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-517\\"
-+                             >
-+                               File upload restrictions
-+                             </p>
-+                             <div>
-+                               Please ensure your files:
-+                               <ul>
-+                                 <li>
-+                                   begin with a letter and are less than 45 characters long
-+                                 </li>
-+                                 <li>
-+                                   contain only upper and lowercase alphanumeric characters, and underscores
-+                                 </li>
-+                                 <li>
-+                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-+                                 </li>
-+                                 <li>
-+                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                 </li>
-+                                 <li>
-+                                   are uploaded individually and not inside a folder
-+                                 </li>
-+                               </ul>
-+                             </div>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                             aria-disabled=\\"false\\"
++                             class=\\"\\"
++                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-518\\"
++                               class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-516\\"
 +                             >
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <svg
-+                                   aria-hidden=\\"true\\"
-+                                   class=\\"MuiSvgIcon-root-395 FileUploadDropzoneStaticContent-cloudIcon-519\\"
-+                                   focusable=\\"false\\"
-+                                   role=\\"presentation\\"
-+                                   viewBox=\\"0 0 24 24\\"
++                                 <p
++                                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-517\\"
 +                                 >
-+                                   <path
-+                                     d=\\"M0 0h24v24H0z\\"
-+                                     fill=\\"none\\"
-+                                   />
-+                                   <path
-+                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
-+                                   />
-+                                 </svg>
++                                   File upload restrictions
++                                 </p>
++                                 <div>
++                                   Please ensure your files:
++                                   <ul>
++                                     <li>
++                                       begin with a letter and are less than 45 characters long
++                                     </li>
++                                     <li>
++                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                     </li>
++                                     <li>
++                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                     </li>
++                                     <li>
++                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                     </li>
++                                     <li>
++                                       are uploaded individually and not inside a folder
++                                     </li>
++                                   </ul>
++                                 </div>
 +                               </div>
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <p>
-+                                   Click here to select files, or drag files into this area to upload
-+                                 </p>
++                                 <div
++                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-518\\"
++                                 >
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-395 FileUploadDropzoneStaticContent-cloudIcon-519\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M0 0h24v24H0z\\"
++                                         fill=\\"none\\"
++                                       />
++                                       <path
++                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <p>
++                                       Click here to select files, or drag files into this area to upload
++                                     </p>
++                                   </div>
++                                 </div>
 +                               </div>
 +                             </div>
++                             <input
++                               aria-label=\\"Upload files\\"
++                               autocomplete=\\"off\\"
++                               id=\\"Uploader\\"
++                               multiple=\\"\\"
++                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                               type=\\"file\\"
++                             />
 +                           </div>
 +                         </div>
-+                         <input
-+                           aria-label=\\"Upload files\\"
-+                           autocomplete=\\"off\\"
-+                           id=\\"Uploader\\"
-+                           multiple=\\"\\"
-+                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-+                           type=\\"file\\"
-+                         />
 +                       </div>
 +                     </div>
 +                   </div>
@@ -1790,7 +1798,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </div>
             </div>
             <div
-@@ -1494,66 +1536,11 @@
+@@ -1502,66 +1544,11 @@
                     </div>
                   </div>
                 </div>
@@ -1857,7 +1865,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
           >
             <div
               class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621\\"
-@@ -1578,21 +1565,23 @@
+@@ -1586,21 +1573,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-594\\"
@@ -2109,32 +2117,32 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -1450,11 +1444,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"false\\"
-+                         aria-disabled=\\"true\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -1456,11 +1450,11 @@
                           <div
-                            class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1524,10 +1518,11 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
-+                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -1536,52 +1531,100 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"false\\"
++                             aria-disabled=\\"true\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
+@@ -1530,10 +1524,11 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
++                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -1544,52 +1539,100 @@
                     </div>
                   </div>
                 </div>
@@ -2483,32 +2491,32 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -1444,11 +1450,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"true\\"
-+                         aria-disabled=\\"false\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -1450,11 +1456,11 @@
                           <div
-                            class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1518,11 +1524,10 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
--                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -1539,48 +1544,44 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"true\\"
++                             aria-disabled=\\"false\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
+@@ -1524,11 +1530,10 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
+-                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -1547,48 +1552,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -2572,7 +2580,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                   </div>
                 </div>
               </div>
-@@ -1594,37 +1595,41 @@
+@@ -1602,37 +1603,41 @@
             />
             <div
               class=\\"MuiGrid-item-594\\"

@@ -260,7 +260,7 @@ export class FileUploader extends PureComponent {
         const { maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions } = this.props.fileRestrictionsConfig;
         const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
         const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
-        const { errorTitle, successTitle, successMessage } = this.props.locale;
+        const { errorTitle, successTitle, successMessage, delayNotice, delayMessage } = this.props.locale;
 
         const instructionsDisplay = instructions
             .replace('[fileUploadLimit]', fileUploadLimit)
@@ -287,59 +287,70 @@ export class FileUploader extends PureComponent {
         });
 
         return (
-            <Fragment>
-                <Typography variant="body2" gutterBottom>
-                    {instructionsDisplay}
-                </Typography>
-                {this.props.isNtro && (
+            <Grid container spacing={16}>
+                <Grid item xs={12}>
                     <Typography variant="body2" gutterBottom>
-                        {ntroSpecificInstructions}
+                        {instructionsDisplay}
                     </Typography>
-                )}
-                <FileUploadDropzone
-                    locale={this.props.locale}
-                    maxSize={this.calculateMaxFileSize()}
-                    disabled={disabled}
-                    filesInQueue={this.state.filesInQueue.map(file => file.name)}
-                    fileNameRestrictions={fileNameRestrictions}
-                    fileUploadLimit={fileUploadLimit}
-                    onDrop={this._handleDroppedFiles}
-                />
-                {filesInQueue.length > 0 && (
-                    <Alert
-                        title={successTitle}
-                        message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
-                        type="done"
+                    {this.props.isNtro && (
+                        <Typography variant="body2" gutterBottom>
+                            {ntroSpecificInstructions}
+                        </Typography>
+                    )}
+                    <FileUploadDropzone
+                        locale={this.props.locale}
+                        maxSize={this.calculateMaxFileSize()}
+                        disabled={disabled}
+                        filesInQueue={this.state.filesInQueue.map(file => file.name)}
+                        fileNameRestrictions={fileNameRestrictions}
+                        fileUploadLimit={fileUploadLimit}
+                        onDrop={this._handleDroppedFiles}
                     />
-                )}
-                {errorMessage.length > 0 && <Alert title={errorTitle} message={errorMessage} type="error" />}
+                </Grid>
                 {filesInQueue.length > 0 && (
-                    <div style={{ flexGrow: 1, padding: 8 }}>
-                        <Grid container display="column" spacing={16}>
+                    <Fragment>
+                        <Grid item xs={12}>
+                            <Alert
+                                title={successTitle}
+                                message={successMessage.replace('[numberOfFiles]', filesInQueue.length)}
+                                type="done"
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            <Alert title={delayNotice} message={delayMessage} type="warning" />
+                        </Grid>
+                    </Fragment>
+                )}
+                {errorMessage.length > 0 && (
+                    <Grid item xs={12}>
+                        <Alert title={errorTitle} message={errorMessage} type="error" />
+                    </Grid>
+                )}
+                {filesInQueue.length > 0 && (
+                    <Fragment>
+                        <Grid item xs={12}>
+                            <FileUploadRowHeader
+                                onDeleteAll={this._deleteAllFiles}
+                                requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
+                                disabled={disabled}
+                            />
+                        </Grid>
+                        <Grid item xs={12}>
+                            {filesInQueueRow}
+                        </Grid>
+                        {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (
                             <Grid item xs={12}>
-                                <FileUploadRowHeader
-                                    onDeleteAll={this._deleteAllFiles}
-                                    requireOpenAccessStatus={requireOpenAccessStatus && !defaultQuickTemplateId}
+                                <FileUploadTermsAndConditions
+                                    onAcceptTermsAndConditions={this._acceptTermsAndConditions}
+                                    accessTermsAndConditions={accessTermsAndConditions}
+                                    isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
                                     disabled={disabled}
                                 />
                             </Grid>
-                            <Grid item xs={12}>
-                                {filesInQueueRow}
-                            </Grid>
-                            {requireOpenAccessStatus && this.isAnyOpenAccess(filesInQueue) && (
-                                <Grid item xs={12}>
-                                    <FileUploadTermsAndConditions
-                                        onAcceptTermsAndConditions={this._acceptTermsAndConditions}
-                                        accessTermsAndConditions={accessTermsAndConditions}
-                                        isTermsAndConditionsAccepted={isTermsAndConditionsAccepted}
-                                        disabled={disabled}
-                                    />
-                                </Grid>
-                            )}
-                        </Grid>
-                    </div>
+                        )}
+                    </Fragment>
                 )}
-            </Fragment>
+            </Grid>
         );
     }
 }

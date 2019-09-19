@@ -33,7 +33,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                           Work type
                           <span
                             class=\\"MuiFormLabel-asterisk-617\\"
-@@ -239,19 +239,138 @@
+@@ -239,20 +239,139 @@
                               class=\\"MuiSelect-select-619 MuiSelect-selectMenu-622 MuiInputBase-input-648 MuiInput-input-633\\"
                               id=\\"rek-display-type\\"
                               role=\\"button\\"
@@ -49,7 +49,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                               id=\\"Work type\\"
                               name=\\"rek_display_type\\"
                               placeholder=\\"Select a Work type from the dropdown list\\"
-+                             type=\\"hidden\\"
+                              type=\\"hidden\\"
 +                             value=\\"181\\"
 +                           />
 +                           <svg
@@ -170,12 +170,13 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                           </div>
 +                           <input
 +                             style=\\"border: 1px solid red;\\"
-                              type=\\"hidden\\"
++                             type=\\"hidden\\"
                               value=\\"\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
-@@ -262,20 +381,948 @@
+                              class=\\"MuiSvgIcon-root-586 MuiSelect-icon-624\\"
+@@ -262,20 +381,956 @@
                             >
                               <path
                                 d=\\"M7 10l5 5 5-5z\\"
@@ -320,8 +321,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   </div>
 +                                 </div>
 +                               </div>
-                              </div>
-                            </div>
++                             </div>
++                           </div>
                           </div>
                         </div>
 +                       <div
@@ -498,11 +499,11 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                     />
 +                                   </div>
 +                                 </div>
-                                </div>
++                               </div>
                               </div>
                             </div>
                           </div>
-+                       </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                       >
@@ -524,8 +525,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                  *
 +                               </span>
 +                             </label>
-                            </div>
-                            <div
++                           </div>
++                           <div
 +                             class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                           >
 +                             <div
@@ -552,14 +553,14 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       type=\\"text\\"
 +                                       value=\\"\\"
 +                                     />
-+                                   </div>
-+                                 </div>
+                                    </div>
+                                  </div>
 +                                 <p
 +                                   class=\\"MuiFormHelperText-root-770 MuiFormHelperText-error-771\\"
 +                                 >
 +                                   Year required
 +                                 </p>
-+                               </div>
+                                </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-379 MuiGrid-grid-xs-4-410\\"
 +                               >
@@ -570,7 +571,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   <div
 +                                     class=\\"MuiSelect-root-618\\"
 +                                   >
-+                                     <div
+                                      <div
 +                                       aria-haspopup=\\"true\\"
 +                                       aria-pressed=\\"false\\"
 +                                       class=\\"MuiSelect-select-619 MuiSelect-selectMenu-622 MuiInputBase-input-648 MuiInput-input-633\\"
@@ -954,101 +955,109 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +               <div
 +                 class=\\"MuiCardContent-root-595\\"
 +               >
-+                 <p
-+                   class=\\"MuiTypography-root-475 MuiTypography-body2-483 MuiTypography-gutterBottom-502\\"
-+                 >
-+                   You may add up to 10 files (max 8GB each)
-+                 </p>
 +                 <div
-+                   class=\\"MuiGrid-container-378\\"
++                   class=\\"MuiGrid-container-378 MuiGrid-spacing-xs-16-401\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                   >
++                     <p
++                       class=\\"MuiTypography-root-475 MuiTypography-body2-483 MuiTypography-gutterBottom-502\\"
++                     >
++                       You may add up to 10 files (max 8GB each)
++                     </p>
 +                     <div
-+                       id=\\"FileUploadDropZone\\"
-+                       tabindex=\\"0\\"
++                       class=\\"MuiGrid-container-378\\"
 +                     >
 +                       <div
-+                         aria-disabled=\\"false\\"
-+                         class=\\"\\"
-+                         style=\\"position: relative; padding: 0px;\\"
++                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-378 FileUploadDropzoneStaticContent-dropzone-766\\"
++                           id=\\"FileUploadDropZone\\"
++                           tabindex=\\"0\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
-+                           >
-+                             <p
-+                               class=\\"MuiTypography-root-475 MuiTypography-body2-483 FileUploadDropzoneStaticContent-heading-767\\"
-+                             >
-+                               File upload restrictions
-+                             </p>
-+                             <div>
-+                               Please ensure your files:
-+                               <ul>
-+                                 <li>
-+                                   begin with a letter and are less than 45 characters long
-+                                 </li>
-+                                 <li>
-+                                   contain only upper and lowercase alphanumeric characters, and underscores
-+                                 </li>
-+                                 <li>
-+                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-+                                 </li>
-+                                 <li>
-+                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                 </li>
-+                                 <li>
-+                                   are uploaded individually and not inside a folder
-+                                 </li>
-+                               </ul>
-+                             </div>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
++                             aria-disabled=\\"false\\"
++                             class=\\"\\"
++                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-378 MuiGrid-direction-xs-column-381 MuiGrid-align-items-xs-center-386 MuiGrid-justify-xs-center-395 FileUploadDropzoneStaticContent-instructions-768\\"
++                               class=\\"MuiGrid-container-378 FileUploadDropzoneStaticContent-dropzone-766\\"
 +                             >
 +                               <div
-+                                 class=\\"MuiGrid-item-379\\"
++                                 class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                               >
-+                                 <svg
-+                                   aria-hidden=\\"true\\"
-+                                   class=\\"MuiSvgIcon-root-586 FileUploadDropzoneStaticContent-cloudIcon-769\\"
-+                                   focusable=\\"false\\"
-+                                   role=\\"presentation\\"
-+                                   viewBox=\\"0 0 24 24\\"
++                                 <p
++                                   class=\\"MuiTypography-root-475 MuiTypography-body2-483 FileUploadDropzoneStaticContent-heading-767\\"
 +                                 >
-+                                   <path
-+                                     d=\\"M0 0h24v24H0z\\"
-+                                     fill=\\"none\\"
-+                                   />
-+                                   <path
-+                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
-+                                   />
-+                                 </svg>
++                                   File upload restrictions
++                                 </p>
++                                 <div>
++                                   Please ensure your files:
++                                   <ul>
++                                     <li>
++                                       begin with a letter and are less than 45 characters long
++                                     </li>
++                                     <li>
++                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                     </li>
++                                     <li>
++                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                     </li>
++                                     <li>
++                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                     </li>
++                                     <li>
++                                       are uploaded individually and not inside a folder
++                                     </li>
++                                   </ul>
++                                 </div>
 +                               </div>
 +                               <div
-+                                 class=\\"MuiGrid-item-379\\"
++                                 class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                               >
-+                                 <p>
-+                                   Click here to select files, or drag files into this area to upload
-+                                 </p>
++                                 <div
++                                   class=\\"MuiGrid-container-378 MuiGrid-direction-xs-column-381 MuiGrid-align-items-xs-center-386 MuiGrid-justify-xs-center-395 FileUploadDropzoneStaticContent-instructions-768\\"
++                                 >
++                                   <div
++                                     class=\\"MuiGrid-item-379\\"
++                                   >
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-586 FileUploadDropzoneStaticContent-cloudIcon-769\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M0 0h24v24H0z\\"
++                                         fill=\\"none\\"
++                                       />
++                                       <path
++                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                   <div
++                                     class=\\"MuiGrid-item-379\\"
++                                   >
++                                     <p>
++                                       Click here to select files, or drag files into this area to upload
++                                     </p>
++                                   </div>
++                                 </div>
 +                               </div>
 +                             </div>
++                             <input
++                               aria-label=\\"Upload files\\"
++                               autocomplete=\\"off\\"
++                               id=\\"Uploader\\"
++                               multiple=\\"\\"
++                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                               type=\\"file\\"
++                             />
 +                           </div>
 +                         </div>
-+                         <input
-+                           aria-label=\\"Upload files\\"
-+                           autocomplete=\\"off\\"
-+                           id=\\"Uploader\\"
-+                           multiple=\\"\\"
-+                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-+                           type=\\"file\\"
-+                         />
 +                       </div>
 +                     </div>
 +                   </div>
@@ -1124,7 +1133,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
             <div
               class=\\"MuiGrid-item-379 MuiGrid-grid-xs-true-406\\"
             />
-@@ -293,10 +1340,28 @@
+@@ -293,10 +1348,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -1411,7 +1420,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           Work subtype
                           <span
                             class=\\"MuiFormLabel-asterisk-1033\\"
-@@ -299,20 +299,139 @@
+@@ -299,19 +299,138 @@
                               class=\\"MuiSelect-select-1035 MuiSelect-selectMenu-1038 MuiInputBase-input-1064 MuiInput-input-1049\\"
                               id=\\"rek-subtype\\"
                               role=\\"button\\"
@@ -1427,7 +1436,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                               id=\\"Work subtype\\"
                               name=\\"rek_subtype\\"
                               placeholder=\\"Select a work subtype from the dropdown list\\"
-                              type=\\"hidden\\"
++                             type=\\"hidden\\"
 +                             value=\\"Textbook\\"
 +                           />
 +                           <svg
@@ -1548,21 +1557,12 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           </div>
 +                           <input
 +                             style=\\"border: 1px solid red;\\"
-+                             type=\\"hidden\\"
+                              type=\\"hidden\\"
                               value=\\"\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-1002 MuiSelect-icon-1040\\"
-@@ -322,20 +441,1104 @@
-                            >
-                              <path
-                                d=\\"M7 10l5 5 5-5z\\"
-                              />
-                            </svg>
-+                         </div>
-                        </div>
-                      </div>
+@@ -330,12 +449,1104 @@
                     </div>
                   </div>
                 </div>
@@ -1592,7 +1592,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         Book information
 +                       </h3>
                       </div>
-                    </div>
++                   </div>
                     <div
 +                     class=\\"MuiCardContent-root-1011\\"
 +                   >
@@ -2480,101 +2480,109 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +               <div
 +                 class=\\"MuiCardContent-root-1011\\"
 +               >
-+                 <p
-+                   class=\\"MuiTypography-root-891 MuiTypography-body2-899 MuiTypography-gutterBottom-918\\"
-+                 >
-+                   You may add up to 10 files (max 8GB each)
-+                 </p>
 +                 <div
-+                   class=\\"MuiGrid-container-794\\"
++                   class=\\"MuiGrid-container-794 MuiGrid-spacing-xs-16-817\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834\\"
 +                   >
++                     <p
++                       class=\\"MuiTypography-root-891 MuiTypography-body2-899 MuiTypography-gutterBottom-918\\"
++                     >
++                       You may add up to 10 files (max 8GB each)
++                     </p>
 +                     <div
-+                       id=\\"FileUploadDropZone\\"
-+                       tabindex=\\"0\\"
++                       class=\\"MuiGrid-container-794\\"
 +                     >
 +                       <div
-+                         aria-disabled=\\"false\\"
-+                         class=\\"\\"
-+                         style=\\"position: relative; padding: 0px;\\"
++                         class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-794 FileUploadDropzoneStaticContent-dropzone-1178\\"
++                           id=\\"FileUploadDropZone\\"
++                           tabindex=\\"0\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-6-842\\"
-+                           >
-+                             <p
-+                               class=\\"MuiTypography-root-891 MuiTypography-body2-899 FileUploadDropzoneStaticContent-heading-1179\\"
-+                             >
-+                               File upload restrictions
-+                             </p>
-+                             <div>
-+                               Please ensure your files:
-+                               <ul>
-+                                 <li>
-+                                   begin with a letter and are less than 45 characters long
-+                                 </li>
-+                                 <li>
-+                                   contain only upper and lowercase alphanumeric characters, and underscores
-+                                 </li>
-+                                 <li>
-+                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-+                                 </li>
-+                                 <li>
-+                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                 </li>
-+                                 <li>
-+                                   are uploaded individually and not inside a folder
-+                                 </li>
-+                               </ul>
-+                             </div>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-6-842\\"
++                             aria-disabled=\\"false\\"
++                             class=\\"\\"
++                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-794 MuiGrid-direction-xs-column-797 MuiGrid-align-items-xs-center-802 MuiGrid-justify-xs-center-811 FileUploadDropzoneStaticContent-instructions-1180\\"
++                               class=\\"MuiGrid-container-794 FileUploadDropzoneStaticContent-dropzone-1178\\"
 +                             >
 +                               <div
-+                                 class=\\"MuiGrid-item-795\\"
++                                 class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-6-842\\"
 +                               >
-+                                 <svg
-+                                   aria-hidden=\\"true\\"
-+                                   class=\\"MuiSvgIcon-root-1002 FileUploadDropzoneStaticContent-cloudIcon-1181\\"
-+                                   focusable=\\"false\\"
-+                                   role=\\"presentation\\"
-+                                   viewBox=\\"0 0 24 24\\"
++                                 <p
++                                   class=\\"MuiTypography-root-891 MuiTypography-body2-899 FileUploadDropzoneStaticContent-heading-1179\\"
 +                                 >
-+                                   <path
-+                                     d=\\"M0 0h24v24H0z\\"
-+                                     fill=\\"none\\"
-+                                   />
-+                                   <path
-+                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
-+                                   />
-+                                 </svg>
++                                   File upload restrictions
++                                 </p>
++                                 <div>
++                                   Please ensure your files:
++                                   <ul>
++                                     <li>
++                                       begin with a letter and are less than 45 characters long
++                                     </li>
++                                     <li>
++                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                     </li>
++                                     <li>
++                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                     </li>
++                                     <li>
++                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                     </li>
++                                     <li>
++                                       are uploaded individually and not inside a folder
++                                     </li>
++                                   </ul>
++                                 </div>
 +                               </div>
 +                               <div
-+                                 class=\\"MuiGrid-item-795\\"
++                                 class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-6-842\\"
 +                               >
-+                                 <p>
-+                                   Click here to select files, or drag files into this area to upload
-+                                 </p>
++                                 <div
++                                   class=\\"MuiGrid-container-794 MuiGrid-direction-xs-column-797 MuiGrid-align-items-xs-center-802 MuiGrid-justify-xs-center-811 FileUploadDropzoneStaticContent-instructions-1180\\"
++                                 >
++                                   <div
++                                     class=\\"MuiGrid-item-795\\"
++                                   >
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-1002 FileUploadDropzoneStaticContent-cloudIcon-1181\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M0 0h24v24H0z\\"
++                                         fill=\\"none\\"
++                                       />
++                                       <path
++                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                   <div
++                                     class=\\"MuiGrid-item-795\\"
++                                   >
++                                     <p>
++                                       Click here to select files, or drag files into this area to upload
++                                     </p>
++                                   </div>
++                                 </div>
 +                               </div>
 +                             </div>
++                             <input
++                               aria-label=\\"Upload files\\"
++                               autocomplete=\\"off\\"
++                               id=\\"Uploader\\"
++                               multiple=\\"\\"
++                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                               type=\\"file\\"
++                             />
 +                           </div>
 +                         </div>
-+                         <input
-+                           aria-label=\\"Upload files\\"
-+                           autocomplete=\\"off\\"
-+                           id=\\"Uploader\\"
-+                           multiple=\\"\\"
-+                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-+                           type=\\"file\\"
-+                         />
 +                       </div>
 +                     </div>
 +                   </div>
@@ -2659,7 +2667,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-true-822\\"
             />
-@@ -353,10 +1556,28 @@
+@@ -353,10 +1564,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -2924,7 +2932,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         label=\\"year\\"
                                         maxlength=\\"4\\"
                                         name=\\"year\\"
-@@ -1512,22 +1488,10 @@
+@@ -1520,22 +1496,10 @@
                             <li>
                               Author/creator names are required
                             </li>
@@ -3357,7 +3365,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                         <span
                           class=\\"MuiTypography-root-891 MuiTypography-caption-901 MuiTypography-colorError-925\\"
                         >
-@@ -1483,13 +1547,10 @@
+@@ -1491,13 +1555,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -3473,17 +3481,18 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1495,67 +1480,12 @@
-                            autocomplete=\\"off\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
--                         />
+@@ -1502,68 +1487,13 @@
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+-                           </div>
+-                         </div>
 -                       </div>
 -                     </div>
--                   </div>
--                 </div>
+                            </div>
+                          </div>
 -               </div>
 -             </div>
 -           </div>
@@ -3519,7 +3528,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         />
 -                         <path
 -                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
-                          />
+-                         />
 -                       </svg>
                         </div>
 -                     <div
@@ -3541,7 +3550,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1587,22 +1517,24 @@
+@@ -1595,22 +1525,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-auto-835\\"
@@ -4020,7 +4029,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1488,12 +1439,70 @@
+@@ -1496,12 +1447,70 @@
                     </div>
                   </div>
                 </div>
@@ -4091,7 +4100,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-true-822\\"
             />
-@@ -1517,24 +1526,22 @@
+@@ -1525,24 +1534,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-auto-835\\"
