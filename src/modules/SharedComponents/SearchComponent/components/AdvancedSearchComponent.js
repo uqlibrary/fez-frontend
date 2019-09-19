@@ -10,7 +10,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import AdvancedSearchRow from './AdvancedSearchRow';
 import Checkbox from '@material-ui/core/Checkbox';
 import { locale } from 'locale';
-import DocumentTypeField from './Fields/DocumentTypeField';
+import DocumentTypeMultipleField from './Fields/DocumentTypeMultipleField';
 import PublicationYearRangeField from './Fields/PublicationYearRangeField';
 import DateRangeField from './Fields/DateRangeField';
 import AdvancedSearchCaption from './AdvancedSearchCaption';
@@ -225,7 +225,7 @@ export class AdvancedSearchComponent extends PureComponent {
                                 <Grid item xs={12} md={4} className={classes.sideBar}>
                                     <Grid container spacing={16}>
                                         <Grid item xs={12}>
-                                            <DocumentTypeField
+                                            <DocumentTypeMultipleField
                                                 docTypes={this.props.docTypes}
                                                 updateDocTypeValues={this.props.updateDocTypeValues}
                                                 disabled={this.props.isLoading}

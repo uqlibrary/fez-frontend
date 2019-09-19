@@ -111,7 +111,8 @@ export default class CollectionForm extends Component {
                                             component={CommunitiesSelectField}
                                             disabled={this.props.submitting}
                                             name="fez_record_search_key_ismemberof"
-                                            locale={txt.formLabels.ismemberof}
+                                            label={txt.formLabels.ismemberof.label}
+                                            placeholder={txt.formLabels.ismemberof.placeholder}
                                             required
                                             validate={[validation.required]}
                                         />

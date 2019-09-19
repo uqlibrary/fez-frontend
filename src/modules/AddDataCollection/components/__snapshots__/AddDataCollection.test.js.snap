@@ -462,6 +462,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 </h3>
                 <p>
                   View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
@@ -1675,6 +1676,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 </h3>
                 <p>
                   View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
@@ -2888,6 +2890,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 </h3>
                 <p>
                   View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"
@@ -4101,6 +4104,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 </h3>
                 <p>
                   View
+                   
                   <a
                     href="https://creativecommons.org/licenses/"
                     target="_blank"

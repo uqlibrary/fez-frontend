@@ -110,10 +110,10 @@ export function linkAuthorOrcidId(userId, authorId, orcidCode) {
     };
 }
 
-/*
+/**
  * Dispatch action to notify reducer to clean up current author saving state (eg progress, errors)
  * @returns {action}
- * */
+ */
 export function resetSavingAuthorState() {
     return dispatch => {
         dispatch({ type: actions.CURRENT_AUTHOR_SAVE_RESET });

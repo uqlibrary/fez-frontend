@@ -13,3 +13,4 @@ export * from './controlledVocabularies';
 export * from './newsFeed';
 export * from './thirdPartyLookupTool';
 export * from './incompleteRecords';
+export * from './batchImport';

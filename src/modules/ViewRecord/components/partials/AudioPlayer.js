@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { pathConfig } from 'config/routes';
 import PlayArrow from '@material-ui/icons/PlayArrow';
 import Pause from '@material-ui/icons/Pause';
 import IconButton from '@material-ui/core/IconButton';
@@ -40,13 +39,13 @@ export default class AudioPlayer extends Component {
     };
 
     render() {
-        const { pid, fileName, mimeType } = this.props;
+        const { fileName, mimeType } = this.props;
         const { controls } = locale.global.audioPlayer;
         const { isPlaying } = this.state;
         return (
             <div>
                 <audio id="audioPlayer" ref={player => (this.audioPlayerRef = player)}>
-                    <source src={pathConfig.file.url(pid, fileName)} type={mimeType} />
+                    <source src={fileName} type={mimeType} />
                 </audio>
                 <IconButton
                     id={isPlaying ? 'pauseButton' : 'playButton'}

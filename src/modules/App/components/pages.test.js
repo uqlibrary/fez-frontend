@@ -20,5 +20,6 @@ describe('Lazy-loaded components', () => {
         expect(JSON.stringify(pages.Admin())).toEqual(expectation);
         expect(JSON.stringify(pages.CollectionForm())).toEqual(expectation);
         expect(JSON.stringify(pages.CommunityForm())).toEqual(expectation);
+        expect(JSON.stringify(pages.BatchImport())).toEqual(expectation);
     });
 });

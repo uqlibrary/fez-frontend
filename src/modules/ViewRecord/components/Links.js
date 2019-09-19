@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import { PubmedCentralLink } from 'modules/SharedComponents/PubmedCentralLink';
-/* eslint-disable-next-line max-len */
+// eslint-disable-next-line max-len
 import DoiCitationView from 'modules/SharedComponents/PublicationCitation/components/citations/partials/DoiCitationView';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -51,7 +51,7 @@ export class LinksClass extends PureComponent {
             <Grid item xs={10} sm={4} className={this.props.classes.description}>
                 <Typography variant={'body2'}>{description}</Typography>
             </Grid>
-            <Grid item xs={2} sm={2}>
+            <Grid item xs={2} sm={2} style={{ textAlign: 'right' }}>
                 <OpenAccessIcon {...openAccessStatus} />
             </Grid>
         </Grid>
@@ -183,13 +183,13 @@ export class LinksClass extends PureComponent {
                         </Grid>
                     </Hidden>
                     {// if record has a PubMedCentral Id - display link, should be always OA
-                    /* prettier-ignore */
+                    // prettier-ignore
                         !!pubmedCentralId &&
                         <this.LinkRow {...this.getPMCLink(pubmedCentralId, pmcOpenAccessStatus)} />}
                     {// if record has a DOI - display a link, should be OA or OA with a date
                         !!doi && <this.LinkRow {...this.getDOILink(doi, doiOpenAccessStatus)} />}
-                    {// record has OA status of "Link (no DOI)" then produce a google scholar link
-                    // for the publication title
+                    {// record has OA status of "Link (no DOI)" then produce a google
+                    // scholar link for the publication title
                         openAccessStatusId === openAccessConfig.OPEN_ACCESS_ID_LINK_NO_DOI && (
                             <this.LinkRow {...this.getGoogleScholarLink(record.rek_title, gcOpenAccessStatus)} />
                         )}

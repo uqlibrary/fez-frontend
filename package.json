@@ -71,7 +71,7 @@
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
-        "cypress": "^3.3.2",
+        "cypress": "^3.4.1",
         "cypress-file-upload": "^3.2.0",
         "cypress-plugin-tab": "^1.0.1",
         "dom-testing-library": "^3.17.1",
@@ -164,6 +164,7 @@
         "react-helmet": "^5.2.0",
         "react-hot-loader": "4.1.2",
         "react-html-parser": "^2.0.2",
+        "react-image": "^2.2.0",
         "react-infinite": "0.13.0",
         "react-json-pretty": "^2.1.0",
         "react-json-tree": "0.11.0",
@@ -210,6 +211,7 @@
         "cypress:run": "cypress run",
         "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
         "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
+        "e2e:open": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress open'",
         "test:all": "npm run test && npm run e2e && npm run codestyles:files",
         "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
     },
@@ -218,10 +220,16 @@
         "node": "11.10.1"
     },
     "babel": {
-        "presets": ["@babel/env", "@babel/react"],
+        "presets": [
+            "@babel/env",
+            "@babel/react"
+        ],
         "env": {
             "development": {
-                "presets": ["@babel/env", "@babel/react"]
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ]
             },
             "production": {
                 "presets": [
@@ -254,7 +262,10 @@
                 ]
             },
             "test": {
-                "presets": ["@babel/env", "@babel/react"],
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -281,9 +292,20 @@
         "transform": {
             ".*": "<rootDir>/node_modules/babel-jest"
         },
-        "testMatch": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(test).[jt]s?(x)", "**/?(*.)+(integration).[jt]s?(x)"],
-        "moduleFileExtensions": ["js", "json", "es6"],
-        "unmockedModulePathPatterns": ["react", "enzyme"],
+        "testMatch": [
+            "**/__tests__/**/*.[jt]s?(x)",
+            "**/?(*.)+(test).[jt]s?(x)",
+            "**/?(*.)+(integration).[jt]s?(x)"
+        ],
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "es6"
+        ],
+        "unmockedModulePathPatterns": [
+            "react",
+            "enzyme"
+        ],
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
@@ -297,7 +319,10 @@
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
         ],
-        "coverageReporters": ["html", "text"],
+        "coverageReporters": [
+            "html",
+            "text"
+        ],
         "coverageThreshold": {
             "global": {
                 "statements": 100,
@@ -306,14 +331,25 @@
                 "lines": 100
             }
         },
-        "modulePaths": ["<rootDir>/src", "<rootDir>/eslint-plugin-uqlibrary", "<rootDir>/utils"],
+        "modulePaths": [
+            "<rootDir>/src",
+            "<rootDir>/eslint-plugin-uqlibrary",
+            "<rootDir>/utils"
+        ],
         "moduleNameMapper": {
             "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
             "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
         },
-        "transformIgnorePatterns": ["<rootDir>/node_modules/"],
-        "setupFiles": ["./src/test.setup.js", "jest-localstorage-mock"],
-        "setupFilesAfterEnv": ["<rootDir>/src/jest.setup.js"],
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ],
+        "setupFiles": [
+            "./src/test.setup.js",
+            "jest-localstorage-mock"
+        ],
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/jest.setup.js"
+        ],
         "testURL": "http://fez-staging.library.uq.edu.au"
     }
 }

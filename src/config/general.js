@@ -1090,16 +1090,6 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
         name: 'Administrators',
         label: 'Administrators',
         order: 0,
-        description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut id aliquam sapien. ' +
-            'Aliquam rhoncus congue consectetur. Aenean sed sapien ipsum. Sed lectus mauris, ' +
-            'mollis et dolor vitae, rutrum lobortis risus. Aenean a nisl non felis pretium ' +
-            'tincidunt id sit amet augue. Aenean ac quam non libero malesuada vulputate. ' +
-            'Integer commodo lacus quis egestas varius. Etiam dapibus mollis feugiat. Aliquam ' +
-            'pellentesque nunc ac libero feugiat laoreet. In hac habitasse platea dictumst. ' +
-            'Duis sagittis lorem id vestibulum maximus. Nullam vel libero eu eros faucibus ' +
-            'venenatis. Vestibulum interdum porttitor ipsum sed fringilla. Sed enim lacus, ' +
-            'faucibus vel tincidunt euismod, euismod vitae turpis.',
     },
     {
         id: 2,
@@ -1107,11 +1097,6 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
         name: 'Theses Assessors',
         label: 'Theses Assessors',
         order: 10,
-        description:
-            'Suspendisse pellentesque libero eget molestie vehicula. Vestibulum eget purus euismod, ' +
-            'imperdiet massa non, vulputate lectus. Sed mi mi, placerat ultricies purus nec, ' +
-            'sollicitudin fringilla odio. Aliquam erat volutpat. Vestibulum at augue sed arcu ' +
-            'condimentum finibus id et dolor.',
     },
     {
         id: 3,
@@ -1119,11 +1104,6 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
         name: 'Evidence Assessors',
         label: 'Evidence Assessors',
         order: 20,
-        description:
-            'Mauris pulvinar tortor eu lectus facilisis, ut ultricies risus elementum. Aenean ac sem ' +
-            'quis enim molestie egestas ut id sem. Nulla nibh elit, efficitur fermentum nisl et, semper ' +
-            'ultrices quam. Aenean in sollicitudin mi. Cras ultricies eros quis maximus pellentesque. ' +
-            'Mauris justo mi, aliquet vitae nisl et, tristique pulvinar risus.',
     },
     {
         id: 4,
@@ -1131,10 +1111,6 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
         name: 'Staff and Students',
         label: 'Staff and Students',
         order: 30,
-        description:
-            'Sed quis blandit erat. Orci varius natoque penatibus et magnis dis parturient montes, ' +
-            'nascetur ridiculus mus. Donec condimentum feugiat maximus. Donec ullamcorper nulla nec ' +
-            'leo elementum dapibus. Ut enim nunc, volutpat quis facilisis sed, congue vel arcu.',
     },
     {
         id: 5,
@@ -1142,10 +1118,6 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
         name: 'Public',
         label: 'Public',
         order: 100,
-        description:
-            'Aenean arcu nibh, feugiat ut mauris id, consectetur pulvinar ipsum. Vestibulum ullamcorper ' +
-            'dictum tristique. Sed lobortis est in mauris venenatis, quis euismod nunc pellentesque. Cras ' +
-            'iaculis a ex nec laoreet. Aliquam sapien arcu, pharetra eget maximus ac, volutpat sit amet libero.',
     },
 ];
 

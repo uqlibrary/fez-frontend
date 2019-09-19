@@ -52,7 +52,7 @@ context('Homepage', () => {
 
     it('Has expected menu items for an admin', () => {
         cy.visit('/?user=uqstaff');
-        checkMenuItemCount(16);
+        checkMenuItemCount(19);
     });
 
     it('Has expected menu items for a student', () => {

@@ -1,8 +1,10 @@
 import { generateCancelToken } from 'config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
-import { get, put } from './generic';
+import { post, put } from './generic';
 import Raven from 'raven-js';
+import locale from 'locale/global';
+const moment = require('moment');
 
 /**
  * Uploads a file directly into an S3 bucket via API
@@ -12,11 +14,19 @@ import Raven from 'raven-js';
  * @returns {Promise}
  */
 export function putUploadFile(pid, file, dispatch) {
-    return get(FILE_UPLOAD_API({ pid: pid, fileName: file.name }))
+    return post(FILE_UPLOAD_API(), {
+        Key: `${pid}/${file.name}`,
+        Metadata: {
+            dsi_security_policy: file.access_condition_id === 8 ? 1 : 5,
+            ...(file.access_condition_id === 9 && !moment(file.date).isSame(moment(), 'day')
+                ? { dsi_embargo_date: moment(file.date).format(locale.global.embargoDateFormat) }
+                : {}),
+        },
+    })
         .then(uploadUrl => {
             const options = {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
+                    'Content-Type': file.fileData && file.fileData.type ? file.fileData.type : 'multipart/form-data',
                 },
                 onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
                 cancelToken: generateCancelToken().token,

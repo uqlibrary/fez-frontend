@@ -8,7 +8,7 @@ context('Thesis', () => {
     afterEach(() => {
         // Add this when we have a dialog when navigating away from a form
         cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+            .then((win) => (win.onbeforeunload = undefined));
     });
 
     it('Submitting a thesis successfully', () => {
@@ -137,7 +137,7 @@ context('Thesis', () => {
         // Field of Research
         cy.get('input[label="Field of research"]')
             .type('a');
-        cy.wait(1000);
+        cy.wait(1000); // Wait for suggestions
         cy.get('li[id="Fieldofresearch-item-0"]')
             .click();
         cy.get('.alert-text')
@@ -158,6 +158,7 @@ context('Thesis', () => {
             .should('have.length', 3);
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('.alert-text')
             .find('ul')
             .children()
@@ -181,6 +182,7 @@ context('Thesis', () => {
             .should('to.have.attr', 'disabled');
         cy.get('input[label="Field of research"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('li[id="Fieldofresearch-item-0"]')
             .click();
         cy.get('.alert-text')
@@ -247,7 +249,7 @@ context('Thesis', () => {
         // Files?
         const fileName = 'test.jpg';
         cy.fixture(fileName)
-            .then(fileContent => {
+            .then((fileContent) => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileName, mimeType: 'image/jpg' },
@@ -266,7 +268,7 @@ context('Thesis', () => {
 
         const fileNameTwo = 'test_two.jpg';
         cy.fixture(fileNameTwo)
-            .then(fileContent => {
+            .then((fileContent) => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
@@ -285,7 +287,7 @@ context('Thesis', () => {
 
         const fileNameThree = 'test three.jpg';
         cy.fixture(fileNameThree)
-            .then(fileContent => {
+            .then((fileContent) => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameThree, mimeType: 'image/jpg' },
@@ -295,7 +297,7 @@ context('Thesis', () => {
         cy.get('div.alert-text')
             .should('have.length', 2);
         cy.fixture(fileName)
-            .then(fileContent => {
+            .then((fileContent) => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName, mimeType: 'image/jpg' },
@@ -303,7 +305,7 @@ context('Thesis', () => {
                     );
             });
         cy.fixture(fileNameTwo)
-            .then(fileContent => {
+            .then((fileContent) => {
                 cy.get('div#FileUploadDropZone')
                     .upload(
                         { fileContent, fileName: fileNameTwo, mimeType: 'image/jpg' },
