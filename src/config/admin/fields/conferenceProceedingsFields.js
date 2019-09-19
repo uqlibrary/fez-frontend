@@ -4,36 +4,23 @@ export default {
     ...commonFields,
     bibliographic: (isLote = false) => [
         {
-            title: 'Book chapter title',
-            groups: [
-                ['rek_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfTitle'],
-                        ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_roman_script_title'],
-                        ['fez_record_search_key_translated_title'],
-                    ]
-                    : []),
-            ],
+            title: 'Title of proceedings',
+            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
             title: 'Language of work',
             groups: [['languages']],
         },
         {
-            title: 'Book title',
+            title: 'Conference name',
             groups: [
-                ['fez_record_search_key_book_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfBookTitle'],
-                        ['fez_record_search_key_native_script_book_title'],
-                        ['fez_record_search_key_roman_script_book_title'],
-                        ['fez_record_search_key_translated_book_title'],
-                    ]
-                    : []),
+                ['fez_record_search_key_conference_name'],
+                ...(isLote ? [['fez_record_search_key_translated_conference_name']] : []),
             ],
+        },
+        {
+            title: 'Conference details',
+            groups: [['fez_record_search_key_conference_location', 'fez_record_search_key_conference_dates']],
         },
         {
             title: 'ISBN',
@@ -47,12 +34,7 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
-                [
-                    'fez_record_search_key_edition',
-                    'fez_record_search_key_volume_number',
-                    'fez_record_search_key_chapter_number',
-                ],
-                ['fez_record_search_key_series'],
+                ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
@@ -102,14 +84,6 @@ export default {
         },
     ],
     ntro: () => [
-        {
-            title: 'Scale/Significance of work & Creator research statement',
-            groups: [['significanceAndContributionStatement']],
-        },
-        {
-            title: 'ISMN',
-            groups: [['fez_record_search_key_ismn']],
-        },
         {
             title: 'Quality indicators',
             groups: [['qualityIndicators']],

@@ -548,6 +548,7 @@ export const EXPORT_FORMAT_TO_EXTENSION = {
 
 export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
+export const AIATSIS_CODES_VOCAB_ID = 453669;
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {

@@ -9,90 +9,31 @@ import { withRouter } from 'react-router';
 import { adminInterfaceConfig, valueExtractor } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
-import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD } from 'config/general';
+import {
+    RECORD_TYPE_COLLECTION,
+    RECORD_TYPE_RECORD,
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_SEMINAR_PAPER,
+} from 'config/general';
 import { bindActionCreators } from 'redux';
+import { FORM_NAME } from '../constants';
 
-export const FORM_NAME = 'Prototype';
+export const bibliographicParams = record =>
+    record.fez_record_search_key_language &&
+    (record.fez_record_search_key_language.length > 1 ||
+        (record.fez_record_search_key_language.length === 1 &&
+            record.fez_record_search_key_language[0].rek_language !== 'eng'));
 
-export const getBibliographicInitialValues = record =>
+export const identifiersParams = record => ({
+    displayLocation: [PUBLICATION_TYPE_AUDIO_DOCUMENT, PUBLICATION_TYPE_SEMINAR_PAPER].includes(
+        record.rek_display_type,
+    ),
+    displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
+});
+
+const getInitialValues = (record, tab, tabParams = () => {}) =>
     (adminInterfaceConfig[record.rek_display_type] || {})
-        .bibliographic(
-            record.fez_record_search_key_language.length > 1 ||
-                (record.fez_record_search_key_language.length === 1 &&
-                    record.fez_record_search_key_language[0].rek_language !== 'eng'),
-        )
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getIdentifiersInitialValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .identifiers()
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getAuthorsInitialValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .authors()
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getAdditionalInformationValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .additionalInformation()
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getNtroValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .ntro()
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getGrantInformationValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .grantInformation()
-        .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
-        .reduce((groups, group) => [...groups, ...group], [])
-        .reduce((initialValue, field) => {
-            return {
-                ...initialValue,
-                [field]: valueExtractor[field].getValue(record),
-            };
-        }, {});
-
-export const getFilesValues = record =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
-        .files()
+        [tab](tabParams(record))
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
         .reduce((initialValue, field) => {
@@ -115,58 +56,63 @@ const PrototypeContainer = reduxForm({
 
 const mapStateToProps = state => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
-    const recordToView = state.get('viewRecordReducer').recordToView || null;
+    const recordToView = state.get('viewRecordReducer').recordToView;
     const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
-    const initialFormValues = {
-        initialValues: {
-            pid: (recordToView && recordToView.rek_pid) || null,
-            publication: recordToView || null,
-            rek_date:
-                (recordToView && recordToView.rek_date) || (recordToView && recordToView.rek_created_date) || null,
-            rek_display_type:
-                (recordToView && recordToView.rek_display_type) || formValues.get('rek_display_type') || null,
-            rek_object_type_lookup: (!recordToView && !!formValues.get('rek_display_type')) || null,
-            collection: [],
-            subject: [],
-            adminSection: {
-                rek_herdc_notes: {
-                    plainText: (recordToView || {}).rek_herdc_notes,
-                    htmlText: (recordToView || {}).rek_herdc_notes,
+
+    const initialFormValues = !!recordToView
+        ? {
+            initialValues: {
+                pid: recordToView.rek_pid,
+                publication: recordToView,
+                rek_date: recordToView.rek_date || recordToView.rek_created_date,
+                collection: [],
+                subject: [],
+                adminSection: {
+                    rek_herdc_notes: {
+                        plainText: (recordToView || {}).rek_herdc_notes,
+                        htmlText: (recordToView || {}).rek_herdc_notes,
+                    },
+                    internalNotes: {
+                        plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                        htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                    },
                 },
-                internalNotes: {
-                    plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                    htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                identifiersSection:
+                      (recordType === RECORD_TYPE_RECORD &&
+                          getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
+                      {},
+                securitySection: {
+                    rek_security_policy: recordToView.rek_security_policy,
+                    ...(recordType === RECORD_TYPE_COLLECTION
+                        ? {
+                            rek_datastream_policy: recordToView.rek_datastream_policy,
+                        }
+                        : {}),
+                    ...(recordType === RECORD_TYPE_RECORD
+                        ? {
+                            rek_security_inherited: recordToView.rek_security_inherited,
+                            dataStreams: (recordToView.fez_datastream_info || []).filter(
+                                isFileValid(viewRecordsConfig, true),
+                            ),
+                        }
+                        : {}),
                 },
+                bibliographicSection:
+                      (recordType === RECORD_TYPE_RECORD &&
+                          getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
+                      {},
+                authorsSection:
+                      (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
+                additionalInformationSection:
+                      (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'additionalInformation')) ||
+                      {},
+                ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
+                grantInformationSection:
+                      (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
+                filesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files')) || {},
             },
-            identifiersSection: (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
-            securitySection: {
-                rek_security_policy: recordToView && recordToView.rek_security_policy,
-                ...(recordType === RECORD_TYPE_COLLECTION
-                    ? {
-                        rek_datastream_policy: recordToView.rek_datastream_policy,
-                    }
-                    : {}),
-                ...(recordType === RECORD_TYPE_RECORD
-                    ? {
-                        rek_security_inherited: recordToView.rek_security_inherited,
-                        dataStreams: (recordToView.fez_datastream_info || []).filter(
-                            isFileValid(viewRecordsConfig, true),
-                        ),
-                    }
-                    : {}),
-            },
-            bibliographicSection:
-                (recordType === RECORD_TYPE_RECORD && getBibliographicInitialValues(recordToView)) || {},
-            authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
-            additionalInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getAdditionalInformationValues(recordToView)) || {},
-            ntroSection: (recordType === RECORD_TYPE_RECORD && getNtroValues(recordToView)) || {},
-            grantInformationSection:
-                (recordType === RECORD_TYPE_RECORD && getGrantInformationValues(recordToView)) || {},
-            filesSection: (recordType === RECORD_TYPE_RECORD && getFilesValues(recordToView)) || {},
-        },
-    };
+        }
+        : null;
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
@@ -190,74 +136,4 @@ const AdminReduxFormContainer = connect(
     mapDispatchToProps,
 )(PrototypeContainer);
 
-// const getReduxFormInitialValues = (recordToView) => {
-//     console.log('mapStateToProps', recordToView);
-//     const recordType = recordToView.rek_object_type_lookup.toLowerCase();
-//     const initialValues = {
-//         pid: recordToView.rek_pid,
-//         publication: recordToView,
-//         rek_date: recordToView.rek_date || recordToView.rek_created_date,
-//         collection: [],
-//         subject: [],
-//         adminSection: {
-//             rek_herdc_notes: recordToView.rek_herdc_notes,
-//             fez_internal_notes: { ...recordToView.fez_internal_notes },
-//         },
-//         identifiersSection: (recordType === RECORD_TYPE_RECORD && getIdentifiersInitialValues(recordToView)) || {},
-//         securitySection: {
-//             rek_security_policy: recordToView.rek_security_policy,
-//             ...(recordType === RECORD_TYPE_COLLECTION
-//                 ? {
-//                     rek_datastream_policy: recordToView.rek_datastream_policy,
-//                 }
-//                 : {}),
-//             ...(recordType === RECORD_TYPE_RECORD
-//                 ? {
-//                     rek_security_inherited: recordToView.rek_security_inherited,
-//                     dataStreams: (recordToView.fez_datastream_info || []).filter(isFileValid),
-//                 }
-//                 : {}),
-//         },
-//         bibliographicSection: (recordType === RECORD_TYPE_RECORD &&
-// getBibliographicInitialValues(recordToView)) || {},
-//         authorsSection: (recordType === RECORD_TYPE_RECORD && getAuthorsInitialValues(recordToView)) || {},
-//     };
-//     return initialValues;
-// };
-
-// export const AdminReduxFormContainer = (props) => {
-//     const { recordToView, loadingRecordToView } = useSelector((state) => state.get('viewRecordReducer'));
-
-//     const formErrors = useSelector((state) => getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({}));
-//     const dispatch = useDispatch();
-//     const disableSubmit = useRef(formErrors && !(formErrors instanceof Immutable.Map));
-//     const initialValues = useRef(null);
-
-//     if (!!recordToView && !initialValues.current) {
-//         initialValues.current = getReduxFormInitialValues(recordToView);
-//     }
-
-//     /* istanbul ignore next */
-//     /* Enzyme's shallow render doesn't support useEffect hook yet */
-//     useEffect(() => {
-//         console.log('useEffect');
-//         if (!!props.match.params.pid && !!loadRecordToView) {
-//             dispatch(loadRecordToView(props.match.params.pid));
-//         }
-//     }, []);
-
-//     console.log('loadingRecordToView', loadingRecordToView);
-//     if (loadingRecordToView) {
-//         return <InlineLoader message={locale.pages.edit.loadingMessage} />;
-//     } else if (!recordToView) {
-//         return <div className="empty" />;
-//     }
-
-//     console.log(initialValues.current);
-//     return <PrototypeContainer {...props} disableSubmit={disableSubmit} initialValues={initialValues.current} />;
-// };
-
-// AdminReduxFormContainer.propTypes = {
-//     match: PropTypes.object,
-// };
 export default withRouter(AdminReduxFormContainer);

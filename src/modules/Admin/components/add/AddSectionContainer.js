@@ -4,7 +4,6 @@ import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { formValueSelector, getFormValues } from 'redux-form/immutable';
 import { FORM_NAME } from '../../constants';
-import { FormValuesContext } from 'context';
 import AddSection from './AddSection';
 import { publicationTypes } from 'config';
 import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING, NTRO_SUBTYPES } from 'config/general';
@@ -12,6 +11,7 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import MenuItem from '@material-ui/core/MenuItem';
 
 const AddSectionContainer = ({
+    formValues,
     disabled,
     hasSubtypes,
     publicationSubtype,
@@ -19,21 +19,18 @@ const AddSectionContainer = ({
     hasDefaultDocTypeSubType,
     subtypes,
     docTypeSubTypeCombo,
-    formValues,
 }) => {
     return (
-        <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
-            <AddSection
-                disabled={disabled}
-                publicationSubtypeItems={publicationSubtypeItems}
-                publicationSubtype={publicationSubtype}
-                hasDefaultDocTypeSubType={hasDefaultDocTypeSubType}
-                hasSubtypes={hasSubtypes}
-                subtypes={subtypes}
-                docTypeSubTypeCombo={docTypeSubTypeCombo}
-                formValues={formValues.toJS()}
-            />
-        </FormValuesContext.Provider>
+        <AddSection
+            disabled={disabled}
+            publicationSubtypeItems={publicationSubtypeItems}
+            publicationSubtype={publicationSubtype}
+            hasDefaultDocTypeSubType={hasDefaultDocTypeSubType}
+            hasSubtypes={hasSubtypes}
+            subtypes={subtypes}
+            docTypeSubTypeCombo={docTypeSubTypeCombo}
+            formValues={formValues}
+        />
     );
 };
 
@@ -82,7 +79,7 @@ const mapStateToProps = (state, ownProps) => {
                 subtypes.filter(type => NTRO_SUBTYPES.includes(type))) ||
             subtypes ||
             null,
-        formValues: formValues.get('adminSection') || Immutable.Map({}),
+        formValues: formValues || Immutable.Map({}),
     };
 };
 

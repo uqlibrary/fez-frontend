@@ -25,9 +25,10 @@ export const BibliographicSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(
         adminInterfaceConfig[record.rek_display_type].bibliographic(
-            record.fez_record_search_key_language.length > 1 ||
-                (record.fez_record_search_key_language.length === 1 &&
-                    record.fez_record_search_key_language[0].rek_language !== 'eng'),
+            record.fez_record_search_key_language &&
+                (record.fez_record_search_key_language.length > 1 ||
+                    (record.fez_record_search_key_language.length === 1 &&
+                        record.fez_record_search_key_language[0].rek_language !== 'eng')),
         ),
     );
 

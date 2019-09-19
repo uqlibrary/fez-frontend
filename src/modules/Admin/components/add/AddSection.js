@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import { Field } from 'redux-form';
+import { Field } from 'redux-form/immutable';
 import { validation } from 'config';
 import StandardPage from 'modules/SharedComponents/Toolbox/StandardPage/components/StandardPage';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
@@ -21,7 +21,6 @@ export const AddSection = ({
     publicationSubtypeItems,
     selectedPublicationType,
     publicationSubtype,
-    // subtypes,
     hasSubtypes,
     disabled = false,
 }) => {
@@ -57,8 +56,8 @@ export const AddSection = ({
         )),
     ];
     return (
-        <StandardPage title={locale.pages.adminAdd.title}>
-            <form>
+        <form>
+            <StandardPage title={locale.pages.adminAdd.title}>
                 <Grid container spacing={24}>
                     <Grid item xs={12}>
                         <StandardCard title={locale.pages.adminAdd.step1} help={locale.pages.adminAdd.help}>
@@ -73,6 +72,8 @@ export const AddSection = ({
                                             locale.pages.adminAdd.formLabels.ismemberof.floatingLabelText
                                         }
                                         hintText={locale.pages.adminAdd.formLabels.ismemberof.hintText}
+                                        required
+                                        validate={[validation.requiredList]}
                                         fullwidth
                                     />
                                 </Grid>
@@ -81,7 +82,6 @@ export const AddSection = ({
                                         component={SelectField}
                                         disabled={disabled}
                                         name="rek_display_type"
-                                        id="rek-display-type"
                                         value={selectedPublicationType}
                                         label={locale.pages.adminAdd.formLabels.rek_display_type.inputLabelText}
                                         required
@@ -120,12 +120,10 @@ export const AddSection = ({
                         </StandardCard>
                     </Grid>
                 </Grid>
-            </form>
-        </StandardPage>
+            </StandardPage>
+        </form>
     );
 };
-
-// export default React.memo(AdminSection);
 
 AddSection.propTypes = {
     disabled: PropTypes.bool,
@@ -134,7 +132,10 @@ AddSection.propTypes = {
     selectedPublicationType: PropTypes.object,
     publicationSubtype: PropTypes.object,
     hasSubtypes: PropTypes.bool,
-    formValues: PropTypes.object,
+    formValues: PropTypes.any,
+    location: PropTypes.object,
+    history: PropTypes.object,
+    actions: PropTypes.object,
 };
 
 export default React.memo(AddSection);

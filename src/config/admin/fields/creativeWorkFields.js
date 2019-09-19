@@ -4,36 +4,12 @@ export default {
     ...commonFields,
     bibliographic: (isLote = false) => [
         {
-            title: 'Book chapter title',
-            groups: [
-                ['rek_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfTitle'],
-                        ['fez_record_search_key_native_script_title'],
-                        ['fez_record_search_key_roman_script_title'],
-                        ['fez_record_search_key_translated_title'],
-                    ]
-                    : []),
-            ],
+            title: 'Title',
+            groups: [['rek_title'], ...(isLote ? [['fez_record_search_key_translated_title']] : [])],
         },
         {
             title: 'Language of work',
             groups: [['languages']],
-        },
-        {
-            title: 'Book title',
-            groups: [
-                ['fez_record_search_key_book_title'],
-                ...(isLote
-                    ? [
-                        ['languageOfBookTitle'],
-                        ['fez_record_search_key_native_script_book_title'],
-                        ['fez_record_search_key_roman_script_book_title'],
-                        ['fez_record_search_key_translated_book_title'],
-                    ]
-                    : []),
-            ],
         },
         {
             title: 'ISBN',
@@ -50,7 +26,7 @@ export default {
                 [
                     'fez_record_search_key_edition',
                     'fez_record_search_key_volume_number',
-                    'fez_record_search_key_chapter_number',
+                    'fez_record_search_key_issue_number',
                 ],
                 ['fez_record_search_key_series'],
                 [
@@ -60,6 +36,7 @@ export default {
                 ],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
+                ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_refereed_source'],
             ],
         },

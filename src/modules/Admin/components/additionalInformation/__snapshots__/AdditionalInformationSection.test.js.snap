@@ -24,10 +24,8 @@ exports[`AdditionalInformationSection component should render default view 1`] =
             ],
             Array [
               "fez_record_search_key_institutional_status",
-              "contentIndicators",
-            ],
-            Array [
               "fez_record_search_key_oa_status",
+              "contentIndicators",
             ],
             Array [
               "additionalNotes",
@@ -66,10 +64,8 @@ exports[`AdditionalInformationSection component should render disabled view 1`] 
             ],
             Array [
               "fez_record_search_key_institutional_status",
-              "contentIndicators",
-            ],
-            Array [
               "fez_record_search_key_oa_status",
+              "contentIndicators",
             ],
             Array [
               "additionalNotes",
