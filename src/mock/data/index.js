@@ -7,6 +7,7 @@ export {
     publicationTypeListConferenceProceedings,
     publicationTypeListCreativeWork,
     publicationTypeListDepartmentTechnicalReport,
+    publicationTypeListDigilibImage,
     publicationTypeListImage,
     publicationTypeListJournal,
     publicationTypeListManuscript,
