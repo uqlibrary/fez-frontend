@@ -4,6 +4,7 @@ export { default as publicationTypeListBookChapter } from './publicationTypeList
 export { default as publicationTypeListConferencePaper } from './publicationTypeListConferencePaper';
 export { default as publicationTypeListConferenceProceedings } from './publicationTypeListConferenceProceedings';
 export { default as publicationTypeListCreativeWork } from './publicationTypeListCreativeWork';
+export { default as publicationTypeListDepartmentTechnicalReport } from './publicationTypeListDepartmentTechnicalReport';
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListManuscript } from './publicationTypeListManuscript';
