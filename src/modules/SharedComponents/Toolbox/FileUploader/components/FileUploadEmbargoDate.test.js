@@ -1,5 +1,7 @@
 import { FileUploadEmbargoDate } from './FileUploadEmbargoDate';
 import FileUploadEmbargoDateWithStyles from './FileUploadEmbargoDate';
+import moment from 'moment';
+import mockDate from 'mockdate';
 
 function setup(testProps = {}) {
     const props = {
@@ -19,6 +21,15 @@ describe('Component FileUploadEmbargoDate', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance()._onChange();
+    });
+
+    it('should render when a undefined default value is passed', () => {
+        mockDate.reset();
+        const wrapper = setup({
+            value: undefined,
+        });
+        const currentTime = moment(new Date());
+        expect(moment(wrapper.instance().props.value).diff(currentTime, 'minutes')).toEqual(0);
     });
 
     it('should render with default setup with styles', () => {
