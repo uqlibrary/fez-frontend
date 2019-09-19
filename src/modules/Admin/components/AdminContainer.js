@@ -93,47 +93,32 @@ export const AdminContainer = ({
         return <div className="empty" />;
     }
 
-    const values = JSON.stringify(formValues);
     const displayType = formValues.get('rek_display_type');
     const selectedPublicationType = displayType && publicationTypes({ ...recordForms })[displayType];
     const hasSubtypes = !!(selectedPublicationType && selectedPublicationType.subtypes);
     const selectedSubType = formValues.get('rek_subtype');
     const additionalInformation = formValues.get('additionalInformationSection') || undefined;
-    const showAddForm =
-        !(!!match.params.pid && !!recordToView) &&
-        (!(selectedPublicationType && selectedPublicationType.name) || // Doc type logic
-        (!(hasSubtypes && selectedSubType) || !hasSubtypes) || // Subtype logic
-            !!!(additionalInformation && additionalInformation.get('collections').length >= 1)); // collections logic
-
-    const isActivated =
-        (recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD) ||
-        (selectedPublicationType && selectedPublicationType.name.toLowerCase() === RECORD_TYPE_RECORD) ||
-        null;
-
-    console.log('values', values);
-    console.log('--------------------------------------------');
-    console.log('inital', !(!!match.params.pid && !!recordToView));
-    console.log('showAddForm', showAddForm);
-    console.log('displayType', displayType);
-    console.log('hasSubtypes', hasSubtypes);
-    console.log('selectedSubType', selectedSubType);
-    console.log('doc type', selectedPublicationType && selectedPublicationType.name);
-    console.log(
-        'additionalInformationSection',
-        !!additionalInformation && additionalInformation.get('collections').length >= 1,
+    const showAddForm = !(
+        !match.params.pid &&
+        !recordToView &&
+        selectedPublicationType &&
+        selectedPublicationType.name &&
+        ((hasSubtypes && selectedSubType) || (selectedPublicationType && !hasSubtypes)) &&
+        additionalInformation &&
+        additionalInformation.get('collections').length >= 1
     );
-    console.log('--------------------------------------------');
-    console.log('doctype:logic', !(selectedPublicationType && selectedPublicationType.name));
-    console.log('subType:logic', !(hasSubtypes && selectedSubType) || !hasSubtypes);
-    console.log(
-        'collections:logic',
-        !!!(additionalInformation && additionalInformation.get('collections').length >= 1),
-    );
-    console.log('--------------------------------------------');
-    console.log('--------------------------------------------');
+    const isActivated = () => {
+        let active = null;
+        if (recordToView && recordToView.rek_object_type_lookup) {
+            active = recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+        } else {
+            active = selectedPublicationType && selectedPublicationType.name.toLowerCase() === RECORD_TYPE_RECORD;
+        }
+        return active;
+    };
     return (
         <React.Fragment>
-            {showAddForm && <AddSection formValues={values} />}
+            {showAddForm && <AddSection />}
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
@@ -141,7 +126,16 @@ export const AdminContainer = ({
                         toggleTabbed: handleToggle,
                     }}
                 >
-                    <RecordContext.Provider value={{ record: recordToView }}>
+                    <RecordContext.Provider
+                        value={{
+                            record:
+                                recordToView || {
+                                    ...formValues.toJS(),
+                                    rek_display_type_lookup: selectedPublicationType.name,
+                                } ||
+                                {},
+                        }}
+                    >
                         <AdminInterface
                             classes={classes}
                             handleSubmit={handleSubmit}
@@ -153,27 +147,31 @@ export const AdminContainer = ({
                             tabs={{
                                 admin: {
                                     component: AdminSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 identifiers: {
                                     component: IdentifiersSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 bibliographic: {
                                     component: BibliographicSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 authorDetails: {
                                     component: AuthorsSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 additionalInformation: {
                                     component: AdditionalInformationSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 ntro: {
                                     component: NtroSection,
-                                    activated: isActivated && NTRO_SUBTYPES.includes(recordToView.rek_subtype),
+                                    activated:
+                                        isActivated &&
+                                        NTRO_SUBTYPES.includes(
+                                            (recordToView && recordToView.rek_subtype) || displayType,
+                                        ),
                                 },
                                 grantInformation: {
                                     component: GrantInformationSection,
@@ -181,16 +179,16 @@ export const AdminContainer = ({
                                         isActivated &&
                                         // Blacklist types without grant info
                                         ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                            recordToView.rek_display_type,
+                                            (recordToView && recordToView.rek_display_type) || displayType,
                                         ),
                                 },
                                 files: {
                                     component: FilesSection,
-                                    activated: isActivated,
+                                    activated: isActivated(),
                                 },
                                 security: {
                                     component: SecuritySection,
-                                    activated: true,
+                                    activated: false, // true,
                                 },
                             }}
                         />

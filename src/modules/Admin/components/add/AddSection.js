@@ -16,7 +16,6 @@ import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
 
 /* istanbul ignore next */
 export const AddSection = ({
-    // formValues,
     hasDefaultDocTypeSubType,
     publicationSubtypeItems,
     selectedPublicationType,
