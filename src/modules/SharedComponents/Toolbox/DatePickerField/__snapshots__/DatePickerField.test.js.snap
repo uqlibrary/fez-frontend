@@ -23,6 +23,7 @@ exports[`DatePickerField snapshots tests renders component 1`] = `
   }
   onChange={[MockFunction]}
   rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  value={null}
 />
 `;
 
@@ -38,5 +39,6 @@ exports[`DatePickerField snapshots tests renders onchange when input not supplie
   leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
   onChange={[MockFunction]}
   rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  value={null}
 />
 `;

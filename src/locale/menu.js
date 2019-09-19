@@ -45,7 +45,7 @@ export default {
             secondaryText: '',
         },
         thirdPartyLookupTools: {
-            primaryText: 'Lookup Tools',
+            primaryText: 'Lookup tools',
         },
         legacyEspace: {
             primaryText: 'Switch to old interface',
@@ -61,6 +61,11 @@ export default {
         },
         unpublished: {
             primaryText: 'Unpublished buffer',
+        },
+        digiteam: {
+            batchImport: {
+                primaryText: 'CSV ingest',
+            },
         },
     },
     footer: {

@@ -15,6 +15,11 @@ describe('DateCitationView test', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render empty component with a placeholder date', () => {
+        const wrapper = setup({ date: '1000-01-01T00:00:00Z' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('should render component with date not in TZ format', () => {
         const wrapper = setup({ date: '2010-08-01 00:00:00' });
         expect(toJson(wrapper)).toMatchSnapshot();

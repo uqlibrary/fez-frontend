@@ -93,11 +93,11 @@ export const AdminContainer = ({
         return <div className="empty" />;
     }
 
-    const displayType = formValues.get('rek_display_type');
+    const displayType = formValues && formValues.get('rek_display_type');
     const selectedPublicationType = displayType && publicationTypes({ ...recordForms })[displayType];
     const hasSubtypes = !!(selectedPublicationType && selectedPublicationType.subtypes);
-    const selectedSubType = formValues.get('rek_subtype');
-    const additionalInformation = formValues.get('additionalInformationSection') || undefined;
+    const selectedSubType = formValues && formValues.get('rek_subtype');
+    const additionalInformation = (formValues && formValues.get('additionalInformationSection')) || undefined;
     const showAddForm = !(
         !match.params.pid &&
         !recordToView &&

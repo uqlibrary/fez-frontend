@@ -1520,7 +1520,7 @@ export default {
                             </ul>
                             <h3>Licensing and terms of access</h3>
                             <p>
-                                View
+                                View{' '}
                                 <a href="https://creativecommons.org/licenses/" target="_blank">
                                     Creative Commons Licenses
                                 </a>{' '}

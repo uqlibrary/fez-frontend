@@ -2,7 +2,7 @@ import { locale } from 'locale';
 import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
-
+import { AUTH_URL_LOGIN } from 'config';
 const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
@@ -24,6 +24,10 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
     }
 
     return `${searchUrl}?${param(params)}`;
+};
+
+const isAdmin = account => {
+    return account && account.canMasquerade;
 };
 
 export const pathConfig = {
@@ -97,6 +101,8 @@ export const pathConfig = {
         institutionalStatus: institutionalStatus => getSearchUrl({ searchQuery: { all: institutionalStatus } }),
     },
     admin: {
+        community: '/admin/community',
+        collection: '/admin/collection',
         masquerade: '/admin/masquerade',
         thirdPartyTools: '/tool/lookup',
         legacyEspace: `${fullPath}/my_upo_tools.php`,
@@ -124,11 +130,23 @@ export const pathConfig = {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    digiteam: {
+        batchImport: '/batch-import',
+    },
 };
 
 // a duplicate list of routes for
 const flattedPathConfig = [
     '/',
+    '/admin/collection',
+    '/admin/community',
+    '/admin/masquerade',
+    '/admin/thirdPartyTools',
+    '/admin/unpublished',
+    '/author-identifiers/google-scholar/link',
+    '/author-identifiers/orcid/link',
+    '/batch-import',
+    '/contact',
     '/dashboard',
     '/contact',
     '/rhdsubmission',
@@ -146,14 +164,15 @@ const flattedPathConfig = [
     '/admin/thirdPartyTools',
     '/admin/add',
     '/view',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
 ];
+
+const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
 
 // TODO: will we even have roles?
 export const roles = {
     researcher: 'researcher',
     admin: 'admin',
+    digiteam: 'digiteam',
 };
 
 export const getRoutesConfig = ({
@@ -357,8 +376,22 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
+                {
+                    path: pathConfig.admin.community,
+                    component: components.CommunityForm,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.community.title,
+                },
+                {
+                    path: pathConfig.admin.collection,
+                    component: components.CollectionForm,
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.collection.title,
+                },
                 {
                     path: pathConfig.admin.add,
                     component: components.Admin,
@@ -401,6 +434,10 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.pages.masquerade.title,
                 },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
                 {
                     path: pathConfig.admin.unpublished,
                     render: props => components.SearchRecords({ ...props, isAdvancedSearch: true }),
@@ -415,17 +452,33 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.components.thirdPartyLookupTools.title,
                 },
+                {
+                    path: pathConfig.digiteam.batchImport,
+                    component: components.BatchImport,
+                    exact: true,
+                    access: [roles.digiteam],
+                    pageTitle: locale.components.digiTeam.batchImport.title,
+                },
             ]
             : []),
         ...publicPages,
         {
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
-                if (isFileUrl(childProps.location.pathname) && account) {
-                    return components.StandardPage({ ...locale.pages.permissionDeniedOrNotFound });
+                const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
+                if ((isValidRoute || isValidFileRoute) && account) {
+                    return components.StandardPage({ ...locale.pages.permissionDenied });
                 }
-                if (isValidRoute && account) return components.StandardPage({ ...locale.pages.permissionDenied });
-                if (isValidRoute) return components.StandardPage({ ...locale.pages.authenticationRequired });
+                if ((isValidRoute || isValidFileRoute) && !account) {
+                    if (
+                        process.env.NODE_ENV !== 'test' &&
+                        process.env.NODE_ENV !== 'development' &&
+                        process.env.NODE_ENV !== 'local'
+                    ) {
+                        window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                    }
+                    return components.StandardPage({ ...locale.pages.authenticationRequired });
+                }
                 return components.StandardPage({ ...locale.pages.notFound });
             },
             pageTitle: locale.pages.notFound.title,
@@ -528,12 +581,24 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && account.canMasquerade
+        ...(account && (account.canMasquerade || isAdmin(account))
             ? [
+                {
+                    linkTo: pathConfig.admin.community,
+                    ...locale.menu.communityForm,
+                },
+                {
+                    linkTo: pathConfig.admin.collection,
+                    ...locale.menu.collectionForm,
+                },
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,
                 },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
                 {
                     linkTo: pathConfig.admin.add,
                     ...locale.menu.adminAdd,
@@ -554,6 +619,18 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
                 },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
+                {
+                    linkTo: pathConfig.digiteam.batchImport,
+                    ...locale.menu.digiteam.batchImport,
+                },
+            ]
+            : []),
+        ...(account && (account.canMasquerade || isAdmin(account))
+            ? [
                 {
                     divider: true,
                     path: '/234234234242',

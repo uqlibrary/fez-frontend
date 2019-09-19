@@ -134,7 +134,7 @@ export default {
             title: 'Permissions denied',
             children: (
                 <StandardCard>
-                    <p>The requested page available to authorised users only.</p>
+                    <p>The requested page is available to authorised users only.</p>
                 </StandardCard>
             ),
         },
@@ -246,8 +246,8 @@ export default {
             recordCount: 'Displaying records [recordsFrom] to [recordsTo] of [recordsTotal] total records. ',
             text: (
                 <span>
-                    Add to this list by <a href={`${pathConfig.records.possible}`}>claiming a work</a> or{' '}
-                    <a href={`${pathConfig.records.add.find}`}>adding a missing work</a>.
+                    Add to this list by <a href={pathConfig.records.possible}>claiming a work</a> or{' '}
+                    <a href={pathConfig.records.add.find}>adding a missing work</a>.
                 </span>
             ),
             loadingMessage: 'Searching for your works',
@@ -258,8 +258,8 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={`${pathConfig.records.possible}`}>claim works we think may be yours</a> or{' '}
-                        <a href={`${pathConfig.records.add.find}`}>add a missing publication</a>
+                        <a href={pathConfig.records.possible}>claim works we think may be yours</a> or{' '}
+                        <a href={pathConfig.records.add.find}>add a missing publication</a>
                     </div>
                 ),
             },
@@ -280,7 +280,7 @@ export default {
                 text: (
                     <div>
                         We were unable to find any results. You may be able to{' '}
-                        <a href={`${pathConfig.dataset.add}`}>add a missing dataset</a>.
+                        <a href={pathConfig.dataset.add}>add a missing dataset</a>.
                     </div>
                 ),
             },
