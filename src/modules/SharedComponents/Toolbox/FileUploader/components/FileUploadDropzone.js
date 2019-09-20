@@ -175,9 +175,9 @@ export class FileUploadDropzone extends PureComponent {
         const validMimeTypeFiles = files.filter(
             file => file && file.name && mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop()),
         );
-        const invalidMimeTypeFiles = files.filter(
-            file => file && file.name && !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop()),
-        );
+        const invalidMimeTypeFiles = files
+            .filter(file => file && file.name && !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop()))
+            .map(file => file.name);
         return { validMimeTypeFiles: validMimeTypeFiles, invalidMimeTypeFiles: invalidMimeTypeFiles };
     };
 
