@@ -319,6 +319,12 @@ export default {
             htmlText: (record.fez_record_search_key_notes || {}).rek_notes,
         }),
     },
+    advisoryStatement: {
+        getValue: record => ({
+            plainText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
+            htmlText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
+        }),
+    },
     significanceAndContributionStatement: {
         getValue: record => {
             const authors = (record.fez_record_search_key_author || []).reduce(

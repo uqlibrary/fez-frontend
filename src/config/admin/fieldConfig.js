@@ -759,6 +759,21 @@ export default {
             format: value => Immutable.Map(value),
         },
     },
+    advisoryStatement: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'filesSection.advisoryStatement',
+            title: 'Advisory statement',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
     fez_record_search_key_transcript: {
         component: RichEditorField,
         componentProps: {
