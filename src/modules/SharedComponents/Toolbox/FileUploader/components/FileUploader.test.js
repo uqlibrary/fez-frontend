@@ -332,14 +332,14 @@ describe('Component FileUploader', () => {
                 tooManyFiles: ['a.txt', 'b.txt'],
                 duplicateFiles: ['c.txt', 'd.txt'],
                 invalidFileNames: ['web_a.txt'],
-                invalidMimeTypeFiles: ['image/unknown'],
+                invalidMimeTypeFiles: ['web_a.txt'],
                 notFiles: ['someFolder'],
                 tooBigFiles: ['big_file.txt'],
             }),
         ).toEqual(
             'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; File(s)' +
                 ' (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name;' +
-                ' File(s) (image/unknown) have invalid mime type; Invalid files (someFolder); File(s) (big_file.txt)' +
+                ' File(s) (web_a.txt) have invalid mime type; Invalid files (someFolder); File(s) (big_file.txt)' +
                 ' exceed maximum allowed upload file size',
         );
     });
