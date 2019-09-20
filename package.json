@@ -135,7 +135,6 @@
         "can-param": "^1.0.4",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
-        "cypress-plugin-snapshots": "git://github.com/meinaart/cypress-plugin-snapshots.git#c30b950",
         "deep-diff": "^1.0.2",
         "dompurify": "^1.0.4",
         "downshift": "^2.2.0",

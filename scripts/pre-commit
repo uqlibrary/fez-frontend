@@ -2,17 +2,18 @@
 
 echo "Pre-commit hook running..."
 
-# Commits should be made directly on Staging branch.
+# Commits should not be made directly on Staging branch.
 # (Do work in feature branch and then merge into Staging branch)
 
-FORBIDDEN_BRANCH="staging"
+FORBIDDEN="staging"
 THIS_BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [[ "$THIS_BRANCH" == "$FORBIDDEN_BRANCH" ]] ; then
+if [[ "$THIS_BRANCH" == "$FORBIDDEN" ]] ; then
   if [ ! -e ".git/MERGE_MODE" ]; then
-    echo "You are trying to commit directly on the $FORBIDDEN_BRANCH branch."
-    echo "Please commit in a feature branch and then merge into $FORBIDDEN_BRANCH branch instead."
-    echo "Aborting commit."
+    printf "\e[31m\n"
+    echo "You are trying to commit directly on the $FORBIDDEN branch."
+    echo "Please commit in a feature branch and then merge into $FORBIDDEN branch instead."
+    printf "\n\e[1mAborting commit.\e[0m\n\n"
     exit 1
   fi
 fi
@@ -23,6 +24,7 @@ STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep ".jsx\{0,1
 FORMATTER="$(git rev-parse --show-toplevel)/node_modules/.bin/prettier-eslint"
 
 if [[ "$STAGED_FILES" = "" ]]; then
+  printf "\e[92mNo files to check.\e[0m\nProceeding with commit..."
   exit 0
 fi
 
@@ -33,44 +35,28 @@ if [ -f ~/.nvm/nvm.sh ]; then
   source ~/.nvm/nvm.sh
 fi
 
-printf "\n\e[32mRunning Code style checks...\e[0m\n\n"
-
 # Check for prettier-eslint
 if [[ ! -x "$FORMATTER" ]]; then
-  echo "Please install dependencies by running 'npm install'"
+  printf "\e[31mPlease install dependencies first by running '\e[0m\e[1mnpm install\e[0m\e[31m'! \e[0m\n"
   exit 1
 fi
 
 FILE_COUNT=$(echo "$STAGED_FILES" | wc -l)
+FILES_ONE_LINE=$(echo -e ${STAGED_FILES/'\n'/' '});
 SECONDS=0
 
-echo "$FILE_COUNT staged file(s) need to be checked for code styles."
+printf "$FILE_COUNT staged file(s) will be checked for code styles.\n\n\e[31m"
 
-if [[ $FILE_COUNT > 30 ]]; then
-  printf "Large number of changes detected. Checking all files instead.\n\n\e[31m"
-  "$FORMATTER" '**/*.js' --list-different -l silent
-  if [[ "$?" != 0 ]]; then
-    PASS=false
-    printf "\nFile(s) above failed code style checks!"
-  else
-    printf "\033[2A"
-  fi
-  printf "\e[0m\n"
+"$FORMATTER" $FILES_ONE_LINE --list-different -l silent
+if [[ "$?" != 0 ]]; then
+  PASS=false
+  printf "\nFile(s) above failed code style checks!"
 else
-  for FILE in $STAGED_FILES
-  do
-    "$FORMATTER" "$FILE" --list-different -l silent > /dev/null
-
-    if [[ "$?" == 0 ]]; then
-      printf "\e[92mPass: $FILE\e[0m\n"
-    else
-      printf "\e[31mFail: $FILE\e[0m\n"
-      PASS=false
-    fi
-  done
+  printf "\033[3A"
 fi
+printf "\e[0m\n\n"
 
-printf "\nCode style checks completed in $SECONDS seconds.\n"
+echo "Code style checks completed in $SECONDS seconds."
 
 if ! $PASS; then
   printf "\n\e[31m\e[1mCOMMIT REJECTED.\e[0m \e[31mYour commit contains files that should pass code style checks but do not.\e[0m\n"
@@ -88,7 +74,7 @@ fi
 #   exit 2
 # else
 
-printf "\n\e[92mNo issues found. Good job!\e[0m\n"
+printf "\n\e[92mNo issues found. Good job!\e[0m\n\n"
 echo "Proceeding with commit..."
 
 # fi
