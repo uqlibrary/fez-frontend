@@ -1115,7 +1115,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Institution',
-            name: 'additionalInformationSection.fez_record_search_key_org_name.rek_org_name',
+            name: 'bibliographicSection.fez_record_search_key_org_name.rek_org_name',
             placeholder: '',
         },
     },
@@ -1124,7 +1124,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'School, Department, or Centre',
-            name: 'additionalInformationSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
             placeholder: '',
         },
     },
@@ -1133,7 +1133,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Report number',
-            name: 'additionalInformationSection.fez_record_search_key_report_number.rek_report_number',
+            name: 'bibliographicSection.fez_record_search_key_report_number.rek_report_number',
             placeholder: '',
         },
     },
