@@ -1142,7 +1142,8 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Parent Publication',
-            name: 'additionalInformationSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            name: 'bibliographicSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            multiline: true,
             placeholder: '',
         },
     },
