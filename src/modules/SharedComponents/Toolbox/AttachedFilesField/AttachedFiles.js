@@ -145,12 +145,11 @@ const FileIcon = ({
     }
 };
 
-const checkArrayForObjectValue = value => {
-    const datastream = this.props.publication.fez_datastream_info;
+const checkArrayForObjectValue = (value, dataStreams) => {
     let resolvedFilename = null;
-    for (let i = 0; i < datastream.length; i++) {
-        if (datastream[i].dsi_dsid === value) {
-            resolvedFilename = datastream[i].dsi_dsid;
+    for (let i = 0; i < dataStreams.length; i++) {
+        if (dataStreams[i].dsi_dsid === value) {
+            resolvedFilename = dataStreams[i].dsi_dsid;
         }
     }
     return resolvedFilename;
@@ -173,44 +172,44 @@ const untranscodedItem = filename => {
     return file;
 };
 
-const checkForThumbnail = filename => {
+const checkForThumbnail = (filename, dataStreams) => {
     const file = untranscodedItem(filename);
     return (
-        checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`) ||
-        checkArrayForObjectValue(`thumbnail_${file}_t.jpg`) ||
-        checkArrayForObjectValue(`thumbnail_${file}.jpg`) ||
-        checkArrayForObjectValue(`${file}_t.jpg`) ||
+        checkArrayForObjectValue(`thumbnail_${file}_compressed_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`thumbnail_${file}_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`thumbnail_${file}.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`${file}_t.jpg`, dataStreams) ||
         null
     );
 };
 
-const checkForPreview = filename => {
+const checkForPreview = (filename, dataStreams) => {
     const file = untranscodedItem(filename);
     return (
-        checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`) ||
-        checkArrayForObjectValue(`preview_${file}_t.jpg`) ||
-        checkArrayForObjectValue(`preview_${file}.jpg`) ||
-        checkArrayForObjectValue(`${file}_t.jpg`) ||
-        checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`) ||
-        checkArrayForObjectValue(`preview_${file}_t.mp4`) ||
-        checkArrayForObjectValue(`${file}_t.mp4`) ||
-        checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`) ||
-        checkArrayForObjectValue(`preview_${file}_t.mp3`) ||
-        checkArrayForObjectValue(`${file}_t.mp3`) ||
+        checkArrayForObjectValue(`preview_${file}_compressed_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`${file}_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}_compressed_t.mp4`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}_t.mp4`, dataStreams) ||
+        checkArrayForObjectValue(`${file}_t.mp4`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}_compressed_t.mp3`, dataStreams) ||
+        checkArrayForObjectValue(`preview_${file}_t.mp3`, dataStreams) ||
+        checkArrayForObjectValue(`${file}_t.mp3`, dataStreams) ||
         null
     );
 };
 
-const checkForWeb = filename => {
+const checkForWeb = (filename, dataStreams) => {
     const file = untranscodedItem(filename);
     return (
-        checkArrayForObjectValue(`web_${file}_compressed_t.jpg`) ||
-        checkArrayForObjectValue(`web_${file}_t.jpg`) ||
-        checkArrayForObjectValue(`web_${file}.jpg`) ||
-        checkArrayForObjectValue(`web_${file}_compressed_t.mp4`) ||
-        checkArrayForObjectValue(`web_${file}_t.mp4`) ||
-        checkArrayForObjectValue(`web_${file}_compressed_t.mp3`) ||
-        checkArrayForObjectValue(`web_${file}_t.mp3`) ||
+        checkArrayForObjectValue(`web_${file}_compressed_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}_t.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}.jpg`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}_compressed_t.mp4`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}_t.mp4`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}_compressed_t.mp3`, dataStreams) ||
+        checkArrayForObjectValue(`web_${file}_t.mp3`, dataStreams) ||
         null
     );
 };
@@ -222,9 +221,9 @@ const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
             const fileName = dataStream.dsi_dsid;
             const mimeType = dataStream.dsi_mimetype ? dataStream.dsi_mimetype : '';
 
-            const thumbnailFileName = checkForThumbnail(fileName);
-            const previewFileName = checkForPreview(fileName);
-            const webFileName = checkForWeb(fileName);
+            const thumbnailFileName = checkForThumbnail(fileName, dataStreams);
+            const previewFileName = checkForPreview(fileName, dataStreams);
+            const webFileName = checkForWeb(fileName, dataStreams);
 
             const openAccessStatus = getFileOpenAccessStatus(publication, dataStream);
             const securityAccess = getSecurityAccess(dataStream);
