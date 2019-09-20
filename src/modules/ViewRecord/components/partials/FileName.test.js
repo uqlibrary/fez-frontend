@@ -48,14 +48,14 @@ describe('File Name Component ', () => {
     });
 
     it('should return canShowPreview as true for image/video files', () => {
-        let wrapper = setup({ mimeType: 'image/jpeg' });
+        let wrapper = setup({ mimeType: 'image/jpeg', previewMediaUrl: 'test' });
         expect(wrapper.instance().canShowPreview('image/jpeg')).toEqual(true);
         // TODO revert once videos are transcoded to open format #158519502
-        wrapper = setup({ mimeType: 'video/mp4' });
+        wrapper = setup({ mimeType: 'video/mp4', previewMediaUrl: 'test' });
         expect(wrapper.instance().canShowPreview('video/mp4')).toEqual(true);
-        wrapper = setup({ mimeType: 'octet-stream' });
+        wrapper = setup({ mimeType: 'octet-stream', previewMediaUrl: 'test' });
         expect(wrapper.instance().canShowPreview('octet-stream')).toEqual(false);
-        wrapper = setup({ mimeType: 'some/text' });
+        wrapper = setup({ mimeType: 'some/text', previewMediaUrl: 'test' });
         expect(wrapper.instance().canShowPreview('some/text')).toEqual(false);
     });
 

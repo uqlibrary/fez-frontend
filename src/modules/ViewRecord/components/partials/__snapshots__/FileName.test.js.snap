@@ -807,7 +807,7 @@ exports[`File Name Component  should display file name link 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       >
                         <WithStyles(ExternalLink)
-                          href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
+                          href="http://localhost/view/UQ:676287/test.jpg"
                           openInNewIcon={true}
                           title="test.jpg"
                         >
@@ -819,7 +819,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                 "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
                               }
                             }
-                            href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
+                            href="http://localhost/view/UQ:676287/test.jpg"
                             openInNewIcon={true}
                             rel="noopener noreferrer"
                             target="_blank"
@@ -1261,7 +1261,7 @@ exports[`File Name Component  should display file name link 1`] = `
                           >
                             <a
                               className=" ExternalLink-externalLink-134"
-                              href="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
+                              href="http://localhost/view/UQ:676287/test.jpg"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"
@@ -3203,7 +3203,7 @@ exports[`File Name Component  should render audio player 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       >
                         <WithStyles(ExternalLink)
-                          href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                          href="http://localhost/view/UQ:676287/test.mp3"
                           openInNewIcon={true}
                           title="test.mp3"
                         >
@@ -3215,7 +3215,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                 "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
                               }
                             }
-                            href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                            href="http://localhost/view/UQ:676287/test.mp3"
                             openInNewIcon={true}
                             rel="noopener noreferrer"
                             target="_blank"
@@ -3657,7 +3657,7 @@ exports[`File Name Component  should render audio player 1`] = `
                           >
                             <a
                               className=" ExternalLink-externalLink-134"
-                              href="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
+                              href="http://localhost/view/UQ:676287/test.mp3"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"
@@ -4762,7 +4762,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                 className="MuiGrid-item-2 MuiGrid-grid-sm-true-43"
                               >
                                 <AudioPlayer
-                                  fileName="test.mp3"
+                                  fileName="http://localhost/view/UQ:676287/test.mp3"
                                   mimeType="audio/mp3"
                                   pid="UQ:676287"
                                 >
@@ -4776,7 +4776,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                       />
                                     </audio>
                                     <WithStyles(IconButton)
-                                      aria-label="Click to play audio file test.mp3"
+                                      aria-label="Click to play audio file http://localhost/view/UQ:676287/test.mp3"
                                       id="playButton"
                                       onClick={[Function]}
                                       style={
@@ -4787,7 +4787,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                       }
                                     >
                                       <IconButton
-                                        aria-label="Click to play audio file test.mp3"
+                                        aria-label="Click to play audio file http://localhost/view/UQ:676287/test.mp3"
                                         classes={
                                           Object {
                                             "colorInherit": "MuiIconButton-colorInherit-146",
@@ -4810,7 +4810,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                         }
                                       >
                                         <WithStyles(ButtonBase)
-                                          aria-label="Click to play audio file test.mp3"
+                                          aria-label="Click to play audio file http://localhost/view/UQ:676287/test.mp3"
                                           centerRipple={true}
                                           className="MuiIconButton-root-145"
                                           disabled={false}
@@ -4825,7 +4825,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                           }
                                         >
                                           <ButtonBase
-                                            aria-label="Click to play audio file test.mp3"
+                                            aria-label="Click to play audio file http://localhost/view/UQ:676287/test.mp3"
                                             centerRipple={true}
                                             className="MuiIconButton-root-145"
                                             classes={
@@ -4852,7 +4852,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                             type="button"
                                           >
                                             <button
-                                              aria-label="Click to play audio file test.mp3"
+                                              aria-label="Click to play audio file http://localhost/view/UQ:676287/test.mp3"
                                               className="MuiButtonBase-root-151 MuiIconButton-root-145"
                                               disabled={false}
                                               id="playButton"
@@ -8274,7 +8274,6 @@ exports[`File Name Component  should run onFileSelect function on click 1`] = `
                               className="MuiTypography-root-98 MuiTypography-body2-106"
                             >
                               <a
-                                className="fileName"
                                 onClick={[Function]}
                                 onKeyPress={[Function]}
                               >
@@ -10263,7 +10262,6 @@ exports[`File Name Component  should run onFileSelect function on key press 1`] 
                               className="MuiTypography-root-98 MuiTypography-body2-106"
                             >
                               <a
-                                className="fileName"
                                 onClick={[Function]}
                                 onKeyPress={[Function]}
                               >

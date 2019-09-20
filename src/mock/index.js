@@ -73,6 +73,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     })
     .onGet(routes.ACADEMIC_STATS_PUBLICATION_HINDEX_API({ userId: user }).apiUrl)
     .reply(200, mockData.hindexResponse)
+    .onGet(routes.BATCH_IMPORT_DIRECTORIES_API().apiUrl)
+    .reply(200, mockData.batchImportDirectories)
     .onGet(routes.SEARCH_EXTERNAL_RECORDS_API({}).apiUrl)
     .reply(config => {
         if (config.params.source === 'scopus' && config.params.title)
@@ -137,6 +139,8 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         } else if (!!config.params.key && config.params.key.rek_object_type === 2) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
             return [200, mockData.collections];
+        } else if (config.params.key && config.params.key.rek_object_type === 1) {
+            return [200, mockData.communitySearchList];
         } else if (
             config.params.id ||
             config.params.doi ||
@@ -163,6 +167,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
         }
         return [404, ['Request not found']];
     })
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({
+                    communityPid: '.*',
+                }).apiUrl,
+            ),
+        ),
+    )
+    .reply(200, mockData.collectionsByCommunity)
     .onGet(routes.AUTHOR_TRENDING_PUBLICATIONS_API().apiUrl)
     // .reply(500, {})
     .reply(200, mockData.trendingPublications)
@@ -183,7 +197,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .reply(200, mockData.recordsTypeList)
     .onGet(routes.GET_NEWS_API().apiUrl)
     .reply(200, mockData.newsFeed)
-    .onGet(new RegExp(escapeRegExp(routes.THIRD_PARTY_LOOKUP_API_1FIELD({ type: 'incites', field1: '.*' }).apiUrl)))
+    .onGet(
+        new RegExp(
+            escapeRegExp(
+                routes.THIRD_PARTY_LOOKUP_API_1FIELD({
+                    type: 'incites',
+                    field1: '.*',
+                }).apiUrl,
+            ),
+        ),
+    )
     .reply(200, mockData.lookupToolIncites)
     .onGet(
         new RegExp(
@@ -199,16 +222,25 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
-            ...mockData.adminEditAudioList.data,
-            ...mockData.adminEditBookChapterList.data,
-            ...mockData.adminEditConferencePaperList.data,
-            ...mockData.adminEditConferenceProceedingsList.data,
-            ...mockData.adminEditManuscriptList.data,
-            ...mockData.adminEditPatentList.data,
-            ...mockData.adminEditSeminarPaperList.data,
-            ...mockData.adminEditThesisList.data,
-            ...mockData.adminEditVideoList.data,
-            ...mockData.adminEditWorkingPaperList.data,
+            ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
+            ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListConferencePaper.data,
+            ...mockData.publicationTypeListConferenceProceedings.data,
+            ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDepartmentTechnicalReport.data,
+            ...mockData.publicationTypeListDigilibImage.data,
+            ...mockData.publicationTypeListImage.data,
+            ...mockData.publicationTypeListJournal.data,
+            ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
+            ...mockData.publicationTypeListPatent.data,
+            ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListResearchReport.data,
+            ...mockData.publicationTypeListSeminarPaper.data,
+            ...mockData.publicationTypeListThesis.data,
+            ...mockData.publicationTypeListVideo.data,
+            ...mockData.publicationTypeListWorkingPaper.data,
             ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
             ...mockData.possibleUnclaimedList.data,
@@ -223,7 +255,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('/') + 1);
+        const vocabId = config.url.substring(config.url.indexOf('=') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(
@@ -235,7 +267,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     )
     .reply(200, { ...mockData.authorOrcidDetails })
     // .reply(500, ["Server error: `POST https://sandbox.orcid.org/oauth/token` resulted in a `500 Internal Server Error` response:\n{\"error\":\"server_error\",\"error_description\":\"Redirect URI mismatch.\"}\n"])
-    .onGet(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)))
+    .onPost(new RegExp(escapeRegExp(routes.FILE_UPLOAD_API().apiUrl)))
     .reply(200, ['s3-ap-southeast-2.amazonaws.com']);
 
 mock.onPut(/(s3-ap-southeast-2.amazonaws.com)/).reply(200, { data: {} });
@@ -247,6 +279,9 @@ mock.onPost(new RegExp(escapeRegExp(routes.RECORDS_ISSUES_API({ pid: '.*' }).api
     .onPost(new RegExp(escapeRegExp(routes.HIDE_POSSIBLE_RECORD_API().apiUrl)))
     .reply(200, { data: {} })
     // .reply(500, ['ERROR HIDE_POSSIBLE_RECORD_API'])
+    .onPost(routes.BATCH_IMPORT_API().apiUrl)
+    .reply(201, { data: 'Batch Import Job Created' })
+    // .reply(422)
     .onPost(new RegExp(escapeRegExp(routes.NEW_RECORD_API().apiUrl)))
     .reply(200, { data: { rek_pid: 'UQ:1111111' } }); // TODO: add actual record to data return!!!
 // .reply(500, {message: 'error - failed NEW_RECORD_API'});

@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 import locale from 'locale/viewRecord';
 import { viewRecordsConfig, routes } from 'config';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
@@ -320,7 +321,19 @@ export class AdditionalInformationClass extends PureComponent {
             .map((item, index) => {
                 let data = '';
                 const field = item.field;
-                const value = field === 'rek_description' ? this.getAbstract(publication) : publication[field];
+                let value;
+                switch (field) {
+                    case 'rek_description':
+                        value = this.getAbstract(publication);
+                        break;
+                    case 'rek_date':
+                        value = moment(publication[field]).isSame(moment('1000-01-01T00:00:00Z'))
+                            ? null
+                            : publication[field];
+                        break;
+                    default:
+                        value = publication[field];
+                }
 
                 // do not display field when value is null, empty array
                 if (value && Object.keys(value).length > 0) {

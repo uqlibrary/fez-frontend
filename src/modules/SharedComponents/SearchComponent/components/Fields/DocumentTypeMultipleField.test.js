@@ -1,4 +1,4 @@
-import { DocumentTypeField, styles } from './DocumentTypeField';
+import { DocumentTypeMultipleField, styles } from './DocumentTypeMultipleField';
 
 function setup(testProps = {}) {
     const props = {
@@ -10,10 +10,10 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(DocumentTypeField, props);
+    return getElement(DocumentTypeMultipleField, props);
 }
 
-describe('DocumentTypeField component', () => {
+describe('DocumentTypeMultipleField component', () => {
     it('should render default view', () => {
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -47,6 +47,7 @@ export const styles = theme => ({
         marginTop: 12,
     },
     citationTitle: {
+        overflowWrap: 'break-word !important',
         lineHeight: 1,
         letterSpacing: 0,
         marginBottom: 6,

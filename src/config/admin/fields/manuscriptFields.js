@@ -2,16 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    identifiers: () => [
-        {
-            title: 'Manage identifiers',
-            groups: [['rek_wok_doc_type'], ['rek_scopus_doc_type'], ['rek_pubmed_doc_type']],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -34,7 +24,7 @@ export default {
             ],
         },
         {
-            title: 'Geographic area',
+            title: 'Geographic co-ordinates',
             groups: [['geoCoordinates']],
         },
         {

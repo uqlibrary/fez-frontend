@@ -27,6 +27,7 @@ export default class ListEditor extends Component {
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
         rowItemTemplate: PropTypes.func,
+        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     };
 
     static defaultProps = {
@@ -193,6 +194,7 @@ export default class ListEditor extends Component {
                     errorText={this.props.errorText}
                     maxInputLength={this.props.maxInputLength}
                     normalize={this.props.inputNormalizer}
+                    category={this.props.category}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader

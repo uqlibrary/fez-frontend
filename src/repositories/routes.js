@@ -107,11 +107,11 @@ export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-tre
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({ apiUrl: 'acml/quick-templates' });
 export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
-export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies/${id}` });
+export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 
 // file uploading apis
-export const FILE_UPLOAD_API = ({ pid, fileName }) => ({ apiUrl: `file/upload/presigned/${pid}/${fileName}` });
+export const FILE_UPLOAD_API = () => ({ apiUrl: 'file/upload/presigned' });
 
 // create/patch record apis
 export const NEW_RECORD_API = () => ({ apiUrl: 'records' });
@@ -287,8 +287,26 @@ export const SEARCH_AUTHOR_LOOKUP_API = ({ searchQuery }) => ({
     },
 });
 
-export const THIRD_PARTY_LOOKUP_API_1FIELD = ({ type, field1 }) => ({ apiUrl: `tool/lookup/${type}/${field1}` });
+export const THIRD_PARTY_LOOKUP_API_1FIELD = ({ type, field1 }) => ({
+    apiUrl: `tool/lookup/${type}/${field1}`,
+});
 
 export const THIRD_PARTY_LOOKUP_API_2FIELD = ({ type, field1, field2 }) => ({
     apiUrl: `tool/lookup/${type}/${field1}/${field2}`,
 });
+
+export const COLLECTIONS_BY_COMMUNITY_LOOKUP_API = ({ communityPid }) => ({
+    apiUrl: `communities/${communityPid}/collections`,
+});
+
+export const BATCH_IMPORT_DIRECTORIES_API = () => {
+    return {
+        apiUrl: 'external/records/batch-import/directories',
+    };
+};
+
+export const BATCH_IMPORT_API = () => {
+    return {
+        apiUrl: 'external/records/batch-import',
+    };
+};

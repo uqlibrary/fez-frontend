@@ -28,6 +28,7 @@ export default class ViewRecord extends PureComponent {
         actions: PropTypes.object.isRequired,
         hideCulturalSensitivityStatement: PropTypes.bool,
         account: PropTypes.object,
+        author: PropTypes.object,
     };
 
     componentDidMount() {
@@ -62,6 +63,13 @@ export default class ViewRecord extends PureComponent {
         } else if (!recordToView) {
             return <div className="empty" />;
         }
+        const isAuthor =
+            this.props.author &&
+            recordToView.fez_record_search_key_author_id &&
+            !!recordToView.fez_record_search_key_author_id.some(authors => {
+                return parseInt(authors.rek_author_id, 10) === parseInt(this.props.author.aut_id, 10);
+            });
+        const isAdmin = !!(this.props.account && this.props.account.canMasquerade);
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -70,7 +78,7 @@ export default class ViewRecord extends PureComponent {
                             publication={recordToView}
                             hideTitle
                             hideContentIndicators
-                            showAdminActions={(this.props.account || {}).canMasquerade}
+                            showAdminActions={isAdmin}
                         />
                     </Grid>
                     {!!this.props.recordToView && this.props.recordToView !== {} && (
@@ -99,9 +107,12 @@ export default class ViewRecord extends PureComponent {
                 </Grid>
                 <Grid container spacing={24}>
                     <Files
+                        account={this.props.account}
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
+                        isAdmin={!!isAdmin}
+                        isAuthor={!!isAuthor}
                     />
                     <Links publication={recordToView} />
                     <RelatedPublications publication={recordToView} />

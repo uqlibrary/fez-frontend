@@ -1,17 +1,28 @@
 export { accounts, authorsSearch, currentAuthor, authorDetails } from './account';
 export {
-    adminEditAudioList,
-    adminEditBookChapterList,
-    adminEditConferencePaperList,
-    adminEditConferenceProceedingsList,
-    adminEditManuscriptList,
-    adminEditPatentList,
-    adminEditSeminarPaperList,
-    adminEditThesisList,
-    adminEditVideoList,
-    adminEditWorkingPaperList,
+    publicationTypeListAudio,
+    publicationTypeListBook,
+    publicationTypeListBookChapter,
+    publicationTypeListConferencePaper,
+    publicationTypeListConferenceProceedings,
+    publicationTypeListCreativeWork,
+    publicationTypeListDepartmentTechnicalReport,
+    publicationTypeListDigilibImage,
+    publicationTypeListImage,
+    publicationTypeListJournal,
+    publicationTypeListManuscript,
+    publicationTypeListNewspaperArticle,
+    publicationTypeListPatent,
+    publicationTypeListPreprint,
+    publicationTypeListResearchReport,
+    publicationTypeListSeminarPaper,
+    publicationTypeListThesis,
+    publicationTypeListVideo,
+    publicationTypeListWorkingPaper,
     collections,
+    collectionsByCommunity,
     communityRecord,
+    communitySearchList,
     collectionRecord,
     externalDoiSearchResultList,
     externalPubMedSearchResultsList,
@@ -40,3 +51,4 @@ export { hindexResponse, trendingPublications, currentAuthorStats } from './acad
 export { searchKeyList } from './searchKeys';
 export { authorOrcidDetails } from './orcid';
 export { newsFeed } from './newsFeed';
+export { batchImportDirectories } from './batchImportDirectories';

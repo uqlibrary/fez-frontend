@@ -251,9 +251,16 @@ export default {
                 {},
             );
 
+            const authorRoles = (record.fez_record_search_key_author_role || []).reduce(
+                (authorRolesObject, authorRole) => ({
+                    ...authorRolesObject,
+                    [authorRole.rek_author_id_order]: authorRole,
+                }),
+                {},
+            );
             return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
                 nameAsPublished: (authors[order] || {}).rek_author,
-                creatorRole: '',
+                creatorRole: (authorRoles[order] || {}).rek_author_role || '',
                 uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
                 authorId: (authorIds[order] || {}).rek_author_id || 0,
                 orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
@@ -423,6 +430,9 @@ export default {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
+    depositAgreement: {
+        getValue: record => record.rek_copyright,
+    },
     rek_herdc_notes: {
         getValue: record => record.rek_herdc_notes,
     },
@@ -483,6 +493,69 @@ export default {
             record.fez_record_search_key_geographic_area &&
             record.fez_record_search_key_geographic_area.length > 0 &&
             record.fez_record_search_key_geographic_area[0].rek_geographic_area,
+    },
+    fez_record_search_key_access_conditions: {
+        getValue: record => ({ ...record.fez_record_search_key_access_conditions }),
+    },
+    fez_record_search_key_related_datasets: {
+        getValue: record => ({ ...record.fez_record_search_key_related_datasets }),
+    },
+    fez_record_search_key_related_publications: {
+        getValue: record => ({ ...record.fez_record_search_key_related_publications }),
+    },
+    fez_record_search_key_software_required: {
+        getValue: record =>
+            (record.fez_record_search_key_software_required || []).map(dataset => ({
+                rek_software_required: dataset.rek_software_required,
+                rek_software_required_order: dataset.rek_software_required_order,
+            })),
+    },
+    fez_record_search_key_type_of_data: {
+        getValue: record =>
+            (record.fez_record_search_key_type_of_data || []).map(dataset => ({
+                rek_type_of_data: dataset.rek_type_of_data,
+                rek_type_of_data_order: dataset.rek_type_of_data_order,
+            })),
+    },
+    fez_record_search_key_isdatasetof: {
+        getValue: record =>
+            (record.fez_record_search_key_isdatasetof || []).map(dataset => ({
+                rek_isdatasetof: {
+                    id: dataset.rek_isdatasetof,
+                    value: dataset.rek_isdatasetof_lookup,
+                },
+                rek_isdatasetof_order: dataset.rek_isdatasetof_order,
+            })),
+    },
+    contactName: {
+        getValue: record => record.fez_record_search_key_contributor[0].rek_contributor,
+    },
+    contactNameId: {
+        getValue: record => record.fez_record_search_key_contributor_id[0].rek_contributor_id,
+    },
+    contactEmail: {
+        getValue: record => record.fez_record_search_key_contact_details_email[0].rek_contact_details_email,
+    },
+    fez_record_search_key_project_name: {
+        getValue: record => record.fez_record_search_key_project_name.rek_project_name,
+    },
+    fez_record_search_key_project_description: {
+        getValue: record => ({
+            plainText: record.fez_record_search_key_project_description.rek_project_description,
+            htmlText: record.fez_record_search_key_project_description.rek_project_description,
+        }),
+    },
+    fez_record_search_key_start_date: {
+        getValue: record => (record.fez_record_search_key_start_date || {}).rek_start_date,
+    },
+    fez_record_search_key_end_date: {
+        getValue: record => (record.fez_record_search_key_end_date || {}).rek_end_date,
+    },
+    fez_record_search_key_time_period_start_date: {
+        getValue: record => (record.fez_record_search_key_time_period_start_date || {}).rek_time_period_start_date,
+    },
+    fez_record_search_key_time_period_end_date: {
+        getValue: record => (record.fez_record_search_key_time_period_end_date || {}).rek_time_period_end_date,
     },
     fez_record_search_key_org_name: {
         getValue: record => ({ ...record.fez_record_search_key_org_name }),
@@ -605,5 +678,17 @@ export default {
                 affiliation: (!!(photographerIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
             }));
         },
+    },
+    fez_record_search_key_parent_publication: {
+        getValue: record => ({ ...record.fez_record_search_key_parent_publication }),
+    },
+    fez_record_search_key_newspaper: {
+        getValue: record => ({ ...record.fez_record_search_key_newspaper }),
+    },
+    fez_record_search_key_section: {
+        getValue: record => ({ ...record.fez_record_search_key_section }),
+    },
+    fez_record_search_key_translated_newspaper: {
+        getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
     },
 };

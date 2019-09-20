@@ -566,7 +566,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for VOCABULARIES_API', () => {
-        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies/410' });
+        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies?cvo_ids=410' });
     });
 
     it('should construct url for GET_PUBLICATION_TYPES_API', () => {
@@ -619,8 +619,8 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for FILE_UPLOAD_API', () => {
-        expect(routes.FILE_UPLOAD_API({ pid: '12345', fileName: 'test.jpg' })).toEqual({
-            apiUrl: 'file/upload/presigned/12345/test.jpg',
+        expect(routes.FILE_UPLOAD_API()).toEqual({
+            apiUrl: 'file/upload/presigned',
         });
     });
 
@@ -754,6 +754,28 @@ describe('Backend routes method', () => {
             }),
         ).toEqual({
             apiUrl: 'tool/lookup/test1/test2/test3',
+        });
+    });
+
+    it('should construct url for COLLECTIONS_BY_COMMUNITY_LOOKUP_API', () => {
+        expect(
+            routes.COLLECTIONS_BY_COMMUNITY_LOOKUP_API({
+                communityPid: 'UQ:123456',
+            }),
+        ).toEqual({
+            apiUrl: 'communities/UQ:123456/collections',
+        });
+    });
+
+    it('should construct url for BATCH_IMPORT_DIRECTORIES_API', () => {
+        expect(routes.BATCH_IMPORT_DIRECTORIES_API()).toEqual({
+            apiUrl: 'external/records/batch-import/directories',
+        });
+    });
+
+    it('should construct url for BATCH_IMPORT_API', () => {
+        expect(routes.BATCH_IMPORT_API()).toEqual({
+            apiUrl: 'external/records/batch-import',
         });
     });
 });

@@ -1940,6 +1940,68 @@ export default {
                 close: 'Close',
             },
         },
+        digiTeam: {
+            batchImport: {
+                title: 'CSV ingest',
+                help: {},
+                formLabels: {
+                    community: {
+                        label: 'Select a community',
+                        placeholder: 'Select a community',
+                        ariaLabel: 'Select a community',
+                    },
+                    collection: {
+                        label: 'Select a collection',
+                        placeholder: 'Select a collection',
+                        ariaLabel: 'Select a collection',
+                    },
+                    docType: {
+                        label: 'Select a document type',
+                        placeholder: 'Select a document type',
+                        ariaLabel: 'Select a document type',
+                    },
+                    directory: {
+                        label: 'Select folder where CSV and datastream files are located',
+                        placeholder: 'Select folder where CSV and datastream files are located',
+                        ariaLabel: 'Select folder where CSV and datastream files are located',
+                    },
+                    cancelButtonLabel: 'Cancel and return to the homepage',
+                    submitButtonLabel: 'Ingest now',
+                },
+                submitProgressAlert: {
+                    type: 'info',
+                    title: 'Requesting CSV ingest',
+                    message: 'Waiting for response...',
+                },
+                submitSuccessAlert: {
+                    type: 'done',
+                    title: 'Success',
+                    message: 'The request to batch-import has been submitted successfully.',
+                },
+                submitFailureAlert: {
+                    type: 'error',
+                    title: 'Error',
+                    message: 'The batch-import request could not be submitted.',
+                },
+                postSubmitPrompt: {
+                    confirmButtonLabel: 'Start another ingest',
+                },
+                details: {
+                    community: {
+                        help: {},
+                    },
+                    collection: {
+                        help: {},
+                    },
+                    docType: {
+                        help: {},
+                    },
+                    directory: {
+                        help: {},
+                    },
+                },
+            },
+        },
         periodForm: {
             field: {
                 form: {

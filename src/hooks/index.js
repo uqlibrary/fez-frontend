@@ -10,3 +10,16 @@ export const useIsAdmin = () => {
     const { account } = useAccountContext();
     return !!account.is_administrator;
 };
+
+export const useIsAuthor = () => {
+    const { account } = useAccountContext();
+    const { record } = useRecordContext();
+
+    return (
+        account &&
+        record.fez_record_search_key_author_id &&
+        !!record.fez_record_search_key_author_id.some(authors => {
+            return parseInt(authors.rek_author_id, 10) === parseInt(account.aut_id, 10);
+        })
+    );
+};

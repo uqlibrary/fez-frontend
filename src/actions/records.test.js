@@ -143,7 +143,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'test.txt' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
                 .reply(200, {});
@@ -204,7 +204,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'test.txt' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(500)
                 .onPut('s3-ap-southeast-2.amazonaws.com', { name: 'test.txt' })
                 .reply(200, {});
@@ -305,7 +305,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -317,7 +317,8 @@ describe('Record action creators', () => {
             const expectedActions = [
                 actions.CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
-                'FILE_UPLOADED_FAILED@test.txt',
+                'FILE_UPLOAD_PROGRESS@test.txt',
+                actions.APP_ALERT_SHOW,
                 actions.CREATE_RECORD_SUCCESS,
             ];
 
@@ -359,7 +360,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -408,7 +409,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -440,7 +441,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -480,7 +481,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -545,7 +546,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -620,7 +621,7 @@ describe('Record action creators', () => {
             mockApi
                 .onPost(repositories.routes.NEW_RECORD_API().apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: '.*', fileName: '.*' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, ['s3-ap-southeast-2.amazonaws.com'])
                 .onPut(/(s3-ap-southeast-2.amazonaws.com)/)
                 .reply(200, { data: {} })
@@ -685,7 +686,7 @@ describe('Record action creators', () => {
                 .reply(500, { rek_pid: pidRequest.pid })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -745,7 +746,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(0);
 
             const expectedActions = [
@@ -800,7 +801,7 @@ describe('Record action creators', () => {
                 .reply(500, { rek_pid: pidRequest.pid })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -857,7 +858,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(500)
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, {});
@@ -917,7 +918,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPost(repositories.routes.RECORDS_ISSUES_API({ pid: pidRequest.pid }).apiUrl, '.*')
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, '')
                 .onAny()
                 .reply(0);
@@ -974,7 +975,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(0);
@@ -1023,7 +1024,7 @@ describe('Record action creators', () => {
                 .reply(200, { data: { ...record } })
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } })
-                .onGet(repositories.routes.FILE_UPLOAD_API({ pid: pidRequest.pid, fileName: 'Test.png' }).apiUrl)
+                .onPost(repositories.routes.FILE_UPLOAD_API().apiUrl)
                 .reply(200, 's3-ap-southeast-2.amazonaws.com')
                 .onPut('s3-ap-southeast-2.amazonaws.com', {})
                 .reply(200, { data: { ...record } });
