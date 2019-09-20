@@ -878,6 +878,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
                   "notFiles": "Invalid files ([fileNames])",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
@@ -1762,6 +1763,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
                   "notFiles": "Invalid files ([fileNames])",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",

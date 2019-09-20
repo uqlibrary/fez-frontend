@@ -552,6 +552,37 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
             filesInQueue={Array []}
             locale={Object {}}
             maxSize={1000}
+            mimeTypeWhitelist={
+              Object {
+                "7z": "application/x-7z-compressed",
+                "avi": "video/x-msvideo",
+                "csv": "text/csv",
+                "gif": "image/gif",
+                "gsheet": "application/vnd.google-apps.spreadsheet",
+                "gz": "application/gzip",
+                "jpg": "image/jpeg",
+                "m4a": "audio/x-m4a",
+                "mkv": "video/x-matroska",
+                "mov": "video/quicktime",
+                "mp3": "audio/mp3",
+                "mp4": "video/mp4",
+                "mpg": "video/mpeg",
+                "ods": "application/vnd.oasis.opendocument.spreadsheet",
+                "pdf": "application/pdf",
+                "png": "image/png",
+                "rar": "application/x-rar-compressed",
+                "tar": "application/x-tar",
+                "tiff": "image/tiff",
+                "wav": "audio/wav",
+                "wma": "audio/x-ms-wma",
+                "wmv": "video/x-ms-wmv",
+                "xls": "application/vnd.ms-excel",
+                "xlsb": "application/vnd.ms-excel.sheet.binary.macroenabled.12",
+                "xlsm": "application/vnd.ms-excel.sheet.macroenabled.12",
+                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "zip": "application/zip",
+              }
+            }
             onDrop={[MockFunction]}
           >
             <WithStyles(Grid)
@@ -2818,6 +2849,37 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
             filesInQueue={Array []}
             locale={Object {}}
             maxSize={1000}
+            mimeTypeWhitelist={
+              Object {
+                "7z": "application/x-7z-compressed",
+                "avi": "video/x-msvideo",
+                "csv": "text/csv",
+                "gif": "image/gif",
+                "gsheet": "application/vnd.google-apps.spreadsheet",
+                "gz": "application/gzip",
+                "jpg": "image/jpeg",
+                "m4a": "audio/x-m4a",
+                "mkv": "video/x-matroska",
+                "mov": "video/quicktime",
+                "mp3": "audio/mp3",
+                "mp4": "video/mp4",
+                "mpg": "video/mpeg",
+                "ods": "application/vnd.oasis.opendocument.spreadsheet",
+                "pdf": "application/pdf",
+                "png": "image/png",
+                "rar": "application/x-rar-compressed",
+                "tar": "application/x-tar",
+                "tiff": "image/tiff",
+                "wav": "audio/wav",
+                "wma": "audio/x-ms-wma",
+                "wmv": "video/x-ms-wmv",
+                "xls": "application/vnd.ms-excel",
+                "xlsb": "application/vnd.ms-excel.sheet.binary.macroenabled.12",
+                "xlsm": "application/vnd.ms-excel.sheet.macroenabled.12",
+                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "zip": "application/zip",
+              }
+            }
             onDrop={[MockFunction]}
           >
             <WithStyles(Grid)
@@ -4509,6 +4571,37 @@ exports[`Component FileUploadDropzone should render with styles 1`] = `
   filesInQueue={Array []}
   locale={Object {}}
   maxSize={8}
+  mimeTypeWhitelist={
+    Object {
+      "7z": "application/x-7z-compressed",
+      "avi": "video/x-msvideo",
+      "csv": "text/csv",
+      "gif": "image/gif",
+      "gsheet": "application/vnd.google-apps.spreadsheet",
+      "gz": "application/gzip",
+      "jpg": "image/jpeg",
+      "m4a": "audio/x-m4a",
+      "mkv": "video/x-matroska",
+      "mov": "video/quicktime",
+      "mp3": "audio/mp3",
+      "mp4": "video/mp4",
+      "mpg": "video/mpeg",
+      "ods": "application/vnd.oasis.opendocument.spreadsheet",
+      "pdf": "application/pdf",
+      "png": "image/png",
+      "rar": "application/x-rar-compressed",
+      "tar": "application/x-tar",
+      "tiff": "image/tiff",
+      "wav": "audio/wav",
+      "wma": "audio/x-ms-wma",
+      "wmv": "video/x-ms-wmv",
+      "xls": "application/vnd.ms-excel",
+      "xlsb": "application/vnd.ms-excel.sheet.binary.macroenabled.12",
+      "xlsm": "application/vnd.ms-excel.sheet.macroenabled.12",
+      "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "zip": "application/zip",
+    }
+  }
   onDrop={[MockFunction]}
 />
 `;
