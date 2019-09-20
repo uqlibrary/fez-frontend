@@ -18,6 +18,9 @@ export default {
     rek_date: {
         getValue: record => record.rek_date,
     },
+    date: {
+        getValue: record => record.rek_date,
+    },
     rek_subtype: {
         getValue: record => record.rek_subtype,
     },

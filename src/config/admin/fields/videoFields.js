@@ -24,7 +24,7 @@ export default {
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                 ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available'],
+                ['date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_original_format'],
                 ['fez_record_search_key_rights'],
