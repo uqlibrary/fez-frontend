@@ -6,6 +6,7 @@ export { default as conferenceProceedingsFields } from './conferenceProceedingsF
 export { default as creativeWorkFields } from './creativeWorkFields';
 export { default as dataCollectionFields } from './dataCollectionFields';
 export { default as departmentTechnicalReportFields } from './departmentTechnicalReportFields';
+export { default as digilibImageFields } from './digilibImageFields';
 export { default as imageFields } from './imageFields';
 export { default as journalArticleFields } from './journalArticleFields';
 export { default as journalFields } from './journalFields';
