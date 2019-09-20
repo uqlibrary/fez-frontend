@@ -41,6 +41,9 @@ export default {
                 ],
                 ['rek_date', 'fez_record_search_key_refereed_source'],
                 ['rek_description'],
+                ['fez_record_search_key_newspaper'],
+                ['fez_record_search_key_section'],
+                ['fez_record_search_key_translated_newspaper'],
             ],
         },
         {
@@ -77,14 +80,6 @@ export default {
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
-            ],
-        },
-        {
-            title: 'Temporary placement',
-            groups: [
-                ['fez_record_search_key_newspaper'],
-                ['fez_record_search_key_section'],
-                ['fez_record_search_key_translated_newspaper'],
             ],
         },
     ],

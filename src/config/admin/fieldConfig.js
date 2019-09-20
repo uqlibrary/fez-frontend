@@ -1151,7 +1151,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Newspaper',
-            name: 'additionalInformationSection.fez_record_search_key_newspaper.rek_newspaper',
+            name: 'bibliographicSection.fez_record_search_key_newspaper.rek_newspaper',
             placeholder: '',
         },
     },
@@ -1160,7 +1160,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Section',
-            name: 'additionalInformationSection.fez_record_search_key_section.rek_section',
+            name: 'bibliographicSection.fez_record_search_key_section.rek_section',
             placeholder: '',
         },
     },
@@ -1169,7 +1169,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Translated newspaper',
-            name: 'additionalInformationSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
+            name: 'bibliographicSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
             placeholder: '',
         },
     },
