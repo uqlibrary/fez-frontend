@@ -214,12 +214,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
+            ...mockData.incompleteNTROlist.data,
+            ...mockData.myRecordsList.data,
+            ...mockData.possibleUnclaimedList.data,
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,
             ...mockData.publicationTypeListBookChapter.data,
             ...mockData.publicationTypeListConferencePaper.data,
             ...mockData.publicationTypeListConferenceProceedings.data,
             ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
             ...mockData.publicationTypeListDepartmentTechnicalReport.data,
             ...mockData.publicationTypeListDigilibImage.data,
             ...mockData.publicationTypeListImage.data,
@@ -233,9 +237,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListThesis.data,
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
-            ...mockData.incompleteNTROlist.data,
-            ...mockData.myRecordsList.data,
-            ...mockData.possibleUnclaimedList.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
