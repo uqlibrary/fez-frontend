@@ -653,7 +653,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "validation": Object {
                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -1781,7 +1781,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "validation": Object {
                       "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                       "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                      "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                      "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                       "notFiles": "Invalid files ([fileNames])",
                       "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                       "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -1876,7 +1876,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       "validation": Object {
                         "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                        "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                        "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                         "notFiles": "Invalid files ([fileNames])",
                         "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2286,7 +2286,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                           "validation": Object {
                                             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                            "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                                            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                             "notFiles": "Invalid files ([fileNames])",
                                             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2379,7 +2379,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                             "validation": Object {
                                               "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                               "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                              "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                                              "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                               "notFiles": "Invalid files ([fileNames])",
                                               "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                               "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -4455,7 +4455,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "validation": Object {
                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -5583,7 +5583,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     "validation": Object {
                       "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                       "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                      "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                      "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                       "notFiles": "Invalid files ([fileNames])",
                       "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                       "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -5678,7 +5678,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       "validation": Object {
                         "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                        "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                        "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                         "notFiles": "Invalid files ([fileNames])",
                         "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6088,7 +6088,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                           "validation": Object {
                                             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                            "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                                            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                             "notFiles": "Invalid files ([fileNames])",
                                             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6181,7 +6181,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                             "validation": Object {
                                               "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                               "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                              "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+                                              "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                               "notFiles": "Invalid files ([fileNames])",
                                               "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                               "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -7677,7 +7677,7 @@ exports[`Component FileUploader should render default component 1`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -7810,7 +7810,7 @@ exports[`Component FileUploader should render disabled component 1`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -7942,7 +7942,7 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8079,7 +8079,7 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8349,7 +8349,7 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8565,7 +8565,7 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8697,7 +8697,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8834,7 +8834,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9104,7 +9104,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9241,7 +9241,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9512,7 +9512,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9785,7 +9785,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10068,7 +10068,7 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10346,7 +10346,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10483,7 +10483,7 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         "validation": Object {
           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-          "invalidMimeTypeFiles": "File(s) ([fileNames]) have invalid mime type",
+          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
           "notFiles": "Invalid files ([fileNames])",
           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
