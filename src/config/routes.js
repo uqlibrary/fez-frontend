@@ -394,7 +394,7 @@ export const getRoutesConfig = ({
                 },
                 {
                     path: pathConfig.admin.add,
-                    component: components.Admin,
+                    render: props => components.Admin({ ...props, createMode: true }),
                     exact: true,
                     access: [roles.admin],
                     pageTitle: locale.pages.adminAdd.title,

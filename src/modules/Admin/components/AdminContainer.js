@@ -24,8 +24,6 @@ import NtroSection from './ntro/NtroSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_RECORD } from 'config/general';
-import { publicationTypes } from 'config';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 const styles = theme => ({
     helpIcon: {
@@ -51,11 +49,10 @@ const styles = theme => ({
 });
 
 export const AdminContainer = ({
-    formValues,
     location,
     recordToView,
-    loadRecordToView,
     loadingRecordToView,
+    loadRecordToView,
     clearRecordToView,
     classes,
     submitting,
@@ -64,14 +61,19 @@ export const AdminContainer = ({
     handleSubmit,
     match,
     history,
+    createMode,
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
+    const [showAddForm, setShowAddForm] = useState(!match.params.pid);
     const theme = useTheme();
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
     const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
+
+    /* istanbul ignore next */
+    const handleAddFormDisplay = useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
@@ -93,32 +95,16 @@ export const AdminContainer = ({
         return <div className="empty" />;
     }
 
-    const displayType = formValues && formValues.get('rek_display_type');
-    const selectedPublicationType = displayType && publicationTypes({ ...recordForms })[displayType];
-    const hasSubtypes = !!(selectedPublicationType && selectedPublicationType.subtypes);
-    const selectedSubType = formValues && formValues.get('rek_subtype');
-    const additionalInformation = (formValues && formValues.get('additionalInformationSection')) || undefined;
-    const showAddForm = !(
-        !match.params.pid &&
-        !recordToView &&
-        selectedPublicationType &&
-        selectedPublicationType.name &&
-        ((hasSubtypes && selectedSubType) || (selectedPublicationType && !hasSubtypes)) &&
-        additionalInformation &&
-        additionalInformation.get('collections').length >= 1
-    );
     const isActivated = () => {
-        let active = null;
         if (recordToView && recordToView.rek_object_type_lookup) {
-            active = recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
-        } else {
-            active = selectedPublicationType && selectedPublicationType.name.toLowerCase() === RECORD_TYPE_RECORD;
+            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
         }
-        return active;
+        return false;
     };
+
     return (
         <React.Fragment>
-            {showAddForm && <AddSection />}
+            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
@@ -128,12 +114,7 @@ export const AdminContainer = ({
                 >
                     <RecordContext.Provider
                         value={{
-                            record:
-                                recordToView || {
-                                    ...formValues.toJS(),
-                                    rek_display_type_lookup: selectedPublicationType.name,
-                                } ||
-                                {},
+                            record: recordToView,
                         }}
                     >
                         <AdminInterface
@@ -144,6 +125,7 @@ export const AdminContainer = ({
                             disableSubmit={disableSubmit}
                             location={location}
                             history={history}
+                            createMode={createMode}
                             tabs={{
                                 admin: {
                                     component: AdminSection,
@@ -168,18 +150,16 @@ export const AdminContainer = ({
                                 ntro: {
                                     component: NtroSection,
                                     activated:
-                                        isActivated &&
-                                        NTRO_SUBTYPES.includes(
-                                            (recordToView && recordToView.rek_subtype) || displayType,
-                                        ),
+                                        isActivated() &&
+                                        NTRO_SUBTYPES.includes(recordToView && recordToView.rek_subtype),
                                 },
                                 grantInformation: {
                                     component: GrantInformationSection,
                                     activated:
-                                        isActivated &&
+                                        isActivated() &&
                                         // Blacklist types without grant info
                                         ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                            (recordToView && recordToView.rek_display_type) || displayType,
+                                            recordToView && recordToView.rek_display_type,
                                         ),
                                 },
                                 files: {
@@ -188,7 +168,7 @@ export const AdminContainer = ({
                                 },
                                 security: {
                                     component: SecuritySection,
-                                    activated: false, // true,
+                                    activated: !createMode, // true,
                                 },
                             }}
                         />
@@ -203,13 +183,14 @@ AdminContainer.propTypes = {
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     clearRecordToView: PropTypes.func,
-    formValues: PropTypes.object,
+    createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
     location: PropTypes.object,
     classes: PropTypes.object,
     submitting: PropTypes.any,
     submitSucceeded: PropTypes.bool,
+    showAddForm: PropTypes.bool,
     disableSubmit: PropTypes.any,
     handleSubmit: PropTypes.func,
     match: PropTypes.object,
@@ -222,8 +203,10 @@ export function isChanged(prevProps, nextProps) {
         prevProps.submitting === nextProps.submitting &&
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
+        (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
+        (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
-        prevProps.formValues === nextProps.formValues
+        prevProps.showAddForm === nextProps.showAddForm
     );
 }
 

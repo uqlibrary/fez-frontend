@@ -1,18 +1,18 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Grid from '@material-ui/core/Grid';
 import { Field } from 'redux-form/immutable';
-import { validation } from 'config';
-import StandardPage from 'modules/SharedComponents/Toolbox/StandardPage/components/StandardPage';
-import { CollectionField } from 'modules/SharedComponents/LookupFields';
-import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
-import locale from 'locale/pages';
-import StandardCard from 'modules/SharedComponents/Toolbox/StandardCard/components/StandardCard';
+
+import Grid from '@material-ui/core/Grid';
+import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
-import Divider from '@material-ui/core/Divider';
-import { publicationTypes } from 'config';
-import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
-import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING } from 'config/general';
+
+import { validation, publicationTypes } from 'config';
+import locale from 'locale/pages';
+
+import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
+import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
+import { CollectionField } from 'modules/SharedComponents/LookupFields';
 
 /* istanbul ignore next */
 export const AddSection = ({
@@ -22,37 +22,17 @@ export const AddSection = ({
     publicationSubtype,
     hasSubtypes,
     disabled = false,
+    onCreate,
 }) => {
-    const allPublicationTypes = Object.values(publicationTypes({ ...recordForms }));
+    const allPublicationTypes = Object.values(publicationTypes());
     const publicationTypeItems = [
-        ...allPublicationTypes
-            .filter(item => {
-                return item.isFavourite;
-            })
-            .map((item, index) => {
-                return (
-                    <MenuItem value={item.id} key={'fav_' + index} disabled={!item.formComponent}>
-                        {item.name}
-                    </MenuItem>
-                );
-            }),
-        ...[<Divider key="div_0" />],
-        ...allPublicationTypes
-            .filter(item => {
-                return item.hasFormComponent;
-            })
-            .map((item, index) => {
-                return (
-                    <MenuItem value={item.id} key={index} disabled={!item.formComponent}>
-                        {item.name}
-                    </MenuItem>
-                );
-            }),
-        ...NEW_DOCTYPES_OPTIONS.map((item, index) => (
-            <MenuItem value={item} key={`ntro-${index}`}>
-                {!!DOCTYPE_SUBTYPE_MAPPING[item] ? DOCTYPE_SUBTYPE_MAPPING[item].name : item}
-            </MenuItem>
-        )),
+        ...allPublicationTypes.map((item, index) => {
+            return (
+                <MenuItem value={item.id} key={index}>
+                    {item.name}
+                </MenuItem>
+            );
+        }),
     ];
     return (
         <form>
@@ -100,7 +80,7 @@ export const AddSection = ({
                                                 component={SelectField}
                                                 disabled={disabled}
                                                 id="rek-subtype"
-                                                name="rek_subtype"
+                                                name="additionalInformationSection.rek_subtype"
                                                 value={publicationSubtype}
                                                 label={locale.pages.adminAdd.formLabels.rek_subtype.inputLabelText}
                                                 required
@@ -114,6 +94,17 @@ export const AddSection = ({
                                             </Field>
                                         </Grid>
                                     )}
+                                </Grid>
+                                <Grid item xs={12} sm="auto">
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        id="submit-work"
+                                        variant="contained"
+                                        color="primary"
+                                        fullWidth
+                                        children="Create record"
+                                        onClick={onCreate}
+                                    />
                                 </Grid>
                             </Grid>
                         </StandardCard>
@@ -135,6 +126,7 @@ AddSection.propTypes = {
     location: PropTypes.object,
     history: PropTypes.object,
     actions: PropTypes.object,
+    onCreate: PropTypes.func,
 };
 
 export default React.memo(AddSection);

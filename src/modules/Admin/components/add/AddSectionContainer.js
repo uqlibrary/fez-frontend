@@ -19,6 +19,7 @@ const AddSectionContainer = ({
     hasDefaultDocTypeSubType,
     subtypes,
     docTypeSubTypeCombo,
+    onCreate,
 }) => {
     return (
         <AddSection
@@ -30,6 +31,7 @@ const AddSectionContainer = ({
             subtypes={subtypes}
             docTypeSubTypeCombo={docTypeSubTypeCombo}
             formValues={formValues}
+            onCreate={onCreate}
         />
     );
 };
@@ -43,6 +45,7 @@ AddSectionContainer.propTypes = {
     hasSubtypes: PropTypes.bool,
     docTypeSubTypeCombo: PropTypes.any,
     formValues: PropTypes.object,
+    onCreate: PropTypes.func,
 };
 
 const mapStateToProps = (state, ownProps) => {

@@ -43,6 +43,59 @@ const getInitialValues = (record, tab, tabParams = () => {}) =>
             };
         }, {});
 
+const getInitialFormValues = (recordToView, recordType) => {
+    return {
+        initialValues: {
+            pid: recordToView.rek_pid,
+            publication: recordToView,
+            rek_date: recordToView.rek_date || recordToView.rek_created_date,
+            collection: [],
+            subject: [],
+            adminSection: {
+                rek_herdc_notes: {
+                    plainText: (recordToView || {}).rek_herdc_notes,
+                    htmlText: (recordToView || {}).rek_herdc_notes,
+                },
+                internalNotes: {
+                    plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                    htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
+                },
+            },
+            identifiersSection:
+                (recordType === RECORD_TYPE_RECORD &&
+                    getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
+                {},
+            securitySection: {
+                rek_security_policy: recordToView.rek_security_policy,
+                ...(recordType === RECORD_TYPE_COLLECTION
+                    ? {
+                        rek_datastream_policy: recordToView.rek_datastream_policy,
+                    }
+                    : {}),
+                ...(recordType === RECORD_TYPE_RECORD
+                    ? {
+                        rek_security_inherited: recordToView.rek_security_inherited,
+                        dataStreams: (recordToView.fez_datastream_info || []).filter(
+                            isFileValid(viewRecordsConfig, true),
+                        ),
+                    }
+                    : {}),
+            },
+            bibliographicSection:
+                (recordType === RECORD_TYPE_RECORD &&
+                    getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
+                {},
+            authorsSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
+            additionalInformationSection:
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'additionalInformation')) || {},
+            ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
+            grantInformationSection:
+                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
+            filesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files')) || {},
+        },
+    };
+};
+
 const onSubmit = (values, dispatch) => {
     return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
@@ -54,76 +107,42 @@ const PrototypeContainer = reduxForm({
     onSubmit,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
-const mapStateToProps = state => {
+const mapStateToProps = (state, props) => {
     const formErrors = getFormSyncErrors(FORM_NAME)(state) || Immutable.Map({});
-    const recordToView = state.get('viewRecordReducer').recordToView;
-    const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
+    const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
+    let initialFormValues = {};
+    let recordToView = {};
 
-    const initialFormValues =
-        !!recordToView && recordToView.rek_pid
-            ? {
-                initialValues: {
-                    pid: recordToView.rek_pid,
-                    publication: recordToView,
-                    rek_date: recordToView.rek_date || recordToView.rek_created_date,
-                    collection: [],
-                    subject: [],
-                    adminSection: {
-                        rek_herdc_notes: {
-                            plainText: (recordToView || {}).rek_herdc_notes,
-                            htmlText: (recordToView || {}).rek_herdc_notes,
-                        },
-                        internalNotes: {
-                            plainText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                            htmlText: ((recordToView || {}).fez_internal_notes || {}).ain_detail,
-                        },
-                    },
-                    identifiersSection:
-                          (recordType === RECORD_TYPE_RECORD &&
-                              getInitialValues(recordToView, 'identifiers', identifiersParams)) ||
-                          {},
-                    securitySection: {
-                        rek_security_policy: recordToView.rek_security_policy,
-                        ...(recordType === RECORD_TYPE_COLLECTION
-                            ? {
-                                rek_datastream_policy: recordToView.rek_datastream_policy,
-                            }
-                            : {}),
-                        ...(recordType === RECORD_TYPE_RECORD
-                            ? {
-                                rek_security_inherited: recordToView.rek_security_inherited,
-                                dataStreams: (recordToView.fez_datastream_info || []).filter(
-                                    isFileValid(viewRecordsConfig, true),
-                                ),
-                            }
-                            : {}),
-                    },
-                    bibliographicSection:
-                          (recordType === RECORD_TYPE_RECORD &&
-                              getInitialValues(recordToView, 'bibliographic', bibliographicParams)) ||
-                          {},
-                    authorsSection:
-                          (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'authors')) || {},
-                    additionalInformationSection:
-                          (recordType === RECORD_TYPE_RECORD &&
-                              getInitialValues(recordToView, 'additionalInformation')) ||
-                          {},
-                    ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
-                    grantInformationSection:
-                          (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) ||
-                          {},
-                    filesSection:
-                          (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files')) || {},
-                },
-            }
-            : {};
+    if (props.createMode) {
+        const displayType = formValues && formValues.get('rek_display_type');
+        const selectedSubType =
+            formValues &&
+            (
+                (!!formValues.get('additionalInformationSection') &&
+                    formValues.get('additionalInformationSection').toJS()) ||
+                {}
+            ).rek_subtype;
+        const recordType = RECORD_TYPE_RECORD;
+
+        recordToView = {
+            rek_display_type: displayType,
+            rek_subtype: selectedSubType,
+            rek_object_type_lookup: recordType,
+        };
+    } else {
+        recordToView = state.get('viewRecordReducer').recordToView;
+        const recordType = ((recordToView || {}).rek_object_type_lookup || '').toLowerCase();
+        initialFormValues =
+            (!!recordToView && recordToView.rek_pid && getInitialFormValues(recordToView, recordType)) || {};
+    }
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        loadingRecordToView: state.get('viewRecordReducer').loadingRecordToView,
+        recordToView,
         ...(!!initialFormValues ? initialFormValues : {}),
-        ...state.get('viewRecordReducer'),
     };
 };
 
