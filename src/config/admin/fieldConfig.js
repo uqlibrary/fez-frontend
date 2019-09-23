@@ -1123,7 +1123,7 @@ export default {
         component: GenericTextField,
         componentProps: {
             fullWidth: true,
-            label: 'School, Department, or Centre',
+            label: 'School, department, or centre',
             name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
             placeholder: '',
         },
