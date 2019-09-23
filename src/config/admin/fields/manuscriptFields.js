@@ -21,6 +21,8 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
                 ['rek_description'],
+                ['rek_genre'],
+                ['fez_record_search_key_original_format'],
             ],
         },
         {
@@ -53,7 +55,7 @@ export default {
         },
         {
             title: 'Additional information',
-            groups: [['rek_subtype'], ['fez_record_search_key_oa_status'], ['fez_record_search_key_original_format']],
+            groups: [['rek_subtype'], ['fez_record_search_key_oa_status']],
         },
     ],
     ntro: () => [],
