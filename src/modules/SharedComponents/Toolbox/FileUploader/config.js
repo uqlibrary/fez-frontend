@@ -59,8 +59,6 @@ export const MIME_TYPE_WHITELIST = {
     xls: 'application/vnd.ms-excel',
     xlt: 'application/vnd.ms-excel',
     xlw: 'application/vnd.ms-excel',
-    xlsb: 'application/vnd.ms-excel.sheet.binary.macroenabled.12',
-    xlsm: 'application/vnd.ms-excel.sheet.macroenabled.12',
     xlsx: 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
     ods: 'application/vnd.oasis.opendocument.spreadsheet',
     gsheet: 'application/vnd.google-apps.spreadsheet',
