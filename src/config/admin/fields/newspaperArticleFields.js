@@ -2,20 +2,6 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
-    identifiers: () => [
-        {
-            title: 'Manage identifiers',
-            groups: [
-                ['fez_record_search_key_isi_loc', 'rek_wok_doc_type'],
-                ['fez_record_search_key_scopus_id', 'rek_scopus_doc_type'],
-                ['rek_pubmed_doc_type'],
-            ],
-        },
-        {
-            title: 'Manage links',
-            groups: [['links']],
-        },
-    ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',
@@ -41,6 +27,9 @@ export default {
                 ],
                 ['rek_date', 'fez_record_search_key_refereed_source'],
                 ['rek_description'],
+                ['fez_record_search_key_newspaper'],
+                ['fez_record_search_key_section'],
+                ['fez_record_search_key_translated_newspaper'],
             ],
         },
         {
@@ -77,14 +66,6 @@ export default {
                 ['fez_record_search_key_herdc_code', 'fez_record_search_key_herdc_status'],
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status', 'contentIndicators'],
                 ['additionalNotes'],
-            ],
-        },
-        {
-            title: 'Temporary placement',
-            groups: [
-                ['fez_record_search_key_newspaper'],
-                ['fez_record_search_key_section'],
-                ['fez_record_search_key_translated_newspaper'],
             ],
         },
     ],

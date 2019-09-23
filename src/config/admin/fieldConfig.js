@@ -1115,7 +1115,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Institution',
-            name: 'additionalInformationSection.fez_record_search_key_org_name.rek_org_name',
+            name: 'bibliographicSection.fez_record_search_key_org_name.rek_org_name',
             placeholder: '',
         },
     },
@@ -1124,7 +1124,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'School, Department, or Centre',
-            name: 'additionalInformationSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
             placeholder: '',
         },
     },
@@ -1133,7 +1133,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Report number',
-            name: 'additionalInformationSection.fez_record_search_key_report_number.rek_report_number',
+            name: 'bibliographicSection.fez_record_search_key_report_number.rek_report_number',
             placeholder: '',
         },
     },
@@ -1142,7 +1142,8 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Parent Publication',
-            name: 'additionalInformationSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            name: 'bibliographicSection.fez_record_search_key_parent_publication.rek_parent_publication',
+            multiline: true,
             placeholder: '',
         },
     },
@@ -1151,7 +1152,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Newspaper',
-            name: 'additionalInformationSection.fez_record_search_key_newspaper.rek_newspaper',
+            name: 'bibliographicSection.fez_record_search_key_newspaper.rek_newspaper',
             placeholder: '',
         },
     },
@@ -1160,7 +1161,7 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Section',
-            name: 'additionalInformationSection.fez_record_search_key_section.rek_section',
+            name: 'bibliographicSection.fez_record_search_key_section.rek_section',
             placeholder: '',
         },
     },
@@ -1169,8 +1170,185 @@ export default {
         componentProps: {
             fullWidth: true,
             label: 'Translated newspaper',
-            name: 'additionalInformationSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
+            name: 'bibliographicSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
             placeholder: '',
+        },
+    },
+    fez_record_search_key_period: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_period',
+            title: 'Periods',
+            searchKey: {
+                value: 'rek_period',
+                order: 'rek_period_order',
+            },
+            locale: locale.components.periodForm.field,
+        },
+    },
+    fez_record_search_key_structural_systems: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_structural_systems',
+            title: 'Structural systems',
+            searchKey: {
+                value: 'rek_structural_systems',
+                order: 'rek_structural_systems_order',
+            },
+            locale: locale.components.structuralSystemsForm.field,
+        },
+    },
+    fez_record_search_key_style: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_style',
+            title: 'Styles',
+            searchKey: {
+                value: 'rek_style',
+                order: 'rek_style_order',
+            },
+            locale: locale.components.styleForm.field,
+        },
+    },
+    fez_record_search_key_subcategory: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_subcategory',
+            title: 'Subcategories',
+            searchKey: {
+                value: 'rek_subcategory',
+                order: 'rek_subcategory_order',
+            },
+            locale: locale.components.subcategoryForm.field,
+        },
+    },
+    fez_record_search_key_surrounding_features: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_surrounding_features',
+            title: 'Surrounding features',
+            searchKey: {
+                value: 'rek_surrounding_features',
+                order: 'rek_surrounding_features_order',
+            },
+            locale: locale.components.surroundingFeaturesForm.field,
+        },
+    },
+    fez_record_search_key_interior_features: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_interior_features',
+            title: 'Interior features',
+            searchKey: {
+                value: 'rek_interior_features',
+                order: 'rek_interior_features_order',
+            },
+            locale: locale.components.interiorFeaturesForm.field,
+        },
+    },
+    fez_record_search_key_date_photo_taken: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_date_photo_taken.rek_date_photo_taken',
+            label: 'Date photo taken',
+            placeholder: 'Date photo taken',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_date_scanned: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_date_scanned.rek_date_scanned',
+            label: 'Date photo scanned',
+            placeholder: 'Date photo scanned',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_building_materials: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_building_materials',
+            title: 'Interior features',
+            searchKey: {
+                value: 'rek_building_materials',
+                order: 'rek_building_materials_order',
+            },
+            locale: locale.components.buildingMaterialsForm.field,
+        },
+    },
+    fez_record_search_key_category: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_category',
+            title: 'Category',
+            searchKey: {
+                value: 'rek_category',
+                order: 'rek_category_order',
+            },
+            locale: locale.components.categoryForm.field,
+        },
+    },
+    fez_record_search_key_condition: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_condition',
+            title: 'Conditions',
+            searchKey: {
+                value: 'rek_condition',
+                order: 'rek_condition_order',
+            },
+            locale: locale.components.conditionForm.field,
+        },
+    },
+    fez_record_search_key_construction_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_construction_date.rek_construction_date',
+            label: 'Construction date',
+            placeholder: 'Construction date',
+            fullWidth: true,
+        },
+    },
+    fez_record_search_key_alternative_title: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_alternative_title',
+            title: 'Alternative titles',
+            searchKey: {
+                value: 'rek_alternative_title',
+                order: 'rek_alternative_title_order',
+            },
+            locale: locale.components.alternativeTitleForm.field,
+        },
+    },
+    fez_record_search_key_architectural_features: {
+        component: ListEditorField,
+        componentProps: {
+            name: 'additionalInformationSection.fez_record_search_key_architectural_features',
+            title: 'Alternative titles',
+            searchKey: {
+                value: 'rek_architectural_features',
+                order: 'rek_architectural_features_order',
+            },
+            locale: locale.components.architecturalFeaturesForm.field,
+        },
+    },
+    architects: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.architects',
+            showIdentifierLookup: true,
+            locale: locale.components.architects.field,
+            canEdit: true,
+        },
+    },
+    photographers: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.photographers',
+            showIdentifierLookup: true,
+            locale: locale.components.photographers.field,
+            canEdit: true,
         },
     },
 };
