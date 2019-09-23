@@ -63,7 +63,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
       xsUp={false}
     >
       <WithStyles(ListItemText)
-        secondary="UQ identifier"
+        secondary="UQ identifier / Organisation"
         secondaryTypographyProps={
           Object {
             "variant": "caption",

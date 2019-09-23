@@ -301,7 +301,7 @@ exports[`VideoDocumentForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Contributor's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -685,7 +685,7 @@ exports[`VideoDocumentForm renders  component should render contributor assignme
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Contributor's name as published",
                 "reorderColumn": "Reorder items",
               },
