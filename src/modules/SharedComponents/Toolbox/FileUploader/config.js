@@ -18,6 +18,12 @@ export const SIZE_UNITS = [SIZE_UNIT_B, SIZE_UNIT_K, SIZE_UNIT_M, SIZE_UNIT_G];
 export const FILE_NAME_RESTRICTION = /^(?=^\S*$)(?=^[a-z\d\-_]+(\.\d{3}|\.r\d{2,3}|\.part\d{1,3})?\.[^\.]+$)(?=.{1,45}$)(?!(web_|preview_|thumbnail_|stream_|fezacml_|presmd_|\d))[a-z\d\-_\.]+/;
 
 /**
+ * When updating the following list, please make sure to update it as well in the following projects:
+ * - https://github.com/uqlibrary/fez-frontend
+ * - https://github.com/uqlibrary/lambda-fez-upload-handler-trigger
+ * - https://github.com/uqlibrary/api
+ * - https://github.com/uqlibrary/fez
+ *
  * Note: ext -> mimetype is a 1-n relation, but we only care about one value
  */
 export const MIME_TYPE_WHITELIST = {
