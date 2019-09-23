@@ -1361,6 +1361,15 @@ export default {
             canEdit: true,
         },
     },
+    supervisors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.supervisors',
+            showIdentifierLookup: true,
+            locale: locale.components.supervisors.field,
+            canEdit: true,
+        },
+    },
     photographers: {
         component: ContributorsEditorField,
         componentProps: {

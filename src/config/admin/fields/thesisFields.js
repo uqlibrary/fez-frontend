@@ -44,6 +44,10 @@ export default {
             title: 'Editors',
             groups: [['editors']],
         },
+        {
+            title: 'Supervisors',
+            groups: [['supervisors']],
+        },
     ],
     additionalInformation: () => [
         {
