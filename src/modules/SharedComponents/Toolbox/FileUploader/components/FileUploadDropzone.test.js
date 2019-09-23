@@ -1,6 +1,6 @@
 import { FileUploadDropzone } from './FileUploadDropzone';
 import FileUploadDropzoneWithStyles from './FileUploadDropzone';
-import { FILE_NAME_RESTRICTION } from '../config';
+import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -9,6 +9,7 @@ function setup(testProps = {}, args = { isShallow: true }) {
         locale: {},
         maxSize: 1000,
         fileNameRestrictions: /.+/,
+        mimeTypeWhitelist: MIME_TYPE_WHITELIST,
         ...testProps,
     };
     return getElement(FileUploadDropzone, props, args);
@@ -178,6 +179,18 @@ describe('Component FileUploadDropzone', () => {
         expect(invalidFileNames.length).toEqual(0);
     });
 
+    it('should remove files with invalid mime type', () => {
+        const wrapper = setup();
+
+        const files = [getMockFile('a.jpg'), getMockFile('b.txt')];
+        const { validMimeTypeFiles, invalidMimeTypeFiles } = wrapper
+            .instance()
+            .removeInvalidMimeTypes(files, MIME_TYPE_WHITELIST);
+
+        expect(validMimeTypeFiles.length).toEqual(1);
+        expect(invalidMimeTypeFiles.length).toEqual(1);
+    });
+
     it('should remove files exceeding max allowed number of files in removeTooManyFiles', () => {
         const wrapper = setup();
 
@@ -246,6 +259,7 @@ describe('Component FileUploadDropzone', () => {
             filesInQueue: [fileA.name, fileB.name],
             onDrop: onDropTestFn,
             fileNameRestrictions: FILE_NAME_RESTRICTION,
+            mimeTypeWhitelist: { txt: 'text/plain' },
         });
 
         const expectedFiles = [fileC, fileF].map(file => ({ fileData: file, name: file.name, size: file.size }));
@@ -254,6 +268,7 @@ describe('Component FileUploadDropzone', () => {
             notFiles: [],
             sameFileNameWithDifferentExt: ['g.doc', 'a.doc'],
             invalidFileNames: ['web_d.txt'],
+            invalidMimeTypeFiles: [],
             duplicateFiles: ['b.txt'],
             tooManyFiles: ['g.txt'],
         };
@@ -278,6 +293,7 @@ describe('Component FileUploadDropzone', () => {
             filesInQueue: [],
             onDrop: onDropTestFn,
             fileNameRestrictions: FILE_NAME_RESTRICTION,
+            mimeTypeWhitelist: { txt: 'text/plain' },
         });
 
         const expectedFiles = [fileG].map(file => ({ fileData: file, name: file.name, size: file.size }));
@@ -286,6 +302,7 @@ describe('Component FileUploadDropzone', () => {
             notFiles: [],
             sameFileNameWithDifferentExt: [],
             invalidFileNames: ['i,am.txt', 'excel,txt', 'excel,xls.txt'],
+            invalidMimeTypeFiles: [],
             duplicateFiles: [],
             tooManyFiles: [],
         };
@@ -352,6 +369,23 @@ describe('Component FileUploadDropzone', () => {
         expect(invalidFileNames.length).toEqual(3);
     });
 
+    it('should allow multipart zip mime type files with part format', () => {
+        const wrapper = setup();
+
+        const fileA = getMockFile('test.000.zip');
+        const fileB = getMockFile('test.part1.zip');
+        const fileC = getMockFile('test.r00.zip');
+
+        const files = [fileA, fileB, fileC];
+
+        const { validMimeTypeFiles, invalidMimeTypeFiles } = wrapper
+            .instance()
+            .removeInvalidMimeTypes(files, MIME_TYPE_WHITELIST);
+
+        expect(validMimeTypeFiles.length).toEqual(3);
+        expect(invalidMimeTypeFiles.length).toEqual(0);
+    });
+
     it('should allow multipart zip files with valid part format (r01 - r999)', () => {
         const wrapper = setup({
             fileNameRestrictions: FILE_NAME_RESTRICTION,
@@ -373,6 +407,27 @@ describe('Component FileUploadDropzone', () => {
 
         expect(validFiles.length).toEqual(3);
         expect(invalidFileNames.length).toEqual(4);
+    });
+
+    it('should allow multipart zip files with valid part format (part1 - part999)', () => {
+        const wrapper = setup({
+            fileNameRestrictions: FILE_NAME_RESTRICTION,
+        });
+
+        const fileA = getMockFile('test.part1.zip');
+        const fileB = getMockFile('test.part8888.zip');
+        const fileC = getMockFile('test.part342.zip');
+        const fileD = getMockFile('test.part33.zip');
+        const fileE = getMockFile('test.rpart89.zip');
+
+        const files = [fileA, fileB, fileC, fileD, fileE];
+
+        const { validFiles, invalidFileNames } = wrapper
+            .instance()
+            .removeInvalidFileNames(files, FILE_NAME_RESTRICTION);
+
+        expect(validFiles.length).toEqual(3);
+        expect(invalidFileNames.length).toEqual(2);
     });
 
     it('should allow multipart zip files with valid part format (part1 - part999)', () => {

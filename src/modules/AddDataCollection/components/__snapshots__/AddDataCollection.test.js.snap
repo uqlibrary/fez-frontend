@@ -1156,6 +1156,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2370,6 +2371,7 @@ exports[`AddDataCollection test should render component with a valid collection 
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -3584,6 +3586,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -4798,6 +4801,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
