@@ -17,7 +17,7 @@ export default {
                 ['patentOwner'],
                 ['fez_record_search_key_series'],
                 ['fez_record_search_key_article_number', 'fez_record_search_key_patent_number'],
-                ['rek_date', 'fez_record_search_key_date_available'],
+                ['dateOfIssue', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['rek_genre'],
                 ['fez_record_search_key_refereed_source'],

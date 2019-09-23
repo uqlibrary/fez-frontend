@@ -183,6 +183,17 @@ export default {
             validate: [validation.required],
         },
     },
+    dateOfIssue: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'bibliographicSection.dateOfIssue',
+            label: 'Date of issue',
+            placeholder: 'Date of issue',
+            required: true,
+            fullWidth: true,
+            validate: [validation.required],
+        },
+    },
     collections: {
         component: CollectionField,
         componentProps: {
