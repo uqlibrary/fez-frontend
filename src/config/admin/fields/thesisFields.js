@@ -13,7 +13,14 @@ export default {
         },
         {
             title: 'Bibliographic',
-            groups: [['fez_record_search_key_total_pages'], ['rek_date'], ['rek_description']],
+            groups: [
+                ['fez_record_search_key_total_pages'],
+                ['rek_date'],
+                ['rek_description'],
+                ['thesisType'],
+                ['fez_record_search_key_org_name'],
+                ['fez_record_search_key_org_unit_name'],
+            ],
         },
         {
             title: 'Keyword(s)',

@@ -29,7 +29,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
-import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
@@ -947,6 +947,14 @@ export default {
             name: 'bibliographicSection.rek_genre',
             fullWidth: true,
             label: 'Type',
+        },
+    },
+    thesisType: {
+        component: ThesisSubtypeField,
+        componentProps: {
+            name: 'bibliographicSection.thesisType',
+            fullWidth: true,
+            label: 'Thesis type',
         },
     },
     geoCoordinates: {
