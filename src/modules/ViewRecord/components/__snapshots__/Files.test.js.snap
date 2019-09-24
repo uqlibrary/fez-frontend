@@ -20068,6 +20068,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(FileName)
             allowDownload={false}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
