@@ -9,6 +9,7 @@ import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/gener
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
+import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import { CollectionField, AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -222,6 +223,16 @@ export default {
             label: 'Language of work',
             placeholder: 'Language of work',
             multiple: true,
+        },
+    },
+    fez_record_search_key_audience_size: {
+        component: AudienceSizeField,
+        componentProps: {
+            name: 'ntroSection.fez_record_search_key_audience_size',
+            fullWidth: true,
+            label: 'Audience size',
+            required: true,
+            validate: [validation.required],
         },
     },
     fez_record_search_key_journal_name: {

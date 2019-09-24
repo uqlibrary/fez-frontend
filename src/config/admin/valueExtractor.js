@@ -685,4 +685,7 @@ export default {
     fez_record_search_key_translated_newspaper: {
         getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
     },
+    fez_record_search_key_audience_size: {
+        getValue: record => (record.fez_record_search_key_audience_size || {}).rek_audience_size || 0,
+    },
 };
