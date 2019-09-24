@@ -10,13 +10,7 @@ import { sessionApi } from 'config';
  */
 export function loadCurrentAccount() {
     return dispatch => {
-        if (
-            navigator.userAgent.indexOf('Googlebot') !== -1 ||
-            navigator.userAgent.indexOf('facebookexternalhit') !== -1 ||
-            navigator.userAgent.indexOf('bingbot') !== -1 ||
-            navigator.userAgent.indexOf('Slackbot-LinkExpanding') !== -1 ||
-            navigator.userAgent.indexOf('Twitterbot') !== -1
-        ) {
+        if (navigator.userAgent.match(/Googlebot|facebookexternalhit|bingbot|Slackbot-LinkExpanding|Twitterbot/)) {
             dispatch({ type: actions.CURRENT_ACCOUNT_ANONYMOUS });
             return Promise.resolve({});
         } else {

@@ -146,24 +146,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             config.params.doi ||
             config.params.hasOwnProperty('all') ||
             config.params.rek_title ||
-            config.params.key
-        ) {
-            // SEARCH_INTERNAL_RECORDS_API
-            // return [200, mockData.internalTitleSearchListNoResults];
-            return [200, mockData.internalTitleSearchList];
-        } else if (
-            config.params.key.id ||
-            config.params.key.doi ||
-            config.params.key.title ||
-            config.params.key.all ||
-            config.params.key.rek_title
+            (config.params.key &&
+                (config.params.key.id ||
+                    config.params.key.doi ||
+                    config.params.key.title ||
+                    config.params.key.all ||
+                    config.params.key.rek_title))
         ) {
             // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams}
             // return [200, mockData.internalTitleSearchListNoResults];
             return [200, mockData.internalTitleSearchList];
-        } else if (config.params.key.rek_object_type === 2) {
-            // SEARCH_INTERNAL_RECORDS_API - Advanced Search {key: searchQueryParams} for Collections
-            return [200, mockData.collections];
         }
         return [404, ['Request not found']];
     })
@@ -222,12 +214,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
+            ...mockData.incompleteNTROlist.data,
+            ...mockData.myRecordsList.data,
+            ...mockData.possibleUnclaimedList.data,
             ...mockData.publicationTypeListAudio.data,
             ...mockData.publicationTypeListBook.data,
             ...mockData.publicationTypeListBookChapter.data,
             ...mockData.publicationTypeListConferencePaper.data,
             ...mockData.publicationTypeListConferenceProceedings.data,
             ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
             ...mockData.publicationTypeListDepartmentTechnicalReport.data,
             ...mockData.publicationTypeListDigilibImage.data,
             ...mockData.publicationTypeListImage.data,
@@ -241,9 +237,6 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             ...mockData.publicationTypeListThesis.data,
             ...mockData.publicationTypeListVideo.data,
             ...mockData.publicationTypeListWorkingPaper.data,
-            ...mockData.incompleteNTROlist.data,
-            ...mockData.myRecordsList.data,
-            ...mockData.possibleUnclaimedList.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {

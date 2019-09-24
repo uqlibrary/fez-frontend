@@ -848,7 +848,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: "Author's name as published",
-                        identifierColumn: 'UQ identifier',
+                        identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -928,7 +928,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name (if applicable)',
                         nameColumn: 'Editor\'s name in the format eg. "John Smith"',
-                        identifierColumn: 'UQ identifier',
+                        identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -1312,7 +1312,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: "Contributor's name as published",
-                        identifierColumn: 'UQ identifier',
+                        identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -2462,7 +2462,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: "Architect's name as published",
-                        identifierColumn: 'UQ identifier',
+                        identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {
@@ -2552,7 +2552,7 @@ export default {
                         ),
                         contributorAssignmentColumn: 'Select your name',
                         nameColumn: "Photographer's name as published",
-                        identifierColumn: 'UQ identifier',
+                        identifierColumn: 'UQ identifier / Organisation',
                         reorderColumn: 'Reorder items',
                         deleteAll: 'Remove all items',
                         deleteAllConfirmation: {

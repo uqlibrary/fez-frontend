@@ -202,7 +202,7 @@ exports[`BookChapterForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -305,7 +305,7 @@ exports[`BookChapterForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
@@ -797,7 +797,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -900,7 +900,7 @@ exports[`BookChapterForm renders  shows an error when end page is less than star
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },

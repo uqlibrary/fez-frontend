@@ -50,6 +50,7 @@ context('Thesis', () => {
         // Enrolling unit
         cy.get('input[label="Enrolling unit"]')
             .type('a');
+        cy.wait(1000); // Wait for suggestions
         cy.get('li[id="Enrollingunit-item-0"]')
             .click();
         cy.get('.alert-text')

@@ -111,7 +111,7 @@ export default {
             record.fez_record_search_key_subject.map(subject => ({
                 rek_value: {
                     key: subject.rek_subject,
-                    value: subject.rek_subject_lookup,
+                    value: subject.rek_subject_lookup || `${subject.rek_subject} (cvo_id)`,
                 },
                 rek_order: subject.rek_subject_order,
             })),

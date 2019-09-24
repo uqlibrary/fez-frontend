@@ -618,7 +618,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -1500,7 +1500,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
