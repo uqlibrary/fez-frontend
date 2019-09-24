@@ -5,6 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
 import RichEditor from 'modules/SharedComponents/RichEditor/components/RichEditor';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 
 export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) => {
@@ -48,10 +49,14 @@ export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) 
         contributionStatementInputFieldLabel,
         addButtonLabel,
         id,
+        authorOrderAlert,
     } = locale;
 
     return (
         <Grid container spacing={16} display="row" alignItems="center">
+            <Grid item xs={12}>
+                <Alert {...authorOrderAlert} />
+            </Grid>
             <Grid item style={{ flexGrow: 1 }} xs={12}>
                 <GenericSelectField
                     fullWidth
