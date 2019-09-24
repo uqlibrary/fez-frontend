@@ -166,11 +166,6 @@ export default class MediaPreview extends React.Component {
                         />
                     </div>
                 )}
-                {isVideo && this.state.videoLoading && (
-                    <div style={{ marginTop: 12, marginBottom: 12 }}>
-                        <InlineLoader message={videoLoadingMessage} />
-                    </div>
-                )}
                 {isVideo && !this.state.videoErrorMsg && (
                     <ReactJWPlayer
                         playerId="previewVideo"
@@ -210,6 +205,11 @@ export default class MediaPreview extends React.Component {
                         </Grid>
                         <Grid item xs />
                     </Grid>
+                )}
+                {isVideo && !this.state.imageError && this.state.videoLoading && (
+                    <div style={{ marginTop: 12, marginBottom: 12 }}>
+                        <InlineLoader message={videoLoadingMessage} />
+                    </div>
                 )}
                 <Hidden smUp>
                     <this.MediaPreviewButtons {...locale.viewRecord.sections.files.preview} />

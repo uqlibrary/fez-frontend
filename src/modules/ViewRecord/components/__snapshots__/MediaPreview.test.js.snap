@@ -10871,6 +10871,51 @@ exports[`Media Preview Component  should render component with video 1`] = `
                 </div>
               </Grid>
             </WithStyles(Grid)>
+            <ReactJWPlayer
+              aspectRatio="inherit"
+              file="https://test.com/preview_test.jpg"
+              isAutoPlay={true}
+              onAdComplete={[Function]}
+              onAdPause={[Function]}
+              onAdPlay={[Function]}
+              onAdResume={[Function]}
+              onAdSkipped={[Function]}
+              onAutoStart={[Function]}
+              onBuffer={[Function]}
+              onBufferChange={[Function]}
+              onClose={[Function]}
+              onEnterFullScreen={[Function]}
+              onError={[Function]}
+              onExitFullScreen={[Function]}
+              onFiftyPercent={[Function]}
+              onMediaError={[Function]}
+              onMute={[Function]}
+              onNinetyFivePercent={[Function]}
+              onOneHundredPercent={[Function]}
+              onPause={[Function]}
+              onPlay={[Function]}
+              onReady={[Function]}
+              onResume={[Function]}
+              onSetupError={[Function]}
+              onSeventyFivePercent={[Function]}
+              onTenSeconds={[Function]}
+              onThirtySeconds={[Function]}
+              onThreeSeconds={[Function]}
+              onTime={[Function]}
+              onTwentyFivePercent={[Function]}
+              onUnmute={[Function]}
+              onVideoLoad={[Function]}
+              playerId="previewVideo"
+              playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
+              playlist=""
+              useMultiplePlayerScripts={false}
+            >
+              <div>
+                <div
+                  id="previewVideo"
+                />
+              </div>
+            </ReactJWPlayer>
             <div
               style={
                 Object {
@@ -13317,51 +13362,6 @@ exports[`Media Preview Component  should render component with video 1`] = `
                 </InlineLoader>
               </WithStyles(InlineLoader)>
             </div>
-            <ReactJWPlayer
-              aspectRatio="inherit"
-              file="https://test.com/preview_test.jpg"
-              isAutoPlay={true}
-              onAdComplete={[Function]}
-              onAdPause={[Function]}
-              onAdPlay={[Function]}
-              onAdResume={[Function]}
-              onAdSkipped={[Function]}
-              onAutoStart={[Function]}
-              onBuffer={[Function]}
-              onBufferChange={[Function]}
-              onClose={[Function]}
-              onEnterFullScreen={[Function]}
-              onError={[Function]}
-              onExitFullScreen={[Function]}
-              onFiftyPercent={[Function]}
-              onMediaError={[Function]}
-              onMute={[Function]}
-              onNinetyFivePercent={[Function]}
-              onOneHundredPercent={[Function]}
-              onPause={[Function]}
-              onPlay={[Function]}
-              onReady={[Function]}
-              onResume={[Function]}
-              onSetupError={[Function]}
-              onSeventyFivePercent={[Function]}
-              onTenSeconds={[Function]}
-              onThirtySeconds={[Function]}
-              onThreeSeconds={[Function]}
-              onTime={[Function]}
-              onTwentyFivePercent={[Function]}
-              onUnmute={[Function]}
-              onVideoLoad={[Function]}
-              playerId="previewVideo"
-              playerScript="https://cdn.jwplayer.com/libraries/VrkpYhtx.js"
-              playlist=""
-              useMultiplePlayerScripts={false}
-            >
-              <div>
-                <div
-                  id="previewVideo"
-                />
-              </div>
-            </ReactJWPlayer>
             <Hidden
               implementation="js"
               lgDown={false}
@@ -14213,18 +14213,6 @@ exports[`Media Preview Component  should render when video fails with no error c
       </WithStyles(Grid)>
     </Hidden>
   </WithStyles(Grid)>
-  <div
-    style={
-      Object {
-        "marginBottom": 12,
-        "marginTop": 12,
-      }
-    }
-  >
-    <WithStyles(InlineLoader)
-      message="Loading"
-    />
-  </div>
   <ReactJWPlayer
     aspectRatio="inherit"
     file="https://test.com/preview_test.jpg"
@@ -14264,6 +14252,18 @@ exports[`Media Preview Component  should render when video fails with no error c
     playlist=""
     useMultiplePlayerScripts={false}
   />
+  <div
+    style={
+      Object {
+        "marginBottom": 12,
+        "marginTop": 12,
+      }
+    }
+  >
+    <WithStyles(InlineLoader)
+      message="Loading"
+    />
+  </div>
   <Hidden
     implementation="js"
     lgDown={false}
