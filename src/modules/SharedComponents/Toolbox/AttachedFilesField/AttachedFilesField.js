@@ -1,9 +1,10 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
+import Immutable from 'immutable';
 
 export const AttachedFilesField = ({ input, ...props }) => {
-    const [dataStreams, setDataStreams] = useState(props.meta.initial.toJS());
+    const [dataStreams, setDataStreams] = useState((props.meta.initial || Immutable.Map([])).toJS());
     const { onChange } = input;
     const handleDelete = useCallback(
         index => {
