@@ -43,7 +43,7 @@ export class FileName extends PureComponent {
     };
 
     canShowPreview = mimeType => {
-        return this.isImage(mimeType) || this.isVideo(mimeType);
+        return (this.isImage(mimeType) || this.isVideo(mimeType)) && !!this.props.previewMediaUrl;
     };
 
     showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => e => {

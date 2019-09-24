@@ -71,7 +71,7 @@
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
-        "cypress": "3.3.2",
+        "cypress": "^3.4.1",
         "cypress-file-upload": "^3.2.0",
         "cypress-plugin-tab": "^1.0.1",
         "dom-testing-library": "^3.17.1",
@@ -135,7 +135,6 @@
         "can-param": "^1.0.4",
         "classnames": "^2.2.6",
         "connected-react-router": "^6.4.0",
-        "cypress-plugin-snapshots": "git://github.com/meinaart/cypress-plugin-snapshots.git#c30b950",
         "deep-diff": "^1.0.2",
         "dompurify": "^1.0.4",
         "downshift": "^2.2.0",
@@ -211,7 +210,8 @@
         "cypress:run": "cypress run",
         "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run'",
         "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
-        "test:all": "npm run test && npm run e2e && npm codestyles:files",
+        "e2e:open": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress open'",
+        "test:all": "npm run test && npm run e2e && npm run codestyles:files",
         "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
     },
     "engines": {

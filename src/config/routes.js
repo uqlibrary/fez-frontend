@@ -4,7 +4,7 @@ import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
 import { createHash } from 'crypto';
-export const fullPath = (process.env.FULL_PATH && process.env.FULL_PATH) || 'https://fez-staging.library.uq.edu.au';
+export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
@@ -28,8 +28,7 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
 };
 
 const isAdmin = account => {
-    return account.canMasquerade;
-    // return account.is_administrator || account.is_super_administrator;
+    return account && account.canMasquerade;
 };
 
 export const getDatastreamVersionQueryString = (fileName, checksum) => {
@@ -148,6 +147,9 @@ export const pathConfig = {
         url: id => `https://app.library.uq.edu.au/#/authors/${id}`,
     },
     help: 'https://guides.library.uq.edu.au/for-researchers/research-publications-guide',
+    digiteam: {
+        batchImport: '/batch-import',
+    },
 };
 
 // a duplicate list of routes for
@@ -160,16 +162,21 @@ const flattedPathConfig = [
     '/admin/unpublished',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
+    '/batch-import',
     '/contact',
     '/dashboard',
+    '/contact',
+    '/rhdsubmission',
+    '/sbslodge_new',
+    '/records/search',
+    '/records/mine',
+    '/records/possible',
+    '/records/incomplete',
+    '/records/claim',
     '/records/add/find',
+    '/records/add/results',
     '/records/add/new',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
     '/view',
-    '/author-identifiers/orcid/link',
-    '/author-identifiers/google-scholar/link',
 ];
 
 const fileRegexConfig = new RegExp(/\/view\/UQ:\w+\/\w+\.\w+/i);
@@ -451,6 +458,13 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.components.thirdPartyLookupTools.title,
                 },
+                {
+                    path: pathConfig.digiteam.batchImport,
+                    component: components.BatchImport,
+                    exact: true,
+                    access: [roles.digiteam],
+                    pageTitle: locale.components.digiTeam.batchImport.title,
+                },
             ]
             : []),
         ...publicPages,
@@ -606,6 +620,14 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 {
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
+                },
+            ]
+            : []),
+        ...(account && isAdmin(account)
+            ? [
+                {
+                    linkTo: pathConfig.digiteam.batchImport,
+                    ...locale.menu.digiteam.batchImport,
                 },
             ]
             : []),

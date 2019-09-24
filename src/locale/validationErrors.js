@@ -100,7 +100,10 @@ export default {
         collectionDateRange: 'Collection start/end dates are invalid',
         pageRange: 'Please provide a valid start/end page range',
         // Collection form validations
-        community: 'You must select a community',
+        communityID: 'You must select a community',
+        collection_pid: 'You must select a collection',
+        doc_type_id: 'You must select a document type',
+        directory: 'You must select a directory',
         title: 'Title is required',
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',

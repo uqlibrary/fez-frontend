@@ -155,9 +155,9 @@ export class FilesClass extends Component {
         return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     };
 
-    getSecurityAccess = dataStream => {
-        const { isAdmin, isAuthor } = this.props;
-        return !!(dataStream.dsi_security_policy === 5 || isAdmin || isAuthor);
+    getSecurityAccess = () => {
+        // const { isAdmin, isAuthor } = this.props;
+        return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
     };
 
     getUrl = (pid, fileName, checksum = '') => {
@@ -173,7 +173,7 @@ export class FilesClass extends Component {
             files: { blacklist },
         } = viewRecordsConfig;
         return (
-            this.getSecurityAccess(dataStream) &&
+            // this.getSecurityAccess(dataStream) && - this hides closed/locked file
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
@@ -278,11 +278,7 @@ export class FilesClass extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload:
-                          ((openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate) &&
-                              this.getSecurityAccess(dataStream)) ||
-                          this.props.isAuthor ||
-                          this.props.isAdmin,
+                    allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
                     icon: this.renderFileIcon(
                         pid,
                         mimeType,

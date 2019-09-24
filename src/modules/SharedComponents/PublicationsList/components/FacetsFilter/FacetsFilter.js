@@ -285,8 +285,8 @@ export default class FacetsFilter extends PureComponent {
                         // const isActive = this.state.activeFacets.filters.hasOwnProperty(item.title);
                         return (
                             <FacetFilterListItem
-                                id={`facet-category-${item.facetTitle.replace(' ', '-')}`}
-                                key={`facet-category-${item.facetTitle.replace(' ', '-')}`}
+                                id={`facet-category-${item.facetTitle.replace(/ /g, '-')}`}
+                                key={`facet-category-${item.facetTitle.replace(/ /g, '-')}`}
                                 facetTitle={item.title}
                                 disabled={this.props.disabled}
                                 onToggle={this.toggleFacet(item.facetTitle)}

@@ -24,6 +24,7 @@ Object {
     "lineHeight": 1,
     "marginBottom": 6,
     "marginRight": 12,
+    "overflowWrap": "break-word !important",
   },
   "contentIndicatorTitle": Object {
     "fontWeight": 400,

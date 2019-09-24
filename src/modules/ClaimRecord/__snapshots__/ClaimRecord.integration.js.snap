@@ -51,9 +51,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
-                      >
-                        <div
-                          class=\\"MuiGrid-container-3\\"
++                     >
++                       <div
++                         class=\\"MuiGrid-container-3\\"
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
@@ -64,7 +64,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           >
 +                             <a
 +                               href=\\"/view/UQ:396321\\"
-                              >
++                             >
 +                               Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer
 +                             </a>
 +                           </h6>
@@ -72,7 +72,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                         <div
 +                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-388\\"
 +                         >
-                            <div
++                           <div
 +                             class=\\"citationContent citationJournalArticle\\"
 +                           >
 +                             <span
@@ -86,12 +86,56 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                               <span
 +                                 class=\\"citationAuthor\\"
 +                               >
-+                                 Al-Ejeh, Fares
++                                 Al-Ejeh, Fares, 
 +                               </span>
 +                               <span
 +                                 class=\\"citationAuthor\\"
 +                               >
-+                                  and Saunus, Jodi M.
++                                 Saunus, Jodi M., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Northwood, Korinne S., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Bailey, Peter J., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Betts, Joshua A., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 McCart Reed, Amy E., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Nephew, Kenneth P., 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Stone, Andrew, 
++                               </span>
++                               <span
++                                 class=\\"citationAuthor\\"
++                               >
++                                 Gee, Julia M. W., 
++                               </span>
++                               <span>
++                                  
++                                 <a
++                                   class=\\"citationShowMoreAuthors\\"
++                                   title=\\"Click to show 8 more authors\\"
++                                 >
++                                   Show 8 more...
++                                 </a>
 +                               </span>
 +                                
 +                             </span>
@@ -168,25 +212,18 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           </div>
 +                         </div>
 +                         <div
-                            class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                          >
-                            <div
--             style=\\"padding: 8px;\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                         >
++                           <div
 +                             class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-center-11\\"
-                            >
-                              <div
--               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                           >
++                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-389\\"
                               >
                                 <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
-+                                 class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
--                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
--                   role=\\"progressbar\\"
--                   style=\\"width: 18px; height: 18px;\\"
+                                  class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +                                 >
 +                                   <a
@@ -205,7 +242,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     <span
 +                                       class=\\"CitationCountView-citationCountNumber-406\\"
 +                                     >
-+                                       6
++                                       23
 +                                     </span>
 +                                   </a>
 +                                   <a
@@ -224,7 +261,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     <span
 +                                       class=\\"CitationCountView-citationCountNumber-406\\"
 +                                     >
-+                                       7
++                                       26
 +                                     </span>
 +                                   </a>
 +                                   <a
@@ -243,7 +280,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     <span
 +                                       class=\\"CitationCountView-citationCountNumber-406\\"
 +                                     >
-+                                       2
++                                       3
 +                                     </span>
 +                                   </a>
 +                                   <a
@@ -255,7 +292,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Google scholar will open in a new window\\"
-+                                   >
+                                    >
 +                                     <span
 +                                       class=\\"fez-icon google large\\"
 +                                     />
@@ -264,7 +301,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     class=\\"noOaIcon\\"
 +                                   />
 +                                 </div>
-+                                 <div
+                                  <div
 +                                   class=\\"MuiGrid-item-4\\"
 +                                 >
 +                                   <a
@@ -275,38 +312,30 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\\"
-                                    >
-                                      <svg
--                     class=\\"MuiCircularProgress-svg-341\\"
--                     viewBox=\\"22 22 44 44\\"
++                                   >
++                                     <svg
 +                                       aria-hidden=\\"true\\"
 +                                       class=\\"MuiSvgIcon-root-395 ExternalLink-externalLinkIcon-394\\"
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
-                                      >
--                     <circle
--                       class=\\"MuiCircularProgress-circle-342 MuiCircularProgress-circleIndeterminate-344\\"
--                       cx=\\"44\\"
--                       cy=\\"44\\"
++                                     >
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
-                                          fill=\\"none\\"
--                       r=\\"21\\"
--                       stroke-width=\\"2\\"
++                                         fill=\\"none\\"
 +                                       />
 +                                       <path
 +                                         d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-                                        />
-                                      </svg>
++                                       />
++                                     </svg>
 +                                     View full statistics
 +                                   </a>
 +                                 </div>
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                                 />
-                                </div>
-                              </div>
++                               </div>
++                             </div>
 +                           </div>
 +                         </div>
 +                       </div>
@@ -315,14 +344,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                   <hr
 +                     class=\\"MuiDivider-root-409 PublicationCitation-divider-386\\"
 +                   />
-                    <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
++                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                    >
-                      <span
--                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
--                   style=\\"font-size: 1.33rem;\\"
++                   >
++                     <span
 +                       class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                     >
 +                       <span
@@ -339,9 +364,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +           </div>
 +           <span />
 +           <div
-+             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+           >
-+             <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+            >
+              <div
+-             style=\\"padding: 8px;\\"
 +               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
 +             >
 +               <div
@@ -352,8 +378,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                 >
 +                   <h3
 +                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
-                    >
--                   Loading record to claim
++                   >
 +                     Author linking
 +                   </h3>
 +                 </div>
@@ -428,12 +453,131 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-+                                   >
+                                    >
 +                                     First  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
 +                             </div>
+                              <div
+-               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
+                              >
+                                <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
++                                 class=\\"MuiGrid-container-3\\"
+                                >
+                                  <div
+-                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
+-                   role=\\"progressbar\\"
+-                   style=\\"width: 18px; height: 18px;\\"
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
+                                    >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
+                                        <svg
+-                     class=\\"MuiCircularProgress-svg-341\\"
+-                     viewBox=\\"22 22 44 44\\"
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
+                                        >
+-                     <circle
+-                       class=\\"MuiCircularProgress-circle-342 MuiCircularProgress-circleIndeterminate-344\\"
+-                       cx=\\"44\\"
+-                       cy=\\"44\\"
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
+                                            fill=\\"none\\"
+-                       r=\\"21\\"
+-                       stroke-width=\\"2\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
+                                          />
+                                        </svg>
++                                       Al-Ejeh, Fares
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Second  listed author
++                                   </span>
+                                  </div>
+                                </div>
++                             </div>
+                              <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                                  >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
+                                      <span
+-                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-                   style=\\"font-size: 1.33rem;\\"
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Saunus, Jodi M.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
+                                    >
+-                   Loading record to claim
++                                     Third  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-3\\"
++                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
@@ -444,8 +588,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
-+                                     tabindex=\\"0\\"
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
@@ -453,24 +598,21 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
 +                                       >
 +                                         <path
-+                                           d=\\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\\"
-+                                         />
-+                                         <path
 +                                           d=\\"M0 0h24v24H0z\\"
 +                                           fill=\\"none\\"
 +                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
 +                                       </svg>
-+                                       Al-Ejeh, Fares
++                                       Northwood, Korinne S.
 +                                     </span>
-+                                     <span
-+                                       class=\\"MuiTouchRipple-root-549\\"
-+                                     />
 +                                   </button>
 +                                 </div>
 +                                 <div
@@ -479,7 +621,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
 +                                   >
-+                                     Second  listed author
++                                     Fourth  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
@@ -517,8 +659,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
 +                                         />
 +                                       </svg>
-+                                       Saunus, Jodi M.
-                                      </span>
++                                       Bailey, Peter J.
++                                     </span>
 +                                   </button>
 +                                 </div>
 +                                 <div
@@ -527,17 +669,513 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
 +                                   >
-+                                     Third  listed author
++                                     Fifth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Betts, Joshua A.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Sixth  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
 +                             </div>
 +                           </div>
-+                           <div>
-+                             <div />
++                           <div
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       McCart Reed, Amy E.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Seventh  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     tabindex=\\"0\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\\"
++                                         />
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                       </svg>
++                                       Nephew, Kenneth P.
++                                     </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-549\\"
++                                     />
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Eighth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     tabindex=\\"0\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\\"
++                                         />
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                       </svg>
++                                       Stone, Andrew
++                                     </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-549\\"
++                                     />
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Ninth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
 +                           </div>
 +                           <div
-+                             style=\\"width: 100%; height: 0px;\\"
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     tabindex=\\"0\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z\\"
++                                         />
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                       </svg>
++                                       Gee, Julia M. W.
++                                     </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-549\\"
++                                     />
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Tenth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Dowhan, Dennis H.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Eleventh  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Dray, Eloise
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Twelfth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Shewan, Annette M.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Thirteenth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       French, Juliet D.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Fourteenth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
++                               >
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <button
++                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-521\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Edwards, Stacey L.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                   >
++                                     Fifteenth  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div />
++                           <div
++                             style=\\"width: 100%; height: 73px;\\"
 +                           />
 +                         </div>
 +                       </div>
@@ -595,7 +1233,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           Click for more information
 +                         </title>
 +                       </svg>
-+                     </span>
+                      </span>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-549\\"
 +                     />
@@ -666,10 +1304,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       </div>
 +                     </div>
 +                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 +           <div
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
@@ -688,7 +1326,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     Optional: Suggest changes or add links to this work
 +                   </h3>
                   </div>
-                </div>
++               </div>
 +               <div
 +                 class=\\"MuiCardContent-root-385\\"
 +               >
@@ -722,9 +1360,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           name=\\"comments\\"
 +                           rows=\\"3\\"
 +                         />
-                        </div>
-                      </div>
-                    </div>
++                       </div>
++                     </div>
++                   </div>
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
@@ -782,101 +1420,109 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +               <div
 +                 class=\\"MuiCardContent-root-385\\"
 +               >
-+                 <p
-+                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
-+                 >
-+                   You may add up to 10 files (max 8GB each)
-+                 </p>
 +                 <div
-+                   class=\\"MuiGrid-container-3\\"
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
++                     >
++                       You may add up to 10 files (max 8GB each)
++                     </p>
 +                     <div
-+                       id=\\"FileUploadDropZone\\"
-+                       tabindex=\\"0\\"
++                       class=\\"MuiGrid-container-3\\"
 +                     >
 +                       <div
-+                         aria-disabled=\\"false\\"
-+                         class=\\"\\"
-+                         style=\\"position: relative; padding: 0px;\\"
++                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                       >
 +                         <div
-+                           class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-516\\"
++                           id=\\"FileUploadDropZone\\"
++                           tabindex=\\"0\\"
 +                         >
 +                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-+                           >
-+                             <p
-+                               class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-517\\"
-+                             >
-+                               File upload restrictions
-+                             </p>
-+                             <div>
-+                               Please ensure your files:
-+                               <ul>
-+                                 <li>
-+                                   begin with a letter and are less than 45 characters long
-+                                 </li>
-+                                 <li>
-+                                   contain only upper and lowercase alphanumeric characters, and underscores
-+                                 </li>
-+                                 <li>
-+                                   have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
-+                                 </li>
-+                                 <li>
-+                                   two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                 </li>
-+                                 <li>
-+                                   are uploaded individually and not inside a folder
-+                                 </li>
-+                               </ul>
-+                             </div>
-+                           </div>
-+                           <div
-+                             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
++                             aria-disabled=\\"false\\"
++                             class=\\"\\"
++                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-518\\"
++                               class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-516\\"
 +                             >
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <svg
-+                                   aria-hidden=\\"true\\"
-+                                   class=\\"MuiSvgIcon-root-395 FileUploadDropzoneStaticContent-cloudIcon-519\\"
-+                                   focusable=\\"false\\"
-+                                   role=\\"presentation\\"
-+                                   viewBox=\\"0 0 24 24\\"
++                                 <p
++                                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-517\\"
 +                                 >
-+                                   <path
-+                                     d=\\"M0 0h24v24H0z\\"
-+                                     fill=\\"none\\"
-+                                   />
-+                                   <path
-+                                     d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
-+                                   />
-+                                 </svg>
++                                   File upload restrictions
++                                 </p>
++                                 <div>
++                                   Please ensure your files:
++                                   <ul>
++                                     <li>
++                                       begin with a letter and are less than 45 characters long
++                                     </li>
++                                     <li>
++                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                     </li>
++                                     <li>
++                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                     </li>
++                                     <li>
++                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                     </li>
++                                     <li>
++                                       are uploaded individually and not inside a folder
++                                     </li>
++                                   </ul>
++                                 </div>
 +                               </div>
 +                               <div
-+                                 class=\\"MuiGrid-item-4\\"
++                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
-+                                 <p>
-+                                   Click here to select files, or drag files into this area to upload
-+                                 </p>
++                                 <div
++                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-518\\"
++                                 >
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <svg
++                                       aria-hidden=\\"true\\"
++                                       class=\\"MuiSvgIcon-root-395 FileUploadDropzoneStaticContent-cloudIcon-519\\"
++                                       focusable=\\"false\\"
++                                       role=\\"presentation\\"
++                                       viewBox=\\"0 0 24 24\\"
++                                     >
++                                       <path
++                                         d=\\"M0 0h24v24H0z\\"
++                                         fill=\\"none\\"
++                                       />
++                                       <path
++                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
++                                       />
++                                     </svg>
++                                   </div>
++                                   <div
++                                     class=\\"MuiGrid-item-4\\"
++                                   >
++                                     <p>
++                                       Click here to select files, or drag files into this area to upload
++                                     </p>
++                                   </div>
++                                 </div>
 +                               </div>
 +                             </div>
++                             <input
++                               aria-label=\\"Upload files\\"
++                               autocomplete=\\"off\\"
++                               id=\\"Uploader\\"
++                               multiple=\\"\\"
++                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
++                               type=\\"file\\"
++                             />
 +                           </div>
 +                         </div>
-+                         <input
-+                           aria-label=\\"Upload files\\"
-+                           autocomplete=\\"off\\"
-+                           id=\\"Uploader\\"
-+                           multiple=\\"\\"
-+                           style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-+                           type=\\"file\\"
-+                         />
 +                       </div>
 +                     </div>
 +                   </div>
@@ -993,7 +1639,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 2`] = `
 - First value
 + Second value
 
-@@ -609,11 +609,12 @@
+@@ -1247,11 +1247,12 @@
                           <div
                             class=\\"MuiSelect-root-476\\"
                           >
@@ -1014,7 +1660,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
 - First value
 + Second value
 
-@@ -309,11 +309,11 @@
+@@ -353,11 +353,11 @@
                     </div>
                   </div>
                 </div>
@@ -1027,7 +1673,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
             >
               <div
                 class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
-@@ -616,16 +616,16 @@
+@@ -1254,16 +1254,16 @@
                               class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1053,7 +1699,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 4`] = `
 - First value
 + Second value
 
-@@ -616,16 +616,16 @@
+@@ -1254,16 +1254,16 @@
                               class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1079,7 +1725,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -424,17 +424,17 @@
+@@ -764,17 +764,17 @@
                                       <span
                                         class=\\"MuiButton-label-1111\\"
                                       >
@@ -1099,17 +1745,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                             d=\\"M0 0h24v24H0z\\"
                                             fill=\\"none\\"
                                           />
-@@ -504,20 +504,60 @@
-                                    </span>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
--                           <div>
-                            <div />
--                           </div>
-                            <div
-                              style=\\"width: 100%; height: 0px;\\"
+@@ -1152,10 +1152,52 @@
                             />
                           </div>
                         </div>
@@ -1162,7 +1798,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </div>
             </div>
             <div
-@@ -856,67 +896,12 @@
+@@ -1502,66 +1544,11 @@
                     </div>
                   </div>
                 </div>
@@ -1202,8 +1838,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
 -                         />
 -                       </svg>
-          </div>
-          <div
+-                     </div>
+-                     <div
 -                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1148 alert-text\\"
 -                     >
 -                       <b>
@@ -1219,18 +1855,17 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -                       </span>
 -                     </div>
 -                   </div>
--                 </div>
+          </div>
 -               </div>
 -             </div>
 -           </div>
 -         </div>
--         <div
+          <div
             class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617\\"
           >
             <div
               class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621\\"
-            />
-@@ -940,21 +925,23 @@
+@@ -1586,21 +1573,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-594\\"
@@ -1264,7 +1899,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -415,12 +415,13 @@
+@@ -755,12 +755,13 @@
                                 >
                                   <div
                                     class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
@@ -1280,11 +1915,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                       <span
                                         class=\\"MuiButton-label-1111\\"
                                       >
-@@ -439,13 +440,10 @@
+@@ -779,13 +780,10 @@
                                             fill=\\"none\\"
                                           />
                                         </svg>
-                                        Al-Ejeh, Fares
+                                        Nephew, Kenneth P.
                                       </span>
 -                                     <span
 -                                       class=\\"MuiTouchRipple-root-1139\\"
@@ -1294,7 +1929,67 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                   <div
                                     class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
                                   >
-@@ -513,14 +511,15 @@
+@@ -805,12 +803,13 @@
+                                >
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+                                    <button
+-                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     tabindex=\\"0\\"
++                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
+                                      type=\\"button\\"
+                                    >
+                                      <span
+                                        class=\\"MuiButton-label-1111\\"
+                                      >
+@@ -829,13 +828,10 @@
+                                            fill=\\"none\\"
+                                          />
+                                        </svg>
+                                        Stone, Andrew
+                                      </span>
+-                                     <span
+-                                       class=\\"MuiTouchRipple-root-1139\\"
+-                                     />
+                                    </button>
+                                  </div>
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+@@ -859,12 +855,13 @@
+                                >
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+                                    <button
+-                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     tabindex=\\"0\\"
++                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
+                                      type=\\"button\\"
+                                    >
+                                      <span
+                                        class=\\"MuiButton-label-1111\\"
+                                      >
+@@ -883,13 +880,10 @@
+                                            fill=\\"none\\"
+                                          />
+                                        </svg>
+                                        Gee, Julia M. W.
+                                      </span>
+-                                     <span
+-                                       class=\\"MuiTouchRipple-root-1139\\"
+-                                     />
+                                    </button>
+                                  </div>
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+@@ -1153,14 +1147,15 @@
                           </div>
                         </div>
                       </div>
@@ -1312,7 +2007,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiIconButton-label-1039\\"
                         >
                           <svg
-@@ -535,21 +534,19 @@
+@@ -1175,21 +1170,19 @@
                             />
                           </svg>
                           <input
@@ -1336,7 +2031,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiTypography-root-690 WithTheme-WithWidth-AuthorLinking---label-1022 MuiTypography-body2-698 MuiTypography-colorSecondary-721\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
-@@ -642,23 +639,22 @@
+@@ -1282,23 +1275,22 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1362,7 +2057,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -714,25 +710,26 @@
+@@ -1354,25 +1346,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
@@ -1392,7 +2087,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -744,25 +741,26 @@
+@@ -1384,25 +1377,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
@@ -1422,32 +2117,32 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -810,11 +808,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"false\\"
-+                         aria-disabled=\\"true\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -1456,11 +1450,11 @@
                           <div
-                            class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -884,10 +882,11 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
-+                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -896,52 +895,100 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"false\\"
++                             aria-disabled=\\"true\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
+@@ -1530,10 +1524,11 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
++                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -1544,52 +1539,100 @@
                     </div>
                   </div>
                 </div>
@@ -1491,8 +2186,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +                           />
 +                         </svg>
 +                       </div>
-+                     </div>
-+                     <div
+                      </div>
+                      <div
 +                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1199 alert-text\\"
 +                     >
 +                       <b>
@@ -1501,12 +2196,12 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +                       Claim publication is being processed.
 +                     </div>
 +                   </div>
-                  </div>
++                 </div>
 +               </div>
 +             </div>
 +           </div>
 +         </div>
-          <div
++         <div
             class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617\\"
           >
             <div
@@ -1565,7 +2260,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 - First value
 + Second value
 
-@@ -309,11 +309,11 @@
+@@ -353,11 +353,11 @@
                     </div>
                   </div>
                 </div>
@@ -1578,7 +2273,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
             >
               <div
                 class=\\"MuiPaper-root-942 MuiPaper-elevation1-945 MuiPaper-rounded-943 MuiCard-root-941 Cards-card-936 StandardCard\\"
-@@ -415,13 +415,12 @@
+@@ -755,13 +755,12 @@
                                 >
                                   <div
                                     class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
@@ -1594,11 +2289,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                       <span
                                         class=\\"MuiButton-label-1111\\"
                                       >
-@@ -440,10 +439,13 @@
+@@ -780,10 +779,13 @@
                                             fill=\\"none\\"
                                           />
                                         </svg>
-                                        Al-Ejeh, Fares
+                                        Nephew, Kenneth P.
                                       </span>
 +                                     <span
 +                                       class=\\"MuiTouchRipple-root-1139\\"
@@ -1608,7 +2303,67 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                   <div
                                     class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
                                   >
-@@ -511,15 +513,14 @@
+@@ -803,13 +805,12 @@
+                                >
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+                                    <button
+-                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     disabled=\\"\\"
+-                                     tabindex=\\"-1\\"
++                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     tabindex=\\"0\\"
+                                      type=\\"button\\"
+                                    >
+                                      <span
+                                        class=\\"MuiButton-label-1111\\"
+                                      >
+@@ -828,10 +829,13 @@
+                                            fill=\\"none\\"
+                                          />
+                                        </svg>
+                                        Stone, Andrew
+                                      </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-1139\\"
++                                     />
+                                    </button>
+                                  </div>
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+@@ -855,13 +859,12 @@
+                                >
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+                                    <button
+-                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     disabled=\\"\\"
+-                                     tabindex=\\"-1\\"
++                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     tabindex=\\"0\\"
+                                      type=\\"button\\"
+                                    >
+                                      <span
+                                        class=\\"MuiButton-label-1111\\"
+                                      >
+@@ -880,10 +883,13 @@
+                                            fill=\\"none\\"
+                                          />
+                                        </svg>
+                                        Gee, Julia M. W.
+                                      </span>
++                                     <span
++                                       class=\\"MuiTouchRipple-root-1139\\"
++                                     />
+                                    </button>
+                                  </div>
+                                  <div
+                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                  >
+@@ -1147,15 +1153,14 @@
                           </div>
                         </div>
                       </div>
@@ -1626,7 +2381,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiIconButton-label-1039\\"
                         >
                           <svg
-@@ -534,19 +535,21 @@
+@@ -1170,19 +1175,21 @@
                             />
                           </svg>
                           <input
@@ -1650,7 +2405,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           class=\\"MuiTypography-root-690 WithTheme-WithWidth-AuthorLinking---label-1022 MuiTypography-body2-698 MuiTypography-colorSecondary-721\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
-@@ -639,22 +642,23 @@
+@@ -1275,22 +1282,23 @@
                           id=\\"Please select relevant indicator(s).-label\\"
                         >
                           Please select relevant indicator(s).
@@ -1676,7 +2431,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -710,26 +714,25 @@
+@@ -1346,26 +1354,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
@@ -1706,7 +2461,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -741,26 +744,25 @@
+@@ -1377,26 +1384,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
@@ -1736,32 +2491,32 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -808,11 +810,11 @@
-                      <div
-                        id=\\"FileUploadDropZone\\"
-                        tabindex=\\"0\\"
-                      >
-                        <div
--                         aria-disabled=\\"true\\"
-+                         aria-disabled=\\"false\\"
-                          class=\\"\\"
-                          style=\\"position: relative; padding: 0px;\\"
-                        >
+@@ -1450,11 +1456,11 @@
                           <div
-                            class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -882,11 +884,10 @@
-                            </div>
-                          </div>
-                          <input
-                            aria-label=\\"Upload files\\"
-                            autocomplete=\\"off\\"
--                           disabled=\\"\\"
-                            id=\\"Uploader\\"
-                            multiple=\\"\\"
-                            style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                            type=\\"file\\"
-                          />
-@@ -903,48 +904,44 @@
+                            id=\\"FileUploadDropZone\\"
+                            tabindex=\\"0\\"
+                          >
+                            <div
+-                             aria-disabled=\\"true\\"
++                             aria-disabled=\\"false\\"
+                              class=\\"\\"
+                              style=\\"position: relative; padding: 0px;\\"
+                            >
+                              <div
+                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
+@@ -1524,11 +1530,10 @@
+                                </div>
+                              </div>
+                              <input
+                                aria-label=\\"Upload files\\"
+                                autocomplete=\\"off\\"
+-                               disabled=\\"\\"
+                                id=\\"Uploader\\"
+                                multiple=\\"\\"
+                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
+                                type=\\"file\\"
+                              />
+@@ -1547,48 +1552,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1778,13 +2533,13 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                     >
                       <div
 -                       class=\\"MuiGrid-item-594 Alert-icon-1198 alert-icon\\"
-+                       class=\\"MuiGrid-item-594 Alert-icon-1222 alert-icon\\"
-                      >
+-                     >
 -                       <div
 -                         class=\\"MuiCircularProgress-root-1211 MuiCircularProgress-colorPrimary-1214 MuiCircularProgress-indeterminate-1213 spinner\\"
 -                         role=\\"progressbar\\"
 -                         style=\\"width: 38px; height: 38px;\\"
--                       >
++                       class=\\"MuiGrid-item-594 Alert-icon-1222 alert-icon\\"
+                      >
                         <svg
 -                           class=\\"MuiCircularProgress-svg-1216\\"
 -                           viewBox=\\"22 22 44 44\\"
@@ -1825,7 +2580,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                   </div>
                 </div>
               </div>
-@@ -958,37 +955,41 @@
+@@ -1602,37 +1603,41 @@
             />
             <div
               class=\\"MuiGrid-item-594\\"
