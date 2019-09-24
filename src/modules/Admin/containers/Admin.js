@@ -12,8 +12,6 @@ import { isFileValid } from 'config/validation';
 import {
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_IMAGE,
-    PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
@@ -36,11 +34,6 @@ export const identifiersParams = record => ({
 });
 
 export const filesParams = record => ({
-    displayAdvisoryStatement: [
-        PUBLICATION_TYPE_AUDIO_DOCUMENT,
-        PUBLICATION_TYPE_IMAGE,
-        PUBLICATION_TYPE_MANUSCRIPT,
-    ].includes(record.rek_display_type),
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
 });
 
