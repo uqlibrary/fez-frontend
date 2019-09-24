@@ -14,6 +14,7 @@ import {
     RECORD_TYPE_RECORD,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
+    PUBLICATION_TYPE_DATA_COLLECTION,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 
@@ -31,6 +32,8 @@ export const identifiersParams = record => ({
     ),
     displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
 });
+
+export const filesParams = record => record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION;
 
 const getInitialValues = (record, tab, tabParams = () => {}) =>
     (adminInterfaceConfig[record.rek_display_type] || {})
@@ -110,7 +113,8 @@ const mapStateToProps = state => {
                 ntroSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'ntro')) || {},
                 grantInformationSection:
                       (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
-                filesSection: (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files')) || {},
+                filesSection:
+                      (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files', filesParams)) || {},
             },
         }
         : null;
