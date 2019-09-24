@@ -149,6 +149,7 @@ exports[`Files Component  Should render the correct icon for a valid transcoded 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -407,6 +408,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -516,7 +518,7 @@ exports[`Files Component  Should render the correct icon for an invalid transcod
 </WithStyles(Grid)>
 `;
 
-exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":true},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true}]"`;
+exports[`Files Component  getFileData{} branch 1 1`] = `"[{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"description\\":\\"Movie 1\\",\\"mimeType\\":\\"\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_1.jpg\\",\\"fileName\\":\\"CH7409_movie_1.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_1.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_1.mov?dsi_version=6184c7e506d64459e5a3fff2c5e6a8fb\\",\\"securityStatus\\":true,\\"checksum\\":\\"a6a6d6qs6dq6wsdqwd\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"description\\":\\"Movie 2\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.62 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_2.jpg\\",\\"fileName\\":\\"CH7409_movie_2.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_2.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_2.mov\\",\\"securityStatus\\":true,\\"checksum\\":\\"\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"description\\":\\"Movie 3\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"2.86 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_3.jpg\\",\\"fileName\\":\\"CH7409_movie_3.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_3.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_3.mov\\",\\"securityStatus\\":true,\\"checksum\\":\\"\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"description\\":\\"Movie 4\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"4.29 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_4.jpg\\",\\"fileName\\":\\"CH7409_movie_4.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_4.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_4.mov\\",\\"securityStatus\\":true,\\"checksum\\":\\"\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"description\\":\\"Movie 5\\",\\"mimeType\\":\\"video/quicktime\\",\\"calculatedSize\\":\\"1.12 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"mimeType\\":\\"video/quicktime\\",\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"previewMediaUrl\\":null,\\"thumbnailMediaUrl\\":\\"http://localhost/view/UQ:185044/thumbnail_CH7409_movie_5.jpg\\",\\"fileName\\":\\"CH7409_movie_5.mov\\",\\"thumbnailFileName\\":\\"thumbnail_CH7409_movie_5.jpg\\",\\"securityStatus\\":true},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/CH7409_movie_5.mov\\",\\"securityStatus\\":true,\\"checksum\\":\\"\\"},{\\"pid\\":\\"UQ:185044\\",\\"fileName\\":\\"ch7409_report.pdf\\",\\"description\\":\\"Technical report PDF file\\",\\"mimeType\\":\\"application/pdf\\",\\"calculatedSize\\":\\"6.67 MB\\",\\"allowDownload\\":true,\\"icon\\":{\\"key\\":null,\\"ref\\":null,\\"props\\":{\\"color\\":\\"secondary\\"},\\"_owner\\":null,\\"_store\\":{}},\\"openAccessStatus\\":{\\"isOpenAccess\\":false,\\"embargoDate\\":null,\\"openAccessStatusId\\":453693},\\"previewMediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"webMediaUrl\\":null,\\"mediaUrl\\":\\"http://localhost/view/UQ:185044/ch7409_report.pdf\\",\\"securityStatus\\":true,\\"checksum\\":\\"\\"}]"`;
 
 exports[`Files Component  should not render audio files with _xt in their filename 1`] = `
 <WithStyles(Grid)
@@ -659,6 +661,7 @@ exports[`Files Component  should not render audio files with _xt in their filena
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="audio.wav"
             icon={
@@ -919,6 +922,7 @@ exports[`Files Component  should not render cultural message 1`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -1185,6 +1189,7 @@ exports[`Files Component  should not render cultural message 2`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -1457,6 +1462,7 @@ exports[`Files Component  should not render cultural sensitivity statement 1`] =
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -1729,6 +1735,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.86 MB"
+            checksum=""
             description="Movie 1"
             fileName="CH7409_movie_1.mov"
             icon={
@@ -1882,6 +1889,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.62 MB"
+            checksum=""
             description="Movie 2"
             fileName="CH7409_movie_2.mov"
             icon={
@@ -2035,6 +2043,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="2.86 MB"
+            checksum=""
             description="Movie 3"
             fileName="CH7409_movie_3.mov"
             icon={
@@ -2188,6 +2197,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="4.29 MB"
+            checksum=""
             description="Movie 4"
             fileName="CH7409_movie_4.mov"
             icon={
@@ -2341,6 +2351,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="1.12 MB"
+            checksum=""
             description="Movie 5"
             fileName="CH7409_movie_5.mov"
             icon={
@@ -2486,6 +2497,7 @@ exports[`Files Component  should render alert for video files and firefox 1`] = 
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="6.67 MB"
+            checksum=""
             description="Technical report PDF file"
             fileName="ch7409_report.pdf"
             icon={
@@ -2736,6 +2748,7 @@ exports[`Files Component  should render an image as the original filename with n
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -2994,6 +3007,7 @@ exports[`Files Component  should render component 1`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -12416,6 +12430,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                           <WithStyles(FileName)
                                                             allowDownload={true}
                                                             calculatedSize="95.49 KB"
+                                                            checksum=""
                                                             description="testing image description"
                                                             fileName="image.jpg"
                                                             icon={
@@ -12449,6 +12464,7 @@ exports[`Files Component  should render component full mount 1`] = `
                                                             <FileName
                                                               allowDownload={true}
                                                               calculatedSize="95.49 KB"
+                                                              checksum=""
                                                               classes={
                                                                 Object {
                                                                   "filename": "FileName-filename-191",
@@ -17923,6 +17939,7 @@ exports[`Files Component  should render cultural message 1`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -18189,6 +18206,7 @@ exports[`Files Component  should render icon for mimeType 1`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -18455,6 +18473,7 @@ exports[`Files Component  should render icon for mimeType 2`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -18721,6 +18740,7 @@ exports[`Files Component  should render icon for mimeType 3`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -18987,6 +19007,7 @@ exports[`Files Component  should render icon for mimeType 4`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -19253,6 +19274,7 @@ exports[`Files Component  should render icon for mimeType 5`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -19519,6 +19541,7 @@ exports[`Files Component  should render icon for mimeType 6`] = `
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -19785,6 +19808,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(FileName)
             allowDownload={false}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
@@ -20044,6 +20068,7 @@ exports[`Files Component  should show embargoed files to admins and not non-admi
           <WithStyles(FileName)
             allowDownload={false}
             calculatedSize="95.49 KB"
+            checksum=""
             description="testing image description"
             fileName="image.jpg"
             icon={
