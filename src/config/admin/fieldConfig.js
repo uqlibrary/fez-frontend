@@ -184,6 +184,17 @@ export default {
             validate: [validation.required],
         },
     },
+    date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'bibliographicSection.date',
+            label: 'Date',
+            placeholder: 'Date',
+            required: true,
+            fullWidth: true,
+            validate: [validation.required],
+        },
+    },
     dateOfIssue: {
         component: DatePickerField,
         componentProps: {
@@ -760,6 +771,21 @@ export default {
         componentProps: {
             name: 'additionalInformationSection.additionalNotes',
             title: 'Additional notes',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
+    advisoryStatement: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'filesSection.advisoryStatement',
+            title: 'Advisory statement',
             titleProps: {
                 variant: 'caption',
                 style: {
