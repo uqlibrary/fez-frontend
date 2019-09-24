@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Immutable from 'immutable';
 import { connect } from 'react-redux';
 import { formValueSelector, getFormValues } from 'redux-form/immutable';
@@ -10,44 +9,6 @@ import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING, NTRO_SUBTYPES } from 'co
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import MenuItem from '@material-ui/core/MenuItem';
 
-const AddSectionContainer = ({
-    formValues,
-    disabled,
-    hasSubtypes,
-    publicationSubtype,
-    publicationSubtypeItems,
-    hasDefaultDocTypeSubType,
-    subtypes,
-    docTypeSubTypeCombo,
-    onCreate,
-}) => {
-    return (
-        <AddSection
-            disabled={disabled}
-            publicationSubtypeItems={publicationSubtypeItems}
-            publicationSubtype={publicationSubtype}
-            hasDefaultDocTypeSubType={hasDefaultDocTypeSubType}
-            hasSubtypes={hasSubtypes}
-            subtypes={subtypes}
-            docTypeSubTypeCombo={docTypeSubTypeCombo}
-            formValues={formValues}
-            onCreate={onCreate}
-        />
-    );
-};
-
-AddSectionContainer.propTypes = {
-    disabled: PropTypes.bool,
-    publicationSubtype: PropTypes.any,
-    publicationSubtypeItems: PropTypes.array,
-    hasDefaultDocTypeSubType: PropTypes.bool,
-    subtypes: PropTypes.array,
-    hasSubtypes: PropTypes.bool,
-    docTypeSubTypeCombo: PropTypes.any,
-    formValues: PropTypes.object,
-    onCreate: PropTypes.func,
-};
-
 const mapStateToProps = (state, ownProps) => {
     const selector = formValueSelector(FORM_NAME);
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
@@ -55,7 +16,9 @@ const mapStateToProps = (state, ownProps) => {
     const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms })[displayType];
     const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
     const subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
-    const publicationSubtype = hasSubtypes ? selector(state, 'rek_subtype') : null;
+    const publicationSubtype = hasSubtypes ? selector(state, 'additionalInformationSection.rek_subtype') : null;
+    const collections = selector(state, 'additionalInformationSection.collections');
+
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
     if (!!displayType && NEW_DOCTYPES_OPTIONS.includes(displayType)) {
@@ -82,8 +45,11 @@ const mapStateToProps = (state, ownProps) => {
                 subtypes.filter(type => NTRO_SUBTYPES.includes(type))) ||
             subtypes ||
             null,
+        publicationSubtype: publicationSubtype,
         formValues: formValues || Immutable.Map({}),
+        disableSubmit:
+            !collections || !collections.length || !selectedPublicationType || (hasSubtypes && !publicationSubtype),
     };
 };
 
-export default connect(mapStateToProps)(React.memo(AddSectionContainer));
+export default connect(mapStateToProps)(React.memo(AddSection));

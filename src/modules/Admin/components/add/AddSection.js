@@ -23,6 +23,7 @@ export const AddSection = ({
     hasSubtypes,
     disabled = false,
     onCreate,
+    disableSubmit,
 }) => {
     const allPublicationTypes = Object.values(publicationTypes());
     const publicationTypeItems = [
@@ -102,8 +103,9 @@ export const AddSection = ({
                                         variant="contained"
                                         color="primary"
                                         fullWidth
-                                        children="Create record"
+                                        children={locale.pages.adminAdd.buttonLabel}
                                         onClick={onCreate}
+                                        disabled={disabled || disableSubmit}
                                     />
                                 </Grid>
                             </Grid>
@@ -117,6 +119,7 @@ export const AddSection = ({
 
 AddSection.propTypes = {
     disabled: PropTypes.bool,
+    disableSubmit: PropTypes.bool,
     hasDefaultDocTypeSubType: PropTypes.bool,
     publicationSubtypeItems: PropTypes.array,
     selectedPublicationType: PropTypes.object,
