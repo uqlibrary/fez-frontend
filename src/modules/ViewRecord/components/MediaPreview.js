@@ -5,7 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
-import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
+import { Alert } from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
+import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 
 export default class MediaPreview extends React.Component {
@@ -25,6 +26,7 @@ export default class MediaPreview extends React.Component {
             videoErrorMsg: null,
             videoErrorCode: null,
             imageError: null,
+            videoLoading: true,
         };
     }
 
@@ -34,6 +36,7 @@ export default class MediaPreview extends React.Component {
                 videoErrorMsg: null,
                 videoErrorCode: null,
                 imageError: null,
+                videoLoading: true,
             });
         }
     }
@@ -63,6 +66,9 @@ export default class MediaPreview extends React.Component {
     }
 
     videoLoaded = () => {
+        this.setState({
+            videoLoading: false,
+        });
         this.scrollToPreview();
     };
 
@@ -72,6 +78,7 @@ export default class MediaPreview extends React.Component {
                 {
                     videoErrorMsg: event.message,
                     videoErrorCode: event.code,
+                    videoLoading: false,
                 },
                 () => {
                     this.scrollToPreview();
@@ -124,7 +131,7 @@ export default class MediaPreview extends React.Component {
 
     render() {
         const { mediaUrl, previewMediaUrl, mimeType } = this.props;
-        const { videoTitle, imageTitle } = locale.viewRecord.sections.files.preview;
+        const { videoTitle, imageTitle, videoLoadingMessage } = locale.viewRecord.sections.files.preview;
         const isVideo = mimeType.indexOf('video') >= 0;
         const isPreviewable = mimeType.indexOf('image') >= 0 || mimeType.indexOf('pdf') >= 0;
         const title = isVideo ? videoTitle : imageTitle;
@@ -157,6 +164,11 @@ export default class MediaPreview extends React.Component {
                             {...locale.viewRecord.imageFailedAlert}
                             message={locale.viewRecord.imageFailedAlert.message}
                         />
+                    </div>
+                )}
+                {isVideo && this.state.videoLoading && (
+                    <div style={{ marginTop: 12, marginBottom: 12 }}>
+                        <InlineLoader message={videoLoadingMessage} />
                     </div>
                 )}
                 {isVideo && !this.state.videoErrorMsg && (
