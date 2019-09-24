@@ -2586,5 +2586,8 @@ export default {
                 },
             },
         },
+        audienceSizeField: {
+            label: 'Audience size',
+        },
     },
 };
