@@ -40,7 +40,17 @@ export default class Orcid extends Component {
             window.location.hash.indexOf('?') >= 0
                 ? window.location.hash.substr(window.location.hash.indexOf('?') + 1)
                 : window.location.search.substr(1);
-        const queryParams = parse(queryString);
+
+        let queryParams;
+        try {
+            queryParams = parse(queryString);
+        } catch (e) {
+            /* istanbul ignore next */
+            queryParams = {
+                code: null,
+                state: null,
+            };
+        }
 
         this.state = {
             orcidRequest: {
