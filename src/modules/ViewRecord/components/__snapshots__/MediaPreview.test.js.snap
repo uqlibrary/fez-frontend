@@ -14035,11 +14035,8 @@ exports[`Media Preview Component  should render when video fails 1`] = `
       }
     }
   >
-    <Alert
-      allowDismiss={false}
-      dismissTitle="Click to dismiss this alert"
+    <WithStyles(Alert)
       message="Please click the download/open in a new window link above to open the original file format. (test failure - 12345)"
-      showLoader={false}
       title="VIDEO PLAYER ERROR"
       type="error"
     />
@@ -14128,11 +14125,8 @@ exports[`Media Preview Component  should render when video fails 2`] = `
       }
     }
   >
-    <Alert
-      allowDismiss={false}
-      dismissTitle="Click to dismiss this alert"
+    <WithStyles(Alert)
       message="You may need to log in to view the preview and original files. Please click the download/open in a new window link above to open the original file format."
-      showLoader={false}
       title="IMAGE FAILED TO LOAD"
       type="error"
     />

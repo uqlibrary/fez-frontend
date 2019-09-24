@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
-import { Alert } from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
+import Alert from 'modules/SharedComponents/Toolbox/Alert/components/Alert';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import ReactJWPlayer from 'react-jw-player';
 
