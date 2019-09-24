@@ -2,5 +2,5 @@
   "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "eslint.autoFixOnSave": true
+  "prettier.eslintIntegration": true
 }
