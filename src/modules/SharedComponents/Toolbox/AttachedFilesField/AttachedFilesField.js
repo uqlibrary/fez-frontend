@@ -1,7 +1,5 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
-import moment from 'moment';
-import locale from 'locale/global';
 import { AttachedFiles } from './AttachedFiles';
 
 export const AttachedFilesField = ({ input, ...props }) => {
@@ -15,22 +13,28 @@ export const AttachedFilesField = ({ input, ...props }) => {
         [dataStreams, setDataStreams],
     );
 
-    const handleDateChange = useCallback(
-        (value, index) => {
+    const handleDataStreamChange = useCallback(
+        (key, value, index) => {
             const newDataStreams = [
                 ...dataStreams.slice(0, index),
-                { ...dataStreams[index], dsi_embargo_date: moment(value).format(locale.global.embargoDateFormat) },
+                { ...dataStreams[index], [key]: value },
                 ...dataStreams.slice(index + 1),
             ];
             setDataStreams(newDataStreams);
         },
-        [dataStreams, setDataStreams],
+        [setDataStreams, dataStreams],
     );
 
     useEffect(() => onChange(dataStreams), [onChange, dataStreams]);
 
     return (
-        <AttachedFiles onDelete={handleDelete} onDateChange={handleDateChange} dataStreams={dataStreams} {...props} />
+        <AttachedFiles
+            onDelete={handleDelete}
+            onDateChange={handleDataStreamChange}
+            onDescriptionChange={handleDataStreamChange}
+            dataStreams={dataStreams}
+            {...props}
+        />
     );
 };
 

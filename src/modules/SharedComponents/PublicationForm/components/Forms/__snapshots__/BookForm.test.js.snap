@@ -221,7 +221,7 @@ exports[`BookForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -320,7 +320,7 @@ exports[`BookForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
@@ -1107,7 +1107,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -1206,7 +1206,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
@@ -1641,7 +1641,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -1740,7 +1740,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
@@ -2317,7 +2317,7 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
@@ -2767,7 +2767,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },
@@ -2866,7 +2866,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Editor's name in the format eg. \\"John Smith\\"",
                 "reorderColumn": "Reorder items",
               },
