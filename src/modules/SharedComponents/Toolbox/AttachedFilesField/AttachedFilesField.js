@@ -5,7 +5,7 @@ import locale from 'locale/global';
 import { AttachedFiles } from './AttachedFiles';
 
 export const AttachedFilesField = ({ input, ...props }) => {
-    const [dataStreams, setDataStreams] = useState(props.meta.initial.toJS());
+    const [dataStreams, setDataStreams] = useState((props.meta.initial && props.meta.initial.toJS()) || []);
     const { onChange } = input;
     const handleDelete = useCallback(
         index => {

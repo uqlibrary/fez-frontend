@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdminInterface component should disabled button and render alert for form submitting 1`] = `
-<StandardPage>
+<StandardPage
+  title="Edit Journal Article - This is test record: UQ:123456"
+>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -178,7 +180,9 @@ exports[`AdminInterface component should disabled button and render alert for fo
 `;
 
 exports[`AdminInterface component should display successful alert 1`] = `
-<StandardPage>
+<StandardPage
+  title="Edit Journal Article - This is test record: UQ:123456"
+>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -355,7 +359,9 @@ exports[`AdminInterface component should display successful alert 1`] = `
 `;
 
 exports[`AdminInterface component should display successful alert 2`] = `
-<StandardPage>
+<StandardPage
+  title="Edit Journal Article - This is test record: UQ:123456"
+>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -532,7 +538,9 @@ exports[`AdminInterface component should display successful alert 2`] = `
 `;
 
 exports[`AdminInterface component should render default view as a full form view 1`] = `
-<StandardPage>
+<StandardPage
+  title="Edit Journal Article - This is test record: UQ:123456"
+>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -684,7 +692,9 @@ exports[`AdminInterface component should render default view as a full form view
 `;
 
 exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
-<StandardPage>
+<StandardPage
+  title="Edit Journal Article - This is test record: UQ:123456"
+>
   <WithStyles(Grid)
     alignItems="center"
     container={true}

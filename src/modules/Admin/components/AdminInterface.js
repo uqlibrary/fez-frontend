@@ -21,8 +21,9 @@ import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
-import { validation } from 'config';
+import { validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 function useQueryStringTabValueState(location, initialValue) {
     const tabValue =
@@ -85,10 +86,19 @@ export const AdminInterface = ({
         </TabContainer>
     );
 
+    const selectedPublicationType =
+        (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name) || 'record';
+
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
     return (
-        <StandardPage>
+        <StandardPage
+            title={
+                !createMode
+                    ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                    : `Add a new ${selectedPublicationType}`
+            }
+        >
             <React.Fragment>
                 <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
