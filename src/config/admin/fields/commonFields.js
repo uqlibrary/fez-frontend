@@ -14,12 +14,12 @@ export default {
         },
         isDataset
             ? {
-                title: 'Copyright agreement',
-                groups: [['rek_copyright']],
-            }
-            : {
                 title: 'Deposit agreement',
                 groups: [['depositAgreement']],
+            }
+            : {
+                title: 'Copyright agreement',
+                groups: [['rek_copyright']],
             },
     ],
     grantInformation: () => [

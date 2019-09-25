@@ -60,7 +60,7 @@ export default class ViewRecord extends PureComponent {
                     <Alert message={recordToViewError} />
                 </StandardPage>
             );
-        } else if (!recordToView) {
+        } else if (!recordToView || !recordToView.rek_pid) {
             return <div className="empty" />;
         }
         const isAuthor =
@@ -81,7 +81,7 @@ export default class ViewRecord extends PureComponent {
                             showAdminActions={isAdmin}
                         />
                     </Grid>
-                    {!!this.props.recordToView && this.props.recordToView !== {} && (
+                    {!!this.props.recordToView && (
                         <Grid item xs={12}>
                             <Grid container spacing={16} style={{ marginBottom: 4 }}>
                                 <Grid item xs />

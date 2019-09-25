@@ -803,7 +803,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -1723,7 +1723,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -2668,7 +2668,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -3664,7 +3664,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -4584,7 +4584,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -5504,7 +5504,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -6424,7 +6424,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -7350,7 +7350,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
@@ -8270,7 +8270,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },

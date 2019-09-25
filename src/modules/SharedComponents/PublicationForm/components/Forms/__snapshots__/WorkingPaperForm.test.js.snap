@@ -1343,7 +1343,7 @@ exports[`WorkingPaperForm renders  component 1`] = `
                   </b>
                    from the list below (if applicable).
                 </div>,
-                "identifierColumn": "UQ identifier",
+                "identifierColumn": "UQ identifier / Organisation",
                 "nameColumn": "Author's name as published",
                 "reorderColumn": "Reorder items",
               },

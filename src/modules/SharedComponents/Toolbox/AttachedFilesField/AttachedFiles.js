@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 
+import globalLocale from 'locale/global';
+
 import viewRecordLocale from 'locale/viewRecord';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
@@ -28,6 +30,7 @@ import FileName from 'modules/ViewRecord/components/partials/FileName';
 import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
+import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 const useStyles = makeStyles(
     theme => ({
@@ -265,6 +268,7 @@ export const AttachedFiles = ({
     deleteHint,
     onDelete,
     onDateChange,
+    onDescriptionChange,
     locale,
     canEdit,
 }) => {
@@ -283,8 +287,11 @@ export const AttachedFiles = ({
             hasVideo = true;
         }
     });
+
     const onFileDelete = index => () => onDelete(index);
-    const onEmbargoDateChange = index => value => onDateChange(value, index);
+    const onEmbargoDateChange = index => value =>
+        onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
+    const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
     return (
         <Grid item xs={12}>
@@ -359,9 +366,18 @@ export const AttachedFiles = ({
                             </Grid>
                             <Hidden xsDown>
                                 <Grid item sm={3} className={classes.dataWrapper}>
-                                    <Typography variant="body2" noWrap>
-                                        {item.description}
-                                    </Typography>
+                                    {isAdmin && canEdit ? (
+                                        <TextField
+                                            fullWidth
+                                            onChange={onFileDescriptionChange(index)}
+                                            name="fileDescription"
+                                            defaultValue={item.description}
+                                        />
+                                    ) : (
+                                        <Typography variant="body2" noWrap>
+                                            {item.description}
+                                        </Typography>
+                                    )}
                                 </Grid>
                             </Hidden>
                             <Hidden smDown>
@@ -413,6 +429,7 @@ AttachedFiles.propTypes = {
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,
+    onDescriptionChange: PropTypes.func,
     locale: PropTypes.object,
     canEdit: PropTypes.bool,
 };

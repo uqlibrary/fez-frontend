@@ -900,6 +900,7 @@ export default {
         adminAdd: {
             title: 'Add a new record',
             step1: 'Step 1 - Identify your record',
+            buttonLabel: 'Create record',
             submitFailed: 'Failed to assign details to the administrator add form',
             formLabels: {
                 ismemberof: {
