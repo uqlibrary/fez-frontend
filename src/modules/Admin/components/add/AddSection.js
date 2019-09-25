@@ -13,6 +13,7 @@ import { StandardPage } from 'modules/SharedComponents/Toolbox/StandardPage';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
+import Hidden from '@material-ui/core/Hidden';
 
 /* istanbul ignore next */
 export const AddSection = ({
@@ -96,17 +97,33 @@ export const AddSection = ({
                                         </Grid>
                                     )}
                                 </Grid>
-                                <Grid item xs={12} sm="auto">
-                                    <Button
-                                        style={{ whiteSpace: 'nowrap' }}
-                                        id="submit-work"
-                                        variant="contained"
-                                        color="primary"
-                                        fullWidth
-                                        children={locale.pages.adminAdd.buttonLabel}
-                                        onClick={onCreate}
-                                        disabled={disabled || disableSubmit}
-                                    />
+                                <Grid item xs={12}>
+                                    <Grid container spacing={8}>
+                                        <Hidden xsDown>
+                                            <Grid item xs />
+                                        </Hidden>
+                                        <Grid item xs={12} sm={'auto'}>
+                                            <Button
+                                                id="cancel-work"
+                                                variant="contained"
+                                                color="secondary"
+                                                fullWidth
+                                                children={locale.pages.adminAdd.cancelLabel}
+                                                onClick={null}
+                                            />
+                                        </Grid>
+                                        <Grid item xs={12} sm={'auto'}>
+                                            <Button
+                                                id="submit-work"
+                                                variant="contained"
+                                                color="primary"
+                                                fullWidth
+                                                children={locale.pages.adminAdd.buttonLabel}
+                                                onClick={onCreate}
+                                                disabled={disabled || disableSubmit}
+                                            />
+                                        </Grid>
+                                    </Grid>
                                 </Grid>
                             </Grid>
                         </StandardCard>
@@ -123,7 +140,7 @@ AddSection.propTypes = {
     hasDefaultDocTypeSubType: PropTypes.bool,
     publicationSubtypeItems: PropTypes.array,
     selectedPublicationType: PropTypes.object,
-    publicationSubtype: PropTypes.object,
+    publicationSubtype: PropTypes.string,
     hasSubtypes: PropTypes.bool,
     formValues: PropTypes.any,
     location: PropTypes.object,

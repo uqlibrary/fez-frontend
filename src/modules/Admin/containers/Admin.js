@@ -82,7 +82,7 @@ const getInitialFormValues = (recordToView, recordType) => {
                             isFileValid(viewRecordsConfig, true),
                         ),
                     }
-                    : {}),
+                    : []),
             },
             bibliographicSection:
                 (recordType === RECORD_TYPE_RECORD &&
