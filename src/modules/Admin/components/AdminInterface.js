@@ -21,8 +21,9 @@ import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
-import { validation } from 'config';
+import { validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 function useQueryStringTabValueState(location, initialValue) {
     const tabValue =
@@ -30,7 +31,16 @@ function useQueryStringTabValueState(location, initialValue) {
     return useState(tabValue);
 }
 
-export const AdminInterface = ({ classes, submitting, handleSubmit, location, tabs, history, submitSucceeded }) => {
+export const AdminInterface = ({
+    classes,
+    submitting,
+    handleSubmit,
+    location,
+    tabs,
+    history,
+    submitSucceeded,
+    createMode,
+}) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
     const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(
@@ -76,10 +86,19 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
         </TabContainer>
     );
 
+    const selectedPublicationType =
+        (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name) || 'record';
+
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
     return (
-        <StandardPage>
+        <StandardPage
+            title={
+                !createMode
+                    ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                    : `Add a new ${selectedPublicationType}`
+            }
+        >
             <React.Fragment>
                 <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
@@ -88,11 +107,13 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                         locale={saveConfirmationLocale}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography
-                            variant="h5"
-                            color="primary"
-                            style={{ fontSize: 24 }}
-                        >{`Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`}</Typography>
+                        {!createMode && (
+                            <Typography
+                                variant="h5"
+                                color="primary"
+                                style={{ fontSize: 24 }}
+                            >{`Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`}</Typography>
+                        )}
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
@@ -182,6 +203,7 @@ AdminInterface.propTypes = {
     location: PropTypes.object,
     history: PropTypes.object,
     tabs: PropTypes.object,
+    createMode: PropTypes.bool,
 };
 
 export default React.memo(AdminInterface);

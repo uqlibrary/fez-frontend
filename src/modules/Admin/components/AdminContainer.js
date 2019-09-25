@@ -16,12 +16,12 @@ import SecuritySection from './security/SecuritySectionContainer';
 import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
+import AddSection from './add/AddSectionContainer';
 import GrantInformationSection from './grantInformation/GrantInformaionSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
 import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
 import NtroSection from './ntro/NtroSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
-
 import { TabbedContext, RecordContext } from 'context';
 import { RECORD_TYPE_RECORD } from 'config/general';
 
@@ -51,8 +51,8 @@ const styles = theme => ({
 export const AdminContainer = ({
     location,
     recordToView,
-    loadRecordToView,
     loadingRecordToView,
+    loadRecordToView,
     clearRecordToView,
     classes,
     submitting,
@@ -61,16 +61,19 @@ export const AdminContainer = ({
     handleSubmit,
     match,
     history,
+    createMode,
 }) => {
-    const [tabbed, setTabbed] = useState(
-        Cookies.get('adminFormTabbed') && !!(Cookies.get('adminFormTabbed') === 'tabbed'),
-    );
+    const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
+    const [showAddForm, setShowAddForm] = useState(!match.params.pid);
     const theme = useTheme();
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
     /* istanbul ignore next */
     const handleToggle = useCallback(() => setTabbed(!tabbed), [setTabbed, tabbed]);
+
+    /* istanbul ignore next */
+    const handleAddFormDisplay = useCallback(() => setShowAddForm(!showAddForm), [setShowAddForm, showAddForm]);
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
@@ -86,76 +89,93 @@ export const AdminContainer = ({
 
     const txt = locale.pages.edit;
 
-    if (loadingRecordToView) {
+    if (!!match.params.pid && loadingRecordToView) {
         return <InlineLoader message={txt.loadingMessage} />;
-    } else if (!recordToView) {
+    } else if (!!match.params.pid && !recordToView) {
         return <div className="empty" />;
     }
 
+    const isActivated = () => {
+        if (recordToView && recordToView.rek_object_type_lookup) {
+            return recordToView && recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD;
+        }
+        return false;
+    };
+
     return (
-        <TabbedContext.Provider
-            value={{
-                tabbed: isMobileView ? false : tabbed,
-                toggleTabbed: handleToggle,
-            }}
-        >
-            <RecordContext.Provider value={{ record: recordToView }}>
-                <AdminInterface
-                    classes={classes}
-                    handleSubmit={handleSubmit}
-                    submitting={submitting}
-                    submitSucceeded={submitSucceeded}
-                    disableSubmit={disableSubmit}
-                    location={location}
-                    history={history}
-                    tabs={{
-                        admin: {
-                            component: AdminSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        identifiers: {
-                            component: IdentifiersSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        bibliographic: {
-                            component: BibliographicSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        authorDetails: {
-                            component: AuthorsSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        additionalInformation: {
-                            component: AdditionalInformationSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        ntro: {
-                            component: NtroSection,
-                            activated:
-                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                NTRO_SUBTYPES.includes(recordToView.rek_subtype),
-                        },
-                        grantInformation: {
-                            component: GrantInformationSection,
-                            activated:
-                                recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD &&
-                                // Blacklist types without grant info
-                                ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
-                                    recordToView.rek_display_type,
-                                ),
-                        },
-                        files: {
-                            component: FilesSection,
-                            activated: recordToView.rek_object_type_lookup.toLowerCase() === RECORD_TYPE_RECORD,
-                        },
-                        security: {
-                            component: SecuritySection,
-                            activated: true,
-                        },
+        <React.Fragment>
+            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
+            {!showAddForm && (
+                <TabbedContext.Provider
+                    value={{
+                        tabbed: isMobileView ? false : tabbed,
+                        toggleTabbed: handleToggle,
                     }}
-                />
-            </RecordContext.Provider>
-        </TabbedContext.Provider>
+                >
+                    <RecordContext.Provider
+                        value={{
+                            record: recordToView,
+                        }}
+                    >
+                        <AdminInterface
+                            classes={classes}
+                            handleSubmit={handleSubmit}
+                            submitting={submitting}
+                            submitSucceeded={submitSucceeded}
+                            disableSubmit={disableSubmit}
+                            location={location}
+                            history={history}
+                            createMode={createMode}
+                            tabs={{
+                                admin: {
+                                    component: AdminSection,
+                                    activated: isActivated(),
+                                },
+                                identifiers: {
+                                    component: IdentifiersSection,
+                                    activated: isActivated(),
+                                },
+                                bibliographic: {
+                                    component: BibliographicSection,
+                                    activated: isActivated(),
+                                },
+                                authorDetails: {
+                                    component: AuthorsSection,
+                                    activated: isActivated(),
+                                },
+                                additionalInformation: {
+                                    component: AdditionalInformationSection,
+                                    activated: isActivated(),
+                                },
+                                ntro: {
+                                    component: NtroSection,
+                                    activated:
+                                        isActivated() &&
+                                        NTRO_SUBTYPES.includes(recordToView && recordToView.rek_subtype),
+                                },
+                                grantInformation: {
+                                    component: GrantInformationSection,
+                                    activated:
+                                        isActivated() &&
+                                        // Blacklist types without grant info
+                                        ![PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS].includes(
+                                            recordToView && recordToView.rek_display_type,
+                                        ),
+                                },
+                                files: {
+                                    component: FilesSection,
+                                    activated: isActivated(),
+                                },
+                                security: {
+                                    component: SecuritySection,
+                                    activated: !createMode, // true,
+                                },
+                            }}
+                        />
+                    </RecordContext.Provider>
+                </TabbedContext.Provider>
+            )}
+        </React.Fragment>
     );
 };
 
@@ -163,12 +183,14 @@ AdminContainer.propTypes = {
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     clearRecordToView: PropTypes.func,
+    createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,
     location: PropTypes.object,
     classes: PropTypes.object,
     submitting: PropTypes.any,
     submitSucceeded: PropTypes.bool,
+    showAddForm: PropTypes.bool,
     disableSubmit: PropTypes.any,
     handleSubmit: PropTypes.func,
     match: PropTypes.object,
@@ -181,7 +203,10 @@ export function isChanged(prevProps, nextProps) {
         prevProps.submitting === nextProps.submitting &&
         prevProps.submitSucceeded === nextProps.submitSucceeded &&
         (prevProps.recordToView || {}).pid === (nextProps.recordToView || {}).pid &&
-        prevProps.loadingRecordToView === nextProps.loadingRecordToView
+        (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
+        (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
+        prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
+        prevProps.showAddForm === nextProps.showAddForm
     );
 }
 

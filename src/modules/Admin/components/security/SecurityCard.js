@@ -13,12 +13,18 @@ import SecuritySelector from './SecuritySelector';
 import { useRecordContext, useFormValuesContext } from 'context';
 import { RECORD_TYPE_COLLECTION, RECORD_TYPE_RECORD, RECORD_TYPE_COMMUNITY } from 'config/general';
 import { locale } from 'locale';
+import { publicationTypes } from 'config';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
 export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    const recordType = record.rek_object_type_lookup.toLowerCase();
+    const recordType =
+        (
+            record.rek_object_type_lookup ||
+            (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name)
+        ).toLowerCase() || null;
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 

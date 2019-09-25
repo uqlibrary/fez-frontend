@@ -4,6 +4,13 @@ import * as actions from 'actions';
 
 const mapStateToProps = (state, props) => {
     const category = 'collection';
+    const selectedItems = props => {
+        const currentValues = (!!props.input.value.toJS && props.input.value.toJS()) || props.input.value || [];
+        if (currentValues[0] === '') {
+            currentValues.shift();
+        }
+        return currentValues;
+    };
     return {
         category: category,
         itemsList:
@@ -25,7 +32,7 @@ const mapStateToProps = (state, props) => {
         error: !!props.meta && !!props.meta.error,
         itemToString: item => (!!item && String(item.value)) || '',
         selectedValue: null,
-        selectedItem: (!!props.input.value.toJS && props.input.value.toJS()) || props.input.value || [],
+        selectedItem: selectedItems(props),
         maxResults: 20,
         showChips: true,
         multiple: true,

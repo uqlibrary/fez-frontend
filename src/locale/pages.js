@@ -3,7 +3,6 @@ import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
-
 /*
 
 NOTE:
@@ -896,6 +895,29 @@ export default {
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
+            },
+        },
+        adminAdd: {
+            title: 'Add a new record',
+            step1: 'Identify your new record',
+            buttonLabel: 'Create record',
+            cancelLabel: 'Cancel',
+            submitFailed: 'Failed to assign details to the administrator add form',
+            formLabels: {
+                ismemberof: {
+                    floatingLabelText: 'Member of collections',
+                    hintText: 'Begin typing to select and add record to a list of collection(s)',
+                },
+                rek_display_type: {
+                    inputLabelText: 'Work type',
+                    hintText: 'Select a Work type from the dropdown list',
+                },
+                rek_subtype: {
+                    inputLabelText: 'Work subtype',
+                    hintText: 'Select a work subtype from the dropdown list',
+                },
+                submit: 'Submit',
+                cancel: 'Cancel',
             },
         },
         incompletePublications: {
