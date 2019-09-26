@@ -2766,6 +2766,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",
