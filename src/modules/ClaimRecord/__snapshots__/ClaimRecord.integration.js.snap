@@ -29,8 +29,8 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             >
 +               <div
 +                 class=\\"MuiCardHeader-root-379\\"
-+               >
-+                 <div
+                >
+                  <div
 +                   class=\\"MuiCardHeader-content-382\\"
 +                 >
 +                   <h3
@@ -53,7 +53,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                     >
 +                       <div
-+                         class=\\"MuiGrid-container-3\\"
+                          class=\\"MuiGrid-container-3\\"
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
@@ -191,7 +191,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                               target=\\"_blank\\"
 +                               theme=\\"[object Object]\\"
 +                               title=\\"Open this DOI in an new window\\"
-+                             >
+                              >
 +                               <svg
 +                                 aria-hidden=\\"true\\"
 +                                 class=\\"MuiSvgIcon-root-395 ExternalLink-externalLinkIcon-394\\"
@@ -211,19 +211,23 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             </a>
 +                           </div>
 +                         </div>
-+                         <div
-+                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                         >
-+                           <div
+                          <div
+                            class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                          >
+                            <div
+-             style=\\"padding: 8px;\\"
 +                             class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-center-11\\"
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-389\\"
                               >
                                 <div
-                                  class=\\"MuiGrid-container-3\\"
-+                               >
-+                                 <div
+-               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                                 class=\\"MuiGrid-container-3\\"
+                                >
+                                  <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +                                 >
 +                                   <a
@@ -302,6 +306,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   />
 +                                 </div>
                                   <div
+-                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
+-                   role=\\"progressbar\\"
+-                   style=\\"width: 18px; height: 18px;\\"
 +                                   class=\\"MuiGrid-item-4\\"
 +                                 >
 +                                   <a
@@ -312,22 +319,30 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Long-range regulators of the lncRNA HOTAIR enhance its prognostic potential in breast cancer\\"
-+                                   >
-+                                     <svg
+                                    >
+                                      <svg
+-                     class=\\"MuiCircularProgress-svg-341\\"
+-                     viewBox=\\"22 22 44 44\\"
 +                                       aria-hidden=\\"true\\"
 +                                       class=\\"MuiSvgIcon-root-395 ExternalLink-externalLinkIcon-394\\"
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
-+                                     >
+                                      >
+-                     <circle
+-                       class=\\"MuiCircularProgress-circle-342 MuiCircularProgress-circleIndeterminate-344\\"
+-                       cx=\\"44\\"
+-                       cy=\\"44\\"
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
-+                                         fill=\\"none\\"
+                                          fill=\\"none\\"
+-                       r=\\"21\\"
+-                       stroke-width=\\"2\\"
 +                                       />
 +                                       <path
 +                                         d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                                       />
-+                                     </svg>
+                                        />
+                                      </svg>
 +                                     View full statistics
 +                                   </a>
 +                                 </div>
@@ -339,20 +354,25 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           </div>
 +                         </div>
 +                       </div>
-+                     </div>
-+                   </div>
+                      </div>
+                    </div>
 +                   <hr
 +                     class=\\"MuiDivider-root-409 PublicationCitation-divider-386\\"
 +                   />
-+                   <div
+                    <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                   >
-+                     <span
+                    >
+                      <span
+-                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-                   style=\\"font-size: 1.33rem;\\"
 +                       class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                     >
 +                       <span
 +                         class=\\"PublicationCitation-contentIndicatorTitle-391\\"
-+                       >
+                        >
+-                   Loading record to claim
 +                         Content Indicators:
 +                       </span>
 +                       Scholarship of Teaching and Learning, Protocol
@@ -364,10 +384,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +           </div>
 +           <span />
 +           <div
-              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-            >
-              <div
--             style=\\"padding: 8px;\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
 +               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
 +             >
 +               <div
@@ -453,25 +472,19 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-                                    >
++                                   >
 +                                     First  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
 +                             </div>
-                              <div
--               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
-                              >
-                                <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
++                             >
++                               <div
 +                                 class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
--                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
--                   role=\\"progressbar\\"
--                   style=\\"width: 18px; height: 18px;\\"
++                               >
++                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
@@ -479,33 +492,25 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
-                                    >
++                                   >
 +                                     <span
 +                                       class=\\"MuiButton-label-521\\"
 +                                     >
-                                        <svg
--                     class=\\"MuiCircularProgress-svg-341\\"
--                     viewBox=\\"22 22 44 44\\"
++                                       <svg
 +                                         aria-hidden=\\"true\\"
 +                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
-                                        >
--                     <circle
--                       class=\\"MuiCircularProgress-circle-342 MuiCircularProgress-circleIndeterminate-344\\"
--                       cx=\\"44\\"
--                       cy=\\"44\\"
++                                       >
 +                                         <path
 +                                           d=\\"M0 0h24v24H0z\\"
-                                            fill=\\"none\\"
--                       r=\\"21\\"
--                       stroke-width=\\"2\\"
++                                           fill=\\"none\\"
 +                                         />
 +                                         <path
 +                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
-                                          />
-                                        </svg>
++                                         />
++                                       </svg>
 +                                       Al-Ejeh, Fares
 +                                     </span>
 +                                   </button>
@@ -518,12 +523,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   >
 +                                     Second  listed author
 +                                   </span>
-                                  </div>
-                                </div>
++                                 </div>
++                               </div>
 +                             </div>
-                              <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
++                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
 +                               <div
@@ -531,16 +534,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                               >
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                                  >
++                                 >
 +                                   <button
 +                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
-                                      <span
--                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
--                   style=\\"font-size: 1.33rem;\\"
++                                     <span
 +                                       class=\\"MuiButton-label-521\\"
 +                                     >
 +                                       <svg
@@ -567,8 +568,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-                                    >
--                   Loading record to claim
++                                   >
 +                                     Third  listed author
 +                                   </span>
 +                                 </div>
@@ -1072,10 +1072,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
 +                                   >
 +                                     Thirteenth  listed author
-+                                   </span>
+                                    </span>
 +                                 </div>
 +                               </div>
-+                             </div>
+                              </div>
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
@@ -1112,7 +1112,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       French, Juliet D.
 +                                     </span>
 +                                   </button>
-+                                 </div>
+                                  </div>
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
@@ -1121,9 +1121,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   >
 +                                     Fourteenth  listed author
 +                                   </span>
-+                                 </div>
-+                               </div>
-+                             </div>
+                                  </div>
+                                </div>
+                              </div>
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
@@ -1233,7 +1233,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           Click for more information
 +                         </title>
 +                       </svg>
-                      </span>
++                     </span>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-549\\"
 +                     />
@@ -1304,10 +1304,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       </div>
 +                     </div>
 +                   </div>
-                  </div>
-                </div>
-              </div>
-            </div>
++                 </div>
++               </div>
++             </div>
++           </div>
 +           <div
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
@@ -1325,7 +1325,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                   >
 +                     Optional: Suggest changes or add links to this work
 +                   </h3>
-                  </div>
++                 </div>
 +               </div>
 +               <div
 +                 class=\\"MuiCardContent-root-385\\"
@@ -1458,22 +1458,24 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   File upload restrictions
 +                                 </p>
 +                                 <div>
-+                                   Please ensure your files:
++                                   Please ensure:
 +                                   <ul>
 +                                     <li>
-+                                       begin with a letter and are less than 45 characters long
++                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
-+                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                       file names contain only upper and lowercase alphanumeric characters, and underscores
 +                                     </li>
 +                                     <li>
-+                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       <br />
++                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
 +                                     </li>
 +                                     <li>
-+                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                       files are uploaded individually and not inside a folder
 +                                     </li>
 +                                     <li>
-+                                       are uploaded individually and not inside a folder
++                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>
@@ -1798,7 +1800,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </div>
             </div>
             <div
-@@ -1502,66 +1544,11 @@
+@@ -1504,66 +1546,11 @@
                     </div>
                   </div>
                 </div>
@@ -1865,7 +1867,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
           >
             <div
               class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621\\"
-@@ -1586,21 +1573,23 @@
+@@ -1588,21 +1575,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-594\\"
@@ -2130,7 +2132,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             >
                               <div
                                 class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1530,10 +1524,11 @@
+@@ -1532,10 +1526,11 @@
                                 </div>
                               </div>
                               <input
@@ -2142,7 +2144,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -1544,52 +1539,100 @@
+@@ -1546,52 +1541,100 @@
                     </div>
                   </div>
                 </div>
@@ -2504,7 +2506,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                             >
                               <div
                                 class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1524,11 +1530,10 @@
+@@ -1526,11 +1532,10 @@
                                 </div>
                               </div>
                               <input
@@ -2516,7 +2518,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -1547,48 +1552,44 @@
+@@ -1549,48 +1554,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -2580,7 +2582,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                   </div>
                 </div>
               </div>
-@@ -1602,37 +1603,41 @@
+@@ -1604,37 +1605,41 @@
             />
             <div
               class=\\"MuiGrid-item-594\\"

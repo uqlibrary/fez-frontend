@@ -589,22 +589,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Please ensure your files:
+                    Please ensure:
                     <ul>
                       <li>
-                        begin with a letter and are less than 45 characters long
+                        file names begin with a letter and are less than 45 characters long
                       </li>
                       <li>
-                        contain only upper and lowercase alphanumeric characters, and underscores
+                        file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
-                        have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        <br />
+                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                        files are uploaded individually and not inside a folder
                       </li>
                       <li>
-                        are uploaded individually and not inside a folder
+                        files are smaller than 8GB.
                       </li>
                     </ul>
                   </div>,
@@ -1968,22 +1970,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </p>,
                                 "fileUploadRestrictionHeading": "File upload restrictions",
                                 "fileUploadRestrictions": <div>
-                                  Please ensure your files:
+                                  Please ensure:
                                   <ul>
                                     <li>
-                                      begin with a letter and are less than 45 characters long
+                                      file names begin with a letter and are less than 45 characters long
                                     </li>
                                     <li>
-                                      contain only upper and lowercase alphanumeric characters, and underscores
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
                                     </li>
                                     <li>
-                                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                     </li>
                                     <li>
-                                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                      files are uploaded individually and not inside a folder
                                     </li>
                                     <li>
-                                      are uploaded individually and not inside a folder
+                                      files are smaller than 8GB.
                                     </li>
                                   </ul>
                                 </div>,
@@ -2064,22 +2068,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </p>,
                                   "fileUploadRestrictionHeading": "File upload restrictions",
                                   "fileUploadRestrictions": <div>
-                                    Please ensure your files:
+                                    Please ensure:
                                     <ul>
                                       <li>
-                                        begin with a letter and are less than 45 characters long
+                                        file names begin with a letter and are less than 45 characters long
                                       </li>
                                       <li>
-                                        contain only upper and lowercase alphanumeric characters, and underscores
+                                        file names contain only upper and lowercase alphanumeric characters, and underscores
                                       </li>
                                       <li>
-                                        have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                        <br />
+                                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                       </li>
                                       <li>
-                                        two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                        files are uploaded individually and not inside a folder
                                       </li>
                                       <li>
-                                        are uploaded individually and not inside a folder
+                                        files are smaller than 8GB.
                                       </li>
                                     </ul>
                                   </div>,
@@ -2444,22 +2450,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </p>,
                                                       "fileUploadRestrictionHeading": "File upload restrictions",
                                                       "fileUploadRestrictions": <div>
-                                                        Please ensure your files:
+                                                        Please ensure:
                                                         <ul>
                                                           <li>
-                                                            begin with a letter and are less than 45 characters long
+                                                            file names begin with a letter and are less than 45 characters long
                                                           </li>
                                                           <li>
-                                                            contain only upper and lowercase alphanumeric characters, and underscores
+                                                            file names contain only upper and lowercase alphanumeric characters, and underscores
                                                           </li>
                                                           <li>
-                                                            have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                            file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                            <br />
+                                                            (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                           </li>
                                                           <li>
-                                                            two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                            files are uploaded individually and not inside a folder
                                                           </li>
                                                           <li>
-                                                            are uploaded individually and not inside a folder
+                                                            files are smaller than 8GB.
                                                           </li>
                                                         </ul>
                                                       </div>,
@@ -2538,22 +2546,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </p>,
                                                         "fileUploadRestrictionHeading": "File upload restrictions",
                                                         "fileUploadRestrictions": <div>
-                                                          Please ensure your files:
+                                                          Please ensure:
                                                           <ul>
                                                             <li>
-                                                              begin with a letter and are less than 45 characters long
+                                                              file names begin with a letter and are less than 45 characters long
                                                             </li>
                                                             <li>
-                                                              contain only upper and lowercase alphanumeric characters, and underscores
+                                                              file names contain only upper and lowercase alphanumeric characters, and underscores
                                                             </li>
                                                             <li>
-                                                              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                              file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                              <br />
+                                                              (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                             </li>
                                                             <li>
-                                                              two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                              files are uploaded individually and not inside a folder
                                                             </li>
                                                             <li>
-                                                              are uploaded individually and not inside a folder
+                                                              files are smaller than 8GB.
                                                             </li>
                                                           </ul>
                                                         </div>,
@@ -3379,22 +3389,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   </Typography>
                                                                 </WithStyles(Typography)>
                                                                 <div>
-                                                                  Please ensure your files:
+                                                                  Please ensure:
                                                                   <ul>
                                                                     <li>
-                                                                      begin with a letter and are less than 45 characters long
+                                                                      file names begin with a letter and are less than 45 characters long
                                                                     </li>
                                                                     <li>
-                                                                      contain only upper and lowercase alphanumeric characters, and underscores
+                                                                      file names contain only upper and lowercase alphanumeric characters, and underscores
                                                                     </li>
                                                                     <li>
-                                                                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                                      <br />
+                                                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                                     </li>
                                                                     <li>
-                                                                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                                      files are uploaded individually and not inside a folder
                                                                     </li>
                                                                     <li>
-                                                                      are uploaded individually and not inside a folder
+                                                                      files are smaller than 8GB.
                                                                     </li>
                                                                   </ul>
                                                                 </div>
@@ -4621,22 +4633,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
-                    Please ensure your files:
+                    Please ensure:
                     <ul>
                       <li>
-                        begin with a letter and are less than 45 characters long
+                        file names begin with a letter and are less than 45 characters long
                       </li>
                       <li>
-                        contain only upper and lowercase alphanumeric characters, and underscores
+                        file names contain only upper and lowercase alphanumeric characters, and underscores
                       </li>
                       <li>
-                        have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                        <br />
+                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                       </li>
                       <li>
-                        two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                        files are uploaded individually and not inside a folder
                       </li>
                       <li>
-                        are uploaded individually and not inside a folder
+                        files are smaller than 8GB.
                       </li>
                     </ul>
                   </div>,
@@ -6000,22 +6014,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 </p>,
                                 "fileUploadRestrictionHeading": "File upload restrictions",
                                 "fileUploadRestrictions": <div>
-                                  Please ensure your files:
+                                  Please ensure:
                                   <ul>
                                     <li>
-                                      begin with a letter and are less than 45 characters long
+                                      file names begin with a letter and are less than 45 characters long
                                     </li>
                                     <li>
-                                      contain only upper and lowercase alphanumeric characters, and underscores
+                                      file names contain only upper and lowercase alphanumeric characters, and underscores
                                     </li>
                                     <li>
-                                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                      <br />
+                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                     </li>
                                     <li>
-                                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                      files are uploaded individually and not inside a folder
                                     </li>
                                     <li>
-                                      are uploaded individually and not inside a folder
+                                      files are smaller than 8GB.
                                     </li>
                                   </ul>
                                 </div>,
@@ -6096,22 +6112,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   </p>,
                                   "fileUploadRestrictionHeading": "File upload restrictions",
                                   "fileUploadRestrictions": <div>
-                                    Please ensure your files:
+                                    Please ensure:
                                     <ul>
                                       <li>
-                                        begin with a letter and are less than 45 characters long
+                                        file names begin with a letter and are less than 45 characters long
                                       </li>
                                       <li>
-                                        contain only upper and lowercase alphanumeric characters, and underscores
+                                        file names contain only upper and lowercase alphanumeric characters, and underscores
                                       </li>
                                       <li>
-                                        have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                        file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                        <br />
+                                        (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                       </li>
                                       <li>
-                                        two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                        files are uploaded individually and not inside a folder
                                       </li>
                                       <li>
-                                        are uploaded individually and not inside a folder
+                                        files are smaller than 8GB.
                                       </li>
                                     </ul>
                                   </div>,
@@ -6476,22 +6494,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       </p>,
                                                       "fileUploadRestrictionHeading": "File upload restrictions",
                                                       "fileUploadRestrictions": <div>
-                                                        Please ensure your files:
+                                                        Please ensure:
                                                         <ul>
                                                           <li>
-                                                            begin with a letter and are less than 45 characters long
+                                                            file names begin with a letter and are less than 45 characters long
                                                           </li>
                                                           <li>
-                                                            contain only upper and lowercase alphanumeric characters, and underscores
+                                                            file names contain only upper and lowercase alphanumeric characters, and underscores
                                                           </li>
                                                           <li>
-                                                            have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                            file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                            <br />
+                                                            (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                           </li>
                                                           <li>
-                                                            two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                            files are uploaded individually and not inside a folder
                                                           </li>
                                                           <li>
-                                                            are uploaded individually and not inside a folder
+                                                            files are smaller than 8GB.
                                                           </li>
                                                         </ul>
                                                       </div>,
@@ -6570,22 +6590,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         </p>,
                                                         "fileUploadRestrictionHeading": "File upload restrictions",
                                                         "fileUploadRestrictions": <div>
-                                                          Please ensure your files:
+                                                          Please ensure:
                                                           <ul>
                                                             <li>
-                                                              begin with a letter and are less than 45 characters long
+                                                              file names begin with a letter and are less than 45 characters long
                                                             </li>
                                                             <li>
-                                                              contain only upper and lowercase alphanumeric characters, and underscores
+                                                              file names contain only upper and lowercase alphanumeric characters, and underscores
                                                             </li>
                                                             <li>
-                                                              have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                              file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                              <br />
+                                                              (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                             </li>
                                                             <li>
-                                                              two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                              files are uploaded individually and not inside a folder
                                                             </li>
                                                             <li>
-                                                              are uploaded individually and not inside a folder
+                                                              files are smaller than 8GB.
                                                             </li>
                                                           </ul>
                                                         </div>,
@@ -7411,22 +7433,24 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   </Typography>
                                                                 </WithStyles(Typography)>
                                                                 <div>
-                                                                  Please ensure your files:
+                                                                  Please ensure:
                                                                   <ul>
                                                                     <li>
-                                                                      begin with a letter and are less than 45 characters long
+                                                                      file names begin with a letter and are less than 45 characters long
                                                                     </li>
                                                                     <li>
-                                                                      contain only upper and lowercase alphanumeric characters, and underscores
+                                                                      file names contain only upper and lowercase alphanumeric characters, and underscores
                                                                     </li>
                                                                     <li>
-                                                                      have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                                      file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                                                                      <br />
+                                                                      (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                                                                     </li>
                                                                     <li>
-                                                                      two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                                                                      files are uploaded individually and not inside a folder
                                                                     </li>
                                                                     <li>
-                                                                      are uploaded individually and not inside a folder
+                                                                      files are smaller than 8GB.
                                                                     </li>
                                                                   </ul>
                                                                 </div>
@@ -8080,22 +8104,24 @@ exports[`Component FileUploader should render default component 1`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8191,22 +8217,24 @@ exports[`Component FileUploader should render disabled component 1`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8301,22 +8329,24 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8416,22 +8446,24 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8664,22 +8696,24 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8858,22 +8892,24 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8968,22 +9004,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9083,22 +9121,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9331,22 +9371,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9446,22 +9488,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9695,22 +9739,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9946,22 +9992,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10207,22 +10255,24 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10463,22 +10513,24 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10578,22 +10630,24 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
-            Please ensure your files:
+            Please ensure:
             <ul>
               <li>
-                begin with a letter and are less than 45 characters long
+                file names begin with a letter and are less than 45 characters long
               </li>
               <li>
-                contain only upper and lowercase alphanumeric characters, and underscores
+                file names contain only upper and lowercase alphanumeric characters, and underscores
               </li>
               <li>
-                have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
+                <br />
+                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
               </li>
               <li>
-                two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
+                files are uploaded individually and not inside a folder
               </li>
               <li>
-                are uploaded individually and not inside a folder
+                files are smaller than 8GB.
               </li>
             </ul>
           </div>,

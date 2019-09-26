@@ -1018,7 +1018,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -1931,7 +1931,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -3152,7 +3152,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -4101,7 +4101,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -5382,7 +5382,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -6831,7 +6831,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -8280,7 +8280,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -9729,7 +9729,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -12216,7 +12216,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   xs={12}
                 >
                   <WithStyles(Alert)
-                    message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
+                    message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                     pushToTop={true}
                     title="File upload and/or edits/changes/comments post failed"
                     type="warning"
@@ -12236,7 +12236,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -13685,7 +13685,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -15134,7 +15134,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -16596,7 +16596,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -18056,7 +18056,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -19517,7 +19517,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -19931,7 +19931,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -20182,7 +20182,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },

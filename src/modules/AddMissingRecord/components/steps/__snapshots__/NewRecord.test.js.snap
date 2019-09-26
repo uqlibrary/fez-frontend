@@ -19,7 +19,7 @@ exports[`Add new record should render alert about file uploading or issue error 
             xs={12}
           >
             <WithStyles(Alert)
-              message="Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators."
+              message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
               title="File upload and/or notes post failed"
               type="warning"
             />
@@ -33,7 +33,7 @@ exports[`Add new record should render alert about file uploading or issue error 
         </WithStyles(Grid)>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -93,7 +93,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         </WithStyles(Grid)>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -152,7 +152,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       </WithStyles(Grid)>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
@@ -310,7 +310,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
       </WithStyles(Grid)>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },

@@ -176,20 +176,12 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                             <svg
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-586 MuiSelect-icon-624\\"
-@@ -262,20 +381,956 @@
-                            >
-                              <path
-                                d=\\"M7 10l5 5 5-5z\\"
-                              />
-                            </svg>
-+                         </div>
-+                       </div>
-+                     </div>
-+                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
+@@ -270,12 +389,950 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 +           <div
 +             class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +           >
@@ -214,7 +206,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         Department technical report information
 +                       </h3>
 +                     </div>
-+                   </div>
+                    </div>
 +                   <div
 +                     class=\\"MuiCardContent-root-595\\"
 +                   >
@@ -224,7 +216,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418\\"
 +                       >
-+                         <div
+                          <div
 +                           class=\\"MuiFormControl-root-596 MuiFormControl-fullWidth-599\\"
 +                         >
 +                           <label
@@ -323,8 +315,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                               </div>
 +                             </div>
 +                           </div>
-                          </div>
-                        </div>
++                         </div>
++                       </div>
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                       >
@@ -500,10 +492,10 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   </div>
 +                                 </div>
 +                               </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
++                             </div>
++                           </div>
++                         </div>
++                       </div>
 +                       <div
 +                         class=\\"MuiGrid-item-379 MuiGrid-grid-xs-12-418 MuiGrid-grid-sm-6-426\\"
 +                       >
@@ -553,14 +545,14 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       type=\\"text\\"
 +                                       value=\\"\\"
 +                                     />
-                                    </div>
-                                  </div>
++                                   </div>
++                                 </div>
 +                                 <p
 +                                   class=\\"MuiFormHelperText-root-768 MuiFormHelperText-error-769\\"
 +                                 >
 +                                   Year required
 +                                 </p>
-                                </div>
++                               </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-379 MuiGrid-grid-xs-4-410\\"
 +                               >
@@ -571,7 +563,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   <div
 +                                     class=\\"MuiSelect-root-618\\"
 +                                   >
-                                      <div
++                                     <div
 +                                       aria-haspopup=\\"true\\"
 +                                       aria-pressed=\\"false\\"
 +                                       class=\\"MuiSelect-select-619 MuiSelect-selectMenu-622 MuiInputBase-input-648 MuiInput-input-633\\"
@@ -993,22 +985,24 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   File upload restrictions
 +                                 </p>
 +                                 <div>
-+                                   Please ensure your files:
++                                   Please ensure:
 +                                   <ul>
 +                                     <li>
-+                                       begin with a letter and are less than 45 characters long
++                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
-+                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                       file names contain only upper and lowercase alphanumeric characters, and underscores
 +                                     </li>
 +                                     <li>
-+                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       <br />
++                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
 +                                     </li>
 +                                     <li>
-+                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                       files are uploaded individually and not inside a folder
 +                                     </li>
 +                                     <li>
-+                                       are uploaded individually and not inside a folder
++                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>
@@ -1133,7 +1127,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
             <div
               class=\\"MuiGrid-item-379 MuiGrid-grid-xs-true-406\\"
             />
-@@ -293,10 +1348,28 @@
+@@ -293,10 +1350,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -1420,7 +1414,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           Work subtype
                           <span
                             class=\\"MuiFormLabel-asterisk-1031\\"
-@@ -299,19 +299,138 @@
+@@ -299,21 +299,471 @@
                               class=\\"MuiSelect-select-1033 MuiSelect-selectMenu-1036 MuiInputBase-input-1062 MuiInput-input-1047\\"
                               id=\\"rek-subtype\\"
                               role=\\"button\\"
@@ -1436,7 +1430,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                               id=\\"Work subtype\\"
                               name=\\"rek_subtype\\"
                               placeholder=\\"Select a work subtype from the dropdown list\\"
-+                             type=\\"hidden\\"
+                              type=\\"hidden\\"
 +                             value=\\"Textbook\\"
 +                           />
 +                           <svg
@@ -1557,17 +1551,28 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           </div>
 +                           <input
 +                             style=\\"border: 1px solid red;\\"
-                              type=\\"hidden\\"
-                              value=\\"\\"
-                            />
-                            <svg
-                              aria-hidden=\\"true\\"
-@@ -330,12 +449,1104 @@
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
++                             type=\\"hidden\\"
++                             value=\\"\\"
++                           />
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-1000 MuiSelect-icon-1038\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7 10l5 5 5-5z\\"
++                             />
++                           </svg>
++                         </div>
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
 +           <div
 +             class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832\\"
 +           >
@@ -1591,9 +1596,9 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       >
 +                         Book information
 +                       </h3>
-                      </div>
++                     </div>
 +                   </div>
-                    <div
++                   <div
 +                     class=\\"MuiCardContent-root-1009\\"
 +                   >
 +                     <div
@@ -1841,7 +1846,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       name=\\"day\\"
 +                                       placeholder=\\"Day\\"
 +                                       type=\\"text\\"
-+                                       value=\\"\\"
+                                        value=\\"\\"
 +                                     />
 +                                   </div>
 +                                 </div>
@@ -1879,21 +1884,17 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       placeholder=\\"Month\\"
 +                                       type=\\"hidden\\"
 +                                       value=\\"-1\\"
-+                                     />
-+                                     <svg
-+                                       aria-hidden=\\"true\\"
-+                                       class=\\"MuiSvgIcon-root-1000 MuiSelect-icon-1038\\"
-+                                       focusable=\\"false\\"
-+                                       role=\\"presentation\\"
-+                                       viewBox=\\"0 0 24 24\\"
-+                                     >
-+                                       <path
-+                                         d=\\"M7 10l5 5 5-5z\\"
-+                                       />
-+                                     </svg>
-+                                   </div>
-+                                 </div>
-+                               </div>
+                                      />
+                                      <svg
+                                        aria-hidden=\\"true\\"
+                                        class=\\"MuiSvgIcon-root-1000 MuiSelect-icon-1038\\"
+                                        focusable=\\"false\\"
+@@ -325,17 +775,780 @@
+                                        />
+                                      </svg>
+                                    </div>
+                                  </div>
+                                </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-793 MuiGrid-grid-xs-4-824\\"
 +                               >
@@ -1978,8 +1979,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           class=\\"MuiTouchRipple-root-1132\\"
 +                         />
 +                       </button>
-+                     </div>
-+                   </div>
+                      </div>
+                    </div>
 +                   <div
 +                     class=\\"MuiCardContent-root-1009\\"
 +                   >
@@ -1995,7 +1996,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           add to a list of authors below
 +                         </b>
 +                         , in the format and order that they are published.
-+                       </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-container-792 MuiGrid-spacing-xs-8-814\\"
 +                         style=\\"margin-top: 8px;\\"
@@ -2035,10 +2036,10 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 type=\\"text\\"
 +                                 value=\\"\\"
 +                               />
-+                             </div>
-+                           </div>
-+                         </div>
-+                         <div
+                              </div>
+                            </div>
+                          </div>
+                          <div
 +                           class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832\\"
 +                           style=\\"margin-bottom: 8px;\\"
 +                         >
@@ -2518,22 +2519,24 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   File upload restrictions
 +                                 </p>
 +                                 <div>
-+                                   Please ensure your files:
++                                   Please ensure:
 +                                   <ul>
 +                                     <li>
-+                                       begin with a letter and are less than 45 characters long
++                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
-+                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                       file names contain only upper and lowercase alphanumeric characters, and underscores
 +                                     </li>
 +                                     <li>
-+                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       <br />
++                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
 +                                     </li>
 +                                     <li>
-+                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
++                                       files are uploaded individually and not inside a folder
 +                                     </li>
 +                                     <li>
-+                                       are uploaded individually and not inside a folder
++                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>
@@ -2667,7 +2670,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820\\"
             />
-@@ -353,10 +1564,28 @@
+@@ -353,10 +1566,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -2932,7 +2935,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         label=\\"year\\"
                                         maxlength=\\"4\\"
                                         name=\\"year\\"
-@@ -1520,22 +1496,10 @@
+@@ -1522,22 +1498,10 @@
                             <li>
                               Author/creator names are required
                             </li>
@@ -3385,7 +3388,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                 >
                   <div
                     class=\\"MuiPaper-root-949 MuiPaper-elevation1-952 MuiPaper-rounded-950 MuiCard-root-948 Cards-card-943 StandardCard\\"
-@@ -1438,71 +1489,13 @@
+@@ -1440,71 +1491,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -3457,7 +3460,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1534,22 +1527,24 @@
+@@ -1536,22 +1529,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832 MuiGrid-grid-sm-auto-833\\"
@@ -3936,7 +3939,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1498,12 +1447,70 @@
+@@ -1500,12 +1449,70 @@
                     </div>
                   </div>
                 </div>
@@ -4007,7 +4010,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-true-820\\"
             />
-@@ -1527,24 +1534,22 @@
+@@ -1529,24 +1536,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-793 MuiGrid-grid-xs-12-832 MuiGrid-grid-sm-auto-833\\"
