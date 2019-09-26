@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import Badge from '@material-ui/core/Badge';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -40,6 +41,7 @@ export const AdminInterface = ({
     history,
     submitSucceeded,
     createMode,
+    disableSubmit,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -156,7 +158,23 @@ export const AdminInterface = ({
                                         {Object.keys(tabs)
                                             .filter(tab => tabs[tab].activated)
                                             .map(tab => (
-                                                <Tab key={tab} label={txt.current.sections[tab].title} value={tab} />
+                                                <Tab
+                                                    key={tab}
+                                                    value={tab}
+                                                    label={
+                                                        !!tabs[tab].numberOfErrors ? (
+                                                            <Badge
+                                                                className={classes.padding}
+                                                                color="error"
+                                                                badgeContent={tabs[tab].numberOfErrors}
+                                                            >
+                                                                {txt.current.sections[tab].title}
+                                                            </Badge>
+                                                        ) : (
+                                                            txt.current.sections[tab].title
+                                                        )
+                                                    }
+                                                />
                                             ))}
                                     </Tabs>
                                 </Grid>
@@ -180,7 +198,7 @@ export const AdminInterface = ({
                         <Grid item xs={12} sm={12}>
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}
-                                disabled={submitting}
+                                disabled={submitting || disableSubmit}
                                 variant="contained"
                                 color="primary"
                                 fullWidth
@@ -204,6 +222,7 @@ AdminInterface.propTypes = {
     history: PropTypes.object,
     tabs: PropTypes.object,
     createMode: PropTypes.bool,
+    disableSubmit: PropTypes.bool,
 };
 
 export default React.memo(AdminInterface);

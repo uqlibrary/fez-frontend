@@ -6,7 +6,7 @@ import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
 import { withRouter } from 'react-router';
-import { adminInterfaceConfig, valueExtractor } from 'config/admin';
+import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import {
@@ -109,6 +109,8 @@ const onSubmit = (values, dispatch) => {
 const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
+    validate,
+    destroyOnUnmount: false,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
@@ -142,7 +144,7 @@ const mapStateToProps = (state, props) => {
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: formErrors,
+        formErrors: (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         loadingRecordToView: state.get('viewRecordReducer').loadingRecordToView,
         recordToView,

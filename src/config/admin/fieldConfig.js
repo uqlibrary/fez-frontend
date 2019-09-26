@@ -191,7 +191,7 @@ export default {
             name: 'additionalInformationSection.collections',
             required: true,
             fullwidth: true,
-            validate: [validation.required],
+            validate: [validation.requiredList],
         },
     },
     rek_subtype: {
@@ -800,6 +800,7 @@ export default {
             name: 'filesSection.rek_copyright',
             label: 'Copyright Agreement',
             placeholder: '',
+            validate: [validation.required],
             copyrightAgreement:
                 'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
         },
@@ -811,6 +812,7 @@ export default {
             label: 'Deposit agreement',
             placeholder: '',
             copyrightAgreement: formLocale.addDataset.information.agreement.text,
+            validate: [validation.required],
         },
     },
     fez_record_search_key_date_available: {

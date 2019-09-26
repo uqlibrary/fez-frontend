@@ -5,7 +5,6 @@ import Immutable from 'immutable';
 
 export const AttachedFilesField = ({ input, ...props }) => {
     const [dataStreams, setDataStreams] = useState((props.meta.initial || Immutable.Map([])).toJS());
-    console.log(dataStreams);
     const { onChange } = input;
     const handleDelete = useCallback(
         index => {
