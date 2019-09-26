@@ -38,6 +38,7 @@ export default {
                     openOriginal: 'Open original file in a new window',
                     openWeb: 'Open web version file in a new window',
                     close: 'Close',
+                    videoLoadingMessage: 'Loading',
                 },
             },
             links: {
@@ -235,6 +236,7 @@ export default {
                 },
             },
             'Audio Document': {
+                rek_date: 'Date',
                 fez_record_search_key_author: 'Creator(s)',
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_location: 'Place of recording',
@@ -252,6 +254,7 @@ export default {
             },
             'Conference Paper': {
                 rek_date: 'Publication year',
+                rek_description: 'Abstract',
                 rek_title: 'Title of paper',
                 fez_record_search_key_translated_title: 'Translated title of paper',
             },
@@ -271,8 +274,8 @@ export default {
                 rek_genre: 'Collection type',
                 rek_title: 'Dataset name',
                 rek_description: 'Dataset description',
-                fez_record_search_key_author: 'Creator name',
-                fez_record_search_key_contributor: 'Contact name',
+                fez_record_search_key_author: 'Creator(s) name',
+                fez_record_search_key_contributor: 'Contact(s) name',
                 fez_record_search_key_author_role: 'Creator(s) role',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_grant_id: 'Grant ID',
@@ -286,9 +289,10 @@ export default {
                 fez_record_search_key_author: 'Designer(s)',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_contributor: 'Consultant(s)',
+                fez_record_search_key_original_format: 'Physical description',
             },
             'Digilib Image': {
-                fez_record_search_key_author: 'Photographer',
+                fez_record_search_key_author: 'Photographer(s)',
                 fez_record_search_key_rights: 'Rights',
             },
             'Generic Document': {
@@ -296,8 +300,9 @@ export default {
                 fez_record_search_key_subject: 'Research fields, Courses and Disciplines',
             },
             Image: {
-                fez_record_search_key_author: 'Creator',
-                fez_record_search_key_contributor: 'Contributor',
+                rek_date: 'Date',
+                fez_record_search_key_author: 'Creator(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
             },
@@ -307,8 +312,8 @@ export default {
             },
             Manuscript: {
                 rek_date: 'Date',
-                fez_record_search_key_author: 'Creator',
-                fez_record_search_key_contributor: 'Contributor',
+                fez_record_search_key_author: 'Creator(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_rights: 'Rights',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
             },
@@ -324,7 +329,7 @@ export default {
             Patent: {
                 rek_title: 'Patent title',
                 rek_date: 'Date of issue',
-                fez_record_search_key_author: 'Creator',
+                fez_record_search_key_author: 'Creator(s)',
                 fez_record_search_key_publisher: 'Patent owner',
                 fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_translated_title: 'Translated title of patent',
@@ -342,8 +347,10 @@ export default {
                 fez_record_search_key_translated_title: 'Translated thesis title',
             },
             'Video Document': {
+                rek_date: 'Date',
                 fez_record_search_key_original_format: 'Format',
-                fez_record_search_key_author: 'Creator',
+                fez_record_search_key_author: 'Creator(s)',
+                fez_record_search_key_contributor: 'Contributor(s)',
                 fez_record_search_key_rights: 'Rights',
             },
             'Working Paper': {},
@@ -537,10 +544,10 @@ export default {
                     field: 'fez_record_search_key_edition',
                     order: 11,
                 },
-                // {
-                //     field: 'fez_record_search_key_series',
-                //     order: 12
-                // },
+                {
+                    field: 'fez_record_search_key_series',
+                    order: 12,
+                },
                 {
                     field: 'fez_record_search_key_isbn',
                     order: 13,
@@ -704,6 +711,10 @@ export default {
                 {
                     field: 'rek_title',
                     order: 2,
+                },
+                {
+                    field: 'rek_description',
+                    order: 2.5,
                 },
                 {
                     field: 'fez_record_search_key_language_of_title',
@@ -1367,10 +1378,10 @@ export default {
                     field: 'fez_record_search_key_source',
                     order: 23,
                 },
-                // {
-                //     field: 'fez_record_search_key_original_format',
-                //     order: 24
-                // },
+                {
+                    field: 'fez_record_search_key_original_format',
+                    order: 24,
+                },
                 {
                     field: 'fez_record_search_key_scale',
                     order: 25,
