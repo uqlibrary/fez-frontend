@@ -108,6 +108,7 @@ export default {
                 validation: {
                     ['notFiles']: 'Invalid files ([fileNames])',
                     ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                    ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
                     ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                     ['tooManyFiles']:
                         'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
@@ -124,11 +125,17 @@ export default {
                     <div>
                         Please ensure your files:
                         <ul>
+                            <li>are under 5GB in size</li>
                             <li>begin with a letter and are less than 45 characters long</li>
                             <li>contain only upper and lowercase alphanumeric characters, and underscores</li>
                             <li>
                                 have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”,
                                 “.tiff”, “.wav” etc.
+                            </li>
+                            <li>
+                                Have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg,
+                                m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt,
+                                rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                             </li>
                             <li>
                                 two periods are allowed for multipart zip files. Allowed formats for part description
@@ -138,7 +145,13 @@ export default {
                         </ul>
                     </div>
                 ),
-                fileUploadInstruction: <p>Click here to select files, or drag files into this area to upload</p>,
+                fileUploadInstruction: (
+                    <p>
+                        Click here to select files,
+                        <br />
+                        or drag files into this area to upload
+                    </p>
+                ),
             },
             text: (
                 <div>

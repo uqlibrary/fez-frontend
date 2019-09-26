@@ -1,5 +1,5 @@
 import { FileUploader } from './FileUploader';
-import { FILE_NAME_RESTRICTION } from '../config';
+import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 import FileUploaderContainer from './FileUploader';
 const moment = require('moment');
 
@@ -9,6 +9,7 @@ const getProps = (testProps = {}) => ({
         maxFileSize: 1,
         fileSizeUnit: 'K',
         fileNameRestrictions: FILE_NAME_RESTRICTION,
+        mimeTypeWhitelist: MIME_TYPE_WHITELIST,
     },
     filesInQueue: [],
     // locale: locale,
@@ -331,14 +332,15 @@ describe('Component FileUploader', () => {
                 tooManyFiles: ['a.txt', 'b.txt'],
                 duplicateFiles: ['c.txt', 'd.txt'],
                 invalidFileNames: ['web_a.txt'],
+                invalidMimeTypeFiles: ['web_a.txt'],
                 notFiles: ['someFolder'],
                 tooBigFiles: ['big_file.txt'],
             }),
         ).toEqual(
-            'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; ' +
-                'File(s) (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) ' +
-                'have invalid file name; Invalid files (someFolder); File(s) (big_file.txt) exceed maximum ' +
-                'allowed upload file size',
+            'Maximum number of files (5) has been exceeded. File(s) (a.txt, b.txt) will not be uploaded; File(s)' +
+                ' (c.txt, d.txt) are duplicates and have been ignored; File(s) (web_a.txt) have invalid file name;' +
+                ' File(s) (web_a.txt) are not supported; Invalid files (someFolder); File(s) (big_file.txt)' +
+                ' exceed maximum allowed upload file size',
         );
     });
 
@@ -349,6 +351,7 @@ describe('Component FileUploader', () => {
                 tooManyFiles: [],
                 duplicateFiles: [],
                 invalidFileNames: [],
+                invalidMimeTypeFiles: [],
                 notFiles: [],
                 tooBigFiles: [],
             }),
