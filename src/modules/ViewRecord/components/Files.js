@@ -13,7 +13,7 @@ import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import Image from '@material-ui/icons/Image';
 import Videocam from '@material-ui/icons/Videocam';
-import { openAccessConfig, viewRecordsConfig, routes } from 'config';
+import { openAccessConfig, routes, viewRecordsConfig } from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -252,12 +252,7 @@ export class FilesClass extends Component {
 
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
-        const { files } = viewRecordsConfig;
-        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof),
-        );
-        return !containBlacklistCollections && !!dataStreams && dataStreams.length > 0
+        return this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
@@ -293,6 +288,15 @@ export class FilesClass extends Component {
                 };
             })
             : [];
+    };
+
+    isViewableByUser = (publication, dataStreams) => {
+        const { files } = viewRecordsConfig;
+        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
+        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
+            files.blacklist.collections.includes(collection.rek_ismemberof),
+        );
+        return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
     stripHtml = html => {
