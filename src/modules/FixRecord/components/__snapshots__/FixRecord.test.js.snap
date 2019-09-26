@@ -1483,7 +1483,7 @@ exports[`Component FixRecord should render fix record form 1`] = `
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload failed",
               "type": "info",
             },
@@ -2647,7 +2647,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
               <WithStyles(Alert)
-                message="Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators."
+                message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                 title="File upload failed"
                 type="info"
               />
@@ -2664,7 +2664,7 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload failed",
               "type": "info",
             },
@@ -3335,7 +3335,7 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
             </React.Fragment>,
             "confirmationTitle": "Your request has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload failed",
               "type": "info",
             },
