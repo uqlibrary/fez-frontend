@@ -5,6 +5,8 @@ import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
 import { FILE_NAME_RESTRICTION } from '../config';
+import { renderToString } from 'react-dom/server';
+import ReactHtmlParser from 'react-html-parser';
 
 const styles = () => ({
     hideLabel: {
