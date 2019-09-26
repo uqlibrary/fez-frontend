@@ -988,6 +988,9 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   Please ensure:
 +                                   <ul>
 +                                     <li>
++                                       files are under 5GB in size.
++                                     </li>
++                                     <li>
 +                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
@@ -1000,9 +1003,6 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                     </li>
 +                                     <li>
 +                                       files are uploaded individually and not inside a folder
-+                                     </li>
-+                                     <li>
-+                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>
@@ -2522,6 +2522,9 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   Please ensure:
 +                                   <ul>
 +                                     <li>
++                                       files are under 5GB in size.
++                                     </li>
++                                     <li>
 +                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
@@ -2534,9 +2537,6 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                     </li>
 +                                     <li>
 +                                       files are uploaded individually and not inside a folder
-+                                     </li>
-+                                     <li>
-+                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>

@@ -1093,6 +1093,9 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   Please ensure:
                   <ul>
                     <li>
+                      files are under 5GB in size.
+                    </li>
+                    <li>
                       file names begin with a letter and are less than 45 characters long
                     </li>
                     <li>
@@ -1105,9 +1108,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                     </li>
                     <li>
                       files are uploaded individually and not inside a folder
-                    </li>
-                    <li>
-                      files are smaller than 8GB.
                     </li>
                   </ul>
                 </div>,
@@ -2309,6 +2309,9 @@ exports[`AddDataCollection test should render component with a valid collection 
                   Please ensure:
                   <ul>
                     <li>
+                      files are under 5GB in size.
+                    </li>
+                    <li>
                       file names begin with a letter and are less than 45 characters long
                     </li>
                     <li>
@@ -2321,9 +2324,6 @@ exports[`AddDataCollection test should render component with a valid collection 
                     </li>
                     <li>
                       files are uploaded individually and not inside a folder
-                    </li>
-                    <li>
-                      files are smaller than 8GB.
                     </li>
                   </ul>
                 </div>,
@@ -3525,6 +3525,9 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   Please ensure:
                   <ul>
                     <li>
+                      files are under 5GB in size.
+                    </li>
+                    <li>
                       file names begin with a letter and are less than 45 characters long
                     </li>
                     <li>
@@ -3537,9 +3540,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
                     </li>
                     <li>
                       files are uploaded individually and not inside a folder
-                    </li>
-                    <li>
-                      files are smaller than 8GB.
                     </li>
                   </ul>
                 </div>,
@@ -4741,6 +4741,9 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   Please ensure:
                   <ul>
                     <li>
+                      files are under 5GB in size.
+                    </li>
+                    <li>
                       file names begin with a letter and are less than 45 characters long
                     </li>
                     <li>
@@ -4753,9 +4756,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
                     </li>
                     <li>
                       files are uploaded individually and not inside a folder
-                    </li>
-                    <li>
-                      files are smaller than 8GB.
                     </li>
                   </ul>
                 </div>,

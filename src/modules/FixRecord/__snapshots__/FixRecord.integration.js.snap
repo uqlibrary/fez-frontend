@@ -805,6 +805,9 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                                   Please ensure:
 +                                   <ul>
 +                                     <li>
++                                       files are under 5GB in size.
++                                     </li>
++                                     <li>
 +                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
@@ -817,9 +820,6 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                                     </li>
 +                                     <li>
 +                                       files are uploaded individually and not inside a folder
-+                                     </li>
-+                                     <li>
-+                                       files are smaller than 8GB.
 +                                     </li>
 +                                   </ul>
 +                                 </div>

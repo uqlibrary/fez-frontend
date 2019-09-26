@@ -592,6 +592,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     Please ensure:
                     <ul>
                       <li>
+                        files are under 5GB in size.
+                      </li>
+                      <li>
                         file names begin with a letter and are less than 45 characters long
                       </li>
                       <li>
@@ -604,9 +607,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
-                      </li>
-                      <li>
-                        files are smaller than 8GB.
                       </li>
                     </ul>
                   </div>,
@@ -1973,6 +1973,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   Please ensure:
                                   <ul>
                                     <li>
+                                      files are under 5GB in size.
+                                    </li>
+                                    <li>
                                       file names begin with a letter and are less than 45 characters long
                                     </li>
                                     <li>
@@ -1985,9 +1988,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
-                                    </li>
-                                    <li>
-                                      files are smaller than 8GB.
                                     </li>
                                   </ul>
                                 </div>,
@@ -2071,6 +2071,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     Please ensure:
                                     <ul>
                                       <li>
+                                        files are under 5GB in size.
+                                      </li>
+                                      <li>
                                         file names begin with a letter and are less than 45 characters long
                                       </li>
                                       <li>
@@ -2083,9 +2086,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
-                                      </li>
-                                      <li>
-                                        files are smaller than 8GB.
                                       </li>
                                     </ul>
                                   </div>,
@@ -2453,6 +2453,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         Please ensure:
                                                         <ul>
                                                           <li>
+                                                            files are under 5GB in size.
+                                                          </li>
+                                                          <li>
                                                             file names begin with a letter and are less than 45 characters long
                                                           </li>
                                                           <li>
@@ -2465,9 +2468,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
-                                                          </li>
-                                                          <li>
-                                                            files are smaller than 8GB.
                                                           </li>
                                                         </ul>
                                                       </div>,
@@ -2549,6 +2549,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           Please ensure:
                                                           <ul>
                                                             <li>
+                                                              files are under 5GB in size.
+                                                            </li>
+                                                            <li>
                                                               file names begin with a letter and are less than 45 characters long
                                                             </li>
                                                             <li>
@@ -2561,9 +2564,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
-                                                            </li>
-                                                            <li>
-                                                              files are smaller than 8GB.
                                                             </li>
                                                           </ul>
                                                         </div>,
@@ -3392,6 +3392,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   Please ensure:
                                                                   <ul>
                                                                     <li>
+                                                                      files are under 5GB in size.
+                                                                    </li>
+                                                                    <li>
                                                                       file names begin with a letter and are less than 45 characters long
                                                                     </li>
                                                                     <li>
@@ -3404,9 +3407,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
-                                                                    </li>
-                                                                    <li>
-                                                                      files are smaller than 8GB.
                                                                     </li>
                                                                   </ul>
                                                                 </div>
@@ -4636,6 +4636,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                     Please ensure:
                     <ul>
                       <li>
+                        files are under 5GB in size.
+                      </li>
+                      <li>
                         file names begin with a letter and are less than 45 characters long
                       </li>
                       <li>
@@ -4648,9 +4651,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
-                      </li>
-                      <li>
-                        files are smaller than 8GB.
                       </li>
                     </ul>
                   </div>,
@@ -6017,6 +6017,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   Please ensure:
                                   <ul>
                                     <li>
+                                      files are under 5GB in size.
+                                    </li>
+                                    <li>
                                       file names begin with a letter and are less than 45 characters long
                                     </li>
                                     <li>
@@ -6029,9 +6032,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
-                                    </li>
-                                    <li>
-                                      files are smaller than 8GB.
                                     </li>
                                   </ul>
                                 </div>,
@@ -6115,6 +6115,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                     Please ensure:
                                     <ul>
                                       <li>
+                                        files are under 5GB in size.
+                                      </li>
+                                      <li>
                                         file names begin with a letter and are less than 45 characters long
                                       </li>
                                       <li>
@@ -6127,9 +6130,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
-                                      </li>
-                                      <li>
-                                        files are smaller than 8GB.
                                       </li>
                                     </ul>
                                   </div>,
@@ -6497,6 +6497,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         Please ensure:
                                                         <ul>
                                                           <li>
+                                                            files are under 5GB in size.
+                                                          </li>
+                                                          <li>
                                                             file names begin with a letter and are less than 45 characters long
                                                           </li>
                                                           <li>
@@ -6509,9 +6512,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
-                                                          </li>
-                                                          <li>
-                                                            files are smaller than 8GB.
                                                           </li>
                                                         </ul>
                                                       </div>,
@@ -6593,6 +6593,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                           Please ensure:
                                                           <ul>
                                                             <li>
+                                                              files are under 5GB in size.
+                                                            </li>
+                                                            <li>
                                                               file names begin with a letter and are less than 45 characters long
                                                             </li>
                                                             <li>
@@ -6605,9 +6608,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
-                                                            </li>
-                                                            <li>
-                                                              files are smaller than 8GB.
                                                             </li>
                                                           </ul>
                                                         </div>,
@@ -7436,6 +7436,9 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   Please ensure:
                                                                   <ul>
                                                                     <li>
+                                                                      files are under 5GB in size.
+                                                                    </li>
+                                                                    <li>
                                                                       file names begin with a letter and are less than 45 characters long
                                                                     </li>
                                                                     <li>
@@ -7448,9 +7451,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
-                                                                    </li>
-                                                                    <li>
-                                                                      files are smaller than 8GB.
                                                                     </li>
                                                                   </ul>
                                                                 </div>
@@ -8107,6 +8107,9 @@ exports[`Component FileUploader should render default component 1`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8119,9 +8122,6 @@ exports[`Component FileUploader should render default component 1`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8220,6 +8220,9 @@ exports[`Component FileUploader should render disabled component 1`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8232,9 +8235,6 @@ exports[`Component FileUploader should render disabled component 1`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8332,6 +8332,9 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8344,9 +8347,6 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8449,6 +8449,9 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8461,9 +8464,6 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8699,6 +8699,9 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8711,9 +8714,6 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -8895,6 +8895,9 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -8907,9 +8910,6 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9007,6 +9007,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -9019,9 +9022,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9124,6 +9124,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -9136,9 +9139,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9374,6 +9374,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -9386,9 +9389,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9491,6 +9491,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -9503,9 +9506,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9742,6 +9742,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -9754,9 +9757,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -9995,6 +9995,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -10007,9 +10010,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10258,6 +10258,9 @@ exports[`Component FileUploader should render rows for uploaded files with acces
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -10270,9 +10273,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10516,6 +10516,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -10528,9 +10531,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
@@ -10633,6 +10633,9 @@ exports[`Component FileUploader should render rows for uploaded files with defau
             Please ensure:
             <ul>
               <li>
+                files are under 5GB in size.
+              </li>
+              <li>
                 file names begin with a letter and are less than 45 characters long
               </li>
               <li>
@@ -10645,9 +10648,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
               </li>
               <li>
                 files are uploaded individually and not inside a folder
-              </li>
-              <li>
-                files are smaller than 8GB.
               </li>
             </ul>
           </div>,
