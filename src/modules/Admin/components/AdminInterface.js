@@ -42,6 +42,7 @@ export const AdminInterface = ({
     submitSucceeded,
     createMode,
     disableSubmit,
+    formErrors,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -58,6 +59,7 @@ export const AdminInterface = ({
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
+        formErrors,
         alertLocale: txt.current.alerts,
     });
 
@@ -223,6 +225,7 @@ AdminInterface.propTypes = {
     tabs: PropTypes.object,
     createMode: PropTypes.bool,
     disableSubmit: PropTypes.bool,
+    formErrors: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

@@ -15,16 +15,29 @@ export default values => {
         (bibliographicSectionErrors.rek_date = locale.validationErrorsSummary.rek_date);
 
     !((data.additionalInformationSection || {}).collections || []).length > 0 &&
-        (additionalInformationSectionErrors.collections = locale.validationErrorsSummary.collection_pid);
+        (additionalInformationSectionErrors.collections = locale.validationErrorsSummary.collections);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_DATA_COLLECTION:
-            !(data.additionalInformationSection || {}).contactName &&
+            !data.additionalInformationSection.contactName &&
                 (additionalInformationSectionErrors.contactName = locale.validationErrorsSummary.contactName);
-            !(data.additionalInformationSection || {}).contactNameId &&
+            !data.additionalInformationSection.contactNameId &&
                 (additionalInformationSectionErrors.contactNameId = locale.validationErrorsSummary.contactNameId);
-            !(data.additionalInformationSection || {}).contactEmail &&
+            !data.additionalInformationSection.contactEmail &&
                 (additionalInformationSectionErrors.contactEmail = locale.validationErrorsSummary.contactEmail);
+            !(data.additionalInformationSection.fez_record_search_key_project_name || {}).rek_project_name &&
+                (additionalInformationSectionErrors.fez_record_search_key_project_name = {
+                    rek_project_name: locale.validationErrorsSummary.rek_project_name,
+                });
+            !(data.additionalInformationSection.fez_record_search_key_project_description || {})
+                .rek_project_description &&
+                (additionalInformationSectionErrors.fez_record_search_key_project_description = {
+                    rek_project_description: locale.validationErrorsSummary.rek_project_description,
+                });
+            !(data.additionalInformationSection.fez_record_search_key_access_conditions || {}).rek_access_conditions &&
+                (additionalInformationSectionErrors.fez_record_search_key_access_conditions = {
+                    rek_access_conditions: locale.validationErrorsSummary.rek_access_conditions,
+                });
             break;
         default:
             break;

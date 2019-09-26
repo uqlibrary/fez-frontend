@@ -144,7 +144,7 @@ const mapStateToProps = (state, props) => {
 
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
-        formErrors: (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors,
+        formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         loadingRecordToView: state.get('viewRecordReducer').loadingRecordToView,
         recordToView,

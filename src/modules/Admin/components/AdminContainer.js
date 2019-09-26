@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
+import Immutable from 'immutable';
 
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
@@ -69,7 +70,9 @@ export const AdminContainer = ({
     const theme = useTheme();
     const tabErrors = useRef(null);
 
-    tabErrors.current = Object.entries(formErrors || {}).reduce(
+    tabErrors.current = Object.entries(
+        (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
+    ).reduce(
         (numberOfErrors, [key, errorObject]) => ({
             ...numberOfErrors,
             [key]: Object.values(errorObject).length,
@@ -136,6 +139,7 @@ export const AdminContainer = ({
                             location={location}
                             history={history}
                             createMode={createMode}
+                            formErrors={formErrors}
                             tabs={{
                                 admin: {
                                     component: AdminSection,

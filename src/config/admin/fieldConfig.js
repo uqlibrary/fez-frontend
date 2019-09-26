@@ -1053,7 +1053,7 @@ export default {
     fez_record_search_key_project_name: {
         component: GenericTextField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_project_name',
+            name: 'additionalInformationSection.fez_record_search_key_project_name.rek_project_name',
             fullWidth: true,
             required: true,
             validate: [validation.required],
@@ -1061,19 +1061,16 @@ export default {
         },
     },
     fez_record_search_key_project_description: {
-        component: RichEditorField,
+        component: GenericTextField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_project_description',
-            title: formLocale.addDataset.information.project.fieldLabels.projectDescription.label,
-            titleProps: {
-                variant: 'caption',
-                style: {
-                    opacity: 0.666,
-                },
-            },
+            name: 'additionalInformationSection.fez_record_search_key_project_description.rek_project_description',
             fullWidth: true,
             height: 100,
-            format: value => Immutable.Map(value),
+            required: true,
+            validate: [validation.required],
+            rows: 5,
+            multiline: true,
+            ...formLocale.addDataset.information.project.fieldLabels.projectDescription,
         },
     },
     fez_record_search_key_start_date: {
