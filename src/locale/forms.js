@@ -98,8 +98,7 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
-                    message:
-                        'Retry via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Claim more publications',

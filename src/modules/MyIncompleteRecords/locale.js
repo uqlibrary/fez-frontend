@@ -127,12 +127,15 @@ export default {
                         <ul>
                             <li>files are under 5GB in size</li>
                             <li>file names begin with a letter and are less than 45 characters long</li>
-                            <li>file names contain only upper and lowercase alphanumeric characters, and underscores</li>
                             <li>
-                                file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”,
-                                “.tiff”, “.wav” etc.<br />
-                                (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g.
-                                “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
+                                file names contain only upper and lowercase alphanumeric characters, and underscores
+                            </li>
+                            <li>
+                                file names have only a single period which precedes the file extension: e.g. “.pdf”,
+                                “.mov”, “.tiff”, “.wav” etc.
+                                <br />
+                                (two periods are allowed for multipart zip files. Allowed formats for part description
+                                are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                             </li>
                             <li>
                                 Have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg,
