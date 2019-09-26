@@ -1,5 +1,5 @@
 import { generateCancelToken } from 'config';
-import { MIME_TYPE_WHITELIST } from 'modules/SharedComponents/Toolbox/FileUploader';
+import { MIME_TYPE_WHITELIST } from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
 import { post, put } from './generic';

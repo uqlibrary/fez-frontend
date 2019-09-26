@@ -44,6 +44,7 @@ const styles = () => ({
     },
     instructions: {
         height: '100%',
+        textAlign: 'center',
     },
     cloudIcon: {
         fontSize: 36,
