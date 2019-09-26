@@ -552,6 +552,51 @@ exports[`Component FileUploadDropzone should open files selection dialog 1`] = `
             filesInQueue={Array []}
             locale={Object {}}
             maxSize={1000}
+            mimeTypeWhitelist={
+              Object {
+                "7z": "application/x-7z-compressed",
+                "avi": "video/x-msvideo",
+                "csv": "text/csv",
+                "gif": "image/gif",
+                "gsheet": "application/vnd.google-apps.spreadsheet",
+                "gz": "application/gzip",
+                "jpe": "image/jpeg",
+                "jpeg": "image/jpeg",
+                "jpg": "image/jpeg",
+                "m1v": "video/mpeg",
+                "m2v": "video/mpeg",
+                "m4a": "audio/x-m4a",
+                "mk3d": "video/x-matroska",
+                "mks": "video/x-matroska",
+                "mkv": "video/x-matroska",
+                "mov": "video/quicktime",
+                "mp3": "audio/mp3",
+                "mp4": "video/mp4",
+                "mp4v": "video/mp4",
+                "mpe": "video/mpeg",
+                "mpeg": "video/mpeg",
+                "mpg": "video/mpeg",
+                "ods": "application/vnd.oasis.opendocument.spreadsheet",
+                "pdf": "application/pdf",
+                "png": "image/png",
+                "qt": "video/quicktime",
+                "rar": "application/x-rar-compressed",
+                "tar": "application/x-tar",
+                "tif": "image/tiff",
+                "tiff": "image/tiff",
+                "wav": "audio/wav",
+                "wma": "audio/x-ms-wma",
+                "wmv": "video/x-ms-wmv",
+                "xla": "application/vnd.ms-excel",
+                "xlc": "application/vnd.ms-excel",
+                "xlm": "application/vnd.ms-excel",
+                "xls": "application/vnd.ms-excel",
+                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "xlt": "application/vnd.ms-excel",
+                "xlw": "application/vnd.ms-excel",
+                "zip": "application/zip",
+              }
+            }
             onDrop={[MockFunction]}
           >
             <WithStyles(Grid)
@@ -2818,6 +2863,51 @@ exports[`Component FileUploadDropzone should render disabled component 1`] = `
             filesInQueue={Array []}
             locale={Object {}}
             maxSize={1000}
+            mimeTypeWhitelist={
+              Object {
+                "7z": "application/x-7z-compressed",
+                "avi": "video/x-msvideo",
+                "csv": "text/csv",
+                "gif": "image/gif",
+                "gsheet": "application/vnd.google-apps.spreadsheet",
+                "gz": "application/gzip",
+                "jpe": "image/jpeg",
+                "jpeg": "image/jpeg",
+                "jpg": "image/jpeg",
+                "m1v": "video/mpeg",
+                "m2v": "video/mpeg",
+                "m4a": "audio/x-m4a",
+                "mk3d": "video/x-matroska",
+                "mks": "video/x-matroska",
+                "mkv": "video/x-matroska",
+                "mov": "video/quicktime",
+                "mp3": "audio/mp3",
+                "mp4": "video/mp4",
+                "mp4v": "video/mp4",
+                "mpe": "video/mpeg",
+                "mpeg": "video/mpeg",
+                "mpg": "video/mpeg",
+                "ods": "application/vnd.oasis.opendocument.spreadsheet",
+                "pdf": "application/pdf",
+                "png": "image/png",
+                "qt": "video/quicktime",
+                "rar": "application/x-rar-compressed",
+                "tar": "application/x-tar",
+                "tif": "image/tiff",
+                "tiff": "image/tiff",
+                "wav": "audio/wav",
+                "wma": "audio/x-ms-wma",
+                "wmv": "video/x-ms-wmv",
+                "xla": "application/vnd.ms-excel",
+                "xlc": "application/vnd.ms-excel",
+                "xlm": "application/vnd.ms-excel",
+                "xls": "application/vnd.ms-excel",
+                "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                "xlt": "application/vnd.ms-excel",
+                "xlw": "application/vnd.ms-excel",
+                "zip": "application/zip",
+              }
+            }
             onDrop={[MockFunction]}
           >
             <WithStyles(Grid)
@@ -4509,6 +4599,51 @@ exports[`Component FileUploadDropzone should render with styles 1`] = `
   filesInQueue={Array []}
   locale={Object {}}
   maxSize={8}
+  mimeTypeWhitelist={
+    Object {
+      "7z": "application/x-7z-compressed",
+      "avi": "video/x-msvideo",
+      "csv": "text/csv",
+      "gif": "image/gif",
+      "gsheet": "application/vnd.google-apps.spreadsheet",
+      "gz": "application/gzip",
+      "jpe": "image/jpeg",
+      "jpeg": "image/jpeg",
+      "jpg": "image/jpeg",
+      "m1v": "video/mpeg",
+      "m2v": "video/mpeg",
+      "m4a": "audio/x-m4a",
+      "mk3d": "video/x-matroska",
+      "mks": "video/x-matroska",
+      "mkv": "video/x-matroska",
+      "mov": "video/quicktime",
+      "mp3": "audio/mp3",
+      "mp4": "video/mp4",
+      "mp4v": "video/mp4",
+      "mpe": "video/mpeg",
+      "mpeg": "video/mpeg",
+      "mpg": "video/mpeg",
+      "ods": "application/vnd.oasis.opendocument.spreadsheet",
+      "pdf": "application/pdf",
+      "png": "image/png",
+      "qt": "video/quicktime",
+      "rar": "application/x-rar-compressed",
+      "tar": "application/x-tar",
+      "tif": "image/tiff",
+      "tiff": "image/tiff",
+      "wav": "audio/wav",
+      "wma": "audio/x-ms-wma",
+      "wmv": "video/x-ms-wmv",
+      "xla": "application/vnd.ms-excel",
+      "xlc": "application/vnd.ms-excel",
+      "xlm": "application/vnd.ms-excel",
+      "xls": "application/vnd.ms-excel",
+      "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "xlt": "application/vnd.ms-excel",
+      "xlw": "application/vnd.ms-excel",
+      "zip": "application/zip",
+    }
+  }
   onDrop={[MockFunction]}
 />
 `;
