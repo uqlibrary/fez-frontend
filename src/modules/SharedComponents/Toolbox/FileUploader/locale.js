@@ -50,9 +50,9 @@ export default {
                     etc.
                 </li>
                 <li>
-                    Have one of the following extensions only: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v,
-                    m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff,
-                    wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                    Have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a,
+                    mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav,
+                    wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                 </li>
                 <li>
                     two periods are allowed for multipart zip files. Allowed formats for part description are: e.g.
