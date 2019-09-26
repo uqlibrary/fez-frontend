@@ -1169,7 +1169,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -2110,107 +2487,13 @@
+@@ -2118,107 +2495,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -1277,7 +1277,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                   </div>
                 </div>
               </div>
-@@ -2244,21 +2527,23 @@
+@@ -2252,21 +2535,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >
