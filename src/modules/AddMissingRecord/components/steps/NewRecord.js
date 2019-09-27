@@ -17,10 +17,12 @@ export default class NewRecord extends PureComponent {
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
         author: PropTypes.object,
+        newRecord: PropTypes.object,
     };
 
     static defaultProps = {
         rawSearchQuery: '',
+        newRecord: {},
     };
 
     _recordSaved = () => {
@@ -36,6 +38,23 @@ export default class NewRecord extends PureComponent {
     _navigateToMyResearch = () => {
         this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.mine);
+    };
+
+    _showFixRecordButton = () => {
+        const isPID = /UQ:(.*)/;
+        return (
+            this.props.newRecord &&
+            this.props.newRecord.rek_pid &&
+            isPID.test(this.props.newRecord.rek_pid) &&
+            !!this.props.newRecordFileUploadingOrIssueError
+        );
+    };
+
+    _navigateToFixRecord = () => {
+        if (this._showFixRecordButton) {
+            this.props.actions.clearNewRecord();
+            this.props.history.push(routes.pathConfig.records.fix(this.props.newRecord.rek_pid));
+        }
     };
 
     render() {
@@ -76,6 +95,8 @@ export default class NewRecord extends PureComponent {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
+                    showFixRecordButton={this._showFixRecordButton}
+                    onFixRecordAction={this._navigateToFixRecord}
                     locale={saveConfirmationLocale}
                 />
                 <PublicationForm

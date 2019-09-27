@@ -456,6 +456,7 @@ export default {
                 },
                 cancelButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research',
+                fixRecordButtonLabel: 'Fix record',
             },
         },
         fixRecord: {
