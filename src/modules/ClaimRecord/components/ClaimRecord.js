@@ -218,8 +218,8 @@ export default class ClaimRecord extends PureComponent {
                                     onRef={this._setSuccessConfirmation}
                                     onAction={this._navigateToMyResearch}
                                     onCancelAction={this._claimAnother}
-                                    onFixRecordAction={this._navigateToFixRecord}
-                                    showFixRecordButton={this._showFixRecordButton}
+                                    onAlternateAction={this._navigateToFixRecord}
+                                    showAlternateActionButton={this._showFixRecordButton}
                                 />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}
