@@ -15,7 +15,7 @@ export default class ConfirmDialogBox extends Component {
         onCancelAction: PropTypes.func,
         onFixRecordAction: PropTypes.func,
         onRef: PropTypes.func,
-        showFixRecordButton: PropTypes.bool,
+        showFixRecordButton: PropTypes.func,
     };
 
     static defaultProps = {
@@ -26,7 +26,6 @@ export default class ConfirmDialogBox extends Component {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
-        showFixRecordButton: false,
     };
 
     constructor(props) {
