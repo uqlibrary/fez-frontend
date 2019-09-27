@@ -91,4 +91,28 @@ describe('ConfirmDialogBox snapshots tests', () => {
         expect(wrapper.state().isDialogOpen).toBeFalsy();
         expect(onCancelActionFn).toHaveBeenCalled();
     });
+
+    it('renders component with 3 buttons', () => {
+        const wrapper = setup({
+            showAlternateActionButton: true,
+        });
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('clicks the alternate action button', () => {
+        const onAlternateActionFn = jest.fn();
+        const wrapper = setup({
+            showAlternateActionButton: true,
+            onAlternateAction: onAlternateActionFn,
+        });
+
+        wrapper
+            .find('WithStyles(Button)')
+            .get(1)
+            .props.onClick();
+
+        expect(wrapper.state().isDialogOpen).toBeFalsy();
+        expect(onAlternateActionFn).toHaveBeenCalled();
+    });
 });
