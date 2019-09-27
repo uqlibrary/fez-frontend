@@ -17,6 +17,10 @@ export default values => {
     !((data.additionalInformationSection || {}).collections || []).length > 0 &&
         (additionalInformationSectionErrors.collections = locale.validationErrorsSummary.collections);
 
+    (data.additionalInformationSection || {}).hasOwnProperty('rek_subtype') &&
+        !data.additionalInformationSection.rek_subtype &&
+        (additionalInformationSectionErrors.rek_subtype = locale.validationErrorsSummary.rek_subtype);
+
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_DATA_COLLECTION:
             !data.additionalInformationSection.contactName &&
@@ -46,5 +50,6 @@ export default values => {
     Object.keys(bibliographicSectionErrors).length && (errors.bibliographicSection = { ...bibliographicSectionErrors });
     Object.keys(additionalInformationSectionErrors).length &&
         (errors.additionalInformationSection = { ...additionalInformationSectionErrors });
+
     return errors;
 };

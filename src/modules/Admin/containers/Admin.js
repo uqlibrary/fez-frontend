@@ -51,9 +51,8 @@ const getInitialFormValues = (recordToView, recordType) => {
         initialValues: {
             pid: recordToView.rek_pid,
             publication: recordToView,
+            rek_display_type: recordToView.rek_display_type,
             rek_date: recordToView.rek_date || recordToView.rek_created_date,
-            collection: [],
-            subject: [],
             adminSection: {
                 rek_herdc_notes: {
                     plainText: (recordToView || {}).rek_herdc_notes,
