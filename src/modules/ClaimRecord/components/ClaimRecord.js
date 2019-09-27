@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
+import { Field, propTypes } from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -21,7 +20,7 @@ import {
     ContentIndicatorsField,
     showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-import { validation, routes, claimRecordConfig } from 'config';
+import { claimRecordConfig, routes, validation } from 'config';
 import locale from 'locale/forms';
 
 export default class ClaimRecord extends PureComponent {
@@ -107,13 +106,27 @@ export default class ClaimRecord extends PureComponent {
             : validation.isValidContributorLink(link, true);
     };
 
-    render() {
-        const txt = locale.forms.claimPublicationForm;
+    _showFixRecordButton = () => {
+        return !!this._publication().rek_pid && !!this.props.newRecordFileUploadingOrIssueError;
+    };
 
-        const publication = {
+    _navigateToFixRecord = () => {
+        this._showFixRecordButton &&
+            !!this._publication().rek_pid &&
+            this.props.history.push(routes.pathConfig.records.fix(this._publication().rek_pid));
+    };
+
+    _publication = () => {
+        return {
             ...(this.props.initialValues.get('publication') && this.props.initialValues.get('publication').toJS(0)),
             ...this.props.fullPublicationToClaim,
         };
+    };
+
+    render() {
+        const txt = locale.forms.claimPublicationForm;
+
+        const publication = this._publication();
 
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         if (!author) {
@@ -201,10 +214,12 @@ export default class ClaimRecord extends PureComponent {
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
                             <React.Fragment>
                                 <ConfirmDialogBox
+                                    locale={saveConfirmationLocale}
                                     onRef={this._setSuccessConfirmation}
                                     onAction={this._navigateToMyResearch}
                                     onCancelAction={this._claimAnother}
-                                    locale={saveConfirmationLocale}
+                                    onFixRecordAction={this._navigateToFixRecord}
+                                    showFixRecordButton={this._showFixRecordButton}
                                 />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}

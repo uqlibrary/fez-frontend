@@ -42,12 +42,10 @@ export default class NewRecord extends PureComponent {
 
     _showFixRecordButton = () => {
         const isPID = /UQ:(.*)/;
-        return (
-            this.props.newRecord &&
+        return this.props.newRecord &&
             this.props.newRecord.rek_pid &&
             isPID.test(this.props.newRecord.rek_pid) &&
-            !!this.props.newRecordFileUploadingOrIssueError
-        );
+            !!this.props.newRecordFileUploadingOrIssueError;
     };
 
     _navigateToFixRecord = () => {
