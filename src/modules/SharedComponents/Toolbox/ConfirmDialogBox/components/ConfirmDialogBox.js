@@ -9,11 +9,13 @@ import DialogContent from '@material-ui/core/DialogContent';
 
 export default class ConfirmDialogBox extends Component {
     static propTypes = {
+        hideCancelButton: PropTypes.bool,
         locale: PropTypes.object,
         onAction: PropTypes.func,
         onCancelAction: PropTypes.func,
-        hideCancelButton: PropTypes.bool,
+        onFixRecordAction: PropTypes.func,
         onRef: PropTypes.func,
+        showFixRecordButton: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -24,12 +26,14 @@ export default class ConfirmDialogBox extends Component {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
+        showFixRecordButton: false,
     };
 
     constructor(props) {
         super(props);
 
         this._onCancelAction = this._onCancelAction.bind(this);
+        this._onFixRecordAction = this._onFixRecordAction.bind(this);
         this._hideConfirmation = this._hideConfirmation.bind(this);
         this._onAction = this._onAction.bind(this);
 
@@ -68,6 +72,11 @@ export default class ConfirmDialogBox extends Component {
         !!this.props.onCancelAction && this.props.onCancelAction();
     }
 
+    _onFixRecordAction() {
+        this._hideConfirmation();
+        !!this.props.onFixRecordAction && this.props.onFixRecordAction();
+    }
+
     render() {
         return (
             <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
@@ -82,6 +91,14 @@ export default class ConfirmDialogBox extends Component {
                         color={'primary'}
                         onClick={this._onAction}
                     />
+                    {this.props.showFixRecordButton && (
+                        <Button
+                            variant={'contained'}
+                            color={'warning'}
+                            children={this.props.locale.fixRecordButtonLabel}
+                            onClick={this._onFixRecordAction}
+                        />
+                    )}
                     {!this.props.hideCancelButton && (
                         <Button
                             variant={'contained'}
