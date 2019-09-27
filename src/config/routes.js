@@ -32,7 +32,7 @@ const isAdmin = account => {
 };
 
 export const getDatastreamVersionQueryString = (fileName, checksum) => {
-    if (!checksum.trim()) {
+    if (!checksum) {
         return '';
     }
 

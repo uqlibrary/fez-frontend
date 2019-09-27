@@ -35,7 +35,7 @@ export class Thumbnail extends Component {
         mimeType: PropTypes.string.isRequired,
         onClick: PropTypes.func,
         classes: PropTypes.object.isRequired,
-        checksum: PropTypes.string,
+        checksums: PropTypes.object,
     };
 
     constructor(props) {
@@ -45,9 +45,9 @@ export class Thumbnail extends Component {
         };
     }
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => e => {
         e.preventDefault();
-        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum);
+        this.props.onClick(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums);
     };
 
     render() {
@@ -61,7 +61,7 @@ export class Thumbnail extends Component {
             fileName,
             mimeType,
             securityStatus,
-            checksum,
+            checksums,
         } = this.props;
         if (
             (fileName && mimeType.indexOf('pdf') >= 0) ||
@@ -89,7 +89,7 @@ export class Thumbnail extends Component {
                     mimeType,
                     webMediaUrl,
                     securityStatus,
-                    checksum,
+                    checksums,
                 )}
                 onKeyPress={this.showPreview(
                     fileName,
@@ -98,7 +98,7 @@ export class Thumbnail extends Component {
                     mimeType,
                     webMediaUrl,
                     securityStatus,
-                    checksum,
+                    checksums,
                 )}
                 title={mediaUrl && txt.thumbnailTitle.replace('[image]', mediaUrl)}
             >

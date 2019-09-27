@@ -27,7 +27,7 @@ export class FileName extends PureComponent {
         allowDownload: PropTypes.bool,
         securityStatus: PropTypes.bool,
         classes: PropTypes.object,
-        checksum: PropTypes.string,
+        checksums: PropTypes.object,
     };
 
     isAudio = mimeType => {
@@ -46,9 +46,9 @@ export class FileName extends PureComponent {
         return (this.isImage(mimeType) || this.isVideo(mimeType)) && !!this.props.previewMediaUrl;
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => e => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => e => {
         e.preventDefault();
-        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum);
+        this.props.onFileSelect(fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums);
     };
 
     render() {
@@ -61,14 +61,14 @@ export class FileName extends PureComponent {
             webMediaUrl,
             previewMediaUrl,
             securityStatus,
-            checksum,
+            checksums,
         } = this.props;
         return (
             <Grid container alignItems="center" wrap="nowrap">
                 <Grid item xs>
                     {allowDownload && !this.canShowPreview(mimeType) && (
                         <ExternalLink
-                            href={pathConfig.file.url(pid, fileName, checksum)}
+                            href={pathConfig.file.url(pid, fileName, checksums && checksums.media)}
                             title={fileName}
                             className={this.props.classes.filename}
                             openInNewIcon
@@ -86,7 +86,7 @@ export class FileName extends PureComponent {
                                     mimeType,
                                     webMediaUrl,
                                     securityStatus,
-                                    checksum,
+                                    checksums,
                                 )}
                                 onKeyPress={this.showPreview(
                                     fileName,
@@ -95,7 +95,7 @@ export class FileName extends PureComponent {
                                     mimeType,
                                     webMediaUrl,
                                     securityStatus,
-                                    checksum,
+                                    checksums,
                                 )}
                                 className={this.props.classes.filename}
                             >
@@ -110,7 +110,10 @@ export class FileName extends PureComponent {
                         {allowDownload && this.isAudio(this.props.mimeType) && (
                             <AudioPlayer
                                 pid={pid}
-                                fileName={previewMediaUrl || pathConfig.file.url(pid, fileName, checksum)}
+                                fileName={
+                                    previewMediaUrl ||
+                                    pathConfig.file.url(pid, fileName, checksums && checksums.preview)
+                                }
                                 mimeType={mimeType}
                             />
                         )}
