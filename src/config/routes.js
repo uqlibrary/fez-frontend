@@ -40,7 +40,6 @@ export const getDatastreamVersionQueryString = (fileName, checksum) => {
         .update(`${fileName}${checksum.trim()}`)
         .digest('hex');
 
-    console.log(`${fileName}${checksum.trim()} : ${hash}`);
     return hash;
 };
 
