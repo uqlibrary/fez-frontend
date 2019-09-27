@@ -3,6 +3,7 @@
 .idea/watcherTasks.xml
 .idea/composerJson.xml
 .idea/php.xml
+.idea/dbnavigator.xml
 node_modules
 dist
 npm-debug.log*

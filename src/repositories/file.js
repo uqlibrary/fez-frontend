@@ -1,4 +1,5 @@
 import { generateCancelToken } from 'config';
+import { MIME_TYPE_WHITELIST } from 'modules/SharedComponents/Toolbox/FileUploader/config';
 import * as fileUploadActions from 'modules/SharedComponents/Toolbox/FileUploader/actions';
 import { FILE_UPLOAD_API } from './routes';
 import { post, put } from './generic';
@@ -24,10 +25,13 @@ export function putUploadFile(pid, file, dispatch) {
         },
     })
         .then(uploadUrl => {
+            const extension = file.name.split('.').pop();
+            const headers = {};
+            if (MIME_TYPE_WHITELIST.hasOwnProperty(extension)) {
+                headers['Content-Type'] = MIME_TYPE_WHITELIST[extension];
+            }
             const options = {
-                headers: {
-                    'Content-Type': file.fileData && file.fileData.type ? file.fileData.type : 'multipart/form-data',
-                },
+                headers,
                 onUploadProgress: fileUploadActions.notifyFileUploadProgress(file.name, dispatch),
                 cancelToken: generateCancelToken().token,
             };
