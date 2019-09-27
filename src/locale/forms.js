@@ -104,7 +104,7 @@ export default {
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research',
-                fixRecordButtonLabel: 'Fix record',
+                alternateActionButtonLabel: 'Fix record',
             },
             validationAlert: {
                 type: 'warning',

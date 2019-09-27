@@ -98,7 +98,7 @@ export default class ConfirmDialogBox extends Component {
                             <Button
                                 variant={'contained'}
                                 color={'secondary'}
-                                children={this.props.locale.AlternateActionButtonLabel}
+                                children={this.props.locale.alternateActionButtonLabel}
                                 onClick={this._onAlternateAction}
                             />
                         )}
