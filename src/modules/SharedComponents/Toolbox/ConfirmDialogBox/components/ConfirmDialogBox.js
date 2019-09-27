@@ -15,9 +15,9 @@ export default class ConfirmDialogBox extends Component {
         locale: PropTypes.object,
         onAction: PropTypes.func,
         onCancelAction: PropTypes.func,
-        onFixRecordAction: PropTypes.func,
+        onAlternateAction: PropTypes.func,
         onRef: PropTypes.func,
-        showFixRecordButton: PropTypes.func,
+        showAlternateActionButton: PropTypes.func,
     };
 
     static defaultProps = {
@@ -34,7 +34,7 @@ export default class ConfirmDialogBox extends Component {
         super(props);
 
         this._onCancelAction = this._onCancelAction.bind(this);
-        this._onFixRecordAction = this._onFixRecordAction.bind(this);
+        this._onAlternateAction = this._onAlternateAction.bind(this);
         this._hideConfirmation = this._hideConfirmation.bind(this);
         this._onAction = this._onAction.bind(this);
 
@@ -73,9 +73,9 @@ export default class ConfirmDialogBox extends Component {
         !!this.props.onCancelAction && this.props.onCancelAction();
     }
 
-    _onFixRecordAction() {
+    _onAlternateAction() {
         this._hideConfirmation();
-        !!this.props.onFixRecordAction && this.props.onFixRecordAction();
+        !!this.props.onAlternateAction && this.props.onAlternateAction();
     }
 
     render() {
@@ -93,12 +93,13 @@ export default class ConfirmDialogBox extends Component {
                             color={'primary'}
                             onClick={this._onAction}
                         />
-                        {this.props.showFixRecordButton && (
+                        // an optional middle button that will display in a warning colour
+                        {this.props.showAlternateActionButton && (
                             <Button
                                 variant={'contained'}
                                 color={'secondary'}
-                                children={this.props.locale.fixRecordButtonLabel}
-                                onClick={this._onFixRecordAction}
+                                children={this.props.locale.AlternateActionButtonLabel}
+                                onClick={this._onAlternateAction}
                             />
                         )}
                         {!this.props.hideCancelButton && (

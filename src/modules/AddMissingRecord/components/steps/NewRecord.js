@@ -93,8 +93,8 @@ export default class NewRecord extends PureComponent {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
-                    showFixRecordButton={this._showFixRecordButton}
-                    onFixRecordAction={this._navigateToFixRecord}
+                    showAlternateActionButton={this._showFixRecordButton}
+                    onAlternateAction={this._navigateToFixRecord}
                     locale={saveConfirmationLocale}
                 />
                 <PublicationForm
