@@ -91,6 +91,7 @@ export default {
         contactEmail: 'Contact email is required',
         rek_access_conditions: 'Access condition is required',
         rek_copyright: 'You are required to accept deposit agreement',
+        depositAgreement: 'You are required to accept deposit agreement',
         rek_license: 'Licensing and terms of access is required',
         rek_project_name: 'Project name is required',
         rek_project_description: 'Project description is required',

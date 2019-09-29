@@ -145,3 +145,40 @@ export default {
         },
     ],
 };
+
+export const validateConferencePaper = (
+    { bibliographicSection: bs, filesSection: fs },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_conference_name || {}).rek_conference_name && {
+            fez_record_search_key_conference_name: {
+                rek_conference_name: summary.rek_conference_name,
+            },
+        }) ||
+            {}),
+        ...((!((bs || {}).fez_record_search_key_conference_location || {}).rek_conference_location && {
+            fez_record_search_key_conference_location: {
+                rek_conference_location: summary.rek_conference_location,
+            },
+        }) ||
+            {}),
+        ...((!((bs || {}).fez_record_search_key_conference_dates || {}).rek_conference_dates && {
+            fez_record_search_key_conference_dates: {
+                rek_conference_dates: summary.rek_conference_dates,
+            },
+        }) ||
+            {}),
+        ...((!((bs || {}).fez_record_search_key_journal_name || {}).rek_journal_name && {
+            fez_record_search_key_journal_name: {
+                rek_journal_name: summary.rek_journal_name,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+});
