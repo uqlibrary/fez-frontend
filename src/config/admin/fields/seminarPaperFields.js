@@ -24,6 +24,8 @@ export default {
                 ['rek_date'],
                 ['rek_description'],
                 ['fez_record_search_key_refereed_source'],
+                ['fez_record_search_key_org_name'],
+                ['fez_record_search_key_org_unit_name'],
             ],
         },
         {

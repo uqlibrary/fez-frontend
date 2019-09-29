@@ -10,11 +10,11 @@ import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import {
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_SEMINAR_PAPER,
     RECORD_TYPE_COLLECTION,
     RECORD_TYPE_RECORD,
-    PUBLICATION_TYPE_AUDIO_DOCUMENT,
-    PUBLICATION_TYPE_SEMINAR_PAPER,
-    PUBLICATION_TYPE_DATA_COLLECTION,
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
@@ -32,7 +32,9 @@ export const identifiersParams = record => ({
     displayIdentifiers: PUBLICATION_TYPE_AUDIO_DOCUMENT === record.rek_display_type,
 });
 
-export const filesParams = record => record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION;
+export const filesParams = record => ({
+    isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+});
 
 const getInitialValues = (record, tab, tabParams = () => {}) =>
     (adminInterfaceConfig[record.rek_display_type] || {})

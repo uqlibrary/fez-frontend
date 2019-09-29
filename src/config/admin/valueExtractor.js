@@ -2,6 +2,82 @@ import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { ORG_TYPE_NOT_SET } from 'config/general';
 
+const authorsGetValue = record => {
+    const authors = (record.fez_record_search_key_author || []).reduce(
+        (authorsObject, author) => ({
+            ...authorsObject,
+            [author.rek_author_order]: author,
+        }),
+        {},
+    );
+
+    const authorIds = (record.fez_record_search_key_author_id || []).reduce(
+        (authorIdsObject, authorId) => ({
+            ...authorIdsObject,
+            [authorId.rek_author_id_order]: authorId,
+        }),
+        {},
+    );
+
+    const authorAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
+        (authorAffiliationsObject, authorAffiliationName) => ({
+            ...authorAffiliationsObject,
+            [authorAffiliationName.rek_author_affiliation_name_order]: authorAffiliationName,
+        }),
+        {},
+    );
+
+    const authorAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
+        (authorAffiliationTypesObject, authorAffiliationType) => ({
+            ...authorAffiliationTypesObject,
+            [authorAffiliationType.rek_author_affiliation_type_order]: authorAffiliationType,
+        }),
+        {},
+    );
+
+    const authorRoles = (record.fez_record_search_key_author_role || []).reduce(
+        (authorRolesObject, authorRole) => ({
+            ...authorRolesObject,
+            [authorRole.rek_author_id_order]: authorRole,
+        }),
+        {},
+    );
+    return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
+        nameAsPublished: (authors[order] || {}).rek_author,
+        creatorRole: (authorRoles[order] || {}).rek_author_role || '',
+        uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
+        authorId: (authorIds[order] || {}).rek_author_id || 0,
+        orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
+        orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
+        affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
+    }));
+};
+
+const editorsGetValue = record => {
+    const contributors = (record.fez_record_search_key_contributor || []).reduce(
+        (contributorsObject, contributor) => ({
+            ...contributorsObject,
+            [contributor.rek_contributor_order]: contributor,
+        }),
+        {},
+    );
+
+    const contributorIds = (record.fez_record_search_key_contributor_id || []).reduce(
+        (contributorIdsObject, contributorId) => ({
+            ...contributorIdsObject,
+            [contributorId.rek_contributor_id_order]: contributorId,
+        }),
+        {},
+    );
+
+    return (record.fez_record_search_key_contributor || []).map(({ rek_contributor_order: order }) => ({
+        nameAsPublished: (contributors[order] || {}).rek_contributor,
+        creatorRole: '',
+        uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id || 0}`,
+        authorId: (contributorIds[order] || {}).rek_contributor_id || 0,
+    }));
+};
+
 export default {
     rek_title: {
         getValue: record => ({
@@ -16,6 +92,12 @@ export default {
         }),
     },
     rek_date: {
+        getValue: record => record.rek_date,
+    },
+    date: {
+        getValue: record => record.rek_date,
+    },
+    dateOfIssue: {
         getValue: record => record.rek_date,
     },
     rek_subtype: {
@@ -218,82 +300,10 @@ export default {
             })),
     },
     authors: {
-        getValue: record => {
-            const authors = (record.fez_record_search_key_author || []).reduce(
-                (authorsObject, author) => ({
-                    ...authorsObject,
-                    [author.rek_author_order]: author,
-                }),
-                {},
-            );
-
-            const authorIds = (record.fez_record_search_key_author_id || []).reduce(
-                (authorIdsObject, authorId) => ({
-                    ...authorIdsObject,
-                    [authorId.rek_author_id_order]: authorId,
-                }),
-                {},
-            );
-
-            const authorAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
-                (authorAffiliationsObject, authorAffiliationName) => ({
-                    ...authorAffiliationsObject,
-                    [authorAffiliationName.rek_author_affiliation_name_order]: authorAffiliationName,
-                }),
-                {},
-            );
-
-            const authorAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
-                (authorAffiliationTypesObject, authorAffiliationType) => ({
-                    ...authorAffiliationTypesObject,
-                    [authorAffiliationType.rek_author_affiliation_type_order]: authorAffiliationType,
-                }),
-                {},
-            );
-
-            const authorRoles = (record.fez_record_search_key_author_role || []).reduce(
-                (authorRolesObject, authorRole) => ({
-                    ...authorRolesObject,
-                    [authorRole.rek_author_id_order]: authorRole,
-                }),
-                {},
-            );
-            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
-                nameAsPublished: (authors[order] || {}).rek_author,
-                creatorRole: (authorRoles[order] || {}).rek_author_role || '',
-                uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
-                authorId: (authorIds[order] || {}).rek_author_id || 0,
-                orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
-                orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
-                affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
-            }));
-        },
+        getValue: authorsGetValue,
     },
     editors: {
-        getValue: record => {
-            const contributors = (record.fez_record_search_key_contributor || []).reduce(
-                (contributorsObject, contributor) => ({
-                    ...contributorsObject,
-                    [contributor.rek_contributor_order]: contributor,
-                }),
-                {},
-            );
-
-            const contributorIds = (record.fez_record_search_key_contributor_id || []).reduce(
-                (contributorIdsObject, contributorId) => ({
-                    ...contributorIdsObject,
-                    [contributorId.rek_contributor_id_order]: contributorId,
-                }),
-                {},
-            );
-
-            return (record.fez_record_search_key_contributor || []).map(({ rek_contributor_order: order }) => ({
-                nameAsPublished: (contributors[order] || {}).rek_contributor,
-                creatorRole: '',
-                uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id || 0}`,
-                authorId: (contributorIds[order] || {}).rek_contributor_id || 0,
-            }));
-        },
+        getValue: editorsGetValue,
     },
     contentIndicators: {
         getValue: record =>
@@ -314,6 +324,12 @@ export default {
         getValue: record => ({
             plainText: (record.fez_record_search_key_notes || {}).rek_notes,
             htmlText: (record.fez_record_search_key_notes || {}).rek_notes,
+        }),
+    },
+    advisoryStatement: {
+        getValue: record => ({
+            plainText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
+            htmlText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
         }),
     },
     significanceAndContributionStatement: {
@@ -488,6 +504,9 @@ export default {
     rek_genre: {
         getValue: record => record.rek_genre,
     },
+    thesisType: {
+        getValue: record => record.rek_genre_type,
+    },
     geoCoordinates: {
         getValue: record =>
             record.fez_record_search_key_geographic_area &&
@@ -634,50 +653,34 @@ export default {
             }));
         },
     },
-    photographers: {
+    supervisors: {
         getValue: record => {
-            const photographers = (record.fez_record_search_key_author || []).reduce(
-                (photographersObject, photographer) => ({
-                    ...photographersObject,
-                    [photographer.rek_author_order]: photographer,
+            const supervisors = (record.fez_record_search_key_supervisor_name || []).reduce(
+                (supervisorsObject, supervisor) => ({
+                    ...supervisorsObject,
+                    [supervisor.rek_supervisor_name_order]: supervisor,
                 }),
                 {},
             );
 
-            const photographerIds = (record.fez_record_search_key_photographer_id || []).reduce(
-                (photographerIdsObject, photographerId) => ({
-                    ...photographerIdsObject,
-                    [photographerId.rek_author_id_order]: photographerId,
+            const supervisorIds = (record.fez_record_search_key_supervisor_id || []).reduce(
+                (supervisorIdsObject, supervisorId) => ({
+                    ...supervisorIdsObject,
+                    [supervisorId.rek_supervisor_id_order]: supervisorId,
                 }),
                 {},
             );
 
-            const photographerAffiliationNames = (record.fez_record_search_key_author_affiliation_name || []).reduce(
-                (photographerAffiliationsObject, photographerAffiliationName) => ({
-                    ...photographerAffiliationsObject,
-                    [photographerAffiliationName.rek_author_affiliation_name_order]: photographerAffiliationName,
-                }),
-                {},
-            );
-
-            const photographerAffiliationTypes = (record.fez_record_search_key_author_affiliation_type || []).reduce(
-                (photographerAffiliationTypesObject, photographerAffiliationType) => ({
-                    ...photographerAffiliationTypesObject,
-                    [photographerAffiliationType.rek_author_affiliation_type_order]: photographerAffiliationType,
-                }),
-                {},
-            );
-
-            return (record.fez_record_search_key_author || []).map(({ rek_author_order: order }) => ({
-                nameAsPublished: (photographers[order] || {}).rek_author,
+            return (record.fez_record_search_key_supervisor_name || []).map(({ rek_supervisor_name_order: order }) => ({
+                nameAsPublished: (supervisors[order] || {}).rek_supervisor_name,
                 creatorRole: '',
-                uqIdentifier: `${(photographerIds[order] || {}).rek_author_id || 0}`,
-                authorId: (photographerIds[order] || {}).rek_author_id || 0,
-                orgaff: (photographerAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
-                orgtype: `${(photographerAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
-                affiliation: (!!(photographerIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
+                uqIdentifier: `${(supervisorIds[order] || {}).rek_supervisor_id || 0}`,
+                authorId: (supervisorIds[order] || {}).rek_supervisor_id || 0,
             }));
         },
+    },
+    photographers: {
+        getValue: authorsGetValue,
     },
     fez_record_search_key_parent_publication: {
         getValue: record => ({ ...record.fez_record_search_key_parent_publication }),
@@ -690,5 +693,8 @@ export default {
     },
     fez_record_search_key_translated_newspaper: {
         getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
+    },
+    fez_record_search_key_audience_size: {
+        getValue: record => (record.fez_record_search_key_audience_size || {}).rek_audience_size || 0,
     },
 };
