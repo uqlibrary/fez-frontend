@@ -80,6 +80,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -966,6 +967,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
       }
       onAction={[MockFunction]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}

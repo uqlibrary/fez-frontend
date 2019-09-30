@@ -461,7 +461,6 @@ exports[`ConfirmDialogBox snapshots tests renders component with 3 buttons 1`] =
       >
         Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
       <WithStyles(Button)
         color="secondary"
         onClick={[Function]}
@@ -940,7 +939,6 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
       >
         ENG: Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
       <WithStyles(Button)
         color="primary"
         onClick={[Function]}
@@ -1414,7 +1412,6 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
       >
         Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
     </WithStyles(DialogActions)>
   </WithStyles(Dialog)>
 </MuiThemeProviderOld>
@@ -1881,7 +1878,6 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
       >
         Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
       <WithStyles(Button)
         color="primary"
         onClick={[Function]}
@@ -2355,7 +2351,6 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
       <WithStyles(Button)
         color="primary"
         onClick={[Function]}
@@ -2829,7 +2824,6 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
       >
         Yes
       </WithStyles(Button)>
-      // an optional middle button that will display in orange warning colour
       <WithStyles(Button)
         color="primary"
         onClick={[Function]}

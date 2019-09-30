@@ -24,6 +24,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       }
       onAction={[Function]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       item={true}
@@ -187,6 +188,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       }
       onAction={[Function]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       item={true}
@@ -350,6 +352,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       }
       onAction={[Function]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       item={true}
@@ -513,6 +516,7 @@ exports[`AdminInterface component should render default view as a full form view
       }
       onAction={[Function]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       item={true}
@@ -651,6 +655,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       }
       onAction={[Function]}
       onRef={[Function]}
+      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       item={true}

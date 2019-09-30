@@ -22,6 +22,7 @@ exports[`Component Orcid  should display error if ORCID url redirect STATE respo
       }
     }
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     container={true}
@@ -175,6 +176,7 @@ exports[`Component Orcid  should display error if author update failed 1`] = `
       }
     }
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     container={true}
@@ -328,6 +330,7 @@ exports[`Component Orcid  should render form uf account/author is set 1`] = `
       }
     }
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     container={true}

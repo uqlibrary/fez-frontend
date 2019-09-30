@@ -147,6 +147,7 @@ exports[`Component PossiblyMyRecords renders list of publications and counts and
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     container={true}

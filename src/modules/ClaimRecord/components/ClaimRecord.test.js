@@ -422,11 +422,15 @@ describe('Component ClaimRecord ', () => {
         const goBack = jest.fn();
 
         const wrapper = setup({ history: { push: testMethod, goBack: goBack } });
+
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
         wrapper.instance()._cancelClaim();
         expect(goBack).toHaveBeenCalled();
+
+        wrapper.instance()._navigateToFixRecord();
+        expect(testMethod).toHaveBeenCalledWith('/records/UQ:676287/fix');
     });
 
     it('should redirect back to previous location on claim more publications', () => {
@@ -562,6 +566,14 @@ describe('Component ClaimRecord ', () => {
         };
 
         const wrapper = setup(props);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render alert about file uploading or issue error', () => {
+        const wrapper = setup({
+            newRecordFileUploadingOrIssueError: true,
+        });
+
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });

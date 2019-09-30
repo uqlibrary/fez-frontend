@@ -14,6 +14,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <br />
   Step 2 - Select your name from the list below
@@ -142,6 +143,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -246,6 +248,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -350,6 +353,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -476,6 +480,7 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
