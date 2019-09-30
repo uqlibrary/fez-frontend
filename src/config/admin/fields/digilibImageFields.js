@@ -25,11 +25,60 @@ export default {
                 ['rek_description'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_refereed_source'],
+                [
+                    'fez_record_search_key_construction_date',
+                    'fez_record_search_key_date_photo_taken',
+                    'fez_record_search_key_date_scanned',
+                ],
             ],
         },
         {
             title: 'Related publications', // Succeeds
             groups: [['fez_record_search_key_isderivationof']],
+        },
+        {
+            title: 'Period(s)',
+            groups: [['fez_record_search_key_period']],
+        },
+        {
+            title: 'Structural system(s)',
+            groups: [['fez_record_search_key_structural_systems']],
+        },
+        {
+            title: 'Style',
+            groups: [['fez_record_search_key_style']],
+        },
+        {
+            title: 'Subcategory(ies)',
+            groups: [['fez_record_search_key_subcategory']],
+        },
+        {
+            title: 'Surrounding feature(s)',
+            groups: [['fez_record_search_key_surrounding_features']],
+        },
+        {
+            title: 'Interior feature(s)',
+            groups: [['fez_record_search_key_interior_features']],
+        },
+        {
+            title: 'Building material(s)',
+            groups: [['fez_record_search_key_building_materials']],
+        },
+        {
+            title: 'Category(ies)',
+            groups: [['fez_record_search_key_category']],
+        },
+        {
+            title: 'Condition(s)',
+            groups: [['fez_record_search_key_condition']],
+        },
+        {
+            title: 'Alternative_ title(s)',
+            groups: [['fez_record_search_key_alternative_title']],
+        },
+        {
+            title: 'Architectural feature(s)',
+            groups: [['fez_record_search_key_architectural_features']],
         },
     ],
     authors: () => [
@@ -56,25 +105,6 @@ export default {
             groups: [
                 ['fez_record_search_key_institutional_status', 'fez_record_search_key_oa_status'],
                 ['additionalNotes'],
-            ],
-        },
-        {
-            title: 'Holding Pen',
-            groups: [
-                ['fez_record_search_key_period'],
-                ['fez_record_search_key_structural_systems'],
-                ['fez_record_search_key_style'],
-                ['fez_record_search_key_subcategory'],
-                ['fez_record_search_key_surrounding_features'],
-                ['fez_record_search_key_interior_features'],
-                ['fez_record_search_key_date_photo_taken'],
-                ['fez_record_search_key_date_scanned'],
-                ['fez_record_search_key_building_materials'],
-                ['fez_record_search_key_category'],
-                ['fez_record_search_key_condition'],
-                ['fez_record_search_key_construction_date'],
-                ['fez_record_search_key_alternative_title'],
-                ['fez_record_search_key_architectural_features'],
             ],
         },
     ],
