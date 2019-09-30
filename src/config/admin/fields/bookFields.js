@@ -1,4 +1,5 @@
 import commonFields from './commonFields';
+import { isAuthorOrEditorSelected } from 'config/validation';
 
 export default {
     ...commonFields,
@@ -98,3 +99,12 @@ export default {
         },
     ],
 };
+
+export const validateBook = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: isAuthorOrEditorSelected(as || {}, true),
+});
