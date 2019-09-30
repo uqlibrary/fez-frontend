@@ -568,12 +568,4 @@ describe('Component ClaimRecord ', () => {
         const wrapper = setup(props);
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
-    it('should render alert about file uploading or issue error', () => {
-        const wrapper = setup({
-            newRecordFileUploadingOrIssueError: true,
-        });
-
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
 });
