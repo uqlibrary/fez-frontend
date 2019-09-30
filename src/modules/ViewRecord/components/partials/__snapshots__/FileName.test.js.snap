@@ -547,6 +547,11 @@ exports[`File Name Component  should display file name link 1`] = `
         >
           <FileName
             allowDownload={true}
+            checksums={
+              Object {
+                "media": "111",
+              }
+            }
             classes={Object {}}
             fileName="test.jpg"
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.jpg"
@@ -807,7 +812,7 @@ exports[`File Name Component  should display file name link 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       >
                         <WithStyles(ExternalLink)
-                          href="http://localhost/view/UQ:676287/test.jpg"
+                          href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
                           openInNewIcon={true}
                           title="test.jpg"
                         >
@@ -819,7 +824,7 @@ exports[`File Name Component  should display file name link 1`] = `
                                 "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
                               }
                             }
-                            href="http://localhost/view/UQ:676287/test.jpg"
+                            href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
                             openInNewIcon={true}
                             rel="noopener noreferrer"
                             target="_blank"
@@ -1261,7 +1266,7 @@ exports[`File Name Component  should display file name link 1`] = `
                           >
                             <a
                               className=" ExternalLink-externalLink-134"
-                              href="http://localhost/view/UQ:676287/test.jpg"
+                              href="http://localhost/view/UQ:676287/test.jpg?dsi_version=d96659e552c8eb09fd5f1b9511b66d71"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"
@@ -2943,6 +2948,11 @@ exports[`File Name Component  should render audio player 1`] = `
         >
           <FileName
             allowDownload={true}
+            checksums={
+              Object {
+                "media": "111",
+              }
+            }
             classes={Object {}}
             fileName="test.mp3"
             mediaUrl="https://espace.library.uq.edu.au/view/UQ:676287/test.mp3"
@@ -3203,7 +3213,7 @@ exports[`File Name Component  should render audio player 1`] = `
                         className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
                       >
                         <WithStyles(ExternalLink)
-                          href="http://localhost/view/UQ:676287/test.mp3"
+                          href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
                           openInNewIcon={true}
                           title="test.mp3"
                         >
@@ -3215,7 +3225,7 @@ exports[`File Name Component  should render audio player 1`] = `
                                 "externalLinkIcon": "ExternalLink-externalLinkIcon-135",
                               }
                             }
-                            href="http://localhost/view/UQ:676287/test.mp3"
+                            href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
                             openInNewIcon={true}
                             rel="noopener noreferrer"
                             target="_blank"
@@ -3657,7 +3667,7 @@ exports[`File Name Component  should render audio player 1`] = `
                           >
                             <a
                               className=" ExternalLink-externalLink-134"
-                              href="http://localhost/view/UQ:676287/test.mp3"
+                              href="http://localhost/view/UQ:676287/test.mp3?dsi_version=96ba1368c9263ef0c5200d522eaf3488"
                               rel="noopener noreferrer"
                               tabIndex="0"
                               target="_blank"

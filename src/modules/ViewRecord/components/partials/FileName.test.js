@@ -30,7 +30,12 @@ describe('File Name Component ', () => {
 
     it('should display file name link', () => {
         const wrapper = setup(
-            { allowDownload: true, fileName: 'test.jpg', previewFileName: 'preview_test.jpg' },
+            {
+                allowDownload: true,
+                fileName: 'test.jpg',
+                previewFileName: 'preview_test.jpg',
+                checksums: { media: '111' },
+            },
             { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -40,7 +45,7 @@ describe('File Name Component ', () => {
 
     it('should render audio player', () => {
         const wrapper = setup(
-            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3' },
+            { allowDownload: true, mimeType: 'audio/mp3', fileName: 'test.mp3', checksums: { media: '111' } },
             { isShallow: false },
         );
         expect(toJson(wrapper)).toMatchSnapshot();

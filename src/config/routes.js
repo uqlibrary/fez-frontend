@@ -3,7 +3,8 @@ import { default as formLocale } from 'locale/publicationForm';
 import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
-const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
+import { createHash } from 'crypto';
+export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
 
@@ -28,6 +29,18 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
 
 const isAdmin = account => {
     return account && account.canMasquerade;
+};
+
+export const getDatastreamVersionQueryString = (fileName, checksum) => {
+    if (!checksum) {
+        return '';
+    }
+
+    const hash = createHash('md5')
+        .update(`${fileName}${checksum.trim()}`)
+        .digest('hex');
+
+    return hash;
 };
 
 export const pathConfig = {
@@ -60,7 +73,14 @@ export const pathConfig = {
     // TODO: update how we get files after security is implemented in fez file api
     // (this is used in metadata to reflect legacy file urls for citation_pdf_url - Google Scholar)
     file: {
-        url: (pid, fileName) => `${fullPath}/view/${pid}/${fileName}`,
+        url: (pid, fileName, checksum = '') => {
+            let version = getDatastreamVersionQueryString(fileName, checksum);
+            if (version) {
+                version = `?dsi_version=${version}`;
+            }
+
+            return `${fullPath}/view/${pid}/${fileName}${version}`;
+        },
     },
     // TODO: review institutional status and herdc status links when we start administrative epic
     list: {
