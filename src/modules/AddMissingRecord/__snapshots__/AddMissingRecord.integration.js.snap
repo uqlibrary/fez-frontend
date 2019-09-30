@@ -963,7 +963,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                     <p
 +                       class=\\"MuiTypography-root-475 MuiTypography-body2-483 MuiTypography-gutterBottom-502\\"
 +                     >
-+                       You may add up to 10 files (max 8GB each)
++                       You may add up to 10 files (max 5GB each)
 +                     </p>
 +                     <div
 +                       class=\\"MuiGrid-container-378\\"
@@ -2505,7 +2505,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                     <p
 +                       class=\\"MuiTypography-root-889 MuiTypography-body2-897 MuiTypography-gutterBottom-916\\"
 +                     >
-+                       You may add up to 10 files (max 8GB each)
++                       You may add up to 10 files (max 5GB each)
 +                     </p>
 +                     <div
 +                       class=\\"MuiGrid-container-792\\"
