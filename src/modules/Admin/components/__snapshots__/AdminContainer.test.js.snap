@@ -1471,6 +1471,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "displayName": "Connect(Component)",
                       "type": [Function],
                     },
+                    "numberOfErrors": null,
                   },
                   "bibliographic": Object {
                     "activated": true,
@@ -1500,6 +1501,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                       "displayName": "Connect(Component)",
                       "type": [Function],
                     },
+                    "numberOfErrors": null,
                   },
                   "grantInformation": Object {
                     "activated": true,
@@ -18843,6 +18845,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 "displayName": "Connect(Component)",
                 "type": [Function],
               },
+              "numberOfErrors": null,
             },
             "bibliographic": Object {
               "activated": true,
@@ -18872,6 +18875,7 @@ exports[`AdminContainer component should render default view 1`] = `
                 "displayName": "Connect(Component)",
                 "type": [Function],
               },
+              "numberOfErrors": null,
             },
             "grantInformation": Object {
               "activated": true,
