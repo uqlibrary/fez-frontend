@@ -157,6 +157,7 @@ export const AdminContainer = ({
                                 authorDetails: {
                                     component: AuthorsSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).authorsSection || null,
                                 },
                                 additionalInformation: {
                                     component: AdditionalInformationSection,
@@ -181,6 +182,7 @@ export const AdminContainer = ({
                                 files: {
                                     component: FilesSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).filesSection || null,
                                 },
                                 security: {
                                     component: SecuritySection,

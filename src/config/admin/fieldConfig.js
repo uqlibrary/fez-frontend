@@ -187,7 +187,7 @@ export default {
     date: {
         component: DatePickerField,
         componentProps: {
-            name: 'bibliographicSection.date',
+            name: 'bibliographicSection.rek_date',
             label: 'Date',
             placeholder: 'Date',
             required: true,

@@ -1,7 +1,12 @@
 import { locale } from 'locale';
-import { PUBLICATION_TYPE_DATA_COLLECTION, PUBLICATION_TYPE_CONFERENCE_PAPER } from 'config/general';
+import {
+    PUBLICATION_TYPE_DATA_COLLECTION,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+} from 'config/general';
 import { validateConferencePaper } from './fields/conferencePaperFields';
 import { validateDataCollection } from './fields/dataCollectionFields';
+import { validateAudioDocument } from './fields/audioFields';
 
 import deepmerge from 'deepmerge';
 
@@ -28,6 +33,10 @@ export default values => {
         (errors.additionalInformationSection.rek_subtype = locale.validationErrorsSummary.rek_subtype);
 
     switch (data.rek_display_type) {
+        case PUBLICATION_TYPE_AUDIO_DOCUMENT:
+            const audioDocumentErrors = validateAudioDocument(data, locale);
+            errors = deepmerge(errors, audioDocumentErrors);
+            break;
         case PUBLICATION_TYPE_CONFERENCE_PAPER:
             const conferencePaperErrors = validateConferencePaper(data, locale);
             errors = deepmerge(errors, conferencePaperErrors);
