@@ -30,6 +30,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
+import { OrgUnitNameField } from 'modules/SharedComponents/LookupFields';
 import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -1175,21 +1176,21 @@ export default {
         },
     },
     fez_record_search_key_org_unit_name: {
-        component: GenericTextField,
+        component: OrgUnitNameField,
         componentProps: {
             fullWidth: true,
             label: 'School, department, or centre',
             name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
-            placeholder: '',
+            floatingLabelText: 'School, department, or centre',
         },
     },
     thesisOrgUnitName: {
-        component: GenericTextField,
+        component: OrgUnitNameField,
         componentProps: {
             fullWidth: true,
             label: 'School, centre, or institute',
             name: 'bibliographicSection.thesisOrgUnitName',
-            placeholder: '',
+            floatingLabelText: 'School, centre, or institute',
         },
     },
     fez_record_search_key_report_number: {

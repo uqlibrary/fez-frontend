@@ -20,6 +20,7 @@ const mapStateToProps = (state, props) => {
             (!!props.value && { value: props.value }) ||
             '',
         itemToString: item => (!!item && String(item.value)) || '',
+        ...props,
     };
 };
 
