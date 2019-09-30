@@ -196,9 +196,6 @@ export default class ClaimRecord extends PureComponent {
             });
         }
 
-        const showAlternateActionButton =
-            !!this._publication().rek_pid && !!this.props.newRecordFileUploadingOrIssueError;
-
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
@@ -216,7 +213,7 @@ export default class ClaimRecord extends PureComponent {
                                     onAction={this._navigateToMyResearch}
                                     onAlternateAction={this._navigateToFixRecord}
                                     onCancelAction={this._claimAnother}
-                                    showAlternateActionButton={showAlternateActionButton}
+                                    showAlternateActionButton={this.props.publicationToClaimFileUploadingError}
                                 />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}
