@@ -19961,6 +19961,14 @@ exports[`Files Component  should show a blacklisted collection member when the u
           <WithStyles(FileName)
             allowDownload={true}
             calculatedSize="95.49 KB"
+            checksums={
+              Object {
+                "media": undefined,
+                "preview": undefined,
+                "thumbnail": undefined,
+                "web": undefined,
+              }
+            }
             description="testing image description"
             fileName="image.jpg"
             icon={
