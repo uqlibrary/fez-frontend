@@ -17,7 +17,7 @@ export default class ConfirmDialogBox extends Component {
         onCancelAction: PropTypes.func,
         onAlternateAction: PropTypes.func,
         onRef: PropTypes.func,
-        showAlternateActionButton: PropTypes.func,
+        showAlternateActionButton: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -28,6 +28,7 @@ export default class ConfirmDialogBox extends Component {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
+        showAlternateActionButton: false,
     };
 
     constructor(props) {
@@ -93,8 +94,8 @@ export default class ConfirmDialogBox extends Component {
                             color={'primary'}
                             onClick={this._onAction}
                         />
-                        // an optional middle button that will display in a warning colour
                         {this.props.showAlternateActionButton && (
+                            // an optional middle button that will display in a warning colour
                             <Button
                                 variant={'contained'}
                                 color={'secondary'}

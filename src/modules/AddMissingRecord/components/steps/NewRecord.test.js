@@ -86,10 +86,23 @@ describe('Add new record', () => {
         expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
     });
 
+    it('should navigate to fix record', () => {
+        const navigateToFixRecord = jest.fn();
+        const history = {
+            push: navigateToFixRecord,
+        };
+        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
+        wrapper.instance()._navigateToFixRecord();
+        expect(navigateToFixRecord).toBeCalled();
+    });
+
     it('should render alert about file uploading or issue error', () => {
         const wrapper = setup({
             author: {},
             newRecordFileUploadingOrIssueError: true,
+            newRecord: {
+                rek_pid: 'UQ:111111',
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

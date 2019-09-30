@@ -22,6 +22,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -94,6 +95,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -195,6 +197,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -256,6 +259,7 @@ exports[`ListRow renders  should move row down 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -343,6 +347,7 @@ exports[`ListRow renders  should move row up 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"

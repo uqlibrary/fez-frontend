@@ -106,14 +106,8 @@ export default class ClaimRecord extends PureComponent {
             : validation.isValidContributorLink(link, true);
     };
 
-    _showFixRecordButton = () => {
-        return !!this._publication().rek_pid && !!this.props.newRecordFileUploadingOrIssueError;
-    };
-
     _navigateToFixRecord = () => {
-        this._showFixRecordButton &&
-            !!this._publication().rek_pid &&
-            this.props.history.push(routes.pathConfig.records.fix(this._publication().rek_pid));
+        this.props.history.push(routes.pathConfig.records.fix(this._publication().rek_pid));
     };
 
     _publication = () => {
@@ -202,6 +196,9 @@ export default class ClaimRecord extends PureComponent {
             });
         }
 
+        const showAlternateActionButton =
+            !!this._publication().rek_pid && !!this.props.newRecordFileUploadingOrIssueError;
+
         return (
             <StandardPage title={txt.title}>
                 <form onSubmit={this._handleDefaultSubmit}>
@@ -217,9 +214,9 @@ export default class ClaimRecord extends PureComponent {
                                     locale={saveConfirmationLocale}
                                     onRef={this._setSuccessConfirmation}
                                     onAction={this._navigateToMyResearch}
-                                    onCancelAction={this._claimAnother}
                                     onAlternateAction={this._navigateToFixRecord}
-                                    showAlternateActionButton={this._showFixRecordButton}
+                                    onCancelAction={this._claimAnother}
+                                    showAlternateActionButton={showAlternateActionButton}
                                 />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}

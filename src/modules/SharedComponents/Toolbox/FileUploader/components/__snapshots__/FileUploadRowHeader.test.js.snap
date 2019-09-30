@@ -33,6 +33,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={
@@ -136,6 +137,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={
@@ -261,6 +263,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <div
     style={

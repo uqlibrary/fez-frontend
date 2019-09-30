@@ -37,6 +37,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -214,6 +215,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -408,6 +410,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={
@@ -602,6 +605,7 @@ exports[`GrantListEditorHeader should show confirmation box 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(ListItem)
     classes={

@@ -14,6 +14,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(FileUploadRowDefaultView)
     index={0}
@@ -41,6 +42,7 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={false}
   />
   <WithStyles(FileUploadRowMobileView)
     index={0}
