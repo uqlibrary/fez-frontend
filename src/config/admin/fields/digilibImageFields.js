@@ -73,7 +73,7 @@ export default {
             groups: [['fez_record_search_key_condition']],
         },
         {
-            title: 'Alternative_ title(s)',
+            title: 'Alternative title(s)',
             groups: [['fez_record_search_key_alternative_title']],
         },
         {
