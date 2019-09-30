@@ -9,6 +9,7 @@ import { FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID } from 'config/gener
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
+import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
 import { CollectionField, AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -29,7 +30,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
-import { PublicationSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
+import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
@@ -183,6 +184,28 @@ export default {
             validate: [validation.required],
         },
     },
+    date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'bibliographicSection.rek_date',
+            label: 'Date',
+            placeholder: 'Date',
+            required: true,
+            fullWidth: true,
+            validate: [validation.required],
+        },
+    },
+    dateOfIssue: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'bibliographicSection.dateOfIssue',
+            label: 'Date of issue',
+            placeholder: 'Date of issue',
+            required: true,
+            fullWidth: true,
+            validate: [validation.required],
+        },
+    },
     collections: {
         component: CollectionField,
         componentProps: {
@@ -191,7 +214,7 @@ export default {
             name: 'additionalInformationSection.collections',
             required: true,
             fullwidth: true,
-            validate: [validation.required],
+            validate: [validation.requiredList],
         },
     },
     rek_subtype: {
@@ -211,6 +234,16 @@ export default {
             label: 'Language of work',
             placeholder: 'Language of work',
             multiple: true,
+        },
+    },
+    fez_record_search_key_audience_size: {
+        component: AudienceSizeField,
+        componentProps: {
+            name: 'ntroSection.fez_record_search_key_audience_size',
+            fullWidth: true,
+            label: 'Audience size',
+            required: true,
+            validate: [validation.required],
         },
     },
     fez_record_search_key_journal_name: {
@@ -748,6 +781,21 @@ export default {
             format: value => Immutable.Map(value),
         },
     },
+    advisoryStatement: {
+        component: RichEditorField,
+        componentProps: {
+            name: 'filesSection.advisoryStatement',
+            title: 'Advisory statement',
+            titleProps: {
+                variant: 'caption',
+                style: {
+                    opacity: 0.666,
+                },
+            },
+            height: 100,
+            format: value => Immutable.Map(value),
+        },
+    },
     fez_record_search_key_transcript: {
         component: RichEditorField,
         componentProps: {
@@ -800,6 +848,7 @@ export default {
             name: 'filesSection.rek_copyright',
             label: 'Copyright Agreement',
             placeholder: '',
+            validate: [validation.required],
             copyrightAgreement:
                 'Depositors of metadata (i.e. abstracts / bibliographic content) must tick this declaration box to facilitate the required workflow but the declaration DOES NOT APPLY to these deposits. [This a temporary measure awaiting redesign of the deposit process].',
         },
@@ -811,6 +860,7 @@ export default {
             label: 'Deposit agreement',
             placeholder: '',
             copyrightAgreement: formLocale.addDataset.information.agreement.text,
+            validate: [validation.required],
         },
     },
     fez_record_search_key_date_available: {
@@ -938,6 +988,14 @@ export default {
             label: 'Type',
         },
     },
+    thesisType: {
+        component: ThesisSubtypeField,
+        componentProps: {
+            name: 'bibliographicSection.thesisType',
+            fullWidth: true,
+            label: 'Thesis type',
+        },
+    },
     geoCoordinates: {
         component: GeoCoordinatesField,
         componentProps: {
@@ -1051,7 +1109,7 @@ export default {
     fez_record_search_key_project_name: {
         component: GenericTextField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_project_name',
+            name: 'additionalInformationSection.fez_record_search_key_project_name.rek_project_name',
             fullWidth: true,
             required: true,
             validate: [validation.required],
@@ -1059,19 +1117,16 @@ export default {
         },
     },
     fez_record_search_key_project_description: {
-        component: RichEditorField,
+        component: GenericTextField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_project_description',
-            title: formLocale.addDataset.information.project.fieldLabels.projectDescription.label,
-            titleProps: {
-                variant: 'caption',
-                style: {
-                    opacity: 0.666,
-                },
-            },
+            name: 'additionalInformationSection.fez_record_search_key_project_description.rek_project_description',
             fullWidth: true,
             height: 100,
-            format: value => Immutable.Map(value),
+            required: true,
+            validate: [validation.required],
+            rows: 5,
+            multiline: true,
+            ...formLocale.addDataset.information.project.fieldLabels.projectDescription,
         },
     },
     fez_record_search_key_start_date: {
@@ -1123,8 +1178,17 @@ export default {
         component: GenericTextField,
         componentProps: {
             fullWidth: true,
-            label: 'School, Department, or Centre',
+            label: 'School, department, or centre',
             name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
+            placeholder: '',
+        },
+    },
+    thesisOrgUnitName: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'School, centre, or institute',
+            name: 'bibliographicSection.thesisOrgUnitName',
             placeholder: '',
         },
     },
@@ -1339,6 +1403,15 @@ export default {
             name: 'authorsSection.architects',
             showIdentifierLookup: true,
             locale: locale.components.architects.field,
+            canEdit: true,
+        },
+    },
+    supervisors: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.supervisors',
+            showIdentifierLookup: true,
+            locale: locale.components.supervisors.field,
             canEdit: true,
         },
     },

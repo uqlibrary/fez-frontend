@@ -4,11 +4,16 @@ import PropTypes from 'prop-types';
 import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
+import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
 /* istanbul ignore next */
 export const FilesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const cards = useRef(adminInterfaceConfig[record.rek_display_type].files());
+    const cards = useRef(
+        adminInterfaceConfig[record.rek_display_type].files(
+            record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+        ),
+    );
 
     return <Section cards={cards} disabled={disabled} />;
 };

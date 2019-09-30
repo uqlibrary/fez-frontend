@@ -92,3 +92,47 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateDataCollection = (
+    { additionalInformationSection: ais, filesSection: fs },
+    { validationErrorsSummary: summary },
+) => ({
+    additionalInformationSection: {
+        ...((!(ais || {}).contactName && {
+            contactName: summary.contactName,
+        }) ||
+            {}),
+        ...((!(ais || {}).contactNameId && {
+            contactNameId: summary.contactNameId,
+        }) ||
+            {}),
+        ...((!(ais || {}).contactEmail && {
+            contactEmail: summary.contactEmail,
+        }) ||
+            {}),
+        ...((!((ais || {}).fez_record_search_key_project_name || {}).rek_project_name && {
+            fez_record_search_key_project_name: {
+                rek_project_name: summary.rek_project_name,
+            },
+        }) ||
+            {}),
+        ...((!((ais || {}).fez_record_search_key_project_description || {}).rek_project_description && {
+            fez_record_search_key_project_description: {
+                rek_project_description: summary.rek_project_description,
+            },
+        }) ||
+            {}),
+        ...((!((ais || {}).fez_record_search_key_access_conditions || {}).rek_access_conditions && {
+            fez_record_search_key_access_conditions: {
+                rek_access_conditions: summary.rek_access_conditions,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...(((fs || {}).depositAgreement !== 'on' && {
+            depositAgreement: summary.rek_copyright,
+        }) ||
+            {}),
+    },
+});

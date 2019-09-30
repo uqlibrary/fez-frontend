@@ -4,13 +4,17 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    files: (isDataset = false) => [
+    files: ({ isDataset } = { isDataset: false }) => [
         {
             groups: [['fez_datastream_info']],
         },
         {
             title: 'Files',
             groups: [['files']],
+        },
+        {
+            title: 'Advisory statement',
+            groups: [['advisoryStatement']],
         },
         isDataset
             ? {

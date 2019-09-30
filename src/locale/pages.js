@@ -895,6 +895,11 @@ export default {
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
+                validationAlert: {
+                    type: 'warning',
+                    title: 'Validation',
+                    message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+                },
             },
         },
         adminAdd: {

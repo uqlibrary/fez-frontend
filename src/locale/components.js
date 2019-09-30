@@ -761,6 +761,11 @@ export default {
                         contributionStatementInputFieldLabel: 'Creator contribution statement',
                         contributionStatementFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;Scale of significance and Contribution statement</span>,
+                        authorOrderAlert: {
+                            message:
+                                'Any changes made to the author order require that all contribution statements are also manually updated to match.',
+                            type: 'info',
+                        },
                     },
                 },
                 header: {
@@ -2585,6 +2590,9 @@ export default {
                     },
                 },
             },
+        },
+        audienceSizeField: {
+            label: 'Audience size',
         },
     },
 };

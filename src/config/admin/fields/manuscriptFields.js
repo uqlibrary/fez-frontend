@@ -15,12 +15,14 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available'],
+                ['date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],
                 ['rek_description'],
+                ['rek_genre'],
+                ['fez_record_search_key_original_format'],
             ],
         },
         {
@@ -53,7 +55,7 @@ export default {
         },
         {
             title: 'Additional information',
-            groups: [['rek_subtype'], ['fez_record_search_key_oa_status'], ['fez_record_search_key_original_format']],
+            groups: [['rek_subtype'], ['fez_record_search_key_oa_status']],
         },
     ],
     ntro: () => [],

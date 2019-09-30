@@ -80,6 +80,10 @@ export default {
     ],
     ntro: () => [
         {
+            title: 'Audience size',
+            groups: [['fez_record_search_key_audience_size']],
+        },
+        {
             title: 'Scale/Significance of work & Creator research statement',
             groups: [['significanceAndContributionStatement']],
         },

@@ -91,6 +91,7 @@ export default {
         contactEmail: 'Contact email is required',
         rek_access_conditions: 'Access condition is required',
         rek_copyright: 'You are required to accept deposit agreement',
+        depositAgreement: 'You are required to accept deposit agreement',
         rek_license: 'Licensing and terms of access is required',
         rek_project_name: 'Project name is required',
         rek_project_description: 'Project description is required',
@@ -104,6 +105,7 @@ export default {
         // Collection form validations
         communityID: 'You must select a community',
         collection_pid: 'You must select a collection',
+        collections: 'You must select atleast one collection',
         doc_type_id: 'You must select a document type',
         directory: 'You must select a directory',
         title: 'Title is required',
