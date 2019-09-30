@@ -93,6 +93,9 @@ export default class ConfirmDialogBox extends Component {
                 dark: '#542400',
             },
         }),
+        typography: {
+            useNextVariants: true,
+        },
     });
 
     render() {
