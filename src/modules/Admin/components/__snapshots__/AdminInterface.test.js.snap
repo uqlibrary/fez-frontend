@@ -340,7 +340,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <WithStyles(Button)
           color="primary"
-          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={
@@ -519,7 +518,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <WithStyles(Button)
           color="primary"
-          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={
@@ -673,7 +671,6 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <WithStyles(Button)
           color="primary"
-          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={
@@ -845,7 +842,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <WithStyles(Button)
           color="primary"
-          disabled={false}
           fullWidth={true}
           onClick={[MockFunction]}
           style={

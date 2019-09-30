@@ -1,6 +1,7 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
+import Immutable from 'immutable';
 
 import locale from 'locale/pages';
 import { NTRO_SUBTYPES, PUBLICATION_TYPE_MANUSCRIPT, PUBLICATION_TYPE_THESIS } from 'config/general';
@@ -62,10 +63,22 @@ export const AdminContainer = ({
     match,
     history,
     createMode,
+    formErrors,
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
     const [showAddForm, setShowAddForm] = useState(!match.params.pid);
     const theme = useTheme();
+    const tabErrors = useRef(null);
+
+    tabErrors.current = Object.entries(
+        (formErrors instanceof Immutable.Map && formErrors.toJS()) || formErrors || {},
+    ).reduce(
+        (numberOfErrors, [key, errorObject]) => ({
+            ...numberOfErrors,
+            [key]: Object.values(errorObject).length,
+        }),
+        {},
+    );
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
@@ -77,7 +90,7 @@ export const AdminContainer = ({
 
     /* istanbul ignore next */
     /* Enzyme's shallow render doesn't support useEffect hook yet */
-    React.useEffect(() => {
+    useEffect(() => {
         if (!!match.params.pid && !!loadRecordToView) {
             loadRecordToView(match.params.pid);
         }
@@ -126,6 +139,7 @@ export const AdminContainer = ({
                             location={location}
                             history={history}
                             createMode={createMode}
+                            formErrors={formErrors}
                             tabs={{
                                 admin: {
                                     component: AdminSection,
@@ -138,14 +152,17 @@ export const AdminContainer = ({
                                 bibliographic: {
                                     component: BibliographicSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).bibliographicSection || null,
                                 },
                                 authorDetails: {
                                     component: AuthorsSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).authorsSection || null,
                                 },
                                 additionalInformation: {
                                     component: AdditionalInformationSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).additionalInformationSection || null,
                                 },
                                 ntro: {
                                     component: NtroSection,
@@ -165,6 +182,7 @@ export const AdminContainer = ({
                                 files: {
                                     component: FilesSection,
                                     activated: isActivated(),
+                                    numberOfErrors: (tabErrors.current || {}).filesSection || null,
                                 },
                                 security: {
                                     component: SecuritySection,
@@ -195,6 +213,7 @@ AdminContainer.propTypes = {
     handleSubmit: PropTypes.func,
     match: PropTypes.object,
     history: PropTypes.object,
+    formErrors: PropTypes.object,
 };
 
 export function isChanged(prevProps, nextProps) {
@@ -206,7 +225,8 @@ export function isChanged(prevProps, nextProps) {
         (prevProps.recordToView || {}).rek_display_type === (nextProps.recordToView || {}).rek_display_type &&
         (prevProps.recordToView || {}).rek_subtype === (nextProps.recordToView || {}).rek_subtype &&
         prevProps.loadingRecordToView === nextProps.loadingRecordToView &&
-        prevProps.showAddForm === nextProps.showAddForm
+        prevProps.showAddForm === nextProps.showAddForm &&
+        prevProps.formErrors === nextProps.formErrors
     );
 }
 

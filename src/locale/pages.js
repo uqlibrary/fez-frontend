@@ -895,6 +895,11 @@ export default {
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
+                validationAlert: {
+                    type: 'warning',
+                    title: 'Validation',
+                    message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+                },
             },
         },
         adminAdd: {
@@ -1027,6 +1032,7 @@ export default {
                         validation: {
                             ['notFiles']: 'Invalid files ([fileNames])',
                             ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                            ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
                             ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                             ['tooManyFiles']:
                                 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',

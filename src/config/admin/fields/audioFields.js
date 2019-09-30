@@ -24,7 +24,7 @@ export default {
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                 ['fez_record_search_key_series'],
-                ['rek_date', 'fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
+                ['date', 'fez_record_search_key_date_available', 'fez_record_search_key_date_recorded'],
                 ['rek_description'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'rek_genre'],
@@ -74,3 +74,19 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateAudioDocument = (
+    { filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});
