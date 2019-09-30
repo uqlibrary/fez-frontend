@@ -118,9 +118,9 @@ export class FilesClass extends Component {
                 preview: {
                     fileName,
                     mediaUrl,
+                    webMediaUrl,
                     previewMediaUrl,
                     mimeType,
-                    webMediaUrl,
                     securityStatus,
                     checksums,
                 },
