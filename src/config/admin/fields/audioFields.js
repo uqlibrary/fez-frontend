@@ -1,4 +1,5 @@
 import commonFields from './commonFields';
+import { isAuthorOrEditorSelected } from 'config/validation';
 
 export default {
     ...commonFields,
@@ -84,9 +85,5 @@ export const validateAudioDocument = (
             rek_copyright: summary.rek_copyright,
         }),
     },
-    authorsSection: {
-        ...(((as || {}).authors || []).length === 0 && {
-            authors: summary.authors,
-        }),
-    },
+    authorsSection: isAuthorOrEditorSelected(as || {}, true),
 });

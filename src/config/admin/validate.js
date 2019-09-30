@@ -16,7 +16,6 @@ export default values => {
     let errors = {
         bibliographicSection: {},
         additionalInformationSection: {},
-        filesSection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title &&
