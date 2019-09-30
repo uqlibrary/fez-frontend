@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Dialog from '@material-ui/core/Dialog';
+import { createMuiTheme } from '@material-ui/core';
+import createPalette from '@material-ui/core/styles/createPalette';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogContent from '@material-ui/core/DialogContent';
 import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
-import { mui2theme } from 'config/theme2';
 
 export default class ConfirmDialogBox extends Component {
     static propTypes = {
@@ -79,9 +80,24 @@ export default class ConfirmDialogBox extends Component {
         !!this.props.onAlternateAction && this.props.onAlternateAction();
     }
 
+    mui2theme = createMuiTheme({
+        palette: createPalette({
+            primary: {
+                light: '#962A8B',
+                main: '#51247A',
+                dark: '#3b1a59',
+            },
+            secondary: {
+                light: '#ff9a57',
+                main: '#bf5000',
+                dark: '#542400',
+            },
+        }),
+    });
+
     render() {
         return (
-            <MuiThemeProvider theme={mui2theme}>
+            <MuiThemeProvider theme={this.mui2theme}>
                 <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                     <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
                     <DialogContent>
