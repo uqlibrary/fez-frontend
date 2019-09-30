@@ -1183,6 +1183,15 @@ export default {
             placeholder: '',
         },
     },
+    thesisOrgUnitName: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'School, centre, or institute',
+            name: 'bibliographicSection.thesisOrgUnitName',
+            placeholder: '',
+        },
+    },
     fez_record_search_key_report_number: {
         component: GenericTextField,
         componentProps: {
