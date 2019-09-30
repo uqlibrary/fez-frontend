@@ -3,10 +3,9 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_BOOK,
 } from 'config/general';
-import { validateConferencePaper } from './fields/conferencePaperFields';
-import { validateDataCollection } from './fields/dataCollectionFields';
-import { validateAudioDocument } from './fields/audioFields';
+import { validateAudioDocument, validateBook, validateConferencePaper, validateDataCollection } from './fields';
 
 import deepmerge from 'deepmerge';
 
@@ -16,7 +15,6 @@ export default values => {
     let errors = {
         bibliographicSection: {},
         additionalInformationSection: {},
-        filesSection: {},
     };
 
     !(data.bibliographicSection || {}).rek_title &&
@@ -36,6 +34,10 @@ export default values => {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:
             const audioDocumentErrors = validateAudioDocument(data, locale);
             errors = deepmerge(errors, audioDocumentErrors);
+            break;
+        case PUBLICATION_TYPE_BOOK:
+            const bookErrors = validateBook(data, locale);
+            errors = deepmerge(errors, bookErrors);
             break;
         case PUBLICATION_TYPE_CONFERENCE_PAPER:
             const conferencePaperErrors = validateConferencePaper(data, locale);

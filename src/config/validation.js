@@ -327,3 +327,23 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataSt
     (isAdmin ||
         !dataStream.dsi_label ||
         !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi')));
+
+export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
+    const errors = {};
+    if (
+        (!data.authors && !data.editors) ||
+        (!data.authors && data.editors && data.editors.length === 0) ||
+        (!data.editors && data.authors && data.authors.length === 0) ||
+        (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
+        (!isAdmin &&
+            data.authors &&
+            data.authors.length !== 0 &&
+            data.authors.filter(item => item.selected).length === 0) ||
+        (data.editors && data.editors.length !== 0 && data.editors.filter(item => item.selected).length === 0)
+    ) {
+        errors.authors = locale.validationErrors.authorRequired;
+        errors.editors = locale.validationErrors.editorRequired;
+    }
+
+    return errors;
+};

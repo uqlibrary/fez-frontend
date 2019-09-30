@@ -580,7 +580,7 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_org_name }),
     },
     fez_record_search_key_org_unit_name: {
-        getValue: record => ({ ...record.fez_record_search_key_org_unit_name }),
+        getValue: record => record.fez_record_search_key_org_unit_name.rek_org_unit_name,
     },
     thesisOrgUnitName: {
         getValue: record => record.fez_record_search_key_org_unit_name.rek_org_unit_name,
