@@ -54,7 +54,7 @@ export class FilesClass extends Component {
                 webMediaUrl: null,
                 previewMediaUrl: null,
                 mimeType: null,
-                checksum: null,
+                checksums: {},
             },
         };
     }
@@ -68,15 +68,18 @@ export class FilesClass extends Component {
         allowDownload,
         webFileName,
         securityStatus,
-        checksum,
+        checksums,
     ) => {
         if (allowDownload && thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
-                mediaUrl: this.getUrl(pid, fileName, checksum),
-                webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksum) : null,
-                previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName, checksum) : null,
-                thumbnailMediaUrl: thumbnailFileName && this.getUrl(pid, thumbnailFileName, checksum),
+                mediaUrl: this.getUrl(pid, fileName, checksums && checksums.media),
+                webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums && checksums.web) : null,
+                previewMediaUrl: previewFileName
+                    ? this.getUrl(pid, previewFileName, checksums && checksums.preview)
+                    : null,
+                thumbnailMediaUrl:
+                    thumbnailFileName && this.getUrl(pid, thumbnailFileName, checksums && checksums.thumbnail),
                 fileName: fileName,
                 thumbnailFileName,
                 onClick: this.showPreview,
@@ -109,7 +112,7 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksum = '') => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => {
         if (securityStatus) {
             this.setState({
                 preview: {
@@ -119,7 +122,7 @@ export class FilesClass extends Component {
                     mimeType,
                     webMediaUrl,
                     securityStatus,
-                    checksum,
+                    checksums,
                 },
             });
         }
@@ -253,6 +256,32 @@ export class FilesClass extends Component {
         );
     };
 
+    getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
+        const checksums = {
+            media: dataStream.dsi_checksum,
+            thumbnail: undefined,
+            preview: undefined,
+            web: undefined,
+        };
+
+        dataStreams.forEach(dataStream => {
+            switch (dataStream.dsi_dsid) {
+                case thumbnailFileName:
+                    checksums.thumbnail = dataStream.dsi_checksum;
+                    break;
+                case previewFileName:
+                    checksums.preview = dataStream.dsi_checksum;
+                    break;
+                case webFileName:
+                    checksums.web = dataStream.dsi_checksum;
+                    break;
+                default:
+            }
+        });
+
+        return checksums;
+    };
+
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
         const { files } = viewRecordsConfig;
@@ -270,7 +299,13 @@ export class FilesClass extends Component {
                 const webFileName = this.checkForWeb(fileName);
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
                 const securityAccess = this.getSecurityAccess(dataStream);
-                const checksum = dataStream.dsi_checksum ? dataStream.dsi_checksum : '';
+                const checksums = this.getChecksums(
+                    dataStream,
+                    thumbnailFileName,
+                    previewFileName,
+                    webFileName,
+                    dataStreams,
+                );
 
                 return {
                     pid: pid,
@@ -288,13 +323,18 @@ export class FilesClass extends Component {
                         openAccessStatus.isOpenAccess || this.props.isAuthor || this.props.isAdmin,
                         webFileName,
                         securityAccess,
+                        checksums,
                     ),
                     openAccessStatus: openAccessStatus,
-                    previewMediaUrl: this.getUrl(pid, previewFileName ? previewFileName : fileName, checksum),
-                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksum) : null,
-                    mediaUrl: this.getUrl(pid, fileName, checksum),
+                    previewMediaUrl: this.getUrl(
+                        pid,
+                        previewFileName ? previewFileName : fileName,
+                        checksums && checksums.preview,
+                    ),
+                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                    mediaUrl: this.getUrl(pid, fileName, checksums.media),
                     securityStatus: this.getSecurityAccess(dataStream),
-                    checksum: checksum,
+                    checksums: checksums,
                 };
             })
             : [];
@@ -421,7 +461,7 @@ export class FilesClass extends Component {
                             fileName={this.getUrl(
                                 publication.rek_pid,
                                 this.state.preview.fileName,
-                                this.state.preview.checksum,
+                                this.state.preview.checksums && this.state.preview.checksums.media,
                             )}
                             mediaUrl={this.state.preview.mediaUrl}
                             webMediaUrl={this.state.preview.webMediaUrl}

@@ -32,13 +32,15 @@ const isAdmin = account => {
 };
 
 export const getDatastreamVersionQueryString = (fileName, checksum) => {
-    if (!checksum.trim()) {
+    if (!checksum) {
         return '';
     }
 
-    return createHash('md5')
+    const hash = createHash('md5')
         .update(`${fileName}${checksum.trim()}`)
         .digest('hex');
+
+    return hash;
 };
 
 export const pathConfig = {

@@ -382,6 +382,34 @@ describe('Files Component ', () => {
         expect(wrapper.instance().untranscodedItem(fileName)).toEqual('test');
     });
 
+    it('should return checksums', () => {
+        const wrapper = setup({});
+        const dataStreams = [
+            {
+                dsi_dsid: 'image.tiff',
+                dsi_checksum: '111',
+            },
+            {
+                dsi_dsid: 'thumbnail_image_t.jpg',
+                dsi_checksum: '222',
+            },
+            {
+                dsi_dsid: 'preview_image_t.jpg',
+                dsi_checksum: '333',
+            },
+        ];
+        expect(
+            wrapper
+                .instance()
+                .getChecksums(dataStreams[0], dataStreams[1].dsi_dsid, dataStreams[2].dsi_dsid, '', dataStreams),
+        ).toEqual({
+            media: dataStreams[0].dsi_checksum,
+            thumbnail: dataStreams[1].dsi_checksum,
+            preview: dataStreams[2].dsi_checksum,
+            web: undefined,
+        });
+    });
+
     it('should not calculate OA of files if search key not present', () => {
         const publicationEmbargoOAFile = {
             rek_created_date: '2019-12-01T00:00:00Z',
