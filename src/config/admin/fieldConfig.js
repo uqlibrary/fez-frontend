@@ -30,6 +30,7 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
+import { OrgUnitNameField } from 'modules/SharedComponents/LookupFields';
 import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
@@ -1175,21 +1176,21 @@ export default {
         },
     },
     fez_record_search_key_org_unit_name: {
-        component: GenericTextField,
+        component: OrgUnitNameField,
         componentProps: {
             fullWidth: true,
             label: 'School, department, or centre',
             name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
-            placeholder: '',
+            floatingLabelText: 'School, department, or centre',
         },
     },
     thesisOrgUnitName: {
-        component: GenericTextField,
+        component: OrgUnitNameField,
         componentProps: {
             fullWidth: true,
             label: 'School, centre, or institute',
             name: 'bibliographicSection.thesisOrgUnitName',
-            placeholder: '',
+            floatingLabelText: 'School, centre, or institute',
         },
     },
     fez_record_search_key_report_number: {
@@ -1241,7 +1242,7 @@ export default {
     fez_record_search_key_period: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_period',
+            name: 'bibliographicSection.fez_record_search_key_period',
             title: 'Periods',
             searchKey: {
                 value: 'rek_period',
@@ -1253,7 +1254,7 @@ export default {
     fez_record_search_key_structural_systems: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_structural_systems',
+            name: 'bibliographicSection.fez_record_search_key_structural_systems',
             title: 'Structural systems',
             searchKey: {
                 value: 'rek_structural_systems',
@@ -1265,7 +1266,7 @@ export default {
     fez_record_search_key_style: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_style',
+            name: 'bibliographicSection.fez_record_search_key_style',
             title: 'Styles',
             searchKey: {
                 value: 'rek_style',
@@ -1277,7 +1278,7 @@ export default {
     fez_record_search_key_subcategory: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_subcategory',
+            name: 'bibliographicSection.fez_record_search_key_subcategory',
             title: 'Subcategories',
             searchKey: {
                 value: 'rek_subcategory',
@@ -1289,7 +1290,7 @@ export default {
     fez_record_search_key_surrounding_features: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_surrounding_features',
+            name: 'bibliographicSection.fez_record_search_key_surrounding_features',
             title: 'Surrounding features',
             searchKey: {
                 value: 'rek_surrounding_features',
@@ -1301,7 +1302,7 @@ export default {
     fez_record_search_key_interior_features: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_interior_features',
+            name: 'bibliographicSection.fez_record_search_key_interior_features',
             title: 'Interior features',
             searchKey: {
                 value: 'rek_interior_features',
@@ -1313,7 +1314,7 @@ export default {
     fez_record_search_key_date_photo_taken: {
         component: DatePickerField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_date_photo_taken.rek_date_photo_taken',
+            name: 'bibliographicSection.fez_record_search_key_date_photo_taken.rek_date_photo_taken',
             label: 'Date photo taken',
             placeholder: 'Date photo taken',
             fullWidth: true,
@@ -1322,7 +1323,7 @@ export default {
     fez_record_search_key_date_scanned: {
         component: DatePickerField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_date_scanned.rek_date_scanned',
+            name: 'bibliographicSection.fez_record_search_key_date_scanned.rek_date_scanned',
             label: 'Date photo scanned',
             placeholder: 'Date photo scanned',
             fullWidth: true,
@@ -1331,7 +1332,7 @@ export default {
     fez_record_search_key_building_materials: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_building_materials',
+            name: 'bibliographicSection.fez_record_search_key_building_materials',
             title: 'Interior features',
             searchKey: {
                 value: 'rek_building_materials',
@@ -1343,7 +1344,7 @@ export default {
     fez_record_search_key_category: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_category',
+            name: 'bibliographicSection.fez_record_search_key_category',
             title: 'Category',
             searchKey: {
                 value: 'rek_category',
@@ -1355,7 +1356,7 @@ export default {
     fez_record_search_key_condition: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_condition',
+            name: 'bibliographicSection.fez_record_search_key_condition',
             title: 'Conditions',
             searchKey: {
                 value: 'rek_condition',
@@ -1367,7 +1368,7 @@ export default {
     fez_record_search_key_construction_date: {
         component: DatePickerField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_construction_date.rek_construction_date',
+            name: 'bibliographicSection.fez_record_search_key_construction_date.rek_construction_date',
             label: 'Construction date',
             placeholder: 'Construction date',
             fullWidth: true,
@@ -1376,7 +1377,7 @@ export default {
     fez_record_search_key_alternative_title: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_alternative_title',
+            name: 'bibliographicSection.fez_record_search_key_alternative_title',
             title: 'Alternative titles',
             searchKey: {
                 value: 'rek_alternative_title',
@@ -1388,7 +1389,7 @@ export default {
     fez_record_search_key_architectural_features: {
         component: ListEditorField,
         componentProps: {
-            name: 'additionalInformationSection.fez_record_search_key_architectural_features',
+            name: 'bibliographicSection.fez_record_search_key_architectural_features',
             title: 'Alternative titles',
             searchKey: {
                 value: 'rek_architectural_features',
