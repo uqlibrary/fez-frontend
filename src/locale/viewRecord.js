@@ -37,6 +37,7 @@ export default {
                     openOriginal: 'Open original file in a new window',
                     openWeb: 'Open web version file in a new window',
                     close: 'Close',
+                    videoLoadingMessage: 'Loading',
                 },
             },
             links: {

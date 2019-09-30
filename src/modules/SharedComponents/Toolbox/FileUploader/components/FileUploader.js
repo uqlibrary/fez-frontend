@@ -34,6 +34,7 @@ export class FileUploader extends PureComponent {
             maxFileSize: config.DEFAULT_MAX_FILE_SIZE,
             fileSizeUnit: config.SIZE_UNIT_G,
             fileNameRestrictions: config.FILE_NAME_RESTRICTION,
+            mimeTypeWhitelist: config.MIME_TYPE_WHITELIST,
         },
         requireOpenAccessStatus: false,
         isNtro: false,
@@ -257,7 +258,13 @@ export class FileUploader extends PureComponent {
 
     render() {
         const { instructions, accessTermsAndConditions, ntroSpecificInstructions } = this.props.locale;
-        const { maxFileSize, fileSizeUnit, fileUploadLimit, fileNameRestrictions } = this.props.fileRestrictionsConfig;
+        const {
+            maxFileSize,
+            fileSizeUnit,
+            fileUploadLimit,
+            fileNameRestrictions,
+            mimeTypeWhitelist,
+        } = this.props.fileRestrictionsConfig;
         const { requireOpenAccessStatus, defaultQuickTemplateId, disabled } = this.props;
         const { filesInQueue, isTermsAndConditionsAccepted, errorMessage } = this.state;
         const { errorTitle, successTitle, successMessage, delayNotice, delayMessage } = this.props.locale;
@@ -303,6 +310,7 @@ export class FileUploader extends PureComponent {
                         disabled={disabled}
                         filesInQueue={this.state.filesInQueue.map(file => file.name)}
                         fileNameRestrictions={fileNameRestrictions}
+                        mimeTypeWhitelist={mimeTypeWhitelist}
                         fileUploadLimit={fileUploadLimit}
                         onDrop={this._handleDroppedFiles}
                     />
