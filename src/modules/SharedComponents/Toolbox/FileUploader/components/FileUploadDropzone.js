@@ -4,7 +4,7 @@ import Dropzone from 'react-dropzone';
 import Grid from '@material-ui/core/Grid';
 import { withStyles } from '@material-ui/core/styles';
 import FileUploadDropzoneStaticContent from './FileUploadDropzoneStaticContent';
-import { FILE_NAME_RESTRICTION } from '../config';
+import { FILE_NAME_RESTRICTION, MIME_TYPE_WHITELIST } from '../config';
 
 const styles = () => ({
     hideLabel: {
@@ -23,6 +23,7 @@ export class FileUploadDropzone extends PureComponent {
         maxSize: PropTypes.number.isRequired,
         locale: PropTypes.object.isRequired,
         fileNameRestrictions: PropTypes.instanceOf(RegExp).isRequired,
+        mimeTypeWhitelist: PropTypes.object.isRequired,
         filesInQueue: PropTypes.array,
         fileUploadLimit: PropTypes.number,
         disabled: PropTypes.bool,
@@ -33,6 +34,7 @@ export class FileUploadDropzone extends PureComponent {
         fileUploadLimit: 10,
         filesInQueue: [],
         fileNameRestrictions: FILE_NAME_RESTRICTION,
+        mimeTypeWhitelist: MIME_TYPE_WHITELIST,
     };
 
     constructor(props) {
@@ -160,6 +162,26 @@ export class FileUploadDropzone extends PureComponent {
     };
 
     /**
+     * Remove invalid file names
+     *
+     * Note: We could use a library like this, however, anything at this end can be easily be tampered.
+     * @link https://github.com/sindresorhus/file-type
+     *
+     * @param files - array of files
+     * @param mimeTypeWhitelist - object ext -> mimetype
+     * @returns Object
+     */
+    removeInvalidMimeTypes = (files, mimeTypeWhitelist) => {
+        const validMimeTypeFiles = files.filter(
+            file => file && file.name && mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop()),
+        );
+        const invalidMimeTypeFiles = files
+            .filter(file => file && file.name && !mimeTypeWhitelist.hasOwnProperty(file.name.split('.').pop()))
+            .map(file => file.name);
+        return { validMimeTypeFiles: validMimeTypeFiles, invalidMimeTypeFiles: invalidMimeTypeFiles };
+    };
+
+    /**
      * Remove files if there are too many files
      *
      * @param incomingFiles - array of files
@@ -181,7 +203,7 @@ export class FileUploadDropzone extends PureComponent {
      * @private
      */
     _onDrop = (incomingFiles, rejectedFiles) => {
-        const { fileNameRestrictions, filesInQueue, fileUploadLimit } = this.props;
+        const { fileNameRestrictions, mimeTypeWhitelist, filesInQueue, fileUploadLimit } = this.props;
         const notFiles = [];
 
         // Remove folders from accepted files (async)
@@ -195,9 +217,15 @@ export class FileUploadDropzone extends PureComponent {
                 filesInQueue,
             );
 
+            // Remove invalid mime type files - based on it's extension
+            const { validMimeTypeFiles, invalidMimeTypeFiles } = this.removeInvalidMimeTypes(
+                uniqueFiles,
+                mimeTypeWhitelist,
+            );
+
             // Remove files exceeding the max number of files allowed
             const { limitedFiles, tooManyFiles } = this.removeTooManyFiles(
-                uniqueFiles,
+                validMimeTypeFiles,
                 fileUploadLimit - filesInQueue.length,
             );
 
@@ -205,6 +233,7 @@ export class FileUploadDropzone extends PureComponent {
                 tooBigFiles: rejectedFiles.map(file => file.name),
                 notFiles: notFiles,
                 invalidFileNames: invalidFileNames,
+                invalidMimeTypeFiles: invalidMimeTypeFiles,
                 duplicateFiles: duplicateFiles,
                 tooManyFiles: tooManyFiles,
                 sameFileNameWithDifferentExt: sameFileNameWithDifferentExt,

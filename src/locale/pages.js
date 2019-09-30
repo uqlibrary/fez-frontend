@@ -1027,6 +1027,7 @@ export default {
                         validation: {
                             ['notFiles']: 'Invalid files ([fileNames])',
                             ['invalidFileNames']: 'File(s) ([fileNames]) have invalid file name',
+                            ['invalidMimeTypeFiles']: 'File(s) ([fileNames]) are not supported',
                             ['tooBigFiles']: 'File(s) ([fileNames]) exceed maximum allowed upload file size',
                             ['tooManyFiles']:
                                 'Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded',
