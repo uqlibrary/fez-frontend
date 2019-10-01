@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { createMuiTheme } from '@material-ui/core';
-import createPalette from '@material-ui/core/styles/createPalette';
 import Button from '@material-ui/core/Button';
 import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogContent from '@material-ui/core/DialogContent';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import { withStyles } from '@material-ui/core/styles';
 
-export default class ConfirmDialogBox extends Component {
+export const styles = theme => ({
+    alternateActionButtonClass: {
+        color: ((theme.palette || {}).white || {}).main,
+        backgroundColor: ((theme.palette || {}).warning || {}).main,
+        '&:hover': {
+            backgroundColor: ((theme.palette || {}).warning || {}).dark,
+        },
+    },
+});
+
+export class ConfirmDialogBox extends Component {
     static propTypes = {
+        className: PropTypes.string,
+        classes: PropTypes.object,
         hideCancelButton: PropTypes.bool,
         locale: PropTypes.object,
         onAction: PropTypes.func,
@@ -80,59 +90,42 @@ export default class ConfirmDialogBox extends Component {
         !!this.props.onAlternateAction && this.props.onAlternateAction();
     }
 
-    mui2theme = createMuiTheme({
-        palette: createPalette({
-            primary: {
-                light: '#962A8B',
-                main: '#51247A',
-                dark: '#3b1a59',
-            },
-            secondary: {
-                light: '#ff9a57',
-                main: '#bf5000',
-                dark: '#542400',
-            },
-        }),
-        typography: {
-            useNextVariants: true,
-        },
-    });
-
     render() {
+        const { classes } = this.props;
         return (
-            <MuiThemeProvider theme={this.mui2theme}>
-                <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
-                    <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
-                    <DialogContent>
-                        <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
-                    </DialogContent>
-                    <DialogActions>
+            <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
+                <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
+                <DialogContent>
+                    <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
+                </DialogContent>
+                <DialogActions>
+                    <Button
+                        children={this.props.locale.confirmButtonLabel}
+                        autoFocus
+                        color={'primary'}
+                        onClick={this._onAction}
+                    />
+                    {this.props.showAlternateActionButton && (
+                        // an optional middle button that will display in a warning colour
                         <Button
-                            children={this.props.locale.confirmButtonLabel}
-                            autoFocus
-                            color={'primary'}
-                            onClick={this._onAction}
+                            variant={'contained'}
+                            className={classes.alternateActionButtonClass}
+                            children={this.props.locale.alternateActionButtonLabel}
+                            onClick={this._onAlternateAction}
                         />
-                        {this.props.showAlternateActionButton && (
-                            // an optional middle button that will display in a warning colour
-                            <Button
-                                variant={'contained'}
-                                color={'secondary'}
-                                children={this.props.locale.alternateActionButtonLabel}
-                                onClick={this._onAlternateAction}
-                            />
-                        )}
-                        {!this.props.hideCancelButton && (
-                            <Button
-                                variant={'contained'}
-                                color={'primary'}
-                                children={this.props.locale.cancelButtonLabel}
-                                onClick={this._onCancelAction}
-                            />
-                        )}
-                    </DialogActions>
-                </Dialog>
-            </MuiThemeProvider>
+                    )}
+                    {!this.props.hideCancelButton && (
+                        <Button
+                            variant={'contained'}
+                            color={'primary'}
+                            children={this.props.locale.cancelButtonLabel}
+                            onClick={this._onCancelAction}
+                        />
+                    )}
+                </DialogActions>
+            </Dialog>
         );
     }
 }
+
+export default withStyles(styles)(ConfirmDialogBox);

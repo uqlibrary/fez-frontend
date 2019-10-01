@@ -1,20 +1,25 @@
-import ConfirmDialogBox from './ConfirmDialogBox';
+import { ConfirmDialogBox, styles } from './ConfirmDialogBox';
+
+const getProps = (testProps = {}) => ({
+    classes: {},
+    hideCancelButton: false,
+    locale: {
+        alternateActionButtonLabel: 'Maybe',
+        confirmationTitle: 'Confirmation',
+        confirmationMessage: 'Are you sure?',
+        cancelButtonLabel: 'No',
+        confirmButtonLabel: 'Yes',
+    },
+    onAction: jest.fn(),
+    onCancelAction: jest.fn(),
+    onAlternateAction: jest.fn(),
+    onRef: jest.fn(),
+    showAlternateActionButton: false,
+    ...testProps,
+});
 
 function setup(testProps = {}) {
-    const props = {
-        locale: {
-            confirmationTitle: 'Confirmation',
-            confirmationMessage: 'Are you sure?',
-            cancelButtonLabel: 'No',
-            confirmButtonLabel: 'Yes',
-        },
-        onAction: jest.fn(),
-        onCancelAction: jest.fn(),
-        hideCancelButton: false,
-        onRef: jest.fn(),
-        ...testProps,
-    };
-    return getElement(ConfirmDialogBox, props);
+    return getElement(ConfirmDialogBox, getProps(testProps));
 }
 
 describe('ConfirmDialogBox snapshots tests', () => {
@@ -29,28 +34,58 @@ describe('ConfirmDialogBox snapshots tests', () => {
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
+
+    it('renders component with yes/no/maybe buttons', () => {
+        const wrapper = setup({ showAlternateActionButton: true });
+        const tree = toJson(wrapper);
+        expect(tree).toMatchSnapshot();
+    });
+
+    it('should have a proper style generator', () => {
+        const theme = {
+            breakpoints: {
+                up: jest.fn(() => 'test1'),
+            },
+            palette: {
+                warning: {
+                    main: 'test2',
+                    dark: 'test3',
+                },
+                white: {
+                    main: 'test4',
+                },
+            },
+        };
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette.warning;
+        delete theme.palette.white;
+        expect(styles(theme)).toMatchSnapshot();
+
+        delete theme.palette;
+        expect(styles(theme)).toMatchSnapshot();
+    });
+
     it('renders component with customised locale', () => {
         const wrapper = setup({
             locale: {
+                alternateActionButtonLabel: 'ENG: Maybe',
+                cancelButtonLabel: 'ENG: No',
                 confirmationTitle: 'ENG: Confirmation',
                 confirmationMessage: 'ENG: Are you sure?',
-                cancelButtonLabel: 'ENG: No',
                 confirmButtonLabel: 'ENG: Yes',
             },
+            showAlternateActionButton: true,
         });
         const tree = toJson(wrapper);
         expect(tree).toMatchSnapshot();
     });
 
     it('should call componentWillUnmount and set ref to null', () => {
-        const onRefFn = jest.fn();
-        const wrapper = setup({
-            onRef: onRefFn,
-        });
+        const wrapper = setup();
         const componentWillUnmount = jest.spyOn(wrapper.instance(), 'componentWillUnmount');
         wrapper.unmount();
         expect(componentWillUnmount).toHaveBeenCalled();
-        expect(onRefFn).toHaveBeenCalled();
     });
 
     it('should show and hide confirmation dialog', () => {
@@ -64,10 +99,10 @@ describe('ConfirmDialogBox snapshots tests', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should call callback function on confirming positive on dialog', () => {
-        const onActionFn = jest.fn();
+    it('the ok-equivalent button should work', () => {
+        const testFn = jest.fn();
         const wrapper = setup({
-            onAction: onActionFn,
+            onAction: testFn,
         });
         wrapper
             .find('WithStyles(Button)')
@@ -75,36 +110,13 @@ describe('ConfirmDialogBox snapshots tests', () => {
             .props.onClick();
 
         expect(wrapper.state().isDialogOpen).toBeFalsy();
-        expect(onActionFn).toHaveBeenCalled();
+        expect(testFn).toHaveBeenCalled();
     });
 
-    it('should call callback function on confirming negative on dialog', () => {
-        const onCancelActionFn = jest.fn();
+    it('the cancel-equivalent button should work', () => {
+        const testFn = jest.fn();
         const wrapper = setup({
-            onCancelAction: onCancelActionFn,
-        });
-        wrapper
-            .find('WithStyles(Button)')
-            .get(1)
-            .props.onClick();
-
-        expect(wrapper.state().isDialogOpen).toBeFalsy();
-        expect(onCancelActionFn).toHaveBeenCalled();
-    });
-
-    it('renders component with 3 buttons', () => {
-        const wrapper = setup({
-            showAlternateActionButton: true,
-        });
-        const tree = toJson(wrapper);
-        expect(tree).toMatchSnapshot();
-    });
-
-    it('clicks the alternate action button', () => {
-        const onAlternateActionFn = jest.fn();
-        const wrapper = setup({
-            showAlternateActionButton: true,
-            onAlternateAction: onAlternateActionFn,
+            onCancelAction: testFn,
         });
 
         wrapper
@@ -113,6 +125,22 @@ describe('ConfirmDialogBox snapshots tests', () => {
             .props.onClick();
 
         expect(wrapper.state().isDialogOpen).toBeFalsy();
-        expect(onAlternateActionFn).toHaveBeenCalled();
+        expect(testFn).toHaveBeenCalled();
+    });
+
+    it('the alternate action button should work', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            showAlternateActionButton: true,
+            onAlternateAction: testFn,
+        });
+
+        wrapper
+            .find('WithStyles(Button)')
+            .get(1)
+            .props.onClick();
+
+        expect(wrapper.state().isDialogOpen).toBeFalsy();
+        expect(testFn).toHaveBeenCalled();
     });
 });

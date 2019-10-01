@@ -82,8 +82,7 @@ describe('Component ClaimRecord ', () => {
                 }),
             },
         });
-
-        expect(wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel).toBe(
+        expect(wrapper.find('WithStyles(ConfirmDialogBox)').props().locale.cancelButtonLabel).toBe(
             locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
         );
     });

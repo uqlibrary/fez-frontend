@@ -73,7 +73,7 @@ describe('Add new record', () => {
             },
             { isShallow: false },
         );
-        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
     });
 
     it('should render the confirm dialog without an alert for a succcessful file upload', () => {
@@ -83,7 +83,7 @@ describe('Add new record', () => {
             newRecordFileUploadingError: false,
             rawSearchQuery: 'This is a test',
         });
-        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
     });
 
     it('should navigate to fix record', () => {

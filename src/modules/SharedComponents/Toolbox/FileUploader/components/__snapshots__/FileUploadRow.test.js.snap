@@ -2,8 +2,7 @@
 
 exports[`FileUploadRow renders with uploaded file 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -14,7 +13,6 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(FileUploadRowDefaultView)
     index={0}
@@ -30,8 +28,7 @@ exports[`FileUploadRow renders with uploaded file 1`] = `
 
 exports[`FileUploadRow should show confirmation and delete file 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -42,7 +39,6 @@ exports[`FileUploadRow should show confirmation and delete file 1`] = `
     }
     onAction={[Function]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(FileUploadRowMobileView)
     index={0}

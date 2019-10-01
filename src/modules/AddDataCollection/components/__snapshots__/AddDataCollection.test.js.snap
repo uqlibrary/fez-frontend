@@ -5,8 +5,7 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
   title="Add data collection"
 >
   <form>
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
@@ -43,7 +42,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       className="DataCollection"
@@ -1235,8 +1233,7 @@ exports[`AddDataCollection test should render component with a valid collection 
   title="Add data collection"
 >
   <form>
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
@@ -1267,7 +1264,6 @@ exports[`AddDataCollection test should render component with a valid collection 
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       className="DataCollection"
@@ -2459,8 +2455,7 @@ exports[`AddDataCollection test should render component with an invalid collecti
   title="Add data collection"
 >
   <form>
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
@@ -2491,7 +2486,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       className="DataCollection"
@@ -3683,8 +3677,7 @@ exports[`AddDataCollection test should render data set form 1`] = `
   title="Add data collection"
 >
   <form>
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Add another missing dataset",
@@ -3715,7 +3708,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       className="DataCollection"

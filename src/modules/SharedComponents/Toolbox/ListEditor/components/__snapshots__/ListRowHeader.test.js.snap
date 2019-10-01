@@ -9,8 +9,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -21,7 +20,6 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -81,8 +79,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -93,7 +90,6 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
@@ -179,8 +175,7 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -191,7 +186,6 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     }
     onAction={[MockFunction]}
     onRef={[Function]}
-    showAlternateActionButton={false}
   />
   <WithStyles(Grid)
     alignItems="center"
