@@ -773,7 +773,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                     <p
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
 +                     >
-+                       You may add up to 10 files (max 5GB each)
++                       You may add up to 10 files (max 8GB each)
 +                     </p>
 +                     <div
 +                       class=\\"MuiGrid-container-3\\"
