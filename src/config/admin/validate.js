@@ -7,6 +7,7 @@ import {
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_IMAGE,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -16,6 +17,7 @@ import {
     validateConferenceProceedings,
     validateDataCollection,
     validateDepartmentTechnicalReport,
+    validateImage,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -69,6 +71,10 @@ export default values => {
         case PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT:
             const departmentTechnicalReportErrors = validateDepartmentTechnicalReport(data, locale);
             errors = deepmerge(errors, departmentTechnicalReportErrors);
+            break;
+        case PUBLICATION_TYPE_IMAGE:
+            const imageErrors = validateImage(data, locale);
+            errors = deepmerge(errors, imageErrors);
             break;
         default:
             break;

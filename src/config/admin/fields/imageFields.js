@@ -69,3 +69,16 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateImage = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});
