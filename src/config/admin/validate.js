@@ -4,8 +4,25 @@ import {
     PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_JOURNAL,
 } from 'config/general';
-import { validateAudioDocument, validateBook, validateConferencePaper, validateDataCollection } from './fields';
+import {
+    validateAudioDocument,
+    validateBook,
+    validateBookChapter,
+    validateConferencePaper,
+    validateConferenceProceedings,
+    validateDataCollection,
+    validateDepartmentTechnicalReport,
+    validateImage,
+    validateJournalArticle,
+    validateJournal,
+} from './fields';
 
 import deepmerge from 'deepmerge';
 
@@ -39,13 +56,37 @@ export default values => {
             const bookErrors = validateBook(data, locale);
             errors = deepmerge(errors, bookErrors);
             break;
+        case PUBLICATION_TYPE_BOOK_CHAPTER:
+            const bookChapterErrors = validateBookChapter(data, locale);
+            errors = deepmerge(errors, bookChapterErrors);
+            break;
         case PUBLICATION_TYPE_CONFERENCE_PAPER:
             const conferencePaperErrors = validateConferencePaper(data, locale);
             errors = deepmerge(errors, conferencePaperErrors);
             break;
+        case PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS:
+            const conferenceProceedingsErrors = validateConferenceProceedings(data, locale);
+            errors = deepmerge(errors, conferenceProceedingsErrors);
+            break;
         case PUBLICATION_TYPE_DATA_COLLECTION:
             const dataCollectionErrors = validateDataCollection(data, locale);
             errors = deepmerge(errors, dataCollectionErrors);
+            break;
+        case PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT:
+            const departmentTechnicalReportErrors = validateDepartmentTechnicalReport(data, locale);
+            errors = deepmerge(errors, departmentTechnicalReportErrors);
+            break;
+        case PUBLICATION_TYPE_IMAGE:
+            const imageErrors = validateImage(data, locale);
+            errors = deepmerge(errors, imageErrors);
+            break;
+        case PUBLICATION_TYPE_JOURNAL_ARTICLE:
+            const journalArticleErrors = validateJournalArticle(data, locale);
+            errors = deepmerge(errors, journalArticleErrors);
+            break;
+        case PUBLICATION_TYPE_JOURNAL:
+            const journalErrors = validateJournal(data, locale);
+            errors = deepmerge(errors, journalErrors);
             break;
         default:
             break;
