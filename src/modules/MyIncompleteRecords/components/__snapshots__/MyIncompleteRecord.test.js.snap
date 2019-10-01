@@ -448,8 +448,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -466,7 +465,6 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -1366,8 +1364,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       }
       when={false}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -1384,7 +1381,6 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -2309,8 +2305,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -2327,7 +2322,6 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -3305,8 +3299,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -3323,7 +3316,6 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -4223,8 +4215,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -4241,7 +4232,6 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -5141,8 +5131,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -5159,7 +5148,6 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -6059,8 +6047,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -6077,7 +6064,6 @@ exports[`Component MyIncompleteRecord should render significance and contributio
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -6977,8 +6963,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -7001,7 +6986,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}
@@ -7901,8 +7885,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       }
       when={true}
     />
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Complete another work",
@@ -7919,7 +7902,6 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
       onAction={[Function]}
       onCancelAction={[Function]}
       onRef={[Function]}
-      showAlternateActionButton={false}
     />
     <WithStyles(Grid)
       container={true}

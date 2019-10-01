@@ -3190,8 +3190,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                         }
                                       }
                                     >
-                                      <ConfirmDialogBox
-                                        hideCancelButton={false}
+                                      <WithStyles(ConfirmDialogBox)
                                         locale={
                                           Object {
                                             "cancelButtonLabel": "Cancel",
@@ -3202,376 +3201,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                         }
                                         onAction={[Function]}
                                         onRef={[Function]}
-                                        showAlternateActionButton={false}
                                       >
-                                        <MuiThemeProviderOld
-                                          theme={
+                                        <ConfirmDialogBox
+                                          classes={
                                             Object {
-                                              "breakpoints": Object {
-                                                "between": [Function],
-                                                "down": [Function],
-                                                "keys": Array [
-                                                  "xs",
-                                                  "sm",
-                                                  "md",
-                                                  "lg",
-                                                  "xl",
-                                                ],
-                                                "only": [Function],
-                                                "up": [Function],
-                                                "values": Object {
-                                                  "lg": 1280,
-                                                  "md": 960,
-                                                  "sm": 600,
-                                                  "xl": 1920,
-                                                  "xs": 0,
-                                                },
-                                                "width": [Function],
-                                              },
-                                              "direction": "ltr",
-                                              "mixins": Object {
-                                                "gutters": [Function],
-                                                "toolbar": Object {
-                                                  "@media (min-width:0px) and (orientation: landscape)": Object {
-                                                    "minHeight": 48,
-                                                  },
-                                                  "@media (min-width:600px)": Object {
-                                                    "minHeight": 64,
-                                                  },
-                                                  "minHeight": 56,
-                                                },
-                                              },
-                                              "overrides": Object {},
-                                              "palette": Object {
-                                                "action": Object {
-                                                  "active": "rgba(0, 0, 0, 0.54)",
-                                                  "disabled": "rgba(0, 0, 0, 0.26)",
-                                                  "disabledBackground": "rgba(0, 0, 0, 0.12)",
-                                                  "hover": "rgba(0, 0, 0, 0.08)",
-                                                  "hoverOpacity": 0.08,
-                                                  "selected": "rgba(0, 0, 0, 0.14)",
-                                                },
-                                                "augmentColor": [Function],
-                                                "background": Object {
-                                                  "default": "#fafafa",
-                                                  "paper": "#fff",
-                                                },
-                                                "common": Object {
-                                                  "black": "#000",
-                                                  "white": "#fff",
-                                                },
-                                                "contrastThreshold": 3,
-                                                "divider": "rgba(0, 0, 0, 0.12)",
-                                                "error": Object {
-                                                  "contrastText": "#fff",
-                                                  "dark": "#d32f2f",
-                                                  "light": "#e57373",
-                                                  "main": "#f44336",
-                                                },
-                                                "getContrastText": [Function],
-                                                "grey": Object {
-                                                  "100": "#f5f5f5",
-                                                  "200": "#eeeeee",
-                                                  "300": "#e0e0e0",
-                                                  "400": "#bdbdbd",
-                                                  "50": "#fafafa",
-                                                  "500": "#9e9e9e",
-                                                  "600": "#757575",
-                                                  "700": "#616161",
-                                                  "800": "#424242",
-                                                  "900": "#212121",
-                                                  "A100": "#d5d5d5",
-                                                  "A200": "#aaaaaa",
-                                                  "A400": "#303030",
-                                                  "A700": "#616161",
-                                                },
-                                                "primary": Object {
-                                                  "contrastText": "#fff",
-                                                  "dark": "#3b1a59",
-                                                  "light": "#962A8B",
-                                                  "main": "#51247A",
-                                                },
-                                                "secondary": Object {
-                                                  "contrastText": "#fff",
-                                                  "dark": "#542400",
-                                                  "light": "#ff9a57",
-                                                  "main": "#bf5000",
-                                                },
-                                                "text": Object {
-                                                  "disabled": "rgba(0, 0, 0, 0.38)",
-                                                  "hint": "rgba(0, 0, 0, 0.38)",
-                                                  "primary": "rgba(0, 0, 0, 0.87)",
-                                                  "secondary": "rgba(0, 0, 0, 0.54)",
-                                                },
-                                                "tonalOffset": 0.2,
-                                                "type": "light",
-                                              },
-                                              "props": Object {},
-                                              "shadows": Array [
-                                                "none",
-                                                "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
-                                                "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
-                                                "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
-                                                "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
-                                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
-                                                "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
-                                                "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
-                                                "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
-                                                "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
-                                                "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
-                                                "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
-                                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
-                                                "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
-                                                "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
-                                                "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
-                                                "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
-                                                "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
-                                                "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
-                                                "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
-                                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
-                                                "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
-                                                "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
-                                                "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
-                                                "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
-                                              ],
-                                              "shape": Object {
-                                                "borderRadius": 4,
-                                              },
-                                              "spacing": Object {
-                                                "unit": 8,
-                                              },
-                                              "transitions": Object {
-                                                "create": [Function],
-                                                "duration": Object {
-                                                  "complex": 375,
-                                                  "enteringScreen": 225,
-                                                  "leavingScreen": 195,
-                                                  "short": 250,
-                                                  "shorter": 200,
-                                                  "shortest": 150,
-                                                  "standard": 300,
-                                                },
-                                                "easing": Object {
-                                                  "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
-                                                  "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
-                                                  "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
-                                                  "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
-                                                },
-                                                "getAutoHeightDuration": [Function],
-                                              },
-                                              "typography": Object {
-                                                "body1": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.00938em",
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "body1Next": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.00938em",
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "body2": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.875rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.01071em",
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "body2Next": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.875rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.01071em",
-                                                  "lineHeight": 1.5,
-                                                },
-                                                "button": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.875rem",
-                                                  "fontWeight": 500,
-                                                  "letterSpacing": "0.02857em",
-                                                  "lineHeight": 1.75,
-                                                  "textTransform": "uppercase",
-                                                },
-                                                "buttonNext": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.875rem",
-                                                  "fontWeight": 500,
-                                                  "letterSpacing": "0.02857em",
-                                                  "lineHeight": 1.75,
-                                                  "textTransform": "uppercase",
-                                                },
-                                                "caption": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.75rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.03333em",
-                                                  "lineHeight": 1.66,
-                                                },
-                                                "captionNext": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.75rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.03333em",
-                                                  "lineHeight": 1.66,
-                                                },
-                                                "display1": Object {
-                                                  "color": "rgba(0, 0, 0, 0.54)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "2.125rem",
-                                                  "fontWeight": 400,
-                                                  "lineHeight": "1.20588em",
-                                                },
-                                                "display2": Object {
-                                                  "color": "rgba(0, 0, 0, 0.54)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "2.8125rem",
-                                                  "fontWeight": 400,
-                                                  "lineHeight": "1.13333em",
-                                                  "marginLeft": "-.02em",
-                                                },
-                                                "display3": Object {
-                                                  "color": "rgba(0, 0, 0, 0.54)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "3.5rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "-.02em",
-                                                  "lineHeight": "1.30357em",
-                                                  "marginLeft": "-.02em",
-                                                },
-                                                "display4": Object {
-                                                  "color": "rgba(0, 0, 0, 0.54)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "7rem",
-                                                  "fontWeight": 300,
-                                                  "letterSpacing": "-.04em",
-                                                  "lineHeight": "1.14286em",
-                                                  "marginLeft": "-.04em",
-                                                },
-                                                "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                "fontSize": 14,
-                                                "fontWeightLight": 300,
-                                                "fontWeightMedium": 500,
-                                                "fontWeightRegular": 400,
-                                                "h1": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "6rem",
-                                                  "fontWeight": 300,
-                                                  "letterSpacing": "-0.01562em",
-                                                  "lineHeight": 1,
-                                                },
-                                                "h2": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "3.75rem",
-                                                  "fontWeight": 300,
-                                                  "letterSpacing": "-0.00833em",
-                                                  "lineHeight": 1,
-                                                },
-                                                "h3": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "3rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0em",
-                                                  "lineHeight": 1.04,
-                                                },
-                                                "h4": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "2.125rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.00735em",
-                                                  "lineHeight": 1.17,
-                                                },
-                                                "h5": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1.5rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0em",
-                                                  "lineHeight": 1.33,
-                                                },
-                                                "h6": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1.25rem",
-                                                  "fontWeight": 500,
-                                                  "letterSpacing": "0.0075em",
-                                                  "lineHeight": 1.6,
-                                                },
-                                                "headline": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1.5rem",
-                                                  "fontWeight": 400,
-                                                  "lineHeight": "1.35417em",
-                                                },
-                                                "overline": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.75rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.08333em",
-                                                  "lineHeight": 2.66,
-                                                  "textTransform": "uppercase",
-                                                },
-                                                "pxToRem": [Function],
-                                                "round": [Function],
-                                                "subheading": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1rem",
-                                                  "fontWeight": 400,
-                                                  "lineHeight": "1.5em",
-                                                },
-                                                "subtitle1": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1rem",
-                                                  "fontWeight": 400,
-                                                  "letterSpacing": "0.00938em",
-                                                  "lineHeight": 1.75,
-                                                },
-                                                "subtitle2": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "0.875rem",
-                                                  "fontWeight": 500,
-                                                  "letterSpacing": "0.00714em",
-                                                  "lineHeight": 1.57,
-                                                },
-                                                "title": Object {
-                                                  "color": "rgba(0, 0, 0, 0.87)",
-                                                  "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
-                                                  "fontSize": "1.3125rem",
-                                                  "fontWeight": 500,
-                                                  "lineHeight": "1.16667em",
-                                                },
-                                                "useNextVariants": true,
-                                              },
-                                              "zIndex": Object {
-                                                "appBar": 1100,
-                                                "drawer": 1200,
-                                                "mobileStepper": 1000,
-                                                "modal": 1300,
-                                                "snackbar": 1400,
-                                                "tooltip": 1500,
-                                              },
+                                              "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-103",
                                             }
                                           }
+                                          hideCancelButton={false}
+                                          locale={
+                                            Object {
+                                              "cancelButtonLabel": "Cancel",
+                                              "confirmButtonLabel": "Edit another work",
+                                              "confirmationMessage": "Work has been updated",
+                                              "confirmationTitle": "Work has been updated",
+                                            }
+                                          }
+                                          onAction={[Function]}
+                                          onRef={[Function]}
+                                          showAlternateActionButton={false}
                                         >
                                           <WithStyles(Dialog)
                                             open={false}
@@ -3586,20 +3234,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                               TransitionComponent={[Function]}
                                               classes={
                                                 Object {
-                                                  "container": "MuiDialog-container-106",
-                                                  "paper": "MuiDialog-paper-107",
-                                                  "paperFullScreen": "MuiDialog-paperFullScreen-116",
-                                                  "paperFullWidth": "MuiDialog-paperFullWidth-115",
-                                                  "paperScrollBody": "MuiDialog-paperScrollBody-109",
-                                                  "paperScrollPaper": "MuiDialog-paperScrollPaper-108",
-                                                  "paperWidthLg": "MuiDialog-paperWidthLg-113",
-                                                  "paperWidthMd": "MuiDialog-paperWidthMd-112",
-                                                  "paperWidthSm": "MuiDialog-paperWidthSm-111",
-                                                  "paperWidthXl": "MuiDialog-paperWidthXl-114",
-                                                  "paperWidthXs": "MuiDialog-paperWidthXs-110",
-                                                  "root": "MuiDialog-root-103",
-                                                  "scrollBody": "MuiDialog-scrollBody-105",
-                                                  "scrollPaper": "MuiDialog-scrollPaper-104",
+                                                  "container": "MuiDialog-container-107",
+                                                  "paper": "MuiDialog-paper-108",
+                                                  "paperFullScreen": "MuiDialog-paperFullScreen-117",
+                                                  "paperFullWidth": "MuiDialog-paperFullWidth-116",
+                                                  "paperScrollBody": "MuiDialog-paperScrollBody-110",
+                                                  "paperScrollPaper": "MuiDialog-paperScrollPaper-109",
+                                                  "paperWidthLg": "MuiDialog-paperWidthLg-114",
+                                                  "paperWidthMd": "MuiDialog-paperWidthMd-113",
+                                                  "paperWidthSm": "MuiDialog-paperWidthSm-112",
+                                                  "paperWidthXl": "MuiDialog-paperWidthXl-115",
+                                                  "paperWidthXs": "MuiDialog-paperWidthXs-111",
+                                                  "root": "MuiDialog-root-104",
+                                                  "scrollBody": "MuiDialog-scrollBody-106",
+                                                  "scrollPaper": "MuiDialog-scrollPaper-105",
                                                 }
                                               }
                                               disableBackdropClick={false}
@@ -3630,7 +3278,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     },
                                                   }
                                                 }
-                                                className="MuiDialog-root-103"
+                                                className="MuiDialog-root-104"
                                                 closeAfterTransition={true}
                                                 disableBackdropClick={false}
                                                 disableEscapeKeyDown={false}
@@ -3652,11 +3300,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       },
                                                     }
                                                   }
-                                                  className="MuiDialog-root-103"
+                                                  className="MuiDialog-root-104"
                                                   classes={
                                                     Object {
-                                                      "hidden": "MuiModal-hidden-118",
-                                                      "root": "MuiModal-root-117",
+                                                      "hidden": "MuiModal-hidden-119",
+                                                      "root": "MuiModal-root-118",
                                                     }
                                                   }
                                                   closeAfterTransition={true}
@@ -3687,8 +3335,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                               </WithStyles(Modal)>
                                             </Dialog>
                                           </WithStyles(Dialog)>
-                                        </MuiThemeProviderOld>
-                                      </ConfirmDialogBox>
+                                        </ConfirmDialogBox>
+                                      </WithStyles(ConfirmDialogBox)>
                                       <WithStyles(Grid)
                                         item={true}
                                         style={
@@ -3842,42 +3490,42 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 align="inherit"
                                                 classes={
                                                   Object {
-                                                    "alignCenter": "MuiTypography-alignCenter-142",
-                                                    "alignJustify": "MuiTypography-alignJustify-144",
-                                                    "alignLeft": "MuiTypography-alignLeft-141",
-                                                    "alignRight": "MuiTypography-alignRight-143",
-                                                    "body1": "MuiTypography-body1-128",
-                                                    "body2": "MuiTypography-body2-127",
-                                                    "button": "MuiTypography-button-130",
-                                                    "caption": "MuiTypography-caption-129",
-                                                    "colorError": "MuiTypography-colorError-153",
-                                                    "colorInherit": "MuiTypography-colorInherit-148",
-                                                    "colorPrimary": "MuiTypography-colorPrimary-149",
-                                                    "colorSecondary": "MuiTypography-colorSecondary-150",
-                                                    "colorTextPrimary": "MuiTypography-colorTextPrimary-151",
-                                                    "colorTextSecondary": "MuiTypography-colorTextSecondary-152",
-                                                    "display1": "MuiTypography-display1-123",
-                                                    "display2": "MuiTypography-display2-122",
-                                                    "display3": "MuiTypography-display3-121",
-                                                    "display4": "MuiTypography-display4-120",
-                                                    "gutterBottom": "MuiTypography-gutterBottom-146",
-                                                    "h1": "MuiTypography-h1-131",
-                                                    "h2": "MuiTypography-h2-132",
-                                                    "h3": "MuiTypography-h3-133",
-                                                    "h4": "MuiTypography-h4-134",
-                                                    "h5": "MuiTypography-h5-135",
-                                                    "h6": "MuiTypography-h6-136",
-                                                    "headline": "MuiTypography-headline-124",
-                                                    "inline": "MuiTypography-inline-154",
-                                                    "noWrap": "MuiTypography-noWrap-145",
-                                                    "overline": "MuiTypography-overline-139",
-                                                    "paragraph": "MuiTypography-paragraph-147",
-                                                    "root": "MuiTypography-root-119",
-                                                    "srOnly": "MuiTypography-srOnly-140",
-                                                    "subheading": "MuiTypography-subheading-126",
-                                                    "subtitle1": "MuiTypography-subtitle1-137",
-                                                    "subtitle2": "MuiTypography-subtitle2-138",
-                                                    "title": "MuiTypography-title-125",
+                                                    "alignCenter": "MuiTypography-alignCenter-143",
+                                                    "alignJustify": "MuiTypography-alignJustify-145",
+                                                    "alignLeft": "MuiTypography-alignLeft-142",
+                                                    "alignRight": "MuiTypography-alignRight-144",
+                                                    "body1": "MuiTypography-body1-129",
+                                                    "body2": "MuiTypography-body2-128",
+                                                    "button": "MuiTypography-button-131",
+                                                    "caption": "MuiTypography-caption-130",
+                                                    "colorError": "MuiTypography-colorError-154",
+                                                    "colorInherit": "MuiTypography-colorInherit-149",
+                                                    "colorPrimary": "MuiTypography-colorPrimary-150",
+                                                    "colorSecondary": "MuiTypography-colorSecondary-151",
+                                                    "colorTextPrimary": "MuiTypography-colorTextPrimary-152",
+                                                    "colorTextSecondary": "MuiTypography-colorTextSecondary-153",
+                                                    "display1": "MuiTypography-display1-124",
+                                                    "display2": "MuiTypography-display2-123",
+                                                    "display3": "MuiTypography-display3-122",
+                                                    "display4": "MuiTypography-display4-121",
+                                                    "gutterBottom": "MuiTypography-gutterBottom-147",
+                                                    "h1": "MuiTypography-h1-132",
+                                                    "h2": "MuiTypography-h2-133",
+                                                    "h3": "MuiTypography-h3-134",
+                                                    "h4": "MuiTypography-h4-135",
+                                                    "h5": "MuiTypography-h5-136",
+                                                    "h6": "MuiTypography-h6-137",
+                                                    "headline": "MuiTypography-headline-125",
+                                                    "inline": "MuiTypography-inline-155",
+                                                    "noWrap": "MuiTypography-noWrap-146",
+                                                    "overline": "MuiTypography-overline-140",
+                                                    "paragraph": "MuiTypography-paragraph-148",
+                                                    "root": "MuiTypography-root-120",
+                                                    "srOnly": "MuiTypography-srOnly-141",
+                                                    "subheading": "MuiTypography-subheading-127",
+                                                    "subtitle1": "MuiTypography-subtitle1-138",
+                                                    "subtitle2": "MuiTypography-subtitle2-139",
+                                                    "title": "MuiTypography-title-126",
                                                   }
                                                 }
                                                 color="primary"
@@ -4348,7 +3996,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 variant="h5"
                                               >
                                                 <h5
-                                                  className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorPrimary-149"
+                                                  className="MuiTypography-root-120 MuiTypography-h5-136 MuiTypography-colorPrimary-150"
                                                   style={
                                                     Object {
                                                       "fontSize": 24,
@@ -5230,14 +4878,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       TransitionComponent={[Function]}
                                                                       classes={
                                                                         Object {
-                                                                          "popper": "MuiTooltip-popper-224",
-                                                                          "popperInteractive": "MuiTooltip-popperInteractive-225",
-                                                                          "tooltip": "MuiTooltip-tooltip-226",
-                                                                          "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-231",
-                                                                          "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-228",
-                                                                          "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-229",
-                                                                          "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-230",
-                                                                          "touch": "MuiTooltip-touch-227",
+                                                                          "popper": "MuiTooltip-popper-225",
+                                                                          "popperInteractive": "MuiTooltip-popperInteractive-226",
+                                                                          "tooltip": "MuiTooltip-tooltip-227",
+                                                                          "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-232",
+                                                                          "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-229",
+                                                                          "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-230",
+                                                                          "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-231",
+                                                                          "touch": "MuiTooltip-touch-228",
                                                                         }
                                                                       }
                                                                       disableFocusListener={false}
@@ -5709,15 +5357,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             className=""
                                                                             classes={
                                                                               Object {
-                                                                                "bar": "MuiSwitch-bar-240",
-                                                                                "checked": "MuiSwitch-checked-236",
-                                                                                "colorPrimary": "MuiSwitch-colorPrimary-237",
-                                                                                "colorSecondary": "MuiSwitch-colorSecondary-238",
-                                                                                "disabled": "MuiSwitch-disabled-239",
-                                                                                "icon": "MuiSwitch-icon-233",
-                                                                                "iconChecked": "MuiSwitch-iconChecked-234",
-                                                                                "root": "MuiSwitch-root-232",
-                                                                                "switchBase": "MuiSwitch-switchBase-235",
+                                                                                "bar": "MuiSwitch-bar-241",
+                                                                                "checked": "MuiSwitch-checked-237",
+                                                                                "colorPrimary": "MuiSwitch-colorPrimary-238",
+                                                                                "colorSecondary": "MuiSwitch-colorSecondary-239",
+                                                                                "disabled": "MuiSwitch-disabled-240",
+                                                                                "icon": "MuiSwitch-icon-234",
+                                                                                "iconChecked": "MuiSwitch-iconChecked-235",
+                                                                                "root": "MuiSwitch-root-233",
+                                                                                "switchBase": "MuiSwitch-switchBase-236",
                                                                               }
                                                                             }
                                                                             color="primary"
@@ -5732,26 +5380,26 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             value="tabbed"
                                                                           >
                                                                             <span
-                                                                              className="MuiSwitch-root-232"
+                                                                              className="MuiSwitch-root-233"
                                                                             >
                                                                               <WithStyles(WithFormControlContext(SwitchBase))
                                                                                 aria-describedby={null}
                                                                                 checked={false}
                                                                                 checkedIcon={
                                                                                   <span
-                                                                                    className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
+                                                                                    className="MuiSwitch-icon-234 MuiSwitch-iconChecked-235"
                                                                                   />
                                                                                 }
                                                                                 classes={
                                                                                   Object {
-                                                                                    "checked": "MuiSwitch-checked-236",
-                                                                                    "disabled": "MuiSwitch-disabled-239",
-                                                                                    "root": "MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
+                                                                                    "checked": "MuiSwitch-checked-237",
+                                                                                    "disabled": "MuiSwitch-disabled-240",
+                                                                                    "root": "MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238",
                                                                                   }
                                                                                 }
                                                                                 icon={
                                                                                   <span
-                                                                                    className="MuiSwitch-icon-233"
+                                                                                    className="MuiSwitch-icon-234"
                                                                                   />
                                                                                 }
                                                                                 onBlur={[Function]}
@@ -5770,20 +5418,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   checked={false}
                                                                                   checkedIcon={
                                                                                     <span
-                                                                                      className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
+                                                                                      className="MuiSwitch-icon-234 MuiSwitch-iconChecked-235"
                                                                                     />
                                                                                   }
                                                                                   classes={
                                                                                     Object {
-                                                                                      "checked": "MuiPrivateSwitchBase-checked-242 MuiSwitch-checked-236",
-                                                                                      "disabled": "MuiPrivateSwitchBase-disabled-243 MuiSwitch-disabled-239",
-                                                                                      "input": "MuiPrivateSwitchBase-input-244",
-                                                                                      "root": "MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
+                                                                                      "checked": "MuiPrivateSwitchBase-checked-243 MuiSwitch-checked-237",
+                                                                                      "disabled": "MuiPrivateSwitchBase-disabled-244 MuiSwitch-disabled-240",
+                                                                                      "input": "MuiPrivateSwitchBase-input-245",
+                                                                                      "root": "MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238",
                                                                                     }
                                                                                   }
                                                                                   icon={
                                                                                     <span
-                                                                                      className="MuiSwitch-icon-233"
+                                                                                      className="MuiSwitch-icon-234"
                                                                                     />
                                                                                   }
                                                                                   onBlur={[Function]}
@@ -5802,20 +5450,20 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     checked={false}
                                                                                     checkedIcon={
                                                                                       <span
-                                                                                        className="MuiSwitch-icon-233 MuiSwitch-iconChecked-234"
+                                                                                        className="MuiSwitch-icon-234 MuiSwitch-iconChecked-235"
                                                                                       />
                                                                                     }
                                                                                     classes={
                                                                                       Object {
-                                                                                        "checked": "MuiPrivateSwitchBase-checked-242 MuiSwitch-checked-236",
-                                                                                        "disabled": "MuiPrivateSwitchBase-disabled-243 MuiSwitch-disabled-239",
-                                                                                        "input": "MuiPrivateSwitchBase-input-244",
-                                                                                        "root": "MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237",
+                                                                                        "checked": "MuiPrivateSwitchBase-checked-243 MuiSwitch-checked-237",
+                                                                                        "disabled": "MuiPrivateSwitchBase-disabled-244 MuiSwitch-disabled-240",
+                                                                                        "input": "MuiPrivateSwitchBase-input-245",
+                                                                                        "root": "MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238",
                                                                                       }
                                                                                     }
                                                                                     icon={
                                                                                       <span
-                                                                                        className="MuiSwitch-icon-233"
+                                                                                        className="MuiSwitch-icon-234"
                                                                                       />
                                                                                     }
                                                                                     onBlur={[Function]}
@@ -5831,7 +5479,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   >
                                                                                     <WithStyles(IconButton)
                                                                                       aria-describedby={null}
-                                                                                      className="MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
+                                                                                      className="MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238"
                                                                                       component="span"
                                                                                       onBlur={[Function]}
                                                                                       onFocus={[Function]}
@@ -5844,15 +5492,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     >
                                                                                       <IconButton
                                                                                         aria-describedby={null}
-                                                                                        className="MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
+                                                                                        className="MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238"
                                                                                         classes={
                                                                                           Object {
-                                                                                            "colorInherit": "MuiIconButton-colorInherit-246",
-                                                                                            "colorPrimary": "MuiIconButton-colorPrimary-247",
-                                                                                            "colorSecondary": "MuiIconButton-colorSecondary-248",
-                                                                                            "disabled": "MuiIconButton-disabled-249",
-                                                                                            "label": "MuiIconButton-label-250",
-                                                                                            "root": "MuiIconButton-root-245",
+                                                                                            "colorInherit": "MuiIconButton-colorInherit-247",
+                                                                                            "colorPrimary": "MuiIconButton-colorPrimary-248",
+                                                                                            "colorSecondary": "MuiIconButton-colorSecondary-249",
+                                                                                            "disabled": "MuiIconButton-disabled-250",
+                                                                                            "label": "MuiIconButton-label-251",
+                                                                                            "root": "MuiIconButton-root-246",
                                                                                           }
                                                                                         }
                                                                                         color="default"
@@ -5870,7 +5518,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                         <WithStyles(ButtonBase)
                                                                                           aria-describedby={null}
                                                                                           centerRipple={true}
-                                                                                          className="MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
+                                                                                          className="MuiIconButton-root-246 MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238"
                                                                                           component="span"
                                                                                           disabled={false}
                                                                                           focusRipple={true}
@@ -5886,12 +5534,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                           <ButtonBase
                                                                                             aria-describedby={null}
                                                                                             centerRipple={true}
-                                                                                            className="MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
+                                                                                            className="MuiIconButton-root-246 MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238"
                                                                                             classes={
                                                                                               Object {
-                                                                                                "disabled": "MuiButtonBase-disabled-222",
-                                                                                                "focusVisible": "MuiButtonBase-focusVisible-223",
-                                                                                                "root": "MuiButtonBase-root-221",
+                                                                                                "disabled": "MuiButtonBase-disabled-223",
+                                                                                                "focusVisible": "MuiButtonBase-focusVisible-224",
+                                                                                                "root": "MuiButtonBase-root-222",
                                                                                               }
                                                                                             }
                                                                                             component="span"
@@ -5911,7 +5559,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                           >
                                                                                             <span
                                                                                               aria-describedby={null}
-                                                                                              className="MuiButtonBase-root-221 MuiIconButton-root-245 MuiPrivateSwitchBase-root-241 MuiSwitch-switchBase-235 MuiSwitch-colorPrimary-237"
+                                                                                              className="MuiButtonBase-root-222 MuiIconButton-root-246 MuiPrivateSwitchBase-root-242 MuiSwitch-switchBase-236 MuiSwitch-colorPrimary-238"
                                                                                               onBlur={[Function]}
                                                                                               onContextMenu={[Function]}
                                                                                               onFocus={[Function]}
@@ -5928,14 +5576,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                               title="Switch to tabbed mode"
                                                                                             >
                                                                                               <span
-                                                                                                className="MuiIconButton-label-250"
+                                                                                                className="MuiIconButton-label-251"
                                                                                               >
                                                                                                 <span
-                                                                                                  className="MuiSwitch-icon-233"
+                                                                                                  className="MuiSwitch-icon-234"
                                                                                                 />
                                                                                                 <input
                                                                                                   checked={false}
-                                                                                                  className="MuiPrivateSwitchBase-input-244"
+                                                                                                  className="MuiPrivateSwitchBase-input-245"
                                                                                                   onChange={[Function]}
                                                                                                   type="checkbox"
                                                                                                   value="tabbed"
@@ -5953,25 +5601,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                     center={true}
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "child": "MuiTouchRipple-child-265",
-                                                                                                        "childLeaving": "MuiTouchRipple-childLeaving-266",
-                                                                                                        "childPulsate": "MuiTouchRipple-childPulsate-267",
-                                                                                                        "ripple": "MuiTouchRipple-ripple-262",
-                                                                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
-                                                                                                        "rippleVisible": "MuiTouchRipple-rippleVisible-263",
-                                                                                                        "root": "MuiTouchRipple-root-261",
+                                                                                                        "child": "MuiTouchRipple-child-266",
+                                                                                                        "childLeaving": "MuiTouchRipple-childLeaving-267",
+                                                                                                        "childPulsate": "MuiTouchRipple-childPulsate-268",
+                                                                                                        "ripple": "MuiTouchRipple-ripple-263",
+                                                                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-265",
+                                                                                                        "rippleVisible": "MuiTouchRipple-rippleVisible-264",
+                                                                                                        "root": "MuiTouchRipple-root-262",
                                                                                                       }
                                                                                                     }
                                                                                                   >
                                                                                                     <TransitionGroup
                                                                                                       childFactory={[Function]}
-                                                                                                      className="MuiTouchRipple-root-261"
+                                                                                                      className="MuiTouchRipple-root-262"
                                                                                                       component="span"
                                                                                                       enter={true}
                                                                                                       exit={true}
                                                                                                     >
                                                                                                       <span
-                                                                                                        className="MuiTouchRipple-root-261"
+                                                                                                        className="MuiTouchRipple-root-262"
                                                                                                       />
                                                                                                     </TransitionGroup>
                                                                                                   </TouchRipple>
@@ -5986,14 +5634,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 </WithFormControlContext(SwitchBase)>
                                                                               </WithStyles(WithFormControlContext(SwitchBase))>
                                                                               <span
-                                                                                className="MuiSwitch-bar-240"
+                                                                                className="MuiSwitch-bar-241"
                                                                               />
                                                                             </span>
                                                                           </Switch>
                                                                         </WithStyles(Switch)>
                                                                       </RootRef>
                                                                       <Popper
-                                                                        className="MuiTooltip-popper-224"
+                                                                        className="MuiTooltip-popper-225"
                                                                         disablePortal={false}
                                                                         id={null}
                                                                         open={false}
@@ -6187,7 +5835,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         buttonLabel="Got it"
                                                                         classes={
                                                                           Object {
-                                                                            "helpIcon": "HelpIcon-helpIcon-251",
+                                                                            "helpIcon": "HelpIcon-helpIcon-252",
                                                                           }
                                                                         }
                                                                         onClick={[Function]}
@@ -6657,14 +6305,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             TransitionComponent={[Function]}
                                                                             classes={
                                                                               Object {
-                                                                                "popper": "MuiTooltip-popper-224",
-                                                                                "popperInteractive": "MuiTooltip-popperInteractive-225",
-                                                                                "tooltip": "MuiTooltip-tooltip-226",
-                                                                                "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-231",
-                                                                                "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-228",
-                                                                                "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-229",
-                                                                                "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-230",
-                                                                                "touch": "MuiTooltip-touch-227",
+                                                                                "popper": "MuiTooltip-popper-225",
+                                                                                "popperInteractive": "MuiTooltip-popperInteractive-226",
+                                                                                "tooltip": "MuiTooltip-tooltip-227",
+                                                                                "tooltipPlacementBottom": "MuiTooltip-tooltipPlacementBottom-232",
+                                                                                "tooltipPlacementLeft": "MuiTooltip-tooltipPlacementLeft-229",
+                                                                                "tooltipPlacementRight": "MuiTooltip-tooltipPlacementRight-230",
+                                                                                "tooltipPlacementTop": "MuiTooltip-tooltipPlacementTop-231",
+                                                                                "touch": "MuiTooltip-touch-228",
                                                                               }
                                                                             }
                                                                             disableFocusListener={false}
@@ -7132,12 +6780,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   className=""
                                                                                   classes={
                                                                                     Object {
-                                                                                      "colorInherit": "MuiIconButton-colorInherit-246",
-                                                                                      "colorPrimary": "MuiIconButton-colorPrimary-247",
-                                                                                      "colorSecondary": "MuiIconButton-colorSecondary-248",
-                                                                                      "disabled": "MuiIconButton-disabled-249",
-                                                                                      "label": "MuiIconButton-label-250",
-                                                                                      "root": "MuiIconButton-root-245",
+                                                                                      "colorInherit": "MuiIconButton-colorInherit-247",
+                                                                                      "colorPrimary": "MuiIconButton-colorPrimary-248",
+                                                                                      "colorSecondary": "MuiIconButton-colorSecondary-249",
+                                                                                      "disabled": "MuiIconButton-disabled-250",
+                                                                                      "label": "MuiIconButton-label-251",
+                                                                                      "root": "MuiIconButton-root-246",
                                                                                     }
                                                                                   }
                                                                                   color="default"
@@ -7154,7 +6802,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                   <WithStyles(ButtonBase)
                                                                                     aria-describedby={null}
                                                                                     centerRipple={true}
-                                                                                    className="MuiIconButton-root-245"
+                                                                                    className="MuiIconButton-root-246"
                                                                                     disabled={false}
                                                                                     focusRipple={true}
                                                                                     onBlur={[Function]}
@@ -7169,12 +6817,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     <ButtonBase
                                                                                       aria-describedby={null}
                                                                                       centerRipple={true}
-                                                                                      className="MuiIconButton-root-245"
+                                                                                      className="MuiIconButton-root-246"
                                                                                       classes={
                                                                                         Object {
-                                                                                          "disabled": "MuiButtonBase-disabled-222",
-                                                                                          "focusVisible": "MuiButtonBase-focusVisible-223",
-                                                                                          "root": "MuiButtonBase-root-221",
+                                                                                          "disabled": "MuiButtonBase-disabled-223",
+                                                                                          "focusVisible": "MuiButtonBase-focusVisible-224",
+                                                                                          "root": "MuiButtonBase-root-222",
                                                                                         }
                                                                                       }
                                                                                       component="button"
@@ -7195,7 +6843,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                     >
                                                                                       <button
                                                                                         aria-describedby={null}
-                                                                                        className="MuiButtonBase-root-221 MuiIconButton-root-245"
+                                                                                        className="MuiButtonBase-root-222 MuiIconButton-root-246"
                                                                                         disabled={false}
                                                                                         onBlur={[Function]}
                                                                                         onClick={[Function]}
@@ -7215,33 +6863,33 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                         type="button"
                                                                                       >
                                                                                         <span
-                                                                                          className="MuiIconButton-label-250"
+                                                                                          className="MuiIconButton-label-251"
                                                                                         >
                                                                                           <pure(KeyboardIcon)
-                                                                                            className="HelpIcon-helpIcon-251"
+                                                                                            className="HelpIcon-helpIcon-252"
                                                                                             titleAccess="Learn about keyboard shortcuts"
                                                                                           >
                                                                                             <KeyboardIcon
-                                                                                              className="HelpIcon-helpIcon-251"
+                                                                                              className="HelpIcon-helpIcon-252"
                                                                                               titleAccess="Learn about keyboard shortcuts"
                                                                                             >
                                                                                               <WithStyles(SvgIcon)
-                                                                                                className="HelpIcon-helpIcon-251"
+                                                                                                className="HelpIcon-helpIcon-252"
                                                                                                 titleAccess="Learn about keyboard shortcuts"
                                                                                               >
                                                                                                 <SvgIcon
-                                                                                                  className="HelpIcon-helpIcon-251"
+                                                                                                  className="HelpIcon-helpIcon-252"
                                                                                                   classes={
                                                                                                     Object {
-                                                                                                      "colorAction": "MuiSvgIcon-colorAction-255",
-                                                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled-257",
-                                                                                                      "colorError": "MuiSvgIcon-colorError-256",
-                                                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary-253",
-                                                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary-254",
-                                                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-258",
-                                                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-260",
-                                                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-259",
-                                                                                                      "root": "MuiSvgIcon-root-252",
+                                                                                                      "colorAction": "MuiSvgIcon-colorAction-256",
+                                                                                                      "colorDisabled": "MuiSvgIcon-colorDisabled-258",
+                                                                                                      "colorError": "MuiSvgIcon-colorError-257",
+                                                                                                      "colorPrimary": "MuiSvgIcon-colorPrimary-254",
+                                                                                                      "colorSecondary": "MuiSvgIcon-colorSecondary-255",
+                                                                                                      "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-259",
+                                                                                                      "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-261",
+                                                                                                      "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-260",
+                                                                                                      "root": "MuiSvgIcon-root-253",
                                                                                                     }
                                                                                                   }
                                                                                                   color="inherit"
@@ -7252,7 +6900,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                                 >
                                                                                                   <svg
                                                                                                     aria-hidden="false"
-                                                                                                    className="MuiSvgIcon-root-252 HelpIcon-helpIcon-251"
+                                                                                                    className="MuiSvgIcon-root-253 HelpIcon-helpIcon-252"
                                                                                                     focusable="false"
                                                                                                     role="img"
                                                                                                     viewBox="0 0 24 24"
@@ -7285,25 +6933,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                               center={true}
                                                                                               classes={
                                                                                                 Object {
-                                                                                                  "child": "MuiTouchRipple-child-265",
-                                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-266",
-                                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-267",
-                                                                                                  "ripple": "MuiTouchRipple-ripple-262",
-                                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
-                                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-263",
-                                                                                                  "root": "MuiTouchRipple-root-261",
+                                                                                                  "child": "MuiTouchRipple-child-266",
+                                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-267",
+                                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-268",
+                                                                                                  "ripple": "MuiTouchRipple-ripple-263",
+                                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-265",
+                                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-264",
+                                                                                                  "root": "MuiTouchRipple-root-262",
                                                                                                 }
                                                                                               }
                                                                                             >
                                                                                               <TransitionGroup
                                                                                                 childFactory={[Function]}
-                                                                                                className="MuiTouchRipple-root-261"
+                                                                                                className="MuiTouchRipple-root-262"
                                                                                                 component="span"
                                                                                                 enter={true}
                                                                                                 exit={true}
                                                                                               >
                                                                                                 <span
-                                                                                                  className="MuiTouchRipple-root-261"
+                                                                                                  className="MuiTouchRipple-root-262"
                                                                                                 />
                                                                                               </TransitionGroup>
                                                                                             </TouchRipple>
@@ -7316,7 +6964,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                               </WithStyles(IconButton)>
                                                                             </RootRef>
                                                                             <Popper
-                                                                              className="MuiTooltip-popper-224"
+                                                                              className="MuiTooltip-popper-225"
                                                                               disablePortal={false}
                                                                               id={null}
                                                                               open={false}
@@ -7747,11 +7395,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     <Cards
                                                       classes={
                                                         Object {
-                                                          "card": "Cards-card-155",
-                                                          "cardContentNoPadding": "Cards-cardContentNoPadding-156",
-                                                          "cardHeaderAccent": "Cards-cardHeaderAccent-158",
-                                                          "cardHeaderPrimary": "Cards-cardHeaderPrimary-157",
-                                                          "fullHeight": "Cards-fullHeight-159",
+                                                          "card": "Cards-card-156",
+                                                          "cardContentNoPadding": "Cards-cardContentNoPadding-157",
+                                                          "cardHeaderAccent": "Cards-cardHeaderAccent-159",
+                                                          "cardHeaderPrimary": "Cards-cardHeaderPrimary-158",
+                                                          "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
                                                       primaryHeader={false}
@@ -8193,55 +7841,55 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       title="Security"
                                                     >
                                                       <WithStyles(Card)
-                                                        className="Cards-card-155 StandardCard"
+                                                        className="Cards-card-156 StandardCard"
                                                         style={Object {}}
                                                       >
                                                         <Card
-                                                          className="Cards-card-155 StandardCard"
+                                                          className="Cards-card-156 StandardCard"
                                                           classes={
                                                             Object {
-                                                              "root": "MuiCard-root-160",
+                                                              "root": "MuiCard-root-161",
                                                             }
                                                           }
                                                           raised={false}
                                                           style={Object {}}
                                                         >
                                                           <WithStyles(Paper)
-                                                            className="MuiCard-root-160 Cards-card-155 StandardCard"
+                                                            className="MuiCard-root-161 Cards-card-156 StandardCard"
                                                             elevation={1}
                                                             style={Object {}}
                                                           >
                                                             <Paper
-                                                              className="MuiCard-root-160 Cards-card-155 StandardCard"
+                                                              className="MuiCard-root-161 Cards-card-156 StandardCard"
                                                               classes={
                                                                 Object {
-                                                                  "elevation0": "MuiPaper-elevation0-163",
-                                                                  "elevation1": "MuiPaper-elevation1-164",
-                                                                  "elevation10": "MuiPaper-elevation10-173",
-                                                                  "elevation11": "MuiPaper-elevation11-174",
-                                                                  "elevation12": "MuiPaper-elevation12-175",
-                                                                  "elevation13": "MuiPaper-elevation13-176",
-                                                                  "elevation14": "MuiPaper-elevation14-177",
-                                                                  "elevation15": "MuiPaper-elevation15-178",
-                                                                  "elevation16": "MuiPaper-elevation16-179",
-                                                                  "elevation17": "MuiPaper-elevation17-180",
-                                                                  "elevation18": "MuiPaper-elevation18-181",
-                                                                  "elevation19": "MuiPaper-elevation19-182",
-                                                                  "elevation2": "MuiPaper-elevation2-165",
-                                                                  "elevation20": "MuiPaper-elevation20-183",
-                                                                  "elevation21": "MuiPaper-elevation21-184",
-                                                                  "elevation22": "MuiPaper-elevation22-185",
-                                                                  "elevation23": "MuiPaper-elevation23-186",
-                                                                  "elevation24": "MuiPaper-elevation24-187",
-                                                                  "elevation3": "MuiPaper-elevation3-166",
-                                                                  "elevation4": "MuiPaper-elevation4-167",
-                                                                  "elevation5": "MuiPaper-elevation5-168",
-                                                                  "elevation6": "MuiPaper-elevation6-169",
-                                                                  "elevation7": "MuiPaper-elevation7-170",
-                                                                  "elevation8": "MuiPaper-elevation8-171",
-                                                                  "elevation9": "MuiPaper-elevation9-172",
-                                                                  "root": "MuiPaper-root-161",
-                                                                  "rounded": "MuiPaper-rounded-162",
+                                                                  "elevation0": "MuiPaper-elevation0-164",
+                                                                  "elevation1": "MuiPaper-elevation1-165",
+                                                                  "elevation10": "MuiPaper-elevation10-174",
+                                                                  "elevation11": "MuiPaper-elevation11-175",
+                                                                  "elevation12": "MuiPaper-elevation12-176",
+                                                                  "elevation13": "MuiPaper-elevation13-177",
+                                                                  "elevation14": "MuiPaper-elevation14-178",
+                                                                  "elevation15": "MuiPaper-elevation15-179",
+                                                                  "elevation16": "MuiPaper-elevation16-180",
+                                                                  "elevation17": "MuiPaper-elevation17-181",
+                                                                  "elevation18": "MuiPaper-elevation18-182",
+                                                                  "elevation19": "MuiPaper-elevation19-183",
+                                                                  "elevation2": "MuiPaper-elevation2-166",
+                                                                  "elevation20": "MuiPaper-elevation20-184",
+                                                                  "elevation21": "MuiPaper-elevation21-185",
+                                                                  "elevation22": "MuiPaper-elevation22-186",
+                                                                  "elevation23": "MuiPaper-elevation23-187",
+                                                                  "elevation24": "MuiPaper-elevation24-188",
+                                                                  "elevation3": "MuiPaper-elevation3-167",
+                                                                  "elevation4": "MuiPaper-elevation4-168",
+                                                                  "elevation5": "MuiPaper-elevation5-169",
+                                                                  "elevation6": "MuiPaper-elevation6-170",
+                                                                  "elevation7": "MuiPaper-elevation7-171",
+                                                                  "elevation8": "MuiPaper-elevation8-172",
+                                                                  "elevation9": "MuiPaper-elevation9-173",
+                                                                  "root": "MuiPaper-root-162",
+                                                                  "rounded": "MuiPaper-rounded-163",
                                                                 }
                                                               }
                                                               component="div"
@@ -8250,7 +7898,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               style={Object {}}
                                                             >
                                                               <div
-                                                                className="MuiPaper-root-161 MuiPaper-elevation1-164 MuiPaper-rounded-162 MuiCard-root-160 Cards-card-155 StandardCard"
+                                                                className="MuiPaper-root-162 MuiPaper-elevation1-165 MuiPaper-rounded-163 MuiCard-root-161 Cards-card-156 StandardCard"
                                                                 style={Object {}}
                                                               >
                                                                 <WithStyles(CardHeader)
@@ -8274,12 +7922,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     action={false}
                                                                     classes={
                                                                       Object {
-                                                                        "action": "MuiCardHeader-action-190",
-                                                                        "avatar": "MuiCardHeader-avatar-189",
-                                                                        "content": "MuiCardHeader-content-191",
-                                                                        "root": "MuiCardHeader-root-188",
-                                                                        "subheader": "MuiCardHeader-subheader-193",
-                                                                        "title": "MuiCardHeader-title-192",
+                                                                        "action": "MuiCardHeader-action-191",
+                                                                        "avatar": "MuiCardHeader-avatar-190",
+                                                                        "content": "MuiCardHeader-content-192",
+                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "subheader": "MuiCardHeader-subheader-194",
+                                                                        "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
@@ -8295,14 +7943,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-188"
+                                                                      className="MuiCardHeader-root-189"
                                                                       style={Object {}}
                                                                     >
                                                                       <div
-                                                                        className="MuiCardHeader-content-191"
+                                                                        className="MuiCardHeader-content-192"
                                                                       >
                                                                         <WithStyles(Typography)
-                                                                          className="MuiCardHeader-title-192"
+                                                                          className="MuiCardHeader-title-193"
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
@@ -8310,45 +7958,45 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
-                                                                            className="MuiCardHeader-title-192"
+                                                                            className="MuiCardHeader-title-193"
                                                                             classes={
                                                                               Object {
-                                                                                "alignCenter": "MuiTypography-alignCenter-142",
-                                                                                "alignJustify": "MuiTypography-alignJustify-144",
-                                                                                "alignLeft": "MuiTypography-alignLeft-141",
-                                                                                "alignRight": "MuiTypography-alignRight-143",
-                                                                                "body1": "MuiTypography-body1-128",
-                                                                                "body2": "MuiTypography-body2-127",
-                                                                                "button": "MuiTypography-button-130",
-                                                                                "caption": "MuiTypography-caption-129",
-                                                                                "colorError": "MuiTypography-colorError-153",
-                                                                                "colorInherit": "MuiTypography-colorInherit-148",
-                                                                                "colorPrimary": "MuiTypography-colorPrimary-149",
-                                                                                "colorSecondary": "MuiTypography-colorSecondary-150",
-                                                                                "colorTextPrimary": "MuiTypography-colorTextPrimary-151",
-                                                                                "colorTextSecondary": "MuiTypography-colorTextSecondary-152",
-                                                                                "display1": "MuiTypography-display1-123",
-                                                                                "display2": "MuiTypography-display2-122",
-                                                                                "display3": "MuiTypography-display3-121",
-                                                                                "display4": "MuiTypography-display4-120",
-                                                                                "gutterBottom": "MuiTypography-gutterBottom-146",
-                                                                                "h1": "MuiTypography-h1-131",
-                                                                                "h2": "MuiTypography-h2-132",
-                                                                                "h3": "MuiTypography-h3-133",
-                                                                                "h4": "MuiTypography-h4-134",
-                                                                                "h5": "MuiTypography-h5-135",
-                                                                                "h6": "MuiTypography-h6-136",
-                                                                                "headline": "MuiTypography-headline-124",
-                                                                                "inline": "MuiTypography-inline-154",
-                                                                                "noWrap": "MuiTypography-noWrap-145",
-                                                                                "overline": "MuiTypography-overline-139",
-                                                                                "paragraph": "MuiTypography-paragraph-147",
-                                                                                "root": "MuiTypography-root-119",
-                                                                                "srOnly": "MuiTypography-srOnly-140",
-                                                                                "subheading": "MuiTypography-subheading-126",
-                                                                                "subtitle1": "MuiTypography-subtitle1-137",
-                                                                                "subtitle2": "MuiTypography-subtitle2-138",
-                                                                                "title": "MuiTypography-title-125",
+                                                                                "alignCenter": "MuiTypography-alignCenter-143",
+                                                                                "alignJustify": "MuiTypography-alignJustify-145",
+                                                                                "alignLeft": "MuiTypography-alignLeft-142",
+                                                                                "alignRight": "MuiTypography-alignRight-144",
+                                                                                "body1": "MuiTypography-body1-129",
+                                                                                "body2": "MuiTypography-body2-128",
+                                                                                "button": "MuiTypography-button-131",
+                                                                                "caption": "MuiTypography-caption-130",
+                                                                                "colorError": "MuiTypography-colorError-154",
+                                                                                "colorInherit": "MuiTypography-colorInherit-149",
+                                                                                "colorPrimary": "MuiTypography-colorPrimary-150",
+                                                                                "colorSecondary": "MuiTypography-colorSecondary-151",
+                                                                                "colorTextPrimary": "MuiTypography-colorTextPrimary-152",
+                                                                                "colorTextSecondary": "MuiTypography-colorTextSecondary-153",
+                                                                                "display1": "MuiTypography-display1-124",
+                                                                                "display2": "MuiTypography-display2-123",
+                                                                                "display3": "MuiTypography-display3-122",
+                                                                                "display4": "MuiTypography-display4-121",
+                                                                                "gutterBottom": "MuiTypography-gutterBottom-147",
+                                                                                "h1": "MuiTypography-h1-132",
+                                                                                "h2": "MuiTypography-h2-133",
+                                                                                "h3": "MuiTypography-h3-134",
+                                                                                "h4": "MuiTypography-h4-135",
+                                                                                "h5": "MuiTypography-h5-136",
+                                                                                "h6": "MuiTypography-h6-137",
+                                                                                "headline": "MuiTypography-headline-125",
+                                                                                "inline": "MuiTypography-inline-155",
+                                                                                "noWrap": "MuiTypography-noWrap-146",
+                                                                                "overline": "MuiTypography-overline-140",
+                                                                                "paragraph": "MuiTypography-paragraph-148",
+                                                                                "root": "MuiTypography-root-120",
+                                                                                "srOnly": "MuiTypography-srOnly-141",
+                                                                                "subheading": "MuiTypography-subheading-127",
+                                                                                "subtitle1": "MuiTypography-subtitle1-138",
+                                                                                "subtitle2": "MuiTypography-subtitle2-139",
+                                                                                "title": "MuiTypography-title-126",
                                                                               }
                                                                             }
                                                                             color="inherit"
@@ -8816,7 +8464,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                             variant="h5"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-119 MuiTypography-h5-135 MuiTypography-colorInherit-148 MuiCardHeader-title-192"
+                                                                              className="MuiTypography-root-120 MuiTypography-h5-136 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Security
                                                                             </h3>
@@ -8833,13 +8481,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     className=""
                                                                     classes={
                                                                       Object {
-                                                                        "root": "MuiCardContent-root-194",
+                                                                        "root": "MuiCardContent-root-195",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                   >
                                                                     <div
-                                                                      className="MuiCardContent-root-194"
+                                                                      className="MuiCardContent-root-195"
                                                                     >
                                                                       <Field
                                                                         component={
@@ -9011,32 +8659,32 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 <Button
                                                   classes={
                                                     Object {
-                                                      "colorInherit": "MuiButton-colorInherit-216",
-                                                      "contained": "MuiButton-contained-206",
-                                                      "containedPrimary": "MuiButton-containedPrimary-207",
-                                                      "containedSecondary": "MuiButton-containedSecondary-208",
-                                                      "disabled": "MuiButton-disabled-215",
-                                                      "extendedFab": "MuiButton-extendedFab-213",
-                                                      "fab": "MuiButton-fab-212",
-                                                      "flat": "MuiButton-flat-200",
-                                                      "flatPrimary": "MuiButton-flatPrimary-201",
-                                                      "flatSecondary": "MuiButton-flatSecondary-202",
-                                                      "focusVisible": "MuiButton-focusVisible-214",
-                                                      "fullWidth": "MuiButton-fullWidth-220",
-                                                      "label": "MuiButton-label-196",
-                                                      "mini": "MuiButton-mini-217",
-                                                      "outlined": "MuiButton-outlined-203",
-                                                      "outlinedPrimary": "MuiButton-outlinedPrimary-204",
-                                                      "outlinedSecondary": "MuiButton-outlinedSecondary-205",
-                                                      "raised": "MuiButton-raised-209",
-                                                      "raisedPrimary": "MuiButton-raisedPrimary-210",
-                                                      "raisedSecondary": "MuiButton-raisedSecondary-211",
-                                                      "root": "MuiButton-root-195",
-                                                      "sizeLarge": "MuiButton-sizeLarge-219",
-                                                      "sizeSmall": "MuiButton-sizeSmall-218",
-                                                      "text": "MuiButton-text-197",
-                                                      "textPrimary": "MuiButton-textPrimary-198",
-                                                      "textSecondary": "MuiButton-textSecondary-199",
+                                                      "colorInherit": "MuiButton-colorInherit-217",
+                                                      "contained": "MuiButton-contained-207",
+                                                      "containedPrimary": "MuiButton-containedPrimary-208",
+                                                      "containedSecondary": "MuiButton-containedSecondary-209",
+                                                      "disabled": "MuiButton-disabled-216",
+                                                      "extendedFab": "MuiButton-extendedFab-214",
+                                                      "fab": "MuiButton-fab-213",
+                                                      "flat": "MuiButton-flat-201",
+                                                      "flatPrimary": "MuiButton-flatPrimary-202",
+                                                      "flatSecondary": "MuiButton-flatSecondary-203",
+                                                      "focusVisible": "MuiButton-focusVisible-215",
+                                                      "fullWidth": "MuiButton-fullWidth-221",
+                                                      "label": "MuiButton-label-197",
+                                                      "mini": "MuiButton-mini-218",
+                                                      "outlined": "MuiButton-outlined-204",
+                                                      "outlinedPrimary": "MuiButton-outlinedPrimary-205",
+                                                      "outlinedSecondary": "MuiButton-outlinedSecondary-206",
+                                                      "raised": "MuiButton-raised-210",
+                                                      "raisedPrimary": "MuiButton-raisedPrimary-211",
+                                                      "raisedSecondary": "MuiButton-raisedSecondary-212",
+                                                      "root": "MuiButton-root-196",
+                                                      "sizeLarge": "MuiButton-sizeLarge-220",
+                                                      "sizeSmall": "MuiButton-sizeSmall-219",
+                                                      "text": "MuiButton-text-198",
+                                                      "textPrimary": "MuiButton-textPrimary-199",
+                                                      "textSecondary": "MuiButton-textSecondary-200",
                                                     }
                                                   }
                                                   color="primary"
@@ -9055,11 +8703,11 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   variant="contained"
                                                 >
                                                   <WithStyles(ButtonBase)
-                                                    className="MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
+                                                    className="MuiButton-root-196 MuiButton-contained-207 MuiButton-containedPrimary-208 MuiButton-raised-210 MuiButton-raisedPrimary-211 MuiButton-fullWidth-221"
                                                     component="button"
                                                     disabled={false}
                                                     focusRipple={true}
-                                                    focusVisibleClassName="MuiButton-focusVisible-214"
+                                                    focusVisibleClassName="MuiButton-focusVisible-215"
                                                     style={
                                                       Object {
                                                         "whiteSpace": "nowrap",
@@ -9069,12 +8717,12 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   >
                                                     <ButtonBase
                                                       centerRipple={false}
-                                                      className="MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
+                                                      className="MuiButton-root-196 MuiButton-contained-207 MuiButton-containedPrimary-208 MuiButton-raised-210 MuiButton-raisedPrimary-211 MuiButton-fullWidth-221"
                                                       classes={
                                                         Object {
-                                                          "disabled": "MuiButtonBase-disabled-222",
-                                                          "focusVisible": "MuiButtonBase-focusVisible-223",
-                                                          "root": "MuiButtonBase-root-221",
+                                                          "disabled": "MuiButtonBase-disabled-223",
+                                                          "focusVisible": "MuiButtonBase-focusVisible-224",
+                                                          "root": "MuiButtonBase-root-222",
                                                         }
                                                       }
                                                       component="button"
@@ -9082,7 +8730,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       disableTouchRipple={false}
                                                       disabled={false}
                                                       focusRipple={true}
-                                                      focusVisibleClassName="MuiButton-focusVisible-214"
+                                                      focusVisibleClassName="MuiButton-focusVisible-215"
                                                       style={
                                                         Object {
                                                           "whiteSpace": "nowrap",
@@ -9092,7 +8740,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                       type="button"
                                                     >
                                                       <button
-                                                        className="MuiButtonBase-root-221 MuiButton-root-195 MuiButton-contained-206 MuiButton-containedPrimary-207 MuiButton-raised-209 MuiButton-raisedPrimary-210 MuiButton-fullWidth-220"
+                                                        className="MuiButtonBase-root-222 MuiButton-root-196 MuiButton-contained-207 MuiButton-containedPrimary-208 MuiButton-raised-210 MuiButton-raisedPrimary-211 MuiButton-fullWidth-221"
                                                         disabled={false}
                                                         onBlur={[Function]}
                                                         onContextMenu={[Function]}
@@ -9114,7 +8762,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                         type="button"
                                                       >
                                                         <span
-                                                          className="MuiButton-label-196"
+                                                          className="MuiButton-label-197"
                                                         >
                                                           Submit
                                                         </span>
@@ -9130,25 +8778,25 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                               center={false}
                                                               classes={
                                                                 Object {
-                                                                  "child": "MuiTouchRipple-child-265",
-                                                                  "childLeaving": "MuiTouchRipple-childLeaving-266",
-                                                                  "childPulsate": "MuiTouchRipple-childPulsate-267",
-                                                                  "ripple": "MuiTouchRipple-ripple-262",
-                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-264",
-                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-263",
-                                                                  "root": "MuiTouchRipple-root-261",
+                                                                  "child": "MuiTouchRipple-child-266",
+                                                                  "childLeaving": "MuiTouchRipple-childLeaving-267",
+                                                                  "childPulsate": "MuiTouchRipple-childPulsate-268",
+                                                                  "ripple": "MuiTouchRipple-ripple-263",
+                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-265",
+                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-264",
+                                                                  "root": "MuiTouchRipple-root-262",
                                                                 }
                                                               }
                                                             >
                                                               <TransitionGroup
                                                                 childFactory={[Function]}
-                                                                className="MuiTouchRipple-root-261"
+                                                                className="MuiTouchRipple-root-262"
                                                                 component="span"
                                                                 enter={true}
                                                                 exit={true}
                                                               >
                                                                 <span
-                                                                  className="MuiTouchRipple-root-261"
+                                                                  className="MuiTouchRipple-root-262"
                                                                 />
                                                               </TransitionGroup>
                                                             </TouchRipple>
