@@ -7,6 +7,8 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogContent from '@material-ui/core/DialogContent';
 import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
 export const styles = theme => ({
     alternateActionButtonClass: {
@@ -99,29 +101,43 @@ export class ConfirmDialogBox extends Component {
                     <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button
-                        children={this.props.locale.confirmButtonLabel}
-                        autoFocus
-                        color={'primary'}
-                        onClick={this._onAction}
-                    />
-                    {this.props.showAlternateActionButton && (
-                        // an optional middle button that will display in a warning colour
-                        <Button
-                            variant={'contained'}
-                            className={classes.alternateActionButtonClass}
-                            children={this.props.locale.alternateActionButtonLabel}
-                            onClick={this._onAlternateAction}
-                        />
-                    )}
-                    {!this.props.hideCancelButton && (
-                        <Button
-                            variant={'contained'}
-                            color={'primary'}
-                            children={this.props.locale.cancelButtonLabel}
-                            onClick={this._onCancelAction}
-                        />
-                    )}
+                    <Grid container spacing={8}>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                children={this.props.locale.confirmButtonLabel}
+                                autoFocus
+                                color={'primary'}
+                                fullWidth
+                                onClick={this._onAction}
+                            />
+                        </Grid>
+                        {this.props.showAlternateActionButton && (
+                            // an optional middle button that will display in a warning colour
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    className={classes.alternateActionButtonClass}
+                                    children={this.props.locale.alternateActionButtonLabel}
+                                    fullWidth
+                                    onClick={this._onAlternateAction}
+                                />
+                            </Grid>
+                        )}
+                        {!this.props.hideCancelButton && (
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    color={'primary'}
+                                    children={this.props.locale.cancelButtonLabel}
+                                    fullWidth
+                                    onClick={this._onCancelAction}
+                                />
+                            </Grid>
+                        )}
+                    </Grid>
                 </DialogActions>
             </Dialog>
         );

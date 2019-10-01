@@ -22,6 +22,7 @@ import {
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { claimRecordConfig, routes, validation } from 'config';
 import locale from 'locale/forms';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class ClaimRecord extends PureComponent {
     static propTypes = {
@@ -344,8 +345,10 @@ export default class ClaimRecord extends PureComponent {
                         )}
                     </Grid>
                     <Grid container spacing={24}>
-                        <Grid item xs />
-                        <Grid item>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -356,7 +359,7 @@ export default class ClaimRecord extends PureComponent {
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                             !(!publication.rek_pid && this.props.submitFailed) && (
-                            <Grid item>
+                            <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
                                     color={'primary'}
