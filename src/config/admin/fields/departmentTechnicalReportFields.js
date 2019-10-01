@@ -68,3 +68,20 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateDepartmentTechnicalReport = (
+    { authorsSection: as, filesSection: fs },
+    { validationErrorsSummary: summary },
+) => ({
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+    filesSection: {
+        ...(((fs || {}).depositAgreement !== 'on' && {
+            depositAgreement: summary.rek_copyright,
+        }) ||
+            {}),
+    },
+});

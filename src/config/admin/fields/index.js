@@ -1,15 +1,18 @@
 export { default as audioFields, validateAudioDocument } from './audioFields';
-export { default as bookChapterFields } from './bookChapterFields';
+export { default as bookChapterFields, validateBookChapter } from './bookChapterFields';
 export { default as bookFields, validateBook } from './bookFields';
 export { default as conferencePaperFields, validateConferencePaper } from './conferencePaperFields';
-export { default as conferenceProceedingsFields } from './conferenceProceedingsFields';
+export { default as conferenceProceedingsFields, validateConferenceProceedings } from './conferenceProceedingsFields';
 export { default as creativeWorkFields } from './creativeWorkFields';
 export { default as dataCollectionFields, validateDataCollection } from './dataCollectionFields';
-export { default as departmentTechnicalReportFields } from './departmentTechnicalReportFields';
+export {
+    default as departmentTechnicalReportFields,
+    validateDepartmentTechnicalReport,
+} from './departmentTechnicalReportFields';
 export { default as digilibImageFields } from './digilibImageFields';
-export { default as imageFields } from './imageFields';
-export { default as journalArticleFields } from './journalArticleFields';
-export { default as journalFields } from './journalFields';
+export { default as imageFields, validateImage } from './imageFields';
+export { default as journalArticleFields, validateJournalArticle } from './journalArticleFields';
+export { default as journalFields, validateJournal } from './journalFields';
 export { default as manuscriptFields } from './manuscriptFields';
 export { default as newspaperArticleFields } from './newspaperArticleFields';
 export { default as patentFields } from './patentFields';
