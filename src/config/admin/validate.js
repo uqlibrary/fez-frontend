@@ -10,6 +10,7 @@ import {
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_MANUSCRIPT,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -22,6 +23,7 @@ import {
     validateImage,
     validateJournalArticle,
     validateJournal,
+    validateManuscript,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -87,6 +89,10 @@ export default values => {
         case PUBLICATION_TYPE_JOURNAL:
             const journalErrors = validateJournal(data, locale);
             errors = deepmerge(errors, journalErrors);
+            break;
+        case PUBLICATION_TYPE_MANUSCRIPT:
+            const manuscriptErrors = validateManuscript(data, locale);
+            errors = deepmerge(errors, manuscriptErrors);
             break;
         default:
             break;
