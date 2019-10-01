@@ -1181,12 +1181,28 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -1199,6 +1215,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -2119,12 +2137,28 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -2137,6 +2171,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -3362,12 +3398,28 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -3380,6 +3432,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -4250,12 +4304,28 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -4268,6 +4338,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -5701,12 +5773,28 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -5719,6 +5807,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -7152,12 +7242,28 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -7170,6 +7276,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -8603,12 +8711,28 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -8621,6 +8745,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -10054,12 +10180,28 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -10072,6 +10214,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -11110,12 +11254,28 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -12563,12 +12723,28 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -12581,6 +12757,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -14014,12 +14192,28 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -14032,6 +14226,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -15477,12 +15673,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={true}
@@ -15495,6 +15707,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -16940,12 +17154,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -16958,6 +17188,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -18403,12 +18635,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -18421,6 +18669,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -19877,12 +20127,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -19895,6 +20161,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -20134,12 +20402,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -20152,6 +20436,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -20387,12 +20673,28 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -21527,12 +21829,28 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}

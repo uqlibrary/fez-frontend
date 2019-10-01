@@ -1,4 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`ConfirmDialogBox snapshots tests renders component with customised locale 1`] = `
 <WithStyles(Dialog)
   open={false}
@@ -17,26 +18,70 @@ exports[`ConfirmDialogBox snapshots tests renders component with customised loca
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      ENG: Yes
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      onClick={[Function]}
-      variant="contained"
-    >
-      ENG: Maybe
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
-      variant="contained"
-    >
-      ENG: No
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          ENG: Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          ENG: Maybe
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          ENG: No
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;
@@ -59,13 +104,43 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes 1`] = `
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      Yes
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;
@@ -88,20 +163,57 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no buttons 
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      Yes
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
-      variant="contained"
-    >
-      No
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          No
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;
@@ -124,26 +236,70 @@ exports[`ConfirmDialogBox snapshots tests renders component with yes/no/maybe bu
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      Yes
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      onClick={[Function]}
-      variant="contained"
-    >
-      Maybe
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
-      variant="contained"
-    >
-      No
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          Maybe
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          No
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;
@@ -202,20 +358,57 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      Yes
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
-      variant="contained"
-    >
-      No
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          No
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;
@@ -238,20 +431,57 @@ exports[`ConfirmDialogBox snapshots tests should show and hide confirmation dial
     </WithStyles(DialogContentText)>
   </WithStyles(DialogContent)>
   <WithStyles(DialogActions)>
-    <WithStyles(Button)
-      autoFocus={true}
-      color="primary"
-      onClick={[Function]}
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
     >
-      Yes
-    </WithStyles(Button)>
-    <WithStyles(Button)
-      color="primary"
-      onClick={[Function]}
-      variant="contained"
-    >
-      No
-    </WithStyles(Button)>
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          autoFocus={true}
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+        >
+          Yes
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm="auto"
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[Function]}
+          variant="contained"
+        >
+          No
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
   </WithStyles(DialogActions)>
 </WithStyles(Dialog)>
 `;

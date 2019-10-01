@@ -1595,7 +1595,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +           />
 +           <div
-+             class=\\"MuiGrid-item-4\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +           >
 +             <button
 +               class=\\"MuiButtonBase-root-452 MuiButton-root-522 MuiButton-contained-533 MuiButton-raised-536 MuiButton-fullWidth-547\\"
@@ -1613,7 +1613,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             </button>
 +           </div>
 +           <div
-+             class=\\"MuiGrid-item-4\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +           >
 +             <button
 +               class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-contained-533 MuiButton-containedPrimary-534 MuiButton-raised-536 MuiButton-raisedPrimary-537 MuiButton-disabled-542 MuiButton-fullWidth-547\\"
@@ -1870,7 +1870,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1588,21 +1575,23 @@
             </div>
             <div
-              class=\\"MuiGrid-item-596\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
 -               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
@@ -2210,7 +2210,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623\\"
             />
             <div
-              class=\\"MuiGrid-item-596\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
 -               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-fullWidth-1139\\"
@@ -2231,7 +2231,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </button>
             </div>
             <div
-              class=\\"MuiGrid-item-596\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
 -               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-fullWidth-1139\\"
@@ -2585,7 +2585,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1604,37 +1605,41 @@
             />
             <div
-              class=\\"MuiGrid-item-596\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
 -               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
@@ -2606,7 +2606,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </button>
             </div>
             <div
-              class=\\"MuiGrid-item-596\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
 -               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
