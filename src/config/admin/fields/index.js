@@ -1,5 +1,5 @@
 export { default as audioFields, validateAudioDocument } from './audioFields';
-export { default as bookChapterFields } from './bookChapterFields';
+export { default as bookChapterFields, validateBookChapter } from './bookChapterFields';
 export { default as bookFields, validateBook } from './bookFields';
 export { default as conferencePaperFields, validateConferencePaper } from './conferencePaperFields';
 export { default as conferenceProceedingsFields } from './conferenceProceedingsFields';
