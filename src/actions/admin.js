@@ -18,6 +18,7 @@ export function createNewAdminRecord(data) {
         const recordRequest = {
             ...NEW_RECORD_DEFAULT_VALUES,
             ...JSON.parse(JSON.stringify(data)),
+            // transform data
         };
 
         // delete extra form values from request object
