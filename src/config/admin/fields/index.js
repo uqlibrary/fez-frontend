@@ -12,7 +12,7 @@ export {
 export { default as digilibImageFields } from './digilibImageFields';
 export { default as imageFields, validateImage } from './imageFields';
 export { default as journalArticleFields, validateJournalArticle } from './journalArticleFields';
-export { default as journalFields } from './journalFields';
+export { default as journalFields, validateJournal } from './journalFields';
 export { default as manuscriptFields } from './manuscriptFields';
 export { default as newspaperArticleFields } from './newspaperArticleFields';
 export { default as patentFields } from './patentFields';
