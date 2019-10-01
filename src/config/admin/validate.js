@@ -5,12 +5,14 @@ import {
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
 } from 'config/general';
 import {
     validateAudioDocument,
     validateBook,
     validateBookChapter,
     validateConferencePaper,
+    validateConferenceProceedings,
     validateDataCollection,
 } from './fields';
 
@@ -53,6 +55,10 @@ export default values => {
         case PUBLICATION_TYPE_CONFERENCE_PAPER:
             const conferencePaperErrors = validateConferencePaper(data, locale);
             errors = deepmerge(errors, conferencePaperErrors);
+            break;
+        case PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS:
+            const conferenceProceedingsErrors = validateConferenceProceedings(data, locale);
+            errors = deepmerge(errors, conferenceProceedingsErrors);
             break;
         case PUBLICATION_TYPE_DATA_COLLECTION:
             const dataCollectionErrors = validateDataCollection(data, locale);
