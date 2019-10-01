@@ -5,7 +5,10 @@ export { default as conferencePaperFields, validateConferencePaper } from './con
 export { default as conferenceProceedingsFields, validateConferenceProceedings } from './conferenceProceedingsFields';
 export { default as creativeWorkFields } from './creativeWorkFields';
 export { default as dataCollectionFields, validateDataCollection } from './dataCollectionFields';
-export { default as departmentTechnicalReportFields } from './departmentTechnicalReportFields';
+export {
+    default as departmentTechnicalReportFields,
+    validateDepartmentTechnicalReport,
+} from './departmentTechnicalReportFields';
 export { default as digilibImageFields } from './digilibImageFields';
 export { default as imageFields } from './imageFields';
 export { default as journalArticleFields } from './journalArticleFields';

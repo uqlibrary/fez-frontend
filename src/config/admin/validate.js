@@ -6,6 +6,7 @@ import {
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -14,6 +15,7 @@ import {
     validateConferencePaper,
     validateConferenceProceedings,
     validateDataCollection,
+    validateDepartmentTechnicalReport,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -63,6 +65,10 @@ export default values => {
         case PUBLICATION_TYPE_DATA_COLLECTION:
             const dataCollectionErrors = validateDataCollection(data, locale);
             errors = deepmerge(errors, dataCollectionErrors);
+            break;
+        case PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT:
+            const departmentTechnicalReportErrors = validateDepartmentTechnicalReport(data, locale);
+            errors = deepmerge(errors, departmentTechnicalReportErrors);
             break;
         default:
             break;
