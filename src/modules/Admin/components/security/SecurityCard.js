@@ -16,15 +16,23 @@ import { locale } from 'locale';
 import { publicationTypes } from 'config';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
+/**
+ * Redux-form normalize callback
+ */
+export const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
+
+export const getRecordType = record =>
+    (
+        record.rek_object_type_lookup ||
+        (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name) ||
+        ''
+    ).toLowerCase() || null;
+
 export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const { record } = useRecordContext();
     const { formValues } = useFormValuesContext();
 
-    const recordType =
-        (
-            record.rek_object_type_lookup ||
-            (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name)
-        ).toLowerCase() || null;
+    const recordType = getRecordType(record);
     const { ...rest } = locale.components.securitySection;
     const text = rest[recordType];
 
@@ -33,11 +41,6 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     const securityPolicy = formValues.rek_security_policy;
     const dataStreamPolicy = formValues.rek_datastream_policy;
 
-    /* istanbul ignore next */
-    /**
-     * Redux-form normalize callback
-     */
-    const overrideSecurityValueNormalizer = value => (value ? 0 : 1);
     return (
         <Grid container spacing={16}>
             <Grid item xs={12}>

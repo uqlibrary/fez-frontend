@@ -51,3 +51,5 @@ Section.propTypes = {
     cards: PropTypes.object,
     disabled: PropTypes.bool,
 };
+
+export default Section;
