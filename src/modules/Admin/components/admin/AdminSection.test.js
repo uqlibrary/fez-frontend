@@ -1,4 +1,4 @@
-import AdditionalInformationSection from './AdditionalInformationSection';
+import AdminSection from './AdminSection';
 
 jest.mock('../../../../context');
 import { useRecordContext } from 'context';
@@ -8,10 +8,10 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(AdditionalInformationSection, props, args);
+    return getElement(AdminSection, props, args);
 }
 
-describe('AdditionalInformationSection component', () => {
+describe('AdminSection component', () => {
     beforeEach(() => {
         useRecordContext.mockImplementation(() => ({
             record: {

@@ -21,7 +21,7 @@ AuthorsSectionContainer.propTypes = {
     formValues: PropTypes.object,
 };
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,

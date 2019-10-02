@@ -1,4 +1,4 @@
-import { NtroSectionContainer, mapStateToProps } from './NtroSectionContainer';
+import { AdminSectionContainer, mapStateToProps } from './AdminSectionContainer';
 import Immutable from 'immutable';
 
 function setup(testProps = {}, args = { isShallow: true }) {
@@ -9,17 +9,12 @@ function setup(testProps = {}, args = { isShallow: true }) {
         ...testProps,
     };
 
-    return getElement(NtroSectionContainer, props, args);
+    return getElement(AdminSectionContainer, props, args);
 }
 
-describe('NtroSectionContainer component', () => {
+describe('AdminSectionContainer component', () => {
     it('should render default view', () => {
         const wrapper = setup();
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should render disabled view', () => {
-        const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 

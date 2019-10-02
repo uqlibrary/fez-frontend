@@ -1,6 +1,5 @@
-import { AuthorsSectionContainer } from './AuthorsSectionContainer';
-
-jest.mock('context');
+import { AuthorsSectionContainer, mapStateToProps } from './AuthorsSectionContainer';
+import Immutable from 'immutable';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -22,5 +21,11 @@ describe('AuthorsSectionContainer component', () => {
     it('should render disabled view', () => {
         const wrapper = setup({ disabled: true });
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should map state to props', () => {
+        expect(mapStateToProps({}, {})).toEqual({
+            formValues: Immutable.Map({}),
+        });
     });
 });

@@ -8,7 +8,7 @@ import { FORM_NAME } from '../../constants';
 import { FormValuesContext } from 'context';
 import AdminSection from './AdminSection';
 
-const AdminSectionContainer = ({ disabled, formValues }) => {
+export const AdminSectionContainer = ({ disabled, formValues }) => {
     return (
         <FormValuesContext.Provider value={{ formValues: formValues.toJS() }}>
             <AdminSection disabled={disabled} />
@@ -21,7 +21,7 @@ AdminSectionContainer.propTypes = {
     formValues: PropTypes.object,
 };
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     return {
         disabled: ownProps.disabled,

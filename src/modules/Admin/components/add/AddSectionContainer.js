@@ -9,7 +9,7 @@ import { NEW_DOCTYPES_OPTIONS, DOCTYPE_SUBTYPE_MAPPING, NTRO_SUBTYPES } from 'co
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import MenuItem from '@material-ui/core/MenuItem';
 
-const mapStateToProps = (state, ownProps) => {
+export const mapStateToProps = (state, ownProps) => {
     const selector = formValueSelector(FORM_NAME);
     const formValues = getFormValues(FORM_NAME)(state) || Immutable.Map({});
     const displayType = selector(state, 'rek_display_type');
@@ -46,7 +46,7 @@ const mapStateToProps = (state, ownProps) => {
             subtypes ||
             null,
         publicationSubtype: publicationSubtype,
-        formValues: formValues || Immutable.Map({}),
+        formValues,
         disableSubmit:
             !collections || !collections.length || !selectedPublicationType || (hasSubtypes && !publicationSubtype),
     };
