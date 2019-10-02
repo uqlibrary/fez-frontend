@@ -152,17 +152,17 @@ export const AdminContainer = ({
                                 bibliographic: {
                                     component: BibliographicSection,
                                     activated: isActivated(),
-                                    numberOfErrors: (tabErrors.current || {}).bibliographicSection || null,
+                                    numberOfErrors: tabErrors.current.bibliographicSection || null,
                                 },
                                 authorDetails: {
                                     component: AuthorsSection,
                                     activated: isActivated(),
-                                    numberOfErrors: (tabErrors.current || {}).authorsSection || null,
+                                    numberOfErrors: tabErrors.current.authorsSection || null,
                                 },
                                 additionalInformation: {
                                     component: AdditionalInformationSection,
                                     activated: isActivated(),
-                                    numberOfErrors: (tabErrors.current || {}).additionalInformationSection || null,
+                                    numberOfErrors: tabErrors.current.additionalInformationSection || null,
                                 },
                                 ntro: {
                                     component: NtroSection,
@@ -182,7 +182,7 @@ export const AdminContainer = ({
                                 files: {
                                     component: FilesSection,
                                     activated: isActivated(),
-                                    numberOfErrors: (tabErrors.current || {}).filesSection || null,
+                                    numberOfErrors: tabErrors.current.filesSection || null,
                                 },
                                 security: {
                                     component: SecuritySection,

@@ -19687,3 +19687,12 @@ exports[`AdminContainer component should render memoized component with styles 1
   }
 />
 `;
+
+exports[`AdminContainer component should show Add form 1`] = `
+<Fragment>
+  <Connect(Component)
+    createMode={true}
+    onCreate={[Function]}
+  />
+</Fragment>
+`;
