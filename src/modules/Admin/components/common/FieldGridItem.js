@@ -31,3 +31,5 @@ FieldGridItem.propTypes = {
     disabled: PropTypes.bool,
     childrenItems: PropTypes.array,
 };
+
+export default FieldGridItem;
