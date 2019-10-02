@@ -26,11 +26,11 @@ import { validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
-function useQueryStringTabValueState(location, initialValue) {
-    const tabValue =
-        queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
+export const useQueryStringTabValueState = (location, initialValue) => {
+    const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
+    const tabValue = queryStringObject && queryStringObject.tab === 'security' ? 'security' : initialValue;
     return useState(tabValue);
-}
+};
 
 export const AdminInterface = ({
     classes,
@@ -46,11 +46,11 @@ export const AdminInterface = ({
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
-    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(
-        location,
-        (((record || {}).rek_object_type_lookup || '').toLowerCase() !== RECORD_TYPE_RECORD && 'security') ||
-            'bibliographic',
-    );
+    const defaultTab =
+        ((record || {}).rek_object_type_lookup || '').toLowerCase() === RECORD_TYPE_RECORD
+            ? 'bibliographic'
+            : 'security';
+    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location, defaultTab);
 
     const successConfirmationRef = useRef();
     const alertProps = useRef(null);
@@ -76,9 +76,15 @@ export const AdminInterface = ({
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
+
+    /* istanbul ignore next */
     const setSuccessConfirmationRef = useCallback(node => {
         successConfirmationRef.current = node;
     }, []);
+
+    if (!record) {
+        return <div className="empty" />;
+    }
 
     const navigateToSearchResult = () => history.go(-1);
 
@@ -91,7 +97,8 @@ export const AdminInterface = ({
     );
 
     const selectedPublicationType =
-        (record.rek_display_type && publicationTypes({ ...recordForms })[record.rek_display_type].name) || 'record';
+        (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
+        'record';
 
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 

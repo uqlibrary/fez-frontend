@@ -104,13 +104,13 @@ exports[`AdminInterface component should disabled button and render alert for fo
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -123,20 +123,20 @@ exports[`AdminInterface component should disabled button and render alert for fo
       spacing={16}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
         <StandardCard
           primaryHeader={true}
           squareTop={true}
-          title="Security"
+          title="Bibliographic"
         >
           <Field
             component={[Function]}
             disabled={true}
-            name="securitySection"
+            name="bibliographicSection"
           />
         </StandardCard>
       </TabContainer>
@@ -175,6 +175,35 @@ exports[`AdminInterface component should disabled button and render alert for fo
     </WithStyles(Grid)>
   </form>
 </StandardPage>
+`;
+
+exports[`AdminInterface component should display badges on tabs for erroring fields 1`] = `
+Array [
+  <WithStyles(Tab)
+    key="bibliographic"
+    label={
+      <WithStyles(Badge)
+        badgeContent={1}
+        color="error"
+      >
+        Bibliographic
+      </WithStyles(Badge)>
+    }
+    value="bibliographic"
+  />,
+  <WithStyles(Tab)
+    key="security"
+    label={
+      <WithStyles(Badge)
+        badgeContent={3}
+        color="error"
+      >
+        Security
+      </WithStyles(Badge)>
+    }
+    value="security"
+  />,
+]
 `;
 
 exports[`AdminInterface component should display successful alert 1`] = `
@@ -281,13 +310,13 @@ exports[`AdminInterface component should display successful alert 1`] = `
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -300,20 +329,20 @@ exports[`AdminInterface component should display successful alert 1`] = `
       spacing={16}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
         <StandardCard
           primaryHeader={true}
           squareTop={true}
-          title="Security"
+          title="Bibliographic"
         >
           <Field
             component={[Function]}
             disabled={false}
-            name="securitySection"
+            name="bibliographicSection"
           />
         </StandardCard>
       </TabContainer>
@@ -457,13 +486,13 @@ exports[`AdminInterface component should display successful alert 2`] = `
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
-              key="security"
-              label="Security"
-              value="security"
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
             />
           </WithStyles(Tabs)>
         </WithStyles(Grid)>
@@ -476,20 +505,20 @@ exports[`AdminInterface component should display successful alert 2`] = `
       spacing={16}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
         <StandardCard
           primaryHeader={true}
           squareTop={true}
-          title="Security"
+          title="Bibliographic"
         >
           <Field
             component={[Function]}
             disabled={false}
-            name="securitySection"
+            name="bibliographicSection"
           />
         </StandardCard>
       </TabContainer>
@@ -527,6 +556,13 @@ exports[`AdminInterface component should display successful alert 2`] = `
     </WithStyles(Grid)>
   </form>
 </StandardPage>
+`;
+
+exports[`AdminInterface component should render alert message for retracted records 1`] = `
+<WithStyles(Alert)
+  message="This article has been retracted"
+  type="warning"
+/>
 `;
 
 exports[`AdminInterface component should render default view as a full form view 1`] = `
@@ -621,25 +657,25 @@ exports[`AdminInterface component should render default view as a full form view
       spacing={16}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={false}
-        value="security"
+        value="bibliographic"
       >
         <StandardCard
           primaryHeader={false}
           squareTop={false}
-          title="Security"
+          title="Bibliographic"
         >
           <Field
             component={[Function]}
             disabled={false}
-            name="securitySection"
+            name="bibliographicSection"
           />
         </StandardCard>
       </TabContainer>
       <TabContainer
-        currentTab="security"
+        currentTab="bibliographic"
         key="files"
         tabbed={false}
         value="files"
@@ -653,6 +689,24 @@ exports[`AdminInterface component should render default view as a full form view
             component={[Function]}
             disabled={false}
             name="filesSection"
+          />
+        </StandardCard>
+      </TabContainer>
+      <TabContainer
+        currentTab="bibliographic"
+        key="security"
+        tabbed={false}
+        value="security"
+      >
+        <StandardCard
+          primaryHeader={false}
+          squareTop={false}
+          title="Security"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="securitySection"
           />
         </StandardCard>
       </TabContainer>
@@ -784,7 +838,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
               }
             }
             textColor="primary"
-            value="security"
+            value="bibliographic"
             variant="scrollable"
           >
             <WithStyles(Tab)
@@ -808,20 +862,20 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       spacing={16}
     >
       <TabContainer
-        currentTab="security"
-        key="security"
+        currentTab="bibliographic"
+        key="bibliographic"
         tabbed={true}
-        value="security"
+        value="bibliographic"
       >
         <StandardCard
           primaryHeader={true}
           squareTop={true}
-          title="Security"
+          title="Bibliographic"
         >
           <Field
             component={[Function]}
             disabled={false}
-            name="securitySection"
+            name="bibliographicSection"
           />
         </StandardCard>
       </TabContainer>
@@ -847,4 +901,173 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     </WithStyles(Grid)>
   </form>
 </StandardPage>
+`;
+
+exports[`AdminInterface component should render in create mode 1`] = `
+<StandardPage
+  title="Add a new Thesis"
+>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ConfirmDialogBox)
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Edit another work",
+          "confirmationMessage": "Work has been updated",
+          "confirmationTitle": "Work has been updated",
+        }
+      }
+      onAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    />
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={12}
+        >
+          <WithStyles(Tabs)
+            classes={
+              Object {
+                "indicator": "tabindicator",
+              }
+            }
+            indicatorColor="primary"
+            onChange={[Function]}
+            scrollButtons="on"
+            style={
+              Object {
+                "marginLeft": -56,
+                "marginRight": -56,
+              }
+            }
+            textColor="primary"
+            value="bibliographic"
+            variant="scrollable"
+          >
+            <WithStyles(Tab)
+              key="bibliographic"
+              label="Bibliographic"
+              value="bibliographic"
+            />
+            <WithStyles(Tab)
+              key="files"
+              label="Files"
+              value="files"
+            />
+            <WithStyles(Tab)
+              key="security"
+              label="Security"
+              value="security"
+            />
+          </WithStyles(Tabs)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+    >
+      <TabContainer
+        currentTab="bibliographic"
+        key="bibliographic"
+        tabbed={true}
+        value="bibliographic"
+      >
+        <StandardCard
+          primaryHeader={true}
+          squareTop={true}
+          title="Bibliographic"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="bibliographicSection"
+          />
+        </StandardCard>
+      </TabContainer>
+      <WithStyles(Grid)
+        item={true}
+        sm={12}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="primary"
+          fullWidth={true}
+          onClick={[MockFunction]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Submit
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should render when no record is available 1`] = `
+<div
+  className="empty"
+/>
 `;
