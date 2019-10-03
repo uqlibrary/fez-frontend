@@ -9,6 +9,9 @@ dist
 npm-debug.log*
 .DS_Store
 
+#ignore .env files
+.env*
+
 e2eTestLog
 chromedriver.log
 coverage
