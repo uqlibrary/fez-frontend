@@ -34,9 +34,11 @@ start:staging-session () {
     source .env > /dev/null 2>&1
 
     # prompt for credentials
-    echo -ne "Username: ${ESPACE_STAGING_USERNAME}\n"
-    if [ -z "${ESPACE_STAGING_USERNAME}" ]; then
+    echo -ne "Username: ${ESPACE_STAGING_USERNAME}"
+    if [ -z ${ESPACE_STAGING_USERNAME+x} ]; then
         read USERNAME
+    else
+        echo ""
     fi
     echo -ne "Password: "
     read -s PASSWORD
