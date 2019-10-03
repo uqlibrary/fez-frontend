@@ -10,7 +10,6 @@ context('Actions', () => {
         cy.getCookie('UQLID')
             .should('exist')
             .then(cookie => {
-                cy.exec('pwd');
                 cy.exec(`echo ${cookie.value} > cypress/fixtures/token`);
             });
     });
