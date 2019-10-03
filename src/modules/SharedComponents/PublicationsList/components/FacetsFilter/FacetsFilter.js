@@ -210,7 +210,7 @@ export default class FacetsFilter extends PureComponent {
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
                         return {
-                            title: publicationTypes()[rawFacet.buckets[index].key].name || 'Unknown',
+                            title: (publicationTypes()[rawFacet.buckets[index].key] || { name: 'Unknown' }).name,
                             key: item.key,
                             count: item.doc_count,
                         };
