@@ -644,7 +644,7 @@ exports[`Publication's map coordinates should mount component 1`] = `
         >
           <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
             <withScriptjs(withGoogleMap(GoogleMapViewComponent))
@@ -680,7 +680,7 @@ exports[`Publication's map coordinates should mount component 1`] = `
                   },
                 ]
               }
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
@@ -1259,7 +1259,7 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
         >
           <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
             readOnly={true}
           >
@@ -1296,7 +1296,7 @@ exports[`Publication's map coordinates should mount component in readonly mode 1
                   },
                 ]
               }
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
@@ -1337,7 +1337,7 @@ exports[`Publication's map coordinates should not render in read only mode 1`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1392,7 +1392,7 @@ exports[`Publication's map coordinates should not render in read only mode 2`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1483,7 +1483,7 @@ exports[`Publication's map coordinates should not render in read only mode 3`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1574,7 +1574,7 @@ exports[`Publication's map coordinates should not render in read only mode 4`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1665,7 +1665,7 @@ exports[`Publication's map coordinates should not render in read only mode 5`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1744,7 +1744,7 @@ exports[`Publication's map coordinates should not render in read only mode 6`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -1824,7 +1824,7 @@ exports[`Publication's map coordinates should not render in read only mode 7`] =
       },
     ]
   }
-  googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+  googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
   handleMarkerComplete={[Function]}
   handlePolygonComplete={[Function]}
   handleRectangleComplete={[Function]}
@@ -2467,7 +2467,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
         >
           <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
             coordinates="153.021781,-27.489337"
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
             <withScriptjs(withGoogleMap(GoogleMapViewComponent))
@@ -2487,7 +2487,7 @@ exports[`Publication's map coordinates should render component with a marker 1`]
                   },
                 ]
               }
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
@@ -3046,7 +3046,7 @@ exports[`Publication's map coordinates should render component with a selected a
         >
           <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
             coordinates="153.021781,-27.489337 152.988274,-27.489337 152.988274,-27.509529 153.021781,-27.509529 153.021781,-27.489337"
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
             <withScriptjs(withGoogleMap(GoogleMapViewComponent))
@@ -3082,7 +3082,7 @@ exports[`Publication's map coordinates should render component with a selected a
                   },
                 ]
               }
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
@@ -3671,7 +3671,7 @@ exports[`Publication's map coordinates should render component with empty coordi
         >
           <lifecycle(withScriptjs(withGoogleMap(GoogleMapViewComponent)))
             coordinates=""
-            googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+            googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
             loadingElement={<div />}
           >
             <withScriptjs(withGoogleMap(GoogleMapViewComponent))
@@ -3684,7 +3684,7 @@ exports[`Publication's map coordinates should render component with empty coordi
               coordinates=""
               currentOverlay={null}
               geoCoords={Array []}
-              googleMapURL="https://maps.googleapis.com/maps/api/js?key=undefined&v=3.exp&libraries=geometry,drawing,places"
+              googleMapURL="https://maps.googleapis.com/maps/api/js?key=1234&v=3.exp&libraries=geometry,drawing,places"
               handleMarkerComplete={[Function]}
               handlePolygonComplete={[Function]}
               handleRectangleComplete={[Function]}
