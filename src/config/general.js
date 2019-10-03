@@ -39,7 +39,6 @@ export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js?key=
     '1234',
 )}&v=3.exp&libraries=geometry,drawing,places`;
 
-export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;
 export const PUBLICATION_TYPE_BOOK_CHAPTER = 177;
@@ -50,6 +49,7 @@ export const PUBLICATION_TYPE_DATA_COLLECTION = 371;
 export const PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT = 181;
 export const PUBLICATION_TYPE_DESIGN = 316;
 export const PUBLICATION_TYPE_DIGILIB_IMAGE = 228;
+export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_IMAGE = 238;
 export const PUBLICATION_TYPE_JOURNAL = 294;
 export const PUBLICATION_TYPE_JOURNAL_ARTICLE = 179;
@@ -57,12 +57,13 @@ export const PUBLICATION_TYPE_MANUSCRIPT = 374;
 export const PUBLICATION_TYPE_NEWSPAPER_ARTICLE = 191;
 export const PUBLICATION_TYPE_PATENT = 185;
 export const PUBLICATION_TYPE_PREPRINT = 204;
+export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 export const PUBLICATION_TYPE_RESEARCH_REPORT = 275;
 export const PUBLICATION_TYPE_SEMINAR_PAPER = 189;
 export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
-export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
+
 export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK = 1003;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK = 1004;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER = 1005;
@@ -91,6 +92,58 @@ export const PUBLICATION_TYPE_RREB_INDUSTRY = 1036;
 export const PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT = 1037;
 export const PUBLICATION_TYPE_RREB_OTHER = 1038;
 export const PUBLICATION_TYPE_RR_INTERNAL_OTHER = 1039;
+
+export const DOCUMENT_TYPE_AUDIO_DOCUMENT = 'Audio Document';
+export const DOCUMENT_TYPE_BOOK = 'Book';
+export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+export const DOCUMENT_TYPE_CONFERENCE_PAPER = 'Conference Paper';
+export const DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS = 'Conference Proceedings';
+export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
+export const DOCUMENT_TYPE_DATA_COLLECTION = 'Data Collection';
+export const DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT = 'Department Technical Report';
+export const DOCUMENT_TYPE_DESIGN = 'Design';
+export const DOCUMENT_TYPE_DIGILIB_IMAGE = 'Digilib Image';
+export const DOCUMENT_TYPE_GENERIC_DOCUMENT = 'Generic Document';
+export const DOCUMENT_TYPE_IMAGE = 'Image';
+export const DOCUMENT_TYPE_JOURNAL = 'Journal';
+export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+export const DOCUMENT_TYPE_MANUSCRIPT = 'Manuscript';
+export const DOCUMENT_TYPE_NEWSPAPER_ARTICLE = 'Newspaper Article';
+export const DOCUMENT_TYPE_PATENT = 'Patent';
+export const DOCUMENT_TYPE_PREPRINT = 'Preprint';
+export const DOCUMENT_TYPE_REFERENCE_ENTRY = 'Reference Entry';
+export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+export const DOCUMENT_TYPE_SEMINAR_PAPER = 'Seminar Paper';
+export const DOCUMENT_TYPE_THESIS = 'Thesis';
+export const DOCUMENT_TYPE_VIDEO_DOCUMENT = 'Video Document';
+export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
+
+export const DOCUMENT_TYPES_LOOKUP = {
+    [PUBLICATION_TYPE_AUDIO_DOCUMENT]: DOCUMENT_TYPE_AUDIO_DOCUMENT,
+    [PUBLICATION_TYPE_BOOK]: DOCUMENT_TYPE_BOOK,
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: DOCUMENT_TYPE_BOOK_CHAPTER,
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: DOCUMENT_TYPE_CONFERENCE_PAPER,
+    [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS,
+    [PUBLICATION_TYPE_CREATIVE_WORK]: DOCUMENT_TYPE_CREATIVE_WORK,
+    [PUBLICATION_TYPE_DATA_COLLECTION]: DOCUMENT_TYPE_DATA_COLLECTION,
+    [PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT]: DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    [PUBLICATION_TYPE_DESIGN]: DOCUMENT_TYPE_DESIGN,
+    [PUBLICATION_TYPE_DIGILIB_IMAGE]: DOCUMENT_TYPE_DIGILIB_IMAGE,
+    [PUBLICATION_TYPE_GENERIC_DOCUMENT]: DOCUMENT_TYPE_GENERIC_DOCUMENT,
+    [PUBLICATION_TYPE_IMAGE]: DOCUMENT_TYPE_IMAGE,
+    [PUBLICATION_TYPE_JOURNAL]: DOCUMENT_TYPE_JOURNAL,
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: DOCUMENT_TYPE_JOURNAL_ARTICLE,
+    [PUBLICATION_TYPE_MANUSCRIPT]: DOCUMENT_TYPE_MANUSCRIPT,
+    [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: DOCUMENT_TYPE_NEWSPAPER_ARTICLE,
+    [PUBLICATION_TYPE_PATENT]: DOCUMENT_TYPE_PATENT,
+    [PUBLICATION_TYPE_PREPRINT]: DOCUMENT_TYPE_PREPRINT,
+    [PUBLICATION_TYPE_REFERENCE_ENTRY]: DOCUMENT_TYPE_REFERENCE_ENTRY,
+    [PUBLICATION_TYPE_RESEARCH_REPORT]: DOCUMENT_TYPE_RESEARCH_REPORT,
+    [PUBLICATION_TYPE_SEMINAR_PAPER]: DOCUMENT_TYPE_SEMINAR_PAPER,
+    [PUBLICATION_TYPE_THESIS]: DOCUMENT_TYPE_THESIS,
+    [PUBLICATION_TYPE_VIDEO_DOCUMENT]: DOCUMENT_TYPE_VIDEO_DOCUMENT,
+    [PUBLICATION_TYPE_WORKING_PAPER]: DOCUMENT_TYPE_WORKING_PAPER,
+};
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
@@ -196,17 +249,10 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
 };
 
-export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
-export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
-export const DOCUMENT_TYPE_BOOK = 'Book';
-export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
-export const DOCUMENT_TYPE_DESIGN = 'Design';
-export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
-
 export const publicationTypes = components => ({
     [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
-        name: 'Audio Document',
+        name: DOCUMENT_TYPE_AUDIO_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
         formComponent: components ? components.AudioDocumentForm : null,
         citationComponent: components ? components.AudioDocumentCitation : null,
@@ -257,7 +303,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
-        name: 'Conference Paper',
+        name: DOCUMENT_TYPE_CONFERENCE_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
@@ -267,7 +313,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
-        name: 'Conference Proceedings',
+        name: DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS,
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
         formComponent: components ? components.ConferenceProceedingsForm : null,
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
@@ -285,14 +331,14 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_DATA_COLLECTION]: {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
-        name: 'Data Collection',
+        name: DOCUMENT_TYPE_DATA_COLLECTION,
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
         citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false,
     },
     [PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT]: {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
-        name: 'Department Technical Report',
+        name: DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
         citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         formComponent: components ? components.DepartmentTechnicalReportForm : null,
@@ -309,14 +355,14 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
-        name: 'Digilib Image',
+        name: DOCUMENT_TYPE_DIGILIB_IMAGE,
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
         citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false,
     },
     [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
-        name: 'Generic Document',
+        name: DOCUMENT_TYPE_GENERIC_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
         formComponent: components ? components.GenericDocumentForm : null,
         citationComponent: components ? components.GenericDocumentCitation : null,
@@ -324,7 +370,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_IMAGE]: {
         id: PUBLICATION_TYPE_IMAGE,
-        name: 'Image',
+        name: DOCUMENT_TYPE_IMAGE,
         class: 'Uqlibrary\\FezCore\\Types\\Image',
         citationComponent: components ? components.ImageDocumentCitation : null,
         formComponent: components ? components.ImageDocumentForm : null,
@@ -332,7 +378,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_JOURNAL]: {
         id: PUBLICATION_TYPE_JOURNAL,
-        name: 'Journal',
+        name: DOCUMENT_TYPE_JOURNAL,
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
         citationComponent: components ? components.JournalCitation : null,
         hasFormComponent: false,
@@ -363,14 +409,14 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_MANUSCRIPT]: {
         id: PUBLICATION_TYPE_MANUSCRIPT,
-        name: 'Manuscript',
+        name: DOCUMENT_TYPE_MANUSCRIPT,
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
         citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false,
     },
     [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: {
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
-        name: 'Newspaper Article',
+        name: DOCUMENT_TYPE_NEWSPAPER_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
         formComponent: components ? components.NewspaperArticleForm : null,
         citationComponent: components ? components.NewspaperArticleCitation : null,
@@ -378,7 +424,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_PATENT]: {
         id: PUBLICATION_TYPE_PATENT,
-        name: 'Patent',
+        name: DOCUMENT_TYPE_PATENT,
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
         formComponent: components ? components.PatentForm : null,
         citationComponent: components ? components.PatentCitation : null,
@@ -386,7 +432,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_PREPRINT]: {
         id: PUBLICATION_TYPE_PREPRINT,
-        name: 'Preprint',
+        name: DOCUMENT_TYPE_PREPRINT,
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
         formComponent: components ? components.PreprintForm : null,
         citationComponent: components ? components.PreprintCitation : null,
@@ -403,7 +449,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_SEMINAR_PAPER]: {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
-        name: 'Seminar Paper',
+        name: DOCUMENT_TYPE_SEMINAR_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
         formComponent: components ? components.SeminarPaperForm : null,
         citationComponent: components ? components.SeminarPaperCitation : null,
@@ -411,7 +457,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_THESIS]: {
         id: PUBLICATION_TYPE_THESIS,
-        name: 'Thesis',
+        name: DOCUMENT_TYPE_THESIS,
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
         formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
@@ -419,7 +465,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
-        name: 'Video Document',
+        name: DOCUMENT_TYPE_VIDEO_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Video',
         formComponent: components ? components.VideoDocumentForm : null,
         citationComponent: components ? components.VideoDocumentCitation : null,
@@ -427,7 +473,7 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_WORKING_PAPER]: {
         id: PUBLICATION_TYPE_WORKING_PAPER,
-        name: 'Working Paper',
+        name: DOCUMENT_TYPE_WORKING_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
         citationComponent: components ? components.WorkingPaperCitation : null,
@@ -435,39 +481,12 @@ export const publicationTypes = components => ({
     },
     [PUBLICATION_TYPE_REFERENCE_ENTRY]: {
         id: PUBLICATION_TYPE_REFERENCE_ENTRY,
-        name: 'Reference Entry',
+        name: DOCUMENT_TYPE_REFERENCE_ENTRY,
         class: 'Uqlibrary\\FezCore\\Types\\ReferenceEntry',
         citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: false,
     },
 });
-
-export const DOCUMENT_TYPES_LOOKUP = {
-    202: 'Generic document',
-    263: 'Audio document',
-    174: 'Book',
-    177: 'Book chapter',
-    130: 'Conference paper',
-    197: 'Conference proceedings',
-    313: 'Creative work',
-    371: 'Data collection',
-    181: 'Department technical report',
-    316: 'Design',
-    228: 'Digilib image',
-    238: 'Image',
-    294: 'Journal',
-    179: 'Journal article',
-    374: 'Manuscript',
-    191: 'Newspaper article',
-    185: 'Patent',
-    204: 'Preprint',
-    275: 'Research report',
-    189: 'Seminar paper',
-    187: 'Thesis',
-    310: 'Video document',
-    183: 'Working paper',
-    272: 'Reference entry',
-};
 
 export const QUICK_TEMPLATES = {
     UQ_STAFF_STUDENTS_VIEW: 1,
