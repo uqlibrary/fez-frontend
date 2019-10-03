@@ -4,8 +4,7 @@ import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './Publ
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
-        googleMapURL:
-            'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places',
+        googleMapURL: `https://maps.googleapis.com/maps/api/js?key=${process.env.GOOGLE_MAPS_API_KEY}&v=3.exp&libraries=geometry,drawing,places`,
         loadingElement: <div />,
     };
     return getElement(PublicationMap, props, args);

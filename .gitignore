@@ -8,6 +8,7 @@ node_modules
 dist
 npm-debug.log*
 .DS_Store
+.env.dev
 
 e2eTestLog
 chromedriver.log
