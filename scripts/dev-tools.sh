@@ -31,16 +31,19 @@ get-uql-x-token () {
 
 start:staging-session () {
     # include dev env if available
-    source .env.dev > /dev/null 2>&1
+    source .env > /dev/null 2>&1
 
-    echo -n "Username: "
-    read USERNAME
-    echo -n "Password: "
+    # prompt for credentials
+    echo -ne "Username: ${ESPACE_STAGING_USERNAME}\n"
+    if [ -z "${ESPACE_STAGING_USERNAME}" ]; then
+        read USERNAME
+    fi
+    echo -ne "Password: "
     read -s PASSWORD
     echo -e "\n"
 
-    # login into staging using provided credentials
-    TOKEN=$(get-uql-x-token "${1:-$ESPACE_STAGING_HOST}" "$USERNAME" "$PASSWORD")
+    # login using provided credentials
+    TOKEN=$(get-uql-x-token "${1:-$ESPACE_STAGING_HOST}" "${USERNAME:-$ESPACE_STAGING_USERNAME}" "$PASSWORD")
     # bail if it fails
     if [[ $? -ne 0 ]]; then
         echo -e "$TOKEN"  && exit 1
