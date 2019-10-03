@@ -327,4 +327,26 @@ describe('Component ContributorForm', () => {
             aut_id: 111,
         });
     });
+
+    it('should set state properly when UQ identifier is cleared', () => {
+        const wrapper = setup({});
+        const testFn = jest.fn();
+        wrapper.instance()._onSubmit = testFn;
+
+        const initialState = wrapper.state();
+        const expected = {
+            ...initialState,
+            contributor: {
+                ...initialState.contributor,
+                uqIdentifier: '0',
+                authorId: 0,
+                affiliation: 'NotUQ',
+            },
+        };
+
+        wrapper.instance()._onUQIdentifierCleared();
+
+        expect(wrapper.state()).toEqual(expected);
+        expect(testFn).toHaveBeenCalledTimes(1);
+    });
 });

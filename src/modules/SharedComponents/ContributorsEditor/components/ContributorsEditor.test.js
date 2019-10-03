@@ -117,6 +117,20 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state().isCurrentAuthorSelected).toEqual(true);
     });
 
+    it('can edit a selected contributor', () => {
+        const wrapper = setup({
+            editMode: true,
+            author: authorsSearch.data[0],
+        });
+        wrapper.setState({
+            contributorIndexSelectedToEdit: 0,
+        });
+        wrapper.instance().addContributor({
+            uqIdentifier: authorsSearch.data[0].aut_id,
+        });
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
     it('assigns a contributor to current author', async() => {
         const wrapper = setup({
             author: {
@@ -261,6 +275,22 @@ describe('ContributorsEditor', () => {
             ],
         });
         expect(wrapper.instance().renderContributorRows()[0].props.onSelect).toBe(null);
+    });
+
+    it('should disable selection when current author is selected', () => {
+        const wrapper = setup({
+            showContributorAssignment: true,
+        });
+        wrapper.setState({
+            isCurrentAuthorSelected: true,
+            contributors: [
+                {
+                    disabled: false,
+                    nameAsPublished: 1,
+                },
+            ],
+        });
+        expect(wrapper.instance().renderContributorRows()[0].props.enableSelect).toBe(false);
     });
 
     it('returns contributor form with expected props', () => {

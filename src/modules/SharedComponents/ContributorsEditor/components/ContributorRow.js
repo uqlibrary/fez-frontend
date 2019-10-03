@@ -235,19 +235,30 @@ export class ContributorRow extends PureComponent {
         );
     };
 
-    render() {
+    getRowIcon() {
         const {
-            deleteRecordConfirmation,
-            moveUpHint,
-            moveDownHint,
-            deleteHint,
-            editHint,
-            selectHint,
-            lockedTooltip,
-            deleteButtonId,
-            editButtonId,
-        } = this.props.locale;
+            contributor,
+            disabled,
+            locale: { lockedTooltip },
+        } = this.props;
+        if (parseInt(contributor.uqIdentifier, 10)) {
+            return <HowToRegIcon />;
+        } else if (contributor.selected) {
+            return <Person />;
+        } else if ((disabled || contributor.disabled) && !this.props.enableSelect) {
+            return lockedTooltip ? (
+                <Tooltip title={lockedTooltip}>
+                    <Lock />
+                </Tooltip>
+            ) : (
+                <Lock />
+            );
+        } else {
+            return <PersonOutlined />;
+        }
+    }
 
+    render() {
         const {
             contributor,
             canEdit,
@@ -259,6 +270,16 @@ export class ContributorRow extends PureComponent {
             hideDelete,
             required,
             index,
+            locale: {
+                deleteRecordConfirmation,
+                moveUpHint,
+                moveDownHint,
+                deleteHint,
+                editHint,
+                selectHint,
+                deleteButtonId,
+                editButtonId,
+            },
         } = this.props;
 
         const selectedClass = contributor.selected ? classes.selected : '';
@@ -268,28 +289,6 @@ export class ContributorRow extends PureComponent {
                 `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
                     ''}`.trim()) ||
             '';
-
-        const rowIcon = () => {
-            if (parseInt(contributor.uqIdentifier, 10)) {
-                return <HowToRegIcon />;
-            } else if (contributor.selected) {
-                return <Person />;
-            } else if (
-                disabled ||
-                contributor.disabled ||
-                (disabled && contributor.disabled && !this.props.enableSelect)
-            ) {
-                return lockedTooltip ? (
-                    <Tooltip title={lockedTooltip}>
-                        <Lock />
-                    </Tooltip>
-                ) : (
-                    <Lock />
-                );
-            } else {
-                return <PersonOutlined />;
-            }
-        };
 
         return (
             <Fragment>
@@ -313,7 +312,7 @@ export class ContributorRow extends PureComponent {
                     id={`contributor-editor-row-${this.props.index}`}
                 >
                     <Hidden xsDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{rowIcon()}</ListItemIcon>
+                        <ListItemIcon classes={{ root: selectedClass }}>{this.getRowIcon()}</ListItemIcon>
                     </Hidden>
                     {this.getContributorRowText(selectedClass)}
                     <ListItemSecondaryAction>

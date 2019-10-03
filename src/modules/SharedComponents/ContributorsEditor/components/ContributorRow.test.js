@@ -69,6 +69,15 @@ describe('Component ContributorRow', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should render a row with a disabled contributor', () => {
+        const wrapper = setup({
+            contributor: {
+                disabled: true,
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('a row with index and creator with creator role set and set as selected', () => {
         const wrapper = setup({
             ...authorsSearch.data[0],
@@ -282,6 +291,31 @@ describe('Component ContributorRow', () => {
         testFunction.mockClear();
         wrapper.instance()._onSelectKeyboard({ key: 'A' });
         expect(testFunction).not.toBeCalled();
+    });
+
+    it('should handle edits', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            index: 2,
+            canEdit: true,
+            onEdit: testFn,
+        });
+        wrapper.instance()._handleEdit();
+        expect(testFn).toHaveBeenCalledWith(2);
+    });
+
+    it('should get row icon', () => {
+        const wrapper = setup({
+            contributor: {
+                uqIdentifier: 123,
+            },
+        });
+        expect(wrapper.instance().getRowIcon()).toMatchSnapshot();
+        const wrapper2 = setup({
+            locale: {},
+            disabled: true,
+        });
+        expect(wrapper2.instance().getRowIcon()).toMatchSnapshot();
     });
 
     it('Row should be clickable when showContributorAssignment set to true', () => {

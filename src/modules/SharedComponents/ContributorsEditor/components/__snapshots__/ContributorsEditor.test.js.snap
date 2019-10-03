@@ -1,5 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ContributorsEditor can edit a selected contributor 1`] = `
+Object {
+  "contributorIndexSelectedToEdit": null,
+  "contributors": Array [
+    Object {
+      "authorId": null,
+      "disabled": true,
+      "required": false,
+      "selected": false,
+      "uqIdentifier": 410,
+    },
+  ],
+  "errorMessage": "",
+  "isCurrentAuthorSelected": false,
+}
+`;
+
 exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 <div>
   <WithStyles(Grid)
