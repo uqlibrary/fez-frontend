@@ -6,7 +6,6 @@ import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 
-/* istanbul ignore next */
 export const FilesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(

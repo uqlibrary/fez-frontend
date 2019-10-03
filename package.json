@@ -310,7 +310,7 @@
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
-            "!src/**/index.js",
+            "!src/**/{index,locale}.js",
             "!src/**/containers/*.{js,jsx}",
             "src/modules/Index/*.{js,jsx}",
             "src/actions/*.{js,jsx}",

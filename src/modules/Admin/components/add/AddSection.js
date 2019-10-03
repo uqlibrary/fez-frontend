@@ -15,7 +15,6 @@ import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import Hidden from '@material-ui/core/Hidden';
 
-/* istanbul ignore next */
 export const AddSection = ({
     hasDefaultDocTypeSubType,
     publicationSubtypeItems,

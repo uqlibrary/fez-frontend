@@ -5,7 +5,6 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 
-/* istanbul ignore next */
 export const AdditionalInformationSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(adminInterfaceConfig[record.rek_display_type].additionalInformation());
