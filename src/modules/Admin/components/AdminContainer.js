@@ -18,7 +18,7 @@ import IdentifiersSection from './identifiers/IdentifiersSectionContainer';
 import BibliographicSection from './bibliographic/BibliographicSectionContainer';
 import AdminSection from './admin/AdminSectionContainer';
 import AddSection from './add/AddSectionContainer';
-import GrantInformationSection from './grantInformation/GrantInformaionSectionContainer';
+import GrantInformationSection from './grantInformation/GrantInformationSectionContainer';
 import FilesSection from './files/FilesSectionContainer';
 import AdditionalInformationSection from './additionalInformation/AdditionalInformationSectionContainer';
 import NtroSection from './ntro/NtroSectionContainer';

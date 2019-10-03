@@ -93,7 +93,7 @@ const grantOptions = {
 };
 
 /* istanbul ignore next */
-export const GrantInformationSection = ({ disabled }) => {
+export const GrantInformationDetailsSection = ({ disabled }) => {
     return (
         <Grid container spacing={8} style={{ marginTop: -12 }}>
             <Grid item xs={12} sm={6}>
@@ -168,8 +168,8 @@ export const GrantInformationSection = ({ disabled }) => {
     );
 };
 
-GrantInformationSection.propTypes = {
+GrantInformationDetailsSection.propTypes = {
     disabled: PropTypes.bool,
 };
 
-export default React.memo(GrantInformationSection);
+export default React.memo(GrantInformationDetailsSection);
