@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import { useRecordContext, useAccountContext } from 'context';
 import { publicationTypes } from 'config';
 
@@ -6,12 +7,12 @@ export const usePublicationSubtype = (displayType = null) => {
     return publicationTypes()[displayType || record.rek_display_type].subtypes || [];
 };
 
-export const useIsAdmin = () => {
+export const userIsAdmin = () => {
     const { account } = useAccountContext();
     return !!account.is_administrator;
 };
 
-export const useIsAuthor = () => {
+export const userIsAuthor = () => {
     const { account } = useAccountContext();
     const { record } = useRecordContext();
 

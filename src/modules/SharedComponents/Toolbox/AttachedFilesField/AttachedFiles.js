@@ -9,7 +9,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { makeStyles } from '@material-ui/styles';
 import { useRecordContext } from 'context';
-import { useIsAdmin, useIsAuthor } from 'hooks';
+import { userIsAdmin, userIsAuthor } from 'hooks';
 
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
@@ -18,21 +18,18 @@ import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
 
-import VolumeUp from '@material-ui/icons/VolumeUp';
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
-import Image from '@material-ui/icons/Image';
-import Videocam from '@material-ui/icons/Videocam';
 import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import { isFileValid } from 'config/validation';
 import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
-import Thumbnail from 'modules/ViewRecord/components/partials/Thumbnail';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoDate';
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
-const useStyles = makeStyles(
+import { FileIcon } from './FileIcon';
+
+export const useStyles = makeStyles(
+    /* istanbul ignore next */
     theme => ({
         header: {
             borderBottom: `1px solid ${theme.palette.secondary.light}`,
@@ -59,10 +56,10 @@ const initialPreviewState = {
     webMediaUrl: null,
 };
 
-export const usePreview = initialPreviewState => {
+const usePreview = initialPreviewState => {
     const [preview, setPreview] = useState(initialPreviewState);
 
-    const showPreview = (...args) => {
+    const showPreview = args => {
         setPreview({ ...args });
     };
 
@@ -73,7 +70,7 @@ export const usePreview = initialPreviewState => {
     return [preview, showPreview, hidePreview];
 };
 
-const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
+export const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
 
 const formatBytes = bytes => {
     if (bytes === 0) {
@@ -108,44 +105,6 @@ const getFileOpenAccessStatus = (publication, dataStream) => {
         };
     }
     return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
-};
-
-const FileIcon = ({
-    pid,
-    mimeType,
-    fileName,
-    thumbnailFileName,
-    previewFileName,
-    allowDownload,
-    webFileName,
-    securityStatus,
-    showPreview,
-}) => {
-    const classes = useStyles();
-    if (allowDownload && thumbnailFileName) {
-        const thumbnailProps = {
-            mimeType,
-            mediaUrl: getUrl(pid, fileName || fileName),
-            webMediaUrl: webFileName ? getUrl(pid, webFileName) : null,
-            previewMediaUrl: getUrl(pid, previewFileName || fileName),
-            thumbnailMediaUrl: getUrl(pid, thumbnailFileName),
-            fileName: fileName,
-            thumbnailFileName,
-            onClick: showPreview,
-            securityStatus: securityStatus,
-        };
-        return <Thumbnail {...thumbnailProps} />;
-    } else if (mimeType.indexOf('audio') >= 0) {
-        return <VolumeUp className={classes.fileIcon} color="secondary" />;
-    } else if (mimeType.indexOf('pdf') >= 0) {
-        return <PictureAsPdf className={classes.fileIcon} color="secondary" />;
-    } else if (mimeType.indexOf('image') >= 0) {
-        return <Image className={classes.fileIcon} color="secondary" />;
-    } else if (mimeType.indexOf('video') >= 0) {
-        return <Videocam className={classes.fileIcon} color="secondary" />;
-    } else {
-        return <InsertDriveFile className={classes.fileIcon} color="secondary" />;
-    }
 };
 
 const checkArrayForObjectValue = (value, dataStreams) => {
@@ -275,18 +234,13 @@ export const AttachedFiles = ({
     const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
-    const isAdmin = useIsAdmin();
-    const isAuthor = useIsAuthor();
+    const isAdmin = userIsAdmin();
+    const isAuthor = userIsAuthor();
 
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
-    let hasVideo = false;
-    fileData.map(item => {
-        if (item.mimeType.indexOf('video') > -1) {
-            hasVideo = true;
-        }
-    });
+    const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1);
 
     const onFileDelete = index => () => onDelete(index);
     const onEmbargoDateChange = index => value =>
@@ -438,5 +392,5 @@ AttachedFiles.defaultProps = {
     deleteHint: 'Remove this file',
     canEdit: false,
 };
-const Files = props => <AttachedFiles {...props} />;
-export default Files;
+
+export default AttachedFiles;
