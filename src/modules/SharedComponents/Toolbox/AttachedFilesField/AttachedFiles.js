@@ -72,7 +72,7 @@ const usePreview = initialPreviewState => {
 
 export const getUrl = (pid, fileName) => fileName && routes.pathConfig.file.url(pid, fileName);
 
-const formatBytes = bytes => {
+export const formatBytes = bytes => {
     if (bytes === 0) {
         return '0 Bytes';
     }
@@ -89,7 +89,7 @@ const getSecurityAccess = () => {
     return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
 };
 
-const getFileOpenAccessStatus = (publication, dataStream) => {
+export const getFileOpenAccessStatus = (publication, dataStream) => {
     const embargoDate = dataStream.dsi_embargo_date;
     const openAccessStatusId =
         (!!publication.fez_record_search_key_oa_status && publication.fez_record_search_key_oa_status.rek_oa_status) ||
@@ -117,7 +117,7 @@ const checkArrayForObjectValue = (value, dataStreams) => {
     return resolvedFilename;
 };
 
-const untranscodedItem = filename => {
+export const untranscodedItem = filename => {
     let file = null;
     if (filename.indexOf('_xt') >= 0) {
         file = filename
@@ -176,7 +176,7 @@ const checkForWeb = (filename, dataStreams) => {
     );
 };
 
-const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
+export const getFileData = (publication, dataStreams, isAdmin, isAuthor) => {
     return !!dataStreams && dataStreams.length > 0
         ? dataStreams.filter(isFileValid(viewRecordsConfig, isAdmin)).map(dataStream => {
             const pid = dataStream.dsi_pid;
