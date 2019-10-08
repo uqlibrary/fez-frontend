@@ -5,20 +5,19 @@ import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
 
-export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
-    const [linkAndDescription, setLinkAndDescription] = useState({ key: null, value: null });
-    const linkInput = useRef(null);
-    const descriptionInput = useRef(null);
-
-    const handleChange = event => {
+export const handleChangeCallbackFactory = (linkAndDescription, setLinkAndDescription) => {
+    const callback = event => {
         const { name, value } = event.target;
         setLinkAndDescription({
             ...linkAndDescription,
             [name]: value,
         });
     };
+    return [callback, [linkAndDescription, setLinkAndDescription]];
+};
 
-    const resetForm = () => {
+export const resetFormCallbackFactory = (linkInput, descriptionInput, setLinkAndDescription) => {
+    const callback = () => {
         setLinkAndDescription({
             key: null,
             value: null,
@@ -26,27 +25,40 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
         linkInput.current.value = null;
         descriptionInput.current.value = null;
     };
+    return [callback, [linkInput, descriptionInput, setLinkAndDescription]];
+};
 
+export const addItemCallbackFactory = (descriptionInput, disabled, linkAndDescription, onAdd, resetForm) => {
+    const callback = event => {
+        // add item if user hits 'enter' key on input field
+        if (
+            disabled ||
+            !linkAndDescription.key ||
+            !linkAndDescription.value ||
+            (event && event.key && event.key !== 'Enter')
+        ) {
+            return;
+        }
+        // pass on the selected item
+        onAdd(linkAndDescription);
+        resetForm();
+
+        // move focus to name as published text field after item was added
+        descriptionInput.current.focus();
+        // linkInput.current.focus();
+    };
+    return [callback, [descriptionInput, disabled, linkAndDescription, onAdd, resetForm]];
+};
+
+export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
+    const [linkAndDescription, setLinkAndDescription] = useState({ key: null, value: null });
+    const linkInput = useRef(null);
+    const descriptionInput = useRef(null);
+
+    const handleChange = useCallback(...handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription));
+    const resetForm = useCallback(...resetFormCallbackFactory(linkInput, descriptionInput, setLinkAndDescription));
     const addItem = useCallback(
-        event => {
-            // add item if user hits 'enter' key on input field
-            if (
-                disabled ||
-                !linkAndDescription.key ||
-                !linkAndDescription.value ||
-                (event && event.key && event.key !== 'Enter')
-            ) {
-                return;
-            }
-            // pass on the selected item
-            onAdd(linkAndDescription);
-            resetForm();
-            // move focus to name as published text field after item was added
-            /* istanbul if ignore */
-            descriptionInput.current.focus();
-            // linkInput.current.focus();
-        },
-        [disabled, linkAndDescription, onAdd],
+        ...addItemCallbackFactory(descriptionInput, disabled, linkAndDescription, onAdd, resetForm),
     );
 
     const {
