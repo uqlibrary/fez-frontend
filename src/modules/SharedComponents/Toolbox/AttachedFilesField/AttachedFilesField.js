@@ -1,32 +1,39 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
-import Immutable from 'immutable';
+
+export const deleteCallbackFactory = (dataStreams, setDataStreams) => {
+    const callback = index => {
+        const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
+        setDataStreams(newDataStreams);
+    };
+    return [callback, [dataStreams, setDataStreams]];
+};
+
+export const datastreamChangeCallbackFactory = (dataStreams, setDataStreams) => {
+    const callback = (key, value, index) => {
+        const newDataStreams = [
+            ...dataStreams.slice(0, index),
+            { ...dataStreams[index], [key]: value },
+            ...dataStreams.slice(index + 1),
+        ];
+        setDataStreams(newDataStreams);
+    };
+    return [callback, [dataStreams, setDataStreams]];
+};
+
+export const onChangeCallbackFactory = (dataStreams, onChange) => {
+    const callback = () => onChange(dataStreams);
+    return [callback, [dataStreams, onChange]];
+};
 
 export const AttachedFilesField = ({ input, ...props }) => {
-    const [dataStreams, setDataStreams] = useState((props.meta.initial || Immutable.Map([])).toJS());
+    const [dataStreams, setDataStreams] = useState((props.meta && props.meta.initial) || []);
     const { onChange } = input;
-    const handleDelete = useCallback(
-        index => {
-            const newDataStreams = [...dataStreams.slice(0, index), ...dataStreams.slice(index + 1)];
-            setDataStreams(newDataStreams);
-        },
-        [dataStreams, setDataStreams],
-    );
 
-    const handleDataStreamChange = useCallback(
-        (key, value, index) => {
-            const newDataStreams = [
-                ...dataStreams.slice(0, index),
-                { ...dataStreams[index], [key]: value },
-                ...dataStreams.slice(index + 1),
-            ];
-            setDataStreams(newDataStreams);
-        },
-        [setDataStreams, dataStreams],
-    );
-
-    useEffect(() => onChange(dataStreams), [onChange, dataStreams]);
+    const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams));
+    const handleDataStreamChange = useCallback(...datastreamChangeCallbackFactory(dataStreams, setDataStreams));
+    useEffect(...onChangeCallbackFactory(dataStreams, onChange));
 
     return (
         <AttachedFiles
