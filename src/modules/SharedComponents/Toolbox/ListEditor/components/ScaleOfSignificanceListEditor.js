@@ -3,7 +3,7 @@ import ScaleOfSignificanceForm from './ScaleOfSignificanceForm';
 import ListEditor from './ListEditor';
 import { ScaleOfSignificanceTemplate } from './ScaleOfSignificanceTemplate';
 
-export default function ScaleOfSignificanceListEditor(fieldProps) {
+export const ScaleOfSignificanceListEditor = fieldProps => {
     return (
         <ListEditor
             formComponent={ScaleOfSignificanceForm}
@@ -11,4 +11,6 @@ export default function ScaleOfSignificanceListEditor(fieldProps) {
             {...fieldProps}
         />
     );
-}
+};
+
+export default ScaleOfSignificanceListEditor;

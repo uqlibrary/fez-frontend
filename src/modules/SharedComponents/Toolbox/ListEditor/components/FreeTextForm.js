@@ -90,7 +90,7 @@ export class FreeTextFormClass extends Component {
                 <Grid item style={{ flexGrow: 1 }}>
                     <TextField
                         fullWidth
-                        id={(!!id && id) || ''}
+                        id={id || ''}
                         inputRef={node => {
                             this.textField = node;
                         }}

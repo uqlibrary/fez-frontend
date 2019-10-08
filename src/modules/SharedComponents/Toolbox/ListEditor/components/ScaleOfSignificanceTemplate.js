@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import { SIGNIFICANCE_MAP } from 'config/general';
+
 export const ScaleOfSignificanceTemplate = ({ item }) => (
     <React.Fragment>
         <Grid container>

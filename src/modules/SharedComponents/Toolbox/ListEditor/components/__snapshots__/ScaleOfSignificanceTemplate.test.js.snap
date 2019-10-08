@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScaleOfSignificanceTemplate component should render default view 1`] = `
+<Fragment>
+  <WithStyles(Grid)
+    container={true}
+  >
+    <WithStyles(Grid)
+      item={true}
+      md={3}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      >
+        Missing
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      md={9}
+      xs={12}
+    >
+      <WithStyles(Typography)
+        variant="body2"
+      />
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</Fragment>
+`;
