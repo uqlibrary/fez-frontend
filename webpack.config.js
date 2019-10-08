@@ -5,6 +5,7 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
 const InjectPreloader = require('preloader-html-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const port = 3000;
 const url = process.env.URL || 'localhost';
@@ -152,6 +153,7 @@ module.exports = {
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
             'process.env.SESSION_COOKIE_NAME': JSON.stringify(process.env.SESSION_COOKIE_NAME),
         }),
+        new Dotenv(),
     ],
     resolve: {
         descriptionFiles: ['package.json'],

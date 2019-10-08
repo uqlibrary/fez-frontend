@@ -1,6 +1,7 @@
 import { journalArticle } from 'mock/data/testing/records';
 import Files from './Files';
 import { FilesClass } from './Files';
+import * as mock from 'mock/data';
 
 function setup(testProps, args = { isShallow: true }) {
     const props = {
@@ -380,6 +381,34 @@ describe('Files Component ', () => {
         const wrapper = setup({});
         const fileName = 'test_xt.jpg';
         expect(wrapper.instance().untranscodedItem(fileName)).toEqual('test');
+    });
+
+    it('should return checksums', () => {
+        const wrapper = setup({});
+        const dataStreams = [
+            {
+                dsi_dsid: 'image.tiff',
+                dsi_checksum: '111',
+            },
+            {
+                dsi_dsid: 'thumbnail_image_t.jpg',
+                dsi_checksum: '222',
+            },
+            {
+                dsi_dsid: 'preview_image_t.jpg',
+                dsi_checksum: '333',
+            },
+        ];
+        expect(
+            wrapper
+                .instance()
+                .getChecksums(dataStreams[0], dataStreams[1].dsi_dsid, dataStreams[2].dsi_dsid, '', dataStreams),
+        ).toEqual({
+            media: dataStreams[0].dsi_checksum,
+            thumbnail: dataStreams[1].dsi_checksum,
+            preview: dataStreams[2].dsi_checksum,
+            web: undefined,
+        });
     });
 
     it('should not calculate OA of files if search key not present', () => {
@@ -2891,6 +2920,7 @@ describe('Files Component ', () => {
                     dsi_copyright: null,
                     dsi_state: 'A',
                     dsi_size: 3000090,
+                    dsi_checksum: 'a6a6d6qs6dq6wsdqwd',
                 },
                 {
                     dsi_pid: 'UQ:185044',
@@ -3338,6 +3368,38 @@ describe('Files Component ', () => {
         /* eslint-enable max-len */
 
         const wrapper = setup({ publication: publication, isAdmin: true });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show a blacklisted collection member when the user is an admin', () => {
+        const wrapper = setup({
+            account: mock.accounts.uqstaff,
+            publication: {
+                ...journalArticle,
+                fez_datastream_info: [
+                    {
+                        dsi_pid: 'UQ:792099',
+                        dsi_dsid: 'image.jpg',
+                        dsi_embargo_date: null,
+                        dsi_open_access: null,
+                        dsi_label: 'testing image description',
+                        dsi_mimetype: 'image/jpeg',
+                        dsi_copyright: null,
+                        dsi_state: 'A',
+                        dsi_size: 97786,
+                    },
+                ],
+                fez_record_search_key_ismemberof: [
+                    {
+                        rek_ismemberof_pid: 'UQ:792099',
+                        rek_ismemberof: 'UQ:413806',
+                        rek_ismemberof_order: 1,
+                    },
+                ],
+                fez_record_search_key_advisory_statement: { rek_advisory_statement: 'No statement' },
+            },
+            hideCulturalSensitivityStatement: true,
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
