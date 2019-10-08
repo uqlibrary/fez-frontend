@@ -8,39 +8,51 @@ import RichEditor from 'modules/SharedComponents/RichEditor/components/RichEdito
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { SIGNIFICANCE } from 'config/general';
 
+export const handleContributionStatementCallbackFactory = setContributionStatement => {
+    const callback = value => setContributionStatement(value);
+    return [callback, [setContributionStatement]];
+};
+
+export const handleSignificanceCallbackFactory = setSignificance => {
+    const callback = value => setSignificance(value);
+    return [callback, [setSignificance]];
+};
+
+export const resetFormCallbackFactory = (contributionStatementEditor, setSignificance) => {
+    const callback = () => {
+        setSignificance(null);
+        contributionStatementEditor.current.setData(null);
+    };
+    return [callback, [contributionStatementEditor, setSignificance]];
+};
+
+export const addItemCallbackFactory = (disabled, significance, contributionStatement, onAdd, resetForm) => {
+    const callback = event => {
+        // add item if user hits 'enter' key on input field
+        if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
+            return;
+        }
+        // pass on the selected item
+        onAdd({ key: significance, value: contributionStatement });
+        resetForm();
+        // move focus to name as published text field after item was added
+    };
+    return [callback, [disabled, significance, contributionStatement, onAdd, resetForm]];
+};
+
 export const ScaleOfSignificanceForm = ({ disabled, locale, errorText, onAdd }) => {
     const [significance, setSignificance] = useState(null);
     const [contributionStatement, setContributionStatement] = useState(null);
     const contributionStatementInput = useRef(null);
     const contributionStatementEditor = useRef(null);
 
-    const handleContributionStatement = useCallback(value => {
-        setContributionStatement(value);
-    }, []);
-
-    const handleSignificance = useCallback(value => {
-        setSignificance(value);
-    }, []);
-
-    const resetForm = useCallback(() => {
-        setSignificance(null);
-        contributionStatementEditor.current.setData(null);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
-
+    const handleContributionStatement = useCallback(
+        ...handleContributionStatementCallbackFactory(setContributionStatement),
+    );
+    const handleSignificance = useCallback(...handleSignificanceCallbackFactory(setSignificance));
+    const resetForm = useCallback(...resetFormCallbackFactory(contributionStatementEditor, setSignificance));
     const addItem = useCallback(
-        event => {
-            // add item if user hits 'enter' key on input field
-            if (disabled || !significance || !contributionStatement || (event && event.key && event.key !== 'Enter')) {
-                return;
-            }
-            // pass on the selected item
-            onAdd({ key: significance, value: contributionStatement });
-            resetForm();
-            // move focus to name as published text field after item was added
-        },
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-        [disabled, significance, contributionStatement],
+        ...addItemCallbackFactory(disabled, significance, contributionStatement, onAdd, resetForm),
     );
 
     const {
