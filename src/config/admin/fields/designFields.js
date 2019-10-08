@@ -27,6 +27,9 @@ export default {
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_acknowledgements'],
+                ['projectNameOptional', 'fez_record_search_key_project_start_date'],
+                ['fez_record_search_key_scale'],
+                ['fez_record_search_key_job_number'],
             ],
         },
         {
@@ -48,8 +51,12 @@ export default {
             groups: [['authors']],
         },
         {
-            title: 'Editors',
+            title: 'Consultants',
             groups: [['editors']],
+        },
+        {
+            title: 'Creators',
+            groups: [['creators']],
         },
     ],
     additionalInformation: () => [

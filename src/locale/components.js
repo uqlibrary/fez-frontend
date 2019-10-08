@@ -1217,6 +1217,85 @@ export default {
                 },
             },
         },
+        designCreators: {
+            title: 'Creators',
+            // help: {
+            //     title: 'Creators help',
+            //     text: 'Enter creator names e.g. first name, last name. ' +
+            // 'Additional boxes will appear for more creators.',
+            //     buttonLabel: 'CLOSE'
+            // },
+            description: 'Please provide a list of creators and then select your name from the list.',
+            field: {
+                form: {
+                    locale: {
+                        descriptionStep1: (
+                            <div>
+                                <span className="authorSteps" key="step-1">
+                                    Step 1 of 2
+                                </span>{' '}
+                                - Please <b>add to a list of creators below</b>, in the format and order that they are
+                                published.
+                            </div>
+                        ),
+                        descriptionStep1NoStep2: (
+                            <div>
+                                Please <b>add to a list of creators below</b>, in the format and order that they are
+                                published.
+                            </div>
+                        ),
+                        nameAsPublishedLabel: "Enter each creator's name as published (eg. Smith, John)",
+                        nameAsPublishedHint: '',
+                        identifierLabel: 'UQ identifier (if available)',
+                        addButton: 'Add creator',
+                        nameAsPublishedFieldId: 'creators-name-as-published-field',
+                    },
+                },
+                header: {
+                    locale: {
+                        descriptionStep2: (
+                            <div>
+                                <span className="authorSteps" key="step-2">
+                                    Step 2 of 2
+                                </span>{' '}
+                                - Please <b>select your name</b> from the list below (if applicable).
+                            </div>
+                        ),
+                        contributorAssignmentColumn: 'Select your name',
+                        nameColumn: "Creator's name as published",
+                        identifierColumn: 'UQ identifier',
+                        reorderColumn: 'Reorder items',
+                        deleteAll: 'Remove all items',
+                        deleteAllConfirmation: {
+                            confirmationTitle: 'Delete all',
+                            confirmationMessage: 'Are you sure you want to delete all items?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                    },
+                },
+                row: {
+                    locale: {
+                        suffix: ' listed creator',
+                        unselectedHint: 'Select this to confirm this creator is you',
+                        selectedHint: 'This is you',
+                        moveUpHint: 'Move item up the order',
+                        moveDownHint: 'Move item down the order',
+                        deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
+                        selectHint: 'Select this creator ([name]) to assign it as you',
+                        deleteRecordConfirmation: {
+                            confirmationTitle: 'Delete item',
+                            confirmationMessage: 'Are you sure you want to delete this item?',
+                            cancelButtonLabel: 'No',
+                            confirmButtonLabel: 'Yes',
+                        },
+                        deleteButtonId: 'delete-creator',
+                        editButtonId: 'edit-creator',
+                    },
+                },
+            },
+        },
         thesisSubmissionSupervisors: {
             title: 'Supervisors',
             // help: {

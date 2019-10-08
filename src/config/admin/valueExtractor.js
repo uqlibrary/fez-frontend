@@ -559,13 +559,19 @@ export default {
         getValue: record => record.fez_record_search_key_contact_details_email[0].rek_contact_details_email,
     },
     fez_record_search_key_project_name: {
-        getValue: record => record.fez_record_search_key_project_name.rek_project_name,
+        getValue: record => (record.fez_record_search_key_project_name || {}).rek_project_name,
+    },
+    projectNameOptional: {
+        getValue: record => (record.fez_record_search_key_project_name || {}).rek_project_name,
     },
     fez_record_search_key_project_description: {
         getValue: record => ({
             plainText: record.fez_record_search_key_project_description.rek_project_description,
             htmlText: record.fez_record_search_key_project_description.rek_project_description,
         }),
+    },
+    fez_record_search_key_project_start_date: {
+        getValue: record => (record.fez_record_search_key_project_start_date || {}).rek_project_start_date,
     },
     fez_record_search_key_start_date: {
         getValue: record => (record.fez_record_search_key_start_date || {}).rek_start_date,
@@ -685,6 +691,32 @@ export default {
             }));
         },
     },
+    creators: {
+        getValue: record => {
+            const creators = (record.fez_record_search_key_creator_name || []).reduce(
+                (creatorsObject, creator) => ({
+                    ...creatorsObject,
+                    [creator.rek_creator_name_order]: creator,
+                }),
+                {},
+            );
+
+            const creatorIds = (record.fez_record_search_key_creator_id || []).reduce(
+                (creatorIdsObject, creatorId) => ({
+                    ...creatorIdsObject,
+                    [creatorId.rek_creator_id_order]: creatorId,
+                }),
+                {},
+            );
+
+            return (record.fez_record_search_key_creator_name || []).map(({ rek_creator_name_order: order }) => ({
+                nameAsPublished: (creators[order] || {}).rek_creator_name,
+                creatorRole: '',
+                uqIdentifier: `${(creatorIds[order] || {}).rek_creator_id || 0}`,
+                authorId: (creatorIds[order] || {}).rek_creator_id || 0,
+            }));
+        },
+    },
     photographers: {
         getValue: authorsGetValue,
     },
@@ -702,5 +734,11 @@ export default {
     },
     fez_record_search_key_audience_size: {
         getValue: record => (record.fez_record_search_key_audience_size || {}).rek_audience_size || 0,
+    },
+    fez_record_search_key_scale: {
+        getValue: record => (record.fez_record_search_key_scale || {}).rek_scale,
+    },
+    fez_record_search_key_job_number: {
+        getValue: record => (record.fez_record_search_key_job_number || {}).rek_job_number,
     },
 };
