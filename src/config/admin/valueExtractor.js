@@ -496,7 +496,7 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_original_format }),
     },
     physicalDescription: {
-        getValue: record => record.fez_record_search_key_original_format.rek_original_format,
+        getValue: record => (record.fez_record_search_key_original_format || {}).rek_original_format,
     },
     fez_record_search_key_transcript: {
         getValue: record => ({
