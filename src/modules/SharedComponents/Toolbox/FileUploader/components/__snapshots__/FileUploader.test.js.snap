@@ -585,16 +585,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
-                    Click here to select files,
-                    <br />
-                    or drag files into this area to upload
+                    Click here to select files, or drag files into this area to upload
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
                     Please ensure:
                     <ul>
                       <li>
-                        files are under 5GB in size
+                        files are under 5GB in size.
                       </li>
                       <li>
                         file names begin with a letter and are less than 45 characters long
@@ -606,9 +604,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                      </li>
-                      <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -662,7 +657,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "validation": Object {
                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -1972,16 +1966,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 "delayNotice": "Notice",
                                 "errorTitle": "Upload Errors",
                                 "fileUploadInstruction": <p>
-                                  Click here to select files,
-                                  <br />
-                                  or drag files into this area to upload
+                                  Click here to select files, or drag files into this area to upload
                                 </p>,
                                 "fileUploadRestrictionHeading": "File upload restrictions",
                                 "fileUploadRestrictions": <div>
                                   Please ensure:
                                   <ul>
                                     <li>
-                                      files are under 5GB in size
+                                      files are under 5GB in size.
                                     </li>
                                     <li>
                                       file names begin with a letter and are less than 45 characters long
@@ -1993,9 +1985,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                       <br />
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                    </li>
-                                    <li>
-                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
@@ -2049,7 +2038,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 "validation": Object {
                                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
                                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2076,16 +2064,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "delayNotice": "Notice",
                                   "errorTitle": "Upload Errors",
                                   "fileUploadInstruction": <p>
-                                    Click here to select files,
-                                    <br />
-                                    or drag files into this area to upload
+                                    Click here to select files, or drag files into this area to upload
                                   </p>,
                                   "fileUploadRestrictionHeading": "File upload restrictions",
                                   "fileUploadRestrictions": <div>
                                     Please ensure:
                                     <ul>
                                       <li>
-                                        files are under 5GB in size
+                                        files are under 5GB in size.
                                       </li>
                                       <li>
                                         file names begin with a letter and are less than 45 characters long
@@ -2097,9 +2083,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                         <br />
                                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                      </li>
-                                      <li>
-                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -2153,7 +2136,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "validation": Object {
                                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
                                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2162,51 +2144,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 }
                               }
                               maxSize={1}
-                              mimeTypeWhitelist={
-                                Object {
-                                  "7z": "application/x-7z-compressed",
-                                  "avi": "video/x-msvideo",
-                                  "csv": "text/csv",
-                                  "gif": "image/gif",
-                                  "gsheet": "application/vnd.google-apps.spreadsheet",
-                                  "gz": "application/gzip",
-                                  "jpe": "image/jpeg",
-                                  "jpeg": "image/jpeg",
-                                  "jpg": "image/jpeg",
-                                  "m1v": "video/mpeg",
-                                  "m2v": "video/mpeg",
-                                  "m4a": "audio/x-m4a",
-                                  "mk3d": "video/x-matroska",
-                                  "mks": "video/x-matroska",
-                                  "mkv": "video/x-matroska",
-                                  "mov": "video/quicktime",
-                                  "mp3": "audio/mp3",
-                                  "mp4": "video/mp4",
-                                  "mp4v": "video/mp4",
-                                  "mpe": "video/mpeg",
-                                  "mpeg": "video/mpeg",
-                                  "mpg": "video/mpeg",
-                                  "ods": "application/vnd.oasis.opendocument.spreadsheet",
-                                  "pdf": "application/pdf",
-                                  "png": "image/png",
-                                  "qt": "video/quicktime",
-                                  "rar": "application/x-rar-compressed",
-                                  "tar": "application/x-tar",
-                                  "tif": "image/tiff",
-                                  "tiff": "image/tiff",
-                                  "wav": "audio/wav",
-                                  "wma": "audio/x-ms-wma",
-                                  "wmv": "video/x-ms-wmv",
-                                  "xla": "application/vnd.ms-excel",
-                                  "xlc": "application/vnd.ms-excel",
-                                  "xlm": "application/vnd.ms-excel",
-                                  "xls": "application/vnd.ms-excel",
-                                  "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                  "xlt": "application/vnd.ms-excel",
-                                  "xlw": "application/vnd.ms-excel",
-                                  "zip": "application/zip",
-                                }
-                              }
                               onDrop={[Function]}
                             >
                               <WithStyles(Grid)
@@ -2509,16 +2446,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       "delayNotice": "Notice",
                                                       "errorTitle": "Upload Errors",
                                                       "fileUploadInstruction": <p>
-                                                        Click here to select files,
-                                                        <br />
-                                                        or drag files into this area to upload
+                                                        Click here to select files, or drag files into this area to upload
                                                       </p>,
                                                       "fileUploadRestrictionHeading": "File upload restrictions",
                                                       "fileUploadRestrictions": <div>
                                                         Please ensure:
                                                         <ul>
                                                           <li>
-                                                            files are under 5GB in size
+                                                            files are under 5GB in size.
                                                           </li>
                                                           <li>
                                                             file names begin with a letter and are less than 45 characters long
@@ -2530,9 +2465,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                             <br />
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                          </li>
-                                                          <li>
-                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
@@ -2586,7 +2518,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       "validation": Object {
                                                         "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                                        "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
                                                         "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -2611,16 +2542,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "delayNotice": "Notice",
                                                         "errorTitle": "Upload Errors",
                                                         "fileUploadInstruction": <p>
-                                                          Click here to select files,
-                                                          <br />
-                                                          or drag files into this area to upload
+                                                          Click here to select files, or drag files into this area to upload
                                                         </p>,
                                                         "fileUploadRestrictionHeading": "File upload restrictions",
                                                         "fileUploadRestrictions": <div>
                                                           Please ensure:
                                                           <ul>
                                                             <li>
-                                                              files are under 5GB in size
+                                                              files are under 5GB in size.
                                                             </li>
                                                             <li>
                                                               file names begin with a letter and are less than 45 characters long
@@ -2632,9 +2561,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                               <br />
                                                               (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                            </li>
-                                                            <li>
-                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -2688,7 +2614,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "validation": Object {
                                                           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                                          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
                                                           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -3467,7 +3392,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   Please ensure:
                                                                   <ul>
                                                                     <li>
-                                                                      files are under 5GB in size
+                                                                      files are under 5GB in size.
                                                                     </li>
                                                                     <li>
                                                                       file names begin with a letter and are less than 45 characters long
@@ -3479,9 +3404,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                                       <br />
                                                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                                    </li>
-                                                                    <li>
-                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
@@ -4046,9 +3968,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                             className="MuiGrid-item-2"
                                                                           >
                                                                             <p>
-                                                                              Click here to select files,
-                                                                              <br />
-                                                                              or drag files into this area to upload
+                                                                              Click here to select files, or drag files into this area to upload
                                                                             </p>
                                                                           </div>
                                                                         </Grid>
@@ -4709,16 +4629,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "delayNotice": "Notice",
                   "errorTitle": "Upload Errors",
                   "fileUploadInstruction": <p>
-                    Click here to select files,
-                    <br />
-                    or drag files into this area to upload
+                    Click here to select files, or drag files into this area to upload
                   </p>,
                   "fileUploadRestrictionHeading": "File upload restrictions",
                   "fileUploadRestrictions": <div>
                     Please ensure:
                     <ul>
                       <li>
-                        files are under 5GB in size
+                        files are under 5GB in size.
                       </li>
                       <li>
                         file names begin with a letter and are less than 45 characters long
@@ -4730,9 +4648,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                         <br />
                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                      </li>
-                      <li>
-                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                       </li>
                       <li>
                         files are uploaded individually and not inside a folder
@@ -4786,7 +4701,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                   "validation": Object {
                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                     "notFiles": "Invalid files ([fileNames])",
                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6096,16 +6010,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 "delayNotice": "Notice",
                                 "errorTitle": "Upload Errors",
                                 "fileUploadInstruction": <p>
-                                  Click here to select files,
-                                  <br />
-                                  or drag files into this area to upload
+                                  Click here to select files, or drag files into this area to upload
                                 </p>,
                                 "fileUploadRestrictionHeading": "File upload restrictions",
                                 "fileUploadRestrictions": <div>
                                   Please ensure:
                                   <ul>
                                     <li>
-                                      files are under 5GB in size
+                                      files are under 5GB in size.
                                     </li>
                                     <li>
                                       file names begin with a letter and are less than 45 characters long
@@ -6117,9 +6029,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                       <br />
                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                    </li>
-                                    <li>
-                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                     </li>
                                     <li>
                                       files are uploaded individually and not inside a folder
@@ -6173,7 +6082,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 "validation": Object {
                                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                   "notFiles": "Invalid files ([fileNames])",
                                   "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6200,16 +6108,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "delayNotice": "Notice",
                                   "errorTitle": "Upload Errors",
                                   "fileUploadInstruction": <p>
-                                    Click here to select files,
-                                    <br />
-                                    or drag files into this area to upload
+                                    Click here to select files, or drag files into this area to upload
                                   </p>,
                                   "fileUploadRestrictionHeading": "File upload restrictions",
                                   "fileUploadRestrictions": <div>
                                     Please ensure:
                                     <ul>
                                       <li>
-                                        files are under 5GB in size
+                                        files are under 5GB in size.
                                       </li>
                                       <li>
                                         file names begin with a letter and are less than 45 characters long
@@ -6221,9 +6127,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                         file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                         <br />
                                         (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                      </li>
-                                      <li>
-                                        file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                       </li>
                                       <li>
                                         files are uploaded individually and not inside a folder
@@ -6277,7 +6180,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                   "validation": Object {
                                     "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                     "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                    "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                     "notFiles": "Invalid files ([fileNames])",
                                     "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                     "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6286,51 +6188,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                 }
                               }
                               maxSize={1}
-                              mimeTypeWhitelist={
-                                Object {
-                                  "7z": "application/x-7z-compressed",
-                                  "avi": "video/x-msvideo",
-                                  "csv": "text/csv",
-                                  "gif": "image/gif",
-                                  "gsheet": "application/vnd.google-apps.spreadsheet",
-                                  "gz": "application/gzip",
-                                  "jpe": "image/jpeg",
-                                  "jpeg": "image/jpeg",
-                                  "jpg": "image/jpeg",
-                                  "m1v": "video/mpeg",
-                                  "m2v": "video/mpeg",
-                                  "m4a": "audio/x-m4a",
-                                  "mk3d": "video/x-matroska",
-                                  "mks": "video/x-matroska",
-                                  "mkv": "video/x-matroska",
-                                  "mov": "video/quicktime",
-                                  "mp3": "audio/mp3",
-                                  "mp4": "video/mp4",
-                                  "mp4v": "video/mp4",
-                                  "mpe": "video/mpeg",
-                                  "mpeg": "video/mpeg",
-                                  "mpg": "video/mpeg",
-                                  "ods": "application/vnd.oasis.opendocument.spreadsheet",
-                                  "pdf": "application/pdf",
-                                  "png": "image/png",
-                                  "qt": "video/quicktime",
-                                  "rar": "application/x-rar-compressed",
-                                  "tar": "application/x-tar",
-                                  "tif": "image/tiff",
-                                  "tiff": "image/tiff",
-                                  "wav": "audio/wav",
-                                  "wma": "audio/x-ms-wma",
-                                  "wmv": "video/x-ms-wmv",
-                                  "xla": "application/vnd.ms-excel",
-                                  "xlc": "application/vnd.ms-excel",
-                                  "xlm": "application/vnd.ms-excel",
-                                  "xls": "application/vnd.ms-excel",
-                                  "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                                  "xlt": "application/vnd.ms-excel",
-                                  "xlw": "application/vnd.ms-excel",
-                                  "zip": "application/zip",
-                                }
-                              }
                               onDrop={[Function]}
                             >
                               <WithStyles(Grid)
@@ -6633,16 +6490,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       "delayNotice": "Notice",
                                                       "errorTitle": "Upload Errors",
                                                       "fileUploadInstruction": <p>
-                                                        Click here to select files,
-                                                        <br />
-                                                        or drag files into this area to upload
+                                                        Click here to select files, or drag files into this area to upload
                                                       </p>,
                                                       "fileUploadRestrictionHeading": "File upload restrictions",
                                                       "fileUploadRestrictions": <div>
                                                         Please ensure:
                                                         <ul>
                                                           <li>
-                                                            files are under 5GB in size
+                                                            files are under 5GB in size.
                                                           </li>
                                                           <li>
                                                             file names begin with a letter and are less than 45 characters long
@@ -6654,9 +6509,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                             file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                             <br />
                                                             (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                          </li>
-                                                          <li>
-                                                            file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                           </li>
                                                           <li>
                                                             files are uploaded individually and not inside a folder
@@ -6710,7 +6562,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                       "validation": Object {
                                                         "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                                         "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                                        "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                         "notFiles": "Invalid files ([fileNames])",
                                                         "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                                         "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -6735,16 +6586,14 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "delayNotice": "Notice",
                                                         "errorTitle": "Upload Errors",
                                                         "fileUploadInstruction": <p>
-                                                          Click here to select files,
-                                                          <br />
-                                                          or drag files into this area to upload
+                                                          Click here to select files, or drag files into this area to upload
                                                         </p>,
                                                         "fileUploadRestrictionHeading": "File upload restrictions",
                                                         "fileUploadRestrictions": <div>
                                                           Please ensure:
                                                           <ul>
                                                             <li>
-                                                              files are under 5GB in size
+                                                              files are under 5GB in size.
                                                             </li>
                                                             <li>
                                                               file names begin with a letter and are less than 45 characters long
@@ -6756,9 +6605,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                               file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                               <br />
                                                               (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                            </li>
-                                                            <li>
-                                                              file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                             </li>
                                                             <li>
                                                               files are uploaded individually and not inside a folder
@@ -6812,7 +6658,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                         "validation": Object {
                                                           "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                                                           "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-                                                          "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                                                           "notFiles": "Invalid files ([fileNames])",
                                                           "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
                                                           "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -7591,7 +7436,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                   Please ensure:
                                                                   <ul>
                                                                     <li>
-                                                                      files are under 5GB in size
+                                                                      files are under 5GB in size.
                                                                     </li>
                                                                     <li>
                                                                       file names begin with a letter and are less than 45 characters long
@@ -7603,9 +7448,6 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                                                                       <br />
                                                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-                                                                    </li>
-                                                                    <li>
-                                                                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
                                                                     </li>
                                                                     <li>
                                                                       files are uploaded individually and not inside a folder
@@ -8170,9 +8012,7 @@ exports[`Component FileUploader should mount and unmount container and clear fil
                                                                             className="MuiGrid-item-2"
                                                                           >
                                                                             <p>
-                                                                              Click here to select files,
-                                                                              <br />
-                                                                              or drag files into this area to upload
+                                                                              Click here to select files, or drag files into this area to upload
                                                                             </p>
                                                                           </div>
                                                                         </Grid>
@@ -8260,16 +8100,14 @@ exports[`Component FileUploader should render default component 1`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -8281,9 +8119,6 @@ exports[`Component FileUploader should render default component 1`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8337,7 +8172,6 @@ exports[`Component FileUploader should render default component 1`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8346,51 +8180,6 @@ exports[`Component FileUploader should render default component 1`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -8424,16 +8213,14 @@ exports[`Component FileUploader should render disabled component 1`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -8445,9 +8232,6 @@ exports[`Component FileUploader should render disabled component 1`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8501,7 +8285,6 @@ exports[`Component FileUploader should render disabled component 1`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8510,51 +8293,6 @@ exports[`Component FileUploader should render disabled component 1`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -8587,16 +8325,14 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -8608,9 +8344,6 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8664,7 +8397,6 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8673,51 +8405,6 @@ exports[`Component FileUploader should render rows for uploaded files 1`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -8755,16 +8442,14 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -8776,9 +8461,6 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -8832,7 +8514,6 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -8841,51 +8522,6 @@ exports[`Component FileUploader should render rows for uploaded files 2`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -9056,16 +8692,14 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -9077,9 +8711,6 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -9133,7 +8764,6 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9142,51 +8772,6 @@ exports[`Component FileUploader should render rows for uploaded files 3`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -9303,16 +8888,14 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -9324,9 +8907,6 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -9380,7 +8960,6 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9389,51 +8968,6 @@ exports[`Component FileUploader should render rows for uploaded files 4`] = `
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -9466,16 +9000,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -9487,9 +9019,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -9543,7 +9072,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9552,51 +9080,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -9634,16 +9117,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -9655,9 +9136,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -9711,7 +9189,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -9720,51 +9197,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -9935,16 +9367,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -9956,9 +9386,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -10012,7 +9439,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10021,51 +9447,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -10103,16 +9484,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -10124,9 +9503,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -10180,7 +9556,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10189,51 +9564,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -10405,16 +9735,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -10426,9 +9754,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -10482,7 +9807,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10491,51 +9815,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -10709,16 +9988,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -10730,9 +10007,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -10786,7 +10060,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -10795,51 +10068,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -11023,16 +10251,14 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -11044,9 +10270,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -11100,7 +10323,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -11109,51 +10331,6 @@ exports[`Component FileUploader should render rows for uploaded files with acces
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -11332,16 +10509,14 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -11353,9 +10528,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -11409,7 +10581,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -11418,51 +10589,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
@@ -11500,16 +10626,14 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "delayNotice": "Notice",
           "errorTitle": "Upload Errors",
           "fileUploadInstruction": <p>
-            Click here to select files,
-            <br />
-            or drag files into this area to upload
+            Click here to select files, or drag files into this area to upload
           </p>,
           "fileUploadRestrictionHeading": "File upload restrictions",
           "fileUploadRestrictions": <div>
             Please ensure:
             <ul>
               <li>
-                files are under 5GB in size
+                files are under 5GB in size.
               </li>
               <li>
                 file names begin with a letter and are less than 45 characters long
@@ -11521,9 +10645,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
                 file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
                 <br />
                 (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
-              </li>
-              <li>
-                file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
               </li>
               <li>
                 files are uploaded individually and not inside a folder
@@ -11577,7 +10698,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
           "validation": Object {
             "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
             "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
-            "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
             "notFiles": "Invalid files ([fileNames])",
             "sameFileNameWithDifferentExt": "File(s) ([fileNames]) have same name that match with other files with different extension",
             "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
@@ -11586,51 +10706,6 @@ exports[`Component FileUploader should render rows for uploaded files with defau
         }
       }
       maxSize={1000}
-      mimeTypeWhitelist={
-        Object {
-          "7z": "application/x-7z-compressed",
-          "avi": "video/x-msvideo",
-          "csv": "text/csv",
-          "gif": "image/gif",
-          "gsheet": "application/vnd.google-apps.spreadsheet",
-          "gz": "application/gzip",
-          "jpe": "image/jpeg",
-          "jpeg": "image/jpeg",
-          "jpg": "image/jpeg",
-          "m1v": "video/mpeg",
-          "m2v": "video/mpeg",
-          "m4a": "audio/x-m4a",
-          "mk3d": "video/x-matroska",
-          "mks": "video/x-matroska",
-          "mkv": "video/x-matroska",
-          "mov": "video/quicktime",
-          "mp3": "audio/mp3",
-          "mp4": "video/mp4",
-          "mp4v": "video/mp4",
-          "mpe": "video/mpeg",
-          "mpeg": "video/mpeg",
-          "mpg": "video/mpeg",
-          "ods": "application/vnd.oasis.opendocument.spreadsheet",
-          "pdf": "application/pdf",
-          "png": "image/png",
-          "qt": "video/quicktime",
-          "rar": "application/x-rar-compressed",
-          "tar": "application/x-tar",
-          "tif": "image/tiff",
-          "tiff": "image/tiff",
-          "wav": "audio/wav",
-          "wma": "audio/x-ms-wma",
-          "wmv": "video/x-ms-wmv",
-          "xla": "application/vnd.ms-excel",
-          "xlc": "application/vnd.ms-excel",
-          "xlm": "application/vnd.ms-excel",
-          "xls": "application/vnd.ms-excel",
-          "xlsx": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-          "xlt": "application/vnd.ms-excel",
-          "xlw": "application/vnd.ms-excel",
-          "zip": "application/zip",
-        }
-      }
       onDrop={[Function]}
     />
   </WithStyles(Grid)>
