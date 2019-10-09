@@ -9,6 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
+import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -95,13 +96,7 @@ export const AdminInterface = ({
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
     return (
-        <StandardPage
-            title={
-                !createMode
-                    ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
-                    : `Add a new ${selectedPublicationType}`
-            }
-        >
+        <StandardPage>
             <React.Fragment>
                 <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
@@ -109,6 +104,14 @@ export const AdminInterface = ({
                         onAction={navigateToSearchResult}
                         locale={saveConfirmationLocale}
                     />
+                    <Grid item xs style={{ marginBottom: 12 }}>
+                        <Typography variant="h4" color="primary" style={{ fontSize: 24 }}>
+                            {!createMode
+                                ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                                : `Add a new ${selectedPublicationType}`}
+                        </Typography>
+                        )
+                    </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
                             <FormViewToggler />

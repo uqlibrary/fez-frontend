@@ -1,9 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`AdminInterface component should disabled button and render alert for form submitting 1`] = `
-<StandardPage
-  title="Edit Journal Article - This is test record: UQ:123456"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -27,6 +25,28 @@ exports[`AdminInterface component should disabled button and render alert for fo
       onAction={[Function]}
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h4"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -159,9 +179,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
 `;
 
 exports[`AdminInterface component should display successful alert 1`] = `
-<StandardPage
-  title="Edit Journal Article - This is test record: UQ:123456"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -185,6 +203,28 @@ exports[`AdminInterface component should display successful alert 1`] = `
       onAction={[Function]}
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h4"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -316,9 +356,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
 `;
 
 exports[`AdminInterface component should display successful alert 2`] = `
-<StandardPage
-  title="Edit Journal Article - This is test record: UQ:123456"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -342,6 +380,28 @@ exports[`AdminInterface component should display successful alert 2`] = `
       onAction={[Function]}
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h4"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -473,9 +533,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
 `;
 
 exports[`AdminInterface component should render default view as a full form view 1`] = `
-<StandardPage
-  title="Edit Journal Article - This is test record: UQ:123456"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -499,6 +557,28 @@ exports[`AdminInterface component should render default view as a full form view
       onAction={[Function]}
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h4"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -605,9 +685,7 @@ exports[`AdminInterface component should render default view as a full form view
 `;
 
 exports[`AdminInterface component should render default view as a tabbed form view 1`] = `
-<StandardPage
-  title="Edit Journal Article - This is test record: UQ:123456"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -631,6 +709,28 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       onAction={[Function]}
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h4"
+      >
+        Edit Journal Article - This is test record: UQ:123456
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
