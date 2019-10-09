@@ -34,6 +34,9 @@
       <option name="SPACES_WITHIN_IMPORTS" value="true" />
       <option name="SPACE_BEFORE_ASYNC_ARROW_LPAREN" value="false" />
     </JSCodeStyleSettings>
+    <MarkdownNavigatorCodeStyleSettings>
+      <option name="RIGHT_MARGIN" value="72" />
+    </MarkdownNavigatorCodeStyleSettings>
     <DBN-PSQL>
       <case-options enabled="true">
         <option name="KEYWORD_CASE" value="lower" />

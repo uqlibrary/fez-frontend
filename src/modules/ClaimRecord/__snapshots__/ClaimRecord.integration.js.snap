@@ -25,23 +25,23 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
 +             <div
-+               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
++               class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 +             >
 +               <div
-+                 class=\\"MuiCardHeader-root-379\\"
++                 class=\\"MuiCardHeader-root-380\\"
 +               >
 +                 <div
-+                   class=\\"MuiCardHeader-content-382\\"
++                   class=\\"MuiCardHeader-content-383\\"
 +                 >
 +                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-384\\"
 +                   >
 +                     You are claiming to be an author for the following work:
 +                   </h3>
 +                 </div>
 +               </div>
 +               <div
-+                 class=\\"MuiCardContent-root-385\\"
++                 class=\\"MuiCardContent-root-386\\"
 +               >
 +                 <div
 +                   class=\\"publicationCitation\\"
@@ -60,7 +60,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           style=\\"min-width: 1px;\\"
 +                         >
 +                           <h6
-+                             class=\\"MuiTypography-root-100 MuiTypography-h6-117 PublicationCitation-citationTitle-387\\"
++                             class=\\"MuiTypography-root-100 MuiTypography-h6-117 PublicationCitation-citationTitle-388\\"
 +                           >
 +                             <a
 +                               href=\\"/view/UQ:396321\\"
@@ -70,7 +70,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           </h6>
 +                         </div>
 +                         <div
-+                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-388\\"
++                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-389\\"
 +                         >
 +                           <div
 +                             class=\\"citationContent citationJournalArticle\\"
@@ -184,7 +184,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             </span>
 +                             <a
 +                               aria-label=\\"Open this DOI in an new window\\"
-+                               class=\\"citationDoiLink ExternalLink-externalLink-393\\"
++                               class=\\"citationDoiLink ExternalLink-externalLink-394\\"
 +                               href=\\"https://doi.org/10.1093/hmg/ddw177\\"
 +                               rel=\\"noopener noreferrer\\"
 +                               tabindex=\\"0\\"
@@ -194,7 +194,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             >
 +                               <svg
 +                                 aria-hidden=\\"true\\"
-+                                 class=\\"MuiSvgIcon-root-395 ExternalLink-externalLinkIcon-394\\"
++                                 class=\\"MuiSvgIcon-root-396 ExternalLink-externalLinkIcon-395\\"
 +                                 focusable=\\"false\\"
 +                                 role=\\"presentation\\"
 +                                 viewBox=\\"0 0 24 24\\"
@@ -218,17 +218,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-center-11\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-389\\"
-                              >
-                                <div
-                                  class=\\"MuiGrid-container-3\\"
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-390\\"
++                             >
++                               <div
++                                 class=\\"MuiGrid-container-3\\"
 +                               >
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +                                 >
 +                                   <a
 +                                     aria-label=\\"Full citation in Web of science will open in a new window\\"
-+                                     class=\\"wosCitationCount CitationCountView-citationCount-405 ExternalLink-externalLink-393\\"
++                                     class=\\"wosCitationCount CitationCountView-citationCount-406 ExternalLink-externalLink-394\\"
 +                                     href=\\"http://ezproxy.library.uq.edu.au/login?url=http://gateway.isiknowledge.com/gateway/Gateway.cgi?GWVersion=2&SrcApp=resolve1&DestLinkType=FullRecord&DestApp=WOS_CPL&KeyUT=000393077300011&SrcAuth=uqueensland\\"
 +                                     rel=\\"noopener noreferrer\\"
 +                                     tabindex=\\"0\\"
@@ -240,14 +240,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       class=\\"fez-icon wos large\\"
 +                                     />
 +                                     <span
-+                                       class=\\"CitationCountView-citationCountNumber-406\\"
++                                       class=\\"CitationCountView-citationCountNumber-407\\"
 +                                     >
 +                                       23
 +                                     </span>
 +                                   </a>
 +                                   <a
 +                                     aria-label=\\"Full citation in Scopus will open in a new window\\"
-+                                     class=\\"scopusCitationCount CitationCountView-citationCount-405 ExternalLink-externalLink-393\\"
++                                     class=\\"scopusCitationCount CitationCountView-citationCount-406 ExternalLink-externalLink-394\\"
 +                                     href=\\"http://ezproxy.library.uq.edu.au/login?url=http://www.scopus.com/record/display.url?eid=2-s2.0-85014391875&origin=inward\\"
 +                                     rel=\\"noopener noreferrer\\"
 +                                     tabindex=\\"0\\"
@@ -259,14 +259,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       class=\\"fez-icon scopus large\\"
 +                                     />
 +                                     <span
-+                                       class=\\"CitationCountView-citationCountNumber-406\\"
++                                       class=\\"CitationCountView-citationCountNumber-407\\"
 +                                     >
 +                                       26
 +                                     </span>
 +                                   </a>
 +                                   <a
 +                                     aria-label=\\"Full citation in Altmetric will open in a new window\\"
-+                                     class=\\"altmetricCitationCount CitationCountView-citationCount-405 ExternalLink-externalLink-393\\"
++                                     class=\\"altmetricCitationCount CitationCountView-citationCount-406 ExternalLink-externalLink-394\\"
 +                                     href=\\"https://queensland.altmetric.com/details/9271343\\"
 +                                     rel=\\"noopener noreferrer\\"
 +                                     tabindex=\\"0\\"
@@ -278,14 +278,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       class=\\"fez-icon altmetric large\\"
 +                                     />
 +                                     <span
-+                                       class=\\"CitationCountView-citationCountNumber-406\\"
++                                       class=\\"CitationCountView-citationCountNumber-407\\"
 +                                     >
 +                                       3
 +                                     </span>
 +                                   </a>
 +                                   <a
 +                                     aria-label=\\"Full citation in Google scholar will open in a new window\\"
-+                                     class=\\"googleCitationCount CitationCountView-citationCount-405 ExternalLink-externalLink-393\\"
++                                     class=\\"googleCitationCount CitationCountView-citationCount-406 ExternalLink-externalLink-394\\"
 +                                     href=\\"https://scholar.google.com/scholar?q=intitle:Long-range%20regulators%20of%20the%20lncRNA%20HOTAIR%20enhance%20its%20prognostic%20potential%20in%20breast%20cancer\\"
 +                                     rel=\\"noopener noreferrer\\"
 +                                     tabindex=\\"0\\"
@@ -305,7 +305,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4\\"
 +                                 >
 +                                   <a
-+                                     class=\\"CitationCounts-statsLink-404 ExternalLink-externalLink-393\\"
++                                     class=\\"CitationCounts-statsLink-405 ExternalLink-externalLink-394\\"
 +                                     href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:396321\\"
 +                                     rel=\\"noopener noreferrer\\"
 +                                     tabindex=\\"0\\"
@@ -315,11 +315,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   >
 +                                     <svg
 +                                       aria-hidden=\\"true\\"
-+                                       class=\\"MuiSvgIcon-root-395 ExternalLink-externalLinkIcon-394\\"
++                                       class=\\"MuiSvgIcon-root-396 ExternalLink-externalLinkIcon-395\\"
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
-                                      >
++                                     >
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
 +                                         fill=\\"none\\"
@@ -331,7 +331,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     View full statistics
 +                                   </a>
 +                                 </div>
-                                  <div
++                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                                 />
 +                               </div>
@@ -342,7 +342,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     </div>
 +                   </div>
 +                   <hr
-+                     class=\\"MuiDivider-root-409 PublicationCitation-divider-386\\"
++                     class=\\"MuiDivider-root-410 PublicationCitation-divider-387\\"
 +                   />
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
@@ -351,7 +351,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-gutterBottom-127\\"
 +                     >
 +                       <span
-+                         class=\\"PublicationCitation-contentIndicatorTitle-391\\"
++                         class=\\"PublicationCitation-contentIndicatorTitle-392\\"
 +                       >
 +                         Content Indicators:
 +                       </span>
@@ -364,26 +364,26 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +           </div>
 +           <span />
 +           <div
-              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
 +             <div
-+               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
++               class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 +             >
 +               <div
-+                 class=\\"MuiCardHeader-root-379\\"
++                 class=\\"MuiCardHeader-root-380\\"
 +               >
 +                 <div
-+                   class=\\"MuiCardHeader-content-382\\"
++                   class=\\"MuiCardHeader-content-383\\"
 +                 >
 +                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-384\\"
 +                   >
 +                     Author linking
 +                   </h3>
 +                 </div>
 +               </div>
 +               <div
-+                 class=\\"MuiCardContent-root-385\\"
++                 class=\\"MuiCardContent-root-386\\"
 +               >
 +                 <label
 +                   for=\\"authorLinking\\"
@@ -397,7 +397,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiGrid-container-3\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 WithTheme-WithWidth-AuthorLinking---infiniteContainer-430\\"
++                       class=\\"MuiGrid-item-4 WithTheme-WithWidth-AuthorLinking---infiniteContainer-432\\"
 +                     >
 +                       <div
 +                         class=\\"\\"
@@ -415,23 +415,22 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             >
 +                               <div
 +                                 class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
--             style=\\"padding: 8px;\\"
++                               >
++                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -452,7 +451,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     First  listed author
 +                                   </span>
@@ -469,17 +468,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -500,81 +499,13 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-                                    >
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
++                                   >
 +                                     Second  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
 +                             </div>
-                              <div
--               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
-+                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
-                              >
-                                <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
-+                                 class=\\"MuiGrid-container-3\\"
-                                >
-                                  <div
--                   class=\\"MuiCircularProgress-root-336 MuiCircularProgress-colorPrimary-339 MuiCircularProgress-indeterminate-338\\"
--                   role=\\"progressbar\\"
--                   style=\\"width: 18px; height: 18px;\\"
-+                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
-+                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
-+                                     disabled=\\"\\"
-+                                     tabindex=\\"-1\\"
-+                                     type=\\"button\\"
-+                                   >
-+                                     <span
-+                                       class=\\"MuiButton-label-521\\"
-                                      >
-                                        <svg
--                     class=\\"MuiCircularProgress-svg-341\\"
--                     viewBox=\\"22 22 44 44\\"
-+                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
-+                                         focusable=\\"false\\"
-+                                         role=\\"presentation\\"
-+                                         viewBox=\\"0 0 24 24\\"
-                                        >
--                     <circle
--                       class=\\"MuiCircularProgress-circle-342 MuiCircularProgress-circleIndeterminate-344\\"
--                       cx=\\"44\\"
--                       cy=\\"44\\"
-+                                         <path
-+                                           d=\\"M0 0h24v24H0z\\"
-                                            fill=\\"none\\"
--                       r=\\"21\\"
--                       stroke-width=\\"2\\"
-+                                         />
-+                                         <path
-+                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
-                                          />
-                                        </svg>
-+                                       Saunus, Jodi M.
-+                                     </span>
-+                                   </button>
-+                                 </div>
-+                                 <div
-+                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
-+                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-+                                   >
-+                                     Third  listed author
-+                                   </span>
-+                                 </div>
-+                               </div>
-                              </div>
-                            </div>
-                            <div
--                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                 style=\\"text-align: center;\\"
-+                             class=\\"MuiGrid-container-3\\"
-+                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
@@ -585,17 +516,69 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
++                                         focusable=\\"false\\"
++                                         role=\\"presentation\\"
++                                         viewBox=\\"0 0 24 24\\"
++                                       >
++                                         <path
++                                           d=\\"M0 0h24v24H0z\\"
++                                           fill=\\"none\\"
++                                         />
++                                         <path
++                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
++                                         />
++                                       </svg>
++                                       Saunus, Jodi M.
++                                     </span>
++                                   </button>
++                                 </div>
++                                 <div
++                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
++                                   >
++                                     Third  listed author
++                                   </span>
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-3\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
+                              >
+                                <div
+                                  class=\\"MuiGrid-container-3\\"
+                                >
+                                  <div
+                                    class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
+                                  >
++                                   <button
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
++                                     disabled=\\"\\"
++                                     tabindex=\\"-1\\"
++                                     type=\\"button\\"
++                                   >
++                                     <span
++                                       class=\\"MuiButton-label-523\\"
++                                     >
++                                       <svg
++                                         aria-hidden=\\"true\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -612,15 +595,13 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                     </span>
 +                                   </button>
 +                                 </div>
-+                                 <div
+                                  <div
+-             style=\\"padding: 8px;\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-                                  >
-                                    <span
--                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
--                   style=\\"font-size: 1.33rem;\\"
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-                                    >
--                   Loading record to claim
++                                 >
++                                   <span
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
++                                   >
 +                                     Fourth  listed author
 +                                   </span>
 +                                 </div>
@@ -636,17 +617,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -667,7 +648,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Fifth  listed author
 +                                   </span>
@@ -684,17 +665,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -715,7 +696,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Sixth  listed author
 +                                   </span>
@@ -736,17 +717,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -767,7 +748,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Seventh  listed author
 +                                   </span>
@@ -784,16 +765,16 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     tabindex=\\"0\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 MuiSvgIcon-colorSecondary-398 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -809,7 +790,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       Nephew, Kenneth P.
 +                                     </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-549\\"
++                                       class=\\"MuiTouchRipple-root-551\\"
 +                                     />
 +                                   </button>
 +                                 </div>
@@ -817,7 +798,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Eighth  listed author
 +                                   </span>
@@ -834,16 +815,16 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     tabindex=\\"0\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 MuiSvgIcon-colorSecondary-398 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -859,7 +840,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       Stone, Andrew
 +                                     </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-549\\"
++                                       class=\\"MuiTouchRipple-root-551\\"
 +                                     />
 +                                   </button>
 +                                 </div>
@@ -867,7 +848,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Ninth  listed author
 +                                   </span>
@@ -888,16 +869,16 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     tabindex=\\"0\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 MuiSvgIcon-colorSecondary-397 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 MuiSvgIcon-colorSecondary-398 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -913,7 +894,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                       Gee, Julia M. W.
 +                                     </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-549\\"
++                                       class=\\"MuiTouchRipple-root-551\\"
 +                                     />
 +                                   </button>
 +                                 </div>
@@ -921,46 +902,60 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-+                                   >
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
+                                    >
 +                                     Tenth  listed author
 +                                   </span>
 +                                 </div>
 +                               </div>
 +                             </div>
-+                             <div
+                              <div
+-               class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
-+                             >
-+                               <div
+                              >
+                                <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
 +                                 class=\\"MuiGrid-container-3\\"
-+                               >
-+                                 <div
+                                >
+                                  <div
+-                   class=\\"MuiCircularProgress-root-337 MuiCircularProgress-colorPrimary-340 MuiCircularProgress-indeterminate-339\\"
+-                   role=\\"progressbar\\"
+-                   style=\\"width: 18px; height: 18px;\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
-+                                   >
+                                    >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
-+                                       <svg
+                                        <svg
+-                     class=\\"MuiCircularProgress-svg-342\\"
+-                     viewBox=\\"22 22 44 44\\"
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
-+                                       >
+                                        >
+-                     <circle
+-                       class=\\"MuiCircularProgress-circle-343 MuiCircularProgress-circleIndeterminate-345\\"
+-                       cx=\\"44\\"
+-                       cy=\\"44\\"
 +                                         <path
 +                                           d=\\"M0 0h24v24H0z\\"
-+                                           fill=\\"none\\"
+                                            fill=\\"none\\"
+-                       r=\\"21\\"
+-                       stroke-width=\\"2\\"
 +                                         />
 +                                         <path
 +                                           d=\\"M3.9 12c0-1.71 1.39-3.1 3.1-3.1h4V7H7c-2.76 0-5 2.24-5 5s2.24 5 5 5h4v-1.9H7c-1.71 0-3.1-1.39-3.1-3.1zM8 13h8v-2H8v2zm9-6h-4v1.9h4c1.71 0 3.1 1.39 3.1 3.1s-1.39 3.1-3.1 3.1h-4V17h4c2.76 0 5-2.24 5-5s-2.24-5-5-5z\\"
-+                                         />
-+                                       </svg>
+                                          />
+                                        </svg>
 +                                       Dowhan, Dennis H.
 +                                     </span>
 +                                   </button>
@@ -969,14 +964,16 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Eleventh  listed author
 +                                   </span>
-+                                 </div>
-+                               </div>
+                                  </div>
+                                </div>
 +                             </div>
-+                             <div
+                              <div
+-                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                 style=\\"text-align: center;\\"
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51 MuiGrid-grid-md-4-63\\"
 +                             >
 +                               <div
@@ -986,17 +983,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -1015,10 +1012,13 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 </div>
 +                                 <div
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                                 >
-+                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
-+                                   >
+                                  >
+                                    <span
+-                   class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-                   style=\\"font-size: 1.33rem;\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
+                                    >
+-                   Loading record to claim
 +                                     Twelfth  listed author
 +                                   </span>
 +                                 </div>
@@ -1038,17 +1038,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -1069,7 +1069,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Thirteenth  listed author
 +                                   </span>
@@ -1086,17 +1086,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -1117,7 +1117,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Fourteenth  listed author
 +                                   </span>
@@ -1134,17 +1134,17 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <button
-+                                     class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-text-522 MuiButton-flat-525 MuiButton-disabled-540 MuiButton-fullWidth-545 AuthorItem-buttonBase-547\\"
++                                     class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-text-524 MuiButton-flat-527 MuiButton-disabled-542 MuiButton-fullWidth-547 AuthorItem-buttonBase-549\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
 +                                     type=\\"button\\"
 +                                   >
 +                                     <span
-+                                       class=\\"MuiButton-label-521\\"
++                                       class=\\"MuiButton-label-523\\"
 +                                     >
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
-+                                         class=\\"MuiSvgIcon-root-395 AuthorItem-authorLinkIcon-546\\"
++                                         class=\\"MuiSvgIcon-root-396 AuthorItem-authorLinkIcon-548\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
@@ -1165,7 +1165,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                                 >
 +                                   <span
-+                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-548\\"
++                                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 AuthorItem-authorOrder-550\\"
 +                                   >
 +                                     Fifteenth  listed author
 +                                   </span>
@@ -1189,35 +1189,35 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
 +             <div
-+               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
++               class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 +             >
 +               <div
-+                 class=\\"MuiCardHeader-root-379\\"
++                 class=\\"MuiCardHeader-root-380\\"
 +               >
 +                 <div
-+                   class=\\"MuiCardHeader-content-382\\"
++                   class=\\"MuiCardHeader-content-383\\"
 +                 >
 +                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-384\\"
 +                   >
 +                     Optional: Content Indicators
 +                   </h3>
 +                 </div>
 +                 <div
-+                   class=\\"MuiCardHeader-action-381\\"
++                   class=\\"MuiCardHeader-action-382\\"
 +                 >
 +                   <button
-+                     class=\\"MuiButtonBase-root-450 MuiIconButton-root-444\\"
++                     class=\\"MuiButtonBase-root-452 MuiIconButton-root-446\\"
 +                     tabindex=\\"0\\"
 +                     title=\\"Click for more information\\"
 +                     type=\\"button\\"
 +                   >
 +                     <span
-+                       class=\\"MuiIconButton-label-449\\"
++                       class=\\"MuiIconButton-label-451\\"
 +                     >
 +                       <svg
 +                         aria-hidden=\\"false\\"
-+                         class=\\"MuiSvgIcon-root-395 HelpIcon-helpIcon-435\\"
++                         class=\\"MuiSvgIcon-root-396 HelpIcon-helpIcon-437\\"
 +                         focusable=\\"false\\"
 +                         role=\\"img\\"
 +                         viewBox=\\"0 0 24 24\\"
@@ -1233,15 +1233,15 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           Click for more information
 +                         </title>
 +                       </svg>
-+                     </span>
+                      </span>
 +                     <span
-+                       class=\\"MuiTouchRipple-root-549\\"
++                       class=\\"MuiTouchRipple-root-551\\"
 +                     />
 +                   </button>
 +                 </div>
 +               </div>
 +               <div
-+                 class=\\"MuiCardContent-root-385\\"
++                 class=\\"MuiCardContent-root-386\\"
 +               >
 +                 <div
 +                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
@@ -1259,25 +1259,25 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
 +                     <div
-+                       class=\\"MuiFormControl-root-454 MuiFormControl-fullWidth-457\\"
++                       class=\\"MuiFormControl-root-456 MuiFormControl-fullWidth-459\\"
 +                     >
 +                       <label
-+                         class=\\"MuiFormLabel-root-469 MuiFormLabel-filled-473 MuiInputLabel-root-458 MuiInputLabel-formControl-463 MuiInputLabel-animated-466 MuiInputLabel-shrink-465\\"
++                         class=\\"MuiFormLabel-root-471 MuiFormLabel-filled-475 MuiInputLabel-root-460 MuiInputLabel-formControl-465 MuiInputLabel-animated-468 MuiInputLabel-shrink-467\\"
 +                         data-shrink=\\"true\\"
 +                         id=\\"Please select relevant indicator(s).-label\\"
 +                       >
 +                         Please select relevant indicator(s).
 +                       </label>
 +                       <div
-+                         class=\\"MuiInputBase-root-496 MuiInput-root-483 MuiInput-underline-487 MuiInputBase-formControl-497 MuiInput-formControl-484\\"
++                         class=\\"MuiInputBase-root-498 MuiInput-root-485 MuiInput-underline-489 MuiInputBase-formControl-499 MuiInput-formControl-486\\"
 +                       >
 +                         <div
-+                           class=\\"MuiSelect-root-476\\"
++                           class=\\"MuiSelect-root-478\\"
 +                         >
 +                           <div
 +                             aria-haspopup=\\"true\\"
 +                             aria-pressed=\\"false\\"
-+                             class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
++                             class=\\"MuiSelect-select-479 MuiSelect-selectMenu-482 MuiInputBase-input-508 MuiInput-input-493\\"
 +                             id=\\"content-indicators\\"
 +                             role=\\"button\\"
 +                             tabindex=\\"0\\"
@@ -1291,7 +1291,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                           />
 +                           <svg
 +                             aria-hidden=\\"true\\"
-+                             class=\\"MuiSvgIcon-root-395 MuiSelect-icon-482\\"
++                             class=\\"MuiSvgIcon-root-396 MuiSelect-icon-484\\"
 +                             focusable=\\"false\\"
 +                             role=\\"presentation\\"
 +                             viewBox=\\"0 0 24 24\\"
@@ -1312,23 +1312,23 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
 +             <div
-+               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
++               class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 +             >
 +               <div
-+                 class=\\"MuiCardHeader-root-379\\"
++                 class=\\"MuiCardHeader-root-380\\"
 +               >
 +                 <div
-+                   class=\\"MuiCardHeader-content-382\\"
++                   class=\\"MuiCardHeader-content-383\\"
 +                 >
 +                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-384\\"
 +                   >
 +                     Optional: Suggest changes or add links to this work
 +                   </h3>
 +                 </div>
 +               </div>
 +               <div
-+                 class=\\"MuiCardContent-root-385\\"
++                 class=\\"MuiCardContent-root-386\\"
 +               >
 +                 <div
 +                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
@@ -1337,10 +1337,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
 +                     <div
-+                       class=\\"MuiFormControl-root-454 MuiFormControl-fullWidth-457\\"
++                       class=\\"MuiFormControl-root-456 MuiFormControl-fullWidth-459\\"
 +                     >
 +                       <label
-+                         class=\\"MuiFormLabel-root-469 MuiInputLabel-root-458 MuiInputLabel-formControl-463 MuiInputLabel-animated-466\\"
++                         class=\\"MuiFormLabel-root-471 MuiInputLabel-root-460 MuiInputLabel-formControl-465 MuiInputLabel-animated-468\\"
 +                         data-shrink=\\"false\\"
 +                         for=\\"Typeedits/changes/commentshere\\"
 +                         id=\\"Typeedits/changes/commentshere-label\\"
@@ -1348,13 +1348,13 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                         Type edits/changes/comments here
 +                       </label>
 +                       <div
-+                         class=\\"MuiInputBase-root-496 MuiInput-root-483 MuiInput-underline-487 MuiInputBase-fullWidth-505 MuiInput-fullWidth-490 MuiInputBase-formControl-497 MuiInput-formControl-484 MuiInputBase-multiline-504 MuiInput-multiline-489\\"
++                         class=\\"MuiInputBase-root-498 MuiInput-root-485 MuiInput-underline-489 MuiInputBase-fullWidth-507 MuiInput-fullWidth-492 MuiInputBase-formControl-499 MuiInput-formControl-486 MuiInputBase-multiline-506 MuiInput-multiline-491\\"
 +                       >
 +                         <textarea
 +                           aria-invalid=\\"false\\"
 +                           aria-label=\\"Type edits/changes/comments here\\"
 +                           aria-labelledby=\\"Typeedits/changes/commentshere-label\\"
-+                           class=\\"MuiInputBase-input-506 MuiInput-input-491 MuiInputBase-inputMultiline-508 MuiInput-inputMultiline-493\\"
++                           class=\\"MuiInputBase-input-508 MuiInput-input-493 MuiInputBase-inputMultiline-510 MuiInput-inputMultiline-495\\"
 +                           id=\\"Typeedits/changes/commentshere\\"
 +                           label=\\"Type edits/changes/comments here\\"
 +                           name=\\"comments\\"
@@ -1367,10 +1367,10 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
 +                     <div
-+                       class=\\"MuiFormControl-root-454 MuiFormControl-fullWidth-457\\"
++                       class=\\"MuiFormControl-root-456 MuiFormControl-fullWidth-459\\"
 +                     >
 +                       <label
-+                         class=\\"MuiFormLabel-root-469 MuiInputLabel-root-458 MuiInputLabel-formControl-463 MuiInputLabel-animated-466\\"
++                         class=\\"MuiFormLabel-root-471 MuiInputLabel-root-460 MuiInputLabel-formControl-465 MuiInputLabel-animated-468\\"
 +                         data-shrink=\\"false\\"
 +                         for=\\"Link(URL)\\"
 +                         id=\\"Link(URL)-label\\"
@@ -1378,22 +1378,22 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                         Link (URL)
 +                       </label>
 +                       <div
-+                         class=\\"MuiInputBase-root-496 MuiInput-root-483 MuiInput-underline-487 MuiInputBase-fullWidth-505 MuiInput-fullWidth-490 MuiInputBase-formControl-497 MuiInput-formControl-484\\"
++                         class=\\"MuiInputBase-root-498 MuiInput-root-485 MuiInput-underline-489 MuiInputBase-fullWidth-507 MuiInput-fullWidth-492 MuiInputBase-formControl-499 MuiInput-formControl-486\\"
 +                       >
 +                         <input
 +                           aria-invalid=\\"false\\"
 +                           aria-label=\\"Link (URL)\\"
 +                           aria-labelledby=\\"Link(URL)-label\\"
-+                           class=\\"MuiInputBase-input-506 MuiInput-input-491\\"
++                           class=\\"MuiInputBase-input-508 MuiInput-input-493\\"
 +                           id=\\"Link(URL)\\"
 +                           label=\\"Link (URL)\\"
 +                           name=\\"rek_link\\"
 +                           type=\\"text\\"
 +                           value=\\"\\"
 +                         />
-+                       </div>
-+                     </div>
-+                   </div>
+                        </div>
+                      </div>
+                    </div>
 +                 </div>
 +               </div>
 +             </div>
@@ -1402,23 +1402,23 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
 +             <div
-+               class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
++               class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 +             >
 +               <div
-+                 class=\\"MuiCardHeader-root-379\\"
++                 class=\\"MuiCardHeader-root-380\\"
 +               >
 +                 <div
-+                   class=\\"MuiCardHeader-content-382\\"
++                   class=\\"MuiCardHeader-content-383\\"
 +                 >
 +                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-383\\"
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-384\\"
 +                   >
 +                     Optional: Upload additional files
 +                   </h3>
-+                 </div>
-+               </div>
+                  </div>
+                </div>
 +               <div
-+                 class=\\"MuiCardContent-root-385\\"
++                 class=\\"MuiCardContent-root-386\\"
 +               >
 +                 <div
 +                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
@@ -1447,39 +1447,38 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             style=\\"position: relative; padding: 0px;\\"
 +                           >
 +                             <div
-+                               class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-516\\"
++                               class=\\"MuiGrid-container-3 FileUploadDropzoneStaticContent-dropzone-518\\"
 +                             >
 +                               <div
 +                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
 +                                 <p
-+                                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-517\\"
++                                   class=\\"MuiTypography-root-100 MuiTypography-body2-108 FileUploadDropzoneStaticContent-heading-519\\"
 +                                 >
 +                                   File upload restrictions
 +                                 </p>
 +                                 <div>
-+                                   Please ensure your files:
++                                   Please ensure:
 +                                   <ul>
 +                                     <li>
-+                                       are under 5GB in size
++                                       files are under 5GB in size
 +                                     </li>
 +                                     <li>
-+                                       begin with a letter and are less than 45 characters long
++                                       file names begin with a letter and are less than 45 characters long
 +                                     </li>
 +                                     <li>
-+                                       contain only upper and lowercase alphanumeric characters, and underscores
++                                       file names contain only upper and lowercase alphanumeric characters, and underscores
 +                                     </li>
 +                                     <li>
-+                                       have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       file names have only a single period which precedes the file extension: e.g. “.pdf”, “.mov”, “.tiff”, “.wav” etc.
++                                       <br />
++                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
 +                                     </li>
 +                                     <li>
-+                                       Have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
++                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
 +                                     </li>
 +                                     <li>
-+                                       two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”
-+                                     </li>
-+                                     <li>
-+                                       are uploaded individually and not inside a folder
++                                       files are uploaded individually and not inside a folder
 +                                     </li>
 +                                   </ul>
 +                                 </div>
@@ -1488,14 +1487,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
 +                               >
 +                                 <div
-+                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-518\\"
++                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-520\\"
 +                                 >
 +                                   <div
 +                                     class=\\"MuiGrid-item-4\\"
 +                                   >
 +                                     <svg
 +                                       aria-hidden=\\"true\\"
-+                                       class=\\"MuiSvgIcon-root-395 FileUploadDropzoneStaticContent-cloudIcon-519\\"
++                                       class=\\"MuiSvgIcon-root-396 FileUploadDropzoneStaticContent-cloudIcon-521\\"
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
@@ -1546,7 +1545,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +               style=\\"padding: 12px;\\"
 +             >
 +               <div
-+                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-564 Alert-common-556\\"
++                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-566 Alert-common-558\\"
 +               >
 +                 <div
 +                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-true-45\\"
@@ -1555,11 +1554,11 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiGrid-container-3 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-4 Alert-icon-557 alert-icon\\"
++                       class=\\"MuiGrid-item-4 Alert-icon-559 alert-icon\\"
 +                     >
 +                       <svg
 +                         aria-hidden=\\"true\\"
-+                         class=\\"MuiSvgIcon-root-395 icon\\"
++                         class=\\"MuiSvgIcon-root-396 icon\\"
 +                         focusable=\\"false\\"
 +                         role=\\"presentation\\"
 +                         viewBox=\\"0 0 24 24\\"
@@ -1574,7 +1573,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       </svg>
 +                     </div>
 +                     <div
-+                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-558 alert-text\\"
++                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-560 alert-text\\"
 +                     >
 +                       <b>
 +                         Validation - 
@@ -1586,13 +1585,13 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             You are required to select a author from the list, then confirm that it is you
 +                           </li>
 +                         </ul>
-                        </span>
++                       </span>
 +                     </div>
 +                   </div>
 +                 </div>
 +               </div>
-              </div>
-            </div>
++             </div>
++           </div>
 +         </div>
 +         <div
 +           class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
@@ -1601,41 +1600,41 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +           />
 +           <div
-+             class=\\"MuiGrid-item-4\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +           >
 +             <button
-+               class=\\"MuiButtonBase-root-450 MuiButton-root-520 MuiButton-contained-531 MuiButton-raised-534 MuiButton-fullWidth-545\\"
++               class=\\"MuiButtonBase-root-452 MuiButton-root-522 MuiButton-contained-533 MuiButton-raised-536 MuiButton-fullWidth-547\\"
 +               tabindex=\\"0\\"
 +               type=\\"button\\"
 +             >
 +               <span
-+                 class=\\"MuiButton-label-521\\"
++                 class=\\"MuiButton-label-523\\"
 +               >
 +                 Cancel this claim
 +               </span>
 +               <span
-+                 class=\\"MuiTouchRipple-root-549\\"
++                 class=\\"MuiTouchRipple-root-551\\"
 +               />
 +             </button>
-            </div>
++           </div>
 +           <div
-+             class=\\"MuiGrid-item-4\\"
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +           >
 +             <button
-+               class=\\"MuiButtonBase-root-450 MuiButtonBase-disabled-451 MuiButton-root-520 MuiButton-contained-531 MuiButton-containedPrimary-532 MuiButton-raised-534 MuiButton-raisedPrimary-535 MuiButton-disabled-540 MuiButton-fullWidth-545\\"
++               class=\\"MuiButtonBase-root-452 MuiButtonBase-disabled-453 MuiButton-root-522 MuiButton-contained-533 MuiButton-containedPrimary-534 MuiButton-raised-536 MuiButton-raisedPrimary-537 MuiButton-disabled-542 MuiButton-fullWidth-547\\"
 +               disabled=\\"\\"
 +               id=\\"claimSubmit\\"
 +               tabindex=\\"-1\\"
 +               type=\\"button\\"
 +             >
 +               <span
-+                 class=\\"MuiButton-label-521\\"
++                 class=\\"MuiButton-label-523\\"
 +               >
 +                 Claim this work
 +               </span>
 +             </button>
-            </div>
-          </div>
++           </div>
++         </div>
 +       </form>
       </div>
     </div>
@@ -1649,14 +1648,14 @@ exports[`ClaimRecord form should allow content indicators to be selected 2`] = `
 
 @@ -1247,11 +1247,12 @@
                           <div
-                            class=\\"MuiSelect-root-476\\"
+                            class=\\"MuiSelect-root-478\\"
                           >
                             <div
                               aria-haspopup=\\"true\\"
 -                             aria-pressed=\\"false\\"
 +                             aria-owns=\\"menu-\\"
 +                             aria-pressed=\\"true\\"
-                              class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
+                              class=\\"MuiSelect-select-479 MuiSelect-selectMenu-482 MuiInputBase-input-508 MuiInput-input-493\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -1680,9 +1679,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
             >
               <div
-                class=\\"MuiPaper-root-352 MuiPaper-elevation1-355 MuiPaper-rounded-353 MuiCard-root-351 Cards-card-346 StandardCard\\"
+                class=\\"MuiPaper-root-353 MuiPaper-elevation1-356 MuiPaper-rounded-354 MuiCard-root-352 Cards-card-347 StandardCard\\"
 @@ -1254,16 +1254,16 @@
-                              class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
+                              class=\\"MuiSelect-select-479 MuiSelect-selectMenu-482 MuiInputBase-input-508 MuiInput-input-493\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -1698,7 +1697,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-395 MuiSelect-icon-482\\"
+                              class=\\"MuiSvgIcon-root-396 MuiSelect-icon-484\\"
                               focusable=\\"false\\""
 `;
 
@@ -1708,7 +1707,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 4`] = `
 + Second value
 
 @@ -1254,16 +1254,16 @@
-                              class=\\"MuiSelect-select-477 MuiSelect-selectMenu-480 MuiInputBase-input-506 MuiInput-input-491\\"
+                              class=\\"MuiSelect-select-479 MuiSelect-selectMenu-482 MuiInputBase-input-508 MuiInput-input-493\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
@@ -1724,7 +1723,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 4`] = `
                             />
                             <svg
                               aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-395 MuiSelect-icon-482\\"
+                              class=\\"MuiSvgIcon-root-396 MuiSelect-icon-484\\"
                               focusable=\\"false\\""
 `;
 
@@ -1735,12 +1734,12 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 
 @@ -764,17 +764,17 @@
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
                                         <svg
                                           aria-hidden=\\"true\\"
--                                         class=\\"MuiSvgIcon-root-985 MuiSvgIcon-colorSecondary-987 AuthorItem-authorLinkIcon-1136\\"
-+                                         class=\\"MuiSvgIcon-root-985 MuiSvgIcon-colorPrimary-986 AuthorItem-authorLinkIcon-1136\\"
+-                                         class=\\"MuiSvgIcon-root-988 MuiSvgIcon-colorSecondary-990 AuthorItem-authorLinkIcon-1140\\"
++                                         class=\\"MuiSvgIcon-root-988 MuiSvgIcon-colorPrimary-989 AuthorItem-authorLinkIcon-1140\\"
                                           focusable=\\"false\\"
                                           role=\\"presentation\\"
                                           viewBox=\\"0 0 24 24\\"
@@ -1760,17 +1759,17 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                       </div>
                     </div>
 +                   <label
-+                     class=\\"MuiFormControlLabel-root-1181 WithTheme-WithWidth-AuthorLinking---root-1021\\"
++                     class=\\"MuiFormControlLabel-root-1185 WithTheme-WithWidth-AuthorLinking---root-1025\\"
 +                   >
 +                     <span
-+                       class=\\"MuiButtonBase-root-1040 MuiIconButton-root-1034 MuiPrivateSwitchBase-root-1193 MuiCheckbox-root-1187 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1023 MuiCheckbox-colorSecondary-1192 MuiPrivateSwitchBase-checked-1194 MuiCheckbox-checked-1188 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1024\\"
++                       class=\\"MuiButtonBase-root-1044 MuiIconButton-root-1038 MuiPrivateSwitchBase-root-1197 MuiCheckbox-root-1191 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1027 MuiCheckbox-colorSecondary-1196 MuiPrivateSwitchBase-checked-1198 MuiCheckbox-checked-1192 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1028\\"
 +                     >
 +                       <span
-+                         class=\\"MuiIconButton-label-1039\\"
++                         class=\\"MuiIconButton-label-1043\\"
 +                       >
 +                         <svg
 +                           aria-hidden=\\"true\\"
-+                           class=\\"MuiSvgIcon-root-985\\"
++                           class=\\"MuiSvgIcon-root-988\\"
 +                           focusable=\\"false\\"
 +                           role=\\"presentation\\"
 +                           viewBox=\\"0 0 24 24\\"
@@ -1780,7 +1779,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +                           />
 +                         </svg>
 +                         <input
-+                           class=\\"MuiPrivateSwitchBase-input-1196\\"
++                           class=\\"MuiPrivateSwitchBase-input-1200\\"
 +                           data-indeterminate=\\"false\\"
 +                           id=\\"authorAcceptDeclaration\\"
 +                           type=\\"checkbox\\"
@@ -1788,14 +1787,14 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +                         />
 +                       </span>
 +                       <span
-+                         class=\\"MuiTouchRipple-root-1139\\"
++                         class=\\"MuiTouchRipple-root-1143\\"
 +                       />
 +                     </span>
 +                     <span
-+                       class=\\"MuiTypography-root-690 MuiTypography-body2-698 MuiFormControlLabel-label-1186\\"
++                       class=\\"MuiTypography-root-692 MuiTypography-body2-700 MuiFormControlLabel-label-1190\\"
 +                     >
 +                       <p
-+                         class=\\"MuiTypography-root-690 WithTheme-WithWidth-AuthorLinking---label-1022 MuiTypography-body2-698 MuiTypography-colorSecondary-721\\"
++                         class=\\"MuiTypography-root-692 WithTheme-WithWidth-AuthorLinking---label-1026 MuiTypography-body2-700 MuiTypography-colorSecondary-723\\"
 +                       >
 +                         I confirm and understand that I am claiming this work under the above name, and confirm this is me
 +                       </p>
@@ -1806,34 +1805,34 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
               </div>
             </div>
             <div
-@@ -1510,66 +1552,11 @@
+@@ -1509,66 +1551,11 @@
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 -           <div
--             class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+-             class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
 -           >
 -             <div
 -               class=\\"Alert\\"
 -               style=\\"padding: 12px;\\"
 -             >
 -               <div
--                 class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610 Alert-warning-1154 Alert-common-1146\\"
+-                 class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612 Alert-warning-1158 Alert-common-1150\\"
 -               >
 -                 <div
--                   class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633 MuiGrid-grid-sm-true-635\\"
+-                   class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-true-637\\"
 -                 >
 -                   <div
--                     class=\\"MuiGrid-container-593 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610\\"
+-                     class=\\"MuiGrid-container-595 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612\\"
 -                   >
 -                     <div
--                       class=\\"MuiGrid-item-594 Alert-icon-1147 alert-icon\\"
+-                       class=\\"MuiGrid-item-596 Alert-icon-1151 alert-icon\\"
 -                     >
 -                       <svg
 -                         aria-hidden=\\"true\\"
--                         class=\\"MuiSvgIcon-root-985 icon\\"
+-                         class=\\"MuiSvgIcon-root-988 icon\\"
 -                         focusable=\\"false\\"
 -                         role=\\"presentation\\"
 -                         viewBox=\\"0 0 24 24\\"
@@ -1848,7 +1847,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -                       </svg>
 -                     </div>
 -                     <div
--                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1148 alert-text\\"
+-                       class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623 Alert-text-1152 alert-text\\"
 -                     >
 -                       <b>
 -                         Validation - 
@@ -1869,31 +1868,31 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -           </div>
 -         </div>
           <div
-            class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617\\"
+            class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619\\"
           >
             <div
-              class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621\\"
-@@ -1594,21 +1581,23 @@
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623\\"
+@@ -1593,21 +1580,23 @@
             </div>
             <div
-              class=\\"MuiGrid-item-594\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
--               class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-disabled-1130 MuiButton-fullWidth-1135\\"
+-               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
 -               disabled=\\"\\"
-+               class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-fullWidth-1135\\"
++               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-fullWidth-1139\\"
                 id=\\"claimSubmit\\"
 -               tabindex=\\"-1\\"
 +               tabindex=\\"0\\"
                 type=\\"button\\"
               >
                 <span
-                  class=\\"MuiButton-label-1111\\"
+                  class=\\"MuiButton-label-1115\\"
                 >
                   Claim this work
                 </span>
 +               <span
-+                 class=\\"MuiTouchRipple-root-1139\\"
++                 class=\\"MuiTouchRipple-root-1143\\"
 +               />
               </button>
             </div>
@@ -1910,18 +1909,18 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -755,12 +755,13 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     tabindex=\\"0\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -779,13 +780,10 @@
                                             fill=\\"none\\"
@@ -1930,28 +1929,28 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Nephew, Kenneth P.
                                       </span>
 -                                     <span
--                                       class=\\"MuiTouchRipple-root-1139\\"
+-                                       class=\\"MuiTouchRipple-root-1143\\"
 -                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -805,12 +803,13 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     tabindex=\\"0\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -829,13 +828,10 @@
                                             fill=\\"none\\"
@@ -1960,28 +1959,28 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Stone, Andrew
                                       </span>
 -                                     <span
--                                       class=\\"MuiTouchRipple-root-1139\\"
+-                                       class=\\"MuiTouchRipple-root-1143\\"
 -                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -859,12 +855,13 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     tabindex=\\"0\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     disabled=\\"\\"
 +                                     tabindex=\\"-1\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -883,13 +880,10 @@
                                             fill=\\"none\\"
@@ -1990,12 +1989,12 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Gee, Julia M. W.
                                       </span>
 -                                     <span
--                                       class=\\"MuiTouchRipple-root-1139\\"
+-                                       class=\\"MuiTouchRipple-root-1143\\"
 -                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -1153,14 +1147,15 @@
                           </div>
@@ -2003,23 +2002,23 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                       </div>
                     </div>
                     <label
--                     class=\\"MuiFormControlLabel-root-1181 WithTheme-WithWidth-AuthorLinking---root-1021\\"
-+                     class=\\"MuiFormControlLabel-root-1181 WithTheme-WithWidth-AuthorLinking---root-1021 MuiFormControlLabel-disabled-1185\\"
+-                     class=\\"MuiFormControlLabel-root-1185 WithTheme-WithWidth-AuthorLinking---root-1025\\"
++                     class=\\"MuiFormControlLabel-root-1185 WithTheme-WithWidth-AuthorLinking---root-1025 MuiFormControlLabel-disabled-1189\\"
                     >
                       <span
--                       class=\\"MuiButtonBase-root-1040 MuiIconButton-root-1034 MuiPrivateSwitchBase-root-1193 MuiCheckbox-root-1187 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1023 MuiCheckbox-colorSecondary-1192 MuiPrivateSwitchBase-checked-1194 MuiCheckbox-checked-1188 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1024\\"
-+                       class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiIconButton-root-1034 MuiIconButton-disabled-1038 MuiPrivateSwitchBase-root-1193 MuiCheckbox-root-1187 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1023 MuiCheckbox-colorSecondary-1192 MuiPrivateSwitchBase-checked-1194 MuiCheckbox-checked-1188 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1024 MuiPrivateSwitchBase-disabled-1195 MuiCheckbox-disabled-1189\\"
+-                       class=\\"MuiButtonBase-root-1044 MuiIconButton-root-1038 MuiPrivateSwitchBase-root-1197 MuiCheckbox-root-1191 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1027 MuiCheckbox-colorSecondary-1196 MuiPrivateSwitchBase-checked-1198 MuiCheckbox-checked-1192 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1028\\"
++                       class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiIconButton-root-1038 MuiIconButton-disabled-1042 MuiPrivateSwitchBase-root-1197 MuiCheckbox-root-1191 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1027 MuiCheckbox-colorSecondary-1196 MuiPrivateSwitchBase-checked-1198 MuiCheckbox-checked-1192 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1028 MuiPrivateSwitchBase-disabled-1199 MuiCheckbox-disabled-1193\\"
 +                       tabindex=\\"-1\\"
                       >
                         <span
-                          class=\\"MuiIconButton-label-1039\\"
+                          class=\\"MuiIconButton-label-1043\\"
                         >
                           <svg
 @@ -1175,21 +1170,19 @@
                             />
                           </svg>
                           <input
-                            class=\\"MuiPrivateSwitchBase-input-1196\\"
+                            class=\\"MuiPrivateSwitchBase-input-1200\\"
                             data-indeterminate=\\"false\\"
 +                           disabled=\\"\\"
                             id=\\"authorAcceptDeclaration\\"
@@ -2028,15 +2027,15 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           />
                         </span>
 -                       <span
--                         class=\\"MuiTouchRipple-root-1139\\"
+-                         class=\\"MuiTouchRipple-root-1143\\"
 -                       />
                       </span>
                       <span
--                       class=\\"MuiTypography-root-690 MuiTypography-body2-698 MuiFormControlLabel-label-1186\\"
-+                       class=\\"MuiTypography-root-690 MuiTypography-body2-698 MuiFormControlLabel-label-1186 MuiFormControlLabel-disabled-1185\\"
+-                       class=\\"MuiTypography-root-692 MuiTypography-body2-700 MuiFormControlLabel-label-1190\\"
++                       class=\\"MuiTypography-root-692 MuiTypography-body2-700 MuiFormControlLabel-label-1190 MuiFormControlLabel-disabled-1189\\"
                       >
                         <p
-                          class=\\"MuiTypography-root-690 WithTheme-WithWidth-AuthorLinking---label-1022 MuiTypography-body2-698 MuiTypography-colorSecondary-721\\"
+                          class=\\"MuiTypography-root-692 WithTheme-WithWidth-AuthorLinking---label-1026 MuiTypography-body2-700 MuiTypography-colorSecondary-723\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
 @@ -1282,23 +1275,22 @@
@@ -2045,18 +2044,18 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Please select relevant indicator(s).
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-1066\\"
+                            class=\\"MuiSelect-root-1070\\"
                           >
                             <div
                               aria-haspopup=\\"true\\"
                               aria-owns=\\"menu-\\"
                               aria-pressed=\\"true\\"
--                             class=\\"MuiSelect-select-1067 MuiSelect-selectMenu-1070 MuiInputBase-input-1096 MuiInput-input-1081\\"
-+                             class=\\"MuiSelect-select-1067 MuiSelect-selectMenu-1070 MuiSelect-disabled-1071 MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076\\"
+-                             class=\\"MuiSelect-select-1071 MuiSelect-selectMenu-1074 MuiInputBase-input-1100 MuiInput-input-1085\\"
++                             class=\\"MuiSelect-select-1071 MuiSelect-selectMenu-1074 MuiSelect-disabled-1075 MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
 -                             tabindex=\\"0\\"
@@ -2068,11 +2067,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1354,25 +1346,26 @@
                     >
                       <div
-                        class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
+                        class=\\"MuiFormControl-root-1048 MuiFormControl-fullWidth-1051\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-1059 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
-+                         class=\\"MuiFormLabel-root-1059 MuiFormLabel-disabled-1061 MuiInputLabel-disabled-1050 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
+-                         class=\\"MuiFormLabel-root-1063 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
++                         class=\\"MuiFormLabel-root-1063 MuiFormLabel-disabled-1065 MuiInputLabel-disabled-1054 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
                           data-shrink=\\"false\\"
                           for=\\"Typeedits/changes/commentshere\\"
                           id=\\"Typeedits/changes/commentshere-label\\"
@@ -2080,15 +2079,15 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Type edits/changes/comments here
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074 MuiInputBase-multiline-1094 MuiInput-multiline-1079\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074 MuiInputBase-multiline-1094 MuiInput-multiline-1079\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078 MuiInputBase-multiline-1098 MuiInput-multiline-1083\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078 MuiInputBase-multiline-1098 MuiInput-multiline-1083\\"
                         >
                           <textarea
                             aria-invalid=\\"false\\"
                             aria-label=\\"Type edits/changes/comments here\\"
                             aria-labelledby=\\"Typeedits/changes/commentshere-label\\"
--                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-inputMultiline-1098 MuiInput-inputMultiline-1083\\"
-+                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-inputMultiline-1098 MuiInput-inputMultiline-1083\\"
+-                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-inputMultiline-1102 MuiInput-inputMultiline-1087\\"
++                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-inputMultiline-1102 MuiInput-inputMultiline-1087\\"
 +                           disabled=\\"\\"
                             id=\\"Typeedits/changes/commentshere\\"
                             label=\\"Type edits/changes/comments here\\"
@@ -2098,11 +2097,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1384,25 +1377,26 @@
                     >
                       <div
-                        class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
+                        class=\\"MuiFormControl-root-1048 MuiFormControl-fullWidth-1051\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-1059 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
-+                         class=\\"MuiFormLabel-root-1059 MuiFormLabel-disabled-1061 MuiInputLabel-disabled-1050 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
+-                         class=\\"MuiFormLabel-root-1063 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
++                         class=\\"MuiFormLabel-root-1063 MuiFormLabel-disabled-1065 MuiInputLabel-disabled-1054 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
                           data-shrink=\\"false\\"
                           for=\\"Link(URL)\\"
                           id=\\"Link(URL)-label\\"
@@ -2110,15 +2109,15 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Link (URL)
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
                         >
                           <input
                             aria-invalid=\\"false\\"
                             aria-label=\\"Link (URL)\\"
                             aria-labelledby=\\"Link(URL)-label\\"
--                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081\\"
-+                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076\\"
+-                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085\\"
++                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080\\"
 +                           disabled=\\"\\"
                             id=\\"Link(URL)\\"
                             label=\\"Link (URL)\\"
@@ -2137,8 +2136,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                               style=\\"position: relative; padding: 0px;\\"
                             >
                               <div
-                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1538,10 +1532,11 @@
+                                class=\\"MuiGrid-container-595 FileUploadDropzoneStaticContent-dropzone-1110\\"
+@@ -1537,10 +1531,11 @@
                                 </div>
                               </div>
                               <input
@@ -2150,42 +2149,42 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -1552,52 +1547,100 @@
+@@ -1551,52 +1546,100 @@
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 +           <div
-+             class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
++             class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
 +           >
 +             <div
 +               class=\\"Alert\\"
 +               style=\\"padding: 12px;\\"
 +             >
 +               <div
-+                 class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610 Alert-info_outline-1209 Alert-common-1197\\"
++                 class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612 Alert-info_outline-1213 Alert-common-1201\\"
 +               >
 +                 <div
-+                   class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633 MuiGrid-grid-sm-true-635\\"
++                   class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-true-637\\"
 +                 >
 +                   <div
-+                     class=\\"MuiGrid-container-593 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610\\"
++                     class=\\"MuiGrid-container-595 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612\\"
 +                   >
 +                     <div
-+                       class=\\"MuiGrid-item-594 Alert-icon-1198 alert-icon\\"
++                       class=\\"MuiGrid-item-596 Alert-icon-1202 alert-icon\\"
 +                     >
 +                       <div
-+                         class=\\"MuiCircularProgress-root-1211 MuiCircularProgress-colorPrimary-1214 MuiCircularProgress-indeterminate-1213 spinner\\"
++                         class=\\"MuiCircularProgress-root-1215 MuiCircularProgress-colorPrimary-1218 MuiCircularProgress-indeterminate-1217 spinner\\"
 +                         role=\\"progressbar\\"
 +                         style=\\"width: 38px; height: 38px;\\"
 +                       >
 +                         <svg
-+                           class=\\"MuiCircularProgress-svg-1216\\"
++                           class=\\"MuiCircularProgress-svg-1220\\"
 +                           viewBox=\\"22 22 44 44\\"
 +                         >
 +                           <circle
-+                             class=\\"MuiCircularProgress-circle-1217 MuiCircularProgress-circleIndeterminate-1219\\"
++                             class=\\"MuiCircularProgress-circle-1221 MuiCircularProgress-circleIndeterminate-1223\\"
 +                             cx=\\"44\\"
 +                             cy=\\"44\\"
 +                             fill=\\"none\\"
@@ -2196,7 +2195,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +                       </div>
                       </div>
                       <div
-+                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1199 alert-text\\"
++                       class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623 Alert-text-1203 alert-text\\"
 +                     >
 +                       <b>
 +                         Saving - 
@@ -2210,38 +2209,38 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 +           </div>
 +         </div>
 +         <div
-            class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617\\"
+            class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619\\"
           >
             <div
-              class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623\\"
             />
             <div
-              class=\\"MuiGrid-item-594\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
--               class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-raised-1124 MuiButton-fullWidth-1135\\"
+-               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-fullWidth-1139\\"
 -               tabindex=\\"0\\"
-+               class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-raised-1124 MuiButton-disabled-1130 MuiButton-fullWidth-1135\\"
++               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
 +               disabled=\\"\\"
 +               tabindex=\\"-1\\"
                 type=\\"button\\"
               >
                 <span
-                  class=\\"MuiButton-label-1111\\"
+                  class=\\"MuiButton-label-1115\\"
                 >
                   Cancel this claim
                 </span>
 -               <span
--                 class=\\"MuiTouchRipple-root-1139\\"
+-                 class=\\"MuiTouchRipple-root-1143\\"
 -               />
               </button>
             </div>
             <div
-              class=\\"MuiGrid-item-594\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
--               class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-fullWidth-1135\\"
-+               class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-disabled-1130 MuiButton-fullWidth-1135\\"
+-               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-fullWidth-1139\\"
++               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
 +               disabled=\\"\\"
                 id=\\"claimSubmit\\"
 -               tabindex=\\"0\\"
@@ -2249,12 +2248,12 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                 type=\\"button\\"
               >
                 <span
-                  class=\\"MuiButton-label-1111\\"
+                  class=\\"MuiButton-label-1115\\"
                 >
                   Claim this work
                 </span>
 -               <span
--                 class=\\"MuiTouchRipple-root-1139\\"
+-                 class=\\"MuiTouchRipple-root-1143\\"
 -               />
               </button>
             </div>
@@ -2277,25 +2276,25 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -           <div />
 +           <span />
             <div
-              class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
             >
               <div
-                class=\\"MuiPaper-root-942 MuiPaper-elevation1-945 MuiPaper-rounded-943 MuiCard-root-941 Cards-card-936 StandardCard\\"
+                class=\\"MuiPaper-root-945 MuiPaper-elevation1-948 MuiPaper-rounded-946 MuiCard-root-944 Cards-card-939 StandardCard\\"
 @@ -755,13 +755,12 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     disabled=\\"\\"
 -                                     tabindex=\\"-1\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     tabindex=\\"0\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -780,10 +779,13 @@
                                             fill=\\"none\\"
@@ -2304,28 +2303,28 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Nephew, Kenneth P.
                                       </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-1139\\"
++                                       class=\\"MuiTouchRipple-root-1143\\"
 +                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -803,13 +805,12 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     disabled=\\"\\"
 -                                     tabindex=\\"-1\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     tabindex=\\"0\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -828,10 +829,13 @@
                                             fill=\\"none\\"
@@ -2334,28 +2333,28 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Stone, Andrew
                                       </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-1139\\"
++                                       class=\\"MuiTouchRipple-root-1143\\"
 +                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -855,13 +859,12 @@
                                 >
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
                                     <button
--                                     class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-disabled-1130 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
+-                                     class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-disabled-1134 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 -                                     disabled=\\"\\"
 -                                     tabindex=\\"-1\\"
-+                                     class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-text-1112 MuiButton-flat-1115 MuiButton-fullWidth-1135 AuthorItem-buttonBase-1137\\"
++                                     class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-text-1116 MuiButton-flat-1119 MuiButton-fullWidth-1139 AuthorItem-buttonBase-1141\\"
 +                                     tabindex=\\"0\\"
                                       type=\\"button\\"
                                     >
                                       <span
-                                        class=\\"MuiButton-label-1111\\"
+                                        class=\\"MuiButton-label-1115\\"
                                       >
 @@ -880,10 +883,13 @@
                                             fill=\\"none\\"
@@ -2364,12 +2363,12 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                         Gee, Julia M. W.
                                       </span>
 +                                     <span
-+                                       class=\\"MuiTouchRipple-root-1139\\"
++                                       class=\\"MuiTouchRipple-root-1143\\"
 +                                     />
                                     </button>
                                   </div>
                                   <div
-                                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633\\"
+                                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635\\"
                                   >
 @@ -1147,15 +1153,14 @@
                           </div>
@@ -2377,23 +2376,23 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                       </div>
                     </div>
                     <label
--                     class=\\"MuiFormControlLabel-root-1181 WithTheme-WithWidth-AuthorLinking---root-1021 MuiFormControlLabel-disabled-1185\\"
-+                     class=\\"MuiFormControlLabel-root-1181 WithTheme-WithWidth-AuthorLinking---root-1021\\"
+-                     class=\\"MuiFormControlLabel-root-1185 WithTheme-WithWidth-AuthorLinking---root-1025 MuiFormControlLabel-disabled-1189\\"
++                     class=\\"MuiFormControlLabel-root-1185 WithTheme-WithWidth-AuthorLinking---root-1025\\"
                     >
                       <span
--                       class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiIconButton-root-1034 MuiIconButton-disabled-1038 MuiPrivateSwitchBase-root-1193 MuiCheckbox-root-1187 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1023 MuiCheckbox-colorSecondary-1192 MuiPrivateSwitchBase-checked-1194 MuiCheckbox-checked-1188 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1024 MuiPrivateSwitchBase-disabled-1195 MuiCheckbox-disabled-1189\\"
+-                       class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiIconButton-root-1038 MuiIconButton-disabled-1042 MuiPrivateSwitchBase-root-1197 MuiCheckbox-root-1191 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1027 MuiCheckbox-colorSecondary-1196 MuiPrivateSwitchBase-checked-1198 MuiCheckbox-checked-1192 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1028 MuiPrivateSwitchBase-disabled-1199 MuiCheckbox-disabled-1193\\"
 -                       tabindex=\\"-1\\"
-+                       class=\\"MuiButtonBase-root-1040 MuiIconButton-root-1034 MuiPrivateSwitchBase-root-1193 MuiCheckbox-root-1187 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1023 MuiCheckbox-colorSecondary-1192 MuiPrivateSwitchBase-checked-1194 MuiCheckbox-checked-1188 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1024\\"
++                       class=\\"MuiButtonBase-root-1044 MuiIconButton-root-1038 MuiPrivateSwitchBase-root-1197 MuiCheckbox-root-1191 WithTheme-WithWidth-AuthorLinking---checkboxRoot-1027 MuiCheckbox-colorSecondary-1196 MuiPrivateSwitchBase-checked-1198 MuiCheckbox-checked-1192 WithTheme-WithWidth-AuthorLinking---checkboxChecked-1028\\"
                       >
                         <span
-                          class=\\"MuiIconButton-label-1039\\"
+                          class=\\"MuiIconButton-label-1043\\"
                         >
                           <svg
 @@ -1170,19 +1175,21 @@
                             />
                           </svg>
                           <input
-                            class=\\"MuiPrivateSwitchBase-input-1196\\"
+                            class=\\"MuiPrivateSwitchBase-input-1200\\"
                             data-indeterminate=\\"false\\"
 -                           disabled=\\"\\"
                             id=\\"authorAcceptDeclaration\\"
@@ -2402,15 +2401,15 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           />
                         </span>
 +                       <span
-+                         class=\\"MuiTouchRipple-root-1139\\"
++                         class=\\"MuiTouchRipple-root-1143\\"
 +                       />
                       </span>
                       <span
--                       class=\\"MuiTypography-root-690 MuiTypography-body2-698 MuiFormControlLabel-label-1186 MuiFormControlLabel-disabled-1185\\"
-+                       class=\\"MuiTypography-root-690 MuiTypography-body2-698 MuiFormControlLabel-label-1186\\"
+-                       class=\\"MuiTypography-root-692 MuiTypography-body2-700 MuiFormControlLabel-label-1190 MuiFormControlLabel-disabled-1189\\"
++                       class=\\"MuiTypography-root-692 MuiTypography-body2-700 MuiFormControlLabel-label-1190\\"
                       >
                         <p
-                          class=\\"MuiTypography-root-690 WithTheme-WithWidth-AuthorLinking---label-1022 MuiTypography-body2-698 MuiTypography-colorSecondary-721\\"
+                          class=\\"MuiTypography-root-692 WithTheme-WithWidth-AuthorLinking---label-1026 MuiTypography-body2-700 MuiTypography-colorSecondary-723\\"
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
 @@ -1275,22 +1282,23 @@
@@ -2419,18 +2418,18 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Please select relevant indicator(s).
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
                         >
                           <div
-                            class=\\"MuiSelect-root-1066\\"
+                            class=\\"MuiSelect-root-1070\\"
                           >
                             <div
                               aria-haspopup=\\"true\\"
                               aria-owns=\\"menu-\\"
                               aria-pressed=\\"true\\"
--                             class=\\"MuiSelect-select-1067 MuiSelect-selectMenu-1070 MuiSelect-disabled-1071 MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076\\"
-+                             class=\\"MuiSelect-select-1067 MuiSelect-selectMenu-1070 MuiInputBase-input-1096 MuiInput-input-1081\\"
+-                             class=\\"MuiSelect-select-1071 MuiSelect-selectMenu-1074 MuiSelect-disabled-1075 MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080\\"
++                             class=\\"MuiSelect-select-1071 MuiSelect-selectMenu-1074 MuiInputBase-input-1100 MuiInput-input-1085\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
 +                             tabindex=\\"0\\"
@@ -2442,11 +2441,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1346,26 +1354,25 @@
                     >
                       <div
-                        class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
+                        class=\\"MuiFormControl-root-1048 MuiFormControl-fullWidth-1051\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-1059 MuiFormLabel-disabled-1061 MuiInputLabel-disabled-1050 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
-+                         class=\\"MuiFormLabel-root-1059 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
+-                         class=\\"MuiFormLabel-root-1063 MuiFormLabel-disabled-1065 MuiInputLabel-disabled-1054 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
++                         class=\\"MuiFormLabel-root-1063 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
                           data-shrink=\\"false\\"
                           for=\\"Typeedits/changes/commentshere\\"
                           id=\\"Typeedits/changes/commentshere-label\\"
@@ -2454,16 +2453,16 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Type edits/changes/comments here
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074 MuiInputBase-multiline-1094 MuiInput-multiline-1079\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074 MuiInputBase-multiline-1094 MuiInput-multiline-1079\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078 MuiInputBase-multiline-1098 MuiInput-multiline-1083\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078 MuiInputBase-multiline-1098 MuiInput-multiline-1083\\"
                         >
                           <textarea
                             aria-invalid=\\"false\\"
                             aria-label=\\"Type edits/changes/comments here\\"
                             aria-labelledby=\\"Typeedits/changes/commentshere-label\\"
--                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-inputMultiline-1098 MuiInput-inputMultiline-1083\\"
+-                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-inputMultiline-1102 MuiInput-inputMultiline-1087\\"
 -                           disabled=\\"\\"
-+                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-inputMultiline-1098 MuiInput-inputMultiline-1083\\"
++                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-inputMultiline-1102 MuiInput-inputMultiline-1087\\"
                             id=\\"Typeedits/changes/commentshere\\"
                             label=\\"Type edits/changes/comments here\\"
                             name=\\"comments\\"
@@ -2472,11 +2471,11 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 @@ -1377,26 +1384,25 @@
                     >
                       <div
-                        class=\\"MuiFormControl-root-1044 MuiFormControl-fullWidth-1047\\"
+                        class=\\"MuiFormControl-root-1048 MuiFormControl-fullWidth-1051\\"
                       >
                         <label
--                         class=\\"MuiFormLabel-root-1059 MuiFormLabel-disabled-1061 MuiInputLabel-disabled-1050 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
-+                         class=\\"MuiFormLabel-root-1059 MuiInputLabel-root-1048 MuiInputLabel-formControl-1053 MuiInputLabel-animated-1056\\"
+-                         class=\\"MuiFormLabel-root-1063 MuiFormLabel-disabled-1065 MuiInputLabel-disabled-1054 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
++                         class=\\"MuiFormLabel-root-1063 MuiInputLabel-root-1052 MuiInputLabel-formControl-1057 MuiInputLabel-animated-1060\\"
                           data-shrink=\\"false\\"
                           for=\\"Link(URL)\\"
                           id=\\"Link(URL)-label\\"
@@ -2484,16 +2483,16 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                           Link (URL)
                         </label>
                         <div
--                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-disabled-1089 MuiInput-disabled-1076 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
-+                         class=\\"MuiInputBase-root-1086 MuiInput-root-1073 MuiInput-underline-1077 MuiInputBase-fullWidth-1095 MuiInput-fullWidth-1080 MuiInputBase-formControl-1087 MuiInput-formControl-1074\\"
+-                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
++                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-fullWidth-1099 MuiInput-fullWidth-1084 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
                         >
                           <input
                             aria-invalid=\\"false\\"
                             aria-label=\\"Link (URL)\\"
                             aria-labelledby=\\"Link(URL)-label\\"
--                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081 MuiInputBase-disabled-1089 MuiInput-disabled-1076\\"
+-                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085 MuiInputBase-disabled-1093 MuiInput-disabled-1080\\"
 -                           disabled=\\"\\"
-+                           class=\\"MuiInputBase-input-1096 MuiInput-input-1081\\"
++                           class=\\"MuiInputBase-input-1100 MuiInput-input-1085\\"
                             id=\\"Link(URL)\\"
                             label=\\"Link (URL)\\"
                             name=\\"rek_link\\"
@@ -2511,8 +2510,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                               style=\\"position: relative; padding: 0px;\\"
                             >
                               <div
-                                class=\\"MuiGrid-container-593 FileUploadDropzoneStaticContent-dropzone-1106\\"
-@@ -1532,11 +1538,10 @@
+                                class=\\"MuiGrid-container-595 FileUploadDropzoneStaticContent-dropzone-1110\\"
+@@ -1531,11 +1537,10 @@
                                 </div>
                               </div>
                               <input
@@ -2524,41 +2523,41 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -1555,48 +1560,44 @@
+@@ -1554,48 +1559,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
               >
                 <div
--                 class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610 Alert-info_outline-1209 Alert-common-1197\\"
-+                 class=\\"MuiGrid-container-593 MuiGrid-spacing-xs-24-617 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610 Alert-done-1234 Alert-common-1221\\"
+-                 class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612 Alert-info_outline-1213 Alert-common-1201\\"
++                 class=\\"MuiGrid-container-595 MuiGrid-spacing-xs-24-619 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612 Alert-done-1238 Alert-common-1225\\"
                 >
                   <div
-                    class=\\"MuiGrid-item-594 MuiGrid-grid-xs-12-633 MuiGrid-grid-sm-true-635\\"
+                    class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-true-637\\"
                   >
                     <div
-                      class=\\"MuiGrid-container-593 MuiGrid-align-items-xs-flex-start-602 MuiGrid-align-content-xs-center-605 MuiGrid-justify-xs-center-610\\"
+                      class=\\"MuiGrid-container-595 MuiGrid-align-items-xs-flex-start-604 MuiGrid-align-content-xs-center-607 MuiGrid-justify-xs-center-612\\"
                     >
                       <div
--                       class=\\"MuiGrid-item-594 Alert-icon-1198 alert-icon\\"
+-                       class=\\"MuiGrid-item-596 Alert-icon-1202 alert-icon\\"
 -                     >
 -                       <div
--                         class=\\"MuiCircularProgress-root-1211 MuiCircularProgress-colorPrimary-1214 MuiCircularProgress-indeterminate-1213 spinner\\"
+-                         class=\\"MuiCircularProgress-root-1215 MuiCircularProgress-colorPrimary-1218 MuiCircularProgress-indeterminate-1217 spinner\\"
 -                         role=\\"progressbar\\"
 -                         style=\\"width: 38px; height: 38px;\\"
-+                       class=\\"MuiGrid-item-594 Alert-icon-1222 alert-icon\\"
++                       class=\\"MuiGrid-item-596 Alert-icon-1226 alert-icon\\"
                       >
                         <svg
--                           class=\\"MuiCircularProgress-svg-1216\\"
+-                           class=\\"MuiCircularProgress-svg-1220\\"
 -                           viewBox=\\"22 22 44 44\\"
 +                         aria-hidden=\\"true\\"
-+                         class=\\"MuiSvgIcon-root-985 icon\\"
++                         class=\\"MuiSvgIcon-root-988 icon\\"
 +                         focusable=\\"false\\"
 +                         role=\\"presentation\\"
 +                         viewBox=\\"0 0 24 24\\"
                         >
 -                           <circle
--                             class=\\"MuiCircularProgress-circle-1217 MuiCircularProgress-circleIndeterminate-1219\\"
+-                             class=\\"MuiCircularProgress-circle-1221 MuiCircularProgress-circleIndeterminate-1223\\"
 -                             cx=\\"44\\"
 -                             cy=\\"44\\"
 +                         <path
@@ -2574,8 +2573,8 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
 -                       </div>
                       </div>
                       <div
--                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1199 alert-text\\"
-+                       class=\\"MuiGrid-item-594 MuiGrid-grid-xs-true-621 Alert-text-1223 alert-text\\"
+-                       class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623 Alert-text-1203 alert-text\\"
++                       class=\\"MuiGrid-item-596 MuiGrid-grid-xs-true-623 Alert-text-1227 alert-text\\"
                       >
                         <b>
 -                         Saving - 
@@ -2588,48 +2587,48 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                   </div>
                 </div>
               </div>
-@@ -1610,37 +1611,41 @@
+@@ -1609,37 +1610,41 @@
             />
             <div
-              class=\\"MuiGrid-item-594\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
--               class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-raised-1124 MuiButton-disabled-1130 MuiButton-fullWidth-1135\\"
+-               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
 -               disabled=\\"\\"
 -               tabindex=\\"-1\\"
-+               class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-raised-1124 MuiButton-fullWidth-1135\\"
++               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-raised-1128 MuiButton-fullWidth-1139\\"
 +               tabindex=\\"0\\"
                 type=\\"button\\"
               >
                 <span
-                  class=\\"MuiButton-label-1111\\"
+                  class=\\"MuiButton-label-1115\\"
                 >
                   Cancel this claim
                 </span>
 +               <span
-+                 class=\\"MuiTouchRipple-root-1139\\"
++                 class=\\"MuiTouchRipple-root-1143\\"
 +               />
               </button>
             </div>
             <div
-              class=\\"MuiGrid-item-594\\"
+              class=\\"MuiGrid-item-596 MuiGrid-grid-xs-12-635 MuiGrid-grid-sm-auto-636\\"
             >
               <button
--               class=\\"MuiButtonBase-root-1040 MuiButtonBase-disabled-1041 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-disabled-1130 MuiButton-fullWidth-1135\\"
+-               class=\\"MuiButtonBase-root-1044 MuiButtonBase-disabled-1045 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-disabled-1134 MuiButton-fullWidth-1139\\"
 -               disabled=\\"\\"
-+               class=\\"MuiButtonBase-root-1040 MuiButton-root-1110 MuiButton-contained-1121 MuiButton-containedPrimary-1122 MuiButton-raised-1124 MuiButton-raisedPrimary-1125 MuiButton-fullWidth-1135\\"
++               class=\\"MuiButtonBase-root-1044 MuiButton-root-1114 MuiButton-contained-1125 MuiButton-containedPrimary-1126 MuiButton-raised-1128 MuiButton-raisedPrimary-1129 MuiButton-fullWidth-1139\\"
                 id=\\"claimSubmit\\"
 -               tabindex=\\"-1\\"
 +               tabindex=\\"0\\"
                 type=\\"button\\"
               >
                 <span
-                  class=\\"MuiButton-label-1111\\"
+                  class=\\"MuiButton-label-1115\\"
                 >
                   Claim this work
                 </span>
 +               <span
-+                 class=\\"MuiTouchRipple-root-1139\\"
++                 class=\\"MuiTouchRipple-root-1143\\"
 +               />
               </button>
             </div>
