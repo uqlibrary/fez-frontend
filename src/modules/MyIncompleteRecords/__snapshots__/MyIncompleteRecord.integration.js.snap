@@ -2089,7 +2089,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1898,13 +1891,10 @@
+@@ -1903,13 +1896,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -2163,7 +2163,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-6-465\\"
                     >
-@@ -1894,13 +1887,10 @@
+@@ -1899,13 +1892,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2251,7 +2251,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-6-465\\"
                     >
-@@ -1887,13 +1880,10 @@
+@@ -1892,13 +1885,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2340,7 +2340,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -1880,13 +1874,10 @@
+@@ -1885,13 +1879,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2510,7 +2510,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -1891,13 +1897,10 @@
+@@ -1896,13 +1902,10 @@
                           Validation - 
                         </b>
                         <span>

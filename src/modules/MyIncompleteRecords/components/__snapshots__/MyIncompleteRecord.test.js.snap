@@ -2734,14 +2734,16 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 "delayNotice": "Notice",
                 "errorTitle": "Upload Errors",
                 "fileUploadInstruction": <p>
-                  Click here to select files, or drag files into this area to upload
+                  Click here to select files,
+                  <br />
+                  or drag files into this area to upload
                 </p>,
                 "fileUploadRestrictionHeading": "File upload restrictions",
                 "fileUploadRestrictions": <div>
                   Please ensure:
                   <ul>
                     <li>
-                      files are under 5GB in size.
+                      files are under 5GB in size
                     </li>
                     <li>
                       file names begin with a letter and are less than 45 characters long
@@ -2755,6 +2757,9 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
                     </li>
                     <li>
+                      file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
+                    </li>
+                    <li>
                       files are uploaded individually and not inside a folder
                     </li>
                   </ul>
@@ -2765,6 +2770,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                 "validation": Object {
                   "duplicateFiles": "File(s) ([fileNames]) are duplicates and have been ignored",
                   "invalidFileNames": "File(s) ([fileNames]) have invalid file name",
+                  "invalidMimeTypeFiles": "File(s) ([fileNames]) are not supported",
                   "notFiles": "Invalid files ([fileNames])",
                   "tooBigFiles": "File(s) ([fileNames]) exceed maximum allowed upload file size",
                   "tooManyFiles": "Maximum number of files ([maxNumberOfFiles]) has been exceeded. File(s) ([fileNames]) will not be uploaded",

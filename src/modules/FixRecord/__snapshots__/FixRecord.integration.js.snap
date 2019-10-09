@@ -455,7 +455,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 - First value
 + Second value
 
-@@ -257,48 +257,45 @@
+@@ -257,67 +257,415 @@
                   <div
                     class=\\"MuiFormControl-root-376\\"
                     style=\\"width: 100%;\\"
@@ -511,14 +511,15 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                           aria-hidden=\\"true\\"
                           class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                           focusable=\\"false\\"
-@@ -307,21 +304,367 @@
+                          role=\\"presentation\\"
+                          viewBox=\\"0 0 24 24\\"
                         >
                           <path
                             d=\\"M7 10l5 5 5-5z\\"
-                          />
-                        </svg>
++                         />
++                       </svg>
 +                     </div>
-                    </div>
++                   </div>
 +                 </div>
 +               </div>
 +             </div>
@@ -541,7 +542,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                   >
 +                     Content Indicators
 +                   </h3>
-                  </div>
++                 </div>
 +                 <div
 +                   class=\\"MuiCardHeader-action-343\\"
 +                 >
@@ -564,21 +565,21 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                         <path
 +                           d=\\"M0 0h24v24H0z\\"
 +                           fill=\\"none\\"
-+                         />
+                          />
 +                         <path
 +                           d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
 +                         />
 +                         <title>
 +                           Click for more information
 +                         </title>
-+                       </svg>
+                        </svg>
 +                     </span>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-476\\"
 +                     />
 +                   </button>
-+                 </div>
-+               </div>
+                  </div>
+                </div>
 +               <div
 +                 class=\\"MuiCardContent-root-347\\"
 +               >
@@ -653,8 +654,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +           >
 +             <div
 +               class=\\"MuiPaper-root-314 MuiPaper-elevation1-317 MuiPaper-rounded-315 MuiCard-root-313 Cards-card-308 StandardCard\\"
-              >
--                     This field is required
++             >
 +               <div
 +                 class=\\"MuiCardHeader-root-341\\"
 +               >
@@ -805,7 +805,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                                   Please ensure:
 +                                   <ul>
 +                                     <li>
-+                                       files are under 5GB in size.
++                                       files are under 5GB in size
 +                                     </li>
 +                                     <li>
 +                                       file names begin with a letter and are less than 45 characters long
@@ -819,6 +819,9 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                                       (two periods are allowed for multipart zip files. Allowed formats for part description are: e.g. “.001 ... .999”, “.r01 ... .r999” and “.part1 ... .part999”)
 +                                     </li>
 +                                     <li>
++                                       file names have one of the following extensions: 7z, avi, csv, gif, gsheet, gz, jpe, jpeg, jpg, m1v, m2v, m4a, mk3d, mks, mkv, mov, mp3, mp4, mp4v, mpe, mpeg, mpg, ods, pdf, png, qt, rar, tar, tif, tiff, wav, wma, wmv, xla, xlc, xlm, xls, xlsx, xlt, xlw, zip
++                                     </li>
++                                     <li>
 +                                       files are uploaded individually and not inside a folder
 +                                     </li>
 +                                   </ul>
@@ -826,7 +829,8 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                               </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-+                               >
+                                >
+-                     This field is required
 +                                 <div
 +                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-552\\"
 +                                 >
@@ -853,7 +857,9 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                                     class=\\"MuiGrid-item-4\\"
 +                                   >
 +                                     <p>
-+                                       Click here to select files, or drag files into this area to upload
++                                       Click here to select files,
++                                       <br />
++                                       or drag files into this area to upload
                                       </p>
 +                                   </div>
 +                                 </div>
@@ -871,17 +877,13 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                         </div>
 +                       </div>
 +                     </div>
-                    </div>
++                   </div>
                   </div>
                 </div>
               </div>
-+           </div>
+            </div>
             <div
-              class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-            >
-              <div
-                class=\\"Alert\\"
-@@ -361,11 +704,15 @@
+@@ -361,11 +709,15 @@
                         <b>
                           Validation - 
                         </b>
@@ -898,7 +900,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                     </div>
                   </div>
                 </div>
-@@ -392,10 +739,27 @@
+@@ -392,10 +744,27 @@
                   Cancel
                 </span>
                 <span
@@ -973,7 +975,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -662,67 +662,12 @@
+@@ -667,67 +667,12 @@
                     </div>
                   </div>
                 </div>
@@ -1041,7 +1043,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -746,21 +691,23 @@
+@@ -751,21 +696,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1094,7 +1096,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -662,12 +662,67 @@
+@@ -667,12 +667,67 @@
                     </div>
                   </div>
                 </div>
@@ -1162,7 +1164,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -691,23 +746,21 @@
+@@ -696,23 +751,21 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1322,7 +1324,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             >
                               <div
                                 class=\\"MuiGrid-container-570 FileUploadDropzoneStaticContent-dropzone-1117\\"
-@@ -648,10 +648,11 @@
+@@ -653,10 +653,11 @@
                                 </div>
                               </div>
                               <input
@@ -1334,7 +1336,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -662,52 +663,100 @@
+@@ -667,52 +668,100 @@
                     </div>
                   </div>
                 </div>
@@ -1591,7 +1593,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             >
                               <div
                                 class=\\"MuiGrid-container-570 FileUploadDropzoneStaticContent-dropzone-1117\\"
-@@ -648,11 +648,10 @@
+@@ -653,11 +653,10 @@
                                 </div>
                               </div>
                               <input
@@ -1603,7 +1605,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -671,48 +670,44 @@
+@@ -676,48 +675,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1667,7 +1669,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                   </div>
                 </div>
               </div>
-@@ -726,37 +721,41 @@
+@@ -731,37 +726,41 @@
             />
             <div
               class=\\"MuiGrid-item-571\\"
