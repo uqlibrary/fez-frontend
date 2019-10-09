@@ -31,6 +31,7 @@ export {
     publicationTypeListDigilibImage,
     publicationTypeListImage,
     publicationTypeListJournal,
+    publicationTypeListJournalArticle,
     publicationTypeListManuscript,
     publicationTypeListNewspaperArticle,
     publicationTypeListPatent,
