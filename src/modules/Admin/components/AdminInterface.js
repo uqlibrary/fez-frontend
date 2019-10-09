@@ -6,7 +6,6 @@ import { Field } from 'redux-form/immutable';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
 import Badge from '@material-ui/core/Badge';
@@ -110,15 +109,6 @@ export const AdminInterface = ({
                         onAction={navigateToSearchResult}
                         locale={saveConfirmationLocale}
                     />
-                    <Grid item xs style={{ marginBottom: 12 }}>
-                        {!createMode && (
-                            <Typography
-                                variant="h5"
-                                color="primary"
-                                style={{ fontSize: 24 }}
-                            >{`Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`}</Typography>
-                        )}
-                    </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
                             <FormViewToggler />

@@ -27,27 +27,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
       onAction={[Function]}
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-      xs={true}
-    >
-      <WithStyles(Typography)
-        color="primary"
-        style={
-          Object {
-            "fontSize": 24,
-          }
-        }
-        variant="h5"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -206,27 +185,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
       onAction={[Function]}
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-      xs={true}
-    >
-      <WithStyles(Typography)
-        color="primary"
-        style={
-          Object {
-            "fontSize": 24,
-          }
-        }
-        variant="h5"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -384,27 +342,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
       onAction={[Function]}
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-      xs={true}
-    >
-      <WithStyles(Typography)
-        color="primary"
-        style={
-          Object {
-            "fontSize": 24,
-          }
-        }
-        variant="h5"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -562,27 +499,6 @@ exports[`AdminInterface component should render default view as a full form view
       onAction={[Function]}
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-      xs={true}
-    >
-      <WithStyles(Typography)
-        color="primary"
-        style={
-          Object {
-            "fontSize": 24,
-          }
-        }
-        variant="h5"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
@@ -715,27 +631,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       onAction={[Function]}
       onRef={[Function]}
     />
-    <WithStyles(Grid)
-      item={true}
-      style={
-        Object {
-          "marginBottom": 12,
-        }
-      }
-      xs={true}
-    >
-      <WithStyles(Typography)
-        color="primary"
-        style={
-          Object {
-            "fontSize": 24,
-          }
-        }
-        variant="h5"
-      >
-        Edit Journal Article - This is test record: UQ:123456
-      </WithStyles(Typography)>
-    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
