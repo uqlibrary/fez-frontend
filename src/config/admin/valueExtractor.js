@@ -504,7 +504,7 @@ export default {
     rek_genre: {
         getValue: record => record.rek_genre,
     },
-    thesisType: {
+    rek_genre_type: {
         getValue: record => record.rek_genre_type,
     },
     geoCoordinates: {

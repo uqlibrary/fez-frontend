@@ -112,5 +112,6 @@ export default {
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
+        subjects: 'Subjects are required',
     },
 };

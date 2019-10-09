@@ -17,7 +17,7 @@ export default {
                 ['fez_record_search_key_total_pages'],
                 ['rek_date'],
                 ['rek_description'],
-                ['thesisType'],
+                ['rek_genre_type'],
                 ['fez_record_search_key_org_name'],
                 ['thesisOrgUnitName'],
             ],
@@ -59,18 +59,38 @@ export default {
             groups: [['rek_subtype'], ['fez_record_search_key_oa_status'], ['additionalNotes']],
         },
     ],
-    ntro: () => [
-        {
-            title: 'Scale/Significance of work & Creator research statement',
-            groups: [['significanceAndContributionStatement']],
-        },
-        {
-            title: 'ISMN',
-            groups: [['fez_record_search_key_ismn']],
-        },
-        {
-            title: 'Quality indicators',
-            groups: [['qualityIndicators']],
-        },
-    ],
+    ntro: () => [],
 };
+
+export const validateThesis = (
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!(bs || {}).thesisOrgUnitName && {
+            thesisOrgUnitName: summary.rek_org_unit_name,
+        }) ||
+            {}),
+        ...((!(bs || {}).rek_genre_type && {
+            rek_genre_type: summary.rek_genre_type,
+        }) ||
+            {}),
+        ...((!(bs || {}).subjects && {
+            subjects: summary.subjects,
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+        ...(((as || {}).supervisors || []).length === 0 && {
+            supervisors: summary.supervisors,
+        }),
+    },
+});

@@ -10,13 +10,19 @@ import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSele
 import { AlternateGenreField } from 'modules/SharedComponents/Toolbox/AlternateGenreField';
 import { AttachedFilesField } from 'modules/SharedComponents/Toolbox/AttachedFilesField';
 import { AudienceSizeField } from 'modules/SharedComponents/Toolbox/AudienceSizeField';
-import { CollectionField, AuthorIdField } from 'modules/SharedComponents/LookupFields';
+import {
+    AuthorIdField,
+    CollectionField,
+    FieldOfResearchListField,
+    OrgUnitNameField,
+    OrgNameField,
+    RelatedDatasetAndPublicationListField,
+} from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
 import { CopyrightAgreementField } from 'modules/SharedComponents/Toolbox/CopyrightAgreementField';
 import { DatePickerField } from 'modules/SharedComponents/Toolbox/DatePickerField';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
-import { FieldOfResearchListField } from 'modules/SharedComponents/LookupFields';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { GrantListEditorField } from 'modules/SharedComponents/GrantListEditor';
 import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField';
@@ -30,12 +36,10 @@ import {
     ScaleOfSignificanceListEditorField,
 } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { OAStatusField } from 'modules/SharedComponents/Toolbox/OAStatusField';
-import { OrgUnitNameField } from 'modules/SharedComponents/LookupFields';
 import { PublicationSubtypeField, ThesisSubtypeField } from 'modules/SharedComponents/PublicationSubtype';
 import { PubmedDocTypesField } from 'modules/SharedComponents/Toolbox/PubmedDocTypesField';
 import { QualityIndicatorField } from 'modules/SharedComponents/Toolbox/QualityIndicatorField';
 import { RefereedSourceField } from 'modules/SharedComponents/Toolbox/RefereedSourceField';
-import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
 import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
@@ -989,12 +993,14 @@ export default {
             label: 'Type',
         },
     },
-    thesisType: {
+    rek_genre_type: {
         component: ThesisSubtypeField,
         componentProps: {
-            name: 'bibliographicSection.thesisType',
+            name: 'bibliographicSection.rek_genre_type',
             fullWidth: true,
             label: 'Thesis type',
+            required: true,
+            validate: [validation.required],
         },
     },
     geoCoordinates: {
@@ -1167,12 +1173,13 @@ export default {
         },
     },
     fez_record_search_key_org_name: {
-        component: GenericTextField,
+        component: OrgNameField,
         componentProps: {
             fullWidth: true,
             label: 'Institution',
             name: 'bibliographicSection.fez_record_search_key_org_name.rek_org_name',
             placeholder: '',
+            floatingLabelText: 'Institution',
         },
     },
     fez_record_search_key_org_unit_name: {
