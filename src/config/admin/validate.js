@@ -14,6 +14,7 @@ import {
     PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
     PUBLICATION_TYPE_PREPRINT,
     PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_SEMINAR_PAPER,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -30,6 +31,7 @@ import {
     validateNewspaperArticle,
     validatePreprint,
     validateResearchReport,
+    validateSeminarPaper,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -111,6 +113,10 @@ export default values => {
         case PUBLICATION_TYPE_RESEARCH_REPORT:
             const researchReportErrors = validateResearchReport(data, locale);
             errors = deepmerge(errors, researchReportErrors);
+            break;
+        case PUBLICATION_TYPE_SEMINAR_PAPER:
+            const seminarPaperErrors = validateSeminarPaper(data, locale);
+            errors = deepmerge(errors, seminarPaperErrors);
             break;
         default:
             break;
