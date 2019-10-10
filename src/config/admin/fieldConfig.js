@@ -17,6 +17,7 @@ import {
     OrgUnitNameField,
     OrgNameField,
     RelatedDatasetAndPublicationListField,
+    SeriesField,
 } from 'modules/SharedComponents/LookupFields';
 import { ContentIndicatorsField } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
 import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEditor';
@@ -542,7 +543,7 @@ export default {
         },
     },
     fez_record_search_key_series: {
-        component: GenericTextField,
+        component: SeriesField,
         componentProps: {
             name: 'bibliographicSection.fez_record_search_key_series.rek_series',
             fullWidth: true,
