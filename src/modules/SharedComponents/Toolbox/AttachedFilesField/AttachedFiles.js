@@ -350,15 +350,9 @@ export const AttachedFiles = ({
                             {isAdmin && canEdit && (
                                 <React.Fragment>
                                     <Grid item xs={2}>
-                                        {(!!item.openAccessStatus.embargoDate ||
-                                            !!item.openAccessStatus.isOpenAccess) && (
+                                        {(!!item.embargoDate || !!item.openAccessStatus.isOpenAccess) && (
                                             <FileUploadEmbargoDate
-                                                value={
-                                                    !!item.embargoDate &&
-                                                    moment(item.openAccessStatus.embargoDate).isSameOrAfter(moment())
-                                                        ? new Date(item.embargoDate)
-                                                        : ''
-                                                }
+                                                value={!!item.embargoDate ? new Date(item.embargoDate) : ''}
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
