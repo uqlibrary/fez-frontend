@@ -17,6 +17,7 @@ import {
     PUBLICATION_TYPE_SEMINAR_PAPER,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
+    PUBLICATION_TYPE_WORKING_PAPER,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -36,6 +37,7 @@ import {
     validateSeminarPaper,
     validateThesis,
     validateVideo,
+    validateWorkingPaper,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -129,6 +131,10 @@ export default values => {
         case PUBLICATION_TYPE_VIDEO_DOCUMENT:
             const videoErrors = validateVideo(data, locale);
             errors = deepmerge(errors, videoErrors);
+            break;
+        case PUBLICATION_TYPE_WORKING_PAPER:
+            const workingPaperErrors = validateWorkingPaper(data, locale);
+            errors = deepmerge(errors, workingPaperErrors);
             break;
         default:
             break;

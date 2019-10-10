@@ -21,4 +21,4 @@ export { default as researchReportFields, validateResearchReport } from './resea
 export { default as seminarPaperFields, validateSeminarPaper } from './seminarPaperFields';
 export { default as thesisFields, validateThesis } from './thesisFields';
 export { default as videoFields, validateVideo } from './videoFields';
-export { default as workingPaperFields } from './workingPaperFields';
+export { default as workingPaperFields, validateWorkingPaper } from './workingPaperFields';
