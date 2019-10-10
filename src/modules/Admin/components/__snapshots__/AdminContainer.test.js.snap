@@ -3216,7 +3216,6 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 </h4>
                                               </Typography>
                                             </WithStyles(Typography)>
-                                            )
                                           </div>
                                         </Grid>
                                       </WithStyles(Grid)>

@@ -110,7 +110,6 @@ export const AdminInterface = ({
                                 ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
-                        )
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
