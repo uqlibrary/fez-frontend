@@ -34,6 +34,20 @@ Cypress.Commands.add('type_ckeditor', (element, content) => {
         });
 });
 
+// Read text from CKEditor instance
+// Usage example:
+// cy.read_ckeditor('editor1')
+//     .then(text => {
+//         cy.wrap(text)
+//             .should('eq', expected);
+//     });
+Cypress.Commands.add('read_ckeditor', element => {
+    cy.window()
+        .then(win => {
+            return win.CKEDITOR.instances[element].getData();
+        });
+});
+
 Cypress.Commands.add('closeUnsupported', () => {
     cy.get('#unsupportedBrowser.card button')
         .then($button => {
