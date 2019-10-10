@@ -17,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
-import Close from '@material-ui/icons/Close';
 
 import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import { isFileValid } from 'config/validation';
@@ -44,9 +43,6 @@ export const useStyles = makeStyles(
         },
         thumbIconCentered: {
             textAlign: 'center',
-        },
-        embargoDateBlock: {
-            backgroundColor: `${theme.palette.secondary.light}`,
         },
     }),
     { withTheme: true },
@@ -227,7 +223,6 @@ export const AttachedFiles = ({
     dataStreams,
     hideCulturalSensitivityStatement,
     setHideCulturalSensitivityStatement,
-    clearDateHint,
     disabled,
     deleteHint,
     onDelete,
@@ -251,7 +246,6 @@ export const AttachedFiles = ({
     const onEmbargoDateChange = index => value =>
         onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-    const _clearEmbargoDate = index => () => onDateChange('dsi_embargo_date', '', index);
 
     return (
         <Grid item xs={12}>
@@ -354,36 +348,14 @@ export const AttachedFiles = ({
                             </Hidden>
                             {isAdmin && canEdit && (
                                 <React.Fragment>
-                                    <Grid item xs={2} className={classes.embargoDateBlock}>
+                                    <Grid item xs={2}>
                                         {(!!item.embargoDate || !!item.openAccessStatus.isOpenAccess) && (
                                             <FileUploadEmbargoDate
-                                                value={
-                                                    !!item.embargoDate &&
-                                                    moment(item.embargoDate).isSameOrAfter(moment())
-                                                        ? new Date(item.embargoDate)
-                                                        : ''
-                                                }
+                                                value={!!item.embargoDate ? new Date(item.embargoDate) : ''}
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
                                         )}
-                                    </Grid>
-                                    <Grid item xs sm="auto" className={classes.embargoDateBlock}>
-                                        <Tooltip title={clearDateHint}>
-                                            <div style={{ display: 'inline' }}>
-                                                <IconButton
-                                                    style={{ marginTop: -10, marginBottom: -10 }}
-                                                    className="deleteFieldButton"
-                                                    onClick={_clearEmbargoDate(index)}
-                                                    disabled={
-                                                        !item.embargoDate ||
-                                                        item.embargoDate <= moment().format('YYYY-MM-DD')
-                                                    }
-                                                >
-                                                    <Close />
-                                                </IconButton>
-                                            </div>
-                                        </Tooltip>
                                     </Grid>
                                     <Grid item xs style={{ textAlign: 'right' }}>
                                         <Tooltip title={deleteHint}>
@@ -407,7 +379,6 @@ AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
     hideCulturalSensitivityStatement: PropTypes.bool,
     setHideCulturalSensitivityStatement: PropTypes.func,
-    clearDateHint: PropTypes.string,
     disabled: PropTypes.bool,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
@@ -418,7 +389,6 @@ AttachedFiles.propTypes = {
 };
 
 AttachedFiles.defaultProps = {
-    clearDateHint: 'Clear this date',
     deleteHint: 'Remove this file',
     canEdit: false,
 };
