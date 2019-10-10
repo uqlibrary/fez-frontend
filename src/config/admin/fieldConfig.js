@@ -939,6 +939,8 @@ export default {
             label: 'Rights',
             placeholder: '',
             multiline: true,
+            required: true,
+            validate: [validation.required],
         },
     },
     fez_record_search_key_acknowledgements: {

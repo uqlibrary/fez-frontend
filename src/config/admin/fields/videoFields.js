@@ -71,3 +71,27 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateVideo = (
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
+            fez_record_search_key_rights: {
+                rek_rights: summary.rek_rights,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});

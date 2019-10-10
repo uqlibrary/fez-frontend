@@ -16,6 +16,7 @@ import {
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_SEMINAR_PAPER,
     PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_VIDEO_DOCUMENT,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -34,6 +35,7 @@ import {
     validateResearchReport,
     validateSeminarPaper,
     validateThesis,
+    validateVideo,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -123,6 +125,10 @@ export default values => {
         case PUBLICATION_TYPE_THESIS:
             const thesisErrors = validateThesis(data, locale);
             errors = deepmerge(errors, thesisErrors);
+            break;
+        case PUBLICATION_TYPE_VIDEO_DOCUMENT:
+            const videoErrors = validateVideo(data, locale);
+            errors = deepmerge(errors, videoErrors);
             break;
         default:
             break;

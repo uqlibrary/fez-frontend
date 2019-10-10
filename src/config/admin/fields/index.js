@@ -20,5 +20,5 @@ export { default as preprintFields, validatePreprint } from './preprintFields';
 export { default as researchReportFields, validateResearchReport } from './researchReportFields';
 export { default as seminarPaperFields, validateSeminarPaper } from './seminarPaperFields';
 export { default as thesisFields, validateThesis } from './thesisFields';
-export { default as videoFields } from './videoFields';
+export { default as videoFields, validateVideo } from './videoFields';
 export { default as workingPaperFields } from './workingPaperFields';

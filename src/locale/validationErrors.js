@@ -113,5 +113,6 @@ export default {
         rek_audience_size: 'Audience size is required',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
         subjects: 'Subjects are required',
+        rek_rights: 'Rights is required',
     },
 };
