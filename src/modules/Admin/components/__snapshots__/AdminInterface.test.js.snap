@@ -44,7 +44,6 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
@@ -250,7 +249,6 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
@@ -426,7 +424,6 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
@@ -609,7 +606,6 @@ exports[`AdminInterface component should render default view as a full form view
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
@@ -778,7 +774,6 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
@@ -947,7 +942,6 @@ exports[`AdminInterface component should render in create mode 1`] = `
       >
         Add a new Thesis
       </WithStyles(Typography)>
-      )
     </WithStyles(Grid)>
     <Hidden
       implementation="js"
