@@ -7,6 +7,7 @@ import {
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_JOURNAL,
@@ -31,6 +32,7 @@ import {
     validateDataCollection,
     validateDepartmentTechnicalReport,
     validateDesign,
+    validateDigilibImage,
     validateImage,
     validateJournalArticle,
     validateJournal,
@@ -105,6 +107,10 @@ export default values => {
         case PUBLICATION_TYPE_DESIGN:
             const designErrors = validateDesign(data, locale);
             errors = deepmerge(errors, designErrors);
+            break;
+        case PUBLICATION_TYPE_DIGILIB_IMAGE:
+            const digilibImageErrors = validateDigilibImage(data, locale);
+            errors = deepmerge(errors, digilibImageErrors);
             break;
         case PUBLICATION_TYPE_IMAGE:
             const imageErrors = validateImage(data, locale);
