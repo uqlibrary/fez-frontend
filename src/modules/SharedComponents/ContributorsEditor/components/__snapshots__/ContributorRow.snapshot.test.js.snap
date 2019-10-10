@@ -2,8 +2,7 @@
 
 exports[`Component ContributorRow Row should be clickable when showContributorAssignment set to true 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -163,8 +162,7 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
 
 exports[`Component ContributorRow Row should not be clickable when showContributorAssignment set to false 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -324,8 +322,7 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -449,8 +446,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor set, renders only name and delete button for mobile view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -574,8 +570,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor set, renders reorder buttons, contributor assignment & delete button 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -779,8 +774,7 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -904,8 +898,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and contributor with author details set and set as selected for mobile view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1029,8 +1022,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and contributor with author details set, contributor author details & delete button 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1190,8 +1182,7 @@ exports[`Component ContributorRow a row with index and contributor with author d
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1339,8 +1330,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 
 exports[`Component ContributorRow a row with index and creator with creator role set and set as selected for mobile view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1488,8 +1478,7 @@ exports[`Component ContributorRow a row with index and creator with creator role
 
 exports[`Component ContributorRow should assign contributor 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1648,8 +1637,7 @@ exports[`Component ContributorRow should assign contributor 1`] = `
 
 exports[`Component ContributorRow should call callback functions on ListItem 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -1943,8 +1931,7 @@ Object {
 
 exports[`Component ContributorRow should render row as required 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -2337,16 +2324,7 @@ exports[`Component ContributorRow should render row with student author title in
 
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[Function]}
     onRef={[Function]}
   />

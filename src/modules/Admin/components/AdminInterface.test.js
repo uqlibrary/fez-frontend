@@ -270,7 +270,7 @@ describe('AdminInterface component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
 
         wrapper
-            .find('ConfirmDialogBox')
+            .find('WithStyles(ConfirmDialogBox)')
             .props()
             .onAction();
         expect(toJson(wrapper)).toMatchSnapshot();

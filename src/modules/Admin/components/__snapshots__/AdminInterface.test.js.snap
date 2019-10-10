@@ -12,8 +12,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       }
     }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Cancel",
@@ -190,8 +189,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       }
     }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Cancel",
@@ -367,8 +365,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       }
     }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Cancel",
@@ -544,8 +541,7 @@ exports[`AdminInterface component should render default view as a full form view
       }
     }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Cancel",
@@ -696,8 +692,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       }
     }
   >
-    <ConfirmDialogBox
-      hideCancelButton={false}
+    <WithStyles(ConfirmDialogBox)
       locale={
         Object {
           "cancelButtonLabel": "Cancel",

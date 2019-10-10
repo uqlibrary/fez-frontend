@@ -997,11 +997,11 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -1018,7 +1018,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -1035,8 +1035,10 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -1179,12 +1181,28 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -1197,6 +1215,8 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -1910,11 +1930,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -1931,7 +1951,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -1948,8 +1968,10 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -2115,12 +2137,28 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -2133,6 +2171,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -3131,11 +3171,11 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -3152,7 +3192,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -3169,8 +3209,10 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -3356,12 +3398,28 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -3374,6 +3432,8 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -4080,11 +4140,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -4101,7 +4161,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -4118,8 +4178,10 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -4242,12 +4304,28 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -4260,6 +4338,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -5361,11 +5441,11 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -5382,7 +5462,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -5399,8 +5479,10 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -5691,12 +5773,28 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -5709,6 +5807,8 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -6810,11 +6910,11 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -6831,7 +6931,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -6848,8 +6948,10 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -7140,12 +7242,28 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -7158,6 +7276,8 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -8259,11 +8379,11 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -8280,7 +8400,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -8297,8 +8417,10 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -8589,12 +8711,28 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -8607,6 +8745,8 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -9708,11 +9848,11 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -9729,7 +9869,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -9746,8 +9886,10 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -10038,12 +10180,28 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -10056,6 +10214,8 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -11094,12 +11254,28 @@ exports[`Component ClaimRecord  should render publication citation, error messag
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -12200,11 +12376,11 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -12216,7 +12392,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   xs={12}
                 >
                   <WithStyles(Alert)
-                    message="Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators."
+                    message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
                     pushToTop={true}
                     title="File upload and/or edits/changes/comments post failed"
                     type="warning"
@@ -12236,7 +12412,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -12253,8 +12429,10 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={true}
       />
       <NavigationDialogBox
         txt={
@@ -12545,12 +12723,28 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -12563,6 +12757,8 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -13664,11 +13860,11 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -13685,7 +13881,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -13702,8 +13898,10 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -13994,12 +14192,28 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -14012,6 +14226,8 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -15113,11 +15329,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -15134,7 +15350,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -15151,8 +15367,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -15455,12 +15673,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={true}
@@ -15473,6 +15707,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -16575,11 +16811,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -16596,7 +16832,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -16613,8 +16849,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -16916,12 +17154,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -16934,6 +17188,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -18035,11 +18291,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -18056,7 +18312,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -18073,8 +18329,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -18377,12 +18635,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -18395,6 +18669,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -19496,11 +19772,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -19517,7 +19793,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -19534,8 +19810,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -19849,12 +20127,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -19867,6 +20161,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -19910,11 +20206,11 @@ exports[`Component ClaimRecord  should return and render alert message depending
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -19931,7 +20227,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -19948,8 +20244,10 @@ exports[`Component ClaimRecord  should return and render alert message depending
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -20104,12 +20402,28 @@ exports[`Component ClaimRecord  should return and render alert message depending
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -20122,6 +20436,8 @@ exports[`Component ClaimRecord  should return and render alert message depending
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           color="primary"
@@ -20161,11 +20477,11 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
           />
         </StandardCard>
       </WithStyles(Grid)>
-      <ConfirmDialogBox
-        hideCancelButton={false}
+      <WithStyles(ConfirmDialogBox)
         locale={
           Object {
             "addRecordButtonLabel": "Add another missing record",
+            "alternateActionButtonLabel": "Fix record",
             "cancelButtonLabel": "Claim more publications",
             "confirmButtonLabel": "Go to my research",
             "confirmationMessage": <React.Fragment>
@@ -20182,7 +20498,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
             </React.Fragment>,
             "confirmationTitle": "Claim has been submitted",
             "fileFailConfirmationAlert": Object {
-              "message": "Retry uploading files and/or posting edits/changes/comments about this claim via \\"Fix record\\" screen or contact eSpace administrators.",
+              "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
               "title": "File upload and/or edits/changes/comments post failed",
               "type": "warning",
             },
@@ -20199,8 +20515,10 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
           }
         }
         onAction={[Function]}
+        onAlternateAction={[Function]}
         onCancelAction={[Function]}
         onRef={[Function]}
+        showAlternateActionButton={false}
       />
       <NavigationDialogBox
         txt={
@@ -20355,12 +20673,28 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
@@ -21495,12 +21829,28 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
       container={true}
       spacing={24}
     >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={true}
+        />
+      </Hidden>
       <WithStyles(Grid)
         item={true}
-        xs={true}
-      />
-      <WithStyles(Grid)
-        item={true}
+        sm="auto"
+        xs={12}
       >
         <WithStyles(Button)
           disabled={false}
