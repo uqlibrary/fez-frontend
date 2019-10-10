@@ -21,8 +21,7 @@ exports[`Component FileUploadRowHeader should render with access condition and e
   xsDown={false}
   xsUp={false}
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -124,8 +123,7 @@ exports[`Component FileUploadRowHeader should render with default setup 1`] = `
   xsDown={false}
   xsUp={false}
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -249,8 +247,7 @@ exports[`Component FileUploadRowHeader should render without access condition ev
   xsDown={false}
   xsUp={false}
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",

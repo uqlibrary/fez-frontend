@@ -82,8 +82,7 @@ describe('Component ClaimRecord ', () => {
                 }),
             },
         });
-
-        expect(wrapper.find('ConfirmDialogBox').props().locale.cancelButtonLabel).toBe(
+        expect(wrapper.find('WithStyles(ConfirmDialogBox)').props().locale.cancelButtonLabel).toBe(
             locale.forms.claimPublicationForm.successWorkflowConfirmation.addRecordButtonLabel,
         );
     });
@@ -422,11 +421,15 @@ describe('Component ClaimRecord ', () => {
         const goBack = jest.fn();
 
         const wrapper = setup({ history: { push: testMethod, goBack: goBack } });
+
         wrapper.instance()._navigateToMyResearch();
         expect(testMethod).toHaveBeenCalledWith('/records/mine');
 
         wrapper.instance()._cancelClaim();
         expect(goBack).toHaveBeenCalled();
+
+        wrapper.instance()._navigateToFixRecord();
+        expect(testMethod).toHaveBeenCalledWith('/records/UQ:676287/fix');
     });
 
     it('should redirect back to previous location on claim more publications', () => {

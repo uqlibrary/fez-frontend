@@ -86,7 +86,7 @@ describe('ListRow renders ', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper
-            .find('ConfirmDialogBox')
+            .find('WithStyles(ConfirmDialogBox)')
             .props()
             .onAction();
         expect(onDeleteFn).toHaveBeenCalled();

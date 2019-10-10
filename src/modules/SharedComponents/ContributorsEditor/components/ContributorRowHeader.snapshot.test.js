@@ -60,7 +60,7 @@ describe('Component ContributorRowHeader', () => {
     it('set confirmation box ref', () => {
         const wrapper = setup();
         wrapper
-            .find('ConfirmDialogBox')
+            .find('WithStyles(ConfirmDialogBox)')
             .props()
             .onRef('testRef');
         expect(wrapper.instance().confirmationBox).toBe('testRef');

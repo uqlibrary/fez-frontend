@@ -1,19 +1,36 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import Dialog from '@material-ui/core/Dialog';
 import Button from '@material-ui/core/Button';
+import Dialog from '@material-ui/core/Dialog';
 import DialogTitle from '@material-ui/core/DialogTitle';
 import DialogActions from '@material-ui/core/DialogActions';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogContent from '@material-ui/core/DialogContent';
+import { withStyles } from '@material-ui/core/styles';
+import Grid from '@material-ui/core/Grid';
+import Hidden from '@material-ui/core/Hidden';
 
-export default class ConfirmDialogBox extends Component {
+export const styles = theme => ({
+    alternateActionButtonClass: {
+        color: ((theme.palette || {}).white || {}).main,
+        backgroundColor: ((theme.palette || {}).warning || {}).main,
+        '&:hover': {
+            backgroundColor: ((theme.palette || {}).warning || {}).dark,
+        },
+    },
+});
+
+export class ConfirmDialogBox extends Component {
     static propTypes = {
+        className: PropTypes.string,
+        classes: PropTypes.object,
+        hideCancelButton: PropTypes.bool,
         locale: PropTypes.object,
         onAction: PropTypes.func,
         onCancelAction: PropTypes.func,
-        hideCancelButton: PropTypes.bool,
+        onAlternateAction: PropTypes.func,
         onRef: PropTypes.func,
+        showAlternateActionButton: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -24,12 +41,14 @@ export default class ConfirmDialogBox extends Component {
             cancelButtonLabel: 'No',
             confirmButtonLabel: 'Yes',
         },
+        showAlternateActionButton: false,
     };
 
     constructor(props) {
         super(props);
 
         this._onCancelAction = this._onCancelAction.bind(this);
+        this._onAlternateAction = this._onAlternateAction.bind(this);
         this._hideConfirmation = this._hideConfirmation.bind(this);
         this._onAction = this._onAction.bind(this);
 
@@ -68,7 +87,13 @@ export default class ConfirmDialogBox extends Component {
         !!this.props.onCancelAction && this.props.onCancelAction();
     }
 
+    _onAlternateAction() {
+        this._hideConfirmation();
+        !!this.props.onAlternateAction && this.props.onAlternateAction();
+    }
+
     render() {
+        const { classes } = this.props;
         return (
             <Dialog style={{ padding: 6 }} open={this.state.isDialogOpen}>
                 <DialogTitle>{this.props.locale.confirmationTitle}</DialogTitle>
@@ -76,22 +101,47 @@ export default class ConfirmDialogBox extends Component {
                     <DialogContentText>{this.props.locale.confirmationMessage}</DialogContentText>
                 </DialogContent>
                 <DialogActions>
-                    <Button
-                        children={this.props.locale.confirmButtonLabel}
-                        autoFocus
-                        color={'primary'}
-                        onClick={this._onAction}
-                    />
-                    {!this.props.hideCancelButton && (
-                        <Button
-                            variant={'contained'}
-                            color={'primary'}
-                            children={this.props.locale.cancelButtonLabel}
-                            onClick={this._onCancelAction}
-                        />
-                    )}
+                    <Grid container spacing={8}>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} sm={'auto'}>
+                            <Button
+                                children={this.props.locale.confirmButtonLabel}
+                                autoFocus
+                                color={'primary'}
+                                fullWidth
+                                onClick={this._onAction}
+                            />
+                        </Grid>
+                        {this.props.showAlternateActionButton && (
+                            // an optional middle button that will display in a warning colour
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    className={classes.alternateActionButtonClass}
+                                    children={this.props.locale.alternateActionButtonLabel}
+                                    fullWidth
+                                    onClick={this._onAlternateAction}
+                                />
+                            </Grid>
+                        )}
+                        {!this.props.hideCancelButton && (
+                            <Grid item xs={12} sm={'auto'}>
+                                <Button
+                                    variant={'contained'}
+                                    color={'primary'}
+                                    children={this.props.locale.cancelButtonLabel}
+                                    fullWidth
+                                    onClick={this._onCancelAction}
+                                />
+                            </Grid>
+                        )}
+                    </Grid>
                 </DialogActions>
             </Dialog>
         );
     }
 }
+
+export default withStyles(styles)(ConfirmDialogBox);

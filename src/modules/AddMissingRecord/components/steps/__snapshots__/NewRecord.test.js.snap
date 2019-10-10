@@ -4,10 +4,10 @@ exports[`Add new record should not render publication form if author is not load
 
 exports[`Add new record should render alert about file uploading or issue error 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
+        "alternateActionButtonLabel": "Fix record",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
@@ -19,7 +19,7 @@ exports[`Add new record should render alert about file uploading or issue error 
             xs={12}
           >
             <WithStyles(Alert)
-              message="Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators."
+              message="Retry via \\"Fix record\\" screen or contact eSpace administrators."
               title="File upload and/or notes post failed"
               type="warning"
             />
@@ -33,7 +33,7 @@ exports[`Add new record should render alert about file uploading or issue error 
         </WithStyles(Grid)>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -46,8 +46,10 @@ exports[`Add new record should render alert about file uploading or issue error 
       }
     }
     onAction={[Function]}
+    onAlternateAction={[Function]}
     onCancelAction={[Function]}
     onRef={[Function]}
+    showAlternateActionButton={true}
   />
   <Connect(ReduxForm)
     initialValues={
@@ -69,10 +71,10 @@ exports[`Add new record should render alert about file uploading or issue error 
 
 exports[`Add new record should render stepper and a publication form 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
+        "alternateActionButtonLabel": "Fix record",
         "cancelButtonLabel": "Add another missing work",
         "confirmButtonLabel": "Go to my research",
         "confirmationMessage": <WithStyles(Grid)
@@ -93,7 +95,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
         </WithStyles(Grid)>,
         "confirmationTitle": "Your work has been submitted",
         "fileFailConfirmationAlert": Object {
-          "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
           "title": "File upload and/or notes post failed",
           "type": "warning",
         },
@@ -106,6 +108,7 @@ exports[`Add new record should render stepper and a publication form 1`] = `
       }
     }
     onAction={[Function]}
+    onAlternateAction={[Function]}
     onCancelAction={[Function]}
     onRef={[Function]}
   />
@@ -128,10 +131,10 @@ exports[`Add new record should render stepper and a publication form 1`] = `
 `;
 
 exports[`Add new record should render the confirm dialog with an alert for failed file upload 1`] = `
-<ConfirmDialogBox
-  hideCancelButton={false}
+<WithStyles(ConfirmDialogBox)
   locale={
     Object {
+      "alternateActionButtonLabel": "Fix record",
       "cancelButtonLabel": "Add another missing work",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(Grid)
@@ -152,7 +155,7 @@ exports[`Add new record should render the confirm dialog with an alert for faile
       </WithStyles(Grid)>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
@@ -165,80 +168,107 @@ exports[`Add new record should render the confirm dialog with an alert for faile
     }
   }
   onAction={[Function]}
+  onAlternateAction={[Function]}
   onCancelAction={[Function]}
   onRef={[Function]}
 >
-  <WithStyles(Dialog)
-    open={false}
-    style={
+  <ConfirmDialogBox
+    classes={
       Object {
-        "padding": 6,
+        "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-1",
       }
     }
-  >
-    <Dialog
-      PaperComponent={[Function]}
-      TransitionComponent={[Function]}
-      classes={
-        Object {
-          "container": "MuiDialog-container-4",
-          "paper": "MuiDialog-paper-5",
-          "paperFullScreen": "MuiDialog-paperFullScreen-14",
-          "paperFullWidth": "MuiDialog-paperFullWidth-13",
-          "paperScrollBody": "MuiDialog-paperScrollBody-7",
-          "paperScrollPaper": "MuiDialog-paperScrollPaper-6",
-          "paperWidthLg": "MuiDialog-paperWidthLg-11",
-          "paperWidthMd": "MuiDialog-paperWidthMd-10",
-          "paperWidthSm": "MuiDialog-paperWidthSm-9",
-          "paperWidthXl": "MuiDialog-paperWidthXl-12",
-          "paperWidthXs": "MuiDialog-paperWidthXs-8",
-          "root": "MuiDialog-root-1",
-          "scrollBody": "MuiDialog-scrollBody-3",
-          "scrollPaper": "MuiDialog-scrollPaper-2",
-        }
+    hideCancelButton={false}
+    locale={
+      Object {
+        "alternateActionButtonLabel": "Fix record",
+        "cancelButtonLabel": "Add another missing work",
+        "confirmButtonLabel": "Go to my research",
+        "confirmationMessage": <WithStyles(Grid)
+          container={true}
+          spacing={24}
+        >
+          <WithStyles(Grid)
+            item={true}
+            xs={12}
+          >
+            <p>
+              Your work has been saved.
+              <br />
+              <br />
+              Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+            </p>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>,
+        "confirmationTitle": "Your work has been submitted",
+        "fileFailConfirmationAlert": Object {
+          "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
+          "title": "File upload and/or notes post failed",
+          "type": "warning",
+        },
+        "recordSuccessConfirmationMessage": <p>
+          Your work has been saved.
+          <br />
+          <br />
+          Your work will be published immediately and a UQ eSpace Research Outputs Officer will review the record.
+        </p>,
       }
-      disableBackdropClick={false}
-      disableEscapeKeyDown={false}
-      fullScreen={false}
-      fullWidth={false}
-      maxWidth="sm"
+    }
+    onAction={[Function]}
+    onAlternateAction={[Function]}
+    onCancelAction={[Function]}
+    onRef={[Function]}
+    showAlternateActionButton={false}
+  >
+    <WithStyles(Dialog)
       open={false}
-      scroll="paper"
       style={
         Object {
           "padding": 6,
         }
       }
-      transitionDuration={
-        Object {
-          "enter": 225,
-          "exit": 195,
-        }
-      }
     >
-      <WithStyles(Modal)
-        BackdropProps={
+      <Dialog
+        PaperComponent={[Function]}
+        TransitionComponent={[Function]}
+        classes={
           Object {
-            "transitionDuration": Object {
-              "enter": 225,
-              "exit": 195,
-            },
+            "container": "MuiDialog-container-5",
+            "paper": "MuiDialog-paper-6",
+            "paperFullScreen": "MuiDialog-paperFullScreen-15",
+            "paperFullWidth": "MuiDialog-paperFullWidth-14",
+            "paperScrollBody": "MuiDialog-paperScrollBody-8",
+            "paperScrollPaper": "MuiDialog-paperScrollPaper-7",
+            "paperWidthLg": "MuiDialog-paperWidthLg-12",
+            "paperWidthMd": "MuiDialog-paperWidthMd-11",
+            "paperWidthSm": "MuiDialog-paperWidthSm-10",
+            "paperWidthXl": "MuiDialog-paperWidthXl-13",
+            "paperWidthXs": "MuiDialog-paperWidthXs-9",
+            "root": "MuiDialog-root-2",
+            "scrollBody": "MuiDialog-scrollBody-4",
+            "scrollPaper": "MuiDialog-scrollPaper-3",
           }
         }
-        className="MuiDialog-root-1"
-        closeAfterTransition={true}
         disableBackdropClick={false}
         disableEscapeKeyDown={false}
+        fullScreen={false}
+        fullWidth={false}
+        maxWidth="sm"
         open={false}
-        role="dialog"
+        scroll="paper"
         style={
           Object {
             "padding": 6,
           }
         }
+        transitionDuration={
+          Object {
+            "enter": 225,
+            "exit": 195,
+          }
+        }
       >
-        <Modal
-          BackdropComponent={[Function]}
+        <WithStyles(Modal)
           BackdropProps={
             Object {
               "transitionDuration": Object {
@@ -247,30 +277,10 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               },
             }
           }
-          className="MuiDialog-root-1"
-          classes={
-            Object {
-              "hidden": "MuiModal-hidden-16",
-              "root": "MuiModal-root-15",
-            }
-          }
+          className="MuiDialog-root-2"
           closeAfterTransition={true}
-          disableAutoFocus={false}
           disableBackdropClick={false}
-          disableEnforceFocus={false}
           disableEscapeKeyDown={false}
-          disablePortal={false}
-          disableRestoreFocus={false}
-          hideBackdrop={false}
-          keepMounted={false}
-          manager={
-            ModalManager {
-              "data": Array [],
-              "handleContainerOverflow": true,
-              "hideSiblingNodes": true,
-              "modals": Array [],
-            }
-          }
           open={false}
           role="dialog"
           style={
@@ -278,18 +288,61 @@ exports[`Add new record should render the confirm dialog with an alert for faile
               "padding": 6,
             }
           }
-        />
-      </WithStyles(Modal)>
-    </Dialog>
-  </WithStyles(Dialog)>
-</ConfirmDialogBox>
+        >
+          <Modal
+            BackdropComponent={[Function]}
+            BackdropProps={
+              Object {
+                "transitionDuration": Object {
+                  "enter": 225,
+                  "exit": 195,
+                },
+              }
+            }
+            className="MuiDialog-root-2"
+            classes={
+              Object {
+                "hidden": "MuiModal-hidden-17",
+                "root": "MuiModal-root-16",
+              }
+            }
+            closeAfterTransition={true}
+            disableAutoFocus={false}
+            disableBackdropClick={false}
+            disableEnforceFocus={false}
+            disableEscapeKeyDown={false}
+            disablePortal={false}
+            disableRestoreFocus={false}
+            hideBackdrop={false}
+            keepMounted={false}
+            manager={
+              ModalManager {
+                "data": Array [],
+                "handleContainerOverflow": true,
+                "hideSiblingNodes": true,
+                "modals": Array [],
+              }
+            }
+            open={false}
+            role="dialog"
+            style={
+              Object {
+                "padding": 6,
+              }
+            }
+          />
+        </WithStyles(Modal)>
+      </Dialog>
+    </WithStyles(Dialog)>
+  </ConfirmDialogBox>
+</WithStyles(ConfirmDialogBox)>
 `;
 
 exports[`Add new record should render the confirm dialog without an alert for a succcessful file upload 1`] = `
-<ConfirmDialogBox
-  hideCancelButton={false}
+<WithStyles(ConfirmDialogBox)
   locale={
     Object {
+      "alternateActionButtonLabel": "Fix record",
       "cancelButtonLabel": "Add another missing work",
       "confirmButtonLabel": "Go to my research",
       "confirmationMessage": <WithStyles(Grid)
@@ -310,7 +363,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
       </WithStyles(Grid)>,
       "confirmationTitle": "Your work has been submitted",
       "fileFailConfirmationAlert": Object {
-        "message": "Retry uploading files and/or submitting notes via \\"Fix record\\" screen or contact eSpace administrators.",
+        "message": "Retry via \\"Fix record\\" screen or contact eSpace administrators.",
         "title": "File upload and/or notes post failed",
         "type": "warning",
       },
@@ -323,6 +376,7 @@ exports[`Add new record should render the confirm dialog without an alert for a 
     }
   }
   onAction={[Function]}
+  onAlternateAction={[Function]}
   onCancelAction={[Function]}
   onRef={[Function]}
 />
