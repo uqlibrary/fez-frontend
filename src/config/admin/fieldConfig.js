@@ -980,6 +980,16 @@ export default {
             placeholder: '',
         },
     },
+    physicalDescription: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.physicalDescription',
+            fullWidth: true,
+            label: 'Physical description',
+            multiline: true,
+            placeholder: '',
+        },
+    },
     fez_record_search_key_alternate_genre: {
         component: AlternateGenreField,
         componentProps: {
@@ -1126,6 +1136,15 @@ export default {
             ...formLocale.addDataset.information.project.fieldLabels.projectName,
         },
     },
+    projectNameOptional: {
+        component: GenericTextField,
+        componentProps: {
+            name: 'bibliographicSection.projectNameOptional',
+            label: 'Project name',
+            fullWidth: true,
+            required: false,
+        },
+    },
     fez_record_search_key_project_description: {
         component: GenericTextField,
         componentProps: {
@@ -1137,6 +1156,15 @@ export default {
             rows: 5,
             multiline: true,
             ...formLocale.addDataset.information.project.fieldLabels.projectDescription,
+        },
+    },
+    fez_record_search_key_project_start_date: {
+        component: DatePickerField,
+        componentProps: {
+            name: 'bibliographicSection.fez_record_search_key_project_start_date',
+            label: 'Project start date',
+            placeholder: 'Project start date',
+            fullWidth: true,
         },
     },
     fez_record_search_key_start_date: {
@@ -1246,6 +1274,24 @@ export default {
             fullWidth: true,
             label: 'Translated newspaper',
             name: 'bibliographicSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_scale: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Scale',
+            name: 'bibliographicSection.fez_record_search_key_scale',
+            placeholder: '',
+        },
+    },
+    fez_record_search_key_job_number: {
+        component: GenericTextField,
+        componentProps: {
+            fullWidth: true,
+            label: 'Job number',
+            name: 'bibliographicSection.fez_record_search_key_job_number',
             placeholder: '',
         },
     },
@@ -1414,6 +1460,15 @@ export default {
             name: 'authorsSection.architects',
             showIdentifierLookup: true,
             locale: locale.components.architects.field,
+            canEdit: true,
+        },
+    },
+    creators: {
+        component: ContributorsEditorField,
+        componentProps: {
+            name: 'authorsSection.creators',
+            showIdentifierLookup: true,
+            locale: locale.components.designCreators.field,
             canEdit: true,
         },
     },
