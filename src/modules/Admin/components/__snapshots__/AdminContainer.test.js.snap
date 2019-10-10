@@ -2693,7 +2693,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   "fontSize": 24,
                                                 }
                                               }
-                                              variant="h4"
+                                              variant="h2"
                                             >
                                               <Typography
                                                 align="inherit"
@@ -3202,10 +3202,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                     },
                                                   }
                                                 }
-                                                variant="h4"
+                                                variant="h2"
                                               >
-                                                <h4
-                                                  className="MuiTypography-root-120 MuiTypography-h4-135 MuiTypography-colorPrimary-150"
+                                                <h2
+                                                  className="MuiTypography-root-120 MuiTypography-h2-133 MuiTypography-colorPrimary-150"
                                                   style={
                                                     Object {
                                                       "fontSize": 24,
@@ -3213,7 +3213,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                   }
                                                 >
                                                   Edit Working Paper - My UQ eSpace - Instructions for depositing, checking and claiming publications: UQ:252236
-                                                </h4>
+                                                </h2>
                                               </Typography>
                                             </WithStyles(Typography)>
                                             )

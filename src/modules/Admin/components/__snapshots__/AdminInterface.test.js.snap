@@ -40,7 +40,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
             "fontSize": 24,
           }
         }
-        variant="h4"
+        variant="h2"
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
@@ -246,7 +246,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
             "fontSize": 24,
           }
         }
-        variant="h4"
+        variant="h2"
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
@@ -422,7 +422,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
             "fontSize": 24,
           }
         }
-        variant="h4"
+        variant="h2"
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
@@ -605,7 +605,7 @@ exports[`AdminInterface component should render default view as a full form view
             "fontSize": 24,
           }
         }
-        variant="h4"
+        variant="h2"
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
@@ -774,7 +774,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
             "fontSize": 24,
           }
         }
-        variant="h4"
+        variant="h2"
       >
         Edit Journal Article - This is test record: UQ:123456
       </WithStyles(Typography)>
@@ -904,9 +904,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
 `;
 
 exports[`AdminInterface component should render in create mode 1`] = `
-<StandardPage
-  title="Add a new Thesis"
->
+<StandardPage>
   <WithStyles(Grid)
     alignItems="center"
     container={true}
@@ -937,7 +935,20 @@ exports[`AdminInterface component should render in create mode 1`] = `
         }
       }
       xs={true}
-    />
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h2"
+      >
+        Add a new Thesis
+      </WithStyles(Typography)>
+      )
+    </WithStyles(Grid)>
     <Hidden
       implementation="js"
       lgDown={false}
