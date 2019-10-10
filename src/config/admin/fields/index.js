@@ -9,7 +9,7 @@ export {
     default as departmentTechnicalReportFields,
     validateDepartmentTechnicalReport,
 } from './departmentTechnicalReportFields';
-export { default as designFields } from './designFields';
+export { default as designFields, validateDesign } from './designFields';
 export { default as digilibImageFields } from './digilibImageFields';
 export { default as imageFields, validateImage } from './imageFields';
 export { default as journalArticleFields, validateJournalArticle } from './journalArticleFields';

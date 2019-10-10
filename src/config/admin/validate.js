@@ -20,6 +20,7 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
     PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DESIGN,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -29,6 +30,7 @@ import {
     validateConferenceProceedings,
     validateDataCollection,
     validateDepartmentTechnicalReport,
+    validateDesign,
     validateImage,
     validateJournalArticle,
     validateJournal,
@@ -99,6 +101,10 @@ export default values => {
         case PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT:
             const departmentTechnicalReportErrors = validateDepartmentTechnicalReport(data, locale);
             errors = deepmerge(errors, departmentTechnicalReportErrors);
+            break;
+        case PUBLICATION_TYPE_DESIGN:
+            const designErrors = validateDesign(data, locale);
+            errors = deepmerge(errors, designErrors);
             break;
         case PUBLICATION_TYPE_IMAGE:
             const imageErrors = validateImage(data, locale);
