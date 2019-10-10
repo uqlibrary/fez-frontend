@@ -77,7 +77,7 @@ describe('FileUploadRow', () => {
         expect(showConfirmationFn).not.toBeCalled();
 
         wrapper
-            .find('ConfirmDialogBox')
+            .find('WithStyles(ConfirmDialogBox)')
             .props()
             .onRef({
                 showConfirmation: showConfirmationFn,
@@ -90,7 +90,7 @@ describe('FileUploadRow', () => {
         expect(showConfirmationFn).toHaveBeenCalled();
 
         wrapper
-            .find('ConfirmDialogBox')
+            .find('WithStyles(ConfirmDialogBox)')
             .props()
             .onAction();
         expect(onDeleteFn).toHaveBeenCalled();

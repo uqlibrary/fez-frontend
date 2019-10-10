@@ -73,7 +73,7 @@ describe('Add new record', () => {
             },
             { isShallow: false },
         );
-        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
     });
 
     it('should render the confirm dialog without an alert for a succcessful file upload', () => {
@@ -83,13 +83,26 @@ describe('Add new record', () => {
             newRecordFileUploadingError: false,
             rawSearchQuery: 'This is a test',
         });
-        expect(toJson(wrapper.find('ConfirmDialogBox'))).toMatchSnapshot();
+        expect(toJson(wrapper.find('WithStyles(ConfirmDialogBox)'))).toMatchSnapshot();
+    });
+
+    it('should navigate to fix record', () => {
+        const navigateToFixRecord = jest.fn();
+        const history = {
+            push: navigateToFixRecord,
+        };
+        const wrapper = setup({ history: history, actions: { clearNewRecord: jest.fn() } });
+        wrapper.instance()._navigateToFixRecord();
+        expect(navigateToFixRecord).toBeCalled();
     });
 
     it('should render alert about file uploading or issue error', () => {
         const wrapper = setup({
             author: {},
             newRecordFileUploadingOrIssueError: true,
+            newRecord: {
+                rek_pid: 'UQ:111111',
+            },
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

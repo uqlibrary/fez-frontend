@@ -95,16 +95,7 @@ Object {
 
 exports[`GrantListEditorRow should render default mobile view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[Function]}
     onRef={[Function]}
   />
@@ -395,16 +386,7 @@ exports[`GrantListEditorRow should render default mobile view 1`] = `
 
 exports[`GrantListEditorRow should render default view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[Function]}
     onRef={[Function]}
   />
@@ -695,8 +677,7 @@ exports[`GrantListEditorRow should render default view 1`] = `
 
 exports[`GrantListEditorRow should render given grant data 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={Object {}}
     onAction={[Function]}
     onRef={[Function]}
@@ -996,8 +977,7 @@ exports[`GrantListEditorRow should render given grant data 1`] = `
 
 exports[`GrantListEditorRow should render given locale 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={Object {}}
     onAction={[Function]}
     onRef={[Function]}
@@ -1295,16 +1275,7 @@ exports[`GrantListEditorRow should render given locale 1`] = `
 
 exports[`GrantListEditorRow should show confirmation box 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[Function]}
     onRef={[Function]}
   />

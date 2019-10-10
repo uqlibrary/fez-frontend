@@ -10,8 +10,7 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -82,8 +81,7 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -183,8 +181,7 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -244,8 +241,7 @@ exports[`ListRow renders  should move row down 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -331,8 +327,7 @@ exports[`ListRow renders  should move row up 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
