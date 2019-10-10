@@ -15,7 +15,7 @@ export { default as journalArticleFields, validateJournalArticle } from './journ
 export { default as journalFields, validateJournal } from './journalFields';
 export { default as manuscriptFields, validateManuscript } from './manuscriptFields';
 export { default as newspaperArticleFields, validateNewspaperArticle } from './newspaperArticleFields';
-export { default as patentFields } from './patentFields';
+export { default as patentFields, validatePatent } from './patentFields';
 export { default as preprintFields, validatePreprint } from './preprintFields';
 export { default as researchReportFields, validateResearchReport } from './researchReportFields';
 export { default as seminarPaperFields, validateSeminarPaper } from './seminarPaperFields';
