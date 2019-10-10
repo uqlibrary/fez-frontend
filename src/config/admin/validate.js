@@ -18,6 +18,7 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -38,6 +39,7 @@ import {
     validateThesis,
     validateVideo,
     validateWorkingPaper,
+    validateCreativeWork,
 } from './fields';
 
 import deepmerge from 'deepmerge';
@@ -83,6 +85,10 @@ export default values => {
         case PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS:
             const conferenceProceedingsErrors = validateConferenceProceedings(data, locale);
             errors = deepmerge(errors, conferenceProceedingsErrors);
+            break;
+        case PUBLICATION_TYPE_CREATIVE_WORK:
+            const creativeWorkErrors = validateCreativeWork(data, locale);
+            errors = deepmerge(errors, creativeWorkErrors);
             break;
         case PUBLICATION_TYPE_DATA_COLLECTION:
             const dataCollectionErrors = validateDataCollection(data, locale);
