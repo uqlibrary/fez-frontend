@@ -23,15 +23,6 @@ describe('Component FileUploadEmbargoDate', () => {
         wrapper.instance()._onChange();
     });
 
-    it('should render when a undefined default value is passed', () => {
-        mockDate.reset();
-        const wrapper = setup({
-            value: undefined,
-        });
-        const currentTime = moment(new Date());
-        expect(moment(wrapper.instance().props.value).diff(currentTime, 'minutes')).toEqual(0);
-    });
-
     it('should render with default setup with styles', () => {
         const wrapper = getElement(FileUploadEmbargoDateWithStyles, {
             minDate: new Date('2016'),
