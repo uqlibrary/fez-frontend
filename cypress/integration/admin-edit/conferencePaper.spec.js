@@ -9,6 +9,11 @@ context('Conference Paper admin edit', () => {
         cy.wait(1000); // Wait for data load
     });
 
+    afterEach(() => {
+        cy.window()
+            .then(win => (win.onbeforeunload = undefined));
+    });
+
     it('should load expected tabs', () => {
         // cy.get('.StandardPage h3')
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')

@@ -12,7 +12,8 @@ context('Journal Article admin edit', () => {
     });
 
     afterEach(() => {
-        // cy.navToHomeFromMenu();
+        cy.window()
+            .then(win => (win.onbeforeunload = undefined));
     });
 
     it('should load with specifed elements', () => {
