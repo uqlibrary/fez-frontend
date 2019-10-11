@@ -358,7 +358,12 @@ export const AttachedFiles = ({
                                     <Grid item xs={2}>
                                         {(!!item.embargoDate || !!item.openAccessStatus.isOpenAccess) && (
                                             <FileUploadEmbargoDate
-                                                value={!!item.embargoDate ? new Date(item.embargoDate) : ''}
+                                                value={
+                                                    !!item.embargoDate &&
+                                                    moment(item.embargoDate).isSameOrAfter(moment())
+                                                        ? new Date(item.embargoDate)
+                                                        : ''
+                                                }
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
