@@ -28,7 +28,9 @@ export const onChangeCallbackFactory = (dataStreams, onChange) => {
 };
 
 export const AttachedFilesField = ({ input, ...props }) => {
-    const [dataStreams, setDataStreams] = useState((props.meta && props.meta.initial) || []);
+    const [dataStreams, setDataStreams] = useState(
+        (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [],
+    );
     const { onChange } = input;
 
     const handleDelete = useCallback(...deleteCallbackFactory(dataStreams, setDataStreams));

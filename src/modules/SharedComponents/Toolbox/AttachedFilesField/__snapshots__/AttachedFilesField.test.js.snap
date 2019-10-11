@@ -34,7 +34,7 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
   deleteHint="Remove this file"
   meta={
     Object {
-      "initial": Array [
+      "initial": Immutable.List [
         Object {
           "dsi_copyright": null,
           "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",

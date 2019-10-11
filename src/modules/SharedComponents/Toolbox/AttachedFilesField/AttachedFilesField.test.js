@@ -4,6 +4,7 @@ import {
     datastreamChangeCallbackFactory,
     onChangeCallbackFactory,
 } from './AttachedFilesField';
+import Immutable from 'immutable';
 
 import { recordWithDatastreams } from 'mock/data';
 
@@ -25,7 +26,7 @@ describe('AttachedFilesField component', () => {
     it('should render with initial data', () => {
         const wrapper = setup({
             meta: {
-                initial: recordWithDatastreams.fez_datastream_info.slice(0, 1),
+                initial: Immutable.List(recordWithDatastreams.fez_datastream_info.slice(0, 1)),
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -1,5 +1,4 @@
 import AudienceSizeField from './AudienceSizeField';
-// import Immutable from 'immutable';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
