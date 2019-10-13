@@ -100,13 +100,6 @@ context('Book chapter admin edit', () => {
     it('should render Author details tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(4)')
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
-                    .should('have.text', 'Author details');
-
                 cy.get('div:nth-child(2) > .StandardCard')
                     .within(() => {
                         cy.get('h3')
