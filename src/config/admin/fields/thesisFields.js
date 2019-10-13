@@ -19,7 +19,7 @@ export default {
                 ['rek_description'],
                 ['rek_genre_type'],
                 ['fez_record_search_key_org_name'],
-                ['thesisOrgUnitName'],
+                ['fez_record_search_key_org_unit_name'],
             ],
         },
         {
@@ -56,7 +56,7 @@ export default {
         },
         {
             title: 'Additional information',
-            groups: [['rek_subtype'], ['fez_record_search_key_oa_status'], ['additionalNotes']],
+            groups: [['fez_record_search_key_oa_status'], ['additionalNotes']],
         },
     ],
     ntro: () => [],
@@ -67,8 +67,8 @@ export const validateThesis = (
     { validationErrorsSummary: summary },
 ) => ({
     bibliographicSection: {
-        ...((!(bs || {}).thesisOrgUnitName && {
-            thesisOrgUnitName: summary.rek_org_unit_name,
+        ...((!((bs || {}).fez_record_search_key_org_unit_name || {}).rek_org_unit_name && {
+            rek_org_unit_name: summary.rek_org_unit_name,
         }) ||
             {}),
         ...((!(bs || {}).rek_genre_type && {
