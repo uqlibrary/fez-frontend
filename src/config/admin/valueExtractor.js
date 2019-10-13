@@ -94,12 +94,6 @@ export default {
     rek_date: {
         getValue: record => record.rek_date,
     },
-    date: {
-        getValue: record => record.rek_date,
-    },
-    dateOfIssue: {
-        getValue: record => record.rek_date,
-    },
     rek_subtype: {
         getValue: record => record.rek_subtype,
     },
@@ -131,9 +125,6 @@ export default {
     },
     fez_record_search_key_publisher: {
         getValue: record => ({ ...record.fez_record_search_key_publisher }),
-    },
-    patentOwner: {
-        getValue: record => record.fez_record_search_key_publisher.rek_publisher,
     },
     fez_record_search_key_volume_number: {
         getValue: record => ({ ...record.fez_record_search_key_volume_number }),
@@ -274,9 +265,6 @@ export default {
     },
     fez_record_search_key_pubmed_id: {
         getValue: record => ({ ...record.fez_record_search_key_pubmed_id }),
-    },
-    fez_record_search_key_pubmed_central_id: {
-        getValue: record => ({ ...record.fez_record_search_key_pubmed_central_id }),
     },
     rek_wok_doc_type: {
         getValue: record => record.rek_wok_doc_type,
@@ -446,9 +434,6 @@ export default {
     rek_copyright: {
         getValue: record => record.rek_copyright,
     },
-    depositAgreement: {
-        getValue: record => record.rek_copyright,
-    },
     rek_herdc_notes: {
         getValue: record => record.rek_herdc_notes,
     },
@@ -494,9 +479,6 @@ export default {
     },
     fez_record_search_key_original_format: {
         getValue: record => ({ ...record.fez_record_search_key_original_format }),
-    },
-    physicalDescription: {
-        getValue: record => (record.fez_record_search_key_original_format || {}).rek_original_format,
     },
     fez_record_search_key_transcript: {
         getValue: record => ({
@@ -559,10 +541,7 @@ export default {
         getValue: record => record.fez_record_search_key_contact_details_email[0].rek_contact_details_email,
     },
     fez_record_search_key_project_name: {
-        getValue: record => (record.fez_record_search_key_project_name || {}).rek_project_name,
-    },
-    projectNameOptional: {
-        getValue: record => (record.fez_record_search_key_project_name || {}).rek_project_name,
+        getValue: record => ({ ...(record.fez_record_search_key_project_name || {}) }),
     },
     fez_record_search_key_project_description: {
         getValue: record => ({
@@ -589,10 +568,7 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_org_name }),
     },
     fez_record_search_key_org_unit_name: {
-        getValue: record => record.fez_record_search_key_org_unit_name.rek_org_unit_name,
-    },
-    thesisOrgUnitName: {
-        getValue: record => record.fez_record_search_key_org_unit_name.rek_org_unit_name,
+        getValue: record => ({ ...record.fez_record_search_key_org_unit_name }),
     },
     fez_record_search_key_report_number: {
         getValue: record => ({ ...record.fez_record_search_key_report_number }),
@@ -716,9 +692,6 @@ export default {
                 authorId: (creatorIds[order] || {}).rek_creator_id || 0,
             }));
         },
-    },
-    photographers: {
-        getValue: authorsGetValue,
     },
     fez_record_search_key_parent_publication: {
         getValue: record => ({ ...record.fez_record_search_key_parent_publication }),

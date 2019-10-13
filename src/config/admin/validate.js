@@ -52,24 +52,22 @@ import deepmerge from 'deepmerge';
 
 export default values => {
     const data = values.toJS();
-
+    const summary = locale.validationErrorsSummary;
     let errors = {
         bibliographicSection: {},
         additionalInformationSection: {},
     };
 
-    !(data.bibliographicSection || {}).rek_title &&
-        (errors.bibliographicSection.rek_title = locale.validationErrorsSummary.rek_title);
+    !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
 
-    !(data.bibliographicSection || {}).rek_date &&
-        (errors.bibliographicSection.rek_date = locale.validationErrorsSummary.rek_date);
+    !(data.bibliographicSection || {}).rek_date && (errors.bibliographicSection.rek_date = summary.rek_date);
 
     !((data.additionalInformationSection || {}).collections || []).length > 0 &&
-        (errors.additionalInformationSection.collections = locale.validationErrorsSummary.collections);
+        (errors.additionalInformationSection.collections = summary.collections);
 
     (data.additionalInformationSection || {}).hasOwnProperty('rek_subtype') &&
         !data.additionalInformationSection.rek_subtype &&
-        (errors.additionalInformationSection.rek_subtype = locale.validationErrorsSummary.rek_subtype);
+        (errors.additionalInformationSection.rek_subtype = summary.rek_subtype);
 
     switch (data.rek_display_type) {
         case PUBLICATION_TYPE_AUDIO_DOCUMENT:
