@@ -88,7 +88,7 @@ export default {
         },
         {
             title: 'Photographers',
-            groups: [['photographers']],
+            groups: [['authors']],
         },
         {
             title: 'Other contributors',
