@@ -254,7 +254,7 @@ exports[`Application component Should display mobile correctly 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -800,7 +800,7 @@ exports[`Application component should determine if it has incomplete works from 
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -1529,7 +1529,7 @@ exports[`Application component should determine if it has incomplete works from 
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -2074,7 +2074,7 @@ exports[`Application component should redirect to login page with correct return
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -2612,7 +2612,7 @@ exports[`Application component should render alert if user is not fez author 1`]
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3341,7 +3341,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -3896,7 +3896,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -4463,7 +4463,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -5168,7 +5168,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -5781,7 +5781,7 @@ exports[`Application component should render app for account with fez author wit
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -6486,7 +6486,7 @@ exports[`Application component should render application with routing for the us
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -6762,7 +6762,7 @@ exports[`Application component should render for anon user 1`] = `
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -7025,7 +7025,7 @@ exports[`Application component should render thesis submission for HDR without m
     className="content-container"
     style={Object {}}
   >
-    <ConfirmDialogBox
+    <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
         Object {
@@ -9821,25 +9821,25 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         center={true}
                                                                         classes={
                                                                           Object {
-                                                                            "child": "MuiTouchRipple-child-286",
-                                                                            "childLeaving": "MuiTouchRipple-childLeaving-287",
-                                                                            "childPulsate": "MuiTouchRipple-childPulsate-288",
-                                                                            "ripple": "MuiTouchRipple-ripple-283",
-                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate-285",
-                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible-284",
-                                                                            "root": "MuiTouchRipple-root-282",
+                                                                            "child": "MuiTouchRipple-child-287",
+                                                                            "childLeaving": "MuiTouchRipple-childLeaving-288",
+                                                                            "childPulsate": "MuiTouchRipple-childPulsate-289",
+                                                                            "ripple": "MuiTouchRipple-ripple-284",
+                                                                            "ripplePulsate": "MuiTouchRipple-ripplePulsate-286",
+                                                                            "rippleVisible": "MuiTouchRipple-rippleVisible-285",
+                                                                            "root": "MuiTouchRipple-root-283",
                                                                           }
                                                                         }
                                                                       >
                                                                         <TransitionGroup
                                                                           childFactory={[Function]}
-                                                                          className="MuiTouchRipple-root-282"
+                                                                          className="MuiTouchRipple-root-283"
                                                                           component="span"
                                                                           enter={true}
                                                                           exit={true}
                                                                         >
                                                                           <span
-                                                                            className="MuiTouchRipple-root-282"
+                                                                            className="MuiTouchRipple-root-283"
                                                                           />
                                                                         </TransitionGroup>
                                                                       </TouchRipple>
@@ -13189,10 +13189,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       <FormControl
                                                                                         classes={
                                                                                           Object {
-                                                                                            "fullWidth": "MuiFormControl-fullWidth-292",
-                                                                                            "marginDense": "MuiFormControl-marginDense-291",
-                                                                                            "marginNormal": "MuiFormControl-marginNormal-290",
-                                                                                            "root": "MuiFormControl-root-289",
+                                                                                            "fullWidth": "MuiFormControl-fullWidth-293",
+                                                                                            "marginDense": "MuiFormControl-marginDense-292",
+                                                                                            "marginNormal": "MuiFormControl-marginNormal-291",
+                                                                                            "root": "MuiFormControl-root-290",
                                                                                           }
                                                                                         }
                                                                                         component="div"
@@ -13205,7 +13205,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                         variant="standard"
                                                                                       >
                                                                                         <div
-                                                                                          className="MuiFormControl-root-289 MuiFormControl-fullWidth-292"
+                                                                                          className="MuiFormControl-root-290 MuiFormControl-fullWidth-293"
                                                                                           onKeyPress={[Function]}
                                                                                         >
                                                                                           <WithStyles(Input)
@@ -13229,19 +13229,19 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                               autoFocus={true}
                                                                                               classes={
                                                                                                 Object {
-                                                                                                  "disabled": "MuiInput-disabled-296",
-                                                                                                  "error": "MuiInput-error-298",
-                                                                                                  "focused": "MuiInput-focused-295",
-                                                                                                  "formControl": "MuiInput-formControl-294",
-                                                                                                  "fullWidth": "MuiInput-fullWidth-300",
-                                                                                                  "input": "MuiInput-input-301",
-                                                                                                  "inputMarginDense": "MuiInput-inputMarginDense-302",
-                                                                                                  "inputMultiline": "MuiInput-inputMultiline-303",
-                                                                                                  "inputType": "MuiInput-inputType-304",
-                                                                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-305",
-                                                                                                  "multiline": "MuiInput-multiline-299",
-                                                                                                  "root": "MuiInput-root-293",
-                                                                                                  "underline": "MuiInput-underline-297",
+                                                                                                  "disabled": "MuiInput-disabled-297",
+                                                                                                  "error": "MuiInput-error-299",
+                                                                                                  "focused": "MuiInput-focused-296",
+                                                                                                  "formControl": "MuiInput-formControl-295",
+                                                                                                  "fullWidth": "MuiInput-fullWidth-301",
+                                                                                                  "input": "MuiInput-input-302",
+                                                                                                  "inputMarginDense": "MuiInput-inputMarginDense-303",
+                                                                                                  "inputMultiline": "MuiInput-inputMultiline-304",
+                                                                                                  "inputType": "MuiInput-inputType-305",
+                                                                                                  "inputTypeSearch": "MuiInput-inputTypeSearch-306",
+                                                                                                  "multiline": "MuiInput-multiline-300",
+                                                                                                  "root": "MuiInput-root-294",
+                                                                                                  "underline": "MuiInput-underline-298",
                                                                                                 }
                                                                                               }
                                                                                               disableUnderline={true}
@@ -13262,18 +13262,18 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                 autoFocus={true}
                                                                                                 classes={
                                                                                                   Object {
-                                                                                                    "disabled": "MuiInput-disabled-296",
-                                                                                                    "error": "MuiInput-error-298",
-                                                                                                    "focused": "MuiInput-focused-295",
-                                                                                                    "formControl": "MuiInput-formControl-294",
-                                                                                                    "fullWidth": "MuiInput-fullWidth-300",
-                                                                                                    "input": "MuiInput-input-301",
-                                                                                                    "inputMarginDense": "MuiInput-inputMarginDense-302",
-                                                                                                    "inputMultiline": "MuiInput-inputMultiline-303",
-                                                                                                    "inputType": "MuiInput-inputType-304",
-                                                                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-305",
-                                                                                                    "multiline": "MuiInput-multiline-299",
-                                                                                                    "root": "MuiInput-root-293",
+                                                                                                    "disabled": "MuiInput-disabled-297",
+                                                                                                    "error": "MuiInput-error-299",
+                                                                                                    "focused": "MuiInput-focused-296",
+                                                                                                    "formControl": "MuiInput-formControl-295",
+                                                                                                    "fullWidth": "MuiInput-fullWidth-301",
+                                                                                                    "input": "MuiInput-input-302",
+                                                                                                    "inputMarginDense": "MuiInput-inputMarginDense-303",
+                                                                                                    "inputMultiline": "MuiInput-inputMultiline-304",
+                                                                                                    "inputType": "MuiInput-inputType-305",
+                                                                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-306",
+                                                                                                    "multiline": "MuiInput-multiline-300",
+                                                                                                    "root": "MuiInput-root-294",
                                                                                                     "underline": null,
                                                                                                   }
                                                                                                 }
@@ -13296,23 +13296,23 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   autoFocus={true}
                                                                                                   classes={
                                                                                                     Object {
-                                                                                                      "adornedEnd": "MuiInputBase-adornedEnd-311",
-                                                                                                      "adornedStart": "MuiInputBase-adornedStart-310",
-                                                                                                      "disabled": "MuiInputBase-disabled-309 MuiInput-disabled-296",
-                                                                                                      "error": "MuiInputBase-error-312 MuiInput-error-298",
-                                                                                                      "focused": "MuiInputBase-focused-308 MuiInput-focused-295",
-                                                                                                      "formControl": "MuiInputBase-formControl-307 MuiInput-formControl-294",
-                                                                                                      "fullWidth": "MuiInputBase-fullWidth-315 MuiInput-fullWidth-300",
-                                                                                                      "input": "MuiInputBase-input-316 MuiInput-input-301",
-                                                                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-322",
-                                                                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-321",
-                                                                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-317 MuiInput-inputMarginDense-302",
-                                                                                                      "inputMultiline": "MuiInputBase-inputMultiline-318 MuiInput-inputMultiline-303",
-                                                                                                      "inputType": "MuiInputBase-inputType-319 MuiInput-inputType-304",
-                                                                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-320 MuiInput-inputTypeSearch-305",
-                                                                                                      "marginDense": "MuiInputBase-marginDense-313",
-                                                                                                      "multiline": "MuiInputBase-multiline-314 MuiInput-multiline-299",
-                                                                                                      "root": "MuiInputBase-root-306 MuiInput-root-293",
+                                                                                                      "adornedEnd": "MuiInputBase-adornedEnd-312",
+                                                                                                      "adornedStart": "MuiInputBase-adornedStart-311",
+                                                                                                      "disabled": "MuiInputBase-disabled-310 MuiInput-disabled-297",
+                                                                                                      "error": "MuiInputBase-error-313 MuiInput-error-299",
+                                                                                                      "focused": "MuiInputBase-focused-309 MuiInput-focused-296",
+                                                                                                      "formControl": "MuiInputBase-formControl-308 MuiInput-formControl-295",
+                                                                                                      "fullWidth": "MuiInputBase-fullWidth-316 MuiInput-fullWidth-301",
+                                                                                                      "input": "MuiInputBase-input-317 MuiInput-input-302",
+                                                                                                      "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-323",
+                                                                                                      "inputAdornedStart": "MuiInputBase-inputAdornedStart-322",
+                                                                                                      "inputMarginDense": "MuiInputBase-inputMarginDense-318 MuiInput-inputMarginDense-303",
+                                                                                                      "inputMultiline": "MuiInputBase-inputMultiline-319 MuiInput-inputMultiline-304",
+                                                                                                      "inputType": "MuiInputBase-inputType-320 MuiInput-inputType-305",
+                                                                                                      "inputTypeSearch": "MuiInputBase-inputTypeSearch-321 MuiInput-inputTypeSearch-306",
+                                                                                                      "marginDense": "MuiInputBase-marginDense-314",
+                                                                                                      "multiline": "MuiInputBase-multiline-315 MuiInput-multiline-300",
+                                                                                                      "root": "MuiInputBase-root-307 MuiInput-root-294",
                                                                                                     }
                                                                                                   }
                                                                                                   fullWidth={true}
@@ -13334,23 +13334,23 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     autoFocus={true}
                                                                                                     classes={
                                                                                                       Object {
-                                                                                                        "adornedEnd": "MuiInputBase-adornedEnd-311",
-                                                                                                        "adornedStart": "MuiInputBase-adornedStart-310",
-                                                                                                        "disabled": "MuiInputBase-disabled-309 MuiInput-disabled-296",
-                                                                                                        "error": "MuiInputBase-error-312 MuiInput-error-298",
-                                                                                                        "focused": "MuiInputBase-focused-308 MuiInput-focused-295",
-                                                                                                        "formControl": "MuiInputBase-formControl-307 MuiInput-formControl-294",
-                                                                                                        "fullWidth": "MuiInputBase-fullWidth-315 MuiInput-fullWidth-300",
-                                                                                                        "input": "MuiInputBase-input-316 MuiInput-input-301",
-                                                                                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-322",
-                                                                                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-321",
-                                                                                                        "inputMarginDense": "MuiInputBase-inputMarginDense-317 MuiInput-inputMarginDense-302",
-                                                                                                        "inputMultiline": "MuiInputBase-inputMultiline-318 MuiInput-inputMultiline-303",
-                                                                                                        "inputType": "MuiInputBase-inputType-319 MuiInput-inputType-304",
-                                                                                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-320 MuiInput-inputTypeSearch-305",
-                                                                                                        "marginDense": "MuiInputBase-marginDense-313",
-                                                                                                        "multiline": "MuiInputBase-multiline-314 MuiInput-multiline-299",
-                                                                                                        "root": "MuiInputBase-root-306 MuiInput-root-293",
+                                                                                                        "adornedEnd": "MuiInputBase-adornedEnd-312",
+                                                                                                        "adornedStart": "MuiInputBase-adornedStart-311",
+                                                                                                        "disabled": "MuiInputBase-disabled-310 MuiInput-disabled-297",
+                                                                                                        "error": "MuiInputBase-error-313 MuiInput-error-299",
+                                                                                                        "focused": "MuiInputBase-focused-309 MuiInput-focused-296",
+                                                                                                        "formControl": "MuiInputBase-formControl-308 MuiInput-formControl-295",
+                                                                                                        "fullWidth": "MuiInputBase-fullWidth-316 MuiInput-fullWidth-301",
+                                                                                                        "input": "MuiInputBase-input-317 MuiInput-input-302",
+                                                                                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-323",
+                                                                                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-322",
+                                                                                                        "inputMarginDense": "MuiInputBase-inputMarginDense-318 MuiInput-inputMarginDense-303",
+                                                                                                        "inputMultiline": "MuiInputBase-inputMultiline-319 MuiInput-inputMultiline-304",
+                                                                                                        "inputType": "MuiInputBase-inputType-320 MuiInput-inputType-305",
+                                                                                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-321 MuiInput-inputTypeSearch-306",
+                                                                                                        "marginDense": "MuiInputBase-marginDense-314",
+                                                                                                        "multiline": "MuiInputBase-multiline-315 MuiInput-multiline-300",
+                                                                                                        "root": "MuiInputBase-root-307 MuiInput-root-294",
                                                                                                       }
                                                                                                     }
                                                                                                     fullWidth={true}
@@ -13384,7 +13384,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     value=""
                                                                                                   >
                                                                                                     <div
-                                                                                                      className="MuiInputBase-root-306 MuiInput-root-293 MuiInputBase-fullWidth-315 MuiInput-fullWidth-300 MuiInputBase-formControl-307 MuiInput-formControl-294"
+                                                                                                      className="MuiInputBase-root-307 MuiInput-root-294 MuiInputBase-fullWidth-316 MuiInput-fullWidth-301 MuiInputBase-formControl-308 MuiInput-formControl-295"
                                                                                                       onClick={[Function]}
                                                                                                     >
                                                                                                       <input
@@ -13392,7 +13392,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         aria-label="Enter your search query to search eSpace and then press Enter"
                                                                                                         autoComplete="search"
                                                                                                         autoFocus={true}
-                                                                                                        className="MuiInputBase-input-316 MuiInput-input-301 MuiInputBase-inputType-319 MuiInput-inputType-304 MuiInputBase-inputTypeSearch-320 MuiInput-inputTypeSearch-305"
+                                                                                                        className="MuiInputBase-input-317 MuiInput-input-302 MuiInputBase-inputType-320 MuiInput-inputType-305 MuiInputBase-inputTypeSearch-321 MuiInput-inputTypeSearch-306"
                                                                                                         disabled={false}
                                                                                                         id="simpleSearchField"
                                                                                                         onBlur={[Function]}
@@ -15194,25 +15194,25 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               center={true}
                                                                               classes={
                                                                                 Object {
-                                                                                  "child": "MuiTouchRipple-child-286",
-                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-287",
-                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-288",
-                                                                                  "ripple": "MuiTouchRipple-ripple-283",
-                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-285",
-                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-284",
-                                                                                  "root": "MuiTouchRipple-root-282",
+                                                                                  "child": "MuiTouchRipple-child-287",
+                                                                                  "childLeaving": "MuiTouchRipple-childLeaving-288",
+                                                                                  "childPulsate": "MuiTouchRipple-childPulsate-289",
+                                                                                  "ripple": "MuiTouchRipple-ripple-284",
+                                                                                  "ripplePulsate": "MuiTouchRipple-ripplePulsate-286",
+                                                                                  "rippleVisible": "MuiTouchRipple-rippleVisible-285",
+                                                                                  "root": "MuiTouchRipple-root-283",
                                                                                 }
                                                                               }
                                                                             >
                                                                               <TransitionGroup
                                                                                 childFactory={[Function]}
-                                                                                className="MuiTouchRipple-root-282"
+                                                                                className="MuiTouchRipple-root-283"
                                                                                 component="span"
                                                                                 enter={true}
                                                                                 exit={true}
                                                                               >
                                                                                 <span
-                                                                                  className="MuiTouchRipple-root-282"
+                                                                                  className="MuiTouchRipple-root-283"
                                                                                 />
                                                                               </TransitionGroup>
                                                                             </TouchRipple>
@@ -16408,7 +16408,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         className="content-container"
                         style={Object {}}
                       >
-                        <ConfirmDialogBox
+                        <WithStyles(ConfirmDialogBox)
                           hideCancelButton={true}
                           locale={
                             Object {
@@ -16421,77 +16421,74 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           onAction={[MockFunction]}
                           onRef={[Function]}
                         >
-                          <WithStyles(Dialog)
-                            open={false}
-                            style={
+                          <ConfirmDialogBox
+                            classes={
                               Object {
-                                "padding": 6,
+                                "alternateActionButtonClass": "ConfirmDialogBox-alternateActionButtonClass-244",
                               }
                             }
-                          >
-                            <Dialog
-                              PaperComponent={[Function]}
-                              TransitionComponent={[Function]}
-                              classes={
-                                Object {
-                                  "container": "MuiDialog-container-247",
-                                  "paper": "MuiDialog-paper-248",
-                                  "paperFullScreen": "MuiDialog-paperFullScreen-257",
-                                  "paperFullWidth": "MuiDialog-paperFullWidth-256",
-                                  "paperScrollBody": "MuiDialog-paperScrollBody-250",
-                                  "paperScrollPaper": "MuiDialog-paperScrollPaper-249",
-                                  "paperWidthLg": "MuiDialog-paperWidthLg-254",
-                                  "paperWidthMd": "MuiDialog-paperWidthMd-253",
-                                  "paperWidthSm": "MuiDialog-paperWidthSm-252",
-                                  "paperWidthXl": "MuiDialog-paperWidthXl-255",
-                                  "paperWidthXs": "MuiDialog-paperWidthXs-251",
-                                  "root": "MuiDialog-root-244",
-                                  "scrollBody": "MuiDialog-scrollBody-246",
-                                  "scrollPaper": "MuiDialog-scrollPaper-245",
-                                }
+                            hideCancelButton={true}
+                            locale={
+                              Object {
+                                "cancelButtonLabel": "Cancel",
+                                "confirmButtonLabel": "Redirect to login",
+                                "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+                                "confirmationTitle": "Session Expired",
                               }
-                              disableBackdropClick={false}
-                              disableEscapeKeyDown={false}
-                              fullScreen={false}
-                              fullWidth={false}
-                              maxWidth="sm"
+                            }
+                            onAction={[MockFunction]}
+                            onRef={[Function]}
+                            showAlternateActionButton={false}
+                          >
+                            <WithStyles(Dialog)
                               open={false}
-                              scroll="paper"
                               style={
                                 Object {
                                   "padding": 6,
                                 }
                               }
-                              transitionDuration={
-                                Object {
-                                  "enter": 225,
-                                  "exit": 195,
-                                }
-                              }
                             >
-                              <WithStyles(Modal)
-                                BackdropProps={
+                              <Dialog
+                                PaperComponent={[Function]}
+                                TransitionComponent={[Function]}
+                                classes={
                                   Object {
-                                    "transitionDuration": Object {
-                                      "enter": 225,
-                                      "exit": 195,
-                                    },
+                                    "container": "MuiDialog-container-248",
+                                    "paper": "MuiDialog-paper-249",
+                                    "paperFullScreen": "MuiDialog-paperFullScreen-258",
+                                    "paperFullWidth": "MuiDialog-paperFullWidth-257",
+                                    "paperScrollBody": "MuiDialog-paperScrollBody-251",
+                                    "paperScrollPaper": "MuiDialog-paperScrollPaper-250",
+                                    "paperWidthLg": "MuiDialog-paperWidthLg-255",
+                                    "paperWidthMd": "MuiDialog-paperWidthMd-254",
+                                    "paperWidthSm": "MuiDialog-paperWidthSm-253",
+                                    "paperWidthXl": "MuiDialog-paperWidthXl-256",
+                                    "paperWidthXs": "MuiDialog-paperWidthXs-252",
+                                    "root": "MuiDialog-root-245",
+                                    "scrollBody": "MuiDialog-scrollBody-247",
+                                    "scrollPaper": "MuiDialog-scrollPaper-246",
                                   }
                                 }
-                                className="MuiDialog-root-244"
-                                closeAfterTransition={true}
                                 disableBackdropClick={false}
                                 disableEscapeKeyDown={false}
+                                fullScreen={false}
+                                fullWidth={false}
+                                maxWidth="sm"
                                 open={false}
-                                role="dialog"
+                                scroll="paper"
                                 style={
                                   Object {
                                     "padding": 6,
                                   }
                                 }
+                                transitionDuration={
+                                  Object {
+                                    "enter": 225,
+                                    "exit": 195,
+                                  }
+                                }
                               >
-                                <Modal
-                                  BackdropComponent={[Function]}
+                                <WithStyles(Modal)
                                   BackdropProps={
                                     Object {
                                       "transitionDuration": Object {
@@ -16500,30 +16497,10 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       },
                                     }
                                   }
-                                  className="MuiDialog-root-244"
-                                  classes={
-                                    Object {
-                                      "hidden": "MuiModal-hidden-243",
-                                      "root": "MuiModal-root-242",
-                                    }
-                                  }
+                                  className="MuiDialog-root-245"
                                   closeAfterTransition={true}
-                                  disableAutoFocus={false}
                                   disableBackdropClick={false}
-                                  disableEnforceFocus={false}
                                   disableEscapeKeyDown={false}
-                                  disablePortal={false}
-                                  disableRestoreFocus={false}
-                                  hideBackdrop={false}
-                                  keepMounted={false}
-                                  manager={
-                                    ModalManager {
-                                      "data": Array [],
-                                      "handleContainerOverflow": true,
-                                      "hideSiblingNodes": true,
-                                      "modals": Array [],
-                                    }
-                                  }
                                   open={false}
                                   role="dialog"
                                   style={
@@ -16531,11 +16508,54 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       "padding": 6,
                                     }
                                   }
-                                />
-                              </WithStyles(Modal)>
-                            </Dialog>
-                          </WithStyles(Dialog)>
-                        </ConfirmDialogBox>
+                                >
+                                  <Modal
+                                    BackdropComponent={[Function]}
+                                    BackdropProps={
+                                      Object {
+                                        "transitionDuration": Object {
+                                          "enter": 225,
+                                          "exit": 195,
+                                        },
+                                      }
+                                    }
+                                    className="MuiDialog-root-245"
+                                    classes={
+                                      Object {
+                                        "hidden": "MuiModal-hidden-243",
+                                        "root": "MuiModal-root-242",
+                                      }
+                                    }
+                                    closeAfterTransition={true}
+                                    disableAutoFocus={false}
+                                    disableBackdropClick={false}
+                                    disableEnforceFocus={false}
+                                    disableEscapeKeyDown={false}
+                                    disablePortal={false}
+                                    disableRestoreFocus={false}
+                                    hideBackdrop={false}
+                                    keepMounted={false}
+                                    manager={
+                                      ModalManager {
+                                        "data": Array [],
+                                        "handleContainerOverflow": true,
+                                        "hideSiblingNodes": true,
+                                        "modals": Array [],
+                                      }
+                                    }
+                                    open={false}
+                                    role="dialog"
+                                    style={
+                                      Object {
+                                        "padding": 6,
+                                      }
+                                    }
+                                  />
+                                </WithStyles(Modal)>
+                              </Dialog>
+                            </WithStyles(Dialog)>
+                          </ConfirmDialogBox>
+                        </WithStyles(ConfirmDialogBox)>
                         <Connect(AppAlert)>
                           <AppAlert
                             actions={
@@ -17216,8 +17236,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       <Page
                                         classes={
                                           Object {
-                                            "layoutCard": "Page-layoutCard-258",
-                                            "layoutTitle": "Page-layoutTitle-259",
+                                            "layoutCard": "Page-layoutCard-259",
+                                            "layoutTitle": "Page-layoutTitle-260",
                                           }
                                         }
                                         theme={
@@ -17782,13 +17802,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                               className="MuiGrid-container-6 StandardPage"
                                             >
                                               <WithStyles(Grid)
-                                                className="Page-layoutCard-258"
+                                                className="Page-layoutCard-259"
                                                 item={true}
                                               >
                                                 <Grid
                                                   alignContent="stretch"
                                                   alignItems="stretch"
-                                                  className="Page-layoutCard-258"
+                                                  className="Page-layoutCard-259"
                                                   classes={
                                                     Object {
                                                       "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -17905,7 +17925,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                   zeroMinWidth={false}
                                                 >
                                                   <div
-                                                    className="MuiGrid-item-7 Page-layoutCard-258"
+                                                    className="MuiGrid-item-7 Page-layoutCard-259"
                                                   >
                                                     <WithStyles(Grid)
                                                       container={true}
@@ -18392,9 +18412,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         }
                                                                         classes={
                                                                           Object {
-                                                                            "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-261",
-                                                                            "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-262",
-                                                                            "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-260",
+                                                                            "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-262",
+                                                                            "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-263",
+                                                                            "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-261",
                                                                           }
                                                                         }
                                                                         history={
@@ -18514,9 +18534,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           }
                                                                           classes={
                                                                             Object {
-                                                                              "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-261",
-                                                                              "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-262",
-                                                                              "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-260",
+                                                                              "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-262",
+                                                                              "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-263",
+                                                                              "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-261",
                                                                             }
                                                                           }
                                                                           history={
@@ -19070,9 +19090,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             }
                                                                             classes={
                                                                               Object {
-                                                                                "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-261",
-                                                                                "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-262",
-                                                                                "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-260",
+                                                                                "tab": "WithTheme-WithWidth-TopCitedPublicationsClass---tab-262",
+                                                                                "tabIndicator": "WithTheme-WithWidth-TopCitedPublicationsClass---tabIndicator-263",
+                                                                                "tabs": "WithTheme-WithWidth-TopCitedPublicationsClass---tabs-261",
                                                                               }
                                                                             }
                                                                             history={
@@ -19134,20 +19154,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 allowDismiss={false}
                                                                                 classes={
                                                                                   Object {
-                                                                                    "actionButton": "Alert-actionButton-326",
-                                                                                    "common": "Alert-common-323",
-                                                                                    "dismissButton": "Alert-dismissButton-327",
-                                                                                    "done": "Alert-done-336",
-                                                                                    "error": "Alert-error-329",
-                                                                                    "error_outline": "Alert-error_outline-330",
-                                                                                    "help": "Alert-help-332",
-                                                                                    "help_outline": "Alert-help_outline-333",
-                                                                                    "icon": "Alert-icon-324",
-                                                                                    "info": "Alert-info-334",
-                                                                                    "info_outline": "Alert-info_outline-335",
-                                                                                    "linked": "Alert-linked-328",
-                                                                                    "text": "Alert-text-325",
-                                                                                    "warning": "Alert-warning-331",
+                                                                                    "actionButton": "Alert-actionButton-327",
+                                                                                    "common": "Alert-common-324",
+                                                                                    "dismissButton": "Alert-dismissButton-328",
+                                                                                    "done": "Alert-done-337",
+                                                                                    "error": "Alert-error-330",
+                                                                                    "error_outline": "Alert-error_outline-331",
+                                                                                    "help": "Alert-help-333",
+                                                                                    "help_outline": "Alert-help_outline-334",
+                                                                                    "icon": "Alert-icon-325",
+                                                                                    "info": "Alert-info-335",
+                                                                                    "info_outline": "Alert-info_outline-336",
+                                                                                    "linked": "Alert-linked-329",
+                                                                                    "text": "Alert-text-326",
+                                                                                    "warning": "Alert-warning-332",
                                                                                   }
                                                                                 }
                                                                                 dismissTitle="Click to dismiss this alert"
@@ -19601,7 +19621,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <WithStyles(Grid)
                                                                                     alignContent="center"
                                                                                     alignItems="flex-start"
-                                                                                    className="Alert-error-329 Alert-common-323"
+                                                                                    className="Alert-error-330 Alert-common-324"
                                                                                     container={true}
                                                                                     justify="center"
                                                                                     spacing={24}
@@ -19609,7 +19629,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     <Grid
                                                                                       alignContent="center"
                                                                                       alignItems="flex-start"
-                                                                                      className="Alert-error-329 Alert-common-323"
+                                                                                      className="Alert-error-330 Alert-common-324"
                                                                                       classes={
                                                                                         Object {
                                                                                           "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -19726,7 +19746,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       zeroMinWidth={false}
                                                                                     >
                                                                                       <div
-                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-329 Alert-common-323"
+                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-330 Alert-common-324"
                                                                                       >
                                                                                         <WithStyles(Grid)
                                                                                           item={true}
@@ -19982,13 +20002,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     className="MuiGrid-container-6 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23"
                                                                                                   >
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-icon-324 alert-icon"
+                                                                                                      className="Alert-icon-325 alert-icon"
                                                                                                       item={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-icon-324 alert-icon"
+                                                                                                        className="Alert-icon-325 alert-icon"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20105,7 +20125,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 Alert-icon-324 alert-icon"
+                                                                                                          className="MuiGrid-item-7 Alert-icon-325 alert-icon"
                                                                                                         >
                                                                                                           <pure(ErrorIcon)
                                                                                                             className="icon"
@@ -20159,14 +20179,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       </Grid>
                                                                                                     </WithStyles(Grid)>
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-text-325 alert-text"
+                                                                                                      className="Alert-text-326 alert-text"
                                                                                                       item={true}
                                                                                                       xs={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-text-325 alert-text"
+                                                                                                        className="Alert-text-326 alert-text"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20283,7 +20303,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-325 alert-text"
+                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-326 alert-text"
                                                                                                         >
                                                                                                           <b>
                                                                                                             There has been an error - 
@@ -20705,11 +20725,11 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <Cards
                                                                                     classes={
                                                                                       Object {
-                                                                                        "card": "Cards-card-263",
-                                                                                        "cardContentNoPadding": "Cards-cardContentNoPadding-264",
-                                                                                        "cardHeaderAccent": "Cards-cardHeaderAccent-266",
-                                                                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-265",
-                                                                                        "fullHeight": "Cards-fullHeight-267",
+                                                                                        "card": "Cards-card-264",
+                                                                                        "cardContentNoPadding": "Cards-cardContentNoPadding-265",
+                                                                                        "cardHeaderAccent": "Cards-cardHeaderAccent-267",
+                                                                                        "cardHeaderPrimary": "Cards-cardHeaderPrimary-266",
+                                                                                        "fullHeight": "Cards-fullHeight-268",
                                                                                       }
                                                                                     }
                                                                                     primaryHeader={true}
@@ -21150,26 +21170,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     title="What is eSpace?"
                                                                                   >
                                                                                     <WithStyles(Card)
-                                                                                      className="Cards-card-263 StandardCard"
+                                                                                      className="Cards-card-264 StandardCard"
                                                                                       style={Object {}}
                                                                                     >
                                                                                       <Card
-                                                                                        className="Cards-card-263 StandardCard"
+                                                                                        className="Cards-card-264 StandardCard"
                                                                                         classes={
                                                                                           Object {
-                                                                                            "root": "MuiCard-root-268",
+                                                                                            "root": "MuiCard-root-269",
                                                                                           }
                                                                                         }
                                                                                         raised={false}
                                                                                         style={Object {}}
                                                                                       >
                                                                                         <WithStyles(Paper)
-                                                                                          className="MuiCard-root-268 Cards-card-263 StandardCard"
+                                                                                          className="MuiCard-root-269 Cards-card-264 StandardCard"
                                                                                           elevation={1}
                                                                                           style={Object {}}
                                                                                         >
                                                                                           <Paper
-                                                                                            className="MuiCard-root-268 Cards-card-263 StandardCard"
+                                                                                            className="MuiCard-root-269 Cards-card-264 StandardCard"
                                                                                             classes={
                                                                                               Object {
                                                                                                 "elevation0": "MuiPaper-elevation0-114",
@@ -21207,14 +21227,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                             style={Object {}}
                                                                                           >
                                                                                             <div
-                                                                                              className="MuiPaper-root-112 MuiPaper-elevation1-115 MuiPaper-rounded-113 MuiCard-root-268 Cards-card-263 StandardCard"
+                                                                                              className="MuiPaper-root-112 MuiPaper-elevation1-115 MuiPaper-rounded-113 MuiCard-root-269 Cards-card-264 StandardCard"
                                                                                               style={Object {}}
                                                                                             >
                                                                                               <WithStyles(CardHeader)
                                                                                                 action={false}
                                                                                                 classes={
                                                                                                   Object {
-                                                                                                    "root": "Cards-cardHeaderPrimary-265",
+                                                                                                    "root": "Cards-cardHeaderPrimary-266",
                                                                                                   }
                                                                                                 }
                                                                                                 style={Object {}}
@@ -21231,12 +21251,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   action={false}
                                                                                                   classes={
                                                                                                     Object {
-                                                                                                      "action": "MuiCardHeader-action-271",
-                                                                                                      "avatar": "MuiCardHeader-avatar-270",
-                                                                                                      "content": "MuiCardHeader-content-272",
-                                                                                                      "root": "MuiCardHeader-root-269 Cards-cardHeaderPrimary-265",
-                                                                                                      "subheader": "MuiCardHeader-subheader-274",
-                                                                                                      "title": "MuiCardHeader-title-273",
+                                                                                                      "action": "MuiCardHeader-action-272",
+                                                                                                      "avatar": "MuiCardHeader-avatar-271",
+                                                                                                      "content": "MuiCardHeader-content-273",
+                                                                                                      "root": "MuiCardHeader-root-270 Cards-cardHeaderPrimary-266",
+                                                                                                      "subheader": "MuiCardHeader-subheader-275",
+                                                                                                      "title": "MuiCardHeader-title-274",
                                                                                                     }
                                                                                                   }
                                                                                                   component="div"
@@ -21252,14 +21272,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   }
                                                                                                 >
                                                                                                   <div
-                                                                                                    className="MuiCardHeader-root-269 Cards-cardHeaderPrimary-265"
+                                                                                                    className="MuiCardHeader-root-270 Cards-cardHeaderPrimary-266"
                                                                                                     style={Object {}}
                                                                                                   >
                                                                                                     <div
-                                                                                                      className="MuiCardHeader-content-272"
+                                                                                                      className="MuiCardHeader-content-273"
                                                                                                     >
                                                                                                       <WithStyles(Typography)
-                                                                                                        className="MuiCardHeader-title-273"
+                                                                                                        className="MuiCardHeader-title-274"
                                                                                                         color="inherit"
                                                                                                         component="h3"
                                                                                                         internalDeprecatedVariant={true}
@@ -21267,7 +21287,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       >
                                                                                                         <Typography
                                                                                                           align="inherit"
-                                                                                                          className="MuiCardHeader-title-273"
+                                                                                                          className="MuiCardHeader-title-274"
                                                                                                           classes={
                                                                                                             Object {
                                                                                                               "alignCenter": "MuiTypography-alignCenter-192",
@@ -21773,7 +21793,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                           variant="h5"
                                                                                                         >
                                                                                                           <h3
-                                                                                                            className="MuiTypography-root-169 MuiTypography-h5-185 MuiTypography-colorInherit-198 MuiCardHeader-title-273"
+                                                                                                            className="MuiTypography-root-169 MuiTypography-h5-185 MuiTypography-colorInherit-198 MuiCardHeader-title-274"
                                                                                                           >
                                                                                                             What is eSpace?
                                                                                                           </h3>
@@ -21790,13 +21810,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                   className=""
                                                                                                   classes={
                                                                                                     Object {
-                                                                                                      "root": "MuiCardContent-root-275",
+                                                                                                      "root": "MuiCardContent-root-276",
                                                                                                     }
                                                                                                   }
                                                                                                   component="div"
                                                                                                 >
                                                                                                   <div
-                                                                                                    className="MuiCardContent-root-275"
+                                                                                                    className="MuiCardContent-root-276"
                                                                                                   >
                                                                                                     <WithStyles(Typography)
                                                                                                       variant="body2"
@@ -22604,7 +22624,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   }
                                                                                   classes={
                                                                                     Object {
-                                                                                      "newsItem": "NewsFeed-newsItem-276",
+                                                                                      "newsItem": "NewsFeed-newsItem-277",
                                                                                     }
                                                                                   }
                                                                                   loadingNewsFeedList={true}
@@ -23085,9 +23105,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             buttonLabel="CLOSE"
                             classes={
                               Object {
-                                "button": "HelpDrawer-button-279",
-                                "paper": "HelpDrawer-paper-277",
-                                "title": "HelpDrawer-title-278",
+                                "button": "HelpDrawer-button-280",
+                                "paper": "HelpDrawer-paper-278",
+                                "title": "HelpDrawer-title-279",
                               }
                             }
                             hide={[Function]}
@@ -23533,7 +23553,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               anchor="right"
                               classes={
                                 Object {
-                                  "paper": "HelpDrawer-paper-277",
+                                  "paper": "HelpDrawer-paper-278",
                                 }
                               }
                               onClose={[Function]}
@@ -23545,7 +23565,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   Object {
                                     "docked": "MuiDrawer-docked-231",
                                     "modal": "MuiDrawer-modal-241",
-                                    "paper": "MuiDrawer-paper-232 HelpDrawer-paper-277",
+                                    "paper": "MuiDrawer-paper-232 HelpDrawer-paper-278",
                                     "paperAnchorBottom": "MuiDrawer-paperAnchorBottom-236",
                                     "paperAnchorDockedBottom": "MuiDrawer-paperAnchorDockedBottom-240",
                                     "paperAnchorDockedLeft": "MuiDrawer-paperAnchorDockedLeft-237",
@@ -24062,8 +24082,8 @@ exports[`Testing wrapped App component Mounts 1`] = `
                         <OfflineSnackbar
                           classes={
                             Object {
-                              "error": "OfflineSnackbar-error-281",
-                              "success": "OfflineSnackbar-success-280",
+                              "error": "OfflineSnackbar-error-282",
+                              "success": "OfflineSnackbar-success-281",
                             }
                           }
                           theme={
@@ -24532,7 +24552,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                     }
                                   >
                                     <pure(LinkIcon)
-                                      className="OfflineSnackbar-success-280"
+                                      className="OfflineSnackbar-success-281"
                                     />
                                   </WithStyles(Grid)>
                                   <WithStyles(Grid)
@@ -24590,7 +24610,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                       }
                                     >
                                       <pure(LinkIcon)
-                                        className="OfflineSnackbar-success-280"
+                                        className="OfflineSnackbar-success-281"
                                       />
                                     </WithStyles(Grid)>
                                     <WithStyles(Grid)

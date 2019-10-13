@@ -1,11 +1,11 @@
 import React from 'react';
 import PublicationMap, { GoogleMapViewComponent, getDefaultCenter } from './PublicationMap';
+import { GOOGLE_MAPS_API_URL } from '../../../config';
 
 function setup(testProps = {}, args = { isShallow: false }) {
     const props = {
         ...testProps,
-        googleMapURL:
-            'https://maps.googleapis.com/maps/api/js?key=GOOGLE_MAPS_API_KEY&v=3.exp&libraries=geometry,drawing,places',
+        googleMapURL: GOOGLE_MAPS_API_URL,
         loadingElement: <div />,
     };
     return getElement(PublicationMap, props, args);

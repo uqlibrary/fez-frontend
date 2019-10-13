@@ -85,3 +85,27 @@ export default {
         },
     ],
 };
+
+export const validateResearchReport = (
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
+            fez_record_search_key_publisher: {
+                rek_publisher: summary.rek_publisher,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});

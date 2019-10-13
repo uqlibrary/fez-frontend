@@ -98,14 +98,13 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or edits/changes/comments post failed',
-                    message:
-                        'Retry uploading files and/or posting edits/changes/comments about this ' +
-                        'claim via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Claim more publications',
                 addRecordButtonLabel: 'Add another missing record',
                 confirmButtonLabel: 'Go to my research',
+                alternateActionButtonLabel: 'Fix record',
             },
             validationAlert: {
                 type: 'warning',
@@ -226,7 +225,7 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload failed',
-                    message: 'Retry uploading files via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
                     type: 'info',
                 },
                 cancelButtonLabel: 'Go to my dashboard',

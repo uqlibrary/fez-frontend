@@ -1,7 +1,6 @@
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
-import { propTypes } from 'redux-form/immutable';
-import { Field } from 'redux-form/immutable';
+import { Field, propTypes } from 'redux-form/immutable';
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -21,8 +20,9 @@ import {
     ContentIndicatorsField,
     showContentIndicatorsField,
 } from 'modules/SharedComponents/Toolbox/ContentIndicatorsField';
-import { validation, routes, claimRecordConfig } from 'config';
+import { claimRecordConfig, routes, validation } from 'config';
 import locale from 'locale/forms';
+import Hidden from '@material-ui/core/Hidden';
 
 export default class ClaimRecord extends PureComponent {
     static propTypes = {
@@ -107,13 +107,21 @@ export default class ClaimRecord extends PureComponent {
             : validation.isValidContributorLink(link, true);
     };
 
-    render() {
-        const txt = locale.forms.claimPublicationForm;
+    _navigateToFixRecord = () => {
+        this.props.history.push(routes.pathConfig.records.fix(this._publication().rek_pid));
+    };
 
-        const publication = {
+    _publication = () => {
+        return {
             ...(this.props.initialValues.get('publication') && this.props.initialValues.get('publication').toJS(0)),
             ...this.props.fullPublicationToClaim,
         };
+    };
+
+    render() {
+        const txt = locale.forms.claimPublicationForm;
+
+        const publication = this._publication();
 
         const author = this.props.initialValues.get('author') ? this.props.initialValues.get('author').toJS() : null;
         if (!author) {
@@ -201,10 +209,12 @@ export default class ClaimRecord extends PureComponent {
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) && (
                             <React.Fragment>
                                 <ConfirmDialogBox
+                                    locale={saveConfirmationLocale}
                                     onRef={this._setSuccessConfirmation}
                                     onAction={this._navigateToMyResearch}
+                                    onAlternateAction={this._navigateToFixRecord}
                                     onCancelAction={this._claimAnother}
-                                    locale={saveConfirmationLocale}
+                                    showAlternateActionButton={this.props.publicationToClaimFileUploadingError}
                                 />
                                 <NavigationDialogBox
                                     when={this.props.dirty && !this.props.submitSucceeded}
@@ -335,8 +345,10 @@ export default class ClaimRecord extends PureComponent {
                         )}
                     </Grid>
                     <Grid container spacing={24}>
-                        <Grid item xs />
-                        <Grid item>
+                        <Hidden xsDown>
+                            <Grid item xs />
+                        </Hidden>
+                        <Grid item xs={12} sm={'auto'}>
                             <Button
                                 variant={'contained'}
                                 fullWidth
@@ -347,7 +359,7 @@ export default class ClaimRecord extends PureComponent {
                         </Grid>
                         {(!publication.rek_pid || !(authorLinked || contributorLinked)) &&
                             !(!publication.rek_pid && this.props.submitFailed) && (
-                            <Grid item>
+                            <Grid item xs={12} sm={'auto'}>
                                 <Button
                                     variant={'contained'}
                                     color={'primary'}

@@ -27,6 +27,7 @@ export {
     publicationTypeListCreativeWork,
     publicationTypeListDataCollection,
     publicationTypeListDepartmentTechnicalReport,
+    publicationTypeListDesign,
     publicationTypeListDigilibImage,
     publicationTypeListImage,
     publicationTypeListJournal,

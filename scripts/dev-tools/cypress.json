@@ -1,0 +1,9 @@
+{
+  "pageLoadTimeout": 30000,
+  "defaultCommandTimeout": 10000,
+  "waitForAnimations": true,
+  "video": false,
+  "chromeWebSecurity": false,
+  "videoUploadOnPasses": false,
+  "blacklistHosts": ["www.googletagmanager.com"]
+}

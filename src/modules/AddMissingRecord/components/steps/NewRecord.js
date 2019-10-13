@@ -17,10 +17,12 @@ export default class NewRecord extends PureComponent {
         rawSearchQuery: PropTypes.string,
         newRecordFileUploadingOrIssueError: PropTypes.bool,
         author: PropTypes.object,
+        newRecord: PropTypes.object,
     };
 
     static defaultProps = {
         rawSearchQuery: '',
+        newRecord: {},
     };
 
     _recordSaved = () => {
@@ -36,6 +38,11 @@ export default class NewRecord extends PureComponent {
     _navigateToMyResearch = () => {
         this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.records.mine);
+    };
+
+    _navigateToFixRecord = () => {
+        this.props.actions.clearNewRecord();
+        this.props.history.push(routes.pathConfig.records.fix(this.props.newRecord.rek_pid));
     };
 
     render() {
@@ -58,6 +65,13 @@ export default class NewRecord extends PureComponent {
             rek_title: rawSearchQuery || '',
         };
 
+        const isPID = /UQ:(.*)/;
+        const showAlternateActionButton =
+            this.props.newRecord &&
+            this.props.newRecord.rek_pid &&
+            isPID.test(this.props.newRecord.rek_pid) &&
+            this.props.newRecordFileUploadingOrIssueError;
+
         // set confirmation message depending on file upload status
         const saveConfirmationLocale = { ...txt.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
@@ -76,6 +90,8 @@ export default class NewRecord extends PureComponent {
                     onRef={ref => (this.confirmationBox = ref)}
                     onAction={this._navigateToMyResearch}
                     onCancelAction={this._restartWorkflow}
+                    showAlternateActionButton={showAlternateActionButton}
+                    onAlternateAction={this._navigateToFixRecord}
                     locale={saveConfirmationLocale}
                 />
                 <PublicationForm

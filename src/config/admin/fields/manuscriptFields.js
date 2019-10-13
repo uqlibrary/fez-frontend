@@ -15,7 +15,7 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_series'],
-                ['date', 'fez_record_search_key_date_available'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
@@ -60,3 +60,16 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateManuscript = ({ filesSection: fs, authorsSection: as }, { validationErrorsSummary: summary }) => ({
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});

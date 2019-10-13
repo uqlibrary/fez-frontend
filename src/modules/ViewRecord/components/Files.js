@@ -13,7 +13,7 @@ import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
 import InsertDriveFile from '@material-ui/icons/InsertDriveFile';
 import Image from '@material-ui/icons/Image';
 import Videocam from '@material-ui/icons/Videocam';
-import { openAccessConfig, viewRecordsConfig, routes } from 'config';
+import { openAccessConfig, routes, viewRecordsConfig } from 'config';
 import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
@@ -54,6 +54,7 @@ export class FilesClass extends Component {
                 webMediaUrl: null,
                 previewMediaUrl: null,
                 mimeType: null,
+                checksums: {},
             },
         };
     }
@@ -67,14 +68,18 @@ export class FilesClass extends Component {
         allowDownload,
         webFileName,
         securityStatus,
+        checksums,
     ) => {
         if (allowDownload && thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
-                mediaUrl: this.getUrl(pid, fileName),
-                webMediaUrl: webFileName ? this.getUrl(pid, webFileName) : null,
-                previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : null,
-                thumbnailMediaUrl: thumbnailFileName && this.getUrl(pid, thumbnailFileName),
+                mediaUrl: this.getUrl(pid, fileName, checksums && checksums.media),
+                webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums && checksums.web) : null,
+                previewMediaUrl: previewFileName
+                    ? this.getUrl(pid, previewFileName, checksums && checksums.preview)
+                    : null,
+                thumbnailMediaUrl:
+                    thumbnailFileName && this.getUrl(pid, thumbnailFileName, checksums && checksums.thumbnail),
                 fileName: fileName,
                 thumbnailFileName,
                 onClick: this.showPreview,
@@ -107,16 +112,17 @@ export class FilesClass extends Component {
         });
     };
 
-    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus) => {
+    showPreview = (fileName, mediaUrl, previewMediaUrl, mimeType, webMediaUrl, securityStatus, checksums = {}) => {
         if (securityStatus) {
             this.setState({
                 preview: {
-                    fileName: fileName,
-                    mediaUrl: mediaUrl,
-                    webMediaUrl: webMediaUrl,
-                    previewMediaUrl: previewMediaUrl,
-                    mimeType: mimeType,
-                    securityStatus: securityStatus,
+                    fileName,
+                    mediaUrl,
+                    webMediaUrl,
+                    previewMediaUrl,
+                    mimeType,
+                    securityStatus,
+                    checksums,
                 },
             });
         }
@@ -157,8 +163,8 @@ export class FilesClass extends Component {
         return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
     };
 
-    getUrl = (pid, fileName) => {
-        return pid && fileName && routes.pathConfig.file.url(pid, fileName);
+    getUrl = (pid, fileName, checksum = '') => {
+        return pid && fileName && routes.pathConfig.file.url(pid, fileName, checksum);
     };
 
     searchByKey = (list, key, value) => {
@@ -250,14 +256,35 @@ export class FilesClass extends Component {
         );
     };
 
+    getChecksums = (dataStream, thumbnailFileName, previewFileName, webFileName, dataStreams) => {
+        const checksums = {
+            media: dataStream.dsi_checksum,
+            thumbnail: undefined,
+            preview: undefined,
+            web: undefined,
+        };
+
+        dataStreams.forEach(dataStream => {
+            switch (dataStream.dsi_dsid) {
+                case thumbnailFileName:
+                    checksums.thumbnail = dataStream.dsi_checksum;
+                    break;
+                case previewFileName:
+                    checksums.preview = dataStream.dsi_checksum;
+                    break;
+                case webFileName:
+                    checksums.web = dataStream.dsi_checksum;
+                    break;
+                default:
+            }
+        });
+
+        return checksums;
+    };
+
     getFileData = publication => {
         const dataStreams = publication.fez_datastream_info;
-        const { files } = viewRecordsConfig;
-        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
-        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
-            files.blacklist.collections.includes(collection.rek_ismemberof),
-        );
-        return !containBlacklistCollections && !!dataStreams && dataStreams.length > 0
+        return this.isViewableByUser(publication, dataStreams)
             ? dataStreams.filter(this.isFileValid).map(dataStream => {
                 const pid = publication.rek_pid;
                 const fileName = dataStream.dsi_dsid;
@@ -267,6 +294,13 @@ export class FilesClass extends Component {
                 const webFileName = this.checkForWeb(fileName);
                 const openAccessStatus = this.getFileOpenAccessStatus(publication, dataStream);
                 const securityAccess = this.getSecurityAccess(dataStream);
+                const checksums = this.getChecksums(
+                    dataStream,
+                    thumbnailFileName,
+                    previewFileName,
+                    webFileName,
+                    dataStreams,
+                );
 
                 return {
                     pid: pid,
@@ -284,15 +318,30 @@ export class FilesClass extends Component {
                         openAccessStatus.isOpenAccess || this.props.isAuthor || this.props.isAdmin,
                         webFileName,
                         securityAccess,
+                        checksums,
                     ),
                     openAccessStatus: openAccessStatus,
-                    previewMediaUrl: previewFileName ? this.getUrl(pid, previewFileName) : this.getUrl(pid, fileName),
-                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName) : null,
-                    mediaUrl: this.getUrl(pid, fileName),
+                    previewMediaUrl: this.getUrl(
+                        pid,
+                        previewFileName ? previewFileName : fileName,
+                        checksums && checksums.preview,
+                    ),
+                    webMediaUrl: webFileName ? this.getUrl(pid, webFileName, checksums.web) : null,
+                    mediaUrl: this.getUrl(pid, fileName, checksums.media),
                     securityStatus: this.getSecurityAccess(dataStream),
+                    checksums: checksums,
                 };
             })
             : [];
+    };
+
+    isViewableByUser = (publication, dataStreams) => {
+        const { files } = viewRecordsConfig;
+        // check if the publication is a member of the blacklist collections, TODO: remove after security epic is done
+        const containBlacklistCollections = publication.fez_record_search_key_ismemberof.some(collection =>
+            files.blacklist.collections.includes(collection.rek_ismemberof),
+        );
+        return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
     stripHtml = html => {
@@ -413,7 +462,11 @@ export class FilesClass extends Component {
                     ))}
                     {this.state.preview.mediaUrl && this.state.preview.mimeType && (
                         <MediaPreview
-                            fileName={this.getUrl(publication.rek_pid, this.state.preview.fileName)}
+                            fileName={this.getUrl(
+                                publication.rek_pid,
+                                this.state.preview.fileName,
+                                this.state.preview.checksums && this.state.preview.checksums.media,
+                            )}
                             mediaUrl={this.state.preview.mediaUrl}
                             webMediaUrl={this.state.preview.webMediaUrl}
                             previewMediaUrl={this.state.preview.previewMediaUrl}

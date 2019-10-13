@@ -24,7 +24,7 @@ export default {
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
                 ['fez_record_search_key_series'],
-                ['date', 'fez_record_search_key_date_available'],
+                ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['rek_genre'],
                 ['fez_record_search_key_original_format'],
@@ -71,3 +71,27 @@ export default {
     ],
     ntro: () => [],
 };
+
+export const validateVideo = (
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
+    { validationErrorsSummary: summary },
+) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
+            fez_record_search_key_rights: {
+                rek_rights: summary.rek_rights,
+            },
+        }) ||
+            {}),
+    },
+    filesSection: {
+        ...((fs || {}).rek_copyright !== 'on' && {
+            rek_copyright: summary.rek_copyright,
+        }),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
+    },
+});

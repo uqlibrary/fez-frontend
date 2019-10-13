@@ -119,9 +119,23 @@ export default {
 };
 
 export const validateBookChapter = (
-    { filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_place_of_publication || {}).rek_place_of_publication && {
+            fez_record_search_key_place_of_publication: {
+                rek_place_of_publication: summary.rek_place_of_publication,
+            },
+        }) ||
+            {}),
+        ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
+            fez_record_search_key_publisher: {
+                rek_publisher: summary.rek_publisher,
+            },
+        }) ||
+            {}),
+    },
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,

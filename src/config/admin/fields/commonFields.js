@@ -16,15 +16,10 @@ export default {
             title: 'Advisory statement',
             groups: [['advisoryStatement']],
         },
-        isDataset
-            ? {
-                title: 'Deposit agreement',
-                groups: [['depositAgreement']],
-            }
-            : {
-                title: 'Copyright agreement',
-                groups: [['rek_copyright']],
-            },
+        {
+            title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
+            groups: [['rek_copyright']],
+        },
     ],
     grantInformation: () => [
         {

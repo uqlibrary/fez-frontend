@@ -9,8 +9,7 @@ exports[`ListRowHeader renders  header for contributor editor control with delet
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -80,8 +79,7 @@ exports[`ListRowHeader renders  header for contributor editor control with name 
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -177,8 +175,7 @@ exports[`ListRowHeader renders  should render larger grid item 1`] = `
     }
   }
 >
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",

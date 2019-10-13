@@ -2,8 +2,7 @@
 
 exports[`Component ContributorRowHeader header for contributor editor control with all options 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -130,8 +129,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with delete all disabled 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -234,8 +232,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for contributor editor control with name and delete all button only 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -338,8 +335,7 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
 
 exports[`Component ContributorRowHeader header for creator role 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
@@ -464,8 +460,7 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
 
 exports[`Component ContributorRowHeader should display infinite class 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
+  <WithStyles(ConfirmDialogBox)
     locale={
       Object {
         "cancelButtonLabel": "No",
