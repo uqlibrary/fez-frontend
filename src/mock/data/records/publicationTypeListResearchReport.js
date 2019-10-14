@@ -388,7 +388,12 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
-            "fez_record_search_key_parent_publication": null,
+            "fez_record_search_key_parent_publication": {
+                "rek_parent_publication_id": 5325,
+                "rek_parent_publication_pid": "UQ:284280",
+                "rek_parent_publication_xsdmf_id": 10075,
+                "rek_parent_publication": "CARD research project papers 2004-2007"
+            },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4444747,
                 "rek_place_of_publication_pid": "UQ:284280",
@@ -416,7 +421,12 @@ export default {
                 "rek_refereed_source": "453632",
                 "rek_refereed_source_lookup": "ERA Journal List 2012"
             },
-            "fez_record_search_key_report_number": null,
+            "fez_record_search_key_report_number": {
+                "rek_report_number_id": 15417,
+                "rek_report_number_pid": "UQ:406706",
+                "rek_report_number_xsdmf_id": 6619,
+                "rek_report_number": "2016-19"
+            },
             "fez_record_search_key_scopus_id": {
                 "rek_scopus_id_id": 2619742,
                 "rek_scopus_id_pid": "UQ:284280",
