@@ -394,12 +394,33 @@ export function adminUpdate(data) {
         });
 
         // delete extra form values from request object
-        const keys = ['pid', 'recordType', 'publication', 'securitySection', 'collection', 'subject'];
+        const keys = [
+            'pid',
+            'recordType',
+            'publication',
+            'adminSection',
+            'identifiersSection',
+            'bibliographicSection',
+            'authorsSection',
+            'additionalInformationSection',
+            'grantInformationSection',
+            'ntroSection',
+            'filesSection',
+            'securitySection',
+        ];
 
         // if user updated NTRO data - update record
         let patchRecordRequest = null;
         patchRecordRequest = {
             ...sanitiseData(data, makeReplacer(keys)),
+            ...transformers.getAdminSectionSearchKeys(data.adminSection),
+            ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
+            // ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
+            // ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
+            // ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
+            // ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
+            // ...transformers.getNtroSectionSearchKeys(data.ntroSection),
+            // ...transformers.getFilesSectionSearchKeys(data.filesSection),
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
         };
 

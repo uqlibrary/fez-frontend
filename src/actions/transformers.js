@@ -622,6 +622,46 @@ export const getExternalSourceIdSearchKeys = data => {
     return result;
 };
 
+export const getAdminSectionSearchKeys = (data = {}) => {
+    const { internalNotes, ...rest } = data;
+
+    return {
+        ...rest,
+        ...(!!internalNotes.hasOwnProperty('htmlText')
+            ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
+            : {}),
+    };
+};
+
+export const getLinkSearchKey = links =>
+    links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order }));
+
+export const getLinkDescriptionSearchKey = links =>
+    links.map(link => ({ rek_link_description: link.rek_value.value, rek_link_description_order: link.rek_order }));
+
+export const getIdentifiersSectionSearchKeys = (data = {}) => {
+    const {
+        fez_record_search_key_doi: doi,
+        fez_record_search_key_isi_loc: isiLoc,
+        fez_record_search_key_scopus_id: scopusId,
+        fez_record_search_key_pubmed_id: pubmedId,
+        links,
+        ...rest
+    } = data;
+
+    return {
+        ...(!!doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
+        ...(!!isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
+        ...(!!scopusId.hasOwnProperty('rek_scopus_id') ? { fez_record_search_key_scopus_id: scopusId } : {}),
+        ...(!!pubmedId.hasOwnProperty('rek_pubmed_id') ? { fez_record_search_key_pubmed_id: pubmedId } : {}),
+        ...(links.length > 0 ? { fez_record_search_key_link: [...getLinkSearchKey(links)] } : {}),
+        ...(links.length > 0
+            ? { fez_record_search_key_link_description: [...getLinkDescriptionSearchKey(links)] }
+            : {}),
+        ...rest,
+    };
+};
+
 export const getSecuritySectionSearchKeys = (data = {}) => {
     const { dataStreams, ...rest } = data;
     return {
