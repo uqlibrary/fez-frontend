@@ -197,7 +197,7 @@ export default {
                 "rek_publisher_id": 4414965,
                 "rek_publisher_pid": "UQ:294443",
                 "rek_publisher_xsdmf_id": null,
-                "rek_publisher": "Kathimerini"
+                "rek_publisher": "Kathimerini publisher"
             },
             "fez_record_search_key_refereed": {
                 "rek_refereed_id": 2892880,
@@ -213,7 +213,12 @@ export default {
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
             "fez_record_search_key_scopus_id": null,
-            "fez_record_search_key_section": null,
+            "fez_record_search_key_section": {
+                "rek_section_id": 64,
+                "rek_section_pid": "UQ:234742",
+                "rek_section_xsdmf_id": 7083,
+                "rek_section": "Letter No. 72"
+            },
             "fez_record_search_key_start_page": {
                 "rek_start_page_id": 5557458,
                 "rek_start_page_pid": "UQ:294443",
@@ -227,7 +232,12 @@ export default {
                 "rek_total_pages_xsdmf_id": null,
                 "rek_total_pages": "1"
             },
-            "fez_record_search_key_translated_newspaper": null,
+            "fez_record_search_key_translated_newspaper":  {
+                "rek_translated_newspaper_id": 11,
+                "rek_translated_newspaper_pid": "UQ:234742",
+                "rek_translated_newspaper_xsdmf_id": 10725,
+                "rek_translated_newspaper": "Arts and Societies. The letter of Seminar"
+            },
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_wok_doc_types": [],
             "fez_record_search_key_doi": null,
