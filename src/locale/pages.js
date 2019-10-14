@@ -451,12 +451,12 @@ export default {
                 ),
                 fileFailConfirmationAlert: {
                     title: 'File upload and/or notes post failed',
-                    message:
-                        'Retry uploading files and/or submitting notes via "Fix record" screen or contact eSpace administrators.',
+                    message: 'Retry via "Fix record" screen or contact eSpace administrators.',
                     type: 'warning',
                 },
                 cancelButtonLabel: 'Add another missing work',
                 confirmButtonLabel: 'Go to my research',
+                alternateActionButtonLabel: 'Fix record',
             },
         },
         fixRecord: {

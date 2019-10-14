@@ -25,16 +25,7 @@ Object {
 
 exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[MockFunction]}
     onRef={[Function]}
   />
@@ -202,16 +193,7 @@ exports[`GrantListEditorHeader should hide grant agency type input 1`] = `
 
 exports[`GrantListEditorHeader should render default mobile view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[MockFunction]}
     onRef={[Function]}
   />
@@ -396,16 +378,7 @@ exports[`GrantListEditorHeader should render default mobile view 1`] = `
 
 exports[`GrantListEditorHeader should render default view 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[MockFunction]}
     onRef={[Function]}
   />
@@ -590,16 +563,7 @@ exports[`GrantListEditorHeader should render default view 1`] = `
 
 exports[`GrantListEditorHeader should show confirmation box 1`] = `
 <Fragment>
-  <ConfirmDialogBox
-    hideCancelButton={false}
-    locale={
-      Object {
-        "cancelButtonLabel": "No",
-        "confirmButtonLabel": "Yes",
-        "confirmationMessage": "Are you sure?",
-        "confirmationTitle": "Confirmation",
-      }
-    }
+  <WithStyles(ConfirmDialogBox)
     onAction={[MockFunction]}
     onRef={[Function]}
   />
