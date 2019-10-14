@@ -21,6 +21,7 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_PREPRINT,
 } from 'config/general';
 
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
@@ -1494,6 +1495,13 @@ export default {
             rek_date: () => ({
                 label: 'Date',
                 placeholder: 'Date',
+            }),
+        },
+        [PUBLICATION_TYPE_PREPRINT]: {
+            rek_date: ({ isCreate }) => ({
+                label: 'Date',
+                placeholder: 'Date',
+                required: isCreate,
             }),
         },
         [PUBLICATION_TYPE_PATENT]: {
