@@ -63,7 +63,13 @@ export default {
             "fez_record_search_key_article_number": null,
             "fez_record_search_key_assigned_group_id": [],
             "fez_record_search_key_assigned_user_id": [],
-            "fez_record_search_key_audience_size": null,
+            "fez_record_search_key_audience_size": {
+                "rek_audience_size_id": 52,
+                "rek_audience_size_pid": "UQ:285760",
+                "rek_audience_size_xsdmf_id": 17395,
+                "rek_audience_size": 453992,
+                "rek_audience_size_lookup": "Less than 100"
+            },
             "fez_record_search_key_author": [
                 {
                     "rek_author_id": 32024577,
