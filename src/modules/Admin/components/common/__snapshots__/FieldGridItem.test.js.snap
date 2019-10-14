@@ -10,7 +10,6 @@ exports[`FieldGridItem should render default view 1`] = `
     component={[Function]}
     format={[Function]}
     height={100}
-    isNtro={false}
     name="bibliographicSection.rek_title"
     required={true}
     title="Formatted title"
