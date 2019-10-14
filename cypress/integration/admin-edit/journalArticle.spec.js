@@ -425,11 +425,12 @@ context('Journal Article admin edit', () => {
                     .children('h3')
                     .should('have.text', 'Files');
 
+                // No visible attached files in mock
+
                 cy.get('div:nth-child(2) > div > div:nth-child(2) .StandardCard')
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Files');
-                        // No visible files in mock
                     });
                 cy.get('div:nth-child(2) > div > div:nth-child(3) .StandardCard')
                     .within(() => {
