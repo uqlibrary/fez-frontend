@@ -1,6 +1,6 @@
-import { default as recordList } from '../../../src/mock/data/records/publicationTypeListNewspaperArticle';
+import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournal';
 
-context('Newspaper Article admin edit', () => {
+context('Journal admin edit', () => {
     // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
@@ -31,7 +31,7 @@ context('Newspaper Article admin edit', () => {
             .should('have.length', 8);
     });
 
-    it('should render Newspaper Article specific fields on the Bibliographic tab', () => {
+    it('should render Journal specific fields on the Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -41,7 +41,7 @@ context('Newspaper Article admin edit', () => {
                     .children('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(4) > .StandardCard')
+                cy.get('div:nth-child(5) > .StandardCard')
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Bibliographic');
@@ -53,17 +53,16 @@ context('Newspaper Article admin edit', () => {
                             );
                         cy.get('#Publishername')
                             .should('have.value', record.fez_record_search_key_publisher.rek_publisher);
-                        cy.get('#Edition')
-                            .should('have.value', record.fez_record_search_key_edition.rek_edition);
-                        cy.get('#Newspaper')
-                            .should('have.value', record.fez_record_search_key_newspaper.rek_newspaper);
-                        cy.get('#Section')
-                            .should('have.value', record.fez_record_search_key_section.rek_section);
-                        cy.get('#Translatednewspaper')
-                            .should(
-                                'have.value',
-                                record.fez_record_search_key_translated_newspaper.rek_translated_newspaper,
-                            );
+                        cy.get('#Volume')
+                            .should('have.value', record.fez_record_search_key_volume_number.rek_volume_number);
+                        cy.get('#Issue')
+                            .should('have.value', record.fez_record_search_key_issue_number.rek_issue_number);
+                        cy.get('label[id="Refereed source-label"]')
+                            .parent()
+                            .find('input[type=hidden]')
+                            .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
+                            .siblings('[role=button]')
+                            .should('have.text', record.fez_record_search_key_refereed_source.rek_refereed_source_lookup);
                     });
             });
     });
