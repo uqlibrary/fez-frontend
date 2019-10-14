@@ -182,7 +182,7 @@ describe('Component FileUploadDropzone', () => {
     it('should remove files with invalid mime type', () => {
         const wrapper = setup();
 
-        const files = [getMockFile('a.jpg'), getMockFile('b.txt')];
+        const files = [getMockFile('a.JPG'), getMockFile('b.txt')];
         const { validMimeTypeFiles, invalidMimeTypeFiles } = wrapper
             .instance()
             .removeInvalidMimeTypes(files, MIME_TYPE_WHITELIST);
