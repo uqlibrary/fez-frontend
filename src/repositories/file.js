@@ -29,7 +29,7 @@ export function putUploadFile(pid, file, dispatch) {
                 .split('.')
                 .pop()
                 .toString()
-                .toLocaleLowerCase();
+                .toLowerCase();
             const headers = {};
             if (MIME_TYPE_WHITELIST.hasOwnProperty(extension)) {
                 headers['Content-Type'] = MIME_TYPE_WHITELIST[extension];
