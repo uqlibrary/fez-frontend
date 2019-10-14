@@ -706,12 +706,12 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
     },
     fez_record_search_key_audience_size: {
-        getValue: record => (record.fez_record_search_key_audience_size || {}).rek_audience_size || 0,
+        getValue: record => ({ ...(record.fez_record_search_key_audience_size || {}) }),
     },
     fez_record_search_key_scale: {
-        getValue: record => (record.fez_record_search_key_scale || {}).rek_scale,
+        getValue: record => ({ ...(record.fez_record_search_key_scale || {}) }),
     },
     fez_record_search_key_job_number: {
-        getValue: record => (record.fez_record_search_key_job_number || {}).rek_job_number,
+        getValue: record => ({ ...(record.fez_record_search_key_job_number || {}) }),
     },
 };
