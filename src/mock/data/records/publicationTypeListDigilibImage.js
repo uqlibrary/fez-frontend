@@ -215,7 +215,7 @@ export default {
                 "rek_construction_date_id": 2818,
                 "rek_construction_date_pid": "UQ:108093",
                 "rek_construction_date_xsdmf_id": 4215,
-                "rek_construction_date": "1994"
+                "rek_construction_date": "AMP Place constructed 1977, Comalco Place in 1983"
             },
             "fez_record_search_key_contributor": [],
             "fez_record_search_key_contributor_id": [],
@@ -292,7 +292,14 @@ export default {
                 "rek_interior_features": "Raked ceilings",
                 "rek_interior_features_order": 2
             }],
-            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_isderivationof": [{
+                "rek_isderivationof_id": 13596,
+                "rek_isderivationof_pid": "UQ:108093",
+                "rek_isderivationof_xsdmf_id": null,
+                "rek_isderivationof": "UQ:4bdd6a8",
+                "rek_isderivationof_order": 1,
+                "rek_isderivationof_lookup": "Fusion transcript loci share many genomic features with non-fusion loci"
+            }],
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11910890,
                 "rek_ismemberof_pid": "UQ:108093",
@@ -398,7 +405,19 @@ export default {
                 "rek_structural_systems": "Rafters",
                 "rek_structural_systems_order": 4
             }],
-            "fez_record_search_key_style": [],
+            "fez_record_search_key_style": [{
+                "rek_style_id": 7881,
+                "rek_style_pid": "UQ:114137",
+                "rek_style_xsdmf_id": 8302,
+                "rek_style": "Art Deco",
+                "rek_style_order": 1
+            }, {
+                "rek_style_id": 7882,
+                "rek_style_pid": "UQ:114137",
+                "rek_style_xsdmf_id": 8302,
+                "rek_style": "Spanish mission",
+                "rek_style_order": 2
+            }],
             "fez_record_search_key_subcategory": [{
                 "rek_subcategory_id": 37254,
                 "rek_subcategory_pid": "UQ:108093",
@@ -412,7 +431,19 @@ export default {
                 "rek_subcategory": "Farmhouses",
                 "rek_subcategory_order": 2
             }],
-            "fez_record_search_key_surrounding_features": [],
+            "fez_record_search_key_surrounding_features": [{
+                "rek_surrounding_features_id": 27171,
+                "rek_surrounding_features_pid": "UQ:108035",
+                "rek_surrounding_features_xsdmf_id": 8318,
+                "rek_surrounding_features": "Farms",
+                "rek_surrounding_features_order": 1
+            }, {
+                "rek_surrounding_features_id": 27172,
+                "rek_surrounding_features_pid": "UQ:108035",
+                "rek_surrounding_features_xsdmf_id": 8318,
+                "rek_surrounding_features": "Mountain ranges",
+                "rek_surrounding_features_order": 2
+            }],
             "fez_record_search_key_issn": [],
             "fez_record_search_key_doi": null,
             "fez_record_search_key_isi_loc": null,
@@ -729,7 +760,19 @@ export default {
             "fez_record_search_key_grant_text": [],
             "fez_record_search_key_grant_type": [],
             "fez_record_search_key_institutional_status": null,
-            "fez_record_search_key_interior_features": [],
+            "fez_record_search_key_interior_features": [{
+                "rek_interior_features_id": 4423,
+                "rek_interior_features_pid": "UQ:108108",
+                "rek_interior_features_xsdmf_id": 8315,
+                "rek_interior_features": "Polished timber floors",
+                "rek_interior_features_order": 1
+            }, {
+                "rek_interior_features_id": 4424,
+                "rek_interior_features_pid": "UQ:108108",
+                "rek_interior_features_xsdmf_id": 8315,
+                "rek_interior_features": "Raked ceilings",
+                "rek_interior_features_order": 2
+            }],
             "fez_record_search_key_isderivationof": [],
             "fez_record_search_key_ismemberof": [{
                 "rek_ismemberof_id": 11911887,
