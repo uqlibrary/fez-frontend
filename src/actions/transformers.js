@@ -623,10 +623,9 @@ export const getExternalSourceIdSearchKeys = data => {
 };
 
 export const getAdminSectionSearchKeys = (data = {}) => {
-    const { internalNotes, ...rest } = data;
+    const { internalNotes } = data;
 
     return {
-        ...rest,
         ...(!!internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
@@ -659,6 +658,57 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             ? { fez_record_search_key_link_description: [...getLinkDescriptionSearchKey(links)] }
             : {}),
         ...rest,
+    };
+};
+
+export const getBibliographicSectionSearchKeys = (data = {}) => {
+    const {
+        rek_title: title,
+        rek_description: description,
+        languageOfTitle,
+        languages,
+        subjects,
+        fez_record_search_key_date_available: dateAvailable,
+        fez_record_search_key_date_recorded: dateRecorded,
+        ...rest
+    } = data;
+
+    return {
+        ...rest,
+        rek_date: moment(data.rek_date).format(),
+        ...(!!title.hasOwnProperty('htmlText') ? { rek_title: title.htmlText } : {}),
+        ...(!!description.hasOwnProperty('htmlText') ? { rek_description: description.htmlText } : {}),
+        ...(!!languageOfTitle
+            ? {
+                fez_record_search_key_language_of_title: languageOfTitle.map(lang => ({
+                    rek_language_of_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languages
+            ? {
+                fez_record_search_key_language: languages.map(lang => ({
+                    rek_language: lang,
+                })),
+            }
+            : {}),
+        ...(!!dateAvailable
+            ? {
+                fez_record_search_key_date_available: {
+                    ...dateAvailable,
+                    rek_date_available: moment(dateAvailable.rek_date_available).format(),
+                },
+            }
+            : {}),
+        ...(!!dateRecorded
+            ? {
+                fez_record_search_key_date_recorded: {
+                    ...dateRecorded,
+                    rek_date_recorded: moment(dateRecorded.rek_date_recorded).format(),
+                },
+            }
+            : {}),
+        ...getRecordSubjectSearchKey(subjects),
     };
 };
 

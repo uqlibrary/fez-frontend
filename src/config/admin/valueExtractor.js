@@ -417,8 +417,12 @@ export default {
         getValue: record => {
             return (
                 record.fez_record_search_key_date_available &&
-                record.fez_record_search_key_date_available.rek_date_available &&
-                moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
+                record.fez_record_search_key_date_available.rek_date_available && {
+                    ...record.fez_record_search_key_date_available,
+                    rek_date_available: moment(record.fez_record_search_key_date_available.rek_date_available).format(
+                        'YYYY',
+                    ),
+                }
             );
         },
     },
@@ -426,8 +430,12 @@ export default {
         getValue: record => {
             return (
                 record.fez_record_search_key_date_recorded &&
-                record.fez_record_search_key_date_recorded.rek_date_recorded &&
-                moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format('YYYY')
+                record.fez_record_search_key_date_recorded.rek_date_recorded && {
+                    ...record.fez_record_search_key_date_recorded,
+                    rek_date_recorded: moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format(
+                        'YYYY',
+                    ),
+                }
             );
         },
     },

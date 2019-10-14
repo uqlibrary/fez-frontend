@@ -665,7 +665,7 @@ export default {
         fez_record_search_key_native_script_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_native_script_title',
+                name: 'bibliographicSection.fez_record_search_key_native_script_title.rek_native_script_title',
                 label: 'Native script title',
                 placeholder: '',
                 fullWidth: true,
@@ -674,7 +674,7 @@ export default {
         fez_record_search_key_roman_script_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_roman_script_title',
+                name: 'bibliographicSection.fez_record_search_key_roman_script_title.rek_roman_script_title',
                 label: 'Roman script title',
                 placeholder: '',
                 fullWidth: true,
@@ -683,7 +683,7 @@ export default {
         fez_record_search_key_translated_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_translated_title',
+                name: 'bibliographicSection.fez_record_search_key_translated_title.rek_translated_title',
                 label: 'Translated title',
                 placeholder: '',
                 fullWidth: true,
@@ -842,7 +842,7 @@ export default {
         fez_record_search_key_date_available: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_date_available',
+                name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
                 label: 'Year available',
                 fullWidth: true,
                 validate: [validation.dateTimeYear],
