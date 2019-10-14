@@ -1364,7 +1364,7 @@ export default {
             },
         },
         fez_record_search_key_construction_date: {
-            component: DatePickerField,
+            component: GenericTextField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_construction_date.rek_construction_date',
                 label: 'Construction date',
