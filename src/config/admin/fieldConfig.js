@@ -10,15 +10,17 @@ import {
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
-    PUBLICATION_TYPE_IMAGE,
-    PUBLICATION_TYPE_MANUSCRIPT,
-    PUBLICATION_TYPE_PATENT,
-    PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DESIGN,
-    PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
+    PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_MANUSCRIPT,
+    PUBLICATION_TYPE_PATENT,
+    PUBLICATION_TYPE_RESEARCH_REPORT,
+    PUBLICATION_TYPE_THESIS,
+    PUBLICATION_TYPE_VIDEO_DOCUMENT,
+    PUBLICATION_TYPE_CREATIVE_WORK,
 } from 'config/general';
 
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
@@ -230,11 +232,9 @@ export default {
         fez_record_search_key_audience_size: {
             component: AudienceSizeField,
             componentProps: {
-                name: 'ntroSection.fez_record_search_key_audience_size',
+                name: 'ntroSection.fez_record_search_key_audience_size.rek_audience_size',
                 fullWidth: true,
                 label: 'Audience size',
-                required: true,
-                validate: [validation.required],
             },
         },
         fez_record_search_key_journal_name: {
@@ -1449,7 +1449,13 @@ export default {
                 validation: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
-            editors: ({ isNtro }) => ({ isNtro }),
+        },
+        [PUBLICATION_TYPE_CREATIVE_WORK]: {
+            fez_record_search_key_place_of_publication: () => ({
+                required: true,
+                validation: [validation.required],
+            }),
+            authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_DATA_COLLECTION]: {
             rek_copyright: () => ({
@@ -1497,6 +1503,12 @@ export default {
             }),
             fez_record_search_key_publisher: () => ({
                 label: 'Patent owner',
+            }),
+        },
+        [PUBLICATION_TYPE_RESEARCH_REPORT]: {
+            fez_record_search_key_place_of_publication: () => ({
+                required: true,
+                validation: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_THESIS]: {
