@@ -60,7 +60,12 @@ export default {
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
-            "fez_record_search_key_acknowledgements": null,
+            "fez_record_search_key_acknowledgements": {
+                "rek_acknowledgements_id": 22452,
+                "rek_acknowledgements_pid": "UQ:134700",
+                "rek_acknowledgements_xsdmf_id": 17128,
+                "rek_acknowledgements": "Information supplied by Kaye Mobsby."
+            },
             "fez_record_search_key_additional_notes": null,
             "fez_record_search_key_advisory_statement": null,
             "fez_record_search_key_article_number": null,
@@ -145,7 +150,13 @@ export default {
                 "rek_language": "eng",
                 "rek_language_order": 1
             }],
-            "fez_record_search_key_license": null,
+            "fez_record_search_key_license": {
+                "rek_license_id": 25068,
+                "rek_license_pid": "UQ:402976",
+                "rek_license_xsdmf_id": 17289,
+                "rek_license": "453613",
+                "rek_license_lookup": "Creative Commons Attribution share alike"
+            },
             "fez_record_search_key_link": [{
                 "rek_link_id": 3238884,
                 "rek_link_pid": "UQ:134700",
@@ -174,7 +185,12 @@ export default {
             }],
             "fez_record_search_key_notes": null,
             "fez_record_search_key_oa_status": null,
-            "fez_record_search_key_original_format": null,
+            "fez_record_search_key_original_format": {
+                "rek_original_format_id": 7396,
+                "rek_original_format_pid": "UQ:134700",
+                "rek_original_format_xsdmf_id": 8567,
+                "rek_original_format": "Negative; b&w; 9 x 15 cm."
+            },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4307808,
                 "rek_place_of_publication_pid": "UQ:134700",
@@ -201,9 +217,19 @@ export default {
                 "rek_refereed_source": "453638",
                 "rek_refereed_source_lookup": "Not yet assessed"
             },
-            "fez_record_search_key_rights": null,
+            "fez_record_search_key_rights": {
+                "rek_rights_id": 103966,
+                "rek_rights_pid": "UQ:367646",
+                "rek_rights_xsdmf_id": 8574,
+                "rek_rights": "Copyright expired"
+            },
             "fez_record_search_key_series": null,
-            "fez_record_search_key_source": null,
+            "fez_record_search_key_source": {
+                "rek_source_id": 54373,
+                "rek_source_pid": "UQ:134700",
+                "rek_source_xsdmf_id": 8572,
+                "rek_source": "Henry William Mobsby Collection, UQFL181, Box 2, Folder 5, photo 119"
+            },
             "fez_record_search_key_subject": [{
                 "rek_subject_id": 9349547,
                 "rek_subject_pid": "UQ:134700",
