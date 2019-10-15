@@ -646,10 +646,10 @@ export default {
     },
     supervisors: {
         getValue: record => {
-            const supervisors = (record.fez_record_search_key_supervisor_name || []).reduce(
+            const supervisors = (record.fez_record_search_key_supervisor || []).reduce(
                 (supervisorsObject, supervisor) => ({
                     ...supervisorsObject,
-                    [supervisor.rek_supervisor_name_order]: supervisor,
+                    [supervisor.rek_supervisor_order]: supervisor,
                 }),
                 {},
             );
@@ -662,8 +662,8 @@ export default {
                 {},
             );
 
-            return (record.fez_record_search_key_supervisor_name || []).map(({ rek_supervisor_name_order: order }) => ({
-                nameAsPublished: (supervisors[order] || {}).rek_supervisor_name,
+            return (record.fez_record_search_key_supervisor || []).map(({ rek_supervisor_order: order }) => ({
+                nameAsPublished: (supervisors[order] || {}).rek_supervisor,
                 creatorRole: '',
                 uqIdentifier: `${(supervisorIds[order] || {}).rek_supervisor_id || 0}`,
                 authorId: (supervisorIds[order] || {}).rek_supervisor_id || 0,
