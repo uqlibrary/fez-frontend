@@ -1110,7 +1110,7 @@ export default {
         fez_record_search_key_project_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_project_start_date',
+                name: 'bibliographicSection.fez_record_search_key_project_start_date.rek_project_start_date',
                 label: 'Project start date',
                 placeholder: 'Project start date',
                 fullWidth: true,
@@ -1119,7 +1119,7 @@ export default {
         fez_record_search_key_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_start_date',
+                name: 'additionalInformationSection.fez_record_search_key_start_date.rek_start_date',
                 label: 'Start date',
                 placeholder: 'Start date',
                 fullWidth: true,
@@ -1128,7 +1128,7 @@ export default {
         fez_record_search_key_end_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_end_date',
+                name: 'additionalInformationSection.fez_record_search_key_end_date.rek_end_date',
                 label: 'End date',
                 placeholder: 'End date',
                 fullWidth: true,
@@ -1137,7 +1137,8 @@ export default {
         fez_record_search_key_time_period_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_time_period_start_date',
+                name:
+                    'additionalInformationSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
                 label: 'Time period start date',
                 placeholder: 'Time period start date',
                 fullWidth: true,
@@ -1146,7 +1147,8 @@ export default {
         fez_record_search_key_time_period_end_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_time_period_end_date',
+                name:
+                    'additionalInformationSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
                 label: 'Time period end date',
                 placeholder: 'Time period end date',
                 fullWidth: true,
@@ -1222,7 +1224,7 @@ export default {
             componentProps: {
                 fullWidth: true,
                 label: 'Scale',
-                name: 'bibliographicSection.fez_record_search_key_scale',
+                name: 'bibliographicSection.fez_record_search_key_scale.rek_scale',
                 placeholder: '',
             },
         },
@@ -1231,7 +1233,7 @@ export default {
             componentProps: {
                 fullWidth: true,
                 label: 'Job number',
-                name: 'bibliographicSection.fez_record_search_key_job_number',
+                name: 'bibliographicSection.fez_record_search_key_job_number.rek_job_number',
                 placeholder: '',
             },
         },

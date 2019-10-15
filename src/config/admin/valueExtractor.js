@@ -553,19 +553,19 @@ export default {
         }),
     },
     fez_record_search_key_project_start_date: {
-        getValue: record => (record.fez_record_search_key_project_start_date || {}).rek_project_start_date,
+        getValue: record => ({ ...record.fez_record_search_key_project_start_date }),
     },
     fez_record_search_key_start_date: {
-        getValue: record => (record.fez_record_search_key_start_date || {}).rek_start_date,
+        getValue: record => ({ ...record.fez_record_search_key_start_date }),
     },
     fez_record_search_key_end_date: {
-        getValue: record => (record.fez_record_search_key_end_date || {}).rek_end_date,
+        getValue: record => ({ ...record.fez_record_search_key_end_date }),
     },
     fez_record_search_key_time_period_start_date: {
-        getValue: record => (record.fez_record_search_key_time_period_start_date || {}).rek_time_period_start_date,
+        getValue: record => ({ ...record.fez_record_search_key_time_period_start_date }),
     },
     fez_record_search_key_time_period_end_date: {
-        getValue: record => (record.fez_record_search_key_time_period_end_date || {}).rek_time_period_end_date,
+        getValue: record => ({ ...record.fez_record_search_key_time_period_end_date }),
     },
     fez_record_search_key_org_name: {
         getValue: record => ({ ...record.fez_record_search_key_org_name }),
@@ -709,12 +709,12 @@ export default {
         getValue: record => ({ ...record.fez_record_search_key_translated_newspaper }),
     },
     fez_record_search_key_audience_size: {
-        getValue: record => ({ ...(record.fez_record_search_key_audience_size || {}) }),
+        getValue: record => ({ ...record.fez_record_search_key_audience_size }),
     },
     fez_record_search_key_scale: {
-        getValue: record => ({ ...(record.fez_record_search_key_scale || {}) }),
+        getValue: record => ({ ...record.fez_record_search_key_scale }),
     },
     fez_record_search_key_job_number: {
-        getValue: record => ({ ...(record.fez_record_search_key_job_number || {}) }),
+        getValue: record => ({ ...record.fez_record_search_key_job_number }),
     },
 };
