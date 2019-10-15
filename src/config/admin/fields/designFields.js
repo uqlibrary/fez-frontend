@@ -28,8 +28,7 @@ export default {
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_project_name', 'fez_record_search_key_project_start_date'],
-                ['fez_record_search_key_scale'],
-                ['fez_record_search_key_job_number'],
+                ['fez_record_search_key_scale', 'fez_record_search_key_job_number'],
             ],
         },
         {
