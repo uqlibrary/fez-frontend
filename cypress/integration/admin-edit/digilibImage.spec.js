@@ -225,4 +225,52 @@ context('Digilib Image admin edit', () => {
                     });
             });
     });
+
+    it('should render Author details tab', () => {
+        cy.get('.StandardPage form > div > div:nth-child(4)')
+            .within(() => {
+                cy.root()
+                    .children('.StandardCard')
+                    .children('div')
+                    .children('div')
+                    .children('h3')
+                    .should('have.text', 'Author details');
+
+                cy.get('div:nth-child(1) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Architects');
+                        const architects = record.fez_record_search_key_architect_name.map(item => item.rek_architect_name);
+                        architects.forEach((author, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', author);
+                        });
+                    });
+
+                cy.get('div:nth-child(2) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Photographers');
+                        const authors = record.fez_record_search_key_author.map(item => item.rek_author);
+                        authors.forEach((author, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', author);
+                        });
+                    });
+
+                cy.get('div:nth-child(3) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Other contributors');
+                        const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
+                        contributors.forEach((contributor, index) => {
+                            cy.get('p')
+                                .eq(index)
+                                .should('have.text', contributor);
+                        });
+                    });
+            });
+    });
 });
