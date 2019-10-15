@@ -90,27 +90,21 @@ context('Research Report admin edit', () => {
                         cy.get('h3')
                             .should('have.text', 'Grant information');
 
-                        const agency = record.fez_record_search_key_grant_agency.map(pub => pub.rek_grant_agency);
-                        agency.forEach((pub, index) => {
+                        const numberItemsInRow = 3;
+                        record.fez_record_search_key_grant_agency.map((pub, index) => {
                             cy.get('p')
-                                .eq(index * 3)
-                                .should('have.text', pub);
+                                .eq(index * numberItemsInRow)
+                                .should('have.text', pub.rek_grant_agency);
                         });
-
-                        const ids = record.fez_record_search_key_grant_id.map(id => id.rek_grant_id);
-                        ids.forEach((id, index) => {
+                        record.fez_record_search_key_grant_id.map((id, index) => {
                             cy.get('p')
-                                .eq(index * 3 + 1)
-                                .should('have.text', id);
+                                .eq(index * numberItemsInRow + 1)
+                                .should('have.text', id.rek_grant_id);
                         });
-                        // prettier-ignore
-                        const types = record.fez_record_search_key_grant_type.map(
-                            type => type.rek_grant_agency_type_lookup
-                        );
-                        types.forEach((type, index) => {
+                        record.fez_record_search_key_grant_agency_type.map((type, index) => {
                             cy.get('p')
-                                .eq(index * 3 + 2)
-                                .should('have.text', type);
+                                .eq(index * numberItemsInRow + 2)
+                                .should('have.text', type.rek_grant_agency_type_lookup);
                         });
                     });
             });

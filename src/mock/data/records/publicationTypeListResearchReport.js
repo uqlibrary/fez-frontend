@@ -209,9 +209,9 @@ export default {
                 "rek_grant_agency_type_id": 180,
                 "rek_grant_agency_type_pid": "UQ:734019",
                 "rek_grant_agency_type_xsdmf_id": 17390,
-                "rek_grant_agency_type": 453985,
+                "rek_grant_agency_type": 453986,
                 "rek_grant_agency_type_order": 2,
-                "rek_grant_agency_type_lookup": "Government"
+                "rek_grant_agency_type_lookup": "NGO"
             }],
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 5005937,
