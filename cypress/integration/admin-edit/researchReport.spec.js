@@ -15,20 +15,20 @@ context('Research Report admin edit', () => {
             .then(win => (win.onbeforeunload = undefined));
     });
 
-    // it('should load with specifed elements', () => {
-    //     cy.get('h2')
-    //         .should('have.length', 1)
-    //         .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
-    //
-    //     cy.get('input[value=tabbed]')
-    //         .should('be.not.checked');
-    //
-    //     cy.get('button[title="Learn about keyboard shortcuts"]')
-    //         .should('exist');
-    //
-    //     cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-    //         .should('have.length', 9);
-    // });
+    it('should load with specifed elements', () => {
+        cy.get('h2')
+            .should('have.length', 1)
+            .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
+
+        cy.get('input[value=tabbed]')
+            .should('be.not.checked');
+
+        cy.get('button[title="Learn about keyboard shortcuts"]')
+            .should('exist');
+
+        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
+            .should('have.length', 9);
+    });
 
     it('should render Research Report specific fields on the Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
@@ -71,6 +71,47 @@ context('Research Report admin edit', () => {
                                 'have.value',
                                 record.fez_record_search_key_report_number.rek_report_number,
                             );
+                    });
+            });
+    });
+
+    it('should render Research Report specific fields on the Grants tab', () => {
+        cy.get('.StandardPage form > div > div:nth-child(7)')
+            .within(() => {
+                cy.root()
+                    .children('.StandardCard')
+                    .children('div')
+                    .children('div')
+                    .children('h3')
+                    .should('have.text', 'Grant information');
+
+                cy.get('div:nth-child(1) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Grant information');
+
+                        const agency = record.fez_record_search_key_grant_agency.map(pub => pub.rek_grant_agency);
+                        agency.forEach((pub, index) => {
+                            cy.get('p')
+                                .eq(index * 3)
+                                .should('have.text', pub);
+                        });
+
+                        const ids = record.fez_record_search_key_grant_id.map(id => id.rek_grant_id);
+                        ids.forEach((id, index) => {
+                            cy.get('p')
+                                .eq(index * 3 + 1)
+                                .should('have.text', id);
+                        });
+                        // prettier-ignore
+                        const types = record.fez_record_search_key_grant_type.map(
+                            type => type.rek_grant_agency_type_lookup
+                        );
+                        types.forEach((type, index) => {
+                            cy.get('p')
+                                .eq(index * 3 + 2)
+                                .should('have.text', type);
+                        });
                     });
             });
     });
