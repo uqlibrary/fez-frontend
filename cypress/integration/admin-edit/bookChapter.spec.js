@@ -1,6 +1,6 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBookChapter';
 
-context('Book chapter admin edit', () => {
+context('Book Chapter admin edit', () => {
     // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 

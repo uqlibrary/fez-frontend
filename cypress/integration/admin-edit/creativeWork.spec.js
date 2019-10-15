@@ -1,6 +1,6 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListCreativeWork';
 
-context('Book chapter admin edit', () => {
+context('Creative Work admin edit', () => {
     const record = recordList.data[0];
 
     beforeEach(() => {
