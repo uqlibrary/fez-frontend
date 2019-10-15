@@ -70,6 +70,12 @@ export default {
                     "rek_author_xsdmf_id": null,
                     "rek_author": "Simon, Bruno",
                     "rek_author_order": 1
+                }, {
+                    "rek_author_id": 30117058,
+                    "rek_author_pid": "UQ:327650",
+                    "rek_author_xsdmf_id": null,
+                    "rek_author": "Some Other Guy",
+                    "rek_author_order": 2
                 }
             ],
             "fez_record_search_key_author_id": [
@@ -80,6 +86,13 @@ export default {
                     "rek_author_id": 91159,
                     "rek_author_id_order": 1,
                     "rek_author_id_lookup": "Simon, Bruno"
+                }, {
+                    "rek_author_id_id": 29437217,
+                    "rek_author_id_pid": "UQ:327650",
+                    "rek_author_id_xsdmf_id": null,
+                    "rek_author_id": 91158,
+                    "rek_author_id_order": 1,
+                    "rek_author_id_lookup": "Some Other Guy"
                 }
             ],
             "fez_record_search_key_contributor": [],
@@ -223,7 +236,16 @@ export default {
                     "rek_file_attachment_name_order": 18
                 }
             ],
-            "fez_record_search_key_isderivationof": [],
+            "fez_record_search_key_isderivationof": [
+                {
+                    "rek_isderivationof_id": 14268,
+                    "rek_isderivationof_pid": "UQ:327650",
+                    "rek_isderivationof_xsdmf_id": 8648,
+                    "rek_isderivationof": "UQ:259612",
+                    "rek_isderivationof_order": 1,
+                    "rek_isderivationof_lookup": "Recent developments in organizational culture and climate research"
+                }
+            ],
             "fez_record_search_key_isi_loc": null,
             "fez_record_search_key_ismemberof": [
                 {
@@ -329,7 +351,12 @@ export default {
             ],
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
-            "fez_record_search_key_notes": null,
+            "fez_record_search_key_notes": {
+                "rek_notes_id": 1189823,
+                "rek_notes_pid": "UQ:03b77a1",
+                "rek_notes_xsdmf_id": 12516,
+                "rek_notes": "Restricted thesis"
+            },
             "fez_record_search_key_oa_status": {
                 "rek_oa_status_id": 605231,
                 "rek_oa_status_pid": "UQ:327650",
