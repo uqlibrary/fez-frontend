@@ -37,4 +37,39 @@ context('Book chapter admin edit', () => {
         cy.get('@cards')
             .should('have.length', 8);
     });
+
+    it('should render Bibliographic tab with multilingual fields', () => {
+        cy.get('.StandardPage form > div > div:nth-child(3)')
+            .within(() => {
+                cy.get('div:nth-child(1) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Title');
+                        const langCodes = record.fez_record_search_key_language_of_title.map(
+                            lang => lang.rek_language_of_title,
+                        );
+                        cy.get('label[id="Language of title-label"]')
+                            .parent()
+                            .find('input[type=hidden]')
+                            .should('have.value', langCodes.join(','))
+                            .siblings('[role=button] span')
+                            .should('have.length', 0); // If no matching codes found, there is a span present
+                        cy.get('#Nativescripttitle')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_native_script_title.rek_native_script_title,
+                            );
+                        cy.get('#Romanscripttitle')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_roman_script_title.rek_roman_script_title,
+                            );
+                        cy.get('#Translatedtitle')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_translated_title.rek_translated_title,
+                            );
+                    });
+            });
+    });
 });
