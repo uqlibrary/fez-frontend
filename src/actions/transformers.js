@@ -351,6 +351,74 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
     };
 };
 
+/* getRecordCreatorsSearchKey - returns editors object formatted for record request
+ * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ * @returns {Object} formatted {fez_record_search_key_creator} for record request
+ */
+export const getRecordCreatorsSearchKey = creators => {
+    if (!creators || creators.length === 0) return {};
+
+    return {
+        fez_record_search_key_creator: creators.map((item, index) => ({
+            rek_creator: item.nameAsPublished,
+            rek_creator_order: index + 1,
+        })),
+    };
+};
+
+export const getRecordCreatorsIdSearchKey = creators => {
+    // return empty object if all parameters are null
+    if (!creators || creators.length === 0) return {};
+
+    return {
+        fez_record_search_key_creator_id: creators.map((item, index) =>
+            item.hasOwnProperty('rek_creator_id') && item.hasOwnProperty('rek_creator_id_order')
+                ? item
+                : {
+                    rek_creator_id:
+                          (item.hasOwnProperty('aut_id') && item.aut_id) ||
+                          (item.hasOwnProperty('authorId') && item.authorId) ||
+                          null,
+                    rek_creator_id_order: index + 1,
+                },
+        ),
+    };
+};
+
+/* getRecordArchitectSearchKey - returns editors object formatted for record request
+ * @param {array} of objects in format {nameAsPublished: "string", disabled: false, selected: true, authorId: 410}
+ * @returns {Object} formatted {fez_record_search_key_architect} for record request
+ */
+export const getRecordArchitectsSearchKey = architects => {
+    if (!architects || architects.length === 0) return {};
+
+    return {
+        fez_record_search_key_architect: architects.map((item, index) => ({
+            rek_architect: item.nameAsPublished,
+            rek_architect_order: index + 1,
+        })),
+    };
+};
+
+export const getRecordArchitectsIdSearchKey = architects => {
+    // return empty object if all parameters are null
+    if (!architects || architects.length === 0) return {};
+
+    return {
+        fez_record_search_key_architect_id: architects.map((item, index) =>
+            item.hasOwnProperty('rek_architect_id') && item.hasOwnProperty('rek_architect_id_order')
+                ? item
+                : {
+                    rek_architect_id:
+                          (item.hasOwnProperty('aut_id') && item.aut_id) ||
+                          (item.hasOwnProperty('authorId') && item.authorId) ||
+                          null,
+                    rek_architect_id_order: index + 1,
+                },
+        ),
+    };
+};
+
 /* getRecordSubjectSearchKey - returns subjects for record request
  * @param {array} of objects in format {rek_value: {key: id, value: value}, rek_order}
  * @returns {Object} formatted {fez_record_search_key_subject} for record request
@@ -626,17 +694,22 @@ export const getAdminSectionSearchKeys = (data = {}) => {
     const { internalNotes } = data;
 
     return {
-        ...(!!internalNotes.hasOwnProperty('htmlText')
+        ...(!!internalNotes && internalNotes.hasOwnProperty('htmlText')
             ? { fez_internal_notes: { ain_detail: internalNotes.htmlText } }
             : {}),
     };
 };
 
-export const getLinkSearchKey = links =>
-    links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order }));
+export const getLinkSearchKey = links => ({
+    fez_record_search_key_link: links.map(link => ({ rek_link: link.rek_value.key, rek_link_order: link.rek_order })),
+});
 
-export const getLinkDescriptionSearchKey = links =>
-    links.map(link => ({ rek_link_description: link.rek_value.value, rek_link_description_order: link.rek_order }));
+export const getLinkDescriptionSearchKey = links => ({
+    fez_record_search_key_link_description: links.map(link => ({
+        rek_link_description: link.rek_value.value,
+        rek_link_description_order: link.rek_order,
+    })),
+});
 
 export const getIdentifiersSectionSearchKeys = (data = {}) => {
     const {
@@ -649,14 +722,16 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
     } = data;
 
     return {
-        ...(!!doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
-        ...(!!isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
-        ...(!!scopusId.hasOwnProperty('rek_scopus_id') ? { fez_record_search_key_scopus_id: scopusId } : {}),
-        ...(!!pubmedId.hasOwnProperty('rek_pubmed_id') ? { fez_record_search_key_pubmed_id: pubmedId } : {}),
-        ...(links.length > 0 ? { fez_record_search_key_link: [...getLinkSearchKey(links)] } : {}),
-        ...(links.length > 0
-            ? { fez_record_search_key_link_description: [...getLinkDescriptionSearchKey(links)] }
+        ...(!!doi && doi.hasOwnProperty('rek_doi') ? { fez_record_search_key_doi: doi } : {}),
+        ...(!!isiLoc && isiLoc.hasOwnProperty('rek_isi_loc') ? { fez_record_search_key_isi_loc: isiLoc } : {}),
+        ...(!!scopusId && scopusId.hasOwnProperty('rek_scopus_id')
+            ? { fez_record_search_key_scopus_id: scopusId }
             : {}),
+        ...(!!pubmedId && pubmedId.hasOwnProperty('rek_pubmed_id')
+            ? { fez_record_search_key_pubmed_id: pubmedId }
+            : {}),
+        ...(!!links && links.length > 0 ? getLinkSearchKey(links) : {}),
+        ...(!!links && links.length > 0 ? getLinkDescriptionSearchKey(links) : {}),
         ...rest,
     };
 };
@@ -676,8 +751,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     return {
         ...rest,
         rek_date: moment(data.rek_date).format(),
-        ...(!!title.hasOwnProperty('htmlText') ? { rek_title: title.htmlText } : {}),
-        ...(!!description.hasOwnProperty('htmlText') ? { rek_description: description.htmlText } : {}),
+        ...(!!title && title.hasOwnProperty('htmlText') ? { rek_title: title.htmlText } : {}),
+        ...(!!description && description.hasOwnProperty('htmlText') ? { rek_description: description.htmlText } : {}),
         ...(!!languageOfTitle
             ? {
                 fez_record_search_key_language_of_title: languageOfTitle.map(lang => ({
@@ -709,6 +784,39 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             }
             : {}),
         ...getRecordSubjectSearchKey(subjects),
+    };
+};
+
+export const getAuthorsSearchKeys = authors => ({
+    ...getRecordAuthorsSearchKey(authors),
+    ...getRecordAuthorsIdSearchKey(authors),
+    ...getRecordAuthorAffiliationSearchKey(authors),
+    ...getRecordAuthorAffiliationTypeSearchKey(authors),
+});
+
+export const getContributorsSearchKeys = editors => ({
+    ...getRecordContributorsSearchKey(editors),
+    ...getRecordContributorsIdSearchKey(editors),
+});
+
+export const getCreatorsSearchKeys = creators => ({
+    ...getRecordCreatorsSearchKey(creators),
+    ...getRecordCreatorsIdSearchKey(creators),
+});
+
+export const getArchitectsSearchKeys = architects => ({
+    ...getRecordArchitectsSearchKey(architects),
+    ...getRecordArchitectsIdSearchKey(architects),
+});
+
+export const getAuthorsSectionSearchKeys = (data = {}) => {
+    const { authors, editors, supervisors, creators, architects } = data;
+    return {
+        ...(!!authors ? getAuthorsSearchKeys(authors) : {}),
+        ...(!!editors ? getContributorsSearchKeys(editors) : {}),
+        ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
+        ...(!!architects ? getArchitectsSearchKeys(architects) : {}),
+        ...(!!supervisors ? getRecordSupervisorsSearchKey(supervisors) : {}),
     };
 };
 

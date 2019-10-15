@@ -416,7 +416,7 @@ export function adminUpdate(data) {
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
             ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
-            // ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
+            ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
             // ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
             // ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             // ...transformers.getNtroSectionSearchKeys(data.ntroSection),
@@ -424,7 +424,6 @@ export function adminUpdate(data) {
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
         };
 
-        console.log(patchRecordRequest);
         return Promise.resolve([])
             .then(() =>
                 patch(
