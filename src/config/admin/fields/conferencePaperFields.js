@@ -27,7 +27,6 @@ export default {
                 ['fez_record_search_key_conference_name'],
                 ...(isLote
                     ? [
-                        ['languageOfConferenceName'],
                         ['fez_record_search_key_native_script_conference_name'],
                         ['fez_record_search_key_roman_script_conference_name'],
                         ['fez_record_search_key_translated_conference_name'],

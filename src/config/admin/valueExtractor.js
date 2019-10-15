@@ -220,12 +220,6 @@ export default {
     fez_record_search_key_translated_book_title: {
         getValue: record => ({ ...record.fez_record_search_key_translated_book_title }),
     },
-    languageOfConferenceName: {
-        getValue: record =>
-            record.fez_record_search_key_language_of_conference_name.map(
-                language => language.rek_language_of_conference_name,
-            ),
-    },
     fez_record_search_key_native_script_conference_name: {
         getValue: record => ({ ...record.fez_record_search_key_native_script_conference_name }),
     },
@@ -240,6 +234,18 @@ export default {
             record.fez_record_search_key_language_of_proceedings_title.map(
                 language => language.rek_language_of_proceedings_title,
             ),
+    },
+    fez_record_search_key_native_script_proceedings_title: {
+        getValue: record =>
+            (record.fez_record_search_key_native_script_proceedings_title || {}).rek_native_script_proceedings_title,
+    },
+    fez_record_search_key_roman_script_proceedings_title: {
+        getValue: record =>
+            (record.fez_record_search_key_roman_script_proceedings_title || {}).rek_roman_script_proceedings_title,
+    },
+    fez_record_search_key_translated_proceedings_title: {
+        getValue: record =>
+            (record.fez_record_search_key_translated_proceedings_title || {}).rek_translated_proceedings_title,
     },
     languageOfTitle: {
         getValue: record =>
