@@ -236,29 +236,26 @@ export default {
             ),
     },
     fez_record_search_key_native_script_proceedings_title: {
-        getValue: record =>
-            (record.fez_record_search_key_native_script_proceedings_title || {}).rek_native_script_proceedings_title,
+        getValue: record => ({ ...record.fez_record_search_key_native_script_proceedings_title }),
     },
     fez_record_search_key_roman_script_proceedings_title: {
-        getValue: record =>
-            (record.fez_record_search_key_roman_script_proceedings_title || {}).rek_roman_script_proceedings_title,
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_proceedings_title }),
     },
     fez_record_search_key_translated_proceedings_title: {
-        getValue: record =>
-            (record.fez_record_search_key_translated_proceedings_title || {}).rek_translated_proceedings_title,
+        getValue: record => ({ ...record.fez_record_search_key_translated_proceedings_title }),
     },
     languageOfTitle: {
         getValue: record =>
             record.fez_record_search_key_language_of_title.map(language => language.rek_language_of_title),
     },
     fez_record_search_key_native_script_title: {
-        getValue: record => (record.fez_record_search_key_native_script_title || {}).rek_native_script_title,
+        getValue: record => ({ ...record.fez_record_search_key_native_script_title }),
     },
     fez_record_search_key_roman_script_title: {
-        getValue: record => (record.fez_record_search_key_roman_script_title || {}).rek_roman_script_title,
+        getValue: record => ({ ...record.fez_record_search_key_roman_script_title }),
     },
     fez_record_search_key_translated_title: {
-        getValue: record => (record.fez_record_search_key_translated_title || {}).rek_translated_title,
+        getValue: record => ({ ...record.fez_record_search_key_translated_title }),
     },
     fez_record_search_key_doi: {
         getValue: record => ({ ...record.fez_record_search_key_doi }),
