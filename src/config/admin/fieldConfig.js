@@ -528,6 +528,7 @@ export default {
                 label: 'Series',
                 placeholder: '',
                 multiline: true,
+                floatingLabelText: 'Series',
             },
         },
         fez_record_search_key_chapter_number: {
@@ -1224,7 +1225,7 @@ export default {
             componentProps: {
                 fullWidth: true,
                 label: 'Scale',
-                name: 'bibliographicSection.fez_record_search_key_scale',
+                name: 'bibliographicSection.fez_record_search_key_scale.rek_scale',
                 placeholder: '',
             },
         },
@@ -1233,7 +1234,7 @@ export default {
             componentProps: {
                 fullWidth: true,
                 label: 'Job number',
-                name: 'bibliographicSection.fez_record_search_key_job_number',
+                name: 'bibliographicSection.fez_record_search_key_job_number.rek_job_number',
                 placeholder: '',
             },
         },
