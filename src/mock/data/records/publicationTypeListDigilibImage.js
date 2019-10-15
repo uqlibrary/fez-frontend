@@ -217,7 +217,19 @@ export default {
                 "rek_construction_date_xsdmf_id": 4215,
                 "rek_construction_date": "AMP Place constructed 1977, Comalco Place in 1983"
             },
-            "fez_record_search_key_contributor": [],
+            "fez_record_search_key_contributor": [{
+                "rek_contributor_id": 3237309,
+                "rek_contributor_pid": "UQ:0d94533",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "Mackintosh, William (sculptor)",
+                "rek_contributor_order": 1
+            },{
+                "rek_contributor_id": 3237310,
+                "rek_contributor_pid": "UQ:0d94533",
+                "rek_contributor_xsdmf_id": null,
+                "rek_contributor": "Some other dude",
+                "rek_contributor_order": 2
+            }],
             "fez_record_search_key_contributor_id": [],
             "fez_record_search_key_corresponding_country": [],
             "fez_record_search_key_corresponding_email": [],
