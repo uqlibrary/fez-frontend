@@ -417,7 +417,7 @@ export function adminUpdate(data) {
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
             ...transformers.getBibliographicSectionSearchKeys(data.bibliographicSection),
             ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
-            // ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
+            ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
             // ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             // ...transformers.getNtroSectionSearchKeys(data.ntroSection),
             // ...transformers.getFilesSectionSearchKeys(data.filesSection),

@@ -282,6 +282,7 @@ export class AutoCompleteAsyncField extends Component {
                                             classes,
                                             inputProps: getInputProps({
                                                 onChange: this.getSuggestions,
+                                                value: (!!selectedValue && selectedValue.value) || '',
                                                 ...(this.props.showChips
                                                     ? {
                                                         startAdornment: Object.values(this.state.selectedItem).map(

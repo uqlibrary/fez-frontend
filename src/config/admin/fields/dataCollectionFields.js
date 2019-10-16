@@ -128,6 +128,12 @@ export const validateDataCollection = (
             },
         }) ||
             {}),
+        ...((!((ais || {}).fez_record_search_key_rights || {}).rek_rights && {
+            fez_record_search_key_rights: {
+                rek_rights: summary.rek_rights,
+            },
+        }) ||
+            {}),
     },
     filesSection: {
         ...(((fs || {}).depositAgreement !== 'on' && {

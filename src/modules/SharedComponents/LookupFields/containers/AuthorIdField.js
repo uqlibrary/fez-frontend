@@ -20,12 +20,13 @@ const mapStateToProps = (state, props) => {
                 !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
         },
+        onClear: () => props.input.onChange(null),
         allowFreeText: true,
         async: true,
         selectedValue:
             (!props.input &&
                 ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
-            (!!props.input && !!props.input.value && { value: props.input.value }) ||
+            (!!props.input && props.input.value.toJS ? props.input.value.toJS() : props.input.value || '') ||
             '',
         itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         maxResults: 50,
