@@ -510,6 +510,7 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 };
 
 export const getGrantsListSearchKey = grants => {
+    console.log('In the main function', grants);
     if (!grants || grants.length === 0) return {};
 
     return {
@@ -787,30 +788,9 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getGrantInformationSectionSearchKeys = grantInformationSection => {
-    const grants = (grantInformationSection && grantInformationSection.grants) || null;
-    if (!grants || grants.length === 0) return {};
-    return {
-        fez_record_search_key_grant_agency: [
-            ...grants.map((item, index) => ({
-                rek_grant_agency: item.grantAgencyName || 'Not set',
-                rek_grant_agency_order: index + 1,
-            })),
-        ],
-        fez_record_search_key_grant_id: [
-            ...grants.map((item, index) => ({
-                rek_grant_id: item.grantId || 'Not set',
-                rek_grant_id_order: index + 1,
-            })),
-        ],
-        fez_record_search_key_grant_agency_type: [
-            ...grants.map((item, index) => ({
-                rek_grant_agency_type: parseInt(item.grantAgencyType, 10) || 454045, // Vocab value for "Not set"
-                rek_grant_agency_type_order: index + 1,
-            })),
-        ],
-    };
-};
+export const getGrantInformationSectionSearchKeys = grantsSection => ({
+    ...getGrantsListSearchKey(grantsSection.grants || []),
+});
 
 export const getAuthorsSearchKeys = authors => ({
     ...getRecordAuthorsSearchKey(authors),
