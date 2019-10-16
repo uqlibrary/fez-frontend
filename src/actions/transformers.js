@@ -744,6 +744,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         languageOfTitle,
         languages,
         subjects,
+        geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
         ...rest
@@ -784,6 +785,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
                 },
             }
             : {}),
+        ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
     };
 };
@@ -822,6 +824,31 @@ export const getAuthorsSectionSearchKeys = (data = {}) => {
         ...(!!creators ? getCreatorsSearchKeys(creators) : {}),
         ...(!!architects ? getArchitectsSearchKeys(architects) : {}),
         ...(!!supervisors ? getRecordSupervisorsSearchKey(supervisors) : {}),
+    };
+};
+
+export const getRecordIsMemberOfSearchKey = collections => {
+    if ((collections || []).length === 0) return {};
+
+    return {
+        fez_record_search_key_ismemberof: collections.map(collection => ({
+            rek_ismemberof: collection.id,
+        })),
+    };
+};
+
+export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
+    const { collections, additionalNotes, contentIndicators, contactName, contactNameId, contactEmail, ...rest } = data;
+    return {
+        ...getRecordIsMemberOfSearchKey(collections),
+        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText')
+            ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
+            : {}),
+        ...getContentIndicatorSearchKey(contentIndicators),
+        ...(!!contactName && !!contactNameId && !!contactEmail
+            ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
+            : {}),
+        ...rest,
     };
 };
 
