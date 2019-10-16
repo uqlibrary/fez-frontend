@@ -416,6 +416,15 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Files tab', () => {
+        const record = recordList.data[1];
+
+        cy.window()
+            .then(win => (win.onbeforeunload = undefined));
+
+        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
+        cy.closeUnsupported();
+        cy.wait(1000); // Wait for data load
+
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.root()
@@ -425,7 +434,28 @@ context('Journal Article admin edit', () => {
                     .children('h3')
                     .should('have.text', 'Files');
 
-                // No visible attached files in mock
+                cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
+                    .within(() => {
+                        // prettier-ignore
+                        const fileSizeInMB = Math.round(
+                            record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
+                        ) / 100;
+                        cy.get('h3')
+                            .should('have.text', 'Attached files');
+                        cy.get('p')
+                            .eq(0)
+                            .should('have.text', record.fez_datastream_info[1].dsi_dsid);
+                        cy.get('input')
+                            .eq(0)
+                            .should('have.value', record.fez_datastream_info[1].dsi_label);
+                        cy.get('p')
+                            .eq(1)
+                            .should('have.text', `${fileSizeInMB} MB`);
+                        cy.get('input')
+                            .eq(1)
+                            .should('have.value', moment(record.fez_datastream_info[1].dsi_embargo_date)
+                                .format('DD/MM/YYYY'));
+                    });
 
                 cy.get('div:nth-child(2) > div > div:nth-child(2) .StandardCard')
                     .within(() => {
