@@ -153,6 +153,19 @@ context('Conference Paper admin edit', () => {
                                 record.fez_record_search_key_translated_journal_name.rek_translated_journal_name,
                             );
                     });
+
+                cy.get('div:nth-child(9) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Bibliographic');
+                        cy.get('#Series-input')
+                            .should('have.value', record.fez_record_search_key_series.rek_series);
+                        cy.get('#Articlenumber')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_article_number.rek_article_number,
+                            );
+                    });
             });
     });
 });

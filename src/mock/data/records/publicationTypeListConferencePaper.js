@@ -59,7 +59,12 @@ export default {
             "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
-            "fez_record_search_key_article_number": null,
+            "fez_record_search_key_article_number":  {
+                "rek_article_number_id": 1,
+                "rek_article_number_pid": "UQ:228367",
+                "rek_article_number_xsdmf_id": null,
+                "rek_article_number": "8069086"
+            },
             "fez_record_search_key_additional_notes": null,
             "fez_record_search_key_assigned_group_id": [],
             "fez_record_search_key_assigned_user_id": [],
