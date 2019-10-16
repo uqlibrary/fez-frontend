@@ -102,7 +102,6 @@ const getInitialFormValues = (recordToView, recordType) => {
 };
 
 const onSubmit = (values, dispatch) => {
-    console.log(values.toJS());
     return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
     });
