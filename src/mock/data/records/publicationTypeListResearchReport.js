@@ -169,12 +169,50 @@ export default {
                 "rek_file_attachment_name_order": 6
             }],
             "fez_record_search_key_grant_acronym": [],
-            "fez_record_search_key_grant_agency": [],
+            "fez_record_search_key_grant_agency": [{
+                "rek_grant_agency_id": 176669,
+                "rek_grant_agency_pid": "UQ:734019",
+                "rek_grant_agency_xsdmf_id": 17327,
+                "rek_grant_agency": "Australian Research Council",
+                "rek_grant_agency_order": 1
+            }, {
+                "rek_grant_agency_id": 176670,
+                "rek_grant_agency_pid": "UQ:734019",
+                "rek_grant_agency_xsdmf_id": 17327,
+                "rek_grant_agency": "Riksbankens Jubileumsfond",
+                "rek_grant_agency_order": 2
+            }],
             "fez_record_search_key_grant_agency_id": [],
-            "fez_record_search_key_grant_agency_type": [],
-            "fez_record_search_key_grant_id": [],
+            "fez_record_search_key_grant_id": [{
+                "rek_grant_id_id": 108811,
+                "rek_grant_id_pid": "UQ:734019",
+                "rek_grant_id_xsdmf_id": 17430,
+                "rek_grant_id": "DE160101574",
+                "rek_grant_id_order": 1
+            }, {
+                "rek_grant_id_id": 108812,
+                "rek_grant_id_pid": "UQ:734019",
+                "rek_grant_id_xsdmf_id": 17430,
+                "rek_grant_id": "P17-0330:1",
+                "rek_grant_id_order": 2
+            }],
             "fez_record_search_key_grant_text": [],
             "fez_record_search_key_grant_type": [],
+            "fez_record_search_key_grant_agency_type": [{
+                "rek_grant_agency_type_id": 179,
+                "rek_grant_agency_type_pid": "UQ:734019",
+                "rek_grant_agency_type_xsdmf_id": 17390,
+                "rek_grant_agency_type": 453985,
+                "rek_grant_agency_type_order": 1,
+                "rek_grant_agency_type_lookup": "Government"
+            }, {
+                "rek_grant_agency_type_id": 180,
+                "rek_grant_agency_type_pid": "UQ:734019",
+                "rek_grant_agency_type_xsdmf_id": 17390,
+                "rek_grant_agency_type": 453986,
+                "rek_grant_agency_type_order": 2,
+                "rek_grant_agency_type_lookup": "NGO"
+            }],
             "fez_record_search_key_herdc_code": {
                 "rek_herdc_code_id": 5005937,
                 "rek_herdc_code_pid": "UQ:284280",
@@ -388,7 +426,12 @@ export default {
                 "rek_oa_status": 453692,
                 "rek_oa_status_lookup": "Not yet assessed"
             },
-            "fez_record_search_key_parent_publication": null,
+            "fez_record_search_key_parent_publication": {
+                "rek_parent_publication_id": 5325,
+                "rek_parent_publication_pid": "UQ:284280",
+                "rek_parent_publication_xsdmf_id": 10075,
+                "rek_parent_publication": "CARD research project papers 2004-2007"
+            },
             "fez_record_search_key_place_of_publication": {
                 "rek_place_of_publication_id": 4444747,
                 "rek_place_of_publication_pid": "UQ:284280",
@@ -416,7 +459,12 @@ export default {
                 "rek_refereed_source": "453632",
                 "rek_refereed_source_lookup": "ERA Journal List 2012"
             },
-            "fez_record_search_key_report_number": null,
+            "fez_record_search_key_report_number": {
+                "rek_report_number_id": 15417,
+                "rek_report_number_pid": "UQ:406706",
+                "rek_report_number_xsdmf_id": 6619,
+                "rek_report_number": "2016-19"
+            },
             "fez_record_search_key_scopus_id": {
                 "rek_scopus_id_id": 2619742,
                 "rek_scopus_id_pid": "UQ:284280",

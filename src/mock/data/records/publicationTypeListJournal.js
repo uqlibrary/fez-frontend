@@ -253,7 +253,12 @@ export default {
                 },
                 "rek_issn_lookup": "gray"
             }],
-            "fez_record_search_key_issue_number": null,
+            "fez_record_search_key_issue_number": {
+                "rek_issue_number_id": 4454478,
+                "rek_issue_number_pid": "UQ:175806",
+                "rek_issue_number_xsdmf_id": null,
+                "rek_issue_number": "4"
+            },
             "fez_record_search_key_keywords": [],
             "fez_record_search_key_language": [{
                 "rek_language_id": 5361608,
