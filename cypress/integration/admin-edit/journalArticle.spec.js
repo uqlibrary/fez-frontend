@@ -75,7 +75,7 @@ context('Journal Article admin edit', () => {
             });
     });
 
-    it.only('should render Identifiers tab', () => {
+    it('should render Identifiers tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(2)')
             .within(() => {
                 cy.root()

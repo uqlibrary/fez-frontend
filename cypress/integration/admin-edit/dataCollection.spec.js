@@ -31,8 +31,11 @@ context('Data Collection admin edit', () => {
     it('should render Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
-                cy.get('h3')
-                    .should('have.text', 'Dataset name');
+                cy.get('div:nth-child(1) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Dataset name');
+                    });
             });
     });
 });
