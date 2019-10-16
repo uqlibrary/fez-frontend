@@ -75,7 +75,7 @@ context('Journal Article admin edit', () => {
             });
     });
 
-    it('should render Identifiers tab', () => {
+    it.only('should render Identifiers tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(2)')
             .within(() => {
                 cy.root()
@@ -114,9 +114,9 @@ context('Journal Article admin edit', () => {
                         cy.get('label[id="PubMed doc type(s)-label"]')
                             .parent()
                             .find('input[type=hidden]')
-                            .should('have.value', record.rek_pubmed_doc_type);
-                        // .siblings('[role=button]') // BUG FOUND. Needs fix first.
-                        // .should('have.text', record.rek_pubmed_doc_type);
+                            .should('have.value', record.rek_pubmed_doc_type)
+                            .siblings('[role=button]')
+                            .should('have.text', record.rek_pubmed_doc_type);
                     });
 
                 cy.get('div:nth-child(2) > .StandardCard')
