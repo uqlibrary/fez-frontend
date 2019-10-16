@@ -788,7 +788,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
 };
 
 export const getGrantInformationSectionSearchKeys = grantInformationSection => {
-    const grants = grantInformationSection && grantInformationSection.grants || null;
+    const grants = (grantInformationSection && grantInformationSection.grants) || null;
     if (!grants || grants.length === 0) return {};
     return {
         fez_record_search_key_grant_agency: [
