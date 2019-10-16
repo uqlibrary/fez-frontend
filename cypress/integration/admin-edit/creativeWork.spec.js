@@ -77,7 +77,7 @@ context('Creative Work admin edit', () => {
             });
     });
 
-    it.only('should render NTRO tab', () => {
+    it('should render NTRO tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(6)')
             .within(() => {
                 cy.root()
