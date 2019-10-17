@@ -20,6 +20,23 @@ context('Audio admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 3)
+                    .should('contain', 'Publication date is required')
+                    .should('contain', 'Author/creator names are required')
+                    .should('contain', 'Editor/contributor names are required');
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('exist')
+            .should('be.disabled');
+
         cy.get('input[value=tabbed]')
             .click()
             .should('be.checked');

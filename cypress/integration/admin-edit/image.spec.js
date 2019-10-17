@@ -1,4 +1,4 @@
-import { default as recordList } from '../../../src/mock/data/records/publicationTypeListImage.js';
+import { default as recordList } from '../../../src/mock/data/records/publicationTypeListImage';
 
 context('Image admin edit', () => {
     const record = recordList.data[0];
@@ -15,19 +15,26 @@ context('Image admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.get('h2')
-            .should('have.length', 1)
-            .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
-
-        cy.get('input[value=tabbed]')
-            .should('be.not.checked');
-
-        cy.get('button[title="Learn about keyboard shortcuts"]')
-            .should('exist');
-
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);
+
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
+            });
+
+        cy.wait(1000); // Allow more time for rendering tabbing mechanism
+        cy.get('input[value=tabbed]')
+            .click()
+            .should('be.checked');
+
+        cy.get('@cards')
+            .should('have.length', 1)
+            .should('have.text', 'Bibliographic');
     });
 
     it('should render Image specific fields on the Bibliographic tab', () => {

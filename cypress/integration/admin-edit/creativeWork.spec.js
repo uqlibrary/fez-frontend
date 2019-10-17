@@ -19,6 +19,14 @@ context('Creative Work admin edit', () => {
             .as('cards')
             .should('have.length', 9);
 
+        cy.get('.StandardPage form > div > div:nth-child(10)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
+            });
+
         cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
             .click()

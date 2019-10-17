@@ -19,6 +19,14 @@ context('Book admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
+            });
+
         cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
             .click()

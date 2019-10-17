@@ -1,4 +1,4 @@
-import { default as recordList } from '../../../src/mock/data/records/publicationTypeListThesis.js';
+import { default as recordList } from '../../../src/mock/data/records/publicationTypeListThesis';
 import moment from 'moment';
 
 context('Thesis admin edit', () => {
@@ -16,19 +16,25 @@ context('Thesis admin edit', () => {
     });
 
     it('should load the nav bar', () => {
-        cy.get('h2')
-            .should('have.length', 1)
-            .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
-
-        cy.get('input[value=tabbed]')
-            .should('be.not.checked');
-
-        cy.get('button[title="Learn about keyboard shortcuts"]')
-            .should('exist');
-
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 7);
+
+        cy.get('.StandardPage form > div > div:nth-child(8)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
+            });
+
+        cy.get('input[value=tabbed]')
+            .click()
+            .should('be.checked');
+
+        cy.get('@cards')
+            .should('have.length', 1)
+            .should('have.text', 'Bibliographic');
     });
 
     it('should render Thesis specific fields on the Bibliographic tab', () => {

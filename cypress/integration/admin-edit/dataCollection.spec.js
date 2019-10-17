@@ -19,6 +19,24 @@ context('Data Collection admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
+        // Disabled until a fix is merged
+        // cy.get('.StandardPage form > div > div:nth-child(9)')
+        //     .within(() => {
+        //         cy.get('.Alert')
+        //             .should('exist')
+        //             .find('.alert-text')
+        //             .should('contain', 'Validation -')
+        //             .find('li')
+        //             .should('have.length', 3)
+        //             .should('contain', 'Project description is required')
+        //             .should('contain', 'You are required to accept deposit agreement')
+        //             .should('contain', 'Rights is required');
+        //     });
+
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('exist')
+            .should('be.disabled');
+
         cy.get('input[value=tabbed]')
             .click()
             .should('be.checked');
@@ -26,6 +44,22 @@ context('Data Collection admin edit', () => {
         cy.get('@cards')
             .should('have.length', 1)
             .should('have.text', 'Bibliographic');
+
+        // Disabled until a fix is merged
+        // cy.get('[role="tab"]')
+        //     .eq(2)
+        //     .find('[class*="MuiBadge-colorError"]')
+        //     .should('have.text', '1');
+
+        // cy.get('[role="tab"]')
+        //     .eq(4)
+        //     .find('[class*="MuiBadge-colorError"]')
+        //     .should('have.text', '1');
+
+        // cy.get('[role="tab"]')
+        //     .eq(6)
+        //     .find('[class*="MuiBadge-colorError"]')
+        //     .should('have.text', '1');
     });
 
     it('should render Bibliographic tab', () => {

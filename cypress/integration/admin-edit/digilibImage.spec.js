@@ -1,4 +1,4 @@
-import { default as recordList } from '../../../src/mock/data/records/publicationTypeListDigilibImage.js';
+import { default as recordList } from '../../../src/mock/data/records/publicationTypeListDigilibImage';
 import moment from 'moment';
 
 context('Digilib Image admin edit', () => {
@@ -16,19 +16,43 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.get('h2')
-            .should('have.length', 1)
-            .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
-
-        cy.get('input[value=tabbed]')
-            .should('be.not.checked');
-
-        cy.get('button[title="Learn about keyboard shortcuts"]')
-            .should('exist');
-
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);
+
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 2)
+                    .should('contain', 'Publication date is required')
+                    .should('contain', 'You are required to accept deposit agreement');
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('exist')
+            .should('be.disabled');
+
+        cy.get('input[value=tabbed]')
+            .click()
+            .should('be.checked');
+
+        cy.get('@cards')
+            .should('have.length', 1)
+            .should('have.text', 'Bibliographic');
+
+        cy.get('[role="tab"]')
+            .eq(2)
+            .find('[class*="MuiBadge-colorError"]')
+            .should('have.text', '1');
+
+        cy.get('[role="tab"]')
+            .eq(6)
+            .find('[class*="MuiBadge-colorError"]')
+            .should('have.text', '1');
     });
 
     it('should render Digilib Image specific fields on the Bibliographic tab', () => {
