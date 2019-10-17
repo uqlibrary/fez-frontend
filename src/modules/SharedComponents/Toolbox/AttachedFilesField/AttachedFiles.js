@@ -356,35 +356,13 @@ export const AttachedFiles = ({
                             {isAdmin && canEdit && (
                                 <React.Fragment>
                                     <Grid item xs={2}>
-                                        {(!!item.embargoDate || !!item.openAccessStatus.isOpenAccess) && (
+                                        {!!item.openAccessStatus.embargoDate && (
                                             <FileUploadEmbargoDate
-                                                value={
-                                                    !!item.embargoDate &&
-                                                    moment(item.embargoDate).isSameOrAfter(moment())
-                                                        ? new Date(item.embargoDate)
-                                                        : ''
-                                                }
+                                                value={new Date(item.embargoDate)}
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
                                         )}
-                                    </Grid>
-                                    <Grid item xs sm="auto" className={classes.embargoDateBlock}>
-                                        <Tooltip title={clearDateHint}>
-                                            <div style={{ display: 'inline' }}>
-                                                <IconButton
-                                                    style={{ marginTop: -10, marginBottom: -10 }}
-                                                    className="deleteFieldButton"
-                                                    onClick={_clearEmbargoDate(index)}
-                                                    disabled={
-                                                        !item.embargoDate ||
-                                                        item.embargoDate <= moment().format('YYYY-MM-DD')
-                                                    }
-                                                >
-                                                    <Close />
-                                                </IconButton>
-                                            </div>
-                                        </Tooltip>
                                     </Grid>
                                     <Grid item xs style={{ textAlign: 'right' }}>
                                         <Tooltip title={deleteHint}>
