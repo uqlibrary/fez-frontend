@@ -97,6 +97,7 @@ describe('DataStreamSecuritySelector component', () => {
                         {
                             dsi_dsid: 'test.txt',
                             dsi_security_policy: 1,
+                            dsi_embargo_date: '2015-12-01',
                         },
                     ],
                 },

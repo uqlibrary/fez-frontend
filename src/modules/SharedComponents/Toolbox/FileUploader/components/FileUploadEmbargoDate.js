@@ -9,11 +9,11 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
-        onChange: PropTypes.func,
-        disabled: PropTypes.bool,
-        value: PropTypes.instanceOf(Date),
-        minDate: PropTypes.instanceOf(Date),
         classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        minDate: PropTypes.instanceOf(Date),
+        onChange: PropTypes.func,
+        value: PropTypes.instanceOf(Date),
     };
 
     static defaultProps = {

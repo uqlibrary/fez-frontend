@@ -65,7 +65,7 @@ export const DataStreamSecuritySelector = ({
                     container
                     spacing={32}
                     alignContent="flex-end"
-                    alignItems="flex-end"
+                    alignItems="flex-start"
                     className={classes.dataStreamFileBlock}
                 >
                     {dataStreamSecurity.map((dataStream, index) => (

@@ -73,7 +73,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-end-49 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
+      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-start-48 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
     >
       <div
         class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"

@@ -1,15 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import moment from 'moment';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
+import Tooltip from '@material-ui/core/Tooltip';
+import IconButton from '@material-ui/core/IconButton';
+import Close from '@material-ui/icons/Close';
 
 import { PolicyDropdown } from './PolicyDropdown';
 
 const DataStreamSecurityItem = ({
     dataStream,
     classes,
+    clearDateHint,
     index,
     disabled,
     onSecurityChange,
@@ -29,6 +34,7 @@ const DataStreamSecurityItem = ({
                 },
         );
     };
+    // const _clearEmbargoDate = index => () => onSecurityChange(index, value='', 'dsi_embargo_date', '', );
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
@@ -51,6 +57,24 @@ const DataStreamSecurityItem = ({
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
                 />
+                {!!dataStream.dsi_embargo_date && moment(dataStream.dsi_embargo_date).isSameOrAfter(moment()) && (
+                    <React.Fragment>
+                        <div style={{ marginTop: 12 }}>
+                            <span>Embargo Date: {dataStream.dsi_embargo_date}</span>
+                            <Tooltip title={clearDateHint}>
+                                <div style={{ display: 'inline' }}>
+                                    <IconButton
+                                        style={{ marginTop: -10, marginBottom: -10 }}
+                                        className="deleteFieldButton"
+                                        // onClick={_clearEmbargoDate(index)}
+                                    >
+                                        <Close />
+                                    </IconButton>
+                                </div>
+                            </Tooltip>
+                        </div>
+                    </React.Fragment>
+                )}
             </Grid>
         </React.Fragment>
     );
@@ -58,6 +82,7 @@ const DataStreamSecurityItem = ({
 
 DataStreamSecurityItem.propTypes = {
     classes: PropTypes.object,
+    clearDateHint: PropTypes.string,
     dataStream: PropTypes.object.isRequired,
     disabled: PropTypes.bool,
     index: PropTypes.number,
@@ -65,6 +90,10 @@ DataStreamSecurityItem.propTypes = {
     inheritedSecurity: PropTypes.number,
     onSecurityChange: PropTypes.func.isRequired,
     policyDropdownLabel: PropTypes.string,
+};
+
+DataStreamSecurityItem.defaultProps = {
+    clearDateHint: 'Clear Embargo date and set Security policy to Public',
 };
 
 export function isSame(prevProps, nextProps) {
