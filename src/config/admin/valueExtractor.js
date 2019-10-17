@@ -38,7 +38,7 @@ const authorsGetValue = record => {
     const authorRoles = (record.fez_record_search_key_author_role || []).reduce(
         (authorRolesObject, authorRole) => ({
             ...authorRolesObject,
-            [authorRole.rek_author_id_order]: authorRole,
+            [authorRole.rek_author_role_order]: authorRole,
         }),
         {},
     );

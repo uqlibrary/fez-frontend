@@ -1491,6 +1491,10 @@ export default {
             fez_record_search_key_end_date: () => ({
                 label: 'Collection end date',
             }),
+            authors: () => ({
+                showRoleInput: true,
+                locale: locale.components.creators.field,
+            }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
             fez_record_search_key_original_format: () => ({
