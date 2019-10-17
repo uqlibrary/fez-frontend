@@ -298,7 +298,22 @@ export default {
                     "rek_ismemberof_lookup": "Non-Traditional Research Outputs (individual items)"
                 }
             ],
-            "fez_record_search_key_ismn": [],
+            "fez_record_search_key_ismn": [
+                {
+                    "rek_ismn_id": 2,
+                    "rek_ismn_pid": "UQ:285760",
+                    "rek_ismn_xsdmf_id": null,
+                    "rek_ismn": "979-0-2600-0043-8",
+                    "rek_ismn_order": 1
+                },
+                {
+                    "rek_ismn_id": 3,
+                    "rek_ismn_pid": "UQ:285760",
+                    "rek_ismn_xsdmf_id": null,
+                    "rek_ismn": "979-0-2600-0042-1",
+                    "rek_ismn_order": 2
+                }
+            ],
             "fez_record_search_key_isrc": [],
             "fez_record_search_key_issn": [],
             "fez_record_search_key_issue_number": null,
