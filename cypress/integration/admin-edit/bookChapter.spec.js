@@ -1,7 +1,6 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListBookChapter';
 
 context('Book Chapter admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {
@@ -16,7 +15,6 @@ context('Book Chapter admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        // cy.get('.StandardPage h3')
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);

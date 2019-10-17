@@ -15,7 +15,6 @@ context('Conference Paper admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        // cy.get('.StandardPage h3')
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);
@@ -57,12 +56,16 @@ context('Conference Paper admin edit', () => {
                         cy.get('#Nativescriptconferencename')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name,
+                                // prettier-ignore
+                                record.fez_record_search_key_native_script_conference_name
+                                    .rek_native_script_conference_name,
                             );
                         cy.get('#Romanscriptconferencename')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name,
+                                // prettier-ignore
+                                record.fez_record_search_key_roman_script_conference_name
+                                    .rek_roman_script_conference_name,
                             );
                         cy.get('#Translatedconferencename')
                             .should(
@@ -108,17 +111,23 @@ context('Conference Paper admin edit', () => {
                         cy.get('#Nativescriptproceedingstitle')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title,
+                                // prettier-ignore
+                                record.fez_record_search_key_native_script_proceedings_title
+                                    .rek_native_script_proceedings_title,
                             );
                         cy.get('#Romanscriptproceedingstitle')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title,
+                                // prettier-ignore
+                                record.fez_record_search_key_roman_script_proceedings_title
+                                    .rek_roman_script_proceedings_title,
                             );
                         cy.get('#Translatedproceedingstitle')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title,
+                                // prettier-ignore
+                                record.fez_record_search_key_translated_proceedings_title
+                                    .rek_translated_proceedings_title,
                             );
                     });
 

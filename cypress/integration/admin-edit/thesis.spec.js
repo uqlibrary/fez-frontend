@@ -2,7 +2,6 @@ import { default as recordList } from '../../../src/mock/data/records/publicatio
 import moment from 'moment';
 
 context('Thesis admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {
@@ -33,8 +32,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Bibliographic tab', () => {
-        const baseUrl = Cypress.config('baseUrl');
-        console.log('baseUrl = ', baseUrl);
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()

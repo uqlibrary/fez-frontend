@@ -2,7 +2,6 @@ import { default as recordList } from '../../../src/mock/data/records/publicatio
 import moment from 'moment';
 
 context('Journal Article admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {
@@ -27,7 +26,6 @@ context('Journal Article admin edit', () => {
         cy.get('button[title="Learn about keyboard shortcuts"]')
             .should('exist');
 
-        // cy.get('.StandardPage h3')
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);

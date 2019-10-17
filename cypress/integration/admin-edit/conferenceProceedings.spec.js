@@ -21,7 +21,6 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        // cy.get('.StandardPage h3')
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);

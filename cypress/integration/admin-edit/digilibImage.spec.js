@@ -2,7 +2,6 @@ import { default as recordList } from '../../../src/mock/data/records/publicatio
 import moment from 'moment';
 
 context('Digilib Image admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {
@@ -33,8 +32,6 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should render Digilib Image specific fields on the Bibliographic tab', () => {
-        const baseUrl = Cypress.config('baseUrl');
-        console.log('baseUrl = ', baseUrl);
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -106,7 +103,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Structural system(s)');
-                        const pubs = record.fez_record_search_key_structural_systems.map(pub => pub.rek_structural_systems);
+                        // prettier-ignore
+                        const pubs = record.fez_record_search_key_structural_systems.map(
+                            pub => pub.rek_structural_systems
+                        );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
                                 .eq(index)
@@ -142,7 +142,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Surrounding feature(s)');
-                        const pubs = record.fez_record_search_key_surrounding_features.map(pub => pub.rek_surrounding_features);
+                        // prettier-ignore
+                        const pubs = record.fez_record_search_key_surrounding_features.map(
+                            pub => pub.rek_surrounding_features
+                        );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
                                 .eq(index)
@@ -154,7 +157,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Interior feature(s)');
-                        const pubs = record.fez_record_search_key_interior_features.map(pub => pub.rek_interior_features);
+                        // prettier-ignore
+                        const pubs = record.fez_record_search_key_interior_features.map(
+                            pub => pub.rek_interior_features
+                        );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
                                 .eq(index)
@@ -166,7 +172,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Building material(s)');
-                        const pubs = record.fez_record_search_key_building_materials.map(pub => pub.rek_building_materials);
+                        // prettier-ignore
+                        const pubs = record.fez_record_search_key_building_materials.map(
+                            pub => pub.rek_building_materials
+                        );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
                                 .eq(index)
@@ -202,7 +211,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Alternative title(s)');
-                        const pubs = record.fez_record_search_key_alternative_title.map(pub => pub.rek_alternative_title);
+                        // prettier-ignore
+                        const pubs = record.fez_record_search_key_alternative_title.map(
+                            pub => pub.rek_alternative_title
+                        );
                         pubs.forEach((pub, index) => {
                             cy.get('p')
                                 .eq(index)
@@ -240,7 +252,10 @@ context('Digilib Image admin edit', () => {
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Architects');
-                        const architects = record.fez_record_search_key_architect_name.map(item => item.rek_architect_name);
+                        // prettier-ignore
+                        const architects = record.fez_record_search_key_architect_name.map(
+                            item => item.rek_architect_name
+                        );
                         architects.forEach((author, index) => {
                             cy.get('p')
                                 .eq(index)

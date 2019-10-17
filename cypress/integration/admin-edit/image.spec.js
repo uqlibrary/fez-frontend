@@ -1,7 +1,6 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListImage.js';
 
 context('Image admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {

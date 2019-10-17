@@ -1,7 +1,6 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournal';
 
 context('Journal admin edit', () => {
-    // const baseUrl = Cypress.config('baseUrl');
     const record = recordList.data[0];
 
     beforeEach(() => {
