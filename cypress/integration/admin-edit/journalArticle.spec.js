@@ -71,13 +71,11 @@ context('Journal Article admin edit', () => {
 
         cy.read_ckeditor('editor1')
             .then(text => {
-                cy.wrap(text)
-                    .should('eq', record.fez_internal_notes.ain_detail);
+                expect(text).to.contain(record.fez_internal_notes.ain_detail);
             });
         cy.read_ckeditor('editor2')
             .then(text => {
-                cy.wrap(text)
-                    .should('eq', record.rek_herdc_notes);
+                expect(text).to.contain(record.rek_herdc_notes);
             });
     });
 
@@ -155,8 +153,7 @@ context('Journal Article admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor3')
                             .then(text => {
-                                cy.wrap(text)
-                                    .should('eq', record.rek_title);
+                                expect(text).to.contain(record.rek_title);
                             });
                     });
 
@@ -245,8 +242,7 @@ context('Journal Article admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor4')
                             .then(text => {
-                                cy.wrap(text)
-                                    .should('eq', record.rek_description);
+                                expect(text).to.contain(record.rek_description);
                             });
                         cy.get('label[id="Refereed source-label"]')
                             .parent()
@@ -395,8 +391,7 @@ context('Journal Article admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor5')
                             .then(text => {
-                                cy.wrap(text)
-                                    .should('eq', record.fez_record_search_key_notes.rek_notes);
+                                expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
                     });
             });

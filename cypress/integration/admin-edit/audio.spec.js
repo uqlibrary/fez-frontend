@@ -121,8 +121,7 @@ context('Audio admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor5')
                             .then(text => {
-                                cy.wrap(text)
-                                    .should('eq', record.fez_record_search_key_transcript.rek_transcript);
+                                expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                             });
                         cy.get('label[id="Alternate genre-label"]')
                             .parent()
@@ -169,8 +168,10 @@ context('Audio admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor7')
                             .then(text => {
-                                cy.wrap(text)
-                                    .should('eq', record.fez_record_search_key_advisory_statement.rek_advisory_statement);
+                                // prettier-ignore
+                                expect(text).to.contain(
+                                    record.fez_record_search_key_advisory_statement.rek_advisory_statement
+                                );
                             });
                     });
             });
