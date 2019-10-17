@@ -510,7 +510,6 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 };
 
 export const getGrantsListSearchKey = grants => {
-    console.log('In the main function', grants);
     if (!grants || grants.length === 0) return {};
 
     return {
@@ -790,8 +789,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getGrantInformationSectionSearchKeys = grantsSection => ({
-    ...getGrantsListSearchKey(grantsSection.grants || []),
+export const getGrantInformationSectionSearchKeys = ({ grants } = {}) => ({
+    ...getGrantsListSearchKey(grants),
 });
 
 export const getAuthorsSearchKeys = authors => ({
@@ -859,7 +858,7 @@ export const getFilesSectionSearchKeys = (data = {}) => {
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
             : {}),
-        ...getRecordFileAttachmentSearchKey(files.queue),
+        ...getRecordFileAttachmentSearchKey((files || {}).queue),
     };
 };
 
