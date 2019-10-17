@@ -40,7 +40,7 @@ export default {
             groups: [['fez_record_search_key_keywords']],
         },
         {
-            title: 'Subject(s)',
+            title: 'ANZSRC Fields of Research (FoR) Code(s)',
             groups: [['subjects']],
         },
         {
@@ -49,7 +49,7 @@ export default {
         },
         {
             title: 'Type(s) of data',
-            groups: [['fez_record_search_key_type_of_data']],
+            groups: [['fez_record_search_key_type_of_data'], ['fez_record_search_key_data_volume']],
         },
         {
             title: 'Related datasets/work',
@@ -69,7 +69,11 @@ export default {
         },
         {
             title: 'Dataset information',
-            groups: [['contactName', 'contactNameId'], ['contactEmail']],
+            groups: [
+                ['contactName', 'contactNameId'],
+                ['contactEmail'],
+                ['fez_record_search_key_ands_collection_type'],
+            ],
         },
         {
             title: 'Additional information',

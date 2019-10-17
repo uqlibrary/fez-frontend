@@ -1349,3 +1349,6 @@ export const OA_STATUS = [
     { value: '453700', text: 'Mediated Access' },
     { value: '453954', text: 'PMC' },
 ];
+
+export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
+export const ANDS_COLLECTION_TYPE_DATASET = 453616;
