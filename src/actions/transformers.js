@@ -861,7 +861,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
     const { collections, additionalNotes, contentIndicators, contactName, contactNameId, contactEmail, ...rest } = data;
     return {
         ...getRecordIsMemberOfSearchKey(collections),
-        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText')
+        ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
             ? { fez_record_search_key_notes: { rek_notes: additionalNotes.htmlText } }
             : {}),
         ...getContentIndicatorSearchKey(contentIndicators),
@@ -869,6 +869,17 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
             : {}),
         ...rest,
+    };
+};
+
+export const getFilesSectionSearchKeys = (data = {}) => {
+    const { files, advisoryStatement, ...rest } = data;
+    return {
+        ...rest,
+        ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
+            ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
+            : {}),
+        ...getRecordFileAttachmentSearchKey(files.queue),
     };
 };
 
