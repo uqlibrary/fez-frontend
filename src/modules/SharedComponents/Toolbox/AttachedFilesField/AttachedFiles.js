@@ -17,6 +17,7 @@ import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
+import Close from '@material-ui/icons/Close';
 
 import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import { isFileValid } from 'config/validation';
@@ -349,14 +350,9 @@ export const AttachedFiles = ({
                             {isAdmin && canEdit && (
                                 <React.Fragment>
                                     <Grid item xs={2}>
-                                        {(!!item.embargoDate || !!item.openAccessStatus.isOpenAccess) && (
+                                        {!!item.openAccessStatus.embargoDate && (
                                             <FileUploadEmbargoDate
-                                                value={
-                                                    !!item.embargoDate &&
-                                                    moment(item.embargoDate).isSameOrAfter(moment())
-                                                        ? new Date(item.embargoDate)
-                                                        : ''
-                                                }
+                                                value={new Date(item.embargoDate)}
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
