@@ -391,7 +391,7 @@ context('Journal Article admin edit', () => {
             .should('be.disabled');
     });
 
-    it.only('should render Additional information tab', () => {
+    it('should render Additional information tab', () => {
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
         cy.get('.StandardPage form > div > div:nth-child(5)')
             .within(() => {
