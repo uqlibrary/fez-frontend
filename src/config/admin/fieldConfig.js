@@ -49,6 +49,7 @@ import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusFi
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
 import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
+import { AndsCollectionTypesField } from 'modules/SharedComponents/Toolbox/AndsCollectionTypesField';
 import {
     LinkInfoListEditorField,
     ListEditorField,
@@ -1007,6 +1008,14 @@ export default {
                 locale: locale.components.typeOfDataForm.field,
             },
         },
+        fez_record_search_key_data_volume: {
+            component: GenericTextField,
+            componentProps: {
+                name: 'bibliographicSection.fez_record_search_key_data_volume.rek_data_volume',
+                fullWidth: true,
+                label: 'Data volume',
+            },
+        },
         fez_record_search_key_software_required: {
             component: ListEditorField,
             componentProps: {
@@ -1087,12 +1096,28 @@ export default {
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactEmail,
             },
         },
+        fez_record_search_key_ands_collection_type: {
+            component: AndsCollectionTypesField,
+            componentProps: {
+                name:
+                    'additionalInformationSection.fez_record_search_key_ands_collection_type.rek_ands_collection_type',
+                label: 'Collection type',
+            },
+        },
         fez_record_search_key_project_name: {
             component: GenericTextField,
             componentProps: {
                 name: 'additionalInformationSection.fez_record_search_key_project_name.rek_project_name',
                 fullWidth: true,
                 ...formLocale.addDataset.information.project.fieldLabels.projectName,
+            },
+        },
+        fez_record_search_key_project_id: {
+            component: GenericTextField,
+            componentProps: {
+                name: 'additionalInformationSection.fez_record_search_key_project_id.rek_project_id',
+                fullWidth: true,
+                ...formLocale.addDataset.information.project.fieldLabels.projectId,
             },
         },
         fez_record_search_key_project_description: {
@@ -1140,8 +1165,8 @@ export default {
             componentProps: {
                 name:
                     'additionalInformationSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
-                label: 'Time period start date',
-                placeholder: 'Time period start date',
+                label: 'Time coverage start date',
+                placeholder: 'Time coverage start date',
                 fullWidth: true,
             },
         },
@@ -1150,8 +1175,8 @@ export default {
             componentProps: {
                 name:
                     'additionalInformationSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
-                label: 'Time period end date',
-                placeholder: 'Time period end date',
+                label: 'Time coverage end date',
+                placeholder: 'Time coverage end date',
                 fullWidth: true,
             },
         },
@@ -1470,6 +1495,16 @@ export default {
             fez_record_search_key_project_name: () => ({
                 required: true,
                 validation: [validation.required],
+            }),
+            fez_record_search_key_start_date: () => ({
+                label: 'Collection start date',
+            }),
+            fez_record_search_key_end_date: () => ({
+                label: 'Collection end date',
+            }),
+            authors: () => ({
+                showRoleInput: true,
+                locale: locale.components.creators.field,
             }),
         },
         [PUBLICATION_TYPE_DESIGN]: {

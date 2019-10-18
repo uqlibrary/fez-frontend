@@ -38,7 +38,7 @@ const authorsGetValue = record => {
     const authorRoles = (record.fez_record_search_key_author_role || []).reduce(
         (authorRolesObject, authorRole) => ({
             ...authorRolesObject,
-            [authorRole.rek_author_id_order]: authorRole,
+            [authorRole.rek_author_role_order]: authorRole,
         }),
         {},
     );
@@ -524,6 +524,12 @@ export default {
                 rek_type_of_data_order: dataset.rek_type_of_data_order,
             })),
     },
+    fez_record_search_key_data_volume: {
+        getValue: record => ({ ...record.fez_record_search_key_data_volume }),
+    },
+    fez_record_search_key_ands_collection_type: {
+        getValue: record => ({ ...record.fez_record_search_key_ands_collection_type }),
+    },
     fez_record_search_key_isdatasetof: {
         getValue: record =>
             (record.fez_record_search_key_isdatasetof || []).map(dataset => ({
@@ -551,6 +557,9 @@ export default {
             plainText: record.fez_record_search_key_project_description.rek_project_description,
             htmlText: record.fez_record_search_key_project_description.rek_project_description,
         }),
+    },
+    fez_record_search_key_project_id: {
+        getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),
     },
     fez_record_search_key_project_start_date: {
         getValue: record => ({ ...record.fez_record_search_key_project_start_date }),
