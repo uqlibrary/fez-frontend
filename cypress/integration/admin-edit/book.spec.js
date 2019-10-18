@@ -45,7 +45,7 @@ context('Book admin edit', () => {
             .should('have.length', 8);
     });
 
-    it.only('should render Bibliographic tab', () => {
+    it('should render Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
@@ -92,7 +92,7 @@ context('Book admin edit', () => {
             .parent()
             .children('p')
             .should('exist')
-            .should('have.text', 'Place of publication is required');
+            .should('have.text', 'This field is required');
 
         cy.get('.StandardPage form > div > div:nth-child(9)')
             .within(() => {
