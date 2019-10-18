@@ -804,12 +804,17 @@ export const getNtroSectionSearchKeys = ntroSection => {
                     rek_significance_order: item.rek_order,
                 }),
             );
-            ntroMetadata.fez_record_search_key_creator_contribution_statement = ntroSection.significanceAndContributionStatement.map(
-                item => ({
-                    rek_creator_contribution_statement: item.rek_value.value.htmlText || item.rek_value.value.plainText,
-                    rek_creator_contribution_statement_order: item.rek_order,
-                }),
-            );
+            ntroMetadata = {
+                ...ntroMetadata,
+                fez_record_search_key_creator_contribution_statement: [
+                    ...ntroSection.significanceAndContributionStatement.map(
+                        ({ rek_value: value, rek_order: order }) => ({
+                            rek_creator_contribution_statement: value.value.htmlText || value.value.plainText,
+                            rek_creator_contribution_statement_order: order,
+                        }),
+                    ),
+                ],
+            };
         }
     }
     return ntroMetadata;
