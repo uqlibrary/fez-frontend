@@ -420,7 +420,7 @@ export function adminUpdate(data) {
             ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
-            // ...transformers.getFilesSectionSearchKeys(data.filesSection),
+            ...transformers.getFilesSectionSearchKeys(data.filesSection),
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
         };
 

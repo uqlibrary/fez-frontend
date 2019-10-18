@@ -213,7 +213,7 @@ export class AutoCompleteAsyncField extends Component {
     handleStateChange = () =>
         this.props.allowFreeText
             ? ({ inputValue }) => {
-                inputValue !== undefined && this.props.onChange({ value: inputValue });
+                inputValue !== undefined && !!inputValue && this.props.onChange({ value: inputValue });
             }
             : () => {};
 
@@ -228,6 +228,11 @@ export class AutoCompleteAsyncField extends Component {
                 this.props.onDelete(Object.values(this.state.selectedItem));
             },
         );
+    };
+
+    handleClear = cb => () => {
+        cb();
+        this.props.onClear();
     };
 
     render() {
@@ -272,6 +277,7 @@ export class AutoCompleteAsyncField extends Component {
                         selectedItem,
                         highlightedIndex,
                         openMenu,
+                        clearSelection,
                     }) => {
                         return (
                             <div className={classes.container}>
@@ -282,7 +288,6 @@ export class AutoCompleteAsyncField extends Component {
                                             classes,
                                             inputProps: getInputProps({
                                                 onChange: this.getSuggestions,
-                                                value: (!!selectedValue && selectedValue.value) || '',
                                                 ...(this.props.showChips
                                                     ? {
                                                         startAdornment: Object.values(this.state.selectedItem).map(
@@ -304,7 +309,7 @@ export class AutoCompleteAsyncField extends Component {
                                                             <InputAdornment position="end">
                                                                 <IconButton
                                                                     aria-label="Clear"
-                                                                    onClick={this.props.onClear}
+                                                                    onClick={this.handleClear(clearSelection)}
                                                                 >
                                                                     <Clear />
                                                                 </IconButton>

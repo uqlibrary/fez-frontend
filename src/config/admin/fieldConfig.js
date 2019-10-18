@@ -1463,7 +1463,6 @@ export default {
         },
         [PUBLICATION_TYPE_DATA_COLLECTION]: {
             rek_copyright: () => ({
-                name: 'filesSection.depositAgreement',
                 label: 'Deposit agreement',
                 copyrightAgreement: formLocale.addDataset.information.agreement.text,
             }),
