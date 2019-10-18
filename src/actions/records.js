@@ -419,7 +419,7 @@ export function adminUpdate(data) {
             ...transformers.getAuthorsSectionSearchKeys(data.authorsSection),
             ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
-            // ...transformers.getNtroSectionSearchKeys(data.ntroSection),
+            ...transformers.getNtroSectionSearchKeys(data.ntroSection),
             // ...transformers.getFilesSectionSearchKeys(data.filesSection),
             ...transformers.getSecuritySectionSearchKeys(data.securitySection),
         };

@@ -502,7 +502,7 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_ismn',
+                name: 'ntroSection.fez_record_search_key_ismn',
                 isValid: validation.isValidIsmn,
                 searchKey: {
                     value: 'rek_ismn',

@@ -510,7 +510,6 @@ export const getRecordAbstractDescriptionSearchKey = (abstract = null) => {
 };
 
 export const getGrantsListSearchKey = grants => {
-    console.log('In the main function', grants);
     if (!grants || grants.length === 0) return {};
 
     return {
@@ -790,8 +789,34 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const getNtroSectionSearchKeys = ntroSection => {
+    let ntroMetadata = {};
+    if (!!ntroSection) {
+        ntroMetadata = {
+            fez_record_search_key_audience_size: ntroSection.fez_record_search_key_audience_size || null,
+            fez_record_search_key_ismn: ntroSection.fez_record_search_key_ismn || null,
+            ...getQualityIndicatorSearchKey(ntroSection.qualityIndicators || []),
+        };
+        if (ntroSection.significanceAndContributionStatement.length > 0) {
+            ntroMetadata.fez_record_search_key_significance = ntroSection.significanceAndContributionStatement.map(
+                item => ({
+                    rek_significance: item.rek_value.key || null,
+                    rek_significance_order: item.rek_order,
+                }),
+            );
+            ntroMetadata.fez_record_search_key_creator_contribution_statement = ntroSection.significanceAndContributionStatement.map(
+                item => ({
+                    rek_creator_contribution_statement: item.rek_value.value.htmlText || item.rek_value.value.plainText,
+                    rek_creator_contribution_statement_order: item.rek_order,
+                }),
+            );
+        }
+    }
+    return ntroMetadata;
+};
+
 export const getGrantInformationSectionSearchKeys = grantsSection => ({
-    ...getGrantsListSearchKey(grantsSection.grants || []),
+    ...getGrantsListSearchKey((grantsSection && grantsSection.grants && grantsSection.grants) || []),
 });
 
 export const getAuthorsSearchKeys = authors => ({
