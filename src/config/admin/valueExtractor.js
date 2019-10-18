@@ -555,6 +555,9 @@ export default {
             htmlText: record.fez_record_search_key_project_description.rek_project_description,
         }),
     },
+    fez_record_search_key_project_id: {
+        getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),
+    },
     fez_record_search_key_project_start_date: {
         getValue: record => (record.fez_record_search_key_project_start_date || {}).rek_project_start_date,
     },

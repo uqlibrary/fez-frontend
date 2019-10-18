@@ -91,7 +91,11 @@ export default {
         },
         {
             title: 'Project information',
-            groups: [['fez_record_search_key_project_name'], ['fez_record_search_key_project_description']],
+            groups: [
+                ['fez_record_search_key_project_name'],
+                ['fez_record_search_key_project_description'],
+                ['fez_record_search_key_project_id'],
+            ],
         },
     ],
     ntro: () => [],

@@ -1111,6 +1111,14 @@ export default {
                 ...formLocale.addDataset.information.project.fieldLabels.projectName,
             },
         },
+        fez_record_search_key_project_id: {
+            component: GenericTextField,
+            componentProps: {
+                name: 'additionalInformationSection.fez_record_search_key_project_id.rek_project_id',
+                fullWidth: true,
+                ...formLocale.addDataset.information.project.fieldLabels.projectId,
+            },
+        },
         fez_record_search_key_project_description: {
             component: GenericTextField,
             componentProps: {
