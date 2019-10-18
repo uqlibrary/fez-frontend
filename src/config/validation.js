@@ -339,7 +339,10 @@ export const isAuthorOrEditorSelected = (data, isAdmin = false) => {
             data.authors &&
             data.authors.length !== 0 &&
             data.authors.filter(item => item.selected).length === 0) ||
-        (data.editors && data.editors.length !== 0 && data.editors.filter(item => item.selected).length === 0)
+        (!isAdmin &&
+            data.editors &&
+            data.editors.length !== 0 &&
+            data.editors.filter(item => item.selected).length === 0)
     ) {
         errors.authors = locale.validationErrors.authorRequired;
         errors.editors = locale.validationErrors.editorRequired;
