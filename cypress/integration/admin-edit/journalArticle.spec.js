@@ -200,6 +200,8 @@ context('Journal Article admin edit', () => {
 
                 cy.get('div:nth-child(6) > .StandardCard')
                     .within(() => {
+                        cy.root()
+                            .as('bibliographicCard');
                         cy.get('h3')
                             .should('have.text', 'Bibliographic');
                         cy.get('#Placeofpublication')
@@ -283,6 +285,55 @@ context('Journal Article admin edit', () => {
                         // No Related publications in mock
                     });
             });
+
+        cy.get('#Journalname')
+            .clear()
+            .parent()
+            .siblings('p')
+            .should('have.id', 'Journalname-helper-text')
+            .should('have.text', 'This field is required');
+
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'Journal name is required');
+            });
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('be.disabled');
+
+        // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
+        // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
+        // cy.get('#Journalname')
+        //     .type('Test');
+
+        // cy.get('.StandardPage form > div > div:nth-child(9)')
+        //     .within(() => {
+        //         cy.get('.Alert')
+        //             .should('not.exist');
+        //         cy.get('button')
+        //             .should('be.enabled');
+        //     });
+
+        // cy.get('@bibliographicCard')
+        //     .get('[placeholder="Publication date"]')
+        //     .clear();
+        // cy.get('.StandardPage form > div > div:nth-child(9)')
+        //     .within(() => {
+        //         cy.get('.Alert')
+        //             .should('exist')
+        //             .find('.alert-text')
+        //             .should('contain', 'Validation -')
+        //             .find('li')
+        //             .should('have.length', 1)
+        //             .should('contain', 'Publication date is required');
+        //     });
+        // cy.get('.StandardPage form > div > div:nth-child(10) button')
+        //     .should('be.disabled');
     });
 
     it('should render Author details tab', () => {
@@ -297,6 +348,8 @@ context('Journal Article admin edit', () => {
 
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
+                        cy.root()
+                            .as('authorsCard');
                         cy.get('h3')
                             .should('have.text', 'Authors');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
@@ -313,9 +366,33 @@ context('Journal Article admin edit', () => {
                         });
                     });
             });
+
+        cy.get('@authorsCard')
+            .find('button[aria-label="Remove all items"]')
+            .click();
+        cy.get('body > div[role=dialog]')
+            .contains('Yes')
+            .click();
+        cy.get('@authorsCard')
+            .find('span[class*="colorError-"]')
+            .should('have.length', 1)
+            .should('have.text', 'Author/creator names are required');
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'Author/creator names are required');
+            });
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('be.disabled');
     });
 
-    it('should render Additional information tab', () => {
+    it.only('should render Additional information tab', () => {
+        const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
         cy.get('.StandardPage form > div > div:nth-child(5)')
             .within(() => {
                 cy.root()
@@ -326,15 +403,12 @@ context('Journal Article admin edit', () => {
                     .should('have.text', 'Additional information');
 
                 cy.get('div:nth-child(1) > .StandardCard')
+                    .as('collectionsCard')
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Member of collections');
                         cy.get('#Memberofcollections-input-label')
                             .should('contain', 'Member of collections');
-                        // prettier-ignore
-                        const collections = record.fez_record_search_key_ismemberof.map(
-                            item => item.rek_ismemberof_lookup
-                        );
                         collections.forEach((collection, index) => {
                             cy.get('[class*="MuiChip-label-"]')
                                 .eq(index)
@@ -395,6 +469,32 @@ context('Journal Article admin edit', () => {
                             });
                     });
             });
+
+        cy.get('@collectionsCard')
+            .within(() => {
+                collections.forEach(() => {
+                    cy.get('[role=button] > svg')
+                        .eq(0)
+                        .click();
+                });
+                cy.get('#Memberofcollections-input-helper-text')
+                    .should('exist')
+                    .should('have.text', 'This field is required');
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'You must select atleast one collection');
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('be.disabled');
     });
 
     it('should render Grant information tab', () => {
@@ -486,6 +586,20 @@ context('Journal Article admin edit', () => {
                             });
                     });
             });
+        cy.get('#deposit-agreement')
+            .click();
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'You are required to accept deposit agreement');
+            });
+        cy.get('.StandardPage form > div > div:nth-child(10) button')
+            .should('be.disabled');
     });
 
     it('should render Security tab', () => {
