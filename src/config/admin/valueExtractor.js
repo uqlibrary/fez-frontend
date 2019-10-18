@@ -569,6 +569,9 @@ export default {
     fez_record_search_key_project_id: {
         getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),
     },
+    fez_record_search_key_project_id: {
+        getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),
+    },
     fez_record_search_key_project_start_date: {
         getValue: record => ({ ...record.fez_record_search_key_project_start_date }),
     },
