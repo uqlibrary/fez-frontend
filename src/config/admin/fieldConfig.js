@@ -1197,6 +1197,7 @@ export default {
                 label: 'School, department, or centre',
                 name: 'bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name',
                 floatingLabelText: 'School, department, or centre',
+                showClear: true,
             },
         },
         fez_record_search_key_report_number: {
@@ -1460,29 +1461,29 @@ export default {
         [PUBLICATION_TYPE_BOOK]: {
             fez_record_search_key_publisher: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_BOOK_CHAPTER]: {
             fez_record_search_key_publisher: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_CREATIVE_WORK]: {
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             authors: ({ isNtro }) => ({ isNtro }),
         },
@@ -1494,7 +1495,7 @@ export default {
             }),
             fez_record_search_key_project_name: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
             fez_record_search_key_start_date: () => ({
                 label: 'Collection start date',
@@ -1554,7 +1555,7 @@ export default {
         [PUBLICATION_TYPE_RESEARCH_REPORT]: {
             fez_record_search_key_place_of_publication: () => ({
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_THESIS]: {
@@ -1562,7 +1563,7 @@ export default {
                 label: 'School, centre, or institute',
                 floatingLabelText: 'School, centre, or institute',
                 required: true,
-                validation: [validation.required],
+                validate: [validation.required],
             }),
         },
         [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {

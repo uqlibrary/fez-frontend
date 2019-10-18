@@ -68,7 +68,9 @@ export const validateThesis = (
 ) => ({
     bibliographicSection: {
         ...((!((bs || {}).fez_record_search_key_org_unit_name || {}).rek_org_unit_name && {
-            rek_org_unit_name: summary.rek_org_unit_name,
+            fez_record_search_key_org_unit_name: {
+                rek_org_unit_name: summary.rek_org_unit_name,
+            },
         }) ||
             {}),
         ...((!(bs || {}).rek_genre_type && {

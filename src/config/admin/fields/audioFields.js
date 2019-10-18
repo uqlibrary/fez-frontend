@@ -77,9 +77,17 @@ export default {
 };
 
 export const validateAudioDocument = (
-    { filesSection: fs, authorsSection: as },
+    { bibliographicSection: bs, filesSection: fs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_rights || {}).rek_rights && {
+            fez_record_search_key_rights: {
+                rek_rights: summary.rek_rights,
+            },
+        }) ||
+            {}),
+    },
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,
