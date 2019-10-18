@@ -61,16 +61,22 @@ context('Design admin edit', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(3) > .StandardCard')
+                    .as('bibliographicCard')
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Bibliographic');
                         cy.get('#Projectname')
-                            .should('have.value', record.fez_record_search_key_project_name.rek_project_name);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_project_name.rek_project_name,
+                            );
                         cy.get('[placeholder="Project start date"]')
                             .should(
                                 'have.value',
                                 moment(record.fez_record_search_key_project_start_date.rek_project_start_date)
-                                    .format('DD/MM/YYYY'),
+                                    .format(
+                                        'DD/MM/YYYY',
+                                    ),
                             );
                         cy.get('#Scale')
                             .should('have.value', record.fez_record_search_key_scale.rek_scale);
@@ -78,6 +84,34 @@ context('Design admin edit', () => {
                             .should('have.value', record.fez_record_search_key_job_number.rek_job_number);
                     });
             });
+
+        cy.get('@bibliographicCard')
+            .find('#Publishername')
+            .type('Publisher')
+            .parent()
+            .parent()
+            .children('p')
+            .should('not.exist');
+
+        cy.get('.StandardPage form > div > div:nth-child(9) .Alert .alert-text ul')
+            .as('errorList')
+            .find('li')
+            .should('have.length', 2);
+
+        cy.get('@bibliographicCard')
+            .find('#Rights')
+            .clear()
+            .parent()
+            .parent()
+            .parent()
+            .children('p')
+            .should('have.text', 'This field is required');
+
+        cy.get('@errorList')
+            .find('li')
+            .should('have.length', 3)
+            .eq(0)
+            .should('have.text', 'Rights is required');
     });
 
     it('should render Author details tab', () => {

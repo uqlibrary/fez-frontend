@@ -27,10 +27,8 @@ context('Audio admin edit', () => {
                     .find('.alert-text')
                     .should('contain', 'Validation -')
                     .find('li')
-                    .should('have.length', 3)
-                    .should('contain', 'Publication date is required')
-                    .should('contain', 'Author/creator names are required')
-                    .should('contain', 'Editor/contributor names are required');
+                    .should('have.length', 1)
+                    .should('contain', 'Publication date is required');
             });
 
         cy.get('.StandardPage form > div > div:nth-child(10) button')
@@ -49,11 +47,6 @@ context('Audio admin edit', () => {
             .eq(2)
             .find('[class*="MuiBadge-colorError"]')
             .should('have.text', '1');
-
-        cy.get('[role="tab"]')
-            .eq(3)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '2');
     });
 
     it('should render Identifiers tab', () => {
@@ -85,6 +78,7 @@ context('Audio admin edit', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(5) > .StandardCard')
+                    .as('bibliographicCard')
                     .within(() => {
                         cy.get('h3')
                             .should('have.text', 'Bibliographic');
@@ -128,7 +122,8 @@ context('Audio admin edit', () => {
                             .find('input[type=hidden]')
                             .should(
                                 'have.value',
-                                record.fez_record_search_key_alternate_genre.map(item => item.rek_alternate_genre)
+                                record.fez_record_search_key_alternate_genre
+                                    .map(item => item.rek_alternate_genre)
                                     .join(','),
                             )
                             .siblings('[role=button]')
@@ -140,6 +135,29 @@ context('Audio admin edit', () => {
                                     .join(','),
                             );
                     });
+            });
+
+        cy.get('@bibliographicCard')
+            .find('[placeholder=Date]')
+            .as('pubDateField')
+            .parent()
+            .parent()
+            .children('p')
+            .should('exist')
+            .should('have.text', 'This field is required');
+        cy.get('@pubDateField')
+            .type('01/10/2019')
+            .blur()
+            .parent()
+            .parent()
+            .children('p')
+            .should('not.exist');
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
             });
     });
 

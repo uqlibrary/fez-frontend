@@ -66,6 +66,26 @@ context('Conference Proceedings admin edit', () => {
             });
     });
 
+    it('should render Author details tab', () => {
+        cy.get('.StandardPage form > div > div:nth-child(4)')
+            .within(() => {
+                cy.get('div:nth-child(1) > .StandardCard')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Authors');
+                        cy.get('#authors-name-as-published-field')
+                            .type('Author{enter}');
+                    });
+            });
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
+            });
+    });
+
     it('should render Files tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {

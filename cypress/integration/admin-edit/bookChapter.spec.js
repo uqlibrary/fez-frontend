@@ -22,18 +22,10 @@ context('Book Chapter admin edit', () => {
         cy.get('.StandardPage form > div > div:nth-child(9)')
             .within(() => {
                 cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 2)
-                    .should('contain', 'Author/creator names are required')
-                    .should('contain', 'Editor/contributor names are required');
+                    .should('not.exist');
+                cy.get('button')
+                    .should('be.enabled');
             });
-
-        cy.get('.StandardPage form > div > div:nth-child(10) button')
-            .should('exist')
-            .should('be.disabled');
 
         cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
@@ -43,11 +35,6 @@ context('Book Chapter admin edit', () => {
         cy.get('@cards')
             .should('have.length', 1)
             .should('have.text', 'Bibliographic');
-
-        cy.get('[role="tab"]')
-            .eq(3)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '2');
     });
 
     it('should render Bibliographic tab with multilingual fields', () => {

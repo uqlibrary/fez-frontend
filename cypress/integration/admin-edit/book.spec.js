@@ -45,7 +45,7 @@ context('Book admin edit', () => {
             .should('have.length', 8);
     });
 
-    it('should render Bibliographic tab with multilingual fields', () => {
+    it.only('should render Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
@@ -77,6 +77,32 @@ context('Book admin edit', () => {
                                 record.fez_record_search_key_translated_title.rek_translated_title,
                             );
                     });
+                cy.get('div:nth-child(5) > .StandardCard')
+                    .as('bibliographicTab')
+                    .within(() => {
+                        cy.get('h3')
+                            .should('have.text', 'Bibliographic');
+                    });
+            });
+
+        cy.get('@bibliographicTab')
+            .find('#Placeofpublication')
+            .clear()
+            .parent()
+            .parent()
+            .children('p')
+            .should('exist')
+            .should('have.text', 'Place of publication is required');
+
+        cy.get('.StandardPage form > div > div:nth-child(9)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('have.text', 'Place of publication is required');
             });
     });
 });

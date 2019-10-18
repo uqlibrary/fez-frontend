@@ -27,8 +27,7 @@ context('Journal admin edit', () => {
                     .should('contain', 'Validation -')
                     .find('li')
                     .should('have.length', 2)
-                    .should('contain', 'Journal name is required')
-                    .should('contain', 'Author/creator names are required');
+                    .should('contain', 'Journal name is required');
             });
 
         cy.get('.StandardPage form > div > div:nth-child(10) button')
@@ -46,11 +45,6 @@ context('Journal admin edit', () => {
 
         cy.get('[role="tab"]')
             .eq(2)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '1');
-
-        cy.get('[role="tab"]')
-            .eq(3)
             .find('[class*="MuiBadge-colorError"]')
             .should('have.text', '1');
     });

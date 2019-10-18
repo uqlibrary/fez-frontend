@@ -39,6 +39,7 @@ context('Conference Paper admin edit', () => {
 
     it('should render Bibliographic tab', () => {
         cy.get('.StandardPage form > div > div:nth-child(3)')
+            .as('bibliographicTab')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
@@ -144,7 +145,10 @@ context('Conference Paper admin edit', () => {
                         cy.get('h3')
                             .should('have.text', 'Journal name');
                         cy.get('#Journalname')
-                            .should('have.value', record.fez_record_search_key_journal_name.rek_journal_name);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_journal_name.rek_journal_name,
+                            );
                         const langCodes = record.fez_record_search_key_language_of_journal_name.map(
                             lang => lang.rek_language_of_journal_name,
                         );
@@ -184,5 +188,21 @@ context('Conference Paper admin edit', () => {
                             );
                     });
             });
+
+        const errorMessages = [
+            'Conference name is required',
+            'Conference location is required',
+            'Conference dates are required',
+            'Journal name is required',
+        ];
+        ['#Conferencename', '#Conferencelocation', '#Conferencedates', '#Journalname'].forEach((selector, index) => {
+            cy.get('@bibliographicTab')
+                .find(selector)
+                .clear();
+            cy.get('.StandardPage form > div > div:nth-child(9) .Alert .alert-text li')
+                .should('have.length', index + 1)
+                .eq(index)
+                .should('have.text', errorMessages[index]);
+        });
     });
 });
