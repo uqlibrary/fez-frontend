@@ -151,6 +151,27 @@ context('Thesis admin edit', () => {
                         });
                     });
             });
+
+        cy.get('#Schoolcentreorinstitute-input')
+            .clear()
+            .parent()
+            .parent()
+            .children('p')
+            .should('have.text', 'This field is required');
+
+        cy.get('.StandardPage form > div > div:nth-child(8)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'Enrolling unit is required');
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(9) button')
+            .should('be.disabled');
     });
 
     it('should render Thesis specific fields on the Author tab', () => {
