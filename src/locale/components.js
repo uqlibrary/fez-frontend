@@ -1992,6 +1992,7 @@ export default {
                     ),
                     overridePrompt: 'Override datastream security policy details',
                     overridePolicyPrompt: 'Security policy for this file to override inheritance',
+                    onEmbargoClearPrompt: 'Embargo date cleared - consider the correct policy',
                 },
                 inheritedPolicy: {
                     record: {

@@ -14769,6 +14769,7 @@ exports[`SecuritySectionContainer should mount with default props 1`] = `
                                                                 text={
                                                                   Object {
                                                                     "cardTitle": [Function],
+                                                                    "onEmbargoClearPrompt": "Embargo date cleared - consider the correct policy",
                                                                     "overridePolicyPrompt": "Security policy for this file to override inheritance",
                                                                     "overridePrompt": "Override datastream security policy details",
                                                                   }

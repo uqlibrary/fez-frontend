@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
+import { useFormValuesContext } from 'context';
 
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -20,8 +21,11 @@ const DataStreamSecurityItem = ({
     onSecurityChange,
     initialDataStream,
     inheritedSecurity,
+    onEmbargoClearPromptText,
     policyDropdownLabel,
 }) => {
+    const { formValues } = useFormValuesContext();
+
     const handleDataStreamChange = value => {
         onSecurityChange(
             index,
@@ -29,12 +33,33 @@ const DataStreamSecurityItem = ({
                 ? initialDataStream
                 : {
                     ...dataStream,
-                    dsi_security_inherited: 0,
-                    dsi_security_policy: value,
+                    ...value,
                 },
         );
     };
-    // const _clearEmbargoDate = index => () => onSecurityChange(index, value='', 'dsi_embargo_date', '', );
+
+    const minimumSecurityPolicyForRecord = () => {
+        return formValues.rek_security_policy;
+    };
+
+    const handlePolicyChange = value => {
+        handleDataStreamChange({
+            dsi_security_inherited: 0,
+            dsi_security_policy: value,
+        });
+    };
+
+    const handleEmbargoDateClear = () => {
+        // clear the embargo value & reset the associated security
+        dataStream.dsi_embargo_date = null;
+        handleDataStreamChange({
+            dsi_embargo_date: dataStream.dsi_embargo_date,
+            dsi_security_inherited: 0,
+            dsi_security_policy: minimumSecurityPolicyForRecord(),
+        });
+
+        dataStream.hasClearedEmbargoDate = true;
+    };
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
@@ -51,7 +76,7 @@ const DataStreamSecurityItem = ({
                     disabled={disabled}
                     {...{
                         input: {
-                            onChange: handleDataStreamChange,
+                            onChange: handlePolicyChange,
                             onBlur: /* istanbul ignore next */ () => {},
                         },
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
@@ -66,13 +91,18 @@ const DataStreamSecurityItem = ({
                                     <IconButton
                                         style={{ marginTop: -10, marginBottom: -10 }}
                                         className="deleteFieldButton"
-                                        // onClick={_clearEmbargoDate(index)}
+                                        onClick={handleEmbargoDateClear}
                                     >
                                         <Close />
                                     </IconButton>
                                 </div>
                             </Tooltip>
                         </div>
+                    </React.Fragment>
+                )}
+                {!!dataStream.hasClearedEmbargoDate && (
+                    <React.Fragment>
+                        <p>{onEmbargoClearPromptText}</p>
                     </React.Fragment>
                 )}
             </Grid>
@@ -88,6 +118,7 @@ DataStreamSecurityItem.propTypes = {
     index: PropTypes.number,
     initialDataStream: PropTypes.object,
     inheritedSecurity: PropTypes.number,
+    onEmbargoClearPromptText: PropTypes.string,
     onSecurityChange: PropTypes.func.isRequired,
     policyDropdownLabel: PropTypes.string,
 };

@@ -17,7 +17,6 @@ import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
-import Close from '@material-ui/icons/Close';
 
 import { openAccessConfig, viewRecordsConfig, routes } from 'config';
 import { isFileValid } from 'config/validation';
@@ -100,7 +99,7 @@ export const getFileOpenAccessStatus = (publication, dataStream) => {
     } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
-            embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
+            embargoDate: embargoDate,
             openAccessStatusId: openAccessStatusId,
             securityStatus: getSecurityAccess(),
         };
@@ -244,8 +243,9 @@ export const AttachedFiles = ({
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1);
 
     const onFileDelete = index => () => onDelete(index);
-    const onEmbargoDateChange = index => value =>
+    const onEmbargoDateChange = index => value => {
         onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
+    };
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
     return (
@@ -350,9 +350,15 @@ export const AttachedFiles = ({
                             {isAdmin && canEdit && (
                                 <React.Fragment>
                                     <Grid item xs={2}>
-                                        {!!item.openAccessStatus.embargoDate && (
+                                        {(!!item.openAccessStatus.embargoDate ||
+                                            !!item.openAccessStatus.isOpenAccess) && (
                                             <FileUploadEmbargoDate
-                                                value={new Date(item.embargoDate)}
+                                                value={
+                                                    !!item.embargoDate &&
+                                                    moment(item.openAccessStatus.embargoDate).isSameOrAfter(moment())
+                                                        ? new Date(item.embargoDate)
+                                                        : ''
+                                                }
                                                 onChange={onEmbargoDateChange(index)}
                                                 disabled={disabled}
                                             />
