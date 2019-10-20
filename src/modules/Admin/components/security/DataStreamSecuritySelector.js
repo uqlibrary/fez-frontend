@@ -76,6 +76,7 @@ export const DataStreamSecuritySelector = ({
                             initialDataStream={initialDataStreams[index]}
                             dataStream={dataStream}
                             policyDropdownLabel={text.overridePolicyPrompt}
+                            onEmbargoClearPromptText={text.onEmbargoClearPrompt}
                             inheritedSecurity={mostSecureParentDatastreamSecurity}
                             onSecurityChange={handleDataStreamSecurityChange}
                             classes={classes}
