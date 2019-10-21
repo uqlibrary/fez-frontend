@@ -56,7 +56,9 @@ describe('DataStreamSecurityItem component', () => {
         });
 
         let fragment = asFragment();
+        expect(asFragment()).toMatchSnapshot();
         fireEvent.click(getByText(/Administrator/i));
+        expect(asFragment()).toMatchSnapshot();
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
         const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
 
