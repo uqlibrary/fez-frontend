@@ -503,7 +503,7 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_ismn',
+                name: 'ntroSection.fez_record_search_key_ismn',
                 isValid: validation.isValidIsmn,
                 searchKey: {
                     value: 'rek_ismn',
@@ -666,7 +666,7 @@ export default {
         fez_record_search_key_native_script_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_native_script_title',
+                name: 'bibliographicSection.fez_record_search_key_native_script_title.rek_native_script_title',
                 label: 'Native script title',
                 placeholder: '',
                 fullWidth: true,
@@ -675,7 +675,7 @@ export default {
         fez_record_search_key_roman_script_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_roman_script_title',
+                name: 'bibliographicSection.fez_record_search_key_roman_script_title.rek_roman_script_title',
                 label: 'Roman script title',
                 placeholder: '',
                 fullWidth: true,
@@ -684,7 +684,7 @@ export default {
         fez_record_search_key_translated_title: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_translated_title',
+                name: 'bibliographicSection.fez_record_search_key_translated_title.rek_translated_title',
                 label: 'Translated title',
                 placeholder: '',
                 fullWidth: true,
@@ -843,7 +843,7 @@ export default {
         fez_record_search_key_date_available: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_date_available',
+                name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
                 label: 'Year available',
                 fullWidth: true,
                 validate: [validation.dateTimeYear],
@@ -1082,6 +1082,7 @@ export default {
                 fullWidth: true,
                 required: true,
                 validate: [validation.required],
+                showClear: true,
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
             },
         },
@@ -1135,7 +1136,7 @@ export default {
         fez_record_search_key_project_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_project_start_date',
+                name: 'bibliographicSection.fez_record_search_key_project_start_date.rek_project_start_date',
                 label: 'Project start date',
                 placeholder: 'Project start date',
                 fullWidth: true,
@@ -1144,7 +1145,7 @@ export default {
         fez_record_search_key_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_start_date',
+                name: 'additionalInformationSection.fez_record_search_key_start_date.rek_start_date',
                 label: 'Start date',
                 placeholder: 'Start date',
                 fullWidth: true,
@@ -1153,7 +1154,7 @@ export default {
         fez_record_search_key_end_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_end_date',
+                name: 'additionalInformationSection.fez_record_search_key_end_date.rek_end_date',
                 label: 'End date',
                 placeholder: 'End date',
                 fullWidth: true,
@@ -1162,7 +1163,8 @@ export default {
         fez_record_search_key_time_period_start_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_time_period_start_date',
+                name:
+                    'additionalInformationSection.fez_record_search_key_time_period_start_date.rek_time_period_start_date',
                 label: 'Time coverage start date',
                 placeholder: 'Time coverage start date',
                 fullWidth: true,
@@ -1171,7 +1173,8 @@ export default {
         fez_record_search_key_time_period_end_date: {
             component: DatePickerField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_time_period_end_date',
+                name:
+                    'additionalInformationSection.fez_record_search_key_time_period_end_date.rek_time_period_end_date',
                 label: 'Time coverage end date',
                 placeholder: 'Time coverage end date',
                 fullWidth: true,
@@ -1486,13 +1489,15 @@ export default {
         },
         [PUBLICATION_TYPE_DATA_COLLECTION]: {
             rek_copyright: () => ({
-                name: 'filesSection.depositAgreement',
                 label: 'Deposit agreement',
                 copyrightAgreement: formLocale.addDataset.information.agreement.text,
             }),
             fez_record_search_key_project_name: () => ({
                 required: true,
                 validate: [validation.required],
+            }),
+            fez_record_search_key_rights: () => ({
+                name: 'additionalInformationSection.fez_record_search_key_rights.rek_rights',
             }),
             fez_record_search_key_start_date: () => ({
                 label: 'Collection start date',
