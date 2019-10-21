@@ -9,9 +9,9 @@ import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
 export const FilesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(
-        adminInterfaceConfig[record.rek_display_type].files(
-            record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
-        ),
+        adminInterfaceConfig[record.rek_display_type].files({
+            isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+        }),
     );
 
     return <Section cards={cards} disabled={disabled} />;

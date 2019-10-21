@@ -52,7 +52,7 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
 
     - session token x-uql-token can easily be found by logging in at <https://www.library.uq.edu.au/> and
       observing the header value in Network tab of Inspections
-    - You will also need to run Chrome in no-security mode by adding the alias `alias chrome-no-cors='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=~/chrome-dev-profile > /dev/null 2>&1'` and then running chrome by `chrome-no-cors`.
+    - You will also need to run Chrome in no-security mode by adding the alias `alias chrome-no-cors='/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disable-web-security --user-data-dir=~/chrome-dev-profile > /dev/null 2>&1'` and then running chrome by `chrome-no-cors`. or `open -n -a /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --args --user-data-dir="/tmp/chrome_dev_test" --disable-web-security`
 
   - for Hot Reloading to work in IntelliJ products, turn "safe write" off in the settings
 

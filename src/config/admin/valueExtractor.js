@@ -313,14 +313,14 @@ export default {
     },
     additionalNotes: {
         getValue: record => ({
-            plainText: (record.fez_record_search_key_notes || {}).rek_notes,
-            htmlText: (record.fez_record_search_key_notes || {}).rek_notes,
+            plainText: (record.fez_record_search_key_notes || {}).rek_notes || '',
+            htmlText: (record.fez_record_search_key_notes || {}).rek_notes || '',
         }),
     },
     advisoryStatement: {
         getValue: record => ({
-            plainText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
-            htmlText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement,
+            plainText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement || '',
+            htmlText: (record.fez_record_search_key_advisory_statement || {}).rek_advisory_statement || '',
         }),
     },
     significanceAndContributionStatement: {
@@ -420,8 +420,12 @@ export default {
         getValue: record => {
             return (
                 record.fez_record_search_key_date_available &&
-                record.fez_record_search_key_date_available.rek_date_available &&
-                moment(record.fez_record_search_key_date_available.rek_date_available).format('YYYY')
+                record.fez_record_search_key_date_available.rek_date_available && {
+                    ...record.fez_record_search_key_date_available,
+                    rek_date_available: moment(record.fez_record_search_key_date_available.rek_date_available).format(
+                        'YYYY',
+                    ),
+                }
             );
         },
     },
@@ -429,8 +433,12 @@ export default {
         getValue: record => {
             return (
                 record.fez_record_search_key_date_recorded &&
-                record.fez_record_search_key_date_recorded.rek_date_recorded &&
-                moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format('YYYY')
+                record.fez_record_search_key_date_recorded.rek_date_recorded && {
+                    ...record.fez_record_search_key_date_recorded,
+                    rek_date_recorded: moment(record.fez_record_search_key_date_recorded.rek_date_recorded).format(
+                        'YYYY',
+                    ),
+                }
             );
         },
     },
@@ -544,19 +552,19 @@ export default {
         getValue: record => record.fez_record_search_key_contributor[0].rek_contributor,
     },
     contactNameId: {
-        getValue: record => record.fez_record_search_key_contributor_id[0].rek_contributor_id,
+        getValue: record => ({
+            id: record.fez_record_search_key_contributor_id[0].rek_contributor_id,
+            value: record.fez_record_search_key_contributor_id[0].rek_contributor_id,
+        }),
     },
     contactEmail: {
         getValue: record => record.fez_record_search_key_contact_details_email[0].rek_contact_details_email,
     },
     fez_record_search_key_project_name: {
-        getValue: record => ({ ...(record.fez_record_search_key_project_name || {}) }),
+        getValue: record => ({ ...record.fez_record_search_key_project_name }),
     },
     fez_record_search_key_project_description: {
-        getValue: record => ({
-            plainText: record.fez_record_search_key_project_description.rek_project_description,
-            htmlText: record.fez_record_search_key_project_description.rek_project_description,
-        }),
+        getValue: record => ({ ...record.fez_record_search_key_project_description }),
     },
     fez_record_search_key_project_id: {
         getValue: record => ({ ...(record.fez_record_search_key_project_id || {}) }),

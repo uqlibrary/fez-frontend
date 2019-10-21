@@ -503,7 +503,7 @@ export default {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_ismn',
+                name: 'ntroSection.fez_record_search_key_ismn',
                 isValid: validation.isValidIsmn,
                 searchKey: {
                     value: 'rek_ismn',
@@ -844,7 +844,7 @@ export default {
         fez_record_search_key_date_available: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_date_available',
+                name: 'bibliographicSection.fez_record_search_key_date_available.rek_date_available',
                 label: 'Year available',
                 fullWidth: true,
                 validate: [validation.dateTimeYear],
@@ -1083,6 +1083,7 @@ export default {
                 fullWidth: true,
                 required: true,
                 validate: [validation.required],
+                showClear: true,
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
             },
         },
@@ -1489,13 +1490,15 @@ export default {
         },
         [PUBLICATION_TYPE_DATA_COLLECTION]: {
             rek_copyright: () => ({
-                name: 'filesSection.depositAgreement',
                 label: 'Deposit agreement',
                 copyrightAgreement: formLocale.addDataset.information.agreement.text,
             }),
             fez_record_search_key_project_name: () => ({
                 required: true,
                 validate: [validation.required],
+            }),
+            fez_record_search_key_rights: () => ({
+                name: 'additionalInformationSection.fez_record_search_key_rights.rek_rights',
             }),
             fez_record_search_key_start_date: () => ({
                 label: 'Collection start date',
