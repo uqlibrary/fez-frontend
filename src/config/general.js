@@ -1068,8 +1068,7 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
+        url: pid => `${APP_URL}admin/edit/${pid}`,
     },
     {
         label: 'Edit author affiliations',
@@ -1079,7 +1078,7 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid => `${APP_URL}records/${pid}/edit`,
+        url: pid => `${APP_URL}admin/edit/${pid}?tab=security`,
     },
     {
         label: 'Delete selected record',
