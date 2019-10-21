@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import moment from 'moment';
 import { useFormValuesContext } from 'context';
@@ -25,6 +25,8 @@ const DataStreamSecurityItem = ({
     policyDropdownLabel,
 }) => {
     const { formValues } = useFormValuesContext();
+
+    const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(false);
 
     const handleDataStreamChange = value => {
         onSecurityChange(
@@ -58,7 +60,7 @@ const DataStreamSecurityItem = ({
             dsi_security_policy: minimumSecurityPolicyForRecord(),
         });
 
-        dataStream.hasClearedEmbargoDate = true;
+        markEmbargoDateAsCleared(true);
     };
 
     return (
@@ -100,7 +102,7 @@ const DataStreamSecurityItem = ({
                         </div>
                     </React.Fragment>
                 )}
-                {!!dataStream.hasClearedEmbargoDate && (
+                {!!hasClearedEmbargoDate && (
                     <React.Fragment>
                         <p>{onEmbargoClearPromptText}</p>
                     </React.Fragment>
@@ -124,7 +126,8 @@ DataStreamSecurityItem.propTypes = {
 };
 
 DataStreamSecurityItem.defaultProps = {
-    clearDateHint: 'Clear Embargo date and set Security policy to Public',
+    clearDateHint: 'Clear Embargo date and reset Security policy',
+    onEmbargoClearPromptText: 'Embargo date cleared - consider the correct policy',
 };
 
 export function isSame(prevProps, nextProps) {
