@@ -23,7 +23,11 @@ export const styles = () => ({
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    document.getElementById('content-container').scrollTo(0, 0);
+    document.getElementById('content-container').scroll({
+        top: 0,
+        left: 0,
+        behavior: 'smooth',
+    });
 };
 
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
