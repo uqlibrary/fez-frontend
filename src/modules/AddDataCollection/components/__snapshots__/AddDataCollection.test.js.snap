@@ -781,6 +781,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -842,6 +848,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -903,6 +915,12 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -2002,6 +2020,12 @@ exports[`AddDataCollection test should render component with a valid collection 
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -2063,6 +2087,12 @@ exports[`AddDataCollection test should render component with a valid collection 
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -2124,6 +2154,12 @@ exports[`AddDataCollection test should render component with a valid collection 
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -3223,6 +3259,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -3284,6 +3326,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -3345,6 +3393,12 @@ exports[`AddDataCollection test should render component with an invalid collecti
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -4444,6 +4498,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -4505,6 +4565,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />
@@ -4566,6 +4632,12 @@ exports[`AddDataCollection test should render data set form 1`] = `
             </WithStyles(Grid)>
             <WithStyles(Grid)
               item={true}
+              style={
+                Object {
+                  "marginLeft": 8,
+                  "marginRight": 8,
+                }
+              }
               xs={12}
             >
               <Divider />

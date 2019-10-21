@@ -363,7 +363,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -379,7 +379,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -392,7 +392,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
