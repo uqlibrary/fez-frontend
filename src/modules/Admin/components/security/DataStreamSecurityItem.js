@@ -78,7 +78,7 @@ const DataStreamSecurityItem = ({
             dsi_security_policy: minimumSecurityPolicyForRecord(),
         });
 
-        dataStream.hasClearedEmbargoDate = true;
+        markEmbargoDateAsCleared(true);
     };
 
     return (
