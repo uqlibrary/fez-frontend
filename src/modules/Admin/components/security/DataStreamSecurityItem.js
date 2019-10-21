@@ -92,7 +92,7 @@ const DataStreamSecurityItem = ({
                                 <div style={{ display: 'inline' }}>
                                     <IconButton
                                         style={{ marginTop: -10, marginBottom: -10 }}
-                                        className="deleteFieldButton"
+                                        id="clearEmbargoButton"
                                         onClick={handleEmbargoDateClear}
                                     >
                                         <Close />

@@ -22,7 +22,7 @@ function setup(testProps = {}) {
         },
         inheritedSecurity: 2,
         onSecurityChange: jest.fn(),
-        policyDropdownLabel: 'Test label',
+        policyDropdownLabel: 'Test Policy Dropdown Label',
         ...testProps,
     };
     return rtlRender(<DataStreamSecurityItem {...props} />);
@@ -56,7 +56,9 @@ describe('DataStreamSecurityItem component', () => {
         });
 
         let fragment = asFragment();
+        expect(asFragment()).toMatchSnapshot();
         fireEvent.click(getByText(/Administrator/i));
+        expect(asFragment()).toMatchSnapshot();
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
         const menu = await waitForElement(() => getByTestId('menu-test.jpg'));
 
@@ -100,5 +102,20 @@ describe('DataStreamSecurityItem component', () => {
                 ),
             ).toBeFalsy();
         });
+    });
+
+    it('should clear an embargo date', async() => {
+        const { asFragment, getByTestId } = setup({
+            dataStream: {
+                dsi_dsid: 'test.jpg',
+                dsi_security_policy: 1,
+                dsi_security_inherited: 0,
+                dsi_embargo_date: '2099-01-01',
+            },
+        });
+
+        expect(asFragment()).toMatchSnapshot();
+        fireEvent.click(getByTestId('clearEmbargoButton'));
+        expect(asFragment()).toMatchSnapshot();
     });
 });
