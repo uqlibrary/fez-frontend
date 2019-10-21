@@ -7,6 +7,7 @@ import { isFileUrl } from 'config/routes';
 
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -359,7 +360,10 @@ export class AppClass extends PureComponent {
                         }}
                     />
                 )}
-                <div className="content-container" style={containerStyle}>
+                <div className="content-container" id="content-container" style={containerStyle}>
+                    <Hidden smDown>
+                        <ScrollTop show />
+                    </Hidden>
                     <ConfirmDialogBox
                         hideCancelButton
                         onRef={this.setSessionExpiredConfirmation}
