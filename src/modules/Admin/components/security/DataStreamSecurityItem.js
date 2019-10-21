@@ -19,7 +19,6 @@ const DataStreamSecurityItem = ({
     index,
     disabled,
     onSecurityChange,
-    initialDataStream,
     inheritedSecurity,
     onEmbargoClearPromptText,
     policyDropdownLabel,
@@ -29,15 +28,10 @@ const DataStreamSecurityItem = ({
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(false);
 
     const handleDataStreamChange = value => {
-        onSecurityChange(
-            index,
-            value === initialDataStream.dsi_security_policy
-                ? initialDataStream
-                : {
-                    ...dataStream,
-                    ...value,
-                },
-        );
+        onSecurityChange(index, {
+            ...dataStream,
+            ...value,
+        });
     };
 
     const minimumSecurityPolicyForRecord = () => {
@@ -118,7 +112,6 @@ DataStreamSecurityItem.propTypes = {
     dataStream: PropTypes.object.isRequired,
     disabled: PropTypes.bool,
     index: PropTypes.number,
-    initialDataStream: PropTypes.object,
     inheritedSecurity: PropTypes.number,
     onEmbargoClearPromptText: PropTypes.string,
     onSecurityChange: PropTypes.func.isRequired,
