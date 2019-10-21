@@ -25,6 +25,7 @@ export const DataStreamSecuritySelector = ({
     meta: { initial: dataStreams },
     ...props
 }) => {
+    const [initialDataStreams] = useState(() => dataStreams.toJS());
     const [dataStreamSecurity, setDataStreamSecurity] = useState(() => dataStreams.toJS());
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
@@ -71,6 +72,7 @@ export const DataStreamSecuritySelector = ({
                         <DataStreamSecurityItem
                             key={dataStream.dsi_dsid}
                             disabled={disabled}
+                            initialDataStream={initialDataStreams[index]}
                             dataStream={dataStream}
                             policyDropdownLabel={text.overridePolicyPrompt}
                             inheritedSecurity={mostSecureParentDatastreamSecurity}

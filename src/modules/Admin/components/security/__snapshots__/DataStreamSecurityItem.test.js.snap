@@ -287,9 +287,11 @@ exports[`DataStreamSecurityItem component should clear an embargo date 2`] = `
         </div>
       </div>
     </div>
-    <p>
+    <div
+      style="margin-top: 12px;"
+    >
       Embargo date cleared - consider the correct policy
-    </p>
+    </div>
   </div>
 </DocumentFragment>
 `;
