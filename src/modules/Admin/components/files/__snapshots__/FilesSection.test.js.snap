@@ -34,7 +34,7 @@ exports[`FilesSection component should render default view 1`] = `
               "rek_copyright",
             ],
           ],
-          "title": "Copyright agreement",
+          "title": "Deposit agreement",
         },
       ],
     }

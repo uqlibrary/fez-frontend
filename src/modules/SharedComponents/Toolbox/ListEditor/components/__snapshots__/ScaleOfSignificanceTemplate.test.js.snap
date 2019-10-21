@@ -22,6 +22,7 @@ exports[`ScaleOfSignificanceTemplate component should render default view 1`] = 
       xs={12}
     >
       <WithStyles(Typography)
+        component="span"
         variant="body2"
       />
     </WithStyles(Grid)>
