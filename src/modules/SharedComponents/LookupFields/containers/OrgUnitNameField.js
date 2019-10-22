@@ -13,6 +13,7 @@ const mapStateToProps = (state, props) => {
                 : [],
         allowFreeText: true,
         async: true,
+        onClear: () => props.input.onChange(null),
         errorText: (!!props.meta && props.meta.error) || (props.error && !!props.errorText && props.errorText) || null,
         error: props.meta ? !!props.meta.error : (props.error && !!props.errorText) || null,
         selectedValue:

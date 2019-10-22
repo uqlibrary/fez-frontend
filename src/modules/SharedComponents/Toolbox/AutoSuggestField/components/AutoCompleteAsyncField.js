@@ -213,7 +213,7 @@ export class AutoCompleteAsyncField extends Component {
     handleStateChange = () =>
         this.props.allowFreeText
             ? ({ inputValue }) => {
-                inputValue !== undefined && this.props.onChange({ value: inputValue });
+                inputValue !== undefined && !!inputValue && this.props.onChange({ value: inputValue });
             }
             : () => {};
 
