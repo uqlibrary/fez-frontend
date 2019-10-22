@@ -19,6 +19,7 @@ context('Data Collection admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
+        // validation block
         // Disabled until a fix is merged
         // cy.get('.StandardPage form > div > div:nth-child(9)')
         //     .within(() => {
@@ -33,6 +34,7 @@ context('Data Collection admin edit', () => {
         //             .should('contain', 'Rights is required');
         //     });
 
+        // submit button block
         cy.get('.StandardPage form > div > div:nth-child(10) button')
             .should('exist')
             .should('be.disabled');
