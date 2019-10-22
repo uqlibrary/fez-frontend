@@ -32,7 +32,6 @@ const scrollWindowToTop = event => {
 
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
-    console.log('test');
     const scrollableContainer = document.getElementById(containerId);
     /* istanbul ignore next */
     if (scrollableContainer) {
