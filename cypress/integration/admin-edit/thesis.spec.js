@@ -152,8 +152,9 @@ context('Thesis admin edit', () => {
                     });
             });
 
-        cy.get('#Schoolcentreorinstitute-input')
-            .clear()
+        cy.get('#clear-input')
+            .click()
+            .parent()
             .parent()
             .parent()
             .children('p')

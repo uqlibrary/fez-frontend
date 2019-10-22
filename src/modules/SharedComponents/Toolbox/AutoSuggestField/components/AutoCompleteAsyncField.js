@@ -308,6 +308,7 @@ export class AutoCompleteAsyncField extends Component {
                                                         endAdornment: (
                                                             <InputAdornment position="end">
                                                                 <IconButton
+                                                                    id="clear-input"
                                                                     aria-label="Clear"
                                                                     onClick={this.handleClear(clearSelection)}
                                                                 >
