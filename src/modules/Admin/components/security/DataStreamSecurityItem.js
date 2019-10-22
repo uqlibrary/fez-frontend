@@ -9,6 +9,10 @@ import Link from '@material-ui/core/Link';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Close from '@material-ui/icons/Close';
+import WarningIcon from '@material-ui/icons/Warning';
+import { mui1theme as theme } from 'config';
+import TextField from '@material-ui/core/TextField';
+
 
 import { PolicyDropdown } from './PolicyDropdown';
 
@@ -66,6 +70,12 @@ const DataStreamSecurityItem = ({
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
+            {
+                index > 0 ? <Grid item xs={12} style={{ opacity: 0.3 }}>
+                    <hr/>
+                </Grid>
+                    : <div style={{ height: 16, width: '100%' }} />
+            }
             <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
                 <Link title={dataStream.dsi_dsid}>{dataStream.dsi_dsid}</Link>
                 <Typography variant="caption">
@@ -87,26 +97,52 @@ const DataStreamSecurityItem = ({
                 />
                 {!!dataStream.dsi_embargo_date && moment(dataStream.dsi_embargo_date).isSameOrAfter(moment()) && (
                     <React.Fragment>
-                        <div style={{ marginTop: 12 }}>
-                            <span>Embargo Date: {dataStream.dsi_embargo_date}</span>
-                            <Tooltip title={clearDateHint}>
-                                <div style={{ display: 'inline' }}>
+                        <Grid container spacing={16} alignContent={'center'} alignItems={'flex-end'}
+                            justify={'flex-start'}
+                            style={{ marginTop: 8 }}
+                        >
+                            <Grid item xs>
+                                {/* <Typography>Embargo Date: {dataStream.dsi_embargo_date}</Typography> */}
+                                <TextField
+                                    id="embargo-date"
+                                    label="Embargo Date"
+                                    value={dataStream.dsi_embargo_date}
+                                    fullWidth
+                                    disabled
+                                />
+                            </Grid>
+                            <Grid item xs={'auto'}>
+                                <Tooltip title={clearDateHint}>
                                     <IconButton
-                                        style={{ marginTop: -10, marginBottom: -10 }}
+                                        style={{ marginLeft: -24, marginRight: -16, marginBottom: -16 }}
+                                        size={'small'}
                                         id="clearEmbargoButton"
                                         onClick={handleEmbargoDateClear}
                                     >
                                         <Close />
                                     </IconButton>
-                                </div>
-                            </Tooltip>
-                        </div>
+                                </Tooltip>
+                            </Grid>
+                        </Grid>
                     </React.Fragment>
                 )}
                 {!!hasClearedEmbargoDate && (
-                    <React.Fragment>
-                        <div style={{ marginTop: 12 }}>{onEmbargoClearPromptText}</div>
-                    </React.Fragment>
+                    <Grid container
+                        spacing={8}
+                        alignContent={'flex-start'}
+                        alignItems={'flex-start'}
+                        justify={'flex-start'}
+                        style={{ marginTop: 4 }}
+                    >
+                        <Grid item xs={1}>
+                            <WarningIcon fontSize={'small'} style={{ color: theme.palette.warning.main }} />
+                        </Grid>
+                        <Grid item xs={11}>
+                            <Typography style={{ color: theme.palette.warning.main }}>
+                                {onEmbargoClearPromptText}
+                            </Typography>
+                        </Grid>
+                    </Grid>
                 )}
             </Grid>
         </React.Fragment>
@@ -121,14 +157,15 @@ DataStreamSecurityItem.propTypes = {
     index: PropTypes.number,
     initialDataStream: PropTypes.object,
     inheritedSecurity: PropTypes.number,
-    onEmbargoClearPromptText: PropTypes.string,
+    onEmbargoClearPromptText: PropTypes.any,
     onSecurityChange: PropTypes.func.isRequired,
     policyDropdownLabel: PropTypes.string,
 };
 
 DataStreamSecurityItem.defaultProps = {
     clearDateHint: 'Clear Embargo date and reset Security policy',
-    onEmbargoClearPromptText: 'Embargo date cleared - consider the correct policy',
+    onEmbargoClearPromptText:
+        (<span><b>Embargo date removed</b> - review security policy shown above</span>),
 };
 
 export function isSame(prevProps, nextProps) {

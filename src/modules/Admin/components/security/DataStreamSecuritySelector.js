@@ -10,6 +10,7 @@ import DataStreamSecurityItem from './DataStreamSecurityItem';
 export const styles = () => ({
     dataStreamFileBlock: {
         backgroundColor: 'rgba(0,0,0,0.05)',
+        padding: 12,
     },
     dataStreamFileName: {
         overflow: 'hidden',

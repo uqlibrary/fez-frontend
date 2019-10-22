@@ -5,7 +5,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -55,11 +55,12 @@
+@@ -58,11 +58,12 @@
               <div
                 class=\\"MuiSelect-root-375\\"
               >
@@ -26,7 +26,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
 - First value
 + Second value
 
-@@ -55,25 +55,24 @@
+@@ -58,25 +58,24 @@
               <div
                 class=\\"MuiSelect-root-375\\"
               >
@@ -75,6 +75,9 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
     <div
       class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-start-48 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
     >
+      <div
+        style="height: 16px; width: 100%;"
+      />
       <div
         class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"
       >

@@ -5,7 +5,7 @@ exports[`DataStreamSecurityItem component should change security value for the f
 - First value
 + Second value
 
-@@ -44,11 +44,12 @@
+@@ -47,11 +47,12 @@
           <div
             class=\\"MuiSelect-root-581\\"
           >
@@ -26,7 +26,7 @@ exports[`DataStreamSecurityItem component should change security value for the f
 - First value
 + Second value
 
-@@ -44,12 +44,11 @@
+@@ -47,12 +47,11 @@
           <div
             class=\\"MuiSelect-root-581\\"
           >
@@ -47,7 +47,7 @@ exports[`DataStreamSecurityItem component should change security value for the f
 - First value
 + Second value
 
-@@ -44,11 +44,12 @@
+@@ -47,11 +47,12 @@
           <div
             class=\\"MuiSelect-root-849\\"
           >
@@ -68,7 +68,7 @@ exports[`DataStreamSecurityItem component should change security value for the f
 - First value
 + Second value
 
-@@ -44,12 +44,11 @@
+@@ -47,12 +47,11 @@
           <div
             class=\\"MuiSelect-root-849\\"
           >
@@ -86,6 +86,9 @@ exports[`DataStreamSecurityItem component should change security value for the f
 
 exports[`DataStreamSecurityItem component should clear an embargo date 1`] = `
 <DocumentFragment>
+  <div
+    style="height: 16px; width: 100%;"
+  />
   <div
     class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005 dataStreamFileName"
   >
@@ -163,21 +166,45 @@ exports[`DataStreamSecurityItem component should clear an embargo date 1`] = `
       </div>
     </div>
     <div
-      style="margin-top: 12px;"
+      class="MuiGrid-container-957 MuiGrid-spacing-xs-16-980 MuiGrid-align-items-xs-flex-end-967 MuiGrid-align-content-xs-center-969"
+      style="margin-top: 8px;"
     >
-      <span>
-        Embargo Date: 2099-01-01
-      </span>
       <div
-        class=""
-        style="display: inline;"
-        title="Clear Embargo date and reset Security policy"
+        class="MuiGrid-item-958 MuiGrid-grid-xs-true-985"
+      >
+        <div
+          class="MuiFormControl-root-1095 MuiFormControl-fullWidth-1098"
+        >
+          <label
+            class="MuiFormLabel-root-1110 MuiFormLabel-disabled-1112 MuiInputLabel-disabled-1101 MuiFormLabel-filled-1114 MuiInputLabel-root-1099 MuiInputLabel-formControl-1104 MuiInputLabel-animated-1107 MuiInputLabel-shrink-1106"
+            data-shrink="true"
+            for="embargo-date"
+          >
+            Embargo Date
+          </label>
+          <div
+            class="MuiInputBase-root-1137 MuiInput-root-1124 MuiInput-underline-1128 MuiInputBase-disabled-1140 MuiInput-disabled-1127 MuiInputBase-fullWidth-1146 MuiInput-fullWidth-1131 MuiInputBase-formControl-1138 MuiInput-formControl-1125"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input-1147 MuiInput-input-1132 MuiInputBase-disabled-1140 MuiInput-disabled-1127"
+              disabled=""
+              id="embargo-date"
+              type="text"
+              value="2099-01-01"
+            />
+          </div>
+        </div>
+      </div>
+      <div
+        class="MuiGrid-item-958 MuiGrid-grid-xs-auto-984"
       >
         <button
           class="MuiButtonBase-root-1181 MuiIconButton-root-1175"
           id="clearEmbargoButton"
-          style="margin-top: -10px; margin-bottom: -10px;"
+          style="margin-left: -24px; margin-right: -16px; margin-bottom: -16px;"
           tabindex="0"
+          title="Clear Embargo date and reset Security policy"
           type="button"
         >
           <span
@@ -212,6 +239,9 @@ exports[`DataStreamSecurityItem component should clear an embargo date 1`] = `
 exports[`DataStreamSecurityItem component should clear an embargo date 2`] = `
 <DocumentFragment>
   <div
+    style="height: 16px; width: 100%;"
+  />
+  <div
     class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005 dataStreamFileName"
   >
     <a
@@ -288,9 +318,44 @@ exports[`DataStreamSecurityItem component should clear an embargo date 2`] = `
       </div>
     </div>
     <div
-      style="margin-top: 12px;"
+      class="MuiGrid-container-957 MuiGrid-spacing-xs-8-979 MuiGrid-align-items-xs-flex-start-966 MuiGrid-align-content-xs-flex-start-970"
+      style="margin-top: 4px;"
     >
-      Embargo date cleared - consider the correct policy
+      <div
+        class="MuiGrid-item-958 MuiGrid-grid-xs-1-986"
+      >
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-1154 MuiSvgIcon-fontSizeSmall-1161"
+          focusable="false"
+          role="presentation"
+          style="color: rgb(191, 80, 0);"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+          />
+        </svg>
+      </div>
+      <div
+        class="MuiGrid-item-958 MuiGrid-grid-xs-11-996"
+      >
+        <p
+          class="MuiTypography-root-1059 MuiTypography-body2-1067"
+          style="color: rgb(191, 80, 0);"
+        >
+          <span>
+            <b>
+              Embargo date removed
+            </b>
+             - review security policy shown above
+          </span>
+        </p>
+      </div>
     </div>
   </div>
 </DocumentFragment>
@@ -298,6 +363,9 @@ exports[`DataStreamSecurityItem component should clear an embargo date 2`] = `
 
 exports[`DataStreamSecurityItem component should render default view with inherited security 1`] = `
 <DocumentFragment>
+  <div
+    style="height: 16px; width: 100%;"
+  />
   <div
     class="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49 dataStreamFileName"
   >
@@ -380,6 +448,9 @@ exports[`DataStreamSecurityItem component should render default view with inheri
 
 exports[`DataStreamSecurityItem component should render default view with overridden security 1`] = `
 <DocumentFragment>
+  <div
+    style="height: 16px; width: 100%;"
+  />
   <div
     class="MuiGrid-item-212 MuiGrid-grid-xs-12-251 MuiGrid-grid-sm-6-259 dataStreamFileName"
   >
