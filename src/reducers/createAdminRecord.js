@@ -9,9 +9,9 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.CREATE_ADMIN_RECORD_RESET]: () => ({
-        ...initialState,
-    }),
+    // [actions.CREATE_ADMIN_RECORD_RESET]: () => ({
+    //     ...initialState,
+    // }),
 
     [actions.CREATE_ADMIN_RECORD_SUCCESS]: (state, action) => ({
         ...initialState,
