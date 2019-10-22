@@ -52,3 +52,18 @@ describe('FieldGridItem', () => {
         expect(global.console.warn).toHaveBeenCalledWith('No field config found for', 'fake_field');
     });
 });
+
+describe('FieldGridItem without record', () => {
+    beforeEach(() => {
+        useRecordContext.mockImplementation(() => ({
+            record: {},
+        }));
+    });
+
+    it('should render default view', () => {
+        const wrapper = setup({
+            field: 'rek_title',
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+});

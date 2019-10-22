@@ -9,6 +9,7 @@ import { useRecordContext } from 'context';
 
 export const FieldGridItem = ({ field, group, disabled }) => {
     const { record } = useRecordContext();
+
     if (!fieldConfig.default[field]) {
         console.warn('No field config found for', field);
         return '';
@@ -18,7 +19,7 @@ export const FieldGridItem = ({ field, group, disabled }) => {
         ...fieldConfig.default[field].componentProps,
         ...(((fieldConfig.override[record.rek_display_type] || {})[field] || (() => {}))({
             isNtro: NTRO_SUBTYPES.includes(record.rek_subtype),
-            isCreate: !(record || {}).rek_pid,
+            isCreate: !record.rek_pid,
         }) || {}),
     };
 
