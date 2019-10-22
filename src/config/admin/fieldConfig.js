@@ -853,7 +853,7 @@ export default {
         fez_record_search_key_date_recorded: {
             component: GenericTextField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_date_recorded',
+                name: 'bibliographicSection.fez_record_search_key_date_recorded.rek_date_recorded',
                 label: 'Year recorded',
                 fullWidth: true,
                 validate: [validation.dateTimeYear],
