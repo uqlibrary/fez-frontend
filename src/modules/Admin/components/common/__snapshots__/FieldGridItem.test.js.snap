@@ -29,3 +29,33 @@ exports[`FieldGridItem should render default view 1`] = `
   />
 </WithStyles(Grid)>
 `;
+
+exports[`FieldGridItem without record should render default view 1`] = `
+<WithStyles(Grid)
+  item={true}
+  md={12}
+  xs={12}
+>
+  <Field
+    component={[Function]}
+    format={[Function]}
+    height={100}
+    name="bibliographicSection.rek_title"
+    required={true}
+    title="Formatted title"
+    titleProps={
+      Object {
+        "style": Object {
+          "opacity": 0.666,
+        },
+        "variant": "caption",
+      }
+    }
+    validate={
+      Array [
+        [Function],
+      ]
+    }
+  />
+</WithStyles(Grid)>
+`;
