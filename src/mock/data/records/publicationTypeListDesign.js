@@ -229,7 +229,12 @@ export default {
                     "rek_ismemberof_lookup": "Fryer Library"
                 }
             ],
-            "fez_record_search_key_job_number": null,
+            "fez_record_search_key_job_number": {
+                "rek_job_number_id": 39,
+                "rek_job_number_pid": "UQ:367344",
+                "rek_job_number_xsdmf_id": 17313,
+                "rek_job_number": "UQFL158, job no. 1006-2"
+            },
             "fez_record_search_key_keywords": [
                 {
                     "rek_keywords_id": 30248429,
