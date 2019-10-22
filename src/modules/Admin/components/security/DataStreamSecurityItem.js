@@ -13,7 +13,6 @@ import WarningIcon from '@material-ui/icons/Warning';
 import { mui1theme as theme } from 'config';
 import TextField from '@material-ui/core/TextField';
 
-
 import { PolicyDropdown } from './PolicyDropdown';
 
 const DataStreamSecurityItem = ({
@@ -70,12 +69,13 @@ const DataStreamSecurityItem = ({
 
     return (
         <React.Fragment key={dataStream.dsi_dsid}>
-            {
-                index > 0 ? <Grid item xs={12} style={{ opacity: 0.3 }}>
-                    <hr/>
+            {index > 0 ? (
+                <Grid item xs={12} style={{ opacity: 0.3 }}>
+                    <hr />
                 </Grid>
-                    : <div style={{ height: 16, width: '100%' }} />
-            }
+            ) : (
+                <div style={{ height: 16, width: '100%' }} />
+            )}
             <Grid item xs={12} sm={6} className={classes.dataStreamFileName}>
                 <Link title={dataStream.dsi_dsid}>{dataStream.dsi_dsid}</Link>
                 <Typography variant="caption">
@@ -97,7 +97,11 @@ const DataStreamSecurityItem = ({
                 />
                 {!!dataStream.dsi_embargo_date && moment(dataStream.dsi_embargo_date).isSameOrAfter(moment()) && (
                     <React.Fragment>
-                        <Grid container spacing={16} alignContent={'center'} alignItems={'flex-end'}
+                        <Grid
+                            container
+                            spacing={16}
+                            alignContent={'center'}
+                            alignItems={'flex-end'}
                             justify={'flex-start'}
                             style={{ marginTop: 8 }}
                         >
@@ -127,7 +131,8 @@ const DataStreamSecurityItem = ({
                     </React.Fragment>
                 )}
                 {!!hasClearedEmbargoDate && (
-                    <Grid container
+                    <Grid
+                        container
                         spacing={8}
                         alignContent={'flex-start'}
                         alignItems={'flex-start'}
@@ -164,8 +169,11 @@ DataStreamSecurityItem.propTypes = {
 
 DataStreamSecurityItem.defaultProps = {
     clearDateHint: 'Clear Embargo date and reset Security policy',
-    onEmbargoClearPromptText:
-        (<span><b>Embargo date removed</b> - review security policy shown above</span>),
+    onEmbargoClearPromptText: (
+        <span>
+            <b>Embargo date removed</b> - review security policy shown above
+        </span>
+    ),
 };
 
 export function isSame(prevProps, nextProps) {
