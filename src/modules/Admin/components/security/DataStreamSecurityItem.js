@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import moment from 'moment';
 import { useFormValuesContext } from 'context';
 
+import { mui1theme as theme } from 'config';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import Link from '@material-ui/core/Link';
@@ -10,7 +11,6 @@ import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Close from '@material-ui/icons/Close';
 import WarningIcon from '@material-ui/icons/Warning';
-import { mui1theme as theme } from 'config';
 import TextField from '@material-ui/core/TextField';
 
 import { PolicyDropdown } from './PolicyDropdown';
@@ -70,7 +70,6 @@ const DataStreamSecurityItem = ({
     };
 
     const handleEmbargoDateClear = () => {
-        // clear the embargo value & reset the associated security
         dataStream.dsi_embargo_date = null;
         handleDataStreamChange({
             dsi_embargo_date: dataStream.dsi_embargo_date,
@@ -120,7 +119,6 @@ const DataStreamSecurityItem = ({
                             style={{ marginTop: 8 }}
                         >
                             <Grid item xs>
-                                {/* <Typography>Embargo Date: {dataStream.dsi_embargo_date}</Typography> */}
                                 <TextField
                                     id="embargo-date"
                                     label="Embargo Date"
