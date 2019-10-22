@@ -114,14 +114,20 @@ context('Creative Work admin edit', () => {
                         );
                         const contributionStatement = record.fez_record_search_key_creator_contribution_statement.map(
                             item => item.rek_creator_contribution_statement,
-                        );
+                        )[0];
                         significanceList.forEach((significance, index) => {
                             cy.get('p')
                                 .eq(2 * index)
                                 .should('have.text', significance);
                             cy.get('p')
                                 .eq(2 * index + 1)
-                                .should('have.text', contributionStatement[index]);
+                                .should(
+                                    'have.text',
+                                    [/<p>/, /<\/p>/].reduce(
+                                        (statement, regex) => statement.replace(regex, ''),
+                                        contributionStatement,
+                                    ),
+                                );
                         });
                     });
 
