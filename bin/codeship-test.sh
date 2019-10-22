@@ -51,6 +51,16 @@ case "$PIPE_NUM" in
     printf "\n--- \e[1mRUNNING INTEGRATION TESTS\e[0m ---\n"
     printf "\n$ npm run test:integration\n"
     npm run test:integration
+
+    # run cypress tests if in master branch, or the branch name includes 'cypress'
+    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+        # Use this variant to only run tests locally in Codeship
+        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
+
+        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
+    fi
 ;;
 "2")
     # codestyle check should be moved here when all branches are running codeship tests from this script
