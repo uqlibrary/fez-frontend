@@ -1510,6 +1510,22 @@ export default {
                 showRoleInput: true,
                 locale: locale.components.creators.field,
             }),
+            rek_description: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
+            fez_record_search_key_publisher: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
+            fez_record_search_key_ands_collection_type: () => ({
+                required: true,
+                validate: [validation.required],
+            }),
+            subjects: () => ({
+                required: true,
+                validate: [validation.requiredList],
+            }),
         },
         [PUBLICATION_TYPE_DESIGN]: {
             fez_record_search_key_original_format: () => ({
