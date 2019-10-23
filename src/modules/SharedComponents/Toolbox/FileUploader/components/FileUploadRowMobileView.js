@@ -108,7 +108,7 @@ export class FileUploadRowMobileView extends PureComponent {
                                 )}
                                 {requireOpenAccessStatus && accessConditionId === config.OPEN_ACCESS_ID && (
                                     <FileUploadEmbargoDate
-                                        value={new Date(embargoDate)}
+                                        value={embargoDate}
                                         onChange={this.props.onEmbargoDateChange}
                                         disabled={disabled}
                                     />

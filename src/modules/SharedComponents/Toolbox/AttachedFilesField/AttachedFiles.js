@@ -361,7 +361,7 @@ export const AttachedFiles = ({
                                                 value={
                                                     !!item.embargoDate &&
                                                     moment(item.openAccessStatus.embargoDate).isSameOrAfter(moment())
-                                                        ? new Date(item.embargoDate)
+                                                        ? item.embargoDate
                                                         : ''
                                                 }
                                                 onChange={onEmbargoDateChange(index)}

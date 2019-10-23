@@ -13,7 +13,7 @@ export class FileUploadEmbargoDate extends PureComponent {
         disabled: PropTypes.bool,
         minDate: PropTypes.instanceOf(Date),
         onChange: PropTypes.func,
-        value: PropTypes.instanceOf(Date),
+        value: PropTypes.string,
     };
 
     static defaultProps = {
@@ -37,7 +37,7 @@ export class FileUploadEmbargoDate extends PureComponent {
             <DatePicker
                 format={GENERIC_DATE_FORMAT}
                 minDate={this.props.minDate}
-                value={this.props.value || null}
+                value={this.props.value ? new Date(this.props.value) : null}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
