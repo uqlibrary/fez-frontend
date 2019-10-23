@@ -114,5 +114,6 @@ export default {
         grants: 'You must click ADD GRANT to enter the value to the grants list',
         subjects: 'Subjects are required',
         rek_rights: 'Rights is required',
+        rek_ands_collection_type: 'Dataset collection type is required',
     },
 };

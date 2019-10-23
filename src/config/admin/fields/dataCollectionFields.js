@@ -102,9 +102,17 @@ export default {
 };
 
 export const validateDataCollection = (
-    { additionalInformationSection: ais, filesSection: fs },
+    { bibliographicSection: bs, additionalInformationSection: ais, filesSection: fs, authorsSection: as },
     { validationErrorsSummary: summary },
 ) => ({
+    bibliographicSection: {
+        ...((!((bs || {}).fez_record_search_key_publisher || {}).rek_publisher && {
+            fez_record_search_key_publisher: {
+                rek_publisher: summary.rek_publisher,
+            },
+        }) ||
+            {}),
+    },
     additionalInformationSection: {
         ...((!(ais || {}).contactName && {
             contactName: summary.contactName,
@@ -142,11 +150,22 @@ export const validateDataCollection = (
             },
         }) ||
             {}),
+        ...((!((ais || {}).fez_record_search_key_ands_collection_type || {}).rek_ands_collection_type && {
+            fez_record_search_key_ands_collection_type: {
+                rek_ands_collection_type: summary.rek_ands_collection_type,
+            },
+        }) ||
+            {}),
     },
     filesSection: {
         ...(((fs || {}).rek_copyright !== 'on' && {
             rek_copyright: summary.rek_copyright,
         }) ||
             {}),
+    },
+    authorsSection: {
+        ...(((as || {}).authors || []).length === 0 && {
+            authors: summary.authors,
+        }),
     },
 });
