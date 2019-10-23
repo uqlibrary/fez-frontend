@@ -2487,4 +2487,30 @@ describe('getBibliographicSectionSearchKeys', () => {
             });
         });
     });
+
+    describe('Conference paper', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                languageOfProceedingsTitle: ['eng', 'pol'],
+                languageOfJournalName: ['fre'],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+                fez_record_search_key_language_of_proceedings_title: [
+                    {
+                        rek_language_of_proceedings_title: 'eng',
+                    },
+                    {
+                        rek_language_of_proceedings_title: 'pol',
+                    },
+                ],
+                fez_record_search_key_language_of_journal_name: [
+                    {
+                        rek_language_of_journal_name: 'fre',
+                    },
+                ],
+            });
+        });
+    });
 });

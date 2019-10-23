@@ -742,6 +742,8 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         rek_description: description,
         languageOfTitle,
         languageOfBookTitle,
+        languageOfProceedingsTitle,
+        languageOfJournalName,
         languages,
         subjects,
         geoCoordinates,
@@ -766,6 +768,20 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_language_of_book_title: languageOfBookTitle.map(lang => ({
                     rek_language_of_book_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfProceedingsTitle
+            ? {
+                fez_record_search_key_language_of_proceedings_title: languageOfProceedingsTitle.map(lang => ({
+                    rek_language_of_proceedings_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfJournalName
+            ? {
+                fez_record_search_key_language_of_journal_name: languageOfJournalName.map(lang => ({
+                    rek_language_of_journal_name: lang,
                 })),
             }
             : {}),
