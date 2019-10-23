@@ -9,13 +9,6 @@ jest.mock('js-cookie', () => ({
     set: jest.fn(),
 }));
 
-jest.mock('query-string', () => ({
-    parse: jest.fn(() => ({
-        tab: 'files',
-    })),
-}));
-import queryString from 'query-string';
-
 function setup(testProps = {}) {
     const props = {
         classes: {
@@ -39,25 +32,74 @@ function setup(testProps = {}) {
 }
 
 describe('AdminInterface component', () => {
-    it('should render default view as a full form view', () => {
+    beforeEach(() => {
         useRecordContext.mockImplementation(() => ({
             record: {
                 rek_pid: 'UQ:123456',
                 rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
             },
         }));
+    });
 
+    afterEach(() => {
+        useRecordContext.mockReset();
+        useTabbedContext.mockReset();
+    });
+
+    it('should render when no record is available', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({}));
+        const wrapper = setup({});
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 
+    it('should render in create mode', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_display_type: 187,
+                rek_object_type_lookup: 'record',
+                rek_subtype: undefined,
+            },
+        }));
         const wrapper = setup({
+            createMode: true,
             tabs: {
-                security: {
+                bibliographic: {
                     activated: true,
-                    component: () => 'SecuritySectionComponent',
+                    component: () => 'BibliographySectionComponent',
                 },
                 files: {
                     activated: true,
                     component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default view as a full form view', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+
+        const wrapper = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
                 },
             },
         });
@@ -65,24 +107,21 @@ describe('AdminInterface component', () => {
     });
 
     it('should render default view as a tabbed form view', () => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'This is test record',
-            },
-        }));
-
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
         const wrapper = setup({
             tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: false,
+                    component: () => 'FilesSectionComponent',
+                },
                 security: {
                     activated: true,
                     component: () => 'SecuritySectionComponent',
-                },
-                files: {
-                    activated: true,
-                    component: () => 'FilesSectionComponent',
                 },
             },
         });
@@ -90,126 +129,82 @@ describe('AdminInterface component', () => {
     });
 
     it('should render activated tabs only', () => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'This is test record',
-            },
-        }));
-
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
         const wrapper = setup({
             tabs: {
+                admin: {
+                    activated: true,
+                    component: () => 'AdminSectionComponent',
+                },
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
                 security: {
                     activated: true,
                     component: () => 'SecuritySectionComponent',
                 },
                 files: {
-                    activated: true,
-                    component: () => 'FilesSectionComponent',
-                },
-                identifiers: {
                     activated: false,
-                    component: () => 'IdentifiersSectionComponent',
-                },
-                admin: {
-                    activated: false,
-                    component: () => 'AdminSectionComponent',
-                },
-            },
-        });
-
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(2);
-        expect(wrapper.find('TabContainer')).toHaveLength(1);
-    });
-
-    it('should render full form with activated sections', () => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'This is test record',
-            },
-        }));
-
-        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
-
-        const wrapper = setup({
-            tabs: {
-                security: {
-                    activated: true,
-                    component: () => 'SecuritySectionComponent',
-                },
-                files: {
-                    activated: true,
-                    component: () => 'FilesSectionComponent',
-                },
-                identifiers: {
-                    activated: false,
-                    component: () => 'IdentifiersSectionComponent',
-                },
-                admin: {
-                    activated: false,
-                    component: () => 'AdminSectionComponent',
-                },
-            },
-        });
-
-        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(0);
-        expect(wrapper.find('TabContainer')).toHaveLength(2);
-    });
-
-    it('should render security tab from query string params by default', () => {
-        queryString.parse = jest.fn(() => ({
-            tab: 'security',
-        }));
-
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'This is test record',
-            },
-        }));
-
-        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-
-        const wrapper = setup({
-            tabs: {
-                files: {
-                    activated: true,
                     component: () => 'FilesSectionComponent',
                 },
                 identifiers: {
                     activated: true,
                     component: () => 'IdentifiersSectionComponent',
-                },
-                admin: {
-                    activated: true,
-                    component: () => 'AdminSectionComponent',
-                },
-                security: {
-                    activated: true,
-                    component: () => 'SecuritySectionComponent',
                 },
             },
         });
 
         expect(wrapper.find('WithStyles(Tab)')).toHaveLength(4);
-        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+        expect(wrapper.find('TabContainer')).toHaveLength(1);
     });
 
-    it('should switch the tab', () => {
-        useRecordContext.mockImplementation(() => ({
-            record: {
-                rek_pid: 'UQ:123456',
-                rek_title: 'This is test record',
-            },
-        }));
+    it('should render full form with activated sections', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
 
+        const wrapper = setup({
+            tabs: {
+                admin: {
+                    activated: false,
+                    component: () => 'AdminSectionComponent',
+                },
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                identifiers: {
+                    activated: false,
+                    component: () => 'IdentifiersSectionComponent',
+                },
+            },
+        });
+
+        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(0);
+        expect(wrapper.find('TabContainer')).toHaveLength(3);
+    });
+
+    it('should render security tab from query string params by default', () => {
         useTabbedContext.mockImplementation(() => ({ tabbed: true }));
 
         const wrapper = setup({
             tabs: {
+                admin: {
+                    activated: true,
+                    component: () => 'AdminSectionComponent',
+                },
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
                 files: {
                     activated: true,
                     component: () => 'FilesSectionComponent',
@@ -218,14 +213,93 @@ describe('AdminInterface component', () => {
                     activated: true,
                     component: () => 'IdentifiersSectionComponent',
                 },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                },
+            },
+            location: {
+                search: '?tab=security',
+            },
+        });
+
+        expect(wrapper.find('WithStyles(Tab)')).toHaveLength(5);
+        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+    });
+
+    it('should render alert message for retracted records', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_title: 'This is test record',
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+                fez_record_search_key_retracted: {
+                    rek_retracted: 1,
+                },
+            },
+        }));
+        const wrapper = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        expect(toJson(wrapper.find('WithStyles(Alert)'))).toMatchSnapshot();
+    });
+
+    it('should display badges on tabs for erroring fields', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+
+        const wrapper = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                    numberOfErrors: 1,
+                },
+                security: {
+                    activated: true,
+                    component: () => 'SecuritySectionComponent',
+                    numberOfErrors: 3,
+                },
+            },
+        });
+
+        expect(toJson(wrapper.find('WithStyles(Tab)'))).toMatchSnapshot();
+    });
+
+    it('should switch the tab', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+
+        const wrapper = setup({
+            tabs: {
                 admin: {
                     activated: true,
                     component: () => 'AdminSectionComponent',
+                },
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+                files: {
+                    activated: true,
+                    component: () => 'FilesSectionComponent',
+                },
+                identifiers: {
+                    activated: true,
+                    component: () => 'IdentifiersSectionComponent',
                 },
                 security: {
                     activated: true,
                     component: () => 'SecuritySectionComponent',
                 },
+            },
+            location: {
+                search: '?tab=security',
             },
         });
 
@@ -239,16 +313,47 @@ describe('AdminInterface component', () => {
         expect(wrapper.find('TabContainer').props().currentTab).toBe('files');
     });
 
+    it('should default to security tab for non-record objects', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_title: 'Test',
+                rek_object_type_lookup: 'Collection',
+                rek_display_type: 9,
+                rek_display_type_lookup: 'Collection',
+            },
+        }));
+        const wrapper = setup({});
+        expect(wrapper.find('TabContainer').props().currentTab).toBe('security');
+    });
+
     it('should disabled button and render alert for form submitting', () => {
-        const wrapper = setup({ submitting: true });
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
+        const wrapper = setup({
+            submitting: true,
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should display successful alert', () => {
+        useTabbedContext.mockImplementation(() => ({ tabbed: true }));
         const wrapper = setup({
             submitSucceeded: true,
             history: {
                 go: jest.fn(),
+            },
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

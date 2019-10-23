@@ -6,9 +6,10 @@ import { Field } from 'redux-form/immutable';
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
 import Grid from '@material-ui/core/Grid';
-import Typography from '@material-ui/core/Typography';
 import Hidden from '@material-ui/core/Hidden';
 import Button from '@material-ui/core/Button';
+import Badge from '@material-ui/core/Badge';
+import Typography from '@material-ui/core/Typography';
 
 import { Alert } from 'modules/SharedComponents/Toolbox/Alert';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
@@ -21,18 +22,35 @@ import { useTabbedContext, useRecordContext } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
-import { validation } from 'config';
+import { validation, publicationTypes } from 'config';
+import { RECORD_TYPE_RECORD } from 'config/general';
+import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 
-function useQueryStringTabValueState(location, initialValue = 'security') {
-    const tabValue =
-        queryString.parse(location.search, { ignoreQueryPrefix: true }).tab === 'security' ? 'security' : initialValue;
+export const useQueryStringTabValueState = (location, initialValue) => {
+    const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
+    const tabValue = queryStringObject && queryStringObject.tab === 'security' ? 'security' : initialValue;
     return useState(tabValue);
-}
+};
 
-export const AdminInterface = ({ classes, submitting, handleSubmit, location, tabs, history, submitSucceeded }) => {
+export const AdminInterface = ({
+    classes,
+    submitting,
+    handleSubmit,
+    location,
+    tabs,
+    history,
+    submitSucceeded,
+    createMode,
+    disableSubmit,
+    formErrors,
+}) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
-    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location);
+    const defaultTab =
+        ((record || {}).rek_object_type_lookup || '').toLowerCase() === RECORD_TYPE_RECORD
+            ? 'bibliographic'
+            : 'security';
+    const [currentTabValue, setCurrentTabValue] = useQueryStringTabValueState(location, defaultTab);
 
     const successConfirmationRef = useRef();
     const alertProps = useRef(null);
@@ -41,6 +59,7 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     alertProps.current = validation.getErrorAlertProps({
         submitting,
         submitSucceeded,
+        formErrors,
         alertLocale: txt.current.alerts,
     });
 
@@ -57,9 +76,15 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
+
+    /* istanbul ignore next */
     const setSuccessConfirmationRef = useCallback(node => {
         successConfirmationRef.current = node;
     }, []);
+
+    if (!record) {
+        return <div className="empty" />;
+    }
 
     const navigateToSearchResult = () => history.go(-1);
 
@@ -70,6 +95,10 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
             </StandardCard>
         </TabContainer>
     );
+
+    const selectedPublicationType =
+        (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
+        'record';
 
     const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
 
@@ -83,24 +112,44 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                         locale={saveConfirmationLocale}
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
-                        <Typography
-                            variant="h5"
-                            color="primary"
-                            style={{ fontSize: 24 }}
-                        >{`${record.rek_pid} ${record.rek_title}`}</Typography>
+                        <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
+                            {!createMode
+                                ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                                : `Add a new ${selectedPublicationType}`}
+                        </Typography>
                     </Grid>
                     <Hidden xsDown>
                         <Grid item xs="auto">
                             <FormViewToggler />
                         </Grid>
+                    </Hidden>
+                    {(record.fez_record_search_key_retracted || {}).rek_retracted === 1 && (
+                        <Grid
+                            container
+                            alignContent="center"
+                            justify="center"
+                            alignItems="center"
+                            style={{ marginBottom: 12 }}
+                        >
+                            <Grid item xs={12}>
+                                <Alert message={txt.current.retractedMessage} type="warning" />
+                            </Grid>
+                        </Grid>
+                    )}
+                    <Hidden xsDown>
                         <Grid container spacing={0} direction="row">
                             {tabbed && (
                                 <Grid item xs={12}>
                                     <Tabs
                                         value={currentTabValue}
                                         variant="fullWidth"
-                                        style={{ marginRight: -56, marginLeft: -56 }}
-                                        classes={{ indicator: classes.tabIndicator }}
+                                        style={{
+                                            marginRight: -56,
+                                            marginLeft: -56,
+                                        }}
+                                        classes={{
+                                            indicator: classes.tabIndicator,
+                                        }}
                                         onChange={handleTabChange}
                                         variant="scrollable"
                                         scrollButtons="on"
@@ -110,7 +159,23 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                                         {Object.keys(tabs)
                                             .filter(tab => tabs[tab].activated)
                                             .map(tab => (
-                                                <Tab key={tab} label={txt.current.sections[tab].title} value={tab} />
+                                                <Tab
+                                                    key={tab}
+                                                    value={tab}
+                                                    label={
+                                                        !!tabs[tab].numberOfErrors ? (
+                                                            <Badge
+                                                                className={classes.padding}
+                                                                color="error"
+                                                                badgeContent={tabs[tab].numberOfErrors}
+                                                            >
+                                                                {txt.current.sections[tab].title}
+                                                            </Badge>
+                                                        ) : (
+                                                            txt.current.sections[tab].title
+                                                        )
+                                                    }
+                                                />
                                             ))}
                                     </Tabs>
                                 </Grid>
@@ -134,7 +199,7 @@ export const AdminInterface = ({ classes, submitting, handleSubmit, location, ta
                         <Grid item xs={12} sm={12}>
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}
-                                disabled={submitting}
+                                disabled={submitting || disableSubmit}
                                 variant="contained"
                                 color="primary"
                                 fullWidth
@@ -157,6 +222,9 @@ AdminInterface.propTypes = {
     location: PropTypes.object,
     history: PropTypes.object,
     tabs: PropTypes.object,
+    createMode: PropTypes.bool,
+    disableSubmit: PropTypes.bool,
+    formErrors: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

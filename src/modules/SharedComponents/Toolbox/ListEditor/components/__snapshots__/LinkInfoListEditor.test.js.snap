@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkInfoListEditor component should render default view 1`] = `
+<ListEditor
+  distinctOnly={false}
+  formComponent={
+    Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": [Function],
+    }
+  }
+  hideReorder={false}
+  inputNormalizer={[Function]}
+  locale={
+    Object {
+      "form": Object {
+        "locale": Object {
+          "inputFieldLabel": "NoLabel",
+        },
+      },
+    }
+  }
+  maxCount={0}
+  rowItemTemplate={[Function]}
+  searchKey={
+    Object {
+      "order": "rek_order",
+      "value": "rek_value",
+    }
+  }
+  transformFunction={[Function]}
+/>
+`;

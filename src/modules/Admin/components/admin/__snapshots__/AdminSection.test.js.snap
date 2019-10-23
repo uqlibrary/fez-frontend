@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AdminSection component should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "internalNotes",
+            ],
+            Array [
+              "rek_herdc_notes",
+            ],
+          ],
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AdminSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "internalNotes",
+            ],
+            Array [
+              "rek_herdc_notes",
+            ],
+          ],
+        },
+      ],
+    }
+  }
+  disabled={true}
+/>
+`;

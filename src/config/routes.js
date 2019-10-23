@@ -128,6 +128,7 @@ export const pathConfig = {
         legacyEspace: `${fullPath}/my_upo_tools.php`,
         unpublished: '/admin/unpublished',
         edit: pid => `/admin/edit/${pid}`,
+        add: '/admin/add/',
         editCommunity: pid => `/communities/${pid}/edit`,
         editCollection: pid => `/collections/${pid}/edit`,
         editRecord: pid => `/records/${pid}/edit`,
@@ -178,6 +179,10 @@ const flattedPathConfig = [
     '/records/add/find',
     '/records/add/results',
     '/records/add/new',
+    '/admin/masquerade',
+    '/admin/unpublished',
+    '/admin/thirdPartyTools',
+    '/admin/add',
     '/view',
 ];
 
@@ -408,6 +413,13 @@ export const getRoutesConfig = ({
                     pageTitle: locale.pages.collection.title,
                 },
                 {
+                    path: pathConfig.admin.add,
+                    render: props => components.Admin({ ...props, createMode: true }),
+                    exact: true,
+                    access: [roles.admin],
+                    pageTitle: locale.pages.adminAdd.title,
+                },
+                {
                     path: pathConfig.admin.edit(pid),
                     component: components.Admin,
                     exact: true,
@@ -607,6 +619,10 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
             : []),
         ...(account && isAdmin(account)
             ? [
+                {
+                    linkTo: pathConfig.admin.add,
+                    ...locale.menu.adminAdd,
+                },
                 {
                     // maybe this should be in some admin bit? tbd
                     linkTo: pathConfig.admin.thirdPartyTools,

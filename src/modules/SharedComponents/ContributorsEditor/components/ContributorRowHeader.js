@@ -38,7 +38,7 @@ export class ContributorRowHeader extends PureComponent {
                 confirmButtonLabel: 'Yes',
             },
             descriptionStep2: 'Step 2 - Select your name from the list below',
-            identifierColumn: 'UQ identifier',
+            identifierColumn: 'UQ identifier / Organisation',
             nameColumn: 'Name as published',
             reorderColumn: 'Reorder records',
             roleColumn: 'Role',

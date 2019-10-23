@@ -566,7 +566,7 @@ describe('Backend routes method', () => {
     });
 
     it('should construct url for VOCABULARIES_API', () => {
-        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies/410' });
+        expect(routes.VOCABULARIES_API({ id: '410' })).toEqual({ apiUrl: 'vocabularies?cvo_ids=410' });
     });
 
     it('should construct url for GET_PUBLICATION_TYPES_API', () => {

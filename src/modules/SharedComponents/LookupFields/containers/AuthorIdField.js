@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
                 ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
         onChange: item => {
-            if (!item.id) {
+            if (!!item && !item.id) {
                 !!props.input
                     ? props.input.onChange({ ...item, id: `${parseInt(item.value, 10)}` })
                     : props.onChange({ ...item, id: `${parseInt(item.value, 10)}` });
@@ -20,11 +20,13 @@ const mapStateToProps = (state, props) => {
                 !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
         },
+        onClear: () => props.input.onChange(null),
         allowFreeText: true,
         async: true,
         selectedValue:
             (!props.input &&
                 ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
+            (!!props.input && props.input.value.toJS ? props.input.value.toJS() : props.input.value || '') ||
             '',
         itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         maxResults: 50,

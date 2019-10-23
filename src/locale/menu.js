@@ -32,6 +32,10 @@ export default {
             primaryText: 'Masquerade',
             secondaryText: 'as another user',
         },
+        adminAdd: {
+            primaryText: 'Add a new record',
+            secondaryText: 'as an admin user',
+        },
         search: {
             primaryText: 'Search eSpace',
             secondaryText: '',

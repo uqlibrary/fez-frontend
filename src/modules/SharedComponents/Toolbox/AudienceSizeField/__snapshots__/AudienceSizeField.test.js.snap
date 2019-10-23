@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AudienceSizeField component should render default view 1`] = `
+<Field
+  SelectDisplayProps={
+    Object {
+      "id": "audienceSize",
+    }
+  }
+  component={[Function]}
+  label="Audience size"
+  name="audienceSize"
+>
+  <WithStyles(MenuItem)
+    key="453992"
+    value={453992}
+  >
+    Less than 100
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="453993"
+    value={453993}
+  >
+    100 - 500
+  </WithStyles(MenuItem)>
+  <WithStyles(MenuItem)
+    key="453994"
+    value={453994}
+  >
+    Greater than 500
+  </WithStyles(MenuItem)>
+</Field>
+`;

@@ -168,6 +168,23 @@ export class ContributorForm extends PureComponent {
         );
     };
 
+    _onUQIdentifierCleared = () => {
+        this.setState(
+            prevState => ({
+                ...prevState,
+                contributor: {
+                    ...prevState.contributor,
+                    uqIdentifier: '0',
+                    authorId: 0,
+                    affiliation: 'NotUQ',
+                },
+            }),
+            () => {
+                this._onSubmit();
+            },
+        );
+    };
+
     handleAffiliationChange = event => {
         const affiliation = event.target.value;
         this.setState(prevState => ({
@@ -215,7 +232,6 @@ export class ContributorForm extends PureComponent {
         } = this.props;
 
         const { contributor } = this.state;
-
         const description = showContributorAssignment ? locale.descriptionStep1 : locale.descriptionStep1NoStep2;
         const buttonDisabled =
             disabled ||
@@ -228,7 +244,7 @@ export class ContributorForm extends PureComponent {
             <React.Fragment>
                 {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    {isNtro && (
+                    {(isNtro || !!contributor.affiliation) && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
                                 affiliation={contributor.affiliation}
@@ -261,8 +277,11 @@ export class ContributorForm extends PureComponent {
                         (this.props.enableUqIdentifierOnAffiliationChange && contributor.affiliation === 'UQ')) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
+                                key={contributor.authorId}
                                 disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
                                 onChange={this._onUQIdentifierSelected}
+                                onClear={this._onUQIdentifierCleared}
+                                showClear={!!parseInt(contributor.uqIdentifier, 10)}
                                 value={contributor.uqIdentifier || ''}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"

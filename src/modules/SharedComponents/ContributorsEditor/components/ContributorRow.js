@@ -17,7 +17,9 @@ import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Person from '@material-ui/icons/Person';
 import PersonOutlined from '@material-ui/icons/PersonOutlined';
+import HowToRegIcon from '@material-ui/icons/HowToReg';
 import Delete from '@material-ui/icons/Delete';
+import Edit from '@material-ui/icons/Edit';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
@@ -68,6 +70,7 @@ export const styles = theme => ({
 
 export class ContributorRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         canMoveDown: PropTypes.bool,
         canMoveUp: PropTypes.bool,
         classes: PropTypes.object,
@@ -79,19 +82,22 @@ export class ContributorRow extends PureComponent {
         locale: PropTypes.object,
         onSelect: PropTypes.func,
         onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
         onMoveDown: PropTypes.func,
         onMoveUp: PropTypes.func,
-        showContributorAssignment: PropTypes.bool,
         width: PropTypes.string,
         required: PropTypes.bool,
+        enableSelect: PropTypes.bool,
     };
 
     static defaultProps = {
+        canEdit: false,
         locale: {
             suffix: ' listed contributor',
             moveUpHint: 'Move record up the order',
             moveDownHint: 'Move record down the order',
             deleteHint: 'Remove this record',
+            editHint: 'Edit this record',
             selectHint: 'Select this record ([name]) to assign it to you',
             lockedTooltip: 'You are not able to edit this row',
             deleteRecordConfirmation: {
@@ -100,11 +106,13 @@ export class ContributorRow extends PureComponent {
                 cancelButtonLabel: 'No',
                 confirmButtonLabel: 'Yes',
             },
-            deleteButtonId: index => `delete-record-${index}`,
+            deleteButtonId: 'delete-record',
+            editButtonId: 'edit-record',
         },
         hideReorder: false,
         hideDelete: false,
         required: false,
+        enableSelect: false,
     };
 
     constructor(props) {
@@ -145,10 +153,15 @@ export class ContributorRow extends PureComponent {
     };
 
     _select = () => {
-        const { disabled, onSelect, index } = this.props;
-        if (!disabled && !!onSelect) {
+        const { disabled, onSelect, index, enableSelect } = this.props;
+        if (!disabled && !!onSelect && enableSelect) {
             onSelect(index);
         }
+    };
+
+    _handleEdit = () => {
+        const { canEdit, index } = this.props;
+        canEdit && !!this.props.onEdit && this.props.onEdit(index);
     };
 
     getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
@@ -222,19 +235,33 @@ export class ContributorRow extends PureComponent {
         );
     };
 
-    render() {
-        const {
-            deleteRecordConfirmation,
-            moveUpHint,
-            moveDownHint,
-            deleteHint,
-            selectHint,
-            lockedTooltip,
-            deleteButtonId,
-        } = this.props.locale;
-
+    getRowIcon() {
         const {
             contributor,
+            disabled,
+            locale: { lockedTooltip },
+        } = this.props;
+        if (parseInt(contributor.uqIdentifier, 10)) {
+            return <HowToRegIcon />;
+        } else if (contributor.selected) {
+            return <Person />;
+        } else if ((disabled || contributor.disabled) && !this.props.enableSelect) {
+            return lockedTooltip ? (
+                <Tooltip title={lockedTooltip}>
+                    <Lock />
+                </Tooltip>
+            ) : (
+                <Lock />
+            );
+        } else {
+            return <PersonOutlined />;
+        }
+    }
+
+    render() {
+        const {
+            contributor,
+            canEdit,
             canMoveDown,
             canMoveUp,
             disabled,
@@ -243,9 +270,18 @@ export class ContributorRow extends PureComponent {
             hideDelete,
             required,
             index,
+            locale: {
+                deleteRecordConfirmation,
+                moveUpHint,
+                moveDownHint,
+                deleteHint,
+                editHint,
+                selectHint,
+                deleteButtonId,
+                editButtonId,
+            },
         } = this.props;
 
-        const enableSelect = this.props.showContributorAssignment;
         const selectedClass = contributor.selected ? classes.selected : '';
 
         const ariaLabel =
@@ -253,22 +289,6 @@ export class ContributorRow extends PureComponent {
                 `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||
                     ''}`.trim()) ||
             '';
-
-        const rowIcon = () => {
-            if (contributor.selected) {
-                return <Person />;
-            } else if (this.props.disabled || !enableSelect) {
-                return lockedTooltip ? (
-                    <Tooltip title={lockedTooltip}>
-                        <Lock />
-                    </Tooltip>
-                ) : (
-                    <Lock />
-                );
-            } else {
-                return <PersonOutlined />;
-            }
-        };
 
         return (
             <Fragment>
@@ -281,18 +301,18 @@ export class ContributorRow extends PureComponent {
                     divider
                     classes={{
                         root: `${classes.listItem || ''} ${(required && classes.highlighted) ||
-                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!enableSelect &&
+                            ''} ${(contributor.selected && classes.rowSelected) || ''} ${(!contributor.disabled &&
                             classes.disabledListItem) ||
                             ''}`.trim(),
                     }}
-                    onClick={enableSelect ? this._onSelect : () => {}}
-                    tabIndex={!enableSelect || this.props.disabled ? -1 : 0}
-                    onKeyDown={enableSelect ? this._onSelectKeyboard : () => {}}
+                    onClick={this._onSelect}
+                    tabIndex={contributor.disabled || this.props.disabled ? -1 : 0}
+                    onKeyDown={contributor.disabled ? this._onSelectKeyboard : () => {}}
                     aria-label={ariaLabel}
                     id={`contributor-editor-row-${this.props.index}`}
                 >
                     <Hidden xsDown>
-                        <ListItemIcon classes={{ root: selectedClass }}>{rowIcon()}</ListItemIcon>
+                        <ListItemIcon classes={{ root: selectedClass }}>{this.getRowIcon()}</ListItemIcon>
                     </Hidden>
                     {this.getContributorRowText(selectedClass)}
                     <ListItemSecondaryAction>
@@ -332,6 +352,25 @@ export class ContributorRow extends PureComponent {
                                 </span>
                             </Tooltip>
                         )}
+                        {canEdit && (
+                            <Tooltip
+                                title={editHint}
+                                disableFocusListener={disabled || !!contributor.disabled}
+                                disableHoverListener={disabled || !!contributor.disabled}
+                                disableTouchListener={disabled || !!contributor.disabled}
+                            >
+                                <span>
+                                    <IconButton
+                                        aria-label={editHint}
+                                        onClick={this._handleEdit}
+                                        disabled={disabled || !!contributor.disabled}
+                                        id={`${editButtonId}-${index}`}
+                                    >
+                                        <Edit classes={{ root: `${selectedClass}` }} />
+                                    </IconButton>
+                                </span>
+                            </Tooltip>
+                        )}
                         <Tooltip
                             title={deleteHint}
                             disableFocusListener={disabled || hideDelete}
@@ -343,7 +382,7 @@ export class ContributorRow extends PureComponent {
                                     aria-label={deleteHint}
                                     onClick={this._showConfirmation}
                                     disabled={disabled || hideDelete}
-                                    id={deleteButtonId(index)}
+                                    id={`${deleteButtonId}-${index}`}
                                 >
                                     <Delete classes={{ root: `${selectedClass}` }} />
                                 </IconButton>

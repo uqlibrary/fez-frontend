@@ -107,7 +107,7 @@ export const AUTHOR_TRENDING_PUBLICATIONS_API = () => ({ apiUrl: 'records/my-tre
 // lookup apis
 export const GET_ACML_QUICK_TEMPLATES_API = () => ({ apiUrl: 'acml/quick-templates' });
 export const GET_NEWS_API = () => ({ apiUrl: 'fez-news' });
-export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies/${id}` });
+export const VOCABULARIES_API = ({ id }) => ({ apiUrl: `vocabularies?cvo_ids=${id}` });
 export const GET_PUBLICATION_TYPES_API = () => ({ apiUrl: 'records/types' });
 
 // file uploading apis

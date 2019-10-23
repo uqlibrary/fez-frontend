@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import ListRowHeader from './ListRowHeader';
 import ListRow from './ListRow';
+import { GenericTemplate } from './GenericTemplate';
 
-export default class ListsEditor extends Component {
+export default class ListEditor extends Component {
     static propTypes = {
-        formComponent: PropTypes.func.isRequired,
+        formComponent: PropTypes.oneOfType([PropTypes.func.isRequired, PropTypes.object.isRequired]),
         inputField: PropTypes.oneOfType([
             PropTypes.object, // eg connected auto complete fields
             PropTypes.func,
@@ -25,6 +26,8 @@ export default class ListsEditor extends Component {
         transformFunction: PropTypes.func.isRequired,
         maxInputLength: PropTypes.number,
         inputNormalizer: PropTypes.func,
+        rowItemTemplate: PropTypes.func,
+        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     };
 
     static defaultProps = {
@@ -39,6 +42,7 @@ export default class ListsEditor extends Component {
             [searchKey.value]: item,
             [searchKey.order]: index + 1,
         }),
+        rowItemTemplate: GenericTemplate,
         inputNormalizer: value => value,
         locale: {
             form: {
@@ -53,9 +57,10 @@ export default class ListsEditor extends Component {
         super(props);
 
         const valueAsJson =
-            (props.input || {}).name &&
-            typeof (props.input.value || {}).toJS === 'function' &&
-            props.input.value.toJS();
+            ((props.input || {}).name &&
+                typeof (props.input.value || {}).toJS === 'function' &&
+                props.input.value.toJS()) ||
+            ((props.input || {}).name && props.input.value);
         this.state = {
             itemList: valueAsJson ? valueAsJson.map(item => item[props.searchKey.value]) : [],
         };
@@ -170,6 +175,7 @@ export default class ListsEditor extends Component {
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}
+                itemTemplate={this.props.rowItemTemplate}
             />
         ));
         return (
@@ -188,6 +194,7 @@ export default class ListsEditor extends Component {
                     errorText={this.props.errorText}
                     maxInputLength={this.props.maxInputLength}
                     normalize={this.props.inputNormalizer}
+                    category={this.props.category}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader

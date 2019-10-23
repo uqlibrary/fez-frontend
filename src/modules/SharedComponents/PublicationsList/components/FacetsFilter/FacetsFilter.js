@@ -209,14 +209,8 @@ export default class FacetsFilter extends PureComponent {
                 facetTitle: lookupFacetsList[key] || key,
                 facets: rawFacet.buckets.map((item, index) => {
                     if (key === 'Display type') {
-                        const publicationTypeIndex = publicationTypes().findIndex(publicationType => {
-                            return publicationType.id === rawFacet.buckets[index].key;
-                        });
                         return {
-                            title:
-                                publicationTypeIndex > -1
-                                    ? publicationTypes()[publicationTypeIndex].name
-                                    : /* istanbul ignore next */ 'Unknown',
+                            title: (publicationTypes()[rawFacet.buckets[index].key] || { name: 'Unknown' }).name,
                             key: item.key,
                             count: item.doc_count,
                         };

@@ -39,7 +39,7 @@ export class DocumentTypeMultipleField extends PureComponent {
 
     constructor(props) {
         super(props);
-        this.publicationTypes = publicationTypes();
+        this.publicationTypes = Object.values(publicationTypes());
     }
 
     _handleDocTypeChange = event => {

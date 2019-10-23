@@ -224,7 +224,7 @@ describe('Component AdvancedSearchCaption', () => {
                 { combiner: 'contains', title: 'Any field', value: 'anything' },
                 { combiner: 'is one of', title: 'Collection', value: 'UQ:120743, UQ:217419 or UQ:217422' },
                 { combiner: 'is', title: 'Author ID', value: '570' },
-                { combiner: 'is one of', title: 'Work type', value: 'Audio document or Book' },
+                { combiner: 'is one of', title: 'Work type', value: 'Audio Document or Book' },
                 { combiner: 'is', title: '', value: <span className="value">open access/full text</span> },
                 { combiner: 'between', title: 'Published', value: '1991 to 2012' },
             ],

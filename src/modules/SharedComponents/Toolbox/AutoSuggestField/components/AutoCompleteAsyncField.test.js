@@ -123,7 +123,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should have a proper style generator', () => {
-        expect(styles()).toMatchSnapshot();
+        expect(styles({ spacing: { unit: 8 } })).toMatchSnapshot();
     });
 
     it('should call stateReducer function on state change as free text field', () => {

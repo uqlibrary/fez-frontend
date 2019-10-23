@@ -4,11 +4,12 @@ import { ConfirmDialogBox } from '../../ConfirmDialogBox';
 import Grid from '@material-ui/core/Grid';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
 import { withStyles } from '@material-ui/core/styles';
+import { GenericTemplate } from './GenericTemplate';
 
 export class ListRow extends PureComponent {
     static propTypes = {
@@ -23,6 +24,7 @@ export class ListRow extends PureComponent {
         disabled: PropTypes.bool,
         hideReorder: PropTypes.bool,
         classes: PropTypes.object,
+        itemTemplate: PropTypes.func,
         form: PropTypes.string,
     };
 
@@ -38,6 +40,7 @@ export class ListRow extends PureComponent {
                 confirmButtonLabel: 'Yes',
             },
         },
+        itemTemplate: GenericTemplate,
         form: 'Form',
     };
 
@@ -78,11 +81,11 @@ export class ListRow extends PureComponent {
                     locale={deleteRecordConfirmation}
                 />
                 <Grid container alignItems="center" spacing={8} className={classes.row}>
-                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6}>
-                        <Typography variant="body2">{item.value || item}</Typography>
+                    <Grid item xs={hideReorder ? 10 : 5} sm={hideReorder ? 11 : 6} md={hideReorder ? 11 : 9}>
+                        <this.props.itemTemplate item={item} />
                     </Grid>
                     {!hideReorder && (
-                        <Grid item xs={5} sm={5} className={classes.center}>
+                        <Grid item xs={5} sm={5} md={2} className={classes.center}>
                             <Grid container justify="flex-end">
                                 {canMoveUp && (
                                     <Grid item>
@@ -127,6 +130,8 @@ const styles = () => ({
         textAlign: 'center',
     },
     row: {
+        marginLeft: 0,
+        marginRight: 0,
         borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
     },
 });

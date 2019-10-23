@@ -595,6 +595,29 @@ describe('FacetsFilter ', () => {
         ).toMatchSnapshot();
     });
 
+    it('getFacetsToDisplay returns "Unknown" for display type', () => {
+        const mockFacetsData = {
+            'Display type': {
+                doc_count_error_upper_bound: 0,
+                sum_other_doc_count: 0,
+                buckets: [
+                    {
+                        key: -1,
+                        doc_count: 1,
+                    },
+                ],
+            },
+        };
+        const excludeFacetsList = ['Scopus document type', 'Subtype', 'Year published'];
+        const renameFacetsList = { 'Display type': 'Work type' };
+        const lookupFacetsList = {};
+        const wrapper = setup();
+        const test = wrapper
+            .instance()
+            .getFacetsToDisplay(mockFacetsData, excludeFacetsList, renameFacetsList, lookupFacetsList);
+        expect(test[0].facets[0].title).toBe('Unknown');
+    });
+
     it('getNestedListItems returns list of facets correctly for a given category', () => {
         const facetsCategory = {
             title: 'Work type',

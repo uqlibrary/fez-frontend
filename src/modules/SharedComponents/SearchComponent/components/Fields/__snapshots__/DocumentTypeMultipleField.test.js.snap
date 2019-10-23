@@ -82,9 +82,9 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
           "display": "block",
         }
       }
-      value={263}
+      value={130}
     >
-      Audio Document
+      Conference Paper
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -133,9 +133,9 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
           "display": "block",
         }
       }
-      value={130}
+      value={179}
     >
-      Conference Paper
+      Journal Article
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -145,57 +145,6 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
         }
       }
       key="5"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={197}
-    >
-      Conference Proceedings
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
       style={
         Object {
           "display": "block",
@@ -212,245 +161,7 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
           "selected": undefined,
         }
       }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
+      key="6"
       style={
         Object {
           "display": "block",
@@ -467,7 +178,177 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
           "selected": undefined,
         }
       }
-      key="24"
+      key="7"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={185}
+    >
+      Patent
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="8"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={187}
+    >
+      Thesis
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="9"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={189}
+    >
+      Seminar Paper
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="10"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={191}
+    >
+      Newspaper Article
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="11"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={197}
+    >
+      Conference Proceedings
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="12"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={202}
+    >
+      Generic Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="13"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={204}
+    >
+      Preprint
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="14"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={228}
+    >
+      Digilib Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="15"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={238}
+    >
+      Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="16"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={263}
+    >
+      Audio Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="17"
       style={
         Object {
           "display": "block",
@@ -476,6 +357,125 @@ exports[`DocumentTypeMultipleField component should render default view 1`] = `
       value={272}
     >
       Reference Entry
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="18"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={275}
+    >
+      Research Report
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="19"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={294}
+    >
+      Journal
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="20"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={310}
+    >
+      Video Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="21"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={313}
+    >
+      Creative Work
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="22"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={316}
+    >
+      Design
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="23"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={371}
+    >
+      Data Collection
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="24"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={374}
+    >
+      Manuscript
     </WithStyles(MenuItem)>
   </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
@@ -515,9 +515,9 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
           "display": "block",
         }
       }
-      value={263}
+      value={130}
     >
-      Audio Document
+      Conference Paper
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -566,9 +566,9 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
           "display": "block",
         }
       }
-      value={130}
+      value={179}
     >
-      Conference Paper
+      Journal Article
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -578,57 +578,6 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
         }
       }
       key="5"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={197}
-    >
-      Conference Proceedings
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
       style={
         Object {
           "display": "block",
@@ -645,245 +594,7 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
           "selected": undefined,
         }
       }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
+      key="6"
       style={
         Object {
           "display": "block",
@@ -900,7 +611,177 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
           "selected": undefined,
         }
       }
-      key="24"
+      key="7"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={185}
+    >
+      Patent
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="8"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={187}
+    >
+      Thesis
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="9"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={189}
+    >
+      Seminar Paper
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="10"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={191}
+    >
+      Newspaper Article
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="11"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={197}
+    >
+      Conference Proceedings
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="12"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={202}
+    >
+      Generic Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="13"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={204}
+    >
+      Preprint
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="14"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={228}
+    >
+      Digilib Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="15"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={238}
+    >
+      Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="16"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={263}
+    >
+      Audio Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="17"
       style={
         Object {
           "display": "block",
@@ -909,6 +790,125 @@ exports[`DocumentTypeMultipleField component should render disabled view 1`] = `
       value={272}
     >
       Reference Entry
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="18"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={275}
+    >
+      Research Report
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="19"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={294}
+    >
+      Journal
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="20"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={310}
+    >
+      Video Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="21"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={313}
+    >
+      Creative Work
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="22"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={316}
+    >
+      Design
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="23"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={371}
+    >
+      Data Collection
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="24"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={374}
+    >
+      Manuscript
     </WithStyles(MenuItem)>
   </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>
@@ -953,9 +953,9 @@ exports[`DocumentTypeMultipleField component should render with given document t
           "display": "block",
         }
       }
-      value={263}
+      value={130}
     >
-      Audio Document
+      Conference Paper
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -1004,9 +1004,9 @@ exports[`DocumentTypeMultipleField component should render with given document t
           "display": "block",
         }
       }
-      value={130}
+      value={179}
     >
-      Conference Paper
+      Journal Article
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -1021,9 +1021,9 @@ exports[`DocumentTypeMultipleField component should render with given document t
           "display": "block",
         }
       }
-      value={197}
+      value={181}
     >
-      Conference Proceedings
+      Department Technical Report
     </WithStyles(MenuItem)>
     <WithStyles(MenuItem)
       checked={false}
@@ -1033,295 +1033,6 @@ exports[`DocumentTypeMultipleField component should render with given document t
         }
       }
       key="6"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={313}
-    >
-      Creative Work
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="7"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={371}
-    >
-      Data Collection
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="8"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={181}
-    >
-      Department Technical Report
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={true}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="9"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={316}
-    >
-      Design
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="10"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={228}
-    >
-      Digilib Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="11"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={202}
-    >
-      Generic Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="12"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={238}
-    >
-      Image
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="13"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={294}
-    >
-      Journal
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="14"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={179}
-    >
-      Journal Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="15"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={374}
-    >
-      Manuscript
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="16"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={191}
-    >
-      Newspaper Article
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="17"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={185}
-    >
-      Patent
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="18"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={204}
-    >
-      Preprint
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="19"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={275}
-    >
-      Research Report
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="20"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={189}
-    >
-      Seminar Paper
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="21"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={187}
-    >
-      Thesis
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="22"
-      style={
-        Object {
-          "display": "block",
-        }
-      }
-      value={310}
-    >
-      Video Document
-    </WithStyles(MenuItem)>
-    <WithStyles(MenuItem)
-      checked={false}
-      classes={
-        Object {
-          "selected": undefined,
-        }
-      }
-      key="23"
       style={
         Object {
           "display": "block",
@@ -1338,7 +1049,177 @@ exports[`DocumentTypeMultipleField component should render with given document t
           "selected": undefined,
         }
       }
-      key="24"
+      key="7"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={185}
+    >
+      Patent
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="8"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={187}
+    >
+      Thesis
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="9"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={189}
+    >
+      Seminar Paper
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="10"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={191}
+    >
+      Newspaper Article
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="11"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={197}
+    >
+      Conference Proceedings
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="12"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={202}
+    >
+      Generic Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="13"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={204}
+    >
+      Preprint
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="14"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={228}
+    >
+      Digilib Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="15"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={238}
+    >
+      Image
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="16"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={263}
+    >
+      Audio Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="17"
       style={
         Object {
           "display": "block",
@@ -1347,6 +1228,125 @@ exports[`DocumentTypeMultipleField component should render with given document t
       value={272}
     >
       Reference Entry
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="18"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={275}
+    >
+      Research Report
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="19"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={294}
+    >
+      Journal
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="20"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={310}
+    >
+      Video Document
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="21"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={313}
+    >
+      Creative Work
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={true}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="22"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={316}
+    >
+      Design
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={true}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="23"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={371}
+    >
+      Data Collection
+    </WithStyles(MenuItem)>
+    <WithStyles(MenuItem)
+      checked={false}
+      classes={
+        Object {
+          "selected": undefined,
+        }
+      }
+      key="24"
+      style={
+        Object {
+          "display": "block",
+        }
+      }
+      value={374}
+    >
+      Manuscript
     </WithStyles(MenuItem)>
   </WithStyles(WithFormControlContext(Select))>
 </WithStyles(FormControl)>

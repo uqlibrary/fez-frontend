@@ -1,0 +1,211 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BibliographicSection component should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "rek_title",
+            ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "languages",
+            ],
+          ],
+          "title": "Language of work",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_journal_name",
+            ],
+          ],
+          "title": "Journal name",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isbn",
+            ],
+          ],
+          "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_place_of_publication",
+              "fez_record_search_key_publisher",
+            ],
+            Array [
+              "fez_record_search_key_volume_number",
+              "fez_record_search_key_issue_number",
+              "fez_record_search_key_article_number",
+            ],
+            Array [
+              "fez_record_search_key_start_page",
+              "fez_record_search_key_end_page",
+              "fez_record_search_key_total_pages",
+            ],
+            Array [
+              "rek_date",
+              "fez_record_search_key_date_available",
+            ],
+            Array [
+              "rek_description",
+            ],
+            Array [
+              "fez_record_search_key_refereed_source",
+            ],
+          ],
+          "title": "Bibliographic",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_keywords",
+            ],
+          ],
+          "title": "Keyword(s)",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "subjects",
+            ],
+          ],
+          "title": "Subject",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isderivationof",
+            ],
+          ],
+          "title": "Related publications",
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
+
+exports[`BibliographicSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "rek_title",
+            ],
+          ],
+          "title": "Title",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "languages",
+            ],
+          ],
+          "title": "Language of work",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_journal_name",
+            ],
+          ],
+          "title": "Journal name",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isbn",
+            ],
+          ],
+          "title": "ISBN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_issn",
+            ],
+          ],
+          "title": "ISSN",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_place_of_publication",
+              "fez_record_search_key_publisher",
+            ],
+            Array [
+              "fez_record_search_key_volume_number",
+              "fez_record_search_key_issue_number",
+              "fez_record_search_key_article_number",
+            ],
+            Array [
+              "fez_record_search_key_start_page",
+              "fez_record_search_key_end_page",
+              "fez_record_search_key_total_pages",
+            ],
+            Array [
+              "rek_date",
+              "fez_record_search_key_date_available",
+            ],
+            Array [
+              "rek_description",
+            ],
+            Array [
+              "fez_record_search_key_refereed_source",
+            ],
+          ],
+          "title": "Bibliographic",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_keywords",
+            ],
+          ],
+          "title": "Keyword(s)",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "subjects",
+            ],
+          ],
+          "title": "Subject",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "fez_record_search_key_isderivationof",
+            ],
+          ],
+          "title": "Related publications",
+        },
+      ],
+    }
+  }
+  disabled={true}
+/>
+`;

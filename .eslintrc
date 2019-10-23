@@ -146,7 +146,8 @@
       "code": 120,
       "ignoreRegExpLiterals": true,
       "ignoreTemplateLiterals": true,
-      "ignoreUrls": true
+      "ignoreUrls": true,
+      "ignoreStrings": true,
     }],                               // https://eslint.org/docs/rules/max-len
     "new-cap": [0, {                 // http://eslint.org/docs/rules/new-cap
       "newIsCap": true

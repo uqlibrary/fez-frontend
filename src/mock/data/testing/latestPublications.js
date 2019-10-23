@@ -18,6 +18,7 @@ export const latestPubsPayload = {
         "rek_date": "2017-08-03T00:00:00Z",
         "rek_object_type_xsdmf_id": 3674,
         "rek_object_type": 3,
+        "rek_object_type_lookup": "Record",
         "rek_depositor_xsdmf_id": 7578,
         "rek_depositor": 8524,
         "rek_created_date_xsdmf_id": 3677,

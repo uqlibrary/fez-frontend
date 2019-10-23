@@ -444,12 +444,18 @@ exports[`AutoCompleteAsyncField component should call given filter function on i
 
 exports[`AutoCompleteAsyncField component should have a proper style generator 1`] = `
 Object {
+  "chip": Object {
+    "margin": "4px 2px",
+  },
   "container": Object {
     "flexGrow": 1,
     "position": "relative",
   },
   "inputRoot": Object {
     "flexWrap": "wrap",
+  },
+  "noWrap": Object {
+    "flexWrap": "unset",
   },
   "paper": Object {
     "maxHeight": 250,
@@ -1117,9 +1123,11 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             loadSuggestions={[MockFunction]}
             maxResults={7}
             onChange={[MockFunction]}
+            onClear={[Function]}
             openOnFocus={false}
             required={true}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -2572,9 +2580,11 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             }
             maxResults={7}
             onChange={[MockFunction]}
+            onClear={[Function]}
             openOnFocus={false}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -4070,9 +4080,11 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             }
             maxResults={7}
             onChange={[MockFunction]}
+            onClear={[Function]}
             openOnFocus={true}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -5398,9 +5410,11 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             }
             maxResults={7}
             onChange={[MockFunction]}
+            onClear={[Function]}
             openOnFocus={true}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"
@@ -6690,9 +6704,11 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             loadSuggestions={[MockFunction]}
             maxResults={7}
             onChange={[MockFunction]}
+            onClear={[Function]}
             openOnFocus={false}
             required={false}
             selectedValue={null}
+            showClear={false}
           >
             <div
               className="root"

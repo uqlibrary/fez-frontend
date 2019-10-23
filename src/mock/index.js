@@ -209,16 +209,36 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
-            { ...mockData.incompleteNTROrecordUqrdav10 },
             { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.incompleteNTROrecord },
-            { ...mockData.incompleteNTROlist.data[1] },
-            { ...mockData.incompleteNTROlist.data[2] },
             { ...mockTestingData.dataCollection },
             { ...mockData.recordWithTiffAndThumbnail },
             { ...mockData.recordWithoutAuthorIds },
-            ...mockData.possibleUnclaimedList.data,
+            ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
+            ...mockData.possibleUnclaimedList.data,
+            ...mockData.publicationTypeListAudio.data,
+            ...mockData.publicationTypeListBook.data,
+            ...mockData.publicationTypeListBookChapter.data,
+            ...mockData.publicationTypeListConferencePaper.data,
+            ...mockData.publicationTypeListConferenceProceedings.data,
+            ...mockData.publicationTypeListCreativeWork.data,
+            ...mockData.publicationTypeListDataCollection.data,
+            ...mockData.publicationTypeListDepartmentTechnicalReport.data,
+            ...mockData.publicationTypeListDesign.data,
+            ...mockData.publicationTypeListDigilibImage.data,
+            ...mockData.publicationTypeListImage.data,
+            ...mockData.publicationTypeListJournal.data,
+            ...mockData.publicationTypeListJournalArticle.data,
+            ...mockData.publicationTypeListManuscript.data,
+            ...mockData.publicationTypeListNewspaperArticle.data,
+            ...mockData.publicationTypeListPatent.data,
+            ...mockData.publicationTypeListPreprint.data,
+            ...mockData.publicationTypeListResearchReport.data,
+            ...mockData.publicationTypeListSeminarPaper.data,
+            ...mockData.publicationTypeListThesis.data,
+            ...mockData.publicationTypeListVideo.data,
+            ...mockData.publicationTypeListWorkingPaper.data,
         ];
         const matchedRecord = mockRecords.find(record => config.url.indexOf(record.rek_pid) > -1);
         if (matchedRecord) {
@@ -230,7 +250,7 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     // .reply(500, ['ERROR in EXISTING_RECORD_API'])
     .onGet(new RegExp(escapeRegExp(routes.VOCABULARIES_API({ id: '.*' }).apiUrl)))
     .reply(config => {
-        const vocabId = config.url.substring(config.url.indexOf('/') + 1);
+        const vocabId = config.url.substring(config.url.indexOf('=') + 1);
         return [200, mockData.vocabulariesList[vocabId]];
     })
     .onGet(

@@ -1,0 +1,44 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FilesSection component should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "fez_datastream_info",
+            ],
+          ],
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "files",
+            ],
+          ],
+          "title": "Files",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "advisoryStatement",
+            ],
+          ],
+          "title": "Advisory statement",
+        },
+        Object {
+          "groups": Array [
+            Array [
+              "rek_copyright",
+            ],
+          ],
+          "title": "Deposit agreement",
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
