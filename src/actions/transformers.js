@@ -741,6 +741,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         rek_title: title,
         rek_description: description,
         languageOfTitle,
+        languageOfBookTitle,
         languages,
         subjects,
         geoCoordinates,
@@ -758,6 +759,13 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_language_of_title: languageOfTitle.map(lang => ({
                     rek_language_of_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfBookTitle
+            ? {
+                fez_record_search_key_language_of_book_title: languageOfBookTitle.map(lang => ({
+                    rek_language_of_book_title: lang,
                 })),
             }
             : {}),
