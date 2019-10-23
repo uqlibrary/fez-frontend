@@ -176,7 +176,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             onFileSelect={[Function]}
             openAccessStatus={
               Object {
-                "embargoDate": "20th October 3000",
+                "embargoDate": "3000-10-20",
                 "isOpenAccess": false,
                 "openAccessStatusId": 453697,
                 "securityStatus": true,
@@ -262,7 +262,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
             }
           >
             <WithStyles(OpenAccessIcon)
-              embargoDate="20th October 3000"
+              embargoDate="3000-10-20"
               isOpenAccess={false}
               openAccessStatusId={453697}
               securityStatus={true}

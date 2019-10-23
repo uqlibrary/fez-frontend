@@ -59,6 +59,29 @@ exports[`Component FileUploadEmbargoDate should render with default setup with s
 />
 `;
 
+exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
+<ForwardRef
+  InputProps={
+    Object {
+      "classes": Object {
+        "root": "",
+      },
+      "disableUnderline": true,
+    }
+  }
+  allowKeyboardControl={true}
+  autoOk={true}
+  format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  minDate={2016-01-01T00:00:00.000Z}
+  onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  value={null}
+/>
+`;
+
 exports[`Component FileUploadEmbargoDate should set correct date on date changed 1`] = `
 <ForwardRef
   InputProps={
