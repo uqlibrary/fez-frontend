@@ -175,7 +175,6 @@ export class FilesClass extends Component {
     isFileValid = dataStream => {
         const authorSecurity = (this.props.authorDetails && this.props.authorDetails.pol_id) || 5;
         const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
-        console.log(authorSecurity, datastreamSecurity, datastreamSecurity >= authorSecurity);
         const {
             files: { blacklist },
         } = viewRecordsConfig;
