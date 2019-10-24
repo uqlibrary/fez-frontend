@@ -741,9 +741,9 @@ describe('getRecordContributorsIdSearchKey test', () => {
         ];
         const expected = {
             fez_record_search_key_contributor_id: [
-                { rek_contributor_id: null, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
                 { rek_contributor_id: 100, rek_contributor_id_order: 2 },
-                { rek_contributor_id: null, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
                 { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
             ],
         };
@@ -2529,6 +2529,168 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
             });
+        });
+    });
+});
+
+describe('getAuthorsSectionSearchKeys', () => {
+    it('should get authors search key', () => {
+        const data = {
+            authors: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_author: [
+                { rek_author: 'Smith A.', rek_author_order: 1 },
+                { rek_author: 'Smith B.', rek_author_order: 2 },
+                { rek_author: 'Smith C.', rek_author_order: 3 },
+                { rek_author: 'Smith D.', rek_author_order: 4 },
+            ],
+            fez_record_search_key_author_id: [
+                { rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id: 100, rek_author_id_order: 2 },
+                { rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id: 1001, rek_author_id_order: 4 },
+            ],
+            fez_record_search_key_author_affiliation_name: [
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 1,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 2,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 3,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 4,
+                },
+            ],
+            fez_record_search_key_author_affiliation_type: [
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 1,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 2,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 3,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 4,
+                },
+            ],
+        });
+    });
+
+    it('should get contributors search key', () => {
+        const data = {
+            editors: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_contributor: [
+                { rek_contributor: 'Smith A.', rek_contributor_order: 1 },
+                { rek_contributor: 'Smith B.', rek_contributor_order: 2 },
+                { rek_contributor: 'Smith C.', rek_contributor_order: 3 },
+                { rek_contributor: 'Smith D.', rek_contributor_order: 4 },
+            ],
+            fez_record_search_key_contributor_id: [
+                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 100, rek_contributor_id_order: 2 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get creators search key', () => {
+        const data = {
+            creators: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_creator: [
+                { rek_creator: 'Smith A.', rek_creator_order: 1 },
+                { rek_creator: 'Smith B.', rek_creator_order: 2 },
+                { rek_creator: 'Smith C.', rek_creator_order: 3 },
+                { rek_creator: 'Smith D.', rek_creator_order: 4 },
+            ],
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: 0, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: 0, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get architects search key', () => {
+        const data = {
+            architects: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_architect: [
+                { rek_architect: 'Smith A.', rek_architect_order: 1 },
+                { rek_architect: 'Smith B.', rek_architect_order: 2 },
+                { rek_architect: 'Smith C.', rek_architect_order: 3 },
+                { rek_architect: 'Smith D.', rek_architect_order: 4 },
+            ],
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: 0, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: 0, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get supervisors search key', () => {
+        const data = {
+            supervisors: [
+                { nameAsPublished: 'Smith A.' },
+                { nameAsPublished: 'Smith B.' },
+                { nameAsPublished: 'Smith C.' },
+                { nameAsPublished: 'Smith D.' },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_supervisor: [
+                { rek_supervisor: 'Smith A.', rek_supervisor_order: 1 },
+                { rek_supervisor: 'Smith B.', rek_supervisor_order: 2 },
+                { rek_supervisor: 'Smith C.', rek_supervisor_order: 3 },
+                { rek_supervisor: 'Smith D.', rek_supervisor_order: 4 },
+            ],
         });
     });
 });

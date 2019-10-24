@@ -344,7 +344,7 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                     rek_contributor_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_contributor_id_order: index + 1,
                 },
         ),
@@ -378,7 +378,7 @@ export const getRecordCreatorsIdSearchKey = creators => {
                     rek_creator_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_creator_id_order: index + 1,
                 },
         ),
@@ -412,7 +412,7 @@ export const getRecordArchitectsIdSearchKey = architects => {
                     rek_architect_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_architect_id_order: index + 1,
                 },
         ),
