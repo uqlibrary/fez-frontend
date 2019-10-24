@@ -104,6 +104,12 @@ describe('DataStreamSecurityItem component', () => {
 
     it('should clear an embargo date', async() => {
         const { asFragment, getByTestId } = setup({
+            initialDataStream: {
+                dsi_dsid: 'test.jpg',
+                dsi_security_policy: 1,
+                dsi_security_inherited: 0,
+                dsi_embargo_date: '2099-01-01',
+            },
             dataStream: {
                 dsi_dsid: 'test.jpg',
                 dsi_security_policy: 1,
@@ -111,8 +117,8 @@ describe('DataStreamSecurityItem component', () => {
                 dsi_embargo_date: '2099-01-01',
             },
         });
-
         expect(asFragment()).toMatchSnapshot();
+
         fireEvent.click(getByTestId('clearEmbargoButton'));
         expect(asFragment()).toMatchSnapshot();
     });

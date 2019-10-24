@@ -98,34 +98,32 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
                 </StandardCard>
             </Grid>
             {!!dataStreams && dataStreams.length > 0 && (
-                <Grid item xs={12}>
-                    <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
-                        <Grid container spacing={8}>
-                            {dataStreams.length && (
-                                <React.Fragment>
-                                    <Grid item xs={12}>
-                                        <InheritedSecurityDetails
-                                            title={text.inheritedPolicy.dataStream.title}
-                                            collections={record.fez_record_search_key_ismemberof}
-                                            parentKey="rek_datastream_policy"
-                                        />
-                                    </Grid>
-                                    <Grid item xs={12}>
-                                        <Field
-                                            component={DataStreamSecuritySelector}
-                                            name="securitySection.dataStreams"
-                                            {...{
-                                                disabled,
-                                                text: text.dataStream,
-                                            }}
-                                            collections={record.fez_record_search_key_ismemberof}
-                                        />
-                                    </Grid>
-                                </React.Fragment>
-                            )}
-                        </Grid>
-                    </StandardCard>
-                </Grid>
+                <React.Fragment>
+                    <Grid item xs={12}>
+                        <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
+                            <Grid container spacing={8}>
+                                <Grid item xs={12}>
+                                    <InheritedSecurityDetails
+                                        title={text.inheritedPolicy.dataStream.title}
+                                        collections={record.fez_record_search_key_ismemberof}
+                                        parentKey="rek_datastream_policy"
+                                    />
+                                </Grid>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={DataStreamSecuritySelector}
+                                        name="securitySection.dataStreams"
+                                        {...{
+                                            disabled,
+                                            text: text.dataStream,
+                                        }}
+                                        collections={record.fez_record_search_key_ismemberof}
+                                    />
+                                </Grid>
+                            </Grid>
+                        </StandardCard>
+                    </Grid>
+                </React.Fragment>
             )}
         </Grid>
     );

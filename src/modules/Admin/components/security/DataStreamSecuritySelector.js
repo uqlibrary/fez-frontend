@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
+import { useFormValuesContext } from 'context';
 
 export const styles = () => ({
     dataStreamFileBlock: {
@@ -26,8 +27,12 @@ export const DataStreamSecuritySelector = ({
     meta: { initial: dataStreams },
     ...props
 }) => {
+    const { formValues } = useFormValuesContext();
+
     const [initialDataStreams] = useState(() => dataStreams.toJS());
-    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => dataStreams.toJS());
+    const [dataStreamSecurity, setDataStreamSecurity] = useState(() =>
+        !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS(),
+    );
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
     const [mostSecureParentDatastreamSecurity] = useState(() =>

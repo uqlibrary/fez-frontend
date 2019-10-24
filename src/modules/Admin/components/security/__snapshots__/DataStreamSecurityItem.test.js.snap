@@ -616,70 +616,43 @@ exports[`DataStreamSecurityItem component should render view for a subsequent fi
       </div>
     </div>
     <div
-      class="MuiGrid-container-1191 MuiGrid-spacing-xs-16-1214 MuiGrid-align-items-xs-flex-end-1201 MuiGrid-align-content-xs-center-1203"
-      style="margin-top: 8px;"
+      class="MuiGrid-container-1191 MuiGrid-spacing-xs-8-1213 MuiGrid-align-items-xs-flex-start-1200 MuiGrid-align-content-xs-flex-start-1204"
+      style="margin-top: 4px;"
     >
       <div
-        class="MuiGrid-item-1192 MuiGrid-grid-xs-true-1219"
+        class="MuiGrid-item-1192 MuiGrid-grid-xs-1-1220"
       >
-        <div
-          class="MuiFormControl-root-1329 MuiFormControl-fullWidth-1332"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-1388 MuiSvgIcon-fontSizeSmall-1395"
+          focusable="false"
+          role="presentation"
+          style="color: rgb(191, 80, 0);"
+          viewBox="0 0 24 24"
         >
-          <label
-            class="MuiFormLabel-root-1344 MuiFormLabel-disabled-1346 MuiInputLabel-disabled-1335 MuiFormLabel-filled-1348 MuiInputLabel-root-1333 MuiInputLabel-formControl-1338 MuiInputLabel-animated-1341 MuiInputLabel-shrink-1340"
-            data-shrink="true"
-            for="embargo-date"
-          >
-            Embargo Date
-          </label>
-          <div
-            class="MuiInputBase-root-1371 MuiInput-root-1358 MuiInput-underline-1362 MuiInputBase-disabled-1374 MuiInput-disabled-1361 MuiInputBase-fullWidth-1380 MuiInput-fullWidth-1365 MuiInputBase-formControl-1372 MuiInput-formControl-1359"
-          >
-            <input
-              aria-invalid="false"
-              class="MuiInputBase-input-1381 MuiInput-input-1366 MuiInputBase-disabled-1374 MuiInput-disabled-1361"
-              disabled=""
-              id="embargo-date"
-              type="text"
-              value="2099-01-01"
-            />
-          </div>
-        </div>
+          <path
+            d="M0 0h24v24H0z"
+            fill="none"
+          />
+          <path
+            d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"
+          />
+        </svg>
       </div>
       <div
-        class="MuiGrid-item-1192 MuiGrid-grid-xs-auto-1218"
+        class="MuiGrid-item-1192 MuiGrid-grid-xs-11-1230"
       >
-        <button
-          class="MuiButtonBase-root-1415 MuiIconButton-root-1409"
-          id="clearEmbargoButton"
-          style="margin-left: -24px; margin-right: -16px; margin-bottom: -16px;"
-          tabindex="0"
-          title="Clear Embargo date and reset Security policy"
-          type="button"
+        <p
+          class="MuiTypography-root-1293 MuiTypography-body2-1301"
+          style="color: rgb(191, 80, 0);"
         >
-          <span
-            class="MuiIconButton-label-1414"
-          >
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root-1388"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-              />
-              <path
-                d="M0 0h24v24H0z"
-                fill="none"
-              />
-            </svg>
+          <span>
+            <b>
+              Embargo date removed
+            </b>
+             - review security policy shown above
           </span>
-          <span
-            class="MuiTouchRipple-root-1418"
-          />
-        </button>
+        </p>
       </div>
     </div>
   </div>

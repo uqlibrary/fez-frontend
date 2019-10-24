@@ -29,19 +29,16 @@ const DataStreamSecurityItem = ({
 }) => {
     const { formValues } = useFormValuesContext();
 
-    const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(false);
+    const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(
+        initialDataStream.dsi_embargo_date !== dataStream.dsi_embargo_date,
+    );
 
     const handleDataStreamChange = value => {
-        onSecurityChange(
-            index,
-            value.dsi_security_policy === initialDataStream.dsi_security_policy
-                ? initialDataStream
-                : {
-                    ...dataStream,
-                    ...value,
-                    dsi_security_inherited: 0,
-                },
-        );
+        onSecurityChange(index, {
+            ...dataStream,
+            ...value,
+            dsi_security_inherited: 0,
+        });
     };
 
     const minimumSecurityPolicyForRecord = () => {
@@ -70,9 +67,8 @@ const DataStreamSecurityItem = ({
     };
 
     const handleEmbargoDateClear = () => {
-        dataStream.dsi_embargo_date = null;
         handleDataStreamChange({
-            dsi_embargo_date: dataStream.dsi_embargo_date,
+            dsi_embargo_date: null,
             dsi_security_inherited: 0,
             dsi_security_policy: minimumSecurityPolicyForRecord(),
         });
@@ -108,7 +104,9 @@ const DataStreamSecurityItem = ({
                         value: dataStream.dsi_security_inherited ? inheritedSecurity : dataStream.dsi_security_policy,
                     }}
                 />
-                {!!dataStream.dsi_embargo_date && moment(dataStream.dsi_embargo_date).isSameOrAfter(moment()) && (
+                {!hasClearedEmbargoDate &&
+                    !!dataStream.dsi_embargo_date &&
+                    moment(dataStream.dsi_embargo_date).isSameOrAfter(moment()) && (
                     <React.Fragment>
                         <Grid
                             container
@@ -143,23 +141,25 @@ const DataStreamSecurityItem = ({
                     </React.Fragment>
                 )}
                 {!!hasClearedEmbargoDate && (
-                    <Grid
-                        container
-                        spacing={8}
-                        alignContent={'flex-start'}
-                        alignItems={'flex-start'}
-                        justify={'flex-start'}
-                        style={{ marginTop: 4 }}
-                    >
-                        <Grid item xs={1}>
-                            <WarningIcon fontSize={'small'} style={{ color: theme.palette.warning.main }} />
+                    <React.Fragment>
+                        <Grid
+                            container
+                            spacing={8}
+                            alignContent={'flex-start'}
+                            alignItems={'flex-start'}
+                            justify={'flex-start'}
+                            style={{ marginTop: 4 }}
+                        >
+                            <Grid item xs={1}>
+                                <WarningIcon fontSize={'small'} style={{ color: theme.palette.warning.main }} />
+                            </Grid>
+                            <Grid item xs={11}>
+                                <Typography style={{ color: theme.palette.warning.main }}>
+                                    {onEmbargoClearPromptText}
+                                </Typography>
+                            </Grid>
                         </Grid>
-                        <Grid item xs={11}>
-                            <Typography style={{ color: theme.palette.warning.main }}>
-                                {onEmbargoClearPromptText}
-                            </Typography>
-                        </Grid>
-                    </Grid>
+                    </React.Fragment>
                 )}
             </Grid>
         </React.Fragment>
