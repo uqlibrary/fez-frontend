@@ -2433,6 +2433,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                 ],
             });
         });
+
+        it('should use default parameter value', () => {
+            expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+            });
+        });
     });
 
     describe('Audio document', () => {
@@ -2442,6 +2448,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                     rek_translated_title: 'Translated test title',
                 },
                 geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2016',
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2455,6 +2467,12 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_geographic_area_order: 1,
                     },
                 ],
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01T10:00:00+10:00',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2016-01-01T10:00:00+10:00',
+                },
             });
         });
     });
