@@ -2534,6 +2534,18 @@ describe('getBibliographicSectionSearchKeys', () => {
 });
 
 describe('getAuthorsSectionSearchKeys', () => {
+    it('should get not get authors section search key', () => {
+        const data = {
+            authors: [],
+            editors: [],
+            supervisors: [],
+            creators: [],
+            architects: [],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({});
+    });
+
     it('should get authors search key', () => {
         const data = {
             authors: [
