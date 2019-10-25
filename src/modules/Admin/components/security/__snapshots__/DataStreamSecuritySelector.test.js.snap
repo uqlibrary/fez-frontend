@@ -12,10 +12,10 @@ exports[`DataStreamSecuritySelector component should change security value for t
                 <div
                   aria-haspopup=\\"true\\"
 -                 aria-pressed=\\"false\\"
-+                 aria-owns=\\"menu-test.txt\\"
++                 aria-owns=\\"menu-test5.txt\\"
 +                 aria-pressed=\\"true\\"
                   class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test.txt\\"
+                  id=\\"select-test5.txt\\"
                   role=\\"button\\"
                   tabindex=\\"0\\"
                 >"
@@ -32,11 +32,11 @@ exports[`DataStreamSecuritySelector component should change security value for t
               >
                 <div
                   aria-haspopup=\\"true\\"
--                 aria-owns=\\"menu-test.txt\\"
+-                 aria-owns=\\"menu-test5.txt\\"
 -                 aria-pressed=\\"true\\"
 +                 aria-pressed=\\"false\\"
                   class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test.txt\\"
+                  id=\\"select-test5.txt\\"
                   role=\\"button\\"
                   tabindex=\\"0\\"
                 >
@@ -46,7 +46,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
                 <input
                   aria-labelledby=\\"Record level policy to apply to this PID-label\\"
                   id=\\"Record level policy to apply to this PID\\"
-                  name=\\"test.txt\\"
+                  name=\\"test5.txt\\"
                   type=\\"hidden\\"
 -                 value=\\"1\\"
 +                 value=\\"5\\"
@@ -83,9 +83,9 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
       >
         <a
           class="MuiTypography-root-3 MuiTypography-colorPrimary-33 MuiTypography-inline-38 MuiLink-root-136 MuiLink-underlineHover-138"
-          title="test.txt"
+          title="test4.txt"
         >
-          test.txt
+          test4.txt
         </a>
         <span
           class="MuiTypography-root-3 MuiTypography-caption-13"
@@ -127,7 +127,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
                 aria-haspopup="true"
                 aria-pressed="false"
                 class="MuiSelect-select-164 MuiSelect-selectMenu-167 MuiInputBase-input-193 MuiInput-input-178"
-                id="select-test.txt"
+                id="select-test4.txt"
                 role="button"
                 tabindex="0"
               >
@@ -136,7 +136,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               <input
                 aria-labelledby="Record level policy to apply to this PID-label"
                 id="Record level policy to apply to this PID"
-                name="test.txt"
+                name="test4.txt"
                 type="hidden"
                 value="1"
               />

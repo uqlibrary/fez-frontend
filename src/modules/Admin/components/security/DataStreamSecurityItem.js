@@ -30,7 +30,7 @@ const DataStreamSecurityItem = ({
     const { formValues } = useFormValuesContext();
 
     const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(
-        initialDataStream.dsi_embargo_date !== dataStream.dsi_embargo_date,
+        initialDataStream.dsi_embargo_date !== dataStream.dsi_embargo_date && dataStream.dsi_embargo_date === null,
     );
 
     const handleDataStreamChange = value => {
@@ -68,7 +68,7 @@ const DataStreamSecurityItem = ({
 
     const handleEmbargoDateClear = () => {
         handleDataStreamChange({
-            dsi_embargo_date: null,
+            dsi_embargo_date: initialDataStream.dsi_embargo_date,
             dsi_security_inherited: 0,
             dsi_security_policy: minimumSecurityPolicyForRecord(),
         });

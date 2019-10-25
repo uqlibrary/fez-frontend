@@ -55,7 +55,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup with s
     }
   }
   minDate={2016-01-01T00:00:00.000Z}
-  value={2016-01-01T00:00:00.000Z}
+  value="2016"
 />
 `;
 

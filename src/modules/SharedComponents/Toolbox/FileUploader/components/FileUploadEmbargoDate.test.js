@@ -15,7 +15,7 @@ function setup(testProps = {}) {
 
 describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup', () => {
-        const wrapper = setup({ value: new Date('2016') });
+        const wrapper = setup({ value: '2016' });
         expect(toJson(wrapper)).toMatchSnapshot();
         wrapper.instance()._onChange();
     });
@@ -33,7 +33,7 @@ describe('Component FileUploadEmbargoDate', () => {
     it('should render with default setup with styles', () => {
         const wrapper = getElement(FileUploadEmbargoDateWithStyles, {
             minDate: new Date('2016'),
-            value: new Date('2016'),
+            value: '2016',
             classes: {
                 input: '',
             },
@@ -42,7 +42,7 @@ describe('Component FileUploadEmbargoDate', () => {
     });
 
     it('should render disabled', () => {
-        const wrapper = setup({ disabled: true, value: new Date('2016') });
+        const wrapper = setup({ disabled: true, value: '2016' });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -58,7 +58,7 @@ describe('Component FileUploadEmbargoDate', () => {
                 fieldName: 'accessDate',
             },
             onChange: onDateChangedTestFn,
-            value: new Date('2016'),
+            value: '2016',
         };
 
         const wrapper = setup(props);
