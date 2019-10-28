@@ -4,6 +4,7 @@ import param from 'can-param';
 import { DEFAULT_QUERY_PARAMS } from 'config/general';
 import { AUTH_URL_LOGIN } from 'config';
 import { createHash } from 'crypto';
+
 export const fullPath = process.env.FULL_PATH || 'https://fez-staging.library.uq.edu.au';
 export const pidRegExp = 'UQ:[a-z0-9]+';
 export const isFileUrl = route => new RegExp('\\/view\\/UQ:[a-z0-9]+\\/.*').test(route);
@@ -27,8 +28,8 @@ const getSearchUrl = ({ searchQuery = { all: '' }, activeFacets = {} }, searchUr
     return `${searchUrl}?${param(params)}`;
 };
 
-const isAdmin = account => {
-    return account && account.canMasquerade;
+const isAdmin = authorDetails => {
+    return authorDetails && (!!authorDetails.is_administrator || !!authorDetails.is_super_administrator);
 };
 
 export const getDatastreamVersionQueryString = (fileName, checksum) => {
@@ -193,6 +194,7 @@ export const roles = {
 export const getRoutesConfig = ({
     components = {},
     account = null,
+    authorDetails = null,
     forceOrcidRegistration = false,
     isHdrStudent = false,
 }) => {
@@ -391,7 +393,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isAdmin(account))
+        ...(isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.community,
@@ -435,6 +437,10 @@ export const getRoutesConfig = ({
                     access: [roles.admin],
                     pageTitle: locale.pages.edit.record.title,
                 },
+            ]
+            : []),
+        ...(account && account.canMasquerade
+            ? [
                 {
                     path: pathConfig.admin.masquerade,
                     component: components.Masquerade,
@@ -444,7 +450,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(account && isAdmin(account)
+        ...(isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.unpublished,
@@ -494,7 +500,7 @@ export const getRoutesConfig = ({
     ];
 };
 
-export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => {
+export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWorks = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -589,7 +595,7 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isAdmin(account))
+        ...(isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.community,
@@ -599,13 +605,17 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                     linkTo: pathConfig.admin.collection,
                     ...locale.menu.collectionForm,
                 },
+            ]
+            : []),
+        ...(account && account.canMasquerade
+            ? [
                 {
                     linkTo: pathConfig.admin.masquerade,
                     ...locale.menu.masquerade,
                 },
             ]
             : []),
-        ...(account && isAdmin(account)
+        ...(isAdmin(authorDetails)
             ? [
                 {
                     // maybe this should be in some admin bit? tbd
@@ -623,17 +633,13 @@ export const getMenuConfig = (account, disabled, hasIncompleteWorks = false) => 
                     linkTo: pathConfig.admin.legacyEspace,
                     ...locale.menu.legacyEspace,
                 },
-            ]
-            : []),
-        ...(account && isAdmin(account)
-            ? [
                 {
                     linkTo: pathConfig.digiteam.batchImport,
                     ...locale.menu.digiteam.batchImport,
                 },
             ]
             : []),
-        ...(account && (account.canMasquerade || isAdmin(account))
+        ...((account && account.canMasquerade) || isAdmin(authorDetails)
             ? [
                 {
                     divider: true,
