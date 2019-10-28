@@ -741,9 +741,9 @@ describe('getRecordContributorsIdSearchKey test', () => {
         ];
         const expected = {
             fez_record_search_key_contributor_id: [
-                { rek_contributor_id: null, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
                 { rek_contributor_id: 100, rek_contributor_id_order: 2 },
-                { rek_contributor_id: null, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
                 { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
             ],
         };
@@ -2176,5 +2176,533 @@ describe('getSecuritySectionSearchKeys', () => {
 
     it('should return empty object', () => {
         expect(transformers.getSecuritySectionSearchKeys()).toEqual({});
+    });
+});
+
+describe('getAdminSectionSearchKeys', () => {
+    it('should get search key for any internal notes entered', () => {
+        const expected = {
+            fez_internal_notes: {
+                ain_detail: '<p>This is test internal note</p>',
+            },
+        };
+
+        expect(
+            transformers.getAdminSectionSearchKeys({
+                internalNotes: {
+                    htmlText: '<p>This is test internal note</p>',
+                    plainText: 'This is test internal note',
+                },
+            }),
+        ).toEqual(expected);
+    });
+
+    it('should get search key for any internal notes entered', () => {
+        expect(transformers.getAdminSectionSearchKeys()).toEqual({});
+    });
+});
+
+describe('getIdentifiersSectionSearchKeys', () => {
+    it('should get search keys for all identifiers', () => {
+        const data = {
+            fez_record_search_key_doi: {
+                rek_doi: '10.1111.252/a23455',
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: '232424',
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: '1111111',
+            },
+            fez_record_search_key_pubmed_id: {
+                rek_pubmed_id: '11231134',
+            },
+            links: [
+                {
+                    rek_value: {
+                        key: 'http://www.test.com',
+                        value: 'test link',
+                    },
+                    rek_order: 1,
+                },
+            ],
+        };
+
+        const expected = {
+            fez_record_search_key_doi: {
+                rek_doi: '10.1111.252/a23455',
+            },
+            fez_record_search_key_isi_loc: {
+                rek_isi_loc: '232424',
+            },
+            fez_record_search_key_scopus_id: {
+                rek_scopus_id: '1111111',
+            },
+            fez_record_search_key_pubmed_id: {
+                rek_pubmed_id: '11231134',
+            },
+            fez_record_search_key_link: [
+                {
+                    rek_link: 'http://www.test.com',
+                    rek_link_order: 1,
+                },
+            ],
+            fez_record_search_key_link_description: [
+                {
+                    rek_link_description: 'test link',
+                    rek_link_description_order: 1,
+                },
+            ],
+        };
+
+        expect(transformers.getIdentifiersSectionSearchKeys(data)).toEqual(expected);
+    });
+
+    it('should not return search keys for identifiers if fields are empty', () => {
+        expect(
+            transformers.getIdentifiersSectionSearchKeys({
+                fez_record_search_key_doi: {},
+                fez_record_search_key_isi_loc: {},
+                fez_record_search_key_scopus_id: {},
+                fez_record_search_key_pubmed_id: {},
+                links: [],
+            }),
+        ).toEqual({});
+    });
+
+    it('should use default data parameter', () => {
+        expect(transformers.getIdentifiersSectionSearchKeys()).toEqual({});
+    });
+});
+
+/**
+ * List of all bibliographic section search keys
+ *  - bibliographicSection.rek_title'
+ *  - bibliographicSection.rek_description'
+ *  - bibliographicSection.rek_date'
+ *  - bibliographicSection.languages'
+ *  - bibliographicSection.fez_record_search_key_journal_name.rek_journal_name'
+ *  - bibliographicSection.fez_record_search_key_book_title.rek_book_title'
+ *  - bibliographicSection.fez_record_search_key_conference_name.rek_conference_name'
+ *  - bibliographicSection.fez_record_search_key_proceedings_title.rek_proceedings_title'
+ *  - bibliographicSection.fez_record_search_key_native_script_book_title.rek_native_script_book_title'
+ *  - bibliographicSection.fez_record_search_key_roman_script_book_title.rek_roman_script_book_title'
+ *  - bibliographicSection.fez_record_search_key_translated_book_title.rek_translated_book_title'
+ *  - bibliographicSection.fez_record_search_key_native_script_conference_name.rek_native_script_conference_name'
+ *  - bibliographicSection.fez_record_search_key_roman_script_conference_name.rek_roman_script_conference_name'
+ *  - bibliographicSection.fez_record_search_key_translated_conference_name.rek_translated_conference_name'
+ *  - bibliographicSection.fez_record_search_key_native_script_proceedings_title.rek_native_script_proceedings_title'
+ *  - bibliographicSection.fez_record_search_key_roman_script_proceedings_title.rek_roman_script_proceedings_title'
+ *  - bibliographicSection.fez_record_search_key_translated_proceedings_title.rek_translated_proceedings_title'
+ *  - bibliographicSection.fez_record_search_key_place_of_publication.rek_place_of_publication'
+ *  - bibliographicSection.fez_record_search_key_publisher.rek_publisher'
+ *  - bibliographicSection.fez_record_search_key_volume_number.rek_volume_number'
+ *  - bibliographicSection.fez_record_search_key_issue_number.rek_issue_number'
+ *  - bibliographicSection.fez_record_search_key_article_number.rek_article_number'
+ *  - bibliographicSection.fez_record_search_key_patent_number.rek_patent_number'
+ *  - bibliographicSection.fez_record_search_key_start_page.rek_start_page'
+ *  - bibliographicSection.fez_record_search_key_end_page.rek_end_page'
+ *  - bibliographicSection.fez_record_search_key_oa_embargo_days.rek_oa_embargo_days'
+ *  - bibliographicSection.fez_record_search_key_keywords'
+ *  - bibliographicSection.fez_record_search_key_issn'
+ *  - bibliographicSection.fez_record_search_key_isbn'
+ *  - bibliographicSection.fez_record_search_key_edition.rek_edition'
+ *  - bibliographicSection.fez_record_search_key_series.rek_series'
+ *  - bibliographicSection.fez_record_search_key_chapter_number.rek_chapter_number'
+ *  - bibliographicSection.fez_record_search_key_total_pages.rek_total_pages'
+ *  - bibliographicSection.subjects'
+ *  - bibliographicSection.fez_record_search_key_refereed_source.rek_refereed_source'
+ *  - bibliographicSection.languageOfJournalName'
+ *  - bibliographicSection.languageOfBookTitle'
+ *  - bibliographicSection.languageOfConferenceName'
+ *  - bibliographicSection.languageOfProceedingsTitle'
+ *  - bibliographicSection.fez_record_search_key_conference_location.rek_conference_location'
+ *  - bibliographicSection.fez_record_search_key_conference_dates.rek_conference_dates'
+ *  - bibliographicSection.fez_record_search_key_native_script_journal_name.rek_native_script_journal_name'
+ *  - bibliographicSection.fez_record_search_key_roman_script_journal_name.rek_roman_script_journal_name'
+ *  - bibliographicSection.fez_record_search_key_translated_journal_name.rek_translated_journal_name'
+ *  - bibliographicSection.languageOfTitle'
+ *  - bibliographicSection.fez_record_search_key_native_script_title.rek_native_script_title'
+ *  - bibliographicSection.fez_record_search_key_roman_script_title.rek_roman_script_title'
+ *  - bibliographicSection.fez_record_search_key_translated_title.rek_translated_title'
+ *  - bibliographicSection.fez_record_search_key_transcript'
+ *  - bibliographicSection.fez_record_search_key_date_available.rek_date_available'
+ *  - bibliographicSection.fez_record_search_key_date_recorded.rek_date_recorded'
+ *  - bibliographicSection.fez_record_search_key_isderivationof'
+ *  - bibliographicSection.fez_record_search_key_source.rek_source'
+ *  - bibliographicSection.fez_record_search_key_rights.rek_rights'
+ *  - bibliographicSection.fez_record_search_key_acknowledgements.rek_acknowledgements'
+ *  - bibliographicSection.fez_record_search_key_length.rek_length'
+ *  - bibliographicSection.fez_record_search_key_license.rek_license'
+ *  - bibliographicSection.fez_record_search_key_original_format.rek_original_format'
+ *  - bibliographicSection.fez_record_search_key_alternate_genre'
+ *  - bibliographicSection.rek_genre'
+ *  - bibliographicSection.rek_genre_type'
+ *  - bibliographicSection.geoCoordinates'
+ *  - bibliographicSection.fez_record_search_key_type_of_data'
+ *  - bibliographicSection.fez_record_search_key_data_volume.rek_data_volume'
+ *  - bibliographicSection.fez_record_search_key_software_required'
+ *  - bibliographicSection.fez_record_search_key_related_datasets'
+ *  - bibliographicSection.fez_record_search_key_related_publications'
+ *  - bibliographicSection.fez_record_search_key_isdatasetof'
+ *  - bibliographicSection.fez_record_search_key_project_start_date.rek_project_start_date'
+ *  - bibliographicSection.fez_record_search_key_org_name.rek_org_name'
+ *  - bibliographicSection.fez_record_search_key_org_unit_name.rek_org_unit_name'
+ *  - bibliographicSection.fez_record_search_key_report_number.rek_report_number'
+ *  - bibliographicSection.fez_record_search_key_parent_publication.rek_parent_publication'
+ *  - bibliographicSection.fez_record_search_key_newspaper.rek_newspaper'
+ *  - bibliographicSection.fez_record_search_key_section.rek_section'
+ *  - bibliographicSection.fez_record_search_key_translated_newspaper.rek_translated_newspaper'
+ *  - bibliographicSection.fez_record_search_key_scale.rek_scale'
+ *  - bibliographicSection.fez_record_search_key_job_number.rek_job_number'
+ *  - bibliographicSection.fez_record_search_key_period'
+ *  - bibliographicSection.fez_record_search_key_structural_systems'
+ *  - bibliographicSection.fez_record_search_key_style'
+ *  - bibliographicSection.fez_record_search_key_subcategory'
+ *  - bibliographicSection.fez_record_search_key_surrounding_features'
+ *  - bibliographicSection.fez_record_search_key_interior_features'
+ *  - bibliographicSection.fez_record_search_key_date_photo_taken.rek_date_photo_taken'
+ *  - bibliographicSection.fez_record_search_key_date_scanned.rek_date_scanned'
+ *  - bibliographicSection.fez_record_search_key_building_materials'
+ *  - bibliographicSection.fez_record_search_key_category'
+ *  - bibliographicSection.fez_record_search_key_condition'
+ *  - bibliographicSection.fez_record_search_key_construction_date.rek_construction_date'
+ *  - bibliographicSection.fez_record_search_key_alternative_title'
+ *  - bibliographicSection.fez_record_search_key_architectural_features'
+ *  - bibliographicSection.fez_record_search_key_project_name.rek_project_name'
+ */
+describe('getBibliographicSectionSearchKeys', () => {
+    describe('Common bibliographic section search keys', () => {
+        it('should get common search keys', () => {
+            const data = {
+                rek_title: {
+                    htmlText: '<p>test</p>',
+                    plainText: 'test',
+                },
+                rek_description: {
+                    htmlText: '<p>test description</p>',
+                    plainText: 'test description',
+                },
+                rek_date: '2019-01-01T00:00:00',
+                languages: ['eng'],
+                subjects: [
+                    {
+                        rek_value: {
+                            key: 111111,
+                            value: 'Test subject',
+                        },
+                        rek_order: 1,
+                    },
+                ],
+                fez_record_search_key_keywords: [
+                    {
+                        rek_keywords: 'test',
+                        rek_keywords_order: 1,
+                    },
+                    {
+                        rek_keywords: 'testing',
+                        rek_keywords_order: 2,
+                    },
+                ],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_title: '<p>test</p>',
+                rek_description: '<p>test description</p>',
+                rek_date: '2019-01-01T00:00:00+10:00',
+                fez_record_search_key_language: [
+                    {
+                        rek_language: 'eng',
+                    },
+                ],
+                fez_record_search_key_subject: [
+                    {
+                        rek_subject: 111111,
+                        rek_subject_order: 1,
+                    },
+                ],
+                fez_record_search_key_keywords: [
+                    {
+                        rek_keywords: 'test',
+                        rek_keywords_order: 1,
+                    },
+                    {
+                        rek_keywords: 'testing',
+                        rek_keywords_order: 2,
+                    },
+                ],
+            });
+        });
+
+        it('should use default parameter value', () => {
+            expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+            });
+        });
+    });
+
+    describe('Audio document', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                geoCoordinates: '153.024504,-27.493017',
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2016',
+                },
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+                fez_record_search_key_translated_title: {
+                    rek_translated_title: 'Translated test title',
+                },
+                fez_record_search_key_geographic_area: [
+                    {
+                        rek_geographic_area: '153.024504,-27.493017',
+                        rek_geographic_area_order: 1,
+                    },
+                ],
+                fez_record_search_key_date_available: {
+                    rek_date_available: '2015-01-01T10:00:00+10:00',
+                },
+                fez_record_search_key_date_recorded: {
+                    rek_date_recorded: '2016-01-01T10:00:00+10:00',
+                },
+            });
+        });
+    });
+
+    describe('Book chapter/Book', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                languageOfTitle: ['eng', 'pol'],
+                languageOfBookTitle: ['eng', 'fre'],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+                fez_record_search_key_language_of_title: [
+                    {
+                        rek_language_of_title: 'eng',
+                    },
+                    {
+                        rek_language_of_title: 'pol',
+                    },
+                ],
+                fez_record_search_key_language_of_book_title: [
+                    {
+                        rek_language_of_book_title: 'eng',
+                    },
+                    {
+                        rek_language_of_book_title: 'fre',
+                    },
+                ],
+            });
+        });
+    });
+
+    describe('Conference paper', () => {
+        it('should get all bibliographic section search keys', () => {
+            const data = {
+                languageOfProceedingsTitle: ['eng', 'pol'],
+                languageOfJournalName: ['fre'],
+            };
+
+            expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
+                rek_date: '2016-01-01T10:00:00+10:00',
+                fez_record_search_key_language_of_proceedings_title: [
+                    {
+                        rek_language_of_proceedings_title: 'eng',
+                    },
+                    {
+                        rek_language_of_proceedings_title: 'pol',
+                    },
+                ],
+                fez_record_search_key_language_of_journal_name: [
+                    {
+                        rek_language_of_journal_name: 'fre',
+                    },
+                ],
+            });
+        });
+    });
+});
+
+describe('getAuthorsSectionSearchKeys', () => {
+    it('should get not get authors section search key', () => {
+        const data = {
+            authors: [],
+            editors: [],
+            supervisors: [],
+            creators: [],
+            architects: [],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({});
+    });
+
+    it('should get authors search key', () => {
+        const data = {
+            authors: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_author: [
+                { rek_author: 'Smith A.', rek_author_order: 1 },
+                { rek_author: 'Smith B.', rek_author_order: 2 },
+                { rek_author: 'Smith C.', rek_author_order: 3 },
+                { rek_author: 'Smith D.', rek_author_order: 4 },
+            ],
+            fez_record_search_key_author_id: [
+                { rek_author_id: 0, rek_author_id_order: 1 },
+                { rek_author_id: 100, rek_author_id_order: 2 },
+                { rek_author_id: 0, rek_author_id_order: 3 },
+                { rek_author_id: 1001, rek_author_id_order: 4 },
+            ],
+            fez_record_search_key_author_affiliation_name: [
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 1,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 2,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 3,
+                },
+                {
+                    rek_author_affiliation_name: 'Missing',
+                    rek_author_affiliation_name_order: 4,
+                },
+            ],
+            fez_record_search_key_author_affiliation_type: [
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 1,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 2,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 3,
+                },
+                {
+                    rek_author_affiliation_type: 0,
+                    rek_author_affiliation_type_order: 4,
+                },
+            ],
+        });
+    });
+
+    it('should get contributors search key', () => {
+        const data = {
+            editors: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_contributor: [
+                { rek_contributor: 'Smith A.', rek_contributor_order: 1 },
+                { rek_contributor: 'Smith B.', rek_contributor_order: 2 },
+                { rek_contributor: 'Smith C.', rek_contributor_order: 3 },
+                { rek_contributor: 'Smith D.', rek_contributor_order: 4 },
+            ],
+            fez_record_search_key_contributor_id: [
+                { rek_contributor_id: 0, rek_contributor_id_order: 1 },
+                { rek_contributor_id: 100, rek_contributor_id_order: 2 },
+                { rek_contributor_id: 0, rek_contributor_id_order: 3 },
+                { rek_contributor_id: 1001, rek_contributor_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get creators search key', () => {
+        const data = {
+            creators: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_creator: [
+                { rek_creator: 'Smith A.', rek_creator_order: 1 },
+                { rek_creator: 'Smith B.', rek_creator_order: 2 },
+                { rek_creator: 'Smith C.', rek_creator_order: 3 },
+                { rek_creator: 'Smith D.', rek_creator_order: 4 },
+            ],
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: 0, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: 0, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get architects search key', () => {
+        const data = {
+            architects: [
+                { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+                { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+                { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_architect: [
+                { rek_architect: 'Smith A.', rek_architect_order: 1 },
+                { rek_architect: 'Smith B.', rek_architect_order: 2 },
+                { rek_architect: 'Smith C.', rek_architect_order: 3 },
+                { rek_architect: 'Smith D.', rek_architect_order: 4 },
+            ],
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: 0, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: 0, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        });
+    });
+
+    it('should get supervisors search key', () => {
+        const data = {
+            supervisors: [
+                { nameAsPublished: 'Smith A.' },
+                { nameAsPublished: 'Smith B.' },
+                { nameAsPublished: 'Smith C.' },
+                { nameAsPublished: 'Smith D.' },
+            ],
+        };
+
+        expect(transformers.getAuthorsSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_supervisor: [
+                { rek_supervisor: 'Smith A.', rek_supervisor_order: 1 },
+                { rek_supervisor: 'Smith B.', rek_supervisor_order: 2 },
+                { rek_supervisor: 'Smith C.', rek_supervisor_order: 3 },
+                { rek_supervisor: 'Smith D.', rek_supervisor_order: 4 },
+            ],
+        });
     });
 });

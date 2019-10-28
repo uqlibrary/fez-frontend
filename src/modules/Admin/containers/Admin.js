@@ -18,6 +18,7 @@ import {
 } from 'config/general';
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
+import { detailedDiff } from 'deep-object-diff';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
@@ -101,7 +102,9 @@ const getInitialFormValues = (recordToView, recordType) => {
     };
 };
 
-const onSubmit = (values, dispatch) => {
+const onSubmit = (values, dispatch, { initialValues }) => {
+    console.log(detailedDiff(initialValues.toJS(), values.toJS()));
+
     return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
     });

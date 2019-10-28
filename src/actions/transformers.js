@@ -344,7 +344,7 @@ export const getRecordContributorsIdSearchKey = (authors, defaultAuthorId) => {
                     rek_contributor_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_contributor_id_order: index + 1,
                 },
         ),
@@ -378,7 +378,7 @@ export const getRecordCreatorsIdSearchKey = creators => {
                     rek_creator_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_creator_id_order: index + 1,
                 },
         ),
@@ -412,7 +412,7 @@ export const getRecordArchitectsIdSearchKey = architects => {
                     rek_architect_id:
                           (item.hasOwnProperty('aut_id') && item.aut_id) ||
                           (item.hasOwnProperty('authorId') && item.authorId) ||
-                          null,
+                          0,
                     rek_architect_id_order: index + 1,
                 },
         ),
@@ -741,6 +741,9 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         rek_title: title,
         rek_description: description,
         languageOfTitle,
+        languageOfBookTitle,
+        languageOfProceedingsTitle,
+        languageOfJournalName,
         languages,
         subjects,
         geoCoordinates,
@@ -758,6 +761,27 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_language_of_title: languageOfTitle.map(lang => ({
                     rek_language_of_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfBookTitle
+            ? {
+                fez_record_search_key_language_of_book_title: languageOfBookTitle.map(lang => ({
+                    rek_language_of_book_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfProceedingsTitle
+            ? {
+                fez_record_search_key_language_of_proceedings_title: languageOfProceedingsTitle.map(lang => ({
+                    rek_language_of_proceedings_title: lang,
+                })),
+            }
+            : {}),
+        ...(!!languageOfJournalName
+            ? {
+                fez_record_search_key_language_of_journal_name: languageOfJournalName.map(lang => ({
+                    rek_language_of_journal_name: lang,
                 })),
             }
             : {}),
