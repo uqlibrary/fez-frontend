@@ -468,7 +468,6 @@ export const getDatasetContactDetailSearchKeys = contact => {
         fez_record_search_key_contributor: [
             {
                 rek_contributor: contact.contactName,
-                rek_contributor_id: null,
                 rek_contributor_order: 1,
             },
         ],
@@ -845,7 +844,7 @@ export const getNtroSectionSearchKeys = ntroSection => {
 };
 
 export const getGrantInformationSectionSearchKeys = grantsSection => ({
-    ...getGrantsListSearchKey((grantsSection && grantsSection.grants && grantsSection.grants) || []),
+    ...getGrantsListSearchKey((grantsSection && grantsSection.grants) || []),
 });
 
 export const getAuthorsSearchKeys = authors => ({
@@ -885,8 +884,9 @@ export const getRecordIsMemberOfSearchKey = collections => {
     if ((collections || []).length === 0) return {};
 
     return {
-        fez_record_search_key_ismemberof: collections.map(collection => ({
+        fez_record_search_key_ismemberof: collections.map((collection, index) => ({
             rek_ismemberof: collection.id,
+            rek_ismemberof_order: index + 1,
         })),
     };
 };
