@@ -2814,3 +2814,91 @@ describe('getFilesSectionSearchKeys', () => {
         });
     });
 });
+
+describe('getRecordCreatorsIdSearchKey test', () => {
+    it('should return empty creators request object', () => {
+        expect(transformers.getRecordCreatorsIdSearchKey()).toEqual({});
+    });
+
+    it('should construct creators id object from component data', () => {
+        const input = [
+            { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+            { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+        ];
+        const expected = {
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: 0, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: 0, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordCreatorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should not modify creators object for original data', () => {
+        const input = [
+            { rek_creator_id: null, rek_creator_id_order: 1 },
+            { rek_creator_id: 100, rek_creator_id_order: 2 },
+            { rek_creator_id: null, rek_creator_id_order: 3 },
+            { rek_creator_id: 1001, rek_creator_id_order: 4 },
+        ];
+        const expected = {
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: null, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: null, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordCreatorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordArchitectsIdSearchKey test', () => {
+    it('should return empty architects request object', () => {
+        expect(transformers.getRecordArchitectsIdSearchKey()).toEqual({});
+    });
+
+    it('should construct architects id object from component data', () => {
+        const input = [
+            { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+            { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+        ];
+        const expected = {
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: 0, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: 0, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordArchitectsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should not modify architects object for original data', () => {
+        const input = [
+            { rek_architect_id: null, rek_architect_id_order: 1 },
+            { rek_architect_id: 100, rek_architect_id_order: 2 },
+            { rek_architect_id: null, rek_architect_id_order: 3 },
+            { rek_architect_id: 1001, rek_architect_id_order: 4 },
+        ];
+        const expected = {
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: null, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: null, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordArchitectsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
