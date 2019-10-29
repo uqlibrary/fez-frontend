@@ -890,7 +890,6 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
             fez_record_search_key_contributor: [
                 {
                     rek_contributor: 'Test Contact',
-                    rek_contributor_id: null,
                     rek_contributor_order: 1,
                 },
             ],
@@ -924,7 +923,6 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
             fez_record_search_key_contributor: [
                 {
                     rek_contributor: 'Test Contact',
-                    rek_contributor_id: null,
                     rek_contributor_order: 1,
                 },
             ],
@@ -958,7 +956,6 @@ describe('getDatasetContactDetailSearchKeys tests', () => {
             fez_record_search_key_contributor: [
                 {
                     rek_contributor: 'Test Contact',
-                    rek_contributor_id: null,
                     rek_contributor_order: 1,
                 },
             ],
@@ -2702,6 +2699,327 @@ describe('getAuthorsSectionSearchKeys', () => {
                 { rek_supervisor: 'Smith B.', rek_supervisor_order: 2 },
                 { rek_supervisor: 'Smith C.', rek_supervisor_order: 3 },
                 { rek_supervisor: 'Smith D.', rek_supervisor_order: 4 },
+            ],
+        });
+    });
+});
+
+describe('getAdditionalInformationSectionSearchKeys', () => {
+    it('should transform all search keys for additional information section', () => {
+        const data = {
+            collections: [
+                {
+                    id: 12344,
+                },
+                {
+                    id: 22343,
+                },
+            ],
+            additionalNotes: {
+                htmlText: '<p>Test additional notes</p>',
+                plainText: 'Test additional notes',
+            },
+            contentIndicators: [123, 234],
+            contactName: 'Test',
+            contactEmail: 'test@email.com',
+            contactNameId: { id: 1234 },
+        };
+
+        expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_ismemberof: [
+                {
+                    rek_ismemberof: 12344,
+                    rek_ismemberof_order: 1,
+                },
+                {
+                    rek_ismemberof: 22343,
+                    rek_ismemberof_order: 2,
+                },
+            ],
+            fez_record_search_key_notes: {
+                rek_notes: '<p>Test additional notes</p>',
+            },
+            fez_record_search_key_content_indicator: [
+                {
+                    rek_content_indicator: 123,
+                    rek_content_indicator_order: 1,
+                },
+                {
+                    rek_content_indicator: 234,
+                    rek_content_indicator_order: 2,
+                },
+            ],
+            fez_record_search_key_contributor: [
+                {
+                    rek_contributor: 'Test',
+                    rek_contributor_order: 1,
+                },
+            ],
+            fez_record_search_key_contributor_id: [
+                {
+                    rek_contributor_id: 1234,
+                    rek_contributor_id_order: 1,
+                },
+            ],
+            fez_record_search_key_contact_details_email: [
+                {
+                    rek_contact_details_email: 'test@email.com',
+                    rek_contact_details_email_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getFilesSectionSearchKeys', () => {
+    it('should get files section search keys', () => {
+        const data = {
+            files: {
+                queue: [
+                    {
+                        name: 'test.txt',
+                        date: '2019-01-01',
+                        access_condition_id: 9,
+                    },
+                ],
+            },
+            advisoryStatement: {
+                htmlText: '<p>Test advisory statement</p>',
+                plainText: 'Test advisory statment',
+            },
+        };
+
+        expect(transformers.getFilesSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_advisory_statement: {
+                rek_advisory_statement: '<p>Test advisory statement</p>',
+            },
+            fez_record_search_key_file_attachment_name: [
+                {
+                    rek_file_attachment_name: 'test.txt',
+                    rek_file_attachment_name_order: 1,
+                },
+            ],
+            fez_record_search_key_file_attachment_embargo_date: [
+                {
+                    rek_file_attachment_embargo_date: '2019-01-01',
+                    rek_file_attachment_embargo_date_order: 1,
+                },
+            ],
+            fez_record_search_key_file_attachment_access_condition: [
+                {
+                    rek_file_attachment_access_condition: 8,
+                    rek_file_attachment_access_condition_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getRecordCreatorsIdSearchKey test', () => {
+    it('should return empty creators request object', () => {
+        expect(transformers.getRecordCreatorsIdSearchKey()).toEqual({});
+    });
+
+    it('should construct creators id object from component data', () => {
+        const input = [
+            { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+            { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+        ];
+        const expected = {
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: 0, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: 0, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordCreatorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should not modify creators object for original data', () => {
+        const input = [
+            { rek_creator_id: null, rek_creator_id_order: 1 },
+            { rek_creator_id: 100, rek_creator_id_order: 2 },
+            { rek_creator_id: null, rek_creator_id_order: 3 },
+            { rek_creator_id: 1001, rek_creator_id_order: 4 },
+        ];
+        const expected = {
+            fez_record_search_key_creator_id: [
+                { rek_creator_id: null, rek_creator_id_order: 1 },
+                { rek_creator_id: 100, rek_creator_id_order: 2 },
+                { rek_creator_id: null, rek_creator_id_order: 3 },
+                { rek_creator_id: 1001, rek_creator_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordCreatorsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getRecordArchitectsIdSearchKey test', () => {
+    it('should return empty architects request object', () => {
+        expect(transformers.getRecordArchitectsIdSearchKey()).toEqual({});
+    });
+
+    it('should construct architects id object from component data', () => {
+        const input = [
+            { nameAsPublished: 'Smith A.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith B.', disabled: false, selected: true, authorId: 100 },
+            { nameAsPublished: 'Smith C.', disabled: false, selected: false, authorId: null },
+            { nameAsPublished: 'Smith D.', disabled: false, selected: false, aut_id: 1001 },
+        ];
+        const expected = {
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: 0, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: 0, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordArchitectsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+
+    it('should not modify architects object for original data', () => {
+        const input = [
+            { rek_architect_id: null, rek_architect_id_order: 1 },
+            { rek_architect_id: 100, rek_architect_id_order: 2 },
+            { rek_architect_id: null, rek_architect_id_order: 3 },
+            { rek_architect_id: 1001, rek_architect_id_order: 4 },
+        ];
+        const expected = {
+            fez_record_search_key_architect_id: [
+                { rek_architect_id: null, rek_architect_id_order: 1 },
+                { rek_architect_id: 100, rek_architect_id_order: 2 },
+                { rek_architect_id: null, rek_architect_id_order: 3 },
+                { rek_architect_id: 1001, rek_architect_id_order: 4 },
+            ],
+        };
+        const result = transformers.getRecordArchitectsIdSearchKey(input);
+        expect(result).toEqual(expected);
+    });
+});
+
+describe('getNtroSectionSearchKeys', () => {
+    it('should get all search keys for NTRO section', () => {
+        const data = {
+            qualityIndicators: [123, 234],
+            significanceAndContributionStatement: [
+                {
+                    rek_value: {
+                        key: 12121,
+                        value: {
+                            htmlText: '<p>Test</p>',
+                            plainText: 'Test',
+                        },
+                    },
+                    rek_order: 1,
+                },
+            ],
+        };
+
+        expect(transformers.getNtroSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 123,
+                    rek_quality_indicator_order: 1,
+                },
+                {
+                    rek_quality_indicator: 234,
+                    rek_quality_indicator_order: 2,
+                },
+            ],
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 12121,
+                    rek_significance_order: 1,
+                },
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: '<p>Test</p>',
+                    rek_creator_contribution_statement_order: 1,
+                },
+            ],
+        });
+    });
+
+    it('should use plain text', () => {
+        const data = {
+            qualityIndicators: [123, 234],
+            significanceAndContributionStatement: [
+                {
+                    rek_value: {
+                        key: 12121,
+                        value: {
+                            plainText: 'Test',
+                        },
+                    },
+                    rek_order: 1,
+                },
+            ],
+        };
+
+        expect(transformers.getNtroSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 123,
+                    rek_quality_indicator_order: 1,
+                },
+                {
+                    rek_quality_indicator: 234,
+                    rek_quality_indicator_order: 2,
+                },
+            ],
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 12121,
+                    rek_significance_order: 1,
+                },
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: 'Test',
+                    rek_creator_contribution_statement_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getGrantInformationSectionSearchKeys', () => {
+    it('should get grant information search keys', () => {
+        expect(
+            transformers.getGrantInformationSectionSearchKeys({
+                grants: [
+                    {
+                        grantAgencyName: 'Test',
+                        grantAgencyType: 123,
+                        grantId: '1234',
+                    },
+                ],
+            }),
+        ).toEqual({
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'Test',
+                    rek_grant_agency_order: 1,
+                },
+            ],
+            fez_record_search_key_grant_id: [
+                {
+                    rek_grant_id: '1234',
+                    rek_grant_id_order: 1,
+                },
+            ],
+            fez_record_search_key_grant_agency_type: [
+                {
+                    rek_grant_agency_type: 123,
+                    rek_grant_agency_type_order: 1,
+                },
             ],
         });
     });
