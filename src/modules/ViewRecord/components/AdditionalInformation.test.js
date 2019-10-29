@@ -1,6 +1,7 @@
 import * as records from 'mock/data/testing/records';
 import { AdditionalInformationClass } from './AdditionalInformation';
 import AdditionalInformation from './AdditionalInformation';
+import { journalArticle } from '../../../mock/data/testing/records';
 
 function setup(testProps = {}, args = { context: { userCountry: 'AU' } }) {
     const props = {
@@ -26,7 +27,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with journal article', () => {
-        const wrapper = setup({});
+        const wrapper = setup({ publication: records.journalArticle });
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         // expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
