@@ -41,6 +41,10 @@ export default class AddDataCollection extends Component {
         isSessionValid: PropTypes.bool,
     };
 
+    static contextTypes = {
+        userCountry: PropTypes.any,
+    };
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.confirmationBox.showConfirmation();
@@ -440,6 +444,7 @@ export default class AddDataCollection extends Component {
                                 </Typography>
                                 <Field
                                     component={GeoCoordinatesField}
+                                    country={this.context.userCountry}
                                     disabled={this.props.submitting}
                                     name="geographicArea"
                                 />

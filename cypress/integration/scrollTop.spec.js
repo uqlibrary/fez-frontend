@@ -2,7 +2,6 @@
 // import internalTitleSearchList from '../../src/mock/data/records/internalTitleSearchList.js';
 
 context('Scroll to top module', () => {
-
     beforeEach(() => {
         cy.visit('/');
         cy.closeUnsupported();

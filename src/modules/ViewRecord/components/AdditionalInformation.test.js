@@ -2,9 +2,8 @@ import * as records from 'mock/data/testing/records';
 import { AdditionalInformationClass } from './AdditionalInformation';
 import AdditionalInformation from './AdditionalInformation';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, args = { context: { userCountry: 'AU' } }) {
     const props = {
-        ...testProps,
         classes: {
             header: 'header',
             data: 'data',
@@ -12,11 +11,12 @@ function setup(testProps = {}) {
             list: 'list',
         },
         publication: {
-            ...(testProps.publication || records.journalArticle),
+            ...(testProps.publication || records.journalArticle || {}),
             rek_formatted_abstract: 'This is a&nbsp;test',
         },
+        ...testProps,
     };
-    return getElement(AdditionalInformationClass, props);
+    return getElement(AdditionalInformationClass, props, args);
 }
 
 describe('Additional Information Component ', () => {
@@ -26,7 +26,7 @@ describe('Additional Information Component ', () => {
     });
 
     it('should render component with journal article', () => {
-        const wrapper = setup();
+        const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();
         // expect(wrapper.find('.sherpaRomeoGreen').length).toEqual(1);
         // expect(wrapper.find('.eraYearListed').text()).toEqual(' (ERA 2010 Journal(s) Listed)');
@@ -590,50 +590,59 @@ describe('Additional Information Component ', () => {
     });
 
     it('renderLicense()', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper.instance().renderLicense(1, null))).toMatchSnapshot();
+        const publication = {
+            rek_date: '1000-01-01T00:00:00Z',
+            rek_display_type_lookup: 'Journal Article',
+        };
+        const wrapper = setup({ publication });
+        expect(wrapper.instance().renderLicense(1, null)).toMatchSnapshot();
     });
 
-    it('getAbstract()', () => {
+    it('getAbstract() 1', () => {
         const wrapper = setup({
             publication: { ...records.journalArticle, rek_formatted_abstract: null },
             isNtro: true,
         });
         expect(
-            toJson(wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null })),
+            wrapper.instance().getAbstract({ ...records.journalArticle, rek_formatted_abstract: null }),
         ).toMatchSnapshot();
     });
-    it('getAbstract()', () => {
+    it('getAbstract() 2', () => {
         const wrapper = setup({
             publication: { ...records.journalArticle, rek_formatted_abstract: null },
             isNtro: false,
         });
         expect(
-            toJson(
-                wrapper
-                    .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null }),
-            ),
+            wrapper
+                .instance()
+                .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: null }),
         ).toMatchSnapshot();
     });
 
-    it('getAbstract()', () => {
+    it('getAbstract() 3', () => {
         const wrapper = setup({
             publication: { ...records.journalArticle, rek_formatted_abstract: null },
             isNtro: false,
         });
         expect(
-            toJson(
-                wrapper
-                    .instance()
-                    .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' }),
-            ),
+            wrapper
+                .instance()
+                .getAbstract({ ...records.journalArticle, rek_formatted_abstract: null, rek_description: 'Test' }),
         ).toMatchSnapshot();
     });
 
-    it('renderMap()', () => {
-        const wrapper = setup();
-        expect(toJson(wrapper.instance().renderMap([]))).toMatchSnapshot();
+    it('renderMap() for China', () => {
+        const context = { userCountry: 'CN' };
+        const wrapper = setup({}, { isShallow: true, requiresStore: false, context });
+        expect(wrapper.instance().renderMap([])).toMatchSnapshot();
+        expect(wrapper.instance().renderMap([{ rek_geographic_area: 'test' }])).toMatchSnapshot();
+    });
+
+    it('renderMap() for Australia', () => {
+        const context = { userCountry: 'AU' };
+        const wrapper = setup({}, { isShallow: true, requiresStore: false, context });
+        expect(wrapper.instance().renderMap([])).toMatchSnapshot();
+        expect(wrapper.instance().renderMap([{ rek_geographic_area: 'test' }])).toMatchSnapshot();
     });
 
     it('Full mount render', () => {

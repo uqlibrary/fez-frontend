@@ -15,7 +15,7 @@ import ReactHtmlParser from 'react-html-parser';
 import PublicationMap from './PublicationMap';
 import JournalName from './partials/JournalName';
 import { Link } from 'react-router-dom';
-import { GOOGLE_MAPS_API_URL } from 'config/general';
+import { GOOGLE_MAPS_API_URL, GOOGLE_MAPS_API_CHINA_URL } from 'config/general';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
@@ -37,6 +37,9 @@ export class AdditionalInformationClass extends PureComponent {
         publication: PropTypes.object.isRequired,
         classes: PropTypes.object,
         isNtro: PropTypes.bool,
+    };
+    static contextTypes = {
+        userCountry: PropTypes.any,
     };
 
     renderRow = (heading, data, index) => {
@@ -240,9 +243,10 @@ export class AdditionalInformationClass extends PureComponent {
         if (coordinatesList.length === 0 || !coordinatesList[0].rek_geographic_area) {
             return <span />;
         }
+        const mapApiUrl = this.context.userCountry === 'CN' ? GOOGLE_MAPS_API_CHINA_URL : GOOGLE_MAPS_API_URL;
         return (
             <PublicationMap
-                googleMapURL={GOOGLE_MAPS_API_URL}
+                googleMapURL={mapApiUrl}
                 loadingElement={<div className="googleMap loading" />}
                 containerElement={<div style={{ height: '400px' }} />}
                 mapElement={<div style={{ height: '100%' }} />}
@@ -360,6 +364,7 @@ export class AdditionalInformationClass extends PureComponent {
         if (!this.props.publication || !this.props.publication.rek_display_type_lookup) {
             return null;
         }
+        console.log(this.context);
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.additionalInformation.title}>
