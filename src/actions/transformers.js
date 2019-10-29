@@ -812,35 +812,27 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getNtroSectionSearchKeys = ntroSection => {
-    let ntroMetadata = {};
-    if (!!ntroSection) {
-        ntroMetadata = {
-            fez_record_search_key_audience_size: ntroSection.fez_record_search_key_audience_size || null,
-            fez_record_search_key_ismn: ntroSection.fez_record_search_key_ismn || null,
-            ...getQualityIndicatorSearchKey(ntroSection.qualityIndicators || []),
-        };
-        if (ntroSection.significanceAndContributionStatement.length > 0) {
-            ntroMetadata.fez_record_search_key_significance = ntroSection.significanceAndContributionStatement.map(
-                item => ({
-                    rek_significance: item.rek_value.key || null,
+export const getNtroSectionSearchKeys = (data = {}) => {
+    const { qualityIndicators, significanceAndContributionStatement, ...rest } = data;
+
+    return {
+        ...getQualityIndicatorSearchKey(qualityIndicators),
+        ...(!!significanceAndContributionStatement && significanceAndContributionStatement.length > 0
+            ? {
+                fez_record_search_key_significance: significanceAndContributionStatement.map(item => ({
+                    rek_significance: item.rek_value.key,
                     rek_significance_order: item.rek_order,
-                }),
-            );
-            ntroMetadata = {
-                ...ntroMetadata,
-                fez_record_search_key_creator_contribution_statement: [
-                    ...ntroSection.significanceAndContributionStatement.map(
-                        ({ rek_value: value, rek_order: order }) => ({
-                            rek_creator_contribution_statement: value.value.htmlText || value.value.plainText,
-                            rek_creator_contribution_statement_order: order,
-                        }),
-                    ),
-                ],
-            };
-        }
-    }
-    return ntroMetadata;
+                })),
+                fez_record_search_key_creator_contribution_statement: significanceAndContributionStatement.map(
+                    ({ rek_value: value, rek_order: order }) => ({
+                        rek_creator_contribution_statement: value.value.htmlText || value.value.plainText,
+                        rek_creator_contribution_statement_order: order,
+                    }),
+                ),
+            }
+            : {}),
+        ...rest,
+    };
 };
 
 export const getGrantInformationSectionSearchKeys = grantsSection => ({

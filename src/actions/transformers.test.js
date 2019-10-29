@@ -2902,3 +2902,125 @@ describe('getRecordArchitectsIdSearchKey test', () => {
         expect(result).toEqual(expected);
     });
 });
+
+describe('getNtroSectionSearchKeys', () => {
+    it('should get all search keys for NTRO section', () => {
+        const data = {
+            qualityIndicators: [123, 234],
+            significanceAndContributionStatement: [
+                {
+                    rek_value: {
+                        key: 12121,
+                        value: {
+                            htmlText: '<p>Test</p>',
+                            plainText: 'Test',
+                        },
+                    },
+                    rek_order: 1,
+                },
+            ],
+        };
+
+        expect(transformers.getNtroSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 123,
+                    rek_quality_indicator_order: 1,
+                },
+                {
+                    rek_quality_indicator: 234,
+                    rek_quality_indicator_order: 2,
+                },
+            ],
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 12121,
+                    rek_significance_order: 1,
+                },
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: '<p>Test</p>',
+                    rek_creator_contribution_statement_order: 1,
+                },
+            ],
+        });
+    });
+
+    it('should use plain text', () => {
+        const data = {
+            qualityIndicators: [123, 234],
+            significanceAndContributionStatement: [
+                {
+                    rek_value: {
+                        key: 12121,
+                        value: {
+                            plainText: 'Test',
+                        },
+                    },
+                    rek_order: 1,
+                },
+            ],
+        };
+
+        expect(transformers.getNtroSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_quality_indicator: [
+                {
+                    rek_quality_indicator: 123,
+                    rek_quality_indicator_order: 1,
+                },
+                {
+                    rek_quality_indicator: 234,
+                    rek_quality_indicator_order: 2,
+                },
+            ],
+            fez_record_search_key_significance: [
+                {
+                    rek_significance: 12121,
+                    rek_significance_order: 1,
+                },
+            ],
+            fez_record_search_key_creator_contribution_statement: [
+                {
+                    rek_creator_contribution_statement: 'Test',
+                    rek_creator_contribution_statement_order: 1,
+                },
+            ],
+        });
+    });
+});
+
+describe('getGrantInformationSectionSearchKeys', () => {
+    it('should get grant information search keys', () => {
+        expect(
+            transformers.getGrantInformationSectionSearchKeys({
+                grants: [
+                    {
+                        grantAgencyName: 'Test',
+                        grantAgencyType: 123,
+                        grantId: '1234',
+                    },
+                ],
+            }),
+        ).toEqual({
+            fez_record_search_key_grant_agency: [
+                {
+                    rek_grant_agency: 'Test',
+                    rek_grant_agency_order: 1,
+                },
+            ],
+            fez_record_search_key_grant_id: [
+                {
+                    rek_grant_id: '1234',
+                    rek_grant_id_order: 1,
+                },
+            ],
+            fez_record_search_key_grant_agency_type: [
+                {
+                    rek_grant_agency_type: 123,
+                    rek_grant_agency_type_order: 1,
+                },
+            ],
+        });
+    });
+});
