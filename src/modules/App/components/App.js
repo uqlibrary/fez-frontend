@@ -127,9 +127,8 @@ export class AppClass extends PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
+        /* istanbul ignore next */
         ipInfo((err, cLoc) => {
-            console.log(err);
-            console.log(cLoc);
             this.setState({
                 userCountry: (cLoc && cLoc.country) || err,
             });
