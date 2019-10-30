@@ -1,7 +1,6 @@
 import * as records from 'mock/data/testing/records';
 import { AdditionalInformationClass } from './AdditionalInformation';
 import AdditionalInformation from './AdditionalInformation';
-import { journalArticle } from '../../../mock/data/testing/records';
 
 function setup(testProps = {}, args = { context: { userCountry: 'AU' } }) {
     const props = {
