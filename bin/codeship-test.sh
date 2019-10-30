@@ -37,9 +37,7 @@ case "$PIPE_NUM" in
     printf "Jest v"; jest --version
     # Not running code coverage check for feature branches.
     # Running in series with `runInBand` to avoid CodeShip VM running out of memory
-    #if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
-    # temp allow non code coverage on staging for uat of admin edit
-    if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "production") ]]; then
+    if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
         printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
         printf "\n$ npm run test:unit -- --ci --runInBand\n"
         npm run test:unit -- --ci --runInBand
