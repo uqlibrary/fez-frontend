@@ -10,6 +10,7 @@ exports[`LookupForm tests  should render lookup form 1`] = `
         "onChange": [MockFunction],
       }
     }
+    required={false}
   />
 </Fragment>
 `;
