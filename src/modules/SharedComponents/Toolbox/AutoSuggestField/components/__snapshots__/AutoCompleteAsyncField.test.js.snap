@@ -1123,7 +1123,6 @@ exports[`AutoCompleteAsyncField component should render as required field 1`] = 
             loadSuggestions={[MockFunction]}
             maxResults={7}
             onChange={[MockFunction]}
-            onClear={[Function]}
             openOnFocus={false}
             required={true}
             selectedValue={null}
@@ -2580,7 +2579,6 @@ exports[`AutoCompleteAsyncField component should render autosuggest field and ca
             }
             maxResults={7}
             onChange={[MockFunction]}
-            onClear={[Function]}
             openOnFocus={false}
             required={false}
             selectedValue={null}
@@ -3451,6 +3449,40 @@ exports[`AutoCompleteAsyncField component should render default MenuItemComponen
 </WithStyles(MenuItem)>
 `;
 
+exports[`AutoCompleteAsyncField component should render default MenuItemComponent 2`] = `
+<div
+  className="root"
+>
+  <label
+    hidden={true}
+    id="autosuggest-label"
+  />
+  <Downshift
+    aria-label="autosuggest"
+    defaultHighlightedIndex={null}
+    defaultInputValue=""
+    defaultIsOpen={false}
+    defaultSelectedItem={null}
+    environment={[Window]}
+    getA11yStatusMessage={[Function]}
+    id="autosuggest"
+    itemToString={[MockFunction]}
+    onChange={[MockFunction]}
+    onInputValueChange={[Function]}
+    onOuterClick={[Function]}
+    onSelect={[Function]}
+    onStateChange={[Function]}
+    onUserAction={[Function]}
+    scrollIntoView={[Function]}
+    selectedItemChanged={[Function]}
+    stateReducer={[Function]}
+    suppressRefError={false}
+  >
+    <Component />
+  </Downshift>
+</div>
+`;
+
 exports[`AutoCompleteAsyncField component should render items list on focusing on input 1`] = `
 <Provider
   store={
@@ -4080,7 +4112,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             }
             maxResults={7}
             onChange={[MockFunction]}
-            onClear={[Function]}
             openOnFocus={true}
             required={false}
             selectedValue={null}
@@ -5410,7 +5441,6 @@ exports[`AutoCompleteAsyncField component should render items list on focusing o
             }
             maxResults={7}
             onChange={[MockFunction]}
-            onClear={[Function]}
             openOnFocus={true}
             required={false}
             selectedValue={null}
@@ -6704,7 +6734,6 @@ exports[`AutoCompleteAsyncField component should render with disabled flag set t
             loadSuggestions={[MockFunction]}
             maxResults={7}
             onChange={[MockFunction]}
-            onClear={[Function]}
             openOnFocus={false}
             required={false}
             selectedValue={null}
