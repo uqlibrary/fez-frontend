@@ -2,7 +2,7 @@ import * as routes from './routes';
 import { accounts, authorDetails } from 'mock/data/account';
 import { locale } from 'locale';
 
-describe('Routes method', () => {
+describe('Routes getMenuConfig method', () => {
     it('should return a list of menus for anon user', () => {
         const testRoutes = routes.getMenuConfig(null);
         expect(testRoutes.length).toEqual(4);
@@ -28,11 +28,36 @@ describe('Routes method', () => {
         expect(testRoutes.length).toEqual(19);
     });
 
-    it('should return a short list of menus for user who can masquerade (uqmasquerade)', () => {
+    it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqstaff, authorDetails.uqstaff, false, true);
+        expect(testRoutes.length).toEqual(20);
+    });
+
+    it('should return a list of menus for user who can masquerade', () => {
+        const testRoutes = routes.getMenuConfig(accounts.uqmasquerade, authorDetails.uqmasquerade);
+        expect(testRoutes.length).toEqual(14);
+    });
+
+    it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqmasquerade, authorDetails.uqmasquerade, false, true);
         expect(testRoutes.length).toEqual(15);
     });
 
+    it('should not return Switch to old interface menu item for public view page', () => {
+        const testMenuItems = routes.getMenuConfig(null, null, false, true);
+        expect(testMenuItems.length).toEqual(4);
+
+        const contactMenuItem = testMenuItems.pop();
+        expect(contactMenuItem.primaryText).toEqual('Contact');
+    });
+
+    it('should return Switch to old interface menu item for logged in user on view page', () => {
+        const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, authorDetails.uqresearcher, false, true);
+        expect(testMenuItems.length).toEqual(13);
+    });
+});
+
+describe('Routes getRoutesConfig method', () => {
     it('should return a list of routes for anon user', () => {
         const testRoutes = routes.getRoutesConfig({ components: {}, account: null });
         expect(testRoutes.length).toEqual(7);
@@ -44,7 +69,11 @@ describe('Routes method', () => {
     });
 
     it('should return a list of routes for user who can masquerade (uqmasquerade)', () => {
-        const testRoutes = routes.getRoutesConfig({ components: {}, account: accounts.uqmasquerade });
+        const testRoutes = routes.getRoutesConfig({
+            components: {},
+            account: accounts.uqmasquerade,
+            authorDetails: authorDetails.uqmasquerade,
+        });
         expect(testRoutes.length).toEqual(24);
     });
 
@@ -136,20 +165,9 @@ describe('Routes method', () => {
         renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.notFound);
     });
+});
 
-    it('should not return Switch to old interface menu item for public view page', () => {
-        const testMenuItems = routes.getMenuConfig(null, null, false, true);
-        expect(testMenuItems.length).toEqual(4);
-
-        const contactMenuItem = testMenuItems.pop();
-        expect(contactMenuItem.primaryText).toEqual('Contact');
-    });
-
-    it('should return Switch to old interface menu item for logged in user on view page', () => {
-        const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, authorDetails.uqresearcher, false, true);
-        expect(testMenuItems.length).toEqual(13);
-    });
-
+describe('Routes other methods', () => {
     it('file.url should without checksum', () => {
         const pid = 'UQ:12345';
         const filename = 'image.jpg';
