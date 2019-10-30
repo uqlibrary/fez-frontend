@@ -71,6 +71,7 @@ exports[`ScaleOfSignificanceForm component should render the default view 1`] = 
       name="value"
       onChange={[Function]}
       onKeyPress={[Function]}
+      required={false}
       returnSingleValue={false}
       titleProps={
         Object {
