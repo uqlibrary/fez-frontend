@@ -555,7 +555,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                     </div>
 +                   </div>
 +                   <div
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-398\\"
@@ -610,7 +610,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"ListRow-Fieldofresearch ListRow-Fieldofresearch-01 Mathematical Sciences\\"
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-400\\"
@@ -1169,7 +1169,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -2120,107 +2497,13 @@
+@@ -2125,107 +2502,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -1277,7 +1277,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                   </div>
                 </div>
               </div>
-@@ -2254,21 +2537,23 @@
+@@ -2259,21 +2542,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >
