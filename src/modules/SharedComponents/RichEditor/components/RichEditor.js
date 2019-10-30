@@ -19,6 +19,7 @@ export default class RichEditor extends PureComponent {
         description: PropTypes.any,
         inputRef: PropTypes.object,
         instanceRef: PropTypes.object,
+        required: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -29,6 +30,7 @@ export default class RichEditor extends PureComponent {
         returnSingleValue: false,
         titleProps: {},
         instanceRef: React.createRef(),
+        required: false,
     };
 
     componentDidMount() {
@@ -104,6 +106,7 @@ export default class RichEditor extends PureComponent {
                             color={this.props.meta && this.props.meta.error && 'error'}
                         >
                             {this.props.title}
+                            {this.props.required && <span> *</span>}
                         </Typography>
                     )}
                     {this.props.description && (

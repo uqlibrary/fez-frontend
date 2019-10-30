@@ -25,6 +25,7 @@ export class FreeTextFormClass extends Component {
         classes: PropTypes.object,
         maxInputLength: PropTypes.number,
         normalize: PropTypes.func,
+        required: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -36,6 +37,7 @@ export class FreeTextFormClass extends Component {
             inputFieldHint: 'Please type the item name',
             addButtonLabel: 'Add',
         },
+        required: false,
     };
 
     constructor(props) {
@@ -108,6 +110,7 @@ export class FreeTextFormClass extends Component {
                                 : null
                         }
                         disabled={disabled}
+                        required={this.props.required}
                     />
                     {this.props.remindToAdd &&
                         remindToAdd &&
