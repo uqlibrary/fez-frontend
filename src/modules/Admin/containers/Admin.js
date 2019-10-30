@@ -20,7 +20,7 @@ import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { detailedDiff } from 'deep-object-diff';
 import { pathConfig } from 'config/routes';
-import { publicationTypeHasAdvisoryStatement } from 'hooks';
+import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&

@@ -5,7 +5,7 @@ import { Section } from '../common/Section';
 import { useRecordContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 import { PUBLICATION_TYPE_DATA_COLLECTION } from 'config/general';
-import { publicationTypeHasAdvisoryStatement } from 'hooks';
+import { publicationTypeHasAdvisoryStatement } from '../common/helpers';
 
 export const FilesSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
