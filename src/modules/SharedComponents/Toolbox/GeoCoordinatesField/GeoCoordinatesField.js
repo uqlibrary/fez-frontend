@@ -1,12 +1,13 @@
 import React from 'react';
 import PublicationMap from 'modules/ViewRecord/components/PublicationMap';
-import { GOOGLE_MAPS_API_URL } from 'config/general';
+import { GOOGLE_MAPS_API_URL, GOOGLE_MAPS_API_CHINA_URL } from 'config/general';
 
 export default function GeoCoordinatesField(fieldProps) {
+    const mapApiUrl = fieldProps.country === 'CN' ? GOOGLE_MAPS_API_CHINA_URL : GOOGLE_MAPS_API_URL;
     return (
         <PublicationMap
             onChange={fieldProps.input.onChange}
-            googleMapURL={GOOGLE_MAPS_API_URL}
+            googleMapURL={mapApiUrl}
             loadingElement={<div className="googleMap loading" />}
             containerElement={<div style={{ height: '400px' }} />}
             mapElement={<div style={{ height: '100%' }} />}
