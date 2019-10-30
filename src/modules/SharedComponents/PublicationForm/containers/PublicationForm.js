@@ -69,8 +69,9 @@ const validate = values => {
                 (!data.editors && data.authors && data.authors.length === 0) ||
                 (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
                 (data.authors &&
-                    data.authors.filter(item => item.selected).length === 0 &&
-                    (data.editors && data.editors.filter(item => item.selected).length === 0))
+                    data.authors.length !== 0 &&
+                    data.authors.filter(item => item.selected).length === 0) ||
+                (data.editors && data.editors.length !== 0 && data.editors.filter(item => item.selected).length === 0)
             ) {
                 errors.authors = locale.validationErrors.authorRequired;
                 errors.editors = locale.validationErrors.editorRequired;
@@ -123,8 +124,7 @@ const mapStateToProps = (state, props) => {
     const displayType = selector(state, 'rek_display_type');
     const publicationSubtype = selector(state, 'rek_subtype');
 
-    const selectedPublicationType =
-        !!displayType && publicationTypes({ ...recordForms }).filter(type => type.id === displayType);
+    const selectedPublicationType = !!displayType && publicationTypes({ ...recordForms })[displayType];
 
     let hasDefaultDocTypeSubType = false;
     let docTypeSubTypeCombo = null;
@@ -134,13 +134,11 @@ const mapStateToProps = (state, props) => {
         docTypeSubTypeCombo = !!DOCTYPE_SUBTYPE_MAPPING[displayType] && DOCTYPE_SUBTYPE_MAPPING[displayType];
     }
 
-    const hasSubtypes =
-        (!!selectedPublicationType && selectedPublicationType.length > 0 && !!selectedPublicationType[0].subtypes) ||
-        false;
-    const subtypes = (hasSubtypes && selectedPublicationType[0].subtypes) || null;
+    const hasSubtypes = !!(selectedPublicationType || {}).subtypes;
+    const subtypes = (hasSubtypes && selectedPublicationType.subtypes) || null;
     const formComponent = hasSubtypes
-        ? !!publicationSubtype && selectedPublicationType[0].formComponent
-        : (selectedPublicationType.length > 0 && selectedPublicationType[0].formComponent) || null;
+        ? !!publicationSubtype && selectedPublicationType.formComponent
+        : (selectedPublicationType || {}).formComponent || null;
 
     return {
         formValues: formValues,

@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GrantInformationSection should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "grants",
+            ],
+          ],
+          "title": "Grant information",
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
+
+exports[`GrantInformationSection should render disabled view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "grants",
+            ],
+          ],
+          "title": "Grant information",
+        },
+      ],
+    }
+  }
+  disabled={true}
+/>
+`;

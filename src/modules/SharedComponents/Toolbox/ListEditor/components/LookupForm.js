@@ -8,6 +8,7 @@ export default class LookupForm extends Component {
         disabled: PropTypes.bool,
         inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
         errorText: PropTypes.string,
+        category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
     };
 
     static defaultProps = {
@@ -35,6 +36,7 @@ export default class LookupForm extends Component {
                         hintText={this.props.locale.inputFieldHint}
                         disabled={this.props.disabled}
                         errorText={this.props.errorText}
+                        category={this.props.category}
                     />
                 )}
             </React.Fragment>

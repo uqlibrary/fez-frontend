@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AuthorsSection component should render default view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "authors",
+            ],
+          ],
+          "title": "Authors",
+        },
+      ],
+    }
+  }
+  disabled={false}
+/>
+`;
+
+exports[`AuthorsSection component should render disabled view 1`] = `
+<Section
+  cards={
+    Object {
+      "current": Array [
+        Object {
+          "groups": Array [
+            Array [
+              "authors",
+            ],
+          ],
+          "title": "Authors",
+        },
+      ],
+    }
+  }
+  disabled={true}
+/>
+`;

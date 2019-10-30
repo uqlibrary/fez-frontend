@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttachedFilesField component should render default view 1`] = `
+<AttachedFiles
+  canEdit={false}
+  dataStreams={Array []}
+  deleteHint="Remove this file"
+  onDateChange={[Function]}
+  onDelete={[Function]}
+  onDescriptionChange={[Function]}
+/>
+`;
+
+exports[`AttachedFilesField component should render with initial data 1`] = `
+<AttachedFiles
+  canEdit={false}
+  dataStreams={
+    Array [
+      Object {
+        "dsi_copyright": null,
+        "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
+        "dsi_embargo_date": null,
+        "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
+        "dsi_mimetype": "text/xml",
+        "dsi_open_access": null,
+        "dsi_pid": "UQ:252236",
+        "dsi_security_inherited": 1,
+        "dsi_security_policy": 1,
+        "dsi_size": 3097,
+        "dsi_state": "A",
+      },
+    ]
+  }
+  deleteHint="Remove this file"
+  meta={
+    Object {
+      "initial": Immutable.List [
+        Object {
+          "dsi_copyright": null,
+          "dsi_dsid": "FezACML_My_UQ_eSpace_researcher_guidelines_2012.pdf.xml",
+          "dsi_embargo_date": null,
+          "dsi_label": "FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf",
+          "dsi_mimetype": "text/xml",
+          "dsi_open_access": null,
+          "dsi_pid": "UQ:252236",
+          "dsi_security_inherited": 1,
+          "dsi_security_policy": 1,
+          "dsi_size": 3097,
+          "dsi_state": "A",
+        },
+      ],
+    }
+  }
+  onDateChange={[Function]}
+  onDelete={[Function]}
+  onDescriptionChange={[Function]}
+/>
+`;

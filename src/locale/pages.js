@@ -3,7 +3,6 @@ import React from 'react';
 import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { pathConfig } from 'config/routes';
 import locale from 'locale/components';
-
 /*
 
 NOTE:
@@ -818,10 +817,16 @@ export default {
                     title: 'Admin',
                 },
                 grantInformation: {
-                    title: 'Grant Information',
+                    title: 'Grant information',
                 },
                 authorDetails: {
                     title: 'Author details',
+                },
+                additionalInformation: {
+                    title: 'Additional information',
+                },
+                ntro: {
+                    title: 'NTRO',
                 },
                 files: {
                     title: 'Files',
@@ -854,6 +859,7 @@ export default {
                 buttonLabel: 'Got it',
             },
             loadingMessage: 'Loading record',
+            retractedMessage: 'This article has been retracted',
             community: {
                 title: 'Edit community',
                 loadingMessage: 'Loading community',
@@ -891,6 +897,34 @@ export default {
                     message: 'Request is being processed.',
                     showLoader: true,
                 },
+                validationAlert: {
+                    type: 'warning',
+                    title: 'Validation',
+                    message: 'Form cannot be submitted until all fields are valid. Please review all input fields.',
+                },
+            },
+        },
+        adminAdd: {
+            title: 'Add a new record',
+            step1: 'Identify your new record',
+            buttonLabel: 'Create record',
+            cancelLabel: 'Cancel',
+            submitFailed: 'Failed to assign details to the administrator add form',
+            formLabels: {
+                ismemberof: {
+                    floatingLabelText: 'Member of collections',
+                    hintText: 'Begin typing to select and add record to a list of collection(s)',
+                },
+                rek_display_type: {
+                    inputLabelText: 'Work type',
+                    hintText: 'Select a Work type from the dropdown list',
+                },
+                rek_subtype: {
+                    inputLabelText: 'Work subtype',
+                    hintText: 'Select a work subtype from the dropdown list',
+                },
+                submit: 'Submit',
+                cancel: 'Cancel',
             },
         },
         incompletePublications: {

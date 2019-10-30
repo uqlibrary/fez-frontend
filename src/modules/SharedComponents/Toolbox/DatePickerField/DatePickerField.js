@@ -10,7 +10,7 @@ export default function DatePickerField(fieldProps) {
     const { error, errorText, ...props } = fieldProps;
     return (
         <DatePicker
-            value={(!!fieldProps.input && fieldProps.input.value) || (!!fieldProps && fieldProps.value) || undefined}
+            value={(!!fieldProps.input && fieldProps.input.value) || (!!fieldProps && fieldProps.value) || null}
             onChange={(!!fieldProps.input && fieldProps.input.onChange) || fieldProps.onChange}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || !!error}
             helperText={(!!fieldProps.meta && fieldProps.meta.error) || errorText}

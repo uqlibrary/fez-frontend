@@ -314,54 +314,62 @@ exports[`Application component Should display mobile correctly 1`] = `
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="eSpace"
-        path="/dashboard"
-      />
-      <Route
-        key="route_6"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {},
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="eSpace"
+          path="/dashboard"
+        />
+        <Route
+          key="route_6"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -868,241 +876,251 @@ exports[`Application component should determine if it has incomplete works from 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "name": "test1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -1605,241 +1623,251 @@ exports[`Application component should determine if it has incomplete works from 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "name": "test1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -2160,54 +2188,62 @@ exports[`Application component should redirect to login page with correct return
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="eSpace"
-        path="/dashboard"
-      />
-      <Route
-        key="route_6"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {},
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="eSpace"
+          path="/dashboard"
+        />
+        <Route
+          key="route_6"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -2706,241 +2742,255 @@ exports[`Application component should render alert if user is not fez author 1`]
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "class": Array [
+              "libstaff",
+              "IS_CURRENT",
+            ],
+            "id": "uqauthor1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -3412,241 +3462,275 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": "1234-1234-1234",
+            "aut_org_username": null,
+            "aut_student_username": "s2222222",
+            "barcode": "111111111111111",
+            "blocked": false,
+            "canMasquerade": false,
+            "class": Array [
+              "IS_UQ_STUDENT_PLACEMENT",
+              "IS_CURRENT",
+            ],
+            "classes": Array [],
+            "expiryDate": "14-12-19",
+            "firstName": "J",
+            "groups": null,
+            "hasSession": true,
+            "homeLib": "St Lucia",
+            "id": "s2222222",
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "lastName": "RHD Student",
+            "mail": "rhd@student.uq.edu.au",
+            "name": "J RHD Student",
+            "tokenBased": false,
+            "type": 22,
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -3978,59 +4062,93 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_5"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_6"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        key="route_7"
-        pageTitle="Link ORCID ID to UQ eSpace"
-      />
-    </Switch>
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": null,
+            "aut_org_username": null,
+            "aut_student_username": "s2222222",
+            "barcode": "111111111111111",
+            "blocked": false,
+            "canMasquerade": false,
+            "class": Array [
+              "IS_UQ_STUDENT_PLACEMENT",
+              "IS_CURRENT",
+            ],
+            "classes": Array [],
+            "expiryDate": "14-12-19",
+            "firstName": "J",
+            "groups": null,
+            "hasSession": true,
+            "homeLib": "St Lucia",
+            "id": "s2222222",
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "lastName": "RHD Student",
+            "mail": "rhd@student.uq.edu.au",
+            "name": "J RHD Student",
+            "tokenBased": false,
+            "type": 22,
+          },
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_5"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_6"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          key="route_7"
+          pageTitle="Link ORCID ID to UQ eSpace"
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -4502,241 +4620,258 @@ exports[`Application component should render app for account with fez author wit
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": "abc-abc-abc",
+            "aut_org_username": "uqauthor1",
+            "class": Array [
+              "libstaff",
+              "IS_CURRENT",
+            ],
+            "id": "uqauthor1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -5237,241 +5372,258 @@ exports[`Application component should render app for account with fez author wit
       </WithStyles(Grid)>
     </WithStyles(Grid)>
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": null,
+            "aut_org_username": "uqauthor1",
+            "class": Array [
+              "libstaff",
+              "IS_CURRENT",
+            ],
+            "id": "uqauthor1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -5822,241 +5974,258 @@ exports[`Application component should render app for account with fez author wit
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        key="route_0"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_1"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": null,
+            "aut_org_username": "uqauthor1",
+            "class": Array [
+              "libstaff",
+              "IS_CURRENT",
+            ],
+            "id": "uqauthor1",
+          },
         }
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/dashboard"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="My research"
-        path="/records/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="My research data"
-        path="/data-collections/mine"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_6"
-        pageTitle="Add data collection"
-        path="/data-collections/add"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_7"
-        pageTitle="Claim possible works"
-        path="/records/possible"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_8"
-        path="/records/incomplete"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_9"
-        pageTitle="Complete my work"
-        path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_10"
-        pageTitle="Claim a work"
-        path="/records/claim"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_11"
-        pageTitle="Request a correction, add more information or upload files"
-        path="/records/:pid(UQ:[a-z0-9]+)/fix"
-        regExPath="/records/(UQ:[a-z0-9]+)/fix"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_12"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/find"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_13"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/results"
-        render={[Function]}
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        exact={true}
-        key="route_14"
-        pageTitle="Add a missing work to eSpace"
-        path="/records/add/new"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_15"
-        pageTitle="Link ORCID ID to UQ eSpace"
-        path="/author-identifiers/orcid/link"
-      />
-      <Route
-        access={
-          Array [
-            "researcher",
-            "admin",
-          ]
-        }
-        component={[Function]}
-        exact={true}
-        key="route_16"
-        pageTitle="Google Scholar identifier"
-        path="/author-identifiers/google-scholar/link"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_17"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_18"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_19"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_20"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_21"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_22"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+      }
+    >
+      <Switch>
+        <Route
+          key="route_0"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_1"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/dashboard"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="My research"
+          path="/records/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="My research data"
+          path="/data-collections/mine"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_6"
+          pageTitle="Add data collection"
+          path="/data-collections/add"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_7"
+          pageTitle="Claim possible works"
+          path="/records/possible"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_8"
+          path="/records/incomplete"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_9"
+          pageTitle="Complete my work"
+          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_10"
+          pageTitle="Claim a work"
+          path="/records/claim"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_11"
+          pageTitle="Request a correction, add more information or upload files"
+          path="/records/:pid(UQ:[a-z0-9]+)/fix"
+          regExPath="/records/(UQ:[a-z0-9]+)/fix"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_12"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/find"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_13"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/results"
+          render={[Function]}
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          exact={true}
+          key="route_14"
+          pageTitle="Add a missing work to eSpace"
+          path="/records/add/new"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_15"
+          pageTitle="Link ORCID ID to UQ eSpace"
+          path="/author-identifiers/orcid/link"
+        />
+        <Route
+          access={
+            Array [
+              "researcher",
+              "admin",
+            ]
+          }
+          component={[Function]}
+          exact={true}
+          key="route_16"
+          pageTitle="Google Scholar identifier"
+          path="/author-identifiers/google-scholar/link"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_17"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_18"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_19"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_20"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_21"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -6822,54 +6991,62 @@ exports[`Application component should render for anon user 1`] = `
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_5"
-        pageTitle="eSpace"
-        path="/dashboard"
-      />
-      <Route
-        key="route_6"
-        pageTitle="Page not found"
-        render={[Function]}
-      />
-    </Switch>
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {},
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="eSpace"
+          path="/dashboard"
+        />
+        <Route
+          key="route_6"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -7095,59 +7272,93 @@ exports[`Application component should render thesis submission for HDR without m
       onRef={[Function]}
     />
     <Connect(AppAlert) />
-    <Switch>
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_0"
-        pageTitle="eSpace"
-        path="/"
-      />
-      <Route
-        key="route_1"
-        pageTitle="Contact UQ eSpace"
-        path="/contact"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_2"
-        path="/view/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_3"
-        path="/view_new/:pid(UQ:[a-z0-9]+)"
-        regExPath="/view_new/(UQ:[a-z0-9]+)"
-      />
-      <Route
-        component={[Function]}
-        exact={true}
-        key="route_4"
-        pageTitle="eSpace search"
-        path="/records/search"
-      />
-      <Route
-        key="route_5"
-        pageTitle="Higher degree by research thesis deposit"
-        path="/rhdsubmission"
-        render={[Function]}
-      />
-      <Route
-        key="route_6"
-        pageTitle="Professional doctorate deposit"
-        path="/habslodge"
-        render={[Function]}
-      />
-      <Route
-        component={[Function]}
-        key="route_7"
-        pageTitle="Link ORCID ID to UQ eSpace"
-      />
-    </Switch>
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_id": 1,
+            "aut_orcid_id": null,
+            "aut_org_username": null,
+            "aut_student_username": "s2222222",
+            "barcode": "111111111111111",
+            "blocked": false,
+            "canMasquerade": false,
+            "class": Array [
+              "IS_UQ_STUDENT_PLACEMENT",
+              "IS_CURRENT",
+            ],
+            "classes": Array [],
+            "expiryDate": "14-12-19",
+            "firstName": "J",
+            "groups": null,
+            "hasSession": true,
+            "homeLib": "St Lucia",
+            "id": "s2222222",
+            "is_administrator": 0,
+            "is_super_administrator": 0,
+            "lastName": "RHD Student",
+            "mail": "rhd@student.uq.edu.au",
+            "name": "J RHD Student",
+            "tokenBased": false,
+            "type": 22,
+          },
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          key="route_5"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_6"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          key="route_7"
+          pageTitle="Link ORCID ID to UQ eSpace"
+        />
+      </Switch>
+    </ContextProvider>
   </div>
   <Connect(WithStyles(HelpDrawer)) />
   <WithStyles(OfflineSnackbar) />
@@ -11674,6 +11885,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "createBatchImport": [Function],
                                                             "createCollection": [Function],
                                                             "createCommunity": [Function],
+                                                            "createNewAdminRecord": [Function],
                                                             "createNewRecord": [Function],
                                                             "createSearchPromise": [Function],
                                                             "dismissAppAlert": [Function],
@@ -11690,6 +11902,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                             "hideRecordErrorReset": [Function],
                                                             "linkAuthorOrcidId": [Function],
                                                             "loadAuthorPublicationsStats": [Function],
+                                                            "loadCollectionsList": [Function],
                                                             "loadCurrentAccount": [Function],
                                                             "loadFullRecordToClaim": [Function],
                                                             "loadNewsFeed": [Function],
@@ -17284,6 +17497,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "createBatchImport": [Function],
                                 "createCollection": [Function],
                                 "createCommunity": [Function],
+                                "createNewAdminRecord": [Function],
                                 "createNewRecord": [Function],
                                 "createSearchPromise": [Function],
                                 "dismissAppAlert": [Function],
@@ -17300,6 +17514,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "hideRecordErrorReset": [Function],
                                 "linkAuthorOrcidId": [Function],
                                 "loadAuthorPublicationsStats": [Function],
+                                "loadCollectionsList": [Function],
                                 "loadCurrentAccount": [Function],
                                 "loadFullRecordToClaim": [Function],
                                 "loadNewsFeed": [Function],
@@ -18952,6 +19167,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "createBatchImport": [Function],
                                                                           "createCollection": [Function],
                                                                           "createCommunity": [Function],
+                                                                          "createNewAdminRecord": [Function],
                                                                           "createNewRecord": [Function],
                                                                           "createSearchPromise": [Function],
                                                                           "dismissAppAlert": [Function],
@@ -18968,6 +19184,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           "hideRecordErrorReset": [Function],
                                                                           "linkAuthorOrcidId": [Function],
                                                                           "loadAuthorPublicationsStats": [Function],
+                                                                          "loadCollectionsList": [Function],
                                                                           "loadCurrentAccount": [Function],
                                                                           "loadFullRecordToClaim": [Function],
                                                                           "loadNewsFeed": [Function],
@@ -19065,6 +19282,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "createBatchImport": [Function],
                                                                             "createCollection": [Function],
                                                                             "createCommunity": [Function],
+                                                                            "createNewAdminRecord": [Function],
                                                                             "createNewRecord": [Function],
                                                                             "createSearchPromise": [Function],
                                                                             "dismissAppAlert": [Function],
@@ -19081,6 +19299,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             "hideRecordErrorReset": [Function],
                                                                             "linkAuthorOrcidId": [Function],
                                                                             "loadAuthorPublicationsStats": [Function],
+                                                                            "loadCollectionsList": [Function],
                                                                             "loadCurrentAccount": [Function],
                                                                             "loadFullRecordToClaim": [Function],
                                                                             "loadNewsFeed": [Function],
@@ -19185,6 +19404,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "createBatchImport": [Function],
                                                                               "createCollection": [Function],
                                                                               "createCommunity": [Function],
+                                                                              "createNewAdminRecord": [Function],
                                                                               "createNewRecord": [Function],
                                                                               "createSearchPromise": [Function],
                                                                               "dismissAppAlert": [Function],
@@ -19201,6 +19421,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               "hideRecordErrorReset": [Function],
                                                                               "linkAuthorOrcidId": [Function],
                                                                               "loadAuthorPublicationsStats": [Function],
+                                                                              "loadCollectionsList": [Function],
                                                                               "loadCurrentAccount": [Function],
                                                                               "loadFullRecordToClaim": [Function],
                                                                               "loadNewsFeed": [Function],
@@ -19739,6 +19960,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "createBatchImport": [Function],
                                                                                 "createCollection": [Function],
                                                                                 "createCommunity": [Function],
+                                                                                "createNewAdminRecord": [Function],
                                                                                 "createNewRecord": [Function],
                                                                                 "createSearchPromise": [Function],
                                                                                 "dismissAppAlert": [Function],
@@ -19755,6 +19977,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 "hideRecordErrorReset": [Function],
                                                                                 "linkAuthorOrcidId": [Function],
                                                                                 "loadAuthorPublicationsStats": [Function],
+                                                                                "loadCollectionsList": [Function],
                                                                                 "loadCurrentAccount": [Function],
                                                                                 "loadFullRecordToClaim": [Function],
                                                                                 "loadNewsFeed": [Function],
@@ -23202,6 +23425,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "createBatchImport": [Function],
                                                                                     "createCollection": [Function],
                                                                                     "createCommunity": [Function],
+                                                                                    "createNewAdminRecord": [Function],
                                                                                     "createNewRecord": [Function],
                                                                                     "createSearchPromise": [Function],
                                                                                     "dismissAppAlert": [Function],
@@ -23218,6 +23442,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     "hideRecordErrorReset": [Function],
                                                                                     "linkAuthorOrcidId": [Function],
                                                                                     "loadAuthorPublicationsStats": [Function],
+                                                                                    "loadCollectionsList": [Function],
                                                                                     "loadCurrentAccount": [Function],
                                                                                     "loadFullRecordToClaim": [Function],
                                                                                     "loadNewsFeed": [Function],
@@ -23269,6 +23494,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "createBatchImport": [Function],
                                                                                       "createCollection": [Function],
                                                                                       "createCommunity": [Function],
+                                                                                      "createNewAdminRecord": [Function],
                                                                                       "createNewRecord": [Function],
                                                                                       "createSearchPromise": [Function],
                                                                                       "dismissAppAlert": [Function],
@@ -23285,6 +23511,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       "hideRecordErrorReset": [Function],
                                                                                       "linkAuthorOrcidId": [Function],
                                                                                       "loadAuthorPublicationsStats": [Function],
+                                                                                      "loadCollectionsList": [Function],
                                                                                       "loadCurrentAccount": [Function],
                                                                                       "loadFullRecordToClaim": [Function],
                                                                                       "loadNewsFeed": [Function],

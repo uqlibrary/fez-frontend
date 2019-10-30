@@ -171,21 +171,17 @@ export class PublicationCitation extends PureComponent {
 
     renderCitation = publicationTypeId => {
         const filteredPublicationType = publicationTypeId
-            ? publicationTypes(this.citationComponents).filter(item => {
-                return item.id === publicationTypeId;
-            })
+            ? publicationTypes(this.citationComponents)[publicationTypeId]
             : null;
 
-        return filteredPublicationType &&
-            filteredPublicationType.length > 0 &&
-            filteredPublicationType[0].citationComponent ? (
-                React.createElement(filteredPublicationType[0].citationComponent, {
-                    publication: this.props.publication,
-                    hideDoiLink: this.props.hideLinks,
-                })
-            ) : (
-                <div>Citation display not available for {publicationTypeId}</div>
-            );
+        return (filteredPublicationType || {}).citationComponent ? (
+            React.createElement(filteredPublicationType.citationComponent, {
+                publication: this.props.publication,
+                hideDoiLink: this.props.hideLinks,
+            })
+        ) : (
+            <div>Citation display not available for {publicationTypeId}</div>
+        );
     };
 
     renderActions = actions => {

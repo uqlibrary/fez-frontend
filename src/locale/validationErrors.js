@@ -17,6 +17,7 @@ export default {
         doi: 'DOI is not valid',
         pid: 'Please provide a valid PID (e.g. UQ:129af6)',
         forRequired: 'Field of research values are required',
+        subRequired: 'Subject values are required',
         dateTimeDay: 'Invalid date',
         dateTimeYear: 'Invalid year',
         maxLength: 'Must be [max] characters or less',
@@ -50,6 +51,7 @@ export default {
     },
     validationErrorsSummary: {
         // appears in footer error block
+        rek_display_type: 'Work type is required',
         rek_title: 'Title is required',
         rek_description: 'Description is required',
         rek_book_title: 'Book title is required',
@@ -89,6 +91,7 @@ export default {
         contactEmail: 'Contact email is required',
         rek_access_conditions: 'Access condition is required',
         rek_copyright: 'You are required to accept deposit agreement',
+        depositAgreement: 'You are required to accept deposit agreement',
         rek_license: 'Licensing and terms of access is required',
         rek_project_name: 'Project name is required',
         rek_project_description: 'Project description is required',
@@ -102,11 +105,15 @@ export default {
         // Collection form validations
         communityID: 'You must select a community',
         collection_pid: 'You must select a collection',
+        collections: 'You must select atleast one collection',
         doc_type_id: 'You must select a document type',
         directory: 'You must select a directory',
         title: 'Title is required',
         authorsAffiliation: 'Author affiliation rows marked with red are required',
         rek_audience_size: 'Audience size is required',
         grants: 'You must click ADD GRANT to enter the value to the grants list',
+        subjects: 'Subjects are required',
+        rek_rights: 'Rights is required',
+        rek_ands_collection_type: 'Dataset collection type is required',
     },
 };

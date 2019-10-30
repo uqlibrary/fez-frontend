@@ -19,7 +19,7 @@ import { OfflineSnackbar } from 'modules/SharedComponents/OfflineSnackbar';
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
-
+import { AccountContext } from 'context';
 // MUI1
 import Tooltip from '@material-ui/core/Tooltip';
 import Fade from '@material-ui/core/Fade';
@@ -393,11 +393,17 @@ export class AppClass extends PureComponent {
                     {isAuthorLoading && <InlineLoader message={locale.global.loadingUserAccount} />}
 
                     {!isAuthorLoading && (
-                        <Switch>
-                            {routesConfig.map((route, index) => (
-                                <Route key={`route_${index}`} {...route} />
-                            ))}
-                        </Switch>
+                        <AccountContext.Provider
+                            value={{
+                                account: { ...this.props.account, ...this.props.author, ...this.props.authorDetails },
+                            }}
+                        >
+                            <Switch>
+                                {routesConfig.map((route, index) => (
+                                    <Route key={`route_${index}`} {...route} />
+                                ))}
+                            </Switch>
+                        </AccountContext.Provider>
                     )}
                 </div>
                 <HelpDrawer />

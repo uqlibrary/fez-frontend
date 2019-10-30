@@ -93,17 +93,6 @@ describe('SecuritySectionContainer', () => {
     });
 
     it('should mount with default props', () => {
-        const store = {
-            ...global.setupStoreForMount.store,
-            getState: jest.fn(() =>
-                Immutable.Map({
-                    authorDetails: {
-                        is_super_administrator: true,
-                    },
-                }),
-            ),
-        };
-
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
                 rek_security_inherited: 1,
@@ -122,7 +111,16 @@ describe('SecuritySectionContainer', () => {
             {
                 isSuperAdmin: false,
             },
-            { isShallow: false, store: store },
+            {
+                isShallow: false,
+                store: global.setupStoreForMount(
+                    Immutable.Map({
+                        authorDetails: {
+                            is_super_administrator: true,
+                        },
+                    }),
+                ).store,
+            },
         );
         expect(toJson(wrapper)).toMatchSnapshot();
     });

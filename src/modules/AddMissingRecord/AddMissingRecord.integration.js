@@ -159,6 +159,9 @@ describe('AddMissingRecord form', () => {
             fireEvent.click(getByText(/add editor/i));
             expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
+            fireEvent.click(getByTestId('contributor-editor-row-0'));
+            expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+
             expect(getByTestId('submit-work')).not.toHaveAttribute('disabled');
 
             fireEvent.click(getByTestId('delete-editor-0'));

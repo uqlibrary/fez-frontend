@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LinkInfoForm component should render the default view 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  display="row"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={6}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+    xs={12}
+  >
+    <TextField
+      error={false}
+      fullWidth={true}
+      id=""
+      inputProps={
+        Object {
+          "ref": Object {
+            "current": null,
+          },
+        }
+      }
+      name="key"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      select={false}
+      variant="standard"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={5}
+    sm={6}
+    xs={12}
+  >
+    <TextField
+      error={false}
+      fullWidth={true}
+      id=""
+      inputProps={
+        Object {
+          "ref": Object {
+            "current": null,
+          },
+        }
+      }
+      name="value"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      select={false}
+      variant="standard"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={2}
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      fullWidth={true}
+      id="add-items"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;

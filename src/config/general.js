@@ -39,7 +39,6 @@ export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js?key=
     '1234',
 )}&v=3.exp&libraries=geometry,drawing,places`;
 
-export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;
 export const PUBLICATION_TYPE_BOOK_CHAPTER = 177;
@@ -50,6 +49,7 @@ export const PUBLICATION_TYPE_DATA_COLLECTION = 371;
 export const PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT = 181;
 export const PUBLICATION_TYPE_DESIGN = 316;
 export const PUBLICATION_TYPE_DIGILIB_IMAGE = 228;
+export const PUBLICATION_TYPE_GENERIC_DOCUMENT = 202;
 export const PUBLICATION_TYPE_IMAGE = 238;
 export const PUBLICATION_TYPE_JOURNAL = 294;
 export const PUBLICATION_TYPE_JOURNAL_ARTICLE = 179;
@@ -57,12 +57,13 @@ export const PUBLICATION_TYPE_MANUSCRIPT = 374;
 export const PUBLICATION_TYPE_NEWSPAPER_ARTICLE = 191;
 export const PUBLICATION_TYPE_PATENT = 185;
 export const PUBLICATION_TYPE_PREPRINT = 204;
+export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
 export const PUBLICATION_TYPE_RESEARCH_REPORT = 275;
 export const PUBLICATION_TYPE_SEMINAR_PAPER = 189;
 export const PUBLICATION_TYPE_THESIS = 187;
 export const PUBLICATION_TYPE_VIDEO_DOCUMENT = 310;
 export const PUBLICATION_TYPE_WORKING_PAPER = 183;
-export const PUBLICATION_TYPE_REFERENCE_ENTRY = 272;
+
 export const PUBLICATION_TYPE_CW_DESIGN_ARCHITECTURAL_WORK_CREATIVE_WORK = 1003;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK = 1004;
 export const PUBLICATION_TYPE_CW_TEXTUAL_WORK_BOOK_CHAPTER = 1005;
@@ -91,6 +92,58 @@ export const PUBLICATION_TYPE_RREB_INDUSTRY = 1036;
 export const PUBLICATION_TYPE_RREB_NOT_FOR_PROFIT = 1037;
 export const PUBLICATION_TYPE_RREB_OTHER = 1038;
 export const PUBLICATION_TYPE_RR_INTERNAL_OTHER = 1039;
+
+export const DOCUMENT_TYPE_AUDIO_DOCUMENT = 'Audio Document';
+export const DOCUMENT_TYPE_BOOK = 'Book';
+export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
+export const DOCUMENT_TYPE_CONFERENCE_PAPER = 'Conference Paper';
+export const DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS = 'Conference Proceedings';
+export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
+export const DOCUMENT_TYPE_DATA_COLLECTION = 'Data Collection';
+export const DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT = 'Department Technical Report';
+export const DOCUMENT_TYPE_DESIGN = 'Design';
+export const DOCUMENT_TYPE_DIGILIB_IMAGE = 'Digilib Image';
+export const DOCUMENT_TYPE_GENERIC_DOCUMENT = 'Generic Document';
+export const DOCUMENT_TYPE_IMAGE = 'Image';
+export const DOCUMENT_TYPE_JOURNAL = 'Journal';
+export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
+export const DOCUMENT_TYPE_MANUSCRIPT = 'Manuscript';
+export const DOCUMENT_TYPE_NEWSPAPER_ARTICLE = 'Newspaper Article';
+export const DOCUMENT_TYPE_PATENT = 'Patent';
+export const DOCUMENT_TYPE_PREPRINT = 'Preprint';
+export const DOCUMENT_TYPE_REFERENCE_ENTRY = 'Reference Entry';
+export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
+export const DOCUMENT_TYPE_SEMINAR_PAPER = 'Seminar Paper';
+export const DOCUMENT_TYPE_THESIS = 'Thesis';
+export const DOCUMENT_TYPE_VIDEO_DOCUMENT = 'Video Document';
+export const DOCUMENT_TYPE_WORKING_PAPER = 'Working Paper';
+
+export const DOCUMENT_TYPES_LOOKUP = {
+    [PUBLICATION_TYPE_AUDIO_DOCUMENT]: DOCUMENT_TYPE_AUDIO_DOCUMENT,
+    [PUBLICATION_TYPE_BOOK]: DOCUMENT_TYPE_BOOK,
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: DOCUMENT_TYPE_BOOK_CHAPTER,
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: DOCUMENT_TYPE_CONFERENCE_PAPER,
+    [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS,
+    [PUBLICATION_TYPE_CREATIVE_WORK]: DOCUMENT_TYPE_CREATIVE_WORK,
+    [PUBLICATION_TYPE_DATA_COLLECTION]: DOCUMENT_TYPE_DATA_COLLECTION,
+    [PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT]: DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    [PUBLICATION_TYPE_DESIGN]: DOCUMENT_TYPE_DESIGN,
+    [PUBLICATION_TYPE_DIGILIB_IMAGE]: DOCUMENT_TYPE_DIGILIB_IMAGE,
+    [PUBLICATION_TYPE_GENERIC_DOCUMENT]: DOCUMENT_TYPE_GENERIC_DOCUMENT,
+    [PUBLICATION_TYPE_IMAGE]: DOCUMENT_TYPE_IMAGE,
+    [PUBLICATION_TYPE_JOURNAL]: DOCUMENT_TYPE_JOURNAL,
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: DOCUMENT_TYPE_JOURNAL_ARTICLE,
+    [PUBLICATION_TYPE_MANUSCRIPT]: DOCUMENT_TYPE_MANUSCRIPT,
+    [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: DOCUMENT_TYPE_NEWSPAPER_ARTICLE,
+    [PUBLICATION_TYPE_PATENT]: DOCUMENT_TYPE_PATENT,
+    [PUBLICATION_TYPE_PREPRINT]: DOCUMENT_TYPE_PREPRINT,
+    [PUBLICATION_TYPE_REFERENCE_ENTRY]: DOCUMENT_TYPE_REFERENCE_ENTRY,
+    [PUBLICATION_TYPE_RESEARCH_REPORT]: DOCUMENT_TYPE_RESEARCH_REPORT,
+    [PUBLICATION_TYPE_SEMINAR_PAPER]: DOCUMENT_TYPE_SEMINAR_PAPER,
+    [PUBLICATION_TYPE_THESIS]: DOCUMENT_TYPE_THESIS,
+    [PUBLICATION_TYPE_VIDEO_DOCUMENT]: DOCUMENT_TYPE_VIDEO_DOCUMENT,
+    [PUBLICATION_TYPE_WORKING_PAPER]: DOCUMENT_TYPE_WORKING_PAPER,
+};
 
 export const MAX_PUBLIC_SEARCH_TEXT_LENGTH = 500;
 
@@ -196,23 +249,16 @@ export const NTRO_SUBTYPES_CATEGORY_CODE = {
     [NTRO_SUBTYPE_RREB_NOT_FOR_PROFIT]: 'CW5',
 };
 
-export const DOCUMENT_TYPE_JOURNAL_ARTICLE = 'Journal Article';
-export const DOCUMENT_TYPE_BOOK_CHAPTER = 'Book Chapter';
-export const DOCUMENT_TYPE_BOOK = 'Book';
-export const DOCUMENT_TYPE_RESEARCH_REPORT = 'Research Report';
-export const DOCUMENT_TYPE_DESIGN = 'Design';
-export const DOCUMENT_TYPE_CREATIVE_WORK = 'Creative Work';
-
-export const publicationTypes = components => [
-    {
+export const publicationTypes = components => ({
+    [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
         id: PUBLICATION_TYPE_AUDIO_DOCUMENT,
-        name: 'Audio Document',
+        name: DOCUMENT_TYPE_AUDIO_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Audio',
         formComponent: components ? components.AudioDocumentForm : null,
         citationComponent: components ? components.AudioDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_BOOK]: {
         id: PUBLICATION_TYPE_BOOK,
         name: DOCUMENT_TYPE_BOOK,
         class: 'Uqlibrary\\FezCore\\Types\\Book',
@@ -233,7 +279,7 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_BOOK_CHAPTER]: {
         id: PUBLICATION_TYPE_BOOK_CHAPTER,
         name: DOCUMENT_TYPE_BOOK_CHAPTER,
         class: 'Uqlibrary\\FezCore\\Types\\BookChapter',
@@ -255,9 +301,9 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
         id: PUBLICATION_TYPE_CONFERENCE_PAPER,
-        name: 'Conference Paper',
+        name: DOCUMENT_TYPE_CONFERENCE_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\ConferencePaper',
         isFavourite: true,
         formComponent: components ? components.ConferencePaperForm : null,
@@ -265,15 +311,15 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: ['Fully published paper', 'Published abstract', 'Poster', 'Oral presentation', 'Other'],
     },
-    {
+    [PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS]: {
         id: PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
-        name: 'Conference Proceedings',
+        name: DOCUMENT_TYPE_CONFERENCE_PROCEEDINGS,
         class: 'Uqlibrary\\FezCore\\Types\\ConferenceProceedings',
         formComponent: components ? components.ConferenceProceedingsForm : null,
         citationComponent: components ? components.ConferenceProceedingsCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_CREATIVE_WORK]: {
         id: PUBLICATION_TYPE_CREATIVE_WORK,
         name: DOCUMENT_TYPE_CREATIVE_WORK,
         class: 'Uqlibrary\\FezCore\\Types\\CreativeWork',
@@ -283,22 +329,22 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: CREATIVE_WORK_NTRO_SUBTYPES,
     },
-    {
+    [PUBLICATION_TYPE_DATA_COLLECTION]: {
         id: PUBLICATION_TYPE_DATA_COLLECTION,
-        name: 'Data Collection',
+        name: DOCUMENT_TYPE_DATA_COLLECTION,
         class: 'Uqlibrary\\FezCore\\Types\\DataCollection',
         citationComponent: components ? components.DataCollectionCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT]: {
         id: PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
-        name: 'Department Technical Report',
+        name: DOCUMENT_TYPE_DEPARTMENT_TECHNICAL_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\DepartmentTechnicalReport',
         citationComponent: components ? components.DepartmentTechnicalReportCitation : null,
         formComponent: components ? components.DepartmentTechnicalReportForm : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_DESIGN]: {
         id: PUBLICATION_TYPE_DESIGN,
         name: DOCUMENT_TYPE_DESIGN,
         class: 'Uqlibrary\\FezCore\\Types\\Design',
@@ -307,37 +353,37 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: [NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK],
     },
-    {
+    [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
         id: PUBLICATION_TYPE_DIGILIB_IMAGE,
-        name: 'Digilib Image',
+        name: DOCUMENT_TYPE_DIGILIB_IMAGE,
         class: 'Uqlibrary\\FezCore\\Types\\DigilibImage',
         citationComponent: components ? components.DigilibImageCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {
         id: PUBLICATION_TYPE_GENERIC_DOCUMENT,
-        name: 'Generic Document',
+        name: DOCUMENT_TYPE_GENERIC_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Generic',
         formComponent: components ? components.GenericDocumentForm : null,
         citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_IMAGE]: {
         id: PUBLICATION_TYPE_IMAGE,
-        name: 'Image',
+        name: DOCUMENT_TYPE_IMAGE,
         class: 'Uqlibrary\\FezCore\\Types\\Image',
         citationComponent: components ? components.ImageDocumentCitation : null,
         formComponent: components ? components.ImageDocumentForm : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_JOURNAL]: {
         id: PUBLICATION_TYPE_JOURNAL,
-        name: 'Journal',
+        name: DOCUMENT_TYPE_JOURNAL,
         class: 'Uqlibrary\\FezCore\\Types\\Journal',
         citationComponent: components ? components.JournalCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_JOURNAL_ARTICLE]: {
         id: PUBLICATION_TYPE_JOURNAL_ARTICLE,
         name: DOCUMENT_TYPE_JOURNAL_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\JournalArticle',
@@ -361,38 +407,38 @@ export const publicationTypes = components => [
             'Other',
         ],
     },
-    {
+    [PUBLICATION_TYPE_MANUSCRIPT]: {
         id: PUBLICATION_TYPE_MANUSCRIPT,
-        name: 'Manuscript',
+        name: DOCUMENT_TYPE_MANUSCRIPT,
         class: 'Uqlibrary\\FezCore\\Types\\Manuscript',
         citationComponent: components ? components.ManuscriptCitation : null,
         hasFormComponent: false,
     },
-    {
+    [PUBLICATION_TYPE_NEWSPAPER_ARTICLE]: {
         id: PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
-        name: 'Newspaper Article',
+        name: DOCUMENT_TYPE_NEWSPAPER_ARTICLE,
         class: 'Uqlibrary\\FezCore\\Types\\NewspaperArticle',
         formComponent: components ? components.NewspaperArticleForm : null,
         citationComponent: components ? components.NewspaperArticleCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_PATENT]: {
         id: PUBLICATION_TYPE_PATENT,
-        name: 'Patent',
+        name: DOCUMENT_TYPE_PATENT,
         class: 'Uqlibrary\\FezCore\\Types\\Patent',
         formComponent: components ? components.PatentForm : null,
         citationComponent: components ? components.PatentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_PREPRINT]: {
         id: PUBLICATION_TYPE_PREPRINT,
-        name: 'Preprint',
+        name: DOCUMENT_TYPE_PREPRINT,
         class: 'Uqlibrary\\FezCore\\Types\\Preprint',
         formComponent: components ? components.PreprintForm : null,
         citationComponent: components ? components.PreprintCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_RESEARCH_REPORT]: {
         id: PUBLICATION_TYPE_RESEARCH_REPORT,
         name: DOCUMENT_TYPE_RESEARCH_REPORT,
         class: 'Uqlibrary\\FezCore\\Types\\ResearchReport',
@@ -401,73 +447,46 @@ export const publicationTypes = components => [
         hasFormComponent: true,
         subtypes: [...RESEARCH_REPORT_NTRO_SUBTYPES, SUBTYPE_RR_INTERNAL_OTHER],
     },
-    {
+    [PUBLICATION_TYPE_SEMINAR_PAPER]: {
         id: PUBLICATION_TYPE_SEMINAR_PAPER,
-        name: 'Seminar Paper',
+        name: DOCUMENT_TYPE_SEMINAR_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\SeminarPaper',
         formComponent: components ? components.SeminarPaperForm : null,
         citationComponent: components ? components.SeminarPaperCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_THESIS]: {
         id: PUBLICATION_TYPE_THESIS,
-        name: 'Thesis',
+        name: DOCUMENT_TYPE_THESIS,
         class: 'Uqlibrary\\FezCore\\Types\\Thesis',
         formComponent: components ? components.ThesisForm : null,
         citationComponent: components ? components.ThesisCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_VIDEO_DOCUMENT]: {
         id: PUBLICATION_TYPE_VIDEO_DOCUMENT,
-        name: 'Video Document',
+        name: DOCUMENT_TYPE_VIDEO_DOCUMENT,
         class: 'Uqlibrary\\FezCore\\Types\\Video',
         formComponent: components ? components.VideoDocumentForm : null,
         citationComponent: components ? components.VideoDocumentCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_WORKING_PAPER]: {
         id: PUBLICATION_TYPE_WORKING_PAPER,
-        name: 'Working Paper',
+        name: DOCUMENT_TYPE_WORKING_PAPER,
         class: 'Uqlibrary\\FezCore\\Types\\WorkingPaper',
         formComponent: components ? components.WorkingPaperForm : null,
         citationComponent: components ? components.WorkingPaperCitation : null,
         hasFormComponent: true,
     },
-    {
+    [PUBLICATION_TYPE_REFERENCE_ENTRY]: {
         id: PUBLICATION_TYPE_REFERENCE_ENTRY,
-        name: 'Reference Entry',
+        name: DOCUMENT_TYPE_REFERENCE_ENTRY,
         class: 'Uqlibrary\\FezCore\\Types\\ReferenceEntry',
         citationComponent: components ? components.GenericDocumentCitation : null,
         hasFormComponent: false,
     },
-];
-
-export const DOCUMENT_TYPES_LOOKUP = {
-    202: 'Generic document',
-    263: 'Audio document',
-    174: 'Book',
-    177: 'Book chapter',
-    130: 'Conference paper',
-    197: 'Conference proceedings',
-    313: 'Creative work',
-    371: 'Data collection',
-    181: 'Department technical report',
-    316: 'Design',
-    228: 'Digilib image',
-    238: 'Image',
-    294: 'Journal',
-    179: 'Journal article',
-    374: 'Manuscript',
-    191: 'Newspaper article',
-    185: 'Patent',
-    204: 'Preprint',
-    275: 'Research report',
-    189: 'Seminar paper',
-    187: 'Thesis',
-    310: 'Video document',
-    183: 'Working paper',
-    272: 'Reference entry',
-};
+});
 
 export const QUICK_TEMPLATES = {
     UQ_STAFF_STUDENTS_VIEW: 1,
@@ -557,6 +576,7 @@ export const EXPORT_FORMAT_TO_EXTENSION = {
 
 export const ORG_UNITS_VOCAB_ID = 453703;
 export const FIELD_OF_RESEARCH_VOCAB_ID = 451780;
+export const AIATSIS_CODES_VOCAB_ID = 453669;
 
 // Default values for createNewRecord
 export const NEW_RECORD_DEFAULT_VALUES = {
@@ -968,6 +988,11 @@ export const SIGNIFICANCE = [
     { text: 'Major', value: SIGNIFICANCE_MAJOR },
 ];
 
+export const SIGNIFICANCE_MAP = {
+    [SIGNIFICANCE_MINOR]: 'Minor',
+    [SIGNIFICANCE_MAJOR]: 'Major',
+};
+
 export const QUALITY_INDICATORS = [
     { value: 453996, text: 'Disseminated via nationally recognised outlet or entity' },
     { value: 453997, text: 'Disseminated via internationally recognised outlet or entity' },
@@ -1062,8 +1087,7 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=289&href=%2Fmy_fez_traditional.php`,
+        url: pid => `${APP_URL}admin/edit/${pid}`,
     },
     {
         label: 'Edit author affiliations',
@@ -1073,7 +1097,7 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid => `${APP_URL}records/${pid}/edit`,
+        url: pid => `${APP_URL}admin/edit/${pid}?tab=security`,
     },
     {
         label: 'Delete selected record',
@@ -1144,3 +1168,205 @@ export const CONTENT_INDICATORS_COLLECTIONS_BLACKLIST = [
     'UQ:335745',
     'UQ:229001',
 ];
+
+export const WOS_DOC_TYPES = [
+    { value: '2', text: '2 - Abstract of Published item' },
+    { value: 'A', text: 'A - Art Exhibit Review' },
+    { value: '@', text: '@ - Article' },
+    { value: '7', text: '7 - Bibliography' },
+    { value: 'I', text: 'I - Biographical-Item' },
+    { value: 'B', text: 'B - Book Review' },
+    { value: 'K', text: 'K - Chronology' },
+    { value: 'C', text: 'C - Correction, Addition' },
+    { value: 'Z', text: 'Z - Dance Performance Review' },
+    { value: '0', text: '0 - Database Review' },
+    { value: 'D', text: 'D - Discussion' },
+    { value: 'E', text: 'E - Editorial Material' },
+    { value: 'X', text: 'X - Excerpt' },
+    { value: 'O', text: 'O - Fiction, Creative Prose' },
+    { value: 'F', text: 'F - Film Review' },
+    { value: 'P', text: 'P - Fully Published Paper' },
+    { value: 'U', text: 'U - Fully Published Paper' },
+    { value: '8', text: '8 - Hardware Review' },
+    { value: 'L', text: 'L - Letter' },
+    { value: 'MC', text: 'MC - Meeting Abstract' },
+    { value: 'M', text: 'M - Meeting Abstract' },
+    { value: 'J', text: 'J - Music Performance Review' },
+    { value: 'S', text: 'S - Music Score' },
+    { value: 'G', text: 'G - Music Score Review' },
+    { value: '5', text: '5 - News Item' },
+    { value: 'N', text: 'N - Note' },
+    { value: 'Y', text: 'Y - Poetry' },
+    { value: '$', text: '$ - Proceedings Paper' },
+    { value: 'H', text: 'H - Record Review' },
+    { value: '6', text: '6 - Reprint' },
+    { value: 'R', text: 'R - Review' },
+    { value: 'Q', text: 'Q - Script' },
+    { value: '9', text: '9 - Software Review' },
+    { value: 'T', text: 'T - Theater Review' },
+    { value: 'V', text: 'V - TV Review, Radio Review, Video Review' },
+];
+export const SCOPUS_DOC_TYPES = [
+    { value: 'ab', text: 'ab - Abstract Report' },
+    { value: 'ar', text: 'ar - Article' },
+    { value: 'ip', text: 'ip - Article in Press' },
+    { value: 'bk', text: 'bk - Book' },
+    { value: 'bz', text: 'bz - Business Article' },
+    { value: 'cp', text: 'cp - Conference Paper' },
+    { value: 'cr', text: 'cr - Conference Review' },
+    { value: 'ed', text: 'ed - Editorial' },
+    { value: 'er', text: 'er - Erratum' },
+    { value: 'le', text: 'le - Letter' },
+    { value: 'no', text: 'no - Note' },
+    { value: 'pr', text: 'pr - Press Release' },
+    { value: 'rp', text: 'rp - Report' },
+    { value: 're', text: 're - Review' },
+    { value: 'sh', text: 'sh - Short Survey' },
+];
+export const PUBMED_DOC_TYPES = [
+    { value: 'Addresses', text: 'Addresses' },
+    { value: 'Autobiography', text: 'Autobiography' },
+    { value: 'Bibliography', text: 'Bibliography' },
+    { value: 'Biography', text: 'Biography' },
+    { value: 'Case Reports', text: 'Case Reports' },
+    { value: 'Clinical Conference', text: 'Clinical Conference' },
+    { value: 'Clinical Study', text: 'Clinical Study' },
+    { value: 'Clinical Trial', text: 'Clinical Trial' },
+    { value: 'Clinical Trial, Phase I', text: 'Clinical Trial, Phase I' },
+    { value: 'Clinical Trial, Phase II', text: 'Clinical Trial, Phase II' },
+    { value: 'Clinical Trial, Phase III', text: 'Clinical Trial, Phase III' },
+    { value: 'Clinical Trial, Phase IV', text: 'Clinical Trial, Phase IV' },
+    { value: 'Comparative Study', text: 'Comparative Study' },
+    { value: 'Congresses', text: 'Congresses' },
+    { value: 'Consensus Development Conference', text: 'Consensus Development Conference' },
+    { value: 'Consensus Development Conference, NIH', text: 'Consensus Development Conference, NIH' },
+    { value: 'Controlled Clinical Trial', text: 'Controlled Clinical Trial' },
+    { value: 'Dataset', text: 'Dataset' },
+    { value: 'Editorial', text: 'Editorial' },
+    { value: 'English Abstract', text: 'English Abstract' },
+    { value: 'Evaluation Studies', text: 'Evaluation Studies' },
+    { value: 'Guideline', text: 'Guideline' },
+    { value: 'Historical Article', text: 'Historical Article' },
+    { value: 'Interview', text: 'Interview' },
+    { value: 'Introductory Journal Article', text: 'Introductory Journal Article' },
+    { value: 'Journal Article', text: 'Journal Article' },
+    { value: 'Lectures', text: 'Lectures' },
+    { value: 'Legal Cases', text: 'Legal Cases' },
+    { value: 'Letter', text: 'Letter' },
+    { value: 'Meta-Analysis', text: 'Meta-Analysis' },
+    { value: 'Multicenter Study', text: 'Multicenter Study' },
+    { value: 'News', text: 'News' },
+    { value: 'Observational Study', text: 'Observational Study' },
+    { value: 'Patient Education Handout', text: 'Patient Education Handout' },
+    { value: 'Personal Narratives', text: 'Personal Narratives' },
+    { value: 'Portraits', text: 'Portraits' },
+    { value: 'Practice Guideline', text: 'Practice Guideline' },
+    { value: 'Pragmatic Clinical Trial', text: 'Pragmatic Clinical Trial' },
+    { value: 'Published Erratum', text: 'Published Erratum' },
+    { value: 'Randomized Controlled Trial', text: 'Randomized Controlled Trial' },
+    { value: 'Review', text: 'Review' },
+    { value: 'Twin Study', text: 'Twin Study' },
+    { value: 'Validation Studies', text: 'Validation Studies' },
+    { value: 'Video-Audio Media', text: 'Video-Audio Media' },
+    { value: 'Webcasts', text: 'Webcasts' },
+];
+
+export const HERDC_CODES = [
+    { value: '450001', text: 'A1 Books - Authored - research' },
+    { value: '450002', text: 'A2 Books - Authored - other' },
+    { value: '450003', text: 'A3 Books - Edited' },
+    { value: '450004', text: 'A4 Books - Revision/New Edition' },
+    { value: '450005', text: 'AX Books - Other Public Output' },
+    { value: '450043', text: 'B Book Chapter' },
+    { value: '450006', text: 'B1 Book Chapter - Research' },
+    { value: '450007', text: 'B2 Book Chapter - Other' },
+    { value: '450008', text: 'BX Book Chapter - Other Public Output' },
+    { value: '450009', text: 'C1 Journal Articles - Refereed article' },
+    { value: '450044', text: 'C2 Journal Article - other refereed' },
+    { value: '450010', text: 'C3 Journal Articles - Non-refereed' },
+    { value: '450011', text: 'C4 Journal Article - Letter or note' },
+    { value: '450012', text: 'C5 Edited Volume of a Refereed Journal' },
+    { value: '450013', text: 'CX Journal Article - Other Public Output' },
+    { value: '450045', text: 'D Major Review' },
+    { value: '450014', text: 'E1 Conference - Written paper - refereed proceedings' },
+    { value: '450015', text: 'E2 Conference - Full written paper - non-refereed proceedings' },
+    { value: '450016', text: 'E3 Conference Publication - Extract of Paper' },
+    { value: '450017', text: 'E4 Edited volume of conference proceedings' },
+    { value: '450018', text: 'EX Conference Proceedings - Other Public Output' },
+    { value: '450019', text: 'F Audio-Visual Recordings' },
+    { value: '450020', text: 'FX Other Public Output' },
+    { value: '450046', text: 'G Computer Software' },
+    { value: '450021', text: 'G1 Computer Software' },
+    { value: '450022', text: 'G2 Computer Database' },
+    { value: '450023', text: 'GX Computer - Other Public Output' },
+    { value: '450047', text: 'H Technical Drawing/Architectural and Industrial Design/Working Model' },
+    { value: '450024', text: 'H1 Refereed Design Awards' },
+    { value: '450026', text: 'H2 Design Exhibitions' },
+    { value: '450048', text: 'H3 Technical drawing/architectural and industrial design/working model' },
+    { value: '450027', text: 'HX Architectural/Building Design - Other Public Output' },
+    { value: '450028', text: 'I Patents' },
+    { value: '450029', text: 'IX Patents - Other public output' },
+    { value: '450030', text: 'J1 Major Creative Works - Published Works' },
+    { value: '450031', text: 'J2 Other Creative Works - Minor Written or Recorded Work' },
+    { value: '450049', text: 'J3 Major Creative Works - Exhibitions' },
+    { value: '450032', text: 'J4 Other Creative Works - Representation of Original Art' },
+    { value: '450033', text: 'J5 Major Creative Works - Recorded Works' },
+    { value: '450034', text: 'JX Other Creative Works - Other Public Output' },
+    { value: '450035', text: 'K Published Research Report' },
+    { value: '450036', text: 'K1 Published Research Report' },
+    { value: '450037', text: 'K2 Published Government Research Report' },
+    { value: '450038', text: 'KX Research Report - Other Public Output' },
+    { value: '450039', text: 'L Thesis' },
+    { value: '450040', text: 'LX Thesis - Other public output' },
+    { value: '450041', text: 'M Reference Entry in Dictionary/Encyclopaedia' },
+    { value: '450042', text: 'MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output' },
+];
+
+export const HERDC_STATUS = [
+    { value: null, text: 'Please choose an option' },
+    { value: '453220', text: 'Provisional Code' },
+    { value: '453221', text: 'Confirmed Code' },
+];
+
+export const INSTITUTIONAL_STATUS = [
+    { value: null, text: 'Please choose an option' },
+    { value: '453223', text: 'UQ' },
+    { value: '453224', text: 'Non-UQ' },
+    { value: '453225', text: 'Unknown' },
+];
+
+export const REFEREED_SOURCES = [
+    { value: '453638', text: 'Not yet assessed' },
+    { value: '453635', text: 'Ulrichs' },
+    { value: '453634', text: 'Thomson Reuters' },
+    { value: '453632', text: 'ERA Journal List 2012' },
+    { value: '453631', text: 'ERA Journal List 2015' },
+    { value: '453633', text: 'ERA Journal List 2010' },
+    { value: '453636', text: 'Other' },
+    { value: '453637', text: 'Not peer reviewed' },
+];
+
+export const ALTERNATE_GENRE = [
+    { value: null, text: 'Please choose an option' },
+    { value: '453663', text: 'Conversation' },
+    { value: '453664', text: 'Culture, stories, people' },
+    { value: '453665', text: 'Session organisation' },
+    { value: '453666', text: 'Song' },
+    { value: '453667', text: 'Traditional language sentence' },
+    { value: '453668', text: 'Traditional language word' },
+];
+
+export const OA_STATUS = [
+    { value: '453692', text: 'Not yet assessed' },
+    { value: '453693', text: 'DOI' },
+    { value: '453694', text: 'Link (no DOI)' },
+    { value: '453695', text: 'File (Publisher version)' },
+    { value: '453696', text: 'File (Author Post-print)' },
+    { value: '453697', text: 'Other' },
+    { value: '453698', text: 'Not Open Access' },
+    { value: '453700', text: 'Mediated Access' },
+    { value: '453954', text: 'PMC' },
+];
+
+export const ANDS_COLLECTION_TYPE_COLLECTION = 453615;
+export const ANDS_COLLECTION_TYPE_DATASET = 453616;

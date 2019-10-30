@@ -15,8 +15,14 @@ exports[`RichEditorField should render default component 1`] = `
       "current": null,
     }
   }
+  instanceRef={
+    Object {
+      "current": null,
+    }
+  }
   onChange={[MockFunction]}
   returnSingleValue={false}
+  titleProps={Object {}}
   value=""
 />
 `;

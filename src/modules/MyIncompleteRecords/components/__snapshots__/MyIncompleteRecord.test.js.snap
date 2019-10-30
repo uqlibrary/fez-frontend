@@ -742,6 +742,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -801,14 +802,14 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -816,6 +817,8 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -1658,6 +1661,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -1717,14 +1721,14 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1732,6 +1736,8 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -2599,6 +2605,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -2658,14 +2665,14 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -2673,6 +2680,8 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -3599,6 +3608,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -3658,14 +3668,14 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -3673,6 +3683,8 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -4515,6 +4527,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -4574,14 +4587,14 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -4589,6 +4602,8 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -5431,6 +5446,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -5490,14 +5506,14 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -5505,6 +5521,8 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -6347,6 +6365,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -6406,14 +6425,14 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -6421,6 +6440,8 @@ exports[`Component MyIncompleteRecord should render significance and contributio
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -7269,6 +7290,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -7328,14 +7350,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -7343,6 +7365,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
@@ -8185,6 +8209,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             </span>
           </WithStyles(Typography)>
           <Field
+            canEdit={true}
             component={[Function]}
             editMode={true}
             hideDelete={true}
@@ -8244,14 +8269,14 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       </b>
                       .
                     </div>,
-                    "identifierColumn": "UQ identifier",
+                    "identifierColumn": "UQ identifier / Organisation",
                     "nameColumn": "Author's name as published",
                     "reorderColumn": "Reorder items",
                   },
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-author",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -8259,6 +8284,8 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-author",
+                    "editHint": "Edit this item",
                     "lockedTooltip": "You are not able to edit this row",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",

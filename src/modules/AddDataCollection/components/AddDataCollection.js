@@ -24,7 +24,6 @@ import { routes, validation } from 'config';
 import componentLocale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import { locale } from 'locale';
-import { default as publicationForm } from 'locale/publicationForm';
 
 import Button from '@material-ui/core/Button';
 import Grid from '@material-ui/core/Grid';
@@ -100,7 +99,7 @@ export default class AddDataCollection extends Component {
             </Grid>
         );
         return (
-            <StandardPage title={publicationForm.addDataset.pageTitle}>
+            <StandardPage title={txt.pageTitle}>
                 <form>
                     <ConfirmDialogBox
                         onRef={this._handleRef}

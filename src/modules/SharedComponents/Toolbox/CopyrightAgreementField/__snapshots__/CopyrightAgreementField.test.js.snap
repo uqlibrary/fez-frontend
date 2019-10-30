@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component CopyrightAgreement should render default view 1`] = `
+<WithStyles(CopyrightAgreement)
+  classes={
+    Object {
+      "accepted": "",
+      "error": "",
+      "label": "",
+    }
+  }
+  copyrightAgreement="test deposit agreement"
+  disabled={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  isCopyrightAgreementAccepted={false}
+  onChange={[MockFunction]}
+/>
+`;

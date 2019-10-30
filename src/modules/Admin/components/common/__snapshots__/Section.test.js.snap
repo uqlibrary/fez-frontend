@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GroupsWithinCard component should render default view 1`] = `
+<WithStyles(Grid)
+  item={true}
+  key="Title"
+  xs={12}
+>
+  <StandardCard
+    accentHeader={true}
+    title="Title"
+  >
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
+      <Memo()
+        groups={
+          Array [
+            Array [
+              "test",
+            ],
+          ]
+        }
+      />
+    </WithStyles(Grid)>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
+exports[`GroupsWithoutCard component should render default view 1`] = `
+<FieldGridItem
+  field="test"
+  group={
+    Array [
+      "test",
+    ]
+  }
+  key="test"
+/>
+`;
+
+exports[`Section component should render default view 1`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <Memo()
+    disabled={false}
+    key="Title"
+    title="Title"
+  />
+</WithStyles(Grid)>
+`;
+
+exports[`Section component should render default view 2`] = `
+<WithStyles(Grid)
+  container={true}
+  spacing={16}
+>
+  <Memo()
+    disabled={false}
+    key="0"
+  />
+</WithStyles(Grid)>
+`;

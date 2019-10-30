@@ -37,7 +37,9 @@ case "$PIPE_NUM" in
     printf "Jest v"; jest --version
     # Not running code coverage check for feature branches.
     # Running in series with `runInBand` to avoid CodeShip VM running out of memory
-    if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
+    #if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
+    # temp allow non code coverage on staging for uat of admin edit
+    if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "production") ]]; then
         printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
         printf "\n$ npm run test:unit -- --ci --runInBand\n"
         npm run test:unit -- --ci --runInBand
@@ -51,16 +53,6 @@ case "$PIPE_NUM" in
     printf "\n--- \e[1mRUNNING INTEGRATION TESTS\e[0m ---\n"
     printf "\n$ npm run test:integration\n"
     npm run test:integration
-
-    # run cypress tests if in master branch, or the branch name includes 'cypress'
-    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        # Use this variant to only run tests locally in Codeship
-        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
-
-        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
-    fi
 ;;
 "2")
     # codestyle check should be moved here when all branches are running codeship tests from this script
@@ -71,25 +63,10 @@ case "$PIPE_NUM" in
     # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
         # Use this variant to only run tests locally in Codeship
-        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
+        npm run e2e
 
-        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
-    fi
-;;
-"3")
-    # codestyle check should be moved here when all branches are running codeship tests from this script
-
-    set -e
-
-    # run cypress tests if in master branch, or the branch name includes 'cypress'
-    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        # Use this variant to only run tests locally in Codeship
-        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
-
-        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
+        # Use this variant to turn on video recording of tests and upload to the Cypress dashboard:
+        # npm run e2e:dashboard
     fi
 ;;
 esac

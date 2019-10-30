@@ -1,41 +1,15 @@
 import React from 'react';
-import { connect } from 'react-redux';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import * as actions from 'actions';
+import { usePublicationSubtype } from 'hooks';
 
-const mapStateToProps = (state, ownProps) => {
-    return {
-        selectedValue: (!!ownProps.input && ownProps.input.value) || ownProps.value,
-        itemsList:
-            state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[ownProps.vocabId]
-                ? state.get('controlledVocabulariesReducer')[ownProps.vocabId].itemsList
-                : [],
-        itemsLoading:
-            state.get('controlledVocabulariesReducer') && state.get('controlledVocabulariesReducer')[ownProps.vocabId]
-                ? state.get('controlledVocabulariesReducer')[ownProps.vocabId].itemsLoading
-                : false,
-    };
-};
-
-const mapDispatchToProps = dispatch => {
-    return {
-        loadItemsList: category => dispatch(actions.loadVocabulariesList(category)),
-    };
-};
-
-const PublicationSubtypeList = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(GenericSelectField);
-
-export default function PublicationSubtypeField(fieldProps) {
+export const PublicationSubtypeField = fieldProps => {
+    const subtypes = usePublicationSubtype();
     return (
-        <PublicationSubtypeList
-            onChange={
-                (!!fieldProps.input && fieldProps.input.onChange) || (!!fieldProps.onChange && fieldProps.onChange)
-            }
-            parentItemsId={fieldProps.vocabId}
+        <GenericSelectField
+            onChange={fieldProps.input.onChange}
+            selectedValue={(!!fieldProps.input && fieldProps.input.value) || fieldProps.value}
+            itemsList={['Select a document subtype', ...subtypes.map(type => ({ value: type }))]}
             {...fieldProps}
         />
     );
-}
+};

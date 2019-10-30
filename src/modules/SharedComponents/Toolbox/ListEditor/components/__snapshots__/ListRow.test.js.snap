@@ -29,18 +29,18 @@ exports[`ListRow renders  a row with index and item and delete button 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <GenericTemplate
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -100,18 +100,18 @@ exports[`ListRow renders  a row with index and item set, renders reorder buttons
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <GenericTemplate
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -200,14 +200,13 @@ exports[`ListRow renders  should delete row on confirmation 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={11}
       sm={11}
       xs={10}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <GenericTemplate
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
@@ -260,18 +259,18 @@ exports[`ListRow renders  should move row down 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <GenericTemplate
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -346,18 +345,18 @@ exports[`ListRow renders  should move row up 1`] = `
   >
     <WithStyles(Grid)
       item={true}
+      md={9}
       sm={6}
       xs={5}
     >
-      <WithStyles(Typography)
-        variant="body2"
-      >
-        one
-      </WithStyles(Typography)>
+      <GenericTemplate
+        item="one"
+      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       className="center"
       item={true}
+      md={2}
       sm={5}
       xs={5}
     >
@@ -414,6 +413,7 @@ exports[`ListRow renders  should render default view with styles 1`] = `
   form="Form"
   index={0}
   item="one"
+  itemTemplate={[Function]}
   locale={
     Object {
       "deleteHint": "Remove this item",

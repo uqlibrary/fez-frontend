@@ -1,11 +1,12 @@
 import QualityIndicatorField from './QualityIndicatorField';
+import Immutable from 'immutable';
 
-function setup(testProps, isShallow = true) {
+function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         ...testProps,
     };
 
-    return getElement(QualityIndicatorField, props, isShallow);
+    return getElement(QualityIndicatorField, props, args);
 }
 
 describe('QualityIndicatorField component', () => {
@@ -25,6 +26,30 @@ describe('QualityIndicatorField component', () => {
             meta: {
                 error: 'Test error',
             },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render immutable list as selected value with given field props', () => {
+        const wrapper = setup({
+            label: 'Test label',
+            placeholder: 'Test placeholder',
+            input: {
+                value: Immutable.List(['One', 'Two']),
+                onChange: jest.fn(),
+            },
+            meta: {
+                error: 'Test error',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render when given a default value field props', () => {
+        const wrapper = setup({
+            label: 'Test label',
+            placeholder: 'Test placeholder',
+            defaultValue: 'afr',
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });

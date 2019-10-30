@@ -663,7 +663,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-supervisor",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -671,6 +671,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-supervisor",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this supervisor ([name]) to assign it as you",
@@ -1549,7 +1551,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 },
                 "row": Object {
                   "locale": Object {
-                    "deleteButtonId": [Function],
+                    "deleteButtonId": "delete-supervisor",
                     "deleteHint": "Remove this item",
                     "deleteRecordConfirmation": Object {
                       "cancelButtonLabel": "No",
@@ -1557,6 +1559,8 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editButtonId": "edit-supervisor",
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                     "selectHint": "Select this supervisor ([name]) to assign it as you",

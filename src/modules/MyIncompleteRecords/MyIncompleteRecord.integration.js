@@ -49,7 +49,7 @@ describe('MyIncompleteRecord form', () => {
         expect(getByTestId('delete-author-2')).toHaveAttribute('disabled');
         expect(getByTestId('delete-author-3')).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId('contributor-editor-row-0'));
+        fireEvent.click(getByTestId('edit-author-0'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
         expect(getByTestId('submit-author')).toHaveAttribute('disabled');
@@ -63,7 +63,7 @@ describe('MyIncompleteRecord form', () => {
         fireEvent.click(getByTestId('submit-author'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
-        fireEvent.click(getByTestId('contributor-editor-row-1'));
+        fireEvent.click(getByTestId('edit-author-1'));
         expect(getByTestId('authors-name-as-published-field')).toHaveAttribute('disabled');
         fireEvent.click(getByTestId('org-affiliation-selector'));
         fireEvent.click(getByText(/^uq$/i));
@@ -71,10 +71,10 @@ describe('MyIncompleteRecord form', () => {
         fireEvent.click(getByTestId('submit-author'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
-        fireEvent.click(getByTestId('contributor-editor-row-2'));
+        fireEvent.click(getByTestId('edit-author-2'));
         expect(fragment).toMatchDiffSnapshot(fragment);
 
-        fireEvent.click(getByTestId('contributor-editor-row-3'));
+        fireEvent.click(getByTestId('edit-author-3'));
         expect(getByTestId('authors-name-as-published-field')).toHaveAttribute('disabled');
         fireEvent.click(getByTestId('org-affiliation-selector'));
         fireEvent.click(getByText(/^uq$/i));
@@ -119,11 +119,12 @@ describe('MyIncompleteRecord form', () => {
         expect(getByTestId('delete-author-1')).toHaveAttribute('disabled');
         expect(getByTestId('delete-author-2')).toHaveAttribute('disabled');
         expect(getByTestId('delete-author-3')).toHaveAttribute('disabled');
+        expect(getByTestId('edit-author-0')).toHaveAttribute('disabled');
 
-        fireEvent.click(getByTestId('contributor-editor-row-0'));
+        fireEvent.click(getByTestId('edit-author-0'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
-        fireEvent.click(getByTestId('contributor-editor-row-1'));
+        fireEvent.click(getByTestId('edit-author-1'));
         expect(getByTestId('submit-author')).toHaveAttribute('disabled');
         expect(getByTestId('authors-name-as-published-field')).toHaveAttribute('disabled');
         expect(getByTestId('authors-name-as-published-field')).toHaveAttributeValue('value', 'Grinberg, Anna');
@@ -133,7 +134,7 @@ describe('MyIncompleteRecord form', () => {
         fireEvent.click(getByTestId('submit-author'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
-        fireEvent.click(getByTestId('contributor-editor-row-2'));
+        fireEvent.click(getByTestId('edit-author-2'));
         expect(getByTestId('authors-name-as-published-field')).toHaveAttribute('disabled');
         fireEvent.change(getByTestId('org-affiliation-name'), { target: { value: 'test' } });
         fireEvent.click(getByTestId('org-affiliation-type'));
@@ -142,7 +143,7 @@ describe('MyIncompleteRecord form', () => {
         fireEvent.click(getByTestId('submit-author'));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
 
-        fireEvent.click(getByTestId('contributor-editor-row-3'));
+        fireEvent.click(getByTestId('edit-author-3'));
         expect(getByTestId('authors-name-as-published-field')).toHaveAttribute('disabled');
         fireEvent.click(getByTestId('org-affiliation-selector'));
         fireEvent.click(getByText(/^uq$/i));

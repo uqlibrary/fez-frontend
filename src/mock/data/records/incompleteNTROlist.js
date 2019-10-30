@@ -925,7 +925,8 @@ export default {
                 "rek_volume_number_id": null,
                 "rek_volume_number_pid": "UQ:678742",
                 "rek_volume_number": "9"
-            }
+            },
+            "rek_object_type_lookup": "Record"
         },
         {
             "rek_pid": "UQ:678743",

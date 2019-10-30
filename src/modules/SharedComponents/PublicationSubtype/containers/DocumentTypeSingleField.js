@@ -4,7 +4,7 @@ import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField'
 import { publicationTypes } from 'config';
 
 const documentTypeList = () => {
-    return publicationTypes(false).map(item => {
+    return Object.values(publicationTypes(false)).map(item => {
         return {
             value: item.id,
             text: item.name,
