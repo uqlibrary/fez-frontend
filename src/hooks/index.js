@@ -1,6 +1,17 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import { useRecordContext, useAccountContext } from 'context';
 import { publicationTypes } from 'config';
+import {
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_BOOK,
+    PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DESIGN,
+    PUBLICATION_TYPE_IMAGE,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
+    PUBLICATION_TYPE_MANUSCRIPT,
+    PUBLICATION_TYPE_RESEARCH_REPORT,
+} from 'config/general';
 
 export const usePublicationSubtype = (displayType = null) => {
     const { record } = useRecordContext();
@@ -23,4 +34,19 @@ export const userIsAuthor = () => {
             return parseInt(authors.rek_author_id, 10) === parseInt(account.aut_id, 10);
         })
     );
+};
+
+export const publicationTypeHasAdvisoryStatement = record => {
+    const publicationTypesWithAdvisoryStatement = [
+        PUBLICATION_TYPE_AUDIO_DOCUMENT,
+        PUBLICATION_TYPE_BOOK_CHAPTER,
+        PUBLICATION_TYPE_BOOK,
+        PUBLICATION_TYPE_DESIGN,
+        PUBLICATION_TYPE_CREATIVE_WORK,
+        PUBLICATION_TYPE_RESEARCH_REPORT,
+        PUBLICATION_TYPE_JOURNAL_ARTICLE,
+        PUBLICATION_TYPE_IMAGE,
+        PUBLICATION_TYPE_MANUSCRIPT,
+    ];
+    return publicationTypesWithAdvisoryStatement.includes(record.rek_display_type);
 };
