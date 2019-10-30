@@ -19,7 +19,7 @@ import { OfflineSnackbar } from 'modules/SharedComponents/OfflineSnackbar';
 import { SearchComponent } from 'modules/SharedComponents/SearchComponent';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import * as pages from './pages';
-import ipInfo from 'ipinfo';
+// import ipInfo from 'ipinfo';
 
 // MUI1
 import Tooltip from '@material-ui/core/Tooltip';
@@ -106,7 +106,7 @@ export class AppClass extends PureComponent {
 
     getChildContext() {
         return {
-            userCountry: this.state.userCountry,
+            userCountry: 'AU', // this.state.userCountry,
             isMobile: this.state.isMobile,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? { width: '100%' } : {},
@@ -128,11 +128,11 @@ export class AppClass extends PureComponent {
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
         /* istanbul ignore next */
-        ipInfo((err, cLoc) => {
-            this.setState({
-                userCountry: (cLoc && cLoc.country) || err,
-            });
-        });
+        // ipInfo((err, cLoc) => {
+        //     this.setState({
+        //         userCountry: (cLoc && cLoc.country) || err,
+        //     });
+        // });
     }
 
     componentWillReceiveProps(nextProps) {
