@@ -1171,7 +1171,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -2126,106 +2505,12 @@
+@@ -2129,106 +2508,12 @@
                     </div>
                   </div>
                 </div>
@@ -1216,7 +1216,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-365 alert-text\\"
 -                     >
 -                       <b>
--                         Validation -
+-                         Validation - 
 -                       </b>
 -                       <span>
 -                         Form cannot be submitted until all fields are valid. Please review all input fields.
@@ -1278,7 +1278,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
             />
-@@ -2251,21 +2536,23 @@
+@@ -2254,21 +2539,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >
