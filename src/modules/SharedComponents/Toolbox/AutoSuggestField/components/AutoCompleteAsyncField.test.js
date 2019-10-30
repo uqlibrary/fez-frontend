@@ -252,6 +252,11 @@ describe('AutoCompleteAsyncField component', () => {
             selectedItem: { value: 'Testing' },
         });
         expect(menuItemResult).toMatchSnapshot();
+
+        wrapper.setProps({
+            selectedItem: [{ value: 'Test' }, { value: 'Testing' }],
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 
     it('should call loadSuggestions function', () => {
