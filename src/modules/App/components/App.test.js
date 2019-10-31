@@ -181,6 +181,7 @@ describe('Application component', () => {
         // current URL is set to testUrl which is set in package.json as http://fez-staging.library.uq.edu.au
         const wrapper = setup();
         expect(wrapper.instance().getChildContext()).toEqual({
+            userCountry: 'AU',
             isMobile: false,
             selectFieldMobileOverrides: {
                 autoWidth: true,
