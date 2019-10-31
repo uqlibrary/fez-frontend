@@ -3885,7 +3885,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 97786
+            "dsi_size": 97786,
+            dsi_security_policy: 5,
         },
         {
             "dsi_pid": "UQ:792099",
@@ -3896,7 +3897,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 65857
+            "dsi_size": 65857,
+            dsi_security_policy: 4,
         },
         {
             "dsi_pid": "UQ:792099",
@@ -3907,7 +3909,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 3952
+            "dsi_size": 3952,
+            dsi_security_policy: 3,
         },
         {
             "dsi_pid": "UQ:792099",
@@ -3918,7 +3921,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 97345
+            "dsi_size": 97345,
+            dsi_security_policy: 2,
         },
         {
             "dsi_pid": "UQ:792099",
@@ -3929,7 +3933,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "D",
-            "dsi_size": 97345
+            "dsi_size": 97345,
+            dsi_security_policy: 1,
         },
         {
             "dsi_pid": "UQ:792099",
@@ -3940,7 +3945,8 @@ export const journalArticle = {
             "dsi_mimetype": "image/jpeg",
             "dsi_copyright": null,
             "dsi_state": "A",
-            "dsi_size": 97345
+            "dsi_size": 97345,
+            dsi_security_policy: 1,
         },
     ],
     "fez_record_search_key_geographic_area": [],
