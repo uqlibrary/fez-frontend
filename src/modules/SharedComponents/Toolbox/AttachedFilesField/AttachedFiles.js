@@ -44,9 +44,6 @@ export const useStyles = makeStyles(
         thumbIconCentered: {
             textAlign: 'center',
         },
-        embargoDateBlock: {
-            backgroundColor: `${theme.palette.secondary.light}`,
-        },
     }),
     { withTheme: true },
 );

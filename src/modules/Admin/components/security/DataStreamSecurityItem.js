@@ -33,10 +33,10 @@ const DataStreamSecurityItem = ({
         initialDataStream.dsi_embargo_date !== dataStream.dsi_embargo_date && dataStream.dsi_embargo_date === null,
     );
 
-    const handleDataStreamChange = value => {
+    const handleDataStreamChange = values => {
         onSecurityChange(index, {
             ...dataStream,
-            ...value,
+            ...values,
             dsi_security_inherited: 0,
         });
     };
@@ -54,7 +54,7 @@ const DataStreamSecurityItem = ({
 
     const handleEmbargoDateClear = () => {
         handleDataStreamChange({
-            dsi_embargo_date: initialDataStream.dsi_embargo_date,
+            dsi_embargo_date: null,
             dsi_security_inherited: 0,
             dsi_security_policy: minimumSecurityPolicyForRecord(),
         });
@@ -177,7 +177,8 @@ DataStreamSecurityItem.defaultProps = {
 export function isSame(prevProps, nextProps) {
     return (
         prevProps.disabled === nextProps.disabled &&
-        prevProps.dataStream.dsi_security_policy === nextProps.dataStream.dsi_security_policy
+        prevProps.dataStream.dsi_security_policy === nextProps.dataStream.dsi_security_policy &&
+        prevProps.dataStream.dsi_embargo_date === nextProps.dataStream.dsi_embargo_date
     );
 }
 
