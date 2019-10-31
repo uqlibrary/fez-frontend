@@ -50,20 +50,6 @@ const DataStreamSecurityItem = ({
             dsi_security_inherited: 0,
             dsi_security_policy: value,
         });
-                    ...value,
-                },
-        );
-    };
-
-    const minimumSecurityPolicyForRecord = () => {
-        return formValues.rek_security_policy;
-    };
-
-    const handlePolicyChange = value => {
-        handleDataStreamChange({
-            dsi_security_inherited: 0,
-            dsi_security_policy: value,
-        });
     };
 
     const handleEmbargoDateClear = () => {

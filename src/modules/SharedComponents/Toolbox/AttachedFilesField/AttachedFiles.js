@@ -226,7 +226,6 @@ export const AttachedFiles = ({
     dataStreams,
     hideCulturalSensitivityStatement,
     setHideCulturalSensitivityStatement,
-    clearDateHint,
     disabled,
     deleteHint,
     onDelete,
@@ -251,7 +250,6 @@ export const AttachedFiles = ({
         onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
     };
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-    const _clearEmbargoDate = index => () => onDateChange('dsi_embargo_date', '', index);
 
     return (
         <Grid item xs={12}>
@@ -391,7 +389,6 @@ AttachedFiles.propTypes = {
     dataStreams: PropTypes.array.isRequired,
     hideCulturalSensitivityStatement: PropTypes.bool,
     setHideCulturalSensitivityStatement: PropTypes.func,
-    clearDateHint: PropTypes.string,
     disabled: PropTypes.bool,
     deleteHint: PropTypes.string,
     onDelete: PropTypes.func,
@@ -402,7 +399,6 @@ AttachedFiles.propTypes = {
 };
 
 AttachedFiles.defaultProps = {
-    clearDateHint: 'Clear this date',
     deleteHint: 'Remove this file',
     canEdit: false,
 };
