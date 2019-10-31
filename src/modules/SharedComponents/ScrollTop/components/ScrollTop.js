@@ -23,13 +23,6 @@ export const styles = () => ({
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    // Edge currentl has a bug using scrollTo
-    // https://developer.microsoft.com/en-us/microsoft-edge/platform/issues/15534521/
-    // document.getElementById('content-container').scroll({
-    //     top: 0,
-    //     left: 0,
-    //     behavior: 'smooth',
-    // });
     document.getElementById('content-container').scrollTop = 0;
 };
 
@@ -37,7 +30,7 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById(containerId);
     /* istanbul ignore next */
-    if (scrollableContainer) {
+    if (!!scrollableContainer) {
         scrollableContainer.onscroll = () => {
             if (scrollableContainer.scrollTop > showAfter) {
                 document.getElementById('scrolltopbtn').style.opacity = '0.5';
