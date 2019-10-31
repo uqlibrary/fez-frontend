@@ -1429,7 +1429,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           Work subtype
                           <span
                             class=\\"MuiFormLabel-asterisk-1034\\"
-@@ -299,20 +299,139 @@
+@@ -299,43 +299,1263 @@
                               class=\\"MuiSelect-select-1036 MuiSelect-selectMenu-1039 MuiInputBase-input-1065 MuiInput-input-1050\\"
                               id=\\"rek-subtype\\"
                               role=\\"button\\"
@@ -1445,7 +1445,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                               id=\\"Work subtype\\"
                               name=\\"rek_subtype\\"
                               placeholder=\\"Select a work subtype from the dropdown list\\"
-                              type=\\"hidden\\"
++                             type=\\"hidden\\"
 +                             value=\\"Textbook\\"
 +                           />
 +                           <svg
@@ -1566,18 +1566,18 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           </div>
 +                           <input
 +                             style=\\"border: 1px solid red;\\"
-+                             type=\\"hidden\\"
-                              value=\\"\\"
-                            />
-                            <svg
-                              aria-hidden=\\"true\\"
-                              class=\\"MuiSvgIcon-root-1003 MuiSelect-icon-1041\\"
-@@ -320,14 +439,1113 @@
-                              role=\\"presentation\\"
-                              viewBox=\\"0 0 24 24\\"
-                            >
-                              <path
-                                d=\\"M7 10l5 5 5-5z\\"
+                              type=\\"hidden\\"
++                             value=\\"\\"
++                           />
++                           <svg
++                             aria-hidden=\\"true\\"
++                             class=\\"MuiSvgIcon-root-1003 MuiSelect-icon-1041\\"
++                             focusable=\\"false\\"
++                             role=\\"presentation\\"
++                             viewBox=\\"0 0 24 24\\"
++                           >
++                             <path
++                               d=\\"M7 10l5 5 5-5z\\"
 +                             />
 +                           </svg>
 +                         </div>
@@ -1777,8 +1777,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                               name=\\"fez_record_search_key_total_pages.rek_total_pages\\"
 +                               placeholder=\\"\\"
 +                               type=\\"text\\"
-+                               value=\\"\\"
-+                             />
+                                value=\\"\\"
+                              />
 +                           </div>
 +                         </div>
 +                       </div>
@@ -1900,15 +1900,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       type=\\"hidden\\"
 +                                       value=\\"-1\\"
 +                                     />
-+                                     <svg
-+                                       aria-hidden=\\"true\\"
-+                                       class=\\"MuiSvgIcon-root-1003 MuiSelect-icon-1041\\"
-+                                       focusable=\\"false\\"
-+                                       role=\\"presentation\\"
-+                                       viewBox=\\"0 0 24 24\\"
-+                                     >
-+                                       <path
-+                                         d=\\"M7 10l5 5 5-5z\\"
+                                      <svg
+                                        aria-hidden=\\"true\\"
+                                        class=\\"MuiSvgIcon-root-1003 MuiSelect-icon-1041\\"
+                                        focusable=\\"false\\"
+                                        role=\\"presentation\\"
+                                        viewBox=\\"0 0 24 24\\"
+                                      >
+                                        <path
+                                          d=\\"M7 10l5 5 5-5z\\"
 +                                       />
 +                                     </svg>
 +                                   </div>
@@ -2161,7 +2161,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
 +                                 type=\\"text\\"
 +                                 value=\\"\\"
-+                               />
+                                />
 +                             </div>
 +                           </div>
 +                         </div>
@@ -2237,6 +2237,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-795\\"
++                           style=\\"flex-grow: 1;\\"
 +                         >
 +                           <div
 +                             class=\\"MuiFormControl-root-1013 MuiFormControl-fullWidth-1016\\"
@@ -2320,6 +2321,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-795\\"
++                           style=\\"flex-grow: 1;\\"
 +                         >
 +                           <div
 +                             class=\\"MuiFormControl-root-1013 MuiFormControl-fullWidth-1016\\"
@@ -2582,7 +2584,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
 +                                         fill=\\"none\\"
-                                        />
++                                       />
 +                                       <path
 +                                         d=\\"M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z\\"
 +                                       />
@@ -2608,19 +2610,19 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                               style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
 +                               type=\\"file\\"
 +                             />
-+                           </div>
-+                         </div>
-+                       </div>
-+                     </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 +           <div
 +             class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834\\"
 +           >
-+             <div
+              <div
 +               class=\\"Alert\\"
 +               style=\\"padding: 12px;\\"
 +             >
@@ -2651,7 +2653,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
 +                         />
 +                       </svg>
-                      </div>
++                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-795 MuiGrid-grid-xs-true-822 Alert-text-1185 alert-text\\"
 +                     >
@@ -2681,12 +2683,20 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                           </li>
 +                         </ul>
 +                       </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-@@ -353,10 +1571,28 @@
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++         </div>
++         <div
+            class=\\"MuiGrid-container-794 MuiGrid-spacing-xs-24-818\\"
+          >
+            <div
+              class=\\"MuiGrid-item-795 MuiGrid-grid-xs-true-822\\"
+            />
+@@ -353,10 +1573,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -2951,7 +2961,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         label=\\"year\\"
                                         maxlength=\\"4\\"
                                         name=\\"year\\"
-@@ -1527,22 +1503,10 @@
+@@ -1529,22 +1505,10 @@
                             <li>
                               Author/creator names are required
                             </li>
@@ -3404,7 +3414,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                 >
                   <div
                     class=\\"MuiPaper-root-952 MuiPaper-elevation1-955 MuiPaper-rounded-953 MuiCard-root-951 Cards-card-946 StandardCard\\"
-@@ -1445,71 +1496,13 @@
+@@ -1447,71 +1498,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -3476,7 +3486,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1541,22 +1534,24 @@
+@@ -1543,22 +1536,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-auto-835\\"
@@ -3955,7 +3965,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1505,12 +1454,70 @@
+@@ -1507,12 +1456,70 @@
                     </div>
                   </div>
                 </div>
@@ -4026,7 +4036,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-true-822\\"
             />
-@@ -1534,24 +1541,22 @@
+@@ -1536,24 +1543,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-795 MuiGrid-grid-xs-12-834 MuiGrid-grid-sm-auto-835\\"

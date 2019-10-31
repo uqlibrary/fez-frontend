@@ -12,8 +12,9 @@ npm install -g npm@6
 
 printf "\nNow running npm v"; npm -v
 
-printf "\n$ npm cache verify\n"
-npm cache verify
+printf "\n$ npm cache clear\n"
+# npm cache verify
+npm cache clear -f
 
 printf "\n\n--- INSTALL DEPENDENCIES ---\n"
 echo "$ npm ci"

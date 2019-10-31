@@ -9,6 +9,7 @@ export {
     ORCID_CLIENT_ID,
     ORCID_AUTHORIZATION_URL,
     GOOGLE_MAPS_API_URL,
+    GOOGLE_MAPS_API_CHINA_URL,
 } from './general';
 
 export { api, generateCancelToken, cache, sessionApi } from './axios';

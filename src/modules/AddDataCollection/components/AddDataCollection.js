@@ -41,6 +41,10 @@ export default class AddDataCollection extends Component {
         isSessionValid: PropTypes.bool,
     };
 
+    static contextTypes = {
+        userCountry: PropTypes.any,
+    };
+
     componentWillReceiveProps(nextProps) {
         if (nextProps.submitSucceeded !== this.props.submitSucceeded) {
             this.confirmationBox.showConfirmation();
@@ -363,7 +367,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -379,7 +383,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12}>
@@ -392,7 +396,7 @@ export default class AddDataCollection extends Component {
                                             disabled={this.props.submitting}
                                         />
                                     </Grid>
-                                    <Grid item xs={12}>
+                                    <Grid item xs={12} style={{ marginLeft: 8, marginRight: 8 }}>
                                         <Divider />
                                     </Grid>
                                     <Grid item xs={12} sm={6} style={{ padding: '0px 20px' }}>
@@ -440,6 +444,7 @@ export default class AddDataCollection extends Component {
                                 </Typography>
                                 <Field
                                     component={GeoCoordinatesField}
+                                    country={this.context.userCountry}
                                     disabled={this.props.submitting}
                                     name="geographicArea"
                                 />
