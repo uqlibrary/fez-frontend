@@ -1075,7 +1075,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -1089,7 +1089,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -1101,7 +1101,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -3292,7 +3292,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -3306,7 +3306,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -3318,7 +3318,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -5667,7 +5667,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -5681,7 +5681,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -5693,7 +5693,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -7136,7 +7136,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -7150,7 +7150,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -7162,7 +7162,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -8605,7 +8605,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -8619,7 +8619,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -8631,7 +8631,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -10074,7 +10074,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -10088,7 +10088,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -10100,7 +10100,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -12617,7 +12617,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -12631,7 +12631,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -12643,7 +12643,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -14086,7 +14086,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -14100,7 +14100,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -14112,7 +14112,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -15555,7 +15555,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -15569,7 +15569,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -15581,7 +15581,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 disabled={true}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -17037,7 +17037,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -17051,7 +17051,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -17063,7 +17063,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -18517,7 +18517,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -18531,7 +18531,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -18543,7 +18543,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -19998,7 +19998,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -20012,7 +20012,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -20024,7 +20024,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -20284,7 +20284,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -20298,7 +20298,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -20310,7 +20310,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />
@@ -20555,7 +20555,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                   here
                 </a>
               </p>,
-              "title": "Content indicators",
+              "title": "Content Indicators",
             }
           }
           title="Optional: Content Indicators"
@@ -20569,7 +20569,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
               xs={12}
             >
               <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
               </WithStyles(Typography)>
             </WithStyles(Grid)>
             <WithStyles(Grid)
@@ -20581,7 +20581,7 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 disabled={false}
                 fullWidth={true}
                 id="content-indicators"
-                label="Please select relevant indicator(s)."
+                label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
               />

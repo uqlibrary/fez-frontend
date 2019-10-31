@@ -540,7 +540,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                   <h3
 +                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-345\\"
 +                   >
-+                     Content Indicators
++                     Optional: Content Indicators
 +                   </h3>
 +                 </div>
 +                 <div
@@ -593,7 +593,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 -                     class=\\"MuiFormHelperText-root-468 MuiFormHelperText-error-469 MuiFormHelperText-required-475\\"
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
 +                     >
-+                       You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
++                       If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
 +                     </p>
 +                   </div>
 +                   <div
@@ -605,9 +605,9 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                       <label
 +                         class=\\"MuiFormLabel-root-391 MuiFormLabel-filled-395 MuiInputLabel-root-380 MuiInputLabel-formControl-385 MuiInputLabel-animated-388 MuiInputLabel-shrink-387\\"
 +                         data-shrink=\\"true\\"
-+                         id=\\"Please select relevant indicator(s).-label\\"
++                         id=\\"Please add any relevant indicator(s).-label\\"
 +                       >
-+                         Please select relevant indicator(s).
++                         Please add any relevant indicator(s).
 +                       </label>
 +                       <div
 +                         class=\\"MuiInputBase-root-418 MuiInput-root-405 MuiInput-underline-409 MuiInputBase-formControl-419 MuiInput-formControl-406\\"
@@ -1226,9 +1226,9 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         <input
                           aria-labelledby=\\"Select an action-label\\"
 @@ -395,23 +394,22 @@
-                          id=\\"Please select relevant indicator(s).-label\\"
+                          id=\\"Please add any relevant indicator(s).-label\\"
                         >
-                          Please select relevant indicator(s).
+                          Please add any relevant indicator(s).
                         </label>
                         <div
 -                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
@@ -1495,9 +1495,9 @@ exports[`FixRecord form should validate the form where applicable and submit cor
               <div
                 class=\\"MuiPaper-root-881 MuiPaper-elevation1-884 MuiPaper-rounded-882 MuiCard-root-880 Cards-card-875 StandardCard\\"
 @@ -394,22 +395,23 @@
-                          id=\\"Please select relevant indicator(s).-label\\"
+                          id=\\"Please add any relevant indicator(s).-label\\"
                         >
-                          Please select relevant indicator(s).
+                          Please add any relevant indicator(s).
                         </label>
                         <div
 -                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-disabled-988 MuiInput-disabled-975 MuiInputBase-formControl-986 MuiInput-formControl-973\\"

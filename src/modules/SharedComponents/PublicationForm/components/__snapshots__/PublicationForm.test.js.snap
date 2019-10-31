@@ -865,10 +865,10 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -879,14 +879,14 @@ exports[`Component PublicationForm Shows an alert 2`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
@@ -1392,10 +1392,10 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -1406,14 +1406,14 @@ exports[`Component PublicationForm Shows an alert 3`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
@@ -4647,10 +4647,10 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -4661,14 +4661,14 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
@@ -5190,10 +5190,10 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -5204,14 +5204,14 @@ exports[`Component PublicationForm should render component with GenericDocument 
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
@@ -5730,10 +5730,10 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -5744,14 +5744,14 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
@@ -6270,10 +6270,10 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -6284,14 +6284,14 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />

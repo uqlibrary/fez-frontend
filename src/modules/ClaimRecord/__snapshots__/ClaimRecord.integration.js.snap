@@ -1252,7 +1252,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                     <p
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
 +                     >
-+                       You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
++                       If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
 +                     </p>
 +                   </div>
 +                   <div
@@ -1264,9 +1264,9 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                       <label
 +                         class=\\"MuiFormLabel-root-471 MuiFormLabel-filled-475 MuiInputLabel-root-460 MuiInputLabel-formControl-465 MuiInputLabel-animated-468 MuiInputLabel-shrink-467\\"
 +                         data-shrink=\\"true\\"
-+                         id=\\"Please select relevant indicator(s).-label\\"
++                         id=\\"Please add any relevant indicator(s).-label\\"
 +                       >
-+                         Please select relevant indicator(s).
++                         Please add any relevant indicator(s).
 +                       </label>
 +                       <div
 +                         class=\\"MuiInputBase-root-498 MuiInput-root-485 MuiInput-underline-489 MuiInputBase-formControl-499 MuiInput-formControl-486\\"
@@ -2039,9 +2039,9 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
 @@ -1282,23 +1275,22 @@
-                          id=\\"Please select relevant indicator(s).-label\\"
+                          id=\\"Please add any relevant indicator(s).-label\\"
                         >
-                          Please select relevant indicator(s).
+                          Please add any relevant indicator(s).
                         </label>
                         <div
 -                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
@@ -2413,9 +2413,9 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                         >
                           I confirm and understand that I am claiming this work under the above name, and confirm this is me
 @@ -1275,22 +1282,23 @@
-                          id=\\"Please select relevant indicator(s).-label\\"
+                          id=\\"Please add any relevant indicator(s).-label\\"
                         >
-                          Please select relevant indicator(s).
+                          Please add any relevant indicator(s).
                         </label>
                         <div
 -                         class=\\"MuiInputBase-root-1090 MuiInput-root-1077 MuiInput-underline-1081 MuiInputBase-disabled-1093 MuiInput-disabled-1080 MuiInputBase-formControl-1091 MuiInput-formControl-1078\\"
