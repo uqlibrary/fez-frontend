@@ -1497,6 +1497,53 @@ exports[`Component FixRecord should render fix record form 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Suggest a correction"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -1545,53 +1592,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Suggest a correction"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -2677,6 +2677,53 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         xs={12}
       >
         <StandardCard
+          title="Suggest a correction"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -2725,53 +2772,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Suggest a correction"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -3347,6 +3347,53 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         xs={12}
       >
         <StandardCard
+          title="Suggest a correction"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -3395,53 +3442,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Suggest a correction"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Describe the problem with this record, eg record is a duplicate, or suggested changes"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>

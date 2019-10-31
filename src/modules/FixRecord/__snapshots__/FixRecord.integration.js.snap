@@ -504,18 +504,17 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                           id=\\"Select an action\\"
                           name=\\"fixAction\\"
                           type=\\"hidden\\"
--                         value=\\"\\"
 +                         value=\\"fix\\"
-                        />
-                        <svg
-                          aria-hidden=\\"true\\"
-                          class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
-                          focusable=\\"false\\"
-                          role=\\"presentation\\"
-                          viewBox=\\"0 0 24 24\\"
-                        >
-                          <path
-                            d=\\"M7 10l5 5 5-5z\\"
++                       />
++                       <svg
++                         aria-hidden=\\"true\\"
++                         class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
++                         focusable=\\"false\\"
++                         role=\\"presentation\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M7 10l5 5 5-5z\\"
 +                         />
 +                       </svg>
 +                     </div>
@@ -525,130 +524,6 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +             </div>
 +           </div>
 +           <div />
-+           <div
-+             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+           >
-+             <div
-+               class=\\"MuiPaper-root-314 MuiPaper-elevation1-317 MuiPaper-rounded-315 MuiCard-root-313 Cards-card-308 StandardCard\\"
-+             >
-+               <div
-+                 class=\\"MuiCardHeader-root-341\\"
-+               >
-+                 <div
-+                   class=\\"MuiCardHeader-content-344\\"
-+                 >
-+                   <h3
-+                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-345\\"
-+                   >
-+                     Optional: Content Indicators
-+                   </h3>
-+                 </div>
-+                 <div
-+                   class=\\"MuiCardHeader-action-343\\"
-+                 >
-+                   <button
-+                     class=\\"MuiButtonBase-root-465 MuiIconButton-root-542\\"
-+                     tabindex=\\"0\\"
-+                     title=\\"Click for more information\\"
-+                     type=\\"button\\"
-+                   >
-+                     <span
-+                       class=\\"MuiIconButton-label-547\\"
-+                     >
-+                       <svg
-+                         aria-hidden=\\"false\\"
-+                         class=\\"MuiSvgIcon-root-362 HelpIcon-helpIcon-533\\"
-+                         focusable=\\"false\\"
-+                         role=\\"img\\"
-+                         viewBox=\\"0 0 24 24\\"
-+                       >
-+                         <path
-+                           d=\\"M0 0h24v24H0z\\"
-+                           fill=\\"none\\"
-                          />
-+                         <path
-+                           d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
-+                         />
-+                         <title>
-+                           Click for more information
-+                         </title>
-                        </svg>
-+                     </span>
-+                     <span
-+                       class=\\"MuiTouchRipple-root-476\\"
-+                     />
-+                   </button>
-                  </div>
-                </div>
-+               <div
-+                 class=\\"MuiCardContent-root-347\\"
-+               >
-+                 <div
-+                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
-+                 >
-+                   <div
-+                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                   >
-                      <p
--                     class=\\"MuiFormHelperText-root-468 MuiFormHelperText-error-469 MuiFormHelperText-required-475\\"
-+                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
-+                     >
-+                       If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
-+                     </p>
-+                   </div>
-+                   <div
-+                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
-+                   >
-+                     <div
-+                       class=\\"MuiFormControl-root-376 MuiFormControl-fullWidth-379\\"
-+                     >
-+                       <label
-+                         class=\\"MuiFormLabel-root-391 MuiFormLabel-filled-395 MuiInputLabel-root-380 MuiInputLabel-formControl-385 MuiInputLabel-animated-388 MuiInputLabel-shrink-387\\"
-+                         data-shrink=\\"true\\"
-+                         id=\\"Please add any relevant indicator(s).-label\\"
-+                       >
-+                         Please add any relevant indicator(s).
-+                       </label>
-+                       <div
-+                         class=\\"MuiInputBase-root-418 MuiInput-root-405 MuiInput-underline-409 MuiInputBase-formControl-419 MuiInput-formControl-406\\"
-+                       >
-+                         <div
-+                           class=\\"MuiSelect-root-398\\"
-+                         >
-+                           <div
-+                             aria-haspopup=\\"true\\"
-+                             aria-pressed=\\"false\\"
-+                             class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
-+                             id=\\"content-indicators\\"
-+                             role=\\"button\\"
-+                             tabindex=\\"0\\"
-+                           >
-+                             Scholarship of Teaching and Learning, Protocol
-+                           </div>
-+                           <input
-+                             style=\\"border: 1px solid red;\\"
-+                             type=\\"hidden\\"
-+                             value=\\"454079,454080\\"
-+                           />
-+                           <svg
-+                             aria-hidden=\\"true\\"
-+                             class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
-+                             focusable=\\"false\\"
-+                             role=\\"presentation\\"
-+                             viewBox=\\"0 0 24 24\\"
-+                           >
-+                             <path
-+                               d=\\"M7 10l5 5 5-5z\\"
-+                             />
-+                           </svg>
-+                         </div>
-+                       </div>
-+                     </div>
-+                   </div>
-+                 </div>
-+               </div>
-+             </div>
-+           </div>
 +           <div
 +             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +           >
@@ -730,8 +605,131 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                           label=\\"Link (URL)\\"
 +                           name=\\"rek_link\\"
 +                           type=\\"text\\"
-+                           value=\\"\\"
+                            value=\\"\\"
+                          />
++                       </div>
++                     </div>
++                   </div>
++                 </div>
++               </div>
++             </div>
++           </div>
++           <div
++             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++           >
++             <div
++               class=\\"MuiPaper-root-314 MuiPaper-elevation1-317 MuiPaper-rounded-315 MuiCard-root-313 Cards-card-308 StandardCard\\"
++             >
++               <div
++                 class=\\"MuiCardHeader-root-341\\"
++               >
++                 <div
++                   class=\\"MuiCardHeader-content-344\\"
++                 >
++                   <h3
++                     class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorInherit-129 MuiCardHeader-title-345\\"
++                   >
++                     Optional: Content Indicators
++                   </h3>
++                 </div>
++                 <div
++                   class=\\"MuiCardHeader-action-343\\"
++                 >
++                   <button
++                     class=\\"MuiButtonBase-root-465 MuiIconButton-root-542\\"
++                     tabindex=\\"0\\"
++                     title=\\"Click for more information\\"
++                     type=\\"button\\"
++                   >
++                     <span
++                       class=\\"MuiIconButton-label-547\\"
++                     >
+                        <svg
++                         aria-hidden=\\"false\\"
++                         class=\\"MuiSvgIcon-root-362 HelpIcon-helpIcon-533\\"
++                         focusable=\\"false\\"
++                         role=\\"img\\"
++                         viewBox=\\"0 0 24 24\\"
++                       >
++                         <path
++                           d=\\"M0 0h24v24H0z\\"
++                           fill=\\"none\\"
 +                         />
++                         <path
++                           d=\\"M11 18h2v-2h-2v2zm1-16C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm0-14c-2.21 0-4 1.79-4 4h2c0-1.1.9-2 2-2s2 .9 2 2c0 2-3 1.75-3 5h2c0-2.25 3-2.5 3-5 0-2.21-1.79-4-4-4z\\"
++                         />
++                         <title>
++                           Click for more information
++                         </title>
++                       </svg>
++                     </span>
++                     <span
++                       class=\\"MuiTouchRipple-root-476\\"
++                     />
++                   </button>
++                 </div>
++               </div>
++               <div
++                 class=\\"MuiCardContent-root-347\\"
++               >
++                 <div
++                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
++                 >
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <p
++                       class=\\"MuiTypography-root-100 MuiTypography-body2-108\\"
++                     >
++                       If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
++                     </p>
++                   </div>
++                   <div
++                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
++                   >
++                     <div
++                       class=\\"MuiFormControl-root-376 MuiFormControl-fullWidth-379\\"
++                     >
++                       <label
++                         class=\\"MuiFormLabel-root-391 MuiFormLabel-filled-395 MuiInputLabel-root-380 MuiInputLabel-formControl-385 MuiInputLabel-animated-388 MuiInputLabel-shrink-387\\"
++                         data-shrink=\\"true\\"
++                         id=\\"Please add any relevant indicator(s).-label\\"
++                       >
++                         Please add any relevant indicator(s).
++                       </label>
++                       <div
++                         class=\\"MuiInputBase-root-418 MuiInput-root-405 MuiInput-underline-409 MuiInputBase-formControl-419 MuiInput-formControl-406\\"
++                       >
++                         <div
++                           class=\\"MuiSelect-root-398\\"
++                         >
++                           <div
++                             aria-haspopup=\\"true\\"
++                             aria-pressed=\\"false\\"
++                             class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
++                             id=\\"content-indicators\\"
++                             role=\\"button\\"
++                             tabindex=\\"0\\"
++                           >
++                             Scholarship of Teaching and Learning, Protocol
++                           </div>
++                           <input
++                             style=\\"border: 1px solid red;\\"
++                             type=\\"hidden\\"
++                             value=\\"454079,454080\\"
++                           />
++                           <svg
+                              aria-hidden=\\"true\\"
+                              class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
+                              focusable=\\"false\\"
+                              role=\\"presentation\\"
+                              viewBox=\\"0 0 24 24\\"
+                            >
+                              <path
+                                d=\\"M7 10l5 5 5-5z\\"
+                              />
+                            </svg>
++                         </div>
 +                       </div>
 +                     </div>
 +                   </div>
@@ -757,22 +755,24 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                     Upload files
 +                   </h3>
 +                 </div>
-+               </div>
+                </div>
 +               <div
 +                 class=\\"MuiCardContent-root-347\\"
 +               >
 +                 <div>
 +                   Upload an Open Access file, HERDC evidence or an NTRO Research Statement
-+                 </div>
+                  </div>
 +                 <div
 +                   class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
 +                 >
 +                   <div
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
-+                     <p
+                      <p
+-                     class=\\"MuiFormHelperText-root-468 MuiFormHelperText-error-469 MuiFormHelperText-required-475\\"
 +                       class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-gutterBottom-127\\"
-+                     >
+                      >
+-                     This field is required
 +                       You may add up to 10 files (max 5GB each)
 +                     </p>
 +                     <div
@@ -829,8 +829,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                               </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-6-51\\"
-                                >
--                     This field is required
++                               >
 +                                 <div
 +                                   class=\\"MuiGrid-container-3 MuiGrid-direction-xs-column-6 MuiGrid-align-items-xs-center-11 MuiGrid-justify-xs-center-20 FileUploadDropzoneStaticContent-instructions-552\\"
 +                                 >
@@ -935,7 +934,7 @@ exports[`FixRecord form should allow content indicators to be selected 4`] = `
 - First value
 + Second value
 
-@@ -402,11 +402,12 @@
+@@ -492,11 +492,12 @@
                           <div
                             class=\\"MuiSelect-root-398\\"
                           >
@@ -956,7 +955,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
 - First value
 + Second value
 
-@@ -409,16 +409,16 @@
+@@ -499,16 +499,16 @@
                               class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1077,7 +1076,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
 - First value
 + Second value
 
-@@ -409,16 +409,16 @@
+@@ -499,16 +499,16 @@
                               class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1225,33 +1224,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         </div>
                         <input
                           aria-labelledby=\\"Select an action-label\\"
-@@ -395,23 +394,22 @@
-                          id=\\"Please add any relevant indicator(s).-label\\"
-                        >
-                          Please add any relevant indicator(s).
-                        </label>
-                        <div
--                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
-+                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-disabled-988 MuiInput-disabled-975 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
-                        >
-                          <div
-                            class=\\"MuiSelect-root-965\\"
-                          >
-                            <div
-                              aria-haspopup=\\"true\\"
-                              aria-owns=\\"menu-\\"
-                              aria-pressed=\\"true\\"
--                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiInputBase-input-995 MuiInput-input-980\\"
-+                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiSelect-disabled-970 MuiInputBase-input-995 MuiInput-input-980 MuiInputBase-disabled-988 MuiInput-disabled-975\\"
-                              id=\\"content-indicators\\"
-                              role=\\"button\\"
--                             tabindex=\\"0\\"
-                            >
-                              Scholarship of Teaching and Learning, Protocol, Case Study
-                            </div>
-                            <input
-                              style=\\"border: 1px solid red;\\"
-@@ -467,25 +465,26 @@
+@@ -343,25 +342,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1281,7 +1254,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -497,25 +496,26 @@
+@@ -373,25 +373,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1311,6 +1284,32 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
+@@ -485,23 +486,22 @@
+                          id=\\"Please add any relevant indicator(s).-label\\"
+                        >
+                          Please add any relevant indicator(s).
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
++                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-disabled-988 MuiInput-disabled-975 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-965\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+                              aria-owns=\\"menu-\\"
+                              aria-pressed=\\"true\\"
+-                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiInputBase-input-995 MuiInput-input-980\\"
++                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiSelect-disabled-970 MuiInputBase-input-995 MuiInput-input-980 MuiInputBase-disabled-988 MuiInput-disabled-975\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
+-                             tabindex=\\"0\\"
+                            >
+                              Scholarship of Teaching and Learning, Protocol, Case Study
+                            </div>
+                            <input
+                              style=\\"border: 1px solid red;\\"
 @@ -572,11 +572,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
@@ -1494,33 +1493,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
             >
               <div
                 class=\\"MuiPaper-root-881 MuiPaper-elevation1-884 MuiPaper-rounded-882 MuiCard-root-880 Cards-card-875 StandardCard\\"
-@@ -394,22 +395,23 @@
-                          id=\\"Please add any relevant indicator(s).-label\\"
-                        >
-                          Please add any relevant indicator(s).
-                        </label>
-                        <div
--                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-disabled-988 MuiInput-disabled-975 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
-+                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
-                        >
-                          <div
-                            class=\\"MuiSelect-root-965\\"
-                          >
-                            <div
-                              aria-haspopup=\\"true\\"
-                              aria-owns=\\"menu-\\"
-                              aria-pressed=\\"true\\"
--                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiSelect-disabled-970 MuiInputBase-input-995 MuiInput-input-980 MuiInputBase-disabled-988 MuiInput-disabled-975\\"
-+                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiInputBase-input-995 MuiInput-input-980\\"
-                              id=\\"content-indicators\\"
-                              role=\\"button\\"
-+                             tabindex=\\"0\\"
-                            >
-                              Scholarship of Teaching and Learning, Protocol, Case Study
-                            </div>
-                            <input
-                              style=\\"border: 1px solid red;\\"
-@@ -465,26 +467,25 @@
+@@ -342,26 +343,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1550,7 +1523,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -496,26 +497,25 @@
+@@ -373,26 +373,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1580,6 +1553,32 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
+@@ -486,22 +485,23 @@
+                          id=\\"Please add any relevant indicator(s).-label\\"
+                        >
+                          Please add any relevant indicator(s).
+                        </label>
+                        <div
+-                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-disabled-988 MuiInput-disabled-975 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
++                         class=\\"MuiInputBase-root-985 MuiInput-root-972 MuiInput-underline-976 MuiInputBase-formControl-986 MuiInput-formControl-973\\"
+                        >
+                          <div
+                            class=\\"MuiSelect-root-965\\"
+                          >
+                            <div
+                              aria-haspopup=\\"true\\"
+                              aria-owns=\\"menu-\\"
+                              aria-pressed=\\"true\\"
+-                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiSelect-disabled-970 MuiInputBase-input-995 MuiInput-input-980 MuiInputBase-disabled-988 MuiInput-disabled-975\\"
++                             class=\\"MuiSelect-select-966 MuiSelect-selectMenu-969 MuiInputBase-input-995 MuiInput-input-980\\"
+                              id=\\"content-indicators\\"
+                              role=\\"button\\"
++                             tabindex=\\"0\\"
+                            >
+                              Scholarship of Teaching and Learning, Protocol, Case Study
+                            </div>
+                            <input
+                              style=\\"border: 1px solid red;\\"
 @@ -572,11 +572,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"

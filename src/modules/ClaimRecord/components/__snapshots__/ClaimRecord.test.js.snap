@@ -1056,6 +1056,53 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -1104,53 +1151,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -3273,6 +3273,53 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -3321,53 +3368,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -5648,6 +5648,53 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -5696,53 +5743,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -7117,6 +7117,53 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -7165,53 +7212,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -8586,6 +8586,53 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -8634,53 +8681,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -10055,6 +10055,53 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -10103,53 +10150,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -12598,6 +12598,53 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -12646,53 +12693,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -14067,6 +14067,53 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -14115,53 +14162,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -15536,6 +15536,53 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -15584,53 +15631,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={true}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={true}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -17018,6 +17018,53 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -17066,53 +17113,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -18498,6 +18498,53 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -18546,53 +18593,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -19979,6 +19979,53 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -20027,53 +20074,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -20265,6 +20265,53 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -20313,53 +20360,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -20536,6 +20536,53 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         xs={12}
       >
         <StandardCard
+          title="Optional: Suggest changes or add links to this work"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={16}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Type edits/changes/comments here"
+                multiline={true}
+                name="comments"
+                rows={3}
+                type="text"
+              />
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                label="Link (URL)"
+                name="rek_link"
+                type="text"
+                validate={
+                  Array [
+                    [Function],
+                  ]
+                }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
           help={
             Object {
               "buttonLabel": "CLOSE",
@@ -20584,53 +20631,6 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                 label="Please add any relevant indicator(s)."
                 multiple={true}
                 name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
-          title="Optional: Suggest changes or add links to this work"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={16}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Type edits/changes/comments here"
-                multiline={true}
-                name="comments"
-                rows={3}
-                type="text"
-              />
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                label="Link (URL)"
-                name="rek_link"
-                type="text"
-                validate={
-                  Array [
-                    [Function],
-                  ]
-                }
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
