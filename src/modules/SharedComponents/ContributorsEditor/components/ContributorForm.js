@@ -34,6 +34,7 @@ export class ContributorForm extends PureComponent {
         contributor: PropTypes.object,
         disableNameAsPublished: PropTypes.bool,
         enableUqIdentifierOnAffiliationChange: PropTypes.bool,
+        displayCancel: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -119,6 +120,11 @@ export class ContributorForm extends PureComponent {
         });
 
         // reset internal state
+        this.setState(this.defaultState(this.props));
+    };
+
+    _onCancel = () => {
+        this.props.onSubmit({ ...this.props.contributor });
         this.setState(this.defaultState(this.props));
     };
 
@@ -322,7 +328,9 @@ export class ContributorForm extends PureComponent {
                             />
                         </Grid>
                     )}
-                    <Grid item xs={12} style={{ marginBottom: 8 }}>
+                </Grid>
+                <Grid container spacing={8} style={{ marginTop: 8 }}>
+                    <Grid item xs={this.props.displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"
                             fullWidth
@@ -334,6 +342,20 @@ export class ContributorForm extends PureComponent {
                             {locale.addButton}
                         </Button>
                     </Grid>
+                    {this.props.displayCancel && (
+                        <Grid item xs={6} style={{ marginBottom: 8 }}>
+                            <Button
+                                variant="contained"
+                                fullWidth
+                                color="primary"
+                                disabled={!this.props.contributor.nameAsPublished}
+                                onClick={this._onCancel}
+                                id="cancel-submit-author"
+                            >
+                                {locale.cancelButton || 'Cancel'}
+                            </Button>
+                        </Grid>
+                    )}
                 </Grid>
             </React.Fragment>
         );
