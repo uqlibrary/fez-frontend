@@ -9,6 +9,7 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
+        canBeCleared: PropTypes.bool,
         classes: PropTypes.object,
         disabled: PropTypes.bool,
         minDate: PropTypes.instanceOf(Date),
@@ -18,6 +19,7 @@ export class FileUploadEmbargoDate extends PureComponent {
 
     static defaultProps = {
         minDate: new Date(),
+        canBeCleared: false,
     };
 
     _onChange = value => {
@@ -47,6 +49,7 @@ export class FileUploadEmbargoDate extends PureComponent {
                 leftArrowIcon={<KeyboardArrowLeft />}
                 rightArrowIcon={<KeyboardArrowRight />}
                 keyboardIcon={<Event />}
+                clearable={this.props.canBeCleared}
             />
         );
     }
