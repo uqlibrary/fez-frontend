@@ -21,4 +21,13 @@ describe('AndsCollectionTypesField component', () => {
 
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render error and error message', () => {
+        const wrapper = setup({
+            meta: {
+                error: 'This field is required',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

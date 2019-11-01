@@ -164,6 +164,7 @@ export default class ThesisSubmission extends Component {
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
                                             disabled={this.props.submitting}
                                             height={50}
+                                            required
                                             validate={[validation.required]}
                                         />
                                     </Grid>
@@ -208,6 +209,7 @@ export default class ThesisSubmission extends Component {
                                             disabled={this.props.submitting}
                                             title={txt.optional.fieldLabels.abstract.label}
                                             name="thesisAbstract"
+                                            required
                                             validate={[validation.required]}
                                         />
                                     </Grid>

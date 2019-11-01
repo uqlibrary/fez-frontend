@@ -696,6 +696,7 @@ exports[`FreeTextForm tests  rendering active form full mount 1`] = `
                 normalize={[Function]}
                 onAdd={[MockFunction]}
                 remindToAdd={false}
+                required={false}
                 theme={Object {}}
               >
                 <WithStyles(Grid)

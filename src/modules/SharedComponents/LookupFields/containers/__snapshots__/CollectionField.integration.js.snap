@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CollectionField  should add chips for selected items 1`] = `
+<DocumentFragment>
+  <div
+    class="AutoCompleteAsyncField-root-1"
+  >
+    <label
+      hidden=""
+      id="autosuggest-label"
+    />
+    <div
+      aria-expanded="false"
+      aria-haspopup="listbox"
+      aria-labelledby="autosuggest-label"
+      class="AutoCompleteAsyncField-container-2"
+      role="combobox"
+    >
+      <div
+        class="MuiGrid-container-7 MuiGrid-spacing-xs-16-30 MuiGrid-align-items-xs-flex-end-17 MuiGrid-align-content-xs-flex-end-21"
+      >
+        <div
+          class="MuiGrid-item-8 MuiGrid-grid-xs-true-35"
+        >
+          <div
+            class="MuiFormControl-root-104 MuiFormControl-fullWidth-107"
+          >
+            <label
+              class="MuiFormLabel-root-119 MuiInputLabel-root-108 MuiInputLabel-formControl-113 MuiInputLabel-animated-116 MuiInputLabel-shrink-115"
+              data-shrink="true"
+              for="autosuggest-input"
+              id="autosuggest-input-label"
+            >
+              autosuggest
+            </label>
+            <div
+              aria-autocomplete="list"
+              aria-labelledby="autosuggest-label"
+              class="MuiInputBase-root-139 MuiInput-root-126 AutoCompleteAsyncField-inputRoot-4 MuiInput-underline-130 MuiInputBase-fullWidth-148 MuiInput-fullWidth-133 MuiInputBase-formControl-140 MuiInput-formControl-127 MuiInputBase-adornedStart-143"
+            >
+              <div
+                class="MuiChip-root-156 MuiChip-deletable-162 AutoCompleteAsyncField-chip-6"
+                role="button"
+                tabindex="-1"
+              >
+                <span
+                  class="MuiChip-label-175"
+                >
+                  Testing collection
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-181 MuiChip-deleteIcon-176"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                  />
+                </svg>
+              </div>
+              <div
+                class="MuiChip-root-156 MuiChip-deletable-162 AutoCompleteAsyncField-chip-6"
+                role="button"
+                tabindex="-1"
+              >
+                <span
+                  class="MuiChip-label-175"
+                >
+                  Test collection
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-181 MuiChip-deleteIcon-176"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                  />
+                </svg>
+              </div>
+              <input
+                aria-invalid="false"
+                aria-label="autosuggest"
+                aria-labelledby="autosuggest-input-label"
+                autocomplete="off"
+                class="MuiInputBase-input-149 MuiInput-input-134 MuiInputBase-inputAdornedStart-154"
+                id="autosuggest-input"
+                label="autosuggest"
+                type="text"
+                value=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`CollectionField  should add chips for selected items 2`] = `
+"Snapshot Diff:
+- First value
++ Second value
+
+@@ -41,32 +41,10 @@
+                  tabindex=\\"-1\\"
+                >
+                  <span
+                    class=\\"MuiChip-label-175\\"
+                  >
+-                   Testing collection
+-                 </span>
+-                 <svg
+-                   aria-hidden=\\"true\\"
+-                   class=\\"MuiSvgIcon-root-181 MuiChip-deleteIcon-176\\"
+-                   focusable=\\"false\\"
+-                   role=\\"presentation\\"
+-                   viewBox=\\"0 0 24 24\\"
+-                 >
+-                   <path
+-                     d=\\"M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z\\"
+-                   />
+-                 </svg>
+-               </div>
+-               <div
+-                 class=\\"MuiChip-root-156 MuiChip-deletable-162 AutoCompleteAsyncField-chip-6\\"
+-                 role=\\"button\\"
+-                 tabindex=\\"-1\\"
+-               >
+-                 <span
+-                   class=\\"MuiChip-label-175\\"
+-                 >
+                    Test collection
+                  </span>
+                  <svg
+                    aria-hidden=\\"true\\"
+                    class=\\"MuiSvgIcon-root-181 MuiChip-deleteIcon-176\\""
+`;

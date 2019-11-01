@@ -97,7 +97,6 @@ export class AutoCompleteAsyncField extends Component {
                 }}
             />
         ),
-        onClear: () => {},
         showClear: false,
     };
 

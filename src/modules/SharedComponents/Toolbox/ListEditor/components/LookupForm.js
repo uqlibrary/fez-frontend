@@ -9,6 +9,7 @@ export default class LookupForm extends Component {
         inputField: PropTypes.oneOfType([PropTypes.object, PropTypes.func]),
         errorText: PropTypes.string,
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+        required: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -16,6 +17,7 @@ export default class LookupForm extends Component {
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name, then select from the list',
         },
+        required: false,
     };
 
     constructor(props) {
@@ -37,6 +39,7 @@ export default class LookupForm extends Component {
                         disabled={this.props.disabled}
                         errorText={this.props.errorText}
                         category={this.props.category}
+                        required={this.props.required}
                     />
                 )}
             </React.Fragment>
