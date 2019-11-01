@@ -374,7 +374,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1735,10 +1733,231 @@
+@@ -1735,10 +1733,256 @@
                                 </button>
                               </span>
                             </div>
@@ -581,8 +581,13 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                               </div>
 +                             </div>
 +                           </div>
++                         </div>
++                         <div
++                           class=\\"MuiGrid-container-1 MuiGrid-spacing-xs-8-23\\"
++                           style=\\"margin-top: 8px;\\"
++                         >
 +                           <div
-+                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
++                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-6-35\\"
 +                             style=\\"margin-bottom: 8px;\\"
 +                           >
 +                             <button
@@ -597,6 +602,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                               >
 +                                 Update author
 +                               </span>
++                             </button>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-6-35\\"
++                             style=\\"margin-bottom: 8px;\\"
++                           >
++                             <button
++                               class=\\"MuiButtonBase-root-163 MuiButton-root-330 MuiButton-contained-341 MuiButton-containedPrimary-342 MuiButton-raised-344 MuiButton-raisedPrimary-345 MuiButton-fullWidth-355\\"
++                               id=\\"cancel-submit-author\\"
++                               tabindex=\\"0\\"
++                               type=\\"button\\"
++                             >
++                               <span
++                                 class=\\"MuiButton-label-331\\"
++                               >
++                                 Cancel
++                               </span>
++                               <span
++                                 class=\\"MuiTouchRipple-root-396\\"
++                               />
 +                             </button>
 +                           </div>
 +                         </div>
@@ -652,7 +677,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-386\\"
                               >
-@@ -1053,30 +1055,41 @@
+@@ -1053,27 +1055,38 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -688,15 +713,12 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                                   >
 +                                     Organisation type: Government
 +                                   </span>
-                                  </div>
++                                 </div>
                                 </div>
                               </div>
-+                           </div>
+                            </div>
                             <div
                               class=\\"MuiListItemSecondaryAction-root-385\\"
-                            >
-                              <span
-                                class=\\"\\"
 @@ -1091,11 +1104,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
@@ -736,7 +758,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1733,231 +1746,10 @@
+@@ -1733,256 +1746,10 @@
                                 </button>
                               </span>
                             </div>
@@ -943,8 +965,13 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                               </div>
 -                             </div>
 -                           </div>
+-                         </div>
+-                         <div
+-                           class=\\"MuiGrid-container-1 MuiGrid-spacing-xs-8-23\\"
+-                           style=\\"margin-top: 8px;\\"
+-                         >
 -                           <div
--                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
+-                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-6-35\\"
 -                             style=\\"margin-bottom: 8px;\\"
 -                           >
 -                             <button
@@ -959,6 +986,26 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                               >
 -                                 Update author
 -                               </span>
+-                             </button>
+-                           </div>
+-                           <div
+-                             class=\\"MuiGrid-item-2 MuiGrid-grid-xs-6-35\\"
+-                             style=\\"margin-bottom: 8px;\\"
+-                           >
+-                             <button
+-                               class=\\"MuiButtonBase-root-163 MuiButton-root-330 MuiButton-contained-341 MuiButton-containedPrimary-342 MuiButton-raised-344 MuiButton-raisedPrimary-345 MuiButton-fullWidth-355\\"
+-                               id=\\"cancel-submit-author\\"
+-                               tabindex=\\"0\\"
+-                               type=\\"button\\"
+-                             >
+-                               <span
+-                                 class=\\"MuiButton-label-331\\"
+-                               >
+-                                 Cancel
+-                               </span>
+-                               <span
+-                                 class=\\"MuiTouchRipple-root-396\\"
+-                               />
 -                             </button>
 -                           </div>
 -                         </div>
