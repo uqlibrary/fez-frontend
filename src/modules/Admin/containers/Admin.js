@@ -103,8 +103,10 @@ const getInitialFormValues = (recordToView, recordType) => {
 };
 
 const onSubmit = (values, dispatch, { initialValues }) => {
-    console.log(detailedDiff(initialValues.toJS(), values.toJS()));
-
+    console.log(detailedDiff(
+        initialValues && initialValues.toJS() || null,
+        values && values.toJS() || null
+    ));
     return dispatch(adminUpdate(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
     });
