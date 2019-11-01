@@ -118,10 +118,6 @@ export const validateDataCollection = (
             contactName: summary.contactName,
         }) ||
             {}),
-        ...((!(ais || {}).contactNameId && {
-            contactNameId: summary.contactNameId,
-        }) ||
-            {}),
         ...((!(ais || {}).contactEmail && {
             contactEmail: summary.contactEmail,
         }) ||
@@ -141,12 +137,6 @@ export const validateDataCollection = (
         ...((!((ais || {}).fez_record_search_key_access_conditions || {}).rek_access_conditions && {
             fez_record_search_key_access_conditions: {
                 rek_access_conditions: summary.rek_access_conditions,
-            },
-        }) ||
-            {}),
-        ...((!((ais || {}).fez_record_search_key_rights || {}).rek_rights && {
-            fez_record_search_key_rights: {
-                rek_rights: summary.rek_rights,
             },
         }) ||
             {}),

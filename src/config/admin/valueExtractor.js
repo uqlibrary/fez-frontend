@@ -298,7 +298,7 @@ export default {
     },
     contentIndicators: {
         getValue: record =>
-            (record.fez_record_search_key_content_indicator || {}).map(
+            (record.fez_record_search_key_content_indicator || []).map(
                 contentIndicator => contentIndicator.rek_content_indicator,
             ),
     },

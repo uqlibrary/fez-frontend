@@ -79,7 +79,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41\\"
                       style=\\"margin-top: 24px;\\"
-@@ -1862,13 +1855,10 @@
+@@ -1865,13 +1858,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -100,7 +100,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -548,23 +548,23 @@
+@@ -551,23 +551,23 @@
                       <div
                         class=\\"MuiFormControl-root-265\\"
                         style=\\"width: 100%;\\"
@@ -128,7 +128,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                         >
                           <div
                             class=\\"MuiSelect-root-287\\"
-@@ -575,20 +575,18 @@
+@@ -578,20 +578,18 @@
                               class=\\"MuiSelect-select-288 MuiSelect-selectMenu-291 MuiInputBase-input-317 MuiInput-input-302\\"
                               id=\\"rek-audience-size\\"
                               role=\\"button\\"
@@ -151,7 +151,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-166 MuiSelect-icon-293\\"
                               focusable=\\"false\\"
-@@ -599,15 +597,10 @@
+@@ -602,15 +600,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -167,7 +167,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                     <div
                       class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-6-49\\"
                     >
-@@ -1858,13 +1851,10 @@
+@@ -1861,13 +1854,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -188,7 +188,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -606,43 +606,42 @@
+@@ -609,43 +609,42 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-265 MuiFormControl-fullWidth-268\\"
@@ -240,7 +240,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-166 MuiSelect-icon-293\\"
                               focusable=\\"false\\"
-@@ -653,15 +652,10 @@
+@@ -656,15 +655,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -256,7 +256,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                   </div>
                 </div>
               </div>
-@@ -1851,13 +1845,10 @@
+@@ -1854,13 +1848,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -277,7 +277,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1017,33 +1017,31 @@
+@@ -1020,33 +1020,31 @@
                           <li
                             class=\\"MuiListItem-container-368\\"
                           >
@@ -316,7 +316,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-386\\"
                               >
-@@ -1052,16 +1050,16 @@
+@@ -1055,16 +1053,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -335,7 +335,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                     </span>
                                   </div>
                                 </div>
-@@ -1090,11 +1088,11 @@
+@@ -1093,11 +1091,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -348,7 +348,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1122,11 +1120,11 @@
+@@ -1125,11 +1123,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -361,7 +361,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1157,11 +1155,11 @@
+@@ -1160,11 +1158,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -374,7 +374,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1732,10 +1730,231 @@
+@@ -1735,10 +1733,231 @@
                                 </button>
                               </span>
                             </div>
@@ -613,7 +613,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1017,31 +1017,33 @@
+@@ -1020,31 +1020,33 @@
                           <li
                             class=\\"MuiListItem-container-368\\"
                           >
@@ -652,7 +652,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                               <div
                                 class=\\"MuiGrid-container-1 WithTheme-WithWidth-ContributorRow---listContainer-386\\"
                               >
-@@ -1050,30 +1052,41 @@
+@@ -1053,30 +1055,41 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -697,7 +697,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <span
                                 class=\\"\\"
-@@ -1088,11 +1101,11 @@
+@@ -1091,11 +1104,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -710,7 +710,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1120,11 +1133,11 @@
+@@ -1123,11 +1136,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -723,7 +723,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1155,11 +1168,11 @@
+@@ -1158,11 +1171,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -736,7 +736,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1730,231 +1743,10 @@
+@@ -1733,231 +1746,10 @@
                                 </button>
                               </span>
                             </div>
@@ -975,7 +975,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1191,16 +1191,16 @@
+@@ -1194,16 +1194,16 @@
                           <li
                             class=\\"MuiListItem-container-368\\"
                           >
@@ -994,7 +994,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                   aria-hidden=\\"true\\"
                                   class=\\"MuiSvgIcon-root-166\\"
                                   focusable=\\"false\\"
-@@ -1230,30 +1230,41 @@
+@@ -1233,30 +1233,41 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -1039,7 +1039,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <span
                                 class=\\"\\"
-@@ -1268,11 +1279,11 @@
+@@ -1271,11 +1282,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1052,7 +1052,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1299,11 +1310,11 @@
+@@ -1302,11 +1313,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1065,7 +1065,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1331,11 +1342,11 @@
+@@ -1334,11 +1345,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1078,7 +1078,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1366,11 +1377,11 @@
+@@ -1369,11 +1380,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1103,7 +1103,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 - First value
 + Second value
 
-@@ -1191,16 +1191,16 @@
+@@ -1194,16 +1194,16 @@
                           <li
                             class=\\"MuiListItem-container-368\\"
                           >
@@ -1122,7 +1122,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                   aria-hidden=\\"true\\"
                                   class=\\"MuiSvgIcon-root-166\\"
                                   focusable=\\"false\\"
-@@ -1230,16 +1230,16 @@
+@@ -1233,16 +1233,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -1141,7 +1141,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                     </span>
                                   </div>
                                 </div>
-@@ -1248,16 +1248,16 @@
+@@ -1251,16 +1251,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-379\\"
@@ -1160,7 +1160,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                     </span>
                                   </div>
                                 </div>
-@@ -1279,11 +1279,11 @@
+@@ -1282,11 +1282,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1173,7 +1173,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1310,11 +1310,11 @@
+@@ -1313,11 +1313,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1186,7 +1186,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1342,11 +1342,11 @@
+@@ -1345,11 +1345,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1199,7 +1199,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1377,11 +1377,11 @@
+@@ -1380,11 +1380,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-162\\"
                                   >
@@ -1212,7 +1212,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1595,11 +1595,11 @@
+@@ -1598,11 +1598,11 @@
                           <li
                             class=\\"MuiListItem-container-368\\"
                           >
@@ -1225,7 +1225,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-411\\"
-@@ -1646,11 +1646,22 @@
+@@ -1649,11 +1649,22 @@
                                 <div
                                   class=\\"MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-5-48\\"
                                 >
@@ -1249,7 +1249,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                             </div>
                             <div
                               class=\\"MuiListItemSecondaryAction-root-385\\"
-@@ -1756,15 +1767,10 @@
+@@ -1759,15 +1770,10 @@
                             </div>
                           </li>
                         </ul>
@@ -1265,7 +1265,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
               </div>
             </div>
             <div
-@@ -1862,13 +1868,10 @@
+@@ -1865,13 +1871,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -2303,7 +2303,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457\\"
                       style=\\"margin-top: 24px;\\"
-@@ -2049,13 +2042,10 @@
+@@ -2052,13 +2045,10 @@
                         <span>
                           Form cannot be submitted until all fields are valid. Please review all input fields.
                           <ul>
@@ -2324,7 +2324,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -549,46 +549,39 @@
+@@ -552,46 +552,39 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-681 MuiFormControl-fullWidth-684\\"
@@ -2377,7 +2377,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-6-465\\"
                     >
-@@ -2045,13 +2038,10 @@
+@@ -2048,13 +2041,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2398,7 +2398,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -588,23 +588,23 @@
+@@ -591,23 +591,23 @@
                       <div
                         class=\\"MuiFormControl-root-681\\"
                         style=\\"width: 100%;\\"
@@ -2426,7 +2426,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                         >
                           <div
                             class=\\"MuiSelect-root-703\\"
-@@ -615,20 +615,18 @@
+@@ -618,20 +618,18 @@
                               class=\\"MuiSelect-select-704 MuiSelect-selectMenu-707 MuiInputBase-input-733 MuiInput-input-718\\"
                               id=\\"rek-audience-size\\"
                               role=\\"button\\"
@@ -2449,7 +2449,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-582 MuiSelect-icon-709\\"
                               focusable=\\"false\\"
-@@ -639,15 +637,10 @@
+@@ -642,15 +640,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -2465,7 +2465,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                     <div
                       class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-6-465\\"
                     >
-@@ -2038,13 +2031,10 @@
+@@ -2041,13 +2034,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2486,7 +2486,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -646,43 +646,42 @@
+@@ -649,43 +649,42 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-681 MuiFormControl-fullWidth-684\\"
@@ -2538,7 +2538,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-582 MuiSelect-icon-709\\"
                               focusable=\\"false\\"
-@@ -693,15 +692,10 @@
+@@ -696,15 +695,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -2554,7 +2554,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                   </div>
                 </div>
               </div>
-@@ -2031,13 +2025,10 @@
+@@ -2034,13 +2028,10 @@
                             <li>
                               Author affiliation rows marked with red are required
                             </li>
@@ -2580,7 +2580,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1221,16 +1221,16 @@
+@@ -1224,16 +1224,16 @@
                           <li
                             class=\\"MuiListItem-container-784\\"
                           >
@@ -2599,7 +2599,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                   aria-hidden=\\"true\\"
                                   class=\\"MuiSvgIcon-root-582\\"
                                   focusable=\\"false\\"
-@@ -1260,30 +1260,41 @@
+@@ -1263,30 +1263,41 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-795\\"
@@ -2644,7 +2644,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <span
                                 class=\\"\\"
-@@ -1298,11 +1309,11 @@
+@@ -1301,11 +1312,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2657,7 +2657,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1329,11 +1340,11 @@
+@@ -1332,11 +1343,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2670,7 +2670,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1361,11 +1372,11 @@
+@@ -1364,11 +1375,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2683,7 +2683,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1396,11 +1407,11 @@
+@@ -1399,11 +1410,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2703,7 +2703,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1221,16 +1221,16 @@
+@@ -1224,16 +1224,16 @@
                           <li
                             class=\\"MuiListItem-container-784\\"
                           >
@@ -2722,7 +2722,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                   aria-hidden=\\"true\\"
                                   class=\\"MuiSvgIcon-root-582\\"
                                   focusable=\\"false\\"
-@@ -1260,16 +1260,16 @@
+@@ -1263,16 +1263,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-795\\"
@@ -2741,7 +2741,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                     </span>
                                   </div>
                                 </div>
-@@ -1278,16 +1278,16 @@
+@@ -1281,16 +1281,16 @@
                                 >
                                   <div
                                     class=\\"MuiListItemText-root-795\\"
@@ -2760,7 +2760,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                     </span>
                                   </div>
                                 </div>
-@@ -1309,11 +1309,11 @@
+@@ -1312,11 +1312,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2773,7 +2773,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1340,11 +1340,11 @@
+@@ -1343,11 +1343,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2786,7 +2786,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1372,11 +1372,11 @@
+@@ -1375,11 +1375,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2799,7 +2799,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1407,11 +1407,11 @@
+@@ -1410,11 +1410,11 @@
                                   <span
                                     class=\\"MuiIconButton-label-578\\"
                                   >
@@ -2812,7 +2812,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1430,11 +1430,11 @@
+@@ -1433,11 +1433,11 @@
                           <li
                             class=\\"MuiListItem-container-784\\"
                           >
@@ -2825,7 +2825,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-832\\"
-@@ -1481,11 +1481,22 @@
+@@ -1484,11 +1484,22 @@
                                 <div
                                   class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-5-464\\"
                                 >
@@ -2856,7 +2856,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
 - First value
 + Second value
 
-@@ -1635,11 +1635,11 @@
+@@ -1638,11 +1638,11 @@
                           <li
                             class=\\"MuiListItem-container-784\\"
                           >
@@ -2869,7 +2869,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <div
                                 class=\\"MuiListItemIcon-root-832\\"
-@@ -1686,14 +1686,25 @@
+@@ -1689,14 +1689,25 @@
                                 <div
                                   class=\\"MuiGrid-item-418 MuiGrid-grid-xs-12-457 MuiGrid-grid-sm-5-464\\"
                                 >
@@ -2896,7 +2896,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
                             >
                               <span
                                 class=\\"\\"
-@@ -1796,15 +1807,10 @@
+@@ -1799,15 +1810,10 @@
                             </div>
                           </li>
                         </ul>
@@ -2912,7 +2912,7 @@ exports[`MyIncompleteRecord form UQ:716942 - Creative Work:Live Performance of C
               </div>
             </div>
             <div
-@@ -2042,13 +2048,10 @@
+@@ -2045,13 +2051,10 @@
                           Validation - 
                         </b>
                         <span>

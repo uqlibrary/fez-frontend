@@ -33,3 +33,42 @@ exports[`AndsCollectionTypesField component should render default view 1`] = `
   selectedValue={453615}
 />
 `;
+
+exports[`AndsCollectionTypesField component should render error and error message 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": 453615,
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Collection",
+        "value": 453615,
+      },
+      Object {
+        "text": "Dataset",
+        "value": 453616,
+      },
+    ]
+  }
+  label="Collection type"
+  locale={
+    Object {
+      "label": "Collection type",
+    }
+  }
+  meta={
+    Object {
+      "error": "This field is required",
+    }
+  }
+  onChange={[MockFunction]}
+  selectedValue={453615}
+/>
+`;

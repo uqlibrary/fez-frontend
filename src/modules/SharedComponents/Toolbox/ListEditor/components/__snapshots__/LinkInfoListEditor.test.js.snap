@@ -22,6 +22,7 @@ exports[`LinkInfoListEditor component should render default view 1`] = `
     }
   }
   maxCount={0}
+  required={false}
   rowItemTemplate={[Function]}
   searchKey={
     Object {

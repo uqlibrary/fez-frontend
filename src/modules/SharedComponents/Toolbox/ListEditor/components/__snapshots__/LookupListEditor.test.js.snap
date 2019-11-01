@@ -21,6 +21,7 @@ exports[`LookupListEditor should render default component 1`] = `
     }
   }
   maxCount={0}
+  required={false}
   rowItemTemplate={[Function]}
   searchKey={
     Object {

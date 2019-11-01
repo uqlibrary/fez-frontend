@@ -1081,8 +1081,6 @@ export default {
             componentProps: {
                 name: 'additionalInformationSection.contactNameId',
                 fullWidth: true,
-                required: true,
-                validate: [validation.required],
                 showClear: true,
                 ...formLocale.addDataset.information.dataset.fieldLabels.contactId,
             },
@@ -1498,6 +1496,8 @@ export default {
                 validate: [validation.required],
             }),
             fez_record_search_key_rights: () => ({
+                required: false,
+                validate: [],
                 name: 'additionalInformationSection.fez_record_search_key_rights.rek_rights',
             }),
             fez_record_search_key_start_date: () => ({

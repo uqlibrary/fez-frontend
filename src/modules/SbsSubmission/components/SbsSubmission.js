@@ -144,6 +144,7 @@ export default class SbsSubmission extends Component {
                                             disabled={this.props.submitting}
                                             height={50}
                                             title={txt.information.fieldLabels.documentTitle.placeholder}
+                                            required
                                             validate={[validation.required]}
                                         />
                                     </Grid>
@@ -210,6 +211,7 @@ export default class SbsSubmission extends Component {
                                             disabled={this.props.submitting}
                                             name="thesisAbstract"
                                             title={txt.optional.fieldLabels.abstract.label}
+                                            required
                                             validate={[validation.required]}
                                         />
                                     </Grid>

@@ -104,6 +104,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                required={true}
                 title="Thesis title"
                 validate={
                   Array [
@@ -611,6 +612,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                required={true}
                 title="Abstract"
                 validate={
                   Array [
@@ -992,6 +994,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 disabled={false}
                 height={50}
                 name="thesisTitle"
+                required={true}
                 title="Thesis title"
                 validate={
                   Array [
@@ -1499,6 +1502,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 component={[Function]}
                 disabled={false}
                 name="thesisAbstract"
+                required={true}
                 title="Abstract"
                 validate={
                   Array [
