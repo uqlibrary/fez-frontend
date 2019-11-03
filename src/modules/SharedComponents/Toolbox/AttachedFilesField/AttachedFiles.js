@@ -27,6 +27,7 @@ import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoD
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { FileIcon } from './FileIcon';
+import { stripHtml } from 'helpers/general';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -246,12 +247,6 @@ export const AttachedFiles = ({
     const onEmbargoDateChange = index => value =>
         onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
-
-    const stripHtml = html => {
-        const temporalDivElement = document.createElement('div');
-        temporalDivElement.innerHTML = html;
-        return temporalDivElement.textContent || temporalDivElement.innerText || '';
-    };
 
     return (
         <Grid item xs={12}>

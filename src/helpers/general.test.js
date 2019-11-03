@@ -1,4 +1,5 @@
-import { leftJoin } from './general';
+import { leftJoin, stripHtml } from './general';
+// import { journalArticle } from '../mock/data/testing/records';
 
 describe('general helpers', () => {
     it('leftJoin', () => {
@@ -20,5 +21,9 @@ describe('general helpers', () => {
         ];
         expect(actual).toEqual(expected);
         expect(leftJoin(objArrA)).toBe(objArrA);
+    });
+
+    it('should strip HTML from a string containing HTML', () => {
+        expect(stripHtml('hello<br/> there')).toEqual('hello there');
     });
 });
