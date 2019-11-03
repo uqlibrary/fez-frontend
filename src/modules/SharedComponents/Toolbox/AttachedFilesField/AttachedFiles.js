@@ -247,6 +247,12 @@ export const AttachedFiles = ({
         onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
+    const stripHtml = html => {
+        const temporalDivElement = document.createElement('div');
+        temporalDivElement.innerHTML = html;
+        return temporalDivElement.textContent || temporalDivElement.innerText || '';
+    };
+
     return (
         <Grid item xs={12}>
             <StandardCard title={locale.title}>
@@ -255,8 +261,8 @@ export const AttachedFiles = ({
                         allowDismiss
                         type="info"
                         message={
-                            record.fez_record_search_key_advisory_statement.rek_advisory_statement ||
-                            locale.culturalSensitivityStatement
+                            stripHtml(record.fez_record_search_key_advisory_statement.rek_advisory_statement) ||
+                            stripHtml(locale.culturalSensitivityStatement)
                         }
                         dismissAction={setHideCulturalSensitivityStatement}
                     />
