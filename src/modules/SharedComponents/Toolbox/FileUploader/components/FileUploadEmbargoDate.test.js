@@ -69,4 +69,9 @@ describe('Component FileUploadEmbargoDate', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(onDateChangedTestFn).toHaveBeenCalled();
     });
+
+    it('should display the clear field', () => {
+        const wrapper = setup({ canBeCleared: true, value: '2016' });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DataStreamSecuritySelector component with mockContext should render with form data 1`] = `
+<AttachedFiles
+  canEdit={false}
+  dataStreams={
+    Immutable.List [
+      Object {
+        "dsi_dsid": "test1.txt",
+        "dsi_embargo_date": "2099-01-01",
+        "dsi_security_policy": 1,
+      },
+    ]
+  }
+  deleteHint="Remove this file"
+  onDateChange={[Function]}
+  onDelete={[Function]}
+  onDescriptionChange={[Function]}
+  onEmbargoClearPromptText={
+    <span>
+      <b>
+        Embargo date removed
+      </b>
+       - review security policy on Security tab
+    </span>
+  }
+/>
+`;

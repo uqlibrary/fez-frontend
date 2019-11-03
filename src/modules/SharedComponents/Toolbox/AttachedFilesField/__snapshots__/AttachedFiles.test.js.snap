@@ -1,5 +1,533 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`AttachedFiles component should clear an embargo date 1`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard>
+    <WithStyles(Alert)
+      allowDismiss={true}
+      message="Please RIGHT CLICK then select link SAVE AS option to save and play video files"
+      title="FireFox Users"
+      type="help_outline"
+    />
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <FileIcon
+            allowDownload={false}
+            fileName="test.mp4"
+            mimeType="video/mp4"
+            pid="UQ:252236"
+            previewFileName={null}
+            securityAccess={true}
+            showPreview={[Function]}
+            thumbnailFileName="thumbnail_test_t.jpg"
+            webFileName={null}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(FileName)
+            allowDownload={false}
+            calculatedSize="3.02 KB"
+            description="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
+            embargoDate="3099-01-01"
+            fileName="test.mp4"
+            iconProps={
+              Object {
+                "allowDownload": false,
+                "fileName": "test.mp4",
+                "mimeType": "video/mp4",
+                "pid": "UQ:252236",
+                "previewFileName": null,
+                "securityAccess": true,
+                "thumbnailFileName": "thumbnail_test_t.jpg",
+                "webFileName": null,
+              }
+            }
+            mediaUrl="http://localhost/view/UQ:252236/test.mp4"
+            mimeType="video/mp4"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": "3099-01-01",
+                "isOpenAccess": false,
+                "openAccessStatusId": 453697,
+                "securityStatus": true,
+              }
+            }
+            pid="UQ:252236"
+            previewMediaUrl="http://localhost/view/UQ:252236/test.mp4"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_test_t.jpg"
+            webMediaUrl={null}
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              3.02 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              embargoDate="3099-01-01"
+              isOpenAccess={false}
+              openAccessStatusId={453697}
+              securityStatus={true}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
+exports[`AttachedFiles component should clear an embargo date 2`] = `
+<WithStyles(Grid)
+  item={true}
+  xs={12}
+>
+  <StandardCard>
+    <WithStyles(Alert)
+      allowDismiss={true}
+      message="Please RIGHT CLICK then select link SAVE AS option to save and play video files"
+      title="FireFox Users"
+      type="help_outline"
+    />
+    <div
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        spacing={16}
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+           
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(Typography)
+            gutterBottom={true}
+            variant="caption"
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            md={2}
+          >
+            <WithStyles(Typography)
+              gutterBottom={true}
+              variant="caption"
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+    <div
+      key="0"
+      style={
+        Object {
+          "padding": 8,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        key="file-0"
+        spacing={16}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+          xs={1}
+        >
+          <FileIcon
+            allowDownload={false}
+            fileName="test.mp4"
+            mimeType="video/mp4"
+            pid="UQ:252236"
+            previewFileName={null}
+            securityAccess={true}
+            showPreview={[Function]}
+            thumbnailFileName="thumbnail_test_t.jpg"
+            webFileName={null}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={3}
+        >
+          <WithStyles(FileName)
+            allowDownload={false}
+            calculatedSize="3.02 KB"
+            description="FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf"
+            embargoDate="3099-01-01"
+            fileName="test.mp4"
+            iconProps={
+              Object {
+                "allowDownload": false,
+                "fileName": "test.mp4",
+                "mimeType": "video/mp4",
+                "pid": "UQ:252236",
+                "previewFileName": null,
+                "securityAccess": true,
+                "thumbnailFileName": "thumbnail_test_t.jpg",
+                "webFileName": null,
+              }
+            }
+            mediaUrl="http://localhost/view/UQ:252236/test.mp4"
+            mimeType="video/mp4"
+            onFileSelect={[Function]}
+            openAccessStatus={
+              Object {
+                "embargoDate": "3099-01-01",
+                "isOpenAccess": false,
+                "openAccessStatusId": 453697,
+                "securityStatus": true,
+              }
+            }
+            pid="UQ:252236"
+            previewMediaUrl="http://localhost/view/UQ:252236/test.mp4"
+            securityStatus={true}
+            thumbnailFileName="thumbnail_test_t.jpg"
+            webMediaUrl={null}
+          />
+        </WithStyles(Grid)>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={3}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              FezACML security for datastream - My_UQ_eSpace_researcher_guidelines_2012.pdf
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={true}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={false}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+          >
+            <WithStyles(Typography)
+              noWrap={true}
+              variant="body2"
+            >
+              3.02 KB
+            </WithStyles(Typography)>
+          </WithStyles(Grid)>
+        </Hidden>
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={true}
+            style={
+              Object {
+                "textAlign": "right",
+              }
+            }
+          >
+            <WithStyles(OpenAccessIcon)
+              embargoDate="3099-01-01"
+              isOpenAccess={false}
+              openAccessStatusId={453697}
+              securityStatus={true}
+            />
+          </WithStyles(Grid)>
+        </Hidden>
+      </WithStyles(Grid)>
+    </div>
+  </StandardCard>
+</WithStyles(Grid)>
+`;
+
 exports[`AttachedFiles component should render admin edit view 1`] = `
 <WithStyles(Grid)
   item={true}
@@ -274,6 +802,8 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
           xs={2}
         >
           <WithStyles(FileUploadEmbargoDate)
+            canBeCleared={true}
+            id="embargoDateButton-{item.dsi_id}"
             onChange={[Function]}
             value="3000-10-20"
           />

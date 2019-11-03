@@ -1,9 +1,12 @@
 import { act } from 'test-utils';
-import { AttachedFiles, formatBytes, getFileOpenAccessStatus, untranscodedItem, getFileData } from './AttachedFiles';
+import { AttachedFiles, formatBytes, getFileData, getFileOpenAccessStatus, untranscodedItem } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
+import { useAccountContext, useRecordContext } from 'context';
+import { fireEvent } from 'test-utils';
+import { rtlRender, withRedux, withRouter } from 'test-utils';
 
 jest.mock('../../../../context');
-import { useAccountContext, useRecordContext } from 'context';
+// import { onSubmit } from '../../../MyIncompleteRecords/components/MyIncompleteRecordForm';
 
 jest.mock('@material-ui/styles', () => ({
     makeStyles: () => () => ({}),
@@ -179,6 +182,53 @@ describe('AttachedFiles component', () => {
         wrapper.update();
         expect(wrapper.find('MediaPreview').length).toBe(0);
     });
+
+    it('should clear an embargo date', () => {
+        useAccountContext.mockImplementation(() => ({
+            account: {
+                is_administrator: true,
+            },
+        }));
+
+        const testFilename = 'test1.mp4';
+        const testProps = {
+            dataStreams: [
+                {
+                    ...recordWithDatastreams.fez_datastream_info[0],
+                    dsi_dsid: testFilename,
+                    dsi_mimetype: 'video/mp4',
+                    dsi_embargo_date: '3099-01-01',
+                },
+                {
+                    ...recordWithDatastreams.fez_datastream_info[0],
+                    dsi_dsid: 'thumbnail_test_t.jpg',
+                },
+            ],
+            locale: {
+                culturalSensitivityStatement: 'test advisory',
+            },
+        };
+        const { wrapper, getByText, getByTestId } = setup(testProps);
+        // const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        // const { asFragment, getByText, getByTestId } = setup(testProps);
+        //
+        // let fragment = asFragment();
+        // expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+
+        fireEvent.click(getByTestId('embargoDateButton-' + testFilename));
+        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+
+        fireEvent.click(getByText('Clear'));
+        expect(toJson(wrapper)).toMatchSnapshot();
+        // expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
+        // fireEvent.onEmbargoDateChange(1)(null);
+        // this doesnt work
+        // AttachedFiles.onEmbargoDateChange(1)(null);
+        // expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
 
 describe('formatBytes helper', () => {
@@ -228,3 +278,27 @@ describe('getFileData helper', () => {
         expect(testResult[0].webMediaUrl).toBe('http://localhost/view/UQ:123456/web_test.jpg');
     });
 });
+
+// describe('something', () => {
+//     it('should clear an embargo date', async() => {
+//         const { asFragment, getByTestId } = setup({
+//             initialDataStream: {
+//                 dsi_dsid: 'test.jpg',
+//                 dsi_security_policy: 1,
+//                 dsi_security_inherited: 0,
+//                 dsi_embargo_date: '2099-01-01',
+//             },
+//             dataStream: {
+//                 dsi_dsid: 'test.jpg',
+//                 dsi_security_policy: 1,
+//                 dsi_security_inherited: 0,
+//                 dsi_embargo_date: '2099-01-01',
+//             },
+//         });
+//         expect(asFragment()).toMatchSnapshot();
+//
+//         fireEvent.click(getByTestId('clearEmbargoButton'));
+//         expect(asFragment()).toMatchSnapshot();
+//     });
+//
+// });

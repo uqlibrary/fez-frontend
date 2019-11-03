@@ -11,14 +11,14 @@ import { makeStyles } from '@material-ui/styles';
 import { useRecordContext } from 'context';
 import { userIsAdmin, userIsAuthor } from 'hooks';
 
+import { mui1theme, openAccessConfig, routes, viewRecordsConfig } from 'config';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import Typography from '@material-ui/core/Typography';
 import Tooltip from '@material-ui/core/Tooltip';
 import IconButton from '@material-ui/core/IconButton';
 import Delete from '@material-ui/icons/Delete';
-
-import { openAccessConfig, viewRecordsConfig, routes } from 'config';
+import WarningIcon from '@material-ui/icons/Warning';
 import { isFileValid } from 'config/validation';
 import MediaPreview from 'modules/ViewRecord/components/MediaPreview';
 import FileName from 'modules/ViewRecord/components/partials/FileName';
@@ -228,9 +228,12 @@ export const AttachedFiles = ({
     onDelete,
     onDateChange,
     onDescriptionChange,
+    onEmbargoClearPromptText,
     locale,
     canEdit,
 }) => {
+    const [hasClearedEmbargoDate, markEmbargoDateAsCleared] = useState(Array(dataStreams.length).fill(false));
+
     const classes = useStyles();
     const [preview, showPreview, hidePreview] = usePreview(initialPreviewState);
     const { record } = useRecordContext();
@@ -240,12 +243,21 @@ export const AttachedFiles = ({
     const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
     const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
+
+    const onEmbargoDateChange = index => value => {
+        value === null &&
+            markEmbargoDateAsCleared([
+                ...hasClearedEmbargoDate.slice(0, index),
+                true,
+                ...hasClearedEmbargoDate.slice(index + 1),
+            ]);
+
+        onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
+    };
+
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1);
 
     const onFileDelete = index => () => onDelete(index);
-    const onEmbargoDateChange = index => value => {
-        onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
-    };
     const onFileDescriptionChange = index => event => onDescriptionChange('dsi_label', event.target.value, index);
 
     return (
@@ -303,78 +315,111 @@ export const AttachedFiles = ({
                     </Grid>
                 </div>
                 {fileData.map((item, index) => (
-                    <div style={{ padding: 8 }} key={index}>
-                        <Grid
-                            container
-                            direction="row"
-                            alignItems="center"
-                            key={`file-${index}`}
-                            spacing={16}
-                            wrap={'nowrap'}
-                            className={classes.header}
-                        >
-                            <Grid item xs={1} className={classes.thumbIconCentered}>
-                                <FileIcon {...item.iconProps} showPreview={showPreview} />
-                            </Grid>
-                            <Grid item sm={3} className={classes.dataWrapper}>
-                                <FileName {...item} onFileSelect={showPreview} />
-                            </Grid>
-                            <Hidden xsDown>
+                    <React.Fragment>
+                        <div style={{ padding: 8 }} key={index}>
+                            <Grid
+                                container
+                                direction="row"
+                                alignItems="center"
+                                key={`file-${index}`}
+                                spacing={16}
+                                wrap={'nowrap'}
+                                className={classes.header}
+                            >
+                                <Grid item xs={1} className={classes.thumbIconCentered}>
+                                    <FileIcon {...item.iconProps} showPreview={showPreview} />
+                                </Grid>
                                 <Grid item sm={3} className={classes.dataWrapper}>
-                                    {isAdmin && canEdit ? (
-                                        <TextField
-                                            fullWidth
-                                            onChange={onFileDescriptionChange(index)}
-                                            name="fileDescription"
-                                            defaultValue={item.description}
-                                        />
-                                    ) : (
-                                        <Typography variant="body2" noWrap>
-                                            {item.description}
-                                        </Typography>
-                                    )}
+                                    <FileName {...item} onFileSelect={showPreview} />
                                 </Grid>
-                            </Hidden>
-                            <Hidden smDown>
-                                <Grid item sm={2} className={classes.dataWrapper}>
-                                    <Typography variant="body2" noWrap>
-                                        {item.calculatedSize}
-                                    </Typography>
-                                </Grid>
-                            </Hidden>
-                            <Hidden xsDown>
-                                <Grid item sm style={{ textAlign: 'right' }}>
-                                    <OpenAccessIcon {...item.openAccessStatus} securityStatus={item.securityStatus} />
-                                </Grid>
-                            </Hidden>
-                            {isAdmin && canEdit && (
-                                <React.Fragment>
-                                    <Grid item xs={2}>
-                                        {(!!item.openAccessStatus.embargoDate ||
-                                            !!item.openAccessStatus.isOpenAccess) && (
-                                            <FileUploadEmbargoDate
-                                                value={
-                                                    !!item.embargoDate &&
-                                                    moment(item.openAccessStatus.embargoDate).isSameOrAfter(moment())
-                                                        ? item.embargoDate
-                                                        : ''
-                                                }
-                                                onChange={onEmbargoDateChange(index)}
-                                                disabled={disabled}
+                                <Hidden xsDown>
+                                    <Grid item sm={3} className={classes.dataWrapper}>
+                                        {isAdmin && canEdit ? (
+                                            <TextField
+                                                fullWidth
+                                                onChange={onFileDescriptionChange(index)}
+                                                name="fileDescription"
+                                                defaultValue={item.description}
                                             />
+                                        ) : (
+                                            <Typography variant="body2" noWrap>
+                                                {item.description}
+                                            </Typography>
                                         )}
                                     </Grid>
-                                    <Grid item xs style={{ textAlign: 'right' }}>
-                                        <Tooltip title={deleteHint}>
-                                            <IconButton onClick={onFileDelete(index)} disabled={disabled}>
-                                                <Delete />
-                                            </IconButton>
-                                        </Tooltip>
+                                </Hidden>
+                                <Hidden smDown>
+                                    <Grid item sm={2} className={classes.dataWrapper}>
+                                        <Typography variant="body2" noWrap>
+                                            {item.calculatedSize}
+                                        </Typography>
                                     </Grid>
-                                </React.Fragment>
-                            )}
-                        </Grid>
-                    </div>
+                                </Hidden>
+                                <Hidden xsDown>
+                                    <Grid item sm style={{ textAlign: 'right' }}>
+                                        <OpenAccessIcon
+                                            {...item.openAccessStatus}
+                                            securityStatus={item.securityStatus}
+                                        />
+                                    </Grid>
+                                </Hidden>
+                                {isAdmin && canEdit && (
+                                    <React.Fragment>
+                                        <Grid item xs={2}>
+                                            {(!!item.openAccessStatus.embargoDate ||
+                                                !!item.openAccessStatus.isOpenAccess) && (
+                                                <FileUploadEmbargoDate
+                                                    value={
+                                                        !!item.embargoDate &&
+                                                        moment(item.openAccessStatus.embargoDate).isSameOrAfter(
+                                                            moment(),
+                                                        )
+                                                            ? item.embargoDate
+                                                            : ''
+                                                    }
+                                                    onChange={onEmbargoDateChange(index)}
+                                                    disabled={disabled}
+                                                    canBeCleared
+                                                    id="embargoDateButton-{item.dsi_id}"
+                                                />
+                                            )}
+                                        </Grid>
+                                        <Grid item xs style={{ textAlign: 'right' }}>
+                                            <Tooltip title={deleteHint}>
+                                                <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                                    <Delete />
+                                                </IconButton>
+                                            </Tooltip>
+                                        </Grid>
+                                    </React.Fragment>
+                                )}
+                            </Grid>
+                        </div>
+                        {!!hasClearedEmbargoDate[index] && (
+                            <React.Fragment>
+                                <Grid
+                                    container
+                                    spacing={8}
+                                    alignContent={'flex-end'}
+                                    alignItems={'flex-end'}
+                                    justify={'flex-end'}
+                                    style={{ marginTop: 4 }}
+                                >
+                                    <Grid item xs={1}>
+                                        <WarningIcon
+                                            fontSize={'small'}
+                                            style={{ color: mui1theme.palette.warning.main }}
+                                        />
+                                    </Grid>
+                                    <Grid item xs={11}>
+                                        <Typography style={{ color: mui1theme.palette.warning.main }}>
+                                            {onEmbargoClearPromptText}
+                                        </Typography>
+                                    </Grid>
+                                </Grid>
+                            </React.Fragment>
+                        )}
+                    </React.Fragment>
                 ))}
                 {preview.mediaUrl && preview.mimeType && <MediaPreview {...preview} onClose={hidePreview} />}
             </StandardCard>
@@ -391,12 +436,18 @@ AttachedFiles.propTypes = {
     onDelete: PropTypes.func,
     onDateChange: PropTypes.func,
     onDescriptionChange: PropTypes.func,
+    onEmbargoClearPromptText: PropTypes.any,
     locale: PropTypes.object,
     canEdit: PropTypes.bool,
 };
 
 AttachedFiles.defaultProps = {
     deleteHint: 'Remove this file',
+    onEmbargoClearPromptText: (
+        <span>
+            <b>Embargo date removed</b> - review security policy on Security tab
+        </span>
+    ),
     canEdit: false,
 };
 
