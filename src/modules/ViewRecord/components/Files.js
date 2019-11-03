@@ -18,6 +18,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
+import { stripHtml } from 'helpers/general';
 
 const styles = theme => ({
     header: {
@@ -348,12 +349,6 @@ export class FilesClass extends Component {
         return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
-    stripHtml = html => {
-        const temporalDivElement = document.createElement('div');
-        temporalDivElement.innerHTML = html;
-        return temporalDivElement.textContent || temporalDivElement.innerText || '';
-    };
-
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
@@ -373,7 +368,7 @@ export class FilesClass extends Component {
                         <Alert
                             allowDismiss
                             type={'info'}
-                            message={this.stripHtml(
+                            message={stripHtml(
                                 publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}
