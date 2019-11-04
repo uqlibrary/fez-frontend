@@ -2479,7 +2479,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     },
                 ],
                 fez_record_search_key_date_available: {
-                    rek_date_available: '2015-01-01T10:00:00+10:00',
+                    rek_date_available: '2015-01-01T00:00:00+10:00',
                 },
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '2016-01-01T10:00:00+10:00',
