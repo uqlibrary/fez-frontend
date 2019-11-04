@@ -845,6 +845,15 @@ exports[`Component PublicationForm Shows an alert 2`] = `
       item={true}
       xs={12}
     >
+      <formComponent
+        formValues={Immutable.Map {}}
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -865,10 +874,10 @@ exports[`Component PublicationForm Shows an alert 2`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -879,29 +888,20 @@ exports[`Component PublicationForm Shows an alert 2`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <formComponent
-        formValues={Immutable.Map {}}
-        submitting={false}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
@@ -1372,6 +1372,15 @@ exports[`Component PublicationForm Shows an alert 3`] = `
       item={true}
       xs={12}
     >
+      <formComponent
+        formValues={Immutable.Map {}}
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -1392,10 +1401,10 @@ exports[`Component PublicationForm Shows an alert 3`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -1406,29 +1415,20 @@ exports[`Component PublicationForm Shows an alert 3`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <formComponent
-        formValues={Immutable.Map {}}
-        submitting={false}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
@@ -4627,6 +4627,22 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
       item={true}
       xs={12}
     >
+      <BookForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 174,
+          }
+        }
+        isAuthorSelected={false}
+        isNtro={false}
+        submitting={false}
+        subtype={null}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -4647,10 +4663,10 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -4661,36 +4677,20 @@ exports[`Component PublicationForm should render component with BookForm 1`] = `
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <BookForm
-        formValues={
-          Immutable.Map {
-            "rek_display_type": 174,
-          }
-        }
-        isAuthorSelected={false}
-        isNtro={false}
-        submitting={false}
-        subtype={null}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
@@ -5170,6 +5170,19 @@ exports[`Component PublicationForm should render component with GenericDocument 
       item={true}
       xs={12}
     >
+      <GenericDocumentForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 202,
+          }
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -5190,10 +5203,10 @@ exports[`Component PublicationForm should render component with GenericDocument 
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -5204,33 +5217,20 @@ exports[`Component PublicationForm should render component with GenericDocument 
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <GenericDocumentForm
-        formValues={
-          Immutable.Map {
-            "rek_display_type": 202,
-          }
-        }
-        submitting={false}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
@@ -5710,6 +5710,19 @@ exports[`Component PublicationForm should render component with JournalArticleFo
       item={true}
       xs={12}
     >
+      <JournalArticleForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 179,
+          }
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -5730,10 +5743,10 @@ exports[`Component PublicationForm should render component with JournalArticleFo
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -5744,33 +5757,20 @@ exports[`Component PublicationForm should render component with JournalArticleFo
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <JournalArticleForm
-        formValues={
-          Immutable.Map {
-            "rek_display_type": 179,
-          }
-        }
-        submitting={false}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
@@ -6250,6 +6250,19 @@ exports[`Component PublicationForm should render component with ResearchReportFo
       item={true}
       xs={12}
     >
+      <ResearchReportForm
+        formValues={
+          Immutable.Map {
+            "rek_display_type": 275,
+          }
+        }
+        submitting={false}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
       <StandardCard
         help={
           Object {
@@ -6270,10 +6283,10 @@ exports[`Component PublicationForm should render component with ResearchReportFo
                 here
               </a>
             </p>,
-            "title": "Content indicators",
+            "title": "Content Indicators",
           }
         }
-        title="Content indicators"
+        title="Optional: Content Indicators"
       >
         <WithStyles(Grid)
           container={true}
@@ -6284,33 +6297,20 @@ exports[`Component PublicationForm should render component with ResearchReportFo
             xs={12}
           >
             <WithStyles(Typography)>
-              You can select multiple (up to 3) content indicators to add more information about your work.
+              If relevant to your work, you can select multiple (up to 3) content indicators to add more information about your work.
             </WithStyles(Typography)>
             <Field
               component={[Function]}
               disabled={false}
               fullWidth={true}
               id="content-indicators"
-              label="Please select relevant indicator(s)."
+              label="Please select any relevant indicator(s)."
               multiple={true}
               name="contentIndicators"
             />
           </WithStyles(Grid)>
         </WithStyles(Grid)>
       </StandardCard>
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
-      xs={12}
-    >
-      <ResearchReportForm
-        formValues={
-          Immutable.Map {
-            "rek_display_type": 275,
-          }
-        }
-        submitting={false}
-      />
     </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}

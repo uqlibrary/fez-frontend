@@ -200,31 +200,6 @@ export default class FixRecord extends PureComponent {
                                     onCancelAction={this._navigateToDashboard}
                                     locale={saveConfirmationLocale}
                                 />
-                                {showContentIndicatorsField(this.props.recordToFix) && (
-                                    <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txtFixForm.contentIndicators.title}
-                                            help={txtFixForm.contentIndicators.help}
-                                        >
-                                            <Grid container spacing={24}>
-                                                <Grid item xs={12}>
-                                                    <Typography>{txtFixForm.contentIndicators.description}</Typography>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={ContentIndicatorsField}
-                                                        disabled={this.props.submitting}
-                                                        id="content-indicators"
-                                                        name="contentIndicators"
-                                                        label={txtFixForm.contentIndicators.label}
-                                                        multiple
-                                                        fullWidth
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txtFixForm.comments.title} help={txtFixForm.comments.help}>
                                         <Grid container spacing={16}>
@@ -254,6 +229,31 @@ export default class FixRecord extends PureComponent {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
+                                {showContentIndicatorsField(this.props.recordToFix) && (
+                                    <Grid item xs={12}>
+                                        <StandardCard
+                                            title={txtFixForm.contentIndicators.title}
+                                            help={txtFixForm.contentIndicators.help}
+                                        >
+                                            <Grid container spacing={24}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txtFixForm.contentIndicators.description}</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txtFixForm.contentIndicators.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txtFixForm.fileUpload.title} help={txtFixForm.fileUpload.help}>
                                         {txtFixForm.fileUpload.description}
