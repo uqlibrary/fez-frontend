@@ -43,7 +43,10 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should render as required field', () => {
-        const wrapper = setup({ required: true }, { isShallow: false });
+        const wrapper = setup(
+            { required: true, showChips: true, showClear: true, selectedItem: [{ id: 1, value: 'Test' }] },
+            { isShallow: false },
+        );
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
@@ -138,6 +141,32 @@ describe('AutoCompleteAsyncField component', () => {
         const wrapper = setup({ required: true, allowFreeText: false });
         const stateChangeFn = wrapper.instance().handleStateChange();
         expect(stateChangeFn()).toEqual(undefined);
+    });
+
+    it('should handle delete', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            required: true,
+            allowFreeText: false,
+            onDelete: testFn,
+            selectedItem: [{ id: '1', value: 'Ti' }, { id: '2', value: 'Ta' }],
+        });
+        const deleteCallback = wrapper.instance().handleDelete({ id: '2', value: 'Ta' });
+        deleteCallback();
+        expect(testFn).toHaveBeenCalledWith([{ id: '1', value: 'Ti' }]);
+    });
+
+    it('should handle clear', () => {
+        const testCallback = jest.fn();
+        const clearCallback = jest.fn();
+        const wrapper = setup({
+            onClear: clearCallback,
+        });
+
+        const cb = wrapper.instance().handleClear(testCallback);
+        cb();
+        expect(testCallback).toHaveBeenCalledTimes(1);
+        expect(clearCallback).toHaveBeenCalledTimes(1);
     });
 
     it('should test stateReducer function correctly when free text input is allowed on blurInput event', () => {
@@ -255,6 +284,23 @@ describe('AutoCompleteAsyncField component', () => {
 
         wrapper.setProps({
             selectedItem: [{ value: 'Test' }, { value: 'Testing' }],
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render default MenuItemComponent with array', () => {
+        const wrapper = setup({ required: true, allowFreeText: true, selectedItem: [{ id: 123, value: 'Test' }] });
+        const menuItemResult = wrapper.instance().renderSuggestion({
+            suggestion: { value: 'Testing menu item' },
+            index: 0,
+            itemProps: {},
+            highlightedIndex: 0,
+            selectedItem: [{ id: 123, value: 'Test' }],
+        });
+        expect(menuItemResult).toMatchSnapshot();
+
+        wrapper.setProps({
+            selectedItem: [{ id: 123, value: 'Test' }, { value: 'Testing' }],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
