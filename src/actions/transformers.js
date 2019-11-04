@@ -909,10 +909,18 @@ export const getFilesSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getSecuritySectionSearchKeys = (data = {}) => {
+export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
     const { dataStreams, ...rest } = data;
+    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => ({ ...map, [ds.dsi_dsid]: ds }), {});
     return {
         ...rest,
-        ...(!!dataStreams ? { fez_datastream_info: [...dataStreams] } : {}),
+        ...(!!dataStreams
+            ? {
+                fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({
+                    ...dataStream,
+                    ...dataStreamsMap[dataStream.dsi_dsid],
+                })),
+            }
+            : {}),
     };
 };

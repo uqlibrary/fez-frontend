@@ -50,6 +50,9 @@ const getInitialValues = (record, tab, tabParams = () => {}) =>
         }, {});
 
 const getInitialFormValues = (recordToView, recordType) => {
+    const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
+    const validDataStreams = (dataStreams || []).filter(isFileValid(viewRecordsConfig, true));
+
     return {
         initialValues: {
             pid: recordToView.rek_pid,
@@ -80,8 +83,12 @@ const getInitialFormValues = (recordToView, recordType) => {
                 ...(recordType === RECORD_TYPE_RECORD
                     ? {
                         rek_security_inherited: recordToView.rek_security_inherited,
-                        dataStreams: (recordToView.fez_datastream_info || []).filter(
-                            isFileValid(viewRecordsConfig, true),
+                        dataStreams: validDataStreams.map(
+                            ({ dsi_dsid: name, dsi_security_inherited: inherited, dsi_security_policy: policy }) => ({
+                                dsi_dsid: name,
+                                dsi_security_inherited: inherited,
+                                dsi_security_policy: policy,
+                            }),
                         ),
                     }
                     : []),
@@ -97,7 +104,7 @@ const getInitialFormValues = (recordToView, recordType) => {
             grantInformationSection:
                 (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'grantInformation')) || {},
             filesSection:
-                (recordType === RECORD_TYPE_RECORD && getInitialValues(recordToView, 'files', filesParams)) || {},
+                (recordType === RECORD_TYPE_RECORD && { fez_datastream_info: validDataStreams, ...rest }) || {},
         },
     };
 };
