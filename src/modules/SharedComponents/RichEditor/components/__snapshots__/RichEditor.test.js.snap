@@ -6457,7 +6457,7 @@ exports[`RichEditor should render error showing maxValue and instructions 1`] = 
               }
             }
             onChange={[MockFunction]}
-            required={false}
+            required={true}
             returnSingleValue={false}
             titleProps={Object {}}
             value={
