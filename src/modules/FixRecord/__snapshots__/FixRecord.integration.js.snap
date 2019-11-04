@@ -160,11 +160,15 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-351\\"
-+                             >
-+                               <div
++                               style=\\"flex-grow: 1;\\"
+                              >
+                                <div
+-       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 +                                 class=\\"MuiGrid-container-3\\"
-+                               >
-+                                 <div
+                                >
+                                  <div
+-         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-         style=\\"text-align: center;\\"
 +                                   class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
 +                                 >
 +                                   <a
@@ -195,7 +199,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Google scholar will open in a new window\\"
-+                                   >
+                                    >
 +                                     <span
 +                                       class=\\"fez-icon google large\\"
 +                                     />
@@ -204,9 +208,12 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                                     class=\\"noOaIcon\\"
 +                                   />
 +                                 </div>
-+                                 <div
+                                  <div
+-           class=\\"MuiCircularProgress-root-296 MuiCircularProgress-colorPrimary-299 MuiCircularProgress-indeterminate-298\\"
+-           role=\\"progressbar\\"
+-           style=\\"width: 18px; height: 18px;\\"
 +                                   class=\\"MuiGrid-item-4\\"
-+                                 >
+                                  >
 +                                   <a
 +                                     class=\\"CitationCounts-statsLink-355 ExternalLink-externalLink-358\\"
 +                                     href=\\"https://app.library.uq.edu.au/#/authors/view/UQ:41878\\"
@@ -216,21 +223,29 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Roles of heterogeneous nuclear ribonucleoproteins A/B in cell growth\\"
 +                                   >
-+                                     <svg
+                                      <svg
+-             class=\\"MuiCircularProgress-svg-301\\"
+-             viewBox=\\"22 22 44 44\\"
 +                                       aria-hidden=\\"true\\"
 +                                       class=\\"MuiSvgIcon-root-362 ExternalLink-externalLinkIcon-359\\"
 +                                       focusable=\\"false\\"
 +                                       role=\\"presentation\\"
 +                                       viewBox=\\"0 0 24 24\\"
-+                                     >
+                                      >
+-             <circle
+-               class=\\"MuiCircularProgress-circle-302 MuiCircularProgress-circleIndeterminate-304\\"
+-               cx=\\"44\\"
+-               cy=\\"44\\"
 +                                       <path
 +                                         d=\\"M0 0h24v24H0z\\"
-+                                         fill=\\"none\\"
+                                          fill=\\"none\\"
+-               r=\\"21\\"
+-               stroke-width=\\"2\\"
 +                                       />
 +                                       <path
 +                                         d=\\"M19 19H5V5h7V3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2v-7h-2v7zM14 3v2h3.59l-9.83 9.83 1.41 1.41L19 6.41V10h2V3h-7z\\"
-+                                       />
-+                                     </svg>
+                                        />
+                                      </svg>
 +                                     View full statistics
 +                                   </a>
 +                                 </div>
@@ -242,12 +257,14 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                           </div>
 +                         </div>
 +                       </div>
-+                     </div>
-+                   </div>
+                      </div>
+                    </div>
 +                   <hr
 +                     class=\\"MuiDivider-root-371 PublicationCitation-divider-348\\"
 +                   />
-+                   <div
+                    <div
+-         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-         style=\\"text-align: center;\\"
 +                     class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 +                   >
 +                     <span
@@ -270,36 +287,33 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                     class=\\"MuiFormLabel-root-391 MuiFormLabel-error-394 MuiInputLabel-error-383 MuiFormLabel-required-396 MuiInputLabel-required-384 MuiInputLabel-root-380 MuiInputLabel-formControl-385 MuiInputLabel-animated-388\\"
 +                     data-shrink=\\"false\\"
 +                     id=\\"Select an action-label\\"
-+                   >
+                    >
 +                     Select an action
-+                     <span
+                      <span
+-           class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
+-           style=\\"font-size: 1.33rem;\\"
 +                       class=\\"MuiFormLabel-asterisk-397 MuiFormLabel-error-394 MuiInputLabel-error-383\\"
-                      >
++                     >
 +                        *
 +                     </span>
 +                   </label>
-                    <div
--       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
++                   <div
 +                     class=\\"MuiInputBase-root-418 MuiInput-root-405 MuiInput-underline-409 MuiInputBase-error-424 MuiInput-error-410 MuiInputBase-formControl-419 MuiInput-formControl-406\\"
 +                     label=\\"Select an action\\"
 +                     required=\\"\\"
                     >
-                      <div
--         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--         style=\\"text-align: center;\\"
+-           Loading work
++                     <div
 +                       class=\\"MuiSelect-root-398\\"
-                      >
-                        <div
--           class=\\"MuiCircularProgress-root-296 MuiCircularProgress-colorPrimary-299 MuiCircularProgress-indeterminate-298\\"
--           role=\\"progressbar\\"
--           style=\\"width: 18px; height: 18px;\\"
++                     >
++                       <div
 +                         aria-haspopup=\\"true\\"
 +                         aria-pressed=\\"false\\"
 +                         class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
 +                         id=\\"fixAction\\"
 +                         role=\\"button\\"
 +                         tabindex=\\"0\\"
-                        >
++                       >
 +                         <span>
 +                           ​
 +                         </span>
@@ -311,9 +325,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         type=\\"hidden\\"
 +                         value=\\"\\"
 +                       />
-                        <svg
--             class=\\"MuiCircularProgress-svg-301\\"
--             viewBox=\\"22 22 44 44\\"
++                       <svg
 +                         aria-hidden=\\"true\\"
 +                         class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
 +                         focusable=\\"false\\"
@@ -341,11 +353,7 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +             <div
 +               class=\\"Alert\\"
 +               style=\\"padding: 12px;\\"
-              >
--             <circle
--               class=\\"MuiCircularProgress-circle-302 MuiCircularProgress-circleIndeterminate-304\\"
--               cx=\\"44\\"
--               cy=\\"44\\"
++             >
 +               <div
 +                 class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27 MuiGrid-align-items-xs-flex-start-12 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20 Alert-warning-491 Alert-common-483\\"
 +               >
@@ -367,14 +375,12 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                       >
 +                         <path
 +                           d=\\"M0 0h24v24H0z\\"
-                            fill=\\"none\\"
--               r=\\"21\\"
--               stroke-width=\\"2\\"
++                           fill=\\"none\\"
 +                         />
 +                         <path
 +                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
-                          />
-                        </svg>
++                         />
++                       </svg>
 +                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-485 alert-text\\"
@@ -386,16 +392,14 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +                         Form cannot be submitted until all fields are valid. Please review all input fields.
 +                         <ul />
 +                       </span>
-                      </div>
-                    </div>
++                     </div>
++                   </div>
 +                 </div>
 +               </div>
 +             </div>
 +           </div>
 +         </div>
-          <div
--         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--         style=\\"text-align: center;\\"
++         <div
 +           class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-24-27\\"
 +         >
 +           <div
@@ -403,18 +407,15 @@ exports[`FixRecord form should allow content indicators to be selected 1`] = `
 +           />
 +           <div
 +             class=\\"MuiGrid-item-4\\"
-            >
++           >
 +             <button
 +               class=\\"MuiButtonBase-root-465 MuiButton-root-439 MuiButton-contained-450 MuiButton-raised-453 MuiButton-fullWidth-464\\"
 +               tabindex=\\"0\\"
 +               type=\\"button\\"
 +             >
-                <span
--           class=\\"MuiTypography-root-100 MuiTypography-h5-116 MuiTypography-colorPrimary-130\\"
--           style=\\"font-size: 1.33rem;\\"
++               <span
 +                 class=\\"MuiButton-label-440\\"
-                >
--           Loading work
++               >
 +                 Cancel
                 </span>
 +               <span
@@ -434,7 +435,7 @@ exports[`FixRecord form should allow content indicators to be selected 2`] = `
 - First value
 + Second value
 
-@@ -278,11 +278,12 @@
+@@ -279,11 +279,12 @@
                       <div
                         class=\\"MuiSelect-root-398\\"
                       >
@@ -455,7 +456,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 - First value
 + Second value
 
-@@ -257,67 +257,415 @@
+@@ -258,67 +258,415 @@
                   <div
                     class=\\"MuiFormControl-root-376\\"
                     style=\\"width: 100%;\\"
@@ -882,7 +883,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
               </div>
             </div>
             <div
-@@ -361,11 +709,15 @@
+@@ -362,11 +710,15 @@
                         <b>
                           Validation - 
                         </b>
@@ -899,7 +900,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
                     </div>
                   </div>
                 </div>
-@@ -392,10 +744,27 @@
+@@ -393,10 +745,27 @@
                   Cancel
                 </span>
                 <span
@@ -934,7 +935,7 @@ exports[`FixRecord form should allow content indicators to be selected 4`] = `
 - First value
 + Second value
 
-@@ -492,11 +492,12 @@
+@@ -493,11 +493,12 @@
                           <div
                             class=\\"MuiSelect-root-398\\"
                           >
@@ -955,7 +956,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
 - First value
 + Second value
 
-@@ -499,16 +499,16 @@
+@@ -500,16 +500,16 @@
                               class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -974,7 +975,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -667,67 +667,12 @@
+@@ -668,67 +668,12 @@
                     </div>
                   </div>
                 </div>
@@ -1042,7 +1043,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -751,21 +696,23 @@
+@@ -752,21 +697,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1076,7 +1077,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
 - First value
 + Second value
 
-@@ -499,16 +499,16 @@
+@@ -500,16 +500,16 @@
                               class=\\"MuiSelect-select-399 MuiSelect-selectMenu-402 MuiInputBase-input-428 MuiInput-input-413\\"
                               id=\\"content-indicators\\"
                               role=\\"button\\"
@@ -1095,7 +1096,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-362 MuiSelect-icon-404\\"
                               focusable=\\"false\\"
-@@ -667,12 +667,67 @@
+@@ -668,12 +668,67 @@
                     </div>
                   </div>
                 </div>
@@ -1163,7 +1164,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
             />
-@@ -696,23 +751,21 @@
+@@ -697,23 +752,21 @@
             </div>
             <div
               class=\\"MuiGrid-item-4\\"
@@ -1197,7 +1198,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
 - First value
 + Second value
 
-@@ -269,24 +269,23 @@
+@@ -270,24 +270,23 @@
                       >
                          *
                       </span>
@@ -1224,7 +1225,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         </div>
                         <input
                           aria-labelledby=\\"Select an action-label\\"
-@@ -343,25 +342,26 @@
+@@ -344,25 +343,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1254,7 +1255,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -373,25 +373,26 @@
+@@ -374,25 +374,26 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1284,7 +1285,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -485,23 +486,22 @@
+@@ -486,23 +487,22 @@
                           id=\\"Please add any relevant indicator(s).-label\\"
                         >
                           Please add any relevant indicator(s).
@@ -1310,7 +1311,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -572,11 +572,11 @@
+@@ -573,11 +573,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
                             tabindex=\\"0\\"
@@ -1323,7 +1324,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             >
                               <div
                                 class=\\"MuiGrid-container-570 FileUploadDropzoneStaticContent-dropzone-1117\\"
-@@ -653,10 +653,11 @@
+@@ -654,10 +654,11 @@
                                 </div>
                               </div>
                               <input
@@ -1335,7 +1336,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -667,52 +668,100 @@
+@@ -668,52 +669,100 @@
                     </div>
                   </div>
                 </div>
@@ -1453,7 +1454,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
 - First value
 + Second value
 
-@@ -269,23 +269,24 @@
+@@ -270,23 +270,24 @@
                       >
                          *
                       </span>
@@ -1480,7 +1481,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                         </div>
                         <input
                           aria-labelledby=\\"Select an action-label\\"
-@@ -309,11 +310,11 @@
+@@ -310,11 +311,11 @@
                     </div>
                   </div>
                 </div>
@@ -1493,7 +1494,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
             >
               <div
                 class=\\"MuiPaper-root-881 MuiPaper-elevation1-884 MuiPaper-rounded-882 MuiCard-root-880 Cards-card-875 StandardCard\\"
-@@ -342,26 +343,25 @@
+@@ -343,26 +344,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1523,7 +1524,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"comments\\"
                             rows=\\"3\\"
                           />
-@@ -373,26 +373,25 @@
+@@ -374,26 +374,25 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-943 MuiFormControl-fullWidth-946\\"
@@ -1553,7 +1554,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             name=\\"rek_link\\"
                             type=\\"text\\"
                             value=\\"\\"
-@@ -486,22 +485,23 @@
+@@ -487,22 +486,23 @@
                           id=\\"Please add any relevant indicator(s).-label\\"
                         >
                           Please add any relevant indicator(s).
@@ -1579,7 +1580,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
-@@ -572,11 +572,11 @@
+@@ -573,11 +573,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
                             tabindex=\\"0\\"
@@ -1592,7 +1593,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                             >
                               <div
                                 class=\\"MuiGrid-container-570 FileUploadDropzoneStaticContent-dropzone-1117\\"
-@@ -653,11 +653,10 @@
+@@ -654,11 +654,10 @@
                                 </div>
                               </div>
                               <input
@@ -1604,7 +1605,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
                                 type=\\"file\\"
                               />
-@@ -676,48 +675,44 @@
+@@ -677,48 +676,44 @@
               <div
                 class=\\"Alert\\"
                 style=\\"padding: 12px;\\"
@@ -1668,7 +1669,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                   </div>
                 </div>
               </div>
-@@ -731,37 +726,41 @@
+@@ -732,37 +727,41 @@
             />
             <div
               class=\\"MuiGrid-item-571\\"
