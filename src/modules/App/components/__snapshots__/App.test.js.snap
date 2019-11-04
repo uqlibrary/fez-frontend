@@ -11634,6 +11634,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       <SearchComponent
                                                         actions={
                                                           Object {
+                                                            "adminCreate": [Function],
                                                             "adminUpdate": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
@@ -16559,6 +16560,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           <AppAlert
                             actions={
                               Object {
+                                "adminCreate": [Function],
                                 "adminUpdate": [Function],
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
@@ -18228,6 +18230,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     <WithStyles(WithTheme(WithWidth(TopCitedPublicationsClass)))
                                                                       actions={
                                                                         Object {
+                                                                          "adminCreate": [Function],
                                                                           "adminUpdate": [Function],
                                                                           "checkSession": [Function],
                                                                           "claimPublication": [Function],
@@ -18342,6 +18345,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithTheme(WithWidth(TopCitedPublicationsClass))
                                                                         actions={
                                                                           Object {
+                                                                            "adminCreate": [Function],
                                                                             "adminUpdate": [Function],
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
@@ -18463,6 +18467,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         <WithWidth(TopCitedPublicationsClass)
                                                                           actions={
                                                                             Object {
+                                                                              "adminCreate": [Function],
                                                                               "adminUpdate": [Function],
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
@@ -19018,6 +19023,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           <TopCitedPublicationsClass
                                                                             actions={
                                                                               Object {
+                                                                                "adminCreate": [Function],
                                                                                 "adminUpdate": [Function],
                                                                                 "checkSession": [Function],
                                                                                 "claimPublication": [Function],
@@ -22482,6 +22488,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               <WithStyles(NewsFeed)
                                                                                 actions={
                                                                                   Object {
+                                                                                    "adminCreate": [Function],
                                                                                     "adminUpdate": [Function],
                                                                                     "checkSession": [Function],
                                                                                     "claimPublication": [Function],
@@ -22550,6 +22557,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 <NewsFeed
                                                                                   actions={
                                                                                     Object {
+                                                                                      "adminCreate": [Function],
                                                                                       "adminUpdate": [Function],
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],

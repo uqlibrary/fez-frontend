@@ -382,7 +382,7 @@ const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replace
 const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
 const getAdminRecordRequest = data => {
-    const { files, ...restFilesSection } = data.filesSection;
+    const { files, ...restFilesSection } = data.filesSection || {};
     const hasFilesToUpload = files && files.queue && files.queue.length > 0;
     // delete extra form values from request object
     const keys = [
@@ -428,9 +428,7 @@ const getAdminRecordRequest = data => {
  * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
  */
 export function adminUpdate(data) {
-    const {
-        filesSection: { files },
-    } = data;
+    const { files } = data.filesSection || {};
     return dispatch => {
         dispatch({
             type: actions.ADMIN_UPDATE_WORK_PROCESSING,
