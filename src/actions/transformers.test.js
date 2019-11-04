@@ -2142,8 +2142,23 @@ describe('getSecuritySectionSearchKeys', () => {
             ],
         };
         expect(
-            transformers.getSecuritySectionSearchKeys({
-                dataStreams: [
+            transformers.getSecuritySectionSearchKeys(
+                {
+                    dataStreams: [
+                        {
+                            dsi_dsid: 'test.png',
+                            dsi_security_policy: 2,
+                            dsi_security_inherited: 1,
+                        },
+                        {
+                            dsi_dsid: 'test1.txt',
+                            dsi_security_policy: 3,
+                            dsi_security_inherited: 0,
+                        },
+                    ],
+                    rek_security_policy: 1,
+                },
+                [
                     {
                         dsi_dsid: 'test.png',
                         dsi_security_policy: 2,
@@ -2151,12 +2166,11 @@ describe('getSecuritySectionSearchKeys', () => {
                     },
                     {
                         dsi_dsid: 'test1.txt',
-                        dsi_security_policy: 3,
-                        dsi_security_inherited: 0,
+                        dsi_security_policy: 1,
+                        dsi_security_inherited: 1,
                     },
                 ],
-                rek_security_policy: 1,
-            }),
+            ),
         ).toEqual(expected);
     });
 

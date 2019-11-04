@@ -421,7 +421,10 @@ export function adminUpdate(data) {
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
             ...transformers.getFilesSectionSearchKeys(data.filesSection),
-            ...transformers.getSecuritySectionSearchKeys(data.securitySection),
+            ...transformers.getSecuritySectionSearchKeys(
+                data.securitySection,
+                (data.filesSection || {}).fez_datastream_info || [],
+            ),
         };
 
         return Promise.resolve([])
