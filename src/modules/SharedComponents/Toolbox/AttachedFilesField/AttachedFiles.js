@@ -252,7 +252,11 @@ export const AttachedFiles = ({
                 ...hasClearedEmbargoDate.slice(index + 1),
             ]);
 
-        onDateChange('dsi_embargo_date', moment(value).format(globalLocale.global.embargoDateFormat), index);
+        onDateChange(
+            'dsi_embargo_date',
+            !!value ? moment(value).format(globalLocale.global.embargoDateFormat) : null,
+            index,
+        );
     };
 
     const hasVideo = fileData.some(item => item.mimeType.indexOf('video') > -1);

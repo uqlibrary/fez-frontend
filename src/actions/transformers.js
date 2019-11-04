@@ -101,7 +101,9 @@ export const getRecordFileAttachmentSearchKey = (files, record) => {
         .map((item, index) => {
             if (!item.hasOwnProperty('date') || !item.date || moment(item.date).isSame(moment(), 'day')) return null;
             return {
-                rek_file_attachment_embargo_date: moment(item.date).format(locale.global.embargoDateFormat),
+                rek_file_attachment_embargo_date: !!item.date
+                    ? moment(item.date).format(locale.global.embargoDateFormat)
+                    : null,
                 rek_file_attachment_embargo_date_order: initialCount + index + 1,
             };
         })
@@ -795,7 +797,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_date_available: {
                     ...dateAvailable,
-                    rek_date_available: moment(dateAvailable.rek_date_available).format(),
+                    rek_date_available: moment(dateAvailable.rek_date_available, 'YYYY').format(),
                 },
             }
             : {}),
