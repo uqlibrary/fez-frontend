@@ -2788,15 +2788,6 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
 describe('getFilesSectionSearchKeys', () => {
     it('should get files section search keys', () => {
         const data = {
-            files: {
-                queue: [
-                    {
-                        name: 'test.txt',
-                        date: '2019-01-01',
-                        access_condition_id: 9,
-                    },
-                ],
-            },
             advisoryStatement: {
                 htmlText: '<p>Test advisory statement</p>',
                 plainText: 'Test advisory statment',
@@ -2807,24 +2798,6 @@ describe('getFilesSectionSearchKeys', () => {
             fez_record_search_key_advisory_statement: {
                 rek_advisory_statement: '<p>Test advisory statement</p>',
             },
-            fez_record_search_key_file_attachment_name: [
-                {
-                    rek_file_attachment_name: 'test.txt',
-                    rek_file_attachment_name_order: 1,
-                },
-            ],
-            fez_record_search_key_file_attachment_embargo_date: [
-                {
-                    rek_file_attachment_embargo_date: '2019-01-01',
-                    rek_file_attachment_embargo_date_order: 1,
-                },
-            ],
-            fez_record_search_key_file_attachment_access_condition: [
-                {
-                    rek_file_attachment_access_condition: 8,
-                    rek_file_attachment_access_condition_order: 1,
-                },
-            ],
         });
     });
 });

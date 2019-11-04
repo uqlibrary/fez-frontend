@@ -67,6 +67,7 @@ describe('RichEditor', () => {
                 meta: {
                     error: 'This field is required',
                 },
+                required: true,
             },
             { isShallow: false },
         );

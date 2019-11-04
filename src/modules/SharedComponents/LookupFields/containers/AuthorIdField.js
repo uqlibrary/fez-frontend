@@ -26,7 +26,9 @@ const mapStateToProps = (state, props) => {
         selectedValue:
             (!props.input &&
                 ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
-            (!!props.input && props.input.value.toJS ? props.input.value.toJS() : props.input.value || '') ||
+            (!!props.input &&
+                !!props.input.value &&
+                (props.input.value.toJS ? props.input.value.toJS() : props.input.value)) ||
             '',
         itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         maxResults: 50,
