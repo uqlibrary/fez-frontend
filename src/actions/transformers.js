@@ -899,13 +899,12 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
 };
 
 export const getFilesSectionSearchKeys = (data = {}) => {
-    const { files, advisoryStatement, ...rest } = data;
+    const { advisoryStatement, ...rest } = data;
     return {
         ...rest,
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
             : {}),
-        ...getRecordFileAttachmentSearchKey((files || {}).queue),
     };
 };
 

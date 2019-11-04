@@ -1,7 +1,7 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
 import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
-import { adminUpdate } from 'actions';
+import { adminUpdate, adminCreate } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
 import { confirmDiscardFormChanges } from 'modules/SharedComponents/ConfirmDiscardFormChanges';
@@ -19,6 +19,7 @@ import {
 import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { detailedDiff } from 'deep-object-diff';
+import { pathConfig } from 'config/routes';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
@@ -109,9 +110,16 @@ const getInitialFormValues = (recordToView, recordType) => {
     };
 };
 
-const onSubmit = (values, dispatch, { initialValues }) => {
+const onSubmit = (values, dispatch, { initialValues, match }) => {
     console.log(detailedDiff((initialValues && initialValues.toJS()) || null, (values && values.toJS()) || null));
-    return dispatch(adminUpdate(values.toJS())).catch(error => {
+    let action = null;
+    if (match.url === pathConfig.admin.edit(match.params.pid || '')) {
+        action = adminUpdate;
+    } else {
+        action = adminCreate;
+    }
+
+    return dispatch(action(values.toJS())).catch(error => {
         throw new SubmissionError({ _error: error });
     });
 };
