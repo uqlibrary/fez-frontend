@@ -39,7 +39,7 @@ export default {
             },
             contentIndicators: {
                 help: {
-                    title: 'Content indicators',
+                    title: 'Content Indicators',
                     text: (
                         <p>
                             For more information about content indicators, click{' '}
@@ -57,10 +57,10 @@ export default {
                 },
                 title: 'Optional: Content Indicators',
                 description:
-                    'You can select multiple (of 3 available) content indicators to add more information ' +
-                    'about your work, but you cannot remove indicators already selected. To amend existing ' +
-                    'information, suggest a correction below.',
-                label: 'Please select relevant indicator(s).',
+                    'If relevant to your work, you can select multiple (of 3 available) content indicators to ' +
+                    'add more information about your work, but you cannot remove indicators already selected. ' +
+                    'To amend existing information, Suggest changes above.',
+                label: 'Please add any relevant indicator(s).',
             },
             comments: {
                 title: 'Optional: Suggest changes or add links to this work',
@@ -166,7 +166,7 @@ export default {
         fixPublicationForm: {
             contentIndicators: {
                 help: {
-                    title: 'Content indicators',
+                    title: 'Content Indicators',
                     text: (
                         <p>
                             For more information about content indicators, click{' '}
@@ -182,12 +182,12 @@ export default {
                     ),
                     buttonLabel: 'CLOSE',
                 },
-                title: 'Content Indicators',
+                title: 'Optional: Content Indicators',
                 description:
-                    'You can select multiple (of 3 available) content indicators to add more information ' +
-                    'about your work, but you cannot remove indicators already selected. To amend existing ' +
-                    'information, suggest a correction below.',
-                label: 'Please select relevant indicator(s).',
+                    'If relevant to your work, you can select multiple (of 3 available) content indicators to ' +
+                    'add more information about your work, but you cannot remove indicators already selected. ' +
+                    'To amend existing information, Suggest a correction above.',
+                label: 'Please add any relevant indicator(s).',
             },
             comments: {
                 title: 'Suggest a correction',
