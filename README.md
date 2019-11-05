@@ -249,6 +249,8 @@ Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3
 
 You can watch video recordings of your test runs and debug the tests via the [Cypress dashboard](https://dashboard.cypress.io). Use username/pass in passwordstate under "GitHub Cypress.io Admin User".
 
+If you want Codeship to run cypress tests before you merge to master, include the text `cypress` in the branch name and push and cypress tests will be run on that branch (set up in bin/codeship-test.sh).
+
 #### Some tricks and tips
 
 - When simulating clicks on components with animations (ripples and the like) - you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations.
