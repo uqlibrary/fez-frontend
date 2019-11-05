@@ -898,7 +898,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getFilesSectionSearchKeys = (data = {}) => {
+export const getFilesSectionSearchKeys = data => {
     const { advisoryStatement, ...rest } = data;
     return {
         ...rest,
