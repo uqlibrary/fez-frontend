@@ -52,6 +52,7 @@ describe('RichEditor', () => {
                 meta: {
                     error: 'This field is required',
                 },
+                required: true,
             },
             { isShallow: false },
         );
@@ -78,6 +79,7 @@ describe('RichEditor', () => {
         const wrapper = setup(
             {
                 maxValue: 10,
+                required: true,
             },
             { isShallow: false },
         );

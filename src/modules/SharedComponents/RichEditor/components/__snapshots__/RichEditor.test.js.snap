@@ -9781,7 +9781,7 @@ exports[`RichEditor should render given title and description with error 1`] = `
               }
             }
             onChange={[MockFunction]}
-            required={false}
+            required={true}
             returnSingleValue={false}
             title="This is title with error"
             titleProps={Object {}}
@@ -10298,6 +10298,9 @@ exports[`RichEditor should render given title and description with error 1`] = `
                     className="MuiTypography-root-1 MuiTypography-body2-9 MuiTypography-colorError-35"
                   >
                     This is title with error
+                    <span>
+                       *
+                    </span>
                   </p>
                 </Typography>
               </WithStyles(Typography)>
