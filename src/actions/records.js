@@ -446,14 +446,14 @@ export function adminUpdate(data) {
                     })
                     : patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
-            .then(responses => {
+            .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid,
+                        pid: response.data,
                     },
                 });
-                return Promise.resolve(responses);
+                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
@@ -495,16 +495,31 @@ export function adminCreate(data) {
                 dispatch({
                     type: actions.ADMIN_CREATE_WORK_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid,
+                        newRecord: response.data ? response.data : newRecord,
+                        fileUploadOrIssueFailed: false,
                     },
                 });
-                return Promise.resolve(response.data);
+                return Promise.resolve(response.data ? response.data : newRecord);
             })
             .catch(error => {
+                // record was created, but file upload or record patch failed or issue post failed
+                if (!!newRecord && !!newRecord.rek_pid) {
+                    dispatch({
+                        type: actions.ADMIN_CREATE_WORK_SUCCESS,
+                        payload: {
+                            newRecord: newRecord,
+                            fileUploadOrIssueFailed: true,
+                        },
+                    });
+
+                    return Promise.resolve(newRecord);
+                }
+
                 dispatch({
                     type: actions.ADMIN_CREATE_WORK_FAILED,
                     payload: error.message,
                 });
+
                 return Promise.reject(error);
             });
     };
