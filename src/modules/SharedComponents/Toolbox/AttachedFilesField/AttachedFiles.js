@@ -96,7 +96,8 @@ export const getFileOpenAccessStatus = (publication, dataStream) => {
         null;
     if (openAccessConfig.openAccessFiles.indexOf(openAccessStatusId) < 0) {
         return { isOpenAccess: false, embargoDate: null, openAccessStatusId: openAccessStatusId };
-    } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
+    }
+    if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
         return {
             isOpenAccess: false,
             embargoDate: embargoDate,
@@ -244,6 +245,8 @@ export const AttachedFiles = ({
     const fileData = getFileData(record, dataStreams, isAdmin, isAuthor);
     if (fileData.length === 0) return null;
 
+    // tested in cypress
+    /* istanbul ignore next */
     const onEmbargoDateChange = index => value => {
         value === null &&
             markEmbargoDateAsCleared([
@@ -321,108 +324,108 @@ export const AttachedFiles = ({
                 {fileData.map((item, index) => (
                     <React.Fragment>
                         <div style={{ padding: 8 }} key={index}>
-                            <Grid
-                                container
-                                direction="row"
-                                alignItems="center"
-                                key={`file-${index}`}
-                                spacing={16}
-                                wrap={'nowrap'}
-                                className={classes.header}
-                            >
-                                <Grid item xs={1} className={classes.thumbIconCentered}>
-                                    <FileIcon {...item.iconProps} showPreview={showPreview} />
-                                </Grid>
-                                <Grid item sm={3} className={classes.dataWrapper}>
-                                    <FileName {...item} onFileSelect={showPreview} />
-                                </Grid>
-                                <Hidden xsDown>
-                                    <Grid item sm={3} className={classes.dataWrapper}>
-                                        {isAdmin && canEdit ? (
-                                            <TextField
-                                                fullWidth
-                                                onChange={onFileDescriptionChange(index)}
-                                                name="fileDescription"
-                                                defaultValue={item.description}
-                                            />
-                                        ) : (
-                                            <Typography variant="body2" noWrap>
-                                                {item.description}
-                                            </Typography>
+                            <Grid container className={classes.header} spacing={24} key={`file-${index}`}>
+                                <Grid item xs={12}>
+                                    <Grid container direction="row" alignItems="center" spacing={16} wrap={'nowrap'}>
+                                        <Grid item xs={1} className={classes.thumbIconCentered}>
+                                            <FileIcon {...item.iconProps} showPreview={showPreview} />
+                                        </Grid>
+                                        <Grid item sm={3} className={classes.dataWrapper}>
+                                            <FileName {...item} onFileSelect={showPreview} />
+                                        </Grid>
+                                        <Hidden xsDown>
+                                            <Grid item sm={3} className={classes.dataWrapper}>
+                                                {isAdmin && canEdit ? (
+                                                    <TextField
+                                                        fullWidth
+                                                        onChange={onFileDescriptionChange(index)}
+                                                        name="fileDescription"
+                                                        defaultValue={item.description}
+                                                    />
+                                                ) : (
+                                                    <Typography variant="body2" noWrap>
+                                                        {item.description}
+                                                    </Typography>
+                                                )}
+                                            </Grid>
+                                        </Hidden>
+                                        <Hidden smDown>
+                                            <Grid item sm={2} className={classes.dataWrapper}>
+                                                <Typography variant="body2" noWrap>
+                                                    {item.calculatedSize}
+                                                </Typography>
+                                            </Grid>
+                                        </Hidden>
+                                        <Hidden xsDown>
+                                            <Grid item sm style={{ textAlign: 'right' }}>
+                                                <OpenAccessIcon
+                                                    {...item.openAccessStatus}
+                                                    securityStatus={item.securityStatus}
+                                                />
+                                            </Grid>
+                                        </Hidden>
+                                        {isAdmin && canEdit && (
+                                            <React.Fragment>
+                                                {/* cypress test does not like period in the id */}
+                                                <Grid
+                                                    item
+                                                    xs={2}
+                                                    id={`embargoDateButton-${item.fileName.replace(/\./g, '-')}`}
+                                                >
+                                                    {!!item.openAccessStatus.embargoDate && (
+                                                        <FileUploadEmbargoDate
+                                                            value={item.openAccessStatus.embargoDate}
+                                                            onChange={onEmbargoDateChange(index)}
+                                                            disabled={disabled}
+                                                            canBeCleared
+                                                        />
+                                                    )}
+                                                </Grid>
+                                                <Grid item xs style={{ textAlign: 'right' }}>
+                                                    <Tooltip title={deleteHint}>
+                                                        <IconButton onClick={onFileDelete(index)} disabled={disabled}>
+                                                            <Delete />
+                                                        </IconButton>
+                                                    </Tooltip>
+                                                </Grid>
+                                            </React.Fragment>
                                         )}
                                     </Grid>
-                                </Hidden>
-                                <Hidden smDown>
-                                    <Grid item sm={2} className={classes.dataWrapper}>
-                                        <Typography variant="body2" noWrap>
-                                            {item.calculatedSize}
-                                        </Typography>
-                                    </Grid>
-                                </Hidden>
-                                <Hidden xsDown>
-                                    <Grid item sm style={{ textAlign: 'right' }}>
-                                        <OpenAccessIcon
-                                            {...item.openAccessStatus}
-                                            securityStatus={item.securityStatus}
-                                        />
-                                    </Grid>
-                                </Hidden>
-                                {isAdmin && canEdit && (
-                                    <React.Fragment>
-                                        <Grid item xs={2}>
-                                            {(!!item.openAccessStatus.embargoDate ||
-                                                !!item.openAccessStatus.isOpenAccess) && (
-                                                <FileUploadEmbargoDate
-                                                    value={
-                                                        !!item.embargoDate &&
-                                                        moment(item.openAccessStatus.embargoDate).isSameOrAfter(
-                                                            moment(),
-                                                        )
-                                                            ? item.embargoDate
-                                                            : ''
-                                                    }
-                                                    onChange={onEmbargoDateChange(index)}
-                                                    disabled={disabled}
-                                                    canBeCleared
-                                                    id="embargoDateButton-{item.dsi_id}"
-                                                />
-                                            )}
-                                        </Grid>
-                                        <Grid item xs style={{ textAlign: 'right' }}>
-                                            <Tooltip title={deleteHint}>
-                                                <IconButton onClick={onFileDelete(index)} disabled={disabled}>
-                                                    <Delete />
-                                                </IconButton>
-                                            </Tooltip>
-                                        </Grid>
-                                    </React.Fragment>
-                                )}
+                                    {!!hasClearedEmbargoDate[index] && (
+                                        // tested in cypress admin-edit audio
+                                        /* istanbul ignore next */
+                                        <React.Fragment>
+                                            <Grid
+                                                container
+                                                spacing={8}
+                                                alignContent={'flex-end'}
+                                                alignItems={'flex-end'}
+                                                justify={'flex-end'}
+                                                style={{ marginTop: 4 }}
+                                            >
+                                                <Grid item xs={6} />
+                                                <Grid item xs={6}>
+                                                    <Typography
+                                                        class="embargodateRemoved"
+                                                        style={{ color: mui1theme.palette.warning.main }}
+                                                    >
+                                                        <WarningIcon
+                                                            fontSize={'small'}
+                                                            style={{
+                                                                color: mui1theme.palette.warning.main,
+                                                                marginRight: 10,
+                                                                marginBottom: -4,
+                                                            }}
+                                                        />
+                                                        {onEmbargoClearPromptText}
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+                                        </React.Fragment>
+                                    )}
+                                </Grid>
                             </Grid>
                         </div>
-                        {!!hasClearedEmbargoDate[index] && (
-                            <React.Fragment>
-                                <Grid
-                                    container
-                                    spacing={8}
-                                    alignContent={'flex-end'}
-                                    alignItems={'flex-end'}
-                                    justify={'flex-end'}
-                                    style={{ marginTop: 4 }}
-                                >
-                                    <Grid item xs={1}>
-                                        <WarningIcon
-                                            fontSize={'small'}
-                                            style={{ color: mui1theme.palette.warning.main }}
-                                        />
-                                    </Grid>
-                                    <Grid item xs={11}>
-                                        <Typography style={{ color: mui1theme.palette.warning.main }}>
-                                            {onEmbargoClearPromptText}
-                                        </Typography>
-                                    </Grid>
-                                </Grid>
-                            </React.Fragment>
-                        )}
                     </React.Fragment>
                 ))}
                 {preview.mediaUrl && preview.mimeType && <MediaPreview {...preview} onClose={hidePreview} />}

@@ -150,7 +150,7 @@ export class FilesClass extends Component {
         } else if (embargoDate && moment(embargoDate).isAfter(moment(), 'day')) {
             return {
                 isOpenAccess: false,
-                embargoDate: !!embargoDate ? moment(embargoDate).format('Do MMMM YYYY') : null,
+                embargoDate: moment(embargoDate).format('Do MMMM YYYY'),
                 openAccessStatusId: openAccessStatusId,
                 securityStatus: this.getSecurityAccess(dataStream),
             };

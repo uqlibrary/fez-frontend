@@ -301,7 +301,13 @@ export default {
                 }
             ],
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 655953,
+                "rek_oa_status_pid": "UQ:048b923",
+                "rek_oa_status_xsdmf_id": null,
+                "rek_oa_status": 453696,
+                "rek_oa_status_lookup": "File (Author Post-print)"
+            },
             "fez_record_search_key_original_format": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
@@ -421,7 +427,7 @@ export default {
                 {
                     "dsi_pid": "UQ:358319",
                     "dsi_dsid": "UQFL173_b57_R298B_2579510.mp3",
-                    "dsi_embargo_date": null,
+                    "dsi_embargo_date": "2099-01-01",
                     "dsi_open_access": null,
                     "dsi_label": "",
                     "dsi_mimetype": "audio/mpeg",
@@ -670,13 +676,7 @@ export default {
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_location": [],
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 655953,
-                "rek_oa_status_pid": "UQ:048b923",
-                "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453696,
-                "rek_oa_status_lookup": "File (Author Post-print)"
-            },
+            "fez_record_search_key_oa_status": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 26908,
                 "rek_original_format_pid": "UQ:048b923",

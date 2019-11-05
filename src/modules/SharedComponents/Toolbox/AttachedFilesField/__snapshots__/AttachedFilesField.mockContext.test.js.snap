@@ -4,7 +4,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
 <AttachedFiles
   canEdit={false}
   dataStreams={
-    Immutable.List [
+    Array [
       Object {
         "dsi_dsid": "test1.txt",
         "dsi_embargo_date": "2099-01-01",
