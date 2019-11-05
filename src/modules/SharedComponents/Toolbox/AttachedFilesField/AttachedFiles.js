@@ -322,7 +322,7 @@ export const AttachedFiles = ({
                     </Grid>
                 </div>
                 {fileData.map((item, index) => (
-                    <React.Fragment>
+                    <React.Fragment key={index}>
                         <div style={{ padding: 8 }} key={index}>
                             <Grid container className={classes.header} spacing={24} key={`file-${index}`}>
                                 <Grid item xs={12}>
@@ -405,10 +405,7 @@ export const AttachedFiles = ({
                                             >
                                                 <Grid item xs={6} />
                                                 <Grid item xs={6}>
-                                                    <Typography
-                                                        class="embargodateRemoved"
-                                                        style={{ color: mui1theme.palette.warning.main }}
-                                                    >
+                                                    <Typography style={{ color: mui1theme.palette.warning.main }}>
                                                         <WarningIcon
                                                             fontSize={'small'}
                                                             style={{
