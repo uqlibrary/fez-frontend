@@ -153,6 +153,16 @@ export default class PublicationForm extends Component {
                     </Grid>
                     {!!this.props.formComponent && (
                         <React.Fragment>
+                            {!!this.props.isNtro && <NtroHeader />}
+                            <Grid item xs={12}>
+                                <this.props.formComponent
+                                    formValues={this.props.formValues}
+                                    subtype={this.props.subtype}
+                                    isNtro={this.props.isNtro}
+                                    isAuthorSelected={this.props.isAuthorSelected}
+                                    submitting={this.props.submitting}
+                                />
+                            </Grid>
                             {showContentIndicatorsField(this.props.formValues && this.props.formValues.toJS()) && (
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.contentIndicators.title} help={txt.contentIndicators.help}>
@@ -173,16 +183,6 @@ export default class PublicationForm extends Component {
                                     </StandardCard>
                                 </Grid>
                             )}
-                            {!!this.props.isNtro && <NtroHeader />}
-                            <Grid item xs={12}>
-                                <this.props.formComponent
-                                    formValues={this.props.formValues}
-                                    subtype={this.props.subtype}
-                                    isNtro={this.props.isNtro}
-                                    isAuthorSelected={this.props.isAuthorSelected}
-                                    submitting={this.props.submitting}
-                                />
-                            </Grid>
                             <Grid item xs={12}>
                                 <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                     <Field

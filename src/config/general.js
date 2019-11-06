@@ -3,12 +3,12 @@ import moment from 'moment';
 const converter = require('number-to-words');
 
 const getValue = value => (typeof value !== 'undefined' && !!value ? value : null);
-const getTestValue = (value, testValue) => {
-    if (process.env.NODE_ENV !== 'test') {
-        return value;
-    }
 
-    return testValue;
+const getKeyValue = value => {
+    if (process.env.NODE_ENV === 'production') {
+        return '?key=' + value + '&';
+    }
+    return '?';
 };
 
 export const numberToWords = value => {
@@ -34,10 +34,12 @@ export const ORCID_BASE_URL = getValue(process.env.ORCID_URL) || 'http://orcid.o
 export const ORCID_CLIENT_ID = getValue(process.env.ORCID_CLIENT_ID) || '12345XYZ';
 export const ORCID_AUTHORIZATION_URL = `${ORCID_BASE_URL}/oauth/authorize`;
 
-export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js?key=${getTestValue(
+export const GOOGLE_MAPS_API_URL = `https://maps.googleapis.com/maps/api/js${getKeyValue(
     process.env.GOOGLE_MAPS_API_KEY,
-    '1234',
-)}&v=3.exp&libraries=geometry,drawing,places`;
+)}v=3.exp&libraries=geometry,drawing,places`;
+export const GOOGLE_MAPS_API_CHINA_URL = `http://maps.google.cn/maps/api/js${getKeyValue(
+    process.env.GOOGLE_MAPS_API_KEY,
+)}v=3.exp&libraries=geometry,drawing,places`;
 
 export const PUBLICATION_TYPE_AUDIO_DOCUMENT = 263;
 export const PUBLICATION_TYPE_BOOK = 174;

@@ -21,6 +21,7 @@ exports[`LinkInfoForm component should render the default view 1`] = `
     <TextField
       error={false}
       fullWidth={true}
+      helperText={null}
       id=""
       inputProps={
         Object {
@@ -32,7 +33,7 @@ exports[`LinkInfoForm component should render the default view 1`] = `
       name="key"
       onChange={[Function]}
       onKeyPress={[Function]}
-      required={false}
+      required={true}
       select={false}
       variant="standard"
     />
@@ -44,7 +45,6 @@ exports[`LinkInfoForm component should render the default view 1`] = `
     xs={12}
   >
     <TextField
-      error={false}
       fullWidth={true}
       id=""
       inputProps={
@@ -69,6 +69,7 @@ exports[`LinkInfoForm component should render the default view 1`] = `
   >
     <WithStyles(Button)
       color="primary"
+      disabled={false}
       fullWidth={true}
       id="add-items"
       onClick={[Function]}

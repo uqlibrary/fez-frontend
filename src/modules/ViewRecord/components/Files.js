@@ -43,6 +43,7 @@ export class FilesClass extends Component {
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
+        authorDetails: PropTypes.object,
     };
 
     constructor(props) {
@@ -172,6 +173,8 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
+        const authorSecurity = (this.props.authorDetails && this.props.authorDetails.pol_id) || 5;
+        const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
         const {
             files: { blacklist },
         } = viewRecordsConfig;
@@ -182,7 +185,8 @@ export class FilesClass extends Component {
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
             (!dataStream.dsi_label ||
                 !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A'
+            dataStream.dsi_state === 'A' &&
+            datastreamSecurity >= authorSecurity
         );
     };
 

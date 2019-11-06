@@ -4,14 +4,16 @@ import PropTypes from 'prop-types';
 import TextField from '@material-ui/core/TextField';
 import Grid from '@material-ui/core/Grid';
 import Button from '@material-ui/core/Button';
+import { url } from 'config/validation';
 
-export const handleChangeCallbackFactory = (linkAndDescription, setLinkAndDescription) => {
+export const handleChangeCallbackFactory = (linkAndDescription, setLinkAndDescription, setErrorText) => {
     const callback = event => {
         const { name, value } = event.target;
         setLinkAndDescription({
             ...linkAndDescription,
             [name]: value,
         });
+        setErrorText(name === 'key' ? url(value) : null);
     };
     return [callback, [linkAndDescription, setLinkAndDescription]];
 };
@@ -28,15 +30,10 @@ export const resetFormCallbackFactory = (linkInput, descriptionInput, setLinkAnd
     return [callback, [linkInput, descriptionInput, setLinkAndDescription]];
 };
 
-export const addItemCallbackFactory = (descriptionInput, disabled, linkAndDescription, onAdd, resetForm) => {
+export const addItemCallbackFactory = (linkInput, disabled, errorText, linkAndDescription, onAdd, resetForm) => {
     const callback = event => {
         // add item if user hits 'enter' key on input field
-        if (
-            disabled ||
-            !linkAndDescription.key ||
-            !linkAndDescription.value ||
-            (event && event.key && event.key !== 'Enter')
-        ) {
+        if (disabled || errorText || !linkAndDescription.key || (event && event.key && event.key !== 'Enter')) {
             return;
         }
         // pass on the selected item
@@ -44,21 +41,24 @@ export const addItemCallbackFactory = (descriptionInput, disabled, linkAndDescri
         resetForm();
 
         // move focus to name as published text field after item was added
-        descriptionInput.current.focus();
+        linkInput.current.focus();
         // linkInput.current.focus();
     };
-    return [callback, [descriptionInput, disabled, linkAndDescription, onAdd, resetForm]];
+    return [callback, [linkInput, disabled, linkAndDescription, onAdd, resetForm, errorText]];
 };
 
-export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
+export const LinkInfoForm = ({ disabled, locale, onAdd }) => {
     const [linkAndDescription, setLinkAndDescription] = useState({ key: null, value: null });
+    const [errorText, setErrorText] = useState(null);
     const linkInput = useRef(null);
     const descriptionInput = useRef(null);
 
-    const handleChange = useCallback(...handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription));
+    const handleChange = useCallback(
+        ...handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription, setErrorText),
+    );
     const resetForm = useCallback(...resetFormCallbackFactory(linkInput, descriptionInput, setLinkAndDescription));
     const addItem = useCallback(
-        ...addItemCallbackFactory(descriptionInput, disabled, linkAndDescription, onAdd, resetForm),
+        ...addItemCallbackFactory(linkInput, disabled, errorText, linkAndDescription, onAdd, resetForm),
     );
 
     const {
@@ -82,10 +82,12 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
                     onChange={handleChange}
                     onKeyPress={addItem}
                     error={!!errorText}
+                    helperText={errorText}
                     disabled={disabled}
                     inputProps={{
                         ref: linkInput,
                     }}
+                    required
                 />
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
@@ -97,7 +99,6 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
                     placeholder={descriptionInputFieldHint}
                     onChange={handleChange}
                     onKeyPress={addItem}
-                    error={!!errorText}
                     disabled={disabled}
                     inputProps={{
                         ref: descriptionInput,
@@ -111,7 +112,7 @@ export const LinkInfoForm = ({ disabled, locale, errorText, onAdd }) => {
                     color="primary"
                     variant="contained"
                     children={addButtonLabel}
-                    disabled={disabled}
+                    disabled={disabled || !!errorText}
                     onClick={addItem}
                 />
             </Grid>

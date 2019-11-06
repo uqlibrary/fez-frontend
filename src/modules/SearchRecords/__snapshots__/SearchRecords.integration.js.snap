@@ -23,7 +23,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-item-358\\"
-+                       style=\\"width: 1px;\\"
++                       style=\\"flex-grow: 1; width: 1px;\\"
 +                     >
 +                       <h5
 +                         class=\\"MuiTypography-root-593 MuiTypography-h5-609\\"
@@ -252,7 +252,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-358 MuiGrid-zeroMinWidth-359\\"
-+                               style=\\"width: 1px;\\"
++                               style=\\"flex-grow: 1; width: 1px;\\"
 +                             >
 +                               <label
 +                                 class=\\"MuiFormLabel-root-510 MuiInputLabel-root-499 MuiInputLabel-animated-507\\"
@@ -311,7 +311,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                             </div>
 +                             <div
 +                               class=\\"MuiGrid-item-358 MuiGrid-zeroMinWidth-359\\"
-+                               style=\\"width: 1px;\\"
++                               style=\\"flex-grow: 1; width: 1px;\\"
 +                             >
 +                               <label
 +                                 class=\\"MuiFormLabel-root-510 MuiInputLabel-root-499 MuiInputLabel-animated-507\\"
@@ -461,7 +461,7 @@ exports[`SearchRecords Should be able to perform advanced search 1`] = `
 +                     </div>
 +                     <div
 +                       class=\\"MuiGrid-item-358\\"
-+                       style=\\"width: 1px;\\"
++                       style=\\"flex-grow: 1; width: 1px;\\"
 +                     />
 +                     <div
 +                       class=\\"MuiGrid-item-358 MuiGrid-grid-xs-12-397 MuiGrid-grid-md-4-417 AdvancedSearchComponent-searchButton-591\\"
@@ -1913,7 +1913,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
                               </div>
                               <input
                                 id=\\"exportPublicationsFormat\\"
-@@ -875,70 +883,545 @@
+@@ -875,70 +883,546 @@
                       </div>
                     </div>
                   </div>
@@ -1928,7 +1928,7 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +               >
 +                 <div
 +                   class=\\"publicationCitation\\"
-+                 >
+                  >
 +                   <div
 +                     class=\\"MuiGrid-container-357\\"
 +                   >
@@ -1966,15 +1966,15 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                               >
 +                                 Brown, M. A.
 +                               </span>
-+                               <span
+                                <span
+-                     class=\\"publicationsListControls empty\\"
 +                                 class=\\"citationAuthor\\"
-                                >
++                               >
 +                                  and Bertouch, J. V.
 +                               </span>
 +                                
 +                             </span>
-                              <span
--                     class=\\"publicationsListControls empty\\"
++                             <span
 +                               class=\\"citationDate\\"
 +                             >
 +                               (1994).
@@ -2046,15 +2046,16 @@ exports[`SearchRecords Should be able to perform advanced search 10`] = `
 +                             </a>
                             </div>
                           </div>
-                          <div
--                 class=\\"MuiGrid-container-357 MuiGrid-justify-xs-center-374\\"
++                         <div
 +                           class=\\"MuiGrid-item-358 MuiGrid-grid-xs-12-397\\"
 +                         >
-+                           <div
+                            <div
+-                 class=\\"MuiGrid-container-357 MuiGrid-justify-xs-center-374\\"
 +                             class=\\"MuiGrid-container-357 MuiGrid-align-items-xs-center-365\\"
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-358 MuiGrid-grid-xs-auto-384 PublicationCitation-citationCounts-767\\"
++                               style=\\"flex-grow: 1;\\"
 +                             >
 +                               <div
 +                                 class=\\"MuiGrid-container-357\\"
@@ -2927,7 +2928,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
                               </div>
                               <input
                                 id=\\"exportPublicationsFormat\\"
-@@ -306,70 +310,747 @@
+@@ -306,70 +310,749 @@
                       </div>
                     </div>
                   </div>
@@ -3068,6 +3069,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-309\\"
++                               style=\\"flex-grow: 1;\\"
 +                             >
                                 <div
 -                 class=\\"MuiGrid-container-3 MuiGrid-justify-xs-center-20\\"
@@ -3104,7 +3106,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Scopus will open in a new window\\"
-                                    >
++                                   >
 +                                     <span
 +                                       class=\\"fez-icon scopus large\\"
 +                                     />
@@ -3142,7 +3144,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                                     target=\\"_blank\\"
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Google scholar will open in a new window\\"
-+                                   >
+                                    >
 +                                     <span
 +                                       class=\\"fez-icon google large\\"
 +                                     />
@@ -3170,19 +3172,24 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                 </div>
 +                 <div
 +                   class=\\"publicationCitation\\"
-+                 >
-+                   <div
+                  >
+                    <div
+-                     style=\\"padding: 8px;\\"
 +                     class=\\"MuiGrid-container-3\\"
-+                   >
-+                     <div
+                    >
+                      <div
+-                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
 +                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
                       >
                         <div
--                     style=\\"padding: 8px;\\"
+-                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
+-                         style=\\"text-align: center;\\"
 +                         class=\\"MuiGrid-container-3\\"
                         >
                           <div
--                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 MuiGrid-align-content-xs-center-15 MuiGrid-justify-xs-center-20\\"
+-                           class=\\"MuiCircularProgress-root-240 MuiCircularProgress-colorPrimary-243 MuiCircularProgress-indeterminate-242\\"
+-                           role=\\"progressbar\\"
+-                           style=\\"width: 18px; height: 18px;\\"
 +                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31\\"
 +                           style=\\"min-width: 1px;\\"
 +                         >
@@ -3191,20 +3198,15 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                           >
 +                             <a
 +                               href=\\"/view/UQ:175986\\"
-                              >
++                             >
 +                               Patient care drives mandatory vaccination
 +                             </a>
 +                           </h6>
 +                         </div>
-                          <div
--                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
--                         style=\\"text-align: center;\\"
++                         <div
 +                           class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 PublicationCitation-citationText-308\\"
-                          >
-                            <div
--                           class=\\"MuiCircularProgress-root-240 MuiCircularProgress-colorPrimary-243 MuiCircularProgress-indeterminate-242\\"
--                           role=\\"progressbar\\"
--                           style=\\"width: 18px; height: 18px;\\"
++                         >
++                           <div
 +                             class=\\"citationContent citationJournalArticle\\"
 +                           >
 +                             <span
@@ -3305,6 +3307,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                           >
 +                             <div
 +                               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30 PublicationCitation-citationCounts-309\\"
++                               style=\\"flex-grow: 1;\\"
 +                             >
                                 <div
 -                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-auto-30\\"
@@ -3324,12 +3327,12 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                                     theme=\\"[object Object]\\"
 +                                     title=\\"Full citation in Web of science will open in a new window\\"
                                     >
++                                     <span
++                                       class=\\"fez-icon wos large\\"
++                                     />
                                       <span
 -                           class=\\"MuiTypography-root-250 MuiTypography-h5-266 MuiTypography-colorPrimary-280\\"
 -                           style=\\"font-size: 1.33rem;\\"
-+                                       class=\\"fez-icon wos large\\"
-+                                     />
-+                                     <span
 +                                       class=\\"CitationCountView-citationCountNumber-317\\"
                                       >
 -                           Searching for works
@@ -3557,7 +3560,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                     </svg>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-229\\"
-                      />
++                     />
 +                   </div>
 +                   <div
 +                     class=\\"MuiButtonBase-root-219 MuiListItem-root-333 MuiListItem-default-336 MuiListItem-dense-337 MuiListItem-gutters-341 FacetsFilterListItem-listItemGutters-331 MuiListItem-button-342\\"
@@ -3652,7 +3655,7 @@ exports[`SearchRecords Should be able to perform simple search 3`] = `
 +                       <path
 +                         d=\\"M0 0h24v24H0z\\"
 +                         fill=\\"none\\"
-+                       />
+                        />
 +                     </svg>
 +                     <span
 +                       class=\\"MuiTouchRipple-root-229\\"

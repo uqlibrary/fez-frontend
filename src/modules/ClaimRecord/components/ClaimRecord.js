@@ -271,31 +271,6 @@ export default class ClaimRecord extends PureComponent {
                                         </StandardCard>
                                     </Grid>
                                 )}
-                                {showContentIndicatorsField(publication) && (
-                                    <Grid item xs={12}>
-                                        <StandardCard
-                                            title={txt.contentIndicators.title}
-                                            help={txt.contentIndicators.help}
-                                        >
-                                            <Grid container spacing={24}>
-                                                <Grid item xs={12}>
-                                                    <Typography>{txt.contentIndicators.description}</Typography>
-                                                </Grid>
-                                                <Grid item xs={12}>
-                                                    <Field
-                                                        component={ContentIndicatorsField}
-                                                        disabled={this.props.submitting}
-                                                        id="content-indicators"
-                                                        name="contentIndicators"
-                                                        label={txt.contentIndicators.label}
-                                                        multiple
-                                                        fullWidth
-                                                    />
-                                                </Grid>
-                                            </Grid>
-                                        </StandardCard>
-                                    </Grid>
-                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.comments.title} help={txt.comments.help}>
                                         <Grid container spacing={16}>
@@ -325,6 +300,31 @@ export default class ClaimRecord extends PureComponent {
                                         </Grid>
                                     </StandardCard>
                                 </Grid>
+                                {showContentIndicatorsField(publication) && (
+                                    <Grid item xs={12}>
+                                        <StandardCard
+                                            title={txt.contentIndicators.title}
+                                            help={txt.contentIndicators.help}
+                                        >
+                                            <Grid container spacing={24}>
+                                                <Grid item xs={12}>
+                                                    <Typography>{txt.contentIndicators.description}</Typography>
+                                                </Grid>
+                                                <Grid item xs={12}>
+                                                    <Field
+                                                        component={ContentIndicatorsField}
+                                                        disabled={this.props.submitting}
+                                                        id="content-indicators"
+                                                        name="contentIndicators"
+                                                        label={txt.contentIndicators.label}
+                                                        multiple
+                                                        fullWidth
+                                                    />
+                                                </Grid>
+                                            </Grid>
+                                        </StandardCard>
+                                    </Grid>
+                                )}
                                 <Grid item xs={12}>
                                     <StandardCard title={txt.fileUpload.title} help={txt.fileUpload.help}>
                                         <Field

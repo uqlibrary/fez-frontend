@@ -1497,64 +1497,6 @@ exports[`Component FixRecord should render fix record form 1`] = `
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Suggest a correction"
         >
           <WithStyles(Grid)
@@ -1592,6 +1534,64 @@ exports[`Component FixRecord should render fix record form 1`] = `
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -2677,64 +2677,6 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Suggest a correction"
         >
           <WithStyles(Grid)
@@ -2772,6 +2714,64 @@ exports[`Component FixRecord should render the confirm dialog box with an alert 
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -3347,64 +3347,6 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Suggest a correction"
         >
           <WithStyles(Grid)
@@ -3442,6 +3384,64 @@ exports[`Component FixRecord should render the confirm dialog box without an ale
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest a correction above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
