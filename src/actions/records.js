@@ -381,37 +381,27 @@ export function clearNewRecord() {
 const sanitiseData = (data, replacer) => JSON.parse(JSON.stringify(data, replacer));
 const makeReplacer = keys => (key, value) => (keys.indexOf(key) > -1 ? undefined : value);
 
-/**
- * Update work request for admins: patch record
- * If error occurs on any stage failed action is displayed
- * @param {object} data to be posted, refer to backend API data
- * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
- */
-export function adminUpdate(data) {
-    return dispatch => {
-        dispatch({
-            type: actions.ADMIN_UPDATE_WORK_PROCESSING,
-        });
+const getAdminRecordRequest = data => {
+    const { files, ...restFilesSection } = data.filesSection || {};
+    const hasFilesToUpload = files && files.queue && files.queue.length > 0;
+    // delete extra form values from request object
+    const keys = [
+        'pid',
+        'recordType',
+        'publication',
+        'adminSection',
+        'identifiersSection',
+        'bibliographicSection',
+        'authorsSection',
+        'additionalInformationSection',
+        'grantInformationSection',
+        'ntroSection',
+        'filesSection',
+        'securitySection',
+    ];
 
-        // delete extra form values from request object
-        const keys = [
-            'pid',
-            'recordType',
-            'publication',
-            'adminSection',
-            'identifiersSection',
-            'bibliographicSection',
-            'authorsSection',
-            'additionalInformationSection',
-            'grantInformationSection',
-            'ntroSection',
-            'filesSection',
-            'securitySection',
-        ];
-
-        // if user updated NTRO data - update record
-        let patchRecordRequest = null;
-        patchRecordRequest = {
+    return [
+        {
             ...sanitiseData(data, makeReplacer(keys)),
             ...transformers.getAdminSectionSearchKeys(data.adminSection),
             ...transformers.getIdentifiersSectionSearchKeys(data.identifiersSection),
@@ -420,33 +410,116 @@ export function adminUpdate(data) {
             ...transformers.getAdditionalInformationSectionSearchKeys(data.additionalInformationSection),
             ...transformers.getGrantInformationSectionSearchKeys(data.grantInformationSection),
             ...transformers.getNtroSectionSearchKeys(data.ntroSection),
-            ...transformers.getFilesSectionSearchKeys(data.filesSection),
-            ...transformers.getSecuritySectionSearchKeys(data.securitySection),
-        };
+            ...transformers.getFilesSectionSearchKeys(restFilesSection),
+            ...transformers.getSecuritySectionSearchKeys(
+                data.securitySection,
+                (data.filesSection || {}).fez_datastream_info || [],
+            ),
+        },
+        hasFilesToUpload,
+        hasFilesToUpload ? transformers.getRecordFileAttachmentSearchKey(files.queue) : null,
+    ];
+};
+
+/**
+ * Update work request for admins: patch record
+ * If error occurs on any stage failed action is displayed
+ * @param {object} data to be posted, refer to backend API data
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
+export function adminUpdate(data) {
+    const { files } = data.filesSection || {};
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_UPDATE_WORK_PROCESSING,
+        });
+
+        const [patchRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
 
         return Promise.resolve([])
+            .then(() => (hasFilesToUpload ? putUploadFiles(data.publication.rek_pid, files.queue, dispatch) : null))
             .then(() =>
-                patch(
-                    EXISTING_RECORD_API({
-                        pid: data.publication.rek_pid,
-                    }),
-                    patchRecordRequest,
-                ),
+                hasFilesToUpload
+                    ? patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), {
+                        ...patchRecordRequest,
+                        ...patchFilesRequest,
+                    })
+                    : patch(EXISTING_RECORD_API({ pid: data.publication.rek_pid }), patchRecordRequest),
             )
-            .then(responses => {
+            .then(response => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_SUCCESS,
                     payload: {
-                        pid: data.publication.rek_pid,
+                        pid: response.data,
                     },
                 });
-                return Promise.resolve(responses);
+                return Promise.resolve(response);
             })
             .catch(error => {
                 dispatch({
                     type: actions.ADMIN_UPDATE_WORK_FAILED,
                     payload: error.message,
                 });
+                return Promise.reject(error);
+            });
+    };
+}
+
+export function adminCreate(data) {
+    const {
+        filesSection: { files },
+    } = data;
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_CREATE_WORK_PROCESSING,
+        });
+
+        let newRecord = null;
+        const [createRecordRequest, hasFilesToUpload, patchFilesRequest] = getAdminRecordRequest(data);
+
+        return post(NEW_RECORD_API(), {
+            ...NEW_RECORD_DEFAULT_VALUES,
+            ...createRecordRequest,
+        })
+            .then(response => {
+                newRecord = response.data;
+                return response;
+            })
+            .then(() => (hasFilesToUpload ? putUploadFiles(newRecord.rek_pid, files.queue, dispatch) : newRecord))
+            .then(() =>
+                hasFilesToUpload
+                    ? patch(EXISTING_RECORD_API({ pid: newRecord.rek_pid }), patchFilesRequest)
+                    : newRecord,
+            )
+            .then(response => {
+                dispatch({
+                    type: actions.ADMIN_CREATE_WORK_SUCCESS,
+                    payload: {
+                        newRecord: response.data ? response.data : newRecord,
+                        fileUploadOrIssueFailed: false,
+                    },
+                });
+                return Promise.resolve(response.data ? response.data : newRecord);
+            })
+            .catch(error => {
+                // record was created, but file upload or record patch failed or issue post failed
+                if (!!newRecord && !!newRecord.rek_pid) {
+                    dispatch({
+                        type: actions.ADMIN_CREATE_WORK_SUCCESS,
+                        payload: {
+                            newRecord: newRecord,
+                            fileUploadOrIssueFailed: true,
+                        },
+                    });
+
+                    return Promise.resolve(newRecord);
+                }
+
+                dispatch({
+                    type: actions.ADMIN_CREATE_WORK_FAILED,
+                    payload: error.message,
+                });
+
                 return Promise.reject(error);
             });
     };

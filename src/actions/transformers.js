@@ -898,21 +898,28 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
     };
 };
 
-export const getFilesSectionSearchKeys = (data = {}) => {
-    const { files, advisoryStatement, ...rest } = data;
+export const getFilesSectionSearchKeys = data => {
+    const { advisoryStatement, ...rest } = data;
     return {
         ...rest,
         ...(!!advisoryStatement && advisoryStatement.hasOwnProperty('htmlText') && !!advisoryStatement.htmlText
             ? { fez_record_search_key_advisory_statement: { rek_advisory_statement: advisoryStatement.htmlText } }
             : {}),
-        ...getRecordFileAttachmentSearchKey((files || {}).queue),
     };
 };
 
-export const getSecuritySectionSearchKeys = (data = {}) => {
+export const getSecuritySectionSearchKeys = (data = {}, dataStreamsFromFileSection = []) => {
     const { dataStreams, ...rest } = data;
+    const dataStreamsMap = (dataStreams || []).reduce((map, ds) => ({ ...map, [ds.dsi_dsid]: ds }), {});
     return {
         ...rest,
-        ...(!!dataStreams ? { fez_datastream_info: [...dataStreams] } : {}),
+        ...(!!dataStreams
+            ? {
+                fez_datastream_info: dataStreamsFromFileSection.map(dataStream => ({
+                    ...dataStream,
+                    ...dataStreamsMap[dataStream.dsi_dsid],
+                })),
+            }
+            : {}),
     };
 };

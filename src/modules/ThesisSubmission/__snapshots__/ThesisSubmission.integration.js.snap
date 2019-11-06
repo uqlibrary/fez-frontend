@@ -111,7 +111,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-238 MuiInput-input-223\\"
                               id=\\"supervisors-name-as-published-field\\"
-@@ -327,20 +320,215 @@
+@@ -332,20 +325,215 @@
                             Add supervisor
                           </span>
                         </button>
@@ -329,7 +329,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
               >
-@@ -392,57 +580,156 @@
+@@ -397,57 +585,156 @@
                           >
                             <div
                               class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
@@ -495,7 +495,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -480,41 +767,34 @@
+@@ -485,41 +772,34 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
@@ -542,7 +542,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       <div
                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
                       >
-@@ -527,18 +807,267 @@
+@@ -532,18 +812,267 @@
                         >
                           <span
                             class=\\"MuiButton-label-273\\"
@@ -810,7 +810,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -657,77 +1186,13 @@
+@@ -662,77 +1191,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -888,7 +888,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                   </div>
                 </div>
               </div>
-@@ -759,21 +1224,23 @@
+@@ -764,21 +1229,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
