@@ -376,6 +376,7 @@ export default {
                 fullWidth: true,
                 label: 'DOI',
                 placeholder: '',
+                validate: [validation.doi],
             },
         },
         fez_record_search_key_place_of_publication: {
