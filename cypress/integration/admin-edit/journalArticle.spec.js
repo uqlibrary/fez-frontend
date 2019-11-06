@@ -7,7 +7,7 @@ context('Journal Article admin edit', () => {
     beforeEach(() => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
-        cy.wait(1000); // Wait for data load
+        cy.wait(2000); // Wait for data load, extra time for pub types with ckeditor
     });
 
     afterEach(() => {
@@ -60,8 +60,7 @@ context('Journal Article admin edit', () => {
                 cy.get('span span')
                     .eq(0)
                     .should('have.text', 'Internal notes');
-                cy.get('span span')
-                    .eq(1)
+                cy.get(' > div > div:nth-child(2) > div > div:nth-child(2) span span')
                     .should('have.text', 'HERDC notes');
                 cy.get('#cke_editor1')
                     .should('exist');
@@ -148,7 +147,7 @@ context('Journal Article admin edit', () => {
                             .should('have.text', 'Title');
                         cy.get('span span')
                             .eq(0)
-                            .should('have.text', 'Formatted title');
+                            .should('contain.text', 'Formatted title');
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')

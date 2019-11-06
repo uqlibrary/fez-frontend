@@ -7,7 +7,7 @@ context('Audio admin edit', () => {
     beforeEach(() => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
-        cy.wait(1000); // Wait for data load
+        cy.wait(2000); // Wait for data load, extra time for pub types with ckeditor
     });
 
     afterEach(() => {
@@ -170,7 +170,7 @@ context('Audio admin edit', () => {
                             .should('have.text', 'Attached files');
                         cy.get('.Alert .alert-text')
                             .should(
-                                'have.text',
+                                'contain.text',
                                 record.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             );
 
@@ -224,7 +224,7 @@ context('Audio admin edit', () => {
                             .then(text => {
                                 // prettier-ignore
                                 expect(text).to.contain(
-                                    record.fez_record_search_key_advisory_statement.rek_advisory_statement
+                                    record.fez_record_search_key_advisory_statement.rek_advisory_statement.replace("'", '&rsquo;')
                                 );
                             });
                     });

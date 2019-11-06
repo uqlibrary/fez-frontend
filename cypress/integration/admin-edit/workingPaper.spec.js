@@ -53,12 +53,13 @@ context('Working paper admin edit', () => {
                             .should('have.text', 'Title');
                         cy.get('span span')
                             .eq(0)
-                            .should('have.text', 'Formatted title');
+                            .should('contain.text', 'Formatted title');
+                        cy.wait(1000); // Allow more time for rendering ckeditor
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')
                             .then(text => {
-                                expect(text).to.contain(record.rek_title);
+                                expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                             });
                     });
 
