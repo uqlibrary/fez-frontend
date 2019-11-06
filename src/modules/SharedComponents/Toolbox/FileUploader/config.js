@@ -3,7 +3,7 @@ export const OPEN_ACCESS_ID = 9;
 export const SIZE_BASE = 1000;
 
 export const DEFAULT_FILE_UPLOAD_LIMIT = 10;
-export const DEFAULT_MAX_FILE_SIZE = 8;
+export const DEFAULT_MAX_FILE_SIZE = 5;
 
 export const SIZE_UNIT_B = 'B';
 export const SIZE_UNIT_K = 'K';

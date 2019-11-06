@@ -252,8 +252,26 @@ exports[`Application component Should display mobile correctly 1`] = `
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -798,8 +816,26 @@ exports[`Application component should determine if it has incomplete works from 
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -1527,8 +1563,26 @@ exports[`Application component should determine if it has incomplete works from 
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -2072,8 +2126,26 @@ exports[`Application component should redirect to login page with correct return
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -2610,8 +2682,26 @@ exports[`Application component should render alert if user is not fez author 1`]
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -3339,8 +3429,26 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -3376,8 +3484,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -3894,8 +4000,26 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -3958,8 +4082,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -4461,8 +4583,26 @@ exports[`Application component should render app for account with fez author wit
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -5166,8 +5306,26 @@ exports[`Application component should render app for account with fez author wit
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -5779,8 +5937,26 @@ exports[`Application component should render app for account with fez author wit
   </WithStyles(AppBar)>
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6484,8 +6660,26 @@ exports[`Application component should render application with routing for the us
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -6760,8 +6954,26 @@ exports[`Application component should render for anon user 1`] = `
   />
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -7023,8 +7235,26 @@ exports[`Application component should render thesis submission for HDR without m
   </WithStyles(AppBar)>
   <div
     className="content-container"
+    id="content-container"
     style={Object {}}
   >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        show={true}
+      />
+    </Hidden>
     <WithStyles(ConfirmDialogBox)
       hideCancelButton={true}
       locale={
@@ -7060,8 +7290,6 @@ exports[`Application component should render thesis submission for HDR without m
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -11634,6 +11862,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       <SearchComponent
                                                         actions={
                                                           Object {
+                                                            "adminCreate": [Function],
                                                             "adminUpdate": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
@@ -16405,8 +16634,694 @@ exports[`Testing wrapped App component Mounts 1`] = `
                       </WithStyles(MenuDrawer)>
                       <div
                         className="content-container"
+                        id="content-container"
                         style={Object {}}
                       >
+                        <Hidden
+                          implementation="js"
+                          lgDown={false}
+                          lgUp={false}
+                          mdDown={false}
+                          mdUp={false}
+                          smDown={true}
+                          smUp={false}
+                          xlDown={false}
+                          xlUp={false}
+                          xsDown={false}
+                          xsUp={false}
+                        >
+                          <WithTheme(WithWidth(HiddenJs))
+                            lgDown={false}
+                            lgUp={false}
+                            mdDown={false}
+                            mdUp={false}
+                            smDown={true}
+                            smUp={false}
+                            xlDown={false}
+                            xlUp={false}
+                            xsDown={false}
+                            xsUp={false}
+                          >
+                            <WithWidth(HiddenJs)
+                              lgDown={false}
+                              lgUp={false}
+                              mdDown={false}
+                              mdUp={false}
+                              smDown={true}
+                              smUp={false}
+                              theme={
+                                Object {
+                                  "breakpoints": Object {
+                                    "between": [Function],
+                                    "down": [Function],
+                                    "keys": Array [
+                                      "xs",
+                                      "sm",
+                                      "md",
+                                      "lg",
+                                      "xl",
+                                    ],
+                                    "only": [Function],
+                                    "up": [Function],
+                                    "values": Object {
+                                      "lg": 1280,
+                                      "md": 960,
+                                      "sm": 600,
+                                      "xl": 1920,
+                                      "xs": 0,
+                                    },
+                                    "width": [Function],
+                                  },
+                                  "direction": "ltr",
+                                  "graphs": Object {
+                                    "color1": "#d72865",
+                                    "color2": "#1e7d94",
+                                    "color3": "#49075E",
+                                    "color4": "#468fcc",
+                                    "color5": "#f28620",
+                                    "color6": "#333333",
+                                    "color7": "#595959",
+                                  },
+                                  "hexToRGBA": [Function],
+                                  "mixins": Object {
+                                    "gutters": [Function],
+                                    "toolbar": Object {
+                                      "@media (min-width:0px) and (orientation: landscape)": Object {
+                                        "minHeight": 48,
+                                      },
+                                      "@media (min-width:600px)": Object {
+                                        "minHeight": 64,
+                                      },
+                                      "minHeight": 56,
+                                    },
+                                  },
+                                  "overrides": Object {
+                                    "MUIDataTable": Object {
+                                      "paper": Object {
+                                        "boxShadow": "none",
+                                        "margin": 0,
+                                        "padding": 0,
+                                      },
+                                    },
+                                    "MuiFormLabel": Object {
+                                      "root": Object {
+                                        "overflow": "hidden",
+                                        "textOverflow": "ellipsis",
+                                        "whiteSpace": "nowrap",
+                                        "width": "100%",
+                                      },
+                                    },
+                                    "MuiMenuItem": Object {
+                                      "root": Object {
+                                        "&$selected": Object {
+                                          "backgroundColor": "#4085C6 !important",
+                                          "color": "#FFFFFF",
+                                        },
+                                      },
+                                    },
+                                  },
+                                  "palette": Object {
+                                    "accent": Object {
+                                      "dark": "#2a557d",
+                                      "light": "#54acff",
+                                      "main": "#316799",
+                                    },
+                                    "action": Object {
+                                      "active": "rgba(0, 0, 0, 0.54)",
+                                      "disabled": "rgba(0, 0, 0, 0.26)",
+                                      "disabledBackground": "rgba(0, 0, 0, 0.12)",
+                                      "hover": "rgba(0, 0, 0, 0.08)",
+                                      "hoverOpacity": 0.08,
+                                      "selected": "rgba(0, 0, 0, 0.14)",
+                                    },
+                                    "augmentColor": [Function],
+                                    "background": Object {
+                                      "default": "#fafafa",
+                                      "paper": "#fff",
+                                    },
+                                    "common": Object {
+                                      "black": "#000",
+                                      "white": "#fff",
+                                    },
+                                    "contrastThreshold": 3,
+                                    "divider": "rgba(0, 0, 0, 0.12)",
+                                    "error": Object {
+                                      "contrastText": "#fff",
+                                      "dark": "#790000",
+                                      "light": "#ff0000",
+                                      "main": "#c80000",
+                                    },
+                                    "getContrastText": [Function],
+                                    "grey": Object {
+                                      "100": "#f5f5f5",
+                                      "200": "#eeeeee",
+                                      "300": "#e0e0e0",
+                                      "400": "#bdbdbd",
+                                      "50": "#fafafa",
+                                      "500": "#9e9e9e",
+                                      "600": "#757575",
+                                      "700": "#616161",
+                                      "800": "#424242",
+                                      "900": "#212121",
+                                      "A100": "#d5d5d5",
+                                      "A200": "#aaaaaa",
+                                      "A400": "#303030",
+                                      "A700": "#616161",
+                                    },
+                                    "primary": Object {
+                                      "contrastText": "#fff",
+                                      "dark": "#3b1a59",
+                                      "gradient": Object {
+                                        "diagonal": Object {
+                                          "background": "linear-gradient(135deg, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                          "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                        },
+                                        "horizontal": Object {
+                                          "background": "linear-gradient(to right, rgb(81,36,122) 55%,rgb(150,42,139) 100%)",
+                                          "filter": "progid:DXImageTransform.Microsoft.gradient( startColorstr=\\"#51247a\\", endColorstr=\\"#962a8b\\",GradientType=1 )",
+                                        },
+                                      },
+                                      "light": "#962A8B",
+                                      "main": "#51247A",
+                                    },
+                                    "secondary": Object {
+                                      "contrastText": "#fff",
+                                      "dark": "#333333",
+                                      "light": "#f2f2f2",
+                                      "main": "#595959",
+                                    },
+                                    "success": Object {
+                                      "dark": "#005000",
+                                      "light": "#00a700",
+                                      "main": "#007200",
+                                    },
+                                    "text": Object {
+                                      "disabled": "rgba(0, 0, 0, 0.38)",
+                                      "hint": "rgba(0, 0, 0, 0.38)",
+                                      "primary": "rgba(0, 0, 0, 0.87)",
+                                      "secondary": "rgba(0, 0, 0, 0.54)",
+                                    },
+                                    "tonalOffset": 0.2,
+                                    "type": "light",
+                                    "warning": Object {
+                                      "dark": "#542400",
+                                      "light": "#ff9a57",
+                                      "main": "#bf5000",
+                                    },
+                                    "white": Object {
+                                      "main": "#FFFFFF",
+                                    },
+                                  },
+                                  "props": Object {},
+                                  "shadows": Array [
+                                    "none",
+                                    "0px 1px 3px 0px rgba(0,0,0,0.2),0px 1px 1px 0px rgba(0,0,0,0.14),0px 2px 1px -1px rgba(0,0,0,0.12)",
+                                    "0px 1px 5px 0px rgba(0,0,0,0.2),0px 2px 2px 0px rgba(0,0,0,0.14),0px 3px 1px -2px rgba(0,0,0,0.12)",
+                                    "0px 1px 8px 0px rgba(0,0,0,0.2),0px 3px 4px 0px rgba(0,0,0,0.14),0px 3px 3px -2px rgba(0,0,0,0.12)",
+                                    "0px 2px 4px -1px rgba(0,0,0,0.2),0px 4px 5px 0px rgba(0,0,0,0.14),0px 1px 10px 0px rgba(0,0,0,0.12)",
+                                    "0px 3px 5px -1px rgba(0,0,0,0.2),0px 5px 8px 0px rgba(0,0,0,0.14),0px 1px 14px 0px rgba(0,0,0,0.12)",
+                                    "0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12)",
+                                    "0px 4px 5px -2px rgba(0,0,0,0.2),0px 7px 10px 1px rgba(0,0,0,0.14),0px 2px 16px 1px rgba(0,0,0,0.12)",
+                                    "0px 5px 5px -3px rgba(0,0,0,0.2),0px 8px 10px 1px rgba(0,0,0,0.14),0px 3px 14px 2px rgba(0,0,0,0.12)",
+                                    "0px 5px 6px -3px rgba(0,0,0,0.2),0px 9px 12px 1px rgba(0,0,0,0.14),0px 3px 16px 2px rgba(0,0,0,0.12)",
+                                    "0px 6px 6px -3px rgba(0,0,0,0.2),0px 10px 14px 1px rgba(0,0,0,0.14),0px 4px 18px 3px rgba(0,0,0,0.12)",
+                                    "0px 6px 7px -4px rgba(0,0,0,0.2),0px 11px 15px 1px rgba(0,0,0,0.14),0px 4px 20px 3px rgba(0,0,0,0.12)",
+                                    "0px 7px 8px -4px rgba(0,0,0,0.2),0px 12px 17px 2px rgba(0,0,0,0.14),0px 5px 22px 4px rgba(0,0,0,0.12)",
+                                    "0px 7px 8px -4px rgba(0,0,0,0.2),0px 13px 19px 2px rgba(0,0,0,0.14),0px 5px 24px 4px rgba(0,0,0,0.12)",
+                                    "0px 7px 9px -4px rgba(0,0,0,0.2),0px 14px 21px 2px rgba(0,0,0,0.14),0px 5px 26px 4px rgba(0,0,0,0.12)",
+                                    "0px 8px 9px -5px rgba(0,0,0,0.2),0px 15px 22px 2px rgba(0,0,0,0.14),0px 6px 28px 5px rgba(0,0,0,0.12)",
+                                    "0px 8px 10px -5px rgba(0,0,0,0.2),0px 16px 24px 2px rgba(0,0,0,0.14),0px 6px 30px 5px rgba(0,0,0,0.12)",
+                                    "0px 8px 11px -5px rgba(0,0,0,0.2),0px 17px 26px 2px rgba(0,0,0,0.14),0px 6px 32px 5px rgba(0,0,0,0.12)",
+                                    "0px 9px 11px -5px rgba(0,0,0,0.2),0px 18px 28px 2px rgba(0,0,0,0.14),0px 7px 34px 6px rgba(0,0,0,0.12)",
+                                    "0px 9px 12px -6px rgba(0,0,0,0.2),0px 19px 29px 2px rgba(0,0,0,0.14),0px 7px 36px 6px rgba(0,0,0,0.12)",
+                                    "0px 10px 13px -6px rgba(0,0,0,0.2),0px 20px 31px 3px rgba(0,0,0,0.14),0px 8px 38px 7px rgba(0,0,0,0.12)",
+                                    "0px 10px 13px -6px rgba(0,0,0,0.2),0px 21px 33px 3px rgba(0,0,0,0.14),0px 8px 40px 7px rgba(0,0,0,0.12)",
+                                    "0px 10px 14px -6px rgba(0,0,0,0.2),0px 22px 35px 3px rgba(0,0,0,0.14),0px 8px 42px 7px rgba(0,0,0,0.12)",
+                                    "0px 11px 14px -7px rgba(0,0,0,0.2),0px 23px 36px 3px rgba(0,0,0,0.14),0px 9px 44px 8px rgba(0,0,0,0.12)",
+                                    "0px 11px 15px -7px rgba(0,0,0,0.2),0px 24px 38px 3px rgba(0,0,0,0.14),0px 9px 46px 8px rgba(0,0,0,0.12)",
+                                  ],
+                                  "shape": Object {
+                                    "borderRadius": 4,
+                                  },
+                                  "spacing": Object {
+                                    "unit": 8,
+                                  },
+                                  "status": Object {
+                                    "danger": "#f44336",
+                                    "warning": "#ff9800",
+                                  },
+                                  "transitions": Object {
+                                    "create": [Function],
+                                    "duration": Object {
+                                      "complex": 375,
+                                      "enteringScreen": 225,
+                                      "leavingScreen": 195,
+                                      "short": 250,
+                                      "shorter": 200,
+                                      "shortest": 150,
+                                      "standard": 300,
+                                    },
+                                    "easing": Object {
+                                      "easeIn": "cubic-bezier(0.4, 0, 1, 1)",
+                                      "easeInOut": "cubic-bezier(0.4, 0, 0.2, 1)",
+                                      "easeOut": "cubic-bezier(0.0, 0, 0.2, 1)",
+                                      "sharp": "cubic-bezier(0.4, 0, 0.6, 1)",
+                                    },
+                                    "getAutoHeightDuration": [Function],
+                                  },
+                                  "typography": Object {
+                                    "body1": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.00938em",
+                                      "lineHeight": 1.5,
+                                    },
+                                    "body1Next": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.00938em",
+                                      "lineHeight": 1.5,
+                                    },
+                                    "body2": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.875rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.01071em",
+                                      "lineHeight": 1.5,
+                                    },
+                                    "body2Next": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.875rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.01071em",
+                                      "lineHeight": 1.5,
+                                    },
+                                    "button": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.875rem",
+                                      "fontWeight": 400,
+                                      "letterSpacing": "0.02857em",
+                                      "lineHeight": 1.75,
+                                      "textTransform": "uppercase",
+                                    },
+                                    "buttonNext": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.875rem",
+                                      "fontWeight": 400,
+                                      "letterSpacing": "0.02857em",
+                                      "lineHeight": 1.75,
+                                      "textTransform": "uppercase",
+                                    },
+                                    "caption": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.75rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.03333em",
+                                      "lineHeight": 1.66,
+                                    },
+                                    "captionNext": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.75rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.03333em",
+                                      "lineHeight": 1.66,
+                                    },
+                                    "display1": Object {
+                                      "color": "rgba(0, 0, 0, 0.54)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "2.125rem",
+                                      "fontWeight": 300,
+                                      "lineHeight": "1.20588em",
+                                    },
+                                    "display2": Object {
+                                      "color": "rgba(0, 0, 0, 0.54)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "2.8125rem",
+                                      "fontWeight": 300,
+                                      "lineHeight": "1.13333em",
+                                      "marginLeft": "-.02em",
+                                    },
+                                    "display3": Object {
+                                      "color": "rgba(0, 0, 0, 0.54)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "3.5rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "-.02em",
+                                      "lineHeight": "1.30357em",
+                                      "marginLeft": "-.02em",
+                                    },
+                                    "display4": Object {
+                                      "color": "rgba(0, 0, 0, 0.54)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "7rem",
+                                      "fontWeight": 200,
+                                      "letterSpacing": "-.04em",
+                                      "lineHeight": "1.14286em",
+                                      "marginLeft": "-.04em",
+                                    },
+                                    "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                    "fontSize": 14,
+                                    "fontWeightLight": 200,
+                                    "fontWeightMedium": 400,
+                                    "fontWeightRegular": 300,
+                                    "h1": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "6rem",
+                                      "fontWeight": 200,
+                                      "letterSpacing": "-0.01562em",
+                                      "lineHeight": 1,
+                                    },
+                                    "h2": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "3.75rem",
+                                      "fontWeight": 200,
+                                      "letterSpacing": "-0.00833em",
+                                      "lineHeight": 1,
+                                    },
+                                    "h3": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "3rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0em",
+                                      "lineHeight": 1.04,
+                                    },
+                                    "h4": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "2.125rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.00735em",
+                                      "lineHeight": 1.17,
+                                    },
+                                    "h5": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1.5rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0em",
+                                      "lineHeight": 1.33,
+                                    },
+                                    "h6": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1.25rem",
+                                      "fontWeight": 400,
+                                      "letterSpacing": "0.0075em",
+                                      "lineHeight": 1.6,
+                                    },
+                                    "headline": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1.5rem",
+                                      "fontWeight": 300,
+                                      "lineHeight": "1.35417em",
+                                    },
+                                    "overline": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.75rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.08333em",
+                                      "lineHeight": 2.66,
+                                      "textTransform": "uppercase",
+                                    },
+                                    "pxToRem": [Function],
+                                    "round": [Function],
+                                    "subheading": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1rem",
+                                      "fontWeight": 300,
+                                      "lineHeight": "1.5em",
+                                    },
+                                    "subtitle1": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1rem",
+                                      "fontWeight": 300,
+                                      "letterSpacing": "0.00938em",
+                                      "lineHeight": 1.75,
+                                    },
+                                    "subtitle2": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "0.875rem",
+                                      "fontWeight": 400,
+                                      "letterSpacing": "0.00714em",
+                                      "lineHeight": 1.57,
+                                    },
+                                    "suppressDeprecationWarnings": true,
+                                    "title": Object {
+                                      "color": "rgba(0, 0, 0, 0.87)",
+                                      "fontFamily": "\\"Roboto\\", \\"Helvetica\\", \\"Arial\\", sans-serif",
+                                      "fontSize": "1.3125rem",
+                                      "fontWeight": 400,
+                                      "lineHeight": "1.16667em",
+                                    },
+                                    "useNextVariants": true,
+                                  },
+                                  "zIndex": Object {
+                                    "appBar": 1100,
+                                    "drawer": 1200,
+                                    "mobileStepper": 1000,
+                                    "modal": 1300,
+                                    "snackbar": 1400,
+                                    "tooltip": 1500,
+                                  },
+                                }
+                              }
+                              xlDown={false}
+                              xlUp={false}
+                              xsDown={false}
+                              xsUp={false}
+                            >
+                              <HiddenJs
+                                lgDown={false}
+                                lgUp={false}
+                                mdDown={false}
+                                mdUp={false}
+                                smDown={true}
+                                smUp={false}
+                                width="md"
+                                xlDown={false}
+                                xlUp={false}
+                                xsDown={false}
+                                xsUp={false}
+                              >
+                                <WithStyles(ScrollTop)
+                                  show={true}
+                                >
+                                  <ScrollTop
+                                    classes={
+                                      Object {
+                                        "scrollTop": "ScrollTop-scrollTop-324",
+                                      }
+                                    }
+                                    containerId="content-container"
+                                    show={true}
+                                    showAfter={100}
+                                  >
+                                    <WithStyles(Fab)
+                                      aria-label="Scroll to top of page"
+                                      className="ScrollTop-scrollTop-324"
+                                      color="secondary"
+                                      id="scrolltopbtn"
+                                      onClick={[Function]}
+                                      title="Scroll to top of page"
+                                    >
+                                      <Fab
+                                        aria-label="Scroll to top of page"
+                                        className="ScrollTop-scrollTop-324"
+                                        classes={
+                                          Object {
+                                            "colorInherit": "MuiFab-colorInherit-332",
+                                            "disabled": "MuiFab-disabled-331",
+                                            "extended": "MuiFab-extended-329",
+                                            "focusVisible": "MuiFab-focusVisible-330",
+                                            "label": "MuiFab-label-326",
+                                            "primary": "MuiFab-primary-327",
+                                            "root": "MuiFab-root-325",
+                                            "secondary": "MuiFab-secondary-328",
+                                            "sizeMedium": "MuiFab-sizeMedium-334",
+                                            "sizeSmall": "MuiFab-sizeSmall-333",
+                                          }
+                                        }
+                                        color="secondary"
+                                        component="button"
+                                        disableFocusRipple={false}
+                                        disabled={false}
+                                        id="scrolltopbtn"
+                                        onClick={[Function]}
+                                        size="large"
+                                        title="Scroll to top of page"
+                                        type="button"
+                                        variant="round"
+                                      >
+                                        <WithStyles(ButtonBase)
+                                          aria-label="Scroll to top of page"
+                                          className="MuiFab-root-325 MuiFab-secondary-328 ScrollTop-scrollTop-324"
+                                          component="button"
+                                          disabled={false}
+                                          focusRipple={true}
+                                          focusVisibleClassName="MuiFab-focusVisible-330"
+                                          id="scrolltopbtn"
+                                          onClick={[Function]}
+                                          title="Scroll to top of page"
+                                          type="button"
+                                        >
+                                          <ButtonBase
+                                            aria-label="Scroll to top of page"
+                                            centerRipple={false}
+                                            className="MuiFab-root-325 MuiFab-secondary-328 ScrollTop-scrollTop-324"
+                                            classes={
+                                              Object {
+                                                "disabled": "MuiButtonBase-disabled-158",
+                                                "focusVisible": "MuiButtonBase-focusVisible-159",
+                                                "root": "MuiButtonBase-root-157",
+                                              }
+                                            }
+                                            component="button"
+                                            disableRipple={false}
+                                            disableTouchRipple={false}
+                                            disabled={false}
+                                            focusRipple={true}
+                                            focusVisibleClassName="MuiFab-focusVisible-330"
+                                            id="scrolltopbtn"
+                                            onClick={[Function]}
+                                            tabIndex="0"
+                                            title="Scroll to top of page"
+                                            type="button"
+                                          >
+                                            <button
+                                              aria-label="Scroll to top of page"
+                                              className="MuiButtonBase-root-157 MuiFab-root-325 MuiFab-secondary-328 ScrollTop-scrollTop-324"
+                                              disabled={false}
+                                              id="scrolltopbtn"
+                                              onBlur={[Function]}
+                                              onClick={[Function]}
+                                              onContextMenu={[Function]}
+                                              onFocus={[Function]}
+                                              onKeyDown={[Function]}
+                                              onKeyUp={[Function]}
+                                              onMouseDown={[Function]}
+                                              onMouseLeave={[Function]}
+                                              onMouseUp={[Function]}
+                                              onTouchEnd={[Function]}
+                                              onTouchMove={[Function]}
+                                              onTouchStart={[Function]}
+                                              tabIndex="0"
+                                              title="Scroll to top of page"
+                                              type="button"
+                                            >
+                                              <span
+                                                className="MuiFab-label-326"
+                                              >
+                                                <pure(ArrowUpwardIcon)>
+                                                  <ArrowUpwardIcon>
+                                                    <WithStyles(SvgIcon)>
+                                                      <SvgIcon
+                                                        classes={
+                                                          Object {
+                                                            "colorAction": "MuiSvgIcon-colorAction-163",
+                                                            "colorDisabled": "MuiSvgIcon-colorDisabled-165",
+                                                            "colorError": "MuiSvgIcon-colorError-164",
+                                                            "colorPrimary": "MuiSvgIcon-colorPrimary-161",
+                                                            "colorSecondary": "MuiSvgIcon-colorSecondary-162",
+                                                            "fontSizeInherit": "MuiSvgIcon-fontSizeInherit-166",
+                                                            "fontSizeLarge": "MuiSvgIcon-fontSizeLarge-168",
+                                                            "fontSizeSmall": "MuiSvgIcon-fontSizeSmall-167",
+                                                            "root": "MuiSvgIcon-root-160",
+                                                          }
+                                                        }
+                                                        color="inherit"
+                                                        component="svg"
+                                                        fontSize="default"
+                                                        viewBox="0 0 24 24"
+                                                      >
+                                                        <svg
+                                                          aria-hidden="true"
+                                                          className="MuiSvgIcon-root-160"
+                                                          focusable="false"
+                                                          role="presentation"
+                                                          viewBox="0 0 24 24"
+                                                        >
+                                                          <path
+                                                            d="M0 0h24v24H0V0z"
+                                                            fill="none"
+                                                          />
+                                                          <path
+                                                            d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"
+                                                          />
+                                                        </svg>
+                                                      </SvgIcon>
+                                                    </WithStyles(SvgIcon)>
+                                                  </ArrowUpwardIcon>
+                                                </pure(ArrowUpwardIcon)>
+                                              </span>
+                                              <NoSsr
+                                                defer={false}
+                                                fallback={null}
+                                              >
+                                                <WithStyles(TouchRipple)
+                                                  center={false}
+                                                  innerRef={[Function]}
+                                                >
+                                                  <TouchRipple
+                                                    center={false}
+                                                    classes={
+                                                      Object {
+                                                        "child": "MuiTouchRipple-child-287",
+                                                        "childLeaving": "MuiTouchRipple-childLeaving-288",
+                                                        "childPulsate": "MuiTouchRipple-childPulsate-289",
+                                                        "ripple": "MuiTouchRipple-ripple-284",
+                                                        "ripplePulsate": "MuiTouchRipple-ripplePulsate-286",
+                                                        "rippleVisible": "MuiTouchRipple-rippleVisible-285",
+                                                        "root": "MuiTouchRipple-root-283",
+                                                      }
+                                                    }
+                                                  >
+                                                    <TransitionGroup
+                                                      childFactory={[Function]}
+                                                      className="MuiTouchRipple-root-283"
+                                                      component="span"
+                                                      enter={true}
+                                                      exit={true}
+                                                    >
+                                                      <span
+                                                        className="MuiTouchRipple-root-283"
+                                                      />
+                                                    </TransitionGroup>
+                                                  </TouchRipple>
+                                                </WithStyles(TouchRipple)>
+                                              </NoSsr>
+                                            </button>
+                                          </ButtonBase>
+                                        </WithStyles(ButtonBase)>
+                                      </Fab>
+                                    </WithStyles(Fab)>
+                                  </ScrollTop>
+                                </WithStyles(ScrollTop)>
+                              </HiddenJs>
+                              <EventListener
+                                onResize={[Function]}
+                                target="window"
+                              />
+                            </WithWidth(HiddenJs)>
+                          </WithTheme(WithWidth(HiddenJs))>
+                        </Hidden>
                         <WithStyles(ConfirmDialogBox)
                           hideCancelButton={true}
                           locale={
@@ -16559,6 +17474,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                           <AppAlert
                             actions={
                               Object {
+                                "adminCreate": [Function],
                                 "adminUpdate": [Function],
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
@@ -18228,6 +19144,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                     <WithStyles(WithTheme(WithWidth(TopCitedPublicationsClass)))
                                                                       actions={
                                                                         Object {
+                                                                          "adminCreate": [Function],
                                                                           "adminUpdate": [Function],
                                                                           "checkSession": [Function],
                                                                           "claimPublication": [Function],
@@ -18342,6 +19259,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       <WithTheme(WithWidth(TopCitedPublicationsClass))
                                                                         actions={
                                                                           Object {
+                                                                            "adminCreate": [Function],
                                                                             "adminUpdate": [Function],
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
@@ -18463,6 +19381,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         <WithWidth(TopCitedPublicationsClass)
                                                                           actions={
                                                                             Object {
+                                                                              "adminCreate": [Function],
                                                                               "adminUpdate": [Function],
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
@@ -19018,6 +19937,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           <TopCitedPublicationsClass
                                                                             actions={
                                                                               Object {
+                                                                                "adminCreate": [Function],
                                                                                 "adminUpdate": [Function],
                                                                                 "checkSession": [Function],
                                                                                 "claimPublication": [Function],
@@ -19148,20 +20068,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 allowDismiss={false}
                                                                                 classes={
                                                                                   Object {
-                                                                                    "actionButton": "Alert-actionButton-327",
-                                                                                    "common": "Alert-common-324",
-                                                                                    "dismissButton": "Alert-dismissButton-328",
-                                                                                    "done": "Alert-done-337",
-                                                                                    "error": "Alert-error-330",
-                                                                                    "error_outline": "Alert-error_outline-331",
-                                                                                    "help": "Alert-help-333",
-                                                                                    "help_outline": "Alert-help_outline-334",
-                                                                                    "icon": "Alert-icon-325",
-                                                                                    "info": "Alert-info-335",
-                                                                                    "info_outline": "Alert-info_outline-336",
-                                                                                    "linked": "Alert-linked-329",
-                                                                                    "text": "Alert-text-326",
-                                                                                    "warning": "Alert-warning-332",
+                                                                                    "actionButton": "Alert-actionButton-338",
+                                                                                    "common": "Alert-common-335",
+                                                                                    "dismissButton": "Alert-dismissButton-339",
+                                                                                    "done": "Alert-done-348",
+                                                                                    "error": "Alert-error-341",
+                                                                                    "error_outline": "Alert-error_outline-342",
+                                                                                    "help": "Alert-help-344",
+                                                                                    "help_outline": "Alert-help_outline-345",
+                                                                                    "icon": "Alert-icon-336",
+                                                                                    "info": "Alert-info-346",
+                                                                                    "info_outline": "Alert-info_outline-347",
+                                                                                    "linked": "Alert-linked-340",
+                                                                                    "text": "Alert-text-337",
+                                                                                    "warning": "Alert-warning-343",
                                                                                   }
                                                                                 }
                                                                                 dismissTitle="Click to dismiss this alert"
@@ -19615,7 +20535,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <WithStyles(Grid)
                                                                                     alignContent="center"
                                                                                     alignItems="flex-start"
-                                                                                    className="Alert-error-330 Alert-common-324"
+                                                                                    className="Alert-error-341 Alert-common-335"
                                                                                     container={true}
                                                                                     justify="center"
                                                                                     spacing={24}
@@ -19623,7 +20543,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     <Grid
                                                                                       alignContent="center"
                                                                                       alignItems="flex-start"
-                                                                                      className="Alert-error-330 Alert-common-324"
+                                                                                      className="Alert-error-341 Alert-common-335"
                                                                                       classes={
                                                                                         Object {
                                                                                           "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -19740,7 +20660,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       zeroMinWidth={false}
                                                                                     >
                                                                                       <div
-                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-330 Alert-common-324"
+                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-341 Alert-common-335"
                                                                                       >
                                                                                         <WithStyles(Grid)
                                                                                           item={true}
@@ -19996,13 +20916,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     className="MuiGrid-container-6 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23"
                                                                                                   >
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-icon-325 alert-icon"
+                                                                                                      className="Alert-icon-336 alert-icon"
                                                                                                       item={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-icon-325 alert-icon"
+                                                                                                        className="Alert-icon-336 alert-icon"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20119,7 +21039,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 Alert-icon-325 alert-icon"
+                                                                                                          className="MuiGrid-item-7 Alert-icon-336 alert-icon"
                                                                                                         >
                                                                                                           <pure(ErrorIcon)
                                                                                                             className="icon"
@@ -20173,14 +21093,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       </Grid>
                                                                                                     </WithStyles(Grid)>
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-text-326 alert-text"
+                                                                                                      className="Alert-text-337 alert-text"
                                                                                                       item={true}
                                                                                                       xs={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-text-326 alert-text"
+                                                                                                        className="Alert-text-337 alert-text"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -20297,7 +21217,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-326 alert-text"
+                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-337 alert-text"
                                                                                                         >
                                                                                                           <b>
                                                                                                             There has been an error - 
@@ -22482,6 +23402,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                               <WithStyles(NewsFeed)
                                                                                 actions={
                                                                                   Object {
+                                                                                    "adminCreate": [Function],
                                                                                     "adminUpdate": [Function],
                                                                                     "checkSession": [Function],
                                                                                     "claimPublication": [Function],
@@ -22550,6 +23471,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 <NewsFeed
                                                                                   actions={
                                                                                     Object {
+                                                                                      "adminCreate": [Function],
                                                                                       "adminUpdate": [Function],
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],

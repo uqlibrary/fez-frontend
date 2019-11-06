@@ -7,6 +7,7 @@ import { isFileUrl } from 'config/routes';
 
 // application components
 import { AppLoader } from 'modules/SharedComponents/Toolbox/Loaders';
+import { ScrollTop } from 'modules/SharedComponents/ScrollTop';
 import { InlineLoader } from 'modules/SharedComponents/Toolbox/Loaders';
 import { MenuDrawer } from 'modules/SharedComponents/Toolbox/MenuDrawer';
 import { HelpDrawer } from 'modules/SharedComponents/Toolbox/HelpDrawer';
@@ -210,7 +211,12 @@ export class AppClass extends PureComponent {
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData.total > 0
         );
-        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, hasIncompleteWorks);
+        const menuItems = routes.getMenuConfig(
+            this.props.account,
+            this.props.authorDetails,
+            isOrcidRequired && isHdrStudent,
+            hasIncompleteWorks,
+        );
         const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage =
             this.props.location.pathname === routes.pathConfig.hdrSubmission ||
@@ -252,6 +258,7 @@ export class AppClass extends PureComponent {
         }
         const routesConfig = routes.getRoutesConfig({
             components: pages,
+            authorDetails: this.props.authorDetails,
             account: this.props.account,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
@@ -359,7 +366,10 @@ export class AppClass extends PureComponent {
                         }}
                     />
                 )}
-                <div className="content-container" style={containerStyle}>
+                <div className="content-container" id="content-container" style={containerStyle}>
+                    <Hidden smDown>
+                        <ScrollTop show />
+                    </Hidden>
                     <ConfirmDialogBox
                         hideCancelButton
                         onRef={this.setSessionExpiredConfirmation}

@@ -349,4 +349,26 @@ describe('Component ContributorForm', () => {
         expect(wrapper.state()).toEqual(expected);
         expect(testFn).toHaveBeenCalledTimes(1);
     });
+
+    it('should clear contributor form on cancellation from edit', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        wrapper.instance()._onCancel();
+        expect(testFn).toBeCalledWith({
+            nameAsPublished: 'Firstname Lastname',
+            affiliation: 'UQ',
+            orgaff: '',
+            orgtype: '',
+            creatorRole: '',
+        });
+    });
 });
