@@ -1291,6 +1291,7 @@ exports[`Search record results should render a single unclaimable item with no a
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
+                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }

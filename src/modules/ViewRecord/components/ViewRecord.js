@@ -29,6 +29,7 @@ export default class ViewRecord extends PureComponent {
         hideCulturalSensitivityStatement: PropTypes.bool,
         account: PropTypes.object,
         author: PropTypes.object,
+        authorDetails: PropTypes.object,
     };
 
     componentDidMount() {
@@ -107,7 +108,7 @@ export default class ViewRecord extends PureComponent {
                 </Grid>
                 <Grid container spacing={24}>
                     <Files
-                        account={this.props.account}
+                        authorDetails={this.props.authorDetails}
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
