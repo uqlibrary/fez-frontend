@@ -1288,6 +1288,8 @@ exports[`Search record results should render a single unclaimable item with no a
                 "hasSession": true,
                 "homeLib": "St Lucia",
                 "id": "uqresearcher",
+                "is_administrator": 0,
+                "is_super_administrator": 0,
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
