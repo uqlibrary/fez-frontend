@@ -29,16 +29,34 @@ describe('LinkInfoForm component', () => {
 });
 
 describe('LinkInfoForm callback factories', () => {
-    it('should create handleChange callback', () => {
+    it('should create handleChange callback for link', () => {
+        const linkAndDescription = {};
+        const setLinkAndDescription = jest.fn();
+        const setErrorText = jest.fn();
+        const event = {
+            target: {
+                name: 'key',
+                value: 'http://test.com',
+            },
+        };
+        const callback = handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription, setErrorText)[0];
+        callback(event);
+        expect(setLinkAndDescription).toHaveBeenCalledWith({
+            key: 'http://test.com',
+        });
+    });
+
+    it('should create handleChange callback for description', () => {
         const linkAndDescription = { link: 'test link' };
         const setLinkAndDescription = jest.fn();
+        const setErrorText = jest.fn();
         const event = {
             target: {
                 name: 'description',
                 value: 'Test description',
             },
         };
-        const callback = handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription)[0];
+        const callback = handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription, setErrorText)[0];
         callback(event);
         expect(setLinkAndDescription).toHaveBeenCalledWith({
             link: 'test link',
@@ -66,6 +84,7 @@ describe('LinkInfoForm callback factories', () => {
         const testFn = jest.fn();
         const descriptionInput = { current: { focus: testFn } };
         const disabled = false;
+        const errorText = null;
         const linkAndDescription = {
             key: 'test1',
             value: 'test2',
@@ -73,7 +92,14 @@ describe('LinkInfoForm callback factories', () => {
         const onAdd = jest.fn();
         const resetForm = jest.fn();
 
-        const callback = addItemCallbackFactory(descriptionInput, disabled, linkAndDescription, onAdd, resetForm)[0];
+        const callback = addItemCallbackFactory(
+            descriptionInput,
+            disabled,
+            errorText,
+            linkAndDescription,
+            onAdd,
+            resetForm,
+        )[0];
 
         callback();
         expect(onAdd).toHaveBeenCalledWith(linkAndDescription);
