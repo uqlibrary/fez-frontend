@@ -88,6 +88,7 @@ export class AppClass extends PureComponent {
         incompleteRecordList: PropTypes.object,
     };
     static childContextTypes = {
+        userCountry: PropTypes.any,
         isMobile: PropTypes.bool,
         selectFieldMobileOverrides: PropTypes.object,
     };
@@ -104,6 +105,7 @@ export class AppClass extends PureComponent {
 
     getChildContext() {
         return {
+            userCountry: 'AU', // this.state.userCountry,
             isMobile: this.state.isMobile,
             selectFieldMobileOverrides: {
                 style: !this.state.isMobile ? { width: '100%' } : {},
@@ -124,6 +126,12 @@ export class AppClass extends PureComponent {
         this.props.actions.loadCurrentAccount();
         this.handleResize(this.state.mediaQuery);
         this.state.mediaQuery.addListener(this.handleResize);
+        /* istanbul ignore next */
+        // ipInfo((err, cLoc) => {
+        //     this.setState({
+        //         userCountry: (cLoc && cLoc.country) || err,
+        //     });
+        // });
     }
 
     componentWillReceiveProps(nextProps) {

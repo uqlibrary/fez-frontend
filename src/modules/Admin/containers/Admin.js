@@ -128,7 +128,6 @@ const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
-    destroyOnUnmount: false,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state, props) => {

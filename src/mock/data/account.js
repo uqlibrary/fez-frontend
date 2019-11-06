@@ -36,6 +36,9 @@ export const accounts = {
         "canMasquerade": true,
         "canMasqueradeType": "full",
         "blocked": false,
+        "is_administrator": 1,
+        "is_super_administrator": 1,
+        pol_id: 1,
     },
     // student
     s1111111: {
@@ -75,6 +78,9 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
+        pol_id: 4,
     },
     // rhd student
     s2222222: {
@@ -94,6 +100,9 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
+        pol_id: 4,
     },
     // researchers
     uqresearcher: {
@@ -113,6 +122,9 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
+        pol_id: 3,
     },
     // researcher without orcid
     uqnoauthid: {
@@ -132,6 +144,9 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
+        "is_administrator": 0,
+        "is_super_administrator": 0,
+        pol_id: 5,
     },
     digiteamMember: {
         'id': 'digiteamMember',
@@ -149,7 +164,8 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": true,
-        "blocked": false
+        "blocked": false,
+        pol_id: 3,
     },
     // expired session
     uqexpired: {

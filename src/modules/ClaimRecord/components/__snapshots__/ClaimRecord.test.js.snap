@@ -30,6 +30,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -41,6 +42,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -52,6 +54,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -63,6 +66,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -74,6 +78,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -85,6 +90,7 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -1056,64 +1062,6 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -1151,6 +1099,64 @@ exports[`Component ClaimRecord  should render claim form if publication doesn't 
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -2219,6 +2225,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -2230,6 +2237,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -2241,6 +2249,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -2252,6 +2261,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -2263,6 +2273,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -2274,6 +2285,7 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -3273,64 +3285,6 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -3368,6 +3322,64 @@ exports[`Component ClaimRecord  should render claim form, author linking compone
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -4386,6 +4398,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -4397,6 +4410,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -4408,6 +4422,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -4419,6 +4434,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -4430,6 +4446,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -4441,6 +4458,7 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -5648,64 +5666,6 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -5743,6 +5703,64 @@ exports[`Component ClaimRecord  should render claim form, contributor linking co
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -5855,6 +5873,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -5866,6 +5885,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -5877,6 +5897,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -5888,6 +5909,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -5899,6 +5921,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -5910,6 +5933,7 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -7117,64 +7141,6 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -7212,6 +7178,64 @@ exports[`Component ClaimRecord  should render claim publication form 1`] = `
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -7324,6 +7348,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -7335,6 +7360,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -7346,6 +7372,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -7357,6 +7384,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -7368,6 +7396,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -7379,6 +7408,7 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -8586,64 +8616,6 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -8681,6 +8653,64 @@ exports[`Component ClaimRecord  should render navigation prompt 1`] = `
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -8793,6 +8823,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -8804,6 +8835,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -8815,6 +8847,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -8826,6 +8859,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -8837,6 +8871,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -8848,6 +8883,7 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -10055,64 +10091,6 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -10150,6 +10128,64 @@ exports[`Component ClaimRecord  should render navigation prompt 2`] = `
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -10262,6 +10298,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -10273,6 +10310,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -10284,6 +10322,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -10295,6 +10334,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -10306,6 +10346,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -10317,6 +10358,7 @@ exports[`Component ClaimRecord  should render publication citation, error messag
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -11321,6 +11363,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -11332,6 +11375,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -11343,6 +11387,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -11354,6 +11399,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -11365,6 +11411,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -11376,6 +11423,7 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -12598,64 +12646,6 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -12693,6 +12683,64 @@ exports[`Component ClaimRecord  should render the confirm dialog with an alert d
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -12805,6 +12853,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -12816,6 +12865,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -12827,6 +12877,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -12838,6 +12889,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -12849,6 +12901,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -12860,6 +12913,7 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -14067,64 +14121,6 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -14162,6 +14158,64 @@ exports[`Component ClaimRecord  should render the confirm dialog without an aler
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -14274,6 +14328,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -14285,6 +14340,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -14296,6 +14352,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -14307,6 +14364,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -14318,6 +14376,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -14329,6 +14388,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -15536,64 +15596,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={true}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -15631,6 +15633,64 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={true}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -15756,6 +15816,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -15767,6 +15828,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -15778,6 +15840,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -15789,6 +15852,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -15800,6 +15864,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -15811,6 +15876,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -17018,64 +17084,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -17113,6 +17121,64 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -17236,6 +17302,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -17247,6 +17314,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -17258,6 +17326,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -17269,6 +17338,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -17280,6 +17350,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -17291,6 +17362,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -18498,64 +18570,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -18593,6 +18607,64 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -18717,6 +18789,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -18728,6 +18801,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -18739,6 +18813,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -18750,6 +18825,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -18761,6 +18837,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -18772,6 +18849,7 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -19979,64 +20057,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -20074,6 +20094,64 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -20265,64 +20343,6 @@ exports[`Component ClaimRecord  should return and render alert message depending
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -20360,6 +20380,64 @@ exports[`Component ClaimRecord  should return and render alert message depending
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -20536,64 +20614,6 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
         xs={12}
       >
         <StandardCard
-          help={
-            Object {
-              "buttonLabel": "CLOSE",
-              "text": <p>
-                For more information about content indicators, click
-                 
-                <a
-                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
-                  rel="noreferrer"
-                  style={
-                    Object {
-                      "fontWeight": 700,
-                    }
-                  }
-                  target="_blank"
-                >
-                  here
-                </a>
-              </p>,
-              "title": "Content indicators",
-            }
-          }
-          title="Optional: Content Indicators"
-        >
-          <WithStyles(Grid)
-            container={true}
-            spacing={24}
-          >
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <WithStyles(Typography)>
-                You can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, suggest a correction below.
-              </WithStyles(Typography)>
-            </WithStyles(Grid)>
-            <WithStyles(Grid)
-              item={true}
-              xs={12}
-            >
-              <Field
-                component={[Function]}
-                disabled={false}
-                fullWidth={true}
-                id="content-indicators"
-                label="Please select relevant indicator(s)."
-                multiple={true}
-                name="contentIndicators"
-              />
-            </WithStyles(Grid)>
-          </WithStyles(Grid)>
-        </StandardCard>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        xs={12}
-      >
-        <StandardCard
           title="Optional: Suggest changes or add links to this work"
         >
           <WithStyles(Grid)
@@ -20631,6 +20651,64 @@ exports[`Component ClaimRecord  should show alert if submit failed and PID not f
                     [Function],
                   ]
                 }
+              />
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </StandardCard>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <StandardCard
+          help={
+            Object {
+              "buttonLabel": "CLOSE",
+              "text": <p>
+                For more information about content indicators, click
+                 
+                <a
+                  href="https://guides.library.uq.edu.au/for-researchers/uqespace-publications-datasets/content-indicators"
+                  rel="noreferrer"
+                  style={
+                    Object {
+                      "fontWeight": 700,
+                    }
+                  }
+                  target="_blank"
+                >
+                  here
+                </a>
+              </p>,
+              "title": "Content Indicators",
+            }
+          }
+          title="Optional: Content Indicators"
+        >
+          <WithStyles(Grid)
+            container={true}
+            spacing={24}
+          >
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <WithStyles(Typography)>
+                If relevant to your work, you can select multiple (of 3 available) content indicators to add more information about your work, but you cannot remove indicators already selected. To amend existing information, Suggest changes above.
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+            <WithStyles(Grid)
+              item={true}
+              xs={12}
+            >
+              <Field
+                component={[Function]}
+                disabled={false}
+                fullWidth={true}
+                id="content-indicators"
+                label="Please add any relevant indicator(s)."
+                multiple={true}
+                name="contentIndicators"
               />
             </WithStyles(Grid)>
           </WithStyles(Grid)>
@@ -20740,6 +20818,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 5,
                     "dsi_size": 97786,
                     "dsi_state": "A",
                   },
@@ -20751,6 +20830,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 4,
                     "dsi_size": 65857,
                     "dsi_state": "A",
                   },
@@ -20762,6 +20842,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 3,
                     "dsi_size": 3952,
                     "dsi_state": "A",
                   },
@@ -20773,6 +20854,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 2,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
@@ -20784,6 +20866,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "D",
                   },
@@ -20795,6 +20878,7 @@ exports[`Component ClaimRecord  should show contributor as linked 1`] = `
                     "dsi_mimetype": "image/jpeg",
                     "dsi_open_access": null,
                     "dsi_pid": "UQ:792099",
+                    "dsi_security_policy": 1,
                     "dsi_size": 97345,
                     "dsi_state": "A",
                   },
