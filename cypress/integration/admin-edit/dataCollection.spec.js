@@ -7,6 +7,7 @@ context('Data Collection admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000);
+        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {

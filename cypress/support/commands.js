@@ -79,3 +79,19 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
             }
         });
 });
+
+/**
+ * ckeditor takes a moment to load, making tests fail randomly
+ * Call this after a page with a rich editor loads, to make sure at least the first editor has loaded,
+ * before you start looking for elements
+ */
+Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
+    cy.get('#cke_editor1 iframe')
+        .should($iframe => {
+            const body = $iframe
+                .contents()
+                .find('body')
+                .get(0);
+            expect(body).to.be.ok;
+        });
+});

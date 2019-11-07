@@ -7,6 +7,7 @@ context('Image admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
+        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
