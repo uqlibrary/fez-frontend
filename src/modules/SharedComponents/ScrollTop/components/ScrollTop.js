@@ -30,21 +30,16 @@ const scrollWindowToTop = event => {
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById(containerId);
+    const scrollButton = document.getElementById('scrolltopbtn');
     /* istanbul ignore next */
-    if (
-        !!show &&
-        !!scrollableContainer &&
-        scrollableContainer.style &&
-        !!document.getElementById('scrolltopbtn') &&
-        !!document.getElementById('scrolltopbtn').style
-    ) {
+    if (!!show && !!scrollableContainer && !!scrollButton) {
         scrollableContainer.onscroll = () => {
             if (scrollableContainer.scrollTop > showAfter) {
-                document.getElementById('scrolltopbtn').style.opacity = '0.5';
-                document.getElementById('scrolltopbtn').style.right = '32px !important';
+                scrollButton.style.opacity = '0.5';
+                scrollButton.style.right = '32px !important';
             } else {
-                document.getElementById('scrolltopbtn').style.opacity = '0';
-                document.getElementById('scrolltopbtn').style.right = '-1000px !important';
+                scrollButton.style.opacity = '0';
+                scrollButton.style.right = '-1000px !important';
             }
         };
     }
