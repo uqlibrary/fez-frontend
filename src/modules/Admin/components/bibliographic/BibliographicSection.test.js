@@ -1,7 +1,7 @@
 import BibliographicSection from './BibliographicSection';
 
 jest.mock('../../../../context');
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
@@ -30,6 +30,11 @@ describe('BibliographicSection component', () => {
                 fez_record_search_key_language: [{ rek_language: 'eng' }],
             },
         }));
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                languages: ['eng'],
+            },
+        }));
 
         const wrapper = setup();
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -51,6 +56,12 @@ describe('BibliographicSection component', () => {
                 ],
                 rek_display_type: 179,
                 fez_record_search_key_language: [{ rek_language: 'eng' }],
+            },
+        }));
+
+        useFormValuesContext.mockImplementation(() => ({
+            formValues: {
+                languages: ['eng'],
             },
         }));
 
