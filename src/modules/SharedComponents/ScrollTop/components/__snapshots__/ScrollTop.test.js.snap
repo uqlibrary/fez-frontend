@@ -34,11 +34,10 @@ exports[`Component ScrollTop should render component 1`] = `
   xsUp={false}
 >
   <WithStyles(Fab)
-    aria-label="Scroll to top of page"
+    aria-label="Scroll to top of this page"
     color="secondary"
     id="scrolltopbtn"
-    onClick={[Function]}
-    title="Scroll to top of page"
+    title="Scroll to top of this page"
   >
     <pure(ArrowUpwardIcon) />
   </WithStyles(Fab)>

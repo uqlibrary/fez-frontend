@@ -269,6 +269,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -825,6 +826,7 @@ exports[`Application component should determine if it has incomplete works from 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -1562,6 +1564,7 @@ exports[`Application component should determine if it has incomplete works from 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -2115,6 +2118,7 @@ exports[`Application component should redirect to login page with correct return
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -2663,6 +2667,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -3396,6 +3401,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -3935,6 +3941,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -4486,6 +4493,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -5192,6 +5200,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -5806,6 +5815,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -6512,6 +6522,7 @@ exports[`Application component should render application with routing for the us
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -6806,6 +6817,7 @@ exports[`Application component should render for anon user 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -7079,6 +7091,7 @@ exports[`Application component should render thesis submission for HDR without m
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -16915,6 +16928,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 xsUp={false}
                               >
                                 <WithStyles(ScrollTop)
+                                  containerId="content-container"
                                   show={true}
                                 >
                                   <ScrollTop
@@ -17412,15 +17426,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                             xsUp={false}
                                           >
                                             <WithStyles(Fab)
-                                              aria-label="Scroll to top of page"
+                                              aria-label="Scroll to top of this page"
                                               className="ScrollTop-scrollTop-324"
                                               color="secondary"
                                               id="scrolltopbtn"
-                                              onClick={[Function]}
-                                              title="Scroll to top of page"
+                                              title="Scroll to top of this page"
                                             >
                                               <Fab
-                                                aria-label="Scroll to top of page"
+                                                aria-label="Scroll to top of this page"
                                                 className="ScrollTop-scrollTop-324"
                                                 classes={
                                                   Object {
@@ -17441,26 +17454,24 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 disableFocusRipple={false}
                                                 disabled={false}
                                                 id="scrolltopbtn"
-                                                onClick={[Function]}
                                                 size="large"
-                                                title="Scroll to top of page"
+                                                title="Scroll to top of this page"
                                                 type="button"
                                                 variant="round"
                                               >
                                                 <WithStyles(ButtonBase)
-                                                  aria-label="Scroll to top of page"
+                                                  aria-label="Scroll to top of this page"
                                                   className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                   component="button"
                                                   disabled={false}
                                                   focusRipple={true}
                                                   focusVisibleClassName="MuiFab-focusVisible-344"
                                                   id="scrolltopbtn"
-                                                  onClick={[Function]}
-                                                  title="Scroll to top of page"
+                                                  title="Scroll to top of this page"
                                                   type="button"
                                                 >
                                                   <ButtonBase
-                                                    aria-label="Scroll to top of page"
+                                                    aria-label="Scroll to top of this page"
                                                     centerRipple={false}
                                                     className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                     classes={
@@ -17477,18 +17488,16 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     focusRipple={true}
                                                     focusVisibleClassName="MuiFab-focusVisible-344"
                                                     id="scrolltopbtn"
-                                                    onClick={[Function]}
                                                     tabIndex="0"
-                                                    title="Scroll to top of page"
+                                                    title="Scroll to top of this page"
                                                     type="button"
                                                   >
                                                     <button
-                                                      aria-label="Scroll to top of page"
+                                                      aria-label="Scroll to top of this page"
                                                       className="MuiButtonBase-root-157 MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                       disabled={false}
                                                       id="scrolltopbtn"
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
                                                       onContextMenu={[Function]}
                                                       onFocus={[Function]}
                                                       onKeyDown={[Function]}
@@ -17500,7 +17509,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       onTouchMove={[Function]}
                                                       onTouchStart={[Function]}
                                                       tabIndex="0"
-                                                      title="Scroll to top of page"
+                                                      title="Scroll to top of this page"
                                                       type="button"
                                                     >
                                                       <span

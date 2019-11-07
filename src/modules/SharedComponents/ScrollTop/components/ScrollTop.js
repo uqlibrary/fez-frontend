@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Fab from '@material-ui/core/Fab';
 import Hidden from '@material-ui/core/Hidden';
@@ -22,13 +22,22 @@ export const styles = () => ({
 });
 
 /* istanbul ignore next */
-const scrollWindowToTop = event => {
-    event.preventDefault();
-    document.getElementById('content-container').scrollTop = 0;
-};
+// const scrollWindowToTop = (element, container) => {
+//     console.log(element.event, container);
+//     element.event.preventDefault();
+//     document.getElementById(container).scrollTop = 0;
+// };
 
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
+    useEffect(() => {
+        document.getElementById('scrolltopbtn') &&
+        document.getElementById('scrolltopbtn')
+            .addEventListener('click', e => {
+                e.preventDefault();
+                document.getElementById(containerId).scrollTop = 0;
+            });
+    });
     const scrollableContainer = document.getElementById(containerId);
     const scrollButton = document.getElementById('scrolltopbtn');
     /* istanbul ignore next */
@@ -48,11 +57,10 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
             <Hidden smDown>
                 <Fab
                     color="secondary"
-                    aria-label="Scroll to top of page"
+                    aria-label="Scroll to top of this page"
                     className={classes.scrollTop}
                     id="scrolltopbtn"
-                    title="Scroll to top of page"
-                    onClick={scrollWindowToTop}
+                    title="Scroll to top of this page"
                 >
                     <ArrowUpwardIcon />
                 </Fab>
