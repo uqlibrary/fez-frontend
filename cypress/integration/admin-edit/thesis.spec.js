@@ -7,7 +7,7 @@ context('Thesis admin edit', () => {
     beforeEach(() => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
-        cy.wait(2000); // Wait for data load, extra time for pub types with ckeditor
+        cy.wait(1000); // Wait for data load
     });
 
     afterEach(() => {
@@ -57,7 +57,7 @@ context('Thesis admin edit', () => {
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
                     });
@@ -266,7 +266,7 @@ context('Thesis admin edit', () => {
                         cy.get('#cke_editor5')
                             .should('exist');
                         cy.read_ckeditor('editor5')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
                     });

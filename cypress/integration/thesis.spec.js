@@ -2,7 +2,7 @@ context('Thesis', () => {
     beforeEach(() => {
         cy.visit('http://localhost:3000/rhdsubmission?user=s2222222');
         cy.closeUnsupported();
-        cy.wait(2000); // extra time for pub types with ckeditor
+        cy.wait(1000);
     });
 
     afterEach(() => {

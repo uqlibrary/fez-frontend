@@ -7,7 +7,7 @@ context('Journal Article admin edit', () => {
     beforeEach(() => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
-        cy.wait(2000); // Wait for data load, extra time for pub types with ckeditor
+        cy.wait(1000); // Wait for data load
     });
 
     afterEach(() => {
@@ -69,11 +69,11 @@ context('Journal Article admin edit', () => {
             });
 
         cy.read_ckeditor('editor1')
-            .then(text => {
+            .should(text => {
                 expect(text).to.contain(record.fez_internal_notes.ain_detail);
             });
         cy.read_ckeditor('editor2')
-            .then(text => {
+            .should(text => {
                 expect(text).to.contain(record.rek_herdc_notes);
             });
     });
@@ -151,7 +151,7 @@ context('Journal Article admin edit', () => {
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
                     });
@@ -242,7 +242,7 @@ context('Journal Article admin edit', () => {
                         cy.get('#cke_editor4')
                             .should('exist');
                         cy.read_ckeditor('editor4')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
                         cy.get('label[id="Refereed source-label"]')
@@ -463,7 +463,7 @@ context('Journal Article admin edit', () => {
                         cy.get('#cke_editor5')
                             .should('exist');
                         cy.read_ckeditor('editor5')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
                     });

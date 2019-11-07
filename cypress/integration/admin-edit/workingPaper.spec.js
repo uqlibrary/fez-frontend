@@ -58,7 +58,7 @@ context('Working paper admin edit', () => {
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                             });
                     });
