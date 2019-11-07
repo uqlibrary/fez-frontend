@@ -9,7 +9,7 @@ export const NtroSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(adminInterfaceConfig[record.rek_display_type].ntro());
 
-    return <Section cards={cards} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} />;
 };
 
 NtroSection.propTypes = {

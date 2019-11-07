@@ -1,22 +1,19 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Section } from '../common/Section';
 
-import { useRecordContext } from 'context';
+import { useRecordContext, useFormValuesContext } from 'context';
 import { adminInterfaceConfig } from 'config/admin';
 
 export const BibliographicSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
-    const cards = useRef(
-        adminInterfaceConfig[record.rek_display_type].bibliographic(
-            record.fez_record_search_key_language &&
-                (record.fez_record_search_key_language.length > 1 ||
-                    (record.fez_record_search_key_language.length === 1 &&
-                        record.fez_record_search_key_language[0].rek_language !== 'eng')),
-        ),
-    );
+    const { formValues } = useFormValuesContext();
+    const isLote =
+        formValues.languages &&
+        (formValues.languages.length > 1 || (formValues.languages.length === 1 && formValues.languages[0] !== 'eng'));
 
+    const cards = adminInterfaceConfig[record.rek_display_type].bibliographic(isLote);
     return <Section cards={cards} disabled={disabled} />;
 };
 

@@ -3,18 +3,16 @@
 exports[`AuthorsSection component should render default view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "authors",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "authors",
           ],
-          "title": "Authors",
-        },
-      ],
-    }
+        ],
+        "title": "Authors",
+      },
+    ]
   }
   disabled={false}
 />
@@ -23,18 +21,16 @@ exports[`AuthorsSection component should render default view 1`] = `
 exports[`AuthorsSection component should render disabled view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "authors",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "authors",
           ],
-          "title": "Authors",
-        },
-      ],
-    }
+        ],
+        "title": "Authors",
+      },
+    ]
   }
   disabled={true}
 />

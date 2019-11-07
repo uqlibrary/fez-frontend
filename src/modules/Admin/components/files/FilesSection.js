@@ -14,7 +14,7 @@ export const FilesSection = ({ disabled = false }) => {
         }),
     );
 
-    return <Section cards={cards} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} />;
 };
 
 FilesSection.propTypes = {

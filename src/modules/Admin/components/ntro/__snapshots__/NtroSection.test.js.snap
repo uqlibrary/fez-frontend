@@ -3,34 +3,32 @@
 exports[`NtroSection component should render default view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "significanceAndContributionStatement",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
           ],
-          "title": "Scale/Significance of work & Creator research statement",
-        },
-        Object {
-          "groups": Array [
-            Array [
-              "fez_record_search_key_ismn",
-            ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_ismn",
           ],
-          "title": "ISMN",
-        },
-        Object {
-          "groups": Array [
-            Array [
-              "qualityIndicators",
-            ],
+        ],
+        "title": "ISMN",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
           ],
-          "title": "Quality indicators",
-        },
-      ],
-    }
+        ],
+        "title": "Quality indicators",
+      },
+    ]
   }
   disabled={false}
 />
@@ -39,34 +37,32 @@ exports[`NtroSection component should render default view 1`] = `
 exports[`NtroSection component should render disabled view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "significanceAndContributionStatement",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "significanceAndContributionStatement",
           ],
-          "title": "Scale/Significance of work & Creator research statement",
-        },
-        Object {
-          "groups": Array [
-            Array [
-              "fez_record_search_key_ismn",
-            ],
+        ],
+        "title": "Scale/Significance of work & Creator research statement",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "fez_record_search_key_ismn",
           ],
-          "title": "ISMN",
-        },
-        Object {
-          "groups": Array [
-            Array [
-              "qualityIndicators",
-            ],
+        ],
+        "title": "ISMN",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "qualityIndicators",
           ],
-          "title": "Quality indicators",
-        },
-      ],
-    }
+        ],
+        "title": "Quality indicators",
+      },
+    ]
   }
   disabled={true}
 />
