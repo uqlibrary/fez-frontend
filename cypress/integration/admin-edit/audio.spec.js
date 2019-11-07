@@ -118,8 +118,7 @@ context('Audio admin edit', () => {
                             .should('exist');
                         cy.read_ckeditor('editor5')
                             .should(text => {
-                                // rerendering of exact spacing means a snippet is more reliable
-                                expect(text).to.contain('Oh. North. North, south, east, west');
+                                expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                             });
                         cy.get('label[id="Alternate genre-label"]')
                             .parent()
@@ -175,17 +174,17 @@ context('Audio admin edit', () => {
                             .should('have.text', 'Attached files');
                         cy.get('.Alert .alert-text')
                             .should(
-                                'contain.text',
-                                record.fez_record_search_key_advisory_statement.rek_advisory_statement.replace("'", '&rsquo;'),
+                                'have.text',
+                                record.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             );
 
+                        // check embargo date can be cleared
                         cy.get('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
                             .within(() => {
                                 cy.get('div > div > input')
                                     .should('have.value', '01/01/2099');
                                 cy.get('div > div > div > button')
-                                    .click();
-                                // date picker popup appears
+                                    .click(); // date picker popup appears
                             });
                     });
             });
@@ -199,8 +198,7 @@ context('Audio admin edit', () => {
                     .should('have.text', 'Clear');
 
                 cy.get('> div:nth-child(2) > button:nth-child(1)')
-                    .click();
-            // clear button has been pressed
+                    .click(); // 'clear' button on date picker popup has been pressed
             });
 
         cy.get('.StandardPage form > div > div:nth-child(7)')
@@ -212,10 +210,7 @@ context('Audio admin edit', () => {
                         )
                             .should('have.text', 'Embargo date removed - review security policy on Security tab');
                     });
-            });
-
-        cy.get('.StandardPage form > div > div:nth-child(7)')
-            .within(() => {
+                // end: check embargo date can be cleared
                 cy.get('div:nth-child(2) > div > div:nth-child(3) .StandardCard')
                     .within(() => {
                         cy.get('h3')
@@ -229,8 +224,7 @@ context('Audio admin edit', () => {
                             .should(text => {
                                 // prettier-ignore
                                 expect(text).to.contain(
-                                    // theres an odd character in the full text that is blowing the exact match
-                                    'The University of Queensland has approval from traditional owners'
+                                    record.fez_record_search_key_advisory_statement.rek_advisory_statement
                                 );
                             });
                     });

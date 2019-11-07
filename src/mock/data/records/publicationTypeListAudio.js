@@ -71,7 +71,7 @@ export default {
                 "rek_advisory_statement_id": 21968,
                 "rek_advisory_statement_pid": "UQ:358319",
                 "rek_advisory_statement_xsdmf_id": 16630,
-                "rek_advisory_statement": "Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and/or descendants of the people who participated in Elwyn Flint’s Queensland Speech Survey in the 1960s."
+                "rek_advisory_statement": "Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and or descendants of the people who participated in the Queensland Speech Survey by Elwyn Flint in the 1960s."
             },
             "fez_record_search_key_alternate_genre": [
                 {
@@ -353,7 +353,7 @@ export default {
                 "rek_transcript_id": 21580,
                 "rek_transcript_pid": "UQ:358319",
                 "rek_transcript_xsdmf_id": 16626,
-                "rek_transcript": "Researcher: North.<br /> Researcher: Oh. North. North, south, east, west. North.<br /> Participant: (Traditional Language)<br /> Researcher: (Traditional Language)?<br /> Researcher: (Traditional Language) north."
+                "rek_transcript": "Researcher: Food?<br />Participant: (Traditional Language)"
             },
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_wok_doc_types": [],
