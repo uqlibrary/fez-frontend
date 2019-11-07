@@ -34,11 +34,14 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
         document.getElementById('scrolltopbtn') &&
             document.getElementById('scrolltopbtn').addEventListener('click', e => {
                 e.preventDefault();
+                console.log(document.getElementById(containerId));
                 document.getElementById(containerId).scrollTop = 0;
             });
     });
     const scrollableContainer = document.getElementById(containerId);
     const scrollButton = document.getElementById('scrolltopbtn');
+    console.log('scrollableContainer', scrollableContainer);
+    console.log('scrollButton', scrollButton);
     /* istanbul ignore next */
     if (!!show && !!scrollableContainer && !!scrollButton) {
         scrollableContainer.onscroll = () => {
