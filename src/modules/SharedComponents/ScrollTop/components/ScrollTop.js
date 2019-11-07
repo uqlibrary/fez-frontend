@@ -32,8 +32,7 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     useEffect(() => {
         document.getElementById('scrolltopbtn') &&
-        document.getElementById('scrolltopbtn')
-            .addEventListener('click', e => {
+            document.getElementById('scrolltopbtn').addEventListener('click', e => {
                 e.preventDefault();
                 document.getElementById(containerId).scrollTop = 0;
             });
