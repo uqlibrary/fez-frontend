@@ -21,6 +21,7 @@ context('Journal Article admin edit', () => {
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .should('be.not.checked');
 
         cy.get('button[title="Learn about keyboard shortcuts"]')
@@ -40,6 +41,7 @@ context('Journal Article admin edit', () => {
 
         cy.wait(1000);
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 

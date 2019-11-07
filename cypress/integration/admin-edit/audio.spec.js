@@ -36,6 +36,7 @@ context('Audio admin edit', () => {
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
