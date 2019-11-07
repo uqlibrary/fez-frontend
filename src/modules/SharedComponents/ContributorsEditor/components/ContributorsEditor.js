@@ -80,6 +80,7 @@ export class ContributorsEditor extends PureComponent {
                 : this.state.contributors.length;
         // only unique identifiers can be added
         if (
+            !(index < this.state.contributors.length && this.props.canEdit) &&
             this.state.contributors.filter(item => {
                 return !!contributor.aut_id && item.aut_id === contributor.aut_id;
             }).length > 0
