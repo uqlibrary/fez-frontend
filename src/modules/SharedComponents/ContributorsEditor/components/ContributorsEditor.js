@@ -78,9 +78,20 @@ export class ContributorsEditor extends PureComponent {
             this.state.contributorIndexSelectedToEdit !== null
                 ? this.state.contributorIndexSelectedToEdit
                 : this.state.contributors.length;
-        // only unique identifiers can be added
-        if (
-            !(index < this.state.contributors.length && this.props.canEdit) &&
+
+        if (index < this.state.contributors.length && this.props.canEdit) {
+            const isEditedContributorAuthorIdInTheList =
+                this.state.contributors.filter(
+                    (item, itemIndex) =>
+                        !!contributor.aut_id && item.aut_id === contributor.aut_id && index !== itemIndex,
+                ).length > 0;
+            if (isEditedContributorAuthorIdInTheList) {
+                this.setState({
+                    errorMessage: this.props.locale.errorMessage,
+                });
+                return;
+            }
+        } else if (
             this.state.contributors.filter(item => {
                 return !!contributor.aut_id && item.aut_id === contributor.aut_id;
             }).length > 0
@@ -88,29 +99,28 @@ export class ContributorsEditor extends PureComponent {
             this.setState({
                 errorMessage: this.props.locale.errorMessage,
             });
-        } else {
-            const isContributorACurrentAuthor =
-                this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
-            this.setState({
-                contributors: [
-                    ...this.state.contributors.slice(0, index),
-                    {
-                        ...contributor,
-                        disabled:
-                            this.props.editMode &&
-                            !isContributorACurrentAuthor &&
-                            !!parseInt(contributor.uqIdentifier, 10),
-                        selected: isContributorACurrentAuthor,
-                        authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
-                        required: false,
-                    },
-                    ...this.state.contributors.slice(index + 1),
-                ],
-                errorMessage: '',
-                isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || isContributorACurrentAuthor,
-                contributorIndexSelectedToEdit: null,
-            });
+            return;
         }
+
+        const isContributorACurrentAuthor =
+            this.props.author && contributor.uqIdentifier === `${this.props.author.aut_id}`;
+        this.setState({
+            contributors: [
+                ...this.state.contributors.slice(0, index),
+                {
+                    ...contributor,
+                    disabled:
+                        this.props.editMode && !isContributorACurrentAuthor && !!parseInt(contributor.uqIdentifier, 10),
+                    selected: isContributorACurrentAuthor,
+                    authorId: isContributorACurrentAuthor ? this.props.author.aut_id : null,
+                    required: false,
+                },
+                ...this.state.contributors.slice(index + 1),
+            ],
+            errorMessage: '',
+            isCurrentAuthorSelected: this.state.isCurrentAuthorSelected || isContributorACurrentAuthor,
+            contributorIndexSelectedToEdit: null,
+        });
     };
 
     moveUpContributor = (contributor, index) => {
@@ -253,8 +263,18 @@ export class ContributorsEditor extends PureComponent {
 
         return (
             <div>
-                {errorMessage && <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />}
-                {!editMode && this.renderContributorForm()}
+                <Grid container spacing={8}>
+                    {errorMessage && (
+                        <Grid item xs={12}>
+                            <Alert title={this.props.locale.errorTitle} message={errorMessage} type="warning" />
+                        </Grid>
+                    )}
+                    {!editMode && (
+                        <Grid item xs={12}>
+                            {this.renderContributorForm()}
+                        </Grid>
+                    )}
+                </Grid>
                 {contributors.length > 0 && (
                     <Grid container spacing={8}>
                         <Grid item xs={12}>
