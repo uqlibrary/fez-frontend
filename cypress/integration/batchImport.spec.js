@@ -56,6 +56,7 @@ context('Batch import', () => {
 
     it('should show collections filtered by selected community', () => {
         cy.get('#communityPID')
+            .should('exist')
             .click();
         cy.get('#menu-')
             .find('li[role=option]')
@@ -91,27 +92,29 @@ context('Batch import', () => {
     });
 
     it('should be able to reset the form on successful form submission', () => {
+        // select the first entry from each of the 4 drop downs
         allFieldIDs.forEach(item => {
             cy.get(item)
+                .should('exist')
                 .click();
             cy.get('#menu- li[role=option]:first-of-type')
+                .should('exist')
                 .click();
         });
+        // click submit button
         cy.get('#submitBatchImport')
+            .should('have.text', locale.formLabels.submitButtonLabel)
             .click();
-        cy.get('.content-container form > div > div:nth-of-type(2)')
-            .find('.Alert')
-            .as('alertBox')
-            .should('contain', locale.submitProgressAlert.title)
-            .should('contain', locale.submitProgressAlert.message);
         cy.wait(500); // Wait for submission
-        cy.get('@alertBox')
+        // form submitted and the green 'all good' message appears, with 'start another' button
+        cy.get('.content-container form > div > div:nth-of-type(2) .Alert')
             .should('contain', locale.submitSuccessAlert.title)
             .should('contain', locale.submitSuccessAlert.message)
             .contains('button', locale.postSubmitPrompt.confirmButtonLabel)
             .click();
 
-        cy.get('@alertBox')
+        // form is ready to go again and the validation errors re-appear
+        cy.get('.content-container form > div > div:nth-of-type(2) .Alert')
             .contains('.alert-text', 'Validation')
             .should('contain', validationErrors.communityID)
             .should('contain', validationErrors.doc_type_id)
