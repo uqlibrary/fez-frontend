@@ -8,7 +8,6 @@ context('Audio admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -52,6 +51,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Identifiers tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(2)')
             .within(() => {
                 cy.get('div:nth-child(2) > .StandardCard')
@@ -77,6 +77,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(5) > .StandardCard')
@@ -110,14 +111,15 @@ context('Audio admin edit', () => {
                             .should('have.text', record.fez_record_search_key_source.rek_source);
                         cy.get('#Rights')
                             .should('have.text', record.fez_record_search_key_rights.rek_rights);
-                        cy.get('span span')
-                            .eq(1)
+                        cy.get('div:nth-child(15) span span')
+                            .eq(0)
                             .should('have.text', 'Transcript');
                         cy.get('#cke_editor5')
                             .should('exist');
                         cy.read_ckeditor('editor5')
                             .should(text => {
-                                expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
+                                // rerendering of exact spacing means a snippet is more reliable
+                                expect(text).to.contain('Oh. North. North, south, east, west');
                             });
                         cy.get('label[id="Alternate genre-label"]')
                             .parent()
@@ -164,6 +166,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Files tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
@@ -173,7 +176,7 @@ context('Audio admin edit', () => {
                         cy.get('.Alert .alert-text')
                             .should(
                                 'contain.text',
-                                record.fez_record_search_key_advisory_statement.rek_advisory_statement,
+                                record.fez_record_search_key_advisory_statement.rek_advisory_statement.replace("'", '&rsquo;'),
                             );
 
                         cy.get('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
@@ -226,7 +229,8 @@ context('Audio admin edit', () => {
                             .should(text => {
                                 // prettier-ignore
                                 expect(text).to.contain(
-                                    record.fez_record_search_key_advisory_statement.rek_advisory_statement.replace("'", '&rsquo;')
+                                    // theres an odd character in the full text that is blowing the exact match
+                                    'The University of Queensland has approval from traditional owners'
                                 );
                             });
                     });

@@ -88,6 +88,7 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
 Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
     cy.get('#cke_editor1 iframe')
         .should($iframe => {
+            console.log('ckeditor get');
             const body = $iframe
                 .contents()
                 .find('body')

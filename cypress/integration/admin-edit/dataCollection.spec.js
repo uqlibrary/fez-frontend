@@ -7,7 +7,6 @@ context('Data Collection admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000);
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -67,6 +66,7 @@ context('Data Collection admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')

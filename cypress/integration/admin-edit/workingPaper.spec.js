@@ -7,7 +7,6 @@ context('Working paper admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -39,6 +38,7 @@ context('Working paper admin edit', () => {
     });
 
     it('should render Working Paper specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()

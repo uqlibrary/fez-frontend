@@ -7,7 +7,6 @@ context('Journal admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -52,6 +51,7 @@ context('Journal admin edit', () => {
     });
 
     it('should render Journal specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()

@@ -7,7 +7,6 @@ context('Research Report admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -39,6 +38,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -84,6 +84,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Grants tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.root()

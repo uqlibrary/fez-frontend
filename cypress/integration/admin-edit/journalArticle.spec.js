@@ -8,7 +8,6 @@ context('Journal Article admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -52,6 +51,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Admin tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(1)')
             .within(() => {
                 cy.root()
@@ -64,6 +64,7 @@ context('Journal Article admin edit', () => {
                     .eq(0)
                     .should('have.text', 'Internal notes');
                 cy.get(' > div > div:nth-child(2) > div > div:nth-child(2) span span')
+                    .eq(0)
                     .should('have.text', 'HERDC notes');
                 cy.get('#cke_editor1')
                     .should('exist');
@@ -77,11 +78,13 @@ context('Journal Article admin edit', () => {
             });
         cy.read_ckeditor('editor2')
             .should(text => {
-                expect(text).to.contain(record.rek_herdc_notes);
+            // ck rewrites bold as strong, use a snippet instead
+                expect(text).to.contain('Published online before print December 28, 2012');
             });
     });
 
     it('should render Identifiers tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(2)')
             .within(() => {
                 cy.root()
@@ -135,6 +138,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -339,6 +343,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Author details tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(4)')
             .within(() => {
                 cy.root()
@@ -394,6 +399,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Additional information tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
         cy.get('.StandardPage form > div > div:nth-child(5)')
             .within(() => {
@@ -500,6 +506,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Grant information tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(6)')
             .within(() => {
                 cy.root()
@@ -519,6 +526,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Files tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         const record = recordList.data[1];
 
         cy.window()
@@ -606,6 +614,7 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Security tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(8)')
             .within(() => {
                 cy.root()

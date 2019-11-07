@@ -7,7 +7,6 @@ context('Creative Work admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
     });
 
     afterEach(() => {
@@ -39,6 +38,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(8) > .StandardCard')
@@ -59,6 +59,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render Additional information tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(5)')
             .within(() => {
                 cy.get('div:nth-child(2) > .StandardCard')
@@ -86,6 +87,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render NTRO tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(6)')
             .within(() => {
                 cy.root()

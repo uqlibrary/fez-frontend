@@ -12,7 +12,6 @@ context('Design admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000);
-        cy.waitForCkeditorToHaveLoaded();
 
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
