@@ -76,9 +76,12 @@ context('Batch import', () => {
         allFieldIDs.forEach(item => {
             cy.get('.content-container form .Alert .alert-text li')
                 .should('exist');
+
             cy.get(item)
+                .should('exist')
                 .click();
             cy.get('#menu- li[role=option]:first-of-type')
+                .should('exist')
                 .click();
         });
         cy.get('.content-container form .Alert')
