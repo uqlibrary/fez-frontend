@@ -31,7 +31,13 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById(containerId);
     /* istanbul ignore next */
-    if (!!scrollableContainer && scrollableContainer.style && document.getElementById('scrolltopbtn')) {
+    if (
+        !!show &&
+        !!scrollableContainer &&
+        scrollableContainer.style &&
+        !!document.getElementById('scrolltopbtn') &&
+        !!document.getElementById('scrolltopbtn').style
+    ) {
         scrollableContainer.onscroll = () => {
             if (scrollableContainer.scrollTop > showAfter) {
                 document.getElementById('scrolltopbtn').style.opacity = '0.5';
