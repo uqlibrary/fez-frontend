@@ -1,4 +1,6 @@
 import { locale } from 'locale';
+import { dateTimeYear } from 'config/validation';
+
 import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_CONFERENCE_PAPER,
@@ -61,6 +63,11 @@ export default values => {
     !(data.bibliographicSection || {}).rek_title && (errors.bibliographicSection.rek_title = summary.rek_title);
 
     !(data.bibliographicSection || {}).rek_date && (errors.bibliographicSection.rek_date = summary.rek_date);
+
+    dateTimeYear(((data.bibliographicSection || {}).fez_record_search_key_date_available || {}).rek_date_available) &&
+        (errors.bibliographicSection.fez_record_search_key_date_available = {
+            rek_date_available: summary.rek_date_available,
+        });
 
     !((data.additionalInformationSection || {}).collections || []).length > 0 &&
         (errors.additionalInformationSection.collections = summary.collections);
