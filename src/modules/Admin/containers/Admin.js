@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError, destroy } from 'redux-form/immutable';
 import { adminUpdate, adminCreate } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
@@ -128,6 +128,7 @@ const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
+    destroyOnUnmount: false,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
@@ -174,6 +175,7 @@ function mapDispatchToProps(dispatch) {
     return {
         loadRecordToView,
         clearRecordToView,
+        destroy,
     };
 }
 

@@ -25,6 +25,7 @@ import queryString from 'query-string';
 import { validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
+import { FORM_NAME } from '../constants';
 
 export const useQueryStringTabValueState = (location, initialValue) => {
     const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
@@ -43,6 +44,7 @@ export const AdminInterface = ({
     createMode,
     disableSubmit,
     formErrors,
+    destroy,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -62,6 +64,12 @@ export const AdminInterface = ({
         formErrors,
         alertLocale: txt.current.alerts,
     });
+
+    useEffect(() => {
+        return () => {
+            destroy(FORM_NAME);
+        };
+    }, [destroy]);
 
     /* istanbul ignore next */
     useEffect(() => {
@@ -219,6 +227,7 @@ AdminInterface.propTypes = {
     submitting: PropTypes.bool,
     submitSucceeded: PropTypes.bool,
     handleSubmit: PropTypes.func,
+    destroy: PropTypes.func,
     location: PropTypes.object,
     history: PropTypes.object,
     tabs: PropTypes.object,
