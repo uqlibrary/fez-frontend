@@ -65,6 +65,7 @@ export const AdminInterface = ({
         alertLocale: txt.current.alerts,
     });
 
+    /* istanbul ignore next */
     useEffect(() => {
         return () => {
             destroy(FORM_NAME);
