@@ -67,8 +67,7 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
         .should('not.be.empty')
         .click();
     cy.get('#mainMenu .menu-item-container')
-        .eq(0)
-        .should('have.text', 'Home')
+        .should('contain.text', 'Home')
         .contains('Home')
         .click();
     // Say yes to 'Are you sure' if it does trigger
