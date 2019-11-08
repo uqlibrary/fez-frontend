@@ -39,7 +39,6 @@ context('Journal Article admin edit', () => {
                     .should('be.enabled');
             });
 
-        cy.wait(1000);
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
@@ -78,8 +77,7 @@ context('Journal Article admin edit', () => {
             });
         cy.read_ckeditor('editor2')
             .should(text => {
-            // ck rewrites bold as strong, use a snippet instead
-                expect(text).to.contain('Published online before print December 28, 2012');
+                expect(text).to.contain(record.rek_herdc_notes);
             });
     });
 

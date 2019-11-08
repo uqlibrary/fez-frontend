@@ -55,7 +55,6 @@ context('Working paper admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.wait(1000); // Allow more time for rendering ckeditor
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')

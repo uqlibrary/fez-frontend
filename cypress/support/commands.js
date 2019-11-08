@@ -84,11 +84,11 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
  * ckeditor takes a moment to load, making tests fail randomly
  * Call this after a page with a rich editor loads, to make sure at least the first editor has loaded,
  * before you start looking for elements
+ * note: the first test in admin-edit where we check the tabs are present, does NOT like this test!
  */
 Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
     cy.get('#cke_editor1 iframe')
         .should($iframe => {
-            console.log('ckeditor get');
             const body = $iframe
                 .contents()
                 .find('body')

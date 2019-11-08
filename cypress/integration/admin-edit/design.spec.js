@@ -2,17 +2,20 @@ import { default as recordList } from '../../../src/mock/data/records/publicatio
 import moment from 'moment';
 
 context('Design admin edit', () => {
+    const record = recordList.data[0];
+
+    beforeEach(() => {
+        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
+        cy.closeUnsupported();
+        cy.wait(1000); // Wait for data load
+    });
+
     afterEach(() => {
         cy.window()
             .then(win => (win.onbeforeunload = undefined));
     });
 
     it('should load expected tabs', () => {
-        const record = recordList.data[0];
-        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
-        cy.closeUnsupported();
-        cy.wait(1000);
-
         cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
             .as('cards')
             .should('have.length', 8);
@@ -24,7 +27,7 @@ context('Design admin edit', () => {
                     .find('.alert-text')
                     .should('contain', 'Validation -')
                     .find('li')
-                    .should('have.length', 2)
+                    .should('have.length', 3)
                     .should('contain', 'Publisher is required')
                     .should('contain', 'Work subtype is required');
             });
@@ -54,10 +57,6 @@ context('Design admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        const record = recordList.data[1];
-        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
-        cy.closeUnsupported();
-        cy.wait(1000);
         cy.waitForCkeditorToHaveLoaded();
 
         cy.get('.StandardPage form > div > div:nth-child(3)')
@@ -117,10 +116,6 @@ context('Design admin edit', () => {
     });
 
     it('should render Author details tab', () => {
-        const record = recordList.data[0];
-        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
-        cy.closeUnsupported();
-        cy.wait(1000);
         cy.waitForCkeditorToHaveLoaded();
 
         cy.get('.StandardPage form > div > div:nth-child(4)')
