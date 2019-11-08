@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import Fab from '@material-ui/core/Fab';
 import Hidden from '@material-ui/core/Hidden';
@@ -19,57 +19,47 @@ export const styles = () => ({
             opacity: 0.9,
         },
     },
+    showButton: {
+        opacity: 0.9,
+    },
+    hideButton: {
+        opacity: 0,
+    },
 });
 
 /* istanbul ignore next */
-// const scrollWindowToTop = (element, container) => {
-//     console.log(element.event, container);
-//     element.event.preventDefault();
-//     document.getElementById(container).scrollTop = 0;
-// };
+const scrollWindowToTop = container => {
+    document.getElementById(container).scrollTop = 0;
+};
 
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
-    useEffect(() => {
-        document.getElementById('scrolltopbtn') &&
-            document.getElementById('scrolltopbtn').addEventListener('click', e => {
-                e.preventDefault();
-                console.log(document.getElementById(containerId));
-                document.getElementById(containerId).scrollTop = 0;
-            });
-    });
-    const scrollableContainer = document.getElementById(containerId);
-    const scrollButton = document.getElementById('scrolltopbtn');
-    console.log('scrollableContainer', scrollableContainer);
-    console.log('scrollButton', scrollButton);
+    const [showButton, setButtonVisibility] = useState(false);
     /* istanbul ignore next */
-    if (!!show && !!scrollableContainer && !!scrollButton) {
-        scrollableContainer.onscroll = () => {
-            if (scrollableContainer.scrollTop > showAfter) {
-                scrollButton.style.opacity = '0.5';
-                scrollButton.style.right = '32px !important';
-            } else {
-                scrollButton.style.opacity = '0';
-                scrollButton.style.right = '-1000px !important';
-            }
-        };
-    }
+    useEffect(() => {
+        document.getElementById(containerId) &&
+        document.getElementById(containerId).addEventListener('scroll', e => {
+            e.preventDefault();
+            setButtonVisibility(!!(show && document.getElementById(containerId).scrollTop > showAfter));
+        });
+    });
+
     if (!!show) {
         return (
             <Hidden smDown>
                 <Fab
                     color="secondary"
                     aria-label="Scroll to top of this page"
-                    className={classes.scrollTop}
+                    className={` ${classes.scrollTop} ${showButton ? classes.showButton : classes.hideButton} `}
                     id="scrolltopbtn"
                     title="Scroll to top of this page"
                 >
-                    <ArrowUpwardIcon />
+                    <ArrowUpwardIcon onClick={() => scrollWindowToTop(containerId)} />
                 </Fab>
             </Hidden>
         );
     } else {
-        return <div className={'scrolltop-hidden'} />;
+        return null;
     }
 };
 
