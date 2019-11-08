@@ -750,6 +750,7 @@ exports[`Component MyIncompleteRecord _handleDefaultSubmit() 1`] = `
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -1669,6 +1670,7 @@ exports[`Component MyIncompleteRecord componentWillReceiveProps() 1`] = `
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -2613,6 +2615,7 @@ exports[`Component MyIncompleteRecord should render file upload field 1`] = `
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -3616,6 +3619,7 @@ exports[`Component MyIncompleteRecord should render langauge field 1`] = `
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -4535,6 +4539,7 @@ exports[`Component MyIncompleteRecord should render no fields as they are comple
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -5454,6 +5459,7 @@ exports[`Component MyIncompleteRecord should render record citation, two actions
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -6373,6 +6379,7 @@ exports[`Component MyIncompleteRecord should render significance and contributio
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -7298,6 +7305,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box with 
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",
@@ -8217,6 +8225,7 @@ exports[`Component MyIncompleteRecord should render the confirm dialog box witho
             isNtro={true}
             locale={
               Object {
+                "errorMessage": "You can not add two authors with the same ID",
                 "form": Object {
                   "locale": Object {
                     "addButton": "Update author",

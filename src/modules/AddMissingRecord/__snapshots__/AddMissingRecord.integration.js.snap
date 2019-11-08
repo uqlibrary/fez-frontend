@@ -376,8 +376,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       label=\\"Report number\\"
 +                                       placeholder=\\"\\"
 +                                       type=\\"text\\"
-+                                       value=\\"\\"
-+                                     />
+                                        value=\\"\\"
+                                      />
 +                                   </div>
 +                                 </div>
 +                               </div>
@@ -432,8 +432,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                       name=\\"day\\"
 +                                       placeholder=\\"Day\\"
 +                                       type=\\"text\\"
-                                        value=\\"\\"
-                                      />
++                                       value=\\"\\"
++                                     />
 +                                   </div>
 +                                 </div>
 +                                 <p
@@ -476,7 +476,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                                         class=\\"MuiSvgIcon-root-588 MuiSelect-icon-626\\"
                                         focusable=\\"false\\"
                                         role=\\"presentation\\"
-@@ -262,20 +679,670 @@
+@@ -262,20 +679,678 @@
                                       >
                                         <path
                                           d=\\"M7 10l5 5 5-5z\\"
@@ -508,10 +508,10 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                                   </div>
 +                                 </div>
 +                               </div>
-+                             </div>
-+                           </div>
-+                         </div>
-+                       </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
 +                       <div
 +                         class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419\\"
 +                       >
@@ -545,8 +545,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
                         </div>
                       </div>
                     </div>
-                  </div>
-                </div>
++                 </div>
++               </div>
 +               <div
 +                 class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419\\"
 +               >
@@ -564,7 +564,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                       >
 +                         Authors
 +                       </h3>
-                      </div>
++                     </div>
 +                     <div
 +                       class=\\"MuiCardHeader-action-566\\"
 +                     >
@@ -601,8 +601,8 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                         />
 +                       </button>
 +                     </div>
-                    </div>
-                    <div
++                   </div>
++                   <div
 +                     class=\\"MuiCardContent-root-597\\"
 +                   >
 +                     <p
@@ -611,82 +611,90 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                       Please provide a list of authors and then select your name from the list.
 +                     </p>
 +                     <div>
-+                       <div>
-+                         <span
-+                           class=\\"authorSteps\\"
-+                         >
-+                           Step 1 of 2
-+                         </span>
-+                          - Please 
-+                         <b>
-+                           add to a list of authors below
-+                         </b>
-+                         , in the format and order that they are published.
-+                       </div>
 +                       <div
 +                         class=\\"MuiGrid-container-379 MuiGrid-spacing-xs-8-401\\"
-+                         style=\\"margin-top: 8px;\\"
 +                       >
-+                         <div
-+                           class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419 MuiGrid-grid-sm-true-421\\"
+                          <div
++                           class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419\\"
 +                         >
++                           <div>
++                             <span
++                               class=\\"authorSteps\\"
++                             >
++                               Step 1 of 2
++                             </span>
++                              - Please 
++                             <b>
++                               add to a list of authors below
++                             </b>
++                             , in the format and order that they are published.
++                           </div>
 +                           <div
-+                             class=\\"MuiFormControl-root-598 MuiFormControl-fullWidth-601\\"
++                             class=\\"MuiGrid-container-379 MuiGrid-spacing-xs-8-401\\"
++                             style=\\"margin-top: 8px;\\"
 +                           >
-+                             <label
-+                               class=\\"MuiFormLabel-root-613 MuiFormLabel-error-616 MuiInputLabel-error-605 MuiFormLabel-required-618 MuiInputLabel-required-606 MuiInputLabel-root-602 MuiInputLabel-formControl-607 MuiInputLabel-animated-610\\"
-+                               data-shrink=\\"false\\"
-+                               for=\\"authors-name-as-published-field\\"
-+                               id=\\"authors-name-as-published-field-label\\"
-+                             >
-+                               Enter each author's name as published (eg. Smith, John)
-+                               <span
-+                                 class=\\"MuiFormLabel-asterisk-619 MuiFormLabel-error-616 MuiInputLabel-error-605\\"
-+                               >
-+                                  *
-+                               </span>
-+                             </label>
 +                             <div
-+                               class=\\"MuiInputBase-root-640 MuiInput-root-627 MuiInput-underline-631 MuiInputBase-error-646 MuiInput-error-632 MuiInputBase-fullWidth-649 MuiInput-fullWidth-634 MuiInputBase-formControl-641 MuiInput-formControl-628\\"
++                               class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419 MuiGrid-grid-sm-true-421\\"
 +                             >
-+                               <input
-+                                 aria-invalid=\\"true\\"
-+                                 aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 aria-labelledby=\\"authors-name-as-published-field-label\\"
-+                                 autocomplete=\\"off\\"
-+                                 class=\\"MuiInputBase-input-650 MuiInput-input-635\\"
-+                                 id=\\"authors-name-as-published-field\\"
-+                                 label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 placeholder=\\"Type the name exactly as published\\"
-+                                 required=\\"\\"
-+                                 type=\\"text\\"
-+                                 value=\\"\\"
-+                               />
++                               <div
++                                 class=\\"MuiFormControl-root-598 MuiFormControl-fullWidth-601\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-613 MuiFormLabel-error-616 MuiInputLabel-error-605 MuiFormLabel-required-618 MuiInputLabel-required-606 MuiInputLabel-root-602 MuiInputLabel-formControl-607 MuiInputLabel-animated-610\\"
++                                   data-shrink=\\"false\\"
++                                   for=\\"authors-name-as-published-field\\"
++                                   id=\\"authors-name-as-published-field-label\\"
++                                 >
++                                   Enter each author's name as published (eg. Smith, John)
++                                   <span
++                                     class=\\"MuiFormLabel-asterisk-619 MuiFormLabel-error-616 MuiInputLabel-error-605\\"
++                                   >
++                                      *
++                                   </span>
++                                 </label>
++                                 <div
++                                   class=\\"MuiInputBase-root-640 MuiInput-root-627 MuiInput-underline-631 MuiInputBase-error-646 MuiInput-error-632 MuiInputBase-fullWidth-649 MuiInput-fullWidth-634 MuiInputBase-formControl-641 MuiInput-formControl-628\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"true\\"
++                                     aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     aria-labelledby=\\"authors-name-as-published-field-label\\"
++                                     autocomplete=\\"off\\"
++                                     class=\\"MuiInputBase-input-650 MuiInput-input-635\\"
++                                     id=\\"authors-name-as-published-field\\"
++                                     label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     placeholder=\\"Type the name exactly as published\\"
++                                     required=\\"\\"
++                                     type=\\"text\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
 +                             </div>
 +                           </div>
-+                         </div>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-container-379 MuiGrid-spacing-xs-8-401\\"
-+                         style=\\"margin-top: 8px;\\"
-+                       >
-+                         <div
-+                           class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419\\"
-+                           style=\\"margin-bottom: 8px;\\"
-+                         >
-+                           <button
-+                             class=\\"MuiButtonBase-root-585 MuiButtonBase-disabled-586 MuiButton-root-659 MuiButton-contained-670 MuiButton-containedPrimary-671 MuiButton-raised-673 MuiButton-raisedPrimary-674 MuiButton-disabled-679 MuiButton-fullWidth-684\\"
-+                             disabled=\\"\\"
-+                             id=\\"submit-author\\"
-+                             tabindex=\\"-1\\"
-+                             type=\\"button\\"
++                           <div
++                             class=\\"MuiGrid-container-379 MuiGrid-spacing-xs-8-401\\"
++                             style=\\"margin-top: 8px;\\"
 +                           >
-+                             <span
-+                               class=\\"MuiButton-label-660\\"
++                             <div
++                               class=\\"MuiGrid-item-380 MuiGrid-grid-xs-12-419\\"
++                               style=\\"margin-bottom: 8px;\\"
 +                             >
-+                               Add author
-+                             </span>
-+                           </button>
++                               <button
++                                 class=\\"MuiButtonBase-root-585 MuiButtonBase-disabled-586 MuiButton-root-659 MuiButton-contained-670 MuiButton-containedPrimary-671 MuiButton-raised-673 MuiButton-raisedPrimary-674 MuiButton-disabled-679 MuiButton-fullWidth-684\\"
++                                 disabled=\\"\\"
++                                 id=\\"submit-author\\"
++                                 tabindex=\\"-1\\"
++                                 type=\\"button\\"
++                               >
++                                 <span
++                                   class=\\"MuiButton-label-660\\"
++                                 >
++                                   Add author
++                                 </span>
++                               </button>
++                             </div>
++                           </div>
 +                         </div>
 +                       </div>
 +                       <span
@@ -1147,7 +1155,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
             <div
               class=\\"MuiGrid-item-380 MuiGrid-grid-xs-true-407\\"
             />
-@@ -293,10 +1360,28 @@
+@@ -293,10 +1368,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -1434,7 +1442,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                           Work subtype
                           <span
                             class=\\"MuiFormLabel-asterisk-1036\\"
-@@ -299,19 +299,1040 @@
+@@ -299,19 +299,1056 @@
                               class=\\"MuiSelect-select-1038 MuiSelect-selectMenu-1041 MuiInputBase-input-1067 MuiInput-input-1052\\"
                               id=\\"rek-subtype\\"
                               role=\\"button\\"
@@ -1888,82 +1896,90 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                     class=\\"MuiCardContent-root-1014\\"
 +                   >
 +                     <div>
-+                       <div>
-+                         <span
-+                           class=\\"authorSteps\\"
-+                         >
-+                           Step 1 of 2
-+                         </span>
-+                          - Please 
-+                         <b>
-+                           add to a list of authors below
-+                         </b>
-+                         , in the format and order that they are published.
-+                       </div>
 +                       <div
 +                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
-+                       >
-+                         <div
-+                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
-+                         >
-+                           <div
-+                             class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
-+                           >
-+                             <label
-+                               class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-+                               data-shrink=\\"false\\"
-+                               for=\\"authors-name-as-published-field\\"
-+                               id=\\"authors-name-as-published-field-label\\"
-+                             >
-+                               Enter each author's name as published (eg. Smith, John)
-+                               <span
-+                                 class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
-+                               >
-+                                  *
-+                               </span>
-+                             </label>
-+                             <div
-+                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-+                             >
-+                               <input
-+                                 aria-invalid=\\"true\\"
-+                                 aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 aria-labelledby=\\"authors-name-as-published-field-label\\"
-+                                 autocomplete=\\"off\\"
-+                                 class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
-+                                 id=\\"authors-name-as-published-field\\"
-+                                 label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 placeholder=\\"Type the name exactly as published\\"
-+                                 required=\\"\\"
-+                                 type=\\"text\\"
-+                                 value=\\"\\"
-+                               />
-+                             </div>
-+                           </div>
-+                         </div>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
-+                           style=\\"margin-bottom: 8px;\\"
 +                         >
-+                           <button
-+                             class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
-+                             disabled=\\"\\"
-+                             id=\\"submit-author\\"
-+                             tabindex=\\"-1\\"
-+                             type=\\"button\\"
-+                           >
++                           <div>
 +                             <span
-+                               class=\\"MuiButton-label-1077\\"
++                               class=\\"authorSteps\\"
 +                             >
-+                               Add author
++                               Step 1 of 2
 +                             </span>
-+                           </button>
++                              - Please 
++                             <b>
++                               add to a list of authors below
++                             </b>
++                             , in the format and order that they are published.
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
++                             >
++                               <div
++                                 class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
++                                   data-shrink=\\"false\\"
++                                   for=\\"authors-name-as-published-field\\"
++                                   id=\\"authors-name-as-published-field-label\\"
++                                 >
++                                   Enter each author's name as published (eg. Smith, John)
++                                   <span
++                                     class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
++                                   >
++                                      *
++                                   </span>
++                                 </label>
++                                 <div
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"true\\"
++                                     aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     aria-labelledby=\\"authors-name-as-published-field-label\\"
++                                     autocomplete=\\"off\\"
++                                     class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
++                                     id=\\"authors-name-as-published-field\\"
++                                     label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     placeholder=\\"Type the name exactly as published\\"
++                                     required=\\"\\"
++                                     type=\\"text\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
++                               style=\\"margin-bottom: 8px;\\"
++                             >
++                               <button
++                                 class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
++                                 disabled=\\"\\"
++                                 id=\\"submit-author\\"
++                                 tabindex=\\"-1\\"
++                                 type=\\"button\\"
++                               >
++                                 <span
++                                   class=\\"MuiButton-label-1077\\"
++                                 >
++                                   Add author
++                                 </span>
++                               </button>
++                             </div>
++                           </div>
 +                         </div>
 +                       </div>
 +                       <span
@@ -2006,76 +2022,84 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                     class=\\"MuiCardContent-root-1014\\"
 +                   >
 +                     <div>
-+                       <div>
-+                         <span
-+                           class=\\"authorSteps\\"
-+                         >
-+                           Step 1 of 2
-+                         </span>
-+                          - Please 
-+                         <b>
-+                           add to a list of editors below
-+                         </b>
-+                         , in the format \\"John Smith\\".
-+                       </div>
 +                       <div
 +                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
-+                       >
-+                         <div
-+                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
-+                         >
-+                           <div
-+                             class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
-+                           >
-+                             <label
-+                               class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-+                               data-shrink=\\"false\\"
-+                               for=\\"editors-name-as-published-field\\"
-+                               id=\\"editors-name-as-published-field-label\\"
-+                             >
-+                               Enter each editor's name as published (eg. John Smith)
-+                             </label>
-+                             <div
-+                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-+                             >
-+                               <input
-+                                 aria-invalid=\\"false\\"
-+                                 aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 aria-labelledby=\\"editors-name-as-published-field-label\\"
-+                                 autocomplete=\\"off\\"
-+                                 class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
-+                                 id=\\"editors-name-as-published-field\\"
-+                                 label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
-+                                 type=\\"text\\"
-+                                 value=\\"\\"
-+                               />
-+                             </div>
-+                           </div>
-+                         </div>
-+                       </div>
-+                       <div
-+                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
 +                       >
 +                         <div
 +                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
-+                           style=\\"margin-bottom: 8px;\\"
 +                         >
-+                           <button
-+                             class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
-+                             disabled=\\"\\"
-+                             id=\\"submit-author\\"
-+                             tabindex=\\"-1\\"
-+                             type=\\"button\\"
-+                           >
++                           <div>
 +                             <span
-+                               class=\\"MuiButton-label-1077\\"
++                               class=\\"authorSteps\\"
 +                             >
-+                               Add editor
++                               Step 1 of 2
 +                             </span>
-+                           </button>
++                              - Please 
++                             <b>
++                               add to a list of editors below
++                             </b>
++                             , in the format \\"John Smith\\".
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
++                             >
++                               <div
++                                 class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
++                               >
++                                 <label
++                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
++                                   data-shrink=\\"false\\"
++                                   for=\\"editors-name-as-published-field\\"
++                                   id=\\"editors-name-as-published-field-label\\"
++                                 >
++                                   Enter each editor's name as published (eg. John Smith)
++                                 </label>
++                                 <div
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
++                                 >
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     aria-labelledby=\\"editors-name-as-published-field-label\\"
++                                     autocomplete=\\"off\\"
++                                     class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
++                                     id=\\"editors-name-as-published-field\\"
++                                     label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                     type=\\"text\\"
++                                     value=\\"\\"
++                                   />
++                                 </div>
++                               </div>
++                             </div>
++                           </div>
++                           <div
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
++                           >
++                             <div
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
++                               style=\\"margin-bottom: 8px;\\"
++                             >
++                               <button
++                                 class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
++                                 disabled=\\"\\"
++                                 id=\\"submit-author\\"
++                                 tabindex=\\"-1\\"
++                                 type=\\"button\\"
++                               >
++                                 <span
++                                   class=\\"MuiButton-label-1077\\"
++                                 >
++                                   Add editor
++                                 </span>
++                               </button>
++                             </div>
++                           </div>
 +                         </div>
 +                       </div>
 +                       <span
@@ -2478,15 +2502,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                             />
                             <svg
                               aria-hidden=\\"true\\"
-@@ -322,20 +1343,229 @@
-                            >
-                              <path
-                                d=\\"M7 10l5 5 5-5z\\"
-                              />
-                            </svg>
-+                         </div>
-                        </div>
-                      </div>
+@@ -330,12 +1367,221 @@
                     </div>
                   </div>
                 </div>
@@ -2509,7 +2525,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                   >
 +                     Upload files
 +                   </h3>
-                  </div>
++                 </div>
                 </div>
 +               <div
 +                 class=\\"MuiCardContent-root-1014\\"
@@ -2517,7 +2533,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                 <div
 +                   class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-16-819\\"
 +                 >
-                    <div
++                   <div
 +                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
 +                   >
 +                     <p
@@ -2543,7 +2559,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             <div
 +                               class=\\"MuiGrid-container-796 FileUploadDropzoneStaticContent-dropzone-1181\\"
 +                             >
-+                               <div
+                                <div
 +                                 class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-6-844\\"
 +                               >
 +                                 <p
@@ -2708,7 +2724,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-true-824\\"
             />
-@@ -353,10 +1583,28 @@
+@@ -353,10 +1599,28 @@
                   Abandon and search again
                 </span>
                 <span
@@ -2973,7 +2989,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         label=\\"year\\"
                                         maxlength=\\"4\\"
                                         name=\\"year\\"
-@@ -1539,22 +1515,10 @@
+@@ -1555,22 +1531,10 @@
                             <li>
                               Author/creator names are required
                             </li>
@@ -3053,79 +3069,81 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                     <div
                       class=\\"MuiCardContent-root-1014\\"
                     >
-@@ -728,13 +692,13 @@
-                          >
-                            Step 1 of 2
-                          </span>
-                           - Please 
-                          <b>
--                           add to a list of authors below
-+                           add to a list of editors below
-                          </b>
--                         , in the format and order that they are published.
-+                         , in the format \\"John Smith\\".
-                        </div>
-                        <div
-                          class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-                          style=\\"margin-top: 8px;\\"
-                        >
-@@ -743,35 +707,29 @@
-                          >
+@@ -734,13 +698,13 @@
+                              >
+                                Step 1 of 2
+                              </span>
+                               - Please 
+                              <b>
+-                               add to a list of authors below
++                               add to a list of editors below
+                              </b>
+-                             , in the format and order that they are published.
++                             , in the format \\"John Smith\\".
+                            </div>
                             <div
-                              class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
+                              class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+                              style=\\"margin-top: 8px;\\"
                             >
-                              <label
--                               class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-+                               class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-                                data-shrink=\\"false\\"
--                               for=\\"authors-name-as-published-field\\"
--                               id=\\"authors-name-as-published-field-label\\"
--                             >
--                               Enter each author's name as published (eg. Smith, John)
--                               <span
--                                 class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
-+                               for=\\"editors-name-as-published-field\\"
-+                               id=\\"editors-name-as-published-field-label\\"
+@@ -749,35 +713,29 @@
                               >
--                                  *
--                               </span>
-+                               Enter each editor's name as published (eg. John Smith)
-                              </label>
-                              <div
--                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-+                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-                              >
-                                <input
--                                 aria-invalid=\\"true\\"
--                                 aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
--                                 aria-labelledby=\\"authors-name-as-published-field-label\\"
-+                                 aria-invalid=\\"false\\"
-+                                 aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 aria-labelledby=\\"editors-name-as-published-field-label\\"
-                                  autocomplete=\\"off\\"
-                                  class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
--                                 id=\\"authors-name-as-published-field\\"
--                                 label=\\"Enter each author's name as published (eg. Smith, John)\\"
--                                 placeholder=\\"Type the name exactly as published\\"
--                                 required=\\"\\"
-+                                 id=\\"editors-name-as-published-field\\"
-+                                 label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
-                                  type=\\"text\\"
-                                  value=\\"\\"
-                                />
+                                <div
+                                  class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
+                                >
+                                  <label
+-                                   class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
++                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
+                                    data-shrink=\\"false\\"
+-                                   for=\\"authors-name-as-published-field\\"
+-                                   id=\\"authors-name-as-published-field-label\\"
+-                                 >
+-                                   Enter each author's name as published (eg. Smith, John)
+-                                   <span
+-                                     class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
++                                   for=\\"editors-name-as-published-field\\"
++                                   id=\\"editors-name-as-published-field-label\\"
+                                  >
+-                                      *
+-                                   </span>
++                                   Enter each editor's name as published (eg. John Smith)
+                                  </label>
+                                  <div
+-                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+                                  >
+                                    <input
+-                                     aria-invalid=\\"true\\"
+-                                     aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
+-                                     aria-labelledby=\\"authors-name-as-published-field-label\\"
++                                     aria-invalid=\\"false\\"
++                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     aria-labelledby=\\"editors-name-as-published-field-label\\"
+                                      autocomplete=\\"off\\"
+                                      class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
+-                                     id=\\"authors-name-as-published-field\\"
+-                                     label=\\"Enter each author's name as published (eg. Smith, John)\\"
+-                                     placeholder=\\"Type the name exactly as published\\"
+-                                     required=\\"\\"
++                                     id=\\"editors-name-as-published-field\\"
++                                     label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+                                  </div>
+                                </div>
+@@ -799,135 +757,228 @@
+                                  type=\\"button\\"
+                                >
+                                  <span
+                                    class=\\"MuiButton-label-1077\\"
+                                  >
+-                                   Add author
++                                   Add editor
+                                  </span>
+                                </button>
                               </div>
                             </div>
-@@ -793,125 +751,226 @@
-                              type=\\"button\\"
-                            >
-                              <span
-                                class=\\"MuiButton-label-1077\\"
-                              >
--                               Add author
-+                               Add editor
-                              </span>
-                            </button>
                           </div>
                         </div>
 +                       <div
@@ -3158,10 +3176,10 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                 </b>
 -                          as you
 -                       </span>
--                     </div>
--                   </div>
 +                                from the list below (if applicable).
                               </div>
+-                   </div>
+-                 </div>
 -               </div>
 +                             <li
 +                               class=\\"MuiListItem-container-1154\\"
@@ -3193,10 +3211,10 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                   <div
 -                     class=\\"MuiCardHeader-root-981\\"
 +                                   class=\\"MuiListItemText-root-1212\\"
-+                                 >
+                                  >
 +                                   <span
 +                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
-                                    >
++                                   >
 +                                     Editor's name in the format eg. \\"John Smith\\"
 +                                   </span>
 +                                 </div>
@@ -3220,20 +3238,23 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
                                 >
 -                     <div>
--                       <div>
-                                  <span
--                           class=\\"authorSteps\\"
+-                       <div
+-                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                                 <span
 +                                   class=\\"\\"
 +                                   title=\\"Remove all items\\"
                                   >
--                           Step 1 of 2
+-                         <div
+-                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
 +                                   <button
 +                                     aria-label=\\"Remove all items\\"
 +                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 +                                     tabindex=\\"0\\"
 +                                     type=\\"button\\"
-+                                   >
-+                                     <span
+                                    >
+-                           <div>
+                                      <span
+-                               class=\\"authorSteps\\"
 +                                       class=\\"MuiIconButton-label-1001\\"
 +                                     >
 +                                       <svg
@@ -3242,7 +3263,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                         focusable=\\"false\\"
 +                                         role=\\"img\\"
 +                                         viewBox=\\"0 0 24 24\\"
-+                                       >
+                                        >
+-                               Step 1 of 2
 +                                         <path
 +                                           d=\\"M0 0h24v24H0V0z\\"
 +                                           fill=\\"none\\"
@@ -3259,11 +3281,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                         </title>
 +                                       </svg>
                                       </span>
--                          - Please 
--                         <b>
--                           add to a list of editors below
--                         </b>
--                         , in the format \\"John Smith\\".
+-                              - Please 
+-                             <b>
+-                               add to a list of editors below
+-                             </b>
+-                             , in the format \\"John Smith\\".
 +                                     <span
 +                                       class=\\"MuiTouchRipple-root-1137\\"
 +                                     />
@@ -3279,15 +3301,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                               class=\\"MuiListItem-container-1154\\"
 +                             >
                                 <div
--                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
--                         style=\\"margin-top: 8px;\\"
+-                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+-                             style=\\"margin-top: 8px;\\"
 +                                 aria-label=\\"Select this editor (test) to assign it as you\\"
 +                                 class=\\"MuiListItem-root-1153 WithTheme-WithWidth-ContributorRow---listItem-1220   WithTheme-WithWidth-ContributorRow---disabledListItem-1221 MuiListItem-default-1156 MuiListItem-gutters-1161 MuiListItem-divider-1160 MuiListItem-secondaryAction-1163\\"
 +                                 id=\\"contributor-editor-row-0\\"
 +                                 tabindex=\\"0\\"
                                 >
                                   <div
--                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
+-                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
 +                                   class=\\"MuiListItemIcon-root-1229\\"
 +                                 >
 +                                   <svg
@@ -3309,35 +3331,23 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                   </svg>
 +                                 </div>
                                   <div
--                             class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
+-                                 class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
 +                                   class=\\"MuiGrid-container-796 WithTheme-WithWidth-ContributorRow---listContainer-1219\\"
                                   >
--                             <label
--                               class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
--                               data-shrink=\\"false\\"
--                               for=\\"editors-name-as-published-field\\"
--                               id=\\"editors-name-as-published-field-label\\"
+-                                 <label
+-                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
+-                                   data-shrink=\\"false\\"
+-                                   for=\\"editors-name-as-published-field\\"
+-                                   id=\\"editors-name-as-published-field-label\\"
 +                                   <div
 +                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-5-857\\"
                                     >
--                               Enter each editor's name as published (eg. John Smith)
--                             </label>
+-                                   Enter each editor's name as published (eg. John Smith)
+-                                 </label>
                                       <div
--                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+-                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
 +                                       class=\\"MuiListItemText-root-1212\\"
-                                      >
--                               <input
--                                 aria-invalid=\\"false\\"
--                                 aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
--                                 aria-labelledby=\\"editors-name-as-published-field-label\\"
--                                 autocomplete=\\"off\\"
--                                 class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
--                                 id=\\"editors-name-as-published-field\\"
--                                 label=\\"Enter each editor's name as published (eg. John Smith)\\"
--                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
--                                 type=\\"text\\"
--                                 value=\\"\\"
--                               />
++                                     >
 +                                       <p
 +                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---primary-1226  MuiTypography-body2-901 MuiTypography-noWrap-919\\"
 +                                       >
@@ -3345,7 +3355,19 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       </p>
 +                                       <span
 +                                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-noWrap-919\\"
-+                                       >
+                                        >
+-                                   <input
+-                                     aria-invalid=\\"false\\"
+-                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
+-                                     aria-labelledby=\\"editors-name-as-published-field-label\\"
+-                                     autocomplete=\\"off\\"
+-                                     class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
+-                                     id=\\"editors-name-as-published-field\\"
+-                                     label=\\"Enter each editor's name as published (eg. John Smith)\\"
+-                                     placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
+-                                     type=\\"text\\"
+-                                     value=\\"\\"
+-                                   />
 +                                         First  listed editor
 +                                       </span>
                                       </div>
@@ -3353,22 +3375,22 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                   </div>
                                 </div>
                                 <div
--                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
--                         style=\\"margin-top: 8px;\\"
+-                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+-                             style=\\"margin-top: 8px;\\"
 +                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
                                 >
--                         <div
--                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
--                           style=\\"margin-bottom: 8px;\\"
+-                             <div
+-                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
+-                               style=\\"margin-bottom: 8px;\\"
 +                                 <span
 +                                   class=\\"\\"
 +                                   title=\\"Remove this item\\"
                                   >
                                     <button
--                             class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
--                             disabled=\\"\\"
--                             id=\\"submit-author\\"
--                             tabindex=\\"-1\\"
+-                                 class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
+-                                 disabled=\\"\\"
+-                                 id=\\"submit-author\\"
+-                                 tabindex=\\"-1\\"
 +                                     aria-label=\\"Remove this item\\"
 +                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 +                                     id=\\"delete-editor-0\\"
@@ -3376,7 +3398,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                       type=\\"button\\"
                                     >
                                       <span
--                               class=\\"MuiButton-label-1077\\"
+-                                   class=\\"MuiButton-label-1077\\"
 +                                       class=\\"MuiIconButton-label-1001\\"
 +                                     >
 +                                       <svg
@@ -3386,7 +3408,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
                                         >
--                               Add editor
+-                                   Add editor
 +                                         <path
 +                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 +                                         />
@@ -3400,8 +3422,9 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       class=\\"MuiTouchRipple-root-1137\\"
 +                                     />
                                     </button>
+-                             </div>
 +                                 </span>
-+                               </div>
+                                </div>
 +                             </li>
 +                           </ul>
                           </div>
@@ -3409,7 +3432,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                         <span
                           class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorError-927\\"
                         >
-@@ -1510,13 +1569,10 @@
+@@ -1526,13 +1577,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -3430,7 +3453,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 - First value
 + Second value
 
-@@ -878,33 +878,31 @@
+@@ -886,33 +886,31 @@
                               <li
                                 class=\\"MuiListItem-container-1154\\"
                               >
@@ -3469,7 +3492,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                   <div
                                     class=\\"MuiGrid-container-796 WithTheme-WithWidth-ContributorRow---listContainer-1219\\"
                                   >
-@@ -913,16 +911,16 @@
+@@ -921,16 +919,16 @@
                                     >
                                       <div
                                         class=\\"MuiListItemText-root-1212\\"
@@ -3488,7 +3511,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         </span>
                                       </div>
                                     </div>
-@@ -945,11 +943,11 @@
+@@ -953,11 +951,11 @@
                                       <span
                                         class=\\"MuiIconButton-label-1001\\"
                                       >
@@ -3501,7 +3524,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                           viewBox=\\"0 0 24 24\\"
                                         >
                                           <path
-@@ -969,23 +967,10 @@
+@@ -977,23 +975,10 @@
                                 </div>
                               </li>
                             </ul>
@@ -3525,7 +3548,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1516,68 +1501,13 @@
+@@ -1524,68 +1509,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -3594,7 +3617,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1609,22 +1539,24 @@
+@@ -1617,22 +1547,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-auto-837\\"
@@ -3705,79 +3728,81 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                     <div
                       class=\\"MuiCardContent-root-1014\\"
                     >
-@@ -692,13 +728,13 @@
-                          >
-                            Step 1 of 2
-                          </span>
-                           - Please 
-                          <b>
--                           add to a list of editors below
-+                           add to a list of authors below
-                          </b>
--                         , in the format \\"John Smith\\".
-+                         , in the format and order that they are published.
-                        </div>
-                        <div
-                          class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-                          style=\\"margin-top: 8px;\\"
-                        >
-@@ -707,29 +743,35 @@
-                          >
-                            <div
-                              class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
-                            >
-                              <label
--                               class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-+                               class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-                                data-shrink=\\"false\\"
--                               for=\\"editors-name-as-published-field\\"
--                               id=\\"editors-name-as-published-field-label\\"
-+                               for=\\"authors-name-as-published-field\\"
-+                               id=\\"authors-name-as-published-field-label\\"
-+                             >
-+                               Enter each author's name as published (eg. Smith, John)
-+                               <span
-+                                 class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
-                                >
--                               Enter each editor's name as published (eg. John Smith)
-+                                  *
-+                               </span>
-                              </label>
-                              <div
--                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-+                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+@@ -698,13 +734,13 @@
                               >
-                                <input
--                                 aria-invalid=\\"false\\"
--                                 aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
--                                 aria-labelledby=\\"editors-name-as-published-field-label\\"
-+                                 aria-invalid=\\"true\\"
-+                                 aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 aria-labelledby=\\"authors-name-as-published-field-label\\"
-                                  autocomplete=\\"off\\"
-                                  class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
--                                 id=\\"editors-name-as-published-field\\"
--                                 label=\\"Enter each editor's name as published (eg. John Smith)\\"
--                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
-+                                 id=\\"authors-name-as-published-field\\"
-+                                 label=\\"Enter each author's name as published (eg. Smith, John)\\"
-+                                 placeholder=\\"Type the name exactly as published\\"
-+                                 required=\\"\\"
-                                  type=\\"text\\"
-                                  value=\\"\\"
-                                />
+                                Step 1 of 2
+                              </span>
+                               - Please 
+                              <b>
+-                               add to a list of editors below
++                               add to a list of authors below
+                              </b>
+-                             , in the format \\"John Smith\\".
++                             , in the format and order that they are published.
+                            </div>
+                            <div
+                              class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+                              style=\\"margin-top: 8px;\\"
+                            >
+@@ -713,29 +749,35 @@
+                              >
+                                <div
+                                  class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
+                                >
+                                  <label
+-                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
++                                   class=\\"MuiFormLabel-root-1030 MuiFormLabel-error-1033 MuiInputLabel-error-1022 MuiFormLabel-required-1035 MuiInputLabel-required-1023 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
+                                    data-shrink=\\"false\\"
+-                                   for=\\"editors-name-as-published-field\\"
+-                                   id=\\"editors-name-as-published-field-label\\"
++                                   for=\\"authors-name-as-published-field\\"
++                                   id=\\"authors-name-as-published-field-label\\"
++                                 >
++                                   Enter each author's name as published (eg. Smith, John)
++                                   <span
++                                     class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
+                                    >
+-                                   Enter each editor's name as published (eg. John Smith)
++                                      *
++                                   </span>
+                                  </label>
+                                  <div
+-                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-error-1063 MuiInput-error-1049 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+                                  >
+                                    <input
+-                                     aria-invalid=\\"false\\"
+-                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
+-                                     aria-labelledby=\\"editors-name-as-published-field-label\\"
++                                     aria-invalid=\\"true\\"
++                                     aria-label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     aria-labelledby=\\"authors-name-as-published-field-label\\"
+                                      autocomplete=\\"off\\"
+                                      class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
+-                                     id=\\"editors-name-as-published-field\\"
+-                                     label=\\"Enter each editor's name as published (eg. John Smith)\\"
+-                                     placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                     id=\\"authors-name-as-published-field\\"
++                                     label=\\"Enter each author's name as published (eg. Smith, John)\\"
++                                     placeholder=\\"Type the name exactly as published\\"
++                                     required=\\"\\"
+                                      type=\\"text\\"
+                                      value=\\"\\"
+                                    />
+                                  </div>
+                                </div>
+@@ -757,229 +799,151 @@
+                                  type=\\"button\\"
+                                >
+                                  <span
+                                    class=\\"MuiButton-label-1077\\"
+                                  >
+-                                   Add editor
++                                   Add author
+                                  </span>
+                                </button>
                               </div>
                             </div>
-@@ -751,226 +793,140 @@
-                              type=\\"button\\"
-                            >
-                              <span
-                                class=\\"MuiButton-label-1077\\"
-                              >
--                               Add editor
-+                               Add author
-                              </span>
-                            </button>
                           </div>
                         </div>
 -                       <div
@@ -3800,15 +3825,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                               </span>
 -                                - Please 
 +                         Please 
-+                         <b>
-+                           provide a list of authors/creators
-+                         </b>
-+                          of the work and 
                           <b>
 -                                 select your name
-+                           select an author/creator or editor/contributor
++                           provide a list of authors/creators
                           </b>
 -                                from the list below (if applicable).
++                          of the work and 
++                         <b>
++                           select an author/creator or editor/contributor
++                         </b>
 +                          as you
 +                       </span>
 +                     </div>
@@ -3844,11 +3869,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                 </div>
                     <div
 -                                   class=\\"MuiListItemText-root-1212\\"
--                                 >
--                                   <span
--                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
 +                     class=\\"MuiCardHeader-root-981\\"
                     >
+-                                   <span
+-                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
+-                                   >
 -                                     Editor's name in the format eg. \\"John Smith\\"
 -                                   </span>
 -                                 </div>
@@ -3869,21 +3894,25 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                     </div>
                     <div
 -                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
--                               >
++                     class=\\"MuiCardContent-root-1014\\"
+                    >
 -                                 <span
 -                                   class=\\"\\"
 -                                   title=\\"Remove all items\\"
--                                 >
++                     <div>
++                       <div
++                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+                        >
 -                                   <button
 -                                     aria-label=\\"Remove all items\\"
 -                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 -                                     tabindex=\\"0\\"
 -                                     type=\\"button\\"
-+                     class=\\"MuiCardContent-root-1014\\"
-                    >
-+                     <div>
-+                       <div>
-                          <span
++                         <div
++                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
+                          >
++                           <div>
+                              <span
 -                                       class=\\"MuiIconButton-label-1001\\"
 -                                     >
 -                                       <svg
@@ -3892,8 +3921,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                         focusable=\\"false\\"
 -                                         role=\\"img\\"
 -                                         viewBox=\\"0 0 24 24\\"
-+                           class=\\"authorSteps\\"
-                          >
++                               class=\\"authorSteps\\"
+                              >
 -                                         <path
 -                                           d=\\"M0 0h24v24H0V0z\\"
 -                                           fill=\\"none\\"
@@ -3914,14 +3943,14 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                       class=\\"MuiTouchRipple-root-1137\\"
 -                                     />
 -                                   </button>
-+                           Step 1 of 2
-                          </span>
-+                          - Please 
-+                         <b>
-+                           add to a list of editors below
-+                         </b>
-+                         , in the format \\"John Smith\\".
-                        </div>
++                               Step 1 of 2
+                              </span>
++                              - Please 
++                             <b>
++                               add to a list of editors below
++                             </b>
++                             , in the format \\"John Smith\\".
+                            </div>
 -                             </li>
 -                           </ul>
 -                           <ul
@@ -3930,15 +3959,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                             <li
 -                               class=\\"MuiListItem-container-1154\\"
 -                             >
-                        <div
+                            <div
 -                                 aria-label=\\"Select this editor (test) to assign it as you\\"
 -                                 class=\\"MuiListItem-root-1153 WithTheme-WithWidth-ContributorRow---listItem-1220  WithTheme-WithWidth-ContributorRow---rowSelected-1223 WithTheme-WithWidth-ContributorRow---disabledListItem-1221 MuiListItem-default-1156 MuiListItem-gutters-1161 MuiListItem-divider-1160 MuiListItem-secondaryAction-1163\\"
 -                                 id=\\"contributor-editor-row-0\\"
 -                                 tabindex=\\"0\\"
-+                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
-                        >
-                          <div
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
+                            >
+                              <div
 -                                   class=\\"MuiListItemIcon-root-1229 WithTheme-WithWidth-ContributorRow---selected-1224\\"
 -                                 >
 -                                   <svg
@@ -3947,8 +3976,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     focusable=\\"false\\"
 -                                     role=\\"presentation\\"
 -                                     viewBox=\\"0 0 24 24\\"
-+                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
-                          >
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-true-838\\"
+                              >
 -                                     <path
 -                                       d=\\"M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z\\"
 -                                     />
@@ -3958,27 +3987,27 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     />
 -                                   </svg>
 -                                 </div>
-                            <div
+                                <div
 -                                   class=\\"MuiGrid-container-796 WithTheme-WithWidth-ContributorRow---listContainer-1219\\"
-+                             class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
-                            >
++                                 class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
+                                >
 -                                   <div
 -                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-5-857\\"
-+                             <label
-+                               class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
-+                               data-shrink=\\"false\\"
-+                               for=\\"editors-name-as-published-field\\"
-+                               id=\\"editors-name-as-published-field-label\\"
-                              >
-+                               Enter each editor's name as published (eg. John Smith)
-+                             </label>
-                              <div
++                                 <label
++                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
++                                   data-shrink=\\"false\\"
++                                   for=\\"editors-name-as-published-field\\"
++                                   id=\\"editors-name-as-published-field-label\\"
+                                  >
++                                   Enter each editor's name as published (eg. John Smith)
++                                 </label>
+                                  <div
 -                                       class=\\"MuiListItemText-root-1212\\"
--                                     >
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+                                  >
 -                                       <p
 -                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---primary-1226 WithTheme-WithWidth-ContributorRow---selected-1224 MuiTypography-body2-901 MuiTypography-noWrap-919\\"
-+                               class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-                              >
+-                                       >
 -                                         test
 -                                       </p>
 -                                       <span
@@ -3986,56 +4015,56 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                       >
 -                                         First  listed editor
 -                                       </span>
-+                               <input
-+                                 aria-invalid=\\"false\\"
-+                                 aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 aria-labelledby=\\"editors-name-as-published-field-label\\"
-+                                 autocomplete=\\"off\\"
-+                                 class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
-+                                 id=\\"editors-name-as-published-field\\"
-+                                 label=\\"Enter each editor's name as published (eg. John Smith)\\"
-+                                 placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
-+                                 type=\\"text\\"
-+                                 value=\\"\\"
-+                               />
++                                   <input
++                                     aria-invalid=\\"false\\"
++                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     aria-labelledby=\\"editors-name-as-published-field-label\\"
++                                     autocomplete=\\"off\\"
++                                     class=\\"MuiInputBase-input-1067 MuiInput-input-1052\\"
++                                     id=\\"editors-name-as-published-field\\"
++                                     label=\\"Enter each editor's name as published (eg. John Smith)\\"
++                                     placeholder=\\"Type the name in the format eg. \\\\\\"John Smith\\\\\\"\\"
++                                     type=\\"text\\"
++                                     value=\\"\\"
++                                   />
+                                  </div>
+                                </div>
                               </div>
                             </div>
-                          </div>
-                        </div>
-                        <div
+                            <div
 -                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
-+                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-+                         style=\\"margin-top: 8px;\\"
-                        >
++                             class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                             style=\\"margin-top: 8px;\\"
+                            >
 -                                 <span
 -                                   class=\\"\\"
 -                                   title=\\"Remove this item\\"
-+                         <div
-+                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
-+                           style=\\"margin-bottom: 8px;\\"
-                          >
-                            <button
++                             <div
++                               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
++                               style=\\"margin-bottom: 8px;\\"
+                              >
+                                <button
 -                                     aria-label=\\"Remove this item\\"
 -                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 -                                     id=\\"delete-editor-0\\"
 -                                     tabindex=\\"0\\"
-+                             class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
-+                             disabled=\\"\\"
-+                             id=\\"submit-author\\"
-+                             tabindex=\\"-1\\"
-                              type=\\"button\\"
-                            >
-                              <span
++                                 class=\\"MuiButtonBase-root-1002 MuiButtonBase-disabled-1003 MuiButton-root-1076 MuiButton-contained-1087 MuiButton-containedPrimary-1088 MuiButton-raised-1090 MuiButton-raisedPrimary-1091 MuiButton-disabled-1096 MuiButton-fullWidth-1101\\"
++                                 disabled=\\"\\"
++                                 id=\\"submit-author\\"
++                                 tabindex=\\"-1\\"
+                                  type=\\"button\\"
+                                >
+                                  <span
 -                                       class=\\"MuiIconButton-label-1001\\"
-+                               class=\\"MuiButton-label-1077\\"
-                              >
+-                                     >
 -                                       <svg
 -                                         aria-hidden=\\"true\\"
 -                                         class=\\"MuiSvgIcon-root-1005 WithTheme-WithWidth-ContributorRow---selected-1224\\"
 -                                         focusable=\\"false\\"
 -                                         role=\\"presentation\\"
 -                                         viewBox=\\"0 0 24 24\\"
--                                       >
++                                   class=\\"MuiButton-label-1077\\"
+                                  >
 -                                         <path
 -                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 -                                         />
@@ -4044,18 +4073,19 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                           fill=\\"none\\"
 -                                         />
 -                                       </svg>
-+                               Add editor
-                              </span>
++                                   Add editor
+                                  </span>
 -                                     <span
 -                                       class=\\"MuiTouchRipple-root-1137\\"
 -                                     />
-                            </button>
+                                </button>
 -                                 </span>
-                          </div>
+                              </div>
 -                             </li>
 -                           </ul>
+                            </div>
+                          </div>
                         </div>
--                       </div>
 +                       <span
 +                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorError-927\\"
 +                       >
@@ -4069,12 +4099,13 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          as you
 +                       </span>
-                      </div>
++                     </div>
                     </div>
                   </div>
                 </div>
                 <div
-@@ -1510,12 +1466,70 @@
+                  class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
+@@ -1518,12 +1482,70 @@
                     </div>
                   </div>
                 </div>
@@ -4145,7 +4176,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-true-824\\"
             />
-@@ -1539,24 +1553,22 @@
+@@ -1547,24 +1569,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-auto-837\\"

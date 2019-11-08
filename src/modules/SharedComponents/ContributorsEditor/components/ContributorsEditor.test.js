@@ -131,6 +131,53 @@ describe('ContributorsEditor', () => {
         expect(wrapper.state()).toMatchSnapshot();
     });
 
+    it('can not add contributor with same id', () => {
+        const wrapper = setup({
+            editMode: true,
+            canEdit: true,
+            author: authorsSearch.data[0],
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test',
+                    aut_id: authorsSearch.data[0].aut_id,
+                },
+            ],
+        });
+
+        wrapper.instance().addContributor({
+            nameAsPublished: 'Test 2',
+            aut_id: authorsSearch.data[0].aut_id,
+        });
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
+    it('can not edit and add contributor with same id', () => {
+        const wrapper = setup({
+            canEdit: true,
+            author: authorsSearch.data[0],
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test',
+                    aut_id: authorsSearch.data[0].aut_id,
+                },
+                {
+                    nameAsPublished: 'Test 2',
+                },
+            ],
+            contributorIndexSelectedToEdit: 1,
+        });
+        wrapper.instance().addContributor({
+            nameAsPublished: 'Testing',
+            aut_id: authorsSearch.data[0].aut_id,
+        });
+
+        expect(wrapper.state()).toMatchSnapshot();
+    });
+
     it('assigns a contributor to current author', async() => {
         const wrapper = setup({
             author: {

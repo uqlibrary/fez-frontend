@@ -93,6 +93,7 @@ exports[`PreprintForm renders  component 1`] = `
         disabled={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
