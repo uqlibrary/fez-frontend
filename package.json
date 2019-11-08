@@ -322,6 +322,9 @@
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
         ],
+        "coveragePathIgnorePatterns": [
+            "src/modules/SharedComponents/ScrollTop/"
+        ],
         "coverageReporters": [
             "html",
             "text"
