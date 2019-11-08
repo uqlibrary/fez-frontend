@@ -61,7 +61,7 @@ export class OpenAccessIcon extends PureComponent {
                     </Tooltip>
                 </Fragment>
             );
-        } else if (!this.props.isOpenAccess && this.props.embargoDate) {
+        } else if (!this.props.isOpenAccess && !!this.props.embargoDate) {
             const openAccessTitle = txt.openAccessEmbargoedLabel
                 .replace('[embargo_date]', this.props.embargoDate)
                 .replace('[oa_status]', openAccessConfig.labels[this.props.openAccessStatusId]);

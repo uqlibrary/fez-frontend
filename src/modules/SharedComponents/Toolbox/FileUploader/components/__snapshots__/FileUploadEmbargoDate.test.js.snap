@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Component FileUploadEmbargoDate should display the clear field 1`] = `
+<ForwardRef
+  InputProps={
+    Object {
+      "classes": Object {
+        "root": "",
+      },
+      "disableUnderline": true,
+    }
+  }
+  allowKeyboardControl={true}
+  autoOk={true}
+  clearable={true}
+  format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  minDate={2016-01-01T00:00:00.000Z}
+  onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  value={2016-01-01T00:00:00.000Z}
+/>
+`;
+
 exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
 <ForwardRef
   InputProps={
@@ -12,6 +36,7 @@ exports[`Component FileUploadEmbargoDate should render disabled 1`] = `
   }
   allowKeyboardControl={true}
   autoOk={true}
+  clearable={false}
   disabled={true}
   format="DD/MM/YYYY"
   keyboard={true}
@@ -36,6 +61,7 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
   }
   allowKeyboardControl={true}
   autoOk={true}
+  clearable={false}
   format="DD/MM/YYYY"
   keyboard={true}
   keyboardIcon={<pure(EventIcon) />}
@@ -49,13 +75,38 @@ exports[`Component FileUploadEmbargoDate should render with default setup 1`] = 
 
 exports[`Component FileUploadEmbargoDate should render with default setup with styles 1`] = `
 <FileUploadEmbargoDate
+  canBeCleared={false}
   classes={
     Object {
       "input": "FileUploadEmbargoDate-input-1",
     }
   }
   minDate={2016-01-01T00:00:00.000Z}
-  value={2016-01-01T00:00:00.000Z}
+  value="2016"
+/>
+`;
+
+exports[`Component FileUploadEmbargoDate should render with no supplied date 1`] = `
+<ForwardRef
+  InputProps={
+    Object {
+      "classes": Object {
+        "root": "",
+      },
+      "disableUnderline": true,
+    }
+  }
+  allowKeyboardControl={true}
+  autoOk={true}
+  clearable={false}
+  format="DD/MM/YYYY"
+  keyboard={true}
+  keyboardIcon={<pure(EventIcon) />}
+  leftArrowIcon={<pure(KeyboardArrowLeftIcon) />}
+  minDate={2016-01-01T00:00:00.000Z}
+  onChange={[Function]}
+  rightArrowIcon={<pure(KeyboardArrowRightIcon) />}
+  value={null}
 />
 `;
 
@@ -71,6 +122,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
+  clearable={false}
   format="DD/MM/YYYY"
   keyboard={true}
   keyboardIcon={<pure(EventIcon) />}
@@ -94,6 +146,7 @@ exports[`Component FileUploadEmbargoDate should set correct date on date changed
   }
   allowKeyboardControl={true}
   autoOk={true}
+  clearable={false}
   format="DD/MM/YYYY"
   keyboard={true}
   keyboardIcon={<pure(EventIcon) />}

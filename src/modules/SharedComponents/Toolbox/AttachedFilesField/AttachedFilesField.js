@@ -1,6 +1,7 @@
 import React, { useState, useCallback, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { AttachedFiles } from './AttachedFiles';
+import { useFormValuesContext } from 'context';
 
 export const deleteCallbackFactory = (dataStreams, setDataStreams) => {
     const callback = index => {
@@ -28,8 +29,12 @@ export const onChangeCallbackFactory = (dataStreams, onChange) => {
 };
 
 export const AttachedFilesField = ({ input, ...props }) => {
+    const { formValues } = useFormValuesContext();
+
     const [dataStreams, setDataStreams] = useState(
-        (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [],
+        !!formValues.fez_datastream_info
+            ? formValues.fez_datastream_info
+            : (props.meta && props.meta.initial && props.meta.initial.toJS && props.meta.initial.toJS()) || [],
     );
     const { onChange } = input;
 
