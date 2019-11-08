@@ -176,6 +176,11 @@ describe('ContributorsEditor', () => {
         });
 
         expect(wrapper.state()).toMatchSnapshot();
+
+        wrapper.instance().addContributor({
+            nameAsPublished: 'EditedContributorAuthorIdNOTInTheList',
+        });
+        expect(wrapper.state()).toMatchSnapshot();
     });
 
     it('assigns a contributor to current author', async() => {
