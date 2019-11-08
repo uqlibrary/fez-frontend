@@ -64,8 +64,11 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
 
     // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
     cy.get('button[title="Main navigation"]')
+        .should('not.be.empty')
         .click();
     cy.get('#mainMenu .menu-item-container')
+        .eq(0)
+        .should('have.text', 'Home')
         .contains('Home')
         .click();
     // Say yes to 'Are you sure' if it does trigger
