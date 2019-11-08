@@ -276,6 +276,8 @@ You can watch video recordings of your test runs and debug the tests via the [Cy
   ```
 
   See `cypress/support/commands.js` to see how that works.
+  
+- if a test occasionally fails as "requires a DOM element." add a .should test after the .get, to make it wait for the element to appear (.should loops)
 
 ## Mocking
 
