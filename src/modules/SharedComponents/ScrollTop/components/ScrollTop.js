@@ -38,10 +38,10 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     useEffect(() => {
         document.getElementById(containerId) &&
-        document.getElementById(containerId).addEventListener('scroll', e => {
-            e.preventDefault();
-            setButtonVisibility(!!(show && document.getElementById(containerId).scrollTop > showAfter));
-        });
+            document.getElementById(containerId).addEventListener('scroll', e => {
+                e.preventDefault();
+                setButtonVisibility(!!(show && document.getElementById(containerId).scrollTop > showAfter));
+            });
     });
 
     if (!!show) {
