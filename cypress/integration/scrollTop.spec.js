@@ -15,7 +15,7 @@ context('Scroll to top module', () => {
         cy.get('#content-container')
             .scrollTo('bottom');
         cy.get('button#scrolltopbtn')
-            .should('have.css', 'opacity', '0.5');
+            .should('have.css', 'opacity', '0.9');
         cy.wait(1000);
         cy.get('button#scrolltopbtn')
             .click();

@@ -1,16 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component ScrollTop should not render component 1`] = `
-<div
-  className="scrolltop-hidden"
-/>
-`;
+exports[`Component ScrollTop should not render component 1`] = `""`;
 
 exports[`Component ScrollTop should not render component 2`] = `
 <ScrollTop
   classes={
     Object {
+      "hideButton": "ScrollTop-hideButton-3",
       "scrollTop": "ScrollTop-scrollTop-1",
+      "showButton": "ScrollTop-showButton-2",
     }
   }
   containerId="content-container"
@@ -35,11 +33,14 @@ exports[`Component ScrollTop should render component 1`] = `
 >
   <WithStyles(Fab)
     aria-label="Scroll to top of this page"
+    className=" undefined undefined "
     color="secondary"
     id="scrolltopbtn"
     title="Scroll to top of this page"
   >
-    <pure(ArrowUpwardIcon) />
+    <pure(ArrowUpwardIcon)
+      onClick={[Function]}
+    />
   </WithStyles(Fab)>
 </Hidden>
 `;
@@ -48,7 +49,9 @@ exports[`Component ScrollTop should render component 2`] = `
 <ScrollTop
   classes={
     Object {
+      "hideButton": "ScrollTop-hideButton-3",
       "scrollTop": "ScrollTop-scrollTop-1",
+      "showButton": "ScrollTop-showButton-2",
     }
   }
   containerId="content-container"
