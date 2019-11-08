@@ -27,7 +27,7 @@ exports[`FilesSection component should render default view for Files on a Data C
         ],
         "title": "Deposit agreement",
       },
-    ],
+    ]
   }
   disabled={false}
 />
@@ -68,7 +68,7 @@ exports[`FilesSection component should render default view for Files on a public
         ],
         "title": "Copyright agreement",
       },
-    ],
+    ]
   }
   disabled={false}
 />
@@ -101,7 +101,7 @@ exports[`FilesSection component should render default view for Files on a public
         ],
         "title": "Copyright agreement",
       },
-    ],
+    ]
   }
   disabled={false}
 />
