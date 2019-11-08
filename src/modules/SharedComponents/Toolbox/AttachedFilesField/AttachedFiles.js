@@ -27,6 +27,7 @@ import FileUploadEmbargoDate from '../FileUploader/components/FileUploadEmbargoD
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 
 import { FileIcon } from './FileIcon';
+import { stripHtml } from 'helpers/general';
 
 export const useStyles = makeStyles(
     /* istanbul ignore next */
@@ -255,8 +256,8 @@ export const AttachedFiles = ({
                         allowDismiss
                         type="info"
                         message={
-                            record.fez_record_search_key_advisory_statement.rek_advisory_statement ||
-                            locale.culturalSensitivityStatement
+                            stripHtml(record.fez_record_search_key_advisory_statement.rek_advisory_statement) ||
+                            stripHtml(locale.culturalSensitivityStatement)
                         }
                         dismissAction={setHideCulturalSensitivityStatement}
                     />

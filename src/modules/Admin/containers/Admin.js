@@ -20,6 +20,7 @@ import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { detailedDiff } from 'deep-object-diff';
 import { pathConfig } from 'config/routes';
+import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
@@ -36,6 +37,7 @@ export const identifiersParams = record => ({
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+    displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) =>
