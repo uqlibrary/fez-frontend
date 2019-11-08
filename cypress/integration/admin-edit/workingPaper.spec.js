@@ -27,8 +27,8 @@ context('Working paper admin edit', () => {
                     .should('be.enabled');
             });
 
-        cy.wait(1000);
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -38,6 +38,7 @@ context('Working paper admin edit', () => {
     });
 
     it('should render Working Paper specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -54,11 +55,10 @@ context('Working paper admin edit', () => {
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
-                        cy.wait(1000); // Allow more time for rendering ckeditor
                         cy.get('#cke_editor3')
                             .should('exist');
                         cy.read_ckeditor('editor3')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                             });
                     });

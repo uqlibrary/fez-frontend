@@ -27,7 +27,8 @@ context('Data Collection form', () => {
             .should('have.length', 13);
 
         // Dataset name
-        cy.get('textarea#Datasetname:visible', { timeout: 5000 })
+        cy.get('textarea#Datasetname:visible') // , { timeout: 5000 })
+            .should('exist')
             .type('Name of Dataset');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
@@ -36,7 +37,8 @@ context('Data Collection form', () => {
             .should('have.length', 12);
 
         // Dataset description
-        cy.get('textarea#Datasetdescription:visible', { timeout: 5000 })
+        cy.get('textarea#Datasetdescription:visible') // , { timeout: 5000 })
+            .should('exist')
             .type('Description of Dataset');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');

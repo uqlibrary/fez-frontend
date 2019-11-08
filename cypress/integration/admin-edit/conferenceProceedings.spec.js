@@ -40,8 +40,8 @@ context('Conference Proceedings admin edit', () => {
             .should('exist')
             .should('be.disabled');
 
-        cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -56,6 +56,7 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
@@ -67,6 +68,7 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Author details tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(4)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
@@ -87,6 +89,7 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Files tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
@@ -109,6 +112,7 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Security tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(8)')
             .within(() => {
                 cy.get('h3')

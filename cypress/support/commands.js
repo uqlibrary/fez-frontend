@@ -64,8 +64,10 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
 
     // Navigate away to trigger 'Are you sure' dialogue about unsaved changes
     cy.get('button[title="Main navigation"]')
+        .should('not.be.empty')
         .click();
     cy.get('#mainMenu .menu-item-container')
+        .should('not.be.empty')
         .contains('Home')
         .click();
     // Say yes to 'Are you sure' if it does trigger
@@ -77,5 +79,22 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
                     .contains(locale.confirmButtonLabel)
                     .click();
             }
+        });
+});
+
+/**
+ * ckeditor takes a moment to load, making tests fail randomly
+ * Call this after a page with a rich editor loads, to make sure at least the first editor has loaded,
+ * before you start looking for elements
+ * note: the first test in admin-edit where we check the tabs are present, does NOT like this test!
+ */
+Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
+    cy.get('#cke_editor1 iframe')
+        .should($iframe => {
+            const body = $iframe
+                .contents()
+                .find('body')
+                .get(0);
+            expect(body).to.be.ok;
         });
 });

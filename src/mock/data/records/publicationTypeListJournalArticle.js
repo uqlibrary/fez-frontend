@@ -620,7 +620,7 @@ export default {
             "rek_scopus_doc_type_lookup": null,
             "rek_status_lookup": "Published",
             "rek_wok_doc_type_lookup": null,
-            "rek_herdc_notes": "Published author bylines:<br /> <b>Adam S Burston; and Anthony G Tuckett<br />The University of Queensland, Australia</b><br /><br />Corresponding author: Adam S Burston, The University of Queensland, School of Nursing and Midwifery, UQ Ipswich Campus, QLD 4305, Australia. Email: a.burston@uq.edu.au<br /><br />Published online before print December 28, 2012<br /><br />3/5/13 added print details<br /><br />",
+            "rek_herdc_notes": "12/1/12 Amended ID at author request #886821",
             "fez_internal_notes": {
                 "ain_id": 42684,
                 "ain_pid": "UQ:288291",

@@ -37,6 +37,7 @@ context('Digilib Image admin edit', () => {
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -56,6 +57,7 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should render Digilib Image specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -263,6 +265,7 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should render Author details tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(4)')
             .within(() => {
                 cy.root()
