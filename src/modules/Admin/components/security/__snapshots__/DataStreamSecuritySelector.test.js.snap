@@ -12,10 +12,10 @@ exports[`DataStreamSecuritySelector component should change security value for t
                 <div
                   aria-haspopup=\\"true\\"
 -                 aria-pressed=\\"false\\"
-+                 aria-owns=\\"menu-test.txt\\"
++                 aria-owns=\\"menu-test5.txt\\"
 +                 aria-pressed=\\"true\\"
                   class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test.txt\\"
+                  id=\\"select-test5.txt\\"
                   role=\\"button\\"
                   tabindex=\\"0\\"
                 >"
@@ -32,11 +32,11 @@ exports[`DataStreamSecuritySelector component should change security value for t
               >
                 <div
                   aria-haspopup=\\"true\\"
--                 aria-owns=\\"menu-test.txt\\"
+-                 aria-owns=\\"menu-test5.txt\\"
 -                 aria-pressed=\\"true\\"
 +                 aria-pressed=\\"false\\"
                   class=\\"MuiSelect-select-376 MuiSelect-selectMenu-379 MuiInputBase-input-405 MuiInput-input-390\\"
-                  id=\\"select-test.txt\\"
+                  id=\\"select-test5.txt\\"
                   role=\\"button\\"
                   tabindex=\\"0\\"
                 >
@@ -46,7 +46,7 @@ exports[`DataStreamSecuritySelector component should change security value for t
                 <input
                   aria-labelledby=\\"Record level policy to apply to this PID-label\\"
                   id=\\"Record level policy to apply to this PID\\"
-                  name=\\"test.txt\\"
+                  name=\\"test5.txt\\"
                   type=\\"hidden\\"
 -                 value=\\"1\\"
 +                 value=\\"5\\"
@@ -73,16 +73,16 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
     style="margin-top: 8px; padding: 16px;"
   >
     <div
-      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-end-49 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
+      class="MuiGrid-container-39 MuiGrid-spacing-xs-32-64 MuiGrid-align-items-xs-flex-start-48 MuiGrid-align-content-xs-flex-end-53 DataStreamSecuritySelector-dataStreamFileBlock-1 dataStreamFileBlock"
     >
       <div
         class="MuiGrid-item-40 MuiGrid-grid-xs-12-79 MuiGrid-grid-sm-6-87 DataStreamSecuritySelector-dataStreamFileName-2 dataStreamFileName"
       >
         <a
           class="MuiTypography-root-3 MuiTypography-colorPrimary-33 MuiTypography-inline-38 MuiLink-root-136 MuiLink-underlineHover-138"
-          title="test.txt"
+          title="test4.txt"
         >
-          test.txt
+          test4.txt
         </a>
         <span
           class="MuiTypography-root-3 MuiTypography-caption-13"
@@ -124,7 +124,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
                 aria-haspopup="true"
                 aria-pressed="false"
                 class="MuiSelect-select-164 MuiSelect-selectMenu-167 MuiInputBase-input-193 MuiInput-input-178"
-                id="select-test.txt"
+                id="select-test4.txt"
                 role="button"
                 tabindex="0"
               >
@@ -133,7 +133,7 @@ exports[`DataStreamSecuritySelector component should render default view 1`] = `
               <input
                 aria-labelledby="Record level policy to apply to this PID-label"
                 id="Record level policy to apply to this PID"
-                name="test.txt"
+                name="test4.txt"
                 type="hidden"
                 value="1"
               />

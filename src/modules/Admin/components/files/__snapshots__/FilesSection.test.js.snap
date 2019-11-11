@@ -1,6 +1,39 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FilesSection component should render default view 1`] = `
+exports[`FilesSection component should render default view for Files on a Data Collection publication type 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_datastream_info",
+          ],
+        ],
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "files",
+          ],
+        ],
+        "title": "Files",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_copyright",
+          ],
+        ],
+        "title": "Deposit agreement",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`FilesSection component should render default view for Files on a publication type that DOES show advisory statement 1`] = `
 <Section
   cards={
     Array [
@@ -33,7 +66,40 @@ exports[`FilesSection component should render default view 1`] = `
             "rek_copyright",
           ],
         ],
-        "title": "Deposit agreement",
+        "title": "Copyright agreement",
+      },
+    ]
+  }
+  disabled={false}
+/>
+`;
+
+exports[`FilesSection component should render default view for Files on a publication type that does NOT show advisory statement 1`] = `
+<Section
+  cards={
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "fez_datastream_info",
+          ],
+        ],
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "files",
+          ],
+        ],
+        "title": "Files",
+      },
+      Object {
+        "groups": Array [
+          Array [
+            "rek_copyright",
+          ],
+        ],
+        "title": "Copyright agreement",
       },
     ]
   }

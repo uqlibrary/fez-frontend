@@ -29,12 +29,12 @@ function setup(testProps = {}, args = { isShallow: false }) {
 }
 
 describe('SecuritySectionContainer', () => {
-    it('should mount with default props', () => {
+    it('should mount with default props for a record', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
                 dataStreams: Immutable.List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test7.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -74,7 +74,7 @@ describe('SecuritySectionContainer', () => {
 
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
+                rek_pid: 'UQ:123457',
                 rek_object_type_lookup: 'Record',
                 fez_record_search_key_ismemberof: [
                     {
@@ -92,7 +92,7 @@ describe('SecuritySectionContainer', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should mount with default props', () => {
+    it('should mount with default props for a collection for a super admin', () => {
         useFormValuesContext.mockImplementation(() => ({
             formValues: {
                 rek_security_inherited: 1,
@@ -103,7 +103,7 @@ describe('SecuritySectionContainer', () => {
 
         useRecordContext.mockImplementation(() => ({
             record: {
-                rek_pid: 'UQ:123456',
+                rek_pid: 'UQ:123458',
                 rek_object_type_lookup: 'Collection',
             },
         }));

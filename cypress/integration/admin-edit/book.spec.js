@@ -27,8 +27,8 @@ context('Book admin edit', () => {
                     .should('be.enabled');
             });
 
-        cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -36,8 +36,8 @@ context('Book admin edit', () => {
             .should('have.length', 1)
             .should('have.text', 'Bibliographic');
 
-        cy.wait(1000); // Test going back to list view
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.not.checked');
 
@@ -46,6 +46,7 @@ context('Book admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')

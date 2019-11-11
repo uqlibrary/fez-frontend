@@ -71,7 +71,7 @@ export default {
                 "rek_advisory_statement_id": 21968,
                 "rek_advisory_statement_pid": "UQ:358319",
                 "rek_advisory_statement_xsdmf_id": 16630,
-                "rek_advisory_statement": "Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and/or descendants of the people who participated in Elwyn Flint’s Queensland Speech Survey in the 1960s."
+                "rek_advisory_statement": "Aboriginal and Torres Strait Islander material and information accessed on this site may be culturally sensitive for some individuals and communities. The University of Queensland has approval from traditional owners and or descendants of the people who participated in the Queensland Speech Survey by Elwyn Flint in the 1960s."
             },
             "fez_record_search_key_alternate_genre": [
                 {
@@ -301,7 +301,13 @@ export default {
                 }
             ],
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": null,
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 655953,
+                "rek_oa_status_pid": "UQ:048b923",
+                "rek_oa_status_xsdmf_id": null,
+                "rek_oa_status": 453696,
+                "rek_oa_status_lookup": "File (Author Post-print)"
+            },
             "fez_record_search_key_original_format": null,
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
@@ -347,7 +353,7 @@ export default {
                 "rek_transcript_id": 21580,
                 "rek_transcript_pid": "UQ:358319",
                 "rek_transcript_xsdmf_id": 16626,
-                "rek_transcript": "Researcher: North.<br /> Researcher: Oh. North. North, south, east, west. North.<br /> Participant: (Traditional Language)<br /> Researcher: (Traditional Language)?<br /> Researcher: (Traditional Language) north."
+                "rek_transcript": "Researcher: Food?<br />Participant: (Traditional Language)"
             },
             "fez_record_search_key_translated_title": null,
             "fez_record_search_key_wok_doc_types": [],
@@ -421,7 +427,7 @@ export default {
                 {
                     "dsi_pid": "UQ:358319",
                     "dsi_dsid": "UQFL173_b57_R298B_2579510.mp3",
-                    "dsi_embargo_date": null,
+                    "dsi_embargo_date": "2099-01-01",
                     "dsi_open_access": null,
                     "dsi_label": "",
                     "dsi_mimetype": "audio/mpeg",
@@ -670,13 +676,7 @@ export default {
             "fez_record_search_key_link_description": [],
             "fez_record_search_key_location": [],
             "fez_record_search_key_notes": null,
-            "fez_record_search_key_oa_status": {
-                "rek_oa_status_id": 655953,
-                "rek_oa_status_pid": "UQ:048b923",
-                "rek_oa_status_xsdmf_id": null,
-                "rek_oa_status": 453696,
-                "rek_oa_status_lookup": "File (Author Post-print)"
-            },
+            "fez_record_search_key_oa_status": null,
             "fez_record_search_key_original_format": {
                 "rek_original_format_id": 26908,
                 "rek_original_format_pid": "UQ:048b923",

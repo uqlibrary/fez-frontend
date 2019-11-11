@@ -795,7 +795,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_date_available: {
                     ...dateAvailable,
-                    rek_date_available: moment(dateAvailable.rek_date_available).format(),
+                    rek_date_available: moment(dateAvailable.rek_date_available, 'YYYY').format(),
                 },
             }
             : {}),
@@ -803,7 +803,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             ? {
                 fez_record_search_key_date_recorded: {
                     ...dateRecorded,
-                    rek_date_recorded: moment(dateRecorded.rek_date_recorded).format(),
+                    rek_date_recorded: moment(dateRecorded.rek_date_recorded, 'YYYY').format(),
                 },
             }
             : {}),

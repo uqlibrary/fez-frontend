@@ -48,6 +48,27 @@ Object {
 }
 `;
 
+exports[`ContributorsEditor can not edit and add contributor with same id 2`] = `
+Object {
+  "contributorIndexSelectedToEdit": null,
+  "contributors": Array [
+    Object {
+      "aut_id": 410,
+      "nameAsPublished": "test",
+    },
+    Object {
+      "authorId": null,
+      "disabled": false,
+      "nameAsPublished": "EditedContributorAuthorIdNOTInTheList",
+      "required": false,
+      "selected": false,
+    },
+  ],
+  "errorMessage": "",
+  "isCurrentAuthorSelected": false,
+}
+`;
+
 exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 <div>
   <WithStyles(Grid)

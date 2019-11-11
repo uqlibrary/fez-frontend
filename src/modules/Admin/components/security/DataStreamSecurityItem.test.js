@@ -22,7 +22,7 @@ function setup(testProps = {}) {
         },
         inheritedSecurity: 2,
         onSecurityChange: jest.fn(),
-        policyDropdownLabel: 'Test label',
+        policyDropdownLabel: 'Test Policy Dropdown Label',
         ...testProps,
     };
     return rtlRender(<DataStreamSecurityItem {...props} />);
@@ -100,5 +100,18 @@ describe('DataStreamSecurityItem component', () => {
                 ),
             ).toBeFalsy();
         });
+    });
+
+    it('should render view for a subsequent file', () => {
+        const { asFragment } = setup({
+            dataStream: {
+                dsi_dsid: 'test.jpg',
+                dsi_security_policy: 2,
+                dsi_security_inherited: 0,
+                dsi_embargo_date: '2099-01-01',
+            },
+            index: 2,
+        });
+        expect(asFragment()).toMatchSnapshot();
     });
 });

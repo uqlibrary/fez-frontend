@@ -4,7 +4,7 @@ export default {
             groups: [['internalNotes'], ['rek_herdc_notes']],
         },
     ],
-    files: ({ isDataset } = { isDataset: false }) => [
+    files: ({ isDataset, displayAdvisoryStatement } = { isDataset: false, displayAdvisoryStatement: false }) => [
         {
             groups: [['fez_datastream_info']],
         },
@@ -12,10 +12,14 @@ export default {
             title: 'Files',
             groups: [['files']],
         },
-        {
-            title: 'Advisory statement',
-            groups: [['advisoryStatement']],
-        },
+        ...(displayAdvisoryStatement
+            ? [
+                {
+                    title: 'Advisory statement',
+                    groups: [['advisoryStatement']],
+                },
+            ]
+            : []),
         {
             title: isDataset ? 'Deposit agreement' : 'Copyright agreement',
             groups: [['rek_copyright']],

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
 import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
