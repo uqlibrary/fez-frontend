@@ -79,42 +79,42 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                           </div>
                         </div>
                       </div>
-@@ -277,27 +270,27 @@
-                      >
-                        <div
-                          class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
-                        >
-                          <label
--                           class=\\"MuiFormLabel-root-208 MuiFormLabel-error-211 MuiInputLabel-error-200 MuiFormLabel-required-213 MuiInputLabel-required-201 MuiInputLabel-root-197 MuiInputLabel-formControl-202 MuiInputLabel-animated-205\\"
-+                           class=\\"MuiFormLabel-root-208 MuiFormLabel-required-213 MuiInputLabel-required-201 MuiInputLabel-root-197 MuiInputLabel-formControl-202 MuiInputLabel-animated-205\\"
-                            data-shrink=\\"false\\"
-                            for=\\"supervisors-name-as-published-field\\"
-                            id=\\"supervisors-name-as-published-field-label\\"
+@@ -283,27 +276,27 @@
                           >
-                            Enter each supervisor’s name on a separate line e.g. Firstname Surname
-                            <span
--                             class=\\"MuiFormLabel-asterisk-214 MuiFormLabel-error-211 MuiInputLabel-error-200\\"
-+                             class=\\"MuiFormLabel-asterisk-214\\"
+                            <div
+                              class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
                             >
-                               *
-                            </span>
-                          </label>
-                          <div
--                           class=\\"MuiInputBase-root-228 MuiInput-root-215 MuiInput-underline-219 MuiInputBase-error-234 MuiInput-error-220 MuiInputBase-fullWidth-237 MuiInput-fullWidth-222 MuiInputBase-formControl-229 MuiInput-formControl-216\\"
-+                           class=\\"MuiInputBase-root-228 MuiInput-root-215 MuiInput-underline-219 MuiInputBase-fullWidth-237 MuiInput-fullWidth-222 MuiInputBase-formControl-229 MuiInput-formControl-216\\"
-                          >
-                            <input
--                             aria-invalid=\\"true\\"
-+                             aria-invalid=\\"false\\"
-                              aria-label=\\"Enter each supervisor’s name on a separate line e.g. Firstname Surname\\"
-                              aria-labelledby=\\"supervisors-name-as-published-field-label\\"
-                              autocomplete=\\"off\\"
-                              class=\\"MuiInputBase-input-238 MuiInput-input-223\\"
-                              id=\\"supervisors-name-as-published-field\\"
-@@ -332,20 +325,215 @@
-                            Add supervisor
-                          </span>
-                        </button>
+                              <label
+-                               class=\\"MuiFormLabel-root-208 MuiFormLabel-error-211 MuiInputLabel-error-200 MuiFormLabel-required-213 MuiInputLabel-required-201 MuiInputLabel-root-197 MuiInputLabel-formControl-202 MuiInputLabel-animated-205\\"
++                               class=\\"MuiFormLabel-root-208 MuiFormLabel-required-213 MuiInputLabel-required-201 MuiInputLabel-root-197 MuiInputLabel-formControl-202 MuiInputLabel-animated-205\\"
+                                data-shrink=\\"false\\"
+                                for=\\"supervisors-name-as-published-field\\"
+                                id=\\"supervisors-name-as-published-field-label\\"
+                              >
+                                Enter each supervisor’s name on a separate line e.g. Firstname Surname
+                                <span
+-                                 class=\\"MuiFormLabel-asterisk-214 MuiFormLabel-error-211 MuiInputLabel-error-200\\"
++                                 class=\\"MuiFormLabel-asterisk-214\\"
+                                >
+                                   *
+                                </span>
+                              </label>
+                              <div
+-                               class=\\"MuiInputBase-root-228 MuiInput-root-215 MuiInput-underline-219 MuiInputBase-error-234 MuiInput-error-220 MuiInputBase-fullWidth-237 MuiInput-fullWidth-222 MuiInputBase-formControl-229 MuiInput-formControl-216\\"
++                               class=\\"MuiInputBase-root-228 MuiInput-root-215 MuiInput-underline-219 MuiInputBase-fullWidth-237 MuiInput-fullWidth-222 MuiInputBase-formControl-229 MuiInput-formControl-216\\"
+                              >
+                                <input
+-                                 aria-invalid=\\"true\\"
++                                 aria-invalid=\\"false\\"
+                                  aria-label=\\"Enter each supervisor’s name on a separate line e.g. Firstname Surname\\"
+                                  aria-labelledby=\\"supervisors-name-as-published-field-label\\"
+                                  autocomplete=\\"off\\"
+                                  class=\\"MuiInputBase-input-238 MuiInput-input-223\\"
+                                  id=\\"supervisors-name-as-published-field\\"
+@@ -340,20 +333,215 @@
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
 +                   <div
@@ -329,7 +329,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
               >
-@@ -397,57 +585,156 @@
+@@ -405,57 +593,156 @@
                           >
                             <div
                               class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
@@ -377,7 +377,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                     </div>
 +                   </div>
 +                   <div
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-437\\"
@@ -432,7 +432,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"ListRow-Fieldofresearch ListRow-Fieldofresearch-0101 Pure Mathematics\\"
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-439\\"
@@ -495,7 +495,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -485,41 +772,34 @@
+@@ -494,41 +781,34 @@
                       >
                         <div
                           class=\\"MuiFormControl-root-193 MuiFormControl-fullWidth-196\\"
@@ -542,7 +542,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                       <div
                         class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-2-47\\"
                       >
-@@ -532,18 +812,267 @@
+@@ -541,18 +821,267 @@
                         >
                           <span
                             class=\\"MuiButton-label-273\\"
@@ -553,7 +553,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                     </div>
 +                   </div>
 +                   <div
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-437\\"
@@ -617,7 +617,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"ListRow-Keywords ListRow-Keywords-test1\\"
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-439\\"
@@ -710,7 +710,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"ListRow-Keywords ListRow-Keywords-test2\\"
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-439\\"
@@ -810,7 +810,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -662,77 +1191,13 @@
+@@ -671,77 +1200,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -888,7 +888,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
                   </div>
                 </div>
               </div>
-@@ -764,21 +1229,23 @@
+@@ -773,21 +1238,23 @@
             </div>
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"

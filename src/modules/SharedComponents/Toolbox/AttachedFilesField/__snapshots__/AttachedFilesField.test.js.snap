@@ -8,6 +8,14 @@ exports[`AttachedFilesField component should render default view 1`] = `
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
+  onEmbargoClearPromptText={
+    <span>
+      <b>
+        Embargo date removed
+      </b>
+       - review security policy on Security tab
+    </span>
+  }
 />
 `;
 
@@ -54,5 +62,13 @@ exports[`AttachedFilesField component should render with initial data 1`] = `
   onDateChange={[Function]}
   onDelete={[Function]}
   onDescriptionChange={[Function]}
+  onEmbargoClearPromptText={
+    <span>
+      <b>
+        Embargo date removed
+      </b>
+       - review security policy on Security tab
+    </span>
+  }
 />
 `;

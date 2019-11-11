@@ -64,6 +64,7 @@ export const AdminContainer = ({
     history,
     createMode,
     formErrors,
+    destroy,
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
     const [showAddForm, setShowAddForm] = useState(!match.params.pid);
@@ -140,6 +141,7 @@ export const AdminContainer = ({
                             history={history}
                             createMode={createMode}
                             formErrors={formErrors}
+                            destroy={destroy}
                             tabs={{
                                 admin: {
                                     component: AdminSection,
@@ -201,6 +203,7 @@ AdminContainer.propTypes = {
     loadingRecordToView: PropTypes.bool,
     loadRecordToView: PropTypes.func,
     clearRecordToView: PropTypes.func,
+    destroy: PropTypes.func,
     createMode: PropTypes.bool,
     recordToView: PropTypes.object,
     actions: PropTypes.object,

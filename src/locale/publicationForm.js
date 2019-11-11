@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React from 'react';
 import { default as txt } from './components';
 import { fileUploaderLocale, CLOSED_ACCESS_ID } from 'modules/SharedComponents/Toolbox/FileUploader';
@@ -34,7 +35,7 @@ export default {
     },
     contentIndicators: {
         help: {
-            title: 'Content indicators',
+            title: 'Content Indicators',
             text: (
                 <p>
                     For more information about content indicators, click{' '}
@@ -50,10 +51,12 @@ export default {
             ),
             buttonLabel: 'CLOSE',
         },
-        title: 'Content indicators',
-        description: 'You can select multiple (up to 3) content indicators to add more information about your work.',
+        title: 'Optional: Content Indicators',
+        description:
+            'If relevant to your work, you can select multiple (up to 3) content indicators ' +
+            'to add more information about your work.',
         fieldLabels: {
-            label: 'Please select relevant indicator(s).',
+            label: 'Please select any relevant indicator(s).',
         },
     },
     generic: {

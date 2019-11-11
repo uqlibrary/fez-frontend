@@ -12,16 +12,12 @@ describe('Section component', () => {
     it('should render default view', () => {
         const wrapper = setup({
             disabled: false,
-            cards: {
-                current: [{ title: 'Title' }],
-            },
+            cards: [{ title: 'Title' }],
         });
         expect(toJson(wrapper)).toMatchSnapshot();
         const wrapper2 = setup({
             disabled: false,
-            cards: {
-                current: [{}],
-            },
+            cards: [{}],
         });
         expect(toJson(wrapper2)).toMatchSnapshot();
     });

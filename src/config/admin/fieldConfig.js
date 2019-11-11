@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import Immutable from 'immutable';
 
 import { validation } from 'config';
@@ -376,6 +377,7 @@ export default {
                 fullWidth: true,
                 label: 'DOI',
                 placeholder: '',
+                validate: [validation.doi],
             },
         },
         fez_record_search_key_place_of_publication: {
@@ -484,6 +486,10 @@ export default {
                     order: 'rek_issn_order',
                 },
                 locale: locale.components.issnForm.field,
+                inputNormalizer: value => {
+                    const newValue = value.replace('-', '');
+                    return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
+                },
             },
         },
         fez_record_search_key_isbn: {

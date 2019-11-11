@@ -3,18 +3,16 @@
 exports[`GrantInformationSection should render default view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "grants",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "grants",
           ],
-          "title": "Grant information",
-        },
-      ],
-    }
+        ],
+        "title": "Grant information",
+      },
+    ]
   }
   disabled={false}
 />
@@ -23,18 +21,16 @@ exports[`GrantInformationSection should render default view 1`] = `
 exports[`GrantInformationSection should render disabled view 1`] = `
 <Section
   cards={
-    Object {
-      "current": Array [
-        Object {
-          "groups": Array [
-            Array [
-              "grants",
-            ],
+    Array [
+      Object {
+        "groups": Array [
+          Array [
+            "grants",
           ],
-          "title": "Grant information",
-        },
-      ],
-    }
+        ],
+        "title": "Grant information",
+      },
+    ]
   }
   disabled={true}
 />

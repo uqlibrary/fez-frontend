@@ -169,6 +169,7 @@ exports[`BookForm renders  component 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -1055,6 +1056,7 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -1589,6 +1591,7 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
         isNtro={true}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",
@@ -2715,6 +2718,7 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
         isNtro={false}
         locale={
           Object {
+            "errorMessage": "You can not add two authors with the same ID",
             "form": Object {
               "locale": Object {
                 "addButton": "Add author",

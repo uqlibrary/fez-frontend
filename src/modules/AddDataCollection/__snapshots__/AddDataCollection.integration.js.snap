@@ -564,7 +564,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                     </div>
 +                   </div>
 +                   <div
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-center-11 ListRowHeader-header-400\\"
@@ -619,7 +619,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                   </div>
 +                   <div
 +                     class=\\"ListRow-Fieldofresearch ListRow-Fieldofresearch-01 Mathematical Sciences\\"
-+                     style=\\"padding: 8px;\\"
++                     style=\\"flex-grow: 1; padding: 8px;\\"
 +                   >
 +                     <div
 +                       class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25 MuiGrid-align-items-xs-center-11 ListRow-row-402\\"
@@ -682,42 +682,42 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -715,27 +901,27 @@
-                      >
-                        <div
-                          class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
-                        >
-                          <label
--                           class=\\"MuiFormLabel-root-246 MuiFormLabel-error-249 MuiInputLabel-error-238 MuiFormLabel-required-251 MuiInputLabel-required-239 MuiInputLabel-root-235 MuiInputLabel-formControl-240 MuiInputLabel-animated-243\\"
-+                           class=\\"MuiFormLabel-root-246 MuiFormLabel-required-251 MuiInputLabel-required-239 MuiInputLabel-root-235 MuiInputLabel-formControl-240 MuiInputLabel-animated-243\\"
-                            data-shrink=\\"false\\"
-                            for=\\"creators-name-as-published-field\\"
-                            id=\\"creators-name-as-published-field-label\\"
+@@ -721,27 +907,27 @@
                           >
-                            Enter each creator's name as published (eg. Smith, John)
-                            <span
--                             class=\\"MuiFormLabel-asterisk-252 MuiFormLabel-error-249 MuiInputLabel-error-238\\"
-+                             class=\\"MuiFormLabel-asterisk-252\\"
+                            <div
+                              class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
                             >
-                               *
-                            </span>
-                          </label>
-                          <div
--                           class=\\"MuiInputBase-root-266 MuiInput-root-253 MuiInput-underline-257 MuiInputBase-error-272 MuiInput-error-258 MuiInputBase-fullWidth-275 MuiInput-fullWidth-260 MuiInputBase-formControl-267 MuiInput-formControl-254\\"
-+                           class=\\"MuiInputBase-root-266 MuiInput-root-253 MuiInput-underline-257 MuiInputBase-fullWidth-275 MuiInput-fullWidth-260 MuiInputBase-formControl-267 MuiInput-formControl-254\\"
-                          >
-                            <input
--                             aria-invalid=\\"true\\"
-+                             aria-invalid=\\"false\\"
-                              aria-label=\\"Enter each creator's name as published (eg. Smith, John)\\"
-                              aria-labelledby=\\"creators-name-as-published-field-label\\"
-                              autocomplete=\\"off\\"
-                              class=\\"MuiInputBase-input-276 MuiInput-input-261\\"
-                              id=\\"creators-name-as-published-field\\"
-@@ -837,19 +1023,236 @@
-                            Add creator
-                          </span>
-                        </button>
+                              <label
+-                               class=\\"MuiFormLabel-root-246 MuiFormLabel-error-249 MuiInputLabel-error-238 MuiFormLabel-required-251 MuiInputLabel-required-239 MuiInputLabel-root-235 MuiInputLabel-formControl-240 MuiInputLabel-animated-243\\"
++                               class=\\"MuiFormLabel-root-246 MuiFormLabel-required-251 MuiInputLabel-required-239 MuiInputLabel-root-235 MuiInputLabel-formControl-240 MuiInputLabel-animated-243\\"
+                                data-shrink=\\"false\\"
+                                for=\\"creators-name-as-published-field\\"
+                                id=\\"creators-name-as-published-field-label\\"
+                              >
+                                Enter each creator's name as published (eg. Smith, John)
+                                <span
+-                                 class=\\"MuiFormLabel-asterisk-252 MuiFormLabel-error-249 MuiInputLabel-error-238\\"
++                                 class=\\"MuiFormLabel-asterisk-252\\"
+                                >
+                                   *
+                                </span>
+                              </label>
+                              <div
+-                               class=\\"MuiInputBase-root-266 MuiInput-root-253 MuiInput-underline-257 MuiInputBase-error-272 MuiInput-error-258 MuiInputBase-fullWidth-275 MuiInput-fullWidth-260 MuiInputBase-formControl-267 MuiInput-formControl-254\\"
++                               class=\\"MuiInputBase-root-266 MuiInput-root-253 MuiInput-underline-257 MuiInputBase-fullWidth-275 MuiInput-fullWidth-260 MuiInputBase-formControl-267 MuiInput-formControl-254\\"
+                              >
+                                <input
+-                                 aria-invalid=\\"true\\"
++                                 aria-invalid=\\"false\\"
+                                  aria-label=\\"Enter each creator's name as published (eg. Smith, John)\\"
+                                  aria-labelledby=\\"creators-name-as-published-field-label\\"
+                                  autocomplete=\\"off\\"
+                                  class=\\"MuiInputBase-input-276 MuiInput-input-261\\"
+                                  id=\\"creators-name-as-published-field\\"
+@@ -845,19 +1031,236 @@
+                            </button>
+                          </div>
+                        </div>
                       </div>
                     </div>
 +                   <div
@@ -953,7 +953,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
             >
               <div
                 class=\\"MuiPaper-root-159 MuiPaper-elevation1-162 MuiPaper-rounded-160 MuiCard-root-158 Cards-card-153 StandardCard\\"
-@@ -914,23 +1317,23 @@
+@@ -922,23 +1325,23 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -981,7 +981,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiSelect-root-291\\"
                           >
                             <div
-@@ -939,18 +1342,16 @@
+@@ -947,18 +1350,16 @@
                               class=\\"MuiSelect-select-292 MuiSelect-selectMenu-295 MuiInputBase-input-276 MuiInput-input-261\\"
                               id=\\"data-collection-access-selector\\"
                               role=\\"button\\"
@@ -1002,7 +1002,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-222 MuiSelect-icon-297\\"
                               focusable=\\"false\\"
-@@ -961,37 +1362,32 @@
+@@ -969,37 +1370,32 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1044,7 +1044,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             class=\\"MuiSelect-root-291\\"
                           >
                             <div
-@@ -1000,18 +1396,16 @@
+@@ -1008,18 +1404,16 @@
                               class=\\"MuiSelect-select-292 MuiSelect-selectMenu-295 MuiInputBase-input-276 MuiInput-input-261\\"
                               id=\\"data-collection-license-selector\\"
                               role=\\"button\\"
@@ -1065,7 +1065,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               aria-hidden=\\"true\\"
                               class=\\"MuiSvgIcon-root-222 MuiSelect-icon-297\\"
                               focusable=\\"false\\"
-@@ -1022,15 +1416,10 @@
+@@ -1030,15 +1424,10 @@
                                 d=\\"M7 10l5 5 5-5z\\"
                               />
                             </svg>
@@ -1081,7 +1081,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57 MuiGrid-grid-md-4-63\\"
                     >
-@@ -1097,89 +1486,79 @@
+@@ -1105,89 +1494,79 @@
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -1187,7 +1187,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -2140,106 +2519,12 @@
+@@ -2153,106 +2532,12 @@
                     </div>
                   </div>
                 </div>
@@ -1294,7 +1294,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
             />
-@@ -2265,21 +2550,23 @@
+@@ -2278,21 +2563,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >

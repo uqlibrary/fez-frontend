@@ -111,9 +111,9 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       <label
         class="MuiFormLabel-root-154 MuiFormLabel-filled-158 MuiFormLabel-required-159 MuiInputLabel-required-147 MuiInputLabel-root-143 MuiInputLabel-formControl-148 MuiInputLabel-animated-151 MuiInputLabel-shrink-150"
         data-shrink="true"
-        id="Test label-label"
+        id="Test Policy Dropdown Label-label"
       >
-        Test label
+        Test Policy Dropdown Label
         <span
           class="MuiFormLabel-asterisk-160"
         >
@@ -122,7 +122,7 @@ exports[`DataStreamSecurityItem component should render default view with inheri
       </label>
       <div
         class="MuiInputBase-root-181 MuiInput-root-168 MuiInput-underline-172 MuiInputBase-formControl-182 MuiInput-formControl-169"
-        label="Test label"
+        label="Test Policy Dropdown Label"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -142,8 +142,8 @@ exports[`DataStreamSecurityItem component should render default view with inheri
             Theses Assessors
           </div>
           <input
-            aria-labelledby="Test label-label"
-            id="Test label"
+            aria-labelledby="Test Policy Dropdown Label-label"
+            id="Test Policy Dropdown Label"
             name="test.jpg"
             type="hidden"
             value="2"
@@ -193,9 +193,9 @@ exports[`DataStreamSecurityItem component should render default view with overri
       <label
         class="MuiFormLabel-root-364 MuiFormLabel-filled-368 MuiFormLabel-required-369 MuiInputLabel-required-357 MuiInputLabel-root-353 MuiInputLabel-formControl-358 MuiInputLabel-animated-361 MuiInputLabel-shrink-360"
         data-shrink="true"
-        id="Test label-label"
+        id="Test Policy Dropdown Label-label"
       >
-        Test label
+        Test Policy Dropdown Label
         <span
           class="MuiFormLabel-asterisk-370"
         >
@@ -204,7 +204,7 @@ exports[`DataStreamSecurityItem component should render default view with overri
       </label>
       <div
         class="MuiInputBase-root-391 MuiInput-root-378 MuiInput-underline-382 MuiInputBase-formControl-392 MuiInput-formControl-379"
-        label="Test label"
+        label="Test Policy Dropdown Label"
         required=""
         validation="function required(value) {
   return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
@@ -224,8 +224,8 @@ exports[`DataStreamSecurityItem component should render default view with overri
             Theses Assessors
           </div>
           <input
-            aria-labelledby="Test label-label"
-            id="Test label"
+            aria-labelledby="Test Policy Dropdown Label-label"
+            id="Test Policy Dropdown Label"
             name="test.jpg"
             type="hidden"
             value="2"
@@ -233,6 +233,88 @@ exports[`DataStreamSecurityItem component should render default view with overri
           <svg
             aria-hidden="true"
             class="MuiSvgIcon-root-408 MuiSelect-icon-377"
+            focusable="false"
+            role="presentation"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M7 10l5 5 5-5z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`DataStreamSecurityItem component should render view for a subsequent file 1`] = `
+<DocumentFragment>
+  <div
+    class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005 dataStreamFileName"
+  >
+    <a
+      class="MuiTypography-root-1059 MuiTypography-colorPrimary-1089 MuiTypography-inline-1094 MuiLink-root-1054 MuiLink-underlineHover-1056"
+      title="test.jpg"
+    >
+      test.jpg
+    </a>
+    <span
+      class="MuiTypography-root-1059 MuiTypography-caption-1069"
+    >
+      Overridden
+    </span>
+  </div>
+  <div
+    class="MuiGrid-item-958 MuiGrid-grid-xs-12-997 MuiGrid-grid-sm-6-1005"
+  >
+    <div
+      class="MuiFormControl-root-1095"
+      style="width: 100%;"
+    >
+      <label
+        class="MuiFormLabel-root-1110 MuiFormLabel-filled-1114 MuiFormLabel-required-1115 MuiInputLabel-required-1103 MuiInputLabel-root-1099 MuiInputLabel-formControl-1104 MuiInputLabel-animated-1107 MuiInputLabel-shrink-1106"
+        data-shrink="true"
+        id="Test Policy Dropdown Label-label"
+      >
+        Test Policy Dropdown Label
+        <span
+          class="MuiFormLabel-asterisk-1116"
+        >
+           *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-1137 MuiInput-root-1124 MuiInput-underline-1128 MuiInputBase-formControl-1138 MuiInput-formControl-1125"
+        label="Test Policy Dropdown Label"
+        required=""
+        validation="function required(value) {
+  return value ? undefined : _validationErrors[\\"default\\"].validationErrors.required;
+}"
+      >
+        <div
+          class="MuiSelect-root-1117"
+        >
+          <div
+            aria-haspopup="true"
+            aria-pressed="false"
+            class="MuiSelect-select-1118 MuiSelect-selectMenu-1121 MuiInputBase-input-1147 MuiInput-input-1132"
+            id="select-test.jpg"
+            role="button"
+            tabindex="0"
+          >
+            Theses Assessors
+          </div>
+          <input
+            aria-labelledby="Test Policy Dropdown Label-label"
+            id="Test Policy Dropdown Label"
+            name="test.jpg"
+            type="hidden"
+            value="2"
+          />
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root-1154 MuiSelect-icon-1123"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"

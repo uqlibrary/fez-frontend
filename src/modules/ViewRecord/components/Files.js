@@ -18,6 +18,7 @@ import MediaPreview from './MediaPreview';
 import FileName from './partials/FileName';
 import OpenAccessIcon from 'modules/SharedComponents/Partials/OpenAccessIcon';
 import Thumbnail from './partials/Thumbnail';
+import { stripHtml } from 'helpers/general';
 
 const styles = theme => ({
     header: {
@@ -43,6 +44,7 @@ export class FilesClass extends Component {
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
+        authorDetails: PropTypes.object,
     };
 
     constructor(props) {
@@ -172,6 +174,8 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
+        const authorSecurity = (this.props.authorDetails && this.props.authorDetails.pol_id) || 5;
+        const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
         const {
             files: { blacklist },
         } = viewRecordsConfig;
@@ -182,7 +186,8 @@ export class FilesClass extends Component {
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
             (!dataStream.dsi_label ||
                 !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A'
+            dataStream.dsi_state === 'A' &&
+            datastreamSecurity >= authorSecurity
         );
     };
 
@@ -344,12 +349,6 @@ export class FilesClass extends Component {
         return !!dataStreams && dataStreams.length > 0 && (!containBlacklistCollections || !!this.props.isAdmin);
     };
 
-    stripHtml = html => {
-        const temporalDivElement = document.createElement('div');
-        temporalDivElement.innerHTML = html;
-        return temporalDivElement.textContent || temporalDivElement.innerText || '';
-    };
-
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
@@ -369,7 +368,7 @@ export class FilesClass extends Component {
                         <Alert
                             allowDismiss
                             type={'info'}
-                            message={this.stripHtml(
+                            message={stripHtml(
                                 publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}

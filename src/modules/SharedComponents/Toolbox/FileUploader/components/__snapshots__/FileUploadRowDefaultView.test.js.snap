@@ -263,7 +263,7 @@ exports[`Component FileUploadRowDefaultView should render embargo date picker if
       <WithStyles(FileUploadEmbargoDate)
         disabled={false}
         onChange={[MockFunction]}
-        value={2016-12-31T14:00:00.000Z}
+        value="01/01/2017"
       />
     </WithStyles(Grid)>
     <WithStyles(Grid)

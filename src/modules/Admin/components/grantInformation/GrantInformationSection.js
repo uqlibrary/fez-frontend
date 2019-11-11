@@ -9,7 +9,7 @@ export const GrantInformationSection = ({ disabled = false }) => {
     const { record } = useRecordContext();
     const cards = useRef(adminInterfaceConfig[record.rek_display_type].grantInformation());
 
-    return <Section cards={cards} disabled={disabled} />;
+    return <Section cards={cards.current} disabled={disabled} />;
 };
 
 GrantInformationSection.propTypes = {

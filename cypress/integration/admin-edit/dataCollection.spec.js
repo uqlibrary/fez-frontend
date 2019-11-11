@@ -40,6 +40,7 @@ context('Data Collection admin edit', () => {
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -65,6 +66,7 @@ context('Data Collection admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')

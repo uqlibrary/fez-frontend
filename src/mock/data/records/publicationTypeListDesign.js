@@ -57,7 +57,7 @@ export default {
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
             "rek_copyright_xsdmf_id": 16815,
-            "rek_copyright": "on",
+            "rek_copyright": null,
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_advisory_statement": null,
@@ -300,9 +300,19 @@ export default {
             },
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
-            "fez_record_search_key_project_name": null,
+            "fez_record_search_key_project_name": {
+                "rek_project_name_id": 0,
+                "rek_project_name_pid": "UQ:00222bb",
+                "rek_project_name_xsdmf_id": null,
+                "rek_project_name": "Mock project name"
+            },
             "fez_record_search_key_project_description": null,
-            "fez_record_search_key_project_start_date": null,
+            "fez_record_search_key_project_start_date": {
+                "rek_project_start_date_id": 1,
+                "rek_project_start_date_pid": "UQ:00222bb",
+                "rek_project_start_date_xsdmf_id": null,
+                "rek_project_start_date": "1893-10-16 00:00:00"
+            },
             "fez_record_search_key_publisher": null,
             "fez_record_search_key_quality_indicator": [],
             "fez_record_search_key_refereed": {
@@ -324,7 +334,12 @@ export default {
                 "rek_rights_xsdmf_id": 17300,
                 "rek_rights": "This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library."
             },
-            "fez_record_search_key_scale": null,
+            "fez_record_search_key_scale": {
+                "rek_scale_id": 566,
+                "rek_scale_pid": "UQ:00222bb",
+                "rek_scale_xsdmf_id": null,
+                "rek_scale": "1\" To 8'"
+            },
             "fez_record_search_key_scopus_id": null,
             "fez_record_search_key_series": {
                 "rek_series_id": 190707,
@@ -484,7 +499,7 @@ export default {
             "rek_altmetric_id": null,
             "rek_altmetric_id_xsdmf_id": null,
             "rek_copyright_xsdmf_id": null,
-            "rek_copyright": null,
+            "rek_copyright": "on",
             "rek_security_policy": 1,
             "rek_datastream_policy": null,
             "fez_record_search_key_advisory_statement": null,
@@ -693,19 +708,9 @@ export default {
             },
             "fez_record_search_key_place_of_publication": null,
             "fez_record_search_key_possible_author_id": [],
-            "fez_record_search_key_project_name": {
-                "rek_project_name_id": 0,
-                "rek_project_name_pid": "UQ:00222bb",
-                "rek_project_name_xsdmf_id": null,
-                "rek_project_name": "Mock project name"
-            },
+            "fez_record_search_key_project_name": null,
             "fez_record_search_key_project_description": null,
-            "fez_record_search_key_project_start_date": {
-                "rek_project_start_date_id": 1,
-                "rek_project_start_date_pid": "UQ:00222bb",
-                "rek_project_start_date_xsdmf_id": null,
-                "rek_project_start_date": "1893-10-16 00:00:00"
-            },
+            "fez_record_search_key_project_start_date": null,
             "fez_record_search_key_publisher": null,
             "fez_record_search_key_quality_indicator": [],
             "fez_record_search_key_refereed": null,
@@ -716,12 +721,7 @@ export default {
                 "rek_rights_xsdmf_id": null,
                 "rek_rights": "This work is made available by the UQ Library for your personal research or study. For further information and access please contact the Fryer Library, The University of Queensland Library."
             },
-            "fez_record_search_key_scale": {
-                "rek_scale_id": 566,
-                "rek_scale_pid": "UQ:00222bb",
-                "rek_scale_xsdmf_id": null,
-                "rek_scale": "1\" To 8'"
-            },
+            "fez_record_search_key_scale": null,
             "fez_record_search_key_scopus_id": null,
             "fez_record_search_key_series": {
                 "rek_series_id": 229011,

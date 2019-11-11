@@ -28,7 +28,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test1.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -99,7 +99,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test2.txt',
                         dsi_security_policy: 1,
                     },
                 ]),
@@ -184,7 +184,7 @@ describe('SecurityCard component', () => {
             formValues: {
                 dataStreams: new List([
                     {
-                        dsi_dsid: 'test.txt',
+                        dsi_dsid: 'test3.txt',
                         dsi_security_policy: 1,
                     },
                 ]),

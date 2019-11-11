@@ -9,16 +9,17 @@ import { GENERIC_DATE_FORMAT } from 'config/general';
 
 export class FileUploadEmbargoDate extends PureComponent {
     static propTypes = {
-        onChange: PropTypes.func,
-        disabled: PropTypes.bool,
-        value: PropTypes.instanceOf(Date),
-        minDate: PropTypes.instanceOf(Date),
+        canBeCleared: PropTypes.bool,
         classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        minDate: PropTypes.instanceOf(Date),
+        onChange: PropTypes.func,
+        value: PropTypes.string,
     };
 
     static defaultProps = {
-        value: new Date(),
         minDate: new Date(),
+        canBeCleared: false,
     };
 
     _onChange = value => {
@@ -38,7 +39,7 @@ export class FileUploadEmbargoDate extends PureComponent {
             <DatePicker
                 format={GENERIC_DATE_FORMAT}
                 minDate={this.props.minDate}
-                value={this.props.value}
+                value={this.props.value ? new Date(this.props.value) : null}
                 onChange={this._onChange}
                 disabled={this.props.disabled}
                 InputProps={inputProps}
@@ -48,6 +49,7 @@ export class FileUploadEmbargoDate extends PureComponent {
                 leftArrowIcon={<KeyboardArrowLeft />}
                 rightArrowIcon={<KeyboardArrowRight />}
                 keyboardIcon={<Event />}
+                clearable={this.props.canBeCleared}
             />
         );
     }

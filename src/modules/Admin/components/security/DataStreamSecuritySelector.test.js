@@ -51,7 +51,7 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test4.txt',
                             dsi_security_policy: 1,
                         },
                     ],
@@ -59,8 +59,8 @@ describe('DataStreamSecuritySelector component', () => {
             },
         });
         expect(asFragment()).toMatchSnapshot();
-        expect(getByText(/test.txt/)).toHaveAttribute('title', 'test.txt');
-        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'select-test.txt');
+        expect(getByText(/test4.txt/)).toHaveAttribute('title', 'test4.txt');
+        expect(getByText(/Administrator/i)).toHaveAttribute('id', 'select-test4.txt');
         expect(getByText(/Administrator/i)).toHaveAttribute('role', 'button');
     });
 
@@ -70,7 +70,7 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test5.txt',
                             dsi_security_policy: 1,
                         },
                     ],
@@ -81,11 +81,11 @@ describe('DataStreamSecuritySelector component', () => {
         let fragment = asFragment();
         fireEvent.click(getByText(/Administrator/i));
         expect(fragment).toMatchDiffSnapshot((fragment = asFragment()));
-        const menu = await waitForElement(() => getByTestId('menu-test.txt'));
+        const menu = await waitForElement(() => getByTestId('menu-test5.txt'));
 
         fireEvent.click(getByText(/public/i, menu));
         expect(fragment).toMatchDiffSnapshot(asFragment());
-        expect(getByText(/public/i)).toHaveAttribute('id', 'select-test.txt');
+        expect(getByText(/public/i)).toHaveAttribute('id', 'select-test5.txt');
         expect(getByText(/public/i)).toHaveAttribute('role', 'button');
     });
 
@@ -95,8 +95,9 @@ describe('DataStreamSecuritySelector component', () => {
                 initial: {
                     toJS: () => [
                         {
-                            dsi_dsid: 'test.txt',
+                            dsi_dsid: 'test6.txt',
                             dsi_security_policy: 1,
+                            dsi_embargo_date: '2015-12-01',
                         },
                     ],
                 },

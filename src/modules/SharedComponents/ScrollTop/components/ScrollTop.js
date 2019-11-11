@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Fab from '@material-ui/core/Fab';
+import Hidden from '@material-ui/core/Hidden';
 import { withStyles } from '@material-ui/core/styles';
 import ArrowUpwardIcon from '@material-ui/icons/ArrowUpward';
 
@@ -23,18 +24,14 @@ export const styles = () => ({
 /* istanbul ignore next */
 const scrollWindowToTop = event => {
     event.preventDefault();
-    document.getElementById('content-container').scroll({
-        top: 0,
-        left: 0,
-        behavior: 'smooth',
-    });
+    document.getElementById('content-container').scrollTop = 0;
 };
 
 export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     /* istanbul ignore next */
     const scrollableContainer = document.getElementById(containerId);
     /* istanbul ignore next */
-    if (scrollableContainer) {
+    if (!!scrollableContainer && scrollableContainer.style && document.getElementById('scrolltopbtn')) {
         scrollableContainer.onscroll = () => {
             if (scrollableContainer.scrollTop > showAfter) {
                 document.getElementById('scrolltopbtn').style.opacity = '0.5';
@@ -47,16 +44,18 @@ export const ScrollTop = ({ show, containerId, showAfter, classes }) => {
     }
     if (!!show) {
         return (
-            <Fab
-                color="secondary"
-                aria-label="Scroll to top of page"
-                className={classes.scrollTop}
-                id="scrolltopbtn"
-                title="Scroll to top of page"
-                onClick={scrollWindowToTop}
-            >
-                <ArrowUpwardIcon />
-            </Fab>
+            <Hidden smDown>
+                <Fab
+                    color="secondary"
+                    aria-label="Scroll to top of page"
+                    className={classes.scrollTop}
+                    id="scrolltopbtn"
+                    title="Scroll to top of page"
+                    onClick={scrollWindowToTop}
+                >
+                    <ArrowUpwardIcon />
+                </Fab>
+            </Hidden>
         );
     } else {
         return <div className={'scrolltop-hidden'} />;

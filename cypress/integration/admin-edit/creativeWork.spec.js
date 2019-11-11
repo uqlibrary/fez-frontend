@@ -27,8 +27,8 @@ context('Creative Work admin edit', () => {
                     .should('be.enabled');
             });
 
-        cy.wait(1000); // Allow more time for rendering tabbing mechanism
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -38,6 +38,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(8) > .StandardCard')
@@ -58,6 +59,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render Additional information tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(5)')
             .within(() => {
                 cy.get('div:nth-child(2) > .StandardCard')
@@ -85,6 +87,7 @@ context('Creative Work admin edit', () => {
     });
 
     it('should render NTRO tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(6)')
             .within(() => {
                 cy.root()
