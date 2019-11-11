@@ -2401,7 +2401,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                     htmlText: '<p>test description</p>',
                     plainText: 'test description',
                 },
-                rek_date: '2019-01-01T00:00:00',
+                rek_date: '2019-01-01 00:00:00',
                 languages: ['eng'],
                 subjects: [
                     {
@@ -2427,7 +2427,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
                 rek_title: '<p>test</p>',
                 rek_description: '<p>test description</p>',
-                rek_date: '2019-01-01T00:00:00+10:00',
+                rek_date: '2019-01-01 00:00:00',
                 fez_record_search_key_language: [
                     {
                         rek_language: 'eng',
@@ -2454,7 +2454,7 @@ describe('getBibliographicSectionSearchKeys', () => {
 
         it('should use default parameter value', () => {
             expect(transformers.getBibliographicSectionSearchKeys()).toEqual({
-                rek_date: '2016-01-01T10:00:00+10:00',
+                rek_date: '2016-01-01 00:00:00',
             });
         });
     });
@@ -2475,7 +2475,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01T10:00:00+10:00',
+                rek_date: '2016-01-01 00:00:00',
                 fez_record_search_key_translated_title: {
                     rek_translated_title: 'Translated test title',
                 },
@@ -2503,7 +2503,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01T10:00:00+10:00',
+                rek_date: '2016-01-01 00:00:00',
                 fez_record_search_key_language_of_title: [
                     {
                         rek_language_of_title: 'eng',
@@ -2532,7 +2532,7 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_date: '2016-01-01T10:00:00+10:00',
+                rek_date: '2016-01-01 00:00:00',
                 fez_record_search_key_language_of_proceedings_title: [
                     {
                         rek_language_of_proceedings_title: 'eng',
