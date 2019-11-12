@@ -153,7 +153,26 @@ exports[`AdminInterface component should disabled button and render alert for fo
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -168,7 +187,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -358,7 +377,26 @@ exports[`AdminInterface component should display successful alert 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -372,7 +410,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -533,7 +571,26 @@ exports[`AdminInterface component should display successful alert 2`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -547,7 +604,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -708,7 +765,26 @@ exports[`AdminInterface component should render default view as a full form view
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -722,7 +798,7 @@ exports[`AdminInterface component should render default view as a full form view
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -876,7 +952,26 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -890,7 +985,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
@@ -1049,7 +1144,26 @@ exports[`AdminInterface component should render in create mode 1`] = `
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={12}
+        sm={2}
+        xs={12}
+      >
+        <WithStyles(Button)
+          color="secondary"
+          fullWidth={true}
+          onClick={[Function]}
+          style={
+            Object {
+              "whiteSpace": "nowrap",
+            }
+          }
+          variant="contained"
+        >
+          Cancel
+        </WithStyles(Button)>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={10}
         xs={12}
       >
         <WithStyles(Button)
@@ -1063,7 +1177,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
           }
           variant="contained"
         >
-          Submit
+           Submit 
         </WithStyles(Button)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
