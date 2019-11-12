@@ -14,6 +14,7 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 import { CollectionField } from 'modules/SharedComponents/LookupFields';
 import Hidden from '@material-ui/core/Hidden';
+import { routes } from 'config';
 
 export const AddSection = ({
     hasDefaultDocTypeSubType,
@@ -24,6 +25,7 @@ export const AddSection = ({
     disabled = false,
     onCreate,
     disableSubmit,
+    history,
 }) => {
     const allPublicationTypes = Object.values(publicationTypes());
     const publicationTypeItems = [
@@ -35,6 +37,11 @@ export const AddSection = ({
             );
         }),
     ];
+    /* istanbul ignore next */
+    const handleCancel = event => {
+        event.preventDefault();
+        history.push(routes.pathConfig.index);
+    };
     return (
         <form>
             <StandardPage title={locale.pages.adminAdd.title}>
@@ -108,7 +115,7 @@ export const AddSection = ({
                                                 color="secondary"
                                                 fullWidth
                                                 children={locale.pages.adminAdd.cancelLabel}
-                                                onClick={null}
+                                                onClick={handleCancel}
                                             />
                                         </Grid>
                                         <Grid item xs={12} sm={'auto'}>

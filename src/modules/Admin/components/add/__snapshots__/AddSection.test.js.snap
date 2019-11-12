@@ -618,7 +618,7 @@ exports[`AddSection component should render default view 1`] = `
                     color="secondary"
                     fullWidth={true}
                     id="cancel-work"
-                    onClick={null}
+                    onClick={[Function]}
                     variant="contained"
                   >
                     Cancel
@@ -1291,7 +1291,7 @@ exports[`AddSection component should render with subtypes 1`] = `
                     color="secondary"
                     fullWidth={true}
                     id="cancel-work"
-                    onClick={null}
+                    onClick={[Function]}
                     variant="contained"
                   >
                     Cancel

@@ -26,6 +26,7 @@ import { validation, publicationTypes } from 'config';
 import { RECORD_TYPE_RECORD } from 'config/general';
 import * as recordForms from 'modules/SharedComponents/PublicationForm/components/Forms';
 import { FORM_NAME } from '../constants';
+import { routes } from 'config';
 
 export const useQueryStringTabValueState = (location, initialValue) => {
     const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
@@ -85,6 +86,17 @@ export const AdminInterface = ({
     }, [submitting, submitSucceeded]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
+    /* istanbul ignore next */
+    const handleCancel = event => {
+        event.preventDefault();
+        if (!!record.rek_pid) {
+            // Editing a record, so navigate to the view page for this PID
+            history.push(routes.pathConfig.records.view(record.rek_pid));
+        } else {
+            // Else this is a new record, so just go to the homepage
+            history.push(routes.pathConfig.index);
+        }
+    };
 
     /* istanbul ignore next */
     const setSuccessConfirmationRef = useCallback(node => {
@@ -205,14 +217,24 @@ export const AdminInterface = ({
                                 <Alert pushToTop {...alertProps.current} />
                             </Grid>
                         )}
-                        <Grid item xs={12} sm={12}>
+                        <Grid item xs={12} sm={2}>
+                            <Button
+                                style={{ whiteSpace: 'nowrap' }}
+                                variant="contained"
+                                color="secondary"
+                                fullWidth
+                                children="Cancel"
+                                onClick={handleCancel}
+                            />
+                        </Grid>
+                        <Grid item xs={12} sm={10}>
                             <Button
                                 style={{ whiteSpace: 'nowrap' }}
                                 disabled={submitting || disableSubmit}
                                 variant="contained"
                                 color="primary"
                                 fullWidth
-                                children="Submit"
+                                children=" Submit "
                                 onClick={handleSubmit}
                             />
                         </Grid>
