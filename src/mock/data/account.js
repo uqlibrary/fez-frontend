@@ -27,7 +27,7 @@ export const accounts = {
         "firstName": "UQ",
         "lastName": "Staff",
         "name": "UQ STAFF",
-        "mail": "uq.staff@example.uq.edu.au",
+        "mail": "uq.masquerader@example.uq.edu.au",
         "barcode": "111111111111111",
         "groups": ["DC=uq,DC=edu,DC=au"],
         "classes": [],
