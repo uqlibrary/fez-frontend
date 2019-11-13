@@ -19,6 +19,9 @@ exports[`IdentifiersSection component should render default view 1`] = `
           ],
           Array [
             "fez_record_search_key_pubmed_id",
+            "fez_record_search_key_pubmed_central_id",
+          ],
+          Array [
             "rek_pubmed_doc_type",
           ],
         ],
@@ -57,6 +60,9 @@ exports[`IdentifiersSection component should render disabled view 1`] = `
           ],
           Array [
             "fez_record_search_key_pubmed_id",
+            "fez_record_search_key_pubmed_central_id",
+          ],
+          Array [
             "rek_pubmed_doc_type",
           ],
         ],
