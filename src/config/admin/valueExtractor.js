@@ -269,6 +269,9 @@ export default {
     fez_record_search_key_pubmed_id: {
         getValue: record => ({ ...record.fez_record_search_key_pubmed_id }),
     },
+    fez_record_search_key_pubmed_central_id: {
+        getValue: record => ({ ...(record.fez_record_search_key_pubmed_central_id || '') }),
+    },
     rek_wok_doc_type: {
         getValue: record => record.rek_wok_doc_type,
     },
