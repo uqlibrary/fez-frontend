@@ -65,6 +65,7 @@ export const AdminContainer = ({
     createMode,
     formErrors,
     destroy,
+    authorDetails,
 }) => {
     const [tabbed, setTabbed] = useState(Cookies.get('adminFormTabbed') && Cookies.get('adminFormTabbed') === 'tabbed');
     const [showAddForm, setShowAddForm] = useState(!match.params.pid);
@@ -115,7 +116,6 @@ export const AdminContainer = ({
         }
         return false;
     };
-
     return (
         <React.Fragment>
             {createMode && showAddForm && (
@@ -134,6 +134,7 @@ export const AdminContainer = ({
                         }}
                     >
                         <AdminInterface
+                            authorDetails={authorDetails}
                             classes={classes}
                             handleSubmit={handleSubmit}
                             submitting={submitting}
@@ -219,6 +220,7 @@ AdminContainer.propTypes = {
     match: PropTypes.object,
     history: PropTypes.object,
     formErrors: PropTypes.object,
+    authorDetails: PropTypes.object,
 };
 
 export function isChanged(prevProps, nextProps) {
