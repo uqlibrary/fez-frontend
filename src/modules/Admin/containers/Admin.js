@@ -167,6 +167,8 @@ const mapStateToProps = (state, props) => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         loadingRecordToView: state.get('viewRecordReducer').loadingRecordToView,
+        authorDetails: state.get('accountReducer').authorDetails || null,
+        author: state.get('accountReducer').author,
         recordToView,
         ...(!!initialFormValues ? initialFormValues : {}),
     };
