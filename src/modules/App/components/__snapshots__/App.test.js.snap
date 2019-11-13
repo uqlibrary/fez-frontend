@@ -17150,9 +17150,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   <ScrollTop
                                     classes={
                                       Object {
-                                        "hideButton": "ScrollTop-hideButton-326",
                                         "scrollTop": "ScrollTop-scrollTop-324",
-                                        "showButton": "ScrollTop-showButton-325",
                                       }
                                     }
                                     containerId="content-container"
@@ -17644,27 +17642,28 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                             xsUp={false}
                                           >
                                             <WithStyles(Fab)
-                                              aria-label="Scroll to top of this page"
-                                              className=" ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
+                                              aria-label="Scroll to top of page"
+                                              className="ScrollTop-scrollTop-324"
                                               color="secondary"
                                               id="scrolltopbtn"
-                                              title="Scroll to top of this page"
+                                              onClick={[Function]}
+                                              title="Scroll to top of page"
                                             >
                                               <Fab
-                                                aria-label="Scroll to top of this page"
-                                                className=" ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
+                                                aria-label="Scroll to top of page"
+                                                className="ScrollTop-scrollTop-324"
                                                 classes={
                                                   Object {
-                                                    "colorInherit": "MuiFab-colorInherit-348",
-                                                    "disabled": "MuiFab-disabled-347",
-                                                    "extended": "MuiFab-extended-345",
-                                                    "focusVisible": "MuiFab-focusVisible-346",
-                                                    "label": "MuiFab-label-342",
-                                                    "primary": "MuiFab-primary-343",
-                                                    "root": "MuiFab-root-341",
-                                                    "secondary": "MuiFab-secondary-344",
-                                                    "sizeMedium": "MuiFab-sizeMedium-350",
-                                                    "sizeSmall": "MuiFab-sizeSmall-349",
+                                                    "colorInherit": "MuiFab-colorInherit-346",
+                                                    "disabled": "MuiFab-disabled-345",
+                                                    "extended": "MuiFab-extended-343",
+                                                    "focusVisible": "MuiFab-focusVisible-344",
+                                                    "label": "MuiFab-label-340",
+                                                    "primary": "MuiFab-primary-341",
+                                                    "root": "MuiFab-root-339",
+                                                    "secondary": "MuiFab-secondary-342",
+                                                    "sizeMedium": "MuiFab-sizeMedium-348",
+                                                    "sizeSmall": "MuiFab-sizeSmall-347",
                                                   }
                                                 }
                                                 color="secondary"
@@ -17672,26 +17671,28 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 disableFocusRipple={false}
                                                 disabled={false}
                                                 id="scrolltopbtn"
+                                                onClick={[Function]}
                                                 size="large"
-                                                title="Scroll to top of this page"
+                                                title="Scroll to top of page"
                                                 type="button"
                                                 variant="round"
                                               >
                                                 <WithStyles(ButtonBase)
-                                                  aria-label="Scroll to top of this page"
-                                                  className="MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
+                                                  aria-label="Scroll to top of page"
+                                                  className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                   component="button"
                                                   disabled={false}
                                                   focusRipple={true}
-                                                  focusVisibleClassName="MuiFab-focusVisible-346"
+                                                  focusVisibleClassName="MuiFab-focusVisible-344"
                                                   id="scrolltopbtn"
-                                                  title="Scroll to top of this page"
+                                                  onClick={[Function]}
+                                                  title="Scroll to top of page"
                                                   type="button"
                                                 >
                                                   <ButtonBase
-                                                    aria-label="Scroll to top of this page"
+                                                    aria-label="Scroll to top of page"
                                                     centerRipple={false}
-                                                    className="MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
+                                                    className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                     classes={
                                                       Object {
                                                         "disabled": "MuiButtonBase-disabled-158",
@@ -17704,18 +17705,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     disableTouchRipple={false}
                                                     disabled={false}
                                                     focusRipple={true}
-                                                    focusVisibleClassName="MuiFab-focusVisible-346"
+                                                    focusVisibleClassName="MuiFab-focusVisible-344"
                                                     id="scrolltopbtn"
+                                                    onClick={[Function]}
                                                     tabIndex="0"
-                                                    title="Scroll to top of this page"
+                                                    title="Scroll to top of page"
                                                     type="button"
                                                   >
                                                     <button
-                                                      aria-label="Scroll to top of this page"
-                                                      className="MuiButtonBase-root-157 MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
+                                                      aria-label="Scroll to top of page"
+                                                      className="MuiButtonBase-root-157 MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
                                                       disabled={false}
                                                       id="scrolltopbtn"
                                                       onBlur={[Function]}
+                                                      onClick={[Function]}
                                                       onContextMenu={[Function]}
                                                       onFocus={[Function]}
                                                       onKeyDown={[Function]}
@@ -17727,21 +17730,15 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       onTouchMove={[Function]}
                                                       onTouchStart={[Function]}
                                                       tabIndex="0"
-                                                      title="Scroll to top of this page"
+                                                      title="Scroll to top of page"
                                                       type="button"
                                                     >
                                                       <span
-                                                        className="MuiFab-label-342"
+                                                        className="MuiFab-label-340"
                                                       >
-                                                        <pure(ArrowUpwardIcon)
-                                                          onClick={[Function]}
-                                                        >
-                                                          <ArrowUpwardIcon
-                                                            onClick={[Function]}
-                                                          >
-                                                            <WithStyles(SvgIcon)
-                                                              onClick={[Function]}
-                                                            >
+                                                        <pure(ArrowUpwardIcon)>
+                                                          <ArrowUpwardIcon>
+                                                            <WithStyles(SvgIcon)>
                                                               <SvgIcon
                                                                 classes={
                                                                   Object {
@@ -17759,14 +17756,12 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 color="inherit"
                                                                 component="svg"
                                                                 fontSize="default"
-                                                                onClick={[Function]}
                                                                 viewBox="0 0 24 24"
                                                               >
                                                                 <svg
                                                                   aria-hidden="true"
                                                                   className="MuiSvgIcon-root-160"
                                                                   focusable="false"
-                                                                  onClick={[Function]}
                                                                   role="presentation"
                                                                   viewBox="0 0 24 24"
                                                                 >
@@ -20588,20 +20583,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 allowDismiss={false}
                                                                                 classes={
                                                                                   Object {
-                                                                                    "actionButton": "Alert-actionButton-330",
-                                                                                    "common": "Alert-common-327",
-                                                                                    "dismissButton": "Alert-dismissButton-331",
-                                                                                    "done": "Alert-done-340",
-                                                                                    "error": "Alert-error-333",
-                                                                                    "error_outline": "Alert-error_outline-334",
-                                                                                    "help": "Alert-help-336",
-                                                                                    "help_outline": "Alert-help_outline-337",
-                                                                                    "icon": "Alert-icon-328",
-                                                                                    "info": "Alert-info-338",
-                                                                                    "info_outline": "Alert-info_outline-339",
-                                                                                    "linked": "Alert-linked-332",
-                                                                                    "text": "Alert-text-329",
-                                                                                    "warning": "Alert-warning-335",
+                                                                                    "actionButton": "Alert-actionButton-328",
+                                                                                    "common": "Alert-common-325",
+                                                                                    "dismissButton": "Alert-dismissButton-329",
+                                                                                    "done": "Alert-done-338",
+                                                                                    "error": "Alert-error-331",
+                                                                                    "error_outline": "Alert-error_outline-332",
+                                                                                    "help": "Alert-help-334",
+                                                                                    "help_outline": "Alert-help_outline-335",
+                                                                                    "icon": "Alert-icon-326",
+                                                                                    "info": "Alert-info-336",
+                                                                                    "info_outline": "Alert-info_outline-337",
+                                                                                    "linked": "Alert-linked-330",
+                                                                                    "text": "Alert-text-327",
+                                                                                    "warning": "Alert-warning-333",
                                                                                   }
                                                                                 }
                                                                                 dismissTitle="Click to dismiss this alert"
@@ -21055,7 +21050,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <WithStyles(Grid)
                                                                                     alignContent="center"
                                                                                     alignItems="flex-start"
-                                                                                    className="Alert-error-333 Alert-common-327"
+                                                                                    className="Alert-error-331 Alert-common-325"
                                                                                     container={true}
                                                                                     justify="center"
                                                                                     spacing={24}
@@ -21063,7 +21058,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     <Grid
                                                                                       alignContent="center"
                                                                                       alignItems="flex-start"
-                                                                                      className="Alert-error-333 Alert-common-327"
+                                                                                      className="Alert-error-331 Alert-common-325"
                                                                                       classes={
                                                                                         Object {
                                                                                           "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -21180,7 +21175,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       zeroMinWidth={false}
                                                                                     >
                                                                                       <div
-                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-333 Alert-common-327"
+                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-331 Alert-common-325"
                                                                                       >
                                                                                         <WithStyles(Grid)
                                                                                           item={true}
@@ -21436,13 +21431,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     className="MuiGrid-container-6 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23"
                                                                                                   >
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-icon-328 alert-icon"
+                                                                                                      className="Alert-icon-326 alert-icon"
                                                                                                       item={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-icon-328 alert-icon"
+                                                                                                        className="Alert-icon-326 alert-icon"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -21559,7 +21554,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 Alert-icon-328 alert-icon"
+                                                                                                          className="MuiGrid-item-7 Alert-icon-326 alert-icon"
                                                                                                         >
                                                                                                           <pure(ErrorIcon)
                                                                                                             className="icon"
@@ -21613,14 +21608,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       </Grid>
                                                                                                     </WithStyles(Grid)>
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-text-329 alert-text"
+                                                                                                      className="Alert-text-327 alert-text"
                                                                                                       item={true}
                                                                                                       xs={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-text-329 alert-text"
+                                                                                                        className="Alert-text-327 alert-text"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -21737,7 +21732,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-329 alert-text"
+                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-327 alert-text"
                                                                                                         >
                                                                                                           <b>
                                                                                                             There has been an error - 
