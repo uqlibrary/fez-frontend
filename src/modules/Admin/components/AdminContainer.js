@@ -118,7 +118,9 @@ export const AdminContainer = ({
 
     return (
         <React.Fragment>
-            {createMode && showAddForm && <AddSection onCreate={handleAddFormDisplay} createMode={createMode} />}
+            {createMode && showAddForm && (
+                <AddSection onCreate={handleAddFormDisplay} createMode={createMode} history={history} />
+            )}
             {!showAddForm && (
                 <TabbedContext.Provider
                     value={{
