@@ -10,25 +10,6 @@ fi
 
 case "$PIPE_NUM" in
 "1")
-    # when all branches are running pipeline 2, this codestyle check should be moved to pipeline 2, as it
-    # is only used occasionally
-    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
-    printf "\n$ npm run codestyles:files -s\n"
-    FILES=$(npm run codestyles:files -s)
-
-    if [[ "$?" == 0 ]]; then
-        printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
-    else
-        printf "\n\e[91mThese files should pass code style checks but do not:\e[0m\n\n"
-        for FILE in $FILES
-        do
-            printf "\t\e[31m$FILE\e[0m\n"
-        done
-        printf "\n* Please fix code styles and try again. Running '\e[1m npm run codestyles:fix:all \e[0m' is a good start."
-        printf "\n* You can run '\e[1m npm run eslint \e[0m' to view ESLint code quality issues, if any.\n\n"
-        exit 1
-    fi
-
     set -e
 
     export TZ='Australia/Brisbane'
@@ -51,9 +32,34 @@ case "$PIPE_NUM" in
     printf "\n--- \e[1mRUNNING INTEGRATION TESTS\e[0m ---\n"
     printf "\n$ npm run test:integration\n"
     npm run test:integration
+
+    # run cypress tests if in master branch, or the branch name includes 'cypress'
+    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+        # Use this variant to only run tests locally in Codeship
+        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
+
+        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
+    fi
 ;;
 "2")
-    # codestyle check should be moved here when all branches are running codeship tests from this script
+    printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
+    printf "\n$ npm run codestyles:files -s\n"
+    FILES=$(npm run codestyles:files -s)
+
+    if [[ "$?" == 0 ]]; then
+        printf "\n\e[92mLooks good! Well done.\e[0m\n\n"
+    else
+        printf "\n\e[91mThese files should pass code style checks but do not:\e[0m\n\n"
+        for FILE in $FILES
+        do
+            printf "\t\e[31m$FILE\e[0m\n"
+        done
+        printf "\n* Please fix code styles and try again. Running '\e[1m npm run codestyles:fix:all \e[0m' is a good start."
+        printf "\n* You can run '\e[1m npm run eslint \e[0m' to view ESLint code quality issues, if any.\n\n"
+        exit 1
+    fi
 
     set -e
 
@@ -61,10 +67,23 @@ case "$PIPE_NUM" in
     # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
         # Use this variant to only run tests locally in Codeship
-        npm run e2e
+        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
 
-        # Use this variant to turn on video recording of tests and upload to the Cypress dashboard:
-        # npm run e2e:dashboard
+        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
+    fi
+;;
+"3")
+    set -e
+
+    # run cypress tests if in master branch, or the branch name includes 'cypress'
+    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
+    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+        # Use this variant to only run tests locally in Codeship
+        # start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false';
+
+        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+         start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config --parallel video=true'
     fi
 ;;
 esac

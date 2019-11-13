@@ -553,6 +553,7 @@ exports[`Audio Player Component  should pause audio 1`] = `
             <div>
               <audio
                 id="audioPlayer"
+                onEnded={[Function]}
               >
                 <source
                   src="UQ676287_OA.pdf"
@@ -767,6 +768,7 @@ exports[`Audio Player Component  should play audio 1`] = `
 <div>
   <audio
     id="audioPlayer"
+    onEnded={[Function]}
   >
     <source
       src="UQ676287_OA.pdf"
@@ -1334,6 +1336,7 @@ exports[`Audio Player Component  should play audio via button click 1`] = `
             <div>
               <audio
                 id="audioPlayer"
+                onEnded={[Function]}
               >
                 <source
                   src="UQ676287_OA.pdf"
@@ -1548,6 +1551,65 @@ exports[`Audio Player Component  should render component 1`] = `
 <div>
   <audio
     id="audioPlayer"
+    onEnded={[Function]}
+  >
+    <source
+      src="UQ676287_OA.pdf"
+      type="audio/mp3"
+    />
+  </audio>
+  <WithStyles(IconButton)
+    aria-label="Click to play audio file UQ676287_OA.pdf"
+    id="playButton"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
+  >
+    <pure(PlayArrowIcon)
+      className="play"
+    />
+  </WithStyles(IconButton)>
+</div>
+`;
+
+exports[`Audio Player Component  should render when image ends 1`] = `
+<div>
+  <audio
+    id="audioPlayer"
+    onEnded={[Function]}
+  >
+    <source
+      src="UQ676287_OA.pdf"
+      type="audio/mp3"
+    />
+  </audio>
+  <WithStyles(IconButton)
+    aria-label="Click to pause audio file UQ676287_OA.pdf"
+    id="pauseButton"
+    onClick={[Function]}
+    style={
+      Object {
+        "marginBottom": -10,
+        "marginTop": -10,
+      }
+    }
+  >
+    <pure(PauseIcon)
+      className="pause"
+    />
+  </WithStyles(IconButton)>
+</div>
+`;
+
+exports[`Audio Player Component  should render when image ends 2`] = `
+<div>
+  <audio
+    id="audioPlayer"
+    onEnded={[Function]}
   >
     <source
       src="UQ676287_OA.pdf"
@@ -1576,6 +1638,7 @@ exports[`Audio Player Component  should set component state to playing 1`] = `
 <div>
   <audio
     id="audioPlayer"
+    onEnded={[Function]}
   >
     <source
       src="UQ676287_OA.pdf"
@@ -1604,6 +1667,7 @@ exports[`Audio Player Component  should set component state to playing 2`] = `
 <div>
   <audio
     id="audioPlayer"
+    onEnded={[Function]}
   >
     <source
       src="UQ676287_OA.pdf"
