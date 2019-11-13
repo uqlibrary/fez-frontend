@@ -1,5 +1,5 @@
 import { act } from 'test-utils';
-import { AttachedFiles, formatBytes, getFileOpenAccessStatus, untranscodedItem, getFileData } from './AttachedFiles';
+import { AttachedFiles, formatBytes, getFileData, getFileOpenAccessStatus, untranscodedItem } from './AttachedFiles';
 import { recordWithDatastreams } from 'mock/data';
 
 jest.mock('../../../../context');

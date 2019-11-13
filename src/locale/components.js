@@ -817,6 +817,7 @@ export default {
                 buttonLabel: 'CLOSE',
             },
             field: {
+                errorMessage: 'You can not add two authors with the same ID',
                 form: {
                     locale: {
                         descriptionStep1: (

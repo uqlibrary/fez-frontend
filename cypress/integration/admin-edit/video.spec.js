@@ -28,6 +28,7 @@ context('Video admin edit', () => {
             });
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -37,6 +38,7 @@ context('Video admin edit', () => {
     });
 
     it('should render Video specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()

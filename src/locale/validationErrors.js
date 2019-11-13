@@ -115,5 +115,6 @@ export default {
         subjects: 'Subjects are required',
         rek_rights: 'Rights is required',
         rek_ands_collection_type: 'Dataset collection type is required',
+        rek_date_available: 'Invalid year',
     },
 };

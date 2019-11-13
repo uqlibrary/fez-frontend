@@ -28,6 +28,7 @@ context('Research Report admin edit', () => {
             });
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -37,6 +38,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.root()
@@ -82,6 +84,7 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Grants tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.root()

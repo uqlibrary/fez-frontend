@@ -1,6 +1,6 @@
 import * as actions from 'actions';
 import { connect } from 'react-redux';
-import { reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
+import { destroy, reduxForm, getFormValues, getFormSyncErrors, SubmissionError } from 'redux-form/immutable';
 import { adminUpdate, adminCreate } from 'actions';
 import Immutable from 'immutable';
 import AdminContainer from '../components/AdminContainer';
@@ -20,6 +20,7 @@ import { bindActionCreators } from 'redux';
 import { FORM_NAME } from '../constants';
 import { detailedDiff } from 'deep-object-diff';
 import { pathConfig } from 'config/routes';
+import { publicationTypeHasAdvisoryStatement } from '../components/common/helpers';
 
 export const bibliographicParams = record =>
     record.fez_record_search_key_language &&
@@ -36,6 +37,7 @@ export const identifiersParams = record => ({
 
 export const filesParams = record => ({
     isDataset: record.rek_display_type === PUBLICATION_TYPE_DATA_COLLECTION,
+    displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
 });
 
 const getInitialValues = (record, tab, tabParams = () => {}) =>
@@ -128,6 +130,7 @@ const PrototypeContainer = reduxForm({
     form: FORM_NAME,
     onSubmit,
     validate,
+    destroyOnUnmount: false,
 })(confirmDiscardFormChanges(AdminContainer, FORM_NAME));
 
 const mapStateToProps = (state, props) => {
@@ -174,6 +177,7 @@ function mapDispatchToProps(dispatch) {
     return {
         loadRecordToView,
         clearRecordToView,
+        destroy,
     };
 }
 

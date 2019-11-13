@@ -36,6 +36,7 @@ context('Audio admin edit', () => {
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
+            .should('have.value', 'tabbed') // force the get to wait for the element
             .click()
             .should('be.checked');
 
@@ -50,6 +51,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Identifiers tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(2)')
             .within(() => {
                 cy.get('div:nth-child(2) > .StandardCard')
@@ -75,6 +77,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(3)')
             .within(() => {
                 cy.get('div:nth-child(5) > .StandardCard')
@@ -108,13 +111,13 @@ context('Audio admin edit', () => {
                             .should('have.text', record.fez_record_search_key_source.rek_source);
                         cy.get('#Rights')
                             .should('have.text', record.fez_record_search_key_rights.rek_rights);
-                        cy.get('span span')
-                            .eq(1)
+                        cy.get('div:nth-child(15) span span')
+                            .eq(0)
                             .should('have.text', 'Transcript');
                         cy.get('#cke_editor5')
                             .should('exist');
                         cy.read_ckeditor('editor5')
-                            .then(text => {
+                            .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                             });
                         cy.get('label[id="Alternate genre-label"]')
@@ -162,6 +165,7 @@ context('Audio admin edit', () => {
     });
 
     it('should render Files tab', () => {
+        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form > div > div:nth-child(7)')
             .within(() => {
                 cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
@@ -173,8 +177,40 @@ context('Audio admin edit', () => {
                                 'have.text',
                                 record.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             );
-                    });
 
+                        // check embargo date can be cleared
+                        cy.get('#embargoDateButton-UQFL173_b57_R298B_2579510-mp3')
+                            .within(() => {
+                                cy.get('div > div > input')
+                                    .should('have.value', '01/01/2099');
+                                cy.get('div > div > div > button')
+                                    .click(); // date picker popup appears
+                            });
+                    });
+            });
+
+        cy.get('[role="dialog"] > div:nth-child(2) > div')
+            .within(() => {
+                cy.get('div > div > h6')
+                    .should('have.text', '2099');
+
+                cy.get('> div:nth-child(2) > button:nth-child(1) > span')
+                    .should('have.text', 'Clear');
+
+                cy.get('> div:nth-child(2) > button:nth-child(1)')
+                    .click(); // 'clear' button on date picker popup has been pressed
+            });
+
+        cy.get('.StandardPage form > div > div:nth-child(7)')
+            .within(() => {
+                cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
+                    .within(() => {
+                        cy.get(
+                            ' > div:nth-child(2) > div:nth-child(3) > div > div > div:nth-child(2) > div:nth-child(2) p span',
+                        )
+                            .should('have.text', 'Embargo date removed - review security policy on Security tab');
+                    });
+                // end: check embargo date can be cleared
                 cy.get('div:nth-child(2) > div > div:nth-child(3) .StandardCard')
                     .within(() => {
                         cy.get('h3')
@@ -185,7 +221,7 @@ context('Audio admin edit', () => {
                         cy.get('#cke_editor7')
                             .should('exist');
                         cy.read_ckeditor('editor7')
-                            .then(text => {
+                            .should(text => {
                                 // prettier-ignore
                                 expect(text).to.contain(
                                     record.fez_record_search_key_advisory_statement.rek_advisory_statement

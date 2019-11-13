@@ -6,10 +6,12 @@ import Typography from '@material-ui/core/Typography';
 import { withStyles } from '@material-ui/core/styles';
 
 import DataStreamSecurityItem from './DataStreamSecurityItem';
+import { useFormValuesContext } from 'context';
 
 export const styles = () => ({
     dataStreamFileBlock: {
         backgroundColor: 'rgba(0,0,0,0.05)',
+        padding: 12,
     },
     dataStreamFileName: {
         overflow: 'hidden',
@@ -25,8 +27,12 @@ export const DataStreamSecuritySelector = ({
     meta: { initial: dataStreams },
     ...props
 }) => {
+    const { formValues } = useFormValuesContext();
+
     const [initialDataStreams] = useState(() => dataStreams.toJS());
-    const [dataStreamSecurity, setDataStreamSecurity] = useState(() => dataStreams.toJS());
+    const [dataStreamSecurity, setDataStreamSecurity] = useState(() =>
+        !!formValues.dataStreams ? formValues.dataStreams : dataStreams.toJS(),
+    );
     const [dataStreamIndexToChange, setDataStreamIndexToChange] = useState(-1);
     const [dataStreamToChange, setDataStreamToChange] = useState(null);
     const [mostSecureParentDatastreamSecurity] = useState(() =>
@@ -65,7 +71,7 @@ export const DataStreamSecuritySelector = ({
                     container
                     spacing={32}
                     alignContent="flex-end"
-                    alignItems="flex-end"
+                    alignItems="flex-start"
                     className={classes.dataStreamFileBlock}
                 >
                     {dataStreamSecurity.map((dataStream, index) => (
