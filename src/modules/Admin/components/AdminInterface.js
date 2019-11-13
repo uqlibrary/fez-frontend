@@ -46,6 +46,7 @@ export const AdminInterface = ({
     disableSubmit,
     formErrors,
     destroy,
+    authorDetails,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -107,7 +108,20 @@ export const AdminInterface = ({
         return <div className="empty" />;
     }
 
-    const navigateToSearchResult = () => history.go(-1);
+    /* istanbul ignore next */
+    const navigateToSearchResult = () => {
+        if ((authorDetails && authorDetails.is_administrator === 1) || authorDetails.is_super_administrator === 1) {
+            history.go(-1);
+        } else if (
+            authorDetails &&
+            authorDetails.is_administrator !== 1 &&
+            authorDetails.is_super_administrator !== 1
+        ) {
+            history.push(routes.pathConfig.records.mine);
+        } else {
+            history.push(routes.pathConfig.index);
+        }
+    };
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
@@ -257,6 +271,7 @@ AdminInterface.propTypes = {
     createMode: PropTypes.bool,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
+    authorDetails: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);

@@ -11,6 +11,10 @@ jest.mock('js-cookie', () => ({
 
 function setup(testProps = {}) {
     const props = {
+        authorDetails: {
+            is_administrator: 1,
+            is_super_administrator: 1,
+        },
         classes: {
             tabIndicator: 'tabindicator',
         },
@@ -364,36 +368,4 @@ describe('AdminInterface component', () => {
             .onAction();
         expect(toJson(wrapper)).toMatchSnapshot();
     });
-
-    // fit('redirect on editing a new record to homepage', () => {
-    //     const push = jest.fn();
-    //     const event = {
-    //         key: 'Enter',
-    //     };
-    //     useTabbedContext.mockImplementation(() => ({ tabbed: true }));
-    //     const wrapper = setup({
-    //         record: {},
-    //         history: {
-    //             push: push,
-    //             go: jest.fn(),
-    //         },
-    //         tabs: {
-    //             bibliographic: {
-    //                 activated: true,
-    //                 component: () => 'BibliographySectionComponent',
-    //             },
-    //             files: {
-    //                 activated: true,
-    //                 component: () => 'FilesSectionComponent',
-    //             },
-    //             security: {
-    //                 activated: true,
-    //                 component: () => 'SecuritySectionComponent',
-    //             },
-    //         },
-    //     });
-    //     wrapper.instance().handleCancel(event);
-    //     expect(push).toBeCalledWith('');
-    //
-    // });
 });
