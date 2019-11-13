@@ -104,6 +104,11 @@ context('Journal Article admin edit', () => {
                             .should('have.value', record.fez_record_search_key_scopus_id.rek_scopus_id);
                         cy.get('#PubMedID')
                             .should('have.value', record.fez_record_search_key_pubmed_id.rek_pubmed_id);
+                        cy.get('#PMCID')
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id,
+                            );
                         cy.get('label[id="WoS doc type(s)-label"]')
                             .parent()
                             .find('input[type=hidden]')

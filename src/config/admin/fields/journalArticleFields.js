@@ -2,6 +2,12 @@ import commonFields from './commonFields';
 
 export default {
     ...commonFields,
+    // identifiers: () => [
+    //     {
+    //         title: 'PMCID',
+    //         groups: [['fez_record_search_key_pubmed_central_id']],
+    //     },
+    // ],
     bibliographic: (isLote = false) => [
         {
             title: 'Title',

@@ -143,6 +143,16 @@ export default {
                 placeholder: '',
             },
         },
+        fez_record_search_key_pubmed_central_id: {
+            component: GenericTextField,
+            componentProps: {
+                name: 'identifiersSection.fez_record_search_key_pubmed_central_id.rek_pubmed_central_id',
+                fullWidth: true,
+                label: 'PMCID',
+                placeholder: '',
+                disabled: true,
+            },
+        },
         rek_wok_doc_type: {
             component: WoSDocTypesField,
             componentProps: {
