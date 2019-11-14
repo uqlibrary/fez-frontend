@@ -7,7 +7,8 @@ export default function HerdcCodeField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField
-            itemsList={HERDC_CODES}
+            canUnselect
+            itemsList={['Please choose an option', ...HERDC_CODES]}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
             selectedValue={
