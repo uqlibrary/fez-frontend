@@ -23,6 +23,7 @@ import {
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_PREPRINT,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
 } from 'config/general';
 
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
@@ -1467,6 +1468,12 @@ export default {
         },
     },
     override: {
+        [PUBLICATION_TYPE_CONFERENCE_PAPER]: {
+            fez_record_search_key_journal_name: () => ({
+                required: false,
+                validate: null,
+            }),
+        },
         [PUBLICATION_TYPE_AUDIO_DOCUMENT]: {
             rek_date: () => ({
                 label: 'Date',
