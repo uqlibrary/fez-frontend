@@ -7,6 +7,7 @@ export default function HerdcStatusField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField
+            canUnselect
             itemsList={HERDC_STATUS}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
