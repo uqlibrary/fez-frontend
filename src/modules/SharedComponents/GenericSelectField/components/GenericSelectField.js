@@ -14,6 +14,12 @@ const styles = theme => ({
     },
 });
 
+/**
+ * 'canUnselect' prop allows the editing user to 'unselect' the entry in the dropdown
+ * Requires a transformer to cover the key in question
+ * (At time of writing, rek_herdc_code, rek_herdc_status, and rek_institutional_status have transformers)
+ */
+
 export class GenericSelectFieldClass extends Component {
     static propTypes = {
         ariaLabel: PropTypes.string,
