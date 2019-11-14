@@ -18,6 +18,7 @@ export class GenericSelectFieldClass extends Component {
     static propTypes = {
         ariaLabel: PropTypes.string,
         autoWidth: PropTypes.bool,
+        canUnselect: PropTypes.bool,
         classes: PropTypes.object,
         className: PropTypes.string,
         disabled: PropTypes.bool,
@@ -54,6 +55,7 @@ export class GenericSelectFieldClass extends Component {
         menuItemClassName: '',
         fullWidth: false,
         autoWidth: false,
+        canUnselect: false,
         hintText: null,
         multiple: false,
     };
@@ -128,7 +130,7 @@ export class GenericSelectFieldClass extends Component {
                         }
                         value={item.value || item}
                         key={index + 1}
-                        disabled={item && (!item.value || !!item.disabled)}
+                        disabled={item && ((!this.props.canUnselect && !item.value) || !!item.disabled)}
                         aria-label={item.text || item.value || item}
                     >
                         {item.text || item.value || item}
