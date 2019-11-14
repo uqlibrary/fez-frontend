@@ -2228,6 +2228,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
             fez_record_search_key_pubmed_id: {
                 rek_pubmed_id: '11231134',
             },
+            fez_record_search_key_pubmed_central_id: {
+                rek_pubmed_central_id: '123123123',
+            },
             links: [
                 {
                     rek_value: {
@@ -2251,6 +2254,9 @@ describe('getIdentifiersSectionSearchKeys', () => {
             },
             fez_record_search_key_pubmed_id: {
                 rek_pubmed_id: '11231134',
+            },
+            fez_record_search_key_pubmed_central_id: {
+                rek_pubmed_central_id: '123123123',
             },
             fez_record_search_key_link: [
                 {
@@ -2276,6 +2282,7 @@ describe('getIdentifiersSectionSearchKeys', () => {
                 fez_record_search_key_isi_loc: {},
                 fez_record_search_key_scopus_id: {},
                 fez_record_search_key_pubmed_id: {},
+                fez_record_search_key_pubmed_central_id: {},
                 links: [],
             }),
         ).toEqual({});

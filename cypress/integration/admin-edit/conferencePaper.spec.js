@@ -194,9 +194,8 @@ context('Conference Paper admin edit', () => {
             'Conference name is required',
             'Conference location is required',
             'Conference dates are required',
-            'Journal name is required',
         ];
-        ['#Conferencename', '#Conferencelocation', '#Conferencedates', '#Journalname'].forEach((selector, index) => {
+        ['#Conferencename', '#Conferencelocation', '#Conferencedates'].forEach((selector, index) => {
             cy.get('@bibliographicTab')
                 .find(selector)
                 .clear();

@@ -168,12 +168,6 @@ export const validateConferencePaper = (
             },
         }) ||
             {}),
-        ...((!((bs || {}).fez_record_search_key_journal_name || {}).rek_journal_name && {
-            fez_record_search_key_journal_name: {
-                rek_journal_name: summary.rek_journal_name,
-            },
-        }) ||
-            {}),
     },
     filesSection: {
         ...((fs || {}).rek_copyright !== 'on' && {
