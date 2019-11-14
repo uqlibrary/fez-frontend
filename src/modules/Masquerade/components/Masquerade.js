@@ -47,7 +47,11 @@ export default class Masquerade extends PureComponent {
         return (
             <StandardPage>
                 <StandardCard title={txt.title} help={txt.help}>
-                    <Typography>{txt.description(this.props.account)}</Typography>
+                    {this.props.account.canMasqueradeType && this.props.account.canMasqueradeType === 'readonly' ? (
+                        <Typography>{txt.description.readonly}</Typography>
+                    ) : (
+                        <Typography>{txt.description.full}</Typography>
+                    )}
                     <Grid container spacing={24} alignItems={'flex-end'} style={{ marginTop: 12 }}>
                         <Grid item xs>
                             <TextField

@@ -220,7 +220,12 @@ export class AppClass extends PureComponent {
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData.total > 0
         );
-        const menuItems = routes.getMenuConfig(this.props.account, isOrcidRequired && isHdrStudent, hasIncompleteWorks);
+        const menuItems = routes.getMenuConfig(
+            this.props.account,
+            this.props.authorDetails,
+            isOrcidRequired && isHdrStudent,
+            hasIncompleteWorks,
+        );
         const isPublicPage = this.isPublicPage(menuItems);
         const isThesisSubmissionPage =
             this.props.location.pathname === routes.pathConfig.hdrSubmission ||
@@ -262,6 +267,7 @@ export class AppClass extends PureComponent {
         }
         const routesConfig = routes.getRoutesConfig({
             components: pages,
+            authorDetails: this.props.authorDetails,
             account: this.props.account,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,

@@ -16,10 +16,27 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": true,
+        "canMasqueradeType": "full",
+        "blocked": false,
+    },
+    uqmasquerade: {
+        "id": "uqmasquerade",
+        "class": ["libstaff", "IS_CURRENT"],
+        "type": 18,
+        "homeLib": "St Lucia",
+        "firstName": "UQ",
+        "lastName": "Staff",
+        "name": "UQ STAFF",
+        "mail": "uq.masquerader@example.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": ["DC=uq,DC=edu,DC=au"],
+        "classes": [],
+        "expiryDate": "31-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": true,
         "canMasqueradeType": "readonly",
         "blocked": false,
-        "is_administrator": 1,
-        "is_super_administrator": 1,
         pol_id: 1,
     },
     // student
@@ -60,8 +77,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        "is_administrator": 0,
-        "is_super_administrator": 0,
         pol_id: 4,
     },
     // rhd student
@@ -82,8 +97,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        "is_administrator": 0,
-        "is_super_administrator": 0,
         pol_id: 4,
     },
     // researchers
@@ -104,8 +117,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        "is_administrator": 0,
-        "is_super_administrator": 0,
         pol_id: 3,
     },
     // researcher without orcid
@@ -126,8 +137,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        "is_administrator": 0,
-        "is_super_administrator": 0,
         pol_id: 5,
     },
     digiteamMember: {
@@ -145,14 +154,14 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        "canMasquerade": true,
+        "canMasquerade": false,
         "blocked": false,
         pol_id: 3,
     },
     // expired session
     uqexpired: {
-        'hasSession': false
-    }
+        'hasSession': false,
+    },
     // upos
     // admins
 };
@@ -215,7 +224,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 553,
@@ -244,7 +253,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 608,
@@ -273,7 +282,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 639,
@@ -302,7 +311,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 102,
@@ -331,7 +340,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 485,
@@ -360,7 +369,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 241,
@@ -389,7 +398,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 1015,
@@ -418,7 +427,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": "",
             "aut_rid_last_updated": "1975-12-15",
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 1086,
@@ -447,7 +456,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 906,
@@ -476,7 +485,7 @@ export const authorsSearch = {
             "aut_google_scholar_id": "pKHbBgIAAAAJ",
             "aut_rid_last_updated": "2017-02-24",
             "aut_publons_id": "1",
-            "aut_student_username": null
+            "aut_student_username": null,
         },
         {
             "aut_id": 20288,
@@ -505,9 +514,9 @@ export const authorsSearch = {
             "aut_google_scholar_id": "",
             "aut_rid_last_updated": "2016-01-08",
             "aut_publons_id": null,
-            "aut_student_username": null
-        }
-    ]
+            "aut_student_username": null,
+        },
+    ],
 };
 
 export const currentAuthor = {
@@ -541,8 +550,8 @@ export const currentAuthor = {
             "aut_google_scholar_id": "kUemDfMAAAAJ",
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
-            "aut_student_username": null
-        }
+            "aut_student_username": null,
+        },
     },
     uqnoauthid: {
         data: {
@@ -572,8 +581,8 @@ export const currentAuthor = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": "2013-05-17",
             "aut_publons_id": null,
-            "aut_student_username": null
-        }
+            "aut_student_username": null,
+        },
     },
     s2222222: {
         "data": {
@@ -603,9 +612,120 @@ export const currentAuthor = {
             "aut_google_scholar_id": null,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
-            "aut_student_username": "s2222222"
-        }
-    }
+            "aut_student_username": "s2222222",
+        },
+    },
+    uqmasquerade: {
+        'data': {
+            'aut_id': 12345678,
+            'aut_org_username': 'uqmasquerade',
+            'aut_org_staff_id': null,
+            'aut_org_student_id': null,
+            'aut_email': null,
+            'aut_display_name': 'Masqueradable Staff',
+            'aut_fname': 'Masqueradable',
+            'aut_mname': null,
+            'aut_lname': 'Staff',
+            'aut_title': 'Ms',
+            'aut_position': null,
+            'aut_homepage_link': null,
+            'aut_created_date': '2017-07-24T00:00:00Z',
+            'aut_update_date': '2019-07-21T19:34:44Z',
+            'aut_external_id': null,
+            'aut_ref_num': null,
+            'aut_researcher_id': '',
+            'aut_scopus_id': null,
+            'aut_is_scopus_id_authenticated': 0,
+            'aut_mypub_url': null,
+            'aut_rid_password': null,
+            'aut_people_australia_id': null,
+            'aut_description': null,
+            'aut_orcid_id': '0000-0001-9999-9998',
+            'aut_orcid_bio': null,
+            'aut_orcid_works_last_modified': null,
+            'aut_google_scholar_id': null,
+            'aut_twitter_username': null,
+            'aut_rid_last_updated': null,
+            'aut_publons_id': '1',
+            'aut_student_username': null,
+            'aut_orcid_works_last_sync': null,
+            'aut_is_orcid_sync_enabled': null,
+        },
+    },
+    uqstaff: {
+        'data': {
+            'aut_id': 12345678,
+            'aut_org_username': 'uqstaff',
+            'aut_org_staff_id': null,
+            'aut_org_student_id': null,
+            'aut_email': null,
+            'aut_display_name': 'Staff Member',
+            'aut_fname': 'Staff',
+            'aut_mname': null,
+            'aut_lname': 'Member',
+            'aut_title': 'Ms',
+            'aut_position': null,
+            'aut_homepage_link': null,
+            'aut_created_date': '2017-07-24T00:00:00Z',
+            'aut_update_date': '2019-07-21T19:34:44Z',
+            'aut_external_id': null,
+            'aut_ref_num': null,
+            'aut_researcher_id': '',
+            'aut_scopus_id': null,
+            'aut_is_scopus_id_authenticated': 0,
+            'aut_mypub_url': null,
+            'aut_rid_password': null,
+            'aut_people_australia_id': null,
+            'aut_description': null,
+            'aut_orcid_id': '0000-0001-9999-9999',
+            'aut_orcid_bio': null,
+            'aut_orcid_works_last_modified': null,
+            'aut_google_scholar_id': null,
+            'aut_twitter_username': null,
+            'aut_rid_last_updated': null,
+            'aut_publons_id': '1',
+            'aut_student_username': null,
+            'aut_orcid_works_last_sync': null,
+            'aut_is_orcid_sync_enabled': null,
+        },
+    },
+    digiteamMember: {
+        'data': {
+            'aut_id': 12345676,
+            'aut_org_username': 'digiteamMember',
+            'aut_org_staff_id': null,
+            'aut_org_student_id': null,
+            'aut_email': null,
+            'aut_display_name': 'Digiteam Member',
+            'aut_fname': 'Digiteam',
+            'aut_mname': null,
+            'aut_lname': 'Member',
+            'aut_title': 'Ms',
+            'aut_position': null,
+            'aut_homepage_link': null,
+            'aut_created_date': '2017-07-24T00:00:00Z',
+            'aut_update_date': '2019-07-21T19:34:44Z',
+            'aut_external_id': null,
+            'aut_ref_num': null,
+            'aut_researcher_id': '',
+            'aut_scopus_id': null,
+            'aut_is_scopus_id_authenticated': 0,
+            'aut_mypub_url': null,
+            'aut_rid_password': null,
+            'aut_people_australia_id': null,
+            'aut_description': null,
+            'aut_orcid_id': '0000-0001-9999-9999',
+            'aut_orcid_bio': null,
+            'aut_orcid_works_last_modified': null,
+            'aut_google_scholar_id': null,
+            'aut_twitter_username': null,
+            'aut_rid_last_updated': null,
+            'aut_publons_id': '1',
+            'aut_student_username': null,
+            'aut_orcid_works_last_sync': null,
+            'aut_is_orcid_sync_enabled': null,
+        },
+    },
 };
 
 export const authorDetails = {
@@ -629,8 +749,8 @@ export const authorDetails = {
         "espace": {
             "first_year": 1975,
             "last_year": 2018,
-            "doc_count": 357
-        }
+            "doc_count": 357,
+        },
     },
     s2222222: {
         "espace_id": 44444,
@@ -652,8 +772,8 @@ export const authorDetails = {
         "espace": {
             "first_year": null,
             "last_year": null,
-            "doc_count": 0
-        }
+            "doc_count": 0,
+        },
     },
     uqnoauthid: {
         "uqr_id": null,
@@ -675,9 +795,87 @@ export const authorDetails = {
         "espace": {
             "first_year": 1999,
             "last_year": 2012,
-            "doc_count": 14
-        }
-    }
+            "doc_count": 14,
+        },
+    },
+    uqmasquerade: {
+        espace_id: 12345678,
+        staff_id: '0123456',
+        given_name: 'Masqueradable',
+        family_name: 'Staff',
+        title: 'Ms',
+        scopus_id: null,
+        google_scholar_id: null,
+        researcher_id: '',
+        orcid_id: '0000-0001-9999-9998',
+        publons_id: '0000-0001-9999-9998',
+        mypub_url: null,
+        pol_id: 1,
+        username: 'uqmasquerade',
+        is_administrator: 0,
+        is_super_administrator: 0,
+        org_units: ['Information Systems and Resource Services, Library'],
+        positions: ['Web Developer'],
+        uqr_id: null,
+        image_exists: null,
+        espace: {
+            first_year: 2000,
+            last_year: 2019,
+            doc_count: 38,
+        },
+    },
+    uqstaff: {
+        espace_id: 12345678,
+        staff_id: '0123456',
+        given_name: 'Staff',
+        family_name: 'Member',
+        title: 'Ms',
+        scopus_id: null,
+        google_scholar_id: null,
+        researcher_id: '',
+        orcid_id: '0000-0001-9999-9999',
+        publons_id: '0000-0001-9999-9999',
+        mypub_url: null,
+        pol_id: 1,
+        username: 'uqstaff',
+        is_administrator: 1,
+        is_super_administrator: 0,
+        org_units: ['Information Systems and Resource Services, Library'],
+        positions: ['Web Developer'],
+        uqr_id: null,
+        image_exists: null,
+        espace: {
+            first_year: 2000,
+            last_year: 2019,
+            doc_count: 38,
+        },
+    },
+    digiteamMember: {
+        espace_id: 12345676,
+        staff_id: '0123456',
+        given_name: 'Digiteam',
+        family_name: 'Member',
+        title: 'Ms',
+        scopus_id: null,
+        google_scholar_id: null,
+        researcher_id: '',
+        orcid_id: '0000-0001-9999-9999',
+        publons_id: '0000-0001-9999-9999',
+        mypub_url: null,
+        pol_id: 1,
+        username: 'digiteamMember',
+        is_administrator: 1,
+        is_super_administrator: 0,
+        org_units: ['Information Systems and Resource Services, Library'],
+        positions: ['Web Developer'],
+        uqr_id: null,
+        image_exists: null,
+        espace: {
+            first_year: 2000,
+            last_year: 2019,
+            doc_count: 38,
+        },
+    },
 };
 
 export const uqrdav10 = {
@@ -696,7 +894,7 @@ export const uqrdav10 = {
             'Office of the Provost',
             'School of Music',
             'staff@uq.edu.au',
-            'uqrdav10@uq.edu.au'
+            'uqrdav10@uq.edu.au',
         ],
         type: 3,
         homeLib: 'St Lucia',
@@ -726,7 +924,7 @@ export const uqrdav10 = {
             'CN=lib_libapi_MasqueradeUsers,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=LIB_Staff_All,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=LIB_Staff_ISRS,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
-            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au'
+            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
         ],
         classes: [],
         expiryDate: '31-12-99',
@@ -735,7 +933,7 @@ export const uqrdav10 = {
         canMasquerade: false,
         blocked: false,
         masqueradingId: 'uqvasai',
-        masqueradingType: 'full'
+        masqueradingType: 'full',
     },
     author: {
         aut_id: 79324,
@@ -770,7 +968,7 @@ export const uqrdav10 = {
         aut_publons_id: null,
         aut_student_username: null,
         aut_orcid_works_last_sync: null,
-        aut_is_orcid_sync_enabled: null
+        aut_is_orcid_sync_enabled: null,
     },
     authorDetails: {
         espace_id: 79324,
@@ -786,25 +984,25 @@ export const uqrdav10 = {
         mypub_url: null,
         username: 'uqrdav10',
         org_units: [
-            'School of Music'
+            'School of Music',
         ],
         positions: [
-            'Senior Lecturer'
+            'Senior Lecturer',
         ],
         uqr_id: 394,
         image_exists: 1,
         espace: {
             first_year: 2001,
             last_year: 2019,
-            doc_count: 192
-        }
+            doc_count: 192,
+        },
     },
     accountLoading: false,
     accountAuthorLoading: false,
     accountAuthorDetailsLoading: false,
     isSessionExpired: null,
     accountAuthorSaving: false,
-    accountAuthorError: null
+    accountAuthorError: null,
 };
 
 export const uqagrinb = {
@@ -823,7 +1021,7 @@ export const uqagrinb = {
             'Office of the Provost',
             'School of Music',
             'staff@uq.edu.au',
-            'uqagrinb@uq.edu.au'
+            'uqagrinb@uq.edu.au',
         ],
         type: 3,
         homeLib: 'St Lucia',
@@ -853,7 +1051,7 @@ export const uqagrinb = {
             'CN=lib_libapi_MasqueradeUsers,OU=lib-libapi-groups,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=LIB_Staff_All,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
             'CN=LIB_Staff_ISRS,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
-            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au'
+            'CN=lib_servicepoint_login,OU=LIB-groups,OU=University of Queensland Library,OU=Deputy Vice-Chancellor (Academic),OU=Vice-Chancellor,DC=uq,DC=edu,DC=au',
         ],
         classes: [],
         expiryDate: '31-12-99',
@@ -862,7 +1060,7 @@ export const uqagrinb = {
         canMasquerade: false,
         blocked: false,
         masqueradingId: 'uqvasai',
-        masqueradingType: 'full'
+        masqueradingType: 'full',
     },
     author: {
         aut_id: 81130,
@@ -897,7 +1095,7 @@ export const uqagrinb = {
         aut_publons_id: null,
         aut_student_username: null,
         aut_orcid_works_last_sync: null,
-        aut_is_orcid_sync_enabled: null
+        aut_is_orcid_sync_enabled: null,
     },
     authorDetails: {
         espace_id: 81130,
@@ -913,23 +1111,23 @@ export const uqagrinb = {
         mypub_url: null,
         username: 'uqagrinb',
         org_units: [
-            'School of Music'
+            'School of Music',
         ],
         positions: [
-            'Lecturer'
+            'Lecturer',
         ],
         uqr_id: null,
         image_exists: null,
         espace: {
             first_year: 2008,
             last_year: 2017,
-            doc_count: 59
-        }
+            doc_count: 59,
+        },
     },
     accountLoading: false,
     accountAuthorLoading: false,
     accountAuthorDetailsLoading: false,
     isSessionExpired: null,
     accountAuthorSaving: false,
-    accountAuthorError: null
+    accountAuthorError: null,
 };
