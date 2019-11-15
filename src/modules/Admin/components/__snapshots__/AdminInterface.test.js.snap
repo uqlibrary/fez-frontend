@@ -120,7 +120,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -345,7 +345,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -540,7 +540,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -711,7 +711,7 @@ exports[`AdminInterface component should render default view as a full form view
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -720,8 +720,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="bibliographic"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Bibliographic"
         >
           <Field
@@ -738,8 +738,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="files"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Files"
         >
           <Field
@@ -756,8 +756,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="security"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Security"
         >
           <Field
@@ -935,7 +935,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -1128,7 +1128,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"

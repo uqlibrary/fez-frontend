@@ -125,7 +125,7 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop >
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
@@ -220,7 +220,7 @@ export const AdminInterface = ({
                 </Grid>
                 {/* --------------- Content here ---------------*/}
                 <form>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={0}>
                         {!tabbed
                             ? Object.keys(tabs)
                                 .filter(tab => tabs[tab].activated)

@@ -6830,7 +6830,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                 <form>
                                   <WithStyles(Grid)
                                     container={true}
-                                    spacing={16}
+                                    spacing={0}
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -6944,14 +6944,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       lg={false}
                                       md={false}
                                       sm={false}
-                                      spacing={16}
+                                      spacing={0}
                                       wrap="wrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
+                                        className="MuiGrid-container-6"
                                       >
                                         <TabContainer
                                           currentTab="bibliographic"
@@ -7085,13 +7085,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Admin"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Admin"
                                                   >
                                                     <Cards
@@ -7104,8 +7104,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -7607,10 +7607,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Admin"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -7627,14 +7632,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Admin"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -7645,8 +7655,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -8354,13 +8369,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Identifiers"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Identifiers"
                                                   >
                                                     <Cards
@@ -8373,8 +8388,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -8876,10 +8891,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Identifiers"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -8896,14 +8916,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Identifiers"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -8914,8 +8939,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -9623,13 +9653,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Bibliographic"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Bibliographic"
                                                   >
                                                     <Cards
@@ -9642,8 +9672,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -10145,10 +10175,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Bibliographic"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -10165,14 +10200,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Bibliographic"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -10183,8 +10223,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -10892,13 +10937,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Author details"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Author details"
                                                   >
                                                     <Cards
@@ -10911,8 +10956,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -11414,10 +11459,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Author details"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -11434,14 +11484,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Author details"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -11452,8 +11507,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -12161,13 +12221,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Additional information"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Additional information"
                                                   >
                                                     <Cards
@@ -12180,8 +12240,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -12683,10 +12743,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Additional information"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -12703,14 +12768,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Additional information"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -12721,8 +12791,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -13430,13 +13505,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Grant information"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Grant information"
                                                   >
                                                     <Cards
@@ -13449,8 +13524,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -13952,10 +14027,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Grant information"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -13972,14 +14052,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Grant information"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -13990,8 +14075,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -14699,13 +14789,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Files"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Files"
                                                   >
                                                     <Cards
@@ -14718,8 +14808,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -15221,10 +15311,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Files"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -15241,14 +15336,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Files"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -15259,8 +15359,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
@@ -15968,13 +16073,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                 className="MuiGrid-item-7 MuiGrid-grid-xs-12-46"
                                               >
                                                 <StandardCard
-                                                  primaryHeader={false}
-                                                  squareTop={false}
+                                                  primaryHeader={true}
+                                                  squareTop={true}
                                                   title="Security"
                                                 >
                                                   <WithStyles(Cards)
-                                                    primaryHeader={false}
-                                                    squareTop={false}
+                                                    primaryHeader={true}
+                                                    squareTop={true}
                                                     title="Security"
                                                   >
                                                     <Cards
@@ -15987,8 +16092,8 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                           "fullHeight": "Cards-fullHeight-160",
                                                         }
                                                       }
-                                                      primaryHeader={false}
-                                                      squareTop={false}
+                                                      primaryHeader={true}
+                                                      squareTop={true}
                                                       theme={
                                                         Object {
                                                           "breakpoints": Object {
@@ -16490,10 +16595,15 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                   action={false}
                                                                   classes={
                                                                     Object {
-                                                                      "root": undefined,
+                                                                      "root": "Cards-cardHeaderPrimary-158",
                                                                     }
                                                                   }
-                                                                  style={Object {}}
+                                                                  style={
+                                                                    Object {
+                                                                      "borderTopLeftRadius": 0,
+                                                                      "borderTopRightRadius": 0,
+                                                                    }
+                                                                  }
                                                                   title="Security"
                                                                   titleTypographyProps={
                                                                     Object {
@@ -16510,14 +16620,19 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                         "action": "MuiCardHeader-action-191",
                                                                         "avatar": "MuiCardHeader-avatar-190",
                                                                         "content": "MuiCardHeader-content-192",
-                                                                        "root": "MuiCardHeader-root-189",
+                                                                        "root": "MuiCardHeader-root-189 Cards-cardHeaderPrimary-158",
                                                                         "subheader": "MuiCardHeader-subheader-194",
                                                                         "title": "MuiCardHeader-title-193",
                                                                       }
                                                                     }
                                                                     component="div"
                                                                     disableTypography={false}
-                                                                    style={Object {}}
+                                                                    style={
+                                                                      Object {
+                                                                        "borderTopLeftRadius": 0,
+                                                                        "borderTopRightRadius": 0,
+                                                                      }
+                                                                    }
                                                                     title="Security"
                                                                     titleTypographyProps={
                                                                       Object {
@@ -16528,8 +16643,13 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     }
                                                                   >
                                                                     <div
-                                                                      className="MuiCardHeader-root-189"
-                                                                      style={Object {}}
+                                                                      className="MuiCardHeader-root-189 Cards-cardHeaderPrimary-158"
+                                                                      style={
+                                                                        Object {
+                                                                          "borderTopLeftRadius": 0,
+                                                                          "borderTopRightRadius": 0,
+                                                                        }
+                                                                      }
                                                                     >
                                                                       <div
                                                                         className="MuiCardHeader-content-192"
