@@ -1,7 +1,7 @@
 import { AdminInterface } from './AdminInterface';
+import { useRecordContext, useTabbedContext } from 'context';
 
 jest.mock('../../../context');
-import { useTabbedContext, useRecordContext } from 'context';
 
 jest.mock('redux-form/immutable');
 jest.mock('js-cookie', () => ({
@@ -367,5 +367,32 @@ describe('AdminInterface component', () => {
             .props()
             .onAction();
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render a title with html correctly', () => {
+        const rekTitle =
+            'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;' +
+            'renal m<sup>a</sup>sses&nbsp;™&nbsp;♦';
+        useRecordContext.mockImplementation(() => ({
+            record: {
+                rek_pid: 'UQ:123456',
+                rek_title: rekTitle,
+                rek_object_type_lookup: 'Record',
+                rek_display_type_lookup: 'Journal Article',
+            },
+        }));
+        useTabbedContext.mockImplementation(() => ({ tabbed: false }));
+
+        const wrapper = setup({
+            tabs: {
+                bibliographic: {
+                    activated: true,
+                    component: () => 'BibliographySectionComponent',
+                },
+            },
+        });
+        // prettier-ignore
+        expect(toJson(wrapper))
+            .toMatchSnapshot();
     });
 });
