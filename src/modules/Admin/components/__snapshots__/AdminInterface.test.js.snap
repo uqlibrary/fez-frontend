@@ -6,6 +6,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -119,7 +120,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -153,42 +154,57 @@ exports[`AdminInterface component should disabled button and render alert for fo
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          disabled={true}
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              disabled={true}
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -230,6 +246,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -343,7 +360,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -377,41 +394,56 @@ exports[`AdminInterface component should display successful alert 1`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -424,6 +456,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -537,7 +570,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -571,41 +604,56 @@ exports[`AdminInterface component should display successful alert 2`] = `
       </WithStyles(Grid)>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -625,6 +673,7 @@ exports[`AdminInterface component should render default view as a full form view
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -707,7 +756,7 @@ exports[`AdminInterface component should render default view as a full form view
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -716,8 +765,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="bibliographic"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Bibliographic"
         >
           <Field
@@ -734,8 +783,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="files"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Files"
         >
           <Field
@@ -752,8 +801,8 @@ exports[`AdminInterface component should render default view as a full form view
         value="security"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          squareTop={true}
           title="Security"
         >
           <Field
@@ -765,41 +814,56 @@ exports[`AdminInterface component should render default view as a full form view
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -812,6 +876,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -930,7 +995,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -952,41 +1017,56 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
@@ -999,6 +1079,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -1122,7 +1203,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -1144,41 +1225,56 @@ exports[`AdminInterface component should render in create mode 1`] = `
       </TabContainer>
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>

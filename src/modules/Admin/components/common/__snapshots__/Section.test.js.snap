@@ -6,7 +6,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
   key="Title"
   xs={12}
 >
-  <StandardCard
+  <AdminCard
     accentHeader={true}
     title="Title"
   >
@@ -24,7 +24,7 @@ exports[`GroupsWithinCard component should render default view 1`] = `
         }
       />
     </WithStyles(Grid)>
-  </StandardCard>
+  </AdminCard>
 </WithStyles(Grid)>
 `;
 
@@ -43,7 +43,7 @@ exports[`GroupsWithoutCard component should render default view 1`] = `
 exports[`Section component should render default view 1`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={8}
 >
   <Memo()
     disabled={false}
@@ -56,7 +56,7 @@ exports[`Section component should render default view 1`] = `
 exports[`Section component should render default view 2`] = `
 <WithStyles(Grid)
   container={true}
-  spacing={16}
+  spacing={8}
 >
   <Memo()
     disabled={false}

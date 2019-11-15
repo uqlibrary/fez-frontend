@@ -125,7 +125,7 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader={!!tabbed} squareTop={!!tabbed}>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop>
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
@@ -140,7 +140,7 @@ export const AdminInterface = ({
     return (
         <StandardPage>
             <React.Fragment>
-                <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
+                <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
                         onAction={navigateToSearchResult}
@@ -220,7 +220,7 @@ export const AdminInterface = ({
                 </Grid>
                 {/* --------------- Content here ---------------*/}
                 <form>
-                    <Grid container spacing={16}>
+                    <Grid container spacing={0}>
                         {!tabbed
                             ? Object.keys(tabs)
                                 .filter(tab => tabs[tab].activated)
@@ -231,26 +231,30 @@ export const AdminInterface = ({
                                 <Alert pushToTop {...alertProps.current} />
                             </Grid>
                         )}
-                        <Grid item xs={12} sm={2}>
-                            <Button
-                                style={{ whiteSpace: 'nowrap' }}
-                                variant="contained"
-                                color="secondary"
-                                fullWidth
-                                children="Cancel"
-                                onClick={handleCancel}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={10}>
-                            <Button
-                                style={{ whiteSpace: 'nowrap' }}
-                                disabled={submitting || disableSubmit}
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                children=" Submit "
-                                onClick={handleSubmit}
-                            />
+                        <Grid item xs={12}>
+                            <Grid container spacing={8} style={{ marginTop: 8 }}>
+                                <Grid item xs={12} sm={2}>
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        variant="contained"
+                                        color="secondary"
+                                        fullWidth
+                                        children="Cancel"
+                                        onClick={handleCancel}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={10}>
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        disabled={submitting || disableSubmit}
+                                        variant="contained"
+                                        color="primary"
+                                        fullWidth
+                                        children=" Submit "
+                                        onClick={handleSubmit}
+                                    />
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </form>

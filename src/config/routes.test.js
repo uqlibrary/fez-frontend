@@ -108,12 +108,17 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render auth required page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent }, account: null });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            account: null,
+            accountAuthorDetailsLoading: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.contact,
             },
+            accountAuthorDetailsLoading: false,
         };
         renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.authenticationRequired);
@@ -125,6 +130,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -142,6 +148,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -155,7 +162,10 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render not found page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent } });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            accountAuthorDetailsLoading: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
