@@ -2262,6 +2262,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                   alignItems="center"
                                   container={true}
                                   direction="row"
+                                  spacing={0}
                                   style={
                                     Object {
                                       "marginTop": -24,

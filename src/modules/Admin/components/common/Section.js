@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Grid from '@material-ui/core/Grid';
-import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
+import { AdminCard } from 'modules/Admin/components/AdminCard';
 import { FieldGridItem } from './FieldGridItem';
 
 export const GroupsWithoutCard = React.memo(({ groups, disabled }) =>
@@ -21,11 +21,11 @@ GroupsWithoutCard.propTypes = {
 
 export const GroupsWithinCard = React.memo(({ title, groups, disabled }) => (
     <Grid item xs={12} key={title}>
-        <StandardCard title={`${title}`} accentHeader>
+        <AdminCard title={`${title}`} accentHeader>
             <Grid container spacing={8}>
                 <GroupsWithoutCard groups={groups} disabled={disabled} />
             </Grid>
-        </StandardCard>
+        </AdminCard>
     </Grid>
 ));
 
@@ -36,7 +36,7 @@ GroupsWithinCard.propTypes = {
 };
 
 export const Section = ({ disabled, cards }) => (
-    <Grid container spacing={16}>
+    <Grid container spacing={8}>
         {cards.map((card, index) =>
             !!card.title ? (
                 <GroupsWithinCard key={card.title} title={card.title} groups={card.groups} disabled={disabled} />

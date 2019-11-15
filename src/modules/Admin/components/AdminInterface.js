@@ -140,7 +140,7 @@ export const AdminInterface = ({
     return (
         <StandardPage>
             <React.Fragment>
-                <Grid container direction="row" alignItems="center" style={{ marginTop: -24 }}>
+                <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
                         onAction={navigateToSearchResult}
