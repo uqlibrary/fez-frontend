@@ -78,6 +78,7 @@ export class AppClass extends PureComponent {
         authorDetails: PropTypes.object,
         accountLoading: PropTypes.bool,
         accountAuthorLoading: PropTypes.bool,
+        accountAuthorDetailsLoading: PropTypes.bool,
         isSessionExpired: PropTypes.bool,
         actions: PropTypes.object,
         location: PropTypes.object,
@@ -268,6 +269,7 @@ export class AppClass extends PureComponent {
             components: pages,
             authorDetails: this.props.authorDetails,
             account: this.props.account,
+            accountAuthorDetailsLoading: this.props.accountAuthorDetailsLoading,
             forceOrcidRegistration: isOrcidRequired && isHdrStudent,
             isHdrStudent: isHdrStudent,
         });
