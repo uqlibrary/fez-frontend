@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -125,7 +126,7 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
@@ -149,7 +150,9 @@ export const AdminInterface = ({
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
-                                ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                                ? ReactHtmlParser(
+                                    `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
@@ -226,9 +229,12 @@ export const AdminInterface = ({
                                 .filter(tab => tabs[tab].activated)
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
+                    </Grid>
+                    <Grid container spacing={8}>
                         {alertProps.current && (
                             <Grid item xs={12}>
-                                <Alert pushToTop {...alertProps.current} />
+                                <div style={{ height: 16 }} />
+                                <Alert {...alertProps.current} />
                             </Grid>
                         )}
                         <Grid item xs={12}>

@@ -130,6 +130,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -140,13 +141,24 @@ exports[`AdminInterface component should disabled button and render alert for fo
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           message="Request is being processed."
-          pushToTop={true}
           showLoader={true}
           title="Saving"
           type="info_outline"
@@ -370,6 +382,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -380,14 +393,25 @@ exports[`AdminInterface component should display successful alert 1`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
@@ -580,6 +604,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -590,18 +615,214 @@ exports[`AdminInterface component should display successful alert 2`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
       </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        xs={12}
+      >
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
+          style={
+            Object {
+              "marginTop": 8,
+            }
+          }
+        >
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+  </form>
+</StandardPage>
+`;
+
+exports[`AdminInterface component should render a title with html correctly 1`] = `
+<StandardPage>
+  <WithStyles(Grid)
+    alignItems="center"
+    container={true}
+    direction="row"
+    spacing={0}
+    style={
+      Object {
+        "marginTop": -24,
+      }
+    }
+  >
+    <WithStyles(ConfirmDialogBox)
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Edit another work",
+          "confirmationMessage": "Work has been updated",
+          "confirmationTitle": "Work has been updated",
+        }
+      }
+      onAction={[Function]}
+      onRef={[Function]}
+    />
+    <WithStyles(Grid)
+      item={true}
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+      xs={true}
+    >
+      <WithStyles(Typography)
+        color="primary"
+        style={
+          Object {
+            "fontSize": 24,
+          }
+        }
+        variant="h2"
+      >
+        Edit Journal Article - Cost analysis: outsourcing radiofrequency ablution for massiv
+        <sub
+          key="1"
+        >
+          e
+        </sub>
+         renal m
+        <sup
+          key="3"
+        >
+          a
+        </sup>
+        sses ™ ♦: UQ:123456
+      </WithStyles(Typography)>
+    </WithStyles(Grid)>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        item={true}
+        xs="auto"
+      >
+        <Memo() />
+      </WithStyles(Grid)>
+    </Hidden>
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={false}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={true}
+      xsUp={false}
+    >
+      <WithStyles(Grid)
+        container={true}
+        direction="row"
+        spacing={0}
+      />
+    </Hidden>
+  </WithStyles(Grid)>
+  <form>
+    <WithStyles(Grid)
+      container={true}
+      spacing={0}
+    >
+      <TabContainer
+        currentTab="bibliographic"
+        key="bibliographic"
+        tabbed={false}
+        value="bibliographic"
+      >
+        <StandardCard
+          primaryHeader={true}
+          smallTitle={true}
+          squareTop={true}
+          title="Bibliographic"
+        >
+          <Field
+            component={[Function]}
+            disabled={false}
+            name="bibliographicSection"
+          />
+        </StandardCard>
+      </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -766,6 +987,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -784,6 +1006,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Files"
         >
@@ -802,6 +1025,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Security"
         >
@@ -812,6 +1036,11 @@ exports[`AdminInterface component should render default view as a full form view
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1005,6 +1234,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -1015,6 +1245,11 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1213,6 +1448,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -1223,6 +1459,11 @@ exports[`AdminInterface component should render in create mode 1`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}

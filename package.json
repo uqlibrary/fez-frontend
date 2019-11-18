@@ -178,6 +178,7 @@
         "react-router": "^5.0.1",
         "react-router-dom": "^5.0.1",
         "react-rte": "^0.16.0",
+        "react-scroll-up": "^1.3.3",
         "react-share": "^3.0.0",
         "recompose": "^0.30.0",
         "redux": "4.0.0",
@@ -302,6 +303,9 @@
             "src/middleware/*.{js,jsx}",
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
+        ],
+        "coveragePathIgnorePatterns": [
+            "src/modules/SharedComponents/ScrollTop/"
         ],
         "coverageReporters": ["html", "text"],
         "coverageThreshold": {
