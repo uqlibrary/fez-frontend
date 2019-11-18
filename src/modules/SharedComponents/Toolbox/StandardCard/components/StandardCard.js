@@ -68,15 +68,18 @@ export class Cards extends Component {
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
                         title={title}
-                        titleTypographyProps={!smallTitle ? {
-                            variant: 'h5',
-                            component: 'h3',
-                            color: 'inherit',
-                        } : {
-                            variant: 'h7',
-                            component: 'h3',
-                            color: 'inherit',
-                        }
+                        titleTypographyProps={
+                            !smallTitle
+                                ? {
+                                    variant: 'h5',
+                                    component: 'h3',
+                                    color: 'inherit',
+                                }
+                                : {
+                                    variant: 'h7',
+                                    component: 'h3',
+                                    color: 'inherit',
+                                }
                         }
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{

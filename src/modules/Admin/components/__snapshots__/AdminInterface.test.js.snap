@@ -702,6 +702,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
     alignItems="center"
     container={true}
     direction="row"
+    spacing={0}
     style={
       Object {
         "marginTop": -24,
@@ -796,7 +797,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
   <form>
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={0}
     >
       <TabContainer
         currentTab="bibliographic"
@@ -805,8 +806,9 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
         value="bibliographic"
       >
         <StandardCard
-          primaryHeader={false}
-          squareTop={false}
+          primaryHeader={true}
+          smallTitle={true}
+          squareTop={true}
           title="Bibliographic"
         >
           <Field
@@ -816,43 +818,70 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <div
+      style={
+        Object {
+          "height": 16,
+        }
+      }
+    />
+    <WithStyles(Grid)
+      container={true}
+      spacing={16}
+    >
       <WithStyles(Grid)
         item={true}
-        sm={2}
         xs={12}
       >
-        <WithStyles(Button)
-          color="secondary"
-          fullWidth={true}
-          onClick={[Function]}
+        <WithStyles(Grid)
+          container={true}
+          spacing={8}
           style={
             Object {
-              "whiteSpace": "nowrap",
+              "marginTop": 8,
             }
           }
-          variant="contained"
         >
-          Cancel
-        </WithStyles(Button)>
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={10}
-        xs={12}
-      >
-        <WithStyles(Button)
-          color="primary"
-          fullWidth={true}
-          onClick={[MockFunction]}
-          style={
-            Object {
-              "whiteSpace": "nowrap",
-            }
-          }
-          variant="contained"
-        >
-           Submit 
-        </WithStyles(Button)>
+          <WithStyles(Grid)
+            item={true}
+            sm={2}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="secondary"
+              fullWidth={true}
+              onClick={[Function]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+              Cancel
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+          <WithStyles(Grid)
+            item={true}
+            sm={10}
+            xs={12}
+          >
+            <WithStyles(Button)
+              color="primary"
+              fullWidth={true}
+              onClick={[MockFunction]}
+              style={
+                Object {
+                  "whiteSpace": "nowrap",
+                }
+              }
+              variant="contained"
+            >
+               Submit 
+            </WithStyles(Button)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
       </WithStyles(Grid)>
     </WithStyles(Grid)>
   </form>
