@@ -125,7 +125,7 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop>
+            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
                 <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
             </StandardCard>
         </TabContainer>
@@ -226,9 +226,12 @@ export const AdminInterface = ({
                                 .filter(tab => tabs[tab].activated)
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
+                    </Grid>
+                    <div style={{ height: 16 }} />
+                    <Grid container spacing={16}>
                         {alertProps.current && (
                             <Grid item xs={12}>
-                                <Alert pushToTop {...alertProps.current} />
+                                <Alert {...alertProps.current} />
                             </Grid>
                         )}
                         <Grid item xs={12} sm={2}>

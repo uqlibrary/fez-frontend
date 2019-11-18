@@ -9,7 +9,7 @@ import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
     card: {
-        marginTop: 12,
+        marginTop: 8,
     },
     title: {
         marginLeft: -4,
