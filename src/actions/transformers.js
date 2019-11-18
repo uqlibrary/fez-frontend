@@ -932,6 +932,23 @@ export const getInstitutionalStatusSearchKey = record => {
     };
 };
 
+export const getOpenAccessStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_oa_status && record.rek_oa_status.value === null) {
+        return {
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
+        };
+    }
+
+    return {
+        fez_record_search_key_oa_status: {
+            rek_oa_status: record.rek_oa_status,
+        },
+    };
+};
+
 export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
     const {
         collections,
@@ -943,6 +960,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         fez_record_search_key_institutional_status: institutionalStatus,
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
+        fez_record_search_key_oa_status: openAccessStatus,
         ...rest
     } = data;
 
@@ -958,6 +976,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
+        ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...rest,
     };
 };

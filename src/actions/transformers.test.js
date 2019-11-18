@@ -2752,6 +2752,11 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_institutional_status_id: 3566611,
                 rek_institutional_status_pid: 'UQ:113765',
             },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: '453694',
+            },
         };
 
         expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
@@ -2805,6 +2810,9 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
             fez_record_search_key_institutional_status: {
                 rek_institutional_status: '453224',
             },
+            fez_record_search_key_oa_status: {
+                rek_oa_status: '453694',
+            },
         });
     });
 
@@ -2831,6 +2839,14 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_institutional_status_id: 3566611,
                 rek_institutional_status_pid: 'UQ:113765',
             },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+            },
         };
 
         expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
@@ -2841,6 +2857,9 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_herdc_status: null,
             },
             fez_record_search_key_institutional_status: {},
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
         });
     });
 
@@ -2869,6 +2888,14 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_institutional_status_id: 3566611,
                 rek_institutional_status_pid: 'UQ:113765',
             },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+            },
         };
 
         expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
@@ -2879,6 +2906,9 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_herdc_status: null,
             },
             fez_record_search_key_institutional_status: {},
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
         });
     });
 
