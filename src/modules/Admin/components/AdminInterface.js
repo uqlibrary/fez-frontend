@@ -230,10 +230,10 @@ export const AdminInterface = ({
                                 .map(renderTabContainer)
                             : renderTabContainer(currentTabValue)}
                     </Grid>
-                    <div style={{ height: 16 }} />
-                    <Grid container spacing={16}>
+                    <Grid container spacing={8}>
                         {alertProps.current && (
                             <Grid item xs={12}>
+                                <div style={{ height: 16 }} />
                                 <Alert {...alertProps.current} />
                             </Grid>
                         )}

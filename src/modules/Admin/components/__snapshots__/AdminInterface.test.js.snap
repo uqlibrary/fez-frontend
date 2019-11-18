@@ -142,21 +142,21 @@ exports[`AdminInterface component should disabled button and render alert for fo
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           message="Request is being processed."
           showLoader={true}
@@ -394,21 +394,21 @@ exports[`AdminInterface component should display successful alert 1`] = `
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
@@ -616,21 +616,21 @@ exports[`AdminInterface component should display successful alert 2`] = `
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
@@ -819,16 +819,9 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -1044,16 +1037,9 @@ exports[`AdminInterface component should render default view as a full form view
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -1260,16 +1246,9 @@ exports[`AdminInterface component should render default view as a tabbed form vi
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}
@@ -1481,16 +1460,9 @@ exports[`AdminInterface component should render in create mode 1`] = `
         </StandardCard>
       </TabContainer>
     </WithStyles(Grid)>
-    <div
-      style={
-        Object {
-          "height": 16,
-        }
-      }
-    />
     <WithStyles(Grid)
       container={true}
-      spacing={16}
+      spacing={8}
     >
       <WithStyles(Grid)
         item={true}

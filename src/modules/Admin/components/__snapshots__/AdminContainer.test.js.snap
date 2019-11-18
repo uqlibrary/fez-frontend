@@ -17294,16 +17294,9 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       </div>
                                     </Grid>
                                   </WithStyles(Grid)>
-                                  <div
-                                    style={
-                                      Object {
-                                        "height": 16,
-                                      }
-                                    }
-                                  />
                                   <WithStyles(Grid)
                                     container={true}
-                                    spacing={16}
+                                    spacing={8}
                                   >
                                     <Grid
                                       alignContent="stretch"
@@ -17417,14 +17410,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       lg={false}
                                       md={false}
                                       sm={false}
-                                      spacing={16}
+                                      spacing={8}
                                       wrap="wrap"
                                       xl={false}
                                       xs={false}
                                       zeroMinWidth={false}
                                     >
                                       <div
-                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-16-29"
+                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-8-28"
                                       >
                                         <WithStyles(Grid)
                                           item={true}
