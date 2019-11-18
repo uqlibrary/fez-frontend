@@ -93,14 +93,10 @@ describe('Audio Player Component ', () => {
         const wrapper = setup();
         wrapper.setState({ isPlaying: true });
         wrapper.update();
-        expect(toJson(wrapper))
-            .toMatchSnapshot();
+        expect(toJson(wrapper)).toMatchSnapshot();
         const endOfAudio = jest.spyOn(wrapper.instance(), 'setState');
-        wrapper.instance()
-            .onAudioStreamEnd({});
-        expect(endOfAudio)
-            .toBeCalled();
-        expect(toJson(wrapper))
-            .toMatchSnapshot();
+        wrapper.instance().onAudioStreamEnd({});
+        expect(endOfAudio).toBeCalled();
+        expect(toJson(wrapper)).toMatchSnapshot();
     });
 });
