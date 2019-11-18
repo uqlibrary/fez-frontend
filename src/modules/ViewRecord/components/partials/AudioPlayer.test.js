@@ -88,4 +88,19 @@ describe('Audio Player Component ', () => {
         wrapper.setState({ isPlaying: true });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render when image ends', () => {
+        const wrapper = setup();
+        wrapper.setState({ isPlaying: true });
+        wrapper.update();
+        expect(toJson(wrapper))
+            .toMatchSnapshot();
+        const endOfAudio = jest.spyOn(wrapper.instance(), 'setState');
+        wrapper.instance()
+            .onAudioStreamEnd({});
+        expect(endOfAudio)
+            .toBeCalled();
+        expect(toJson(wrapper))
+            .toMatchSnapshot();
+    });
 });

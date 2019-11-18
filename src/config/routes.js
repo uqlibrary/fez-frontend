@@ -400,7 +400,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.community,
@@ -464,7 +464,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.unpublished,
@@ -613,7 +613,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.community,
@@ -633,7 +633,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.add,
