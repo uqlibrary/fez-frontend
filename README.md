@@ -291,11 +291,28 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 - anonymous user: <http://localhost:3000/?user=anon>
 - researcher user: <http://localhost:3000/?user=uqresearcher>
 - researcher user without orcid: <http://localhost:3000/?user=noorcid>
-- staff/not author user: <http://localhost:3000/?user=uqstaff>
+- staff/not author user (has admin): <http://localhost:3000/?user=uqstaff>
 - undegrad student user: <http://localhost:3000/?user=s1111111>
 - postgrad student user: <http://localhost:3000/?user=s2222222>
 - RHD submission form: <http://localhost:3000/rhdsubmission?user=s2222222>
 - user with expired token: <http://localhost:3000/?user=uqexpired>
+- user who has readonly masquerade (but not admin): <http://localhost:3000/?user=uqmasquerade>
+- user who can do CSV Ingest: <http://localhost:3000/?user=digiteamMember>
+
+The following access is required:
+
+| User type          | masquerade | admin  | Resulting access
+| ------------------ | ---------- | ------ | ----------------------------------------------
+| general user       | false      | false  | no masquerade, no admin, no csv ingest
+| support staff      | readonly   | false  | readonly masquerade, no admin, no csv ingest
+| admin or developer | full       | true   | full masquerade, admin, csv ingest
+| digiteam           | false      | true   | no masquerade, admin (side effect), csv ingest
+
+masquerade - on account record (CURRENT_ACCOUNT_API) eg https://api.library.uq.edu.au/staging/account, canMasquerade = true or false; when true, masqueradeType = full or readonly
+
+admin - on author record (AUTHOR_DETAILS_API) eg https://api.library.uq.edu.au/staging/authors/details/uqldegro, is_administrator = 0 or 1
+
+(there is also is_super_administrator, 0 or 1, which gives access to the security tab)
 
 ## Reviewing
 

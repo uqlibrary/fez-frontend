@@ -64,4 +64,11 @@ context('Homepage', () => {
         cy.visit('/?user=s2222222');
         checkMenuItemCount(12);
     });
+
+    it('Has expected menu items for a Masqueradable staff member', () => {
+        cy.visit('/?user=uqmasquerade');
+        checkMenuItemCount(13);
+        cy.get('#mainMenu .menu-item-container p')
+            .contains('uq.masquerader@example.uq.edu.au');
+    });
 });

@@ -25,12 +25,12 @@ describe('Routes getMenuConfig method', () => {
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, authorDetails.uqstaff);
-        expect(testRoutes.length).toEqual(20);
+        expect(testRoutes.length).toEqual(21);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
         const testRoutes = routes.getMenuConfig(accounts.uqstaff, authorDetails.uqstaff, false, true);
-        expect(testRoutes.length).toEqual(21);
+        expect(testRoutes.length).toEqual(22);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
@@ -83,7 +83,7 @@ describe('Routes getRoutesConfig method', () => {
             account: accounts.uqstaff,
             authorDetails: authorDetails.uqstaff,
         });
-        expect(testRoutes.length).toEqual(33);
+        expect(testRoutes.length).toEqual(34);
     });
 
     it('should return a list of routes for hdr student without ORCID', () => {
@@ -108,12 +108,17 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render auth required page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent }, account: null });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            account: null,
+            accountAuthorDetailsLoading: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
                 pathname: routes.pathConfig.contact,
             },
+            accountAuthorDetailsLoading: false,
         };
         renderPage(props);
         expect(testComponent).toHaveBeenCalledWith(locale.pages.authenticationRequired);
@@ -125,6 +130,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -142,6 +148,7 @@ describe('Routes getRoutesConfig method', () => {
             components: { StandardPage: testComponent },
             account: accounts.uqresearcher,
             authorDetails: authorDetails.uqresearcher,
+            accountAuthorDetailsLoading: false,
         });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
@@ -155,7 +162,10 @@ describe('Routes getRoutesConfig method', () => {
 
     it('should render not found page', () => {
         const testComponent = jest.fn();
-        const routesConfig = routes.getRoutesConfig({ components: { StandardPage: testComponent } });
+        const routesConfig = routes.getRoutesConfig({
+            components: { StandardPage: testComponent },
+            accountAuthorDetailsLoading: false,
+        });
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {

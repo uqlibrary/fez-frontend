@@ -164,6 +164,11 @@ const flattedPathConfig = [
     '/admin/masquerade',
     '/admin/thirdPartyTools',
     '/admin/unpublished',
+    '/admin/add',
+    '/admin/edit',
+    '/admin/masquerade',
+    '/admin/unpublished',
+    '/admin/thirdPartyTools',
     '/author-identifiers/google-scholar/link',
     '/author-identifiers/orcid/link',
     '/batch-import',
@@ -180,10 +185,6 @@ const flattedPathConfig = [
     '/records/add/find',
     '/records/add/results',
     '/records/add/new',
-    '/admin/masquerade',
-    '/admin/unpublished',
-    '/admin/thirdPartyTools',
-    '/admin/add',
     '/view',
 ];
 
@@ -200,6 +201,7 @@ export const getRoutesConfig = ({
     components = {},
     account = null,
     authorDetails = null,
+    accountAuthorDetailsLoading = true,
     forceOrcidRegistration = false,
     isHdrStudent = false,
 }) => {
@@ -398,7 +400,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.community,
@@ -462,7 +464,7 @@ export const getRoutesConfig = ({
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     path: pathConfig.admin.unpublished,
@@ -492,20 +494,24 @@ export const getRoutesConfig = ({
             render: childProps => {
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
                 const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
-                if ((isValidRoute || isValidFileRoute) && account) {
-                    return components.StandardPage({ ...locale.pages.permissionDenied });
-                }
-                if ((isValidRoute || isValidFileRoute) && !account) {
-                    if (
-                        process.env.NODE_ENV !== 'test' &&
-                        process.env.NODE_ENV !== 'development' &&
-                        process.env.NODE_ENV !== 'local'
-                    ) {
-                        window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                if (!accountAuthorDetailsLoading) {
+                    if ((isValidRoute || isValidFileRoute) && account && !accountAuthorDetailsLoading) {
+                        return components.StandardPage({ ...locale.pages.permissionDenied });
                     }
-                    return components.StandardPage({ ...locale.pages.authenticationRequired });
+                    if ((isValidRoute || isValidFileRoute) && !account && !accountAuthorDetailsLoading) {
+                        if (
+                            process.env.NODE_ENV !== 'test' &&
+                            process.env.NODE_ENV !== 'development' &&
+                            process.env.NODE_ENV !== 'local'
+                        ) {
+                            window.location.assign(`${AUTH_URL_LOGIN}?url=${window.btoa(window.location.href)}`);
+                        }
+                        return components.StandardPage({ ...locale.pages.authenticationRequired });
+                    }
+                    return components.StandardPage({ ...locale.pages.notFound });
+                } else {
+                    return null;
                 }
-                return components.StandardPage({ ...locale.pages.notFound });
             },
             pageTitle: locale.pages.notFound.title,
         },
@@ -607,7 +613,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.community,
@@ -627,7 +633,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
                 },
             ]
             : []),
-        ...(isAdmin(authorDetails)
+        ...(authorDetails && isAdmin(authorDetails)
             ? [
                 {
                     linkTo: pathConfig.admin.add,

@@ -269,6 +269,7 @@ exports[`Application component Should display mobile correctly 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -833,6 +834,7 @@ exports[`Application component should determine if it has incomplete works from 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -1580,6 +1582,7 @@ exports[`Application component should determine if it has incomplete works from 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -2143,6 +2146,7 @@ exports[`Application component should redirect to login page with correct return
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -2699,6 +2703,7 @@ exports[`Application component should render alert if user is not fez author 1`]
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -3446,6 +3451,7 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -3484,8 +3490,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -4020,6 +4024,7 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -4085,8 +4090,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -4606,6 +4609,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -5329,6 +5333,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -5960,6 +5965,7 @@ exports[`Application component should render app for account with fez author wit
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -6683,6 +6689,7 @@ exports[`Application component should render application with routing for the us
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -6977,6 +6984,7 @@ exports[`Application component should render for anon user 1`] = `
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -7258,6 +7266,7 @@ exports[`Application component should render thesis submission for HDR without m
       xsUp={false}
     >
       <WithStyles(ScrollTop)
+        containerId="content-container"
         show={true}
       />
     </Hidden>
@@ -7296,8 +7305,6 @@ exports[`Application component should render thesis submission for HDR without m
             "hasSession": true,
             "homeLib": "St Lucia",
             "id": "s2222222",
-            "is_administrator": 0,
-            "is_super_administrator": 0,
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
@@ -17131,6 +17138,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 xsUp={false}
                               >
                                 <WithStyles(ScrollTop)
+                                  containerId="content-container"
                                   show={true}
                                 >
                                   <ScrollTop

@@ -38,13 +38,17 @@ export default class AudioPlayer extends Component {
         this.setState({ isPlaying: false });
     };
 
+    onAudioStreamEnd = () => {
+        this.setState({ isPlaying: false });
+    };
+
     render() {
         const { fileName, mimeType } = this.props;
         const { controls } = locale.global.audioPlayer;
         const { isPlaying } = this.state;
         return (
             <div>
-                <audio id="audioPlayer" ref={player => (this.audioPlayerRef = player)}>
+                <audio id="audioPlayer" ref={player => (this.audioPlayerRef = player)} onEnded={this.onAudioStreamEnd}>
                     <source src={fileName} type={mimeType} />
                 </audio>
                 <IconButton

@@ -716,6 +716,7 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
         fez_record_search_key_isi_loc: isiLoc,
         fez_record_search_key_scopus_id: scopusId,
         fez_record_search_key_pubmed_id: pubmedId,
+        fez_record_search_key_pubmed_central_id: pubmedCentralId,
         links,
         ...rest
     } = data;
@@ -728,6 +729,9 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
             : {}),
         ...(!!pubmedId && pubmedId.hasOwnProperty('rek_pubmed_id')
             ? { fez_record_search_key_pubmed_id: pubmedId }
+            : {}),
+        ...(!!pubmedCentralId && pubmedCentralId.hasOwnProperty('rek_pubmed_central_id')
+            ? { fez_record_search_key_pubmed_central_id: pubmedCentralId }
             : {}),
         ...(!!links && links.length > 0 ? getLinkSearchKey(links) : {}),
         ...(!!links && links.length > 0 ? getLinkDescriptionSearchKey(links) : {}),

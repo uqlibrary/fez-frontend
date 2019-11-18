@@ -87,7 +87,6 @@ export const LinkInfoForm = ({ disabled, locale, onAdd }) => {
                     inputProps={{
                         ref: linkInput,
                     }}
-                    required
                 />
             </Grid>
             <Grid item xs={12} sm={6} md={5}>
