@@ -3,7 +3,7 @@
 exports[`AppLoader component should have a proper style generator 1`] = `
 Object {
   "card": Object {
-    "marginTop": 12,
+    "marginTop": 8,
   },
   "divider": Object {
     "border": 0,

@@ -854,6 +854,11 @@ export default {
                         <p>
                             Your preference is saved as a cookie on this browser and it will remember your preference.
                         </p>
+                        <h3>Page zoom</h3>
+                        <p>
+                            Using <b>CTRL</b> & <b>+/-</b> will zoom the page in/out further for more screen real
+                            estate.
+                        </p>
                     </div>
                 ),
                 buttonLabel: 'Got it',

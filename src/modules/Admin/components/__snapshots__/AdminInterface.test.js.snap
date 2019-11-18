@@ -130,6 +130,7 @@ exports[`AdminInterface component should disabled button and render alert for fo
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -140,13 +141,24 @@ exports[`AdminInterface component should disabled button and render alert for fo
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           message="Request is being processed."
-          pushToTop={true}
           showLoader={true}
           title="Saving"
           type="info_outline"
@@ -370,6 +382,7 @@ exports[`AdminInterface component should display successful alert 1`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -380,14 +393,25 @@ exports[`AdminInterface component should display successful alert 1`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
@@ -580,6 +604,7 @@ exports[`AdminInterface component should display successful alert 2`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -590,14 +615,25 @@ exports[`AdminInterface component should display successful alert 2`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
       >
+        <div
+          style={
+            Object {
+              "height": 16,
+            }
+          }
+        />
         <WithStyles(Alert)
           allowDismiss={true}
           message="Work has been saved successfully"
-          pushToTop={true}
           title="Success"
           type="done"
         />
@@ -771,6 +807,7 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -781,6 +818,11 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -945,6 +987,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -963,6 +1006,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Files"
         >
@@ -981,6 +1025,7 @@ exports[`AdminInterface component should render default view as a full form view
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Security"
         >
@@ -991,6 +1036,11 @@ exports[`AdminInterface component should render default view as a full form view
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1184,6 +1234,7 @@ exports[`AdminInterface component should render default view as a tabbed form vi
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -1194,6 +1245,11 @@ exports[`AdminInterface component should render default view as a tabbed form vi
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}
@@ -1392,6 +1448,7 @@ exports[`AdminInterface component should render in create mode 1`] = `
       >
         <StandardCard
           primaryHeader={true}
+          smallTitle={true}
           squareTop={true}
           title="Bibliographic"
         >
@@ -1402,6 +1459,11 @@ exports[`AdminInterface component should render in create mode 1`] = `
           />
         </StandardCard>
       </TabContainer>
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      container={true}
+      spacing={8}
+    >
       <WithStyles(Grid)
         item={true}
         xs={12}

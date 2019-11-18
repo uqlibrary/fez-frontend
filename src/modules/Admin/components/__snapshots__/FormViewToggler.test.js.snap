@@ -44,6 +44,20 @@ exports[`FormViewToggler component should render default view 1`] = `
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
           </p>
+          <h3>
+            Page zoom
+          </h3>
+          <p>
+            Using 
+            <b>
+              CTRL
+            </b>
+             & 
+            <b>
+              +/-
+            </b>
+             will zoom the page in/out further for more screen real estate.
+          </p>
         </div>
       }
       title="Keyboard shortcuts"
@@ -96,6 +110,20 @@ exports[`FormViewToggler component should render tooltip for full form 1`] = `
           </p>
           <p>
             Your preference is saved as a cookie on this browser and it will remember your preference.
+          </p>
+          <h3>
+            Page zoom
+          </h3>
+          <p>
+            Using 
+            <b>
+              CTRL
+            </b>
+             & 
+            <b>
+              +/-
+            </b>
+             will zoom the page in/out further for more screen real estate.
           </p>
         </div>
       }
