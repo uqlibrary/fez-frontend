@@ -378,7 +378,7 @@ export class AppClass extends PureComponent {
                 )}
                 <div className="content-container" id="content-container" style={containerStyle}>
                     <Hidden smDown>
-                        <ScrollTop show containerId="content-container"/>
+                        <ScrollTop show containerId="content-container" />
                     </Hidden>
                     <ConfirmDialogBox
                         hideCancelButton
