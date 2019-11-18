@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -149,7 +150,9 @@ export const AdminInterface = ({
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
-                                ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                                ? ReactHtmlParser(
+                                    `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
