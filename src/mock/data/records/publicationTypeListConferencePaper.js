@@ -9,7 +9,7 @@ export default {
         {
             "rek_pid": "UQ:228367",
             "rek_title_xsdmf_id": 10605,
-            "rek_title": "Von eingebetteten systemen zu cyber-physical systems: Eine neue forschungsdimension fur verteilte eingebettete realzeitsysteme",
+            'rek_title': 'Cost analysis: outsourcing radiofrequency ablution for massiv<sub>e</sub>&nbsp;renal m<sup>a</sup>sses&nbsp;™&nbsp;♦',
             "rek_description_xsdmf_id": null,
             "rek_description": null,
             "rek_display_type_xsdmf_id": 3673,

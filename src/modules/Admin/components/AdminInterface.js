@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react';
 import PropTypes from 'prop-types';
 import Cookies from 'js-cookie';
 import { Field } from 'redux-form/immutable';
+import ReactHtmlParser from 'react-html-parser';
 
 import Tabs from '@material-ui/core/Tabs';
 import Tab from '@material-ui/core/Tab';
@@ -149,7 +150,9 @@ export const AdminInterface = ({
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
                             {!createMode
-                                ? `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`
+                                ? ReactHtmlParser(
+                                    `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`,
+                                )
                                 : `Add a new ${selectedPublicationType}`}
                         </Typography>
                     </Grid>
@@ -234,26 +237,30 @@ export const AdminInterface = ({
                                 <Alert {...alertProps.current} />
                             </Grid>
                         )}
-                        <Grid item xs={12} sm={2}>
-                            <Button
-                                style={{ whiteSpace: 'nowrap' }}
-                                variant="contained"
-                                color="secondary"
-                                fullWidth
-                                children="Cancel"
-                                onClick={handleCancel}
-                            />
-                        </Grid>
-                        <Grid item xs={12} sm={10}>
-                            <Button
-                                style={{ whiteSpace: 'nowrap' }}
-                                disabled={submitting || disableSubmit}
-                                variant="contained"
-                                color="primary"
-                                fullWidth
-                                children=" Submit "
-                                onClick={handleSubmit}
-                            />
+                        <Grid item xs={12}>
+                            <Grid container spacing={8} style={{ marginTop: 8 }}>
+                                <Grid item xs={12} sm={2}>
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        variant="contained"
+                                        color="secondary"
+                                        fullWidth
+                                        children="Cancel"
+                                        onClick={handleCancel}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={10}>
+                                    <Button
+                                        style={{ whiteSpace: 'nowrap' }}
+                                        disabled={submitting || disableSubmit}
+                                        variant="contained"
+                                        color="primary"
+                                        fullWidth
+                                        children=" Submit "
+                                        onClick={handleSubmit}
+                                    />
+                                </Grid>
+                            </Grid>
                         </Grid>
                     </Grid>
                 </form>
