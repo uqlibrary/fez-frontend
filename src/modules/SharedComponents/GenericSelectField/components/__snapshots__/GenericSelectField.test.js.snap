@@ -1203,9 +1203,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                         disabled={false}
                         inputProps={
                           Object {
-                            "style": Object {
-                              "border": "1px solid red",
-                            },
+                            "aria-labelledby": "Select item-label",
                           }
                         }
                         multiple={false}
@@ -1233,9 +1231,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                           disabled={false}
                           inputProps={
                             Object {
-                              "style": Object {
-                                "border": "1px solid red",
-                              },
+                              "aria-labelledby": "Select item-label",
                             }
                           }
                           multiple={false}
@@ -1266,9 +1262,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                             input={<WithStyles(Input) />}
                             inputProps={
                               Object {
-                                "style": Object {
-                                  "border": "1px solid red",
-                                },
+                                "aria-labelledby": "Select item-label",
                               }
                             }
                             muiFormControl={
@@ -1302,6 +1296,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "SelectDisplayProps": Object {
                                     "id": undefined,
                                   },
+                                  "aria-labelledby": "Select item-label",
                                   "autoWidth": false,
                                   "children": Array [
                                     undefined,
@@ -1321,9 +1316,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                   "onOpen": undefined,
                                   "open": undefined,
                                   "renderValue": undefined,
-                                  "style": Object {
-                                    "border": "1px solid red",
-                                  },
                                   "type": undefined,
                                   "variant": "standard",
                                 }
@@ -1358,6 +1350,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "SelectDisplayProps": Object {
                                       "id": undefined,
                                     },
+                                    "aria-labelledby": "Select item-label",
                                     "autoWidth": false,
                                     "children": Array [
                                       undefined,
@@ -1377,9 +1370,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                     "onOpen": undefined,
                                     "open": undefined,
                                     "renderValue": undefined,
-                                    "style": Object {
-                                      "border": "1px solid red",
-                                    },
                                     "type": undefined,
                                     "variant": "standard",
                                   }
@@ -1415,6 +1405,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         undefined,
@@ -1434,9 +1425,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
-                                      "style": Object {
-                                        "border": "1px solid red",
-                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -1478,6 +1466,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           undefined,
@@ -1497,9 +1486,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
-                                        "style": Object {
-                                          "border": "1px solid red",
-                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -1541,6 +1527,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             undefined,
@@ -1560,9 +1547,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
-                                          "style": Object {
-                                            "border": "1px solid red",
-                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -1600,6 +1584,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                             }
                                           }
                                           aria-invalid={false}
+                                          aria-labelledby="Select item-label"
                                           autoWidth={false}
                                           className="MuiInputBase-input-54 MuiInput-input-39"
                                           classes={
@@ -1621,11 +1606,6 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                           onChange={[Function]}
                                           onFocus={[Function]}
                                           required={false}
-                                          style={
-                                            Object {
-                                              "border": "1px solid red",
-                                            }
-                                          }
                                           value=""
                                           variant="standard"
                                         >
@@ -1652,11 +1632,7 @@ exports[`GenericSelectField Full mount should render 1`] = `
                                               />
                                             </div>
                                             <input
-                                              style={
-                                                Object {
-                                                  "border": "1px solid red",
-                                                }
-                                              }
+                                              aria-labelledby="Select item-label"
                                               type="hidden"
                                               value=""
                                             />
@@ -2342,9 +2318,7 @@ exports[`GenericSelectField Methods Shows an error 1`] = `
     disabled={false}
     inputProps={
       Object {
-        "style": Object {
-          "border": "1px solid red",
-        },
+        "aria-labelledby": "Select item-label",
       }
     }
     multiple={false}
@@ -2667,9 +2641,7 @@ exports[`GenericSelectField should render snapshots for loading items 1`] = `
     disabled={true}
     inputProps={
       Object {
-        "style": Object {
-          "border": "1px solid red",
-        },
+        "aria-labelledby": "Select item-label",
       }
     }
     multiple={false}
@@ -2753,9 +2725,7 @@ exports[`GenericSelectField should render snapshots for loading items 2`] = `
     disabled={false}
     inputProps={
       Object {
-        "style": Object {
-          "border": "1px solid red",
-        },
+        "aria-labelledby": "Select item-label",
       }
     }
     multiple={false}
@@ -2848,9 +2818,7 @@ exports[`GenericSelectField should render snapshots for no items 1`] = `
     disabled={false}
     inputProps={
       Object {
-        "style": Object {
-          "border": "1px solid red",
-        },
+        "aria-labelledby": "Select item-label",
       }
     }
     multiple={false}
@@ -2878,9 +2846,7 @@ exports[`GenericSelectField should render snapshots for one item 1`] = `
     disabled={false}
     inputProps={
       Object {
-        "style": Object {
-          "border": "1px solid red",
-        },
+        "aria-labelledby": "Select item-label",
       }
     }
     multiple={false}
