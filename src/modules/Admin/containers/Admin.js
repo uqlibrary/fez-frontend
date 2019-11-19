@@ -40,8 +40,12 @@ export const filesParams = record => ({
     displayAdvisoryStatement: publicationTypeHasAdvisoryStatement(record),
 });
 
-const getInitialValues = (record, tab, tabParams = () => {}) =>
-    (adminInterfaceConfig[record.rek_display_type] || {})
+const getInitialValues = (record, tab, tabParams = () => {}) => {
+    // collections and communities dont have this setup
+    if (typeof adminInterfaceConfig[record.rek_display_type] === 'undefined') {
+        return false;
+    }
+    return (adminInterfaceConfig[record.rek_display_type] || {})
         [tab](tabParams(record))
         .map(card => card.groups.reduce((groups, group) => [...groups, ...group], []))
         .reduce((groups, group) => [...groups, ...group], [])
@@ -51,6 +55,7 @@ const getInitialValues = (record, tab, tabParams = () => {}) =>
                 [field]: valueExtractor[field].getValue(record),
             };
         }, {});
+};
 
 const getInitialFormValues = (recordToView, recordType) => {
     const { fez_datastream_info: dataStreams, ...rest } = getInitialValues(recordToView, 'files', filesParams);
