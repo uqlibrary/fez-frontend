@@ -235,6 +235,7 @@ export function searchEspacePublications(searchParams) {
 }
 
 export function loadCollectionsList(searchKey, searchQuery) {
+    console.log(searchKey, searchQuery);
     return dispatch => {
         dispatch({
             type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
@@ -243,11 +244,11 @@ export function loadCollectionsList(searchKey, searchQuery) {
 
         return get(
             SEARCH_INTERNAL_RECORDS_API({
-                searchQueryParams: { rek_object_type: 2, all: searchQuery },
+                searchQueryParams: { all: searchQuery, rek_object_type: 2 },
                 page: 1,
                 pageSize: 20,
-                sortBy: 'title',
-                sortDirection: 'Asc',
+                sortBy: 'score',
+                sortDirection: 'desc',
                 facets: {},
             }),
         ).then(

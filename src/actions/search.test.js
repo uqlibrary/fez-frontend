@@ -427,8 +427,8 @@ describe('Search action creators', () => {
             searchQueryParams: { rek_object_type: 2, all: searchQuery },
             page: 1,
             pageSize: 20,
-            sortBy: 'title',
-            sortDirection: 'Asc',
+            sortBy: 'score',
+            sortDirection: 'desc',
             facets: {},
         };
         mockApi
@@ -466,7 +466,7 @@ describe('Search action creators', () => {
 
         const expectedActions = [
             `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,
-            actions.APP_ALERT_SHOW,
+            // actions.APP_ALERT_SHOW,
             `${actions.SEARCH_KEY_LOOKUP_FAILED}@${searchKey}`,
         ];
         await mockActionsStore.dispatch(searchActions.loadCollectionsList(searchKey, searchQuery));

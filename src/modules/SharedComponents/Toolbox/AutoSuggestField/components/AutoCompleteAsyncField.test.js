@@ -353,7 +353,7 @@ describe('AutoCompleteAsyncField component', () => {
     });
 
     it('should call filter function on itemsList', () => {
-        const itemsList = [{ value: 'test 1', id: 123 }, { value: 'test 2', id: 456 }];
+        const itemsList = [{ value: 'test 1', id: 'UQ:123' }, { value: 'test 2', id: 'UQ:456' }];
         const wrapper = setup({
             required: true,
             allowFreeText: true,
@@ -363,7 +363,7 @@ describe('AutoCompleteAsyncField component', () => {
             floatingLabelText: 'Test',
             hideLabel: true,
             clearInput: true,
-            selectedValue: { value: 'test 1', id: 123 },
+            selectedValue: { value: 'test 1', id: 'UQ:123' },
             error: true,
             errorText: 'This field is required',
         });
@@ -390,17 +390,20 @@ describe('AutoCompleteAsyncField component', () => {
             getInputProps: jest.fn(),
             isOpen: true,
             getMenuProps: jest.fn(),
-            inputValue: '123',
+            inputValue: 'UQ:123',
             getItemProps: jest.fn(),
         });
         const SecondRenderedChildren = getElement(childrens2.type, childrens2.props);
         expect(toJson(SecondRenderedChildren)).toMatchSnapshot();
-        expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(1);
+        expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(2);
 
-        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)').dive())).toMatchSnapshot();
+        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)')
+            .at(0)
+            .dive())).toMatchSnapshot();
         expect(
             toJson(
                 SecondRenderedChildren.find('WithStyles(MenuItem)')
+                    .at(0)
                     .dive()
                     .find('MenuItemComponent')
                     .dive(),
@@ -424,7 +427,7 @@ describe('AutoCompleteAsyncField component', () => {
             inputValue: '123',
             getItemProps: jest.fn(),
             highlightedIndex: 1,
-            selectedItem: { value: 'test 1', id: 123 },
+            selectedItem: { value: 'test 1', id: 'UQ:123' },
         });
 
         const ThirdRenderedChildren = getElement(childrens3.type, childrens3.props);

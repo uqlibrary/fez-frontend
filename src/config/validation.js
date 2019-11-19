@@ -84,8 +84,9 @@ export const isValidPartialDOIValue = value => {
 };
 
 export const isValidPid = value => {
+    console.log(value);
     const isValid = /^uq:[a-z0-9]+$/i;
-    return isValid.test(value.trim());
+    return isValid.test(value.toString().trim());
 };
 
 export const isValidPublicationTitle = value => {
