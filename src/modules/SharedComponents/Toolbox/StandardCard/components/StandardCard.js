@@ -76,7 +76,7 @@ export class Cards extends Component {
                                     color: 'inherit',
                                 }
                                 : {
-                                    variant: 'h7',
+                                    variant: 'h6',
                                     component: 'h3',
                                     color: 'inherit',
                                 }
