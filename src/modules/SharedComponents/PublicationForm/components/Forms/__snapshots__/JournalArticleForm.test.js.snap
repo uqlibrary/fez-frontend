@@ -235,7 +235,9 @@ exports[`JournalArticleForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
