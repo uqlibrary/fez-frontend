@@ -50,22 +50,16 @@ export default {
             ],
         },
         {
-            title: 'Language of work',
-            groups: [['languages']],
-        },
-        {
-            title: 'Journal name',
-            groups: [
-                ['fez_record_search_key_journal_name'],
-                ...(isLote
-                    ? [
-                        ['languageOfJournalName'],
-                        ['fez_record_search_key_native_script_journal_name'],
-                        ['fez_record_search_key_translated_journal_name'],
-                        ['fez_record_search_key_roman_script_journal_name'],
-                    ]
-                    : []),
-            ],
+            title: 'Language of work & Journal name',
+            groups: [['languages', 'fez_record_search_key_journal_name']],
+            ...(isLote
+                ? [
+                    ['languageOfJournalName'],
+                    ['fez_record_search_key_native_script_journal_name'],
+                    ['fez_record_search_key_translated_journal_name'],
+                    ['fez_record_search_key_roman_script_journal_name'],
+                ]
+                : []),
         },
         {
             title: 'ISBN',

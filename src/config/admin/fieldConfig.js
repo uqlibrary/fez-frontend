@@ -642,6 +642,15 @@ export default {
                 validate: [validation.required],
             },
         },
+        languageOfTitle: {
+            component: LanguageField,
+            componentProps: {
+                name: 'bibliographicSection.languageOfTitle',
+                label: 'Language of title',
+                placeholder: '',
+                multiple: true,
+            },
+        },
         fez_record_search_key_native_script_journal_name: {
             component: GenericTextField,
             componentProps: {
@@ -669,15 +678,6 @@ export default {
                 label: 'Translated journal name',
                 placeholder: '',
                 fullWidth: true,
-            },
-        },
-        languageOfTitle: {
-            component: LanguageField,
-            componentProps: {
-                name: 'bibliographicSection.languageOfTitle',
-                label: 'Language of title',
-                placeholder: '',
-                multiple: true,
             },
         },
         fez_record_search_key_native_script_title: {

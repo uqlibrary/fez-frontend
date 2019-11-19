@@ -16,17 +16,10 @@ exports[`BibliographicSection component should render default view 1`] = `
         "groups": Array [
           Array [
             "languages",
-          ],
-        ],
-        "title": "Language of work",
-      },
-      Object {
-        "groups": Array [
-          Array [
             "fez_record_search_key_journal_name",
           ],
         ],
-        "title": "Journal name",
+        "title": "Language of work & Journal name",
       },
       Object {
         "groups": Array [
@@ -119,17 +112,10 @@ exports[`BibliographicSection component should render disabled view 1`] = `
         "groups": Array [
           Array [
             "languages",
-          ],
-        ],
-        "title": "Language of work",
-      },
-      Object {
-        "groups": Array [
-          Array [
             "fez_record_search_key_journal_name",
           ],
         ],
-        "title": "Journal name",
+        "title": "Language of work & Journal name",
       },
       Object {
         "groups": Array [

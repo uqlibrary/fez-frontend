@@ -289,7 +289,9 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -363,7 +365,9 @@ exports[`ConferenceProceedingsForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>

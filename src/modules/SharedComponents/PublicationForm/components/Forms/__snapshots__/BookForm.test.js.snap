@@ -371,7 +371,9 @@ exports[`BookForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -445,7 +447,9 @@ exports[`BookForm renders  component 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
@@ -708,7 +712,9 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -782,7 +788,9 @@ exports[`BookForm renders  component should render contributor assignment 1`] = 
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
@@ -1258,7 +1266,9 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -1332,7 +1342,9 @@ exports[`BookForm renders  component should render non ntro book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
@@ -1936,7 +1948,9 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -2010,7 +2024,9 @@ exports[`BookForm renders  component with 4 input fields for NTRO 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
@@ -2370,7 +2386,9 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -2444,7 +2462,9 @@ exports[`BookForm renders  should hide author when is edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>
@@ -2920,7 +2940,9 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISBN",
+                "addButtonLabel": <span>
+                  Add ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
                 "remindToAdd": <span>
@@ -2994,7 +3016,9 @@ exports[`BookForm renders  should show author when is not edited book 1`] = `
           Object {
             "form": Object {
               "locale": Object {
-                "addButtonLabel": "Add ISSN",
+                "addButtonLabel": <span>
+                  Add ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
                 "remindToAdd": <span>

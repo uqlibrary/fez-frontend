@@ -528,7 +528,7 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
-                        addButtonLabel: 'Add ISBN',
+                        addButtonLabel: <span>Add&nbsp;ISBN</span>,
                         remindToAdd: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
@@ -577,7 +577,7 @@ export default {
                     locale: {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
-                        addButtonLabel: 'Add ISSN',
+                        addButtonLabel: <span>Add&nbsp;ISSN</span>,
                         remindToAdd: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
