@@ -153,6 +153,29 @@ describe('AdminContainer component', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('should not render non-security errors for community editing', () => {
+        const wrapper = setup({
+            recordToView: {
+                rek_pid: 'UQ:367646',
+                rek_title: 'View across Windsor Castle',
+                rek_description: 'Henry William Mobsby was born on 17 August 1860',
+                rek_display_type: 11,
+                rek_display_type_lookup: 'Community',
+            },
+            formErrors: Immutable.Map({
+                bibliographicSection: {
+                    rek_date: 'Publication date is required',
+                    rek_title: 'Title is required',
+                },
+                securitySection: {
+                    rek_security_policy: 'Policy is required',
+                },
+            }),
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     describe('isChanged callback function', () => {
         it('should return true if props are not changed', () => {
             expect(
