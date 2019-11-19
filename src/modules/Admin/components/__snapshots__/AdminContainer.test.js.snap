@@ -7666,7 +7666,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -7695,7 +7695,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -7716,7 +7716,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -8223,10 +8223,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Admin
                                                                             </h3>
@@ -8953,7 +8953,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -8982,7 +8982,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -9003,7 +9003,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -9510,10 +9510,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Identifiers
                                                                             </h3>
@@ -10240,7 +10240,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -10269,7 +10269,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -10290,7 +10290,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -10797,10 +10797,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Bibliographic
                                                                             </h3>
@@ -11527,7 +11527,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -11556,7 +11556,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -11577,7 +11577,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -12084,10 +12084,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Author details
                                                                             </h3>
@@ -12814,7 +12814,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -12843,7 +12843,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -12864,7 +12864,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -13371,10 +13371,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Additional information
                                                                             </h3>
@@ -14101,7 +14101,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -14130,7 +14130,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -14151,7 +14151,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -14658,10 +14658,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Grant information
                                                                             </h3>
@@ -15388,7 +15388,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -15417,7 +15417,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -15438,7 +15438,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -15945,10 +15945,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Files
                                                                             </h3>
@@ -16675,7 +16675,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                     Object {
                                                                       "color": "inherit",
                                                                       "component": "h3",
-                                                                      "variant": "h7",
+                                                                      "variant": "h6",
                                                                     }
                                                                   }
                                                                 >
@@ -16704,7 +16704,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                       Object {
                                                                         "color": "inherit",
                                                                         "component": "h3",
-                                                                        "variant": "h7",
+                                                                        "variant": "h6",
                                                                       }
                                                                     }
                                                                   >
@@ -16725,7 +16725,7 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                           color="inherit"
                                                                           component="h3"
                                                                           internalDeprecatedVariant={true}
-                                                                          variant="h7"
+                                                                          variant="h6"
                                                                         >
                                                                           <Typography
                                                                             align="inherit"
@@ -17232,10 +17232,10 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                                                                 },
                                                                               }
                                                                             }
-                                                                            variant="h7"
+                                                                            variant="h6"
                                                                           >
                                                                             <h3
-                                                                              className="MuiTypography-root-120 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
+                                                                              className="MuiTypography-root-120 MuiTypography-h6-137 MuiTypography-colorInherit-149 MuiCardHeader-title-193"
                                                                             >
                                                                               Security
                                                                             </h3>

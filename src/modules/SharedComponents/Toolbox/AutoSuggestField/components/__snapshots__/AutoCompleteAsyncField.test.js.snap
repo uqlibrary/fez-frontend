@@ -118,7 +118,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -131,7 +131,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
               }
             }
@@ -139,7 +139,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         </WithStyles(MenuItem)>
         <WithStyles(MenuItem)
           button={true}
-          key="456"
+          key="UQ:456"
           selected={false}
           style={
             Object {
@@ -152,7 +152,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 456,
+                "id": "UQ:456",
                 "value": "test 2",
               }
             }
@@ -194,7 +194,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
         id="Test-input"
         placeholder={null}
         required={true}
-        value="123"
+        value="UQ:123"
       />
     </WithStyles(Grid)>
   </WithStyles(Grid)>
@@ -217,7 +217,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -230,8 +230,29 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          button={true}
+          key="UQ:456"
+          selected={false}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": "UQ:456",
+                "value": "test 2",
               }
             }
           />
@@ -267,7 +288,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   <MenuItemComponent
     suggestion={
       Object {
-        "id": 123,
+        "id": "UQ:123",
         "value": "test 1",
       }
     }
@@ -283,7 +304,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       "variant": "body1",
     }
   }
-  secondary={123}
+  secondary="UQ:123"
   secondaryTypographyProps={
     Object {
       "variant": "body2",
@@ -320,7 +341,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     }
     inputRef={[Function]}
     placeholder={null}
-    value="123"
+    value="UQ:123"
   />
   <WithStyles(WithFormControlContext(FormHelperText))
     id="Test-input-helper-text"
@@ -383,7 +404,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
       >
         <WithStyles(MenuItem)
           button={true}
-          key="123"
+          key="UQ:123"
           selected={false}
           style={
             Object {
@@ -396,8 +417,29 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
           <MenuItemComponent
             suggestion={
               Object {
-                "id": 123,
+                "id": "UQ:123",
                 "value": "test 1",
+              }
+            }
+          />
+        </WithStyles(MenuItem)>
+        <WithStyles(MenuItem)
+          button={true}
+          key="UQ:456"
+          selected={true}
+          style={
+            Object {
+              "fontWeight": 400,
+              "height": "auto",
+              "whiteSpace": "normal",
+            }
+          }
+        >
+          <MenuItemComponent
+            suggestion={
+              Object {
+                "id": "UQ:456",
+                "value": "test 2",
               }
             }
           />

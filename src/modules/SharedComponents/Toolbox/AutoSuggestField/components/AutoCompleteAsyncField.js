@@ -14,6 +14,7 @@ import IconButton from '@material-ui/core/IconButton';
 import Chip from '@material-ui/core/Chip';
 import Clear from '@material-ui/icons/Clear';
 import { throttle } from 'throttle-debounce';
+import { isValidPid } from 'config/validation';
 
 export const styles = theme => ({
     root: {
@@ -72,18 +73,20 @@ export class AutoCompleteAsyncField extends Component {
     };
 
     static defaultProps = {
-        maxResults: 7,
+        maxResults: 10,
         required: false,
-        filter: (searchText, key) => {
+        filter: (searchText, key, pid) => {
+            /* istanbul ignore next */
             const anyKey = isNaN(key) ? key : `${key}`;
-            const regex = new RegExp(
+            const anyPid = `${pid}`;
+            const keywordRegex = new RegExp(
                 `(${searchText
                     .split(' ')
                     .join('|')
                     .replace(/[()]/g, '')})`,
                 'gi',
             );
-            return regex.test(anyKey);
+            return keywordRegex.test(anyKey) || pid && isValidPid(anyPid);
         },
         MenuItemComponent: ({ suggestion }) => (
             <ListItemText
@@ -358,6 +361,7 @@ export class AutoCompleteAsyncField extends Component {
                                                             isNaN(inputValue)
                                                                 ? suggestion.value
                                                                 : suggestion.id || suggestion.value.toString(),
+                                                            suggestion.id,
                                                         ),
                                                     )
                                                     .slice(0, maxResults)
