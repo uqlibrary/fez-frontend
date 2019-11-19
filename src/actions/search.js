@@ -235,7 +235,6 @@ export function searchEspacePublications(searchParams) {
 }
 
 export function loadCollectionsList(searchKey, searchQuery) {
-    console.log(searchKey, searchQuery);
     return dispatch => {
         dispatch({
             type: `${actions.SEARCH_KEY_LOOKUP_LOADING}@${searchKey}`,

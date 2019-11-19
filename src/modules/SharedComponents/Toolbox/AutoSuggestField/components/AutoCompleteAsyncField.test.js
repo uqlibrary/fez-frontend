@@ -397,9 +397,13 @@ describe('AutoCompleteAsyncField component', () => {
         expect(toJson(SecondRenderedChildren)).toMatchSnapshot();
         expect(SecondRenderedChildren.find('WithStyles(MenuItem)').length).toEqual(2);
 
-        expect(toJson(SecondRenderedChildren.find('WithStyles(MenuItem)')
-            .at(0)
-            .dive())).toMatchSnapshot();
+        expect(
+            toJson(
+                SecondRenderedChildren.find('WithStyles(MenuItem)')
+                    .at(0)
+                    .dive(),
+            ),
+        ).toMatchSnapshot();
         expect(
             toJson(
                 SecondRenderedChildren.find('WithStyles(MenuItem)')

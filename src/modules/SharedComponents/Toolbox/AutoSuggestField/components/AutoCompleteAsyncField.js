@@ -86,7 +86,7 @@ export class AutoCompleteAsyncField extends Component {
                     .replace(/[()]/g, '')})`,
                 'gi',
             );
-            return keywordRegex.test(anyKey) || pid && isValidPid(anyPid);
+            return keywordRegex.test(anyKey) || (pid && isValidPid(anyPid));
         },
         MenuItemComponent: ({ suggestion }) => (
             <ListItemText
