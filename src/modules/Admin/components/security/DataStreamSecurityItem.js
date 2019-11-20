@@ -42,6 +42,7 @@ const DataStreamSecurityItem = ({
                 <PolicyDropdown
                     fieldName={dataStream.dsi_dsid}
                     fieldLabel={policyDropdownLabel}
+                    inheritedSecurity={inheritedSecurity}
                     disabled={disabled}
                     {...{
                         input: {

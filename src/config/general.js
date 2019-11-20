@@ -1112,6 +1112,7 @@ export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     },
 ];
 
+export const MAXIMUM_SECURITY_PUBLIC = 5;
 export const TOP_LEVEL_SECURITY_POLICIES = [
     {
         id: 1,
@@ -1143,7 +1144,7 @@ export const TOP_LEVEL_SECURITY_POLICIES = [
     },
     {
         id: 5,
-        value: 5,
+        value: MAXIMUM_SECURITY_PUBLIC,
         name: 'Public',
         label: 'Public',
         order: 100,
