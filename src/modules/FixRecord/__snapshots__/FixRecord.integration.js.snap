@@ -715,7 +715,7 @@ exports[`FixRecord form should allow content indicators to be selected 3`] = `
 +                             Scholarship of Teaching and Learning, Protocol
 +                           </div>
 +                           <input
-+                             style=\\"border: 1px solid red;\\"
++                             aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 +                             type=\\"hidden\\"
 +                             value=\\"454079,454080\\"
 +                           />
@@ -966,7 +966,7 @@ exports[`FixRecord form should allow content indicators to be selected 5`] = `
 +                             Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
                               type=\\"hidden\\"
 -                             value=\\"454079,454080\\"
 +                             value=\\"454079,454080,454081\\"
@@ -1087,7 +1087,7 @@ exports[`FixRecord form should allow content indicators to be selected 6`] = `
 +                             Scholarship of Teaching and Learning, Protocol
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
                               type=\\"hidden\\"
 -                             value=\\"454079,454080,454081\\"
 +                             value=\\"454079,454080\\"
@@ -1310,7 +1310,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                               Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 @@ -573,11 +573,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
@@ -1579,7 +1579,7 @@ exports[`FixRecord form should validate the form where applicable and submit cor
                               Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 @@ -573,11 +573,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"

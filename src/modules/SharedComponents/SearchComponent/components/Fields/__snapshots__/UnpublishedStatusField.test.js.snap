@@ -1338,9 +1338,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                             disabled={false}
                             inputProps={
                               Object {
-                                "style": Object {
-                                  "border": "1px solid red",
-                                },
+                                "aria-labelledby": "Select item-label",
                               }
                             }
                             multiple={false}
@@ -1368,9 +1366,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                               disabled={false}
                               inputProps={
                                 Object {
-                                  "style": Object {
-                                    "border": "1px solid red",
-                                  },
+                                  "aria-labelledby": "Select item-label",
                                 }
                               }
                               multiple={false}
@@ -1401,9 +1397,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                 input={<WithStyles(Input) />}
                                 inputProps={
                                   Object {
-                                    "style": Object {
-                                      "border": "1px solid red",
-                                    },
+                                    "aria-labelledby": "Select item-label",
                                   }
                                 }
                                 muiFormControl={
@@ -1437,6 +1431,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -1575,9 +1570,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
-                                      "style": Object {
-                                        "border": "1px solid red",
-                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -1612,6 +1604,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -1750,9 +1743,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
-                                        "style": Object {
-                                          "border": "1px solid red",
-                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -1788,6 +1778,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -1926,9 +1917,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
-                                          "style": Object {
-                                            "border": "1px solid red",
-                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -1970,6 +1958,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "SelectDisplayProps": Object {
                                               "id": undefined,
                                             },
+                                            "aria-labelledby": "Select item-label",
                                             "autoWidth": false,
                                             "children": Array [
                                               false,
@@ -2108,9 +2097,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
-                                            "style": Object {
-                                              "border": "1px solid red",
-                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -2152,6 +2138,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "SelectDisplayProps": Object {
                                                 "id": undefined,
                                               },
+                                              "aria-labelledby": "Select item-label",
                                               "autoWidth": false,
                                               "children": Array [
                                                 false,
@@ -2290,9 +2277,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
-                                              "style": Object {
-                                                "border": "1px solid red",
-                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -2330,6 +2314,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                 }
                                               }
                                               aria-invalid={false}
+                                              aria-labelledby="Select item-label"
                                               autoWidth={false}
                                               className="MuiInputBase-input-54 MuiInput-input-39"
                                               classes={
@@ -2351,11 +2336,6 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
-                                              style={
-                                                Object {
-                                                  "border": "1px solid red",
-                                                }
-                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -2382,11 +2362,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                                                   />
                                                 </div>
                                                 <input
-                                                  style={
-                                                    Object {
-                                                      "border": "1px solid red",
-                                                    }
-                                                  }
+                                                  aria-labelledby="Select item-label"
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -4395,9 +4371,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                             disabled={false}
                             inputProps={
                               Object {
-                                "style": Object {
-                                  "border": "1px solid red",
-                                },
+                                "aria-labelledby": "Select item-label",
                               }
                             }
                             multiple={false}
@@ -4425,9 +4399,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                               disabled={false}
                               inputProps={
                                 Object {
-                                  "style": Object {
-                                    "border": "1px solid red",
-                                  },
+                                  "aria-labelledby": "Select item-label",
                                 }
                               }
                               multiple={false}
@@ -4458,9 +4430,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                 input={<WithStyles(Input) />}
                                 inputProps={
                                   Object {
-                                    "style": Object {
-                                      "border": "1px solid red",
-                                    },
+                                    "aria-labelledby": "Select item-label",
                                   }
                                 }
                                 muiFormControl={
@@ -4494,6 +4464,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -4632,9 +4603,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
-                                      "style": Object {
-                                        "border": "1px solid red",
-                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -4669,6 +4637,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -4807,9 +4776,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
-                                        "style": Object {
-                                          "border": "1px solid red",
-                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -4845,6 +4811,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -4983,9 +4950,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
-                                          "style": Object {
-                                            "border": "1px solid red",
-                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -5027,6 +4991,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "SelectDisplayProps": Object {
                                               "id": undefined,
                                             },
+                                            "aria-labelledby": "Select item-label",
                                             "autoWidth": false,
                                             "children": Array [
                                               false,
@@ -5165,9 +5130,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
-                                            "style": Object {
-                                              "border": "1px solid red",
-                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -5209,6 +5171,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "SelectDisplayProps": Object {
                                                 "id": undefined,
                                               },
+                                              "aria-labelledby": "Select item-label",
                                               "autoWidth": false,
                                               "children": Array [
                                                 false,
@@ -5347,9 +5310,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
-                                              "style": Object {
-                                                "border": "1px solid red",
-                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -5387,6 +5347,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                 }
                                               }
                                               aria-invalid={true}
+                                              aria-labelledby="Select item-label"
                                               autoWidth={false}
                                               className="MuiInputBase-input-54 MuiInput-input-39"
                                               classes={
@@ -5408,11 +5369,6 @@ exports[`UnpublishedStatusField component should render error message from redux
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
-                                              style={
-                                                Object {
-                                                  "border": "1px solid red",
-                                                }
-                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -5439,11 +5395,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                                                   />
                                                 </div>
                                                 <input
-                                                  style={
-                                                    Object {
-                                                      "border": "1px solid red",
-                                                    }
-                                                  }
+                                                  aria-labelledby="Select item-label"
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -7497,9 +7449,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                             disabled={false}
                             inputProps={
                               Object {
-                                "style": Object {
-                                  "border": "1px solid red",
-                                },
+                                "aria-labelledby": "Select item-label",
                               }
                             }
                             multiple={false}
@@ -7527,9 +7477,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                               disabled={false}
                               inputProps={
                                 Object {
-                                  "style": Object {
-                                    "border": "1px solid red",
-                                  },
+                                  "aria-labelledby": "Select item-label",
                                 }
                               }
                               multiple={false}
@@ -7560,9 +7508,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                 input={<WithStyles(Input) />}
                                 inputProps={
                                   Object {
-                                    "style": Object {
-                                      "border": "1px solid red",
-                                    },
+                                    "aria-labelledby": "Select item-label",
                                   }
                                 }
                                 muiFormControl={
@@ -7596,6 +7542,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -7734,9 +7681,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
-                                      "style": Object {
-                                        "border": "1px solid red",
-                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -7771,6 +7715,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -7909,9 +7854,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
-                                        "style": Object {
-                                          "border": "1px solid red",
-                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -7947,6 +7889,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -8085,9 +8028,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
-                                          "style": Object {
-                                            "border": "1px solid red",
-                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -8129,6 +8069,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "SelectDisplayProps": Object {
                                               "id": undefined,
                                             },
+                                            "aria-labelledby": "Select item-label",
                                             "autoWidth": false,
                                             "children": Array [
                                               false,
@@ -8267,9 +8208,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
-                                            "style": Object {
-                                              "border": "1px solid red",
-                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -8311,6 +8249,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "SelectDisplayProps": Object {
                                                 "id": undefined,
                                               },
+                                              "aria-labelledby": "Select item-label",
                                               "autoWidth": false,
                                               "children": Array [
                                                 false,
@@ -8449,9 +8388,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
-                                              "style": Object {
-                                                "border": "1px solid red",
-                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -8489,6 +8425,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                 }
                                               }
                                               aria-invalid={false}
+                                              aria-labelledby="Select item-label"
                                               autoWidth={false}
                                               className="MuiInputBase-input-54 MuiInput-input-39"
                                               classes={
@@ -8510,11 +8447,6 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
-                                              style={
-                                                Object {
-                                                  "border": "1px solid red",
-                                                }
-                                              }
                                               value=""
                                               variant="standard"
                                             >
@@ -8541,11 +8473,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                                                   />
                                                 </div>
                                                 <input
-                                                  style={
-                                                    Object {
-                                                      "border": "1px solid red",
-                                                    }
-                                                  }
+                                                  aria-labelledby="Select item-label"
                                                   type="hidden"
                                                   value=""
                                                 />
@@ -10547,9 +10475,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                             disabled={false}
                             inputProps={
                               Object {
-                                "style": Object {
-                                  "border": "1px solid red",
-                                },
+                                "aria-labelledby": "Select item-label",
                               }
                             }
                             multiple={false}
@@ -10577,9 +10503,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                               disabled={false}
                               inputProps={
                                 Object {
-                                  "style": Object {
-                                    "border": "1px solid red",
-                                  },
+                                  "aria-labelledby": "Select item-label",
                                 }
                               }
                               multiple={false}
@@ -10610,9 +10534,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                 input={<WithStyles(Input) />}
                                 inputProps={
                                   Object {
-                                    "style": Object {
-                                      "border": "1px solid red",
-                                    },
+                                    "aria-labelledby": "Select item-label",
                                   }
                                 }
                                 muiFormControl={
@@ -10646,6 +10568,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "SelectDisplayProps": Object {
                                         "id": undefined,
                                       },
+                                      "aria-labelledby": "Select item-label",
                                       "autoWidth": false,
                                       "children": Array [
                                         false,
@@ -10784,9 +10707,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                       "onOpen": undefined,
                                       "open": undefined,
                                       "renderValue": undefined,
-                                      "style": Object {
-                                        "border": "1px solid red",
-                                      },
                                       "type": undefined,
                                       "variant": "standard",
                                     }
@@ -10821,6 +10741,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "SelectDisplayProps": Object {
                                           "id": undefined,
                                         },
+                                        "aria-labelledby": "Select item-label",
                                         "autoWidth": false,
                                         "children": Array [
                                           false,
@@ -10959,9 +10880,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                         "onOpen": undefined,
                                         "open": undefined,
                                         "renderValue": undefined,
-                                        "style": Object {
-                                          "border": "1px solid red",
-                                        },
                                         "type": undefined,
                                         "variant": "standard",
                                       }
@@ -10997,6 +10915,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "SelectDisplayProps": Object {
                                             "id": undefined,
                                           },
+                                          "aria-labelledby": "Select item-label",
                                           "autoWidth": false,
                                           "children": Array [
                                             false,
@@ -11135,9 +11054,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                           "onOpen": undefined,
                                           "open": undefined,
                                           "renderValue": undefined,
-                                          "style": Object {
-                                            "border": "1px solid red",
-                                          },
                                           "type": undefined,
                                           "variant": "standard",
                                         }
@@ -11179,6 +11095,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "SelectDisplayProps": Object {
                                               "id": undefined,
                                             },
+                                            "aria-labelledby": "Select item-label",
                                             "autoWidth": false,
                                             "children": Array [
                                               false,
@@ -11317,9 +11234,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                             "onOpen": undefined,
                                             "open": undefined,
                                             "renderValue": undefined,
-                                            "style": Object {
-                                              "border": "1px solid red",
-                                            },
                                             "type": undefined,
                                             "variant": "standard",
                                           }
@@ -11361,6 +11275,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "SelectDisplayProps": Object {
                                                 "id": undefined,
                                               },
+                                              "aria-labelledby": "Select item-label",
                                               "autoWidth": false,
                                               "children": Array [
                                                 false,
@@ -11499,9 +11414,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               "onOpen": undefined,
                                               "open": undefined,
                                               "renderValue": undefined,
-                                              "style": Object {
-                                                "border": "1px solid red",
-                                              },
                                               "type": undefined,
                                               "variant": "standard",
                                             }
@@ -11539,6 +11451,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                 }
                                               }
                                               aria-invalid={false}
+                                              aria-labelledby="Select item-label"
                                               autoWidth={false}
                                               className="MuiInputBase-input-54 MuiInput-input-39"
                                               classes={
@@ -11560,11 +11473,6 @@ exports[`UnpublishedStatusField component should render with value selected from
                                               onChange={[Function]}
                                               onFocus={[Function]}
                                               required={false}
-                                              style={
-                                                Object {
-                                                  "border": "1px solid red",
-                                                }
-                                              }
                                               value="test"
                                               variant="standard"
                                             >
@@ -11591,11 +11499,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                                                   />
                                                 </div>
                                                 <input
-                                                  style={
-                                                    Object {
-                                                      "border": "1px solid red",
-                                                    }
-                                                  }
+                                                  aria-labelledby="Select item-label"
                                                   type="hidden"
                                                   value="test"
                                                 />

@@ -15,7 +15,7 @@ exports[`ThesisSubmission form should allow user to submit thesis 1`] = `
 +                             PhD Thesis
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Select item-label\\"
                               type=\\"hidden\\"
 -                             value=\\"Professional Doctorate\\"
 +                             value=\\"PhD Thesis\\"

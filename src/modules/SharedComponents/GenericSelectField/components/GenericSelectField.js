@@ -145,18 +145,17 @@ export class GenericSelectFieldClass extends Component {
                     {this.props.label}
                 </InputLabel>
                 <Select
-                    style={this.props.style}
-                    value={this.newValue()}
-                    displayEmpty={this.props.displayEmpty}
-                    onChange={this._itemSelected}
-                    disabled={this.props.disabled || !!this.props.itemsLoading}
-                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
                     autoWidth={this.props.autoWidth}
+                    disabled={this.props.disabled || !!this.props.itemsLoading}
+                    displayEmpty={this.props.displayEmpty}
+                    inputProps={{ 'aria-labelledby': `${this.props.locale.label}-label` }}
                     multiple={this.props.multiple}
-                    inputProps={{ style: { border: '1px solid red' } }}
+                    onChange={this._itemSelected}
+                    style={this.props.style}
                     SelectDisplayProps={{
                         id: this.props.id,
                     }}
+                    value={this.newValue()}
                 >
                     {this.renderMenuItems()}
                 </Select>
