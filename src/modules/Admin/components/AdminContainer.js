@@ -24,7 +24,7 @@ import AdditionalInformationSection from './additionalInformation/AdditionalInfo
 import NtroSection from './ntro/NtroSectionContainer';
 import AuthorsSection from './authors/AuthorsSectionContainer';
 import { TabbedContext, RecordContext } from 'context';
-import { RECORD_TYPE_RECORD } from 'config/general';
+import { RECORD_TYPE_COLLECTION, RECORD_TYPE_COMMUNITY, RECORD_TYPE_RECORD } from 'config/general';
 
 const styles = theme => ({
     helpIcon: {
@@ -81,6 +81,19 @@ export const AdminContainer = ({
         }),
         {},
     );
+
+    // Collections and Communities admin edit currently only has the Security tab, so don't act on errors in other tabs
+    const reducedFormErrors = formErrors => {
+        if (
+            !!recordToView &&
+            recordToView.rek_display_type_lookup &&
+            (recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COMMUNITY ||
+                recordToView.rek_display_type_lookup.toLowerCase() === RECORD_TYPE_COLLECTION)
+        ) {
+            return Object.keys(formErrors).reduce((result, key) => key === 'securitySection', {});
+        }
+        return formErrors;
+    };
 
     const isMobileView = useMediaQuery(theme.breakpoints.down('xs')) || false;
 
@@ -143,7 +156,7 @@ export const AdminContainer = ({
                             location={location}
                             history={history}
                             createMode={createMode}
-                            formErrors={formErrors}
+                            formErrors={reducedFormErrors(formErrors)}
                             destroy={destroy}
                             tabs={{
                                 admin: {

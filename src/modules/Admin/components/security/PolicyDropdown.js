@@ -6,9 +6,18 @@ import MenuItem from '@material-ui/core/MenuItem';
 import { SelectField } from 'modules/SharedComponents/Toolbox/SelectField';
 
 import { validation } from 'config';
-import { TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
+import { MAXIMUM_SECURITY_PUBLIC, TOP_LEVEL_SECURITY_POLICIES } from 'config/general';
 
-export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt, policyList, prompt, ...props }) => (
+export const PolicyDropdown = ({
+    fieldName,
+    disabled,
+    fieldLabel,
+    displayPrompt,
+    policyList,
+    prompt,
+    inheritedSecurity,
+    ...props
+}) => (
     <SelectField
         disabled={disabled}
         name={fieldName}
@@ -23,7 +32,7 @@ export const PolicyDropdown = ({ fieldName, disabled, fieldLabel, displayPrompt,
             </MenuItem>
         )}
         {policyList.map((policy, index) => (
-            <MenuItem key={index} value={policy.value}>
+            <MenuItem key={index} value={policy.value} disabled={policy.value > inheritedSecurity}>
                 {policy.label}
             </MenuItem>
         ))}
@@ -37,10 +46,12 @@ PolicyDropdown.propTypes = {
     displayPrompt: PropTypes.bool,
     policyList: PropTypes.array,
     prompt: PropTypes.string,
+    inheritedSecurity: PropTypes.number,
 };
 
 PolicyDropdown.defaultProps = {
     displayPrompt: false,
     policyList: TOP_LEVEL_SECURITY_POLICIES,
     fieldLabel: 'Record level policy to apply to this PID',
+    inheritedSecurity: MAXIMUM_SECURITY_PUBLIC,
 };

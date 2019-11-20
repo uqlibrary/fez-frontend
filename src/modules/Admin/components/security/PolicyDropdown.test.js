@@ -15,4 +15,11 @@ describe('PolicyDropdown component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should hide policies that the user cant select', () => {
+        const wrapper = setup({
+            inheritedSecurity: 2,
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

@@ -925,7 +925,7 @@ exports[`AddMissingRecord form BookForm:Textbook should  show submit button when
 +                             </span>
 +                           </div>
 +                           <input
-+                             style=\\"border: 1px solid red;\\"
++                             aria-labelledby=\\"Please select any relevant indicator(s).-label\\"
 +                             type=\\"hidden\\"
 +                             value=\\"\\"
 +                           />
@@ -2500,7 +2500,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                             </span>
 +                           </div>
 +                           <input
-+                             style=\\"border: 1px solid red;\\"
++                             aria-labelledby=\\"Please select any relevant indicator(s).-label\\"
                               type=\\"hidden\\"
                               value=\\"\\"
                             />
