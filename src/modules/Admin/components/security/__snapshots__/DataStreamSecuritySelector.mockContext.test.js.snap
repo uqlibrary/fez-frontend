@@ -2609,6 +2609,7 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                 displayPrompt={false}
                                 fieldLabel="Record level policy to apply to this PID"
                                 fieldName="test1.txt"
+                                inheritedSecurity={1}
                                 input={
                                   Object {
                                     "onBlur": [Function],
@@ -2977,26 +2978,31 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                       false,
                                                       Array [
                                                         <WithStyles(MenuItem)
+                                                          disabled={false}
                                                           value={1}
                                                         >
                                                           Administrators
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
+                                                          disabled={true}
                                                           value={2}
                                                         >
                                                           Theses Assessors
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
+                                                          disabled={true}
                                                           value={3}
                                                         >
                                                           Evidence Assessors
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
+                                                          disabled={true}
                                                           value={4}
                                                         >
                                                           Staff and Students
                                                         </WithStyles(MenuItem)>,
                                                         <WithStyles(MenuItem)
+                                                          disabled={true}
                                                           value={5}
                                                         >
                                                           Public
@@ -3068,26 +3074,31 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                         false,
                                                         Array [
                                                           <WithStyles(MenuItem)
+                                                            disabled={false}
                                                             value={1}
                                                           >
                                                             Administrators
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
+                                                            disabled={true}
                                                             value={2}
                                                           >
                                                             Theses Assessors
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
+                                                            disabled={true}
                                                             value={3}
                                                           >
                                                             Evidence Assessors
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
+                                                            disabled={true}
                                                             value={4}
                                                           >
                                                             Staff and Students
                                                           </WithStyles(MenuItem)>,
                                                           <WithStyles(MenuItem)
+                                                            disabled={true}
                                                             value={5}
                                                           >
                                                             Public
@@ -3160,26 +3171,31 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                           false,
                                                           Array [
                                                             <WithStyles(MenuItem)
+                                                              disabled={false}
                                                               value={1}
                                                             >
                                                               Administrators
                                                             </WithStyles(MenuItem)>,
                                                             <WithStyles(MenuItem)
+                                                              disabled={true}
                                                               value={2}
                                                             >
                                                               Theses Assessors
                                                             </WithStyles(MenuItem)>,
                                                             <WithStyles(MenuItem)
+                                                              disabled={true}
                                                               value={3}
                                                             >
                                                               Evidence Assessors
                                                             </WithStyles(MenuItem)>,
                                                             <WithStyles(MenuItem)
+                                                              disabled={true}
                                                               value={4}
                                                             >
                                                               Staff and Students
                                                             </WithStyles(MenuItem)>,
                                                             <WithStyles(MenuItem)
+                                                              disabled={true}
                                                               value={5}
                                                             >
                                                               Public
@@ -3258,26 +3274,31 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                             false,
                                                             Array [
                                                               <WithStyles(MenuItem)
+                                                                disabled={false}
                                                                 value={1}
                                                               >
                                                                 Administrators
                                                               </WithStyles(MenuItem)>,
                                                               <WithStyles(MenuItem)
+                                                                disabled={true}
                                                                 value={2}
                                                               >
                                                                 Theses Assessors
                                                               </WithStyles(MenuItem)>,
                                                               <WithStyles(MenuItem)
+                                                                disabled={true}
                                                                 value={3}
                                                               >
                                                                 Evidence Assessors
                                                               </WithStyles(MenuItem)>,
                                                               <WithStyles(MenuItem)
+                                                                disabled={true}
                                                                 value={4}
                                                               >
                                                                 Staff and Students
                                                               </WithStyles(MenuItem)>,
                                                               <WithStyles(MenuItem)
+                                                                disabled={true}
                                                                 value={5}
                                                               >
                                                                 Public
@@ -3356,26 +3377,31 @@ exports[`DataStreamSecuritySelector component with mockContext should render wit
                                                               false,
                                                               Array [
                                                                 <WithStyles(MenuItem)
+                                                                  disabled={false}
                                                                   value={1}
                                                                 >
                                                                   Administrators
                                                                 </WithStyles(MenuItem)>,
                                                                 <WithStyles(MenuItem)
+                                                                  disabled={true}
                                                                   value={2}
                                                                 >
                                                                   Theses Assessors
                                                                 </WithStyles(MenuItem)>,
                                                                 <WithStyles(MenuItem)
+                                                                  disabled={true}
                                                                   value={3}
                                                                 >
                                                                   Evidence Assessors
                                                                 </WithStyles(MenuItem)>,
                                                                 <WithStyles(MenuItem)
+                                                                  disabled={true}
                                                                   value={4}
                                                                 >
                                                                   Staff and Students
                                                                 </WithStyles(MenuItem)>,
                                                                 <WithStyles(MenuItem)
+                                                                  disabled={true}
                                                                   value={5}
                                                                 >
                                                                   Public
