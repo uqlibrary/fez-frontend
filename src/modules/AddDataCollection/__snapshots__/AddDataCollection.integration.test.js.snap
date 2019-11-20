@@ -993,7 +993,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             Mediated Access
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Access conditions-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"453618\\"
@@ -1056,7 +1056,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                             Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Licensing and terms of access-label\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
 +                             value=\\"453608\\"
