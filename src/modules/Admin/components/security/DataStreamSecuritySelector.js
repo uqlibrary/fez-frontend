@@ -20,11 +20,11 @@ export const styles = () => ({
 });
 
 export const DataStreamSecuritySelector = ({
-    text,
-    disabled,
-    collections,
     classes,
+    collections,
+    disabled,
     meta: { initial: dataStreams },
+    text,
     ...props
 }) => {
     const { formValues } = useFormValuesContext();
@@ -68,23 +68,23 @@ export const DataStreamSecuritySelector = ({
             <Typography variant="h6">{text.overridePrompt}</Typography>
             <div style={{ marginTop: 8, padding: 16 }}>
                 <Grid
-                    container
-                    spacing={32}
                     alignContent="flex-end"
                     alignItems="flex-start"
                     className={classes.dataStreamFileBlock}
+                    container
+                    spacing={32}
                 >
                     {dataStreamSecurity.map((dataStream, index) => (
                         <DataStreamSecurityItem
-                            key={dataStream.dsi_dsid}
-                            disabled={disabled}
-                            initialDataStream={initialDataStreams[index]}
-                            dataStream={dataStream}
-                            policyDropdownLabel={text.overridePolicyPrompt}
-                            inheritedSecurity={mostSecureParentDatastreamSecurity}
-                            onSecurityChange={handleDataStreamSecurityChange}
                             classes={classes}
+                            dataStream={dataStream}
+                            disabled={disabled}
                             index={index}
+                            inheritedSecurity={mostSecureParentDatastreamSecurity}
+                            initialDataStream={initialDataStreams[index]}
+                            key={dataStream.dsi_dsid}
+                            onSecurityChange={handleDataStreamSecurityChange}
+                            policyDropdownLabel={text.overridePolicyPrompt}
                         />
                     ))}
                 </Grid>
@@ -94,16 +94,16 @@ export const DataStreamSecuritySelector = ({
 };
 
 DataStreamSecuritySelector.propTypes = {
-    disabled: PropTypes.bool,
-    text: PropTypes.object,
-    collections: PropTypes.array,
     classes: PropTypes.object,
+    collections: PropTypes.array,
+    disabled: PropTypes.bool,
     input: PropTypes.object,
     meta: PropTypes.shape({
         initial: PropTypes.shape({
             toJS: PropTypes.func.isRequired,
         }).isRequired,
     }).isRequired,
+    text: PropTypes.object,
 };
 
 export function isSame(prevProps, nextProps) {
