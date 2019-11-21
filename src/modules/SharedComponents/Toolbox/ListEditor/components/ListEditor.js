@@ -212,7 +212,7 @@ export default class ListEditor extends Component {
                         disabled={this.props.disabled}
                     />
                 )}
-                {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? ( // 55 height of a list item
+                {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? (
                     <div
                         className={'ListEditor-scrollable-list'}
                         style={{
