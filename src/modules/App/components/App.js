@@ -206,6 +206,10 @@ export class AppClass extends PureComponent {
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired =
+            this.props.authorDetails &&
+            !(
+                this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1
+            ) &&
             this.props.author &&
             !this.props.author.aut_orcid_id &&
             this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
