@@ -757,7 +757,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
 
     return {
         ...rest,
-        rek_date: moment(data.rek_date).format(),
+        rek_date: moment(data.rek_date).format('YYYY-MM-DD 00:00:00'),
         ...(!!title && title.hasOwnProperty('htmlText') ? { rek_title: title.htmlText } : {}),
         ...(!!description && description.hasOwnProperty('htmlText') ? { rek_description: description.htmlText } : {}),
         ...(!!languageOfTitle

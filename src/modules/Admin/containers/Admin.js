@@ -10,6 +10,7 @@ import { adminInterfaceConfig, valueExtractor, validate } from 'config/admin';
 import { viewRecordsConfig } from 'config';
 import { isFileValid } from 'config/validation';
 import {
+    DOCUMENT_TYPES_LOOKUP,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_SEMINAR_PAPER,
@@ -170,7 +171,12 @@ const mapStateToProps = (state, props) => {
     return {
         formValues: getFormValues(FORM_NAME)(state) || Immutable.Map({}),
         formErrors: formErrors,
-        disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
+        disableSubmit:
+            !!recordToView &&
+            !!recordToView.rek_display_type &&
+            typeof DOCUMENT_TYPES_LOOKUP[recordToView.rek_display_type] !== 'undefined' &&
+            formErrors &&
+            !(formErrors instanceof Immutable.Map),
         loadingRecordToView: state.get('viewRecordReducer').loadingRecordToView,
         authorDetails: state.get('accountReducer').authorDetails || null,
         author: state.get('accountReducer').author,

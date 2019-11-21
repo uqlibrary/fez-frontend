@@ -1376,7 +1376,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 1`] = `
 +                             Scholarship of Teaching and Learning, Protocol
 +                           </div>
 +                           <input
-+                             style=\\"border: 1px solid red;\\"
++                             aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 +                             type=\\"hidden\\"
 +                             value=\\"454079,454080\\"
 +                           />
@@ -1691,7 +1691,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 3`] = `
 +                             Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
                               type=\\"hidden\\"
 -                             value=\\"454079,454080\\"
 +                             value=\\"454079,454080,454081\\"
@@ -1717,7 +1717,7 @@ exports[`ClaimRecord form should allow content indicators to be selected 4`] = `
 +                             Scholarship of Teaching and Learning, Protocol
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
                               type=\\"hidden\\"
 -                             value=\\"454079,454080,454081\\"
 +                             value=\\"454079,454080\\"
@@ -2124,7 +2124,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                               Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 @@ -1457,11 +1451,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
@@ -2498,7 +2498,7 @@ exports[`ClaimRecord form should validate the form where applicable and submit c
                               Scholarship of Teaching and Learning, Protocol, Case Study
                             </div>
                             <input
-                              style=\\"border: 1px solid red;\\"
+                              aria-labelledby=\\"Please add any relevant indicator(s).-label\\"
 @@ -1451,11 +1457,11 @@
                           <div
                             id=\\"FileUploadDropZone\\"
