@@ -1275,6 +1275,7 @@ export const PUBMED_DOC_TYPES = [
 ];
 
 export const HERDC_CODES = [
+    { value: null, text: 'Please choose an option' },
     { value: '450001', text: 'A1 Books - Authored - research' },
     { value: '450002', text: 'A2 Books - Authored - other' },
     { value: '450003', text: 'A3 Books - Edited' },

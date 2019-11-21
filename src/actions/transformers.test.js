@@ -2826,7 +2826,10 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
     it('should transform unselected search keys for additional information section', () => {
         const data = {
             fez_record_search_key_herdc_code: {
-                rek_herdc_code: 'Please choose an option',
+                rek_herdc_code: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
                 rek_herdc_code_id: 5013387,
                 rek_herdc_code_pid: 'UQ:113765',
             },
@@ -2875,7 +2878,10 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
             collections: [],
             contentIndicators: [],
             fez_record_search_key_herdc_code: {
-                rek_herdc_code: 'Please choose an option',
+                rek_herdc_code: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
                 rek_herdc_code_id: 5013387,
                 rek_herdc_code_pid: 'UQ:113765',
             },

@@ -889,7 +889,7 @@ export const getRecordIsMemberOfSearchKey = collections => {
 
 export const getHerdcCodeSearchKey = record => {
     // return empty object if all parameters are null
-    if (!!record.rek_herdc_code && record.rek_herdc_code === 'Please choose an option') {
+    if (!!record.rek_herdc_code && record.rek_herdc_code.value === null) {
         return {
             fez_record_search_key_herdc_code: {
                 rek_herdc_code: null,
