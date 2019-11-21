@@ -8,6 +8,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
   hideLabel={false}
   itemsList={
     Array [
+      "Please choose an option",
       Object {
         "text": "Please choose an option",
         "value": null,
@@ -232,6 +233,7 @@ exports[`HerdcCodeField component should render immutable list as selected value
   }
   itemsList={
     Array [
+      "Please choose an option",
       Object {
         "text": "Please choose an option",
         "value": null,
@@ -461,6 +463,7 @@ exports[`HerdcCodeField component should render when given a default value field
   hideLabel={false}
   itemsList={
     Array [
+      "Please choose an option",
       Object {
         "text": "Please choose an option",
         "value": null,
@@ -691,6 +694,7 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
+      "Please choose an option",
       Object {
         "text": "Please choose an option",
         "value": null,
