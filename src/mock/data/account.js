@@ -193,6 +193,8 @@ export const authorsSearch = {
             "aut_description": null,
             "aut_orcid_id": "0000-0001-1111-1111",
             "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
             "aut_student_username": null
@@ -751,6 +753,8 @@ export const authorDetails = {
             "last_year": 2018,
             "doc_count": 357,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     s2222222: {
         "espace_id": 44444,
@@ -774,6 +778,8 @@ export const authorDetails = {
             "last_year": null,
             "doc_count": 0,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     uqnoauthid: {
         "uqr_id": null,
@@ -797,6 +803,8 @@ export const authorDetails = {
             "last_year": 2012,
             "doc_count": 14,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     uqmasquerade: {
         espace_id: 12345678,
@@ -839,7 +847,7 @@ export const authorDetails = {
         pol_id: 1,
         username: 'uqstaff',
         is_administrator: 1,
-        is_super_administrator: 0,
+        is_super_administrator: 1,
         org_units: ['Information Systems and Resource Services, Library'],
         positions: ['Web Developer'],
         uqr_id: null,
