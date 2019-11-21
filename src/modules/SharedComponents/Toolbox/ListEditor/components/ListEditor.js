@@ -29,6 +29,8 @@ export default class ListEditor extends Component {
         rowItemTemplate: PropTypes.func,
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
+        scrollList: PropTypes.bool,
+        scrollListHeight: PropTypes.number,
     };
 
     static defaultProps = {
@@ -53,6 +55,8 @@ export default class ListEditor extends Component {
             },
         },
         required: false,
+        scrollList: false,
+        scrollListHeight: 250,
     };
 
     constructor(props) {
@@ -207,7 +211,22 @@ export default class ListEditor extends Component {
                         disabled={this.props.disabled}
                     />
                 )}
-                {renderListsRows}
+                {!!this.props.scrollList &&
+                this.props.scrollListHeight &&
+                this.state.itemList.length >= this.props.scrollListHeight / 55 ? ( // 55 height of a list item
+                        <div
+                            style={{
+                                width: '100%',
+                                height: this.props.scrollListHeight,
+                                overflowX: 'hidden',
+                                overflowY: 'scroll',
+                            }}
+                        >
+                            {renderListsRows}
+                        </div>
+                    ) : (
+                        renderListsRows
+                    )}
             </div>
         );
     }
