@@ -184,6 +184,7 @@ export default class ListEditor extends Component {
                 itemTemplate={this.props.rowItemTemplate}
             />
         ));
+        console.log(this.props.scrollList, this.props.scrollListHeight);
         return (
             <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
@@ -211,22 +212,21 @@ export default class ListEditor extends Component {
                         disabled={this.props.disabled}
                     />
                 )}
-                {!!this.props.scrollList &&
-                this.props.scrollListHeight &&
-                this.state.itemList.length >= this.props.scrollListHeight / 55 ? ( // 55 height of a list item
-                        <div
-                            style={{
-                                width: '100%',
-                                height: this.props.scrollListHeight,
-                                overflowX: 'hidden',
-                                overflowY: 'scroll',
-                            }}
-                        >
-                            {renderListsRows}
-                        </div>
-                    ) : (
-                        renderListsRows
-                    )}
+                {!!this.props.scrollList && this.state.itemList.length >= this.props.scrollListHeight / 55 ? ( // 55 height of a list item
+                    <div
+                        className={'ListEditor-scrollable-list'}
+                        style={{
+                            width: '100%',
+                            height: this.props.scrollListHeight,
+                            overflowX: 'hidden',
+                            overflowY: 'scroll',
+                        }}
+                    >
+                        {renderListsRows}
+                    </div>
+                ) : (
+                    renderListsRows
+                )}
             </div>
         );
     }
