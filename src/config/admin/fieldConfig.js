@@ -476,6 +476,8 @@ export default {
         fez_record_search_key_keywords: {
             component: ListEditorField,
             componentProps: {
+                scrollListHeight: 250,
+                scrollList: true,
                 name: 'bibliographicSection.fez_record_search_key_keywords',
                 maxInputLength: 111,
                 searchKey: {

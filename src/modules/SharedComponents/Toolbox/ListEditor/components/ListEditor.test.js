@@ -2,7 +2,7 @@ import React from 'react';
 import ListEditor from './ListEditor';
 import { List } from 'immutable';
 
-function setup(testProps = {}) {
+function setup(testProps = {}, args = {}) {
     const props = {
         className: 'testClass', // : PropTypes.string,
         searchKey: { value: 'value', order: 'order' }, // : PropTypes.object.isRequired,
@@ -14,9 +14,11 @@ function setup(testProps = {}) {
         hideReorder: false,
         distinctOnly: false,
         errorText: '',
+        scrollList: testProps.scrollList || false,
+        scrollListHeight: testProps.scrollListHeight || 250,
         ...testProps,
     };
-    return getElement(ListEditor, props);
+    return getElement(ListEditor, props, args);
 }
 
 describe('ListEditor tests', () => {
@@ -216,5 +218,36 @@ describe('ListEditor tests', () => {
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items in a scrollable HTML div', () => {
+        const wrapper = setup({ scrollList: true, scrollListHeight: 250 });
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper.state().itemList.length).toEqual(3);
+        wrapper.setState({ itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'] });
+        expect(wrapper.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items inline', () => {
+        const wrapper2 = setup({ scrollList: false, scrollListHeight: 250 });
+        wrapper2.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper2.state().itemList.length).toEqual(3);
+        wrapper2.setState({
+            itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
+        });
+        expect(wrapper2.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper2)).toMatchSnapshot();
+    });
+
+    it('Should render a list of many items inline', () => {
+        const wrapper2 = setup({ scrollList: false });
+        wrapper2.setState({ itemList: ['one', 'two', 'three'] });
+        expect(wrapper2.state().itemList.length).toEqual(3);
+        wrapper2.setState({
+            itemList: ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'],
+        });
+        expect(wrapper2.state().itemList.length).toEqual(10);
+        expect(toJson(wrapper2)).toMatchSnapshot();
     });
 });

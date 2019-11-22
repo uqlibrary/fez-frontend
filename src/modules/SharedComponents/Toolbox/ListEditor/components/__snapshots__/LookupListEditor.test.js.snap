@@ -23,6 +23,8 @@ exports[`LookupListEditor should render default component 1`] = `
   maxCount={0}
   required={false}
   rowItemTemplate={[Function]}
+  scrollList={false}
+  scrollListHeight={250}
   searchKey={
     Object {
       "order": "rek_order",

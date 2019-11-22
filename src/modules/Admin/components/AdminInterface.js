@@ -124,6 +124,13 @@ export const AdminInterface = ({
         }
     };
 
+    /* istanbul ignore next */
+    const navigateToViewRecord = pid => {
+        if (!!pid && validation.isValidPid(pid)) {
+            history.push(routes.pathConfig.records.view(pid));
+        }
+    };
+
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
             <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
@@ -146,6 +153,10 @@ export const AdminInterface = ({
                         onRef={setSuccessConfirmationRef}
                         onAction={navigateToSearchResult}
                         locale={saveConfirmationLocale}
+                        onCancelAction={
+                            /* istanbul ignore next */
+                            () => navigateToViewRecord(record.rek_pid)
+                        }
                     />
                     <Grid item xs style={{ marginBottom: 12 }}>
                         <Typography variant="h2" color="primary" style={{ fontSize: 24 }}>
