@@ -138,6 +138,8 @@ context('Request correction form', () => {
         cy.get('#menu-')
             .contains('Protocol')
             .click();
+        cy.get('#menu-')
+            .click(10, 10);
         cy.contains('button', 'Submit')
             .should('not.be.disabled')
             .click();

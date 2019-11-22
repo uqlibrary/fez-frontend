@@ -16,13 +16,14 @@ exports[`AdminInterface component should disabled button and render alert for fo
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -268,13 +269,14 @@ exports[`AdminInterface component should display successful alert 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -490,13 +492,14 @@ exports[`AdminInterface component should display successful alert 2`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -712,13 +715,14 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -904,13 +908,14 @@ exports[`AdminInterface component should render default view as a full form view
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -1115,13 +1120,14 @@ exports[`AdminInterface component should render default view as a tabbed form vi
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)
@@ -1324,13 +1330,14 @@ exports[`AdminInterface component should render in create mode 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "Cancel",
+          "cancelButtonLabel": "View updated record",
           "confirmButtonLabel": "Edit another work",
           "confirmationMessage": "Work has been updated",
           "confirmationTitle": "Work has been updated",
         }
       }
       onAction={[Function]}
+      onCancelAction={[Function]}
       onRef={[Function]}
     />
     <WithStyles(Grid)

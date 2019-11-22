@@ -880,7 +880,7 @@ export default {
             successWorkflowConfirmation: {
                 confirmationTitle: 'Work has been updated',
                 confirmationMessage: 'Work has been updated',
-                cancelButtonLabel: 'Cancel',
+                cancelButtonLabel: 'View updated record',
                 confirmButtonLabel: 'Edit another work',
             },
             alerts: {

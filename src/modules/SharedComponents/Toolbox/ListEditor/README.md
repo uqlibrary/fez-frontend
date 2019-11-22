@@ -22,6 +22,8 @@ data is passed to redux form values in the following format:
 - searchKey: PropTypes.object.isRequired - a structure for output, eg {{value: 'rek_isbn', order: 'rek_isbn_order'}}
 - maxCount: PropTypes.number - a max number of items (default 0 - no limit)
 - isValid: PropTypes.func - validation function, takes item value outputs an error message or empty string
+- scrollList: PropTypes.bool - if true, will scroll the items list instead of just expanding endlessly
+- scrollListheight: PropTypes.number - height in pixels of the scrollable area
 
 ## Usage
 
