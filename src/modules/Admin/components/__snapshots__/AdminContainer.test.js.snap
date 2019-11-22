@@ -2403,13 +2403,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                       <WithStyles(ConfirmDialogBox)
                                         locale={
                                           Object {
-                                            "cancelButtonLabel": "Cancel",
+                                            "cancelButtonLabel": "View updated record",
                                             "confirmButtonLabel": "Edit another work",
                                             "confirmationMessage": "Work has been updated",
                                             "confirmationTitle": "Work has been updated",
                                           }
                                         }
                                         onAction={[Function]}
+                                        onCancelAction={[Function]}
                                         onRef={[Function]}
                                       >
                                         <ConfirmDialogBox
@@ -2421,13 +2422,14 @@ exports[`AdminContainer component should full mount the component 1`] = `
                                           hideCancelButton={false}
                                           locale={
                                             Object {
-                                              "cancelButtonLabel": "Cancel",
+                                              "cancelButtonLabel": "View updated record",
                                               "confirmButtonLabel": "Edit another work",
                                               "confirmationMessage": "Work has been updated",
                                               "confirmationTitle": "Work has been updated",
                                             }
                                           }
                                           onAction={[Function]}
+                                          onCancelAction={[Function]}
                                           onRef={[Function]}
                                           showAlternateActionButton={false}
                                         >

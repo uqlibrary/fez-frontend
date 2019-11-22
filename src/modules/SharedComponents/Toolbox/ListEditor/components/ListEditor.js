@@ -184,7 +184,6 @@ export default class ListEditor extends Component {
                 itemTemplate={this.props.rowItemTemplate}
             />
         ));
-        console.log(this.props.scrollList, this.props.scrollListHeight);
         return (
             <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
