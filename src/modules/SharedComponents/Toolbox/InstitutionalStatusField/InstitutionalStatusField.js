@@ -7,6 +7,7 @@ export default function InstitutionalStatusField(fieldProps) {
     const input = !!fieldProps.input && fieldProps.input.value;
     return (
         <GenericSelectField
+            canUnselect
             itemsList={INSTITUTIONAL_STATUS}
             hideLabel={false}
             locale={{ label: fieldProps.label }}
