@@ -2,11 +2,16 @@
 
 exports[`OAStatus component should render default view 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",
@@ -56,6 +61,7 @@ exports[`OAStatus component should render default view 1`] = `
 
 exports[`OAStatus component should render immutable list as selected value with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -70,6 +76,10 @@ exports[`OAStatus component should render immutable list as selected value with 
   }
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",
@@ -132,12 +142,17 @@ exports[`OAStatus component should render immutable list as selected value with 
 
 exports[`OAStatus component should render when given a default value field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",
@@ -193,6 +208,7 @@ exports[`OAStatus component should render when given a default value field props
 
 exports[`OAStatus component should render with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -207,6 +223,10 @@ exports[`OAStatus component should render with given field props 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "Not yet assessed",
         "value": "453692",

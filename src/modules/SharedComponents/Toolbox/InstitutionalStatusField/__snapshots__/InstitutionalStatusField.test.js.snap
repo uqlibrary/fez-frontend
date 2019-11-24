@@ -2,6 +2,7 @@
 
 exports[`InstitutionalStatusField component should render default view 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   hideLabel={false}
@@ -36,6 +37,7 @@ exports[`InstitutionalStatusField component should render default view 1`] = `
 
 exports[`InstitutionalStatusField component should render immutable list as selected value with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -92,6 +94,7 @@ exports[`InstitutionalStatusField component should render immutable list as sele
 
 exports[`InstitutionalStatusField component should render when given a default value field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
@@ -133,6 +136,7 @@ exports[`InstitutionalStatusField component should render when given a default v
 
 exports[`InstitutionalStatusField component should render with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}

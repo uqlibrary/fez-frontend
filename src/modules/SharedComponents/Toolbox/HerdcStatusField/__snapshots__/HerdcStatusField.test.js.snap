@@ -2,6 +2,7 @@
 
 exports[`HerdcStatusField component should render default view 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   hideLabel={false}
@@ -32,6 +33,7 @@ exports[`HerdcStatusField component should render default view 1`] = `
 
 exports[`HerdcStatusField component should render immutable list as selected value with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -84,6 +86,7 @@ exports[`HerdcStatusField component should render immutable list as selected val
 
 exports[`HerdcStatusField component should render when given a default value field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
@@ -121,6 +124,7 @@ exports[`HerdcStatusField component should render when given a default value fie
 
 exports[`HerdcStatusField component should render with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}

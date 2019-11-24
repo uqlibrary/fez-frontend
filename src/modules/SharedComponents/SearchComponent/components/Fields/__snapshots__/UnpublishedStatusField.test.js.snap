@@ -681,6 +681,7 @@ exports[`UnpublishedStatusField component should render default view 1`] = `
                 >
                   <GenericSelectFieldClass
                     autoWidth={false}
+                    canUnselect={false}
                     classes={
                       Object {
                         "selectedMenuItem": "GenericSelectFieldClass-selectedMenuItem-1",
@@ -3709,6 +3710,7 @@ exports[`UnpublishedStatusField component should render error message from redux
                 >
                   <GenericSelectFieldClass
                     autoWidth={false}
+                    canUnselect={false}
                     classes={
                       Object {
                         "selectedMenuItem": "GenericSelectFieldClass-selectedMenuItem-1",
@@ -6792,6 +6794,7 @@ exports[`UnpublishedStatusField component should render error text 1`] = `
                 >
                   <GenericSelectFieldClass
                     autoWidth={false}
+                    canUnselect={false}
                     classes={
                       Object {
                         "selectedMenuItem": "GenericSelectFieldClass-selectedMenuItem-1",
@@ -9812,6 +9815,7 @@ exports[`UnpublishedStatusField component should render with value selected from
                 >
                   <GenericSelectFieldClass
                     autoWidth={false}
+                    canUnselect={false}
                     classes={
                       Object {
                         "selectedMenuItem": "GenericSelectFieldClass-selectedMenuItem-1",
