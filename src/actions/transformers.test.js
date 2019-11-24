@@ -2744,6 +2744,26 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
             contactName: 'Test',
             contactEmail: 'test@email.com',
             contactNameId: { id: 1234 },
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: '450003',
+                rek_herdc_code_id: 5013387,
+                rek_herdc_code_pid: 'UQ:113765',
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status_id: 3872732,
+                rek_herdc_status_pid: 'UQ:113765',
+                rek_herdc_status: '453220',
+            },
+            fez_record_search_key_institutional_status: {
+                rek_institutional_status: '453224',
+                rek_institutional_status_id: 3566611,
+                rek_institutional_status_pid: 'UQ:113765',
+            },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: '453694',
+            },
         };
 
         expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
@@ -2788,7 +2808,130 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                     rek_contact_details_email_order: 1,
                 },
             ],
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: '450003',
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: '453220',
+            },
+            fez_record_search_key_institutional_status: {
+                rek_institutional_status: '453224',
+            },
+            fez_record_search_key_oa_status: {
+                rek_oa_status: '453694',
+            },
         });
+    });
+
+    it('should transform unselected search keys for additional information section', () => {
+        const data = {
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_herdc_code_id: 5013387,
+                rek_herdc_code_pid: 'UQ:113765',
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_herdc_status_id: 3872732,
+                rek_herdc_status_pid: 'UQ:113765',
+            },
+            fez_record_search_key_institutional_status: {
+                rek_institutional_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_institutional_status_id: 3566611,
+                rek_institutional_status_pid: 'UQ:113765',
+            },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+            },
+        };
+
+        expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: null,
+            },
+            fez_record_search_key_institutional_status: {},
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
+        });
+    });
+
+    it('should transform unselected search keys for additional information section', () => {
+        const data = {
+            collections: [],
+            contentIndicators: [],
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_herdc_code_id: 5013387,
+                rek_herdc_code_pid: 'UQ:113765',
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_herdc_status_id: 3872732,
+                rek_herdc_status_pid: 'UQ:113765',
+            },
+            fez_record_search_key_institutional_status: {
+                rek_institutional_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+                rek_institutional_status_id: 3566611,
+                rek_institutional_status_pid: 'UQ:113765',
+            },
+            fez_record_search_key_oa_status: {
+                rek_oa_status_id: 3872732,
+                rek_oa_status_pid: 'UQ:113765',
+                rek_oa_status: {
+                    text: 'Please choose an option',
+                    value: null,
+                },
+            },
+        };
+
+        expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: null,
+            },
+            fez_record_search_key_institutional_status: {},
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
+        });
+    });
+
+    it('should not transform unused search keys for additional information section', () => {
+        const data = {
+            collections: [],
+            contentIndicators: [],
+        };
+
+        expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({});
     });
 });
 

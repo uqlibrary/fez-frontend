@@ -2,11 +2,16 @@
 
 exports[`HerdcCodeField component should render default view 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={false}
   errorText=""
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "A1 Books - Authored - research",
         "value": "450001",
@@ -212,6 +217,7 @@ exports[`HerdcCodeField component should render default view 1`] = `
 
 exports[`HerdcCodeField component should render immutable list as selected value with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -226,6 +232,10 @@ exports[`HerdcCodeField component should render immutable list as selected value
   }
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "A1 Books - Authored - research",
         "value": "450001",
@@ -444,12 +454,17 @@ exports[`HerdcCodeField component should render immutable list as selected value
 
 exports[`HerdcCodeField component should render when given a default value field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   defaultValue="afr"
   error={false}
   errorText=""
   hideLabel={false}
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "A1 Books - Authored - research",
         "value": "450001",
@@ -661,6 +676,7 @@ exports[`HerdcCodeField component should render when given a default value field
 
 exports[`HerdcCodeField component should render with given field props 1`] = `
 <GenericSelectField
+  canUnselect={true}
   error={true}
   errorText="Test error"
   hideLabel={false}
@@ -675,6 +691,10 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
   }
   itemsList={
     Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
       Object {
         "text": "A1 Books - Authored - research",
         "value": "450001",

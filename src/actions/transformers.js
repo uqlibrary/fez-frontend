@@ -887,8 +887,87 @@ export const getRecordIsMemberOfSearchKey = collections => {
     };
 };
 
+export const getHerdcCodeSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_herdc_code && record.rek_herdc_code.value === null) {
+        return {
+            fez_record_search_key_herdc_code: {
+                rek_herdc_code: null,
+            },
+        };
+    }
+
+    return {
+        fez_record_search_key_herdc_code: {
+            rek_herdc_code: record.rek_herdc_code,
+        },
+    };
+};
+
+export const getHerdcStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_herdc_status && record.rek_herdc_status.value === null) {
+        return {
+            fez_record_search_key_herdc_status: {
+                rek_herdc_status: null,
+            },
+        };
+    }
+
+    return {
+        fez_record_search_key_herdc_status: {
+            rek_herdc_status: record.rek_herdc_status,
+        },
+    };
+};
+
+export const getInstitutionalStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_institutional_status && record.rek_institutional_status.value === null) {
+        return {
+            fez_record_search_key_institutional_status: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_institutional_status: {
+            rek_institutional_status: record.rek_institutional_status,
+        },
+    };
+};
+
+export const getOpenAccessStatusSearchKey = record => {
+    // return empty object if all parameters are null
+    if (!!record.rek_oa_status && record.rek_oa_status.value === null) {
+        return {
+            fez_record_search_key_oa_status: {
+                rek_oa_status: null,
+            },
+        };
+    }
+
+    return {
+        fez_record_search_key_oa_status: {
+            rek_oa_status: record.rek_oa_status,
+        },
+    };
+};
+
 export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
-    const { collections, additionalNotes, contentIndicators, contactName, contactNameId, contactEmail, ...rest } = data;
+    const {
+        collections,
+        additionalNotes,
+        contentIndicators,
+        contactName,
+        contactNameId,
+        contactEmail,
+        fez_record_search_key_institutional_status: institutionalStatus,
+        fez_record_search_key_herdc_code: herdcCode,
+        fez_record_search_key_herdc_status: herdcStatus,
+        fez_record_search_key_oa_status: openAccessStatus,
+        ...rest
+    } = data;
+
     return {
         ...getRecordIsMemberOfSearchKey(collections),
         ...(!!additionalNotes && additionalNotes.hasOwnProperty('htmlText') && !!additionalNotes.htmlText
@@ -898,6 +977,10 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         ...(!!contactName && !!contactNameId && !!contactEmail
             ? getDatasetContactDetailSearchKeys({ contactName, contactNameId, contactEmail })
             : {}),
+        ...(!!institutionalStatus ? getInstitutionalStatusSearchKey(institutionalStatus) : {}),
+        ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
+        ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
+        ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
         ...rest,
     };
 };
