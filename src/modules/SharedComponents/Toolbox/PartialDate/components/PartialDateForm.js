@@ -237,7 +237,7 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('month')}
                                 inputProps={{ label: 'month', maxLength: 2 }}
                             >
-                                <MenuItem key={-1} value={-1} disabled>
+                                <MenuItem key={-1} value={-1}>
                                     Month
                                 </MenuItem>
                                 {renderMonths}
