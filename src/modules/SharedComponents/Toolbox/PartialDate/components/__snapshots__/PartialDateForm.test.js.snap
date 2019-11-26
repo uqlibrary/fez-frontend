@@ -87,6 +87,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
           value=""
         >
           <WithStyles(MenuItem)
+            disabled={false}
             key="-1"
             value={-1}
           >

@@ -149,7 +149,6 @@ export class PartialDateForm extends Component {
             '';
 
         if (this.props.allowPartial) {
-            this.errors.month = year && month < 0 ? locale.validationMessage.month : '';
             this.errors.day =
                 day && year && month > -1 && validationStatus !== STATUS_VALID ? locale.validationMessage.day : '';
         } else {
@@ -237,7 +236,7 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('month')}
                                 inputProps={{ label: 'month', maxLength: 2 }}
                             >
-                                <MenuItem key={-1} value={-1}>
+                                <MenuItem key={-1} value={-1} disabled={!this.props.allowPartial}>
                                     Month
                                 </MenuItem>
                                 {renderMonths}
