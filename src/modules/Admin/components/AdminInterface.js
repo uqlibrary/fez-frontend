@@ -110,9 +110,18 @@ export const AdminInterface = ({
     }
 
     /* istanbul ignore next */
-    const navigateToSearchResult = () => {
-        if ((authorDetails && authorDetails.is_administrator === 1) || authorDetails.is_super_administrator === 1) {
-            history.go(-1);
+    const navigateToSearchResult = createMode => {
+        if (createMode) {
+            history.push(routes.pathConfig.admin.add);
+        }
+        const navigatedFrom = queryString.parse(location.search).navigatedFrom || null;
+        if (
+            (authorDetails && authorDetails.is_administrator === 1) ||
+            (authorDetails.is_super_administrator === 1 && !!navigatedFrom)
+        ) {
+            console.log('Navigating back to where you came from: ', navigatedFrom);
+            // history.go(-1);
+            history.push(navigatedFrom);
         } else if (
             authorDetails &&
             authorDetails.is_administrator !== 1 &&
@@ -120,7 +129,8 @@ export const AdminInterface = ({
         ) {
             history.push(routes.pathConfig.records.mine);
         } else {
-            history.push(routes.pathConfig.index);
+            // history.push(routes.pathConfig.index);
+            history.push(navigatedFrom);
         }
     };
 
@@ -143,15 +153,16 @@ export const AdminInterface = ({
         (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
         'record';
 
-    const saveConfirmationLocale = txt.current.successWorkflowConfirmation;
-
+    const saveConfirmationLocale = createMode
+        ? txt.current.successAddWorkflowConfirmation
+        : txt.current.successWorkflowConfirmation;
     return (
         <StandardPage>
             <React.Fragment>
                 <Grid container spacing={0} direction="row" alignItems="center" style={{ marginTop: -24 }}>
                     <ConfirmDialogBox
                         onRef={setSuccessConfirmationRef}
-                        onAction={navigateToSearchResult}
+                        onAction={() => navigateToSearchResult(createMode)}
                         locale={saveConfirmationLocale}
                         onCancelAction={
                             /* istanbul ignore next */

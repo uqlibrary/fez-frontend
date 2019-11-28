@@ -16835,6 +16835,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                         actions={
                                                           Object {
                                                             "adminCreate": [Function],
+                                                            "adminReset": [Function],
                                                             "adminUpdate": [Function],
                                                             "checkSession": [Function],
                                                             "claimPublication": [Function],
@@ -22940,6 +22941,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                             actions={
                               Object {
                                 "adminCreate": [Function],
+                                "adminReset": [Function],
                                 "adminUpdate": [Function],
                                 "checkSession": [Function],
                                 "claimPublication": [Function],
@@ -24610,6 +24612,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                       actions={
                                                                         Object {
                                                                           "adminCreate": [Function],
+                                                                          "adminReset": [Function],
                                                                           "adminUpdate": [Function],
                                                                           "checkSession": [Function],
                                                                           "claimPublication": [Function],
@@ -24725,6 +24728,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                         actions={
                                                                           Object {
                                                                             "adminCreate": [Function],
+                                                                            "adminReset": [Function],
                                                                             "adminUpdate": [Function],
                                                                             "checkSession": [Function],
                                                                             "claimPublication": [Function],
@@ -24847,6 +24851,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                           actions={
                                                                             Object {
                                                                               "adminCreate": [Function],
+                                                                              "adminReset": [Function],
                                                                               "adminUpdate": [Function],
                                                                               "checkSession": [Function],
                                                                               "claimPublication": [Function],
@@ -25403,6 +25408,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                             actions={
                                                                               Object {
                                                                                 "adminCreate": [Function],
+                                                                                "adminReset": [Function],
                                                                                 "adminUpdate": [Function],
                                                                                 "checkSession": [Function],
                                                                                 "claimPublication": [Function],
@@ -28868,6 +28874,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 actions={
                                                                                   Object {
                                                                                     "adminCreate": [Function],
+                                                                                    "adminReset": [Function],
                                                                                     "adminUpdate": [Function],
                                                                                     "checkSession": [Function],
                                                                                     "claimPublication": [Function],
@@ -28937,6 +28944,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   actions={
                                                                                     Object {
                                                                                       "adminCreate": [Function],
+                                                                                      "adminReset": [Function],
                                                                                       "adminUpdate": [Function],
                                                                                       "checkSession": [Function],
                                                                                       "claimPublication": [Function],

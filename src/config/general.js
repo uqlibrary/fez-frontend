@@ -1089,26 +1089,41 @@ export const LANGUAGE = [
 export const UNPUBLISHED_BUFFER_ACTION_URLS = [
     {
         label: 'Edit selected record',
-        url: pid => `${APP_URL}admin/edit/${pid}`,
+        url: pid =>
+            process.env.NODE_ENV === 'development' ? `${APP_URL}#/admin/edit/${pid}` : `${APP_URL}admin/edit/${pid}`,
+        inApp: true,
     },
     {
         label: 'Edit author affiliations',
         url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+            process.env.NODE_ENV === 'development'
+                ? `${APP_URL}#/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`
+                : `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=229&href=%2Fmy_fez_traditional.php`,
+        inApp: true,
     },
     {
         label: 'Edit security for selected record',
         inApp: true,
-        url: pid => `${APP_URL}admin/edit/${pid}?tab=security`,
+        url: pid =>
+            process.env.NODE_ENV === 'development'
+                ? `${APP_URL}#/admin/edit/${pid}?tab=security`
+                : `${APP_URL}admin/edit/${pid}?tab=security`,
     },
     {
         label: 'Delete selected record',
         url: pid =>
-            `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
+            process.env.NODE_ENV === 'development'
+                ? `${APP_URL}#/workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`
+                : `${APP_URL}workflow/update.php?pid=${pid}&cat=select_workflow&xdis_id=187&wft_id=225&href=%2Fmy_fez_traditional.php`,
+        inApp: true,
     },
     {
         label: 'More options',
-        url: pid => `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        url: pid =>
+            process.env.NODE_ENV === 'development'
+                ? `${APP_URL}#/workflow/list_workflows2.php?pid=${pid}`
+                : `${APP_URL}workflow/list_workflows2.php?pid=${pid}`,
+        inApp: true,
     },
 ];
 

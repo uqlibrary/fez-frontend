@@ -465,13 +465,31 @@ export function adminUpdate(data) {
     };
 }
 
+/**
+ * Clear new admin record
+ * @returns {action}
+ */
+export function adminReset() {
+    return dispatch => {
+        dispatch({
+            type: actions.ADMIN_CREATE_RECORD_RESET,
+        });
+    };
+}
+
+/**
+ * Save a new record as an admin involves multiple requests.
+ * If error occurs on any stage failed action is dispatched
+ * @param {object} data to be posted, refer to backend API
+ * @returns {promise} - this method is used by redux form onSubmit which requires Promise resolve/reject as a return
+ */
 export function adminCreate(data) {
     const {
         filesSection: { files },
     } = data;
     return dispatch => {
         dispatch({
-            type: actions.ADMIN_CREATE_WORK_PROCESSING,
+            type: actions.ADMIN_CREATE_RECORD_SAVING,
         });
 
         let newRecord = null;
@@ -493,7 +511,7 @@ export function adminCreate(data) {
             )
             .then(response => {
                 dispatch({
-                    type: actions.ADMIN_CREATE_WORK_SUCCESS,
+                    type: actions.ADMIN_CREATE_RECORD_SUCCESS,
                     payload: {
                         newRecord: response.data ? response.data : newRecord,
                         fileUploadOrIssueFailed: false,
@@ -505,7 +523,7 @@ export function adminCreate(data) {
                 // record was created, but file upload or record patch failed or issue post failed
                 if (!!newRecord && !!newRecord.rek_pid) {
                     dispatch({
-                        type: actions.ADMIN_CREATE_WORK_SUCCESS,
+                        type: actions.ADMIN_CREATE_RECORD_SUCCESS,
                         payload: {
                             newRecord: newRecord,
                             fileUploadOrIssueFailed: true,
@@ -516,7 +534,7 @@ export function adminCreate(data) {
                 }
 
                 dispatch({
-                    type: actions.ADMIN_CREATE_WORK_FAILED,
+                    type: actions.ADMIN_CREATE_RECORD_FAILED,
                     payload: error.message,
                 });
 

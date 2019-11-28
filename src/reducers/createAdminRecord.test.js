@@ -16,13 +16,13 @@ describe('createAdminReducer', () => {
     };
 
     it('clears the state of a new record and returns the initialState', () => {
-        const test = createAdminReducer(initialState, { type: actions.CREATE_ADMIN_RECORD_RESET });
+        const test = createAdminReducer(initialState, { type: actions.ADMIN_CREATE_RECORD_RESET });
         expect(test).toEqual(initialState);
     });
 
     it('returns the payload of the created record, and whether the file upload was successful', () => {
         const test = createAdminReducer(initialState, {
-            type: actions.CREATE_ADMIN_RECORD_SUCCESS,
+            type: actions.ADMIN_CREATE_RECORD_SUCCESS,
             payload: {
                 newRecord: aRecordToCreate,
                 fileUploadOrIssueFailed: false,
@@ -37,7 +37,7 @@ describe('createAdminReducer', () => {
 
     it('returns the payload of the failed record and that there was an error', () => {
         const test = createAdminReducer(initialState, {
-            type: actions.CREATE_ADMIN_RECORD_FAILED,
+            type: actions.ADMIN_CREATE_RECORD_FAILED,
             payload: aRecordToCreate,
         });
         expect(test).toEqual({ ...initialState, newRecordError: true, newRecordErrorMessage: aRecordToCreate });
@@ -45,7 +45,7 @@ describe('createAdminReducer', () => {
 
     it('returns that the new record is currently being saved', () => {
         const test = createAdminReducer(initialState, {
-            type: actions.CREATE_ADMIN_RECORD_SAVING,
+            type: actions.ADMIN_CREATE_RECORD_SAVING,
             payload: aRecordToCreate,
         });
         expect(test).toEqual({ ...initialState, newRecordSaving: true });

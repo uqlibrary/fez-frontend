@@ -43,7 +43,7 @@ export default class PublicationsList extends PureComponent {
                         : this.props.subsetCustomActions
                 }
                 showSources={this.props.showSources}
-                showAdminActions={this.props.showAdminActions}
+                showAdminActions={!!this.props.showAdminActions}
                 showDefaultActions={this.props.showDefaultActions}
                 showMetrics={this.props.showMetrics}
                 showSourceCountIcon={this.props.showSourceCountIcon}

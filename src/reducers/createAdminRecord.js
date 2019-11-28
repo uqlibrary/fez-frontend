@@ -9,26 +9,30 @@ export const initialState = {
 };
 
 const handlers = {
-    [actions.CREATE_ADMIN_RECORD_RESET]: () => ({
+    [actions.ADMIN_CREATE_RECORD_RESET]: () => ({
         ...initialState,
     }),
 
-    [actions.CREATE_ADMIN_RECORD_SUCCESS]: (state, action) => ({
-        ...initialState,
-        newRecord: action.payload.newRecord,
-        newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
-    }),
+    [actions.ADMIN_CREATE_RECORD_SUCCESS]: (state, action) => {
+        return {
+            ...initialState,
+            newRecord: action.payload.newRecord,
+            newRecordFileUploadingOrIssueError: !!action.payload.fileUploadOrIssueFailed,
+        };
+    },
 
-    [actions.CREATE_ADMIN_RECORD_FAILED]: (state, action) => ({
+    [actions.ADMIN_CREATE_RECORD_FAILED]: (state, action) => ({
         ...initialState,
         newRecordError: true,
         newRecordErrorMessage: action.payload,
     }),
 
-    [actions.CREATE_ADMIN_RECORD_SAVING]: () => ({
-        ...initialState,
-        newRecordSaving: true,
-    }),
+    [actions.ADMIN_CREATE_RECORD_SAVING]: () => {
+        return {
+            ...initialState,
+            newRecordSaving: true,
+        };
+    },
 };
 
 export default function createAdminRecordReducer(state = initialState, action) {

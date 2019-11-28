@@ -3,6 +3,7 @@ import Dashboard from './Dashboard';
 import * as mock from 'mock/data';
 
 const publicationTotalCount = {
+    account: mock.accounts.uqresearcher,
     articleCount: mock.currentAuthorStats.total,
     articleFirstYear: mock.currentAuthorStats.filters.facets.min_date_year_t.value_as_string,
     articleLastYear: mock.currentAuthorStats.filters.facets.max_date_year_t.value_as_string,
@@ -12,7 +13,12 @@ function setup(testProps = {}, args = {}) {
     const props = {
         classes: {},
         theme: {},
+        author: mock.currentAuthor.uqresearcher,
         account: mock.accounts.uqresearcher,
+        authorDetails: {
+            is_administrator: 0,
+            is_super_administrator: 0,
+        },
         accountAuthorDetailsLoading: false,
         publicationTotalCount: null,
         loadingPublicationsByYear: false,
@@ -26,7 +32,6 @@ function setup(testProps = {}, args = {}) {
         },
         loadingIncompleteRecordData: false,
         history: {},
-        ...testProps,
         incomplete: {
             publicationsListPagingData: {},
             loadingPublicationsList: false,
@@ -34,6 +39,7 @@ function setup(testProps = {}, args = {}) {
             publicationsListFacets: {},
             ...testProps.incomplete,
         },
+        ...testProps,
     };
     return getElement(DashboardClass, props, args);
 }
@@ -417,6 +423,7 @@ describe('Dashboard test', () => {
     it('displays a lure when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
             incomplete: {
+                publicationsList: [],
                 publicationsListPagingData: {
                     total: 2,
                     took: 30,
@@ -436,6 +443,7 @@ describe('Dashboard test', () => {
     it('displays a lure to a single work when the user has incomplete NTRO submissions', () => {
         const wrapper = setup({
             incomplete: {
+                publicationsList: [],
                 publicationsListPagingData: {
                     total: 1,
                     took: 30,
