@@ -5,7 +5,6 @@ import TextField from '@material-ui/core/TextField';
 import InputLabel from '@material-ui/core/InputLabel';
 import Select from '@material-ui/core/Select';
 import MenuItem from '@material-ui/core/MenuItem';
-
 // MUI 1
 import Grid from '@material-ui/core/Grid';
 import FormHelperText from '@material-ui/core/FormHelperText';
@@ -32,6 +31,8 @@ export const STATUS_VALID = 1; // user entered a valid date
 export const STATUS_INVALID = 2; // user entered an invalid date
 export const STATUS_FUTURE_DATE = 3; // the date entered is valid but in the future, when prop disableFuture is
 
+export const MONTH_UNSELECTED = -1;
+
 export class PartialDateForm extends Component {
     static propTypes = {
         locale: PropTypes.object,
@@ -55,9 +56,11 @@ export class PartialDateForm extends Component {
             monthLabel: 'Month',
             yearLabel: 'Year',
             validationMessage: {
+                date: 'Invalid date',
                 day: 'Invalid day',
-                month: 'Invalid month',
+                month: 'Enter a month',
                 year: 'Invalid year',
+                yearRequired: 'Year required',
                 future: 'Date must be before now',
             },
             minNumberCharCode: 48,
@@ -113,7 +116,14 @@ export class PartialDateForm extends Component {
      */
     _validate = state => {
         let validationStatus;
-        const { day, month, year } = state;
+        // const { day, month, year } = state;
+        const day = state.day;
+        const year = state.year;
+        let month = state.month;
+        if (state.month === MONTH_UNSELECTED) {
+            // moment validation doesnt recognise -1 as a valid date
+            month = null;
+        }
 
         if (this.props.allowPartial) {
             validationStatus = !!year && moment(state).isValid() ? STATUS_VALID : STATUS_INVALID;
@@ -139,38 +149,74 @@ export class PartialDateForm extends Component {
         return validationStatus;
     };
 
-    _displayErrors = (state, validationStatus) => {
+    _displayErrors = (state, validationStatus, allowPartial = '', isRequired = '') => {
+        const allowPartialHere = allowPartial === '' ? this.props.allowPartial : allowPartial;
+        const isRequiredHere = isRequired === '' ? this.props.required : isRequired;
+
         const { day, month, year } = state;
         const { locale } = this.props;
+        const validMonthIndices = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
-        this.errors.year =
-            (this.props.floatingTitleRequired && this.props.allowPartial && !year && 'Year required') ||
-            (!!year && isNaN(year) && locale.validationMessage.year) ||
-            '';
+        this.errors.date = (!!year && isNaN(year) && locale.validationMessage.year) || '';
 
-        if (this.props.allowPartial) {
-            this.errors.day =
-                day && year && month > -1 && validationStatus !== STATUS_VALID ? locale.validationMessage.day : '';
-        } else {
-            this.errors.month = month < 0 ? locale.validationMessage.month : '';
-            if (validationStatus === STATUS_INVALID) {
-                this.errors.day =
-                    (isNaN(day) && !!this.props.required) || ((month !== null || month > -1) && year)
-                        ? locale.validationMessage.day
-                        : '';
-            } else if (validationStatus === STATUS_FUTURE_DATE) {
-                this.errors.day = locale.validationMessage.future;
-            } else {
-                this.errors.day = '';
-            }
+        switch (validationStatus) {
+            case STATUS_INVALID:
+                this.errors.date =
+                    // initial load of 'required' message for required date fields
+                    (allowPartialHere &&
+                        isRequiredHere &&
+                        !year &&
+                        !isNaN(year) &&
+                        locale.validationMessage.yearRequired) ||
+                    // initial load of 'required' message for required date fields
+                    (isNaN(year) && locale.validationMessage.year) ||
+                    // they've just typed in a nonsense number
+                    // dont wait for date complete for the moment validation to kick in
+                    ((isNaN(day) || (!!day && (day < 1 || day > 31))) && locale.validationMessage.day) ||
+                    // // date fields initially blank // remove
+                    // (year === null && this._isUnselected(month) && day === null && '') || // remove
+                    // they've entered a day
+                    (year === null && this._isUnselected(month) && !!day && '') ||
+                    // they've entered a day and a month
+                    (year === null && validMonthIndices.includes(month) && !!day && '') ||
+                    // encourage them to select a month if the year and day are selected
+                    (!!year && this._isUnselected(month) && !!day && locale.validationMessage.month) ||
+                    locale.validationMessage.date;
+                break;
+            case STATUS_VALID:
+                // cypress does not like more concise format (?!?) (integration tests didnt either?!?!?)
+                if (!!year && validMonthIndices.includes(month) && !!day) {
+                    // date complete for non-partial-entry
+                    this.errors.date = '';
+                } else if (allowPartialHere && !!year && this._isUnselected(month) && day === null) {
+                    // partial entry means they can get away with just a year
+                    this.errors.date = '';
+                } else {
+                    this.errors.date = locale.validationMessage.date;
+                }
+                break;
+            case STATUS_FUTURE_DATE:
+                this.errors.date = locale.validationMessage.future;
+                break;
+            /* istanbul ignore next */
+            default:
+                break;
         }
     };
+
+    _isUnselected(month) {
+        return month === MONTH_UNSELECTED || month === null;
+    }
 
     _setDate = date => {
         const validationStatus = this._validate(date);
 
-        this._displayErrors(date, validationStatus);
+        this._displayErrors(date, validationStatus, this.props.allowPartial, this.props.required);
 
+        if (date.month === MONTH_UNSELECTED) {
+            // moment validation doesnt recognise -1 as a valid month number
+            date.month = null;
+        }
         return validationStatus === STATUS_VALID ? moment(date).format(this.props.dateFormat) : '';
     };
 
@@ -185,9 +231,14 @@ export class PartialDateForm extends Component {
 
     _onDateChanged = key => {
         return (event, index, value) => {
-            this.setState({
-                [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
-            });
+            if (event.target.value === '') {
+                // allow the field to be cleared (otherwise it sets NaN, which fires the validation)
+                this.setState({ [key]: null });
+            } else {
+                this.setState({
+                    [key]: parseInt(event.target.value === undefined ? value : event.target.value, 10),
+                });
+            }
         };
     };
 
@@ -198,7 +249,7 @@ export class PartialDateForm extends Component {
                 {month}
             </MenuItem>
         ));
-        const isError = this.errors.day || this.errors.month || this.errors.year || this.props.hasError || '';
+        const isError = this.errors.date || this.props.hasError || '';
         return (
             <Grid container spacing={0}>
                 <Grid item xs={12}>
@@ -236,7 +287,7 @@ export class PartialDateForm extends Component {
                                 onChange={this._onDateChanged('month')}
                                 inputProps={{ label: 'month', maxLength: 2 }}
                             >
-                                <MenuItem key={-1} value={-1} disabled={!this.props.allowPartial}>
+                                <MenuItem key={-1} value={MONTH_UNSELECTED}>
                                     Month
                                 </MenuItem>
                                 {renderMonths}
