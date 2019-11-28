@@ -13,6 +13,10 @@ function setup(testProps, isShallow = true) {
         },
         account: testProps.account || accounts.uqresearcher,
         author: testProps.author || null,
+        authorDetails: {
+            is_administrator: 0,
+            is_super_administrator: 0,
+        },
         ...testProps,
     };
     return getElement(ViewRecord, props, isShallow);

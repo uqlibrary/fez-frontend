@@ -10304,6 +10304,36 @@ exports[`PublicationCitation  should show admin actions on unpublished buffer/se
               item={true}
             >
               <Memo(AdminActions)
+                navigatedFrom="/"
+                options={
+                  Array [
+                    Object {
+                      "inApp": true,
+                      "label": "Edit selected record",
+                      "url": [Function],
+                    },
+                    Object {
+                      "inApp": true,
+                      "label": "Edit author affiliations",
+                      "url": [Function],
+                    },
+                    Object {
+                      "inApp": true,
+                      "label": "Edit security for selected record",
+                      "url": [Function],
+                    },
+                    Object {
+                      "inApp": true,
+                      "label": "Delete selected record",
+                      "url": [Function],
+                    },
+                    Object {
+                      "inApp": true,
+                      "label": "More options",
+                      "url": [Function],
+                    },
+                  ]
+                }
                 pid="UQ:41878"
               />
             </WithStyles(Grid)>

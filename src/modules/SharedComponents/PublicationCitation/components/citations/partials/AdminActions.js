@@ -5,13 +5,11 @@ import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 
-import { UNPUBLISHED_BUFFER_ACTION_URLS as options } from 'config/general';
-
-export const navigateToUrl = (url, target = '_blank') => () => {
-    window.open(url, target);
+export const navigateToUrl = (url, target, navigatedFrom = '') => () => {
+    window.open(`${url}?navigatedFrom=${navigatedFrom}`, target);
 };
 
-export const AdminActions = ({ pid }) => {
+export const AdminActions = ({ pid, navigatedFrom, options }) => {
     const [anchorEl, setAnchorEl] = useState(null);
     const open = Boolean(anchorEl);
 
@@ -31,7 +29,10 @@ export const AdminActions = ({ pid }) => {
             </IconButton>
             <Menu id="admin-actions-menu" anchorEl={anchorEl} open={open} onClose={handleClose}>
                 {options.map((option, index) => (
-                    <MenuItem key={index} onClick={navigateToUrl(option.url(pid), option.inApp && '_self')}>
+                    <MenuItem
+                        key={index}
+                        onClick={navigateToUrl(option.url(pid), option.inApp ? '_self' : '_blank', navigatedFrom)}
+                    >
                         {option.label}
                     </MenuItem>
                 ))}
@@ -42,6 +43,8 @@ export const AdminActions = ({ pid }) => {
 
 AdminActions.propTypes = {
     pid: PropTypes.string,
+    navigatedFrom: PropTypes.string,
+    options: PropTypes.array.isRequired,
 };
 
 export default React.memo(AdminActions);

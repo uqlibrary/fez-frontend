@@ -1050,6 +1050,15 @@ describe('Record action creators', () => {
         });
     });
 
+    describe('adminReset()', () => {
+        it('dispatches expected actions', async() => {
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_RESET];
+
+            await mockActionsStore.dispatch(recordActions.adminReset());
+            expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+        });
+    });
+
     describe('adminUpdate()', () => {
         const testInput = {
             pid: 'UQ:396321',
@@ -1199,7 +1208,7 @@ describe('Record action creators', () => {
                 .onPatch(repositories.routes.EXISTING_RECORD_API(pidRequest).apiUrl)
                 .reply(200, { data: { ...record } });
 
-            const expectedActions = [actions.ADMIN_CREATE_WORK_PROCESSING, actions.ADMIN_CREATE_WORK_SUCCESS];
+            const expectedActions = [actions.ADMIN_CREATE_RECORD_SAVING, actions.ADMIN_CREATE_RECORD_SUCCESS];
 
             await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
             expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
@@ -1252,10 +1261,10 @@ describe('Record action creators', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                actions.ADMIN_CREATE_WORK_PROCESSING,
+                actions.ADMIN_CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
                 'FILE_UPLOAD_PROGRESS@test.txt',
-                actions.ADMIN_CREATE_WORK_SUCCESS,
+                actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 
             await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
@@ -1309,11 +1318,11 @@ describe('Record action creators', () => {
                 .reply(200, {});
 
             const expectedActions = [
-                actions.ADMIN_CREATE_WORK_PROCESSING,
+                actions.ADMIN_CREATE_RECORD_SAVING,
                 'FILE_UPLOAD_STARTED',
                 actions.APP_ALERT_SHOW,
                 'FILE_UPLOADED_FAILED@test.txt',
-                actions.ADMIN_CREATE_WORK_SUCCESS,
+                actions.ADMIN_CREATE_RECORD_SUCCESS,
             ];
 
             await mockActionsStore.dispatch(recordActions.adminCreate(testInput));
@@ -1358,9 +1367,9 @@ describe('Record action creators', () => {
             mockApi.onAny().reply(403, {});
 
             const expectedActions = [
-                actions.ADMIN_CREATE_WORK_PROCESSING,
+                actions.ADMIN_CREATE_RECORD_SAVING,
                 actions.CURRENT_ACCOUNT_ANONYMOUS,
-                actions.ADMIN_CREATE_WORK_FAILED,
+                actions.ADMIN_CREATE_RECORD_FAILED,
             ];
 
             try {

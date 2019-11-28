@@ -883,6 +883,12 @@ export default {
                 cancelButtonLabel: 'View updated record',
                 confirmButtonLabel: 'Edit another work',
             },
+            successAddWorkflowConfirmation: {
+                confirmationTitle: 'Work has been added',
+                confirmationMessage: 'Your new record has been added to eSpace.',
+                cancelButtonLabel: 'View new record',
+                confirmButtonLabel: 'Add another work',
+            },
             alerts: {
                 errorAlert: {
                     type: 'error_outline',

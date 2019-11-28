@@ -1330,10 +1330,10 @@ exports[`AdminInterface component should render in create mode 1`] = `
     <WithStyles(ConfirmDialogBox)
       locale={
         Object {
-          "cancelButtonLabel": "View updated record",
-          "confirmButtonLabel": "Edit another work",
-          "confirmationMessage": "Work has been updated",
-          "confirmationTitle": "Work has been updated",
+          "cancelButtonLabel": "View new record",
+          "confirmButtonLabel": "Add another work",
+          "confirmationMessage": "Your new record has been added to eSpace.",
+          "confirmationTitle": "Work has been added",
         }
       }
       onAction={[Function]}
