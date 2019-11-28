@@ -181,7 +181,9 @@ export class DashboardClass extends PureComponent {
             this.props.incomplete.publicationsListPagingData.total > 1
                 ? ''
                 : 's';
-
+        const isAdmin =
+            this.props.authorDetails &&
+            (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage>
                 <Grid container spacing={24}>
@@ -324,7 +326,7 @@ export class DashboardClass extends PureComponent {
                                             xs={12}
                                             style={this.state.dashboardPubsTabs !== 1 ? { display: 'none' } : {}}
                                         >
-                                            <MyLatestPublications />
+                                            <MyLatestPublications isAdmin={!!isAdmin} />
                                         </Grid>
                                     )}
                                     {this.props.showTrendingPublicationsTab && (

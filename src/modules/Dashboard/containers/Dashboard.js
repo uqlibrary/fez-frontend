@@ -11,6 +11,8 @@ const mapStateToProps = state => {
 
     return {
         ...state.get('accountReducer'),
+        author: { ...state.get('accountReducer').author },
+        authorDetails: { ...state.get('accountReducer').authorDetails },
         ...state.get('academicStatsReducer'),
         ...state.get('appReducer'),
         ...state.get('publicationsReducer'),

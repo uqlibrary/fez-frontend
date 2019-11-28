@@ -22,6 +22,10 @@ function setup(testProps = {}) {
         loadingPublicationsList: false,
         publicationsList: [],
         publicationsListFacets: {},
+        authorDetails: {
+            is_administrator: 0,
+            is_super_administrator: 0,
+        },
         ...testProps,
     };
     return getElement(myDatasets, props);

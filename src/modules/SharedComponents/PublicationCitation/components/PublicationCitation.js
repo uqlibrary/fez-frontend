@@ -11,6 +11,7 @@ import { routes, publicationTypes } from 'config';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import ReactHtmlParser from 'react-html-parser';
 import { withStyles } from '@material-ui/core/styles';
+import { UNPUBLISHED_BUFFER_ACTION_URLS as options } from 'config/general';
 
 // citations for different publication types
 import CitationCounts from './citations/CitationCounts';
@@ -81,6 +82,7 @@ export class PublicationCitation extends PureComponent {
         customActions: PropTypes.array,
         className: PropTypes.string,
         history: PropTypes.object.isRequired,
+        location: PropTypes.object,
         actions: PropTypes.object.isRequired,
         hideTitle: PropTypes.bool,
         showAdminActions: PropTypes.bool,
@@ -345,7 +347,7 @@ export class PublicationCitation extends PureComponent {
                                     <UnpublishedBufferCitationView publication={this.props.publication} />
                                 </Grid>
                             )}
-                            {(!this.props.hideCitationCounts || this.props.showAdminActions) && (
+                            {(!this.props.hideCitationCounts || !!this.props.showAdminActions) && (
                                 <Grid item xs={12}>
                                     <Grid container alignItems="center">
                                         {!this.props.hideCitationCounts && (
@@ -361,9 +363,13 @@ export class PublicationCitation extends PureComponent {
                                                 />
                                             </Grid>
                                         )}
-                                        {this.props.showAdminActions && (
+                                        {!!this.props.showAdminActions && (
                                             <Grid item>
-                                                <AdminActions pid={this.props.publication.rek_pid} />
+                                                <AdminActions
+                                                    pid={this.props.publication.rek_pid}
+                                                    navigatedFrom={location.hash.replace('#', '')}
+                                                    options={options}
+                                                />
                                             </Grid>
                                         )}
                                     </Grid>

@@ -11,6 +11,7 @@ jest.mock('js-cookie', () => ({
 
 function setup(testProps = {}) {
     const props = {
+        createMode: false,
         authorDetails: {
             is_administrator: 1,
             is_super_administrator: 1,
@@ -352,6 +353,7 @@ describe('AdminInterface component', () => {
             submitSucceeded: true,
             history: {
                 go: jest.fn(),
+                push: jest.fn(),
             },
             tabs: {
                 bibliographic: {
