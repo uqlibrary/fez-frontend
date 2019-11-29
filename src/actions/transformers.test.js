@@ -2425,8 +2425,10 @@ describe('getBibliographicSectionSearchKeys', () => {
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
-                rek_title: '<p>test</p>',
-                rek_description: '<p>test description</p>',
+                rek_title: 'test',
+                rek_formatted_title: '<p>test</p>',
+                rek_description: 'test description',
+                rek_formatted_abstract: '<p>test description</p>',
                 rek_date: '2019-01-01 00:00:00',
                 fez_record_search_key_language: [
                     {
