@@ -139,6 +139,8 @@ context('Data Collection form', () => {
         cy.get('div.Alert')
             .find('li')
             .should('have.length', 7);
+        cy.contains('p', 'Invalid date')
+            .should('not.be.visible');
 
         // Field of research
         cy.get('input#Fieldofresearch-input')
@@ -547,7 +549,7 @@ context('Data Collection form', () => {
             .find('input#year')
             .type('2000');
 
-        cy.contains('p', 'Invalid day')
+        cy.contains('p', 'Invalid date')
             .should('be.visible');
 
         // now check valid dates
