@@ -60,7 +60,7 @@ exports[`PartialDateForm component should display errors correctly 1`] = `
         <WithStyles(WithFormControlContext(FormHelperText))
           error={true}
         >
-          Year required
+          Invalid date
         </WithStyles(WithFormControlContext(FormHelperText))>
       </WithStyles(Grid)>
       <WithStyles(Grid)

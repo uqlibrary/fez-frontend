@@ -21,10 +21,12 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 1`] =
       "minNumberCharCode": 48,
       "monthLabel": "Month",
       "validationMessage": Object {
+        "date": "Invalid date",
         "day": "Invalid day",
         "future": "Date must be before now",
-        "month": "Invalid month",
+        "month": "Enter a month",
         "year": "Invalid year",
+        "yearRequired": "Year required",
       },
       "yearLabel": "Year",
     }
@@ -71,10 +73,12 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 2 1`]
       "minNumberCharCode": 48,
       "monthLabel": "Month",
       "validationMessage": Object {
+        "date": "Invalid date",
         "day": "Invalid day",
         "future": "Date must be before now",
-        "month": "Invalid month",
+        "month": "Enter a month",
         "year": "Invalid year",
+        "yearRequired": "Year required",
       },
       "yearLabel": "Year",
     }
@@ -121,10 +125,12 @@ exports[`PartialDateForm snapshots tests renders PartialDateForm component 3 1`]
       "minNumberCharCode": 48,
       "monthLabel": "Month",
       "validationMessage": Object {
+        "date": "Invalid date",
         "day": "Invalid day",
         "future": "Date must be before now",
-        "month": "Invalid month",
+        "month": "Enter a month",
         "year": "Invalid year",
+        "yearRequired": "Year required",
       },
       "yearLabel": "Year",
     }

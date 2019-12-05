@@ -39,6 +39,7 @@ describe('PartialDateForm unit tests', () => {
         form.instance()._onDateChanged('month')({ target: { value: undefined } }, 2, 1);
         form.instance()._onDateChanged('year')({ target: { value: '2016' } });
         form.instance()._onDateChanged('day')({ target: { value: NaN } });
+        form.instance()._onDateChanged('month')({ target: { value: '' } }, 2, 1);
     });
 
     it('should return correct formatted date 3', () => {
