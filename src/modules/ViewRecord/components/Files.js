@@ -160,7 +160,7 @@ export class FilesClass extends Component {
         return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     };
 
-    getSecurityAccess = (dataStream) => {
+    getSecurityAccess = dataStream => {
         const { isAdmin, isAuthor, author } = this.props;
         return !!(
             isAdmin ||
