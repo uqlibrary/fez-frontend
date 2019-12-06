@@ -119,8 +119,6 @@ export const AdminInterface = ({
             (authorDetails && authorDetails.is_administrator === 1) ||
             (authorDetails.is_super_administrator === 1 && !!navigatedFrom)
         ) {
-            console.log('Navigating back to where you came from: ', navigatedFrom);
-            // history.go(-1);
             history.push(navigatedFrom);
         } else if (
             authorDetails &&
@@ -129,7 +127,6 @@ export const AdminInterface = ({
         ) {
             history.push(routes.pathConfig.records.mine);
         } else {
-            // history.push(routes.pathConfig.index);
             history.push(navigatedFrom);
         }
     };
