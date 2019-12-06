@@ -110,7 +110,7 @@ export default class ViewRecord extends PureComponent {
                 </Grid>
                 <Grid container spacing={24}>
                     <Files
-                        authorDetails={this.props.authorDetails}
+                        author={this.props.author}
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
