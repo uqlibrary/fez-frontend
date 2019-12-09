@@ -44,7 +44,7 @@ export class FilesClass extends Component {
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
-        authorDetails: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {
@@ -160,9 +160,14 @@ export class FilesClass extends Component {
         return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     };
 
-    getSecurityAccess = () => {
-        // const { isAdmin, isAuthor } = this.props;
-        return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
+    getSecurityAccess = dataStream => {
+        const { isAdmin, isAuthor, author } = this.props;
+        return !!(
+            isAdmin ||
+            isAuthor ||
+            dataStream.dsi_security_policy === 5 ||
+            dataStream.dsi_security_policy >= author.pol_id
+        );
     };
 
     getUrl = (pid, fileName, checksum = '') => {
@@ -174,20 +179,20 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        const authorSecurity = (this.props.authorDetails && this.props.authorDetails.pol_id) || 5;
+        const authorSecurity = (this.props.author && this.props.author.pol_id) || 5;
         const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
         const {
             files: { blacklist },
         } = viewRecordsConfig;
+        console.log(dataStream.dsi_dsid, 'datastreamSecurity', datastreamSecurity, 'authorSecurity', authorSecurity);
         return (
-            // this.getSecurityAccess(dataStream) && - this hides closed/locked file
+            this.getSecurityAccess(dataStream) &&
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
             (!dataStream.dsi_label ||
                 !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A' &&
-            datastreamSecurity >= authorSecurity
+            dataStream.dsi_state === 'A'
         );
     };
 

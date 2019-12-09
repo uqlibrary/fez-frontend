@@ -11,28 +11,8 @@ function setup(testProps, args = { isShallow: true }) {
         hideCulturalSensitivityStatement: false,
         setHideCulturalSensitivityStatement: jest.fn(),
         classes: { header: 'header' },
-        authorDetails: testProps.authorDetails || {
-            espace_id: 4801528,
-            staff_id: '0130256',
-            given_name: 'Ky',
-            family_name: 'Lane',
-            title: 'Mr',
-            scopus_id: null,
-            google_scholar_id: null,
-            researcher_id: '',
-            orcid_id: '0000-0001-8618-5488',
-            publons_id: null,
-            mypub_url: null,
-            pol_id: 1,
-            username: 'uqklane1',
-            is_administrator: 1,
-            is_super_administrator: 1,
-            org_units: ['Information Systems and Resource Services, Library'],
-            positions: ['Senior UX Developer'],
-            uqr_id: null,
-            image_exists: null,
-            espace: { first_year: 1, last_year: 2021, doc_count: 11 },
-        },
+        authorDetails: testProps.authorDetails || mock.accounts.uqresearcher,
+        author: testProps.author || mock.currentAuthor.uqresearcher,
         ...testProps,
     };
     return getElement(FilesClass, props, args);
@@ -265,7 +245,7 @@ describe('Files Component ', () => {
             embargoDate: '1st December 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: true,
+            securityStatus: false,
         });
         expect(
             wrapper
@@ -275,7 +255,7 @@ describe('Files Component ', () => {
             embargoDate: '1st November 2021',
             isOpenAccess: false,
             openAccessStatusId: 453695,
-            securityStatus: true,
+            securityStatus: false,
         });
         expect(
             wrapper

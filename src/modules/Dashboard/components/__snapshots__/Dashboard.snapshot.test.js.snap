@@ -566,7 +566,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }
@@ -654,7 +653,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   "lastName": "Researcher",
                   "mail": "j.Researcher@uq.edu.au",
                   "name": "J Researcher",
-                  "pol_id": 3,
                   "tokenBased": false,
                   "type": 3,
                 }
@@ -742,7 +740,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     "lastName": "Researcher",
                     "mail": "j.Researcher@uq.edu.au",
                     "name": "J Researcher",
-                    "pol_id": 3,
                     "tokenBased": false,
                     "type": 3,
                   }
@@ -1699,6 +1696,7 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -1889,6 +1887,7 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -2404,6 +2403,7 @@ exports[`Dashboard test Should only render barChart 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -2756,6 +2756,7 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -2963,6 +2964,7 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -3086,6 +3088,7 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -3192,6 +3195,7 @@ exports[`Dashboard test does render latest and trending publications tabs correc
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -3359,6 +3363,7 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -3510,6 +3515,7 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -3941,6 +3947,7 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4094,6 +4101,7 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4183,6 +4191,7 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4289,6 +4298,7 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4378,6 +4388,7 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4509,6 +4520,7 @@ exports[`Dashboard test publicationStats should render stats 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -4932,6 +4944,7 @@ exports[`Dashboard test publicationStats should render stats 1 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -5030,6 +5043,7 @@ exports[`Dashboard test publicationStats should render stats 2 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -5128,6 +5142,7 @@ exports[`Dashboard test renders alert for non-authors 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -5203,6 +5218,7 @@ exports[`Dashboard test renders dashboard header only 1`] = `
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -5309,6 +5325,7 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
               "aut_student_username": null,
               "aut_title": "Professor",
               "aut_update_date": "2017-07-23",
+              "pol_id": 3,
             },
           }
         }
@@ -5947,7 +5964,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }
@@ -6028,6 +6044,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   "aut_student_username": null,
                   "aut_title": "Professor",
                   "aut_update_date": "2017-07-23",
+                  "pol_id": 3,
                 },
               }
             }
@@ -6073,7 +6090,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                   "lastName": "Researcher",
                   "mail": "j.Researcher@uq.edu.au",
                   "name": "J Researcher",
-                  "pol_id": 3,
                   "tokenBased": false,
                   "type": 3,
                 },
@@ -7062,6 +7078,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                   "aut_student_username": null,
                                                   "aut_title": "Professor",
                                                   "aut_update_date": "2017-07-23",
+                                                  "pol_id": 3,
                                                 },
                                               }
                                             }
@@ -7105,6 +7122,7 @@ exports[`Dashboard test should get styles for full render 1`] = `
                                                     "aut_student_username": null,
                                                     "aut_title": "Professor",
                                                     "aut_update_date": "2017-07-23",
+                                                    "pol_id": 3,
                                                   },
                                                 }
                                               }

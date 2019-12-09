@@ -914,6 +914,7 @@ exports[`Component GoogleScholar  should handle keyboard form submit event 1`] =
                 "aut_student_username": null,
                 "aut_title": "Professor",
                 "aut_update_date": "2017-07-23",
+                "pol_id": 5,
               }
             }
             autofill={[MockFunction]}
