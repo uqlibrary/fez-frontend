@@ -47,7 +47,7 @@ export function loadCurrentAccount() {
                         payload: currentAuthor,
                     });
                     // load repository author details if a valid author/student was found
-                    if (currentAuthor.aut_org_username || currentAuthor.aut_student_username) {
+                    if (!!currentAuthor.aut_org_username || !!currentAuthor.aut_student_username) {
                         dispatch({ type: actions.CURRENT_AUTHOR_DETAILS_LOADING });
                         return get(
                             AUTHOR_DETAILS_API({
