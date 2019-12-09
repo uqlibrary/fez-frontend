@@ -165,8 +165,10 @@ export class FilesClass extends Component {
         return !!(
             isAdmin ||
             isAuthor ||
-            dataStream.dsi_security_policy === 5 ||
-            dataStream.dsi_security_policy >= author.pol_id
+            (dataStream && dataStream.dsi_security_policy &&
+            dataStream.dsi_security_policy === 5) ||
+            /* istanbul ignore next */
+            (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
         );
     };
 
@@ -179,12 +181,9 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        const authorSecurity = (this.props.author && this.props.author.pol_id) || 5;
-        const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
         const {
             files: { blacklist },
         } = viewRecordsConfig;
-        console.log(dataStream.dsi_dsid, 'datastreamSecurity', datastreamSecurity, 'authorSecurity', authorSecurity);
         return (
             this.getSecurityAccess(dataStream) &&
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
