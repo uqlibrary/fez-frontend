@@ -14,7 +14,6 @@ const handlers = {
     }),
 
     [actions.CREATE_RECORD_SUCCESS]: (state, action) => {
-        console.log('createRecordReducer - created', action.payload.newRecord);
         return {
             ...initialState,
             newRecord: action.payload.newRecord,

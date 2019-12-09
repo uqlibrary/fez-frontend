@@ -552,12 +552,12 @@ export default {
             })),
     },
     contactName: {
-        getValue: record => record.fez_record_search_key_contributor[0].rek_contributor,
+        getValue: record => (record.fez_record_search_key_contributor[0] || {}).rek_contributor,
     },
     contactNameId: {
         getValue: record => ({
-            id: record.fez_record_search_key_contributor_id[0].rek_contributor_id,
-            value: record.fez_record_search_key_contributor_id[0].rek_contributor_id,
+            id: (record.fez_record_search_key_contributor_id[0] || {}).rek_contributor_id,
+            value: (record.fez_record_search_key_contributor_id[0] || {}).rek_contributor_id,
         }),
     },
     contactEmail: {
