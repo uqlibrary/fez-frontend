@@ -165,8 +165,7 @@ export class FilesClass extends Component {
         return !!(
             isAdmin ||
             isAuthor ||
-            (dataStream && dataStream.dsi_security_policy &&
-            dataStream.dsi_security_policy === 5) ||
+            (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
             /* istanbul ignore next */
             (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
         );
