@@ -1735,9 +1735,6 @@ Array [
   />,
   <WithStyles(Alert)
     allowDismiss={true}
-    message="Please RIGHT CLICK then select link SAVE AS option to save and play video files"
-    title="FireFox Users"
-    type="help_outline"
   />,
 ]
 `;

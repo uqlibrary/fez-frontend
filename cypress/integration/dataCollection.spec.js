@@ -13,18 +13,16 @@ context('Data Collection form', () => {
     it('Form behaves as expected', () => {
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 14);
+        cy.get('div.Alert li')
+            .should('have.length', 13);
 
         // Accept the agreement
         cy.get('input#deposit-agreement')
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 13);
+        cy.get('div.Alert li')
+            .should('have.length', 12);
 
         // Dataset name
         cy.get('textarea#Datasetname:visible') // , { timeout: 5000 })
@@ -32,9 +30,8 @@ context('Data Collection form', () => {
             .type('Name of Dataset');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 12);
+        cy.get('div.Alert li')
+            .should('have.length', 11);
 
         // Dataset description
         cy.get('textarea#Datasetdescription:visible') // , { timeout: 5000 })
@@ -42,18 +39,16 @@ context('Data Collection form', () => {
             .type('Description of Dataset');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 11);
+        cy.get('div.Alert li')
+            .should('have.length', 10);
 
         // Contact name
         cy.get('input#Contactname')
             .type('Ky Lane');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 10);
+        cy.get('div.Alert li')
+            .should('have.length', 9);
 
         // Contact name ID
         cy.get('input#ContactnameID-input')
@@ -66,9 +61,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 9);
+        cy.get('div.Alert li')
+            .should('have.length', 8);
 
         // Contact email
         cy.get('input#Contactemail')
@@ -78,14 +72,12 @@ context('Data Collection form', () => {
             .should('have.length', 1);
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 9);
+        cy.get('div.Alert li')
+            .should('have.length', 8);
         cy.get('input#Contactemail')
             .type('uq.edu.au');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 8);
+        cy.get('div.Alert li')
+            .should('have.length', 7);
 
         // DOI
         cy.get('input#DOI')
@@ -99,36 +91,32 @@ context('Data Collection form', () => {
             });
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 8);
+        cy.get('div.Alert li')
+            .should('have.length', 7);
 
         // Publisher
         cy.get('input#Publisher')
             .type('A publisher');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 8);
+        cy.get('div.Alert li')
+            .should('have.length', 7);
 
         // Publication date
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
             .find('input#day')
             .type('16');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 8);
+        cy.get('div.Alert li')
+            .should('have.length', 7);
 
         cy.get('div[role="button"][aria-haspopup="true"]')
             .contains('Month')
             .click();
         cy.get('li[data-value="11"]')
             .click();
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 8);
+        cy.get('div.Alert li')
+            .should('have.length', 7);
 
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
@@ -138,7 +126,7 @@ context('Data Collection form', () => {
             .should('have.attr', 'disabled');
         cy.get('div.Alert')
             .find('li')
-            .should('have.length', 7);
+            .should('have.length', 6);
         cy.contains('p', 'Invalid date')
             .should('not.be.visible');
 
@@ -153,9 +141,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 6);
+        cy.get('div.Alert li')
+            .should('have.length', 5);
         cy.get('button[title="Remove this item"]')
             .click();
         cy.get('[role="dialog"] button')
@@ -163,9 +150,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 7);
+        cy.get('div.Alert li')
+            .should('have.length', 6);
         cy.get('input#Fieldofresearch-input')
             .type('a');
         cy.wait(1000);
@@ -176,9 +162,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 6);
+        cy.get('div.Alert li')
+            .should('have.length', 5);
         cy.get('input#Fieldofresearch-input')
             .type('a');
         cy.wait(1000);
@@ -194,9 +179,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 7);
+        cy.get('div.Alert li')
+            .should('have.length', 6);
         cy.get('input#Fieldofresearch-input')
             .type('a');
         cy.wait(1000);
@@ -207,27 +191,24 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 6);
+        cy.get('div.Alert li')
+            .should('have.length', 5);
 
         // Creators
         cy.get('input#creators-name-as-published-field')
             .type('Ky Lane');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 6);
+        cy.get('div.Alert li')
+            .should('have.length', 5);
         cy.get('input#Entercreatorsrole-input')
             .type('Custom role');
         cy.get('button#submit-author')
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 5);
+        cy.get('div.Alert li')
+            .should('have.length', 4);
         cy.get('input#creators-name-as-published-field')
             .type('Vishal Asai');
         cy.get('input#Entercreatorsrole-input')
@@ -244,18 +225,16 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 5);
+        cy.get('div.Alert li')
+            .should('have.length', 4);
         cy.get('div.Creators')
             .get('button[aria-label="Remove all items"]')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 6);
+        cy.get('div.Alert li')
+            .should('have.length', 5);
         cy.get('input#creators-name-as-published-field')
             .type('Ky Lane');
         cy.get('input#Entercreatorsrole-input')
@@ -264,9 +243,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 5);
+        cy.get('div.Alert li')
+            .should('have.length', 4);
 
         // Access conditions
 
@@ -276,8 +254,7 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
+        cy.get('div.Alert li')
             .should('have.length', 3);
 
         cy.get('div#data-collection-access-selector')
@@ -286,9 +263,8 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 4);
+        cy.get('div.Alert li')
+            .should('have.length', 3);
 
         // Licensing and terms of access
         cy.get('div#data-collection-license-selector')
@@ -297,27 +273,24 @@ context('Data Collection form', () => {
             .click();
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 3);
+        cy.get('div.Alert li')
+            .should('have.length', 2);
 
         // Copyright notice
         cy.get('input#Copyrightnotice')
             .type('This is a copyright notice');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 3);
+        cy.get('div.Alert li')
+            .should('have.length', 2);
 
         // Project name
         cy.get('textarea#Projectname:visible', { timeout: 5000 })
             .type('This is the project name');
         cy.get('button#submit-data-collection')
             .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 2);
+        cy.get('div.Alert li')
+            .should('have.length', 1);
 
         // Project description
         cy.get('textarea#Projectdescription:visible', { timeout: 5000 })
@@ -325,10 +298,9 @@ context('Data Collection form', () => {
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
             );
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Funding body
         cy.get('input#funding-body-input')
@@ -364,10 +336,9 @@ context('Data Collection form', () => {
             .find('button#add-items')
             .click();
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Grant ID
         cy.get('input#grant-id-input')
@@ -401,10 +372,9 @@ context('Data Collection form', () => {
             .find('button#add-items')
             .click();
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Type of data
         cy.get('input#type-of-data-input')
@@ -438,10 +408,9 @@ context('Data Collection form', () => {
             .find('button#add-items')
             .click();
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Software required
         cy.get('input#software-required-input')
@@ -475,10 +444,9 @@ context('Data Collection form', () => {
             .find('button#add-items')
             .click();
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Keywords
         cy.get('input#keywords-input')
@@ -512,10 +480,9 @@ context('Data Collection form', () => {
             .find('button#add-items')
             .click();
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+            .should('not.have.attr', 'disabled');
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         // Collection Start date
         // the field is not required - if we focus on it, type something in, clear and click on a different field,
@@ -579,12 +546,11 @@ context('Data Collection form', () => {
         cy.contains('p', 'Date must be before now')
             .should('not.be.visible');
 
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+        cy.get('div.Alert li')
+            .should('have.length', 0);
 
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
+            .should('not.have.attr', 'disabled');
 
         // End Collection date
         cy.contains('span', 'Collection end date')
@@ -629,11 +595,10 @@ context('Data Collection form', () => {
         cy.contains('p', 'Date range is not valid')
             .should('not.be.visible');
 
-        cy.get('div.Alert')
-            .find('li')
-            .should('have.length', 1);
+        cy.get('div.Alert li')
+            .should('have.length', 0);
         cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
+            .should('not.have.attr', 'disabled');
 
         // Related datasets
         cy.get('input#DatasetWorktitle-input')
