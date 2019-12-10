@@ -15,8 +15,8 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        "canMasquerade": true,
-        "canMasqueradeType": "full",
+        'canMasquerade': true,
+        'canMasqueradeType': 'full',
         "blocked": false,
     },
     uqmasquerade: {
@@ -27,7 +27,7 @@ export const accounts = {
         "firstName": "UQ",
         "lastName": "Staff",
         "name": "UQ STAFF",
-        "mail": "uq.masquerader@example.uq.edu.au",
+        'mail': 'uq.masquerader@example.uq.edu.au',
         "barcode": "111111111111111",
         "groups": ["DC=uq,DC=edu,DC=au"],
         "classes": [],
@@ -35,9 +35,8 @@ export const accounts = {
         "hasSession": true,
         "tokenBased": false,
         "canMasquerade": true,
-        "canMasqueradeType": "readonly",
+        'canMasqueradeType': 'readonly',
         "blocked": false,
-        pol_id: 1,
     },
     // student
     s1111111: {
@@ -77,7 +76,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 4,
     },
     // rhd student
     s2222222: {
@@ -97,7 +95,25 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 4,
+    },
+    // Student with no author account
+    s3333333: {
+        "id": "s3333333",
+        "class": ["IS_UQ_STUDENT_PLACEMENT", "IS_CURRENT"],
+        "type": 22,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "No Author Student",
+        "name": "NO Author Student",
+        "mail": "noauthor@student.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": null,
+        "classes": [],
+        "expiryDate": "14-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": false,
+        "blocked": false,
     },
     // researchers
     uqresearcher: {
@@ -117,7 +133,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 3,
     },
     // researcher without orcid
     uqnoauthid: {
@@ -137,7 +152,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 5,
     },
     digiteamMember: {
         'id': 'digiteamMember',
@@ -154,9 +168,8 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        "canMasquerade": false,
+        'canMasquerade': false,
         "blocked": false,
-        pol_id: 3,
     },
     // expired session
     uqexpired: {
@@ -193,6 +206,8 @@ export const authorsSearch = {
             "aut_description": null,
             "aut_orcid_id": "0000-0001-1111-1111",
             "aut_google_scholar_id": "kUemDfMAAAAJ",
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "aut_rid_last_updated": null,
             "aut_publons_id": null,
             "aut_student_username": null
@@ -522,6 +537,7 @@ export const authorsSearch = {
 export const currentAuthor = {
     uqresearcher: {
         data: {
+            pol_id: 3,
             "aut_id": 410,
             "aut_org_username": "uqresearcher",
             "aut_org_staff_id": "0001952",
@@ -555,6 +571,7 @@ export const currentAuthor = {
     },
     uqnoauthid: {
         data: {
+            pol_id: 5,
             "aut_id": 4101,
             "aut_org_username": "uqnoauthid",
             "aut_org_staff_id": "0001952",
@@ -586,6 +603,7 @@ export const currentAuthor = {
     },
     s2222222: {
         "data": {
+            pol_id: 4,
             "aut_id": 44444,
             "aut_org_username": null,
             "aut_org_staff_id": null,
@@ -615,8 +633,14 @@ export const currentAuthor = {
             "aut_student_username": "s2222222",
         },
     },
+    s3333333: {
+        "data": {
+            pol_id: 4,
+        },
+    },
     uqmasquerade: {
         'data': {
+            pol_id: 3,
             'aut_id': 12345678,
             'aut_org_username': 'uqmasquerade',
             'aut_org_staff_id': null,
@@ -654,6 +678,7 @@ export const currentAuthor = {
     },
     uqstaff: {
         'data': {
+            pol_id: 1,
             'aut_id': 12345678,
             'aut_org_username': 'uqstaff',
             'aut_org_staff_id': null,
@@ -691,6 +716,7 @@ export const currentAuthor = {
     },
     digiteamMember: {
         'data': {
+            pol_id: 2,
             'aut_id': 12345676,
             'aut_org_username': 'digiteamMember',
             'aut_org_staff_id': null,
@@ -751,6 +777,8 @@ export const authorDetails = {
             "last_year": 2018,
             "doc_count": 357,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     s2222222: {
         "espace_id": 44444,
@@ -774,6 +802,8 @@ export const authorDetails = {
             "last_year": null,
             "doc_count": 0,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     uqnoauthid: {
         "uqr_id": null,
@@ -797,6 +827,8 @@ export const authorDetails = {
             "last_year": 2012,
             "doc_count": 14,
         },
+        is_administrator: 0,
+        is_super_administrator: 0,
     },
     uqmasquerade: {
         espace_id: 12345678,
@@ -839,7 +871,7 @@ export const authorDetails = {
         pol_id: 1,
         username: 'uqstaff',
         is_administrator: 1,
-        is_super_administrator: 0,
+        is_super_administrator: 1,
         org_units: ['Information Systems and Resource Services, Library'],
         positions: ['Web Developer'],
         uqr_id: null,
