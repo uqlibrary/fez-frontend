@@ -72,7 +72,7 @@ export class FilesClass extends Component {
         securityStatus,
         checksums,
     ) => {
-        if (allowDownload && thumbnailFileName) {
+        if (thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
                 mediaUrl: this.getUrl(pid, fileName, checksums && checksums.media),
@@ -316,7 +316,7 @@ export class FilesClass extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                    allowDownload: !openAccessStatus.embargoDate,
                     icon: this.renderFileIcon(
                         pid,
                         mimeType,
