@@ -70,7 +70,9 @@ export default class ViewRecord extends PureComponent {
             !!recordToView.fez_record_search_key_author_id.some(authors => {
                 return parseInt(authors.rek_author_id, 10) === parseInt(this.props.author.aut_id, 10);
             });
-        const isAdmin = !!(this.props.account && this.props.account.canMasquerade);
+        const isAdmin =
+            this.props.authorDetails &&
+            (this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1);
         return (
             <StandardPage className="viewRecord" title={ReactHtmlParser(recordToView.rek_title)}>
                 <Grid container style={{ marginTop: -24 }}>
@@ -108,7 +110,7 @@ export default class ViewRecord extends PureComponent {
                 </Grid>
                 <Grid container spacing={24}>
                     <Files
-                        authorDetails={this.props.authorDetails}
+                        author={this.props.author}
                         publication={recordToView}
                         hideCulturalSensitivityStatement={this.props.hideCulturalSensitivityStatement}
                         setHideCulturalSensitivityStatement={this.props.actions.setHideCulturalSensitivityStatement}
