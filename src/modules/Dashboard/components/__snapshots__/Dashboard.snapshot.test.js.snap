@@ -566,7 +566,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }
@@ -654,7 +653,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   "lastName": "Researcher",
                   "mail": "j.Researcher@uq.edu.au",
                   "name": "J Researcher",
-                  "pol_id": 3,
                   "tokenBased": false,
                   "type": 3,
                 }
@@ -742,7 +740,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     "lastName": "Researcher",
                     "mail": "j.Researcher@uq.edu.au",
                     "name": "J Researcher",
-                    "pol_id": 3,
                     "tokenBased": false,
                     "type": 3,
                   }
@@ -1680,6 +1677,8 @@ exports[`Dashboard test Rendering MyLatestPublications tab 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -1832,6 +1831,8 @@ exports[`Dashboard test Rendering MyTrendingPublications tab 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -2596,6 +2597,8 @@ exports[`Dashboard test componentDidMount without account id 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -2765,6 +2768,8 @@ exports[`Dashboard test displays a lure to a single work when the user has incom
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -2852,6 +2857,8 @@ exports[`Dashboard test displays a lure when the user has incomplete NTRO submis
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -2922,6 +2929,8 @@ exports[`Dashboard test does render latest and trending publications tabs correc
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3051,6 +3060,8 @@ exports[`Dashboard test does render latest publications tab correctly 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3164,6 +3175,8 @@ exports[`Dashboard test does render the donut/bar graph cards when data is avail
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3559,6 +3572,8 @@ exports[`Dashboard test does render trending publications tab correctly 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3676,6 +3691,8 @@ exports[`Dashboard test doesn't render either the publications lure or the add a
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3729,6 +3746,8 @@ exports[`Dashboard test doesn't render possibly your publications lure and shows
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3799,6 +3818,8 @@ exports[`Dashboard test doesn't render possibly your publications lure or the ad
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -3852,6 +3873,8 @@ exports[`Dashboard test doesn't render the bar/donut graph cards when no data is
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -4380,6 +4403,8 @@ exports[`Dashboard test renders dashboard header only 1`] = `
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -4450,6 +4475,8 @@ exports[`Dashboard test renders possibly your publications lure but not the add 
             "given_name": "J",
             "google_scholar_id": "kUemDfMAAAAJ",
             "image_exists": 1,
+            "is_administrator": 0,
+            "is_super_administrator": 0,
             "mypub_url": "uqresearcher",
             "orcid_id": "0000-0001-1111-1111",
             "org_units": Array [
@@ -5054,7 +5081,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }
