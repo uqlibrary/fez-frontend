@@ -217,7 +217,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                         >
                           <div
                             class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26 MuiGrid-align-items-xs-flex-end-13 MuiGrid-align-content-xs-flex-end-17\\"
-@@ -293,42 +277,157 @@
+@@ -293,91 +277,199 @@
                             >
                               <div
                                 class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -362,8 +362,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               >
 +                                 <div
 +                                   class=\\"MuiListItemText-root-390\\"
-                                  >
--                                 This field is required
++                                 >
 +                                   <span
 +                                     class=\\"MuiTypography-root-100 MuiTypography-body1-109 MuiListItemText-primary-393\\"
 +                                   >
@@ -371,10 +370,11 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   </span>
 +                                   <p
 +                                     class=\\"MuiTypography-root-100 MuiTypography-body2-108 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-394\\"
-+                                   >
+                                    >
+-                                 This field is required
 +                                     75875
                                     </p>
-+                                 </div>
+                                  </div>
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-346\\"
 +                                 />
@@ -384,7 +384,9 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                           </div>
                         </div>
                       </div>
-@@ -338,46 +437,39 @@
++                   </div>
+                    <div
+                      class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-12-57\\"
                     >
                       <div
                         class=\\"MuiFormControl-root-231 MuiFormControl-fullWidth-234\\"
@@ -591,14 +593,14 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                               <path
 +                                 d=\\"M0 0h24v24H0V0z\\"
 +                                 fill=\\"none\\"
-+                               />
+                                />
 +                               <path
 +                                 d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zm2.46-7.12l1.41-1.41L12 12.59l2.12-2.12 1.41 1.41L13.41 14l2.12 2.12-1.41 1.41L12 15.41l-2.12 2.12-1.41-1.41L10.59 14l-2.13-2.12zM15.5 4l-1-1h-5l-1 1H5v2h14V4z\\"
 +                               />
 +                               <path
 +                                 d=\\"M0 0h24v24H0z\\"
 +                                 fill=\\"none\\"
-                                />
++                               />
 +                             </svg>
 +                           </span>
 +                           <span
@@ -698,12 +700,16 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                               autocomplete=\\"off\\"
                               class=\\"MuiInputBase-input-276 MuiInput-input-261\\"
                               id=\\"creators-name-as-published-field\\"
-@@ -826,19 +1012,234 @@
+@@ -822,23 +1008,238 @@
+                        >
+                          <span
+                            class=\\"MuiButton-label-301\\"
+                          >
                             Add creator
-                          </span>
-                        </button>
-                      </div>
-                    </div>
++                         </span>
++                       </button>
++                     </div>
++                   </div>
 +                   <div
 +                     class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-8-25\\"
 +                   >
@@ -746,7 +752,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorTextSecondary-133 MuiListItemText-secondary-394\\"
 +                               >
 +                                 Creator's name as published
-+                               </span>
+                                </span>
 +                             </div>
 +                             <div
 +                               class=\\"MuiListItemText-root-390\\"
@@ -770,8 +776,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                           <div
 +                             class=\\"MuiListItemSecondaryAction-root-410\\"
 +                           >
-                              <span
--                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
++                             <span
 +                               class=\\"\\"
 +                               title=\\"Remove all items\\"
 +                             >
@@ -810,7 +815,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-346\\"
 +                                 />
-+                               </button>
+                                </button>
 +                             </span>
 +                           </div>
 +                         </li>
@@ -865,8 +870,8 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                   >
 +                                     First  listed creator
 +                                   </span>
-+                                 </div>
-+                               </div>
+                                  </div>
+                                </div>
 +                               <div
 +                                 class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-5-50 MuiGrid-grid-md-5-64\\"
 +                               >
@@ -885,10 +890,12 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                           <div
 +                             class=\\"MuiListItemSecondaryAction-root-410\\"
 +                           >
-+                             <span
+                              <span
+-                     class=\\"MuiTypography-root-100 MuiTypography-caption-110 MuiTypography-colorError-134\\"
 +                               class=\\"\\"
 +                               title=\\"Remove this item\\"
-+                             >
+                              >
+-                     This field is required
 +                               <button
 +                                 aria-label=\\"Remove this item\\"
 +                                 class=\\"MuiButtonBase-root-219 MuiIconButton-root-213\\"
@@ -905,8 +912,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                     focusable=\\"false\\"
 +                                     role=\\"presentation\\"
 +                                     viewBox=\\"0 0 24 24\\"
-                                    >
--                     This field is required
++                                   >
 +                                     <path
 +                                       d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 +                                     />
@@ -915,19 +921,19 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 +                                       fill=\\"none\\"
 +                                     />
 +                                   </svg>
-+                                 </span>
+                                  </span>
 +                                 <span
 +                                   class=\\"MuiTouchRipple-root-346\\"
 +                                 />
 +                               </button>
-                              </span>
++                             </span>
                             </div>
 +                         </li>
 +                       </ul>
-                      </div>
++                     </div>
                     </div>
                   </div>
-+               </div>
+                </div>
 +             </div>
 +           </div>
             <div
@@ -1154,36 +1160,27 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             required=\\"\\"
                             rows=\\"1\\"
 -                         />
--                       </div>
++                         >
++                           test description
++                         </textarea>
+                        </div>
 -                       <p
 -                         class=\\"MuiFormHelperText-root-353 MuiFormHelperText-error-354 MuiFormHelperText-required-360\\"
 -                         id=\\"Projectdescription-helper-text\\"
-                          >
+-                       >
 -                         This field is required
 -                       </p>
-+                           test description
-+                         </textarea>
-+                       </div>
                       </div>
                     </div>
                     <div
                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
                     >
-@@ -2125,107 +2502,13 @@
-                                id=\\"Uploader\\"
-                                multiple=\\"\\"
-                                style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
-                                type=\\"file\\"
-                              />
--                           </div>
--                         </div>
--                       </div>
--                     </div>
--                   </div>
--                 </div>
--               </div>
-                            </div>
-                          </div>
+@@ -2134,102 +2511,11 @@
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 -           <div
 -             class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43\\"
 -           >
@@ -1218,7 +1215,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           d=\\"M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z\\"
 -                         />
 -                       </svg>
-                        </div>
+-                     </div>
 -                     <div
 -                       class=\\"MuiGrid-item-4 MuiGrid-grid-xs-true-31 Alert-text-363 alert-text\\"
 -                     >
@@ -1267,17 +1264,21 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                           <li>
 -                             Project description is required
 -                           </li>
--                           <li>
--                             File submission to be completed
--                           </li>
 -                         </ul>
 -                       </span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-@@ -2259,21 +2542,23 @@
+-                     </div>
+-                   </div>
+-                 </div>
+-               </div>
+          </div>
+-           </div>
+-         </div>
+          <div
+            class=\\"MuiGrid-container-3 MuiGrid-spacing-xs-16-26\\"
+          >
+            <div
+              class=\\"MuiGrid-item-4 MuiGrid-grid-sm-true-45\\"
+@@ -2256,21 +2542,23 @@
             <div
               class=\\"MuiGrid-item-4 MuiGrid-grid-xs-12-43 MuiGrid-grid-sm-auto-44\\"
             >

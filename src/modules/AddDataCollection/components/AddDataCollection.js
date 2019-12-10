@@ -502,7 +502,7 @@ export default class AddDataCollection extends Component {
                                     disabled={this.props.submitting}
                                     requireOpenAccessStatus
                                     locale={txt.fileUpload.fileUploader}
-                                    validate={[validation.fileUploadNotRequiredForMediated, validation.validFileUpload]}
+                                    validate={[validation.validFileUpload]}
                                 />
                             </StandardCard>
                         </Grid>
