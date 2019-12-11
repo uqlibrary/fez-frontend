@@ -48,12 +48,15 @@ export function loadCurrentAccount() {
                     });
 
                     // load repository author details
-                    dispatch({ type: actions.CURRENT_AUTHOR_DETAILS_LOADING });
-                    return get(
-                        AUTHOR_DETAILS_API({
-                            userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username,
-                        }),
-                    );
+                    if (currentAuthor.aut_org_username || currentAuthor.aut_student_username) {
+                        dispatch({ type: actions.CURRENT_AUTHOR_DETAILS_LOADING });
+                        return get(
+                            AUTHOR_DETAILS_API({
+                                userId: currentAuthor.aut_org_username || currentAuthor.aut_student_username,
+                            }),
+                        );
+                    }
+                    return null;
                 })
                 .then(authorDetailsResponse => {
                     dispatch({

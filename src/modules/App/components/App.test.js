@@ -1,6 +1,6 @@
 import { AppClass } from './App';
 import App from './App';
-import { accounts } from 'mock/data';
+import { accounts, currentAuthor } from 'mock/data';
 import { routes, AUTH_URL_LOGIN, AUTH_URL_LOGOUT } from 'config';
 import mui1theme from 'config';
 
@@ -71,6 +71,27 @@ describe('Application component', () => {
         expect(redirectUserToLogin).toHaveBeenCalled();
         wrapper.update();
 
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show orcid alert for a student without an author account', () => {
+        const wrapper = setup({
+            account: account.s2222222,
+            author: {
+                ...currentAuthor.s2222222.data,
+                aut_orcid_id: null,
+            },
+            location: { pathname: '/' },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should not show orcid alert for a student without an author account', () => {
+        const wrapper = setup({
+            account: account.s3333333,
+            author: currentAuthor.s3333333.data,
+            location: { pathname: '/' },
+        });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
