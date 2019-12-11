@@ -148,6 +148,31 @@ describe('Account action creators', () => {
         },
     );
 
+    it('should dispatch expected actions for a student without an author account', async() => {
+        process.env = {
+            ENABLE_LOG: true,
+        };
+
+        mockApi
+            .onGet(repositories.routes.CURRENT_ACCOUNT_API().apiUrl)
+            .reply(200, accounts.s3333333)
+            .onGet(repositories.routes.CURRENT_AUTHOR_API().apiUrl)
+            .reply(200, currentAuthor.s3333333)
+            .onAny()
+            .reply(404, {});
+
+        const expectedActions = [
+            actions.CURRENT_ACCOUNT_LOADING,
+            actions.CURRENT_ACCOUNT_LOADED,
+            actions.CURRENT_AUTHOR_LOADING,
+            actions.CURRENT_AUTHOR_LOADED,
+            actions.CURRENT_AUTHOR_DETAILS_LOADED,
+        ];
+
+        await mockActionsStore.dispatch(accountActions.loadCurrentAccount());
+        expect(mockActionsStore.getActions()).toHaveDispatchedActions(expectedActions);
+    });
+
     it('should dispatch expected action when user logs out', () => {
         const expectedActions = [actions.CURRENT_ACCOUNT_ANONYMOUS];
         mockActionsStore.dispatch(accountActions.logout());
