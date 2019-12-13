@@ -213,10 +213,14 @@ export class AppClass extends PureComponent {
         const isHdrStudent =
             !isAuthorLoading &&
             !!this.props.account &&
-            !!this.props.author &&
-            Object.keys(this.props.author).length === 1 &&
+            this.props.account.class &&
             this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
             this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
+        const isAuthor =
+            !isAuthorLoading &&
+            !!this.props.account &&
+            !!this.props.author &&
+            Object.keys(this.props.author).length > 1;
         const hasIncompleteWorks = !!(
             this.props.incompleteRecordList &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
@@ -224,8 +228,9 @@ export class AppClass extends PureComponent {
         );
         const menuItems = routes.getMenuConfig(
             this.props.account,
+            this.props.author,
             this.props.authorDetails,
-            isHdrStudent,
+            isHdrStudent && !isAuthor,
             hasIncompleteWorks,
         );
         const isPublicPage = this.isPublicPage(menuItems);

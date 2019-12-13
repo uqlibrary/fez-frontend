@@ -33,7 +33,7 @@ user = user || 'uqresearcher';
  */
 mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
     // mock account response
-    if (user === 's2222222') {
+    if (user === 's2222222' || user === 's3333333') {
         return [200, mockData.accounts[user]];
     } else if (mockData.accounts[user]) {
         return [403, {}];

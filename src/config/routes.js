@@ -500,7 +500,7 @@ export const getRoutesConfig = ({
     ];
 };
 
-export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWorks = false) => {
+export const getMenuConfig = (account, author, authorDetails, disabled, hasIncompleteWorks = false) => {
     const homePage = [
         {
             linkTo: pathConfig.index,
@@ -525,7 +525,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
             public: true,
         },
     ];
-
+    const isAuthor = author && Object.keys(author).length > 1;
     const incompletePage =
         (hasIncompleteWorks && [
             {
@@ -557,7 +557,7 @@ export const getMenuConfig = (account, authorDetails, disabled, hasIncompleteWor
 
     return [
         ...homePage,
-        ...(account
+        ...(account && isAuthor
             ? [
                 {
                     linkTo: pathConfig.dashboard,
