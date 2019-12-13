@@ -520,7 +520,7 @@ describe('MyIncompleteRecord Container', () => {
                 dsi_label: 'corrected thesis',
                 dsi_state: 'A',
             }),
-        ).toBeFalsy();
+        ).toBeTruthy();
 
         expect(
             wrapper.instance().isFileValid({

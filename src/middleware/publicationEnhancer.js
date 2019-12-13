@@ -44,14 +44,9 @@ export const calculateOpenAccess = record => {
                 ? record.fez_datastream_info.filter(
                     item =>
                         !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          (!item.dsi_label ||
-                              !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'),
-                              )) &&
                           item.dsi_state === 'A',
                 )
                 : [];
-
         const hasFiles = allFiles.length > 0;
         const allEmbargoFiles = hasFiles
             ? record.fez_datastream_info
@@ -60,10 +55,6 @@ export const calculateOpenAccess = record => {
                         !!item.dsi_embargo_date &&
                           moment(item.dsi_embargo_date).isAfter(moment()) &&
                           !item.dsi_dsid.match(viewRecordsConfig.files.blacklist.namePrefixRegex) &&
-                          (!item.dsi_label ||
-                              !item.dsi_label.match(
-                                  new RegExp(viewRecordsConfig.files.blacklist.descriptionKeywordsRegex, 'gi'),
-                              )) &&
                           item.dsi_state === 'A',
                 )
                 .sort((file1, file2) => (file1.dsi_embargo_date > file2.dsi_embargo_date ? 1 : -1))

@@ -215,12 +215,7 @@ export default class MyIncompleteRecordContainer extends React.Component {
         const {
             files: { blacklist },
         } = incompleteRecord;
-        return (
-            !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
-            (!dataStream.dsi_label ||
-                !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A'
-        );
+        return !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) && dataStream.dsi_state === 'A';
     };
 
     render() {

@@ -188,8 +188,6 @@ export class FilesClass extends Component {
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
-            (!dataStream.dsi_label ||
-                !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
             dataStream.dsi_state === 'A'
         );
     };
