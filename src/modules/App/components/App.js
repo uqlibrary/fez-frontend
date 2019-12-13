@@ -214,6 +214,7 @@ export class AppClass extends PureComponent {
             !isAuthorLoading &&
             !!this.props.account &&
             !!this.props.author &&
+            Object.keys(this.props.author).length === 1 &&
             this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
             this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
         const hasIncompleteWorks = !!(
@@ -224,7 +225,7 @@ export class AppClass extends PureComponent {
         const menuItems = routes.getMenuConfig(
             this.props.account,
             this.props.authorDetails,
-            isOrcidRequired && isHdrStudent,
+            isHdrStudent,
             hasIncompleteWorks,
         );
         const isPublicPage = this.isPublicPage(menuItems);
