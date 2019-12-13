@@ -538,7 +538,7 @@ export const getMenuConfig = (account, author, authorDetails, disabled, hasIncom
     if (disabled) {
         return [
             ...homePage,
-            ...(account
+            ...(account && isAuthor
                 ? [
                     {
                         linkTo: pathConfig.dashboard,
