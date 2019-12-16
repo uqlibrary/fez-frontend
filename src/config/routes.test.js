@@ -221,7 +221,6 @@ describe('Routes getRoutesConfig method', () => {
             forceOrcidRegistration: false,
             isHdrStudent: false,
         });
-        console.log(routesConfig);
         const renderPage = routesConfig[routesConfig.length - 1].render;
         const props = {
             location: {
