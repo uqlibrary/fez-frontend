@@ -492,6 +492,7 @@ export const getRoutesConfig = ({
         ...publicPages,
         {
             render: childProps => {
+                console.log(accountAuthorDetailsLoading);
                 const isValidRoute = flattedPathConfig.indexOf(childProps.location.pathname) >= 0;
                 const isValidFileRoute = fileRegexConfig.test(childProps.location.pathname);
                 if (!accountAuthorDetailsLoading) {

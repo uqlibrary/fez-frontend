@@ -137,7 +137,7 @@ describe('AttachedFiles component', () => {
         expect(toJson(wrapper.find('WithStyles(Alert)'))).toMatchSnapshot();
     });
 
-    it('should toggle preview', () => {
+    fit('should toggle preview', () => {
         const testProps = {
             dataStreams: [
                 {
@@ -155,6 +155,7 @@ describe('AttachedFiles component', () => {
             },
         };
         const wrapper = setup(testProps);
+        console.log(wrapper);
 
         act(() => {
             wrapper

@@ -758,43 +758,6 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/incomplete",
-          "primaryText": "My incomplete works",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -1506,43 +1469,6 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/incomplete",
-          "primaryText": "My incomplete works",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -1866,6 +1792,356 @@ exports[`Application component should determine if it has incomplete works from 
         />
         <Route
           key="route_22"
+          pageTitle="Page not found"
+          render={[Function]}
+        />
+      </Switch>
+    </ContextProvider>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
+exports[`Application component should not show orcid alert for a student without an author account 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                >
+                  The University of Queensland
+                </div>
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log in to eSpace"
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    hasIncompleteWorks={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile={false}
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    id="content-container"
+    style={Object {}}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        containerId="content-container"
+        show={true}
+      />
+    </Hidden>
+    <WithStyles(ConfirmDialogBox)
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <Connect(AppAlert) />
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "pol_id": 4,
+          },
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="eSpace"
+          path="/dashboard"
+        />
+        <Route
+          key="route_6"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -2629,39 +2905,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "linkTo": "/",
           "primaryText": "Home",
           "public": true,
-        },
-        Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
         },
         Object {
           "linkTo": "/records/search",
@@ -3493,7 +3736,6 @@ exports[`Application component should render app for HDR with ORCID ID 1`] = `
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
-            "pol_id": 4,
             "tokenBased": false,
             "type": 22,
           },
@@ -3981,6 +4223,30 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "secondaryText": "rhd@student.uq.edu.au",
         },
         Object {
+          "linkTo": "/records/mine",
+          "primaryText": "My research",
+        },
+        Object {
+          "linkTo": "/records/possible",
+          "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/add/find",
+          "primaryText": "Add a missing work",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "/data-collections/add",
+          "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
+          "primaryText": "Author statistics",
+        },
+        Object {
           "divider": true,
           "path": "/234234234242",
         },
@@ -4095,7 +4361,6 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
-            "pol_id": 4,
             "tokenBased": false,
             "type": 22,
           },
@@ -7105,6 +7370,35 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          action={[Function]}
+          actionButtonLabel="Click here to link or register"
+          message="You do not have an ORCID ID linked to your UQ eSpace."
+          title="ORCID ID REQUIRED"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <ContextProvider
       value={
@@ -7952,6 +8246,35 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          action={[Function]}
+          actionButtonLabel="Click here to link or register"
+          message="You do not have an ORCID ID linked to your UQ eSpace."
+          title="ORCID ID REQUIRED"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <ContextProvider
       value={
@@ -9888,6 +10211,35 @@ exports[`Application component should render app for account with fez author wit
       }
       onRef={[Function]}
     />
+    <WithStyles(Grid)
+      alignContent="center"
+      alignItems="center"
+      container={true}
+      justify="center"
+      style={
+        Object {
+          "marginBottom": 12,
+        }
+      }
+    >
+      <WithStyles(Grid)
+        item={true}
+        style={
+          Object {
+            "marginBottom": 0,
+            "marginTop": 0,
+          }
+        }
+      >
+        <WithStyles(Alert)
+          action={[Function]}
+          actionButtonLabel="Click here to link or register"
+          message="You do not have an ORCID ID linked to your UQ eSpace."
+          title="ORCID ID REQUIRED"
+          type="warning"
+        />
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
     <Connect(AppAlert) />
     <ContextProvider
       value={
@@ -11248,39 +11600,6 @@ exports[`Application component should render application with routing for the us
           "public": true,
         },
         Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -11720,159 +12039,6 @@ exports[`Application component should render thesis submission for HDR without m
     routesConfig={
       Array [
         Object {
-          "pageTitle": "Higher degree by research thesis deposit",
-          "path": "/rhdsubmission",
-          "render": [Function],
-        },
-        Object {
-          "pageTitle": "Professional doctorate deposit",
-          "path": "/habslodge",
-          "render": [Function],
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "eSpace",
-          "path": "/",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/dashboard",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "My research",
-          "path": "/records/mine",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "My research data",
-          "path": "/data-collections/mine",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Add data collection",
-          "path": "/data-collections/add",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Claim possible works",
-          "path": "/records/possible",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": undefined,
-          "path": "/records/incomplete",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "exact": true,
-          "pageTitle": "Complete my work",
-          "path": "/records/:pid(UQ:[a-z0-9]+)/incomplete",
-          "render": [Function],
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Claim a work",
-          "path": "/records/claim",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Request a correction, add more information or upload files",
-          "path": "/records/:pid(UQ:[a-z0-9]+)/fix",
-          "regExPath": "/records/(UQ:[a-z0-9]+)/fix",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "exact": true,
-          "pageTitle": "Add a missing work to eSpace",
-          "path": "/records/add/find",
-          "render": [Function],
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "exact": true,
-          "pageTitle": "Add a missing work to eSpace",
-          "path": "/records/add/results",
-          "render": [Function],
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "exact": true,
-          "pageTitle": "Add a missing work to eSpace",
-          "path": "/records/add/new",
-          "render": [Function],
-        },
-        Object {
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Link ORCID ID to UQ eSpace",
-          "path": "/author-identifiers/orcid/link",
-        },
-        Object {
-          "access": Array [
-            "researcher",
-            "admin",
-          ],
-          "component": [Function],
-          "exact": true,
-          "pageTitle": "Google Scholar identifier",
-          "path": "/author-identifiers/google-scholar/link",
-        },
-        Object {
           "component": [Function],
           "exact": true,
           "pageTitle": "eSpace",
@@ -11904,8 +12070,18 @@ exports[`Application component should render thesis submission for HDR without m
           "path": "/records/search",
         },
         Object {
-          "pageTitle": "Page not found",
+          "pageTitle": "Higher degree by research thesis deposit",
+          "path": "/rhdsubmission",
           "render": [Function],
+        },
+        Object {
+          "pageTitle": "Professional doctorate deposit",
+          "path": "/habslodge",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "pageTitle": "Link ORCID ID to UQ eSpace",
         },
       ]
     }
@@ -12082,7 +12258,6 @@ exports[`Application component should render thesis submission for HDR without m
             "lastName": "RHD Student",
             "mail": "rhd@student.uq.edu.au",
             "name": "J RHD Student",
-            "pol_id": 4,
             "tokenBased": false,
             "type": 22,
           },
@@ -12091,208 +12266,14 @@ exports[`Application component should render thesis submission for HDR without m
     >
       <Switch>
         <Route
+          component={[Function]}
+          exact={true}
           key="route_0"
-          pageTitle="Higher degree by research thesis deposit"
-          path="/rhdsubmission"
-          render={[Function]}
+          pageTitle="eSpace"
+          path="/"
         />
         <Route
           key="route_1"
-          pageTitle="Professional doctorate deposit"
-          path="/habslodge"
-          render={[Function]}
-        />
-        <Route
-          component={[Function]}
-          exact={true}
-          key="route_2"
-          pageTitle="eSpace"
-          path="/"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_3"
-          path="/dashboard"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_4"
-          pageTitle="My research"
-          path="/records/mine"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_5"
-          pageTitle="My research data"
-          path="/data-collections/mine"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_6"
-          pageTitle="Add data collection"
-          path="/data-collections/add"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_7"
-          pageTitle="Claim possible works"
-          path="/records/possible"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_8"
-          path="/records/incomplete"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          exact={true}
-          key="route_9"
-          pageTitle="Complete my work"
-          path="/records/:pid(UQ:[a-z0-9]+)/incomplete"
-          render={[Function]}
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_10"
-          pageTitle="Claim a work"
-          path="/records/claim"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_11"
-          pageTitle="Request a correction, add more information or upload files"
-          path="/records/:pid(UQ:[a-z0-9]+)/fix"
-          regExPath="/records/(UQ:[a-z0-9]+)/fix"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          exact={true}
-          key="route_12"
-          pageTitle="Add a missing work to eSpace"
-          path="/records/add/find"
-          render={[Function]}
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          exact={true}
-          key="route_13"
-          pageTitle="Add a missing work to eSpace"
-          path="/records/add/results"
-          render={[Function]}
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          exact={true}
-          key="route_14"
-          pageTitle="Add a missing work to eSpace"
-          path="/records/add/new"
-          render={[Function]}
-        />
-        <Route
-          component={[Function]}
-          exact={true}
-          key="route_15"
-          pageTitle="Link ORCID ID to UQ eSpace"
-          path="/author-identifiers/orcid/link"
-        />
-        <Route
-          access={
-            Array [
-              "researcher",
-              "admin",
-            ]
-          }
-          component={[Function]}
-          exact={true}
-          key="route_16"
-          pageTitle="Google Scholar identifier"
-          path="/author-identifiers/google-scholar/link"
-        />
-        <Route
-          component={[Function]}
-          exact={true}
-          key="route_17"
-          pageTitle="eSpace"
-          path="/"
-        />
-        <Route
-          key="route_18"
           pageTitle="Contact UQ eSpace"
           path="/contact"
           render={[Function]}
@@ -12300,26 +12281,415 @@ exports[`Application component should render thesis submission for HDR without m
         <Route
           component={[Function]}
           exact={true}
-          key="route_19"
+          key="route_2"
           path="/view/:pid(UQ:[a-z0-9]+)"
           regExPath="/view/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_20"
+          key="route_3"
           path="/view_new/:pid(UQ:[a-z0-9]+)"
           regExPath="/view_new/(UQ:[a-z0-9]+)"
         />
         <Route
           component={[Function]}
           exact={true}
-          key="route_21"
+          key="route_4"
           pageTitle="eSpace search"
           path="/records/search"
         />
         <Route
-          key="route_22"
+          key="route_5"
+          pageTitle="Higher degree by research thesis deposit"
+          path="/rhdsubmission"
+          render={[Function]}
+        />
+        <Route
+          key="route_6"
+          pageTitle="Professional doctorate deposit"
+          path="/habslodge"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          key="route_7"
+          pageTitle="Link ORCID ID to UQ eSpace"
+        />
+      </Switch>
+    </ContextProvider>
+  </div>
+  <Connect(WithStyles(HelpDrawer)) />
+  <WithStyles(OfflineSnackbar) />
+</WithStyles(Grid)>
+`;
+
+exports[`Application component should show orcid alert for a student without an author account 1`] = `
+<WithStyles(Grid)
+  container={true}
+>
+  <withRouter(Connect(Meta))
+    routesConfig={
+      Array [
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/",
+        },
+        Object {
+          "pageTitle": "Contact UQ eSpace",
+          "path": "/contact",
+          "render": [Function],
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": undefined,
+          "path": "/view_new/:pid(UQ:[a-z0-9]+)",
+          "regExPath": "/view_new/(UQ:[a-z0-9]+)",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace search",
+          "path": "/records/search",
+        },
+        Object {
+          "component": [Function],
+          "exact": true,
+          "pageTitle": "eSpace",
+          "path": "/dashboard",
+        },
+        Object {
+          "pageTitle": "Page not found",
+          "render": [Function],
+        },
+      ]
+    }
+  />
+  <WithStyles(AppBar)
+    className="AppBar"
+    color="primary"
+    position="fixed"
+  >
+    <WithStyles(Toolbar)
+      style={
+        Object {
+          "height": "70px",
+        }
+      }
+    >
+      <WithStyles(Grid)
+        alignItems="center"
+        container={true}
+        direction="row"
+        justify="flex-start"
+        spacing={8}
+        wrap="nowrap"
+      >
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(Tooltip)
+            TransitionComponent={[Function]}
+            placement="bottom-end"
+            title="Main navigation"
+          >
+            <WithStyles(IconButton)
+              aria-label="Click to open the main navigation"
+              onClick={[Function]}
+              style={
+                Object {
+                  "marginLeft": "-12px",
+                  "marginRight": "12px",
+                }
+              }
+            >
+              <pure(MenuIcon)
+                style={
+                  Object {
+                    "color": "white",
+                  }
+                }
+              />
+            </WithStyles(IconButton)>
+          </WithStyles(Tooltip)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          style={
+            Object {
+              "paddingLeft": 0,
+            }
+          }
+          xs={true}
+        >
+          <WithStyles(Grid)
+            alignItems="center"
+            container={true}
+            justify="flex-start"
+            spacing={16}
+            wrap="nowrap"
+          >
+            <Hidden
+              implementation="js"
+              lgDown={false}
+              lgUp={false}
+              mdDown={false}
+              mdUp={false}
+              smDown={false}
+              smUp={false}
+              xlDown={false}
+              xlUp={false}
+              xsDown={true}
+              xsUp={false}
+            >
+              <WithStyles(Grid)
+                item={true}
+              >
+                <div
+                  className="smallLogo"
+                  id="logo"
+                  style={
+                    Object {
+                      "height": 66,
+                      "width": 60,
+                    }
+                  }
+                >
+                  The University of Queensland
+                </div>
+              </WithStyles(Grid)>
+            </Hidden>
+            <WithStyles(Grid)
+              item={true}
+              style={
+                Object {
+                  "overflow": "hidden",
+                  "textOverflow": "ellipsis",
+                }
+              }
+              xs="auto"
+            >
+              <WithStyles(Typography)
+                component="h1"
+                noWrap={true}
+                variant="h5"
+              >
+                <a
+                  className="appTitle"
+                  href="/"
+                  style={
+                    Object {
+                      "color": "#FFFFFF",
+                    }
+                  }
+                  title="Click to return to the eSpace home page"
+                >
+                  UQ eSpace 
+                </a>
+              </WithStyles(Typography)>
+            </WithStyles(Grid)>
+          </WithStyles(Grid)>
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+          sm={4}
+          xs={2}
+        >
+          <withRouter(Connect(SearchComponent))
+            autoFocus={false}
+            isInHeader={true}
+            showMobileSearchButton={true}
+            showPrefixIcon={true}
+          />
+        </WithStyles(Grid)>
+        <WithStyles(Grid)
+          item={true}
+        >
+          <WithStyles(AuthButton)
+            ariaLabel="Click to log in to eSpace"
+            isAuthorizedUser={false}
+            onClick={[Function]}
+            signInTooltipText="Log in"
+            signOutTooltipText=""
+          />
+        </WithStyles(Grid)>
+      </WithStyles(Grid)>
+    </WithStyles(Toolbar)>
+  </WithStyles(AppBar)>
+  <WithStyles(MenuDrawer)
+    docked={false}
+    drawerOpen={false}
+    hasIncompleteWorks={false}
+    history={
+      Object {
+        "location": Object {},
+      }
+    }
+    isMobile={false}
+    locale={
+      Object {
+        "closeMenuLabel": "Close menu",
+        "skipNavAriaLabel": "Click to skip, or tab to progress to the navigation",
+        "skipNavTitle": "Skip Navigation",
+      }
+    }
+    logoImage="largeLogo"
+    logoLink="http://www.uq.edu.au"
+    logoText="The University of Queensland"
+    menuItems={
+      Array [
+        Object {
+          "linkTo": "/",
+          "primaryText": "Home",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/records/search",
+          "primaryText": "Search eSpace",
+          "public": true,
+          "secondaryText": "",
+        },
+        Object {
+          "linkTo": "https://guides.library.uq.edu.au/for-researchers/research-publications-guide",
+          "primaryText": "Help",
+          "public": true,
+        },
+        Object {
+          "linkTo": "/contact",
+          "primaryText": "Contact",
+          "public": true,
+          "secondaryText": "",
+        },
+      ]
+    }
+    onToggleDrawer={[Function]}
+  />
+  <div
+    className="content-container"
+    id="content-container"
+    style={Object {}}
+  >
+    <Hidden
+      implementation="js"
+      lgDown={false}
+      lgUp={false}
+      mdDown={false}
+      mdUp={false}
+      smDown={true}
+      smUp={false}
+      xlDown={false}
+      xlUp={false}
+      xsDown={false}
+      xsUp={false}
+    >
+      <WithStyles(ScrollTop)
+        containerId="content-container"
+        show={true}
+      />
+    </Hidden>
+    <WithStyles(ConfirmDialogBox)
+      hideCancelButton={true}
+      locale={
+        Object {
+          "cancelButtonLabel": "Cancel",
+          "confirmButtonLabel": "Redirect to login",
+          "confirmationMessage": "Your session has expired. Follow the login prompt to return to your submission form. You must upload your files again to successfully deposit your thesis, even if you have already uploaded your files.",
+          "confirmationTitle": "Session Expired",
+        }
+      }
+      onRef={[Function]}
+    />
+    <Connect(AppAlert) />
+    <ContextProvider
+      value={
+        Object {
+          "account": Object {
+            "aut_created_date": "2017-11-03T01:00:24Z",
+            "aut_description": null,
+            "aut_display_name": "HDR Student, N",
+            "aut_email": null,
+            "aut_external_id": null,
+            "aut_fname": "N",
+            "aut_google_scholar_id": null,
+            "aut_homepage_link": null,
+            "aut_id": 44444,
+            "aut_lname": "HDR Student",
+            "aut_mname": null,
+            "aut_mypub_url": null,
+            "aut_orcid_id": null,
+            "aut_org_staff_id": null,
+            "aut_org_student_id": "2222222",
+            "aut_org_username": null,
+            "aut_people_australia_id": null,
+            "aut_position": null,
+            "aut_publons_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_rid_last_updated": null,
+            "aut_rid_password": null,
+            "aut_scopus_id": null,
+            "aut_student_username": "s2222222",
+            "aut_title": "Miss",
+            "aut_update_date": "2017-12-21T07:31:09Z",
+            "pol_id": 4,
+          },
+        }
+      }
+    >
+      <Switch>
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_0"
+          pageTitle="eSpace"
+          path="/"
+        />
+        <Route
+          key="route_1"
+          pageTitle="Contact UQ eSpace"
+          path="/contact"
+          render={[Function]}
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_2"
+          path="/view/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_3"
+          path="/view_new/:pid(UQ:[a-z0-9]+)"
+          regExPath="/view_new/(UQ:[a-z0-9]+)"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_4"
+          pageTitle="eSpace search"
+          path="/records/search"
+        />
+        <Route
+          component={[Function]}
+          exact={true}
+          key="route_5"
+          pageTitle="eSpace"
+          path="/dashboard"
+        />
+        <Route
+          key="route_6"
           pageTitle="Page not found"
           render={[Function]}
         />
@@ -20484,39 +20854,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "public": true,
                             },
                             Object {
-                              "linkTo": "/dashboard",
-                              "primaryText": "My dashboard",
-                              "secondaryText": undefined,
-                            },
-                            Object {
-                              "linkTo": "/records/mine",
-                              "primaryText": "My research",
-                            },
-                            Object {
-                              "linkTo": "/records/possible",
-                              "primaryText": "Claim possible work",
-                            },
-                            Object {
-                              "linkTo": "/records/add/find",
-                              "primaryText": "Add a missing work",
-                            },
-                            Object {
-                              "linkTo": "/data-collections/mine",
-                              "primaryText": "My research data",
-                            },
-                            Object {
-                              "linkTo": "/data-collections/add",
-                              "primaryText": "Add a missing dataset",
-                            },
-                            Object {
-                              "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-                              "primaryText": "Author statistics",
-                            },
-                            Object {
-                              "divider": true,
-                              "path": "/234234234242",
-                            },
-                            Object {
                               "linkTo": "/records/search",
                               "primaryText": "Search eSpace",
                               "public": true,
@@ -20581,39 +20918,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "linkTo": "/",
                                 "primaryText": "Home",
                                 "public": true,
-                              },
-                              Object {
-                                "linkTo": "/dashboard",
-                                "primaryText": "My dashboard",
-                                "secondaryText": undefined,
-                              },
-                              Object {
-                                "linkTo": "/records/mine",
-                                "primaryText": "My research",
-                              },
-                              Object {
-                                "linkTo": "/records/possible",
-                                "primaryText": "Claim possible work",
-                              },
-                              Object {
-                                "linkTo": "/records/add/find",
-                                "primaryText": "Add a missing work",
-                              },
-                              Object {
-                                "linkTo": "/data-collections/mine",
-                                "primaryText": "My research data",
-                              },
-                              Object {
-                                "linkTo": "/data-collections/add",
-                                "primaryText": "Add a missing dataset",
-                              },
-                              Object {
-                                "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-                                "primaryText": "Author statistics",
-                              },
-                              Object {
-                                "divider": true,
-                                "path": "/234234234242",
                               },
                               Object {
                                 "linkTo": "/records/search",
@@ -22101,7 +22405,9 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                   <ScrollTop
                                     classes={
                                       Object {
+                                        "hideButton": "ScrollTop-hideButton-326",
                                         "scrollTop": "ScrollTop-scrollTop-324",
+                                        "showButton": "ScrollTop-showButton-325",
                                       }
                                     }
                                     containerId="content-container"
@@ -22593,28 +22899,27 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                             xsUp={false}
                                           >
                                             <WithStyles(Fab)
-                                              aria-label="Scroll to top of page"
-                                              className="ScrollTop-scrollTop-324"
+                                              aria-label="Scroll to top of this page"
+                                              className=" ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
                                               color="secondary"
                                               id="scrolltopbtn"
-                                              onClick={[Function]}
-                                              title="Scroll to top of page"
+                                              title="Scroll to top of this page"
                                             >
                                               <Fab
-                                                aria-label="Scroll to top of page"
-                                                className="ScrollTop-scrollTop-324"
+                                                aria-label="Scroll to top of this page"
+                                                className=" ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
                                                 classes={
                                                   Object {
-                                                    "colorInherit": "MuiFab-colorInherit-346",
-                                                    "disabled": "MuiFab-disabled-345",
-                                                    "extended": "MuiFab-extended-343",
-                                                    "focusVisible": "MuiFab-focusVisible-344",
-                                                    "label": "MuiFab-label-340",
-                                                    "primary": "MuiFab-primary-341",
-                                                    "root": "MuiFab-root-339",
-                                                    "secondary": "MuiFab-secondary-342",
-                                                    "sizeMedium": "MuiFab-sizeMedium-348",
-                                                    "sizeSmall": "MuiFab-sizeSmall-347",
+                                                    "colorInherit": "MuiFab-colorInherit-348",
+                                                    "disabled": "MuiFab-disabled-347",
+                                                    "extended": "MuiFab-extended-345",
+                                                    "focusVisible": "MuiFab-focusVisible-346",
+                                                    "label": "MuiFab-label-342",
+                                                    "primary": "MuiFab-primary-343",
+                                                    "root": "MuiFab-root-341",
+                                                    "secondary": "MuiFab-secondary-344",
+                                                    "sizeMedium": "MuiFab-sizeMedium-350",
+                                                    "sizeSmall": "MuiFab-sizeSmall-349",
                                                   }
                                                 }
                                                 color="secondary"
@@ -22622,28 +22927,26 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                 disableFocusRipple={false}
                                                 disabled={false}
                                                 id="scrolltopbtn"
-                                                onClick={[Function]}
                                                 size="large"
-                                                title="Scroll to top of page"
+                                                title="Scroll to top of this page"
                                                 type="button"
                                                 variant="round"
                                               >
                                                 <WithStyles(ButtonBase)
-                                                  aria-label="Scroll to top of page"
-                                                  className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
+                                                  aria-label="Scroll to top of this page"
+                                                  className="MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
                                                   component="button"
                                                   disabled={false}
                                                   focusRipple={true}
-                                                  focusVisibleClassName="MuiFab-focusVisible-344"
+                                                  focusVisibleClassName="MuiFab-focusVisible-346"
                                                   id="scrolltopbtn"
-                                                  onClick={[Function]}
-                                                  title="Scroll to top of page"
+                                                  title="Scroll to top of this page"
                                                   type="button"
                                                 >
                                                   <ButtonBase
-                                                    aria-label="Scroll to top of page"
+                                                    aria-label="Scroll to top of this page"
                                                     centerRipple={false}
-                                                    className="MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
+                                                    className="MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
                                                     classes={
                                                       Object {
                                                         "disabled": "MuiButtonBase-disabled-158",
@@ -22656,20 +22959,18 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                     disableTouchRipple={false}
                                                     disabled={false}
                                                     focusRipple={true}
-                                                    focusVisibleClassName="MuiFab-focusVisible-344"
+                                                    focusVisibleClassName="MuiFab-focusVisible-346"
                                                     id="scrolltopbtn"
-                                                    onClick={[Function]}
                                                     tabIndex="0"
-                                                    title="Scroll to top of page"
+                                                    title="Scroll to top of this page"
                                                     type="button"
                                                   >
                                                     <button
-                                                      aria-label="Scroll to top of page"
-                                                      className="MuiButtonBase-root-157 MuiFab-root-339 MuiFab-secondary-342 ScrollTop-scrollTop-324"
+                                                      aria-label="Scroll to top of this page"
+                                                      className="MuiButtonBase-root-157 MuiFab-root-341 MuiFab-secondary-344  ScrollTop-scrollTop-324 ScrollTop-hideButton-326 "
                                                       disabled={false}
                                                       id="scrolltopbtn"
                                                       onBlur={[Function]}
-                                                      onClick={[Function]}
                                                       onContextMenu={[Function]}
                                                       onFocus={[Function]}
                                                       onKeyDown={[Function]}
@@ -22681,15 +22982,21 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                       onTouchMove={[Function]}
                                                       onTouchStart={[Function]}
                                                       tabIndex="0"
-                                                      title="Scroll to top of page"
+                                                      title="Scroll to top of this page"
                                                       type="button"
                                                     >
                                                       <span
-                                                        className="MuiFab-label-340"
+                                                        className="MuiFab-label-342"
                                                       >
-                                                        <pure(ArrowUpwardIcon)>
-                                                          <ArrowUpwardIcon>
-                                                            <WithStyles(SvgIcon)>
+                                                        <pure(ArrowUpwardIcon)
+                                                          onClick={[Function]}
+                                                        >
+                                                          <ArrowUpwardIcon
+                                                            onClick={[Function]}
+                                                          >
+                                                            <WithStyles(SvgIcon)
+                                                              onClick={[Function]}
+                                                            >
                                                               <SvgIcon
                                                                 classes={
                                                                   Object {
@@ -22707,12 +23014,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                 color="inherit"
                                                                 component="svg"
                                                                 fontSize="default"
+                                                                onClick={[Function]}
                                                                 viewBox="0 0 24 24"
                                                               >
                                                                 <svg
                                                                   aria-hidden="true"
                                                                   className="MuiSvgIcon-root-160"
                                                                   focusable="false"
+                                                                  onClick={[Function]}
                                                                   role="presentation"
                                                                   viewBox="0 0 24 24"
                                                                 >
@@ -25539,20 +25848,20 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                 allowDismiss={false}
                                                                                 classes={
                                                                                   Object {
-                                                                                    "actionButton": "Alert-actionButton-328",
-                                                                                    "common": "Alert-common-325",
-                                                                                    "dismissButton": "Alert-dismissButton-329",
-                                                                                    "done": "Alert-done-338",
-                                                                                    "error": "Alert-error-331",
-                                                                                    "error_outline": "Alert-error_outline-332",
-                                                                                    "help": "Alert-help-334",
-                                                                                    "help_outline": "Alert-help_outline-335",
-                                                                                    "icon": "Alert-icon-326",
-                                                                                    "info": "Alert-info-336",
-                                                                                    "info_outline": "Alert-info_outline-337",
-                                                                                    "linked": "Alert-linked-330",
-                                                                                    "text": "Alert-text-327",
-                                                                                    "warning": "Alert-warning-333",
+                                                                                    "actionButton": "Alert-actionButton-330",
+                                                                                    "common": "Alert-common-327",
+                                                                                    "dismissButton": "Alert-dismissButton-331",
+                                                                                    "done": "Alert-done-340",
+                                                                                    "error": "Alert-error-333",
+                                                                                    "error_outline": "Alert-error_outline-334",
+                                                                                    "help": "Alert-help-336",
+                                                                                    "help_outline": "Alert-help_outline-337",
+                                                                                    "icon": "Alert-icon-328",
+                                                                                    "info": "Alert-info-338",
+                                                                                    "info_outline": "Alert-info_outline-339",
+                                                                                    "linked": "Alert-linked-332",
+                                                                                    "text": "Alert-text-329",
+                                                                                    "warning": "Alert-warning-335",
                                                                                   }
                                                                                 }
                                                                                 dismissTitle="Click to dismiss this alert"
@@ -26006,7 +26315,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                   <WithStyles(Grid)
                                                                                     alignContent="center"
                                                                                     alignItems="flex-start"
-                                                                                    className="Alert-error-331 Alert-common-325"
+                                                                                    className="Alert-error-333 Alert-common-327"
                                                                                     container={true}
                                                                                     justify="center"
                                                                                     spacing={24}
@@ -26014,7 +26323,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                     <Grid
                                                                                       alignContent="center"
                                                                                       alignItems="flex-start"
-                                                                                      className="Alert-error-331 Alert-common-325"
+                                                                                      className="Alert-error-333 Alert-common-327"
                                                                                       classes={
                                                                                         Object {
                                                                                           "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -26131,7 +26440,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                       zeroMinWidth={false}
                                                                                     >
                                                                                       <div
-                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-331 Alert-common-325"
+                                                                                        className="MuiGrid-container-6 MuiGrid-spacing-xs-24-30 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23 Alert-error-333 Alert-common-327"
                                                                                       >
                                                                                         <WithStyles(Grid)
                                                                                           item={true}
@@ -26387,13 +26696,13 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                     className="MuiGrid-container-6 MuiGrid-align-items-xs-flex-start-15 MuiGrid-align-content-xs-center-18 MuiGrid-justify-xs-center-23"
                                                                                                   >
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-icon-326 alert-icon"
+                                                                                                      className="Alert-icon-328 alert-icon"
                                                                                                       item={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-icon-326 alert-icon"
+                                                                                                        className="Alert-icon-328 alert-icon"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -26510,7 +26819,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 Alert-icon-326 alert-icon"
+                                                                                                          className="MuiGrid-item-7 Alert-icon-328 alert-icon"
                                                                                                         >
                                                                                                           <pure(ErrorIcon)
                                                                                                             className="icon"
@@ -26564,14 +26873,14 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                       </Grid>
                                                                                                     </WithStyles(Grid)>
                                                                                                     <WithStyles(Grid)
-                                                                                                      className="Alert-text-327 alert-text"
+                                                                                                      className="Alert-text-329 alert-text"
                                                                                                       item={true}
                                                                                                       xs={true}
                                                                                                     >
                                                                                                       <Grid
                                                                                                         alignContent="stretch"
                                                                                                         alignItems="stretch"
-                                                                                                        className="Alert-text-327 alert-text"
+                                                                                                        className="Alert-text-329 alert-text"
                                                                                                         classes={
                                                                                                           Object {
                                                                                                             "align-content-xs-center": "MuiGrid-align-content-xs-center-18",
@@ -26688,7 +26997,7 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                                                                                         zeroMinWidth={false}
                                                                                                       >
                                                                                                         <div
-                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-327 alert-text"
+                                                                                                          className="MuiGrid-item-7 MuiGrid-grid-xs-true-34 Alert-text-329 alert-text"
                                                                                                         >
                                                                                                           <b>
                                                                                                             There has been an error - 
