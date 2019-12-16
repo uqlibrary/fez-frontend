@@ -44,7 +44,7 @@ export class FilesClass extends Component {
         classes: PropTypes.object,
         isAdmin: PropTypes.bool,
         isAuthor: PropTypes.bool,
-        authorDetails: PropTypes.object,
+        author: PropTypes.object,
     };
 
     constructor(props) {
@@ -72,7 +72,7 @@ export class FilesClass extends Component {
         securityStatus,
         checksums,
     ) => {
-        if (allowDownload && thumbnailFileName) {
+        if (thumbnailFileName) {
             const thumbnailProps = {
                 mimeType,
                 mediaUrl: this.getUrl(pid, fileName, checksums && checksums.media),
@@ -160,9 +160,15 @@ export class FilesClass extends Component {
         return { isOpenAccess: true, embargoDate: null, openAccessStatusId: openAccessStatusId };
     };
 
-    getSecurityAccess = () => {
-        // const { isAdmin, isAuthor } = this.props;
-        return true; // !!(dataStream.dsi_security_policy > 1 || isAdmin || isAuthor);
+    getSecurityAccess = dataStream => {
+        const { isAdmin, isAuthor, author } = this.props;
+        return !!(
+            isAdmin ||
+            isAuthor ||
+            (dataStream && dataStream.dsi_security_policy && dataStream.dsi_security_policy === 5) ||
+            /* istanbul ignore next */
+            (author && author.pol_id && dataStream.dsi_security_policy >= author.pol_id)
+        );
     };
 
     getUrl = (pid, fileName, checksum = '') => {
@@ -174,20 +180,15 @@ export class FilesClass extends Component {
     };
 
     isFileValid = dataStream => {
-        const authorSecurity = (this.props.authorDetails && this.props.authorDetails.pol_id) || 5;
-        const datastreamSecurity = (dataStream && dataStream.dsi_security_policy) || 5;
         const {
             files: { blacklist },
         } = viewRecordsConfig;
         return (
-            // this.getSecurityAccess(dataStream) && - this hides closed/locked file
+            this.getSecurityAccess(dataStream) &&
             !dataStream.dsi_dsid.match(blacklist.namePrefixRegex) &&
             !dataStream.dsi_dsid.match(blacklist.nameSuffixRegex) &&
             !(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0) &&
-            (!dataStream.dsi_label ||
-                !dataStream.dsi_label.match(new RegExp(blacklist.descriptionKeywordsRegex, 'gi'))) &&
-            dataStream.dsi_state === 'A' &&
-            datastreamSecurity >= authorSecurity
+            dataStream.dsi_state === 'A'
         );
     };
 
@@ -313,7 +314,7 @@ export class FilesClass extends Component {
                     description: dataStream.dsi_label,
                     mimeType: mimeType,
                     calculatedSize: this.formatBytes(dataStream.dsi_size),
-                    allowDownload: openAccessStatus.isOpenAccess || !openAccessStatus.embargoDate,
+                    allowDownload: !openAccessStatus.embargoDate,
                     icon: this.renderFileIcon(
                         pid,
                         mimeType,
@@ -352,14 +353,7 @@ export class FilesClass extends Component {
     render() {
         const { publication } = this.props;
         const fileData = this.getFileData(publication);
-        const isFireFox = navigator.userAgent.toLowerCase().indexOf('firefox') > -1;
         if (fileData.length === 0) return null;
-        let hasVideo = false;
-        fileData.map(item => {
-            if (item.mimeType.indexOf('video') > -1) {
-                hasVideo = true;
-            }
-        });
         return (
             <Grid item xs={12}>
                 <StandardCard title={locale.viewRecord.sections.files.title}>
@@ -372,14 +366,6 @@ export class FilesClass extends Component {
                                 publication.fez_record_search_key_advisory_statement.rek_advisory_statement,
                             )}
                             dismissAction={this.props.setHideCulturalSensitivityStatement}
-                        />
-                    )}
-                    {isFireFox && hasVideo && (
-                        <Alert
-                            allowDismiss
-                            type={locale.viewRecord.fireFoxAlert.type}
-                            title={locale.viewRecord.fireFoxAlert.title}
-                            message={locale.viewRecord.fireFoxAlert.message}
                         />
                     )}
                     <div style={{ padding: 8 }}>

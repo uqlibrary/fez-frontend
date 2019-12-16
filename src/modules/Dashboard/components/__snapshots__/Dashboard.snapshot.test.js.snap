@@ -566,7 +566,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }
@@ -654,7 +653,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                   "lastName": "Researcher",
                   "mail": "j.Researcher@uq.edu.au",
                   "name": "J Researcher",
-                  "pol_id": 3,
                   "tokenBased": false,
                   "type": 3,
                 }
@@ -742,7 +740,6 @@ exports[`Dashboard test Full mount for styles render 1`] = `
                     "lastName": "Researcher",
                     "mail": "j.Researcher@uq.edu.au",
                     "name": "J Researcher",
-                    "pol_id": 3,
                     "tokenBased": false,
                     "type": 3,
                   }
@@ -5947,7 +5944,6 @@ exports[`Dashboard test should get styles for full render 1`] = `
                 "lastName": "Researcher",
                 "mail": "j.Researcher@uq.edu.au",
                 "name": "J Researcher",
-                "pol_id": 3,
                 "tokenBased": false,
                 "type": 3,
               }

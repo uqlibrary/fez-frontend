@@ -1,5 +1,4 @@
 import { leftJoin, stripHtml } from './general';
-// import { journalArticle } from '../mock/data/testing/records';
 
 describe('general helpers', () => {
     it('leftJoin', () => {

@@ -37,7 +37,6 @@ export const accounts = {
         "canMasquerade": true,
         'canMasqueradeType': 'readonly',
         "blocked": false,
-        pol_id: 1,
     },
     // student
     s1111111: {
@@ -77,7 +76,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 4,
     },
     // rhd student
     s2222222: {
@@ -97,7 +95,25 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 4,
+    },
+    // Student with no author account
+    s3333333: {
+        "id": "s3333333",
+        "class": ["IS_UQ_STUDENT_PLACEMENT", "IS_CURRENT"],
+        "type": 22,
+        "homeLib": "St Lucia",
+        "firstName": "J",
+        "lastName": "No Author Student",
+        "name": "NO Author Student",
+        "mail": "noauthor@student.uq.edu.au",
+        "barcode": "111111111111111",
+        "groups": null,
+        "classes": [],
+        "expiryDate": "14-12-19",
+        "hasSession": true,
+        "tokenBased": false,
+        "canMasquerade": false,
+        "blocked": false,
     },
     // researchers
     uqresearcher: {
@@ -117,7 +133,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 3,
     },
     // researcher without orcid
     uqnoauthid: {
@@ -137,7 +152,6 @@ export const accounts = {
         "tokenBased": false,
         "canMasquerade": false,
         "blocked": false,
-        pol_id: 5,
     },
     digiteamMember: {
         'id': 'digiteamMember',
@@ -154,14 +168,13 @@ export const accounts = {
         "expiryDate": "31-12-19",
         "hasSession": true,
         "tokenBased": false,
-        'canMasquerade': false,
+        "canMasquerade": true,
         "blocked": false,
-        pol_id: 3,
     },
     // expired session
     uqexpired: {
-        'hasSession': false,
-    },
+        'hasSession': false
+    }
     // upos
     // admins
 };
@@ -524,6 +537,7 @@ export const authorsSearch = {
 export const currentAuthor = {
     uqresearcher: {
         data: {
+            pol_id: 3,
             "aut_id": 410,
             "aut_org_username": "uqresearcher",
             "aut_org_staff_id": "0001952",
@@ -557,6 +571,7 @@ export const currentAuthor = {
     },
     uqnoauthid: {
         data: {
+            pol_id: 5,
             "aut_id": 4101,
             "aut_org_username": "uqnoauthid",
             "aut_org_staff_id": "0001952",
@@ -586,8 +601,9 @@ export const currentAuthor = {
             "aut_student_username": null,
         },
     },
-    s2222222: {
+    s1111111: {
         "data": {
+            pol_id: 4,
             "aut_id": 44444,
             "aut_org_username": null,
             "aut_org_staff_id": null,
@@ -617,8 +633,46 @@ export const currentAuthor = {
             "aut_student_username": "s2222222",
         },
     },
+    s2222222: {
+        "data": {
+            pol_id: 4,
+            "aut_id": 44444,
+            "aut_org_username": null,
+            "aut_org_staff_id": null,
+            "aut_org_student_id": "2222222",
+            "aut_email": null,
+            "aut_display_name": "HDR Student, N",
+            "aut_fname": "N",
+            "aut_mname": null,
+            "aut_lname": "HDR Student",
+            "aut_title": "Miss",
+            "aut_position": null,
+            "aut_homepage_link": null,
+            "aut_created_date": "2017-11-03T01:00:24Z",
+            "aut_update_date": "2017-12-21T07:31:09Z",
+            "aut_external_id": null,
+            "aut_ref_num": null,
+            "aut_researcher_id": null,
+            "aut_scopus_id": null,
+            "aut_mypub_url": null,
+            "aut_rid_password": null,
+            "aut_people_australia_id": null,
+            "aut_description": null,
+            "aut_orcid_id": '12345',
+            "aut_google_scholar_id": null,
+            "aut_rid_last_updated": null,
+            "aut_publons_id": null,
+            "aut_student_username": "s2222222",
+        },
+    },
+    s3333333: {
+        "data": {
+            pol_id: 4,
+        },
+    },
     uqmasquerade: {
         'data': {
+            pol_id: 3,
             'aut_id': 12345678,
             'aut_org_username': 'uqmasquerade',
             'aut_org_staff_id': null,
@@ -656,6 +710,7 @@ export const currentAuthor = {
     },
     uqstaff: {
         'data': {
+            pol_id: 1,
             'aut_id': 12345678,
             'aut_org_username': 'uqstaff',
             'aut_org_staff_id': null,
@@ -693,6 +748,7 @@ export const currentAuthor = {
     },
     digiteamMember: {
         'data': {
+            pol_id: 2,
             'aut_id': 12345676,
             'aut_org_username': 'digiteamMember',
             'aut_org_staff_id': null,

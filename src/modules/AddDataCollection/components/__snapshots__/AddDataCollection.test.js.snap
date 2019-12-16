@@ -1195,7 +1195,6 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
             validate={
               Array [
                 [Function],
-                [Function],
               ]
             }
           />
@@ -2435,7 +2434,6 @@ exports[`AddDataCollection test should render component with a valid collection 
             requireOpenAccessStatus={true}
             validate={
               Array [
-                [Function],
                 [Function],
               ]
             }
@@ -3677,7 +3675,6 @@ exports[`AddDataCollection test should render component with an invalid collecti
             validate={
               Array [
                 [Function],
-                [Function],
               ]
             }
           />
@@ -4917,7 +4914,6 @@ exports[`AddDataCollection test should render data set form 1`] = `
             requireOpenAccessStatus={true}
             validate={
               Array [
-                [Function],
                 [Function],
               ]
             }

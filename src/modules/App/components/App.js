@@ -206,19 +206,21 @@ export class AppClass extends PureComponent {
         const isAuthorizedUser = !this.props.accountLoading && this.props.account !== null;
         const isAuthorLoading = this.props.accountLoading || this.props.accountAuthorLoading;
         const isOrcidRequired =
-            this.props.authorDetails &&
-            !(
-                this.props.authorDetails.is_administrator === 1 || this.props.authorDetails.is_super_administrator === 1
-            ) &&
             this.props.author &&
+            Object.keys(this.props.author).length > 1 &&
             !this.props.author.aut_orcid_id &&
             this.props.location.pathname !== routes.pathConfig.authorIdentifiers.orcid.link;
         const isHdrStudent =
             !isAuthorLoading &&
             !!this.props.account &&
-            !!this.props.author &&
+            this.props.account.class &&
             this.props.account.class.indexOf('IS_CURRENT') >= 0 &&
             this.props.account.class.indexOf('IS_UQ_STUDENT_PLACEMENT') >= 0;
+        const isAuthor =
+            !isAuthorLoading &&
+            !!this.props.account &&
+            !!this.props.author &&
+            Object.keys(this.props.author).length > 1;
         const hasIncompleteWorks = !!(
             this.props.incompleteRecordList &&
             this.props.incompleteRecordList.incomplete.publicationsListPagingData &&
@@ -226,8 +228,9 @@ export class AppClass extends PureComponent {
         );
         const menuItems = routes.getMenuConfig(
             this.props.account,
+            this.props.author,
             this.props.authorDetails,
-            isOrcidRequired && isHdrStudent,
+            isHdrStudent && !isAuthor,
             hasIncompleteWorks,
         );
         const isPublicPage = this.isPublicPage(menuItems);
