@@ -1,5 +1,5 @@
 import * as routes from './routes';
-import { accounts, authorDetails } from 'mock/data/account';
+import { accounts, currentAuthor, authorDetails } from 'mock/data/account';
 import { locale } from 'locale';
 
 describe('Routes getMenuConfig method', () => {
@@ -9,37 +9,68 @@ describe('Routes getMenuConfig method', () => {
     });
 
     it('should return a list of menus for researcher (uqresearcher)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqresearcher, authorDetails.uqresearcher);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqresearcher,
+            currentAuthor.uqresearcher.data,
+            authorDetails.uqresearcher,
+        );
         expect(testRoutes.length).toEqual(12);
     });
 
     it('should return a list of menus including incomplete menu item for researcher (uqresearcher)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqresearcher, authorDetails.uqresearcher, false, true);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqresearcher,
+            currentAuthor.uqresearcher.data,
+            authorDetails.uqresearcher,
+            false,
+            true,
+        );
         expect(testRoutes.length).toEqual(13);
     });
 
     it('should return menus for a user with dashboard only (eg HDR student without ORCID) (uqnoauthid)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqnoauthid, authorDetails.uqnoauthid, true);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqnoauthid,
+            currentAuthor.uqnoauthid.data,
+            authorDetails.uqnoauthid,
+            true,
+        );
         expect(testRoutes.length).toEqual(6);
     });
 
     it('should return a list of menus for user who has admin (uqstaff)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqstaff, authorDetails.uqstaff);
+        const testRoutes = routes.getMenuConfig(accounts.uqstaff, currentAuthor.uqstaff.data, authorDetails.uqstaff);
         expect(testRoutes.length).toEqual(20);
     });
 
     it('should return a list of menus with Incomplete entry for user who has admin (uqstaff)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqstaff, authorDetails.uqstaff, false, true);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqstaff,
+            currentAuthor.uqstaff.data,
+            authorDetails.uqstaff,
+            false,
+            true,
+        );
         expect(testRoutes.length).toEqual(21);
     });
 
     it('should return a list of menus for user who can masquerade', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqmasquerade, authorDetails.uqmasquerade);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqmasquerade,
+            currentAuthor.uqmasquerade.data,
+            authorDetails.uqmasquerade,
+        );
         expect(testRoutes.length).toEqual(14);
     });
 
     it('should return a list of menus with Incomplete entry for user who can masquerade (uqmasquerade)', () => {
-        const testRoutes = routes.getMenuConfig(accounts.uqmasquerade, authorDetails.uqmasquerade, false, true);
+        const testRoutes = routes.getMenuConfig(
+            accounts.uqmasquerade,
+            currentAuthor.uqmasquerade.data,
+            authorDetails.uqmasquerade,
+            false,
+            true,
+        );
         expect(testRoutes.length).toEqual(15);
     });
 
@@ -52,8 +83,36 @@ describe('Routes getMenuConfig method', () => {
     });
 
     it('should return Switch to old interface menu item for logged in user on view page', () => {
-        const testMenuItems = routes.getMenuConfig(accounts.uqresearcher, authorDetails.uqresearcher, false, true);
+        const testMenuItems = routes.getMenuConfig(
+            accounts.uqresearcher,
+            currentAuthor.uqresearcher.data,
+            authorDetails.uqresearcher,
+            false,
+            true,
+        );
         expect(testMenuItems.length).toEqual(13);
+    });
+
+    it('should return list of menus for a student with an author account', () => {
+        const testMenuItems = routes.getMenuConfig(
+            accounts.s2222222,
+            currentAuthor.s2222222.data,
+            authorDetails.s2222222,
+            false,
+            false,
+        );
+        expect(testMenuItems.length).toEqual(12);
+    });
+
+    it('should return list of menus for a student with an author account', () => {
+        const testMenuItems = routes.getMenuConfig(
+            accounts.s3333333,
+            currentAuthor.s3333333.data,
+            authorDetails.s3333333,
+            false,
+            false,
+        );
+        expect(testMenuItems.length).toEqual(4);
     });
 });
 
