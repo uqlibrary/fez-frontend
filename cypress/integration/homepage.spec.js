@@ -55,9 +55,9 @@ context('Homepage', () => {
         checkMenuItemCount(19);
     });
 
-    it('Has expected menu items for a student', () => {
-        cy.visit('/?user=s1111111');
-        checkMenuItemCount(12);
+    it('Has expected menu items for a student without an author account', () => {
+        cy.visit('/?user=s3333333');
+        checkMenuItemCount(4);
     });
 
     it('Has expected menu items for a RHD student', () => {

@@ -750,43 +750,6 @@ exports[`Application component should determine if it has incomplete works from 
           "public": true,
         },
         Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/incomplete",
-          "primaryText": "My incomplete works",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -1486,43 +1449,6 @@ exports[`Application component should determine if it has incomplete works from 
           "linkTo": "/",
           "primaryText": "Home",
           "public": true,
-        },
-        Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/incomplete",
-          "primaryText": "My incomplete works",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
         },
         Object {
           "linkTo": "/records/search",
@@ -2935,39 +2861,6 @@ exports[`Application component should render alert if user is not fez author 1`]
           "public": true,
         },
         Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
-        },
-        Object {
           "linkTo": "/records/search",
           "primaryText": "Search eSpace",
           "public": true,
@@ -4236,6 +4129,30 @@ exports[`Application component should render app for HDR without ORCID ID 1`] = 
           "linkTo": "/dashboard",
           "primaryText": "My dashboard",
           "secondaryText": "rhd@student.uq.edu.au",
+        },
+        Object {
+          "linkTo": "/records/mine",
+          "primaryText": "My research",
+        },
+        Object {
+          "linkTo": "/records/possible",
+          "primaryText": "Claim possible work",
+        },
+        Object {
+          "linkTo": "/records/add/find",
+          "primaryText": "Add a missing work",
+        },
+        Object {
+          "linkTo": "/data-collections/mine",
+          "primaryText": "My research data",
+        },
+        Object {
+          "linkTo": "/data-collections/add",
+          "primaryText": "Add a missing dataset",
+        },
+        Object {
+          "linkTo": "https://app.library.uq.edu.au/#/authors/s2222222",
+          "primaryText": "Author statistics",
         },
         Object {
           "divider": true,
@@ -6788,39 +6705,6 @@ exports[`Application component should render application with routing for the us
           "linkTo": "/",
           "primaryText": "Home",
           "public": true,
-        },
-        Object {
-          "linkTo": "/dashboard",
-          "primaryText": "My dashboard",
-          "secondaryText": undefined,
-        },
-        Object {
-          "linkTo": "/records/mine",
-          "primaryText": "My research",
-        },
-        Object {
-          "linkTo": "/records/possible",
-          "primaryText": "Claim possible work",
-        },
-        Object {
-          "linkTo": "/records/add/find",
-          "primaryText": "Add a missing work",
-        },
-        Object {
-          "linkTo": "/data-collections/mine",
-          "primaryText": "My research data",
-        },
-        Object {
-          "linkTo": "/data-collections/add",
-          "primaryText": "Add a missing dataset",
-        },
-        Object {
-          "linkTo": "https://app.library.uq.edu.au/#/authors/uqauthor1",
-          "primaryText": "Author statistics",
-        },
-        Object {
-          "divider": true,
-          "path": "/234234234242",
         },
         Object {
           "linkTo": "/records/search",
@@ -15997,39 +15881,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                               "public": true,
                             },
                             Object {
-                              "linkTo": "/dashboard",
-                              "primaryText": "My dashboard",
-                              "secondaryText": undefined,
-                            },
-                            Object {
-                              "linkTo": "/records/mine",
-                              "primaryText": "My research",
-                            },
-                            Object {
-                              "linkTo": "/records/possible",
-                              "primaryText": "Claim possible work",
-                            },
-                            Object {
-                              "linkTo": "/records/add/find",
-                              "primaryText": "Add a missing work",
-                            },
-                            Object {
-                              "linkTo": "/data-collections/mine",
-                              "primaryText": "My research data",
-                            },
-                            Object {
-                              "linkTo": "/data-collections/add",
-                              "primaryText": "Add a missing dataset",
-                            },
-                            Object {
-                              "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-                              "primaryText": "Author statistics",
-                            },
-                            Object {
-                              "divider": true,
-                              "path": "/234234234242",
-                            },
-                            Object {
                               "linkTo": "/records/search",
                               "primaryText": "Search eSpace",
                               "public": true,
@@ -16094,39 +15945,6 @@ exports[`Testing wrapped App component Mounts 1`] = `
                                 "linkTo": "/",
                                 "primaryText": "Home",
                                 "public": true,
-                              },
-                              Object {
-                                "linkTo": "/dashboard",
-                                "primaryText": "My dashboard",
-                                "secondaryText": undefined,
-                              },
-                              Object {
-                                "linkTo": "/records/mine",
-                                "primaryText": "My research",
-                              },
-                              Object {
-                                "linkTo": "/records/possible",
-                                "primaryText": "Claim possible work",
-                              },
-                              Object {
-                                "linkTo": "/records/add/find",
-                                "primaryText": "Add a missing work",
-                              },
-                              Object {
-                                "linkTo": "/data-collections/mine",
-                                "primaryText": "My research data",
-                              },
-                              Object {
-                                "linkTo": "/data-collections/add",
-                                "primaryText": "Add a missing dataset",
-                              },
-                              Object {
-                                "linkTo": "https://app.library.uq.edu.au/#/authors/undefined",
-                                "primaryText": "Author statistics",
-                              },
-                              Object {
-                                "divider": true,
-                                "path": "/234234234242",
                               },
                               Object {
                                 "linkTo": "/records/search",
