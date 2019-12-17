@@ -325,8 +325,7 @@ export const isFileValid = ({ files: { blacklist } }, isAdmin = false) => dataSt
     const suffixMatch = !!dataStream.dsi_dsid.match(blacklist.nameSuffixRegex);
     const isAudioXT = !!(dataStream.dsi_dsid.indexOf('_xt.') >= 0 && dataStream.dsi_mimetype.indexOf('audio') >= 0);
     const validDsiState = dataStream.dsi_state === 'A';
-    const result =
-        (!prefixMatch && !suffixMatch && !isAudioXT && validDsiState) || isAdmin;
+    const result = (!prefixMatch && !suffixMatch && !isAudioXT && validDsiState) || isAdmin;
     return result;
 };
 
