@@ -363,7 +363,6 @@ describe('AddDataCollection form', () => {
 
         fireEvent.click(getByTestId('deposit-agreement'));
         expect(container).not.toHaveTextContent(/you are required to accept deposit agreement/i);
-        console.log(container);
         expect(submitButton).toHaveAttribute('disabled');
 
         expect(firstRender).toMatchDiffSnapshot(asFragment());

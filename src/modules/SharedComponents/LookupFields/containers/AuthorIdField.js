@@ -14,7 +14,7 @@ const mapStateToProps = (state, props) => {
         onChange: item => {
             if (!item.id) {
                 props.input.onChange(null);
-            }else if (!item.id || isNaN(parseInt(item.id, 10))) {
+            } else if (!item.id || isNaN(parseInt(item.id, 10))) {
                 !!props.input
                     ? props.input.onChange({
                         ...item,
