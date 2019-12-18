@@ -12,10 +12,16 @@ const mapStateToProps = (state, props) => {
                 ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
         onChange: item => {
-            if (!item.id) {
+            console.log(props);
+            if (!item.value && !!props.input) {
+                props.input.onChange(null);
+            } else if (!item.id || isNaN(parseInt(item.id, 10))) {
                 !!props.input
-                    ? props.input.onChange({ ...item, id: `${parseInt(item.value, 10)}` })
-                    : props.onChange({ ...item, id: `${parseInt(item.value, 10)}` });
+                    ? props.input.onChange({
+                        ...item,
+                        id: `${isNaN(parseInt(item.value, 10)) ? undefined : parseInt(item.value, 10)}`,
+                    })
+                    : props.onChange({ ...item, id: `${isNaN(item.value) ? undefined : parseInt(item.value, 10)}` });
             } else {
                 !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
