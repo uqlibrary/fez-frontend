@@ -179,6 +179,7 @@ to keep initial load to a minimum following optimisation has been added to the p
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
+- if you cant get eg https://fez-staging.library.uq.edu.au/view/UQ:e6c5854 to load the new FE (it always loads legacy) you can use the alternate url of https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854
 
 #### Optimisation Guidelines
 
