@@ -91,7 +91,6 @@ export default class AddDataCollection extends Component {
                 errorAlert: { ...formLocale.errorAlert },
             },
         });
-
         const saveConfirmationLocale = { ...locale.pages.addDataset.successWorkflowConfirmation };
         saveConfirmationLocale.confirmationMessage = (
             <Grid container spacing={24}>

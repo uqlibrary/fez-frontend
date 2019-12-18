@@ -345,7 +345,7 @@ describe('AddDataCollection form', () => {
         fireEvent.change(getByTestId('Projectname'), { target: { value: 'test project' } });
         fireEvent.change(getByTestId('Projectdescription'), { target: { value: 'test description' } });
 
-        expect(submitButton).not.toHaveAttribute('disabled');
+        expect(submitButton).toHaveAttribute('disabled');
 
         fireEvent.change(getByTestId('Contactemail'), { target: { value: 'testing' } });
         expect(container).toHaveTextContent(/email address is not valid/i);
@@ -355,7 +355,7 @@ describe('AddDataCollection form', () => {
         fireEvent.change(getByTestId('Contactemail'), { target: { value: 'testing@test.com' } });
         expect(container).not.toHaveTextContent(/email address is not valid/i);
         expect(container).not.toHaveTextContent(/contact email is required/i);
-        expect(submitButton).not.toHaveAttribute('disabled');
+        expect(submitButton).toHaveAttribute('disabled');
 
         fireEvent.click(getByTestId('deposit-agreement'));
         expect(container).toHaveTextContent(/you are required to accept deposit agreement/i);
@@ -363,7 +363,8 @@ describe('AddDataCollection form', () => {
 
         fireEvent.click(getByTestId('deposit-agreement'));
         expect(container).not.toHaveTextContent(/you are required to accept deposit agreement/i);
-        expect(submitButton).not.toHaveAttribute('disabled');
+        console.log(container);
+        expect(submitButton).toHaveAttribute('disabled');
 
         expect(firstRender).toMatchDiffSnapshot(asFragment());
     });
