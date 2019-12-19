@@ -39,6 +39,7 @@ export default class AddDataCollection extends Component {
         disableSubmit: PropTypes.bool,
         actions: PropTypes.object,
         isSessionValid: PropTypes.bool,
+        resetForm: PropTypes.any,
     };
 
     static contextTypes = {
@@ -52,11 +53,13 @@ export default class AddDataCollection extends Component {
     }
 
     _navigateToMyDatasets = () => {
+        this.props.resetForm();
         this.props.actions.clearNewRecord();
         this.props.history.push(routes.pathConfig.dataset.mine);
     };
 
     _restartWorkflow = () => {
+        this.props.resetForm();
         window.location.reload();
     };
 
@@ -506,7 +509,7 @@ export default class AddDataCollection extends Component {
                             </StandardCard>
                         </Grid>
 
-                        {alertProps && (
+                        {alertProps && !this.props.submitSucceeded && (
                             <Grid item xs={12}>
                                 <Alert {...alertProps} />
                             </Grid>
