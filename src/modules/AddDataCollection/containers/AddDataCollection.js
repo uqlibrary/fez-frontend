@@ -28,9 +28,9 @@ const onSubmit = (values, dispatch, state) => {
     return dispatch(createNewRecord({ ...cleanValues }))
         .then(() => {
             // once this promise is resolved form is submitted successfully and will call parent container
-            setTimeout(() => {
-                dispatch(reset(FORM_NAME));
-            }, 100);
+            // setTimeout(() => {
+            //     dispatch(reset(FORM_NAME));
+            // }, 100);
         })
         .catch(error => {
             throw new SubmissionError({ _error: error.message });
@@ -85,6 +85,7 @@ const mapStateToProps = state => {
         formErrors: formErrors,
         disableSubmit: formErrors && !(formErrors instanceof Immutable.Map),
         initialValues: initialValues,
+        resetForm: () => reset(FORM_NAME),
     };
 };
 
