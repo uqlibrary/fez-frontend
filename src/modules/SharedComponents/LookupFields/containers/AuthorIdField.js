@@ -13,9 +13,14 @@ const mapStateToProps = (state, props) => {
                 : [],
         onChange: item => {
             if (!item.id) {
+                props.input.onChange(null);
+            } else if (!item.id || isNaN(parseInt(item.id, 10))) {
                 !!props.input
-                    ? props.input.onChange({ ...item, id: `${parseInt(item.value, 10)}` })
-                    : props.onChange({ ...item, id: `${parseInt(item.value, 10)}` });
+                    ? props.input.onChange({
+                        ...item,
+                        id: isNaN(parseInt(item.value, 10)) ? undefined : `${parseInt(item.value, 10)}`,
+                    })
+                    : props.onChange({ ...item, id: isNaN(item.value) ? undefined : `${parseInt(item.value, 10)}` });
             } else {
                 !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
@@ -25,7 +30,7 @@ const mapStateToProps = (state, props) => {
         selectedValue:
             (!props.input &&
                 ((!!props.label && { value: props.label }) || (!!props.value && { value: props.value }))) ||
-            '',
+            null,
         itemToString: item => (!!item && String(`${item.id} (${item.value})`)) || '',
         maxResults: 50,
         error: (!!props.meta && !!props.meta.error) || props.error,
