@@ -39,8 +39,13 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
-        const txt = formLocale.creativeWork;
-        const designTxt = formLocale.design;
+        let txt = formLocale.creativeWork;
+        if (this.props.subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) {
+            txt = {
+                ...formLocale.creativeWork,
+                ...formLocale.design,
+            };
+        }
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startDate = formValues && formValues.rek_date;
         const endDate =
@@ -135,7 +140,7 @@ export default class CreativeWorkForm extends Component {
                                         disabled={this.props.submitting}
                                         name="fez_record_search_key_end_date.rek_end_date"
                                         allowPartial
-                                        floatingTitle={txt.information.fieldLabels.enddate.title}
+                                        floatingTitle={txt.information.fieldLabels.endDate.title}
                                         hasError={dateError}
                                     />
                                 </Grid>
@@ -145,7 +150,7 @@ export default class CreativeWorkForm extends Component {
                 )}
                 {this.props.subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK && (
                     <Grid item xs={12}>
-                        <StandardCard title={designTxt.information.title} help={designTxt.information.help}>
+                        <StandardCard title={txt.information.title} help={txt.information.help}>
                             <Grid container spacing={16}>
                                 <Grid item xs={12}>
                                     <Field
@@ -155,7 +160,7 @@ export default class CreativeWorkForm extends Component {
                                         name="rek_title"
                                         type="text"
                                         fullWidth
-                                        {...designTxt.information.fieldLabels.articleTitle}
+                                        {...txt.information.fieldLabels.articleTitle}
                                         required
                                         validate={[validation.required]}
                                     />
@@ -167,7 +172,7 @@ export default class CreativeWorkForm extends Component {
                                         name="fez_record_search_key_project_name.rek_project_name"
                                         type="text"
                                         fullWidth
-                                        {...designTxt.information.fieldLabels.projectName}
+                                        {...txt.information.fieldLabels.projectName}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
@@ -177,7 +182,7 @@ export default class CreativeWorkForm extends Component {
                                         name="fez_record_search_key_location[0].rek_location"
                                         type="text"
                                         fullWidth
-                                        {...designTxt.information.fieldLabels.location}
+                                        {...txt.information.fieldLabels.location}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
@@ -189,7 +194,7 @@ export default class CreativeWorkForm extends Component {
                                         fullWidth
                                         required
                                         validate={[validation.required]}
-                                        {...designTxt.information.fieldLabels.publisher}
+                                        {...txt.information.fieldLabels.publisher}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={4}>
@@ -201,7 +206,7 @@ export default class CreativeWorkForm extends Component {
                                         fullWidth
                                         required
                                         validate={[validation.required]}
-                                        {...designTxt.information.fieldLabels.placeOfPublication}
+                                        {...txt.information.fieldLabels.placeOfPublication}
                                     />
                                 </Grid>
                                 <Grid item xs={12} sm={6}>
@@ -213,7 +218,7 @@ export default class CreativeWorkForm extends Component {
                                         required
                                         className="requiredHintField"
                                         validate={[validation.required]}
-                                        floatingTitle={designTxt.information.fieldLabels.date.title}
+                                        floatingTitle={txt.information.fieldLabels.date.title}
                                         floatingTitleRequired
                                     />
                                 </Grid>
@@ -223,7 +228,7 @@ export default class CreativeWorkForm extends Component {
                                         disabled={this.props.submitting}
                                         name="fez_record_search_key_end_date.rek_end_date"
                                         allowPartial
-                                        floatingTitle={txt.information.fieldLabels.enddate.title}
+                                        floatingTitle={txt.information.fieldLabels.endDate.title}
                                         hasError={dateError}
                                     />
                                 </Grid>

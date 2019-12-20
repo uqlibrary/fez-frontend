@@ -753,7 +753,7 @@ export default {
                     month: 'Month',
                     year: 'Year',
                 },
-                enddate: {
+                endDate: {
                     title: 'End date',
                     day: 'Day',
                     month: 'Month',
