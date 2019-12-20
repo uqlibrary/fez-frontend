@@ -1,7 +1,11 @@
 jest.dontMock('./CreativeWorkForm');
 
 import CreativeWorkForm from './CreativeWorkForm';
-import { NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT, NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK } from 'config/general';
+import {
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
+} from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -42,6 +46,15 @@ describe('CreativeWorkForm renders ', () => {
     it('should show architectural content correctly', () => {
         const testProps = {
             subtype: NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+            isNtro: true,
+        };
+        const wrapper = setup(testProps);
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should show content for a random (other) NTRO type correctly (base case)', () => {
+        const testProps = {
+            subtype: NTRO_SUBTYPE_LP_PLAYS_DRAMAS_THEATRE,
             isNtro: true,
         };
         const wrapper = setup(testProps);
