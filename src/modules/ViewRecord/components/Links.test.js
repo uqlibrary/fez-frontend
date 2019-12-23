@@ -231,4 +231,28 @@ describe('Component Links ', () => {
             // expect(wrapper.find('.openAccess').length).toEqual(1);
         },
     );
+
+    it('should use special default description if the link has the RDM hostname', () => {
+        const wrapper = setup({
+            publication: {
+                fez_record_search_key_link_description: [
+                    {
+                        rek_link_description: 'Provided description',
+                    },
+                    {
+                        rek_link_description: null,
+                    },
+                ],
+            },
+        });
+        const link1 = {
+            rek_link: 'https://rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link1, 0)).toMatchSnapshot();
+
+        const link2 = {
+            rek_link: 'https://uat.rdm.uq.edu.au/files/example123',
+        };
+        expect(wrapper.instance().getPublicationLink(link2, 1)).toMatchSnapshot();
+    });
 });
