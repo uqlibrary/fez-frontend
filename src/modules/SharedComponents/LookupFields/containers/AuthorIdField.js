@@ -22,7 +22,7 @@ const mapStateToProps = (state, props) => {
                     })
                     : props.onChange({ ...item, id: isNaN(item.value) ? undefined : `${parseInt(item.value, 10)}` });
             } else {
-                !!props.input ? props.input.onChange(item) : props.onChange(item);
+                props && !!props.input ? props.input.onChange(item) : props.onChange(item);
             }
         },
         allowFreeText: true,
