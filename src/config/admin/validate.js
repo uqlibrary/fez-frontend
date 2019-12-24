@@ -2,17 +2,19 @@ import { locale } from 'locale';
 import { dateTimeYear } from 'config/validation';
 
 import {
-    PUBLICATION_TYPE_DATA_COLLECTION,
-    PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
     PUBLICATION_TYPE_CONFERENCE_PROCEEDINGS,
+    PUBLICATION_TYPE_CREATIVE_WORK,
+    PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DEPARTMENT_TECHNICAL_REPORT,
+    PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
     PUBLICATION_TYPE_IMAGE,
-    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_JOURNAL,
+    PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_NEWSPAPER_ARTICLE,
     PUBLICATION_TYPE_PATENT,
@@ -22,8 +24,6 @@ import {
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
     PUBLICATION_TYPE_WORKING_PAPER,
-    PUBLICATION_TYPE_CREATIVE_WORK,
-    PUBLICATION_TYPE_DESIGN,
 } from 'config/general';
 import {
     validateAudioDocument,
@@ -31,13 +31,14 @@ import {
     validateBookChapter,
     validateConferencePaper,
     validateConferenceProceedings,
+    validateCreativeWork,
     validateDataCollection,
     validateDepartmentTechnicalReport,
     validateDesign,
     validateDigilibImage,
     validateImage,
-    validateJournalArticle,
     validateJournal,
+    validateJournalArticle,
     validateManuscript,
     validateNewspaperArticle,
     validatePatent,
@@ -47,7 +48,6 @@ import {
     validateThesis,
     validateVideo,
     validateWorkingPaper,
-    validateCreativeWork,
 } from './fields';
 
 import deepmerge from 'deepmerge';
