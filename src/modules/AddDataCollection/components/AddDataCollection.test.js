@@ -52,6 +52,7 @@ function setup(testProps) {
         actions: {
             logout: jest.fn(),
         },
+        resetForm: testProps.resetForm || jest.fn(),
         ...testProps,
     };
 
