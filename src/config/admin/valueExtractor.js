@@ -98,7 +98,7 @@ export default {
         getValue: record => record.rek_subtype,
     },
     languages: {
-        getValue: record => record.fez_record_search_key_language.map(language => language.rek_language),
+        getValue: record => (record.fez_record_search_key_language || []).map(language => language.rek_language),
     },
     fez_record_search_key_journal_name: {
         getValue: record => ({ ...record.fez_record_search_key_journal_name }),
@@ -181,7 +181,7 @@ export default {
     },
     subjects: {
         getValue: record =>
-            record.fez_record_search_key_subject.map(subject => ({
+            (record.fez_record_search_key_subject || []).map(subject => ({
                 rek_value: {
                     key: subject.rek_subject,
                     value: subject.rek_subject_lookup || `${subject.rek_subject} (cvo_id)`,

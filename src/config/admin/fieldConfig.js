@@ -16,6 +16,7 @@ import {
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
+    PUBLICATION_TYPE_GENERIC_DOCUMENT,
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
@@ -1562,6 +1563,12 @@ export default {
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
                 locale: locale.components.photographers.field,
+            }),
+        },
+        [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {
+            rek_date: () => ({
+                label: 'Date',
+                placeholder: 'Date',
             }),
         },
         [PUBLICATION_TYPE_IMAGE]: {
