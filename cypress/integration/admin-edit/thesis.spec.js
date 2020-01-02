@@ -20,16 +20,21 @@ context('Thesis admin edit', () => {
             .as('cards')
             .should('have.length', 7);
 
-        cy.get('.StandardPage form > div > div:nth-child(8)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
             });
 
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .should('exist')
+            .parent()
+            .should('be.enabled');
+
+        cy.wait(1000); // Wait for tabbing init
         cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed') // force the get to wait for the element
+            .should('have.value', 'tabbed')
             .click()
             .should('be.checked');
 
@@ -40,19 +45,18 @@ context('Thesis admin edit', () => {
 
     it('should render Thesis specific fields on the Bibliographic tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Title');
+                        cy.get('h4')
+                            .should('contain', 'Title');
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
@@ -64,10 +68,11 @@ context('Thesis admin edit', () => {
                             });
                     });
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('@cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Language of work');
+                        cy.get('h4')
+                            .should('contain', 'Language of work');
                         const langCodes = record.fez_record_search_key_language.map(lang => lang.rek_language);
                         cy.get('label[id="Language of work-label"]')
                             .parent()
@@ -77,10 +82,11 @@ context('Thesis admin edit', () => {
                             .should('have.length', 0); // If no matching codes found, there is a span present
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('@cards')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('[id="Totalpages/Extent"]')
                             .should(
@@ -107,7 +113,10 @@ context('Thesis admin edit', () => {
                             .should('have.text', record.rek_genre_type);
 
                         cy.get('#Institution-input')
-                            .should('have.value', record.fez_record_search_key_org_name.rek_org_name);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_org_name.rek_org_name,
+                            );
                         cy.get('#Schoolcentreorinstitute-input')
                             .should(
                                 'have.value',
@@ -115,10 +124,11 @@ context('Thesis admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(4) > .StandardCard')
+                cy.get('@cards')
+                    .eq(3)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Keyword(s)');
+                        cy.get('h4')
+                            .should('contain', 'Keyword(s)');
                         const keywords = record.fez_record_search_key_keywords.map(item => item.rek_keywords);
                         keywords.forEach((keyword, index) => {
                             cy.get('p')
@@ -127,10 +137,11 @@ context('Thesis admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(5) > .StandardCard')
+                cy.get('@cards')
+                    .eq(4)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Subject');
+                        cy.get('h4')
+                            .should('contain', 'Subject');
                         const subjects = record.fez_record_search_key_subject.map(item => item.rek_subject_lookup);
                         subjects.forEach((subject, index) => {
                             cy.get('p')
@@ -139,10 +150,11 @@ context('Thesis admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(6) > .StandardCard')
+                cy.get('@cards')
+                    .eq(5)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Related publications');
+                        cy.get('h4')
+                            .should('contain', 'Related publications');
                         const relatedPubs = record.fez_record_search_key_isderivationof.map(
                             item => item.rek_isderivationof_lookup,
                         );
@@ -162,7 +174,7 @@ context('Thesis admin edit', () => {
             .children('p')
             .should('have.text', 'This field is required');
 
-        cy.get('.StandardPage form > div > div:nth-child(8)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('exist')
@@ -173,25 +185,26 @@ context('Thesis admin edit', () => {
                     .should('contain', 'Enrolling unit is required');
             });
 
-        cy.get('.StandardPage form > div > div:nth-child(9) button')
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .parent()
             .should('be.disabled');
     });
 
     it('should render Thesis specific fields on the Author tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(4)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(3)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Author details');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Authors');
+                        cy.get('h4')
+                            .should('contain', 'Authors');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
                         authors.forEach((person, index) => {
                             cy.get('p')
@@ -200,10 +213,11 @@ context('Thesis admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('@cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Editors');
+                        cy.get('h4')
+                            .should('contain', 'Editors');
                         const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
                         contributors.forEach((person, index) => {
                             cy.get('p')
@@ -212,10 +226,11 @@ context('Thesis admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('@cards')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Supervisors');
+                        cy.get('h4')
+                            .should('contain', 'Supervisors');
                         const supervisors = record.fez_record_search_key_supervisor.map(item => item.rek_supervisor);
                         supervisors.forEach((person, index) => {
                             cy.get('p')
@@ -228,19 +243,18 @@ context('Thesis admin edit', () => {
 
     it('should render Thesis specific fields on the Additional Information tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(5)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(4)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Additional information');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Member of collections');
+                        cy.get('h4')
+                            .should('contain', 'Member of collections');
                         cy.get('#Memberofcollections-input-label')
                             .should('contain', 'Member of collections');
                         // prettier-ignore
@@ -254,10 +268,11 @@ context('Thesis admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('@cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Additional information');
+                        cy.get('h4')
+                            .should('contain', 'Additional information');
                         cy.get('label[id="OA status-label"]')
                             .parent()
                             .find('input[type=hidden]')
@@ -279,34 +294,36 @@ context('Thesis admin edit', () => {
 
     it('should render Thesis specific fields on the Files tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(6)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(5)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
+                    .eq(0)
                     .should('have.text', 'Files');
 
-                cy.get('div:nth-child(2) > div > div:nth-child(2) .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Files');
+                        cy.get('h4')
+                            .should('contain', 'Files');
                         // No visible files in mock
                     });
-                cy.get('div:nth-child(2) > div > div:nth-child(3) .StandardCard')
+                // cy.get('.AdminCard')
+                //     .eq(1)
+                //     .within(() => {
+                //         cy.get('h3')
+                //             .should('have.text', 'Advisory statement');
+                //         cy.get('span span')
+                //             .eq(0)
+                //             .should('have.text', 'Advisory statement');
+                //         // No advisory statement in mock
+                //     });
+                cy.get('@cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Advisory statement');
-                        cy.get('span span')
-                            .eq(0)
-                            .should('have.text', 'Advisory statement');
-                        // No advisory statement in mock
-                    });
-                cy.get('div:nth-child(2) > div > div:nth-child(4) .StandardCard')
-                    .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Copyright agreement');
+                        cy.get('h4')
+                            .should('contain', 'Copyright agreement');
                         cy.get('#deposit-agreement')
                             .should($checkbox => {
                                 if (record.rek_copyright === 'on') {
@@ -321,10 +338,10 @@ context('Thesis admin edit', () => {
 
     it('should render Thesis specific fields on the Security tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(7)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(7)
             .within(() => {
                 cy.root()
-                    .children('.StandardCard')
                     .children('div')
                     .children('div')
                     .children('h3')
@@ -333,7 +350,10 @@ context('Thesis admin edit', () => {
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
                         cy.get('h3')
-                            .should('have.text', `${record.rek_object_type_lookup} level security - ${record.rek_pid}`);
+                            .should(
+                                'have.text',
+                                `${record.rek_object_type_lookup} level security - ${record.rek_pid}`,
+                            );
                         cy.get('h6')
                             .eq(0)
                             .should('have.text', 'Inherited security policy details');
@@ -353,7 +373,7 @@ context('Thesis admin edit', () => {
                                 .contains('Override inherited security (detailed below)')
                                 .parent()
                                 .find('input')
-                                .should('be.not.checked');
+                                .should('not.be.checked');
                         }
                     });
                 cy.get('div:nth-child(2) > .StandardCard')
@@ -367,7 +387,7 @@ context('Thesis admin edit', () => {
                             .eq(5)
                             .should('have.text', 'Override datastream security policy details');
                         cy.get('a')
-                            .should('have.length', 9);
+                            .should('have.length', 22);
                     });
             });
     });

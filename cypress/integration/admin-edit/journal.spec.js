@@ -19,7 +19,7 @@ context('Journal admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('exist')
@@ -30,8 +30,10 @@ context('Journal admin edit', () => {
                     .should('contain', 'Journal name is required');
             });
 
-        cy.get('.StandardPage form > div > div:nth-child(10) button')
+        cy.get('.StandardPage form button')
+            .contains('Submit')
             .should('exist')
+            .parent()
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
@@ -51,19 +53,17 @@ context('Journal admin edit', () => {
 
     it('should render Journal specific fields on the Bibliographic tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(5) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(4)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('#Placeofpublication')
                             .should(
@@ -71,17 +71,29 @@ context('Journal admin edit', () => {
                                 record.fez_record_search_key_place_of_publication.rek_place_of_publication,
                             );
                         cy.get('#Publishername')
-                            .should('have.value', record.fez_record_search_key_publisher.rek_publisher);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_publisher.rek_publisher,
+                            );
                         cy.get('#Volume')
-                            .should('have.value', record.fez_record_search_key_volume_number.rek_volume_number);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_volume_number.rek_volume_number,
+                            );
                         cy.get('#Issue')
-                            .should('have.value', record.fez_record_search_key_issue_number.rek_issue_number);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_issue_number.rek_issue_number,
+                            );
                         cy.get('label[id="Refereed source-label"]')
                             .parent()
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
                             .siblings('[role=button]')
-                            .should('have.text', record.fez_record_search_key_refereed_source.rek_refereed_source_lookup);
+                            .should(
+                                'have.text',
+                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
+                            );
                     });
             });
     });

@@ -20,7 +20,7 @@ context('Digilib Image admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('exist')
@@ -32,8 +32,10 @@ context('Digilib Image admin edit', () => {
                     .should('contain', 'You are required to accept deposit agreement');
             });
 
-        cy.get('.StandardPage form > div > div:nth-child(10) button')
+        cy.get('.StandardPage form button')
+            .contains('Submit')
             .should('exist')
+            .parent()
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
@@ -58,19 +60,18 @@ context('Digilib Image admin edit', () => {
 
     it('should render Digilib Image specific fields on the Bibliographic tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('#Rights')
                             .should('have.value', record.fez_record_search_key_rights.rek_rights);
@@ -79,7 +80,10 @@ context('Digilib Image admin edit', () => {
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
                             .siblings('[role=button]')
-                            .should('have.text', record.fez_record_search_key_refereed_source.rek_refereed_source_lookup);
+                            .should(
+                                'have.text',
+                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
+                            );
                         cy.get('[placeholder="Construction date"]')
                             .should(
                                 'have.value',
@@ -89,7 +93,9 @@ context('Digilib Image admin edit', () => {
                             .should(
                                 'have.value',
                                 moment(record.fez_record_search_key_date_photo_taken.rek_date_photo_taken)
-                                    .format('DD/MM/YYYY'),
+                                    .format(
+                                        'DD/MM/YYYY',
+                                    ),
                             );
                         cy.get('[placeholder="Date photo scanned"]')
                             .should(
@@ -99,10 +105,11 @@ context('Digilib Image admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('@cards')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Related publications');
+                        cy.get('h4')
+                            .should('contain', 'Related publications');
                         const relatedPubs = record.fez_record_search_key_isderivationof.map(
                             item => item.rek_isderivationof_lookup,
                         );
@@ -113,10 +120,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(4) > .StandardCard')
+                cy.get('@cards')
+                    .eq(3)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Period(s)');
+                        cy.get('h4')
+                            .should('contain', 'Period(s)');
                         const pubs = record.fez_record_search_key_period.map(pub => pub.rek_period);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -125,10 +133,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(5) > .StandardCard')
+                cy.get('@cards')
+                    .eq(4)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Structural system(s)');
+                        cy.get('h4')
+                            .should('contain', 'Structural system(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_structural_systems.map(
                             pub => pub.rek_structural_systems
@@ -140,10 +149,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(6) > .StandardCard')
+                cy.get('@cards')
+                    .eq(5)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Style');
+                        cy.get('h4')
+                            .should('contain', 'Style');
                         const pubs = record.fez_record_search_key_style.map(pub => pub.rek_style);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -152,10 +162,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(7) > .StandardCard')
+                cy.get('@cards')
+                    .eq(6)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Subcategory(ies)');
+                        cy.get('h4')
+                            .should('contain', 'Subcategory(ies)');
                         const pubs = record.fez_record_search_key_subcategory.map(pub => pub.rek_subcategory);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -164,10 +175,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(8) > .StandardCard')
+                cy.get('@cards')
+                    .eq(7)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Surrounding feature(s)');
+                        cy.get('h4')
+                            .should('contain', 'Surrounding feature(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_surrounding_features.map(
                             pub => pub.rek_surrounding_features
@@ -179,10 +191,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(9) > .StandardCard')
+                cy.get('@cards')
+                    .eq(8)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Interior feature(s)');
+                        cy.get('h4')
+                            .should('contain', 'Interior feature(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_interior_features.map(
                             pub => pub.rek_interior_features
@@ -194,10 +207,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(10) > .StandardCard')
+                cy.get('@cards')
+                    .eq(9)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Building material(s)');
+                        cy.get('h4')
+                            .should('contain', 'Building material(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_building_materials.map(
                             pub => pub.rek_building_materials
@@ -209,10 +223,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(11) > .StandardCard')
+                cy.get('@cards')
+                    .eq(10)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Category(ies)');
+                        cy.get('h4')
+                            .should('contain', 'Category(ies)');
                         const pubs = record.fez_record_search_key_category.map(pub => pub.rek_category);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -221,10 +236,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(12) > .StandardCard')
+                cy.get('@cards')
+                    .eq(11)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Condition(s)');
+                        cy.get('h4')
+                            .should('contain', 'Condition(s)');
                         const pubs = record.fez_record_search_key_condition.map(pub => pub.rek_condition);
                         pubs.forEach((pub, index) => {
                             cy.get('p')
@@ -233,10 +249,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(13) > .StandardCard')
+                cy.get('@cards')
+                    .eq(12)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Alternative title(s)');
+                        cy.get('h4')
+                            .should('contain', 'Alternative title(s)');
                         // prettier-ignore
                         const pubs = record.fez_record_search_key_alternative_title.map(
                             pub => pub.rek_alternative_title
@@ -248,10 +265,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(14) > .StandardCard')
+                cy.get('@cards')
+                    .eq(13)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Architectural feature(s)');
+                        cy.get('h4')
+                            .should('contain', 'Architectural feature(s)');
                         const pubs = record.fez_record_search_key_architectural_features.map(
                             pub => pub.rek_architectural_features,
                         );
@@ -266,19 +284,18 @@ context('Digilib Image admin edit', () => {
 
     it('should render Author details tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(4)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(3)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Author details');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Architects');
+                        cy.get('h4')
+                            .should('contain', 'Architects');
                         // prettier-ignore
                         const architects = record.fez_record_search_key_architect_name.map(
                             item => item.rek_architect_name
@@ -290,10 +307,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('@cards')
+                    .eq(1)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Photographers');
+                        cy.get('h4')
+                            .should('contain', 'Photographers');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
                         authors.forEach((author, index) => {
                             cy.get('p')
@@ -302,10 +320,11 @@ context('Digilib Image admin edit', () => {
                         });
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('@cards')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Other contributors');
+                        cy.get('h4')
+                            .should('contain', 'Other contributors');
                         const contributors = record.fez_record_search_key_contributor.map(item => item.rek_contributor);
                         contributors.forEach((contributor, index) => {
                             cy.get('p')

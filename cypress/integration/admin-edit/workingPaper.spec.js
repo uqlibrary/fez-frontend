@@ -19,16 +19,21 @@ context('Working paper admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
             });
 
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .should('exist')
+            .parent()
+            .should('be.enabled');
+
+        cy.wait(1000); // Wait for tabbing init
         cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed') // force the get to wait for the element
+            .should('have.value', 'tabbed')
             .click()
             .should('be.checked');
 
@@ -39,19 +44,18 @@ context('Working paper admin edit', () => {
 
     it('should render Working Paper specific fields on the Bibliographic tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Title');
+                        cy.get('h4')
+                            .should('contain', 'Title');
                         cy.get('span span')
                             .eq(0)
                             .should('contain.text', 'Formatted title');
@@ -63,17 +67,21 @@ context('Working paper admin edit', () => {
                             });
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('@cards')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
                         cy.get('#Reportnumber')
                             .should(
                                 'have.value',
                                 record.fez_record_search_key_report_number.rek_report_number,
                             );
                         cy.get('#Institution-input')
-                            .should('have.value', record.fez_record_search_key_org_name.rek_org_name);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_org_name.rek_org_name,
+                            );
                         cy.get('#Schooldepartmentorcentre-input')
                             .should(
                                 'have.value',

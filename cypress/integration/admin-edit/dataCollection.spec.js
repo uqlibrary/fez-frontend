@@ -19,24 +19,22 @@ context('Data Collection admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        // validation block
-        // Disabled until a fix is merged
-        // cy.get('.StandardPage form > div > div:nth-child(9)')
-        //     .within(() => {
-        //         cy.get('.Alert')
-        //             .should('exist')
-        //             .find('.alert-text')
-        //             .should('contain', 'Validation -')
-        //             .find('li')
-        //             .should('have.length', 3)
-        //             .should('contain', 'Project description is required')
-        //             .should('contain', 'You are required to accept deposit agreement')
-        //             .should('contain', 'Rights is required');
-        //     });
+        cy.get('.StandardPage form > div:nth-child(2)')
+            .within(() => {
+                cy.get('.Alert')
+                    .should('exist')
+                    .find('.alert-text')
+                    .should('contain', 'Validation -')
+                    .find('li')
+                    .should('have.length', 1)
+                    .should('contain', 'Publication date is required');
+            });
 
         // submit button block
-        cy.get('.StandardPage form > div > div:nth-child(10) button')
+        cy.get('.StandardPage form button')
+            .contains('Submit')
             .should('exist')
+            .parent()
             .should('be.disabled');
 
         cy.get('input[value=tabbed]')
@@ -48,32 +46,22 @@ context('Data Collection admin edit', () => {
             .should('have.length', 1)
             .should('have.text', 'Bibliographic');
 
-        // Disabled until a fix is merged
-        // cy.get('[role="tab"]')
-        //     .eq(2)
-        //     .find('[class*="MuiBadge-colorError"]')
-        //     .should('have.text', '1');
+        cy.get('[role="tab"]')
+            .eq(2)
+            .find('[class*="MuiBadge-colorError"]')
+            .should('have.text', '1');
 
-        // cy.get('[role="tab"]')
-        //     .eq(4)
-        //     .find('[class*="MuiBadge-colorError"]')
-        //     .should('have.text', '1');
-
-        // cy.get('[role="tab"]')
-        //     .eq(6)
-        //     .find('[class*="MuiBadge-colorError"]')
-        //     .should('have.text', '1');
+        cy.log('Finished testing tabs'); // This makes the test suite a bit more stable. It's magic :p
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
+            .find('.AdminCard')
+            .eq(0)
             .within(() => {
-                cy.get('div:nth-child(1) > .StandardCard')
-                    .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Dataset name');
-                    });
+                cy.get('h4')
+                    .should('contain', 'Dataset name');
             });
     });
 });

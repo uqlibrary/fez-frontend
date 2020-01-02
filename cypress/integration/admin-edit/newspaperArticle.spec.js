@@ -19,13 +19,17 @@ context('Newspaper Article admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
             });
+
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .should('exist')
+            .parent()
+            .should('be.enabled');
 
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
@@ -39,19 +43,17 @@ context('Newspaper Article admin edit', () => {
 
     it('should render Newspaper Article specific fields on the Bibliographic tab', () => {
         cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(4) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(3)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('#Placeofpublication')
                             .should(
@@ -59,7 +61,10 @@ context('Newspaper Article admin edit', () => {
                                 record.fez_record_search_key_place_of_publication.rek_place_of_publication,
                             );
                         cy.get('#Publishername')
-                            .should('have.value', record.fez_record_search_key_publisher.rek_publisher);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_publisher.rek_publisher,
+                            );
                         cy.get('#Edition')
                             .should('have.value', record.fez_record_search_key_edition.rek_edition);
                         cy.get('#Newspaper')

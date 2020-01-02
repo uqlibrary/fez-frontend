@@ -19,13 +19,18 @@ context('Conference Paper admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
                 cy.get('button')
+                    .contains('Submit')
+                    .should('exist')
+                    .parent()
                     .should('be.enabled');
             });
+
+        cy.wait(1000); // Wait for tabbing to fully load
 
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
@@ -38,26 +43,22 @@ context('Conference Paper admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .as('bibliographicTab')
             .within(() => {
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Title of paper');
+                        cy.get('h4')
+                            .should('contain', 'Title of paper');
                     });
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Conference name');
-                    });
-
-                cy.get('div:nth-child(3) > .StandardCard')
-                    .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Conference name');
+                        cy.get('h4')
+                            .should('contain', 'Conference name');
                         cy.get('#Conferencename')
                             .should(
                                 'have.value',
@@ -84,10 +85,11 @@ context('Conference Paper admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(4) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(3)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Conference details');
+                        cy.get('h4')
+                            .should('contain', 'Conference details');
                         cy.get('#Conferencelocation')
                             .should(
                                 'have.value',
@@ -100,10 +102,11 @@ context('Conference Paper admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(5) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(4)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Proceedings title');
+                        cy.get('h4')
+                            .should('contain', 'Proceedings title');
                         cy.get('#Proceedingstitle')
                             .should(
                                 'have.value',
@@ -141,10 +144,11 @@ context('Conference Paper admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(6) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(5)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Journal name');
+                        cy.get('h4')
+                            .should('contain', 'Journal name');
                         cy.get('#Journalname')
                             .should(
                                 'have.value',
@@ -176,10 +180,11 @@ context('Conference Paper admin edit', () => {
                             );
                     });
 
-                cy.get('div:nth-child(9) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(8)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
                         cy.get('#Series-input')
                             .should('have.value', record.fez_record_search_key_series.rek_series);
                         cy.get('#Articlenumber')
@@ -199,7 +204,7 @@ context('Conference Paper admin edit', () => {
             cy.get('@bibliographicTab')
                 .find(selector)
                 .clear();
-            cy.get('.StandardPage form > div > div:nth-child(9) .Alert .alert-text li')
+            cy.get('.StandardPage form > div:nth-child(2) .Alert .alert-text li')
                 .should('have.length', index + 1)
                 .eq(index)
                 .should('have.text', errorMessages[index]);
