@@ -19,29 +19,12 @@ export default {
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['rek_genre'],
-                ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_source'],
-                ['fez_record_search_key_rights'],
-                ['fez_record_search_key_license'],
                 ['fez_record_search_key_refereed_source'],
-                ['fez_record_search_key_acknowledgements'],
             ],
         },
         {
-            title: 'Geographic co-ordinates',
-            groups: [['geoCoordinates']],
-        },
-        // {
-        //     title: 'Keyword(s)',
-        //     groups: [['fez_record_search_key_keywords']],
-        // },
-        {
             title: 'Subject',
             groups: [['subjects']],
-        },
-        {
-            title: 'Related publications', // Succeeds
-            groups: [['fez_record_search_key_isderivationof']],
         },
     ],
     authors: () => [
