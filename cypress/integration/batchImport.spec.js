@@ -55,8 +55,10 @@ context('Batch import', () => {
     });
 
     it('should show collections filtered by selected community', () => {
+        cy.waitUntil(() => cy.get('#communityPID')
+            .then($el => $el.attr('class')
+                .indexOf('-disabled') === -1));
         cy.get('#communityPID')
-            .should('exist')
             .click();
         cy.get('#menu-')
             .find('li[role=option]')
@@ -78,8 +80,10 @@ context('Batch import', () => {
             cy.get('.content-container form .Alert .alert-text li')
                 .should('exist');
 
+            cy.waitUntil(() => cy.get(item)
+                .then($el => $el.attr('class')
+                    .indexOf('-disabled') === -1));
             cy.get(item)
-                .should('exist')
                 .click();
             cy.get('#menu- li[role=option]:first-of-type')
                 .should('exist')
@@ -94,8 +98,10 @@ context('Batch import', () => {
     it('should be able to reset the form on successful form submission', () => {
         // select the first entry from each of the 4 drop downs
         allFieldIDs.forEach(item => {
+            cy.waitUntil(() => cy.get(item)
+                .then($el => $el.attr('class')
+                    .indexOf('-disabled') === -1));
             cy.get(item)
-                .should('exist')
                 .click();
             cy.get('#menu- li[role=option]:first-of-type')
                 .should('exist')
