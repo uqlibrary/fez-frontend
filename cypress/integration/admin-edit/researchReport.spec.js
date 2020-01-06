@@ -19,13 +19,17 @@ context('Research Report admin edit', () => {
             .as('cards')
             .should('have.length', 9);
 
-        cy.get('.StandardPage form > div > div:nth-child(10)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
             });
+
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .should('exist')
+            .parent()
+            .should('be.enabled');
 
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
@@ -38,20 +42,17 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(5) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(4)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('#ParentPublication')
                             .should(
@@ -60,7 +61,10 @@ context('Research Report admin edit', () => {
                             );
 
                         cy.get('#Startpage')
-                            .should('have.value', record.fez_record_search_key_start_page.rek_start_page);
+                            .should(
+                                'have.value',
+                                record.fez_record_search_key_start_page.rek_start_page,
+                            );
                         cy.get('#Endpage')
                             .should('have.value', record.fez_record_search_key_end_page.rek_end_page);
                         cy.get('[id="Totalpages/Extent"]')
@@ -73,7 +77,10 @@ context('Research Report admin edit', () => {
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
                             .siblings('[role=button]')
-                            .should('have.text', record.fez_record_search_key_refereed_source.rek_refereed_source_lookup);
+                            .should(
+                                'have.text',
+                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
+                            );
                         cy.get('#Reportnumber')
                             .should(
                                 'have.value',
@@ -84,20 +91,17 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Grants tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(7)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(6)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Grant information');
 
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Grant information');
+                        cy.get('h4')
+                            .should('contain', 'Grant information');
 
                         const numberItemsInRow = 3;
                         record.fez_record_search_key_grant_agency.map((pub, index) => {

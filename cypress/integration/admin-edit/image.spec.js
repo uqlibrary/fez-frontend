@@ -19,13 +19,17 @@ context('Image admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
             });
+
+        cy.get('.StandardPage form button')
+            .contains('Submit')
+            .should('exist')
+            .parent()
+            .should('be.enabled');
 
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
@@ -38,22 +42,17 @@ context('Image admin edit', () => {
     });
 
     it('should render Image specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        const baseUrl = Cypress.config('baseUrl');
-        console.log('baseUrl = ', baseUrl);
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.root()
-                    .children('.StandardCard')
-                    .children('div')
-                    .children('div')
-                    .children('h3')
+                cy.get('h3')
                     .should('have.text', 'Bibliographic');
 
-                cy.get('div:nth-child(3) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(2)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Bibliographic');
+                        cy.get('h4')
+                            .should('contain', 'Bibliographic');
 
                         cy.get('#Type')
                             .should('have.value', record.rek_genre);
@@ -67,7 +66,10 @@ context('Image admin edit', () => {
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_refereed_source.rek_refereed_source)
                             .siblings('[role=button]')
-                            .should('have.text', record.fez_record_search_key_refereed_source.rek_refereed_source_lookup);
+                            .should(
+                                'have.text',
+                                record.fez_record_search_key_refereed_source.rek_refereed_source_lookup,
+                            );
                         cy.get('#Source')
                             .should('have.value', record.fez_record_search_key_source.rek_source);
                         cy.get('#Rights')

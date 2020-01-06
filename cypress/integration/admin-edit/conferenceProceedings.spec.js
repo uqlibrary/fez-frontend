@@ -7,7 +7,7 @@ context('Conference Proceedings admin edit', () => {
         dsi_label: visibleFileDescription,
         dsi_security_policy: visibleFileSecurityPolicy,
     } = record.fez_datastream_info[0];
-    const { dsi_dsid: hiddenFilename } = record.fez_datastream_info[1];
+    // const { dsi_dsid: hiddenFilename } = record.fez_datastream_info[1];
 
     beforeEach(() => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
@@ -25,7 +25,7 @@ context('Conference Proceedings admin edit', () => {
             .as('cards')
             .should('have.length', 8);
 
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('exist')
@@ -34,11 +34,14 @@ context('Conference Proceedings admin edit', () => {
                     .find('li')
                     .should('have.length', 1)
                     .should('contain', 'Author/creator names are required');
+                cy.get('button')
+                    .contains('Submit')
+                    .should('exist')
+                    .parent()
+                    .should('be.disabled');
             });
 
-        cy.get('.StandardPage form > div > div:nth-child(10) button')
-            .should('exist')
-            .should('be.disabled');
+        cy.wait(1000); // Wait for tabbing to fully load
 
         cy.get('input[value=tabbed]')
             .should('have.value', 'tabbed') // force the get to wait for the element
@@ -56,30 +59,32 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(3)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(2)
             .within(() => {
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Title of proceedings');
+                        cy.get('h4')
+                            .should('contain', 'Title of proceedings');
                     });
             });
     });
 
     it('should render Author details tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(4)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(3)
             .within(() => {
-                cy.get('div:nth-child(1) > .StandardCard')
+                cy.get('.AdminCard')
+                    .eq(0)
                     .within(() => {
-                        cy.get('h3')
-                            .should('have.text', 'Authors');
+                        cy.get('h4')
+                            .should('contain', 'Authors');
                         cy.get('#authors-name-as-published-field')
                             .type('Author{enter}');
                     });
             });
-        cy.get('.StandardPage form > div > div:nth-child(9)')
+        cy.get('.StandardPage form > div:nth-child(2)')
             .within(() => {
                 cy.get('.Alert')
                     .should('not.exist');
@@ -89,8 +94,8 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Files tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(7)')
+        cy.get('.StandardPage form .StandardCard')
+            .eq(6)
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
@@ -101,8 +106,10 @@ context('Conference Proceedings admin edit', () => {
                             .within(() => {
                                 cy.get(`a[title="${visibleFilename}"]`)
                                     .should('have.length', 1);
-                                cy.get(`a[title="${hiddenFilename}"]`)
-                                    .should('have.length', 0);
+
+                                // TODO: Write test for file hidden as per new logic
+                                // cy.get(`a[title="${hiddenFilename}"]`)
+                                //     .should('have.length', 0);
 
                                 cy.get('input[name=fileDescription]')
                                     .should('have.value', visibleFileDescription);
@@ -112,14 +119,14 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should render Security tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-        cy.get('.StandardPage form > div > div:nth-child(8)')
+        cy.get('.StandardPage form > div > div:nth-child(8) > .StandardCard')
             .within(() => {
-                cy.get('h3')
-                    .eq(2)
+                cy.get('.StandardCard h3')
+                    .eq(1)
                     .should('have.text', `Datastream level security - ${record.rek_pid}`);
 
-                cy.get('div:nth-child(2) > .StandardCard')
+                cy.get('.StandardCard')
+                    .eq(1)
                     .within(() => {
                         cy.get('h6')
                             .eq(0)
