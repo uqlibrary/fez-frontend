@@ -12,7 +12,7 @@ const mapStateToProps = (state, props) => {
                 ? state.get('searchKeysReducer')[category].itemsList.filter(item => !!item.id && item.id !== 0)
                 : [],
         onChange: item => {
-            if (!item.id) {
+            if (!item.id && !!props.input) {
                 props.input.onChange(null);
             } else if (!item.id || isNaN(parseInt(item.id, 10))) {
                 !!props.input
