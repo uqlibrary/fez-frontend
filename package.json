@@ -31,7 +31,6 @@
         "@babel/preset-react": "^7.0.0",
         "@babel/register": "^7.0.0",
         "@babel/runtime-corejs2": "^7.0.0",
-        "@percy/cypress": "^2.2.0",
         "@sentry/webpack-plugin": "^1.5.2",
         "@types/enzyme": "^3.1.16",
         "@types/file-saver": "^2.0.1",
@@ -214,7 +213,6 @@
         "cypress:open": "cypress open",
         "cypress:watch": "cypress run --headed",
         "cypress:run": "cypress run",
-        "percy:run": "percy exec -- cypress run",
         "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
         "e2e:dashboard": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --parallel --config video=true'",
         "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
@@ -361,12 +359,5 @@
             "<rootDir>/src/jest.setup.js"
         ],
         "testURL": "http://fez-staging.library.uq.edu.au"
-    },
-    "percy": {
-        "version": 1,
-        "snapshot": {
-            "widths": [1000],
-            "min-height": 2000
-        }
     }
 }
