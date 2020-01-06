@@ -201,7 +201,7 @@
         "start:build:e2e": "cross-env NODE_ENV=production URL=localhost USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server --config=./webpack-dist.config",
         "test": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest",
         "test:unit": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.js",
-        "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest integration.test.js --no-coverage",
+        "test:integration": "cross-env NODE_ENV=test FULL_PATH=http://localhost jest test.integration.js --no-coverage",
         "test:watch": "npm run test -- --watch --onlyChanged",
         "test:update": "npm run test -- --updateSnapshot",
         "test-unit": "node $NODE_DEBUG_OPTION ./node_modules/lab/bin/lab ./test/unit --pattern \"^[^_]\"",
