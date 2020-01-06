@@ -10,14 +10,11 @@ context('Conference Proceedings admin edit', () => {
     // const { dsi_dsid: hiddenFilename } = record.fez_datastream_info[1];
 
     beforeEach(() => {
-        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
-        cy.closeUnsupported();
-        cy.wait(1000); // Wait for data load
+        cy.loadRecordForAdminEdit(record.rek_pid);
     });
 
     afterEach(() => {
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+        cy.adminEditCleanup();
     });
 
     it('should load expected tabs', () => {
