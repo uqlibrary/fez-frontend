@@ -4,14 +4,11 @@ context('Journal admin edit', () => {
     const record = recordList.data[0];
 
     beforeEach(() => {
-        cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
-        cy.closeUnsupported();
-        cy.wait(1000); // Wait for data load
+        cy.loadRecordForAdminEdit(record.rek_pid);
     });
 
     afterEach(() => {
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+        cy.adminEditCleanup();
     });
 
     it('should load with specifed elements', () => {

@@ -62,6 +62,28 @@ Cypress.Commands.add('read_ckeditor', element => {
         });
 });
 
+Cypress.Commands.add('loadRecordForAdminEdit', pid => {
+    cy.visit(`/admin/edit/${pid}?user=uqstaff`);
+    cy.closeUnsupported();
+    cy.wait(1000); // Wait for data load
+});
+
+Cypress.Commands.add('adminEditCleanup', () => {
+    cy.window()
+        .then(win => {
+        // Unset page unload handler
+            win.onbeforeunload = undefined;
+
+            // Unload CKEditor instances
+            win.CKEDITOR &&
+            Object.keys(win.CKEDITOR.instances)
+                .forEach(editor => {
+                    win.CKEDITOR.instances[editor].removeAllListeners();
+                    win.CKEDITOR.remove(win.CKEDITOR.instances[editor]);
+                });
+        });
+});
+
 Cypress.Commands.add('closeUnsupported', () => {
     cy.get('#unsupportedBrowser.card button')
         .then($button => {
