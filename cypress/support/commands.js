@@ -24,6 +24,22 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+/**
+ * Visual snapshots with Percy.io (hosted)
+ * https://docs.cypress.io/guides/tooling/visual-testing.html#Percy
+ *
+ * Breakpoints for the project are at these widths: 600, 960, 1280.
+ * Percy uses an uploaded DOM snapshot to test different widths, but can only account for
+ * CSS media query changes to the layout depending on resolution. So to take screenshots of
+ * non-CSS changes between resolutions, you must set the viewport resolution as in the example:
+ *     cy.viewport(1280)
+ *       .percySnapshot('Desktop - Home', { widths: [1280] })
+ *       .viewport(480)
+ *       .percySnapshot('Mobile - Home', { widths: [480] })
+ * The default resolution for Cypress is 1000 x 660.
+ */
+import '@percy/cypress';
+
 // Allows the targeting of CKEditors
 // CKeditor dynamically names instances as "editor1", "editor2" etc.
 // USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
@@ -97,4 +113,20 @@ Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
                 .get(0);
             expect(body).to.be.ok;
         });
+
+Cypress.Commands.add('percyDeviceSnapshot', (type, title = 'Snapshot', options = {}) => {
+    const widths = {
+        mobile: 480,
+        tablet: 600,
+        desktop: 960,
+        wide: 1280,
+    };
+    const viewportHeight = 2000;
+    const viewportWidth = widths[type];
+    cy.viewport(viewportWidth, viewportHeight);
+    cy.wait(1000); // Allow time for resize handlers to fire
+    cy.percySnapshot(`${title} - ${type}`, {
+        ...options,
+        widths: [viewportWidth],
+    });
 });
