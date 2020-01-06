@@ -94,11 +94,15 @@ export class LinksClass extends PureComponent {
     };
 
     getPublicationLink = (link, index, openAccessStatus = {}) => {
+        const isRDM = !!link.rek_link.match(/^https?:\/\/[a-z0-9\-]*\.?rdm\.uq\.edu\.au/i);
+        const defaultDescription = isRDM
+            ? locale.viewRecord.sections.links.rdmLinkMissingDescriptionTitle
+            : locale.viewRecord.sections.links.linkMissingDescriptionTitle;
         const linkDescription =
             (this.props.publication.fez_record_search_key_link_description &&
                 this.props.publication.fez_record_search_key_link_description[index] &&
                 this.props.publication.fez_record_search_key_link_description[index].rek_link_description) ||
-            locale.viewRecord.sections.links.linkMissingDescriptionTitle;
+            defaultDescription;
         return {
             index: index,
             link: (
