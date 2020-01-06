@@ -42,7 +42,6 @@ context('Video admin edit', () => {
     });
 
     it('should render Video specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {

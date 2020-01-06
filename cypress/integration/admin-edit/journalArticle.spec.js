@@ -54,7 +54,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Admin tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(0)
             .within(() => {
@@ -84,7 +83,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Identifiers tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(1)
             .within(() => {
@@ -142,7 +140,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -368,7 +365,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Author details tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -424,7 +420,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Additional information tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
@@ -536,7 +531,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Grant information tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
@@ -554,7 +548,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Files tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         const record = recordList.data[1];
 
         cy.window()
@@ -563,7 +556,6 @@ context('Journal Article admin edit', () => {
         cy.visit(`/admin/edit/${record.rek_pid}?user=uqstaff`);
         cy.closeUnsupported();
         cy.wait(1000); // Wait for data load
-        cy.waitForCkeditorToHaveLoaded();
 
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
@@ -653,7 +645,6 @@ context('Journal Article admin edit', () => {
     });
 
     it('should render Security tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(8)
             .within(() => {

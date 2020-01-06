@@ -42,7 +42,6 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -92,7 +91,6 @@ context('Research Report admin edit', () => {
     });
 
     it('should render Research Report specific fields on the Grants tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .within(() => {

@@ -59,7 +59,6 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should render Digilib Image specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -283,7 +282,6 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should render Author details tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {

@@ -42,7 +42,6 @@ context('Newspaper Article admin edit', () => {
     });
 
     it('should render Newspaper Article specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {

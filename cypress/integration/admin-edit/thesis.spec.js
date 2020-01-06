@@ -44,7 +44,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -192,7 +191,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Author tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -242,7 +240,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Additional Information tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
             .within(() => {
@@ -293,7 +290,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Files tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
@@ -337,7 +333,6 @@ context('Thesis admin edit', () => {
     });
 
     it('should render Thesis specific fields on the Security tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(7)
             .within(() => {

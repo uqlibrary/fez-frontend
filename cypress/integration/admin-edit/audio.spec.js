@@ -78,7 +78,6 @@ context('Audio admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .find('.AdminCard')
@@ -165,7 +164,6 @@ context('Audio admin edit', () => {
     });
 
     it('should render Files tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .as('filesTab')

@@ -24,10 +24,23 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
+/**
+ * Allows waiting until certain conditions are satisfied.
+ * https://www.npmjs.com/package/cypress-wait-until
+ */
+import 'cypress-wait-until';
+
+const waitForCKEditorInstance = instanceName =>
+    cy.waitUntil(() =>
+        cy.window()
+            .then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
+    );
+
 // Allows the targeting of CKEditors
 // CKeditor dynamically names instances as "editor1", "editor2" etc.
 // USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
 Cypress.Commands.add('type_ckeditor', (element, content) => {
+    waitForCKEditorInstance(element);
     cy.window()
         .then(win => {
             win.CKEDITOR.instances[element].setData(content);
@@ -42,6 +55,7 @@ Cypress.Commands.add('type_ckeditor', (element, content) => {
 //             .should('eq', expected);
 //     });
 Cypress.Commands.add('read_ckeditor', element => {
+    waitForCKEditorInstance(element);
     cy.window()
         .then(win => {
             return win.CKEDITOR.instances[element].getData();
@@ -79,22 +93,5 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
                     .contains(locale.confirmButtonLabel)
                     .click();
             }
-        });
-});
-
-/**
- * ckeditor takes a moment to load, making tests fail randomly
- * Call this after a page with a rich editor loads, to make sure at least the first editor has loaded,
- * before you start looking for elements
- * note: the first test in admin-edit where we check the tabs are present, does NOT like this test!
- */
-Cypress.Commands.add('waitForCkeditorToHaveLoaded', () => {
-    cy.get('#cke_editor1 iframe')
-        .should($iframe => {
-            const body = $iframe
-                .contents()
-                .find('body')
-                .get(0);
-            expect(body).to.be.ok;
         });
 });

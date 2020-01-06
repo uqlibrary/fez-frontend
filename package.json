@@ -74,6 +74,7 @@
         "cypress": "^3.8.1",
         "cypress-file-upload": "^3.2.0",
         "cypress-plugin-tab": "^1.0.1",
+        "cypress-wait-until": "^1.6.1",
         "dom-testing-library": "^3.17.1",
         "dotenv-webpack": "^1.7.0",
         "enzyme": "^3.9.0",

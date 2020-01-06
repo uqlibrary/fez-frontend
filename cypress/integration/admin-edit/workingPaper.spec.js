@@ -43,7 +43,6 @@ context('Working paper admin edit', () => {
     });
 
     it('should render Working Paper specific fields on the Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {

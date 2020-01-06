@@ -59,8 +59,6 @@ context('Design admin edit', () => {
     });
 
     it('should render Bibliographic tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .find('.AdminCard')
@@ -116,8 +114,6 @@ context('Design admin edit', () => {
     });
 
     it('should render Author details tab', () => {
-        cy.waitForCkeditorToHaveLoaded();
-
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .find('.AdminCard')
