@@ -14,13 +14,14 @@ import { NtroFields } from 'modules/SharedComponents/Toolbox/NtroFields';
 import { validation } from 'config';
 import { default as formLocale } from 'locale/publicationForm';
 import {
-    RRW_NTRO_SUBTYPES,
-    LP_NTRO_SUBTYPES,
     CPEE_NTRO_SUBTYPES,
+    LP_NTRO_SUBTYPES,
+    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
     NTRO_SUBTYPE_CW_MUSICAL_COMPOSITION,
     NTRO_SUBTYPE_CW_OTHER,
     NTRO_SUBTYPE_CW_TEXTUAL_WORK,
-    NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT,
+    NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK,
+    RRW_NTRO_SUBTYPES,
 } from 'config/general';
 import moment from 'moment';
 
@@ -38,7 +39,13 @@ export default class CreativeWorkForm extends Component {
     }
 
     render() {
-        const txt = formLocale.creativeWork;
+        let txt = formLocale.creativeWork;
+        if (this.props.subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK) {
+            txt = {
+                ...formLocale.creativeWork,
+                ...formLocale.design,
+            };
+        }
         const formValues = this.props.formValues && this.props.formValues.toJS();
         const startDate = formValues && formValues.rek_date;
         const endDate =
@@ -51,86 +58,184 @@ export default class CreativeWorkForm extends Component {
                 : '';
         return (
             <Grid container spacing={24}>
-                <Grid item xs={12}>
-                    <StandardCard title={txt.information.title} help={txt.information.help}>
-                        <Grid container spacing={16}>
-                            <Grid item xs={12}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    autoFocus={!this.props.isNtro}
-                                    name="rek_title"
-                                    type="text"
-                                    fullWidth
-                                    {...txt.information.fieldLabels.articleTitle}
-                                    required
-                                    validate={[validation.required]}
-                                />
+                {this.props.subtype !== NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK && (
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.information.title} help={txt.information.help}>
+                            <Grid container spacing={16}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        autoFocus={!this.props.isNtro}
+                                        name="rek_title"
+                                        type="text"
+                                        fullWidth
+                                        {...txt.information.fieldLabels.articleTitle}
+                                        required
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}
+                                >
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                        type="text"
+                                        fullWidth
+                                        required
+                                        validate={[validation.required]}
+                                        {...txt.information.fieldLabels.placeOfPublication}
+                                    />
+                                </Grid>
+                                <Grid
+                                    item
+                                    xs={12}
+                                    sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}
+                                >
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_publisher.rek_publisher"
+                                        type="text"
+                                        fullWidth
+                                        required
+                                        validate={[validation.required]}
+                                        {...txt.information.fieldLabels.publisher}
+                                    />
+                                </Grid>
+                                {this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT && (
+                                    <Grid item xs={12} sm={4}>
+                                        <Field
+                                            component={TextField}
+                                            disabled={this.props.submitting}
+                                            name="fez_record_search_key_doi.rek_doi"
+                                            type="text"
+                                            fullWidth
+                                            validate={[validation.doi]}
+                                            {...txt.information.fieldLabels.doi}
+                                        />
+                                    </Grid>
+                                )}
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={PartialDateField}
+                                        disabled={this.props.submitting}
+                                        name="rek_date"
+                                        allowPartial
+                                        required
+                                        className="requiredHintField"
+                                        validate={[validation.required]}
+                                        floatingTitle={txt.information.fieldLabels.date.title}
+                                        floatingTitleRequired
+                                        hasError={dateError}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={PartialDateField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_end_date.rek_end_date"
+                                        allowPartial
+                                        floatingTitle={txt.information.fieldLabels.endDate.title}
+                                        hasError={dateError}
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_place_of_publication.rek_place_of_publication"
-                                    type="text"
-                                    fullWidth
-                                    required
-                                    validate={[validation.required]}
-                                    {...txt.information.fieldLabels.placeOfPublication}
-                                />
-                            </Grid>
-                            <Grid item xs={12} sm={this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT ? 4 : 6}>
-                                <Field
-                                    component={TextField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_publisher.rek_publisher"
-                                    type="text"
-                                    fullWidth
-                                    required
-                                    validate={[validation.required]}
-                                    {...txt.information.fieldLabels.publisher}
-                                />
-                            </Grid>
-                            {this.props.subtype !== NTRO_SUBTYPE_CPEE_EXHIBITION_EVENT && (
+                        </StandardCard>
+                    </Grid>
+                )}
+                {this.props.subtype === NTRO_SUBTYPE_CW_DESIGN_ARCHITECTURAL_WORK && (
+                    <Grid item xs={12}>
+                        <StandardCard title={txt.information.title} help={txt.information.help}>
+                            <Grid container spacing={16}>
+                                <Grid item xs={12}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        autoFocus={!this.props.isNtro}
+                                        name="rek_title"
+                                        type="text"
+                                        fullWidth
+                                        {...txt.information.fieldLabels.articleTitle}
+                                        required
+                                        validate={[validation.required]}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={12}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_project_name.rek_project_name"
+                                        type="text"
+                                        fullWidth
+                                        {...txt.information.fieldLabels.projectName}
+                                    />
+                                </Grid>
                                 <Grid item xs={12} sm={4}>
                                     <Field
                                         component={TextField}
                                         disabled={this.props.submitting}
-                                        name="fez_record_search_key_doi.rek_doi"
+                                        name="fez_record_search_key_location[0].rek_location"
                                         type="text"
                                         fullWidth
-                                        validate={[validation.doi]}
-                                        {...txt.information.fieldLabels.doi}
+                                        {...txt.information.fieldLabels.location}
                                     />
                                 </Grid>
-                            )}
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="rek_date"
-                                    allowPartial
-                                    required
-                                    className="requiredHintField"
-                                    validate={[validation.required]}
-                                    floatingTitle={txt.information.fieldLabels.date.title}
-                                    floatingTitleRequired
-                                    hasError={dateError}
-                                />
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_publisher.rek_publisher"
+                                        type="text"
+                                        fullWidth
+                                        required
+                                        validate={[validation.required]}
+                                        {...txt.information.fieldLabels.publisher}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={4}>
+                                    <Field
+                                        component={TextField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_place_of_publication.rek_place_of_publication"
+                                        type="text"
+                                        fullWidth
+                                        required
+                                        validate={[validation.required]}
+                                        {...txt.information.fieldLabels.placeOfPublication}
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={PartialDateField}
+                                        disabled={this.props.submitting}
+                                        name="rek_date"
+                                        allowPartial
+                                        required
+                                        className="requiredHintField"
+                                        validate={[validation.required]}
+                                        floatingTitle={txt.information.fieldLabels.date.title}
+                                        floatingTitleRequired
+                                    />
+                                </Grid>
+                                <Grid item xs={12} sm={6}>
+                                    <Field
+                                        component={PartialDateField}
+                                        disabled={this.props.submitting}
+                                        name="fez_record_search_key_end_date.rek_end_date"
+                                        allowPartial
+                                        floatingTitle={txt.information.fieldLabels.endDate.title}
+                                        hasError={dateError}
+                                    />
+                                </Grid>
                             </Grid>
-                            <Grid item xs={12} sm={6}>
-                                <Field
-                                    component={PartialDateField}
-                                    disabled={this.props.submitting}
-                                    name="fez_record_search_key_end_date.rek_end_date"
-                                    allowPartial
-                                    floatingTitle={txt.information.fieldLabels.enddate.title}
-                                    hasError={dateError}
-                                />
-                            </Grid>
-                        </Grid>
-                    </StandardCard>
-                </Grid>
+                        </StandardCard>
+                    </Grid>
+                )}
                 <Grid item xs={12}>
                     <StandardCard title={txt.authors.title} help={txt.authors.help}>
                         <Typography>{txt.authors.description}</Typography>
