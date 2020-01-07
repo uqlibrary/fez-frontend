@@ -179,7 +179,10 @@ export class ContributorForm extends PureComponent {
             prevState => ({
                 ...prevState,
                 contributor: {
-                    ...prevState.contributor,
+                    nameAsPublished: prevState.contributor.nameAsPublished,
+                    creatorRole: prevState.contributor.creatorRole,
+                    orgaff: prevState.contributor.orgaff,
+                    orgtype: prevState.contributor.orgtype,
                     uqIdentifier: '0',
                     authorId: 0,
                     affiliation: 'NotUQ',
