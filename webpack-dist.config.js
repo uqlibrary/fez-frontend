@@ -126,7 +126,9 @@ const webpackConfig = {
             'process.env.PUBLIC_PATH': JSON.stringify(config.basePath),
             'process.env.GOOGLE_MAPS_URL': JSON.stringify(config.googleMaps),
             'process.env.GOOGLE_MAPS_API_KEY': JSON.stringify(process.env.GOOGLE_MAPS_API_KEY),
-            'process.env.ENABLE_LOG': JSON.stringify(!!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test'),
+            'process.env.ENABLE_LOG': JSON.stringify(
+                !!process.env.CI_BRANCH && process.env.NODE_ENV !== 'test' && process.env.NODE_ENV !== 'cc',
+            ),
             'process.env.TITLE_SUFFIX': JSON.stringify(config.titleSuffix),
             'process.env.GIT_SHA': JSON.stringify(process.env.CI_COMMIT_ID),
         }),

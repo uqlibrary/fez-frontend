@@ -31,6 +31,7 @@
         "@babel/preset-react": "^7.0.0",
         "@babel/register": "^7.0.0",
         "@babel/runtime-corejs2": "^7.0.0",
+        "@cypress/code-coverage": "^1.10.4",
         "@sentry/webpack-plugin": "^1.5.2",
         "@types/enzyme": "^3.1.16",
         "@types/file-saver": "^2.0.1",
@@ -66,6 +67,7 @@
         "babel-eslint": "^9.0.0",
         "babel-jest": "^24.8.0",
         "babel-plugin-dynamic-import-node": "^1.2.0",
+        "babel-plugin-istanbul": "^6.0.0",
         "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
         "chalk": "2.4.1",
         "chromedriver": "^2.38.2",
@@ -97,6 +99,7 @@
         "mini-css-extract-plugin": "^0.5.0",
         "mockdate": "^2.0.2",
         "node-sass": "^4.12.0",
+        "nyc": "^15.0.0",
         "postcss-loader": "^2.1.4",
         "preloader-html-webpack-plugin": "github:uqlibrary/preloader-html-webpack-plugin#master",
         "prettier": "^1.18.2",
@@ -215,11 +218,14 @@
         "cypress:watch": "cypress run --headed",
         "cypress:run": "cypress run",
         "e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
+        "pree2e:cc": "rm -rf .nyc_output coverage/cypress",
+        "e2e:cc": "cross-env NODE_ENV=cc npm run e2e",
         "e2e:dashboard": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --parallel --config video=true'",
         "e2e:watch": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --headed'",
         "e2e:open": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress open'",
         "test:all": "npm run test && npm run e2e && npm run codestyles:files",
-        "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json"
+        "clean": "rm -rf assets coverage cypress/screenshots cypress/videos dist node_modules stats.json .nyc_output",
+        "cc:reportAll": "scripts/code-coverage.sh"
     },
     "engines": {
         "npm": "^6",
@@ -291,6 +297,32 @@
                     "@babel/plugin-proposal-export-default-from",
                     "@babel/plugin-proposal-class-properties"
                 ]
+            },
+            "cc": {
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ],
+                "plugins": [
+                    [
+                        "dynamic-import-node",
+                        {
+                            "noInterop": true
+                        }
+                    ],
+                    [
+                        "@babel/plugin-transform-runtime",
+                        {
+                            "helpers": false,
+                            "regenerator": true,
+                            "corejs": false
+                        }
+                    ],
+                    "@babel/plugin-proposal-export-namespace-from",
+                    "@babel/plugin-proposal-export-default-from",
+                    "@babel/plugin-proposal-class-properties",
+                    "istanbul"
+                ]
             }
         }
     },
@@ -316,6 +348,7 @@
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
+            "!src/modules/SharedComponents/ScrollTop/**",
             "!src/**/{index,locale}.js",
             "!src/**/containers/*.{js,jsx}",
             "src/modules/Index/*.{js,jsx}",
@@ -325,12 +358,11 @@
             "src/reducers/*.{js,jsx}",
             "src/repositories/routes.js"
         ],
-        "coveragePathIgnorePatterns": [
-            "src/modules/SharedComponents/ScrollTop/"
-        ],
+        "coverageDirectory": "coverage/jest",
         "coverageReporters": [
             "html",
-            "text"
+            "text",
+            "json"
         ],
         "coverageThreshold": {
             "global": {
@@ -360,5 +392,30 @@
             "<rootDir>/src/jest.setup.js"
         ],
         "testURL": "http://fez-staging.library.uq.edu.au"
+    },
+    "nyc": {
+        "reporter": [
+            "html",
+            "text-summary",
+            "json"
+        ],
+        "report-dir": "coverage/cypress",
+        "temp-dir": "coverage/temp",
+        "include": [
+            "src/modules/**/*.{js,jsx}",
+            "src/modules/Index/*.{js,jsx}",
+            "src/actions/*.{js,jsx}",
+            "src/helpers/*.{js,jsx}",
+            "src/middleware/*.{js,jsx}",
+            "src/reducers/*.{js,jsx}",
+            "src/repositories/routes.js"
+        ],
+        "exclude": [
+            "src/modules/**/*.integration.{js,jsx}",
+            "src/**/{index,locale}.js",
+            "src/**/containers/*.{js,jsx}",
+            "src/modules/SharedComponents/ScrollTop/**"
+        ],
+        "all": true
     }
 }
