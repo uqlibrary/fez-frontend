@@ -351,7 +351,7 @@
             "src/modules/**/*.{js,jsx}",
             "!src/modules/**/*.integration.{js,jsx}",
             "!src/modules/SharedComponents/ScrollTop/**",
-            "!src/**/{index,locale}.js",
+            "!src/**/{index,locale,config}.js",
             "!src/**/containers/*.{js,jsx}",
             "src/modules/Index/*.{js,jsx}",
             "src/actions/*.{js,jsx}",
@@ -414,7 +414,7 @@
         ],
         "exclude": [
             "src/modules/**/*.integration.{js,jsx}",
-            "src/**/{index,locale}.js",
+            "src/**/{index,locale,config}.js",
             "src/**/containers/*.{js,jsx}",
             "src/modules/SharedComponents/ScrollTop/**"
         ],
