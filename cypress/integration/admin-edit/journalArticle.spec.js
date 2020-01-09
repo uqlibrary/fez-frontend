@@ -549,6 +549,7 @@ context('Journal Article admin edit', () => {
 
         cy.adminEditCleanup();
         cy.navToHomeFromMenu();
+        cy.adminEditCleanup();
         cy.loadRecordForAdminEdit(record.rek_pid);
 
         cy.get('.StandardPage form .StandardCard')
