@@ -164,6 +164,12 @@ export class ContributorForm extends PureComponent {
                 ...prevState,
                 contributor: {
                     ...prevState.contributor,
+                    nameAsPublished:
+                        prevState.contributor.nameAsPublished ||
+                        (selectedItem &&
+                            selectedItem.aut_lname &&
+                            `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
+                        '',
                     uqIdentifier: `${selectedItem.aut_id}`,
                     ...selectedItem,
                 },
@@ -181,8 +187,8 @@ export class ContributorForm extends PureComponent {
                 contributor: {
                     nameAsPublished: prevState.contributor.nameAsPublished,
                     creatorRole: prevState.contributor.creatorRole,
-                    orgaff: prevState.contributor.orgaff,
-                    orgtype: prevState.contributor.orgtype,
+                    orgaff: 'Missing',
+                    orgtype: '',
                     uqIdentifier: '0',
                     authorId: 0,
                     affiliation: 'NotUQ',
@@ -231,6 +237,7 @@ export class ContributorForm extends PureComponent {
         const {
             disabled,
             disableNameAsPublished,
+            displayCancel,
             isContributorAssigned,
             isNtro,
             locale,
@@ -287,7 +294,12 @@ export class ContributorForm extends PureComponent {
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 key={contributor.authorId}
-                                disabled={disabled || (contributor.nameAsPublished || '').trim().length === 0}
+                                disabled={
+                                    disabled ||
+                                    // displayCancel is true only for admins, so just using it instead of adding new
+                                    // prop. userIsAdmin hook is there but only for functional components
+                                    (!displayCancel && (contributor.nameAsPublished || '').trim().length === 0)
+                                }
                                 onChange={this._onUQIdentifierSelected}
                                 onClear={this._onUQIdentifierCleared}
                                 showClear={!!parseInt(contributor.uqIdentifier, 10)}
