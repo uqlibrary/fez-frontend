@@ -29,6 +29,7 @@ export {
     publicationTypeListDepartmentTechnicalReport,
     publicationTypeListDesign,
     publicationTypeListDigilibImage,
+    publicationTypeListGenericDocument,
     publicationTypeListImage,
     publicationTypeListJournal,
     publicationTypeListJournalArticle,

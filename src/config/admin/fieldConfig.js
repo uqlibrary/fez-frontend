@@ -6,24 +6,25 @@ import { validation } from 'config';
 import locale from 'locale/components';
 import { default as formLocale } from 'locale/publicationForm';
 import {
-    FIELD_OF_RESEARCH_VOCAB_ID,
     AIATSIS_CODES_VOCAB_ID,
+    FIELD_OF_RESEARCH_VOCAB_ID,
+    PUBLICATION_TYPE_AUDIO_DOCUMENT,
     PUBLICATION_TYPE_BOOK,
     PUBLICATION_TYPE_BOOK_CHAPTER,
-    PUBLICATION_TYPE_AUDIO_DOCUMENT,
+    PUBLICATION_TYPE_CONFERENCE_PAPER,
+    PUBLICATION_TYPE_CREATIVE_WORK,
     PUBLICATION_TYPE_DATA_COLLECTION,
     PUBLICATION_TYPE_DESIGN,
     PUBLICATION_TYPE_DIGILIB_IMAGE,
+    PUBLICATION_TYPE_GENERIC_DOCUMENT,
     PUBLICATION_TYPE_IMAGE,
     PUBLICATION_TYPE_JOURNAL_ARTICLE,
     PUBLICATION_TYPE_MANUSCRIPT,
     PUBLICATION_TYPE_PATENT,
+    PUBLICATION_TYPE_PREPRINT,
     PUBLICATION_TYPE_RESEARCH_REPORT,
     PUBLICATION_TYPE_THESIS,
     PUBLICATION_TYPE_VIDEO_DOCUMENT,
-    PUBLICATION_TYPE_CREATIVE_WORK,
-    PUBLICATION_TYPE_PREPRINT,
-    PUBLICATION_TYPE_CONFERENCE_PAPER,
 } from 'config/general';
 
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
@@ -1562,6 +1563,12 @@ export default {
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
                 locale: locale.components.photographers.field,
+            }),
+        },
+        [PUBLICATION_TYPE_GENERIC_DOCUMENT]: {
+            rek_date: () => ({
+                label: 'Date',
+                placeholder: 'Date',
             }),
         },
         [PUBLICATION_TYPE_IMAGE]: {

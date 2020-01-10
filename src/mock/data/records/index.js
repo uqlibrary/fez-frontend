@@ -27,6 +27,7 @@ export { default as publicationTypeListDataCollection } from './publicationTypeL
 export { default as publicationTypeListDepartmentTechnicalReport } from './publicationTypeListDepartmentTechnicalReport';
 export { default as publicationTypeListDesign } from './publicationTypeListDesign';
 export { default as publicationTypeListDigilibImage } from './publicationTypeListDigilibImage';
+export { default as publicationTypeListGenericDocument } from './publicationTypeListGenericDocument';
 export { default as publicationTypeListImage } from './publicationTypeListImage';
 export { default as publicationTypeListJournal } from './publicationTypeListJournal';
 export { default as publicationTypeListJournalArticle } from './publicationTypeListJournalArticle';
