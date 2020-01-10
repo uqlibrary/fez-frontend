@@ -55,7 +55,9 @@ context('Design admin edit', () => {
             .should('have.text', '1');
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .find('.AdminCard')
@@ -108,9 +110,9 @@ context('Design admin edit', () => {
             .should('have.length', 3)
             .eq(0)
             .should('have.text', 'Rights is required');
-    });
 
-    it('should render Author details tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .find('.AdminCard')

@@ -39,7 +39,9 @@ context('Book Chapter admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Bibliographic tab with multilingual fields', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -105,9 +107,9 @@ context('Book Chapter admin edit', () => {
                             );
                     });
             });
-    });
 
-    it('should render Author details tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {

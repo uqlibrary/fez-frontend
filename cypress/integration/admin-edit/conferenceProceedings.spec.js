@@ -55,7 +55,9 @@ context('Conference Proceedings admin edit', () => {
             .should('have.text', '1');
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -66,9 +68,9 @@ context('Conference Proceedings admin edit', () => {
                             .should('contain', 'Title of proceedings');
                     });
             });
-    });
 
-    it('should render Author details tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -88,9 +90,9 @@ context('Conference Proceedings admin edit', () => {
                 cy.get('button')
                     .should('be.enabled');
             });
-    });
 
-    it('should render Files tab', () => {
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .within(() => {
@@ -113,9 +115,9 @@ context('Conference Proceedings admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Security tab', () => {
+        // --------------------------------------------- SECURITY TAB ------------------------------------------------
+        cy.log('Security tab');
         cy.get('.StandardPage form > div > div:nth-child(8) > .StandardCard')
             .within(() => {
                 cy.get('.StandardCard h3')

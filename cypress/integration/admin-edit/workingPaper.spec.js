@@ -39,7 +39,9 @@ context('Working paper admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Working Paper specific fields on the Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {

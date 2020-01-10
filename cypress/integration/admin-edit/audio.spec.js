@@ -49,7 +49,9 @@ context('Audio admin edit', () => {
             .should('have.text', '1');
     });
 
-    it('should render Identifiers tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
+        cy.log('Identifiers tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(1)
             .find('.AdminCard')
@@ -72,9 +74,9 @@ context('Audio admin edit', () => {
                         .should('have.text', `Description: ${link.description}`);
                 });
             });
-    });
 
-    it('should render Bibliographic tab', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .find('.AdminCard')
@@ -158,9 +160,9 @@ context('Audio admin edit', () => {
                 cy.get('button')
                     .should('be.enabled');
             });
-    });
 
-    it('should render Files tab', () => {
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .as('filesTab')

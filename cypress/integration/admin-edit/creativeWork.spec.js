@@ -38,7 +38,9 @@ context('Creative Work admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .find('.AdminCard')
@@ -56,9 +58,9 @@ context('Creative Work admin edit', () => {
                         .should('have.text', pub);
                 });
             });
-    });
 
-    it('should render Additional information tab', () => {
+        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
+        cy.log('Additional Information tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
             .find('.AdminCard')
@@ -83,9 +85,9 @@ context('Creative Work admin edit', () => {
                             .join(', '),
                     );
             });
-    });
 
-    it('should render NTRO tab', () => {
+        // ---------------------------------------------- NTRO TAB ---------------------------------------------------
+        cy.log('NTRO tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {

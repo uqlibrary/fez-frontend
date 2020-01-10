@@ -40,7 +40,9 @@ context('Thesis admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Thesis specific fields on the Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -185,9 +187,9 @@ context('Thesis admin edit', () => {
             .contains('Submit')
             .parent()
             .should('be.disabled');
-    });
 
-    it('should render Thesis specific fields on the Author tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -234,9 +236,9 @@ context('Thesis admin edit', () => {
                         });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Additional Information tab', () => {
+        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
+        cy.log('Additional information tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
             .within(() => {
@@ -284,9 +286,9 @@ context('Thesis admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Files tab', () => {
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
@@ -327,9 +329,9 @@ context('Thesis admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Security tab', () => {
+        // --------------------------------------------- SECURITY TAB ------------------------------------------------
+        cy.log('Security tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(7)
             .within(() => {

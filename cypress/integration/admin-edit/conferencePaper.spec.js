@@ -39,7 +39,9 @@ context('Conference Paper admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .as('bibliographicTab')

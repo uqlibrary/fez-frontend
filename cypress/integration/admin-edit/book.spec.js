@@ -48,7 +48,9 @@ context('Book admin edit', () => {
             .should('have.length', 8);
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {

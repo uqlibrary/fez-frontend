@@ -38,7 +38,9 @@ context('Research Report admin edit', () => {
             .should('have.text', 'Bibliographic');
     });
 
-    it('should render Research Report specific fields on the Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -85,9 +87,9 @@ context('Research Report admin edit', () => {
                             );
                     });
             });
-    });
 
-    it('should render Research Report specific fields on the Grants tab', () => {
+        // ---------------------------------------- GRANT INFORMATION TAB --------------------------------------------
+        cy.log('Grant Information tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .within(() => {
