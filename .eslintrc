@@ -173,7 +173,7 @@
       }
     ],                               // http://eslint.org/docs/rules/operator-linebreak
     "newline-per-chained-call": [2, {
-      "ignoreChainWithDepth": 2,
+      "ignoreChainWithDepth": 2
     }],                              // http://eslint.org/docs/rules/newline-per-chained-call
     "padded-blocks": [2, "never"],   // http://eslint.org/docs/rules/padded-blocks
     "semi": [2, "always"],           // http://eslint.org/docs/rules/semi
