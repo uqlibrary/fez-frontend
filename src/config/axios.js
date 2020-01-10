@@ -30,7 +30,7 @@ export const cache = setupCache({
 
 export const api = axios.create({
     baseURL: API_URL,
-    adapter: process.env.NODE_ENV === 'test' ? undefined : cache.adapter,
+    adapter: process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc' ? undefined : cache.adapter,
     crossdomain: true,
 });
 
@@ -117,7 +117,7 @@ api.interceptors.response.use(
                     delete api.defaults.headers.common[TOKEN_NAME];
                 }
 
-                if (process.env.NODE_ENV === 'test') {
+                if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
                     global.mockActionsStore.dispatch(logout());
                 } else {
                     store.dispatch(logout());
@@ -127,7 +127,7 @@ api.interceptors.response.use(
             if (!!error.message && !!error.response && !!error.response.status && error.response.status === 500) {
                 errorMessage =
                     ((error.response || {}).data || {}).message || locale.global.errorMessages[error.response.status];
-                if (process.env.NODE_ENV === 'test') {
+                if (process.env.NODE_ENV === 'test' || process.env.NODE_ENV === 'cc') {
                     global.mockActionsStore.dispatch(showAppAlert(error.response.data));
                 } else {
                     store.dispatch(showAppAlert(error.response.data));

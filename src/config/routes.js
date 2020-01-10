@@ -501,6 +501,7 @@ export const getRoutesConfig = ({
                     if ((isValidRoute || isValidFileRoute) && !account && !accountAuthorDetailsLoading) {
                         if (
                             process.env.NODE_ENV !== 'test' &&
+                            process.env.NODE_ENV !== 'cc' &&
                             process.env.NODE_ENV !== 'development' &&
                             process.env.NODE_ENV !== 'local'
                         ) {

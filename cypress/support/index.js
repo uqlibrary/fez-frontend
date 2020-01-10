@@ -21,3 +21,4 @@ import './commands';
 
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
+import '@cypress/code-coverage/support';

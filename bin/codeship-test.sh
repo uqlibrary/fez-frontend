@@ -34,15 +34,9 @@ case "$PIPE_NUM" in
     printf "\n$ npm run test:integration\n"
     npm run test:integration
 
-    # run cypress tests if in master branch, or the branch name includes 'cypress'
-    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        # Use this variant to only run tests locally in Codeship
-        # npm run e2e
-
-        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-        npm run e2e:dashboard
-    fi
+    # if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+    #     npm run e2e:dashboard
+    # fi
 ;;
 "2")
     printf "\n--- \e[1mRUNNING CODE STYLE CHECKS\e[0m ---\n"
@@ -64,15 +58,21 @@ case "$PIPE_NUM" in
 
     set -e
 
+    # run cypress tests if in master branch, or the branch name includes 'cypress'
+    # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        npm run e2e:dashboard
-    fi
-;;
-"3")
-    set -e
+        # Use this variant to only run tests locally in Codeship
+        npm run e2e
 
-    if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        npm run e2e:dashboard
+        # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
+        # npm run e2e:dashboard
     fi
 ;;
+# "3")
+#     set -e
+
+#     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
+#         npm run e2e:dashboard
+#     fi
+# ;;
 esac
