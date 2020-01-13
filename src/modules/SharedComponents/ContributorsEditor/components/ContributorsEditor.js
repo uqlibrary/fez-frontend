@@ -188,7 +188,16 @@ export class ContributorsEditor extends PureComponent {
     };
 
     renderContributorRows = () => {
-        const { canEdit, disabled, hideDelete, hideReorder, locale, showContributorAssignment } = this.props;
+        const {
+            canEdit,
+            disabled,
+            hideDelete,
+            hideReorder,
+            locale,
+            showContributorAssignment,
+            showIdentifierLookup,
+            showRoleInput,
+        } = this.props;
 
         const { contributors, isCurrentAuthorSelected } = this.state;
 
@@ -213,6 +222,8 @@ export class ContributorsEditor extends PureComponent {
                 onMoveUp={this.moveUpContributor}
                 required={contributor.required}
                 enableSelect={showContributorAssignment && !isCurrentAuthorSelected}
+                showIdentifierLookup={showIdentifierLookup}
+                showRoleInput={showRoleInput}
             />
         ));
     };

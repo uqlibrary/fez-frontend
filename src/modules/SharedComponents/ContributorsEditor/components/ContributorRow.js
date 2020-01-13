@@ -24,6 +24,7 @@ import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import Lock from '@material-ui/icons/Lock';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
+import { ContributorRowText } from './ContributorRowText';
 
 export const styles = theme => ({
     listContainer: {
@@ -88,6 +89,8 @@ export class ContributorRow extends PureComponent {
         width: PropTypes.string,
         required: PropTypes.bool,
         enableSelect: PropTypes.bool,
+        showIdentifierLookup: PropTypes.bool,
+        showRoleInput: PropTypes.bool,
     };
 
     static defaultProps = {
@@ -181,16 +184,18 @@ export class ContributorRow extends PureComponent {
                     </Typography>
                 )
             }
+            secondaryTypographyProps={{ variant: 'caption' }}
         />
     );
 
     getContributorRowText = selectedClass => {
-        const { index, contributor, classes, width } = this.props;
+        const { index, contributor, classes, width, showRoleInput } = this.props;
         const { suffix } = this.props.locale;
         const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
+        const md = showRoleInput ? 3 : 5;
         return (
             <Grid container classes={{ container: classes.listContainer }}>
-                <Grid item xs={10} sm={5} md={5}>
+                <Grid item xs={10} sm={5} md={md}>
                     {this.getListItemTypography(
                         contributor.nameAsPublished,
                         contributorOrder,
@@ -199,7 +204,7 @@ export class ContributorRow extends PureComponent {
                     )}
                 </Grid>
                 {!!contributor.aut_title && (
-                    <Grid item xs={10} sm={5} md={5}>
+                    <Grid item xs={10} sm={5} md={md}>
                         {this.getListItemTypography(
                             `${contributor.aut_title} ${contributor.aut_display_name}`,
                             `${locale.global.orgTitle} (${contributor.aut_org_username ||
@@ -210,7 +215,7 @@ export class ContributorRow extends PureComponent {
                     </Grid>
                 )}
                 {contributor.affiliation && !contributor.aut_title && (
-                    <Grid item xs={12} sm={5}>
+                    <Grid item xs={12} sm={5} md={md}>
                         {this.getListItemTypography(
                             `${contributor.orgaff}`,
                             `${(ORG_TYPES_LOOKUP[contributor.orgtype] &&
@@ -221,8 +226,8 @@ export class ContributorRow extends PureComponent {
                         )}
                     </Grid>
                 )}
-                {contributor.creatorRole && (
-                    <Grid item xs={12} sm={5} md={5}>
+                {showRoleInput && (
+                    <Grid item xs={12} sm={5} md={md}>
                         {this.getListItemTypography(
                             contributor.creatorRole,
                             '',
@@ -314,7 +319,16 @@ export class ContributorRow extends PureComponent {
                     <Hidden xsDown>
                         <ListItemIcon classes={{ root: selectedClass }}>{this.getRowIcon()}</ListItemIcon>
                     </Hidden>
-                    {this.getContributorRowText(selectedClass)}
+                    <ContributorRowText
+                        index={this.props.index}
+                        canEdit={this.props.canEdit}
+                        contributor={this.props.contributor}
+                        classes={this.props.classes}
+                        width={this.props.width}
+                        showRoleInput={this.props.showRoleInput}
+                        selectedClass={selectedClass}
+                        suffix={this.props.locale.suffix}
+                    />
                     <ListItemSecondaryAction>
                         {canMoveUp && (
                             <Tooltip
