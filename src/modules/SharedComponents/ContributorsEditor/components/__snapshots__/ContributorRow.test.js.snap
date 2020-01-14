@@ -50,87 +50,58 @@ exports[`Component ContributorRow Row should be clickable when showContributorAs
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Professor J Researcher
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " ",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              The University of Queensland (uqresearcher)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "aut_created_date": "2007-08-09",
+          "aut_description": null,
+          "aut_display_name": "J Researcher",
+          "aut_email": null,
+          "aut_external_id": "0001098586",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": null,
+          "aut_id": 410,
+          "aut_lname": "Researcher",
+          "aut_mname": null,
+          "aut_mypub_url": null,
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0000111",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": null,
+          "aut_position": null,
+          "aut_publons_id": null,
+          "aut_ref_num": null,
+          "aut_researcher_id": null,
+          "aut_rid_last_updated": null,
+          "aut_rid_password": null,
+          "aut_scopus_id": null,
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": null,
+          "is_administrator": 0,
+          "is_super_administrator": 0,
+          "nameAsPublished": "J. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -210,87 +181,58 @@ exports[`Component ContributorRow Row should not be clickable when showContribut
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Professor J Researcher
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " ",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              The University of Queensland (uqresearcher)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "aut_created_date": "2007-08-09",
+          "aut_description": null,
+          "aut_display_name": "J Researcher",
+          "aut_email": null,
+          "aut_external_id": "0001098586",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": null,
+          "aut_id": 410,
+          "aut_lname": "Researcher",
+          "aut_mname": null,
+          "aut_mypub_url": null,
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0000111",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": null,
+          "aut_position": null,
+          "aut_publons_id": null,
+          "aut_ref_num": null,
+          "aut_researcher_id": null,
+          "aut_rid_last_updated": null,
+          "aut_rid_password": null,
+          "aut_scopus_id": null,
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": null,
+          "is_administrator": 0,
+          "is_super_administrator": 0,
+          "nameAsPublished": "J. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -370,51 +312,29 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              A. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -494,51 +414,29 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              A. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="xs"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -618,87 +516,58 @@ exports[`Component ContributorRow a row with index and contributor set, renders 
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Professor J Researcher
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " ",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              The University of Queensland (uqresearcher)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "aut_created_date": "2007-08-09",
+          "aut_description": null,
+          "aut_display_name": "J Researcher",
+          "aut_email": null,
+          "aut_external_id": "0001098586",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": null,
+          "aut_id": 410,
+          "aut_lname": "Researcher",
+          "aut_mname": null,
+          "aut_mypub_url": null,
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0000111",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": null,
+          "aut_position": null,
+          "aut_publons_id": null,
+          "aut_ref_num": null,
+          "aut_researcher_id": null,
+          "aut_rid_last_updated": null,
+          "aut_rid_password": null,
+          "aut_scopus_id": null,
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": null,
+          "is_administrator": 0,
+          "is_super_administrator": 0,
+          "nameAsPublished": "J. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -822,51 +691,30 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "nameAsPublished": "J. Smith",
+          "selected": true,
+        }
+      }
+      index={0}
+      selectedClass="selected"
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -946,51 +794,30 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "nameAsPublished": "J. Smith",
+          "selected": true,
+        }
+      }
+      index={0}
+      selectedClass="selected"
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1070,87 +897,58 @@ exports[`Component ContributorRow a row with index and contributor with author d
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Professor J Researcher
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " ",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              The University of Queensland (uqresearcher)
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "aut_created_date": "2007-08-09",
+          "aut_description": null,
+          "aut_display_name": "J Researcher",
+          "aut_email": null,
+          "aut_external_id": "0001098586",
+          "aut_fname": "J",
+          "aut_google_scholar_id": "kUemDfMAAAAJ",
+          "aut_homepage_link": null,
+          "aut_id": 410,
+          "aut_lname": "Researcher",
+          "aut_mname": null,
+          "aut_mypub_url": null,
+          "aut_orcid_id": "0000-0001-1111-1111",
+          "aut_org_staff_id": "0000111",
+          "aut_org_student_id": null,
+          "aut_org_username": "uqresearcher",
+          "aut_people_australia_id": null,
+          "aut_position": null,
+          "aut_publons_id": null,
+          "aut_ref_num": null,
+          "aut_researcher_id": null,
+          "aut_rid_last_updated": null,
+          "aut_rid_password": null,
+          "aut_scopus_id": null,
+          "aut_student_username": null,
+          "aut_title": "Professor",
+          "aut_update_date": null,
+          "is_administrator": 0,
+          "is_super_administrator": 0,
+          "nameAsPublished": "J. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1230,75 +1028,31 @@ exports[`Component ContributorRow a row with index and creator with creator role
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={12}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Investigator
-            </WithStyles(Typography)>
-          }
-          secondary=""
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "creatorRole": "Investigator",
+          "nameAsPublished": "J. Smith",
+          "selected": true,
+        }
+      }
+      index={0}
+      selectedClass="selected"
+      showRoleInput={true}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1378,75 +1132,31 @@ exports[`Component ContributorRow a row with index and creator with creator role
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              J. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={12}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Investigator
-            </WithStyles(Typography)>
-          }
-          secondary=""
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "creatorRole": "Investigator",
+          "nameAsPublished": "J. Smith",
+          "selected": true,
+        }
+      }
+      index={0}
+      selectedClass="selected"
+      showRoleInput={true}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1526,86 +1236,33 @@ exports[`Component ContributorRow should assign contributor 1`] = `
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              test
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={5}
-        xs={12}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary selected",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Somewhere
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": " selected",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              Organisation type: Library/Museum/Public Gallery
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "affiliation": "NotUQ",
+          "nameAsPublished": "test",
+          "orgaff": "Somewhere",
+          "orgtype": "453983",
+          "selected": true,
+        }
+      }
+      index={0}
+      selectedClass="selected"
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1685,86 +1342,28 @@ exports[`Component ContributorRow should call callback functions on ListItem 1`]
         <pure(PersonIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "identifierName": "test-class-1",
+          "identifierSubtitle": "test-class-2",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "undefined undefined",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              test
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "undefined",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-      <WithStyles(Grid)
-        item={true}
-        sm={5}
-        xs={12}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-1 undefined",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Somewhere
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "test-class-2 undefined",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              Organisation type: Library/Museum/Public Gallery
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "affiliation": "NotUQ",
+          "nameAsPublished": "test",
+          "orgaff": "Somewhere",
+          "orgtype": "453983",
+          "selected": true,
+        }
+      }
+      index={0}
+      showRoleInput={true}
+      suffix=" listed contributor"
+      width="xs"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -1987,38 +1586,29 @@ exports[`Component ContributorRow should render a row with a disabled contributo
         </WithStyles(Tooltip)>
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "disabled": true,
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -2098,51 +1688,27 @@ exports[`Component ContributorRow should render row as required 1`] = `
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "highlighted": "highlighted",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "undefined ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              Test
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First  listed contributor
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "affilication": "NotUQ",
+          "nameAsPublished": "Test",
+          "orgaff": "Test",
+          "orgtype": "NGO",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      suffix=" listed contributor"
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}
@@ -2170,275 +1736,6 @@ exports[`Component ContributorRow should render row as required 1`] = `
     </WithStyles(ListItemSecondaryAction)>
   </WithStyles(ListItem)>
 </Fragment>
-`;
-
-exports[`Component ContributorRow should render row with UQ affiiliation and missing author title 1`] = `
-<WithStyles(Grid)
-  classes={
-    Object {
-      "container": undefined,
-    }
-  }
-  container={true}
->
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={10}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={5}
-    xs={12}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test1 undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          undefined
-        </WithStyles(Typography)>
-      }
-      secondary=""
-    />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
-`;
-
-exports[`Component ContributorRow should render row with UQ affiiliation and missing author title in non-xs width 1`] = `
-<WithStyles(Grid)
-  classes={
-    Object {
-      "container": undefined,
-    }
-  }
-  container={true}
->
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={10}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={5}
-    xs={12}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          undefined
-        </WithStyles(Typography)>
-      }
-      secondary=""
-    />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
-`;
-
-exports[`Component ContributorRow should render row with non-UQ affiiliation and missing org type 1`] = `
-<WithStyles(Grid)
-  classes={
-    Object {
-      "container": undefined,
-    }
-  }
-  container={true}
->
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={10}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    sm={5}
-    xs={12}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "primary undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          undefined
-        </WithStyles(Typography)>
-      }
-      secondary=""
-    />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
-`;
-
-exports[`Component ContributorRow should render row with student author title in xs width 1`] = `
-<WithStyles(Grid)
-  classes={
-    Object {
-      "container": undefined,
-    }
-  }
-  container={true}
->
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={10}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          First  listed contributor
-        </WithStyles(Typography)>
-      }
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={10}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test2 undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          Ms undefined
-        </WithStyles(Typography)>
-      }
-      secondary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test3 undefined",
-            }
-          }
-          noWrap={true}
-          variant="caption"
-        >
-          The University of Queensland (studentUser)
-        </WithStyles(Typography)>
-      }
-    />
-  </WithStyles(Grid)>
-  <WithStyles(Grid)
-    item={true}
-    md={5}
-    sm={5}
-    xs={12}
-  >
-    <WithStyles(ListItemText)
-      disableTypography={true}
-      primary={
-        <WithStyles(Typography)
-          classes={
-            Object {
-              "root": "test2 undefined",
-            }
-          }
-          noWrap={true}
-          variant="body2"
-        >
-          role
-        </WithStyles(Typography)>
-      }
-      secondary=""
-    />
-  </WithStyles(Grid)>
-</WithStyles(Grid)>
 `;
 
 exports[`Component ContributorRow should render with missing aria label if selectHint prop is falsy 1`] = `
@@ -2483,51 +1780,28 @@ exports[`Component ContributorRow should render with missing aria label if selec
         <pure(PersonOutlinedIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(Grid)
+    <ContributorRowText
+      canEdit={false}
       classes={
         Object {
-          "container": undefined,
+          "hideIcon": "hideIcon",
+          "identifierName": "identifierName",
+          "identifierSubtitle": "identifierSubtitle",
+          "listItem": "listItem",
+          "primary": "primary",
+          "selected": "selected",
         }
       }
-      container={true}
-    >
-      <WithStyles(Grid)
-        item={true}
-        md={5}
-        sm={5}
-        xs={10}
-      >
-        <WithStyles(ListItemText)
-          disableTypography={true}
-          primary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "primary ",
-                }
-              }
-              noWrap={true}
-              variant="body2"
-            >
-              A. Smith
-            </WithStyles(Typography)>
-          }
-          secondary={
-            <WithStyles(Typography)
-              classes={
-                Object {
-                  "root": "",
-                }
-              }
-              noWrap={true}
-              variant="caption"
-            >
-              First undefined
-            </WithStyles(Typography)>
-          }
-        />
-      </WithStyles(Grid)>
-    </WithStyles(Grid)>
+      contributor={
+        Object {
+          "nameAsPublished": "A. Smith",
+        }
+      }
+      index={0}
+      selectedClass=""
+      showRoleInput={false}
+      width="md"
+    />
     <WithStyles(ListItemSecondaryAction)>
       <WithStyles(Tooltip)
         disableFocusListener={false}

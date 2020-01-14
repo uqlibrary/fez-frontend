@@ -1,18 +1,13 @@
 import React, { PureComponent, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { numberToWords } from 'config';
-import { ORG_TYPES_LOOKUP } from 'config/general';
 import locale from 'locale/global';
 
 import { withStyles } from '@material-ui/core/styles';
 import withWidth from '@material-ui/core/withWidth';
-import Grid from '@material-ui/core/Grid';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
 import Tooltip from '@material-ui/core/Tooltip';
-import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import Hidden from '@material-ui/core/Hidden';
 import Person from '@material-ui/icons/Person';
@@ -165,79 +160,6 @@ export class ContributorRow extends PureComponent {
     _handleEdit = () => {
         const { canEdit, index } = this.props;
         canEdit && !!this.props.onEdit && this.props.onEdit(index);
-    };
-
-    getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
-        <ListItemText
-            disableTypography
-            primary={
-                primaryText && (
-                    <Typography noWrap variant="body2" classes={{ root: primaryClass }}>
-                        {primaryText}
-                    </Typography>
-                )
-            }
-            secondary={
-                secondaryText && (
-                    <Typography noWrap variant="caption" classes={{ root: secondaryClass }}>
-                        {secondaryText}
-                    </Typography>
-                )
-            }
-            secondaryTypographyProps={{ variant: 'caption' }}
-        />
-    );
-
-    getContributorRowText = selectedClass => {
-        const { index, contributor, classes, width, showRoleInput } = this.props;
-        const { suffix } = this.props.locale;
-        const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
-        const md = showRoleInput ? 3 : 5;
-        return (
-            <Grid container classes={{ container: classes.listContainer }}>
-                <Grid item xs={10} sm={5} md={md}>
-                    {this.getListItemTypography(
-                        contributor.nameAsPublished,
-                        contributorOrder,
-                        `${classes.primary} ${selectedClass}`,
-                        `${selectedClass}`,
-                    )}
-                </Grid>
-                {!!contributor.aut_title && (
-                    <Grid item xs={10} sm={5} md={md}>
-                        {this.getListItemTypography(
-                            `${contributor.aut_title} ${contributor.aut_display_name}`,
-                            `${locale.global.orgTitle} (${contributor.aut_org_username ||
-                                contributor.aut_student_username})`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-                {contributor.affiliation && !contributor.aut_title && (
-                    <Grid item xs={12} sm={5} md={md}>
-                        {this.getListItemTypography(
-                            `${contributor.orgaff}`,
-                            `${(ORG_TYPES_LOOKUP[contributor.orgtype] &&
-                                `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
-                                ''}`,
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-                {showRoleInput && (
-                    <Grid item xs={12} sm={5} md={md}>
-                        {this.getListItemTypography(
-                            contributor.creatorRole,
-                            '',
-                            `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
-                            `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
-                        )}
-                    </Grid>
-                )}
-            </Grid>
-        );
     };
 
     getRowIcon() {

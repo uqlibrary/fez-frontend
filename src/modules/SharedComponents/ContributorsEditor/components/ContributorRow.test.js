@@ -467,61 +467,6 @@ describe('Component ContributorRow', () => {
         expect(styles(theme)).toMatchSnapshot();
     });
 
-    it('should render row with non-UQ affiiliation and missing org type', () => {
-        const wrapper = setup({
-            contributor: {
-                orgtype: 'test',
-                affiliation: 'NotUQ',
-            },
-        });
-        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
-    });
-
-    it('should render row with UQ affiiliation and missing author title', () => {
-        const wrapper = setup({
-            contributor: {
-                affiliation: 'UQ',
-                aut_title: '',
-            },
-            width: 'xs',
-            classes: {
-                identifierName: 'test1',
-                identifierSubtitle: 'test2',
-            },
-        });
-        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
-    });
-
-    it('should render row with UQ affiiliation and missing author title in non-xs width', () => {
-        const wrapper = setup({
-            contributor: {
-                affiliation: 'UQ',
-                aut_title: '',
-            },
-            classes: {
-                primary: 'test',
-            },
-        });
-        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
-    });
-
-    it('should render row with student author title in xs width', () => {
-        const wrapper = setup({
-            contributor: {
-                aut_title: 'Ms',
-                aut_student_username: 'studentUser',
-                creatorRole: 'role',
-            },
-            classes: {
-                primary: 'test1',
-                identifierName: 'test2',
-                identifierSubtitle: 'test3',
-            },
-            width: 'xs',
-        });
-        expect(wrapper.instance().getContributorRowText()).toMatchSnapshot();
-    });
-
     it('should render row as required', () => {
         const wrapper = setup({
             contributor: {

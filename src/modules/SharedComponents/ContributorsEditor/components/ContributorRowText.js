@@ -45,7 +45,7 @@ export const ContributorRowText = ({
     );
 
     return (
-        <Grid container classes={{ container: classes.listContainer }}>
+        <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
             <Grid item xs={10} sm={5} md={md}>
                 {getListItemTypography(
                     contributor.nameAsPublished,
@@ -58,8 +58,7 @@ export const ContributorRowText = ({
                 <Grid item xs={10} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${locale.global.orgTitle} (${contributor.aut_org_username ||
-                            contributor.aut_student_username})`,
+                        `${locale.global.orgTitle} (${contributor.aut_org_username})`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                         `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                     )}
