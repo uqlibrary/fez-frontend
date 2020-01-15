@@ -393,6 +393,18 @@ export const dataCollection = {
             "rek_isdatasetof_xsdmf_id": 16601,
             "rek_isdatasetof": "UQ:365357",
             "rek_isdatasetof_order": 1,
+            "datasetSiblings": [
+                {
+                    "rek_pid": "UQ:4",
+                    "rek_title": "Some other record which shares this isdatasetof",
+                },
+            ],
+            "parent": {
+                "rek_pid": "UQ:365357",
+                "rek_display_type": "371",
+                "rek_title": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes",
+                "fez_record_search_key_doi": null,
+            },
             "rek_isdatasetof_lookup": "CheckM: assessing the quality of microbial genomes recovered from isolates, single cells, and metagenomes"
         }
     ],
