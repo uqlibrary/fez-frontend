@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
 import Grid from '@material-ui/core/Grid';
@@ -8,8 +6,6 @@ import Button from '@material-ui/core/Button';
 
 import { TextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
-
-import * as actions from 'actions/authors';
 
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
@@ -19,12 +15,10 @@ import locale from 'locale/global';
 
 export class ContributorForm extends PureComponent {
     static propTypes = {
-        authorsList: PropTypes.array.isRequired,
         onSubmit: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         errorText: PropTypes.string,
-        actions: PropTypes.object.isRequired,
         locale: PropTypes.object,
         disabled: PropTypes.bool,
         showContributorAssignment: PropTypes.bool,
@@ -377,19 +371,4 @@ export class ContributorForm extends PureComponent {
     }
 }
 
-export const mapStateToProps = state => {
-    return {
-        authorsList: state && state.get('authorsReducer') ? state.get('authorsReducer').authorsList : [],
-    };
-};
-
-function mapDispatchToProps(dispatch) {
-    return {
-        actions: bindActionCreators(actions, dispatch),
-    };
-}
-
-export default connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(ContributorForm);
+export default ContributorForm;

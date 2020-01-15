@@ -1,14 +1,11 @@
-import { ContributorForm, mapStateToProps } from './ContributorForm';
-import ConnectedContributorForm from './ContributorForm';
+import ContributorForm from './ContributorForm';
 
 function setup(testProps = {}) {
     const props = {
-        authorsList: [],
         onSubmit: jest.fn(),
         showIdentifierLookup: false,
         showRoleInput: false,
         isNtro: false,
-        actions: {},
         disabled: false,
         locale: {
             descriptionStep1: 'Step 1 description',
@@ -251,33 +248,11 @@ describe('Component ContributorForm', () => {
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
     });
 
-    it('should render connected component', () => {
-        const wrapper = getElement(ConnectedContributorForm, { onSubmit: jest.fn() }, { isShallow: false });
-        expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
     it('should show contributor assignment', () => {
         const wrapper = setup({
             showContributorAssignment: true,
         });
         expect(toJson(wrapper)).toMatchSnapshot();
-    });
-
-    it('should map state to props as expected', () => {
-        const authorsList = ['test1', 'test2'];
-        const testFunction = () => ({ authorsList });
-        expect(
-            mapStateToProps({
-                get: testFunction,
-            }),
-        ).toEqual({ authorsList });
-        expect(
-            mapStateToProps({
-                get: () => false,
-            }),
-        ).toEqual({
-            authorsList: [],
-        });
     });
 
     it('should render narrower grid at md breakpoint if showIdentifierLookup is true', () => {
