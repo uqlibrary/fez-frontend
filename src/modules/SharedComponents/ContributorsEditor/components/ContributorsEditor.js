@@ -237,6 +237,7 @@ export class ContributorsEditor extends PureComponent {
             locale: (this.props.locale.form || {}).locale,
             contributor: this.state.contributors[contributorIndexSelectedToEdit],
             displayCancel: this.props.canEdit, // admin can cancel and clear the edit form
+            canEdit: this.props.canEdit,
         };
 
         return (

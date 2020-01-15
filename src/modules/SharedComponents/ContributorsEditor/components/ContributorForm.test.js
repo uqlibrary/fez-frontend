@@ -54,6 +54,7 @@ describe('Component ContributorForm', () => {
                 orgaff: '',
                 orgtype: '',
                 creatorRole: '',
+                uqUsername: '',
             },
         });
         const event = {
@@ -67,6 +68,7 @@ describe('Component ContributorForm', () => {
             orgtype: '453989',
             creatorRole: '',
             uqIdentifier: '',
+            uqUsername: '',
         });
     });
 
@@ -291,7 +293,7 @@ describe('Component ContributorForm', () => {
         const wrapper = setup({
             onSubmit: testFn,
         });
-        wrapper.instance()._onUQIdentifierSelected({ aut_id: 111 });
+        wrapper.instance()._onUQIdentifierSelected({ aut_id: 111, aut_org_username: 'uqtest' });
         expect(testFn).toBeCalledWith({
             affiliation: '',
             creatorRole: '',
@@ -300,6 +302,8 @@ describe('Component ContributorForm', () => {
             orgtype: '',
             uqIdentifier: '111',
             aut_id: 111,
+            aut_org_username: 'uqtest',
+            uqUsername: 'uqtest',
         });
     });
 
@@ -308,7 +312,12 @@ describe('Component ContributorForm', () => {
         const wrapper = setup({
             onSubmit: testFn,
         });
-        wrapper.instance()._onUQIdentifierSelected({ aut_id: 111, aut_lname: 'Test', aut_fname: 'Testing' });
+        wrapper.instance()._onUQIdentifierSelected({
+            aut_id: 111,
+            aut_lname: 'Test',
+            aut_fname: 'Testing',
+            aut_org_username: 'uqtest',
+        });
         expect(testFn).toBeCalledWith({
             affiliation: '',
             creatorRole: '',
@@ -319,6 +328,8 @@ describe('Component ContributorForm', () => {
             aut_id: 111,
             aut_lname: 'Test',
             aut_fname: 'Testing',
+            aut_org_username: 'uqtest',
+            uqUsername: 'uqtest',
         });
     });
 
@@ -328,10 +339,12 @@ describe('Component ContributorForm', () => {
         wrapper.instance()._onSubmit = testFn;
 
         const initialState = wrapper.state();
+        const { uqUsername, ...rest } = initialState.contributor;
+
         const expected = {
             ...initialState,
             contributor: {
-                ...initialState.contributor,
+                ...rest,
                 uqIdentifier: '0',
                 orgaff: 'Missing',
                 authorId: 0,
@@ -343,6 +356,7 @@ describe('Component ContributorForm', () => {
 
         expect(wrapper.state()).toEqual(expected);
         expect(testFn).toHaveBeenCalledTimes(1);
+        expect(uqUsername).toBe('');
     });
 
     it('should clear contributor form on cancellation from edit', () => {

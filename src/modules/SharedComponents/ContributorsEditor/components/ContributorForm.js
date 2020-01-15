@@ -29,9 +29,11 @@ export class ContributorForm extends PureComponent {
         disableNameAsPublished: PropTypes.bool,
         enableUqIdentifierOnAffiliationChange: PropTypes.bool,
         displayCancel: PropTypes.bool,
+        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
+        canEdit: false,
         required: false,
         contributor: {},
         locale: {
@@ -83,6 +85,7 @@ export class ContributorForm extends PureComponent {
             orgaff: '',
             orgtype: '',
             affiliation: '',
+            uqUsername: '',
             ...props.contributor,
         },
         showIdentifierLookup: props.showIdentifierLookup,
@@ -147,6 +150,7 @@ export class ContributorForm extends PureComponent {
             () => {
                 this.state.contributor.nameAsPublished.trim().length !== 0 &&
                     DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
+                    !this.props.canEdit &&
                     this._onSubmit();
             },
         );
@@ -165,11 +169,12 @@ export class ContributorForm extends PureComponent {
                             `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
                         '',
                     uqIdentifier: `${selectedItem.aut_id}`,
+                    uqUsername: `${selectedItem.aut_org_username}`,
                     ...selectedItem,
                 },
             }),
             () => {
-                this._onSubmit();
+                (!this.props.canEdit || (this.props.canEdit && !this.props.showRoleInput)) && this._onSubmit();
             },
         );
     };
@@ -229,6 +234,7 @@ export class ContributorForm extends PureComponent {
 
     render() {
         const {
+            canEdit,
             disabled,
             disableNameAsPublished,
             displayCancel,
@@ -249,12 +255,13 @@ export class ContributorForm extends PureComponent {
             (showRoleInput && contributor.creatorRole.length === 0) ||
             (contributor.affiliation === 'NotUQ' &&
                 (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
-
+        const addButtonLabel =
+            canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
         return (
             <React.Fragment>
                 {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    {(isNtro || !!contributor.affiliation) && (
+                    {(isNtro || !!contributor.affiliation || canEdit) && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
                                 affiliation={contributor.affiliation}
@@ -278,7 +285,7 @@ export class ContributorForm extends PureComponent {
                             autoComplete="off"
                             error={
                                 !isContributorAssigned &&
-                                contributor.nameAsPublished.trim().length === 0 &&
+                                (contributor.nameAsPublished || '').trim().length === 0 &&
                                 (isNtro ? contributor.affiliation !== '' : !!required)
                             }
                         />
@@ -287,20 +294,17 @@ export class ContributorForm extends PureComponent {
                         (this.props.enableUqIdentifierOnAffiliationChange && contributor.affiliation === 'UQ')) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
-                                key={contributor.authorId}
                                 disabled={
-                                    disabled ||
-                                    // displayCancel is true only for admins, so just using it instead of adding new
-                                    // prop. userIsAdmin hook is there but only for functional components
-                                    (!displayCancel && (contributor.nameAsPublished || '').trim().length === 0)
+                                    disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
                                 }
-                                onChange={this._onUQIdentifierSelected}
-                                onClear={this._onUQIdentifierCleared}
-                                showClear={!!parseInt(contributor.uqIdentifier, 10)}
-                                value={contributor.uqIdentifier || ''}
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"
                                 id="identifierField"
+                                key={contributor.authorId}
+                                onChange={this._onUQIdentifierSelected}
+                                onClear={this._onUQIdentifierCleared}
+                                showClear={!!parseInt(contributor.uqIdentifier, 10)}
+                                value={contributor.uqUsername || ''}
                             />
                         </Grid>
                     )}
@@ -339,7 +343,7 @@ export class ContributorForm extends PureComponent {
                     )}
                 </Grid>
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    <Grid item xs={this.props.displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
+                    <Grid item xs={displayCancel ? 6 : 12} style={{ marginBottom: 8 }}>
                         <Button
                             variant="contained"
                             fullWidth
@@ -348,10 +352,10 @@ export class ContributorForm extends PureComponent {
                             onClick={this._onSubmit}
                             id="submit-author"
                         >
-                            {locale.addButton}
+                            {addButtonLabel}
                         </Button>
                     </Grid>
-                    {this.props.displayCancel && (
+                    {displayCancel && (
                         <Grid item xs={6} style={{ marginBottom: 8 }}>
                             <Button
                                 variant="contained"

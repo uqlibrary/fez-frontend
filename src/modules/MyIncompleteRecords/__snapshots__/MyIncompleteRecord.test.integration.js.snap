@@ -600,7 +600,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                               <span
 +                                 class=\\"MuiButton-label-331\\"
 +                               >
-+                                 Update author
++                                 Change Details
 +                               </span>
 +                             </button>
 +                           </div>
@@ -984,7 +984,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                               <span
 -                                 class=\\"MuiButton-label-331\\"
 -                               >
--                                 Update author
+-                                 Change Details
 -                               </span>
 -                             </button>
 -                           </div>
