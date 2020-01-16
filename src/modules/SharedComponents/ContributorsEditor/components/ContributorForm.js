@@ -224,6 +224,7 @@ export class ContributorForm extends PureComponent {
                     ...prevState.contributor,
                     orgaff,
                 },
+            },
         }));
     };
 
@@ -296,7 +297,7 @@ export class ContributorForm extends PureComponent {
                             }
                         />
                     </Grid>
-                    {(!contributor.affiliation && this.state.showIdentifierLookup ||
+                    {((!contributor.affiliation && this.state.showIdentifierLookup) ||
                         (this.props.enableUqIdentifierOnAffiliationChange &&
                             contributor.affiliation === AFFILIATION_TYPE_UQ)) && (
                         <Grid item xs={12} sm={3}>
