@@ -40,63 +40,99 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      secondary="Name as published"
-      secondaryTypographyProps={
+    <WithStyles(Grid)
+      classes={
         Object {
-          "variant": "caption",
+          "container": undefined,
         }
       }
-    />
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      container={true}
     >
-      <WithStyles(ListItemText)
-        secondary="UQ identifier / Organisation"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        sm={4}
+        xs={12}
+      >
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(ListItemText)
+            secondary="UQ identifier / Organisation"
+            secondaryTypographyProps={
+              Object {
+                "variant": "caption",
+              }
+            }
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
       />
-    </Hidden>
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
     >
-      <WithStyles(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight24",
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "secondary": "right paddingRight24",
+            }
           }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
-      />
-    </Hidden>
+        />
+      </Hidden>
+    </WithStyles(ListItemSecondaryAction)>
     <WithStyles(ListItemSecondaryAction)
       classes={
         Object {
@@ -165,41 +201,71 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      secondary="Name as published"
-      secondaryTypographyProps={
+    <WithStyles(Grid)
+      classes={
         Object {
-          "variant": "caption",
+          "container": undefined,
         }
       }
-    />
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      container={true}
     >
-      <WithStyles(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight24",
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
       />
-    </Hidden>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "secondary": "right paddingRight24",
+            }
+          }
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
+          }
+        />
+      </Hidden>
+    </WithStyles(ListItemSecondaryAction)>
     <WithStyles(ListItemSecondaryAction)
       classes={
         Object {
@@ -268,41 +334,71 @@ exports[`Component ContributorRowHeader header for contributor editor control wi
         <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      secondary="Name as published"
-      secondaryTypographyProps={
+    <WithStyles(Grid)
+      classes={
         Object {
-          "variant": "caption",
+          "container": undefined,
         }
       }
-    />
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      container={true}
     >
-      <WithStyles(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight24",
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
       />
-    </Hidden>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "secondary": "right paddingRight24",
+            }
+          }
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
+          }
+        />
+      </Hidden>
+    </WithStyles(ListItemSecondaryAction)>
     <WithStyles(ListItemSecondaryAction)
       classes={
         Object {
@@ -371,63 +467,94 @@ exports[`Component ContributorRowHeader header for creator role 1`] = `
         <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      secondary="Name as published"
-      secondaryTypographyProps={
+    <WithStyles(Grid)
+      classes={
         Object {
-          "variant": "caption",
+          "container": undefined,
         }
       }
-    />
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      container={true}
     >
-      <WithStyles(ListItemText)
-        secondary="Role"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
+      >
+        <Hidden
+          implementation="js"
+          lgDown={false}
+          lgUp={false}
+          mdDown={false}
+          mdUp={false}
+          smDown={false}
+          smUp={false}
+          xlDown={false}
+          xlUp={false}
+          xsDown={true}
+          xsUp={false}
+        >
+          <WithStyles(ListItemText)
+            secondary="Role"
+            secondaryTypographyProps={
+              Object {
+                "variant": "caption",
+              }
+            }
+          />
+        </Hidden>
+      </WithStyles(Grid)>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
         }
-      />
-    </Hidden>
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      }
     >
-      <WithStyles(ListItemText)
-        classes={
-          Object {
-            "secondary": "right paddingRight24",
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "secondary": "right paddingRight24",
+            }
           }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
-      />
-    </Hidden>
+        />
+      </Hidden>
+    </WithStyles(ListItemSecondaryAction)>
     <WithStyles(ListItemSecondaryAction)
       classes={
         Object {
@@ -496,41 +623,71 @@ exports[`Component ContributorRowHeader should display infinite class 1`] = `
         <pure(PeopleIcon) />
       </WithStyles(ListItemIcon)>
     </Hidden>
-    <WithStyles(ListItemText)
-      secondary="Name as published"
-      secondaryTypographyProps={
+    <WithStyles(Grid)
+      classes={
         Object {
-          "variant": "caption",
+          "container": undefined,
         }
       }
-    />
-    <Hidden
-      implementation="js"
-      lgDown={false}
-      lgUp={false}
-      mdDown={false}
-      mdUp={false}
-      smDown={false}
-      smUp={false}
-      xlDown={false}
-      xlUp={false}
-      xsDown={true}
-      xsUp={false}
+      container={true}
     >
-      <WithStyles(ListItemText)
-        classes={
-          Object {
-            "secondary": "undefined test-class-1",
+      <WithStyles(Grid)
+        item={true}
+        md={3}
+        sm={5}
+        xs={10}
+      >
+        <WithStyles(ListItemText)
+          secondary="Name as published"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
           }
-        }
-        secondary="Reorder records"
-        secondaryTypographyProps={
-          Object {
-            "variant": "caption",
-          }
-        }
+        />
+      </WithStyles(Grid)>
+      <WithStyles(Grid)
+        item={true}
+        md={4}
+        sm={5}
+        xs={12}
       />
-    </Hidden>
+    </WithStyles(Grid)>
+    <WithStyles(ListItemSecondaryAction)
+      classes={
+        Object {
+          "root": undefined,
+        }
+      }
+    >
+      <Hidden
+        implementation="js"
+        lgDown={false}
+        lgUp={false}
+        mdDown={false}
+        mdUp={false}
+        smDown={false}
+        smUp={false}
+        xlDown={false}
+        xlUp={false}
+        xsDown={true}
+        xsUp={false}
+      >
+        <WithStyles(ListItemText)
+          classes={
+            Object {
+              "secondary": "undefined test-class-1",
+            }
+          }
+          secondary="Reorder records"
+          secondaryTypographyProps={
+            Object {
+              "variant": "caption",
+            }
+          }
+        />
+      </Hidden>
+    </WithStyles(ListItemSecondaryAction)>
     <WithStyles(ListItemSecondaryAction)
       classes={
         Object {

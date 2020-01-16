@@ -219,10 +219,11 @@ export class ContributorForm extends PureComponent {
         const orgaff = event.target.value;
         this.setState(prevState => ({
             ...prevState,
-            contributor: {
-                ...prevState.contributor,
-                orgaff,
-            },
+            ...{
+                contributor: {
+                    ...prevState.contributor,
+                    orgaff,
+                },
         }));
     };
 
@@ -295,7 +296,7 @@ export class ContributorForm extends PureComponent {
                             }
                         />
                     </Grid>
-                    {(this.state.showIdentifierLookup ||
+                    {(!contributor.affiliation && this.state.showIdentifierLookup ||
                         (this.props.enableUqIdentifierOnAffiliationChange &&
                             contributor.affiliation === AFFILIATION_TYPE_UQ)) && (
                         <Grid item xs={12} sm={3}>

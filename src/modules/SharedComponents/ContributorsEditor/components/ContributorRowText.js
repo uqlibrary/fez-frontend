@@ -20,7 +20,7 @@ export const ContributorRowText = ({
 }) => {
     const isAdmin = userIsAdmin();
     const md = showRoleInput && isAdmin && canEdit ? 4 : 5;
-    const idColWidth = showRoleInput && isAdmin && canEdit ? 3 : 5;
+    const idColWidth = showRoleInput && isAdmin && canEdit ? 4 : 5;
     const contributorOrder = `${numberToWords(index + 1)} ${suffix}`;
 
     const isUQAuthor = author => {
@@ -56,9 +56,13 @@ export const ContributorRowText = ({
         />
     );
 
+    if (!contributor.aut_title || contributor.aut_title.length < 2) {
+        contributor.aut_title = ''; // if missing or has silly value - blank
+    }
+
     return (
         <Grid container classes={{ container: classes.listContainer }} id="contributor-row">
-            <Grid item xs={10} sm={5} md={md}>
+            <Grid item xs={10} sm={5} md={3}>
                 {getListItemTypography(
                     contributor.nameAsPublished,
                     contributorOrder,

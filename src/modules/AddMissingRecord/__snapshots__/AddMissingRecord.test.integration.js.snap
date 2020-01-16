@@ -3138,7 +3138,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                     />
                                   </div>
                                 </div>
-@@ -799,135 +757,229 @@
+@@ -799,137 +757,246 @@
                                   type=\\"button\\"
                                 >
                                   <span
@@ -3169,17 +3169,17 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 class=\\"authorSteps\\"
                                 >
 -                         Please 
--                         <b>
--                           provide a list as described
--                         </b>
--                          and 
 +                                 Step 2 of 2
 +                               </span>
 +                                - Please 
                                 <b>
--                           select one
+-                           provide a list as described
 +                                 select your name
                                 </b>
+-                          and 
+-                         <b>
+-                           select one
+-                         </b>
 -                          as you
 -                       </span>
 +                                from the list below (if applicable).
@@ -3204,7 +3204,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                     focusable=\\"false\\"
 +                                     role=\\"presentation\\"
 +                                     viewBox=\\"0 0 24 24\\"
-                                    >
++                                   >
 +                                     <path
 +                                       d=\\"M0 0h24v24H0z\\"
 +                                       fill=\\"none\\"
@@ -3214,51 +3214,64 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                     />
 +                                   </svg>
 +                                 </div>
-                                  <div
++                                 <div
++                                   class=\\"MuiGrid-container-796\\"
+                                  >
+                                    <div
 -                     class=\\"MuiCardHeader-root-981\\"
-+                                   class=\\"MuiListItemText-root-1212\\"
-                                  >
-+                                   <span
-+                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
-+                                   >
-+                                     Editor's name in the format eg. \\"John Smith\\"
-+                                   </span>
-+                                 </div>
-                                  <div
++                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-3-855\\"
+                                    >
+                                      <div
 -                       class=\\"MuiCardHeader-content-984\\"
-+                                   class=\\"MuiListItemText-root-1212\\"
-                                  >
++                                       class=\\"MuiListItemText-root-1212\\"
+                                      >
 -                       <h3
 -                         class=\\"MuiTypography-root-893 MuiTypography-h5-909 MuiTypography-colorInherit-922 MuiCardHeader-title-985\\"
-+                                   <span
-+                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216 ContributorRowHeader-right-1207 ContributorRowHeader-paddingRight24-1209\\"
-                                    >
++                                       <span
++                                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
+                                        >
 -                         Editors
 -                       </h3>
-+                                     Reorder items
-+                                   </span>
-                                  </div>
-                                </div>
-                                <div
++                                         Editor's name in the format eg. \\"John Smith\\"
++                                       </span>
+                                      </div>
+                                    </div>
+                                    <div
 -                     class=\\"MuiCardContent-root-1014\\"
++                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-4-856\\"
++                                   />
++                                 </div>
++                                 <div
++                                   class=\\"MuiListItemSecondaryAction-root-1218\\"
+                                  >
+-                     <div>
+                                    <div
+-                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
++                                     class=\\"MuiListItemText-root-1212\\"
++                                   >
++                                     <span
++                                       class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216 ContributorRowHeader-right-1207 ContributorRowHeader-paddingRight24-1209\\"
+                                      >
++                                       Reorder items
++                                     </span>
++                                   </div>
++                                 </div>
++                               </div>
+                                <div
+-                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
 +                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
                                 >
--                     <div>
--                       <div
--                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+-                           <div>
 +                                 <span
 +                                   class=\\"\\"
 +                                   title=\\"Remove all items\\"
-                                  >
--                         <div
--                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
++                                 >
 +                                   <button
 +                                     aria-label=\\"Remove all items\\"
 +                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 +                                     tabindex=\\"0\\"
 +                                     type=\\"button\\"
-                                    >
--                           <div>
++                                   >
                                       <span
 -                               class=\\"authorSteps\\"
 +                                       class=\\"MuiIconButton-label-1001\\"
@@ -3347,22 +3360,14 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                   for=\\"editors-name-as-published-field\\"
 -                                   id=\\"editors-name-as-published-field-label\\"
 +                                   <div
-+                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-5-857\\"
++                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-3-855\\"
                                     >
 -                                   Enter each editor's name as published (eg. John Smith)
 -                                 </label>
                                       <div
 -                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
 +                                       class=\\"MuiListItemText-root-1212\\"
-+                                     >
-+                                       <p
-+                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---primary-1226  MuiTypography-body2-901 MuiTypography-noWrap-919\\"
-+                                       >
-+                                         test
-+                                       </p>
-+                                       <span
-+                                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-noWrap-919\\"
-                                        >
+                                      >
 -                                   <input
 -                                     aria-invalid=\\"false\\"
 -                                     aria-label=\\"Enter each editor's name as published (eg. John Smith)\\"
@@ -3375,6 +3380,14 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     type=\\"text\\"
 -                                     value=\\"\\"
 -                                   />
++                                       <p
++                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---primary-1226  MuiTypography-body2-901 MuiTypography-noWrap-919\\"
++                                       >
++                                         test
++                                       </p>
++                                       <span
++                                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-noWrap-919\\"
++                                       >
 +                                         First  listed editor
 +                                       </span>
                                       </div>
@@ -3407,15 +3420,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                       <span
 -                                   class=\\"MuiButton-label-1077\\"
 +                                       class=\\"MuiIconButton-label-1001\\"
-+                                     >
+                                      >
+-                                   Add editor
 +                                       <svg
 +                                         aria-hidden=\\"true\\"
 +                                         class=\\"MuiSvgIcon-root-1005\\"
 +                                         focusable=\\"false\\"
 +                                         role=\\"presentation\\"
 +                                         viewBox=\\"0 0 24 24\\"
-                                        >
--                                   Add editor
++                                       >
 +                                         <path
 +                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 +                                         />
@@ -3429,17 +3442,19 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                       class=\\"MuiTouchRipple-root-1137\\"
 +                                     />
                                     </button>
--                             </div>
 +                                 </span>
                                 </div>
 +                             </li>
 +                           </ul>
                           </div>
                         </div>
+-                       </div>
                         <span
                           class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorError-927\\"
                         >
-@@ -1530,13 +1582,10 @@
+                          Please 
+                          <b>
+@@ -1530,13 +1597,10 @@
                           Validation - 
                         </b>
                         <span>
@@ -3460,7 +3475,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 - First value
 + Second value
 
-@@ -886,33 +886,31 @@
+@@ -901,33 +901,31 @@
                               <li
                                 class=\\"MuiListItem-container-1154\\"
                               >
@@ -3499,7 +3514,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                   <div
                                     class=\\"MuiGrid-container-796 WithTheme-WithWidth-ContributorRow---listContainer-1219\\"
                                     id=\\"contributor-row\\"
-@@ -922,16 +920,16 @@
+@@ -937,16 +935,16 @@
                                     >
                                       <div
                                         class=\\"MuiListItemText-root-1212\\"
@@ -3518,7 +3533,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                         </span>
                                       </div>
                                     </div>
-@@ -954,11 +952,11 @@
+@@ -969,11 +967,11 @@
                                       <span
                                         class=\\"MuiIconButton-label-1001\\"
                                       >
@@ -3531,7 +3546,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                           viewBox=\\"0 0 24 24\\"
                                         >
                                           <path
-@@ -978,23 +976,10 @@
+@@ -993,23 +991,10 @@
                                 </div>
                               </li>
                             </ul>
@@ -3555,7 +3570,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
                 <div
-@@ -1529,68 +1514,13 @@
+@@ -1544,68 +1529,13 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -3624,7 +3639,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1622,22 +1552,24 @@
+@@ -1637,22 +1567,24 @@
             </div>
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-auto-837\\"
@@ -3685,7 +3700,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                 aria-invalid=\\"false\\"
                                 aria-label=\\"Book title\\"
                                 aria-labelledby=\\"rek-title-label\\"
-@@ -676,12 +676,48 @@
+@@ -676,14 +676,50 @@
                         class=\\"MuiCardHeader-content-984\\"
                       >
                         <h3
@@ -3694,7 +3709,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                         Editors
 +                         Authors
                         </h3>
-+                     </div>
+                      </div>
 +                     <div
 +                       class=\\"MuiCardHeader-action-983\\"
 +                     >
@@ -3731,10 +3746,12 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         />
 +                       </button>
                       </div>
-                    </div>
++                   </div>
                     <div
                       class=\\"MuiCardContent-root-1014\\"
                     >
+                      <div>
+                        <div
 @@ -698,13 +734,13 @@
                               >
                                 Step 1 of 2
@@ -3764,12 +3781,12 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                   id=\\"editors-name-as-published-field-label\\"
 +                                   for=\\"authors-name-as-published-field\\"
 +                                   id=\\"authors-name-as-published-field-label\\"
-+                                 >
+                                  >
+-                                   Enter each editor's name as published (eg. John Smith)
 +                                   Enter each author's name as published (eg. Smith, John)
 +                                   <span
 +                                     class=\\"MuiFormLabel-asterisk-1036 MuiFormLabel-error-1033 MuiInputLabel-error-1022\\"
-                                    >
--                                   Enter each editor's name as published (eg. John Smith)
++                                   >
 +                                      *
 +                                   </span>
                                   </label>
@@ -3798,7 +3815,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                     />
                                   </div>
                                 </div>
-@@ -757,229 +799,150 @@
+@@ -757,245 +799,151 @@
                                   type=\\"button\\"
                                 >
                                   <span
@@ -3843,11 +3860,11 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          as you
 +                       </span>
-+                     </div>
-                    </div>
+                      </div>
 -                             <li
 -                               class=\\"MuiListItem-container-1154\\"
 -                             >
++                   </div>
 +                 </div>
 +               </div>
                 <div
@@ -3863,8 +3880,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     focusable=\\"false\\"
 -                                     role=\\"presentation\\"
 -                                     viewBox=\\"0 0 24 24\\"
-+                   class=\\"MuiPaper-root-954 MuiPaper-elevation1-957 MuiPaper-rounded-955 MuiCard-root-953 Cards-card-948 StandardCard\\"
-                  >
+-                                   >
 -                                     <path
 -                                       d=\\"M0 0h24v24H0z\\"
 -                                       fill=\\"none\\"
@@ -3874,50 +3890,64 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                     />
 -                                   </svg>
 -                                 </div>
+-                                 <div
+-                                   class=\\"MuiGrid-container-796\\"
++                   class=\\"MuiPaper-root-954 MuiPaper-elevation1-957 MuiPaper-rounded-955 MuiCard-root-953 Cards-card-948 StandardCard\\"
+                  >
                     <div
--                                   class=\\"MuiListItemText-root-1212\\"
+-                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-3-855\\"
 +                     class=\\"MuiCardHeader-root-981\\"
                     >
--                                   <span
--                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
--                                   >
--                                     Editor's name in the format eg. \\"John Smith\\"
--                                   </span>
--                                 </div>
                       <div
--                                   class=\\"MuiListItemText-root-1212\\"
+-                                       class=\\"MuiListItemText-root-1212\\"
 +                       class=\\"MuiCardHeader-content-984\\"
                       >
--                                   <span
--                                     class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216 ContributorRowHeader-right-1207 ContributorRowHeader-paddingRight24-1209\\"
+-                                       <span
+-                                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216\\"
 +                       <h3
 +                         class=\\"MuiTypography-root-893 MuiTypography-h5-909 MuiTypography-colorInherit-922 MuiCardHeader-title-985\\"
                         >
--                                     Reorder items
--                                   </span>
+-                                         Editor's name in the format eg. \\"John Smith\\"
+-                                       </span>
+-                                     </div>
 +                         Editors
 +                       </h3>
                       </div>
+-                                   <div
+-                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-4-856\\"
+-                                   />
                     </div>
                     <div
--                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
+-                                   class=\\"MuiListItemSecondaryAction-root-1218\\"
 +                     class=\\"MuiCardContent-root-1014\\"
                     >
++                     <div>
+                        <div
+-                                     class=\\"MuiListItemText-root-1212\\"
+-                                   >
+-                                     <span
+-                                       class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorTextSecondary-926 MuiListItemText-secondary-1216 ContributorRowHeader-right-1207 ContributorRowHeader-paddingRight24-1209\\"
++                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
+                        >
+-                                       Reorder items
+-                                     </span>
+-                                   </div>
+-                                 </div>
+-                               </div>
+                          <div
+-                                 class=\\"MuiListItemSecondaryAction-root-1218\\"
++                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
+                          >
 -                                 <span
 -                                   class=\\"\\"
 -                                   title=\\"Remove all items\\"
-+                     <div>
-+                       <div
-+                         class=\\"MuiGrid-container-796 MuiGrid-spacing-xs-8-818\\"
-                        >
+-                                 >
 -                                   <button
 -                                     aria-label=\\"Remove all items\\"
 -                                     class=\\"MuiButtonBase-root-1002 MuiIconButton-root-996\\"
 -                                     tabindex=\\"0\\"
 -                                     type=\\"button\\"
-+                         <div
-+                           class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
-                          >
+-                                   >
 +                           <div>
                               <span
 -                                       class=\\"MuiIconButton-label-1001\\"
@@ -3945,13 +3975,13 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                           Remove all items
 -                                         </title>
 -                                       </svg>
-+                               Step 1 of 2
-                              </span>
+-                                     </span>
 -                                     <span
 -                                       class=\\"MuiTouchRipple-root-1137\\"
 -                                     />
 -                                   </button>
--                                 </span>
++                               Step 1 of 2
+                              </span>
 +                              - Please 
 +                             <b>
 +                               add to a list of editors below
@@ -4000,7 +4030,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 class=\\"MuiFormControl-root-1015 MuiFormControl-fullWidth-1018\\"
                                 >
 -                                   <div
--                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-5-857\\"
+-                                     class=\\"MuiGrid-item-797 MuiGrid-grid-xs-10-834 MuiGrid-grid-sm-5-843 MuiGrid-grid-md-3-855\\"
 +                                 <label
 +                                   class=\\"MuiFormLabel-root-1030 MuiInputLabel-root-1019 MuiInputLabel-formControl-1024 MuiInputLabel-animated-1027\\"
 +                                   data-shrink=\\"false\\"
@@ -4011,8 +4041,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                                 </label>
                                   <div
 -                                       class=\\"MuiListItemText-root-1212\\"
-+                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
-                                  >
+-                                     >
 -                                       <p
 -                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---primary-1226 WithTheme-WithWidth-ContributorRow---selected-1224 MuiTypography-body2-901 MuiTypography-noWrap-919\\"
 -                                       >
@@ -4020,7 +4049,8 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                                       </p>
 -                                       <span
 -                                         class=\\"MuiTypography-root-893 WithTheme-WithWidth-ContributorRow---selected-1224 MuiTypography-caption-903 MuiTypography-noWrap-919\\"
--                                       >
++                                   class=\\"MuiInputBase-root-1057 MuiInput-root-1044 MuiInput-underline-1048 MuiInputBase-fullWidth-1066 MuiInput-fullWidth-1051 MuiInputBase-formControl-1058 MuiInput-formControl-1045\\"
+                                  >
 -                                         First  listed editor
 -                                       </span>
 +                                   <input
@@ -4064,15 +4094,15 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                                 >
                                   <span
 -                                       class=\\"MuiIconButton-label-1001\\"
-+                                   class=\\"MuiButton-label-1077\\"
-                                  >
+-                                     >
 -                                       <svg
 -                                         aria-hidden=\\"true\\"
 -                                         class=\\"MuiSvgIcon-root-1005 WithTheme-WithWidth-ContributorRow---selected-1224\\"
 -                                         focusable=\\"false\\"
 -                                         role=\\"presentation\\"
 -                                         viewBox=\\"0 0 24 24\\"
--                                       >
++                                   class=\\"MuiButton-label-1077\\"
+                                  >
 -                                         <path
 -                                           d=\\"M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z\\"
 -                                         />
@@ -4093,7 +4123,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 -                           </ul>
                             </div>
                           </div>
-+                       </div>
+                        </div>
 +                       <span
 +                         class=\\"MuiTypography-root-893 MuiTypography-caption-903 MuiTypography-colorError-927\\"
 +                       >
@@ -4107,12 +4137,13 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
 +                         </b>
 +                          as you
 +                       </span>
-                      </div>
++                     </div>
                     </div>
                   </div>
                 </div>
                 <div
-@@ -1514,13 +1477,71 @@
+                  class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836\\"
+@@ -1529,13 +1477,71 @@
                                 id=\\"Uploader\\"
                                 multiple=\\"\\"
                                 style=\\"position: absolute; top: 0px; right: 0px; bottom: 0px; left: 0px; opacity: 0.00001; pointer-events: none;\\"
@@ -4184,7 +4215,7 @@ exports[`AddMissingRecord form BookForm:Textbook should validate the form and sh
                   </div>
                 </div>
               </div>
-@@ -1552,24 +1573,22 @@
+@@ -1567,24 +1573,22 @@
             </div>
             <div
               class=\\"MuiGrid-item-797 MuiGrid-grid-xs-12-836 MuiGrid-grid-sm-auto-837\\"
