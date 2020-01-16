@@ -380,4 +380,25 @@ describe('Component ContributorForm', () => {
             creatorRole: '',
         });
     });
+
+    it('should not submit contributor form if admin user is adding dataset', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+            canEdit: true,
+            showRoleInput: true,
+        });
+        wrapper.instance()._onUQIdentifierSelected({
+            aut_id: 1,
+            aut_org_username: 'uqtest',
+        });
+        expect(testFn).not.toBeCalledWith();
+    });
 });
