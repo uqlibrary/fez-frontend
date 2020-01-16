@@ -214,9 +214,11 @@ export class ContributorForm extends PureComponent {
         const orgaff = event.target.value;
         this.setState(prevState => ({
             ...prevState,
-            contributor: {
-                ...prevState.contributor,
-                orgaff,
+            ...{
+                contributor: {
+                    ...prevState.contributor,
+                    orgaff,
+                },
             },
         }));
     };
@@ -257,6 +259,7 @@ export class ContributorForm extends PureComponent {
                 (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
         const addButtonLabel =
             canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
+
         return (
             <React.Fragment>
                 {description}
@@ -290,7 +293,7 @@ export class ContributorForm extends PureComponent {
                             }
                         />
                     </Grid>
-                    {(this.state.showIdentifierLookup ||
+                    {((!contributor.affiliation && this.state.showIdentifierLookup) ||
                         (this.props.enableUqIdentifierOnAffiliationChange && contributor.affiliation === 'UQ')) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField

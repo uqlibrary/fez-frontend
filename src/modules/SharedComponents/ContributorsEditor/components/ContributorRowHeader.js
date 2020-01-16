@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { ConfirmDialogBox } from 'modules/SharedComponents/Toolbox/ConfirmDialogBox';
 import IconButton from '@material-ui/core/IconButton';
 import Tooltip from '@material-ui/core/Tooltip';
+import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
@@ -94,31 +95,44 @@ export class ContributorRowHeader extends PureComponent {
                             <People />
                         </ListItemIcon>
                     </Hidden>
-                    <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
-                    {showIdentifierLookup && (
+                    <Grid container classes={{ container: classes.listContainer }}>
+                        <Grid item xs={10} sm={5} md={3}>
+                            <ListItemText secondary={nameColumn} secondaryTypographyProps={{ variant: 'caption' }} />
+                        </Grid>
+                        {showIdentifierLookup && (
+                            <Grid item xs={12} sm={4}>
+                                <Hidden xsDown>
+                                    <ListItemText
+                                        secondary={identifierColumn}
+                                        secondaryTypographyProps={{ variant: 'caption' }}
+                                    />
+                                </Hidden>
+                            </Grid>
+                        )}
+                        <Grid item xs={12} sm={5} md={4}>
+                            {showRoleInput && (
+                                <Hidden xsDown>
+                                    <ListItemText
+                                        secondary={roleColumn}
+                                        secondaryTypographyProps={{ variant: 'caption' }}
+                                    />
+                                </Hidden>
+                            )}
+                        </Grid>
+                    </Grid>
+                    <ListItemSecondaryAction classes={{ root: classes.paddingRight64 }}>
                         <Hidden xsDown>
                             <ListItemText
-                                secondary={identifierColumn}
+                                secondary={reorderColumn}
                                 secondaryTypographyProps={{ variant: 'caption' }}
+                                classes={{
+                                    secondary: `${classes.right} ${
+                                        isInfinite ? classes.paddingRight36 : classes.paddingRight24
+                                    }`,
+                                }}
                             />
                         </Hidden>
-                    )}
-                    {showRoleInput && (
-                        <Hidden xsDown>
-                            <ListItemText secondary={roleColumn} secondaryTypographyProps={{ variant: 'caption' }} />
-                        </Hidden>
-                    )}
-                    <Hidden xsDown>
-                        <ListItemText
-                            secondary={reorderColumn}
-                            secondaryTypographyProps={{ variant: 'caption' }}
-                            classes={{
-                                secondary: `${classes.right} ${
-                                    isInfinite ? classes.paddingRight36 : classes.paddingRight24
-                                }`,
-                            }}
-                        />
-                    </Hidden>
+                    </ListItemSecondaryAction>
                     <ListItemSecondaryAction classes={{ root: isInfinite ? classes.paddingRight14 : '' }}>
                         <Tooltip
                             title={deleteAll}
