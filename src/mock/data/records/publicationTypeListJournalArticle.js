@@ -89,6 +89,14 @@ export default {
                     'rek_author_id': 80316,
                     'rek_author_id_order': 1,
                     'rek_author_id_lookup': 'Adam Burston',
+                    'author': {
+                        'aut_org_username': 'uqaburs',
+                        'aut_student_username': null,
+                        'aut_id': 80316,
+                        'aut_orcid_id': '0000-0002-6051-4253',
+                        'aut_people_australia_id': null,
+                        'aut_title': 'Dr',
+                    }
                 },
                 {
                     'rek_author_id_id': 27931008,
@@ -97,6 +105,14 @@ export default {
                     'rek_author_id': 3223,
                     'rek_author_id_order': 2,
                     'rek_author_id_lookup': 'Tuckett, Anthony G.',
+                    'author': {
+                        'aut_org_username': 'uqatuck',
+                        'aut_student_username': null,
+                        'aut_id': 3223,
+                        'aut_orcid_id': '0000-0002-6051-4252',
+                        'aut_people_australia_id': null,
+                        'aut_title': 'Dr',
+                    }
                 },
             ],
             'fez_record_search_key_author_crossref_authenticated': [],

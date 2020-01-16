@@ -75,50 +75,109 @@ export const searchKeyList = {
             {value: 'UQ:677356', text: "Admin Only - UQ Diamantina Institute"},
         ]
     },
-    author: {"total":10,"data":[
-        {
+    author: {
+        "total": 10,
+        "data": [
+            {
             "id": 78152,
-            "value": "Kisely, Steve (uqskisely)"
-        },
-        {
+            "value": "Kisely, Steve (uqskisely)",
+            "aut_id": 78152,
+            "aut_org_staff_id": "0076870",
+            "aut_display_name": "Kisely, Steve",
+            "aut_org_username": "uqskisel",
+            "aut_fname": "Steve",
+            "aut_lname": "Kisely",
+            "aut_mname": "",
+            "aut_title": "Professor"
+        }, {
             "id": 0,
-            "value": "Segal, Steven"
-        },
-        {
-            "id": 0,
-            "value": "Stevenson, Freda K."
-        },
-        {
+            "value": "Segal, Steven",
+            "aut_id": 0,
+            "aut_display_name": "Segal, Steven",
+            "aut_fname": "",
+            "aut_lname": "Stevens",
+            "aut_title": ""
+        }, {
             "id": 352995,
-            "value": "Stevenson, Philip G. (uqpsteven)"
-        },
-        {
-            "id": 0,
-            "value": "Hooker, Steven P."
-        },
-        {
-            "id": 0,
-            "value": "Blair, Steven N."
-        },
-        {
-            "id": 0,
-            "value": "McGloughlin, Steven"
-        },
-        {
+            "value": "Stevenson, Philip G. (uqpsteven)",
+            "aut_id": 352995,
+            "aut_display_name": "Stevenson, Philip G.",
+            "aut_fname": "Philip",
+            "aut_lname": "Stevenson",
+            "aut_mname": "G.",
+            "aut_title": ""
+        }, {
             "id": 75121,
-            "value": "O'Donoghue, Steven (uqsodono)"
-        },
-        {
-            "id": 0,
-            "value": "Weiss, Steven"
-        },
-        {
+            "value": "O'Donoghue, Steven (uqsodono)",
+            "aut_id": 75121,
+            "aut_org_staff_id": "0057740",
+            "aut_display_name": "O'Donoghue, Steven",
+            "aut_org_username": "uqsunder",
+            "aut_fname": "Steven",
+            "aut_lname": "O'Donoghue",
+            "aut_mname": "",
+            "aut_title": "Associate Professor"
+        }, {
             "id": 75875,
-            "value": "Wallis, Steven C. (uqswallis)"
-        },
-        {
-            "id": 343434,
-            "value": "Todd, Header (uqhtodd1)"
-        }
-    ]}
+            "value": "Wallis, Steven C. (uqswallis)",
+            "aut_id": 2113632,
+            "aut_org_staff_id": "0123039",
+            "aut_display_name": "Wallis, Steven C.",
+            "aut_org_username": "uqlstev4",
+            "aut_fname": "Steven C.",
+            "aut_lname": "Wallis",
+            "aut_title": "Mr"
+        }, {
+            "id": 88113,
+            "value": "David Stevens (uqdstev1)",
+            "aut_id": 88113,
+            "aut_org_staff_id": "0093917",
+            "aut_display_name": "David Stevens",
+            "aut_org_username": "uqdstev1",
+            "aut_fname": "David",
+            "aut_lname": "Stevens",
+            "aut_title": "Mr"
+        }, {
+            "id": 85004,
+            "value": "Steve Su (uqysu4)",
+            "aut_id": 85004,
+            "aut_org_staff_id": "0088630",
+            "aut_display_name": "Steve Su",
+            "aut_org_username": "uqysu4",
+            "aut_fname": "Steve",
+            "aut_lname": "Su",
+            "aut_title": "Dr"
+        }, {
+            "id": 85400,
+            "value": "Steven Platz (uqsplatz)",
+            "aut_id": 85400,
+            "aut_org_staff_id": "0090136",
+            "aut_display_name": "Steven Platz",
+            "aut_org_username": "uqsplatz",
+            "aut_fname": "Steven",
+            "aut_lname": "Platz",
+            "aut_title": "Mr"
+        }, {
+            "id": 85705,
+            "value": "Steven Giddings (uqsgiddi)",
+            "aut_id": 85705,
+            "aut_org_staff_id": "0090858",
+            "aut_display_name": "Steven Giddings",
+            "aut_org_username": "uqsgiddi",
+            "aut_fname": "Steven",
+            "aut_lname": "Giddings",
+            "aut_title": "Mr"
+        }, {
+            "id": 89633,
+            "value": "Steven Robbins (uqsrobb1)",
+            "aut_id": 89633,
+            "aut_org_staff_id": "0095885",
+            "aut_display_name": "Steven Robbins",
+            "aut_org_username": "uqsrobb1",
+            "aut_fname": "Steven",
+            "aut_lname": "Robbins",
+            "aut_title": "Dr"
+        }],
+        "filters": []
+    }
 };

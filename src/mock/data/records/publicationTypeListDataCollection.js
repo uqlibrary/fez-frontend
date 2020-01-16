@@ -128,8 +128,117 @@ export default {
                     "rek_author_order": 7
                 }
             ],
+            "fez_record_search_key_author_affiliation_name": [
+                {
+                    "rek_author_affiliation_name_id": 29400323,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 1,
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400324,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 2,
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400325,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 3,
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400326,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 4,
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400327,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "Brisbane Lions AFC",
+                    "rek_author_affiliation_name_order": 5
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400328,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 6,
+                },
+                {
+                    "rek_author_affiliation_name_id": 29400329,
+                    "rek_author_affiliation_name_pid": "UQ:406908",
+                    "rek_author_affiliation_name_xsdmf_id": 16269,
+                    "rek_author_affiliation_name": "The University of Queensland",
+                    "rek_author_affiliation_name_order": 7,
+                }
+            ],
+            "fez_record_search_key_author_affiliation_type": [
+                {
+                    "rek_author_affiliation_type_id": 29400323,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 1,
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400324,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 2,
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400325,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 3,
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400326,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 4,
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400327,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453988",
+                    "rek_author_affiliation_type_order": 5
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400328,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 6,
+                },
+                {
+                    "rek_author_affiliation_type_id": 29400329,
+                    "rek_author_affiliation_type_pid": "UQ:406908",
+                    "rek_author_affiliation_type_xsdmf_id": 16269,
+                    "rek_author_affiliation_type": "453989",
+                    "rek_author_affiliation_type_order": 7,
+                }
+            ],
             "fez_record_search_key_author_id": [
                 {
+                    author: {
+                        "aut_org_username": "uqrpriya",
+                        "aut_id": 20288,
+                        "aut_orcid_id": "0000-0001-5386-7924",
+                        "aut_student_username": null,
+                        "aut_title": "Mr",
+                    },
                     "rek_author_id_id": 29400323,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
@@ -138,30 +247,52 @@ export default {
                     "rek_author_id_lookup": "Rashmi Priya"
                 },
                 {
+                    author: {
+                        "aut_org_username": "uqggomez",
+                        "aut_id": 20289,
+                        "aut_orcid_id": "0000-0001-5386-7925",
+                        "aut_student_username": null,
+                        "aut_title": "Dr",
+                    },
                     "rek_author_id_id": 29400324,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
                     "rek_author_id": 83254,
                     "rek_author_id_order": 2,
-                    "rek_author_id_lookup": "Gomez, Guillermo"
+                    "rek_author_id_lookup": "Guillermo Gomez"
                 },
                 {
+                    author: {
+                        "aut_org_username": "uqsbudar",
+                        "aut_id": 20287,
+                        "aut_orcid_id": "0000-0001-5386-7926",
+                        "aut_student_username": null,
+                        "aut_title": "Professor",
+                    },
                     "rek_author_id_id": 29400325,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
                     "rek_author_id": 95545,
                     "rek_author_id_order": 3,
-                    "rek_author_id_lookup": "Budnar, Srikanth"
+                    "rek_author_id_lookup": "Srikanth Budnar"
                 },
                 {
+                    author: {
+                        "aut_org_username": "uqsverma",
+                        "aut_id": 20286,
+                        "aut_orcid_id": "0000-0001-5386-7927",
+                        "aut_student_username": null,
+                        "aut_title": "Ms",
+                    },
                     "rek_author_id_id": 29400326,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
                     "rek_author_id": 90677,
                     "rek_author_id_order": 4,
-                    "rek_author_id_lookup": "Verma, Suzie"
+                    "rek_author_id_lookup": "Suzie Verma"
                 },
                 {
+                    author: null,
                     "rek_author_id_id": 29400327,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
@@ -169,20 +300,34 @@ export default {
                     "rek_author_id_order": 5
                 },
                 {
+                    author: {
+                        "aut_org_username": "snhamil",
+                        "aut_id": 20285,
+                        "aut_orcid_id": "0000-0001-5386-7928",
+                        "aut_student_username": null,
+                        "aut_title": "Mr",
+                    },
                     "rek_author_id_id": 29400328,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
                     "rek_author_id": 857,
                     "rek_author_id_order": 6,
-                    "rek_author_id_lookup": "Hamilton, Nicholas A."
+                    "rek_author_id_lookup": "Nicholas Hamilton"
                 },
                 {
+                    author: {
+                        "aut_org_username": null,
+                        "aut_id": 20284,
+                        "aut_orcid_id": "0000-0001-5386-7929",
+                        "aut_student_username": "s1234567",
+                        "aut_title": "Mr",
+                    },
                     "rek_author_id_id": 29400329,
                     "rek_author_id_pid": "UQ:406908",
                     "rek_author_id_xsdmf_id": 16269,
                     "rek_author_id": 262,
                     "rek_author_id_order": 7,
-                    "rek_author_id_lookup": "Yap, Alpha S.K."
+                    "rek_author_id_lookup": "Alpha S.K. Yap"
                 }
             ],
             "fez_record_search_key_author_role": [
@@ -190,49 +335,49 @@ export default {
                     "rek_author_role_id": 9034,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Project lead/Principal investigator",
                     "rek_author_role_order": 1
                 },
                 {
                     "rek_author_role_id": 9035,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Co-investigator",
                     "rek_author_role_order": 2
                 },
                 {
                     "rek_author_role_id": 9036,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Higher degree research student",
                     "rek_author_role_order": 3
                 },
                 {
                     "rek_author_role_id": 9037,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Research assistant",
                     "rek_author_role_order": 4
                 },
                 {
                     "rek_author_role_id": 9038,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Software engineer",
                     "rek_author_role_order": 5
                 },
                 {
                     "rek_author_role_id": 9039,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Investigator",
+                    "rek_author_role": "Statistician",
                     "rek_author_role_order": 6
                 },
                 {
                     "rek_author_role_id": 9040,
                     "rek_author_role_pid": "UQ:406908",
                     "rek_author_role_xsdmf_id": 16244,
-                    "rek_author_role": "Chief Investigator",
+                    "rek_author_role": "Student",
                     "rek_author_role_order": 7
                 }
             ],
