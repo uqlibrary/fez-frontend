@@ -2,6 +2,7 @@ import MyIncompleteRecordForm, { onSubmit, validate } from './MyIncompleteRecord
 import { UQ352045 } from 'mock/data/records';
 import { Map } from 'immutable';
 import { SubmissionError } from 'redux-form';
+import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 
 jest.mock('actions', () => ({
     updateIncompleteRecord: data =>
@@ -94,7 +95,7 @@ describe('MyIncompleteRecordForm', () => {
         const values = new Map({
             authorsAffiliation: [
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: false,
                     nameAsPublished: 'Test',

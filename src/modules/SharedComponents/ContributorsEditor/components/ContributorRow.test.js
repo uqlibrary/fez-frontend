@@ -1,6 +1,7 @@
 import { ContributorRow, styles } from './ContributorRow';
 
 import { authorsSearch } from 'mock/data';
+import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 
 function setup(testProps = {}, args = {}) {
     // build full props list requied by the component
@@ -390,7 +391,7 @@ describe('Component ContributorRow', () => {
             contributor: {
                 nameAsPublished: 'test',
                 selected: true,
-                affiliation: 'NotUQ',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
                 orgaff: 'Somewhere',
                 orgtype: '453983',
             },
@@ -419,7 +420,7 @@ describe('Component ContributorRow', () => {
             contributor: {
                 nameAsPublished: 'test',
                 selected: true,
-                affiliation: 'NotUQ',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
                 orgaff: 'Somewhere',
                 orgtype: '453983',
             },
@@ -472,7 +473,7 @@ describe('Component ContributorRow', () => {
             contributor: {
                 nameAsPublished: 'Test',
                 orgaff: 'Test',
-                affilication: 'NotUQ',
+                affilication: AFFILIATION_TYPE_NOT_UQ,
                 orgtype: 'NGO',
             },
             classes: {

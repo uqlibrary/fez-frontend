@@ -10,7 +10,12 @@ import { UqIdField, RoleField } from 'modules/SharedComponents/LookupFields';
 import OrgAffiliationTypeSelector from './OrgAffiliationTypeSelector';
 import NonUqOrgAffiliationFormSection from './NonUqOrgAffiliationFormSection';
 
-import { DATA_COLLECTION_CREATOR_ROLES, ORG_TYPE_ID_UNIVERSITY } from 'config/general';
+import {
+    AFFILIATION_TYPE_NOT_UQ,
+    AFFILIATION_TYPE_UQ,
+    DATA_COLLECTION_CREATOR_ROLES,
+    ORG_TYPE_ID_UNIVERSITY,
+} from 'config/general';
 import locale from 'locale/global';
 
 export class ContributorForm extends PureComponent {
@@ -102,7 +107,7 @@ export class ContributorForm extends PureComponent {
                     !contributor.nameAsPublished ||
                     contributor.nameAsPublished.trim().length === 0 ||
                     (this.props.showRoleInput && contributor.creatorRole.length === 0) ||
-                    (contributor.affiliation === 'NotUQ' &&
+                    (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
                         contributor.orgaff.trim().length === 0 &&
                         contributor.orgtype.trim().length === 0)))
         ) {
@@ -112,8 +117,8 @@ export class ContributorForm extends PureComponent {
         // pass on the selected contributor
         this.props.onSubmit({
             ...contributor,
-            orgtype: (contributor.affiliation === 'UQ' && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
-            orgaff: (contributor.affiliation === 'UQ' && locale.global.orgTitle) || contributor.orgaff,
+            orgtype: (contributor.affiliation === AFFILIATION_TYPE_UQ && ORG_TYPE_ID_UNIVERSITY) || contributor.orgtype,
+            orgaff: (contributor.affiliation === AFFILIATION_TYPE_UQ && locale.global.orgTitle) || contributor.orgaff,
         });
 
         // reset internal state
@@ -190,7 +195,7 @@ export class ContributorForm extends PureComponent {
                     orgtype: '',
                     uqIdentifier: '0',
                     authorId: 0,
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                 },
             }),
             () => {
@@ -253,7 +258,7 @@ export class ContributorForm extends PureComponent {
             disabled ||
             (contributor.nameAsPublished || '').trim().length === 0 ||
             (showRoleInput && contributor.creatorRole.length === 0) ||
-            (contributor.affiliation === 'NotUQ' &&
+            (contributor.affiliation === AFFILIATION_TYPE_NOT_UQ &&
                 (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
         const addButtonLabel =
             canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
@@ -291,7 +296,8 @@ export class ContributorForm extends PureComponent {
                         />
                     </Grid>
                     {(this.state.showIdentifierLookup ||
-                        (this.props.enableUqIdentifierOnAffiliationChange && contributor.affiliation === 'UQ')) && (
+                        (this.props.enableUqIdentifierOnAffiliationChange &&
+                            contributor.affiliation === AFFILIATION_TYPE_UQ)) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={
@@ -329,7 +335,7 @@ export class ContributorForm extends PureComponent {
                             />
                         </Grid>
                     )}
-                    {contributor.affiliation === 'NotUQ' && (
+                    {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
                         <Grid item xs={12}>
                             <NonUqOrgAffiliationFormSection
                                 orgAffiliation={contributor.orgaff || ''}

@@ -1,6 +1,6 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
-import { ORG_TYPE_NOT_SET } from 'config/general';
+import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -49,7 +49,7 @@ const authorsGetValue = record => {
         authorId: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
-        affiliation: (!!(authorIds[order] || {}).rek_author_id && 'UQ') || 'NotUQ',
+        affiliation: (!!(authorIds[order] || {}).rek_author_id && AFFILIATION_TYPE_UQ) || AFFILIATION_TYPE_NOT_UQ,
     }));
 };
 

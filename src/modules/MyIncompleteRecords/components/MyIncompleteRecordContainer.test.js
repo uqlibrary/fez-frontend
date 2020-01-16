@@ -1,5 +1,6 @@
 import MyIncompleteRecordContainer from './MyIncompleteRecordContainer';
 import { UQ352045 } from 'mock/data/records';
+import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -161,7 +162,7 @@ describe('MyIncompleteRecord Container', () => {
             ],
             authorsAffiliation: [
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'Topology',
@@ -181,7 +182,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '79324',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: true,
                     nameAsPublished: 'Babbage, John',
@@ -191,7 +192,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '78691',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'The Brodsky Quartet',
@@ -286,7 +287,7 @@ describe('MyIncompleteRecord Container', () => {
             grants: [],
             authorsAffiliation: [
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'Topology',
@@ -296,7 +297,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '0',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: false,
                     nameAsPublished: 'Davidson, Robert',
@@ -306,7 +307,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '79324',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: true,
                     nameAsPublished: 'Babbage, John',
@@ -316,7 +317,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '78691',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'The Brodsky Quartet',
@@ -423,7 +424,7 @@ describe('MyIncompleteRecord Container', () => {
             grants: [],
             authorsAffiliation: [
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'Topology',
@@ -433,7 +434,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '0',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: false,
                     nameAsPublished: 'Davidson, Robert',
@@ -443,7 +444,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '79324',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: true,
                     nameAsPublished: 'Babbage, John',
@@ -453,7 +454,7 @@ describe('MyIncompleteRecord Container', () => {
                     uqIdentifier: '78691',
                 },
                 {
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     creatorRole: '',
                     disabled: 0,
                     nameAsPublished: 'The Brodsky Quartet',

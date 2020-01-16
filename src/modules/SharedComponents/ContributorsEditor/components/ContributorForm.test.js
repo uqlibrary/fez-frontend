@@ -1,4 +1,5 @@
 import ContributorForm from './ContributorForm';
+import { AFFILIATION_TYPE_NOT_UQ } from 'config/general';
 
 function setup(testProps = {}) {
     const props = {
@@ -137,7 +138,7 @@ describe('Component ContributorForm', () => {
             wrapper.setState({
                 contributor: {
                     nameAsPublished: 'test',
-                    affiliation: 'NotUQ',
+                    affiliation: AFFILIATION_TYPE_NOT_UQ,
                     orgaff: '',
                     orgtype: '',
                 },
@@ -200,7 +201,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             contributor: {
                 nameAsPublished: '',
-                affiliation: 'NotUQ',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
@@ -227,7 +228,7 @@ describe('Component ContributorForm', () => {
         wrapper.setState({
             nameAsPublished: 'test',
             creatorRole: 'role',
-            affiliation: 'NotUQ',
+            affiliation: AFFILIATION_TYPE_NOT_UQ,
             orgaff: '',
         });
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
@@ -242,7 +243,7 @@ describe('Component ContributorForm', () => {
             contributor: {
                 nameAsPublished: 'test',
                 creatorRole: 'role',
-                affiliation: 'NotUQ',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
                 orgaff: 'test',
                 orgtype: 'test',
             },
