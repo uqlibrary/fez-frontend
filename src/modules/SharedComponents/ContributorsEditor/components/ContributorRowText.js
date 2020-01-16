@@ -32,7 +32,7 @@ export const ContributorRowText = ({
     };
 
     const haveFullAuthorDetails = author => {
-        return !!author.aut_display_name && (!!author.uqUsername || !!author.aut_student_username);
+        return !!author.aut_display_name && (!!author.aut_org_username || !!author.aut_student_username);
     };
 
     const getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
@@ -74,7 +74,8 @@ export const ContributorRowText = ({
                 <Grid item xs={10} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${locale.global.orgTitle} (${contributor.uqUsername || contributor.aut_student_username})`,
+                        `${locale.global.orgTitle} (${contributor.aut_org_username ||
+                            contributor.aut_student_username})`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                         `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                     )}
@@ -84,7 +85,8 @@ export const ContributorRowText = ({
                 <Grid item xs={12} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.orgaff}`,
-                        `${(ORG_TYPES_LOOKUP[contributor.orgtype] &&
+                        `${(!!contributor.orgtype &&
+                            !!ORG_TYPES_LOOKUP[contributor.orgtype] &&
                             `Organisation type: ${ORG_TYPES_LOOKUP[contributor.orgtype]}`) ||
                             ''}`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,

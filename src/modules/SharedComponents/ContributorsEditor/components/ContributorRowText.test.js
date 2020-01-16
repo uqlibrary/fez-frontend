@@ -68,7 +68,7 @@ describe('ContributorRowText', () => {
                     nameAsPublished: 'Test, Testing',
                     aut_title: 'Mr.',
                     aut_display_name: 'Test, Testing',
-                    aut_org_username: 'uqttesting',
+                    aut_org_username: null,
                     affiliation: 'UQ',
                     aut_student_username: 's123456',
                 }}
@@ -150,7 +150,6 @@ describe('ContributorRowText', () => {
                     nameAsPublished: 'Test, Testing',
                     affiliation: 'NonUQ',
                     orgaff: 'Some institution',
-                    orgtype: '453989',
                 }}
                 index={0}
                 selectedClass="test"
