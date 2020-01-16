@@ -242,6 +242,50 @@ describe('ContributorsEditor', () => {
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
+    it('chooses a architectural contributor to edit', () => {
+        const wrapper = setup({
+            editMode: true,
+            canEdit: true,
+            showIdentifierLookup: true,
+            hideOrgAffiliationSelector: true,
+        });
+        wrapper.setState({
+            contributors: [
+                {
+                    nameAsPublished: 'test1',
+                    selected: false,
+                },
+                {
+                    nameAsPublished: 'test2',
+                    selected: false,
+                },
+                {
+                    nameAsPublished: 'test3',
+                    selected: false,
+                },
+            ],
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.instance().selectContributor(1);
+        expect(wrapper.state().contributors).toEqual([
+            {
+                nameAsPublished: 'test1',
+                selected: false,
+            },
+            {
+                nameAsPublished: 'test2',
+                selected: true,
+            },
+            {
+                nameAsPublished: 'test3',
+                selected: false,
+            },
+        ]);
+        wrapper.update();
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
     it('deletes a contributor from the list', () => {
         const wrapper = setup();
         wrapper.setState({

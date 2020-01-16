@@ -69,6 +69,310 @@ Object {
 }
 `;
 
+exports[`ContributorsEditor chooses a architectural contributor to edit 1`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
+        <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          isInfinite={false}
+          isNtro={false}
+          onDeleteAll={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "ContributorList list ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={true}
+          canMoveUp={false}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test1",
+              "selected": false,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={0}
+          key="ContributorRow_0"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={true}
+          canMoveUp={true}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test2",
+              "selected": false,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={1}
+          key="ContributorRow_1"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={false}
+          canMoveUp={true}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test3",
+              "selected": false,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={2}
+          key="ContributorRow_2"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
+exports[`ContributorsEditor chooses a architectural contributor to edit 2`] = `
+<div>
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  />
+  <WithStyles(Grid)
+    container={true}
+    spacing={8}
+  >
+    <WithStyles(Grid)
+      item={true}
+      xs={12}
+    >
+      <WithStyles(List)
+        style={
+          Object {
+            "marginBottom": 0,
+          }
+        }
+      >
+        <WithStyles(ContributorRowHeader)
+          hideDelete={false}
+          isInfinite={false}
+          isNtro={false}
+          onDeleteAll={[Function]}
+          showContributorAssignment={false}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+      <WithStyles(List)
+        classes={
+          Object {
+            "root": "ContributorList list ",
+          }
+        }
+      >
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={true}
+          canMoveUp={false}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test1",
+              "selected": false,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={0}
+          key="ContributorRow_0"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={true}
+          canMoveUp={true}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test2",
+              "selected": true,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={1}
+          key="ContributorRow_1"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+        <WithStyles(WithTheme(WithWidth(ContributorRow)))
+          canEdit={true}
+          canMoveDown={false}
+          canMoveUp={true}
+          className="ContributorRow"
+          contributor={
+            Object {
+              "nameAsPublished": "test3",
+              "selected": false,
+            }
+          }
+          enableSelect={false}
+          hideDelete={false}
+          hideReorder={false}
+          index={2}
+          key="ContributorRow_2"
+          onDelete={[Function]}
+          onEdit={[Function]}
+          onMoveDown={[Function]}
+          onMoveUp={[Function]}
+          onSelect={null}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+      </WithStyles(List)>
+      <div
+        style={
+          Object {
+            "marginTop": 24,
+          }
+        }
+      >
+        <ContributorForm
+          author={
+            Object {
+              "aut_id": 1,
+            }
+          }
+          canEdit={true}
+          classes={
+            Object {
+              "list": "list",
+              "scroll": "scroll",
+            }
+          }
+          contributor={
+            Object {
+              "nameAsPublished": "test2",
+              "selected": true,
+            }
+          }
+          disableNameAsPublished={true}
+          displayCancel={true}
+          editMode={true}
+          enableUqIdentifierOnAffiliationChange={false}
+          hideDelete={false}
+          hideOrgAffiliationSelector={true}
+          hideReorder={false}
+          isContributorAssigned={true}
+          isNtro={false}
+          key="1"
+          locale={
+            Object {
+              "addButton": "Add author",
+              "creatorRoleHint": "Role of the creator in relation to the dataset",
+              "creatorRoleLabel": "Creator role",
+              "descriptionStep1": <div>
+                <span
+                  className="authorSteps"
+                >
+                  Step 1 of 2
+                </span>
+                - Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "descriptionStep1NoStep2": <div>
+                Please 
+                <b>
+                  add to a list of contributors below
+                </b>
+                , in the format and order that they are published.
+              </div>,
+              "identifierLabel": "UQ identifier (if available)",
+              "nameAsPublishedHint": "Please type the name exactly as published",
+              "nameAsPublishedLabel": "Name as published",
+            }
+          }
+          onSubmit={[Function]}
+          required={false}
+          showContributorAssignment={false}
+          showIdentifierLookup={true}
+          showRoleInput={false}
+        />
+      </div>
+    </WithStyles(Grid)>
+  </WithStyles(Grid)>
+</div>
+`;
+
 exports[`ContributorsEditor chooses a contributor to edit 1`] = `
 <div>
   <WithStyles(Grid)
@@ -327,6 +631,7 @@ exports[`ContributorsEditor chooses a contributor to edit 2`] = `
           editMode={true}
           enableUqIdentifierOnAffiliationChange={false}
           hideDelete={false}
+          hideOrgAffiliationSelector={false}
           hideReorder={false}
           isContributorAssigned={true}
           isNtro={false}
@@ -402,6 +707,7 @@ exports[`ContributorsEditor renders 3 contributor rows with no infinite scroll 1
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={true}
         isNtro={false}
@@ -580,6 +886,7 @@ exports[`ContributorsEditor renders 4 contributor rows wrapped in an infinite sc
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={true}
         isNtro={false}
@@ -1661,6 +1968,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             editMode={false}
                             enableUqIdentifierOnAffiliationChange={true}
                             hideDelete={false}
+                            hideOrgAffiliationSelector={false}
                             hideReorder={false}
                             isContributorAssigned={false}
                             isNtro={false}
@@ -5389,6 +5697,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             editMode={false}
                             enableUqIdentifierOnAffiliationChange={true}
                             hideDelete={false}
+                            hideOrgAffiliationSelector={false}
                             hideReorder={false}
                             isContributorAssigned={false}
                             isNtro={true}
@@ -8061,6 +8370,7 @@ exports[`ContributorsEditor renders full component with a defined className 1`] 
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8134,6 +8444,7 @@ exports[`ContributorsEditor renders full component with identifier lookup 1`] = 
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8207,6 +8518,7 @@ exports[`ContributorsEditor renders full component with role input 1`] = `
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8281,6 +8593,7 @@ exports[`ContributorsEditor renders no contributor rows with no infinite scroll 
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8352,6 +8665,7 @@ exports[`ContributorsEditor returns contributor form with expected props 1`] = `
   editMode={false}
   enableUqIdentifierOnAffiliationChange={true}
   hideDelete={false}
+  hideOrgAffiliationSelector={false}
   hideReorder={false}
   isContributorAssigned={false}
   isNtro={false}
@@ -8419,6 +8733,7 @@ exports[`ContributorsEditor returns contributor form with expected props 2`] = `
   editMode={true}
   enableUqIdentifierOnAffiliationChange={true}
   hideDelete={false}
+  hideOrgAffiliationSelector={false}
   hideReorder={false}
   isContributorAssigned={false}
   isNtro={false}
@@ -8471,6 +8786,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         input={
           Object {
@@ -8638,6 +8954,7 @@ exports[`ContributorsEditor should get contributors from props and input value s
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         input={
           Object {
@@ -8820,6 +9137,7 @@ exports[`ContributorsEditor should not move contributor down 1`] = `
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8893,6 +9211,7 @@ exports[`ContributorsEditor should render error as html 1`] = `
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -8985,6 +9304,7 @@ exports[`ContributorsEditor should render error as one child 1`] = `
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}
@@ -9072,6 +9392,7 @@ exports[`ContributorsEditor should show validation error 1`] = `
         editMode={false}
         enableUqIdentifierOnAffiliationChange={true}
         hideDelete={false}
+        hideOrgAffiliationSelector={false}
         hideReorder={false}
         isContributorAssigned={false}
         isNtro={false}

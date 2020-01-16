@@ -22,6 +22,7 @@ export class ContributorForm extends PureComponent {
     static propTypes = {
         onSubmit: PropTypes.func.isRequired,
         showIdentifierLookup: PropTypes.bool,
+        hideOrgAffiliationSelector: PropTypes.bool,
         showRoleInput: PropTypes.bool,
         errorText: PropTypes.string,
         locale: PropTypes.object,
@@ -63,6 +64,7 @@ export class ContributorForm extends PureComponent {
         showIdentifierLookup: false,
         disableNameAsPublished: false,
         enableUqIdentifierOnAffiliationChange: true,
+        hideOrgAffiliationSelector: false,
     };
 
     constructor(props) {
@@ -94,6 +96,7 @@ export class ContributorForm extends PureComponent {
             ...props.contributor,
         },
         showIdentifierLookup: props.showIdentifierLookup,
+        hideOrgAffiliationSelector: props.hideOrgAffiliationSelector,
     });
 
     _onSubmit = event => {
@@ -252,6 +255,7 @@ export class ContributorForm extends PureComponent {
             showContributorAssignment,
             showIdentifierLookup,
             showRoleInput,
+            hideOrgAffiliationSelector,
         } = this.props;
 
         const { contributor } = this.state;
@@ -264,11 +268,12 @@ export class ContributorForm extends PureComponent {
                 (contributor.orgaff.trim().length === 0 || contributor.orgtype.trim().length === 0));
         const addButtonLabel =
             canEdit && !!this.props.contributor.nameAsPublished ? 'Change Details' : locale.addButton;
+
         return (
             <React.Fragment>
                 {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
-                    {(isNtro || !!contributor.affiliation || canEdit) && (
+                    {!hideOrgAffiliationSelector && (isNtro || !!contributor.affiliation || canEdit) && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
                                 affiliation={contributor.affiliation}
