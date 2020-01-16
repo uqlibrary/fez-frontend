@@ -69,6 +69,8 @@ describe('ContributorRowText', () => {
                     aut_title: 'Mr.',
                     aut_display_name: 'Test, Testing',
                     aut_org_username: 'uqttesting',
+                    affiliation: 'UQ',
+                    aut_student_username: 's123456',
                 }}
                 index={0}
                 selectedClass="test"
@@ -95,6 +97,8 @@ describe('ContributorRowText', () => {
                     aut_title: 'Mr.',
                     aut_display_name: 'Test, Testing',
                     aut_org_username: 'uqttesting',
+                    affiliation: 'UQ',
+                    uqUsername: 'uqtest',
                 }}
                 index={0}
                 selectedClass="test"
