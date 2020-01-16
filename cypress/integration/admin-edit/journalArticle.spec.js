@@ -17,37 +17,14 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
-        cy.get('input[value=tabbed]')
-            .as('tabViewToggle')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .should('not.be.checked');
-
         cy.get('button[title="Learn about keyboard shortcuts"]')
             .should('exist');
 
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditNoAlerts();
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('not.exist');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.enabled');
-
-        cy.get('@tabViewToggle')
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
     });
 
     it('should render the different sections as expected', () => {
@@ -317,50 +294,20 @@ context('Journal Article admin edit', () => {
             .should('have.id', 'Journalname-helper-text')
             .should('have.text', 'This field is required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Journal name is required');
-            });
+        cy.adminEditVerifyAlerts(1, ['Journal name is required']);
 
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
+        cy.get('#Journalname')
+            .type('Test');
+
+        cy.adminEditNoAlerts();
 
         // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
         // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
-        // cy.get('#Journalname')
-        //     .type('Test');
-
-        // cy.get('.StandardPage form > div > div:nth-child(9)')
-        //     .within(() => {
-        //         cy.get('.Alert')
-        //             .should('not.exist');
-        //         cy.get('button')
-        //             .should('be.enabled');
-        //     });
 
         // cy.get('@bibliographicCard')
         //     .get('[placeholder="Publication date"]')
         //     .clear();
-        // cy.get('.StandardPage form > div > div:nth-child(9)')
-        //     .within(() => {
-        //         cy.get('.Alert')
-        //             .should('exist')
-        //             .find('.alert-text')
-        //             .should('contain', 'Validation -')
-        //             .find('li')
-        //             .should('have.length', 1)
-        //             .should('contain', 'Publication date is required');
-        //     });
-        // cy.get('.StandardPage form > div > div:nth-child(10) button')
-        //     .should('be.disabled');
+        // cy.adminEditVerifyAlerts(1, 'Publication date is required');
 
         // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
         cy.log('Author Details tab');
@@ -402,20 +349,7 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', 'Author/creator names are required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Author/creator names are required');
-            });
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
+        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
         // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
         cy.log('Additional information tab');
@@ -512,21 +446,7 @@ context('Journal Article admin edit', () => {
                     .should('have.text', 'This field is required');
             });
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'You must select atleast one collection');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
+        cy.adminEditVerifyAlerts(2, ['You must select atleast one collection']);
 
         // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
         cy.log('Grant Information tab');
@@ -664,21 +584,6 @@ context('Journal Article admin edit', () => {
         cy.get('#deposit-agreement')
             .click();
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'You are required to accept deposit agreement');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.disabled');
+        cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);
     });
 });

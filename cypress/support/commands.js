@@ -24,66 +24,6 @@
 // -- This is will overwrite an existing command --
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
-/**
- * Allows waiting until certain conditions are satisfied.
- * https://www.npmjs.com/package/cypress-wait-until
- */
-import 'cypress-wait-until';
-
-const waitForCKEditorInstance = instanceName =>
-    cy.waitUntil(() =>
-        cy.window()
-            .then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
-    );
-
-// Allows the targeting of CKEditors
-// CKeditor dynamically names instances as "editor1", "editor2" etc.
-// USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
-Cypress.Commands.add('type_ckeditor', (element, content) => {
-    waitForCKEditorInstance(element);
-    cy.window()
-        .then(win => {
-            win.CKEDITOR.instances[element].setData(content);
-        });
-});
-
-// Read text from CKEditor instance
-// Usage example:
-// cy.read_ckeditor('editor1')
-//     .then(text => {
-//         cy.wrap(text)
-//             .should('eq', expected);
-//     });
-Cypress.Commands.add('read_ckeditor', element => {
-    waitForCKEditorInstance(element);
-    cy.window()
-        .then(win => {
-            return win.CKEDITOR.instances[element].getData();
-        });
-});
-
-Cypress.Commands.add('loadRecordForAdminEdit', pid => {
-    cy.visit(`/admin/edit/${pid}?user=uqstaff`);
-    cy.closeUnsupported();
-    cy.wait(1000); // Wait for data load
-});
-
-Cypress.Commands.add('adminEditCleanup', () => {
-    cy.window()
-        .then(win => {
-        // Unset page unload handler
-            win.onbeforeunload = undefined;
-
-            // Unload CKEditor instances
-            win.CKEDITOR &&
-            Object.keys(win.CKEDITOR.instances)
-                .forEach(editor => {
-                    win.CKEDITOR.instances[editor].removeAllListeners();
-                    win.CKEDITOR.remove(win.CKEDITOR.instances[editor]);
-                });
-        });
-});
-
 Cypress.Commands.add('closeUnsupported', () => {
     cy.get('#unsupportedBrowser.card button')
         .then($button => {

@@ -13,46 +13,13 @@ context('Digilib Image admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditVerifyAlerts(2, ['Publication date is required', 'You are required to accept deposit agreement']);
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 2)
-                    .should('contain', 'Publication date is required')
-                    .should('contain', 'You are required to accept deposit agreement');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.disabled');
-
-        cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
-
-        cy.get('[role="tab"]')
-            .eq(2)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '1');
-
-        cy.get('[role="tab"]')
-            .eq(6)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '1');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(2);
+        cy.adminEditCheckTabErrorBadge(6);
     });
 
     it('should render the different sections as expected', () => {
