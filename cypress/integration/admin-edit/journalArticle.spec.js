@@ -375,16 +375,31 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Authors');
                         const authors = record.fez_record_search_key_author.map(item => item.rek_author);
-                        const authorAffs = record.fez_record_search_key_author_affiliation_name.map(
-                            item => item.rek_author_affiliation_name,
+                        const authorUsernames = record.fez_record_search_key_author_id.map(
+                            item => item.author.aut_org_username,
                         );
+                        const authorUQ = record.fez_record_search_key_author_id.map(item =>
+                            item.rek_author_id_id > 0 ? 'UQ' : 'nonUQ',
+                        );
+                        const authorNames = record.fez_record_search_key_author_id.map(
+                            item => item.rek_author_id_lookup,
+                        );
+                        const authorAffs = record.fez_record_search_key_author_affiliation_name.map((item, index) => {
+                            return authorUQ[index] === 'UQ'
+                                ? 'The University of Queensland'
+                                : item.rek_author_affiliation_name;
+                        });
                         authors.forEach((author, index) => {
                             cy.get('p')
                                 .eq(2 * index)
                                 .should('have.text', author);
                             cy.get('p')
                                 .eq(2 * index + 1)
-                                .should('have.text', authorAffs[index]);
+                                .should('contain.text', authorNames[index]);
+
+                            cy.get('span')
+                                .eq(10 + 11 * index)
+                                .should('have.text', authorAffs[index] + ' (' + authorUsernames[index] + ')');
                         });
                     });
             });
