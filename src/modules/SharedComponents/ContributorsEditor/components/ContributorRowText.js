@@ -70,7 +70,7 @@ export const ContributorRowText = ({
                     `${selectedClass}`,
                 )}
             </Grid>
-            {!!contributor.affiliation && isUQAuthor(contributor) && haveFullAuthorDetails(contributor) && (
+            {isUQAuthor(contributor) && haveFullAuthorDetails(contributor) && (
                 <Grid item xs={10} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
