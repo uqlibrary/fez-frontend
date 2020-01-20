@@ -1709,6 +1709,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                             </div>
                             <WithStyles(Grid)
                               container={true}
+                              id="contributorForm"
                               spacing={8}
                               style={
                                 Object {
@@ -1823,6 +1824,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                 component="div"
                                 container={true}
                                 direction="row"
+                                id="contributorForm"
                                 item={false}
                                 justify="flex-start"
                                 lg={false}
@@ -1841,6 +1843,7 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                               >
                                 <div
                                   className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23"
+                                  id="contributorForm"
                                   style={
                                     Object {
                                       "marginTop": 8,
@@ -5437,6 +5440,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                             </div>
                             <WithStyles(Grid)
                               container={true}
+                              id="contributorForm"
                               spacing={8}
                               style={
                                 Object {
@@ -5551,6 +5555,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                                 component="div"
                                 container={true}
                                 direction="row"
+                                id="contributorForm"
                                 item={false}
                                 justify="flex-start"
                                 lg={false}
@@ -5569,6 +5574,7 @@ exports[`ContributorsEditor renders full component with NTRO fields 1`] = `
                               >
                                 <div
                                   className="MuiGrid-container-1 MuiGrid-spacing-xs-8-23"
+                                  id="contributorForm"
                                   style={
                                     Object {
                                       "marginTop": 8,

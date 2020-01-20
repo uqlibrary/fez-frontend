@@ -374,7 +374,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1758,10 +1756,256 @@
+@@ -1758,10 +1756,257 @@
                                 </button>
                               </span>
                             </div>
@@ -397,6 +397,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 +                         </div>
 +                         <div
 +                           class=\\"MuiGrid-container-1 MuiGrid-spacing-xs-8-23\\"
++                           id=\\"contributorForm\\"
 +                           style=\\"margin-top: 8px;\\"
 +                         >
 +                           <div
@@ -758,7 +759,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
                                       viewBox=\\"0 0 24 24\\"
                                     >
                                       <path
-@@ -1756,256 +1769,10 @@
+@@ -1756,257 +1769,10 @@
                                 </button>
                               </span>
                             </div>
@@ -781,6 +782,7 @@ exports[`MyIncompleteRecord form Creative Work:Live Performance of Creative Work
 -                         </div>
 -                         <div
 -                           class=\\"MuiGrid-container-1 MuiGrid-spacing-xs-8-23\\"
+-                           id=\\"contributorForm\\"
 -                           style=\\"margin-top: 8px;\\"
 -                         >
 -                           <div

@@ -15,27 +15,29 @@ import locale from 'locale/global';
 
 export class ContributorForm extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
+        contributor: PropTypes.object,
+        disabled: PropTypes.bool,
+        disableNameAsPublished: PropTypes.bool,
+        displayCancel: PropTypes.bool,
+        enableUqIdentifierOnAffiliationChange: PropTypes.bool,
+        errorText: PropTypes.string,
+        isContributorAssigned: PropTypes.bool,
+        isNtro: PropTypes.bool,
+        locale: PropTypes.object,
         onSubmit: PropTypes.func.isRequired,
+        required: PropTypes.bool,
+        showContributorAssignment: PropTypes.bool,
         showIdentifierLookup: PropTypes.bool,
         showRoleInput: PropTypes.bool,
-        errorText: PropTypes.string,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
-        showContributorAssignment: PropTypes.bool,
-        required: PropTypes.bool,
-        isNtro: PropTypes.bool,
-        isContributorAssigned: PropTypes.bool,
-        contributor: PropTypes.object,
-        disableNameAsPublished: PropTypes.bool,
-        enableUqIdentifierOnAffiliationChange: PropTypes.bool,
-        displayCancel: PropTypes.bool,
-        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
         canEdit: false,
-        required: false,
         contributor: {},
+        displayCancel: false,
+        disableNameAsPublished: false,
+        enableUqIdentifierOnAffiliationChange: true,
         locale: {
             nameAsPublishedLabel: 'Name as published',
             nameAsPublishedHint: 'Please type the name exactly as published',
@@ -55,9 +57,9 @@ export class ContributorForm extends PureComponent {
                 </div>
             ),
         },
+        required: false,
         showIdentifierLookup: false,
-        disableNameAsPublished: false,
-        enableUqIdentifierOnAffiliationChange: true,
+        showRoleInput: false,
     };
 
     constructor(props) {
@@ -263,7 +265,7 @@ export class ContributorForm extends PureComponent {
         return (
             <React.Fragment>
                 {description}
-                <Grid container spacing={8} style={{ marginTop: 8 }}>
+                <Grid container spacing={8} style={{ marginTop: 8 }} id="contributorForm">
                     {(isNtro || !!contributor.affiliation || canEdit) && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
