@@ -1,7 +1,6 @@
 import React from 'react';
 import { ContributorForm } from './ContributorForm';
 import { rtlRender, withRedux, fireEvent, waitForElement } from 'test-utils';
-import * as repositories from 'repositories';
 
 describe('ContributorForm', () => {
     describe('For Researchers adding non-NTRO work', () => {
@@ -120,7 +119,7 @@ describe('ContributorForm', () => {
             );
 
             const contributorForm = getByTestId('contributorForm');
-            expect(contributorForm.children.length).toBe(3);
+            expect(contributorForm.children.length).toBe(2);
             expect(getByTestId('UQAuthorID-input')).not.toHaveAttribute('disabled');
 
             // assert 'Add author' button is disabled
@@ -130,7 +129,7 @@ describe('ContributorForm', () => {
 
         it('should hide UQ identifier as soon as affiliation is changed to "Not UQ"', () => {
             const { getByTestId, getByRole, getByText } = rtlRender(
-                withRedux()(<ContributorForm onSubmit={jest.fn()} canEdit showIdentifierLookup displayCancel />),
+                withRedux()(<ContributorForm onSubmit={jest.fn()} canEdit showIdentifierLookup displayCancel isNtro />),
             );
 
             const contributorForm = getByTestId('contributorForm');
@@ -166,7 +165,7 @@ describe('ContributorForm', () => {
             );
 
             const contributorForm = getByTestId('contributorForm');
-            expect(contributorForm.children.length).toBe(4);
+            expect(contributorForm.children.length).toBe(3);
             expect(getByTestId('UQAuthorID-input')).not.toHaveAttribute('disabled');
 
             // assert 'Add author' button is disabled

@@ -266,7 +266,7 @@ export class ContributorForm extends PureComponent {
             <React.Fragment>
                 {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }} id="contributorForm">
-                    {(isNtro || !!contributor.affiliation || canEdit) && (
+                    {isNtro && (
                         <Grid item xs={12} sm={2}>
                             <OrgAffiliationTypeSelector
                                 affiliation={contributor.affiliation}

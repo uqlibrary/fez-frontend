@@ -75,34 +75,6 @@ exports[`Component ContributorForm should display org affiliation selector if af
   >
     <WithStyles(Grid)
       item={true}
-      sm={2}
-      xs={12}
-    >
-      <OrgAffilicationTypeSelector
-        affiliation="NotUQ"
-        disabled={false}
-        error={false}
-        locale={
-          Object {
-            "inputLabel": "Org affiliation",
-            "options": Array [
-              Object {
-                "key": "UQ",
-                "value": "UQ",
-              },
-              Object {
-                "key": "NotUQ",
-                "value": "Not UQ",
-              },
-            ],
-            "placeholder": "Organisational affiliation at time of publication",
-          }
-        }
-        onAffiliationChange={[Function]}
-      />
-    </WithStyles(Grid)>
-    <WithStyles(Grid)
-      item={true}
       sm={true}
       xs={12}
     >
