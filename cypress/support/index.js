@@ -13,12 +13,12 @@
 // https://on.cypress.io/configuration
 // ***********************************************************
 
-// Import commands.js using ES2015 syntax:
-import './commands';
-
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
-
+// Plugins
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
+
+// Custom
+import './adminEdit';
+import './ckeditor';
+import './commands';

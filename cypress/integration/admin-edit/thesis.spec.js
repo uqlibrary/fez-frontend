@@ -13,34 +13,16 @@ context('Thesis admin edit', () => {
     });
 
     it('should load the nav bar', () => {
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 7);
+        cy.adminEditCountCards(7);
+        cy.adminEditNoAlerts();
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('not.exist');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.enabled');
-
-        cy.wait(1000); // Wait for tabbing init
-        cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed')
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
     });
 
-    it('should render Thesis specific fields on the Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -170,24 +152,10 @@ context('Thesis admin edit', () => {
             .children('p')
             .should('have.text', 'This field is required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Enrolling unit is required');
-            });
+        cy.adminEditVerifyAlerts(1, ['Enrolling unit is required']);
 
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
-    });
-
-    it('should render Thesis specific fields on the Author tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -234,9 +202,9 @@ context('Thesis admin edit', () => {
                         });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Additional Information tab', () => {
+        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
+        cy.log('Additional information tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
             .within(() => {
@@ -284,9 +252,9 @@ context('Thesis admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Files tab', () => {
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
@@ -327,9 +295,9 @@ context('Thesis admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Thesis specific fields on the Security tab', () => {
+        // --------------------------------------------- SECURITY TAB ------------------------------------------------
+        cy.log('Security tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(7)
             .within(() => {

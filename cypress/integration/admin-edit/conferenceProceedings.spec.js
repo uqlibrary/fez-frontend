@@ -18,44 +18,17 @@ context('Conference Proceedings admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Author/creator names are required');
-                cy.get('button')
-                    .contains('Submit')
-                    .should('exist')
-                    .parent()
-                    .should('be.disabled');
-            });
-
-        cy.wait(1000); // Wait for tabbing to fully load
-
-        cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
-
-        cy.get('[role="tab"]')
-            .eq(3)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '1');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(3);
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -66,9 +39,9 @@ context('Conference Proceedings admin edit', () => {
                             .should('contain', 'Title of proceedings');
                     });
             });
-    });
 
-    it('should render Author details tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -81,16 +54,10 @@ context('Conference Proceedings admin edit', () => {
                             .type('Author{enter}');
                     });
             });
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('not.exist');
-                cy.get('button')
-                    .should('be.enabled');
-            });
-    });
+        cy.adminEditNoAlerts();
 
-    it('should render Files tab', () => {
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
             .within(() => {
@@ -113,9 +80,9 @@ context('Conference Proceedings admin edit', () => {
                             });
                     });
             });
-    });
 
-    it('should render Security tab', () => {
+        // --------------------------------------------- SECURITY TAB ------------------------------------------------
+        cy.log('Security tab');
         cy.get('.StandardPage form > div > div:nth-child(8) > .StandardCard')
             .within(() => {
                 cy.get('.StandardCard h3')

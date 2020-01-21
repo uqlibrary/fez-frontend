@@ -17,40 +17,19 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
 
-        cy.get('input[value=tabbed]')
-            .as('tabViewToggle')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .should('not.be.checked');
-
         cy.get('button[title="Learn about keyboard shortcuts"]')
             .should('exist');
 
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditNoAlerts();
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('not.exist');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.enabled');
-
-        cy.get('@tabViewToggle')
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
     });
 
-    it('should render Admin tab', () => {
+    it('should render the different sections as expected', () => {
+        // ---------------------------------------------- ADMIN TAB --------------------------------------------------
+        cy.log('Admin tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(0)
             .within(() => {
@@ -77,9 +56,9 @@ context('Journal Article admin edit', () => {
             .should(text => {
                 expect(text).to.contain(record.rek_herdc_notes);
             });
-    });
 
-    it('should render Identifiers tab', () => {
+        // ------------------------------------------- IDENTIFIERS TAB -----------------------------------------------
+        cy.log('Identifiers tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(1)
             .within(() => {
@@ -134,9 +113,9 @@ context('Journal Article admin edit', () => {
                         // No content in mock.
                     });
             });
-    });
 
-    it('should render Bibliographic tab', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -315,53 +294,23 @@ context('Journal Article admin edit', () => {
             .should('have.id', 'Journalname-helper-text')
             .should('have.text', 'This field is required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Journal name is required');
-            });
+        cy.adminEditVerifyAlerts(1, ['Journal name is required']);
 
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
+        cy.get('#Journalname')
+            .type('Test');
+
+        cy.adminEditNoAlerts();
 
         // Skipped until bugfix for rek_date clearing via keyboard not triggering validation error
         // https://www.pivotaltracker.com/story/show/168742188/comments/207811461
-        // cy.get('#Journalname')
-        //     .type('Test');
-
-        // cy.get('.StandardPage form > div > div:nth-child(9)')
-        //     .within(() => {
-        //         cy.get('.Alert')
-        //             .should('not.exist');
-        //         cy.get('button')
-        //             .should('be.enabled');
-        //     });
 
         // cy.get('@bibliographicCard')
         //     .get('[placeholder="Publication date"]')
         //     .clear();
-        // cy.get('.StandardPage form > div > div:nth-child(9)')
-        //     .within(() => {
-        //         cy.get('.Alert')
-        //             .should('exist')
-        //             .find('.alert-text')
-        //             .should('contain', 'Validation -')
-        //             .find('li')
-        //             .should('have.length', 1)
-        //             .should('contain', 'Publication date is required');
-        //     });
-        // cy.get('.StandardPage form > div > div:nth-child(10) button')
-        //     .should('be.disabled');
-    });
+        // cy.adminEditVerifyAlerts(1, 'Publication date is required');
 
-    it('should render Author details tab', () => {
+        // ------------------------------------------ AUTHOR DETAILS TAB ---------------------------------------------
+        cy.log('Author Details tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(3)
             .within(() => {
@@ -400,23 +349,10 @@ context('Journal Article admin edit', () => {
             .should('have.length', 1)
             .should('have.text', 'Author/creator names are required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'Author/creator names are required');
-            });
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
-    });
+        cy.adminEditVerifyAlerts(1, ['Author/creator names are required']);
 
-    it('should render Additional information tab', () => {
+        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
+        cy.log('Additional information tab');
         const collections = record.fez_record_search_key_ismemberof.map(item => item.rek_ismemberof_lookup);
         cy.get('.StandardPage form .StandardCard')
             .eq(4)
@@ -510,24 +446,10 @@ context('Journal Article admin edit', () => {
                     .should('have.text', 'This field is required');
             });
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'You must select atleast one collection');
-            });
+        cy.adminEditVerifyAlerts(2, ['You must select atleast one collection']);
 
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .parent()
-            .should('be.disabled');
-    });
-
-    it('should render Grant information tab', () => {
+        // ----------------------------------------- GRANT INFORMATION TAB -------------------------------------------
+        cy.log('Grant Information tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(5)
             .within(() => {
@@ -542,104 +464,9 @@ context('Journal Article admin edit', () => {
                         // No grant information in mock
                     });
             });
-    });
 
-    it('should render Files tab', () => {
-        const record = recordList.data[1];
-
-        cy.adminEditCleanup();
-        cy.navToHomeFromMenu();
-        cy.adminEditCleanup();
-        cy.loadRecordForAdminEdit(record.rek_pid);
-
-        cy.get('.StandardPage form .StandardCard')
-            .eq(6)
-            .within(() => {
-                cy.get('h3')
-                    .eq(0)
-                    .should('have.text', 'Files');
-
-                cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
-                    .within(() => {
-                    // prettier-ignore
-                        const fileSizeInMB = Math.round(
-                            record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
-                        ) / 100;
-                        cy.get('h3')
-                            .should('have.text', 'Attached files');
-                        cy.get('p')
-                            .eq(1)
-                            .should('have.text', record.fez_datastream_info[1].dsi_dsid);
-                        cy.get('input')
-                            .eq(1)
-                            .should('have.value', record.fez_datastream_info[1].dsi_label);
-                        cy.get('p')
-                            .eq(2)
-                            .should('have.text', `${fileSizeInMB} MB`);
-                        cy.get('input')
-                            .eq(2)
-                            .should(
-                                'have.value',
-                                moment(record.fez_datastream_info[1].dsi_embargo_date)
-                                    .format('DD/MM/YYYY'),
-                            );
-                    });
-
-                cy.get('.AdminCard')
-                    .as('cards')
-                    .eq(0)
-                    .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Files');
-                    });
-                // cy.get('@cards')
-                //     .eq(2)
-                //     .within(() => {
-                //         cy.get('h4')
-                //             .should('contain', 'Advisory statement');
-                //         cy.get('span span')
-                //             .eq(0)
-                //             .should('have.text', 'Advisory statement');
-                //         // No advisory statement in mock
-                //     });
-                cy.get('@cards')
-                    .eq(1)
-                    .within(() => {
-                        cy.get('h4')
-                            .should('contain', 'Copyright agreement');
-                        cy.get('#deposit-agreement')
-                            .should($checkbox => {
-                                if (record.rek_copyright === 'on') {
-                                    expect($checkbox).to.be.checked;
-                                } else {
-                                    expect($checkbox).not.to.be.checked;
-                                }
-                            });
-                    });
-            });
-
-        cy.get('#deposit-agreement')
-            .click();
-
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('contain', 'You are required to accept deposit agreement');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.disabled');
-    });
-
-    it('should render Security tab', () => {
+        // ---------------------------------------------- SECURITY TAB -----------------------------------------------
+        cy.log('Security tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(8)
             .within(() => {
@@ -677,5 +504,86 @@ context('Journal Article admin edit', () => {
                         }
                     });
             });
+
+        // ---------------------------------------------- FILES TAB --------------------------------------------------
+        cy.log('Files tab');
+
+        const record2 = recordList.data[1];
+
+        cy.adminEditCleanup();
+        cy.navToHomeFromMenu();
+        cy.adminEditCleanup();
+        cy.loadRecordForAdminEdit(record2.rek_pid);
+
+        cy.get('.StandardPage form .StandardCard')
+            .eq(6)
+            .within(() => {
+                cy.get('h3')
+                    .eq(0)
+                    .should('have.text', 'Files');
+
+                cy.get('div:nth-child(2) > div > div:nth-child(1) .StandardCard')
+                    .within(() => {
+                    // prettier-ignore
+                        const fileSizeInMB = Math.round(
+                            record2.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
+                        ) / 100;
+                        cy.get('h3')
+                            .should('have.text', 'Attached files');
+                        cy.get('p')
+                            .eq(1)
+                            .should('have.text', record2.fez_datastream_info[1].dsi_dsid);
+                        cy.get('input')
+                            .eq(1)
+                            .should('have.value', record2.fez_datastream_info[1].dsi_label);
+                        cy.get('p')
+                            .eq(2)
+                            .should('have.text', `${fileSizeInMB} MB`);
+                        cy.get('input')
+                            .eq(2)
+                            .should(
+                                'have.value',
+                                moment(record2.fez_datastream_info[1].dsi_embargo_date)
+                                    .format('DD/MM/YYYY'),
+                            );
+                    });
+
+                cy.get('.AdminCard')
+                    .as('cards')
+                    .eq(0)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Files');
+                    });
+                // cy.get('@cards')
+                //     .eq(2)
+                //     .within(() => {
+                //         cy.get('h4')
+                //             .should('contain', 'Advisory statement');
+                //         cy.get('span span')
+                //             .eq(0)
+                //             .should('have.text', 'Advisory statement');
+                //         // No advisory statement in mock
+                //     });
+                cy.get('@cards')
+                    .eq(1)
+                    .within(() => {
+                        cy.get('h4')
+                            .should('contain', 'Copyright agreement');
+                        cy.get('#deposit-agreement')
+                            .should($checkbox => {
+                                if (record2.rek_copyright === 'on') {
+                                    expect($checkbox).to.be.checked;
+                                } else {
+                                    expect($checkbox).not.to.be.checked;
+                                }
+                            });
+                    });
+            });
+
+        cy.get('#deposit-agreement')
+            .click();
+
+        cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);
     });
 });

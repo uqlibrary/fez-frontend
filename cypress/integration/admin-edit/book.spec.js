@@ -12,43 +12,19 @@ context('Book admin edit', () => {
     });
 
     it('should load expected tabs', () => {
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditNoAlerts();
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('not.exist');
-                cy.get('button')
-                    .contains('Submit')
-                    .should('exist')
-                    .parent()
-                    .should('be.enabled');
-            });
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
 
-        cy.wait(1000); // Wait for tabbing to fully load
-
-        cy.get('input[value=tabbed]')
-            .as('tabViewToggle')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
-
-        cy.get('@tabViewToggle')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .click()
-            .should('not.be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 8);
+        cy.adminEditTabbedView(false);
+        cy.adminEditCountCards(8);
     });
 
-    it('should render Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
@@ -100,15 +76,6 @@ context('Book admin edit', () => {
             .should('exist')
             .should('have.text', 'This field is required');
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 1)
-                    .should('have.text', 'Place of publication is required');
-            });
+        cy.adminEditVerifyAlerts(1, ['Place of publication is required']);
     });
 });
