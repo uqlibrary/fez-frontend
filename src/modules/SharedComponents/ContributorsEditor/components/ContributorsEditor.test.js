@@ -247,7 +247,6 @@ describe('ContributorsEditor', () => {
             editMode: true,
             canEdit: true,
             showIdentifierLookup: true,
-            hideOrgAffiliationSelector: true,
         });
         wrapper.setState({
             contributors: [

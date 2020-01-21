@@ -1448,7 +1448,6 @@ export default {
                 showIdentifierLookup: true,
                 locale: locale.components.architects.field,
                 canEdit: true,
-                hideOrgAffiliationSelector: true,
             },
         },
         creators: {
