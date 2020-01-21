@@ -398,7 +398,7 @@ context('Journal Article admin edit', () => {
                                 .should('contain.text', authorNames[index]);
 
                             cy.get('span')
-                                .eq(10 + 11 * index)
+                                .eq(9 + 11 * index)
                                 .should('have.text', authorAffs[index] + ' (' + authorUsernames[index] + ')');
                         });
                     });
