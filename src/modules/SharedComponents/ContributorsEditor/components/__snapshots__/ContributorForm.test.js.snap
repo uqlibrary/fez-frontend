@@ -14,18 +14,63 @@ exports[`Component ContributorForm should display org affiliation selector if af
   >
     <WithStyles(Grid)
       item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation=""
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
       sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
-        disabled={false}
+        disabled={true}
         error={false}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
         onKeyDown={[Function]}
         required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -75,13 +120,41 @@ exports[`Component ContributorForm should display org affiliation selector if af
   >
     <WithStyles(Grid)
       item={true}
+      sm={2}
+      xs={12}
+    >
+      <OrgAffilicationTypeSelector
+        affiliation="NotUQ"
+        disabled={false}
+        error={false}
+        locale={
+          Object {
+            "inputLabel": "Org affiliation",
+            "options": Array [
+              Object {
+                "key": "UQ",
+                "value": "UQ",
+              },
+              Object {
+                "key": "NotUQ",
+                "value": "Not UQ",
+              },
+            ],
+            "placeholder": "Organisational affiliation at time of publication",
+          }
+        }
+        onAffiliationChange={[Function]}
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
       sm={true}
       xs={12}
     >
       <WithStyles(TextFieldWrapper)
         autoComplete="off"
         disabled={false}
-        error={false}
+        error={true}
         fullWidth={true}
         id="nameAsPublishedField"
         onChange={[Function]}
@@ -203,6 +276,23 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
         onChange={[Function]}
         onKeyDown={[Function]}
         required={false}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
         value=""
       />
     </WithStyles(Grid)>
@@ -417,6 +507,23 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
         value=""
       />
     </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
+        value=""
+      />
+    </WithStyles(Grid)>
   </WithStyles(Grid)>
   <WithStyles(Grid)
     container={true}
@@ -488,6 +595,7 @@ exports[`Component ContributorForm should render display name field and identifi
         floatingLabelText="UQ Author ID"
         hintText="Type UQ author name to search"
         id="identifierField"
+        key=""
         onChange={[Function]}
         onClear={[Function]}
         showClear={false}
@@ -782,6 +890,23 @@ exports[`Component ContributorForm should show error regarding affiliation type 
         onChange={[Function]}
         onKeyDown={[Function]}
         required={true}
+        value=""
+      />
+    </WithStyles(Grid)>
+    <WithStyles(Grid)
+      item={true}
+      sm={3}
+      xs={12}
+    >
+      <Connect(WithStyles(AutoCompleteAsyncField))
+        disabled={true}
+        floatingLabelText="UQ Author ID"
+        hintText="Type UQ author name to search"
+        id="identifierField"
+        key=""
+        onChange={[Function]}
+        onClear={[Function]}
+        showClear={false}
         value=""
       />
     </WithStyles(Grid)>

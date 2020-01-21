@@ -195,7 +195,7 @@ describe('Component ContributorForm', () => {
     });
 
     it('should display org affiliation selector if affiliation is NotUQ', () => {
-        const wrapper = setup();
+        const wrapper = setup({ isNtro: true });
         expect(toJson(wrapper)).toMatchSnapshot();
         expect(wrapper.find('NonUqOrgAffiliationFormSection').length).toBe(0);
         wrapper.setState({
@@ -349,7 +349,8 @@ describe('Component ContributorForm', () => {
                 uqIdentifier: '0',
                 orgaff: 'Missing',
                 authorId: 0,
-                affiliation: 'NotUQ',
+                affiliation: '',
+                uqUsername: '',
             },
         };
 
@@ -380,6 +381,24 @@ describe('Component ContributorForm', () => {
             orgtype: '',
             creatorRole: '',
         });
+    });
+
+    it('should clear contributor form on clearing from UQ ID but should not submit for admins', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            canEdit: true,
+            onSubmit: testFn,
+            showRoleInput: true,
+            contributor: {
+                nameAsPublished: 'Firstname Lastname',
+                affiliation: 'UQ',
+                orgaff: '',
+                orgtype: '',
+                creatorRole: '',
+            },
+        });
+        wrapper.instance()._onUQIdentifierCleared();
+        expect(testFn).not.toBeCalledWith();
     });
 
     it('should not submit contributor form if admin user is adding dataset', () => {

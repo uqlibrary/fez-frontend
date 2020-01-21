@@ -39,47 +39,32 @@ describe('ContributorForm', () => {
     });
 
     describe('For researchers adding NTRO work', () => {
-        it('should initially display affiliation picker and name as published fields only', () => {
-            const { getByTestId } = rtlRender(<ContributorForm onSubmit={jest.fn()} isNtro />);
+        it('should initially display affiliation picker, UQ identifier and name as published fields only', () => {
+            const { getByTestId } = rtlRender(
+                withRedux()(<ContributorForm onSubmit={jest.fn()} isNtro required isContributorAssigned={false} />),
+            );
             const contributorForm = getByTestId('contributorForm');
-            expect(contributorForm.children.length).toBe(2);
-
-            // assert name as published field is initially disabled
-            expect(getByTestId('nameAsPublishedField')).toHaveAttribute('disabled');
-            expect(getByTestId('nameAsPublishedField')).toHaveAttribute('aria-invalid', 'false');
+            expect(contributorForm.children.length).toBe(3);
         });
 
         it('should enable and display error for name as published field as soon as affiliation is changed', () => {
             const { getByTestId, getByRole, getByText } = rtlRender(
-                withRedux()(<ContributorForm onSubmit={jest.fn()} isNtro />),
+                withRedux()(<ContributorForm onSubmit={jest.fn()} isNtro required isContributorAssigned={false} />),
             );
 
-            fireEvent.click(getByRole('button'));
-            const menu = waitForElement(getByRole('presentation'));
-            fireEvent.click(getByText(/UQ/), menu);
-
-            // assert name as published field is enabled and displayed in error state
-            expect(getByTestId('nameAsPublishedField')).not.toHaveAttribute('disabled');
-            expect(getByTestId('nameAsPublishedField')).toHaveAttribute('aria-invalid', 'true');
-        });
-
-        it('should display UQ identifier as soon as affiliation is changed to "UQ"', () => {
-            const { getByTestId, getByRole, getByText } = rtlRender(
-                withRedux()(<ContributorForm onSubmit={jest.fn()} isNtro />),
-            );
-
-            const contributorForm = getByTestId('contributorForm');
-            expect(contributorForm.children.length).toBe(2);
+            expect(getByTestId('nameAsPublishedField')).toHaveAttribute('disabled');
+            expect(getByTestId('nameAsPublishedField')).toHaveAttribute('aria-invalid', 'false');
 
             fireEvent.click(getByRole('button'));
-            const menu = waitForElement(getByRole('presentation'));
-            fireEvent.click(getByText(/UQ/), menu);
+            waitForElement(() => {
+                const menu = getByRole('presentation');
 
-            expect(contributorForm.children.length).toBe(3);
-            expect(getByTestId('UQAuthorID-input')).toHaveAttribute('disabled');
+                fireEvent.click(getByText(/UQ/), menu);
 
-            // assert 'Add author' button is not disabled
-            expect(getByTestId('submit-author')).toHaveAttribute('disabled', '');
+                // assert name as published field is enabled and displayed in error state
+                expect(getByTestId('nameAsPublishedField')).toHaveAttribute('disabled', '');
+                expect(getByTestId('nameAsPublishedField')).toHaveAttribute('aria-invalid', 'true');
+            });
         });
 
         it('should display org affiliation fields as soon as affiliation is changed to "Not UQ"', () => {
@@ -88,7 +73,7 @@ describe('ContributorForm', () => {
             );
 
             const contributorForm = getByTestId('contributorForm');
-            expect(contributorForm.children.length).toBe(2);
+            expect(contributorForm.children.length).toBe(3);
 
             fireEvent.click(getByRole('button'));
             const menu = waitForElement(getByRole('presentation'));

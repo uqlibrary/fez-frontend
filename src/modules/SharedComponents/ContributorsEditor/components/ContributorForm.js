@@ -157,7 +157,6 @@ export class ContributorForm extends PureComponent {
             () => {
                 this.state.contributor.nameAsPublished.trim().length !== 0 &&
                     DATA_COLLECTION_CREATOR_ROLES.some(role => role.value === value) &&
-                    !this.props.canEdit &&
                     this._onSubmit();
             },
         );
@@ -196,12 +195,13 @@ export class ContributorForm extends PureComponent {
                     orgaff: 'Missing',
                     orgtype: '',
                     uqIdentifier: '0',
+                    uqUsername: '',
                     authorId: 0,
-                    affiliation: AFFILIATION_TYPE_NOT_UQ,
+                    affiliation: '',
                 },
             }),
             () => {
-                this._onSubmit();
+                (!this.props.canEdit || (this.props.canEdit && !this.props.showRoleInput)) && this._onSubmit();
             },
         );
     };
@@ -290,7 +290,11 @@ export class ContributorForm extends PureComponent {
                             value={contributor.nameAsPublished}
                             onChange={this._onNameChanged}
                             onKeyDown={this._onSubmit}
-                            disabled={disabled || disableNameAsPublished || (isNtro && contributor.affiliation === '')}
+                            disabled={
+                                disabled ||
+                                disableNameAsPublished ||
+                                (!canEdit && isNtro && contributor.affiliation === '')
+                            }
                             required={required}
                             autoComplete="off"
                             error={
@@ -300,18 +304,18 @@ export class ContributorForm extends PureComponent {
                             }
                         />
                     </Grid>
-                    {((!contributor.affiliation && this.state.showIdentifierLookup) ||
-                        (this.props.enableUqIdentifierOnAffiliationChange &&
-                            contributor.affiliation === AFFILIATION_TYPE_UQ)) && (
+                    {(showIdentifierLookup || isNtro) &&
+                        (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={
-                                    disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
+                                    disabled ||
+                                        (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
                                 }
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"
                                 id="identifierField"
-                                key={contributor.authorId}
+                                key={contributor.uqUsername}
                                 onChange={this._onUQIdentifierSelected}
                                 onClear={this._onUQIdentifierCleared}
                                 showClear={!!parseInt(contributor.uqIdentifier, 10)}
@@ -340,7 +344,7 @@ export class ContributorForm extends PureComponent {
                             />
                         </Grid>
                     )}
-                    {contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
+                    {isNtro && contributor.affiliation === AFFILIATION_TYPE_NOT_UQ && (
                         <Grid item xs={12}>
                             <NonUqOrgAffiliationFormSection
                                 orgAffiliation={contributor.orgaff || ''}
