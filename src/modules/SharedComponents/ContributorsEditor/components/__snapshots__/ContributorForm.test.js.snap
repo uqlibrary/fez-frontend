@@ -4,6 +4,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -64,6 +65,7 @@ exports[`Component ContributorForm should display org affiliation selector if af
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -71,34 +73,6 @@ exports[`Component ContributorForm should display org affiliation selector if af
       }
     }
   >
-    <WithStyles(Grid)
-      item={true}
-      sm={2}
-      xs={12}
-    >
-      <OrgAffilicationTypeSelector
-        affiliation="NotUQ"
-        disabled={false}
-        error={false}
-        locale={
-          Object {
-            "inputLabel": "Org affiliation",
-            "options": Array [
-              Object {
-                "key": "UQ",
-                "value": "UQ",
-              },
-              Object {
-                "key": "NotUQ",
-                "value": "Not UQ",
-              },
-            ],
-            "placeholder": "Organisational affiliation at time of publication",
-          }
-        }
-        onAffiliationChange={[Function]}
-      />
-    </WithStyles(Grid)>
     <WithStyles(Grid)
       item={true}
       sm={true}
@@ -179,6 +153,7 @@ exports[`Component ContributorForm should handle affiliation change 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -267,6 +242,7 @@ exports[`Component ContributorForm should process prop updates 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -327,6 +303,7 @@ exports[`Component ContributorForm should process prop updates 2`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -387,6 +364,7 @@ exports[`Component ContributorForm should render NTRO fields 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -475,6 +453,7 @@ exports[`Component ContributorForm should render display name field and identifi
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -551,6 +530,7 @@ exports[`Component ContributorForm should render display name field and role fie
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -629,6 +609,7 @@ exports[`Component ContributorForm should render display name field only 1`] = `
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -690,6 +671,7 @@ exports[`Component ContributorForm should show contributor assignment 1`] = `
   Step 1 description
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -750,6 +732,7 @@ exports[`Component ContributorForm should show error regarding affiliation type 
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
@@ -838,6 +821,7 @@ exports[`Component ContributorForm should show error regarding name field 1`] = 
 <Fragment>
   <WithStyles(Grid)
     container={true}
+    id="contributorForm"
     spacing={8}
     style={
       Object {
