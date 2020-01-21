@@ -12,43 +12,17 @@ context('Journal admin edit', () => {
     });
 
     it('should load with specifed elements', () => {
-        cy.get('.StandardPage form > div > div > div.StandardCard > div > div > h3')
-            .as('cards')
-            .should('have.length', 8);
+        cy.adminEditCountCards(8);
+        cy.adminEditVerifyAlerts(2, ['Journal name is required']);
 
-        cy.get('.StandardPage form > div:nth-child(2)')
-            .within(() => {
-                cy.get('.Alert')
-                    .should('exist')
-                    .find('.alert-text')
-                    .should('contain', 'Validation -')
-                    .find('li')
-                    .should('have.length', 2)
-                    .should('contain', 'Journal name is required');
-            });
-
-        cy.get('.StandardPage form button')
-            .contains('Submit')
-            .should('exist')
-            .parent()
-            .should('be.disabled');
-
-        cy.get('input[value=tabbed]')
-            .should('have.value', 'tabbed') // force the get to wait for the element
-            .click()
-            .should('be.checked');
-
-        cy.get('@cards')
-            .should('have.length', 1)
-            .should('have.text', 'Bibliographic');
-
-        cy.get('[role="tab"]')
-            .eq(2)
-            .find('[class*="MuiBadge-colorError"]')
-            .should('have.text', '1');
+        cy.adminEditTabbedView();
+        cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCheckTabErrorBadge(2);
     });
 
-    it('should render Journal specific fields on the Bibliographic tab', () => {
+    it('should render the different sections as expected', () => {
+        // ------------------------------------------ BIBLIOGRAPHIC TAB ----------------------------------------------
+        cy.log('Bibliographic tab');
         cy.get('.StandardPage form .StandardCard')
             .eq(2)
             .within(() => {
