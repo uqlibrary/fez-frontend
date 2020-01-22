@@ -18,6 +18,16 @@ Cookies.set(SESSION_COOKIE_NAME, 'abc123');
 // Get user from query string
 let user = queryString.parse(location.search || location.hash.substring(location.hash.indexOf('?'))).user;
 
+mockData.accounts.uqrdav10 = mockData.uqrdav10.account;
+mockData.accounts.uqagrinb = mockData.uqagrinb.account;
+mockData.authorDetails.uqrdav10 = mockData.uqrdav10.authorDetails;
+mockData.authorDetails.uqagrinb = mockData.uqagrinb.authorDetails;
+mockData.currentAuthor.uqrdav10 = {
+    data: mockData.uqrdav10.author,
+};
+mockData.currentAuthor.uqagrinb = {
+    data: mockData.uqagrinb.author,
+};
 if (user && !mockData.accounts[user]) {
     console.warn(
         `API MOCK DATA: User name (${user}) is not found, please use one of the usernames from mock data only...`,
@@ -33,7 +43,7 @@ user = user || 'uqresearcher';
  */
 mockSessionApi.onGet(routes.CURRENT_ACCOUNT_API().apiUrl).reply(() => {
     // mock account response
-    if (user === 's2222222' || user === 's3333333') {
+    if (['s2222222', 's3333333'].indexOf(user) > -1) {
         return [200, mockData.accounts[user]];
     } else if (mockData.accounts[user]) {
         return [403, {}];
@@ -97,16 +107,16 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
             return [200, mockData.currentAuthorStats];
         } else if (config.params.rule === 'mine' && config.params['filters[facets][Display+type]'] === 371) {
             // CURRENT_USER_RECORDS_API - myDataset
-            const totalRecords = mockData.MyDatasetList.data.length;
+            const totalRecords = mockData.myDatasetList.data.length;
             const fromRecord = 1;
             const toRecord = 2;
             return [
                 200,
                 // {total: 0, data: []}
                 {
-                    ...mockData.MyDatasetList,
+                    ...mockData.myDatasetList,
                     current_page: config.params.page,
-                    data: mockData.MyDatasetList.data.slice(
+                    data: mockData.myDatasetList.data.slice(
                         fromRecord,
                         totalRecords > toRecord ? toRecord : totalRecords,
                     ),
@@ -209,11 +219,13 @@ mock.onGet(routes.CURRENT_ACCOUNT_API().apiUrl)
     .onGet(new RegExp(escapeRegExp(routes.EXISTING_RECORD_API({ pid: '.*' }).apiUrl)))
     .reply(config => {
         const mockRecords = [
-            { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.incompleteNTROrecord },
-            { ...mockTestingData.dataCollection },
-            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.incompleteNTRORecordUQ352045 },
+            { ...mockData.incompleteNTROrecordUqsbutl1 },
             { ...mockData.recordWithoutAuthorIds },
+            { ...mockData.recordWithTiffAndThumbnail },
+            { ...mockData.UQ716942uqagrinb },
+            { ...mockTestingData.dataCollection },
             ...mockData.incompleteNTROlist.data,
             ...mockData.myRecordsList.data,
             ...mockData.possibleUnclaimedList.data,
