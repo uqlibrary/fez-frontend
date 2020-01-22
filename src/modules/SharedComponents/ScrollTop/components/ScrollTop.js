@@ -22,7 +22,7 @@ export const styles = () => ({
 });
 
 /* istanbul ignore next */
-const scrollWindowToTop = (event) => {
+const scrollWindowToTop = event => {
     event.preventDefault();
     document.getElementById('content-container').scrollTop = 0;
 };
