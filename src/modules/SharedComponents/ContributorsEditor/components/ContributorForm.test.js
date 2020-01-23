@@ -334,6 +334,32 @@ describe('Component ContributorForm', () => {
         });
     });
 
+    it('should be able to set nameAsPublished on the contributor object from selected author', () => {
+        const testFn = jest.fn();
+        const wrapper = setup({
+            onSubmit: testFn,
+        });
+        wrapper.instance()._onUQIdentifierSelected({
+            aut_id: 111,
+            aut_lname: 'Test',
+            aut_fname: 'Testing',
+            aut_student_username: 'uqtest',
+        });
+        expect(testFn).toBeCalledWith({
+            affiliation: '',
+            creatorRole: '',
+            nameAsPublished: 'Test, Testing',
+            orgaff: '',
+            orgtype: '',
+            uqIdentifier: '111',
+            aut_id: 111,
+            aut_lname: 'Test',
+            aut_fname: 'Testing',
+            aut_student_username: 'uqtest',
+            uqUsername: 'uqtest',
+        });
+    });
+
     it('should set state properly when UQ identifier is cleared', () => {
         const wrapper = setup({});
         const testFn = jest.fn();
