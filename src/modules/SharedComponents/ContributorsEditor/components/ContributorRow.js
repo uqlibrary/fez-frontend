@@ -210,7 +210,7 @@ export class ContributorRow extends PureComponent {
         } = this.props;
 
         const selectedClass = contributor.selected ? classes.selected : '';
-
+        console.log(contributor);
         const ariaLabel =
             (!disabled &&
                 `${selectHint.replace('[name]', contributor.nameAsPublished)} ${(required && locale.requiredLabel) ||

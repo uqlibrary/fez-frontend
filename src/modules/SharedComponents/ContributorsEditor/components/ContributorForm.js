@@ -196,7 +196,6 @@ export class ContributorForm extends PureComponent {
                     orgtype: '',
                     uqIdentifier: '0',
                     uqUsername: '',
-                    authorId: 0,
                     affiliation: '',
                 },
             }),

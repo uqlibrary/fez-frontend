@@ -348,7 +348,6 @@ describe('Component ContributorForm', () => {
                 ...rest,
                 uqIdentifier: '0',
                 orgaff: 'Missing',
-                authorId: 0,
                 affiliation: '',
                 uqUsername: '',
             },
