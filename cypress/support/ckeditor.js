@@ -19,9 +19,11 @@ const waitForCKEditorInstance = instanceName =>
 // USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
 Cypress.Commands.add('type_ckeditor', (element, content) => {
     waitForCKEditorInstance(element);
+    cy.log(`Found #cke_${element}`);
     cy.window()
         .then(win => {
             win.CKEDITOR.instances[element].setData(content);
+            cy.log(`Typed "${content}"`);
         });
 });
 
