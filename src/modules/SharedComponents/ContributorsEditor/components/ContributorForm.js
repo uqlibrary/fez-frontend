@@ -175,7 +175,7 @@ export class ContributorForm extends PureComponent {
                             `${selectedItem.aut_lname}, ${selectedItem.aut_fname}`) ||
                         '',
                     uqIdentifier: `${selectedItem.aut_id}`,
-                    uqUsername: `${selectedItem.aut_org_username}`,
+                    uqUsername: `${selectedItem.aut_org_username || selectedItem.aut_student_username}`,
                     ...selectedItem,
                 },
             }),
