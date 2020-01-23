@@ -32,7 +32,7 @@ export const ContributorRowText = ({
     };
 
     const haveFullAuthorDetails = author => {
-        return !!author.aut_display_name && !!author.aut_org_username;
+        return !!author.aut_display_name && (!!author.aut_org_username || !!author.aut_student_username);
     };
 
     const getListItemTypography = (primaryText, secondaryText, primaryClass, secondaryClass) => (
@@ -74,7 +74,8 @@ export const ContributorRowText = ({
                 <Grid item xs={10} sm={5} md={idColWidth}>
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
-                        `${locale.global.orgTitle} (${contributor.aut_org_username})`,
+                        `${locale.global.orgTitle} (${contributor.aut_org_username ||
+                            contributor.aut_student_username})`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                         `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                     )}
