@@ -46,7 +46,7 @@ const authorsGetValue = record => {
         nameAsPublished: (authors[order] || {}).rek_author,
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
         uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
-        authorId: (authorIds[order] || {}).rek_author_id || 0,
+        aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
         affiliation: (!!(authorIds[order] || {}).rek_author_id && AFFILIATION_TYPE_UQ) || AFFILIATION_TYPE_NOT_UQ,
@@ -77,7 +77,7 @@ const editorsGetValue = record => {
         nameAsPublished: (contributors[order] || {}).rek_contributor,
         creatorRole: '',
         uqIdentifier: `${(contributorIds[order] || {}).rek_contributor_id || 0}`,
-        authorId: (contributorIds[order] || {}).rek_contributor_id || 0,
+        aut_id: (contributorIds[order] || {}).rek_contributor_id || 0,
     }));
 };
 
@@ -663,7 +663,7 @@ export default {
                 nameAsPublished: (architects[order] || {}).rek_architect_name,
                 creatorRole: '',
                 uqIdentifier: `${(architectIds[order] || {}).rek_architect_id || 0}`,
-                authorId: (architectIds[order] || {}).rek_architect_id || 0,
+                aut_id: (architectIds[order] || {}).rek_architect_id || 0,
             }));
         },
     },
@@ -689,7 +689,7 @@ export default {
                 nameAsPublished: (supervisors[order] || {}).rek_supervisor,
                 creatorRole: '',
                 uqIdentifier: `${(supervisorIds[order] || {}).rek_supervisor_id || 0}`,
-                authorId: (supervisorIds[order] || {}).rek_supervisor_id || 0,
+                aut_id: (supervisorIds[order] || {}).rek_supervisor_id || 0,
             }));
         },
     },
@@ -715,7 +715,7 @@ export default {
                 nameAsPublished: (creators[order] || {}).rek_creator_name,
                 creatorRole: '',
                 uqIdentifier: `${(creatorIds[order] || {}).rek_creator_id || 0}`,
-                authorId: (creatorIds[order] || {}).rek_creator_id || 0,
+                aut_id: (creatorIds[order] || {}).rek_creator_id || 0,
             }));
         },
     },
