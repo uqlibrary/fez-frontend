@@ -723,7 +723,17 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
 
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
-export const LICENSES = [
+export const CURRENT_LICENSES = [
+    {
+        value: 454104,
+        text: 'UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction',
+    },
+    {
+        value: 454105,
+        text: 'UQ Terms & Conditions Permitted Re-Use with Share Alike Requirement',
+    },
+];
+export const DEPRECATED_LICENSES = [
     {
         value: 453608,
         text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US',

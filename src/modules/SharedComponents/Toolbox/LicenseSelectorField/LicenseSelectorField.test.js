@@ -30,4 +30,12 @@ describe('LicenseSelectorField component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should render with deprecated list', () => {
+        const wrapper = setup({
+            showDeprecatedLicenses: true,
+        });
+
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });

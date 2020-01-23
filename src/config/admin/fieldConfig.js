@@ -959,6 +959,7 @@ export default {
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_license.rek_license',
                 label: 'License',
+                showDeprecatedLicenses: true,
             },
         },
         fez_record_search_key_original_format: {
