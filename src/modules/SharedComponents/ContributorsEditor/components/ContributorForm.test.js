@@ -251,6 +251,24 @@ describe('Component ContributorForm', () => {
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
     });
 
+    it('should not disable the button if work is not NTRO', () => {
+        const wrapper = setup({
+            disabled: false,
+            showRoleInput: false,
+            isNtro: false,
+        });
+        wrapper.setState({
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: '',
+                affiliation: '',
+                orgaff: '',
+                orgtype: '',
+            },
+        });
+        expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
+    });
+
     it('should show contributor assignment', () => {
         const wrapper = setup({
             showContributorAssignment: true,
