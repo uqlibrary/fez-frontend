@@ -954,10 +954,18 @@ export default {
                 placeholder: '',
             },
         },
-        fez_record_search_key_license: {
+        fez_record_search_key_license_biblio: {
             component: LicenseSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
+                label: 'License',
+                showDeprecatedLicenses: true,
+            },
+        },
+        fez_record_search_key_license_more: {
+            component: LicenseSelectorField,
+            componentProps: {
+                name: 'additionalInformationSection.fez_record_search_key_license_more.rek_license',
                 label: 'License',
                 showDeprecatedLicenses: true,
             },
