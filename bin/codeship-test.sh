@@ -21,21 +21,14 @@ case "$PIPE_NUM" in
     # Running in series with `runInBand` to avoid CodeShip VM running out of memory
     if [[ ($CI_BRANCH == "master" || $CI_BRANCH == "staging" || $CI_BRANCH == "production") ]]; then
         printf "(\"$CI_BRANCH\" build INCLUDES code coverage check)\n"
-        printf "\n$ npm run test:unit -- --ci --runInBand\n"
-        npm run test:unit -- --ci --runInBand
+        npm run test:unit:serial
     else
         printf "(Build of feature branch \"$CI_BRANCH\" SKIPS code coverage check)\n"
-        printf "\n$ npm run test:unit -- --ci --runInBand --no-coverage\n"
-        npm run test:unit -- --ci --runInBand --no-coverage
+        npm run test:unit:serial:skipcoverage
     fi
 
-    # Run integration tests
-    printf "\n--- \e[1mRUNNING INTEGRATION TESTS\e[0m ---\n"
-    printf "\n$ npm run test:integration\n"
-    npm run test:integration
-
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        npm run e2e:dashboard
+        npm run test:e2e:dashboard
     fi
 ;;
 "2")
@@ -62,17 +55,17 @@ case "$PIPE_NUM" in
     # (putting * around the test-string gives a test for inclusion of the substring rather than exact match)
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
         # Use this variant to only run tests locally in Codeship
-        # npm run e2e
+        # npm run test:e2e
 
         # Use this variant to turn on the recording to Cypress dashboard and video of the tests:
-        npm run e2e:dashboard
+        npm run test:e2e:dashboard
     fi
 ;;
 *)
     set -e
 
     if [[ $CI_BRANCH == "master" || $CI_BRANCH == *"cypress"* ]]; then
-        npm run e2e:dashboard
+        npm run test:e2e:dashboard
     fi
 ;;
 esac
