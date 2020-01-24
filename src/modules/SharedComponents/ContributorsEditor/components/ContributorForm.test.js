@@ -269,6 +269,23 @@ describe('Component ContributorForm', () => {
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
     });
 
+    it('should be disable the button', () => {
+        const wrapper = setup({
+            disabled: true,
+            showRoleInput: false,
+        });
+        wrapper.setState({
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: '',
+                affiliation: '',
+                orgaff: '',
+                orgtype: '',
+            },
+        });
+        expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
+    });
+
     it('should show contributor assignment', () => {
         const wrapper = setup({
             showContributorAssignment: true,
