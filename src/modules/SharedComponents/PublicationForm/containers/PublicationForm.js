@@ -70,6 +70,7 @@ const validate = values => {
                 (data.authors && data.editors && data.editors.length === 0 && data.authors.length === 0) ||
                 (data.authors &&
                     data.authors.length !== 0 &&
+                    (data.editors || []).filter(item => item.selected).length === 0 &&
                     data.authors.filter(item => item.selected).length === 0) ||
                 (data.editors &&
                     data.editors.length !== 0 &&
