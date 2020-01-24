@@ -253,7 +253,7 @@ export class AutoCompleteAsyncField extends Component {
             selectedValue,
             itemsListLoading,
         } = this.props;
-        const selectedItemProps = this.props.clearInput ? { selectedItem: '' } : {};
+        const selectedItemProps = this.props.clearInput ? { selectedItem: null } : {};
         const labelText = floatingLabelText || 'autosuggest';
         return (
             <div className={classes.root}>
