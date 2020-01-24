@@ -251,6 +251,42 @@ describe('Component ContributorForm', () => {
         expect(wrapper.find('WithStyles(Button)').props().disabled).toBeFalsy();
     });
 
+    it('should disable button for NTRO', () => {
+        const wrapper = setup({
+            disabled: false,
+            showRoleInput: false,
+            isNtro: true,
+        });
+        wrapper.setState({
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: 'role',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
+                orgaff: '',
+                orgtype: '',
+            },
+        });
+        expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
+    });
+
+    it('should disable button for NTRO 2', () => {
+        const wrapper = setup({
+            disabled: false,
+            showRoleInput: false,
+            isNtro: true,
+        });
+        wrapper.setState({
+            contributor: {
+                nameAsPublished: 'test',
+                creatorRole: 'role',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
+                orgaff: 'test',
+                orgtype: '',
+            },
+        });
+        expect(wrapper.find('WithStyles(Button)').props().disabled).toBeTruthy();
+    });
+
     it('should not disable the button if work is not NTRO', () => {
         const wrapper = setup({
             disabled: false,
