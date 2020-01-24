@@ -27,7 +27,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
     onStateChange={[Function]}
     onUserAction={[Function]}
     scrollIntoView={[Function]}
-    selectedItem=""
+    selectedItem={null}
     selectedItemChanged={[Function]}
     stateReducer={[Function]}
     suppressRefError={false}
@@ -55,7 +55,7 @@ exports[`AutoCompleteAsyncField component should call filter function on itemsLi
   onStateChange={[Function]}
   onUserAction={[Function]}
   scrollIntoView={[Function]}
-  selectedItem=""
+  selectedItem={null}
   selectedItemChanged={[Function]}
   stateReducer={[Function]}
   suppressRefError={false}
