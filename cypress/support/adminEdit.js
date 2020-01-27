@@ -72,9 +72,13 @@ Cypress.Commands.add('adminEditTabbedView', (showTabs = true) => {
     cy.wait(1000); // Wait for tabbing mechanism to fully load
     cy.get('input[value=tabbed]')
         .as('tabViewButton')
-        .should(showTabs ? 'not.be.checked' : 'be.checked')
+        .should(showTabs ? 'not.be.checked' : 'be.checked');
+    cy.get('@tabViewButton')
         .click();
-    cy.wait(1000); // Wait for view switch
+    cy.waitUntil(() => {
+        const tabCount = Cypress.$(tabHeadingSelector).length;
+        return (showTabs && tabCount === 1) || (!showTabs && tabCount > 1);
+    });
     cy.get('@tabViewButton')
         .should(showTabs ? 'be.checked' : 'not.be.checked');
 });
