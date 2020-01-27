@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournalArticle';
-import moment from 'moment';
 
 context('Journal Article admin edit', () => {
     const record = recordList.data[0];
@@ -240,14 +239,16 @@ context('Journal Article admin edit', () => {
                         cy.get('[placeholder="Publication date"]')
                             .should(
                                 'have.value',
-                                moment(record.rek_date)
+                                Cypress.moment(record.rek_date)
                                     .format('DD/MM/YYYY'),
                             );
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',
-                                moment(record.fez_record_search_key_date_available.rek_date_available)
-                                    .format('YYYY'),
+                                Cypress.moment(record.fez_record_search_key_date_available.rek_date_available)
+                                    .format(
+                                        'YYYY',
+                                    ),
                             );
                         cy.get('span span')
                             .eq(0)
@@ -575,7 +576,7 @@ context('Journal Article admin edit', () => {
                             .eq(2)
                             .should(
                                 'have.value',
-                                moment(record2.fez_datastream_info[1].dsi_embargo_date)
+                                Cypress.moment(record2.fez_datastream_info[1].dsi_embargo_date)
                                     .format('DD/MM/YYYY'),
                             );
                     });

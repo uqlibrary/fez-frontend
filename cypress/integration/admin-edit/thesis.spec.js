@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListThesis';
-import moment from 'moment';
 
 context('Thesis admin edit', () => {
     const record = recordList.data[0];
@@ -75,7 +74,7 @@ context('Thesis admin edit', () => {
                         cy.get('[placeholder="Publication date"]')
                             .should(
                                 'have.value',
-                                moment(record.rek_date)
+                                Cypress.moment(record.rek_date)
                                     .format('DD/MM/YYYY'),
                             );
 
