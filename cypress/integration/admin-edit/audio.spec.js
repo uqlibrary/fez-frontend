@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListAudio';
-import moment from 'moment';
 
 context('Audio admin edit', () => {
     const record = recordList.data[0];
@@ -60,7 +59,7 @@ context('Audio admin edit', () => {
                 cy.get('#Yearrecorded')
                     .should(
                         'have.value',
-                        moment(record.fez_record_search_key_date_recorded.rek_date_recorded)
+                        Cypress.moment(record.fez_record_search_key_date_recorded.rek_date_recorded)
                             .format('YYYY'),
                     );
                 cy.get('#Acknowledgements')
