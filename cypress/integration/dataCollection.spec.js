@@ -16,9 +16,7 @@ context('Data Collection form', () => {
     });
 
     after(() => {
-        // Add this when we have a dialog when navigating away from a form
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+        cy.killWindowUnloadHandler();
     });
 
     it('validates deposit agreement', () => {
@@ -297,7 +295,7 @@ context('Data Collection form', () => {
 
     it('validates project information', () => {
         // Project name
-        cy.type_ckeditor('Projectname', 'This is the project name');
+        cy.typeCKEditor('Projectname', 'This is the project name');
         cy.get('#Projectname')
             .type('This is the project name', { force: true });
         cy.get('@submitButton')
@@ -308,7 +306,7 @@ context('Data Collection form', () => {
         // Project description
         const descText =
             'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ';
-        cy.type_ckeditor('Projectdescription', descText);
+        cy.typeCKEditor('Projectdescription', descText);
         cy.get('#Projectdescription')
             .type(descText, { force: true });
         cy.get('@submitButton')

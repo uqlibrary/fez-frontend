@@ -11,12 +11,8 @@ Cypress.Commands.add('loadRecordForAdminEdit', pid => {
 });
 
 Cypress.Commands.add('adminEditCleanup', () => {
-    cy.kill_ckeditor();
-    cy.window()
-        .then(win => {
-        // Unset page unload handler
-            win.onbeforeunload = undefined;
-        });
+    cy.killCKEditor();
+    cy.killWindowUnloadHandler();
 });
 
 Cypress.Commands.add('adminEditCountCards', count => {

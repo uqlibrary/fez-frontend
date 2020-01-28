@@ -16,8 +16,8 @@ const waitForCKEditorInstance = instanceName =>
 
 // Allows the targeting of CKEditors
 // CKeditor dynamically names instances as "editor1", "editor2" etc.
-// USAGE : cy.type_ckeditor('editor1', '<p>This is some text</p>');
-Cypress.Commands.add('type_ckeditor', (element, content) => {
+// USAGE : cy.typeCKEditor('editor1', '<p>This is some text</p>');
+Cypress.Commands.add('typeCKEditor', (element, content) => {
     waitForCKEditorInstance(element);
     cy.log(`Found #cke_${element}`);
     cy.window()
@@ -29,12 +29,12 @@ Cypress.Commands.add('type_ckeditor', (element, content) => {
 
 // Read text from CKEditor instance
 // Usage example:
-// cy.read_ckeditor('editor1')
+// cy.readCKEditor('editor1')
 //     .then(text => {
 //         cy.wrap(text)
 //             .should('eq', expected);
 //     });
-Cypress.Commands.add('read_ckeditor', element => {
+Cypress.Commands.add('readCKEditor', element => {
     waitForCKEditorInstance(element);
     cy.window()
         .then(win => {
@@ -42,7 +42,7 @@ Cypress.Commands.add('read_ckeditor', element => {
         });
 });
 
-Cypress.Commands.add('kill_ckeditor', () => {
+Cypress.Commands.add('killCKEditor', () => {
     cy.window()
         .then(win => {
             Object.keys((win.CKEDITOR || {}).instances || {})

@@ -39,7 +39,7 @@ context('Thesis admin edit', () => {
                             .should('contain.text', 'Formatted title');
                         cy.get('#cke_editor3')
                             .should('exist');
-                        cy.read_ckeditor('editor3')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
@@ -245,7 +245,7 @@ context('Thesis admin edit', () => {
                             .should('have.text', 'Additional notes');
                         cy.get('#cke_editor5')
                             .should('exist');
-                        cy.read_ckeditor('editor5')
+                        cy.readCKEditor('editor5')
                             .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });

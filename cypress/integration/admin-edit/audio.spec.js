@@ -87,7 +87,7 @@ context('Audio admin edit', () => {
                     .should('have.text', 'Transcript');
                 cy.get('#cke_editor5')
                     .should('exist');
-                cy.read_ckeditor('editor5')
+                cy.readCKEditor('editor5')
                     .should(text => {
                         expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                     });
@@ -178,7 +178,7 @@ context('Audio admin edit', () => {
                     .should('contain', 'Advisory statement');
                 cy.get('#cke_editor7')
                     .should('exist');
-                cy.read_ckeditor('editor7')
+                cy.readCKEditor('editor7')
                     .should(text => {
                     // prettier-ignore
                         expect(text).to.contain(
