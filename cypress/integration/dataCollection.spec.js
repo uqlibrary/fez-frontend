@@ -57,12 +57,7 @@ context('Data Collection form', () => {
         // Contact name ID
         cy.get('input#ContactnameID-input')
             .type('a');
-        cy.get('#ContactnameID-menu')
-            .should('exist');
-        cy.get('li#ContactnameID-item-0')
-            .should('exist');
-        cy.get('li#ContactnameID-item-0')
-            .click();
+        cy.clickAutoSuggestion('ContactnameID', 0);
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -136,12 +131,7 @@ context('Data Collection form', () => {
         // Field of research
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.get('#Fieldofresearch-menu')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-4')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-4')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 4);
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -157,26 +147,14 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(200);
-        cy.get('#Fieldofresearch-menu')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-3')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-3')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 3);
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
             .should('have.length', --errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(200);
-        cy.get('#Fieldofresearch-menu')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-1')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-1')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 1);
         cy.get('button[title="Remove all items"]')
             .click();
         cy.get('[role="dialog"] button')
@@ -188,13 +166,7 @@ context('Data Collection form', () => {
             .should('have.length', ++errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(200);
-        cy.get('#Fieldofresearch-menu')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-2')
-            .should('exist');
-        cy.get('li#Fieldofresearch-item-2')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 2);
         cy.get('@submitButton')
             .should('be.disabled');
         cy.get('@errors')
@@ -221,10 +193,7 @@ context('Data Collection form', () => {
             .type('Vishal Asai');
         cy.get('input#Entercreatorsrole-input')
             .click();
-        cy.get('li#Entercreatorsrole-item-1')
-            .should('exist');
-        cy.get('li#Entercreatorsrole-item-1')
-            .click();
+        cy.clickAutoSuggestion('Entercreatorsrole', 1);
         cy.get('button#delete-creator-1')
             .click();
         cy.get('[role="dialog"] button')
@@ -295,7 +264,6 @@ context('Data Collection form', () => {
 
     it('validates project information', () => {
         // Project name
-        cy.typeCKEditor('Projectname', 'This is the project name');
         cy.get('#Projectname')
             .type('This is the project name', { force: true });
         cy.get('@submitButton')
@@ -304,11 +272,11 @@ context('Data Collection form', () => {
             .should('have.length', --errorCount);
 
         // Project description
-        const descText =
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ';
-        cy.typeCKEditor('Projectdescription', descText);
         cy.get('#Projectdescription')
-            .type(descText, { force: true });
+            .type(
+                'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
+                { force: true },
+            );
         cy.get('@submitButton')
             .should('not.be.disabled');
         cy.get('@errors')
@@ -619,22 +587,12 @@ context('Data Collection form', () => {
         // Related datasets
         cy.get('input#DatasetWorktitle-input')
             .type('a');
-        cy.get('#DatasetWorktitle-menu')
-            .should('exist');
-        cy.get('li#DatasetWorktitle-item-0')
-            .should('exist');
-        cy.get('li#DatasetWorktitle-item-0')
-            .click();
+        cy.clickAutoSuggestion('DatasetWorktitle', 0);
         // cy.get('@submitButton').should('be.disabled');
         // cy.get('@errors').should('have.length', 1);
         cy.get('input#DatasetWorktitle-input')
             .type('a');
-        cy.get('#DatasetWorktitle-menu')
-            .should('exist');
-        cy.get('li#DatasetWorktitle-item-1')
-            .should('exist');
-        cy.get('li#DatasetWorktitle-item-1')
-            .click();
+        cy.clickAutoSuggestion('DatasetWorktitle', 1);
         cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .first()
