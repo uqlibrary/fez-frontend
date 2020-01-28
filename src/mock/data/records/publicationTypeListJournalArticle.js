@@ -354,6 +354,10 @@ export default {
                         'srm_journal_name': 'Nursing Ethics',
                         'srm_colour': 'green',
                     },
+                    'fez_ulrichs': {
+                        'ulr_issn': '0969-7330',
+                        'ulr_title_id': '54321',
+                    },
                     'rek_issn_lookup': 'green',
                 },
                 {
@@ -433,6 +437,10 @@ export default {
                         'srm_issn': '1477-0989',
                         'srm_journal_name': 'Nursing Ethics',
                         'srm_colour': 'green',
+                    },
+                    'fez_ulrichs': {
+                        'ulr_issn': '1477-0989',
+                        'ulr_title_id': '54322',
                     },
                     'rek_issn_lookup': 'green',
                 },
@@ -1351,6 +1359,10 @@ export default {
                         'srm_journal_name': 'Zoology',
                         'srm_colour': 'green',
                     },
+                    'fez_ulrichs': {
+                        'ulr_issn': '1873-2720',
+                        'ulr_title_id': '54323',
+                    },
                     'rek_issn_lookup': 'green',
                 },
                 {
@@ -1430,6 +1442,10 @@ export default {
                         'srm_issn': '0944-2006',
                         'srm_journal_name': 'Zoology',
                         'srm_colour': 'green',
+                    },
+                    'fez_ulrichs': {
+                        'ulr_issn': '0944-2006',
+                        'ulr_title_id': '54324',
                     },
                     'rek_issn_lookup': 'green',
                 },
