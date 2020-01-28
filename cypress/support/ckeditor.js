@@ -41,3 +41,13 @@ Cypress.Commands.add('read_ckeditor', element => {
             return win.CKEDITOR.instances[element].getData();
         });
 });
+
+Cypress.Commands.add('kill_ckeditor', () => {
+    cy.window()
+        .then(win =>
+            Object.keys((win.CKEDITOR || {}).instances || {})
+                .forEach(instance => {
+                    win.CKEDITOR.instances[instance].destroy();
+                }),
+        );
+});

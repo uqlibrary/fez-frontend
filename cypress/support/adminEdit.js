@@ -15,15 +15,9 @@ Cypress.Commands.add('adminEditCleanup', () => {
         .then(win => {
         // Unset page unload handler
             win.onbeforeunload = undefined;
-
-            // Unload CKEditor instances
-            win.CKEDITOR &&
-            Object.keys(win.CKEDITOR.instances)
-                .forEach(editor => {
-                    win.CKEDITOR.instances[editor].removeAllListeners();
-                    win.CKEDITOR.remove(win.CKEDITOR.instances[editor]);
-                });
         });
+
+    cy.kill_ckeditor();
 });
 
 Cypress.Commands.add('adminEditCountCards', count => {
