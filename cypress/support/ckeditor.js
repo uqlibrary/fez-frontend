@@ -44,10 +44,12 @@ Cypress.Commands.add('read_ckeditor', element => {
 
 Cypress.Commands.add('kill_ckeditor', () => {
     cy.window()
-        .then(win =>
+        .then(win => {
             Object.keys((win.CKEDITOR || {}).instances || {})
                 .forEach(instance => {
-                    win.CKEDITOR.instances[instance].destroy();
-                }),
-        );
+                    win.CKEDITOR.instances[instance].removeAllListeners();
+                    win.CKEDITOR.instances[instance].destroy(false);
+                });
+            (win.CKEDITOR || {}).removeAllListeners && win.CKEDITOR.removeAllListeners();
+        });
 });
