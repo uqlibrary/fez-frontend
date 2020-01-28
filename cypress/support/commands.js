@@ -57,3 +57,10 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
             }
         });
 });
+
+Cypress.Commands.add('killWindowUnloadHandler', () => {
+    cy.window()
+        .then(win => {
+            win.onbeforeunload = undefined;
+        });
+});

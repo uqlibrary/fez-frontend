@@ -42,11 +42,11 @@ context('Journal Article admin edit', () => {
                     .should('exist');
             });
 
-        cy.read_ckeditor('editor1')
+        cy.readCKEditor('editor1')
             .should(text => {
                 expect(text).to.contain(record.fez_internal_notes.ain_detail);
             });
-        cy.read_ckeditor('editor2')
+        cy.readCKEditor('editor2')
             .should(text => {
                 expect(text).to.contain(record.rek_herdc_notes);
             });
@@ -127,7 +127,7 @@ context('Journal Article admin edit', () => {
                             .should('contain.text', 'Formatted title');
                         cy.get('#cke_editor3')
                             .should('exist');
-                        cy.read_ckeditor('editor3')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
@@ -233,7 +233,7 @@ context('Journal Article admin edit', () => {
                             .should('have.text', 'Abstract / Description');
                         cy.get('#cke_editor4')
                             .should('exist');
-                        cy.read_ckeditor('editor4')
+                        cy.readCKEditor('editor4')
                             .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
@@ -438,7 +438,7 @@ context('Journal Article admin edit', () => {
                             .should('have.text', 'Additional notes');
                         cy.get('#cke_editor5')
                             .should('exist');
-                        cy.read_ckeditor('editor5')
+                        cy.readCKEditor('editor5')
                             .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });

@@ -6,9 +6,7 @@ context('Thesis', () => {
     });
 
     afterEach(() => {
-        // Add this when we have a dialog when navigating away from a form
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+        cy.killWindowUnloadHandler();
     });
 
     it('Submitting a thesis successfully', () => {
@@ -20,13 +18,13 @@ context('Thesis', () => {
             .should('have.length', 8);
 
         // Title
-        cy.type_ckeditor('editor1', '<p>This is a thesis title</p>');
+        cy.typeCKEditor('editor1', '<p>This is a thesis title</p>');
         cy.get('.alert-text')
             .find('ul')
             .children()
             .should('have.length', 7);
         // Abstract
-        cy.type_ckeditor('editor2', '<p>This is the thesis abstract</p>');
+        cy.typeCKEditor('editor2', '<p>This is the thesis abstract</p>');
         cy.get('.alert-text')
             .find('ul')
             .children()

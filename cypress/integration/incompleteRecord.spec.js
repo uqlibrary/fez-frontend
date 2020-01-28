@@ -1,9 +1,6 @@
 context('Incomplete record form', () => {
     afterEach(() => {
-        cy.window()
-            .then(win => {
-                win.onbeforeunload = undefined;
-            });
+        cy.killWindowUnloadHandler();
     });
 
     const checkSignificance = significance => {
@@ -19,8 +16,8 @@ context('Incomplete record form', () => {
     };
 
     const checkResearchStatement = statement => {
-        cy.type_ckeditor('editor1', statement);
-        cy.read_ckeditor('editor1')
+        cy.typeCKEditor('editor1', statement);
+        cy.readCKEditor('editor1')
             .then(text => {
                 cy.wrap(text)
                     .should('eq', statement);
