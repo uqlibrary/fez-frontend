@@ -18,7 +18,6 @@ context('Journal Article admin edit', () => {
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
         cy.adminEditCleanup();
-        cy.wait(1000);
     });
 
     it('should render the different sections as expected', () => {
