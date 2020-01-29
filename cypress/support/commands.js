@@ -57,3 +57,21 @@ Cypress.Commands.add('navToHomeFromMenu', locale => {
             }
         });
 });
+
+Cypress.Commands.add('killWindowUnloadHandler', () => {
+    cy.window()
+        .then(win => {
+            win.onbeforeunload = undefined;
+        });
+});
+
+Cypress.Commands.add('clickAutoSuggestion', (fieldName, ordinal) => {
+    cy.get(`#${fieldName}-menu`)
+        .should('exist');
+    cy.get(`#${fieldName}-item-${ordinal}`)
+        .as('menuItem')
+        .should('exist');
+    cy.wait(200);
+    cy.get('@menuItem')
+        .click();
+});
