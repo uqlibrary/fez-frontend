@@ -179,7 +179,7 @@ to keep initial load to a minimum following optimisation has been added to the p
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
-- if you cant get eg https://fez-staging.library.uq.edu.au/view/UQ:e6c5854 to load the new FE (it always loads legacy) you can use the alternate url of https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854
+- if you cant get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
 
 #### Optimisation Guidelines
 
@@ -311,9 +311,9 @@ The following access is required:
 | admin or developer | full       | true  | full masquerade, admin, csv ingest             |
 | digiteam           | false      | true  | no masquerade, admin (side effect), csv ingest |
 
-masquerade - on account record (CURRENT_ACCOUNT_API) eg https://api.library.uq.edu.au/staging/account, canMasquerade = true or false; when true, masqueradeType = full or readonly
+masquerade - on account record (CURRENT_ACCOUNT_API) eg <https://api.library.uq.edu.au/staging/account>, canMasquerade = true or false; when true, masqueradeType = full or readonly
 
-admin - on author record (AUTHOR_DETAILS_API) eg https://api.library.uq.edu.au/staging/authors/details/uqldegro, is_administrator = 0 or 1
+admin - on author record (AUTHOR_DETAILS_API) eg <https://api.library.uq.edu.au/staging/authors/details/uqldegro>, is_administrator = 0 or 1
 
 (there is also is_super_administrator, 0 or 1, which gives access to the security tab)
 
