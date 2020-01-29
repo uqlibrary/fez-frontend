@@ -63,10 +63,10 @@ This project is using `npm` for dependency management. Make sure `npm` is instal
   - runs production build version on `http://localhost:9000/`
   - uses mock data from src/mock
   - async loading is not working since chuncks are not saved, navigate directly to required routes
-- `npm run eslint`
-  - Runs ESLint on all JavaScript files in the project, with specific exceptions listed in `.eslintignore`.
-- `npm run codestyles:files`
+- `npm run test:cs`
   - Runs Prettier and ESLint checks on all Javascript files in the project, then lists files with code style issues. Check the other npm scripts for ways to fix the issues automatically if possible.
+- `npm run test:e2e:cc`
+  - Runs Cypress tests with code coverage checks. HTML report will be available under `coverage/cypress` while and after tests run.
 
 Mock data is provided for all pages and actions under `src/mock/`.
 
@@ -179,7 +179,7 @@ to keep initial load to a minimum following optimisation has been added to the p
 
 - Because FE is served from cloudFront, add a behaviour to serve css/js filename patterns. E.g. behaviours have been
   added for `main-*` and `commons-*` files.
-- if you cant get eg https://fez-staging.library.uq.edu.au/view/UQ:e6c5854 to load the new FE (it always loads legacy) you can use the alternate url of https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854
+- if you cant get eg <https://fez-staging.library.uq.edu.au/view/UQ:e6c5854> to load the new FE (it always loads legacy) you can use the alternate url of <https://fez-staging.library.uq.edu.au/view_new/UQ:e6c5854>
 
 #### Optimisation Guidelines
 
@@ -221,9 +221,9 @@ Jest is used as testing tool for unit tests. Any HTMl markup is to be tested wit
 - run tests `npm test`
 
 Before committing changes, locally run tests and update stapshots (if required). To update snapshots run
-`npm test -- -u`.
+`npm run test:unit:update`.
 
-[Code coverage](coverage/index.html) is available (after running `npm test`)
+[Code coverage](coverage/jest/index.html) is available (after running `npm test`)
 
 #### Guidelines
 
@@ -244,43 +244,45 @@ Then:
 - or to open the Cypress UI use `npm run cypress:open`
 - or to watch the tests `npm run cypress:watch`.
 
-Before pushing to a branch make sure to run `npm run test:all`. This runs the unit, integration and cypress tests.
+Before pushing to a branch make sure to run `npm run test:all`. This runs the unit and cypress tests.
 
-Codeship runs `start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record --config video=true` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
+Codeship runs `npm run test:e2e:dashboard` as it spins up a webpack-dev-server and serves the frontend with mock data to run tests for now until we have API integration with docker, but only in `master` branch.
 
-You can watch video recordings of your test runs and debug the tests via the [Cypress dashboard](https://dashboard.cypress.io). Use username/pass in passwordstate under "GitHub Cypress.io Admin User".
+You can watch video recordings of any failed test runs and view some debug messages via the [Cypress dashboard](https://dashboard.cypress.io/projects/mvfnrv/runs). We have open-source license which allows unlimited runs. To manage the account, username/pass in PasswordState under "GitHub Cypress.io Admin User".
 
 If you want Codeship to run cypress tests before you merge to master, include the text `cypress` in the branch name and push and cypress tests will be run on that branch (set up in bin/codeship-test.sh).
 
 #### Some tricks and tips
 
-- When simulating clicks on components with animations (ripples and the like) - you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations.
-- When the form you are writing tests for has a browser alert box to prevent navigating away before its complete, add this to the top of your test to unbind the handler as shown below. The issue might only present itself when trying to do another test by navigating to a new url, which never finishes loading because the browser is waiting for the alert from the previous page to be dismissed, which is actually not visible in Cypress UI!
+- When simulating clicks which result in non-trivial DOM changes, you might need to `cy.wait(1000);` to wait 1 second after the click before posing any expectations. If possible, use `cy.waitUntil()` instead to wait for a particular condition to be true.
+- Custom cypress commands can be added to `cypress/support` to abstract out common actions. For example:
 
-  ```javascript
-  afterEach(() => {
-    cy.window().then(win => (win.onbeforeunload = undefined));
-  });
-  ```
+  - When the form you are writing tests for has a browser alert box to prevent navigating away before its complete, add this to the top of your test to unbind the unload event handler. The issue might only present itself when trying to do another test by navigating to a new url, which never finishes loading because the browser is waiting for the alert from the previous page to be dismissed, which is actually not visible in Cypress UI!
 
-- When using the MUI dialog confirmation, use the following for navigating to the homepage:
+    ```javascript
+    afterEach(() => {
+      cy.killWindowUnloadHandler();
+    });
+    ```
 
-  ```javascript
-  cy.navToHomeFromMenu(locale);
-  ```
+  - When using the MUI dialog confirmation, use the following for navigating to the homepage:
 
-  where `locale` is:
+    ```javascript
+    cy.navToHomeFromMenu(locale);
+    ```
 
-  ```javascript
-  {
-    confirmationTitle: '(Title of the confirmation dialogue)',
-    confirmButtonLabel: '(Text of the "Yes" button)'
-  }
-  ```
+    where `locale` is:
 
-  See `cypress/support/commands.js` to see how that works.
-  
-- if a test occasionally fails as "requires a DOM element." add a .should test after the .get, to make it wait for the element to appear (.should loops)
+    ```javascript
+    {
+      confirmationTitle: '(Title of the confirmation dialogue)',
+      confirmButtonLabel: '(Text of the "Yes" button)'
+    }
+    ```
+
+    See `cypress/support/commands.js` to see how that works.
+
+- If a test occasionally fails as "requires a DOM element." add a `.should()` test after the `.get()`, to make it wait for the element to appear (`.should()` loops)
 
 ## Mocking
 
@@ -302,16 +304,16 @@ you in as that user. Usernames can be found in the `src/mock/data/accounts.js` f
 
 The following access is required:
 
-| User type          | masquerade | admin  | Resulting access
-| ------------------ | ---------- | ------ | ----------------------------------------------
-| general user       | false      | false  | no masquerade, no admin, no csv ingest
-| support staff      | readonly   | false  | readonly masquerade, no admin, no csv ingest
-| admin or developer | full       | true   | full masquerade, admin, csv ingest
-| digiteam           | false      | true   | no masquerade, admin (side effect), csv ingest
+| User type          | masquerade | admin | Resulting access                               |
+| ------------------ | ---------- | ----- | ---------------------------------------------- |
+| general user       | false      | false | no masquerade, no admin, no csv ingest         |
+| support staff      | readonly   | false | readonly masquerade, no admin, no csv ingest   |
+| admin or developer | full       | true  | full masquerade, admin, csv ingest             |
+| digiteam           | false      | true  | no masquerade, admin (side effect), csv ingest |
 
-masquerade - on account record (CURRENT_ACCOUNT_API) eg https://api.library.uq.edu.au/staging/account, canMasquerade = true or false; when true, masqueradeType = full or readonly
+masquerade - on account record (CURRENT_ACCOUNT_API) eg <https://api.library.uq.edu.au/staging/account>, canMasquerade = true or false; when true, masqueradeType = full or readonly
 
-admin - on author record (AUTHOR_DETAILS_API) eg https://api.library.uq.edu.au/staging/authors/details/uqldegro, is_administrator = 0 or 1
+admin - on author record (AUTHOR_DETAILS_API) eg <https://api.library.uq.edu.au/staging/authors/details/uqldegro>, is_administrator = 0 or 1
 
 (there is also is_super_administrator, 0 or 1, which gives access to the security tab)
 

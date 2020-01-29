@@ -11,7 +11,6 @@ context('Batch import', () => {
     beforeEach(() => {
         cy.visit('/batch-import?user=digiteamMember');
         cy.closeUnsupported();
-        cy.wait(1000); // Wait for data load. Without it, the click below doesn't trigger the menu.
     });
 
     afterEach(() => {
@@ -111,7 +110,6 @@ context('Batch import', () => {
         cy.get('#submitBatchImport')
             .should('have.text', locale.formLabels.submitButtonLabel)
             .click();
-        cy.wait(500); // Wait for submission
         // form submitted and the green 'all good' message appears, with 'start another' button
         cy.get('.content-container form > div > div:nth-of-type(2) .Alert')
             .should('contain', locale.submitSuccessAlert.title)

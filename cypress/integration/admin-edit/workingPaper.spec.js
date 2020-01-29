@@ -39,7 +39,7 @@ context('Working paper admin edit', () => {
                             .should('contain.text', 'Formatted title');
                         cy.get('#cke_editor3')
                             .should('exist');
-                        cy.read_ckeditor('editor3')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title.replace("'", '&#39;'));
                             });

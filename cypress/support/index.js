@@ -17,8 +17,17 @@
 import 'cypress-file-upload';
 import 'cypress-plugin-tab';
 import '@cypress/code-coverage/support';
+import 'cypress-wait-until';
 
 // Custom
 import './adminEdit';
 import './ckeditor';
 import './commands';
+
+// Ignore uncaught exceptions
+// https://docs.cypress.io/guides/references/error-messages.html#Uncaught-exceptions-from-your-application
+// Cypress has flagged handling of uncaught app exceptions as WIP.
+// They recommend ignoring these until they say otherwise.
+Cypress.on('uncaught:exception', () => {
+    return false;
+});

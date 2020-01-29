@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListDesign';
-import moment from 'moment';
 
 context('Design admin edit', () => {
     const record = recordList.data[0];
@@ -38,8 +37,10 @@ context('Design admin edit', () => {
                 cy.get('[placeholder="Project start date"]')
                     .should(
                         'have.value',
-                        moment(record.fez_record_search_key_project_start_date.rek_project_start_date)
-                            .format('DD/MM/YYYY'),
+                        Cypress.moment(record.fez_record_search_key_project_start_date.rek_project_start_date)
+                            .format(
+                                'DD/MM/YYYY',
+                            ),
                     );
                 cy.get('#Scale')
                     .should('have.value', record.fez_record_search_key_scale.rek_scale);

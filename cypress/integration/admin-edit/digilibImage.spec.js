@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListDigilibImage';
-import moment from 'moment';
 
 context('Digilib Image admin edit', () => {
     const record = recordList.data[0];
@@ -57,7 +56,7 @@ context('Digilib Image admin edit', () => {
                         cy.get('[placeholder="Date photo taken"]')
                             .should(
                                 'have.value',
-                                moment(record.fez_record_search_key_date_photo_taken.rek_date_photo_taken)
+                                Cypress.moment(record.fez_record_search_key_date_photo_taken.rek_date_photo_taken)
                                     .format(
                                         'DD/MM/YYYY',
                                     ),
@@ -65,8 +64,10 @@ context('Digilib Image admin edit', () => {
                         cy.get('[placeholder="Date photo scanned"]')
                             .should(
                                 'have.value',
-                                moment(record.fez_record_search_key_date_scanned.rek_date_scanned)
-                                    .format('DD/MM/YYYY'),
+                                Cypress.moment(record.fez_record_search_key_date_scanned.rek_date_scanned)
+                                    .format(
+                                        'DD/MM/YYYY',
+                                    ),
                             );
                     });
 

@@ -1,66 +1,67 @@
 context('Data Collection form', () => {
-    beforeEach(() => {
+    let errorCount = 13;
+
+    before(() => {
         cy.visit('/data-collections/add');
         cy.closeUnsupported();
     });
 
-    afterEach(() => {
-        // Add this when we have a dialog when navigating away from a form
-        cy.window()
-            .then(win => (win.onbeforeunload = undefined));
+    beforeEach(() => {
+        cy.get('button#submit-data-collection')
+            .as('submitButton')
+            .should(errorCount === 0 ? 'not.be.disabled' : 'be.disabled');
+        cy.get('div.Alert li')
+            .as('errors')
+            .should('have.length', errorCount);
     });
 
-    it('Form behaves as expected', () => {
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 13);
+    after(() => {
+        cy.killWindowUnloadHandler();
+    });
 
+    it('validates deposit agreement', () => {
         // Accept the agreement
         cy.get('input#deposit-agreement')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 12);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
+    });
 
+    it('validates Dataset information', () => {
         // Dataset name
-        cy.get('textarea#Datasetname:visible', { timeout: 5000 })
-            .type('Name of Dataset');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 11);
+        cy.get('#Datasetname')
+            .type('Name of Dataset', { force: true });
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Dataset description
-        cy.get('textarea#Datasetdescription:visible', { timeout: 5000 })
-            .type('Description of Dataset');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 10);
+        cy.get('#Datasetdescription')
+            .type('Description of Dataset', { force: true });
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Contact name
         cy.get('input#Contactname')
             .type('Ky Lane');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 9);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Contact name ID
         cy.get('input#ContactnameID-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#ContactnameID-item-0:visible')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#ContactnameID-item-0')
-            .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 8);
+        cy.clickAutoSuggestion('ContactnameID', 0);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Contact email
         cy.get('input#Contactemail')
@@ -68,14 +69,14 @@ context('Data Collection form', () => {
         cy.get('p#Contactemail-helper-text')
             .contains('Email address is not valid')
             .should('have.length', 1);
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 8);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
         cy.get('input#Contactemail')
             .type('uq.edu.au');
-        cy.get('div.Alert li')
-            .should('have.length', 7);
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // DOI
         cy.get('input#DOI')
@@ -87,215 +88,199 @@ context('Data Collection form', () => {
             .type('{backspace}{backspace}{backspace}{backspace}{backspace}10.1037/a0028240', {
                 delay: 30,
             });
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 7);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Publisher
         cy.get('input#Publisher')
             .type('A publisher');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 7);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Publication date
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
             .find('input#day')
             .type('16');
-        cy.get('div.Alert li')
-            .should('have.length', 7);
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         cy.get('div[role="button"][aria-haspopup="true"]')
             .contains('Month')
             .click();
         cy.get('li[data-value="11"]')
             .click();
-        cy.get('div.Alert li')
-            .should('have.length', 7);
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         cy.contains('h3', 'Dataset information')
             .closest('.StandardCard')
             .find('input#year')
             .type('1976');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 6);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
+    });
 
+    it('validates FoR codes', () => {
         // Field of research
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#Fieldofresearch-item-4:visible')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#Fieldofresearch-item-4')
-            .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 5);
+        cy.clickAutoSuggestion('Fieldofresearch', 4);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
         cy.get('button[title="Remove this item"]')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 6);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', ++errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#Fieldofresearch-item-3:visible')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#Fieldofresearch-item-3')
-            .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 5);
+        cy.clickAutoSuggestion('Fieldofresearch', 3);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#Fieldofresearch-item-1')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#Fieldofresearch-item-1')
-            .click();
+        cy.clickAutoSuggestion('Fieldofresearch', 1);
         cy.get('button[title="Remove all items"]')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 6);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', ++errorCount);
         cy.get('input#Fieldofresearch-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#Fieldofresearch-item-2')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#Fieldofresearch-item-2')
-            .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 5);
+        cy.clickAutoSuggestion('Fieldofresearch', 2);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
+    });
 
+    it('validates creators', () => {
         // Creators
         cy.get('input#creators-name-as-published-field')
             .type('Ky Lane');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 5);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
         cy.get('input#Entercreatorsrole-input')
             .type('Custom role');
         cy.get('button#submit-author')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 4);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
         cy.get('input#creators-name-as-published-field')
             .type('Vishal Asai');
         cy.get('input#Entercreatorsrole-input')
             .click();
-        cy.get('li#Entercreatorsrole-item-1')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#Entercreatorsrole-item-1')
-            .click();
+        cy.clickAutoSuggestion('Entercreatorsrole', 1);
         cy.get('button#delete-creator-1')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 4);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
         cy.get('div.Creators')
             .get('button[aria-label="Remove all items"]')
             .click();
         cy.get('[role="dialog"] button')
             .contains('Yes')
             .click();
-        cy.get('div.Alert li')
-            .should('have.length', 5);
+        cy.get('@errors')
+            .should('have.length', ++errorCount);
         cy.get('input#creators-name-as-published-field')
             .type('Ky Lane');
         cy.get('input#Entercreatorsrole-input')
             .type('UX Developer');
         cy.get('button#submit-author')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 4);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
+    });
 
+    it('validates access and licensing info', () => {
         // Access conditions
-
         cy.get('div#data-collection-access-selector')
             .click();
         cy.get('li[data-value="453618"]')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 3);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         cy.get('div#data-collection-access-selector')
             .click();
         cy.get('li[data-value="453619"]')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 3);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Licensing and terms of access
         cy.get('div#data-collection-license-selector')
             .click();
         cy.get('li[data-value="453609"]')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 2);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Copyright notice
         cy.get('input#Copyrightnotice')
             .type('This is a copyright notice');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 2);
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
+    });
 
+    it('validates project information', () => {
         // Project name
-        cy.get('textarea#Projectname:visible', { timeout: 5000 })
-            .type('This is the project name');
-        cy.get('button#submit-data-collection')
-            .should('have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 1);
+        cy.get('#Projectname')
+            .type('This is the project name', { force: true });
+        cy.get('@submitButton')
+            .should('be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Project description
-        cy.get('textarea#Projectdescription:visible', { timeout: 5000 })
+        cy.get('#Projectdescription')
             .type(
                 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dictum non purus id aliquet. ',
+                { force: true },
             );
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', --errorCount);
 
         // Funding body
         cy.get('input#funding-body-input')
@@ -330,10 +315,10 @@ context('Data Collection form', () => {
         cy.get('div.Fundingbody')
             .find('button#add-items')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Grant ID
         cy.get('input#grant-id-input')
@@ -366,11 +351,13 @@ context('Data Collection form', () => {
         cy.get('div.GrantIDs')
             .find('button#add-items')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
+    });
 
+    it('validates dataset details', () => {
         // Type of data
         cy.get('input#type-of-data-input')
             .type('Type of data 1');
@@ -402,10 +389,10 @@ context('Data Collection form', () => {
         cy.get('div.Typeofdata')
             .find('button#add-items')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Software required
         cy.get('input#software-required-input')
@@ -438,10 +425,10 @@ context('Data Collection form', () => {
         cy.get('div.Softwarerequired')
             .find('button#add-items')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Keywords
         cy.get('input#keywords-input')
@@ -474,10 +461,10 @@ context('Data Collection form', () => {
         cy.get('div.Keywords')
             .find('button#add-items')
             .click();
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
         // Collection Start date
         // the field is not required - if we focus on it, type something in, clear and click on a different field,
@@ -541,11 +528,11 @@ context('Data Collection form', () => {
         cy.contains('p', 'Date must be before now')
             .should('not.be.visible');
 
-        cy.get('div.Alert li')
-            .should('have.length', 0);
+        cy.get('@errors')
+            .should('have.length', errorCount);
 
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
+        cy.get('@submitButton')
+            .should('not.be.disabled');
 
         // End Collection date
         cy.contains('span', 'Collection end date')
@@ -590,49 +577,41 @@ context('Data Collection form', () => {
         cy.contains('p', 'Date range is not valid')
             .should('not.be.visible');
 
-        cy.get('div.Alert li')
-            .should('have.length', 0);
-        cy.get('button#submit-data-collection')
-            .should('not.have.attr', 'disabled');
+        cy.get('@errors')
+            .should('have.length', errorCount);
+        cy.get('@submitButton')
+            .should('not.be.disabled');
+    });
 
+    it('validates related datasets/work', () => {
         // Related datasets
         cy.get('input#DatasetWorktitle-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#DatasetWorktitle-item-0:visible')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#DatasetWorktitle-item-0')
-            .click();
-        // cy.get('button#submit-data-collection').should('have.attr', 'disabled');
-        // cy.get('div.Alert').find('li').should('have.length', 1);
+        cy.clickAutoSuggestion('DatasetWorktitle', 0);
+        // cy.get('@submitButton').should('be.disabled');
+        // cy.get('@errors').should('have.length', 1);
         cy.get('input#DatasetWorktitle-input')
             .type('a');
-        cy.wait(1000);
-        cy.get('li#DatasetWorktitle-item-1:visible')
-            .invoke('width')
-            .should('be.greaterThan', 0);
-        cy.get('li#DatasetWorktitle-item-1')
-            .click();
-        cy.get('div[class="undefined Relateddatasets/work"]')
+        cy.clickAutoSuggestion('DatasetWorktitle', 1);
+        cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .first()
             .get('p')
             .should('contain', 'Vaccination day');
-        cy.get('div[class="undefined Relateddatasets/work"]')
+        cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .last()
             .get('p')
             .should('contain', 'Early Onset Scoliosis');
-        cy.get('div[class="undefined Relateddatasets/work"]')
+        cy.get('div[class*="Relateddatasets/work"]')
             .get('button[title="Move item up the order"]')
             .click();
-        cy.get('div[class="undefined Relateddatasets/work"]')
+        cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .last()
             .get('p')
             .should('contain', 'Vaccination day');
-        cy.get('div[class="undefined Relateddatasets/work"]')
+        cy.get('div[class*="Relateddatasets/work"]')
             .get('div.ListRow-NoLabel')
             .first()
             .get('p')
