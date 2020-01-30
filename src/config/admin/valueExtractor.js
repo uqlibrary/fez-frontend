@@ -166,8 +166,20 @@ export default {
                 value: collection.rek_ismemberof_lookup,
             })),
     },
-    fez_record_search_key_issn: {
-        getValue: record => [...record.fez_record_search_key_issn],
+    issnField: {
+        getValue: record =>
+            (record.fez_record_search_key_issn || []).map(issn => ({
+                rek_order: issn.rek_issn_order,
+                rek_value: {
+                    key: issn.rek_issn,
+                    value:
+                        (!!issn.fez_ulrichs &&
+                            !!issn.fez_ulrichs.ulr_title_id &&
+                            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
+                                issn.fez_ulrichs.ulr_title_id) ||
+                        '',
+                },
+            })),
     },
     fez_record_search_key_isbn: {
         getValue: record => [...record.fez_record_search_key_isbn],

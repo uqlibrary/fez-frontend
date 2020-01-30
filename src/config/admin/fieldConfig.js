@@ -67,6 +67,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
+import IssnListEditorField from '../../modules/SharedComponents/Toolbox/ListEditor/IssnListEditorField';
 
 export default {
     default: {
@@ -488,16 +489,12 @@ export default {
                 locale: locale.components.keywordsForm.field,
             },
         },
-        fez_record_search_key_issn: {
-            component: ListEditorField,
+        issnField: {
+            component: IssnListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_issn',
+                name: 'bibliographicSection.issnField',
                 isValid: validation.isValidIssn,
-                searchKey: {
-                    value: 'rek_issn',
-                    order: 'rek_issn_order',
-                },
                 locale: locale.components.issnForm.field,
                 inputNormalizer: value => {
                     const newValue = value.replace('-', '');

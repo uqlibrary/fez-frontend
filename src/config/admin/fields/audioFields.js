@@ -18,7 +18,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
+            groups: [['issnField']],
         },
         {
             title: 'Bibliographic',
