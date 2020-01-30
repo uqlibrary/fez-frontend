@@ -2422,6 +2422,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
+                fez_record_search_key_license_biblio: {},
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2451,6 +2452,7 @@ describe('getBibliographicSectionSearchKeys', () => {
                         rek_keywords_order: 2,
                     },
                 ],
+                fez_record_search_key_license: {},
             });
         });
 
@@ -2474,6 +2476,9 @@ describe('getBibliographicSectionSearchKeys', () => {
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '2016',
                 },
+                fez_record_search_key_license_biblio: {
+                    rek_license: '453610',
+                },
             };
 
             expect(transformers.getBibliographicSectionSearchKeys(data)).toEqual({
@@ -2492,6 +2497,9 @@ describe('getBibliographicSectionSearchKeys', () => {
                 },
                 fez_record_search_key_date_recorded: {
                     rek_date_recorded: '2016-01-01T00:00:00+10:00',
+                },
+                fez_record_search_key_license: {
+                    rek_license: '453610',
                 },
             });
         });
@@ -2766,6 +2774,9 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_oa_status_pid: 'UQ:113765',
                 rek_oa_status: '453694',
             },
+            fez_record_search_key_license_more: {
+                rek_license: '453607',
+            },
         };
 
         expect(transformers.getAdditionalInformationSectionSearchKeys(data)).toEqual({
@@ -2821,6 +2832,9 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
             },
             fez_record_search_key_oa_status: {
                 rek_oa_status: '453694',
+            },
+            fez_record_search_key_license: {
+                rek_license: '453607',
             },
         });
     });
