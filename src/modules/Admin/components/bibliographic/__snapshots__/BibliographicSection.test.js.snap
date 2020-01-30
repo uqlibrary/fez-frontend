@@ -32,7 +32,7 @@ exports[`BibliographicSection component should render default view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_issn",
+            "issnField",
           ],
         ],
         "title": "ISSN",
@@ -128,7 +128,7 @@ exports[`BibliographicSection component should render disabled view 1`] = `
       Object {
         "groups": Array [
           Array [
-            "fez_record_search_key_issn",
+            "issnField",
           ],
         ],
         "title": "ISSN",

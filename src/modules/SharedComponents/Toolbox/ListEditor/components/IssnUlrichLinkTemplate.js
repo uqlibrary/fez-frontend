@@ -7,8 +7,12 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
-                {item.key}
-                {!!item.value && <Link to={item.value}>Check Ulrichs information</Link>}
+                <span>{item.key}</span>{' '}
+                {!!item.value && (
+                    <Link target="_blank" to={item.value}>
+                        Check Ulrichs information
+                    </Link>
+                )}
             </Typography>
         </React.Fragment>
     );
