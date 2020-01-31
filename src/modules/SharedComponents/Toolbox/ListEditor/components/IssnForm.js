@@ -39,7 +39,6 @@ export const addItemCallbackFactory = (issnInput, disabled, errorText, issnValue
 
         // move focus to name as published text field after item was added
         issnInput.current.focus();
-        // issnInput.current.focus();
     };
     return [callback, [issnInput, disabled, issnValue, onAdd, resetForm, errorText]];
 };
