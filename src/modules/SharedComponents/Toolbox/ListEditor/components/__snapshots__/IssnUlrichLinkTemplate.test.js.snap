@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span />
+     
+    <a
+      href="http://example.com/ulrichs?id=1234"
+      target="_blank"
+    >
+      Check Ulrichs information
+    </a>
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span />
+     
+  </WithStyles(Typography)>
+</Fragment>
+`;

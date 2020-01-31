@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnForm component should render the default view 1`] = `
+<WithStyles(Grid)
+  alignItems="center"
+  container={true}
+  display="row"
+  spacing={16}
+>
+  <WithStyles(Grid)
+    item={true}
+    style={
+      Object {
+        "flexGrow": 1,
+      }
+    }
+  >
+    <TextField
+      error={false}
+      fullWidth={true}
+      helperText={null}
+      id=""
+      inputProps={
+        Object {
+          "ref": Object {
+            "current": null,
+          },
+        }
+      }
+      name="key"
+      onChange={[Function]}
+      onKeyPress={[Function]}
+      required={false}
+      select={false}
+      variant="standard"
+    />
+  </WithStyles(Grid)>
+  <WithStyles(Grid)
+    item={true}
+    md={2}
+    xs={12}
+  >
+    <WithStyles(Button)
+      color="primary"
+      disabled={false}
+      fullWidth={true}
+      id="add-items"
+      onClick={[Function]}
+      variant="contained"
+    />
+  </WithStyles(Grid)>
+</WithStyles(Grid)>
+`;
