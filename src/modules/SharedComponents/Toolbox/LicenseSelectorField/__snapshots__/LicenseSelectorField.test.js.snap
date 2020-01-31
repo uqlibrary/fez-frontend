@@ -17,11 +17,11 @@ exports[`LicenseSelectorField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454104,
       },
       Object {
-        "text": "Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454105,
       },
     ]
@@ -59,11 +59,11 @@ exports[`LicenseSelectorField component should render error and error message 1`
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454104,
       },
       Object {
-        "text": "Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454105,
       },
     ]
@@ -106,11 +106,11 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454104,
       },
       Object {
-        "text": "Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 454105,
       },
       Object {
