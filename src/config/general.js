@@ -726,11 +726,11 @@ export const MEDIATED_ACCESS_ID = 453618;
 export const CURRENT_LICENSES = [
     {
         value: 454104,
-        text: 'UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction',
+        text: 'Permitted Re-Use with Commercial Use Restriction',
     },
     {
         value: 454105,
-        text: 'UQ Terms & Conditions Permitted Re-Use with Share Alike Requirement',
+        text: 'Permitted Re-Use with Share Alike Requirement',
     },
 ];
 export const DEPRECATED_LICENSES = [
@@ -763,12 +763,12 @@ export const DEPRECATED_LICENSES = [
     {
         value: 453701,
         text:
-            'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            'Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
     {
         value: 453702,
         text:
-            'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            'Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
 ];
 

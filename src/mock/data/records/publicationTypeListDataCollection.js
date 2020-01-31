@@ -762,7 +762,7 @@ export default {
                 "rek_license_pid": "UQ:406908",
                 "rek_license_xsdmf_id": 16246,
                 "rek_license": 454104,
-                "rek_license_lookup": "UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction"
+                "rek_license_lookup": "Permitted Re-Use with Commercial Use Restriction"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],

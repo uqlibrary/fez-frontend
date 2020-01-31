@@ -17,11 +17,11 @@ exports[`LicenseSelectorField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
         "value": 454104,
       },
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement",
         "value": 454105,
       },
     ]
@@ -59,11 +59,11 @@ exports[`LicenseSelectorField component should render error and error message 1`
   itemsList={
     Array [
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
         "value": 454104,
       },
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement",
         "value": 454105,
       },
     ]
@@ -106,11 +106,11 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
   itemsList={
     Array [
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Commercial Use Restriction",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
         "value": 454104,
       },
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-Use with Share Alike Requirement",
+        "text": "Permitted Re-Use with Share Alike Requirement",
         "value": 454105,
       },
       Object {
@@ -138,11 +138,11 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
         "value": 453613,
       },
       Object {
-        "text": "UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 453701,
       },
       Object {
-        "text": "UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 453702,
       },
     ]
