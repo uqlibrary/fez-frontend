@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
-import { Link } from 'react-router-dom';
 
 export const IssnUlrichLinkTemplate = ({ item }) => {
     return (
@@ -9,9 +8,9 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
             <Typography variant="body2" component={'span'}>
                 <span>{item.key}</span>{' '}
                 {!!item.value && (
-                    <Link target="_blank" to={item.value}>
+                    <a target="_blank" href={item.value}>
                         Check Ulrichs information
-                    </Link>
+                    </a>
                 )}
             </Typography>
         </React.Fragment>
