@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`issnListEditorField function should return <issnListEditor> 1`] = `
+exports[`IssnListEditorField function should return <issnListEditor> 1`] = `
 <IssnListEditor
   errorText={null}
   input={
@@ -12,7 +12,7 @@ exports[`issnListEditorField function should return <issnListEditor> 1`] = `
 />
 `;
 
-exports[`issnListEditorField function should return <issnListEditor> with error attributes 1`] = `
+exports[`IssnListEditorField function should return <issnListEditor> with error attributes 1`] = `
 <IssnListEditor
   error="test"
   errorText="test"
