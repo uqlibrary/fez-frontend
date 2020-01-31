@@ -174,11 +174,25 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'ISSN');
                         const issns = record.fez_record_search_key_issn.map(item => item.rek_issn);
-                        issns.forEach((issn, index) => {
-                            cy.get('p')
-                                .eq(index)
-                                .should('have.text', issn);
-                        });
+                        const ulrichs = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
+
+                        cy.get('div.ISSNvalue')
+                            .within(() => {
+                                issns.forEach((issn, index) => {
+                                    cy.get('.ListRow-ISSNvalue span span')
+                                        .eq(index)
+                                        .should('contain.text', issn);
+                                    cy.get('.ListRow-ISSNvalue a')
+                                        .eq(index)
+                                        .should('contain.text', 'Check Ulrichs information')
+                                        .should(
+                                            'have.attr',
+                                            'href',
+                                            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
+                                            ulrichs[index],
+                                        );
+                                });
+                            });
                     });
 
                 cy.get('@cards')
