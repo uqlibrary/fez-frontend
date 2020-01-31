@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`issnListEditorField function should return <issnListEditor> 1`] = `
+<IssnListEditor
+  errorText={null}
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
+
+exports[`issnListEditorField function should return <issnListEditor> with error attributes 1`] = `
+<IssnListEditor
+  error="test"
+  errorText="test"
+  input={
+    Object {
+      "onChange": [MockFunction],
+    }
+  }
+  meta={
+    Object {
+      "error": "test",
+    }
+  }
+  onChange={[MockFunction]}
+/>
+`;
