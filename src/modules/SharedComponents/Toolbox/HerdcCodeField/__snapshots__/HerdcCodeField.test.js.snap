@@ -1,5 +1,165 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HerdcCodeField component should not render unknown value 1`] = `
+<GenericSelectField
+  canUnselect={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "value": "999",
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "A1 Books - Authored - research",
+        "value": "450001",
+      },
+      Object {
+        "text": "AX Books - Other Public Output",
+        "value": "450005",
+      },
+      Object {
+        "text": "B1 Book Chapter - Research",
+        "value": "450006",
+      },
+      Object {
+        "text": "BX Book Chapter - Other Public Output",
+        "value": "450008",
+      },
+      Object {
+        "text": "C1 Journal Articles - Refereed article",
+        "value": "450009",
+      },
+      Object {
+        "text": "CX Journal Article - Other Public Output",
+        "value": "450013",
+      },
+      Object {
+        "text": "E1 Conference - Written paper - refereed proceedings",
+        "value": "450014",
+      },
+      Object {
+        "text": "EX Conference Proceedings - Other Public Output",
+        "value": "450018",
+      },
+      Object {
+        "text": "CW1 Creative Work",
+        "value": "454028",
+      },
+      Object {
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
+      },
+      Object {
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
+      },
+      Object {
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
+      },
+      Object {
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue="999"
+/>
+`;
+
+exports[`HerdcCodeField component should render a current value 1`] = `
+<GenericSelectField
+  canUnselect={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "value": "454028",
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "A1 Books - Authored - research",
+        "value": "450001",
+      },
+      Object {
+        "text": "AX Books - Other Public Output",
+        "value": "450005",
+      },
+      Object {
+        "text": "B1 Book Chapter - Research",
+        "value": "450006",
+      },
+      Object {
+        "text": "BX Book Chapter - Other Public Output",
+        "value": "450008",
+      },
+      Object {
+        "text": "C1 Journal Articles - Refereed article",
+        "value": "450009",
+      },
+      Object {
+        "text": "CX Journal Article - Other Public Output",
+        "value": "450013",
+      },
+      Object {
+        "text": "E1 Conference - Written paper - refereed proceedings",
+        "value": "450014",
+      },
+      Object {
+        "text": "EX Conference Proceedings - Other Public Output",
+        "value": "450018",
+      },
+      Object {
+        "text": "CW1 Creative Work",
+        "value": "454028",
+      },
+      Object {
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
+      },
+      Object {
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
+      },
+      Object {
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
+      },
+      Object {
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue="454028"
+/>
+`;
+
 exports[`HerdcCodeField component should render a deprecated value 1`] = `
 <GenericSelectField
   canUnselect={true}
@@ -8,7 +168,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
   hideLabel={false}
   input={
     Object {
-      "value": "450002",
+      "value": "450033",
     }
   }
   itemsList={
@@ -70,8 +230,8 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
         "value": "454032",
       },
       Object {
-        "text": "A2 Books - Authored - other",
-        "value": "450002",
+        "text": "J5 Major Creative Works - Recorded Works",
+        "value": "450033",
       },
     ]
   }
@@ -80,7 +240,7 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
       "label": undefined,
     }
   }
-  selectedValue="450002"
+  selectedValue="450033"
 />
 `;
 
