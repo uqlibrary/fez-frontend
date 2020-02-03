@@ -337,9 +337,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -374,6 +377,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -408,9 +412,12 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -445,6 +452,7 @@ exports[`Component NtroFields should render all fields as disabled 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -1266,9 +1274,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -1303,6 +1314,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -1337,9 +1349,12 @@ exports[`Component NtroFields should render contribution statement fields as wel
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -1374,6 +1389,7 @@ exports[`Component NtroFields should render contribution statement fields as wel
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -2064,9 +2080,12 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -2101,6 +2120,7 @@ exports[`Component NtroFields should render default view 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -2135,9 +2155,12 @@ exports[`Component NtroFields should render default view 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -2172,6 +2195,7 @@ exports[`Component NtroFields should render default view 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -2993,9 +3017,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -3030,6 +3057,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -3064,9 +3092,12 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -3101,6 +3132,7 @@ exports[`Component NtroFields should render with grants component hidden 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -3863,9 +3895,12 @@ exports[`Component NtroFields should show significance field even if contributio
                     "addButtonLabel": <span>
                       Add ISMN
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISMN
+                    </span>,
                     "inputFieldHint": "Enter ISMN, e.g. 9790720208015",
                     "inputFieldLabel": "ISMN value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -3900,6 +3935,7 @@ exports[`Component NtroFields should show significance field even if contributio
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },
@@ -3934,9 +3970,12 @@ exports[`Component NtroFields should show significance field even if contributio
                     "addButtonLabel": <span>
                       Add ISRC
                     </span>,
+                    "editButtonLabel": <span>
+                      Update ISRC
+                    </span>,
                     "inputFieldHint": "Enter ISRC, e.g. US6R21320619",
                     "inputFieldLabel": "ISRC value",
-                    "remindToAdd": <span>
+                    "remindToAddText": <span>
                       Please press 
                       <b>
                         ENTER
@@ -3971,6 +4010,7 @@ exports[`Component NtroFields should show significance field even if contributio
                       "confirmationMessage": "Are you sure you want to delete this item?",
                       "confirmationTitle": "Delete item",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move item down the order",
                     "moveUpHint": "Move item up the order",
                   },

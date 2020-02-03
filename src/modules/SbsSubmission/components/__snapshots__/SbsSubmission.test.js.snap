@@ -770,6 +770,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "editButtonLabel": "Update",
                     "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
@@ -797,6 +798,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 1`] = `
                       "confirmationMessage": "Are you sure you want to delete this keyword?",
                       "confirmationTitle": "Delete keyword",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move keyword down the order",
                     "moveUpHint": "Move keyword up the order",
                   },
@@ -1660,6 +1662,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                 "form": Object {
                   "locale": Object {
                     "addButtonLabel": "Add",
+                    "editButtonLabel": "Update",
                     "id": "keywords-input",
                     "inputFieldHint": "Type keywords",
                     "inputFieldLabel": "Keywords",
@@ -1687,6 +1690,7 @@ exports[`SbsSubmission test should render sbs thesis submission form 2`] = `
                       "confirmationMessage": "Are you sure you want to delete this keyword?",
                       "confirmationTitle": "Delete keyword",
                     },
+                    "editHint": "Edit this item",
                     "moveDownHint": "Move keyword down the order",
                     "moveUpHint": "Move keyword up the order",
                   },
