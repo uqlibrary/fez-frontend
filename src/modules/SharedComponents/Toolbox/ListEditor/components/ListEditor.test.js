@@ -250,4 +250,19 @@ describe('ListEditor tests', () => {
         expect(wrapper2.state().itemList.length).toEqual(10);
         expect(toJson(wrapper2)).toMatchSnapshot();
     });
+
+    it('should update an item with selected index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.setState({ itemIndexSelectedToEdit: 1 });
+        wrapper.instance().addItem('four');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should set item to edit index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.instance().editItem(1);
+        expect(wrapper.state().itemIndexSelectedToEdit).toEqual(1);
+    });
 });
