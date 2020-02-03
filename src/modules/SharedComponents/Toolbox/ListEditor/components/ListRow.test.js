@@ -131,4 +131,16 @@ describe('ListRow renders ', () => {
         wrapper.instance().onMoveDown();
         expect(wrapper.instance().props.onMoveDown).not.toBeCalled();
     });
+
+    it('should handle edit', () => {
+        const onEditFn = jest.fn();
+        const wrapper = setup({ onEdit: onEditFn, index: 1 });
+        wrapper.instance()._handleEdit();
+        expect(onEditFn).toHaveBeenCalledWith(1);
+    });
+
+    it('should render edit button', () => {
+        const wrapper = setup({ canEdit: true });
+        expect(wrapper).toMatchSnapshot();
+    });
 });

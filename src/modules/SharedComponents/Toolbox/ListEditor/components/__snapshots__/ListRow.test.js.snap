@@ -429,3 +429,5 @@ exports[`ListRow renders  should render default view with styles 1`] = `
   }
 />
 `;
+
+exports[`ListRow renders  should render edit button 1`] = `ShallowWrapper {}`;
