@@ -2,8 +2,15 @@
 
 exports[`FreeTextListEditor component should render default view 1`] = `
 <ListEditor
+  canEdit={false}
   distinctOnly={false}
-  formComponent={[Function]}
+  formComponent={
+    Object {
+      "$$typeof": Symbol(react.memo),
+      "compare": null,
+      "type": [Function],
+    }
+  }
   hideReorder={false}
   inputNormalizer={[Function]}
   locale={
