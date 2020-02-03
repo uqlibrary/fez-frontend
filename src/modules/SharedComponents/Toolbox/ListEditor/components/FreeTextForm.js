@@ -70,7 +70,7 @@ export const FreeTextForm = ({
             <Grid item style={{ flexGrow: 1 }}>
                 <TextField
                     fullWidth
-                    id={id || ''}
+                    id={id}
                     inputProps={{
                         ref: textField,
                     }}
