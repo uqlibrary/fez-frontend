@@ -31,9 +31,11 @@ export default class ListEditor extends Component {
         required: PropTypes.bool,
         scrollList: PropTypes.bool,
         scrollListHeight: PropTypes.number,
+        canEdit: PropTypes.bool,
     };
 
     static defaultProps = {
+        canEdit: false,
         hideReorder: false,
         distinctOnly: false,
         searchKey: {
@@ -111,10 +113,21 @@ export default class ListEditor extends Component {
                     itemList: [...totalArray],
                 });
             } else {
-                // Item is just a string - so just add it
-                this.setState({
-                    itemList: [...this.state.itemList, item],
-                });
+                if (this.state.itemIndexSelectedToEdit > -1) {
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+                            item,
+                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
+                        ],
+                        itemIndexSelectedToEdit: null,
+                    });
+                } else {
+                    // Item is just a string - so just add it
+                    this.setState({
+                        itemList: [...this.state.itemList, item],
+                    });
+                }
             }
         }
     };
@@ -152,6 +165,12 @@ export default class ListEditor extends Component {
         });
     };
 
+    editItem = index => {
+        this.setState({
+            itemIndexSelectedToEdit: index,
+        });
+    };
+
     render() {
         const componentID = (
             (this.props.locale.form && this.props.locale.form.title) ||
@@ -178,10 +197,12 @@ export default class ListEditor extends Component {
                 onMoveUp={this.moveUpList}
                 onMoveDown={this.moveDownList}
                 onDelete={this.deleteItem}
+                onEdit={this.editItem}
                 {...(this.props.locale && this.props.locale.row ? this.props.locale.row : {})}
                 hideReorder={this.props.hideReorder}
                 disabled={this.props.disabled}
                 itemTemplate={this.props.rowItemTemplate}
+                canEdit={this.props.canEdit}
             />
         ));
         return (
@@ -202,6 +223,8 @@ export default class ListEditor extends Component {
                     normalize={this.props.inputNormalizer}
                     category={this.props.category}
                     required={this.props.required}
+                    itemSelectedToEdit={this.state.itemList[this.state.itemIndexSelectedToEdit] || null}
+                    itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                 />
                 {this.state.itemList.length > 0 && (
                     <ListRowHeader

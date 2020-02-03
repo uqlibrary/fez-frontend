@@ -487,6 +487,7 @@ export default {
                     order: 'rek_keywords_order',
                 },
                 locale: locale.components.keywordsForm.field,
+                canEdit: true,
             },
         },
         issnField: {
@@ -500,6 +501,7 @@ export default {
                     const newValue = value.replace('-', '');
                     return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
+                canEdit: true,
             },
         },
         fez_record_search_key_isbn: {
@@ -513,6 +515,7 @@ export default {
                     order: 'rek_isbn_order',
                 },
                 locale: locale.components.isbnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_ismn: {
@@ -526,6 +529,7 @@ export default {
                     order: 'rek_ismn_order',
                 },
                 locale: locale.components.ismnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_edition: {

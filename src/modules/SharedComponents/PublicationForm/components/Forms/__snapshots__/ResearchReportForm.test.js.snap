@@ -679,9 +679,12 @@ exports[`ResearchReportForm renders  component 1`] = `
                 "addButtonLabel": <span>
                   Add ISBN
                 </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -716,6 +719,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -755,9 +759,12 @@ exports[`ResearchReportForm renders  component 1`] = `
                 "addButtonLabel": <span>
                   Add ISSN
                 </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -792,6 +799,7 @@ exports[`ResearchReportForm renders  component 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1566,9 +1574,12 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                 "addButtonLabel": <span>
                   Add ISBN
                 </span>,
+                "editButtonLabel": <span>
+                  Update ISBN
+                </span>,
                 "inputFieldHint": "Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717",
                 "inputFieldLabel": "ISBN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -1603,6 +1614,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },
@@ -1642,9 +1654,12 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                 "addButtonLabel": <span>
                   Add ISSN
                 </span>,
+                "editButtonLabel": <span>
+                  Update ISSN
+                </span>,
                 "inputFieldHint": "Enter ISSN, e.g. 1838-9414",
                 "inputFieldLabel": "ISSN value",
-                "remindToAdd": <span>
+                "remindToAddText": <span>
                   Please press 
                   <b>
                     ENTER
@@ -1679,6 +1694,7 @@ exports[`ResearchReportForm renders  should render validation required 1`] = `
                   "confirmationMessage": "Are you sure you want to delete this item?",
                   "confirmationTitle": "Delete item",
                 },
+                "editHint": "Edit this item",
                 "moveDownHint": "Move item down the order",
                 "moveUpHint": "Move item up the order",
               },

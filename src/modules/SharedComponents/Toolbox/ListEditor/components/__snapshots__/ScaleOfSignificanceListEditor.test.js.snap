@@ -2,6 +2,7 @@
 
 exports[`ScaleOfSignificanceListEditor component should render default view 1`] = `
 <ListEditor
+  canEdit={false}
   distinctOnly={false}
   formComponent={
     Object {
