@@ -24,8 +24,10 @@ export class FreeTextFormClass extends Component {
         remindToAdd: PropTypes.bool,
         classes: PropTypes.object,
         maxInputLength: PropTypes.number,
-        normalize: PropTypes.func,
+        normalize: PropTypes.func.isRequired,
         required: PropTypes.bool,
+        itemSelectedToEdit: PropTypes.any,
+        itemIndexSelectedToEdit: PropTypes.number,
     };
 
     static defaultProps = {
@@ -33,6 +35,7 @@ export class FreeTextFormClass extends Component {
         remindToAdd: false,
         maxInputLength: 2000,
         locale: {
+            id: 'free-text-input',
             inputFieldLabel: 'Item name',
             inputFieldHint: 'Please type the item name',
             addButtonLabel: 'Add',
@@ -46,6 +49,10 @@ export class FreeTextFormClass extends Component {
             itemName: '',
         };
         this.textField = null;
+    }
+
+    componentWillReceiveProps(nextProps) {
+        !!nextProps.itemSelectedToEdit && this.setState({ itemName: nextProps.itemSelectedToEdit });
     }
 
     addItem = event => {
@@ -69,9 +76,7 @@ export class FreeTextFormClass extends Component {
 
         // move focus to name as published text field after item was added
         /* istanbul if ignore */
-        if (this.textField) {
-            this.textField.focus();
-        }
+        this.textField && this.textField.focus();
     };
 
     onNameChanged = event => {
@@ -82,17 +87,21 @@ export class FreeTextFormClass extends Component {
 
     render() {
         const { classes, locale, errorText, disabled } = this.props;
-        const { inputFieldLabel, inputFieldHint, remindToAdd, addButtonLabel, id } = locale;
-        const inputLength =
+
+        const { inputFieldLabel, inputFieldHint, remindToAddText, addButtonLabel, id, editButtonLabel } = locale;
+        const inputLengthText =
             this.state.itemName &&
             this.state.itemName.length > this.props.maxInputLength &&
             `Limited to ${this.props.maxInputLength} characters`;
+
+        const validationErrorText = this.props.isValid(this.state.itemName) || errorText;
+
         return (
             <Grid container spacing={16} display="row" alignItems="center">
                 <Grid item style={{ flexGrow: 1 }}>
                     <TextField
                         fullWidth
-                        id={id || ''}
+                        id={id}
                         inputRef={node => {
                             this.textField = node;
                         }}
@@ -100,24 +109,24 @@ export class FreeTextFormClass extends Component {
                         placeholder={inputFieldHint}
                         value={this.state.itemName}
                         onChange={this.onNameChanged}
-                        onKeyPress={this.addItem}
-                        error={!!errorText || this.props.isValid(this.state.itemName) || !!inputLength}
+                        onKeyDown={this.addItem}
+                        error={!!validationErrorText || !!inputLengthText}
                         helperText={
-                            this.props.isValid(this.state.itemName) || errorText || inputLength
-                                ? `${!!errorText ? errorText : ''}${!!errorText && !!inputLength ? ' - ' : ''}${
-                                    !!inputLength ? inputLength : ''
-                                }`
+                            validationErrorText || inputLengthText
+                                ? `${!!validationErrorText ? validationErrorText : ''}${
+                                    !!validationErrorText && !!inputLengthText ? ' - ' : ''
+                                }${!!inputLengthText ? inputLengthText : ''}`
                                 : null
                         }
                         disabled={disabled}
                         required={this.props.required}
                     />
                     {this.props.remindToAdd &&
-                        remindToAdd &&
+                        remindToAddText &&
                         this.state.itemName.length !== 0 &&
                         !this.props.isValid(this.state.itemName) && (
                         <Typography variant="caption" className={classes.remindToAdd}>
-                            {remindToAdd}
+                            {remindToAddText}
                         </Typography>
                     )}
                 </Grid>
@@ -127,12 +136,12 @@ export class FreeTextFormClass extends Component {
                         id="add-items"
                         color="primary"
                         variant="contained"
-                        children={addButtonLabel}
+                        children={!!this.props.itemSelectedToEdit ? editButtonLabel : addButtonLabel}
                         disabled={
                             disabled ||
                             this.props.isValid(this.state.itemName) !== '' ||
                             this.state.itemName.trim().length === 0 ||
-                            !!inputLength
+                            !!inputLengthText
                         }
                         onClick={this.addItem}
                     />
