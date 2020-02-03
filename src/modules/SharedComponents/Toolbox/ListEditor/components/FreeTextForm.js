@@ -78,7 +78,7 @@ export const FreeTextForm = ({
                     placeholder={inputFieldHint}
                     value={item}
                     onChange={onItemChange}
-                    onKeyPress={addItem}
+                    onKeyDown={addItem}
                     error={!!errorText || isValid(item) || !!inputLengthText}
                     helperText={
                         validationErrorText || inputLengthText
