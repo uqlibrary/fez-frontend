@@ -94,11 +94,22 @@ export default class ListEditor extends Component {
             // If when the item is submitted, there is no maxCount,
             // its not exceeding the maxCount, is distinct and isnt already in the list...
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
-                // Item is an object with {key: 'something', value: 'something} - as per FoR codes
+                // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
-                this.setState({
-                    itemList: [...this.state.itemList, item],
-                });
+                if (this.state.itemIndexSelectedToEdit > -1) {
+                    this.setState({
+                        itemList: [
+                            ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
+                            item,
+                            ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
+                        ],
+                        itemIndexSelectedToEdit: null,
+                    });
+                } else {
+                    this.setState({
+                        itemList: [...this.state.itemList, item],
+                    });
+                }
             } else if (!!item && !item.key && !item.value && item.includes(',')) {
                 // Item is a string with commas in it - we will strip and separate the values to be individual keywords
                 const commaSepListToArray = item.split(','); // Convert the string to an array of values

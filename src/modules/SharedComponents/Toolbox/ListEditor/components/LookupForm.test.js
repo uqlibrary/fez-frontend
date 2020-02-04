@@ -26,4 +26,12 @@ describe('LookupForm tests ', () => {
         wrapper.instance().addKeyValueItem('test');
         expect(onAddFn).toHaveBeenCalledWith('test');
     });
+
+    it('should set default value on receiving new props', () => {
+        const wrapper = setup();
+        expect(toJson(wrapper)).toMatchSnapshot();
+
+        wrapper.setProps({ itemSelectedToEdit: { key: 23, value: 'Testing' } });
+        expect(wrapper.state().defaultValue).toEqual('Testing');
+    });
 });
