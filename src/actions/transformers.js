@@ -985,7 +985,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
-        fez_record_search_key_license_more: licenseData,
+        fez_record_search_key_license_additional: licenseData,
         ...rest
     } = data;
 

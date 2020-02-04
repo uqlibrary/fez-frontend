@@ -959,15 +959,15 @@ export default {
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
                 label: 'License',
-                showDeprecatedLicenses: true,
+                isAdmin: true,
             },
         },
-        fez_record_search_key_license_more: {
+        fez_record_search_key_license_additional: {
             component: LicenseSelectorField,
             componentProps: {
-                name: 'additionalInformationSection.fez_record_search_key_license_more.rek_license',
+                name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
                 label: 'License',
-                showDeprecatedLicenses: true,
+                isAdmin: true,
             },
         },
         fez_record_search_key_original_format: {

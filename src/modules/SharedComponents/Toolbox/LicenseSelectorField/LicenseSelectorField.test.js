@@ -33,7 +33,7 @@ describe('LicenseSelectorField component', () => {
 
     it('should render with deprecated list', () => {
         const wrapper = setup({
-            showDeprecatedLicenses: true,
+            isAdmin: true,
         });
 
         expect(toJson(wrapper)).toMatchSnapshot();

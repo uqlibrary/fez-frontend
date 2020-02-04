@@ -2774,7 +2774,7 @@ describe('getAdditionalInformationSectionSearchKeys', () => {
                 rek_oa_status_pid: 'UQ:113765',
                 rek_oa_status: '453694',
             },
-            fez_record_search_key_license_more: {
+            fez_record_search_key_license_additional: {
                 rek_license: '453607',
             },
         };

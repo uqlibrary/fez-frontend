@@ -17,15 +17,18 @@ exports[`LicenseSelectorField component should render default view 1`] = `
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement Licence",
         "value": 453701,
       },
       Object {
-        "text": "Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
         "value": 454104,
       },
       Object {
-        "text": "Permitted Re-Use with Share Alike Requirement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Share Alike Requirement",
         "value": 454105,
       },
     ]
@@ -63,15 +66,18 @@ exports[`LicenseSelectorField component should render error and error message 1`
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement Licence",
         "value": 453701,
       },
       Object {
-        "text": "Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
         "value": 454104,
       },
       Object {
-        "text": "Permitted Re-Use with Share Alike Requirement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Share Alike Requirement",
         "value": 454105,
       },
     ]
@@ -111,6 +117,7 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
       ],
     }
   }
+  isAdmin={true}
   itemsList={
     Array [
       Object {
@@ -168,6 +175,5 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
       "test1",
     ]
   }
-  showDeprecatedLicenses={true}
 />
 `;

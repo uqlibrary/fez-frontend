@@ -4,8 +4,16 @@ import { CURRENT_LICENSES, DEPRECATED_LICENSES } from 'config/general';
 
 export default function LicenseSelectorField(fieldProps) {
     let licenses = CURRENT_LICENSES;
-    if (!!fieldProps.showDeprecatedLicenses) {
-        licenses = [...licenses, ...DEPRECATED_LICENSES];
+    if (!!fieldProps.isAdmin) {
+        licenses = [
+            ...CURRENT_LICENSES.map(license => {
+                return {
+                    value: license.value,
+                    text: license.text + ' ' + license.link,
+                };
+            }),
+            ...DEPRECATED_LICENSES,
+        ];
     }
     return (
         <GenericSelectField
