@@ -1040,6 +1040,7 @@ export default {
                     order: 'rek_type_of_data_order',
                 },
                 locale: locale.components.typeOfDataForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_data_volume: {
@@ -1059,6 +1060,7 @@ export default {
                     order: 'rek_software_required_order',
                 },
                 locale: locale.components.softwareRequiredForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_related_datasets: {
