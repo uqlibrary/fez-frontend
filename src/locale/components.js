@@ -1496,6 +1496,7 @@ export default {
                         inputFieldLabel: 'Begin typing to select and add subject(s)',
                         inputFieldHint: 'Start typing code or field name and select from list',
                         addButtonLabel: <span>Add&nbsp;Subject</span>,
+                        editButtonLabel: <span>Edit&nbsp;Subject</span>,
                     },
                 },
                 header: {
@@ -1515,6 +1516,7 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
