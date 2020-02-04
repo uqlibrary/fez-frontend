@@ -54,7 +54,7 @@ describe('ListEditor tests', () => {
         wrapper.instance().editItem(0);
         wrapper.instance().addItem({ id: 'test', value: 'testing value' });
         expect(wrapper.state().itemList.length).toEqual(1);
-        expect(wrapper.state().itemList).toEqual([{ id: 'test', valu: 'test value' }]);
+        expect(wrapper.state().itemList).toEqual([{ id: 'test', value: 'testing value' }]);
     });
 
     it('should render items not more than maxCount', () => {
