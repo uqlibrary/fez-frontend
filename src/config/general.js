@@ -725,6 +725,11 @@ export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
 export const CURRENT_LICENSES = [
     {
+        value: 453701,
+        text:
+            'Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+    },
+    {
         value: 454104,
         text:
             'Permitted Re-Use with Commercial Use Restriction http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
@@ -761,11 +766,6 @@ export const DEPRECATED_LICENSES = [
     {
         value: 453613,
         text: 'Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
-    },
-    {
-        value: 453701,
-        text:
-            'Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
     {
         value: 453702,
