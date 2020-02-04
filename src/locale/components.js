@@ -448,6 +448,7 @@ export default {
                         inputFieldLabel: 'Type of data',
                         inputFieldHint: 'Type type of data',
                         addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
                         id: 'type-of-data-input',
                     },
                 },
@@ -469,6 +470,7 @@ export default {
                         moveUpHint: 'Move type of data up the order',
                         moveDownHint: 'Move type of data down the order',
                         deleteHint: 'Remove this type of data',
+                        editHint: 'Edit this type of data',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete type of data',
                             confirmationMessage: 'Are you sure you want to delete this type of data?',
@@ -505,7 +507,7 @@ export default {
                 },
                 row: {
                     locale: {
-                        editHint: 'Edit this item',
+                        editHint: 'Edit this software required',
                         moveUpHint: 'Move software required up the order',
                         moveDownHint: 'Move software required down the order',
                         deleteHint: 'Remove this software required',
