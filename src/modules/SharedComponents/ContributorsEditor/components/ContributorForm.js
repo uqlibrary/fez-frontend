@@ -304,13 +304,13 @@ export class ContributorForm extends PureComponent {
                             }
                         />
                     </Grid>
-                    {(showIdentifierLookup || isNtro) &&
-                        (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ) && (
+                    {(((showIdentifierLookup || isNtro) &&
+                        (!contributor.affiliation || contributor.affiliation === AFFILIATION_TYPE_UQ)) ||
+                        (!isNtro && canEdit)) && (
                         <Grid item xs={12} sm={3}>
                             <UqIdField
                                 disabled={
-                                    disabled ||
-                                        (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
+                                    disabled || (!canEdit && (contributor.nameAsPublished || '').trim().length === 0)
                                 }
                                 floatingLabelText="UQ Author ID"
                                 hintText="Type UQ author name to search"

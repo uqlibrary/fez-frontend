@@ -1131,8 +1131,18 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
         "calls": Array [
           Array [],
           Array [],
+          Array [],
+          Array [],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
+          Object {
+            "type": "return",
+            "value": Immutable.Map {},
+          },
           Object {
             "type": "return",
             "value": Immutable.Map {},
@@ -1148,8 +1158,15 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
           Array [
             [Function],
           ],
+          Array [
+            [Function],
+          ],
         ],
         "results": Array [
+          Object {
+            "type": "return",
+            "value": undefined,
+          },
           Object {
             "type": "return",
             "value": undefined,
@@ -2728,6 +2745,1033 @@ exports[`ContributorsEditor renders full component for admin user 1`] = `
                                             </TextField>
                                           </TextFieldWrapper>
                                         </WithStyles(TextFieldWrapper)>
+                                      </div>
+                                    </Grid>
+                                  </WithStyles(Grid)>
+                                  <WithStyles(Grid)
+                                    item={true}
+                                    sm={3}
+                                    xs={12}
+                                  >
+                                    <Grid
+                                      alignContent="stretch"
+                                      alignItems="stretch"
+                                      classes={
+                                        Object {
+                                          "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
+                                          "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-15",
+                                          "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-14",
+                                          "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-17",
+                                          "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-16",
+                                          "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-12",
+                                          "align-items-xs-center": "MuiGrid-align-items-xs-center-9",
+                                          "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-11",
+                                          "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-10",
+                                          "container": "MuiGrid-container-1",
+                                          "direction-xs-column": "MuiGrid-direction-xs-column-4",
+                                          "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-5",
+                                          "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-6",
+                                          "grid-lg-1": "MuiGrid-grid-lg-1-72",
+                                          "grid-lg-10": "MuiGrid-grid-lg-10-81",
+                                          "grid-lg-11": "MuiGrid-grid-lg-11-82",
+                                          "grid-lg-12": "MuiGrid-grid-lg-12-83",
+                                          "grid-lg-2": "MuiGrid-grid-lg-2-73",
+                                          "grid-lg-3": "MuiGrid-grid-lg-3-74",
+                                          "grid-lg-4": "MuiGrid-grid-lg-4-75",
+                                          "grid-lg-5": "MuiGrid-grid-lg-5-76",
+                                          "grid-lg-6": "MuiGrid-grid-lg-6-77",
+                                          "grid-lg-7": "MuiGrid-grid-lg-7-78",
+                                          "grid-lg-8": "MuiGrid-grid-lg-8-79",
+                                          "grid-lg-9": "MuiGrid-grid-lg-9-80",
+                                          "grid-lg-auto": "MuiGrid-grid-lg-auto-70",
+                                          "grid-lg-true": "MuiGrid-grid-lg-true-71",
+                                          "grid-md-1": "MuiGrid-grid-md-1-58",
+                                          "grid-md-10": "MuiGrid-grid-md-10-67",
+                                          "grid-md-11": "MuiGrid-grid-md-11-68",
+                                          "grid-md-12": "MuiGrid-grid-md-12-69",
+                                          "grid-md-2": "MuiGrid-grid-md-2-59",
+                                          "grid-md-3": "MuiGrid-grid-md-3-60",
+                                          "grid-md-4": "MuiGrid-grid-md-4-61",
+                                          "grid-md-5": "MuiGrid-grid-md-5-62",
+                                          "grid-md-6": "MuiGrid-grid-md-6-63",
+                                          "grid-md-7": "MuiGrid-grid-md-7-64",
+                                          "grid-md-8": "MuiGrid-grid-md-8-65",
+                                          "grid-md-9": "MuiGrid-grid-md-9-66",
+                                          "grid-md-auto": "MuiGrid-grid-md-auto-56",
+                                          "grid-md-true": "MuiGrid-grid-md-true-57",
+                                          "grid-sm-1": "MuiGrid-grid-sm-1-44",
+                                          "grid-sm-10": "MuiGrid-grid-sm-10-53",
+                                          "grid-sm-11": "MuiGrid-grid-sm-11-54",
+                                          "grid-sm-12": "MuiGrid-grid-sm-12-55",
+                                          "grid-sm-2": "MuiGrid-grid-sm-2-45",
+                                          "grid-sm-3": "MuiGrid-grid-sm-3-46",
+                                          "grid-sm-4": "MuiGrid-grid-sm-4-47",
+                                          "grid-sm-5": "MuiGrid-grid-sm-5-48",
+                                          "grid-sm-6": "MuiGrid-grid-sm-6-49",
+                                          "grid-sm-7": "MuiGrid-grid-sm-7-50",
+                                          "grid-sm-8": "MuiGrid-grid-sm-8-51",
+                                          "grid-sm-9": "MuiGrid-grid-sm-9-52",
+                                          "grid-sm-auto": "MuiGrid-grid-sm-auto-42",
+                                          "grid-sm-true": "MuiGrid-grid-sm-true-43",
+                                          "grid-xl-1": "MuiGrid-grid-xl-1-86",
+                                          "grid-xl-10": "MuiGrid-grid-xl-10-95",
+                                          "grid-xl-11": "MuiGrid-grid-xl-11-96",
+                                          "grid-xl-12": "MuiGrid-grid-xl-12-97",
+                                          "grid-xl-2": "MuiGrid-grid-xl-2-87",
+                                          "grid-xl-3": "MuiGrid-grid-xl-3-88",
+                                          "grid-xl-4": "MuiGrid-grid-xl-4-89",
+                                          "grid-xl-5": "MuiGrid-grid-xl-5-90",
+                                          "grid-xl-6": "MuiGrid-grid-xl-6-91",
+                                          "grid-xl-7": "MuiGrid-grid-xl-7-92",
+                                          "grid-xl-8": "MuiGrid-grid-xl-8-93",
+                                          "grid-xl-9": "MuiGrid-grid-xl-9-94",
+                                          "grid-xl-auto": "MuiGrid-grid-xl-auto-84",
+                                          "grid-xl-true": "MuiGrid-grid-xl-true-85",
+                                          "grid-xs-1": "MuiGrid-grid-xs-1-30",
+                                          "grid-xs-10": "MuiGrid-grid-xs-10-39",
+                                          "grid-xs-11": "MuiGrid-grid-xs-11-40",
+                                          "grid-xs-12": "MuiGrid-grid-xs-12-41",
+                                          "grid-xs-2": "MuiGrid-grid-xs-2-31",
+                                          "grid-xs-3": "MuiGrid-grid-xs-3-32",
+                                          "grid-xs-4": "MuiGrid-grid-xs-4-33",
+                                          "grid-xs-5": "MuiGrid-grid-xs-5-34",
+                                          "grid-xs-6": "MuiGrid-grid-xs-6-35",
+                                          "grid-xs-7": "MuiGrid-grid-xs-7-36",
+                                          "grid-xs-8": "MuiGrid-grid-xs-8-37",
+                                          "grid-xs-9": "MuiGrid-grid-xs-9-38",
+                                          "grid-xs-auto": "MuiGrid-grid-xs-auto-28",
+                                          "grid-xs-true": "MuiGrid-grid-xs-true-29",
+                                          "item": "MuiGrid-item-2",
+                                          "justify-xs-center": "MuiGrid-justify-xs-center-18",
+                                          "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-19",
+                                          "justify-xs-space-around": "MuiGrid-justify-xs-space-around-21",
+                                          "justify-xs-space-between": "MuiGrid-justify-xs-space-between-20",
+                                          "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-22",
+                                          "spacing-xs-16": "MuiGrid-spacing-xs-16-24",
+                                          "spacing-xs-24": "MuiGrid-spacing-xs-24-25",
+                                          "spacing-xs-32": "MuiGrid-spacing-xs-32-26",
+                                          "spacing-xs-40": "MuiGrid-spacing-xs-40-27",
+                                          "spacing-xs-8": "MuiGrid-spacing-xs-8-23",
+                                          "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-7",
+                                          "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-8",
+                                          "zeroMinWidth": "MuiGrid-zeroMinWidth-3",
+                                        }
+                                      }
+                                      component="div"
+                                      container={false}
+                                      direction="row"
+                                      item={true}
+                                      justify="flex-start"
+                                      lg={false}
+                                      md={false}
+                                      sm={3}
+                                      spacing={0}
+                                      wrap="wrap"
+                                      xl={false}
+                                      xs={12}
+                                      zeroMinWidth={false}
+                                    >
+                                      <div
+                                        className="MuiGrid-item-2 MuiGrid-grid-xs-12-41 MuiGrid-grid-sm-3-46"
+                                      >
+                                        <Connect(WithStyles(AutoCompleteAsyncField))
+                                          disabled={false}
+                                          floatingLabelText="UQ Author ID"
+                                          hintText="Type UQ author name to search"
+                                          id="identifierField"
+                                          key=""
+                                          onChange={[Function]}
+                                          onClear={[Function]}
+                                          showClear={false}
+                                          value=""
+                                        >
+                                          <WithStyles(AutoCompleteAsyncField)
+                                            allowFreeText={false}
+                                            async={true}
+                                            disabled={false}
+                                            floatingLabelText="UQ Author ID"
+                                            hintText="Type UQ author name to search"
+                                            id="identifierField"
+                                            itemToString={[Function]}
+                                            itemsList={Array []}
+                                            itemsListLoading={false}
+                                            loadSuggestions={[Function]}
+                                            maxResults={7}
+                                            onChange={[Function]}
+                                            onClear={[Function]}
+                                            selectedValue=""
+                                            showClear={false}
+                                            value=""
+                                          >
+                                            <AutoCompleteAsyncField
+                                              MenuItemComponent={[Function]}
+                                              allowFreeText={false}
+                                              async={true}
+                                              classes={
+                                                Object {
+                                                  "chip": "AutoCompleteAsyncField-chip-175",
+                                                  "container": "AutoCompleteAsyncField-container-171",
+                                                  "inputRoot": "AutoCompleteAsyncField-inputRoot-173",
+                                                  "noWrap": "AutoCompleteAsyncField-noWrap-174",
+                                                  "paper": "AutoCompleteAsyncField-paper-172",
+                                                  "root": "AutoCompleteAsyncField-root-170",
+                                                }
+                                              }
+                                              disabled={false}
+                                              filter={[Function]}
+                                              floatingLabelText="UQ Author ID"
+                                              hintText="Type UQ author name to search"
+                                              id="identifierField"
+                                              itemToString={[Function]}
+                                              itemsList={Array []}
+                                              itemsListLoading={false}
+                                              loadSuggestions={[Function]}
+                                              maxResults={7}
+                                              onChange={[Function]}
+                                              onClear={[Function]}
+                                              required={false}
+                                              selectedValue=""
+                                              showClear={false}
+                                              value=""
+                                            >
+                                              <div
+                                                className="AutoCompleteAsyncField-root-170"
+                                              >
+                                                <label
+                                                  hidden={true}
+                                                  id="UQAuthorID-label"
+                                                >
+                                                  UQ Author ID
+                                                </label>
+                                                <Downshift
+                                                  aria-label="UQ Author ID"
+                                                  defaultHighlightedIndex={null}
+                                                  defaultInputValue=""
+                                                  defaultIsOpen={false}
+                                                  defaultSelectedItem={null}
+                                                  environment={[Window]}
+                                                  getA11yStatusMessage={[Function]}
+                                                  id="UQAuthorID"
+                                                  itemToString={[Function]}
+                                                  onChange={[Function]}
+                                                  onInputValueChange={[Function]}
+                                                  onOuterClick={[Function]}
+                                                  onSelect={[Function]}
+                                                  onStateChange={[Function]}
+                                                  onUserAction={[Function]}
+                                                  scrollIntoView={[Function]}
+                                                  selectedItemChanged={[Function]}
+                                                  stateReducer={[Function]}
+                                                  suppressRefError={false}
+                                                >
+                                                  <div
+                                                    aria-expanded={false}
+                                                    aria-haspopup="listbox"
+                                                    aria-labelledby="UQAuthorID-label"
+                                                    aria-owns={null}
+                                                    className="AutoCompleteAsyncField-container-171"
+                                                    role="combobox"
+                                                  >
+                                                    <WithStyles(Grid)
+                                                      alignContent="flex-end"
+                                                      alignItems="flex-end"
+                                                      container={true}
+                                                      spacing={16}
+                                                    >
+                                                      <Grid
+                                                        alignContent="flex-end"
+                                                        alignItems="flex-end"
+                                                        classes={
+                                                          Object {
+                                                            "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
+                                                            "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-15",
+                                                            "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-14",
+                                                            "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-17",
+                                                            "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-16",
+                                                            "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-12",
+                                                            "align-items-xs-center": "MuiGrid-align-items-xs-center-9",
+                                                            "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-11",
+                                                            "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-10",
+                                                            "container": "MuiGrid-container-1",
+                                                            "direction-xs-column": "MuiGrid-direction-xs-column-4",
+                                                            "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-5",
+                                                            "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-6",
+                                                            "grid-lg-1": "MuiGrid-grid-lg-1-72",
+                                                            "grid-lg-10": "MuiGrid-grid-lg-10-81",
+                                                            "grid-lg-11": "MuiGrid-grid-lg-11-82",
+                                                            "grid-lg-12": "MuiGrid-grid-lg-12-83",
+                                                            "grid-lg-2": "MuiGrid-grid-lg-2-73",
+                                                            "grid-lg-3": "MuiGrid-grid-lg-3-74",
+                                                            "grid-lg-4": "MuiGrid-grid-lg-4-75",
+                                                            "grid-lg-5": "MuiGrid-grid-lg-5-76",
+                                                            "grid-lg-6": "MuiGrid-grid-lg-6-77",
+                                                            "grid-lg-7": "MuiGrid-grid-lg-7-78",
+                                                            "grid-lg-8": "MuiGrid-grid-lg-8-79",
+                                                            "grid-lg-9": "MuiGrid-grid-lg-9-80",
+                                                            "grid-lg-auto": "MuiGrid-grid-lg-auto-70",
+                                                            "grid-lg-true": "MuiGrid-grid-lg-true-71",
+                                                            "grid-md-1": "MuiGrid-grid-md-1-58",
+                                                            "grid-md-10": "MuiGrid-grid-md-10-67",
+                                                            "grid-md-11": "MuiGrid-grid-md-11-68",
+                                                            "grid-md-12": "MuiGrid-grid-md-12-69",
+                                                            "grid-md-2": "MuiGrid-grid-md-2-59",
+                                                            "grid-md-3": "MuiGrid-grid-md-3-60",
+                                                            "grid-md-4": "MuiGrid-grid-md-4-61",
+                                                            "grid-md-5": "MuiGrid-grid-md-5-62",
+                                                            "grid-md-6": "MuiGrid-grid-md-6-63",
+                                                            "grid-md-7": "MuiGrid-grid-md-7-64",
+                                                            "grid-md-8": "MuiGrid-grid-md-8-65",
+                                                            "grid-md-9": "MuiGrid-grid-md-9-66",
+                                                            "grid-md-auto": "MuiGrid-grid-md-auto-56",
+                                                            "grid-md-true": "MuiGrid-grid-md-true-57",
+                                                            "grid-sm-1": "MuiGrid-grid-sm-1-44",
+                                                            "grid-sm-10": "MuiGrid-grid-sm-10-53",
+                                                            "grid-sm-11": "MuiGrid-grid-sm-11-54",
+                                                            "grid-sm-12": "MuiGrid-grid-sm-12-55",
+                                                            "grid-sm-2": "MuiGrid-grid-sm-2-45",
+                                                            "grid-sm-3": "MuiGrid-grid-sm-3-46",
+                                                            "grid-sm-4": "MuiGrid-grid-sm-4-47",
+                                                            "grid-sm-5": "MuiGrid-grid-sm-5-48",
+                                                            "grid-sm-6": "MuiGrid-grid-sm-6-49",
+                                                            "grid-sm-7": "MuiGrid-grid-sm-7-50",
+                                                            "grid-sm-8": "MuiGrid-grid-sm-8-51",
+                                                            "grid-sm-9": "MuiGrid-grid-sm-9-52",
+                                                            "grid-sm-auto": "MuiGrid-grid-sm-auto-42",
+                                                            "grid-sm-true": "MuiGrid-grid-sm-true-43",
+                                                            "grid-xl-1": "MuiGrid-grid-xl-1-86",
+                                                            "grid-xl-10": "MuiGrid-grid-xl-10-95",
+                                                            "grid-xl-11": "MuiGrid-grid-xl-11-96",
+                                                            "grid-xl-12": "MuiGrid-grid-xl-12-97",
+                                                            "grid-xl-2": "MuiGrid-grid-xl-2-87",
+                                                            "grid-xl-3": "MuiGrid-grid-xl-3-88",
+                                                            "grid-xl-4": "MuiGrid-grid-xl-4-89",
+                                                            "grid-xl-5": "MuiGrid-grid-xl-5-90",
+                                                            "grid-xl-6": "MuiGrid-grid-xl-6-91",
+                                                            "grid-xl-7": "MuiGrid-grid-xl-7-92",
+                                                            "grid-xl-8": "MuiGrid-grid-xl-8-93",
+                                                            "grid-xl-9": "MuiGrid-grid-xl-9-94",
+                                                            "grid-xl-auto": "MuiGrid-grid-xl-auto-84",
+                                                            "grid-xl-true": "MuiGrid-grid-xl-true-85",
+                                                            "grid-xs-1": "MuiGrid-grid-xs-1-30",
+                                                            "grid-xs-10": "MuiGrid-grid-xs-10-39",
+                                                            "grid-xs-11": "MuiGrid-grid-xs-11-40",
+                                                            "grid-xs-12": "MuiGrid-grid-xs-12-41",
+                                                            "grid-xs-2": "MuiGrid-grid-xs-2-31",
+                                                            "grid-xs-3": "MuiGrid-grid-xs-3-32",
+                                                            "grid-xs-4": "MuiGrid-grid-xs-4-33",
+                                                            "grid-xs-5": "MuiGrid-grid-xs-5-34",
+                                                            "grid-xs-6": "MuiGrid-grid-xs-6-35",
+                                                            "grid-xs-7": "MuiGrid-grid-xs-7-36",
+                                                            "grid-xs-8": "MuiGrid-grid-xs-8-37",
+                                                            "grid-xs-9": "MuiGrid-grid-xs-9-38",
+                                                            "grid-xs-auto": "MuiGrid-grid-xs-auto-28",
+                                                            "grid-xs-true": "MuiGrid-grid-xs-true-29",
+                                                            "item": "MuiGrid-item-2",
+                                                            "justify-xs-center": "MuiGrid-justify-xs-center-18",
+                                                            "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-19",
+                                                            "justify-xs-space-around": "MuiGrid-justify-xs-space-around-21",
+                                                            "justify-xs-space-between": "MuiGrid-justify-xs-space-between-20",
+                                                            "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-22",
+                                                            "spacing-xs-16": "MuiGrid-spacing-xs-16-24",
+                                                            "spacing-xs-24": "MuiGrid-spacing-xs-24-25",
+                                                            "spacing-xs-32": "MuiGrid-spacing-xs-32-26",
+                                                            "spacing-xs-40": "MuiGrid-spacing-xs-40-27",
+                                                            "spacing-xs-8": "MuiGrid-spacing-xs-8-23",
+                                                            "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-7",
+                                                            "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-8",
+                                                            "zeroMinWidth": "MuiGrid-zeroMinWidth-3",
+                                                          }
+                                                        }
+                                                        component="div"
+                                                        container={true}
+                                                        direction="row"
+                                                        item={false}
+                                                        justify="flex-start"
+                                                        lg={false}
+                                                        md={false}
+                                                        sm={false}
+                                                        spacing={16}
+                                                        wrap="wrap"
+                                                        xl={false}
+                                                        xs={false}
+                                                        zeroMinWidth={false}
+                                                      >
+                                                        <div
+                                                          className="MuiGrid-container-1 MuiGrid-spacing-xs-16-24 MuiGrid-align-items-xs-flex-end-11 MuiGrid-align-content-xs-flex-end-15"
+                                                        >
+                                                          <WithStyles(Grid)
+                                                            item={true}
+                                                            xs={true}
+                                                          >
+                                                            <Grid
+                                                              alignContent="stretch"
+                                                              alignItems="stretch"
+                                                              classes={
+                                                                Object {
+                                                                  "align-content-xs-center": "MuiGrid-align-content-xs-center-13",
+                                                                  "align-content-xs-flex-end": "MuiGrid-align-content-xs-flex-end-15",
+                                                                  "align-content-xs-flex-start": "MuiGrid-align-content-xs-flex-start-14",
+                                                                  "align-content-xs-space-around": "MuiGrid-align-content-xs-space-around-17",
+                                                                  "align-content-xs-space-between": "MuiGrid-align-content-xs-space-between-16",
+                                                                  "align-items-xs-baseline": "MuiGrid-align-items-xs-baseline-12",
+                                                                  "align-items-xs-center": "MuiGrid-align-items-xs-center-9",
+                                                                  "align-items-xs-flex-end": "MuiGrid-align-items-xs-flex-end-11",
+                                                                  "align-items-xs-flex-start": "MuiGrid-align-items-xs-flex-start-10",
+                                                                  "container": "MuiGrid-container-1",
+                                                                  "direction-xs-column": "MuiGrid-direction-xs-column-4",
+                                                                  "direction-xs-column-reverse": "MuiGrid-direction-xs-column-reverse-5",
+                                                                  "direction-xs-row-reverse": "MuiGrid-direction-xs-row-reverse-6",
+                                                                  "grid-lg-1": "MuiGrid-grid-lg-1-72",
+                                                                  "grid-lg-10": "MuiGrid-grid-lg-10-81",
+                                                                  "grid-lg-11": "MuiGrid-grid-lg-11-82",
+                                                                  "grid-lg-12": "MuiGrid-grid-lg-12-83",
+                                                                  "grid-lg-2": "MuiGrid-grid-lg-2-73",
+                                                                  "grid-lg-3": "MuiGrid-grid-lg-3-74",
+                                                                  "grid-lg-4": "MuiGrid-grid-lg-4-75",
+                                                                  "grid-lg-5": "MuiGrid-grid-lg-5-76",
+                                                                  "grid-lg-6": "MuiGrid-grid-lg-6-77",
+                                                                  "grid-lg-7": "MuiGrid-grid-lg-7-78",
+                                                                  "grid-lg-8": "MuiGrid-grid-lg-8-79",
+                                                                  "grid-lg-9": "MuiGrid-grid-lg-9-80",
+                                                                  "grid-lg-auto": "MuiGrid-grid-lg-auto-70",
+                                                                  "grid-lg-true": "MuiGrid-grid-lg-true-71",
+                                                                  "grid-md-1": "MuiGrid-grid-md-1-58",
+                                                                  "grid-md-10": "MuiGrid-grid-md-10-67",
+                                                                  "grid-md-11": "MuiGrid-grid-md-11-68",
+                                                                  "grid-md-12": "MuiGrid-grid-md-12-69",
+                                                                  "grid-md-2": "MuiGrid-grid-md-2-59",
+                                                                  "grid-md-3": "MuiGrid-grid-md-3-60",
+                                                                  "grid-md-4": "MuiGrid-grid-md-4-61",
+                                                                  "grid-md-5": "MuiGrid-grid-md-5-62",
+                                                                  "grid-md-6": "MuiGrid-grid-md-6-63",
+                                                                  "grid-md-7": "MuiGrid-grid-md-7-64",
+                                                                  "grid-md-8": "MuiGrid-grid-md-8-65",
+                                                                  "grid-md-9": "MuiGrid-grid-md-9-66",
+                                                                  "grid-md-auto": "MuiGrid-grid-md-auto-56",
+                                                                  "grid-md-true": "MuiGrid-grid-md-true-57",
+                                                                  "grid-sm-1": "MuiGrid-grid-sm-1-44",
+                                                                  "grid-sm-10": "MuiGrid-grid-sm-10-53",
+                                                                  "grid-sm-11": "MuiGrid-grid-sm-11-54",
+                                                                  "grid-sm-12": "MuiGrid-grid-sm-12-55",
+                                                                  "grid-sm-2": "MuiGrid-grid-sm-2-45",
+                                                                  "grid-sm-3": "MuiGrid-grid-sm-3-46",
+                                                                  "grid-sm-4": "MuiGrid-grid-sm-4-47",
+                                                                  "grid-sm-5": "MuiGrid-grid-sm-5-48",
+                                                                  "grid-sm-6": "MuiGrid-grid-sm-6-49",
+                                                                  "grid-sm-7": "MuiGrid-grid-sm-7-50",
+                                                                  "grid-sm-8": "MuiGrid-grid-sm-8-51",
+                                                                  "grid-sm-9": "MuiGrid-grid-sm-9-52",
+                                                                  "grid-sm-auto": "MuiGrid-grid-sm-auto-42",
+                                                                  "grid-sm-true": "MuiGrid-grid-sm-true-43",
+                                                                  "grid-xl-1": "MuiGrid-grid-xl-1-86",
+                                                                  "grid-xl-10": "MuiGrid-grid-xl-10-95",
+                                                                  "grid-xl-11": "MuiGrid-grid-xl-11-96",
+                                                                  "grid-xl-12": "MuiGrid-grid-xl-12-97",
+                                                                  "grid-xl-2": "MuiGrid-grid-xl-2-87",
+                                                                  "grid-xl-3": "MuiGrid-grid-xl-3-88",
+                                                                  "grid-xl-4": "MuiGrid-grid-xl-4-89",
+                                                                  "grid-xl-5": "MuiGrid-grid-xl-5-90",
+                                                                  "grid-xl-6": "MuiGrid-grid-xl-6-91",
+                                                                  "grid-xl-7": "MuiGrid-grid-xl-7-92",
+                                                                  "grid-xl-8": "MuiGrid-grid-xl-8-93",
+                                                                  "grid-xl-9": "MuiGrid-grid-xl-9-94",
+                                                                  "grid-xl-auto": "MuiGrid-grid-xl-auto-84",
+                                                                  "grid-xl-true": "MuiGrid-grid-xl-true-85",
+                                                                  "grid-xs-1": "MuiGrid-grid-xs-1-30",
+                                                                  "grid-xs-10": "MuiGrid-grid-xs-10-39",
+                                                                  "grid-xs-11": "MuiGrid-grid-xs-11-40",
+                                                                  "grid-xs-12": "MuiGrid-grid-xs-12-41",
+                                                                  "grid-xs-2": "MuiGrid-grid-xs-2-31",
+                                                                  "grid-xs-3": "MuiGrid-grid-xs-3-32",
+                                                                  "grid-xs-4": "MuiGrid-grid-xs-4-33",
+                                                                  "grid-xs-5": "MuiGrid-grid-xs-5-34",
+                                                                  "grid-xs-6": "MuiGrid-grid-xs-6-35",
+                                                                  "grid-xs-7": "MuiGrid-grid-xs-7-36",
+                                                                  "grid-xs-8": "MuiGrid-grid-xs-8-37",
+                                                                  "grid-xs-9": "MuiGrid-grid-xs-9-38",
+                                                                  "grid-xs-auto": "MuiGrid-grid-xs-auto-28",
+                                                                  "grid-xs-true": "MuiGrid-grid-xs-true-29",
+                                                                  "item": "MuiGrid-item-2",
+                                                                  "justify-xs-center": "MuiGrid-justify-xs-center-18",
+                                                                  "justify-xs-flex-end": "MuiGrid-justify-xs-flex-end-19",
+                                                                  "justify-xs-space-around": "MuiGrid-justify-xs-space-around-21",
+                                                                  "justify-xs-space-between": "MuiGrid-justify-xs-space-between-20",
+                                                                  "justify-xs-space-evenly": "MuiGrid-justify-xs-space-evenly-22",
+                                                                  "spacing-xs-16": "MuiGrid-spacing-xs-16-24",
+                                                                  "spacing-xs-24": "MuiGrid-spacing-xs-24-25",
+                                                                  "spacing-xs-32": "MuiGrid-spacing-xs-32-26",
+                                                                  "spacing-xs-40": "MuiGrid-spacing-xs-40-27",
+                                                                  "spacing-xs-8": "MuiGrid-spacing-xs-8-23",
+                                                                  "wrap-xs-nowrap": "MuiGrid-wrap-xs-nowrap-7",
+                                                                  "wrap-xs-wrap-reverse": "MuiGrid-wrap-xs-wrap-reverse-8",
+                                                                  "zeroMinWidth": "MuiGrid-zeroMinWidth-3",
+                                                                }
+                                                              }
+                                                              component="div"
+                                                              container={false}
+                                                              direction="row"
+                                                              item={true}
+                                                              justify="flex-start"
+                                                              lg={false}
+                                                              md={false}
+                                                              sm={false}
+                                                              spacing={0}
+                                                              wrap="wrap"
+                                                              xl={false}
+                                                              xs={true}
+                                                              zeroMinWidth={false}
+                                                            >
+                                                              <div
+                                                                className="MuiGrid-item-2 MuiGrid-grid-xs-true-29"
+                                                              >
+                                                                <WithStyles(TextFieldWrapper)
+                                                                  InputProps={
+                                                                    Object {
+                                                                      "aria-activedescendant": null,
+                                                                      "aria-autocomplete": "list",
+                                                                      "aria-controls": null,
+                                                                      "aria-labelledby": "UQAuthorID-label",
+                                                                      "autoComplete": "off",
+                                                                      "classes": Object {
+                                                                        "root": "AutoCompleteAsyncField-inputRoot-173",
+                                                                      },
+                                                                      "id": "UQAuthorID-input",
+                                                                      "inputRef": [Function],
+                                                                      "onBlur": [Function],
+                                                                      "onChange": [Function],
+                                                                      "onKeyDown": [Function],
+                                                                      "value": "",
+                                                                    }
+                                                                  }
+                                                                  disabled={false}
+                                                                  errorText=""
+                                                                  fullWidth={true}
+                                                                  id="UQAuthorID-input"
+                                                                  label="UQ Author ID"
+                                                                  placeholder="Type UQ author name to search"
+                                                                  required={false}
+                                                                  value=""
+                                                                >
+                                                                  <TextFieldWrapper
+                                                                    InputProps={
+                                                                      Object {
+                                                                        "aria-activedescendant": null,
+                                                                        "aria-autocomplete": "list",
+                                                                        "aria-controls": null,
+                                                                        "aria-labelledby": "UQAuthorID-label",
+                                                                        "autoComplete": "off",
+                                                                        "classes": Object {
+                                                                          "root": "AutoCompleteAsyncField-inputRoot-173",
+                                                                        },
+                                                                        "id": "UQAuthorID-input",
+                                                                        "inputRef": [Function],
+                                                                        "onBlur": [Function],
+                                                                        "onChange": [Function],
+                                                                        "onKeyDown": [Function],
+                                                                        "value": "",
+                                                                      }
+                                                                    }
+                                                                    classes={Object {}}
+                                                                    disabled={false}
+                                                                    errorText=""
+                                                                    fullWidth={true}
+                                                                    id="UQAuthorID-input"
+                                                                    label="UQ Author ID"
+                                                                    placeholder="Type UQ author name to search"
+                                                                    required={false}
+                                                                    value=""
+                                                                  >
+                                                                    <TextField
+                                                                      InputLabelProps={
+                                                                        Object {
+                                                                          "hidden": false,
+                                                                          "htmlFor": "UQAuthorID-input",
+                                                                          "id": "UQAuthorID-input-label",
+                                                                          "shrink": undefined,
+                                                                        }
+                                                                      }
+                                                                      InputProps={
+                                                                        Object {
+                                                                          "aria-activedescendant": null,
+                                                                          "aria-autocomplete": "list",
+                                                                          "aria-controls": null,
+                                                                          "aria-labelledby": "UQAuthorID-label",
+                                                                          "autoComplete": "off",
+                                                                          "classes": Object {
+                                                                            "root": "AutoCompleteAsyncField-inputRoot-173",
+                                                                          },
+                                                                          "id": "UQAuthorID-input",
+                                                                          "inputRef": [Function],
+                                                                          "onBlur": [Function],
+                                                                          "onChange": [Function],
+                                                                          "onKeyDown": [Function],
+                                                                          "value": "",
+                                                                        }
+                                                                      }
+                                                                      classes={Object {}}
+                                                                      disabled={false}
+                                                                      error={false}
+                                                                      fullWidth={true}
+                                                                      id="UQAuthorID-input"
+                                                                      inputProps={
+                                                                        Object {
+                                                                          "aria-label": "UQ Author ID",
+                                                                          "aria-labelledby": "UQAuthorID-input-label",
+                                                                          "id": "UQAuthorID-input",
+                                                                          "label": "UQ Author ID",
+                                                                        }
+                                                                      }
+                                                                      label="UQ Author ID"
+                                                                      placeholder="Type UQ author name to search"
+                                                                      required={false}
+                                                                      select={false}
+                                                                      value=""
+                                                                      variant="standard"
+                                                                    >
+                                                                      <WithStyles(FormControl)
+                                                                        classes={Object {}}
+                                                                        disabled={false}
+                                                                        error={false}
+                                                                        fullWidth={true}
+                                                                        required={false}
+                                                                        variant="standard"
+                                                                      >
+                                                                        <FormControl
+                                                                          classes={
+                                                                            Object {
+                                                                              "fullWidth": "MuiFormControl-fullWidth-101",
+                                                                              "marginDense": "MuiFormControl-marginDense-100",
+                                                                              "marginNormal": "MuiFormControl-marginNormal-99",
+                                                                              "root": "MuiFormControl-root-98",
+                                                                            }
+                                                                          }
+                                                                          component="div"
+                                                                          disabled={false}
+                                                                          error={false}
+                                                                          fullWidth={true}
+                                                                          margin="none"
+                                                                          required={false}
+                                                                          variant="standard"
+                                                                        >
+                                                                          <div
+                                                                            className="MuiFormControl-root-98 MuiFormControl-fullWidth-101"
+                                                                          >
+                                                                            <WithStyles(WithFormControlContext(InputLabel))
+                                                                              hidden={false}
+                                                                              htmlFor="UQAuthorID-input"
+                                                                              id="UQAuthorID-input-label"
+                                                                            >
+                                                                              <WithFormControlContext(InputLabel)
+                                                                                classes={
+                                                                                  Object {
+                                                                                    "animated": "MuiInputLabel-animated-110",
+                                                                                    "disabled": "MuiInputLabel-disabled-104",
+                                                                                    "error": "MuiInputLabel-error-105",
+                                                                                    "filled": "MuiInputLabel-filled-111",
+                                                                                    "focused": "MuiInputLabel-focused-103",
+                                                                                    "formControl": "MuiInputLabel-formControl-107",
+                                                                                    "marginDense": "MuiInputLabel-marginDense-108",
+                                                                                    "outlined": "MuiInputLabel-outlined-112",
+                                                                                    "required": "MuiInputLabel-required-106",
+                                                                                    "root": "MuiInputLabel-root-102",
+                                                                                    "shrink": "MuiInputLabel-shrink-109",
+                                                                                  }
+                                                                                }
+                                                                                hidden={false}
+                                                                                htmlFor="UQAuthorID-input"
+                                                                                id="UQAuthorID-input-label"
+                                                                              >
+                                                                                <InputLabel
+                                                                                  classes={
+                                                                                    Object {
+                                                                                      "animated": "MuiInputLabel-animated-110",
+                                                                                      "disabled": "MuiInputLabel-disabled-104",
+                                                                                      "error": "MuiInputLabel-error-105",
+                                                                                      "filled": "MuiInputLabel-filled-111",
+                                                                                      "focused": "MuiInputLabel-focused-103",
+                                                                                      "formControl": "MuiInputLabel-formControl-107",
+                                                                                      "marginDense": "MuiInputLabel-marginDense-108",
+                                                                                      "outlined": "MuiInputLabel-outlined-112",
+                                                                                      "required": "MuiInputLabel-required-106",
+                                                                                      "root": "MuiInputLabel-root-102",
+                                                                                      "shrink": "MuiInputLabel-shrink-109",
+                                                                                    }
+                                                                                  }
+                                                                                  disableAnimation={false}
+                                                                                  hidden={false}
+                                                                                  htmlFor="UQAuthorID-input"
+                                                                                  id="UQAuthorID-input-label"
+                                                                                  muiFormControl={
+                                                                                    Object {
+                                                                                      "adornedStart": false,
+                                                                                      "disabled": false,
+                                                                                      "error": false,
+                                                                                      "filled": false,
+                                                                                      "focused": false,
+                                                                                      "margin": "none",
+                                                                                      "onBlur": [Function],
+                                                                                      "onEmpty": [Function],
+                                                                                      "onFilled": [Function],
+                                                                                      "onFocus": [Function],
+                                                                                      "required": false,
+                                                                                      "variant": "standard",
+                                                                                    }
+                                                                                  }
+                                                                                >
+                                                                                  <WithStyles(WithFormControlContext(FormLabel))
+                                                                                    className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                                                    classes={
+                                                                                      Object {
+                                                                                        "disabled": "MuiInputLabel-disabled-104",
+                                                                                        "error": "MuiInputLabel-error-105",
+                                                                                        "focused": "MuiInputLabel-focused-103",
+                                                                                        "required": "MuiInputLabel-required-106",
+                                                                                      }
+                                                                                    }
+                                                                                    data-shrink={false}
+                                                                                    hidden={false}
+                                                                                    htmlFor="UQAuthorID-input"
+                                                                                    id="UQAuthorID-input-label"
+                                                                                  >
+                                                                                    <WithFormControlContext(FormLabel)
+                                                                                      className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                                                      classes={
+                                                                                        Object {
+                                                                                          "asterisk": "MuiFormLabel-asterisk-119",
+                                                                                          "disabled": "MuiFormLabel-disabled-115 MuiInputLabel-disabled-104",
+                                                                                          "error": "MuiFormLabel-error-116 MuiInputLabel-error-105",
+                                                                                          "filled": "MuiFormLabel-filled-117",
+                                                                                          "focused": "MuiFormLabel-focused-114 MuiInputLabel-focused-103",
+                                                                                          "required": "MuiFormLabel-required-118 MuiInputLabel-required-106",
+                                                                                          "root": "MuiFormLabel-root-113",
+                                                                                        }
+                                                                                      }
+                                                                                      data-shrink={false}
+                                                                                      hidden={false}
+                                                                                      htmlFor="UQAuthorID-input"
+                                                                                      id="UQAuthorID-input-label"
+                                                                                    >
+                                                                                      <FormLabel
+                                                                                        className="MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                                                        classes={
+                                                                                          Object {
+                                                                                            "asterisk": "MuiFormLabel-asterisk-119",
+                                                                                            "disabled": "MuiFormLabel-disabled-115 MuiInputLabel-disabled-104",
+                                                                                            "error": "MuiFormLabel-error-116 MuiInputLabel-error-105",
+                                                                                            "filled": "MuiFormLabel-filled-117",
+                                                                                            "focused": "MuiFormLabel-focused-114 MuiInputLabel-focused-103",
+                                                                                            "required": "MuiFormLabel-required-118 MuiInputLabel-required-106",
+                                                                                            "root": "MuiFormLabel-root-113",
+                                                                                          }
+                                                                                        }
+                                                                                        component="label"
+                                                                                        data-shrink={false}
+                                                                                        hidden={false}
+                                                                                        htmlFor="UQAuthorID-input"
+                                                                                        id="UQAuthorID-input-label"
+                                                                                        muiFormControl={
+                                                                                          Object {
+                                                                                            "adornedStart": false,
+                                                                                            "disabled": false,
+                                                                                            "error": false,
+                                                                                            "filled": false,
+                                                                                            "focused": false,
+                                                                                            "margin": "none",
+                                                                                            "onBlur": [Function],
+                                                                                            "onEmpty": [Function],
+                                                                                            "onFilled": [Function],
+                                                                                            "onFocus": [Function],
+                                                                                            "required": false,
+                                                                                            "variant": "standard",
+                                                                                          }
+                                                                                        }
+                                                                                      >
+                                                                                        <label
+                                                                                          className="MuiFormLabel-root-113 MuiInputLabel-root-102 MuiInputLabel-formControl-107 MuiInputLabel-animated-110"
+                                                                                          data-shrink={false}
+                                                                                          hidden={false}
+                                                                                          htmlFor="UQAuthorID-input"
+                                                                                          id="UQAuthorID-input-label"
+                                                                                        >
+                                                                                          UQ Author ID
+                                                                                        </label>
+                                                                                      </FormLabel>
+                                                                                    </WithFormControlContext(FormLabel)>
+                                                                                  </WithStyles(WithFormControlContext(FormLabel))>
+                                                                                </InputLabel>
+                                                                              </WithFormControlContext(InputLabel)>
+                                                                            </WithStyles(WithFormControlContext(InputLabel))>
+                                                                            <WithStyles(Input)
+                                                                              aria-activedescendant={null}
+                                                                              aria-autocomplete="list"
+                                                                              aria-controls={null}
+                                                                              aria-labelledby="UQAuthorID-label"
+                                                                              autoComplete="off"
+                                                                              classes={
+                                                                                Object {
+                                                                                  "root": "AutoCompleteAsyncField-inputRoot-173",
+                                                                                }
+                                                                              }
+                                                                              fullWidth={true}
+                                                                              id="UQAuthorID-input"
+                                                                              inputProps={
+                                                                                Object {
+                                                                                  "aria-label": "UQ Author ID",
+                                                                                  "aria-labelledby": "UQAuthorID-input-label",
+                                                                                  "id": "UQAuthorID-input",
+                                                                                  "label": "UQ Author ID",
+                                                                                }
+                                                                              }
+                                                                              inputRef={[Function]}
+                                                                              onBlur={[Function]}
+                                                                              onChange={[Function]}
+                                                                              onKeyDown={[Function]}
+                                                                              placeholder="Type UQ author name to search"
+                                                                              value=""
+                                                                            >
+                                                                              <Input
+                                                                                aria-activedescendant={null}
+                                                                                aria-autocomplete="list"
+                                                                                aria-controls={null}
+                                                                                aria-labelledby="UQAuthorID-label"
+                                                                                autoComplete="off"
+                                                                                classes={
+                                                                                  Object {
+                                                                                    "disabled": "MuiInput-disabled-130",
+                                                                                    "error": "MuiInput-error-132",
+                                                                                    "focused": "MuiInput-focused-129",
+                                                                                    "formControl": "MuiInput-formControl-128",
+                                                                                    "fullWidth": "MuiInput-fullWidth-134",
+                                                                                    "input": "MuiInput-input-135",
+                                                                                    "inputMarginDense": "MuiInput-inputMarginDense-136",
+                                                                                    "inputMultiline": "MuiInput-inputMultiline-137",
+                                                                                    "inputType": "MuiInput-inputType-138",
+                                                                                    "inputTypeSearch": "MuiInput-inputTypeSearch-139",
+                                                                                    "multiline": "MuiInput-multiline-133",
+                                                                                    "root": "MuiInput-root-127 AutoCompleteAsyncField-inputRoot-173",
+                                                                                    "underline": "MuiInput-underline-131",
+                                                                                  }
+                                                                                }
+                                                                                fullWidth={true}
+                                                                                id="UQAuthorID-input"
+                                                                                inputProps={
+                                                                                  Object {
+                                                                                    "aria-label": "UQ Author ID",
+                                                                                    "aria-labelledby": "UQAuthorID-input-label",
+                                                                                    "id": "UQAuthorID-input",
+                                                                                    "label": "UQ Author ID",
+                                                                                  }
+                                                                                }
+                                                                                inputRef={[Function]}
+                                                                                onBlur={[Function]}
+                                                                                onChange={[Function]}
+                                                                                onKeyDown={[Function]}
+                                                                                placeholder="Type UQ author name to search"
+                                                                                value=""
+                                                                              >
+                                                                                <WithStyles(WithFormControlContext(InputBase))
+                                                                                  aria-activedescendant={null}
+                                                                                  aria-autocomplete="list"
+                                                                                  aria-controls={null}
+                                                                                  aria-labelledby="UQAuthorID-label"
+                                                                                  autoComplete="off"
+                                                                                  classes={
+                                                                                    Object {
+                                                                                      "disabled": "MuiInput-disabled-130",
+                                                                                      "error": "MuiInput-error-132",
+                                                                                      "focused": "MuiInput-focused-129",
+                                                                                      "formControl": "MuiInput-formControl-128",
+                                                                                      "fullWidth": "MuiInput-fullWidth-134",
+                                                                                      "input": "MuiInput-input-135",
+                                                                                      "inputMarginDense": "MuiInput-inputMarginDense-136",
+                                                                                      "inputMultiline": "MuiInput-inputMultiline-137",
+                                                                                      "inputType": "MuiInput-inputType-138",
+                                                                                      "inputTypeSearch": "MuiInput-inputTypeSearch-139",
+                                                                                      "multiline": "MuiInput-multiline-133",
+                                                                                      "root": "MuiInput-root-127 AutoCompleteAsyncField-inputRoot-173 MuiInput-underline-131",
+                                                                                      "underline": null,
+                                                                                    }
+                                                                                  }
+                                                                                  fullWidth={true}
+                                                                                  id="UQAuthorID-input"
+                                                                                  inputComponent="input"
+                                                                                  inputProps={
+                                                                                    Object {
+                                                                                      "aria-label": "UQ Author ID",
+                                                                                      "aria-labelledby": "UQAuthorID-input-label",
+                                                                                      "id": "UQAuthorID-input",
+                                                                                      "label": "UQ Author ID",
+                                                                                    }
+                                                                                  }
+                                                                                  inputRef={[Function]}
+                                                                                  multiline={false}
+                                                                                  onBlur={[Function]}
+                                                                                  onChange={[Function]}
+                                                                                  onKeyDown={[Function]}
+                                                                                  placeholder="Type UQ author name to search"
+                                                                                  type="text"
+                                                                                  value=""
+                                                                                >
+                                                                                  <WithFormControlContext(InputBase)
+                                                                                    aria-activedescendant={null}
+                                                                                    aria-autocomplete="list"
+                                                                                    aria-controls={null}
+                                                                                    aria-labelledby="UQAuthorID-label"
+                                                                                    autoComplete="off"
+                                                                                    classes={
+                                                                                      Object {
+                                                                                        "adornedEnd": "MuiInputBase-adornedEnd-145",
+                                                                                        "adornedStart": "MuiInputBase-adornedStart-144",
+                                                                                        "disabled": "MuiInputBase-disabled-143 MuiInput-disabled-130",
+                                                                                        "error": "MuiInputBase-error-146 MuiInput-error-132",
+                                                                                        "focused": "MuiInputBase-focused-142 MuiInput-focused-129",
+                                                                                        "formControl": "MuiInputBase-formControl-141 MuiInput-formControl-128",
+                                                                                        "fullWidth": "MuiInputBase-fullWidth-149 MuiInput-fullWidth-134",
+                                                                                        "input": "MuiInputBase-input-150 MuiInput-input-135",
+                                                                                        "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-156",
+                                                                                        "inputAdornedStart": "MuiInputBase-inputAdornedStart-155",
+                                                                                        "inputMarginDense": "MuiInputBase-inputMarginDense-151 MuiInput-inputMarginDense-136",
+                                                                                        "inputMultiline": "MuiInputBase-inputMultiline-152 MuiInput-inputMultiline-137",
+                                                                                        "inputType": "MuiInputBase-inputType-153 MuiInput-inputType-138",
+                                                                                        "inputTypeSearch": "MuiInputBase-inputTypeSearch-154 MuiInput-inputTypeSearch-139",
+                                                                                        "marginDense": "MuiInputBase-marginDense-147",
+                                                                                        "multiline": "MuiInputBase-multiline-148 MuiInput-multiline-133",
+                                                                                        "root": "MuiInputBase-root-140 MuiInput-root-127 AutoCompleteAsyncField-inputRoot-173 MuiInput-underline-131",
+                                                                                      }
+                                                                                    }
+                                                                                    fullWidth={true}
+                                                                                    id="UQAuthorID-input"
+                                                                                    inputComponent="input"
+                                                                                    inputProps={
+                                                                                      Object {
+                                                                                        "aria-label": "UQ Author ID",
+                                                                                        "aria-labelledby": "UQAuthorID-input-label",
+                                                                                        "id": "UQAuthorID-input",
+                                                                                        "label": "UQ Author ID",
+                                                                                      }
+                                                                                    }
+                                                                                    inputRef={[Function]}
+                                                                                    multiline={false}
+                                                                                    onBlur={[Function]}
+                                                                                    onChange={[Function]}
+                                                                                    onKeyDown={[Function]}
+                                                                                    placeholder="Type UQ author name to search"
+                                                                                    type="text"
+                                                                                    value=""
+                                                                                  >
+                                                                                    <InputBase
+                                                                                      aria-activedescendant={null}
+                                                                                      aria-autocomplete="list"
+                                                                                      aria-controls={null}
+                                                                                      aria-labelledby="UQAuthorID-label"
+                                                                                      autoComplete="off"
+                                                                                      classes={
+                                                                                        Object {
+                                                                                          "adornedEnd": "MuiInputBase-adornedEnd-145",
+                                                                                          "adornedStart": "MuiInputBase-adornedStart-144",
+                                                                                          "disabled": "MuiInputBase-disabled-143 MuiInput-disabled-130",
+                                                                                          "error": "MuiInputBase-error-146 MuiInput-error-132",
+                                                                                          "focused": "MuiInputBase-focused-142 MuiInput-focused-129",
+                                                                                          "formControl": "MuiInputBase-formControl-141 MuiInput-formControl-128",
+                                                                                          "fullWidth": "MuiInputBase-fullWidth-149 MuiInput-fullWidth-134",
+                                                                                          "input": "MuiInputBase-input-150 MuiInput-input-135",
+                                                                                          "inputAdornedEnd": "MuiInputBase-inputAdornedEnd-156",
+                                                                                          "inputAdornedStart": "MuiInputBase-inputAdornedStart-155",
+                                                                                          "inputMarginDense": "MuiInputBase-inputMarginDense-151 MuiInput-inputMarginDense-136",
+                                                                                          "inputMultiline": "MuiInputBase-inputMultiline-152 MuiInput-inputMultiline-137",
+                                                                                          "inputType": "MuiInputBase-inputType-153 MuiInput-inputType-138",
+                                                                                          "inputTypeSearch": "MuiInputBase-inputTypeSearch-154 MuiInput-inputTypeSearch-139",
+                                                                                          "marginDense": "MuiInputBase-marginDense-147",
+                                                                                          "multiline": "MuiInputBase-multiline-148 MuiInput-multiline-133",
+                                                                                          "root": "MuiInputBase-root-140 MuiInput-root-127 AutoCompleteAsyncField-inputRoot-173 MuiInput-underline-131",
+                                                                                        }
+                                                                                      }
+                                                                                      fullWidth={true}
+                                                                                      id="UQAuthorID-input"
+                                                                                      inputComponent="input"
+                                                                                      inputProps={
+                                                                                        Object {
+                                                                                          "aria-label": "UQ Author ID",
+                                                                                          "aria-labelledby": "UQAuthorID-input-label",
+                                                                                          "id": "UQAuthorID-input",
+                                                                                          "label": "UQ Author ID",
+                                                                                        }
+                                                                                      }
+                                                                                      inputRef={[Function]}
+                                                                                      muiFormControl={
+                                                                                        Object {
+                                                                                          "adornedStart": false,
+                                                                                          "disabled": false,
+                                                                                          "error": false,
+                                                                                          "filled": false,
+                                                                                          "focused": false,
+                                                                                          "margin": "none",
+                                                                                          "onBlur": [Function],
+                                                                                          "onEmpty": [Function],
+                                                                                          "onFilled": [Function],
+                                                                                          "onFocus": [Function],
+                                                                                          "required": false,
+                                                                                          "variant": "standard",
+                                                                                        }
+                                                                                      }
+                                                                                      multiline={false}
+                                                                                      onBlur={[Function]}
+                                                                                      onChange={[Function]}
+                                                                                      onKeyDown={[Function]}
+                                                                                      placeholder="Type UQ author name to search"
+                                                                                      type="text"
+                                                                                      value=""
+                                                                                    >
+                                                                                      <div
+                                                                                        aria-activedescendant={null}
+                                                                                        aria-autocomplete="list"
+                                                                                        aria-controls={null}
+                                                                                        aria-labelledby="UQAuthorID-label"
+                                                                                        className="MuiInputBase-root-140 MuiInput-root-127 AutoCompleteAsyncField-inputRoot-173 MuiInput-underline-131 MuiInputBase-fullWidth-149 MuiInput-fullWidth-134 MuiInputBase-formControl-141 MuiInput-formControl-128"
+                                                                                        onClick={[Function]}
+                                                                                      >
+                                                                                        <input
+                                                                                          aria-invalid={false}
+                                                                                          aria-label="UQ Author ID"
+                                                                                          aria-labelledby="UQAuthorID-input-label"
+                                                                                          autoComplete="off"
+                                                                                          className="MuiInputBase-input-150 MuiInput-input-135"
+                                                                                          disabled={false}
+                                                                                          id="UQAuthorID-input"
+                                                                                          label="UQ Author ID"
+                                                                                          onBlur={[Function]}
+                                                                                          onChange={[Function]}
+                                                                                          onFocus={[Function]}
+                                                                                          onKeyDown={[Function]}
+                                                                                          placeholder="Type UQ author name to search"
+                                                                                          required={false}
+                                                                                          type="text"
+                                                                                          value=""
+                                                                                        />
+                                                                                      </div>
+                                                                                    </InputBase>
+                                                                                  </WithFormControlContext(InputBase)>
+                                                                                </WithStyles(WithFormControlContext(InputBase))>
+                                                                              </Input>
+                                                                            </WithStyles(Input)>
+                                                                          </div>
+                                                                        </FormControl>
+                                                                      </WithStyles(FormControl)>
+                                                                    </TextField>
+                                                                  </TextFieldWrapper>
+                                                                </WithStyles(TextFieldWrapper)>
+                                                              </div>
+                                                            </Grid>
+                                                          </WithStyles(Grid)>
+                                                        </div>
+                                                      </Grid>
+                                                    </WithStyles(Grid)>
+                                                  </div>
+                                                </Downshift>
+                                              </div>
+                                            </AutoCompleteAsyncField>
+                                          </WithStyles(AutoCompleteAsyncField)>
+                                        </Connect(WithStyles(AutoCompleteAsyncField))>
                                       </div>
                                     </Grid>
                                   </WithStyles(Grid)>
