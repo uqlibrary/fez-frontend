@@ -36,6 +36,7 @@ export class ListRow extends PureComponent {
             moveUpHint: 'Move item up the order',
             moveDownHint: 'Move item down the order',
             deleteHint: 'Remove this item',
+            editHint: 'Edit this item',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete item',
                 confirmationMessage: 'Are you sure you want to delete this item?',

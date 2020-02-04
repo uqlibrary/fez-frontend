@@ -580,6 +580,7 @@ export default {
                 locale: locale.components.subjectForm.field,
                 distinctOnly: true,
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
+                canEdit: true,
             },
         },
         fez_record_search_key_refereed_source: {
@@ -891,6 +892,7 @@ export default {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
                 height: 50,
+                canEdit: true,
             },
         },
         fez_record_search_key_location: {
@@ -1095,6 +1097,7 @@ export default {
                 locale: {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
+                canEdit: true,
             },
             height: 50,
         },
