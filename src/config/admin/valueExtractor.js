@@ -47,7 +47,8 @@ const authorsGetValue = record => {
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
         uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
         uqUsername: `${((authorIds[order] || {}).author || {}).aut_org_username ||
-            ((authorIds[order] || {}).author || {}).aut_student_username}`,
+            ((authorIds[order] || {}).author || {}).aut_student_username ||
+            ''}`,
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
