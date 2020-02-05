@@ -18,35 +18,35 @@ exports[`HerdcCodeField component should not render unknown value 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -98,35 +98,35 @@ exports[`HerdcCodeField component should render a current value 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -178,35 +178,35 @@ exports[`HerdcCodeField component should render a deprecated value 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -257,35 +257,35 @@ exports[`HerdcCodeField component should render default view 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -341,35 +341,35 @@ exports[`HerdcCodeField component should render immutable list as selected value
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -430,35 +430,35 @@ exports[`HerdcCodeField component should render when given a default value field
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
@@ -520,35 +520,35 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
