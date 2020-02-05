@@ -174,14 +174,12 @@ context('Journal Article admin edit', () => {
                         cy.get('div.ISSNvalue')
                             .within(() => {
                                 issns.forEach((issn, index) => {
-                                    cy.get('.ListRow-ISSNvalue span span')
+                                    cy.get('.ListRow-ISSNvalue span>span')
                                         .eq(index)
                                         .should('contain.text', issn);
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(index)
-                                        .should('contain.text', 'Visit ')
-                                        .should('contain.text', ulrichsTitle[index])
-                                        .should('contain.text', ' on Ulrichs')
+                                        .should('contain.text', 'Visit  ' + ulrichsTitle[index] + '  on Ulrichs')
                                         .should(
                                             'have.attr',
                                             'href',
