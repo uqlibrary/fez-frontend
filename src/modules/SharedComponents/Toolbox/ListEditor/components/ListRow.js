@@ -8,24 +8,27 @@ import Tooltip from '@material-ui/core/Tooltip';
 import KeyboardArrowUp from '@material-ui/icons/KeyboardArrowUp';
 import KeyboardArrowDown from '@material-ui/icons/KeyboardArrowDown';
 import Delete from '@material-ui/icons/Delete';
+import Edit from '@material-ui/icons/Edit';
 import { withStyles } from '@material-ui/core/styles';
 import { GenericTemplate } from './GenericTemplate';
 
 export class ListRow extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
+        canMoveDown: PropTypes.bool,
+        canMoveUp: PropTypes.bool,
+        classes: PropTypes.object,
+        disabled: PropTypes.bool,
+        form: PropTypes.string,
+        hideReorder: PropTypes.bool,
         index: PropTypes.number.isRequired,
         item: PropTypes.any.isRequired,
-        canMoveUp: PropTypes.bool,
-        canMoveDown: PropTypes.bool,
-        onMoveUp: PropTypes.func,
-        onMoveDown: PropTypes.func,
-        onDelete: PropTypes.func,
-        locale: PropTypes.object,
-        disabled: PropTypes.bool,
-        hideReorder: PropTypes.bool,
-        classes: PropTypes.object,
         itemTemplate: PropTypes.func,
-        form: PropTypes.string,
+        locale: PropTypes.object,
+        onDelete: PropTypes.func,
+        onEdit: PropTypes.func,
+        onMoveDown: PropTypes.func,
+        onMoveUp: PropTypes.func,
     };
 
     static defaultProps = {
@@ -33,6 +36,7 @@ export class ListRow extends PureComponent {
             moveUpHint: 'Move item up the order',
             moveDownHint: 'Move item down the order',
             deleteHint: 'Remove this item',
+            editHint: 'Edit this item',
             deleteRecordConfirmation: {
                 confirmationTitle: 'Delete item',
                 confirmationMessage: 'Are you sure you want to delete this item?',
@@ -54,6 +58,11 @@ export class ListRow extends PureComponent {
         }
     };
 
+    _handleEdit = () => {
+        const { onEdit, index } = this.props;
+        !!onEdit && onEdit(index);
+    };
+
     onMoveUp = () => {
         if (!this.props.disabled && this.props.onMoveUp) {
             this.props.onMoveUp(this.props.item, this.props.index);
@@ -67,8 +76,15 @@ export class ListRow extends PureComponent {
     };
 
     render() {
-        const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes } = this.props;
-        const { moveDownHint, moveUpHint, deleteHint, deleteRecordConfirmation } = this.props.locale;
+        const { item, disabled, hideReorder, canMoveUp, canMoveDown, classes, canEdit, index } = this.props;
+        const {
+            moveDownHint,
+            moveUpHint,
+            deleteHint,
+            deleteRecordConfirmation,
+            editHint,
+            editButtonId,
+        } = this.props.locale;
         const componentID = this.props.form.replace(/\s+/g, '');
         return (
             <div
@@ -104,6 +120,26 @@ export class ListRow extends PureComponent {
                                             </IconButton>
                                         </Tooltip>
                                     </Grid>
+                                )}
+
+                                {canEdit && (
+                                    <Tooltip
+                                        title={editHint}
+                                        disableFocusListener={disabled}
+                                        disableHoverListener={disabled}
+                                        disableTouchListener={disabled}
+                                    >
+                                        <span>
+                                            <IconButton
+                                                aria-label={editHint}
+                                                onClick={this._handleEdit}
+                                                disabled={disabled}
+                                                id={`${editButtonId}-${index}`}
+                                            >
+                                                <Edit />
+                                            </IconButton>
+                                        </span>
+                                    </Tooltip>
                                 )}
                             </Grid>
                         </Grid>

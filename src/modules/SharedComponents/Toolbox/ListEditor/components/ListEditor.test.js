@@ -46,6 +46,17 @@ describe('ListEditor tests', () => {
         expect(wrapper.state().itemList.length).toEqual(1);
     });
 
+    it('should update an object item in the list', () => {
+        const wrapper = setup();
+        expect(wrapper.state().itemList.length).toEqual(0);
+        wrapper.instance().addItem({ id: 'test', value: 'test value' });
+        expect(wrapper.state().itemList.length).toEqual(1);
+        wrapper.instance().editItem(0);
+        wrapper.instance().addItem({ id: 'test', value: 'testing value' });
+        expect(wrapper.state().itemList.length).toEqual(1);
+        expect(wrapper.state().itemList).toEqual([{ id: 'test', value: 'testing value' }]);
+    });
+
     it('should render items not more than maxCount', () => {
         const wrapper = setup({ maxCount: 1 });
         expect(wrapper.state().itemList.length).toEqual(0);
@@ -249,5 +260,20 @@ describe('ListEditor tests', () => {
         });
         expect(wrapper2.state().itemList.length).toEqual(10);
         expect(toJson(wrapper2)).toMatchSnapshot();
+    });
+
+    it('should update an item with selected index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.setState({ itemIndexSelectedToEdit: 1 });
+        wrapper.instance().addItem('four');
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should set item to edit index', () => {
+        const wrapper = setup();
+        wrapper.setState({ itemList: ['one', 'two', 'three'] });
+        wrapper.instance().editItem(1);
+        expect(wrapper.state().itemIndexSelectedToEdit).toEqual(1);
     });
 });

@@ -4,10 +4,7 @@ context('Add missing record', () => {
     });
 
     afterEach(() => {
-        cy.window()
-            .then(win => {
-                win.onbeforeunload = undefined;
-            });
+        cy.killWindowUnloadHandler();
     });
 
     it('should enable the submit button on form render only', () => {
@@ -36,10 +33,7 @@ context('Add missing record', () => {
             .should('be.disabled');
 
         // Start over
-        cy.window()
-            .then(win => {
-                win.onbeforeunload = undefined;
-            });
+        cy.killWindowUnloadHandler();
         cy.reload();
 
         // Dept. Tech. report has no subtypes

@@ -8,8 +8,27 @@ exports[`LookupForm tests  should render lookup form 1`] = `
     input={
       Object {
         "onChange": [MockFunction],
+        "value": "",
       }
     }
+    key=""
+    required={false}
+  />
+</Fragment>
+`;
+
+exports[`LookupForm tests  should set default value on receiving new props 1`] = `
+<Fragment>
+  <inputField
+    floatingLabelText="Item name"
+    hintText="Please type the item name, then select from the list"
+    input={
+      Object {
+        "onChange": [MockFunction],
+        "value": "",
+      }
+    }
+    key=""
     required={false}
   />
 </Fragment>

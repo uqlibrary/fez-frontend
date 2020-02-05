@@ -1,170 +1,220 @@
-import { FreeTextFormClass } from './FreeTextForm';
+import React from 'react';
 import FreeTextForm from './FreeTextForm';
+import { rtlRender, fireEvent } from 'test-utils';
+import { isValidIsbn } from 'config/validation';
 
-function setup(testProps = {}) {
-    const props = {
-        onAdd: jest.fn(),
-        disabled: false,
-        locale: {
-            inputFieldLabel: 'Item name',
-            inputFieldHint: 'Please type the item name',
-            addButtonLabel: 'Add',
-        },
-        classes: {
-            remindToAdd: '',
-        },
-        theme: {},
-        errorText: 'This field is required',
-        normalize: value => value,
-        // isValid: jest.fn(() => ''),
-        ...testProps,
-    };
-    return getElement(FreeTextFormClass, props);
-}
-
-describe('FreeTextForm tests ', () => {
-    it('rendering active form', () => {
-        const wrapper1 = setup();
-        expect(toJson(wrapper1)).toMatchSnapshot();
-        const wrapper2 = setup({
-            errorText: '',
-            maxInputLength: 5,
-        });
-        wrapper2.instance().setState({ itemName: '123456' });
-        expect(toJson(wrapper2)).toMatchSnapshot();
-    });
-
-    it('rendering active form full mount', () => {
-        const wrapper = getElement(
-            FreeTextForm,
-            {
-                onAdd: jest.fn(),
-                disabled: false,
-                locale: {
+describe('FreeTextForm behaviour tests', () => {
+    it('should display input field with add button disabled and it should be enabled as soon as user has entered valid value in text field', () => {
+        const { getByTestId } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
                     inputFieldLabel: 'Item name',
                     inputFieldHint: 'Please type the item name',
                     addButtonLabel: 'Add',
-                },
-                classes: {
-                    remindToAdd: '',
-                },
-                theme: {},
-                errorText: 'This field is required',
-                normalize: value => value,
-            },
-            { isShallow: false },
+                }}
+                normalize={jest.fn(value => value)}
+            />,
         );
-        expect(toJson(wrapper)).toMatchSnapshot();
+
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
+
+        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
     });
 
-    it('rendering disabled form', () => {
-        const wrapper = setup({ disabled: true });
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should display error message for ISBN if not valid, and it should enable add button only if valid ISBN is entered', () => {
+        const { getByTestId, getByText } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-isbn-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add ISBN',
+                }}
+                isValid={isValidIsbn}
+                normalize={jest.fn(value => value)}
+            />,
+        );
+
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+
+        fireEvent.change(getByTestId('free-text-isbn-input'), { target: { value: 'test' } });
+
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByText('ISBN value is not valid')).toBeVisible();
+
+        fireEvent.change(getByTestId('free-text-isbn-input'), { target: { value: '1234567897' } });
+
+        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        try {
+            getByText('ISBN value is not valid');
+        } catch (e) {
+            expect(e.message).toContain('Unable to find an element with the text: ISBN value is not valid.');
+        }
     });
 
-    it('adding item method is called', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({ onAdd: testMethod });
-        wrapper.setState({ itemName: 'one' });
-        wrapper.instance().addItem({});
-        expect(testMethod).toBeCalled;
+    it('should display maximum input length error message, and it should enable add button only if valid value is entered', () => {
+        const { getByTestId, getByText } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                }}
+                maxInputLength={5}
+                normalize={jest.fn(value => value)}
+            />,
+        );
+
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
+
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByText('Limited to 5 characters')).toBeVisible();
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
+
+        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        try {
+            getByText('Limited to 5 characters');
+        } catch (e) {
+            expect(e.message).toContain('Unable to find an element with the text: Limited to 5 characters.');
+        }
     });
 
-    it('adding item method is not called on disabled form', () => {
-        const testMethod = jest.fn();
-        const wrapper = setup({
-            disabled: true,
-            onAdd: testMethod,
-        });
-        wrapper.setState({ itemName: 'one' });
-        wrapper.instance().addItem({});
-        expect(testMethod).not.toBeCalled;
+    it('should add item and clear input field', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <FreeTextForm
+                onAdd={onAddFn}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                }}
+                normalize={value => value}
+            />,
+        );
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
+        expect(getByTestId('free-text-input')).toHaveAttribute('value', 'test');
+        fireEvent.click(getByTestId('add-items'));
+
+        expect(onAddFn).toHaveBeenCalledWith('test');
+        expect(getByTestId('free-text-input')).toHaveAttribute('value', '');
     });
 
-    it('setting state', () => {
-        const wrapper = setup();
-        expect(wrapper.state().itemName).toBeFalsy();
-        wrapper.instance().onNameChanged({ target: { value: 'one' } });
-        expect(wrapper.state().itemName).toEqual('one');
+    it('should not submit form if pressed key is other than "Enter"', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <FreeTextForm
+                onAdd={onAddFn}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                }}
+                normalize={value => value}
+            />,
+        );
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'test' } });
+        fireEvent.keyDown(getByTestId('free-text-input'), { key: 'Esc', code: 27, charCode: 27, keyCode: 27 });
+
+        expect(onAddFn).not.toHaveBeenCalled();
     });
 
-    it('rendering reminder to add input', () => {
-        const wrapper = setup();
-        wrapper.setProps({
-            locale: {
-                remindToAdd: 'reminder text',
-                addButtonLabel: 'Add',
-            },
-            remindToAdd: true,
-            isValid: jest.fn(() => false),
-        });
-        wrapper.setState({ itemName: 'one' });
-        wrapper.update();
-        expect(toJson(wrapper)).toMatchSnapshot();
+    it('should render item selected to edit', () => {
+        const { getByTestId, getByText, container } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                    editButtonLabel: 'Edit',
+                }}
+                normalize={value => value}
+            />,
+        );
+
+        expect(getByTestId('free-text-input')).toHaveAttribute('value', '');
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
+        expect(getByText('Add')).toBeVisible();
+
+        rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                    editButtonLabel: 'Edit',
+                }}
+                normalize={value => value}
+                itemSelectedToEdit="Testing"
+            />,
+            { container },
+        );
+
+        expect(getByTestId('free-text-input')).toHaveAttribute('value', 'Testing');
+        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
+        expect(getByText('Edit')).toBeVisible();
     });
 
-    it('should not add item if state is not set', () => {
-        const wrapper = setup();
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(wrapper.instance().props.onAdd).not.toBeCalled();
+    it('should display remind to add text', () => {
+        const { getByTestId, getByText } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                    editButtonLabel: 'Edit',
+                    remindToAddText: 'Please click "Add" button to add item to the list',
+                }}
+                normalize={value => value}
+                remindToAdd
+                isValid={jest.fn(() => undefined)}
+            />,
+        );
+
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
+        expect(getByText('Please click "Add" button to add item to the list')).toBeVisible();
     });
 
-    it('should not fire onAdd when itemName is empty', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ isValid: () => '', onAdd: testFn, disabled: false });
-        wrapper.setState({ itemName: '' });
+    it('should display error message with text length message', () => {
+        const { getByTestId, getByText } = rtlRender(
+            <FreeTextForm
+                onAdd={jest.fn()}
+                locale={{
+                    id: 'free-text-input',
+                    inputFieldLabel: 'Item name',
+                    inputFieldHint: 'Please type the item name',
+                    addButtonLabel: 'Add',
+                    editButtonLabel: 'Edit',
+                    remindToAddText: 'Please click "Add" button to add item to the list',
+                }}
+                normalize={value => value}
+                errorText="Some error text"
+                isValid={jest.fn(() => undefined)}
+                maxInputLength={5}
+            />,
+        );
 
-        wrapper.instance().addItem({ key: 'Space' });
-        expect(testFn).not.toHaveBeenCalled();
-    });
-
-    it('should not fire onAdd when disabled', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ isValid: () => '', onAdd: testFn, disabled: true });
-        wrapper.setState({ itemName: 'Test' });
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(testFn).not.toHaveBeenCalled();
-    });
-
-    it('should not fire onAdd when itemName is empty', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ isValid: () => '', onAdd: testFn, disabled: false });
-        wrapper.setState({ itemName: '' });
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(testFn).not.toHaveBeenCalled();
-    });
-
-    it('should fire onAdd when itemName is valid and Enter is pressed', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ isValid: () => '', onAdd: testFn, disabled: false });
-        wrapper.setState({ itemName: 'Test' });
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(testFn).toHaveBeenCalledWith('Test');
-    });
-
-    it('should fire onAdd when itemName is valid and Enter is pressed', () => {
-        const testFn = jest.fn();
-        const wrapper = setup({ onAdd: testFn, disabled: false });
-        wrapper.setState({ itemName: '' });
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(testFn).not.toHaveBeenCalled();
-    });
-
-    it('should fire ref focus when all is OK', () => {
-        const testFn = jest.fn();
-        const refFn = jest.fn();
-        const wrapper = setup({ isValid: () => '', onAdd: testFn, disabled: false });
-        wrapper.setState({ itemName: 'Test' });
-        wrapper.instance().textField = { focus: refFn };
-        wrapper.instance().addItem({ key: 'Enter' });
-        expect(refFn).toHaveBeenCalled();
-    });
-
-    it('should display error about input length', () => {
-        const wrapper = setup({
-            maxInputLength: 3,
-        });
-        wrapper.setState({ itemName: 'test' });
-        expect(toJson(wrapper)).toMatchSnapshot();
+        fireEvent.change(getByTestId('free-text-input'), { target: { value: 'testing' } });
+        expect(getByText('Some error text - Limited to 5 characters')).toBeVisible();
     });
 });

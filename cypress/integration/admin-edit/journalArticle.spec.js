@@ -1,18 +1,10 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListJournalArticle';
-import moment from 'moment';
 
 context('Journal Article admin edit', () => {
     const record = recordList.data[0];
 
-    beforeEach(() => {
-        cy.loadRecordForAdminEdit(record.rek_pid);
-    });
-
-    afterEach(() => {
-        cy.adminEditCleanup();
-    });
-
     it('should load with specifed elements', () => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
         cy.get('h2')
             .should('have.length', 1)
             .should('have.text', `Edit ${record.rek_display_type_lookup} - ${record.rek_title}: ${record.rek_pid}`);
@@ -25,9 +17,11 @@ context('Journal Article admin edit', () => {
 
         cy.adminEditTabbedView();
         cy.adminEditCheckDefaultTab('Bibliographic');
+        cy.adminEditCleanup();
     });
 
     it('should render the different sections as expected', () => {
+        cy.loadRecordForAdminEdit(record.rek_pid);
         // ---------------------------------------------- ADMIN TAB --------------------------------------------------
         cy.log('Admin tab');
         cy.get('.StandardPage form .StandardCard')
@@ -48,11 +42,11 @@ context('Journal Article admin edit', () => {
                     .should('exist');
             });
 
-        cy.read_ckeditor('editor1')
+        cy.readCKEditor('editor1')
             .should(text => {
                 expect(text).to.contain(record.fez_internal_notes.ain_detail);
             });
-        cy.read_ckeditor('editor2')
+        cy.readCKEditor('editor2')
             .should(text => {
                 expect(text).to.contain(record.rek_herdc_notes);
             });
@@ -133,7 +127,7 @@ context('Journal Article admin edit', () => {
                             .should('contain.text', 'Formatted title');
                         cy.get('#cke_editor3')
                             .should('exist');
-                        cy.read_ckeditor('editor3')
+                        cy.readCKEditor('editor3')
                             .should(text => {
                                 expect(text).to.contain(record.rek_title);
                             });
@@ -223,21 +217,23 @@ context('Journal Article admin edit', () => {
                         cy.get('[placeholder="Publication date"]')
                             .should(
                                 'have.value',
-                                moment(record.rek_date)
+                                Cypress.moment(record.rek_date)
                                     .format('DD/MM/YYYY'),
                             );
                         cy.get('#Yearavailable')
                             .should(
                                 'have.value',
-                                moment(record.fez_record_search_key_date_available.rek_date_available)
-                                    .format('YYYY'),
+                                Cypress.moment(record.fez_record_search_key_date_available.rek_date_available)
+                                    .format(
+                                        'YYYY',
+                                    ),
                             );
                         cy.get('span span')
                             .eq(0)
                             .should('have.text', 'Abstract / Description');
                         cy.get('#cke_editor4')
                             .should('exist');
-                        cy.read_ckeditor('editor4')
+                        cy.readCKEditor('editor4')
                             .should(text => {
                                 expect(text).to.contain(record.rek_description);
                             });
@@ -442,7 +438,7 @@ context('Journal Article admin edit', () => {
                             .should('have.text', 'Additional notes');
                         cy.get('#cke_editor5')
                             .should('exist');
-                        cy.read_ckeditor('editor5')
+                        cy.readCKEditor('editor5')
                             .should(text => {
                                 expect(text).to.contain(record.fez_record_search_key_notes.rek_notes);
                             });
@@ -519,16 +515,14 @@ context('Journal Article admin edit', () => {
                         }
                     });
             });
+        cy.adminEditCleanup();
+    });
 
+    it('should render the files tab as expected', () => {
         // ---------------------------------------------- FILES TAB --------------------------------------------------
-        cy.log('Files tab');
 
-        const record2 = recordList.data[1];
-
-        cy.adminEditCleanup();
-        cy.navToHomeFromMenu();
-        cy.adminEditCleanup();
-        cy.loadRecordForAdminEdit(record2.rek_pid);
+        const record = recordList.data[1];
+        cy.loadRecordForAdminEdit(record.rek_pid);
 
         cy.get('.StandardPage form .StandardCard')
             .eq(6)
@@ -541,16 +535,16 @@ context('Journal Article admin edit', () => {
                     .within(() => {
                     // prettier-ignore
                         const fileSizeInMB = Math.round(
-                            record2.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
+                            record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
                         ) / 100;
                         cy.get('h3')
                             .should('have.text', 'Attached files');
                         cy.get('p')
                             .eq(1)
-                            .should('have.text', record2.fez_datastream_info[1].dsi_dsid);
+                            .should('have.text', record.fez_datastream_info[1].dsi_dsid);
                         cy.get('input')
                             .eq(1)
-                            .should('have.value', record2.fez_datastream_info[1].dsi_label);
+                            .should('have.value', record.fez_datastream_info[1].dsi_label);
                         cy.get('p')
                             .eq(2)
                             .should('have.text', `${fileSizeInMB} MB`);
@@ -558,7 +552,7 @@ context('Journal Article admin edit', () => {
                             .eq(2)
                             .should(
                                 'have.value',
-                                moment(record2.fez_datastream_info[1].dsi_embargo_date)
+                                Cypress.moment(record.fez_datastream_info[1].dsi_embargo_date)
                                     .format('DD/MM/YYYY'),
                             );
                     });
@@ -587,7 +581,7 @@ context('Journal Article admin edit', () => {
                             .should('contain', 'Copyright agreement');
                         cy.get('#deposit-agreement')
                             .should($checkbox => {
-                                if (record2.rek_copyright === 'on') {
+                                if (record.rek_copyright === 'on') {
                                     expect($checkbox).to.be.checked;
                                 } else {
                                     expect($checkbox).not.to.be.checked;
@@ -600,5 +594,6 @@ context('Journal Article admin edit', () => {
             .click();
 
         cy.adminEditVerifyAlerts(1, ['You are required to accept deposit agreement']);
+        cy.adminEditCleanup();
     });
 });

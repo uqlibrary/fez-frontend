@@ -7,23 +7,13 @@ const tabHeadingSelector = '.StandardPage form > div > div > div.StandardCard > 
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
     cy.closeUnsupported();
-    cy.wait(1000); // Wait for data load
+    cy.get('h2')
+        .should('contain.text', pid);
 });
 
 Cypress.Commands.add('adminEditCleanup', () => {
-    cy.window()
-        .then(win => {
-        // Unset page unload handler
-            win.onbeforeunload = undefined;
-
-            // Unload CKEditor instances
-            win.CKEDITOR &&
-            Object.keys(win.CKEDITOR.instances)
-                .forEach(editor => {
-                    win.CKEDITOR.instances[editor].removeAllListeners();
-                    win.CKEDITOR.remove(win.CKEDITOR.instances[editor]);
-                });
-        });
+    cy.killCKEditor();
+    cy.killWindowUnloadHandler();
 });
 
 Cypress.Commands.add('adminEditCountCards', count => {
@@ -72,9 +62,14 @@ Cypress.Commands.add('adminEditTabbedView', (showTabs = true) => {
     cy.wait(1000); // Wait for tabbing mechanism to fully load
     cy.get('input[value=tabbed]')
         .as('tabViewButton')
-        .should(showTabs ? 'not.be.checked' : 'be.checked')
+        .should(showTabs ? 'not.be.checked' : 'be.checked');
+    cy.wait(200);
+    cy.get('@tabViewButton')
         .click();
-    cy.wait(1000); // Wait for view switch
+    cy.waitUntil(() => {
+        const tabCount = Cypress.$(tabHeadingSelector).length;
+        return (showTabs && tabCount === 1) || (!showTabs && tabCount > 1);
+    });
     cy.get('@tabViewButton')
         .should(showTabs ? 'be.checked' : 'not.be.checked');
 });

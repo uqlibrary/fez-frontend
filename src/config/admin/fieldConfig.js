@@ -185,6 +185,7 @@ export default {
                 label: 'Link',
                 placeholder: '',
                 locale: locale.components.linkListForm.field,
+                canEdit: true,
             },
         },
         rek_description: {
@@ -486,6 +487,7 @@ export default {
                     order: 'rek_keywords_order',
                 },
                 locale: locale.components.keywordsForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_issn: {
@@ -503,6 +505,7 @@ export default {
                     const newValue = value.replace('-', '');
                     return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
+                canEdit: true,
             },
         },
         fez_record_search_key_isbn: {
@@ -516,6 +519,7 @@ export default {
                     order: 'rek_isbn_order',
                 },
                 locale: locale.components.isbnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_ismn: {
@@ -529,6 +533,7 @@ export default {
                     order: 'rek_ismn_order',
                 },
                 locale: locale.components.ismnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_edition: {
@@ -576,6 +581,7 @@ export default {
                 locale: locale.components.subjectForm.field,
                 distinctOnly: true,
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
+                canEdit: true,
             },
         },
         fez_record_search_key_refereed_source: {
@@ -887,6 +893,7 @@ export default {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
                 height: 50,
+                canEdit: true,
             },
         },
         fez_record_search_key_location: {
@@ -1025,6 +1032,7 @@ export default {
                     order: 'rek_type_of_data_order',
                 },
                 locale: locale.components.typeOfDataForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_data_volume: {
@@ -1044,6 +1052,7 @@ export default {
                     order: 'rek_software_required_order',
                 },
                 locale: locale.components.softwareRequiredForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_related_datasets: {
@@ -1082,6 +1091,7 @@ export default {
                 locale: {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
+                canEdit: true,
             },
             height: 50,
         },

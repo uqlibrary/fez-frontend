@@ -1,5 +1,4 @@
 import { default as recordList } from '../../../src/mock/data/records/publicationTypeListAudio';
-import moment from 'moment';
 
 context('Audio admin edit', () => {
     const record = recordList.data[0];
@@ -60,7 +59,7 @@ context('Audio admin edit', () => {
                 cy.get('#Yearrecorded')
                     .should(
                         'have.value',
-                        moment(record.fez_record_search_key_date_recorded.rek_date_recorded)
+                        Cypress.moment(record.fez_record_search_key_date_recorded.rek_date_recorded)
                             .format('YYYY'),
                     );
                 cy.get('#Acknowledgements')
@@ -88,7 +87,7 @@ context('Audio admin edit', () => {
                     .should('have.text', 'Transcript');
                 cy.get('#cke_editor5')
                     .should('exist');
-                cy.read_ckeditor('editor5')
+                cy.readCKEditor('editor5')
                     .should(text => {
                         expect(text).to.contain(record.fez_record_search_key_transcript.rek_transcript);
                     });
@@ -179,7 +178,7 @@ context('Audio admin edit', () => {
                     .should('contain', 'Advisory statement');
                 cy.get('#cke_editor7')
                     .should('exist');
-                cy.read_ckeditor('editor7')
+                cy.readCKEditor('editor7')
                     .should(text => {
                     // prettier-ignore
                         expect(text).to.contain(
