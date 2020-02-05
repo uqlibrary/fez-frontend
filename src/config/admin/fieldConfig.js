@@ -186,6 +186,7 @@ export default {
                 label: 'Link',
                 placeholder: '',
                 locale: locale.components.linkListForm.field,
+                canEdit: true,
             },
         },
         rek_description: {
