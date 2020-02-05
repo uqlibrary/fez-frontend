@@ -739,6 +739,20 @@ export const getIdentifiersSectionSearchKeys = (data = {}) => {
     };
 };
 
+export const renameLicense = record => {
+    if (!!record && !record.rek_license) {
+        return {
+            fez_record_search_key_license: {},
+        };
+    }
+
+    return {
+        fez_record_search_key_license: {
+            rek_license: record.rek_license,
+        },
+    };
+};
+
 export const getBibliographicSectionSearchKeys = (data = {}) => {
     const {
         rek_title: title,
@@ -752,6 +766,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
         geoCoordinates,
         fez_record_search_key_date_available: dateAvailable,
         fez_record_search_key_date_recorded: dateRecorded,
+        fez_record_search_key_license_biblio: licenseData,
         ...rest
     } = data;
 
@@ -817,6 +832,7 @@ export const getBibliographicSectionSearchKeys = (data = {}) => {
             : {}),
         ...getGeographicAreaSearchKey(geoCoordinates),
         ...getRecordSubjectSearchKey(subjects),
+        ...(!!licenseData ? renameLicense(licenseData) : {}),
     };
 };
 
@@ -969,6 +985,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         fez_record_search_key_herdc_code: herdcCode,
         fez_record_search_key_herdc_status: herdcStatus,
         fez_record_search_key_oa_status: openAccessStatus,
+        fez_record_search_key_license_additional: licenseData,
         ...rest
     } = data;
 
@@ -985,6 +1002,7 @@ export const getAdditionalInformationSectionSearchKeys = (data = {}) => {
         ...(!!herdcCode ? getHerdcCodeSearchKey(herdcCode) : {}),
         ...(!!herdcStatus ? getHerdcStatusSearchKey(herdcStatus) : {}),
         ...(!!openAccessStatus ? getOpenAccessStatusSearchKey(openAccessStatus) : {}),
+        ...(!!licenseData ? renameLicense(licenseData) : {}),
         ...rest,
     };
 };

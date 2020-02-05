@@ -67,6 +67,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
+import IssnListEditorField from '../../modules/SharedComponents/Toolbox/ListEditor/IssnListEditorField';
 
 export default {
     default: {
@@ -490,16 +491,12 @@ export default {
                 canEdit: true,
             },
         },
-        fez_record_search_key_issn: {
-            component: ListEditorField,
+        issnField: {
+            component: IssnListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_issn',
+                name: 'bibliographicSection.issnField',
                 isValid: validation.isValidIssn,
-                searchKey: {
-                    value: 'rek_issn',
-                    order: 'rek_issn_order',
-                },
                 locale: locale.components.issnForm.field,
                 inputNormalizer: value => {
                     const newValue = value.replace('-', '');
@@ -961,11 +958,20 @@ export default {
                 placeholder: '',
             },
         },
-        fez_record_search_key_license: {
+        fez_record_search_key_license_biblio: {
             component: LicenseSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
                 label: 'License',
+                isAdmin: true,
+            },
+        },
+        fez_record_search_key_license_additional: {
+            component: LicenseSelectorField,
+            componentProps: {
+                name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
+                label: 'License',
+                isAdmin: true,
             },
         },
         fez_record_search_key_original_format: {

@@ -723,7 +723,24 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
 
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
-export const LICENSES = [
+export const CURRENT_LICENSES = [
+    {
+        value: 453701,
+        text: 'Permitted Re-use with Acknowledgement Licence',
+        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+    },
+    {
+        value: 454104,
+        text: 'Permitted Re-Use with Commercial Use Restriction',
+        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+    },
+    {
+        value: 454105,
+        text: 'Permitted Re-Use with Share Alike Requirement',
+        link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+    },
+];
+export const DEPRECATED_LICENSES = [
     {
         value: 453608,
         text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US',
@@ -751,14 +768,9 @@ export const LICENSES = [
         text: 'Creative Commons Attribution share alike http://creativecommons.org/licenses/by-sa/3.0/deed.en_US',
     },
     {
-        value: 453701,
-        text:
-            'UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
-    },
-    {
         value: 453702,
         text:
-            'UQ Terms & Conditions Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
+            'Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
 ];
 
@@ -1291,27 +1303,34 @@ export const PUBMED_DOC_TYPES = [
 
 export const HERDC_CODES = [
     { value: null, text: 'Please choose an option' },
-    { value: '450001', text: 'A1 Books - Authored - research' },
+    { value: '450001', text: 'A1 Authored Book (Research)' },
+    { value: '450005', text: 'AX Edited Book; Book (Other Public Output)' },
+    { value: '450006', text: 'B1 Book Chapter (Research, Critical Review of Research)' },
+    { value: '450008', text: 'BX Book Chapter (Other Public Output)' },
+    { value: '450009', text: 'C1 Refereed Journal Article (Research, Critical Review of Research)' },
+    { value: '450013', text: 'CX Journal Article (Other Public Output)' },
+    { value: '450014', text: 'E1 Refereed Conference Paper (Fully Published)' },
+    { value: '450018', text: 'EX Conference Paper (Other Public Output)' },
+    { value: '454028', text: 'CW1 Creative Work' },
+    { value: '454029', text: 'CW2 Live Performance of Creative Work' },
+    { value: '454030', text: 'CW3 Recorded or Rendered Creative Work' },
+    { value: '454031', text: 'CW4 Curated or Produced Exhibition or Event' },
+    { value: '454032', text: 'CW5 Research Report for an External Body' },
+];
+export const DEPRECATED_HERDC_CODES = [
     { value: '450002', text: 'A2 Books - Authored - other' },
     { value: '450003', text: 'A3 Books - Edited' },
     { value: '450004', text: 'A4 Books - Revision/New Edition' },
-    { value: '450005', text: 'AX Books - Other Public Output' },
     { value: '450043', text: 'B Book Chapter' },
-    { value: '450006', text: 'B1 Book Chapter - Research' },
     { value: '450007', text: 'B2 Book Chapter - Other' },
-    { value: '450008', text: 'BX Book Chapter - Other Public Output' },
-    { value: '450009', text: 'C1 Journal Articles - Refereed article' },
     { value: '450044', text: 'C2 Journal Article - other refereed' },
     { value: '450010', text: 'C3 Journal Articles - Non-refereed' },
     { value: '450011', text: 'C4 Journal Article - Letter or note' },
     { value: '450012', text: 'C5 Edited Volume of a Refereed Journal' },
-    { value: '450013', text: 'CX Journal Article - Other Public Output' },
     { value: '450045', text: 'D Major Review' },
-    { value: '450014', text: 'E1 Conference - Written paper - refereed proceedings' },
     { value: '450015', text: 'E2 Conference - Full written paper - non-refereed proceedings' },
     { value: '450016', text: 'E3 Conference Publication - Extract of Paper' },
     { value: '450017', text: 'E4 Edited volume of conference proceedings' },
-    { value: '450018', text: 'EX Conference Proceedings - Other Public Output' },
     { value: '450019', text: 'F Audio-Visual Recordings' },
     { value: '450020', text: 'FX Other Public Output' },
     { value: '450046', text: 'G Computer Software' },

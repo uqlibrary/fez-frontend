@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IssnListEditor component should render default view 1`] = `
+<ListEditor
+  canEdit={false}
+  distinctOnly={false}
+  formComponent={[Function]}
+  hideReorder={false}
+  inputNormalizer={[Function]}
+  locale={
+    Object {
+      "form": Object {
+        "locale": Object {
+          "inputFieldLabel": "NoLabel",
+        },
+      },
+    }
+  }
+  maxCount={0}
+  required={false}
+  rowItemTemplate={[Function]}
+  scrollList={false}
+  scrollListHeight={250}
+  searchKey={
+    Object {
+      "order": "rek_order",
+      "value": "rek_value",
+    }
+  }
+  transformFunction={[Function]}
+/>
+`;

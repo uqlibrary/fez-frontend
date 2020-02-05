@@ -33,5 +33,23 @@ context('Data Collection admin edit', () => {
                 cy.get('h4')
                     .should('contain', 'Dataset name');
             });
+
+        // -------------------------------------- ADDITIONAL INFORMATION TAB -----------------------------------------
+        cy.log('Additional Information tab');
+        cy.get('.StandardPage form .StandardCard')
+            .eq(4)
+            .find('.AdminCard')
+            .eq(2)
+            .within(() => {
+                cy.get('h4')
+                    .should('contain', 'Additional information');
+                cy.get('label[id="License-label"]')
+                    .parent()
+                    .find('input[type=hidden]')
+                    .should('have.value', record.fez_record_search_key_license.rek_license.toString())
+                    .siblings('[role=button]')
+                    .invoke('text')
+                    .should('match', new RegExp(`^${record.fez_record_search_key_license.rek_license_lookup}`));
+            });
     });
 });

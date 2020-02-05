@@ -246,7 +246,7 @@ context('Data Collection form', () => {
         // Licensing and terms of access
         cy.get('div#data-collection-license-selector')
             .click();
-        cy.get('li[data-value="453609"]')
+        cy.get('li[data-value="454104"]')
             .click();
         cy.get('@submitButton')
             .should('be.disabled');
