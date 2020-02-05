@@ -735,6 +735,7 @@ export default {
                         descriptionInputFieldLabel: 'Description',
                         descriptionFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;link</span>,
+                        editButtonLabel: <span>Update&nbsp;link</span>,
                     },
                 },
                 header: {
@@ -755,6 +756,7 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
