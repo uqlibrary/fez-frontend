@@ -1,117 +1,155 @@
-import {
-    LinkInfoForm,
-    addItemCallbackFactory,
-    handleChangeCallbackFactory,
-    resetFormCallbackFactory,
-} from './LinkInfoForm';
+import React from 'react';
+import LinkInfoForm from './LinkInfoForm';
+import { rtlRender, fireEvent } from 'test-utils';
 
-function setup(testProps = {}, args = { isShallow: true }) {
-    const props = {
-        locale: {},
-        onAdd: jest.fn(),
-        ...testProps,
-    };
-
-    return getElement(LinkInfoForm, props, args);
-}
-
-describe('LinkInfoForm component', () => {
-    it('should render the default view', () => {
-        const wrapper = setup({});
-        expect(toJson(wrapper)).toMatchSnapshot();
+describe('LinkInfoForm', () => {
+    it('should render link info form with two inputs and button disabled', () => {
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={jest.fn()}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
+        expect(getByTestId('link-info-link')).toBeVisible();
+        expect(getByTestId('link-info-description')).toBeVisible();
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
     });
 
-    it('should render with id', () => {
-        const wrapper = setup({ locale: { id: '100' } });
-        expect(wrapper.find('TextField').get(0).props.id).toBe('100');
-        expect(wrapper.find('TextField').get(1).props.id).toBe('100');
-    });
-});
+    it('should enable "Add link" button if valid link is entered', () => {
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={jest.fn()}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
 
-describe('LinkInfoForm callback factories', () => {
-    it('should create handleChange callback for link', () => {
-        const linkAndDescription = {};
-        const setLinkAndDescription = jest.fn();
-        const setErrorText = jest.fn();
-        const event = {
-            target: {
-                name: 'key',
-                value: 'http://test.com',
-            },
-        };
-        const callback = handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription, setErrorText)[0];
-        callback(event);
-        expect(setLinkAndDescription).toHaveBeenCalledWith({
-            key: 'http://test.com',
-        });
+        fireEvent.change(getByTestId('link-info-link'), { target: { value: 'http://test.com' } });
+        expect(getByTestId('add-items')).not.toHaveAttribute('disabled', '');
     });
 
-    it('should create handleChange callback for description', () => {
-        const linkAndDescription = { link: 'test link' };
-        const setLinkAndDescription = jest.fn();
-        const setErrorText = jest.fn();
-        const event = {
-            target: {
-                name: 'description',
-                value: 'Test description',
-            },
-        };
-        const callback = handleChangeCallbackFactory(linkAndDescription, setLinkAndDescription, setErrorText)[0];
-        callback(event);
-        expect(setLinkAndDescription).toHaveBeenCalledWith({
-            link: 'test link',
-            description: 'Test description',
-        });
+    it('should display error message if link is not valid', () => {
+        const { getByTestId, getByText } = rtlRender(
+            <LinkInfoForm
+                onAdd={jest.fn()}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
+
+        fireEvent.change(getByTestId('link-info-link'), { target: { value: 'test.com' } });
+        expect(getByText('URL is not valid')).toBeVisible();
+        expect(getByTestId('add-items')).toHaveAttribute('disabled', '');
     });
 
-    it('should create resetForm callback', () => {
-        const linkInput = { current: { value: 'test1' } };
-        const descriptionInput = { current: { value: 'test2' } };
-        const setLinkAndDescription = jest.fn();
+    it('should add link info and reset form if link is valid and "Enter" is pressed', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={onAddFn}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
 
-        const result = resetFormCallbackFactory(linkInput, descriptionInput, setLinkAndDescription);
-        const callback = result[0];
-        const updatedLinkInput = result[1][0];
-        const updatedDescriptionInput = result[1][1];
+        fireEvent.change(getByTestId('link-info-link'), { target: { value: 'http://test.com' } });
+        fireEvent.change(getByTestId('link-info-description'), { target: { value: 'test description' } });
+        fireEvent.keyDown(getByTestId('link-info-description'), { key: 'Enter', code: 13 });
 
-        callback();
-        expect(setLinkAndDescription).toHaveBeenCalledWith({ key: null, value: null });
-        expect(updatedLinkInput).toEqual({ current: { value: null } });
-        expect(updatedDescriptionInput).toEqual({ current: { value: null } });
+        expect(onAddFn).toHaveBeenCalledWith({ key: 'http://test.com', value: 'test description' });
+        expect(getByTestId('link-info-link')).toHaveAttribute('value', '');
+        expect(getByTestId('link-info-description')).toHaveAttribute('value', '');
     });
 
-    it('should create addItem callback', () => {
-        const testFn = jest.fn();
-        const descriptionInput = { current: { focus: testFn } };
-        const disabled = false;
-        const errorText = null;
-        const linkAndDescription = {
-            key: 'test1',
-            value: 'test2',
-        };
-        const onAdd = jest.fn();
-        const resetForm = jest.fn();
+    it('should not submit link info form if link is not valid and "Enter" is pressed', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={onAddFn}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
 
-        const callback = addItemCallbackFactory(
-            descriptionInput,
-            disabled,
-            errorText,
-            linkAndDescription,
-            onAdd,
-            resetForm,
-        )[0];
+        fireEvent.change(getByTestId('link-info-link'), { target: { value: 'test.com' } });
+        fireEvent.change(getByTestId('link-info-description'), { target: { value: 'test description' } });
+        fireEvent.keyDown(getByTestId('link-info-description'), { key: 'Enter', code: 13 });
 
-        callback();
-        expect(onAdd).toHaveBeenCalledWith(linkAndDescription);
-        expect(resetForm).toHaveBeenCalledTimes(1);
-        expect(testFn).toHaveBeenCalledTimes(1);
+        expect(onAddFn).not.toHaveBeenCalled();
+    });
 
-        testFn.mockClear();
-        onAdd.mockClear();
-        resetForm.mockClear();
-        callback({ key: 'test3' });
-        expect(onAdd).toHaveBeenCalledTimes(0);
-        expect(resetForm).toHaveBeenCalledTimes(0);
-        expect(testFn).toHaveBeenCalledTimes(0);
+    it('should not submit link info form if link is valid and "Esc" is pressed', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={onAddFn}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+            />,
+        );
+
+        fireEvent.change(getByTestId('link-info-link'), { target: { value: 'http://test.com' } });
+        fireEvent.change(getByTestId('link-info-description'), { target: { value: 'test description' } });
+        fireEvent.keyDown(getByTestId('link-info-description'), { key: 'Esc', code: 27 });
+
+        expect(onAddFn).not.toHaveBeenCalled();
+    });
+
+    it('should load link info form with give link info values', () => {
+        const onAddFn = jest.fn();
+        const { getByTestId } = rtlRender(
+            <LinkInfoForm
+                onAdd={onAddFn}
+                locale={{
+                    linkInputFieldLabel: 'Link',
+                    linkInputFieldHint: 'Enter link',
+                    descriptionInputFieldLabel: 'Description',
+                    descriptionInputFieldHint: 'Enter description',
+                    addButtonLabel: 'Add link',
+                    editButtonLabel: 'Update link',
+                }}
+                itemSelectedToEdit={{ key: 'http://test.com', value: 'test description' }}
+            />,
+        );
+
+        expect(getByTestId('link-info-link')).toHaveAttribute('value', 'http://test.com');
+        expect(getByTestId('link-info-description')).toHaveAttribute('value', 'test description');
     });
 });

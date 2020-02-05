@@ -96,7 +96,7 @@ export default class ListEditor extends Component {
             if ((!!item.key && !!item.value) || (!!item.id && !!item.value)) {
                 // Item is an object with {key: 'something', value: 'something'} - as per FoR codes
                 // OR item is an object with {id: 'PID:1234', value: 'Label'} - as per related datasets
-                if (this.state.itemIndexSelectedToEdit > -1) {
+                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     this.setState({
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
@@ -124,7 +124,7 @@ export default class ListEditor extends Component {
                     itemList: [...totalArray],
                 });
             } else {
-                if (this.state.itemIndexSelectedToEdit > -1) {
+                if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
                     this.setState({
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
@@ -220,6 +220,7 @@ export default class ListEditor extends Component {
             <div className={`${this.props.className} ${componentID}`}>
                 <this.props.formComponent
                     inputField={this.props.inputField}
+                    key={this.state.itemIndexSelectedToEdit + 1 || 'link-info-form'}
                     onAdd={this.addItem}
                     remindToAdd={this.props.remindToAdd}
                     locale={{ ...(this.props.locale && this.props.locale.form ? this.props.locale.form : {}) }}
