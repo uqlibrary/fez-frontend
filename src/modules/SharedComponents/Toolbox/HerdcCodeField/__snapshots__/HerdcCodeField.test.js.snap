@@ -1,5 +1,249 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`HerdcCodeField component should not render unknown value 1`] = `
+<GenericSelectField
+  canUnselect={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "value": "999",
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "A1 Authored Book (Research)",
+        "value": "450001",
+      },
+      Object {
+        "text": "AX Edited Book; Book (Other Public Output)",
+        "value": "450005",
+      },
+      Object {
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
+        "value": "450006",
+      },
+      Object {
+        "text": "BX Book Chapter (Other Public Output)",
+        "value": "450008",
+      },
+      Object {
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
+        "value": "450009",
+      },
+      Object {
+        "text": "CX Journal Article (Other Public Output)",
+        "value": "450013",
+      },
+      Object {
+        "text": "E1 Refereed Conference Paper (Fully Published)",
+        "value": "450014",
+      },
+      Object {
+        "text": "EX Conference Paper (Other Public Output)",
+        "value": "450018",
+      },
+      Object {
+        "text": "CW1 Creative Work",
+        "value": "454028",
+      },
+      Object {
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
+      },
+      Object {
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
+      },
+      Object {
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
+      },
+      Object {
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue="999"
+/>
+`;
+
+exports[`HerdcCodeField component should render a current value 1`] = `
+<GenericSelectField
+  canUnselect={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "value": "454028",
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "A1 Authored Book (Research)",
+        "value": "450001",
+      },
+      Object {
+        "text": "AX Edited Book; Book (Other Public Output)",
+        "value": "450005",
+      },
+      Object {
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
+        "value": "450006",
+      },
+      Object {
+        "text": "BX Book Chapter (Other Public Output)",
+        "value": "450008",
+      },
+      Object {
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
+        "value": "450009",
+      },
+      Object {
+        "text": "CX Journal Article (Other Public Output)",
+        "value": "450013",
+      },
+      Object {
+        "text": "E1 Refereed Conference Paper (Fully Published)",
+        "value": "450014",
+      },
+      Object {
+        "text": "EX Conference Paper (Other Public Output)",
+        "value": "450018",
+      },
+      Object {
+        "text": "CW1 Creative Work",
+        "value": "454028",
+      },
+      Object {
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
+      },
+      Object {
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
+      },
+      Object {
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
+      },
+      Object {
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue="454028"
+/>
+`;
+
+exports[`HerdcCodeField component should render a deprecated value 1`] = `
+<GenericSelectField
+  canUnselect={true}
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "value": "450033",
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "text": "Please choose an option",
+        "value": null,
+      },
+      Object {
+        "text": "A1 Authored Book (Research)",
+        "value": "450001",
+      },
+      Object {
+        "text": "AX Edited Book; Book (Other Public Output)",
+        "value": "450005",
+      },
+      Object {
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
+        "value": "450006",
+      },
+      Object {
+        "text": "BX Book Chapter (Other Public Output)",
+        "value": "450008",
+      },
+      Object {
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
+        "value": "450009",
+      },
+      Object {
+        "text": "CX Journal Article (Other Public Output)",
+        "value": "450013",
+      },
+      Object {
+        "text": "E1 Refereed Conference Paper (Fully Published)",
+        "value": "450014",
+      },
+      Object {
+        "text": "EX Conference Paper (Other Public Output)",
+        "value": "450018",
+      },
+      Object {
+        "text": "CW1 Creative Work",
+        "value": "454028",
+      },
+      Object {
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
+      },
+      Object {
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
+      },
+      Object {
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
+      },
+      Object {
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
+      },
+      Object {
+        "text": "J5 Major Creative Works - Recorded Works",
+        "value": "450033",
+      },
+    ]
+  }
+  locale={
+    Object {
+      "label": undefined,
+    }
+  }
+  selectedValue="450033"
+/>
+`;
+
 exports[`HerdcCodeField component should render default view 1`] = `
 <GenericSelectField
   canUnselect={true}
@@ -13,196 +257,56 @@ exports[`HerdcCodeField component should render default view 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "A2 Books - Authored - other",
-        "value": "450002",
-      },
-      Object {
-        "text": "A3 Books - Edited",
-        "value": "450003",
-      },
-      Object {
-        "text": "A4 Books - Revision/New Edition",
-        "value": "450004",
-      },
-      Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B Book Chapter",
-        "value": "450043",
-      },
-      Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "B2 Book Chapter - Other",
-        "value": "450007",
-      },
-      Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "C2 Journal Article - other refereed",
-        "value": "450044",
-      },
-      Object {
-        "text": "C3 Journal Articles - Non-refereed",
-        "value": "450010",
-      },
-      Object {
-        "text": "C4 Journal Article - Letter or note",
-        "value": "450011",
-      },
-      Object {
-        "text": "C5 Edited Volume of a Refereed Journal",
-        "value": "450012",
-      },
-      Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "D Major Review",
-        "value": "450045",
-      },
-      Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "E2 Conference - Full written paper - non-refereed proceedings",
-        "value": "450015",
-      },
-      Object {
-        "text": "E3 Conference Publication - Extract of Paper",
-        "value": "450016",
-      },
-      Object {
-        "text": "E4 Edited volume of conference proceedings",
-        "value": "450017",
-      },
-      Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
-        "text": "F Audio-Visual Recordings",
-        "value": "450019",
+        "text": "CW1 Creative Work",
+        "value": "454028",
       },
       Object {
-        "text": "FX Other Public Output",
-        "value": "450020",
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
       },
       Object {
-        "text": "G Computer Software",
-        "value": "450046",
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
       },
       Object {
-        "text": "G1 Computer Software",
-        "value": "450021",
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
       },
       Object {
-        "text": "G2 Computer Database",
-        "value": "450022",
-      },
-      Object {
-        "text": "GX Computer - Other Public Output",
-        "value": "450023",
-      },
-      Object {
-        "text": "H Technical Drawing/Architectural and Industrial Design/Working Model",
-        "value": "450047",
-      },
-      Object {
-        "text": "H1 Refereed Design Awards",
-        "value": "450024",
-      },
-      Object {
-        "text": "H2 Design Exhibitions",
-        "value": "450026",
-      },
-      Object {
-        "text": "H3 Technical drawing/architectural and industrial design/working model",
-        "value": "450048",
-      },
-      Object {
-        "text": "HX Architectural/Building Design - Other Public Output",
-        "value": "450027",
-      },
-      Object {
-        "text": "I Patents",
-        "value": "450028",
-      },
-      Object {
-        "text": "IX Patents - Other public output",
-        "value": "450029",
-      },
-      Object {
-        "text": "J1 Major Creative Works - Published Works",
-        "value": "450030",
-      },
-      Object {
-        "text": "J2 Other Creative Works - Minor Written or Recorded Work",
-        "value": "450031",
-      },
-      Object {
-        "text": "J3 Major Creative Works - Exhibitions",
-        "value": "450049",
-      },
-      Object {
-        "text": "J4 Other Creative Works - Representation of Original Art",
-        "value": "450032",
-      },
-      Object {
-        "text": "J5 Major Creative Works - Recorded Works",
-        "value": "450033",
-      },
-      Object {
-        "text": "JX Other Creative Works - Other Public Output",
-        "value": "450034",
-      },
-      Object {
-        "text": "K Published Research Report",
-        "value": "450035",
-      },
-      Object {
-        "text": "K1 Published Research Report",
-        "value": "450036",
-      },
-      Object {
-        "text": "K2 Published Government Research Report",
-        "value": "450037",
-      },
-      Object {
-        "text": "KX Research Report - Other Public Output",
-        "value": "450038",
-      },
-      Object {
-        "text": "L Thesis",
-        "value": "450039",
-      },
-      Object {
-        "text": "LX Thesis - Other public output",
-        "value": "450040",
-      },
-      Object {
-        "text": "M Reference Entry in Dictionary/Encyclopaedia",
-        "value": "450041",
-      },
-      Object {
-        "text": "MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output",
-        "value": "450042",
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
       },
     ]
   }
@@ -237,196 +341,56 @@ exports[`HerdcCodeField component should render immutable list as selected value
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "A2 Books - Authored - other",
-        "value": "450002",
-      },
-      Object {
-        "text": "A3 Books - Edited",
-        "value": "450003",
-      },
-      Object {
-        "text": "A4 Books - Revision/New Edition",
-        "value": "450004",
-      },
-      Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B Book Chapter",
-        "value": "450043",
-      },
-      Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "B2 Book Chapter - Other",
-        "value": "450007",
-      },
-      Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "C2 Journal Article - other refereed",
-        "value": "450044",
-      },
-      Object {
-        "text": "C3 Journal Articles - Non-refereed",
-        "value": "450010",
-      },
-      Object {
-        "text": "C4 Journal Article - Letter or note",
-        "value": "450011",
-      },
-      Object {
-        "text": "C5 Edited Volume of a Refereed Journal",
-        "value": "450012",
-      },
-      Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "D Major Review",
-        "value": "450045",
-      },
-      Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "E2 Conference - Full written paper - non-refereed proceedings",
-        "value": "450015",
-      },
-      Object {
-        "text": "E3 Conference Publication - Extract of Paper",
-        "value": "450016",
-      },
-      Object {
-        "text": "E4 Edited volume of conference proceedings",
-        "value": "450017",
-      },
-      Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
-        "text": "F Audio-Visual Recordings",
-        "value": "450019",
+        "text": "CW1 Creative Work",
+        "value": "454028",
       },
       Object {
-        "text": "FX Other Public Output",
-        "value": "450020",
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
       },
       Object {
-        "text": "G Computer Software",
-        "value": "450046",
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
       },
       Object {
-        "text": "G1 Computer Software",
-        "value": "450021",
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
       },
       Object {
-        "text": "G2 Computer Database",
-        "value": "450022",
-      },
-      Object {
-        "text": "GX Computer - Other Public Output",
-        "value": "450023",
-      },
-      Object {
-        "text": "H Technical Drawing/Architectural and Industrial Design/Working Model",
-        "value": "450047",
-      },
-      Object {
-        "text": "H1 Refereed Design Awards",
-        "value": "450024",
-      },
-      Object {
-        "text": "H2 Design Exhibitions",
-        "value": "450026",
-      },
-      Object {
-        "text": "H3 Technical drawing/architectural and industrial design/working model",
-        "value": "450048",
-      },
-      Object {
-        "text": "HX Architectural/Building Design - Other Public Output",
-        "value": "450027",
-      },
-      Object {
-        "text": "I Patents",
-        "value": "450028",
-      },
-      Object {
-        "text": "IX Patents - Other public output",
-        "value": "450029",
-      },
-      Object {
-        "text": "J1 Major Creative Works - Published Works",
-        "value": "450030",
-      },
-      Object {
-        "text": "J2 Other Creative Works - Minor Written or Recorded Work",
-        "value": "450031",
-      },
-      Object {
-        "text": "J3 Major Creative Works - Exhibitions",
-        "value": "450049",
-      },
-      Object {
-        "text": "J4 Other Creative Works - Representation of Original Art",
-        "value": "450032",
-      },
-      Object {
-        "text": "J5 Major Creative Works - Recorded Works",
-        "value": "450033",
-      },
-      Object {
-        "text": "JX Other Creative Works - Other Public Output",
-        "value": "450034",
-      },
-      Object {
-        "text": "K Published Research Report",
-        "value": "450035",
-      },
-      Object {
-        "text": "K1 Published Research Report",
-        "value": "450036",
-      },
-      Object {
-        "text": "K2 Published Government Research Report",
-        "value": "450037",
-      },
-      Object {
-        "text": "KX Research Report - Other Public Output",
-        "value": "450038",
-      },
-      Object {
-        "text": "L Thesis",
-        "value": "450039",
-      },
-      Object {
-        "text": "LX Thesis - Other public output",
-        "value": "450040",
-      },
-      Object {
-        "text": "M Reference Entry in Dictionary/Encyclopaedia",
-        "value": "450041",
-      },
-      Object {
-        "text": "MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output",
-        "value": "450042",
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
       },
     ]
   }
@@ -466,196 +430,56 @@ exports[`HerdcCodeField component should render when given a default value field
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "A2 Books - Authored - other",
-        "value": "450002",
-      },
-      Object {
-        "text": "A3 Books - Edited",
-        "value": "450003",
-      },
-      Object {
-        "text": "A4 Books - Revision/New Edition",
-        "value": "450004",
-      },
-      Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B Book Chapter",
-        "value": "450043",
-      },
-      Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "B2 Book Chapter - Other",
-        "value": "450007",
-      },
-      Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "C2 Journal Article - other refereed",
-        "value": "450044",
-      },
-      Object {
-        "text": "C3 Journal Articles - Non-refereed",
-        "value": "450010",
-      },
-      Object {
-        "text": "C4 Journal Article - Letter or note",
-        "value": "450011",
-      },
-      Object {
-        "text": "C5 Edited Volume of a Refereed Journal",
-        "value": "450012",
-      },
-      Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "D Major Review",
-        "value": "450045",
-      },
-      Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "E2 Conference - Full written paper - non-refereed proceedings",
-        "value": "450015",
-      },
-      Object {
-        "text": "E3 Conference Publication - Extract of Paper",
-        "value": "450016",
-      },
-      Object {
-        "text": "E4 Edited volume of conference proceedings",
-        "value": "450017",
-      },
-      Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
-        "text": "F Audio-Visual Recordings",
-        "value": "450019",
+        "text": "CW1 Creative Work",
+        "value": "454028",
       },
       Object {
-        "text": "FX Other Public Output",
-        "value": "450020",
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
       },
       Object {
-        "text": "G Computer Software",
-        "value": "450046",
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
       },
       Object {
-        "text": "G1 Computer Software",
-        "value": "450021",
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
       },
       Object {
-        "text": "G2 Computer Database",
-        "value": "450022",
-      },
-      Object {
-        "text": "GX Computer - Other Public Output",
-        "value": "450023",
-      },
-      Object {
-        "text": "H Technical Drawing/Architectural and Industrial Design/Working Model",
-        "value": "450047",
-      },
-      Object {
-        "text": "H1 Refereed Design Awards",
-        "value": "450024",
-      },
-      Object {
-        "text": "H2 Design Exhibitions",
-        "value": "450026",
-      },
-      Object {
-        "text": "H3 Technical drawing/architectural and industrial design/working model",
-        "value": "450048",
-      },
-      Object {
-        "text": "HX Architectural/Building Design - Other Public Output",
-        "value": "450027",
-      },
-      Object {
-        "text": "I Patents",
-        "value": "450028",
-      },
-      Object {
-        "text": "IX Patents - Other public output",
-        "value": "450029",
-      },
-      Object {
-        "text": "J1 Major Creative Works - Published Works",
-        "value": "450030",
-      },
-      Object {
-        "text": "J2 Other Creative Works - Minor Written or Recorded Work",
-        "value": "450031",
-      },
-      Object {
-        "text": "J3 Major Creative Works - Exhibitions",
-        "value": "450049",
-      },
-      Object {
-        "text": "J4 Other Creative Works - Representation of Original Art",
-        "value": "450032",
-      },
-      Object {
-        "text": "J5 Major Creative Works - Recorded Works",
-        "value": "450033",
-      },
-      Object {
-        "text": "JX Other Creative Works - Other Public Output",
-        "value": "450034",
-      },
-      Object {
-        "text": "K Published Research Report",
-        "value": "450035",
-      },
-      Object {
-        "text": "K1 Published Research Report",
-        "value": "450036",
-      },
-      Object {
-        "text": "K2 Published Government Research Report",
-        "value": "450037",
-      },
-      Object {
-        "text": "KX Research Report - Other Public Output",
-        "value": "450038",
-      },
-      Object {
-        "text": "L Thesis",
-        "value": "450039",
-      },
-      Object {
-        "text": "LX Thesis - Other public output",
-        "value": "450040",
-      },
-      Object {
-        "text": "M Reference Entry in Dictionary/Encyclopaedia",
-        "value": "450041",
-      },
-      Object {
-        "text": "MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output",
-        "value": "450042",
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
       },
     ]
   }
@@ -696,196 +520,56 @@ exports[`HerdcCodeField component should render with given field props 1`] = `
         "value": null,
       },
       Object {
-        "text": "A1 Books - Authored - research",
+        "text": "A1 Authored Book (Research)",
         "value": "450001",
       },
       Object {
-        "text": "A2 Books - Authored - other",
-        "value": "450002",
-      },
-      Object {
-        "text": "A3 Books - Edited",
-        "value": "450003",
-      },
-      Object {
-        "text": "A4 Books - Revision/New Edition",
-        "value": "450004",
-      },
-      Object {
-        "text": "AX Books - Other Public Output",
+        "text": "AX Edited Book; Book (Other Public Output)",
         "value": "450005",
       },
       Object {
-        "text": "B Book Chapter",
-        "value": "450043",
-      },
-      Object {
-        "text": "B1 Book Chapter - Research",
+        "text": "B1 Book Chapter (Research, Critical Review of Research)",
         "value": "450006",
       },
       Object {
-        "text": "B2 Book Chapter - Other",
-        "value": "450007",
-      },
-      Object {
-        "text": "BX Book Chapter - Other Public Output",
+        "text": "BX Book Chapter (Other Public Output)",
         "value": "450008",
       },
       Object {
-        "text": "C1 Journal Articles - Refereed article",
+        "text": "C1 Refereed Journal Article (Research, Critical Review of Research)",
         "value": "450009",
       },
       Object {
-        "text": "C2 Journal Article - other refereed",
-        "value": "450044",
-      },
-      Object {
-        "text": "C3 Journal Articles - Non-refereed",
-        "value": "450010",
-      },
-      Object {
-        "text": "C4 Journal Article - Letter or note",
-        "value": "450011",
-      },
-      Object {
-        "text": "C5 Edited Volume of a Refereed Journal",
-        "value": "450012",
-      },
-      Object {
-        "text": "CX Journal Article - Other Public Output",
+        "text": "CX Journal Article (Other Public Output)",
         "value": "450013",
       },
       Object {
-        "text": "D Major Review",
-        "value": "450045",
-      },
-      Object {
-        "text": "E1 Conference - Written paper - refereed proceedings",
+        "text": "E1 Refereed Conference Paper (Fully Published)",
         "value": "450014",
       },
       Object {
-        "text": "E2 Conference - Full written paper - non-refereed proceedings",
-        "value": "450015",
-      },
-      Object {
-        "text": "E3 Conference Publication - Extract of Paper",
-        "value": "450016",
-      },
-      Object {
-        "text": "E4 Edited volume of conference proceedings",
-        "value": "450017",
-      },
-      Object {
-        "text": "EX Conference Proceedings - Other Public Output",
+        "text": "EX Conference Paper (Other Public Output)",
         "value": "450018",
       },
       Object {
-        "text": "F Audio-Visual Recordings",
-        "value": "450019",
+        "text": "CW1 Creative Work",
+        "value": "454028",
       },
       Object {
-        "text": "FX Other Public Output",
-        "value": "450020",
+        "text": "CW2 Live Performance of Creative Work",
+        "value": "454029",
       },
       Object {
-        "text": "G Computer Software",
-        "value": "450046",
+        "text": "CW3 Recorded or Rendered Creative Work",
+        "value": "454030",
       },
       Object {
-        "text": "G1 Computer Software",
-        "value": "450021",
+        "text": "CW4 Curated or Produced Exhibition or Event",
+        "value": "454031",
       },
       Object {
-        "text": "G2 Computer Database",
-        "value": "450022",
-      },
-      Object {
-        "text": "GX Computer - Other Public Output",
-        "value": "450023",
-      },
-      Object {
-        "text": "H Technical Drawing/Architectural and Industrial Design/Working Model",
-        "value": "450047",
-      },
-      Object {
-        "text": "H1 Refereed Design Awards",
-        "value": "450024",
-      },
-      Object {
-        "text": "H2 Design Exhibitions",
-        "value": "450026",
-      },
-      Object {
-        "text": "H3 Technical drawing/architectural and industrial design/working model",
-        "value": "450048",
-      },
-      Object {
-        "text": "HX Architectural/Building Design - Other Public Output",
-        "value": "450027",
-      },
-      Object {
-        "text": "I Patents",
-        "value": "450028",
-      },
-      Object {
-        "text": "IX Patents - Other public output",
-        "value": "450029",
-      },
-      Object {
-        "text": "J1 Major Creative Works - Published Works",
-        "value": "450030",
-      },
-      Object {
-        "text": "J2 Other Creative Works - Minor Written or Recorded Work",
-        "value": "450031",
-      },
-      Object {
-        "text": "J3 Major Creative Works - Exhibitions",
-        "value": "450049",
-      },
-      Object {
-        "text": "J4 Other Creative Works - Representation of Original Art",
-        "value": "450032",
-      },
-      Object {
-        "text": "J5 Major Creative Works - Recorded Works",
-        "value": "450033",
-      },
-      Object {
-        "text": "JX Other Creative Works - Other Public Output",
-        "value": "450034",
-      },
-      Object {
-        "text": "K Published Research Report",
-        "value": "450035",
-      },
-      Object {
-        "text": "K1 Published Research Report",
-        "value": "450036",
-      },
-      Object {
-        "text": "K2 Published Government Research Report",
-        "value": "450037",
-      },
-      Object {
-        "text": "KX Research Report - Other Public Output",
-        "value": "450038",
-      },
-      Object {
-        "text": "L Thesis",
-        "value": "450039",
-      },
-      Object {
-        "text": "LX Thesis - Other public output",
-        "value": "450040",
-      },
-      Object {
-        "text": "M Reference Entry in Dictionary/Encyclopaedia",
-        "value": "450041",
-      },
-      Object {
-        "text": "MX Reference Entry in Dictionary/Encyclopaedia - Other Public Output",
-        "value": "450042",
+        "text": "CW5 Research Report for an External Body",
+        "value": "454032",
       },
     ]
   }

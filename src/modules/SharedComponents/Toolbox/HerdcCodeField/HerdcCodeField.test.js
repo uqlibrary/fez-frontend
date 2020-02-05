@@ -53,4 +53,31 @@ describe('HerdcCodeField component', () => {
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
+
+    it('should not render unknown value', () => {
+        const wrapper = setup({
+            input: {
+                value: '999',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render a current value', () => {
+        const wrapper = setup({
+            input: {
+                value: '454028',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should render a deprecated value', () => {
+        const wrapper = setup({
+            input: {
+                value: '450033',
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
 });
