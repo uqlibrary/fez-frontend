@@ -1038,13 +1038,13 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                             <span>
 -                               ​
 -                             </span>
-+                             Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US
++                             Permitted Re-use with Acknowledgement Licence
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
                               type=\\"hidden\\"
 -                             value=\\"\\"
-+                             value=\\"453608\\"
++                             value=\\"453701\\"
                             />
                             <svg
                               aria-hidden=\\"true\\"
