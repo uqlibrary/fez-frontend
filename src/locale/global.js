@@ -180,7 +180,6 @@ export default {
         },
         ulrichsLink: {
             ariaLabel: 'View Ulrichs information in a new window',
-            labelPrefix: 'Visit ',
             labelSuffix: ' on Ulrichs',
             prefix: 'http://ulrichsweb.serialssolutions.com/',
             externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',

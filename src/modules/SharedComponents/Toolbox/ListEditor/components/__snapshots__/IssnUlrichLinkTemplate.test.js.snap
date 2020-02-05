@@ -14,8 +14,6 @@ exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
       aria-label="View Ulrichs information in a new window"
       href="http://example.com/ulrichs?id=1234"
     >
-      Visit 
-       
       <i>
         Architectural Journal
       </i>

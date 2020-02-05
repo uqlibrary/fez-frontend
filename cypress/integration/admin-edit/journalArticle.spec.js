@@ -179,7 +179,7 @@ context('Journal Article admin edit', () => {
                                         .should('contain.text', issn);
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(index)
-                                        .should('contain.text', 'Visit  ' + ulrichsTitle[index] + '  on Ulrichs')
+                                        .should('contain.text', ulrichsTitle[index] + '  on Ulrichs')
                                         .should(
                                             'have.attr',
                                             'href',

@@ -11,8 +11,7 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
                 <span>{item.key}</span>{' '}
                 {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
                     <ExternalLink href={item.value.ulrichs.link} aria-label={globalLocale.global.ulrichsLink.ariaLabel}>
-                        {globalLocale.global.ulrichsLink.labelPrefix} <i>{item.value.ulrichs.linkText}</i>{' '}
-                        {globalLocale.global.ulrichsLink.labelSuffix}
+                        <i>{item.value.ulrichs.linkText}</i> {globalLocale.global.ulrichsLink.labelSuffix}
                     </ExternalLink>
                 )}
             </Typography>
