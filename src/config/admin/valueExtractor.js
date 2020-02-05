@@ -494,7 +494,10 @@ export default {
     fez_record_search_key_length: {
         getValue: record => ({ ...record.fez_record_search_key_length }),
     },
-    fez_record_search_key_license: {
+    fez_record_search_key_license_biblio: {
+        getValue: record => ({ ...record.fez_record_search_key_license }),
+    },
+    fez_record_search_key_license_additional: {
         getValue: record => ({ ...record.fez_record_search_key_license }),
     },
     fez_record_search_key_original_format: {
