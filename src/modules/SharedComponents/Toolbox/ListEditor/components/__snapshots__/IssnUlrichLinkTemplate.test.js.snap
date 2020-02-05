@@ -6,14 +6,22 @@ exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
     component="span"
     variant="body2"
   >
-    <span />
+    <span>
+      1234-1234
+    </span>
      
-    <a
+    <WithStyles(ExternalLink)
+      aria-label="View Ulrichs information in a new window"
       href="http://example.com/ulrichs?id=1234"
-      target="_blank"
     >
-      Check Ulrichs information
-    </a>
+      Visit 
+       
+      <i>
+        Architectural Journal
+      </i>
+       
+       on Ulrichs
+    </WithStyles(ExternalLink)>
   </WithStyles(Typography)>
 </Fragment>
 `;
@@ -25,6 +33,20 @@ exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
     variant="body2"
   >
     <span />
+     
+  </WithStyles(Typography)>
+</Fragment>
+`;
+
+exports[`IssnUlrichLinkTemplate component should skip a missing ulrichs 1`] = `
+<Fragment>
+  <WithStyles(Typography)
+    component="span"
+    variant="body2"
+  >
+    <span>
+      1235-1235
+    </span>
      
   </WithStyles(Typography)>
 </Fragment>

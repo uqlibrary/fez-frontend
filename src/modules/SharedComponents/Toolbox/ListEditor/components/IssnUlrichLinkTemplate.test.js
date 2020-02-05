@@ -17,7 +17,28 @@ describe('IssnUlrichLinkTemplate component', () => {
     it('should render a value', () => {
         const wrapper = setup({
             item: {
-                value: 'http://example.com/ulrichs?id=1234',
+                key: '1234-1234',
+                value: {
+                    ulrichs: {
+                        link: 'http://example.com/ulrichs?id=1234',
+                        linkText: 'Architectural Journal',
+                    },
+                },
+            },
+        });
+        expect(toJson(wrapper)).toMatchSnapshot();
+    });
+
+    it('should skip a missing ulrichs', () => {
+        const wrapper = setup({
+            item: {
+                key: '1235-1235',
+                value: {
+                    ulrichs: {
+                        link: '',
+                        linkText: '',
+                    },
+                },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -356,7 +356,8 @@ export default {
                     },
                     'fez_ulrichs': {
                         'ulr_issn': '0969-7330',
-                        'ulr_title_id': '54321',
+                        'ulr_title_id': '233801',
+                        'ulr_title': 'Nursing Ethics',
                     },
                     'rek_issn_lookup': 'green',
                 },
@@ -440,7 +441,8 @@ export default {
                     },
                     'fez_ulrichs': {
                         'ulr_issn': '1477-0989',
-                        'ulr_title_id': '54322',
+                        'ulr_title_id': '233802',
+                        'ulr_title': 'Nursing Ethics',
                     },
                     'rek_issn_lookup': 'green',
                 },
@@ -1361,7 +1363,8 @@ export default {
                     },
                     'fez_ulrichs': {
                         'ulr_issn': '1873-2720',
-                        'ulr_title_id': '54323',
+                        'ulr_title_id': '387171',
+                        'ulr_title': 'Zoology',
                     },
                     'rek_issn_lookup': 'green',
                 },
@@ -1445,7 +1448,8 @@ export default {
                     },
                     'fez_ulrichs': {
                         'ulr_issn': '0944-2006',
-                        'ulr_title_id': '54324',
+                        'ulr_title_id': '24252',
+                        'ulr_title': 'Zoology',
                     },
                     'rek_issn_lookup': 'green',
                 },

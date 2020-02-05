@@ -174,7 +174,8 @@ context('Journal Article admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'ISSN');
                         const issns = record.fez_record_search_key_issn.map(item => item.rek_issn);
-                        const ulrichs = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
+                        const ulrichsId = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title_id);
+                        const ulrichsTitle = record.fez_record_search_key_issn.map(item => item.fez_ulrichs.ulr_title);
 
                         cy.get('div.ISSNvalue')
                             .within(() => {
@@ -184,12 +185,14 @@ context('Journal Article admin edit', () => {
                                         .should('contain.text', issn);
                                     cy.get('.ListRow-ISSNvalue a')
                                         .eq(index)
-                                        .should('contain.text', 'Check Ulrichs information')
+                                        .should('contain.text', 'Visit ')
+                                        .should('contain.text', ulrichsTitle[index])
+                                        .should('contain.text', ' on Ulrichs')
                                         .should(
                                             'have.attr',
                                             'href',
                                             'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
-                                            ulrichs[index],
+                                            ulrichsId[index],
                                         );
                                 });
                             });

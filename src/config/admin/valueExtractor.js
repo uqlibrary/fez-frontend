@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
+import { default as globalLocale } from 'locale/global';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -168,18 +169,27 @@ export default {
     },
     issnField: {
         getValue: record =>
-            (record.fez_record_search_key_issn || []).map(issn => ({
-                rek_order: issn.rek_issn_order,
-                rek_value: {
-                    key: issn.rek_issn,
-                    value:
-                        (!!issn.fez_ulrichs &&
-                            !!issn.fez_ulrichs.ulr_title_id &&
-                            'http://ezproxy.library.uq.edu.au/login?url=http://ulrichsweb.serialssolutions.com/title/' +
-                                issn.fez_ulrichs.ulr_title_id) ||
-                        '',
-                },
-            })),
+            (record.fez_record_search_key_issn || []).map(issn => {
+                const ulrichsLink =
+                    (!!issn.fez_ulrichs &&
+                        !!issn.fez_ulrichs.ulr_title_id &&
+                        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', issn.fez_ulrichs.ulr_title_id)) ||
+                    '';
+                const ulrichsLinkText =
+                    (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title && issn.fez_ulrichs.ulr_title) || '';
+                return {
+                    rek_order: issn.rek_issn_order,
+                    rek_value: {
+                        key: issn.rek_issn,
+                        value: {
+                            ulrichs: {
+                                link: ulrichsLink,
+                                linkText: ulrichsLinkText,
+                            },
+                        },
+                    },
+                };
+            }),
     },
     fez_record_search_key_isbn: {
         getValue: record => [...record.fez_record_search_key_isbn],

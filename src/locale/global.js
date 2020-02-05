@@ -178,6 +178,13 @@ export default {
             prefix: 'http://www.sherpa.ac.uk/romeo/',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
         },
+        ulrichsLink: {
+            ariaLabel: 'View Ulrichs information in a new window',
+            labelPrefix: 'Visit ',
+            labelSuffix: ' on Ulrichs',
+            prefix: 'http://ulrichsweb.serialssolutions.com/',
+            externalUrl: EXPROXY_URL_PREFIX + 'http://ulrichsweb.serialssolutions.com/title/[id]',
+        },
         embargoDateFormat: 'YYYY-MM-DD',
         defaultLinkDescription: 'Link to work',
         offlineSnackbar: {
