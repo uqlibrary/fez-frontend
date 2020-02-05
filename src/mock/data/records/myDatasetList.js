@@ -293,7 +293,7 @@ export default {
                 "rek_license_pid": "UQ:418081",
                 "rek_license_xsdmf_id": 16246,
                 "rek_license": 453701,
-                "rek_license_lookup": "UQ Terms & Conditions Permitted Re-use with Acknowledgement Licence"
+                "rek_license_lookup": "Permitted Re-use with Acknowledgement Licence"
             },
             "fez_record_search_key_link": [],
             "fez_record_search_key_link_description": [],
