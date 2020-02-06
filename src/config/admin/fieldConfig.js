@@ -842,6 +842,7 @@ export default {
             component: GrantListEditorField,
             componentProps: {
                 name: 'grantInformationSection.grants',
+                canEdit: true,
             },
         },
         fez_datastream_info: {

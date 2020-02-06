@@ -42,6 +42,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -54,6 +55,7 @@ exports[`GrantListEditor should add grant to the list 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -105,6 +107,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -117,10 +120,12 @@ exports[`GrantListEditor should delete all grants 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -133,6 +138,7 @@ exports[`GrantListEditor should delete all grants 1`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -196,6 +202,7 @@ exports[`GrantListEditor should delete grant 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -208,10 +215,12 @@ exports[`GrantListEditor should delete grant 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -224,6 +233,7 @@ exports[`GrantListEditor should delete grant 1`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -275,6 +285,7 @@ exports[`GrantListEditor should delete grant 2`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -287,6 +298,7 @@ exports[`GrantListEditor should delete grant 2`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -351,6 +363,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -363,10 +376,12 @@ exports[`GrantListEditor should move the grant down 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -379,6 +394,7 @@ exports[`GrantListEditor should move the grant down 1`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -430,6 +446,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -442,10 +459,12 @@ exports[`GrantListEditor should move the grant down 2`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -458,6 +477,7 @@ exports[`GrantListEditor should move the grant down 2`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -509,6 +529,7 @@ exports[`GrantListEditor should move the grant down 3`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -521,10 +542,12 @@ exports[`GrantListEditor should move the grant down 3`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -537,6 +560,7 @@ exports[`GrantListEditor should move the grant down 3`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -588,6 +612,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -600,10 +625,12 @@ exports[`GrantListEditor should move the grant up 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -616,6 +643,7 @@ exports[`GrantListEditor should move the grant up 1`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -667,6 +695,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -679,10 +708,12 @@ exports[`GrantListEditor should move the grant up 2`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -695,6 +726,7 @@ exports[`GrantListEditor should move the grant up 2`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -746,6 +778,7 @@ exports[`GrantListEditor should move the grant up 3`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -758,10 +791,12 @@ exports[`GrantListEditor should move the grant up 3`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -774,6 +809,7 @@ exports[`GrantListEditor should move the grant up 3`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -825,6 +861,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -837,6 +874,7 @@ exports[`GrantListEditor should not move the grant up at index 0 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -888,6 +926,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -900,6 +939,7 @@ exports[`GrantListEditor should not move the grant up at index 0 2`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -951,6 +991,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           disabled={true}
@@ -965,10 +1006,12 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -981,6 +1024,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 1`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -1032,6 +1076,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           disabled={true}
@@ -1046,10 +1091,12 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -1062,6 +1109,7 @@ exports[`GrantListEditor should not move the grant up the disabled grant 2`] = `
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -1170,6 +1218,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={false}
           grant={
@@ -1182,10 +1231,12 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
           grant={
@@ -1198,10 +1249,12 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           index={1}
           key="GrantListRow_1"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={true}
           canMoveUp={true}
           grant={
@@ -1214,10 +1267,12 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           index={2}
           key="GrantListRow_2"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={true}
           grant={
@@ -1230,6 +1285,7 @@ exports[`GrantListEditor should render scroll class if grants are more than 3 1`
           index={3}
           key="GrantListRow_3"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -1299,6 +1355,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -1311,6 +1368,7 @@ exports[`GrantListEditor should render with default given value 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -1362,6 +1420,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -1374,6 +1433,7 @@ exports[`GrantListEditor should render with default given value is Immutable Lis
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />
@@ -1425,6 +1485,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
         }
       >
         <WithStyles(WithTheme(WithWidth(GrantListEditorRow)))
+          canEdit={false}
           canMoveDown={false}
           canMoveUp={false}
           grant={
@@ -1437,6 +1498,7 @@ exports[`GrantListEditor should update on receiving new props 1`] = `
           index={0}
           key="GrantListRow_0"
           onDelete={[Function]}
+          onEdit={[Function]}
           onMoveDown={[Function]}
           onMoveUp={[Function]}
         />

@@ -341,8 +341,50 @@ describe('GrantListEditor', () => {
     it('isFormPopulated() sets state correctly', () => {
         const wrapper = setup({ onChange: jest.fn() });
         wrapper.instance().isFormPopulated(true);
-        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: true, grants: [] });
+        expect(wrapper.state()).toEqual({
+            errorMessage: '',
+            grantFormPopulated: true,
+            grants: [],
+            grantIndexSelectedToEdit: null,
+            grantSelectedToEdit: null,
+        });
         wrapper.instance().isFormPopulated(false);
-        expect(wrapper.state()).toEqual({ errorMessage: '', grantFormPopulated: false, grants: [] });
+        expect(wrapper.state()).toEqual({
+            errorMessage: '',
+            grantFormPopulated: false,
+            grants: [],
+            grantIndexSelectedToEdit: null,
+            grantSelectedToEdit: null,
+        });
+    });
+
+    it('should edit selected grant correctly', () => {
+        const grant1 = {
+            grantAgencyName: 'Test 1',
+            grantId: '123',
+            grantAgencyType: 'Testing 1',
+        };
+
+        const grant2 = {
+            grantAgencyName: 'Test 2',
+            grantId: '456',
+            grantAgencyType: 'Testing 2',
+        };
+
+        const wrapper = setup({
+            input: {
+                name: 'test',
+                value: [grant1, grant2],
+            },
+        });
+
+        wrapper.instance().editGrant(grant2, 1);
+
+        expect(wrapper.instance().state.grantSelectedToEdit).toEqual(grant2);
+        expect(wrapper.instance().state.grantIndexSelectedToEdit).toEqual(1);
+
+        wrapper.instance().addGrant({ ...grant2, grantAgencyName: 'Testing 2' });
+
+        expect(wrapper.instance().state.grants[1].grantAgencyName).toEqual('Testing 2');
     });
 });

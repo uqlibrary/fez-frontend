@@ -13,6 +13,7 @@ import Grid from '@material-ui/core/Grid';
 
 export class GrantListEditor extends PureComponent {
     static propTypes = {
+        canEdit: PropTypes.bool,
         disabled: PropTypes.bool,
         meta: PropTypes.object,
         onChange: PropTypes.func,
@@ -25,6 +26,7 @@ export class GrantListEditor extends PureComponent {
     };
 
     static defaultProps = {
+        canEdit: false,
         hideType: false,
         disableDeleteAllGrants: false,
     };
@@ -33,6 +35,8 @@ export class GrantListEditor extends PureComponent {
         super(props);
         this.state = {
             grants: this.getGrantsFromProps(props),
+            grantSelectedToEdit: null,
+            grantIndexSelectedToEdit: null,
             errorMessage: '',
         };
     }
@@ -55,9 +59,30 @@ export class GrantListEditor extends PureComponent {
     };
 
     addGrant = grant => {
+        const { grantIndexSelectedToEdit } = this.state;
+        if (grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1) {
+            this.setState({
+                grants: [
+                    ...this.state.grants.slice(0, grantIndexSelectedToEdit),
+                    grant,
+                    ...this.state.grants.slice(grantIndexSelectedToEdit + 1),
+                ],
+                grantIndexSelectedToEdit: null,
+                grantSelectedToEdit: null,
+                errorMessage: '',
+            });
+        } else {
+            this.setState({
+                grants: [...this.state.grants, grant],
+                errorMessage: '',
+            });
+        }
+    };
+
+    editGrant = (grant, index) => {
         this.setState({
-            grants: [...this.state.grants, grant],
-            errorMessage: '',
+            grantSelectedToEdit: grant,
+            grantIndexSelectedToEdit: index,
         });
     };
 
@@ -106,8 +131,8 @@ export class GrantListEditor extends PureComponent {
     };
 
     render() {
-        const { classes, disabled, required, disableDeleteAllGrants } = this.props;
-        const { grants, errorMessage } = this.state;
+        const { classes, disabled, required, disableDeleteAllGrants, canEdit } = this.props;
+        const { grants, errorMessage, grantIndexSelectedToEdit, grantSelectedToEdit } = this.state;
 
         const renderGrantsRows = grants.map((grant, index) => (
             <GrantListEditorRow
@@ -117,9 +142,11 @@ export class GrantListEditor extends PureComponent {
                 grant={grant}
                 canMoveDown={index !== grants.length - 1}
                 canMoveUp={index !== 0}
+                canEdit={canEdit}
                 onMoveUp={this.moveUpGrant}
                 onMoveDown={this.moveDownGrant}
                 onDelete={this.deleteGrant}
+                onEdit={this.editGrant}
             />
         ));
 
@@ -147,6 +174,9 @@ export class GrantListEditor extends PureComponent {
                     disabled={disabled}
                     hideType={this.props.hideType}
                     {...(this.props.locale && this.props.locale.form ? this.props.locale.form : {})}
+                    {...(grantIndexSelectedToEdit !== null && grantIndexSelectedToEdit > -1
+                        ? { grantSelectedToEdit: grantSelectedToEdit }
+                        : {})}
                 />
                 {grants.length > 0 && (
                     <Grid container spacing={8}>
