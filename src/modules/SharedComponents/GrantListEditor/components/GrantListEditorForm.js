@@ -30,17 +30,19 @@ export class GrantListEditorFormClass extends PureComponent {
         hideType: PropTypes.bool,
         classes: PropTypes.object,
         isPopulated: PropTypes.any,
+        grantSelectedToEdit: PropTypes.object,
     };
 
     static defaultProps = {
         locale: {
-            grantAgencyName: 'Funder/Sponsor name',
+            grantAgencyNameLabel: 'Funder/Sponsor name',
             grantAgencyNameHint: 'Enter funder/sponsor name for this work',
-            grantId: 'Grant ID',
+            grantIdLabel: 'Grant ID',
             grantIdHint: 'Enter grant number for this work, if available',
-            grantAgencyType: 'Funder/Sponsor type',
+            grantAgencyTypeLabel: 'Funder/Sponsor type',
             grantAgencyTypeHint: 'Select Funder/Sponsor type',
             addButton: 'Add grant',
+            editButton: 'Edit grant',
             description:
                 "Add the Funder/Sponsor's name, grant ID and type - " +
                 'then click the ADD GRANT button to add each to the list',
@@ -62,6 +64,10 @@ export class GrantListEditorFormClass extends PureComponent {
             grantId: '',
             grantAgencyType: '',
         };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        !!nextProps.grantSelectedToEdit && this.setState({ ...nextProps.grantSelectedToEdit });
     }
 
     _addGrant = event => {
@@ -123,65 +129,73 @@ export class GrantListEditorFormClass extends PureComponent {
     };
 
     render() {
-        const { disabled } = this.props;
+        const { disabled, grantSelectedToEdit, required, hideType } = this.props;
+        const {
+            addButton,
+            editButton,
+            description,
+            grantAgencyNameLabel,
+            grantAgencyNameHint,
+            grantIdHint,
+            grantIdLabel,
+            grantAgencyTypeLabel,
+            grantAgencyTypeHint,
+        } = this.props.locale;
+        const { grantAgencyName, grantAgencyType, grantId } = this.state;
+
         // const remindToAdd = (this.state.grantAgencyName.trim().length > 0 ||
         // this.state.grantId.trim().length > 0) ? this.props.locale.remindToAdd : null;
         return (
             <React.Fragment>
-                {this.props.locale.description}
+                {description}
                 <Grid container spacing={8} style={{ marginTop: 8 }}>
                     <Grid item xs={12} sm={12} md>
                         <TextField
                             fullWidth
                             id="grantAgencyName"
-                            label={this.props.locale.grantAgencyName}
-                            placeholder={this.props.locale.grantAgencyNameHint}
-                            value={this.state.grantAgencyName}
+                            label={grantAgencyNameLabel}
+                            placeholder={grantAgencyNameHint}
+                            value={grantAgencyName}
                             onChange={this._onNameChanged}
                             disabled={disabled}
-                            required={this.props.required}
+                            required={required}
                             autoComplete="off"
-                            error={this.props.required && !this.state.grantAgencyName}
-                            errorText={
-                                this.props.required && !this.state.grantAgencyName && locale.validationErrors.required
-                            }
+                            error={required && !grantAgencyName}
+                            errorText={required && !grantAgencyName && locale.validationErrors.required}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={12} md={!this.props.hideType ? 3 : 4}>
+                    <Grid item xs={12} sm={12} md={!hideType ? 3 : 4}>
                         <TextField
                             fullWidth
                             id="grantId"
-                            label={this.props.locale.grantId}
-                            placeholder={this.props.locale.grantIdHint}
-                            value={this.state.grantId}
+                            label={grantIdLabel}
+                            placeholder={grantIdHint}
+                            value={grantId}
                             onChange={this._onIDChanged}
-                            disabled={disabled || this.state.grantAgencyName.trim().length === 0}
-                            required={this.props.required}
+                            disabled={disabled || grantAgencyName.trim().length === 0}
+                            required={required}
                         />
                     </Grid>
-                    {!this.props.hideType && (
+                    {!hideType && (
                         <Grid item xs={12} sm={12} md={3}>
                             <FormControl
                                 fullWidth
-                                required={this.props.required || this.state.grantAgencyName.trim().length > 0}
-                                error={
-                                    this.state.grantAgencyName.trim().length > 0 &&
-                                    this.state.grantAgencyType.trim().length === 0
-                                }
+                                required={required || grantAgencyName.trim().length > 0}
+                                error={grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0}
                             >
-                                <InputLabel>{this.props.locale.grantAgencyType}</InputLabel>
+                                <InputLabel>{grantAgencyTypeLabel}</InputLabel>
                                 <Select
                                     SelectDisplayProps={{
                                         id: 'grantType',
                                     }}
-                                    label={this.props.locale.grantAgencyType}
-                                    placeholder={this.props.locale.grantAgencyTypeHint}
-                                    value={this.state.grantAgencyType}
+                                    label={grantAgencyType}
+                                    placeholder={grantAgencyTypeHint}
+                                    value={grantAgencyType}
                                     onChange={this._onTypeChanged}
-                                    disabled={disabled || this.state.grantAgencyName.trim().length === 0}
+                                    disabled={disabled || grantAgencyName.trim().length === 0}
                                 >
                                     <MenuItem value={''} disabled>
-                                        {this.props.locale.grantAgencyTypeHint}
+                                        {grantAgencyTypeHint}
                                     </MenuItem>
                                     {ORG_AFFILIATION_TYPES.map((item, index) => {
                                         return item.value !== '454045' ? (
@@ -191,8 +205,7 @@ export class GrantListEditorFormClass extends PureComponent {
                                         ) : null;
                                     })}
                                 </Select>
-                                {this.state.grantAgencyName.trim().length > 0 &&
-                                    this.state.grantAgencyType.trim().length === 0 && (
+                                {grantAgencyName.trim().length > 0 && grantAgencyType.trim().length === 0 && (
                                     <FormHelperText error>{locale.validationErrors.required}</FormHelperText>
                                 )}
                             </FormControl>
@@ -206,12 +219,12 @@ export class GrantListEditorFormClass extends PureComponent {
                             color="primary"
                             disabled={
                                 disabled ||
-                                this.state.grantAgencyName.trim().length === 0 ||
-                                (!this.props.hideType && this.state.grantAgencyType.trim().length === 0)
+                                grantAgencyName.trim().length === 0 ||
+                                (!hideType && grantAgencyType.trim().length === 0)
                             }
                             onClick={this._addGrant}
                         >
-                            {this.props.locale.addButton}
+                            {(!!grantSelectedToEdit && editButton) || addButton}
                         </Button>
                     </Grid>
                 </Grid>

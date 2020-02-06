@@ -218,4 +218,17 @@ describe('GrantListEditorForm', () => {
         wrapper.instance()._onIDChanged({ target: { value: 'test' } });
         expect(setState).toHaveBeenCalled();
     });
+
+    it('should reload form with grant information data on props change', () => {
+        const wrapper = setup();
+        wrapper.setProps({
+            grantSelectedToEdit: {
+                grantAgencyName: 'test',
+                grantId: '123',
+                grantAgencyType: 'Government',
+            },
+        });
+
+        expect(wrapper.instance().state.grantAgencyName).toEqual('test');
+    });
 });

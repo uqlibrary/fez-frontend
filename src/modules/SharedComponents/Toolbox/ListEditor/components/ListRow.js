@@ -121,7 +121,6 @@ export class ListRow extends PureComponent {
                                         </Tooltip>
                                     </Grid>
                                 )}
-
                                 {canEdit && (
                                     <Tooltip
                                         title={editHint}
