@@ -10,7 +10,7 @@ export default {
             grantInformation: 'Grant information',
             additionalInformation: {
                 title: 'Additional information',
-                licenseLinkText: 'View license details',
+                licenseLinkText: 'View licence details',
             },
             relatedPublications: {
                 title: 'Related works and datasets',
@@ -173,7 +173,7 @@ export default {
                 fez_record_search_key_project_id: 'Project ID',
                 fez_record_search_key_project_description: 'Project description',
                 fez_record_search_key_project_name: 'Project name',
-                fez_record_search_key_license: 'Licencing and terms of access',
+                fez_record_search_key_license: 'Licence',
                 fez_record_search_key_geographic_area: 'Geographic area',
                 fez_record_search_key_rights: 'Copyright notice',
                 fez_record_search_key_software_required: 'Software required',
@@ -237,7 +237,7 @@ export default {
                 fez_record_search_key_location: 'Place of recording',
                 fez_record_search_key_geographic_area: 'Geographic co-ordinates',
                 fez_record_search_key_rights: 'Rights',
-                fez_record_search_key_license: 'License',
+                fez_record_search_key_license: 'Licence',
             },
             Book: {
                 rek_date: 'Publication year',

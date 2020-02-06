@@ -457,19 +457,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
-                   
-                  <a
-                    href="https://creativecommons.org/licenses/"
-                    target="_blank"
-                  >
-                    Creative Commons Licenses
-                  </a>
-                   
-                  and
                    
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -479,10 +470,10 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
                   </a>
                 </p>
               </p>,
-              "title": "Access and licensing information",
+              "title": "Access and licence",
             }
           }
-          title="Access and licensing information"
+          title="Access and licence"
         >
           <WithStyles(Grid)
             container={true}
@@ -517,8 +508,8 @@ exports[`AddDataCollection test should get save confirmation locale correctly 1`
               <Field
                 component={[Function]}
                 disabled={false}
-                id="data-collection-license-selector"
-                label="Licensing and terms of access"
+                id="data-collection-licence-selector"
+                label="Licence"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
                 validate={
@@ -1703,19 +1694,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
-                   
-                  <a
-                    href="https://creativecommons.org/licenses/"
-                    target="_blank"
-                  >
-                    Creative Commons Licenses
-                  </a>
-                   
-                  and
                    
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -1725,10 +1707,10 @@ exports[`AddDataCollection test should render component with a valid collection 
                   </a>
                 </p>
               </p>,
-              "title": "Access and licensing information",
+              "title": "Access and licence",
             }
           }
-          title="Access and licensing information"
+          title="Access and licence"
         >
           <WithStyles(Grid)
             container={true}
@@ -1763,8 +1745,8 @@ exports[`AddDataCollection test should render component with a valid collection 
               <Field
                 component={[Function]}
                 disabled={false}
-                id="data-collection-license-selector"
-                label="Licensing and terms of access"
+                id="data-collection-licence-selector"
+                label="Licence"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
                 validate={
@@ -2949,19 +2931,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
-                   
-                  <a
-                    href="https://creativecommons.org/licenses/"
-                    target="_blank"
-                  >
-                    Creative Commons Licenses
-                  </a>
-                   
-                  and
                    
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -2971,10 +2944,10 @@ exports[`AddDataCollection test should render component with an invalid collecti
                   </a>
                 </p>
               </p>,
-              "title": "Access and licensing information",
+              "title": "Access and licence",
             }
           }
-          title="Access and licensing information"
+          title="Access and licence"
         >
           <WithStyles(Grid)
             container={true}
@@ -3009,8 +2982,8 @@ exports[`AddDataCollection test should render component with an invalid collecti
               <Field
                 component={[Function]}
                 disabled={false}
-                id="data-collection-license-selector"
-                label="Licensing and terms of access"
+                id="data-collection-licence-selector"
+                label="Licence"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
                 validate={
@@ -4195,19 +4168,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   </li>
                 </ul>
                 <h3>
-                  Licensing and terms of access
+                  Licence
                 </h3>
                 <p>
                   View
-                   
-                  <a
-                    href="https://creativecommons.org/licenses/"
-                    target="_blank"
-                  >
-                    Creative Commons Licenses
-                  </a>
-                   
-                  and
                    
                   <a
                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
@@ -4217,10 +4181,10 @@ exports[`AddDataCollection test should render data set form 1`] = `
                   </a>
                 </p>
               </p>,
-              "title": "Access and licensing information",
+              "title": "Access and licence",
             }
           }
-          title="Access and licensing information"
+          title="Access and licence"
         >
           <WithStyles(Grid)
             container={true}
@@ -4255,8 +4219,8 @@ exports[`AddDataCollection test should render data set form 1`] = `
               <Field
                 component={[Function]}
                 disabled={false}
-                id="data-collection-license-selector"
-                label="Licensing and terms of access"
+                id="data-collection-licence-selector"
+                label="Licence"
                 name="fez_record_search_key_license.rek_license"
                 required={true}
                 validate={

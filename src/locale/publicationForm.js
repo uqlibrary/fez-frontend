@@ -1509,9 +1509,9 @@ export default {
                 text: 'Select Field of Research (FoR) codes',
             },
             accessAndLicensing: {
-                title: 'Access and licensing information',
+                title: 'Access and licence',
                 help: {
-                    title: 'Access and licensing information',
+                    title: 'Access and licence',
                     text: (
                         <p>
                             <h3>Access conditions</h3>
@@ -1519,13 +1519,9 @@ export default {
                                 <li>Open Access (upload your data, or link to the data)</li>
                                 <li>Meditated Access</li>
                             </ul>
-                            <h3>Licensing and terms of access</h3>
+                            <h3>Licence</h3>
                             <p>
                                 View{' '}
-                                <a href="https://creativecommons.org/licenses/" target="_blank">
-                                    Creative Commons Licenses
-                                </a>{' '}
-                                and{' '}
                                 <a
                                     href="http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions"
                                     target="_blank"
@@ -1541,7 +1537,7 @@ export default {
                         label: 'Access conditions',
                     },
                     licensingAndTermsOfAccess: {
-                        label: 'Licensing and terms of access',
+                        label: 'Licence',
                     },
                     copyrightNotice: {
                         label: 'Copyright notice',
