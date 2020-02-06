@@ -965,7 +965,7 @@ export default {
             component: LicenseSelectorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
-                label: 'License',
+                label: 'Licence',
                 isAdmin: true,
             },
         },
@@ -973,7 +973,7 @@ export default {
             component: LicenseSelectorField,
             componentProps: {
                 name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
-                label: 'License',
+                label: 'Licence',
                 isAdmin: true,
             },
         },

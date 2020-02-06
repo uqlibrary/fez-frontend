@@ -723,7 +723,7 @@ export const DATA_COLLECTION_CREATOR_ROLES = [
 
 export const OPEN_ACCESS_ID = 453619;
 export const MEDIATED_ACCESS_ID = 453618;
-export const CURRENT_LICENSES = [
+export const CURRENT_LICENCES = [
     {
         value: 453701,
         text: 'Permitted Re-use with Acknowledgement Licence',
@@ -740,7 +740,7 @@ export const CURRENT_LICENSES = [
         link: 'http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions',
     },
 ];
-export const DEPRECATED_LICENSES = [
+export const DEPRECATED_LICENCES = [
     {
         value: 453608,
         text: 'Creative Commons Attribution (only) http://creativecommons.org/licenses/by/3.0/deed.en_US',

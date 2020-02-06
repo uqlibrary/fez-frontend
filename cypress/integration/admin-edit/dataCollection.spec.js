@@ -43,7 +43,7 @@ context('Data Collection admin edit', () => {
             .within(() => {
                 cy.get('h4')
                     .should('contain', 'Additional information');
-                cy.get('label[id="License-label"]')
+                cy.get('label[id="Licence-label"]')
                     .parent()
                     .find('input[type=hidden]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())

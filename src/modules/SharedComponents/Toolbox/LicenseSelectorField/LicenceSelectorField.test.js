@@ -1,4 +1,4 @@
-import LicenseSelectorField from './LicenseSelectorField';
+import LicenceSelectorField from './LicenceSelectorField';
 
 function setup(testProps = {}) {
     const props = {
@@ -12,7 +12,7 @@ function setup(testProps = {}) {
         ...testProps,
     };
 
-    return getElement(LicenseSelectorField, props);
+    return getElement(LicenceSelectorField, props);
 }
 
 describe('LicenseSelectorField component', () => {

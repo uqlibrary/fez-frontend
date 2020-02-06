@@ -1,18 +1,18 @@
 import React from 'react';
 import { GenericSelectField } from 'modules/SharedComponents/GenericSelectField';
-import { CURRENT_LICENSES, DEPRECATED_LICENSES } from 'config/general';
+import { CURRENT_LICENCES, DEPRECATED_LICENCES } from 'config/general';
 
-export default function LicenseSelectorField(fieldProps) {
-    let licenses = CURRENT_LICENSES;
+export default function LicenceSelectorField(fieldProps) {
+    let licences = CURRENT_LICENCES;
     if (!!fieldProps.isAdmin) {
-        licenses = [
-            ...CURRENT_LICENSES.map(license => {
+        licences = [
+            ...CURRENT_LICENCES.map(licence => {
                 return {
-                    value: license.value,
-                    text: license.text + ' ' + license.link,
+                    value: licence.value,
+                    text: licence.text + ' ' + licence.link,
                 };
             }),
-            ...DEPRECATED_LICENSES,
+            ...DEPRECATED_LICENCES,
         ];
     }
     return (
@@ -21,7 +21,7 @@ export default function LicenseSelectorField(fieldProps) {
             locale={{ label: fieldProps.label }}
             selectedValue={fieldProps.input.value}
             onChange={!!fieldProps.input && fieldProps.input.onChange}
-            itemsList={licenses}
+            itemsList={licences}
             errorText={(!!fieldProps.meta && fieldProps.meta.error) || ''}
             error={(!!fieldProps.meta && !!fieldProps.meta.error) || false}
             {...fieldProps}

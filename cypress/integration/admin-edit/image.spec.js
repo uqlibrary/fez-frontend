@@ -55,7 +55,7 @@ context('Image admin edit', () => {
                         cy.get('#Rights')
                             .should('have.value', record.fez_record_search_key_rights.rek_rights);
 
-                        cy.get('label[id="License-label"]')
+                        cy.get('label[id="Licence-label"]')
                             .parent()
                             .find('input[type=hidden]')
                             .should('have.value', record.fez_record_search_key_license.rek_license)
