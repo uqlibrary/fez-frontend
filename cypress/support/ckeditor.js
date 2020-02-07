@@ -3,8 +3,10 @@
  */
 
 const waitForCKEditorInstance = instanceName =>
-    cy.window()
-        .should('have.deep.property', `CKEDITOR.instances.${instanceName}.status`, 'ready');
+    cy.waitUntil(() =>
+        cy.window()
+            .then(win => (((win.CKEDITOR || {}).instances || {})[instanceName] || {}).status === 'ready'),
+    );
 
 // Allows the targeting of CKEditors
 // CKeditor dynamically names instances as "editor1", "editor2" etc.
