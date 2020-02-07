@@ -64,11 +64,11 @@ export function putUploadFile(pid, file, dispatch) {
  */
 export function putUploadFiles(pid, files, dispatch) {
     const filenameList = files && Array.isArray(files) && files.map(item => item.name);
-    const checkIfDuplicateExists = (w) => {
+    const checkIfDuplicateExists = w => {
         return new Set(w).size !== w.length;
     };
     const duplicateFileNames = checkIfDuplicateExists(filenameList);
-    if(!!duplicateFileNames) {
+    if (!!duplicateFileNames) {
         Raven.captureMessage(`Duplicate files found when uploading files for PID ${pid} : ${filenameList}`);
     }
     dispatch(fileUploadActions.startFileUpload());
