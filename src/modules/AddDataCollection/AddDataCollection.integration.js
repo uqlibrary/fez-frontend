@@ -334,9 +334,9 @@ describe('AddDataCollection form', () => {
         waitForElement(() => getByTestId('menu-'));
         fireEvent.click(getByText(/mediated access/i));
 
-        fireEvent.click(getByTestId('data-collection-license-selector'));
+        fireEvent.click(getByTestId('data-collection-licence-selector'));
         waitForElement(() => getByTestId('menu-'));
-        fireEvent.click(getByText(/Permitted Re-use with Acknowledgement Licence/i));
+        fireEvent.click(getByText(/Permitted Re-use with Acknowledgement/i));
 
         fireEvent.change(getByTestId('Projectname'), { target: { value: 'test project' } });
         fireEvent.change(getByTestId('Projectdescription'), { target: { value: 'test description' } });

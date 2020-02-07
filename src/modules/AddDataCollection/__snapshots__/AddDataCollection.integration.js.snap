@@ -1011,9 +1011,9 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                         data-shrink=\\"false\\"
 +                         class=\\"MuiFormLabel-root-246 MuiFormLabel-filled-250 MuiFormLabel-required-251 MuiInputLabel-required-239 MuiInputLabel-root-235 MuiInputLabel-formControl-240 MuiInputLabel-animated-243 MuiInputLabel-shrink-242\\"
 +                         data-shrink=\\"true\\"
-                          id=\\"Licensing and terms of access-label\\"
+                          id=\\"Licence-label\\"
                         >
-                          Licensing and terms of access
+                          Licence
                           <span
 -                           class=\\"MuiFormLabel-asterisk-252 MuiFormLabel-error-249 MuiInputLabel-error-238\\"
 +                           class=\\"MuiFormLabel-asterisk-252\\"
@@ -1031,14 +1031,14 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
                             <div
 @@ -989,18 +1390,16 @@
                               class=\\"MuiSelect-select-290 MuiSelect-selectMenu-293 MuiInputBase-input-276 MuiInput-input-261\\"
-                              id=\\"data-collection-license-selector\\"
+                              id=\\"data-collection-licence-selector\\"
                               role=\\"button\\"
                               tabindex=\\"0\\"
                             >
 -                             <span>
 -                               ​
 -                             </span>
-+                             Permitted Re-use with Acknowledgement Licence
++                             Permitted Re-use with Acknowledgement
                             </div>
                             <input
                               style=\\"border: 1px solid red;\\"
@@ -1208,7 +1208,7 @@ exports[`AddDataCollection form should allow user to submit the form 1`] = `
 -                             Access condition is required
 -                           </li>
 -                           <li>
--                             Licensing and terms of access is required
+-                             Licence and terms of access is required
 -                           </li>
 -                           <li>
 -                             Project name is required
