@@ -15,7 +15,7 @@ function setup(testProps = {}) {
     return getElement(LicenceSelectorField, props);
 }
 
-describe('LicenseSelectorField component', () => {
+describe('LicenceSelectorField component', () => {
     it('should render default view', () => {
         const wrapper = setup();
 

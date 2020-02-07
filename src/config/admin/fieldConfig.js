@@ -51,7 +51,7 @@ import { HerdcCodeField } from 'modules/SharedComponents/Toolbox/HerdcCodeField'
 import { HerdcStatusField } from 'modules/SharedComponents/Toolbox/HerdcStatusField';
 import { InstitutionalStatusField } from 'modules/SharedComponents/Toolbox/InstitutionalStatusField';
 import { LanguageField } from 'modules/SharedComponents/Toolbox/LanguageField';
-import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
+import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { AndsCollectionTypesField } from 'modules/SharedComponents/Toolbox/AndsCollectionTypesField';
 import {
     LinkInfoListEditorField,
@@ -962,7 +962,7 @@ export default {
             },
         },
         fez_record_search_key_license_biblio: {
-            component: LicenseSelectorField,
+            component: LicenceSelectorField,
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
                 label: 'Licence',
@@ -970,7 +970,7 @@ export default {
             },
         },
         fez_record_search_key_license_additional: {
-            component: LicenseSelectorField,
+            component: LicenceSelectorField,
             componentProps: {
                 name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
                 label: 'Licence',
