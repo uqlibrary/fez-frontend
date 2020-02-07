@@ -18,7 +18,7 @@ exports[`LicenseSelectorField component should render default view 1`] = `
     Array [
       Object {
         "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
-        "text": "Permitted Re-use with Acknowledgement Licence",
+        "text": "Permitted Re-use with Acknowledgement",
         "value": 453701,
       },
       Object {
@@ -67,7 +67,7 @@ exports[`LicenseSelectorField component should render error and error message 1`
     Array [
       Object {
         "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
-        "text": "Permitted Re-use with Acknowledgement Licence",
+        "text": "Permitted Re-use with Acknowledgement",
         "value": 453701,
       },
       Object {
@@ -121,7 +121,7 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
   itemsList={
     Array [
       Object {
-        "text": "Permitted Re-use with Acknowledgement Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 453701,
       },
       Object {
@@ -157,7 +157,7 @@ exports[`LicenseSelectorField component should render with deprecated list 1`] =
         "value": 453613,
       },
       Object {
-        "text": "Permitted Non-commercial Re-use with Acknowledge Licence http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Non-commercial Re-use with Acknowledgement http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
         "value": 453702,
       },
     ]
