@@ -1,0 +1,104 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LicenseSelectorField component should render default view 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        "test",
+        "test1",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement",
+        "value": 453701,
+      },
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
+        "value": 454104,
+      },
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Share Alike Requirement",
+        "value": 454105,
+      },
+    ]
+  }
+  label="License selector field"
+  locale={
+    Object {
+      "label": "License selector field",
+    }
+  }
+  onChange={[MockFunction]}
+  selectedValue={
+    Array [
+      "test",
+      "test1",
+    ]
+  }
+/>
+`;
+
+exports[`LicenseSelectorField component should render error and error message 1`] = `
+<GenericSelectField
+  error={false}
+  errorText=""
+  hideLabel={false}
+  input={
+    Object {
+      "onChange": [MockFunction],
+      "value": Array [
+        "test",
+        "test1",
+      ],
+    }
+  }
+  itemsList={
+    Array [
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-use with Acknowledgement",
+        "value": 453701,
+      },
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Commercial Use Restriction",
+        "value": 454104,
+      },
+      Object {
+        "link": "http://guides.library.uq.edu.au/deposit_your_data/terms_and_conditions",
+        "text": "Permitted Re-Use with Share Alike Requirement",
+        "value": 454105,
+      },
+    ]
+  }
+  label="License selector field"
+  locale={
+    Object {
+      "label": "License selector field",
+    }
+  }
+  meta={
+    Object {
+      "error": "This field is required",
+    }
+  }
+  onChange={[MockFunction]}
+  selectedValue={
+    Array [
+      "test",
+      "test1",
+    ]
+  }
+/>
+`;

@@ -262,7 +262,7 @@ context('Data Collection form', () => {
             .should('have.length', 3);
 
         // Licensing and terms of access
-        cy.get('div#data-collection-license-selector')
+        cy.get('div#data-collection-licence-selector')
             .click();
         cy.get('li[data-value="454104"]')
             .click();
