@@ -371,7 +371,7 @@ describe('Component ContributorForm', () => {
             uqIdentifier: '111',
             aut_id: 111,
             aut_org_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
@@ -397,7 +397,7 @@ describe('Component ContributorForm', () => {
             aut_lname: 'Test',
             aut_fname: 'Testing',
             aut_org_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
@@ -423,7 +423,7 @@ describe('Component ContributorForm', () => {
             aut_lname: 'Test',
             aut_fname: 'Testing',
             aut_student_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
