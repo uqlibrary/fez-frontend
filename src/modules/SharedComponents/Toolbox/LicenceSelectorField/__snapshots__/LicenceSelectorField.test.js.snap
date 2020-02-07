@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LicenseSelectorField component should render default view 1`] = `
+exports[`LicenceSelectorField component should render default view 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
@@ -49,7 +49,7 @@ exports[`LicenseSelectorField component should render default view 1`] = `
 />
 `;
 
-exports[`LicenseSelectorField component should render error and error message 1`] = `
+exports[`LicenceSelectorField component should render error and error message 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
@@ -103,7 +103,7 @@ exports[`LicenseSelectorField component should render error and error message 1`
 />
 `;
 
-exports[`LicenseSelectorField component should render with deprecated list 1`] = `
+exports[`LicenceSelectorField component should render with deprecated list 1`] = `
 <GenericSelectField
   error={false}
   errorText=""
