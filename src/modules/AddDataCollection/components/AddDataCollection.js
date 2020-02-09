@@ -14,7 +14,7 @@ import { ContributorsEditorField } from 'modules/SharedComponents/ContributorsEd
 import { ListEditorField } from 'modules/SharedComponents/Toolbox/ListEditor';
 import { FileUploadField } from 'modules/SharedComponents/Toolbox/FileUploader';
 import { AccessSelectorField } from 'modules/SharedComponents/Toolbox/AccessSelectorField';
-import { LicenseSelectorField } from 'modules/SharedComponents/Toolbox/LicenseSelectorField';
+import { LicenceSelectorField } from 'modules/SharedComponents/Toolbox/LicenceSelectorField';
 import { GeoCoordinatesField } from 'modules/SharedComponents/Toolbox/GeoCoordinatesField';
 import { AuthorIdField } from 'modules/SharedComponents/LookupFields';
 import { RelatedDatasetAndPublicationListField } from 'modules/SharedComponents/LookupFields';
@@ -278,8 +278,8 @@ export default class AddDataCollection extends Component {
                                     </Grid>
                                     <Grid item xs={12} sm={12} md={4}>
                                         <Field
-                                            component={LicenseSelectorField}
-                                            id="data-collection-license-selector"
+                                            component={LicenceSelectorField}
+                                            id="data-collection-licence-selector"
                                             name="fez_record_search_key_license.rek_license"
                                             required
                                             validate={[validation.required]}

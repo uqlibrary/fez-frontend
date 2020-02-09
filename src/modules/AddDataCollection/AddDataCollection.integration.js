@@ -334,13 +334,9 @@ describe('AddDataCollection form', () => {
         waitForElement(() => getByTestId('menu-'));
         fireEvent.click(getByText(/mediated access/i));
 
-        fireEvent.click(getByTestId('data-collection-license-selector'));
+        fireEvent.click(getByTestId('data-collection-licence-selector'));
         waitForElement(() => getByTestId('menu-'));
-        fireEvent.click(
-            getByText(
-                /Creative Commons Attribution \(only\) http:\/\/creativecommons.org\/licenses\/by\/3.0\/deed.en_US/i,
-            ),
-        );
+        fireEvent.click(getByText(/Permitted Re-use with Acknowledgement/i));
 
         fireEvent.change(getByTestId('Projectname'), { target: { value: 'test project' } });
         fireEvent.change(getByTestId('Projectdescription'), { target: { value: 'test description' } });
