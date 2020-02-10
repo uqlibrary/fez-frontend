@@ -29,25 +29,30 @@ import * as recordForms from 'modules/SharedComponents/PublicationForm/component
 import { FORM_NAME } from '../constants';
 import { routes } from 'config';
 
-export const useQueryStringTabValueState = (location, initialValue) => {
+const getTabFromQueryString = () => {
     const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
-    const tabValue = queryStringObject && queryStringObject.tab === 'security' ? 'security' : initialValue;
+    return (queryStringObject && queryStringObject.tab) || '';
+};
+
+export const useQueryStringTabValueState = (location, initialValue) => {
+    const tabValue = getTabFromQueryString() === 'security' ? 'security' : initialValue;
     return useState(tabValue);
 };
 
 export const AdminInterface = ({
+    authorDetails,
     classes,
-    submitting,
-    handleSubmit,
-    location,
-    tabs,
-    history,
-    submitSucceeded,
     createMode,
+    destroy,
     disableSubmit,
     formErrors,
-    destroy,
-    authorDetails,
+    handleSubmit,
+    history,
+    loadingRecordToView,
+    location,
+    submitSucceeded,
+    submitting,
+    tabs,
 }) => {
     const { record } = useRecordContext();
     const { tabbed } = useTabbedContext();
@@ -60,6 +65,7 @@ export const AdminInterface = ({
     const successConfirmationRef = useRef();
     const alertProps = useRef(null);
     const txt = useRef(pageLocale.pages.edit);
+    const securityTabRef = useRef(null);
 
     alertProps.current = validation.getErrorAlertProps({
         submitting,
@@ -86,6 +92,12 @@ export const AdminInterface = ({
             successConfirmationRef.current.showConfirmation();
         }
     }, [submitting, submitSucceeded]);
+
+    useEffect(() => {
+        securityTabRef.current &&
+            // TODO: Replace the timeout with logic to require all content to have rendered.
+            window.setTimeout(() => securityTabRef.current.scrollIntoView({ behavior: 'smooth' }), 300);
+    }, [loadingRecordToView, securityTabRef]);
 
     const handleTabChange = (event, value) => setCurrentTabValue(value);
     /* istanbul ignore next */
@@ -138,13 +150,21 @@ export const AdminInterface = ({
         }
     };
 
-    const renderTabContainer = tab => (
-        <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
-            </StandardCard>
-        </TabContainer>
-    );
+    const renderTabContainer = tab => {
+        const props = {};
+        if (tab === 'security' && getTabFromQueryString() === tab) {
+            props.ref = securityTabRef;
+        }
+        return (
+            <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
+                <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
+                    <div {...props}>
+                        <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
+                    </div>
+                </StandardCard>
+            </TabContainer>
+        );
+    };
 
     const selectedPublicationType =
         (record.rek_display_type && (publicationTypes({ ...recordForms })[record.rek_display_type] || {}).name) ||
@@ -289,18 +309,19 @@ export const AdminInterface = ({
 };
 
 AdminInterface.propTypes = {
+    authorDetails: PropTypes.object,
     classes: PropTypes.object,
-    submitting: PropTypes.bool,
-    submitSucceeded: PropTypes.bool,
-    handleSubmit: PropTypes.func,
-    destroy: PropTypes.func,
-    location: PropTypes.object,
-    history: PropTypes.object,
-    tabs: PropTypes.object,
     createMode: PropTypes.bool,
+    destroy: PropTypes.func,
     disableSubmit: PropTypes.bool,
     formErrors: PropTypes.object,
-    authorDetails: PropTypes.object,
+    handleSubmit: PropTypes.func,
+    history: PropTypes.object,
+    loadingRecordToView: PropTypes.bool,
+    location: PropTypes.object,
+    submitSucceeded: PropTypes.bool,
+    submitting: PropTypes.bool,
+    tabs: PropTypes.object,
 };
 
 export default React.memo(AdminInterface);
