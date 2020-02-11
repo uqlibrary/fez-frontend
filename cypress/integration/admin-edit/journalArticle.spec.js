@@ -344,6 +344,7 @@ context('Journal Article admin edit', () => {
                         const authorNames = record.fez_record_search_key_author_id.map(
                             item => item.rek_author_id_lookup,
                         );
+                        const authorIDs = record.fez_record_search_key_author_id.map(item => item.rek_author_id);
                         const authorAffs = record.fez_record_search_key_author_affiliation_name.map((item, index) => {
                             return authorUQ[index] === 'UQ'
                                 ? 'The University of Queensland'
@@ -359,7 +360,10 @@ context('Journal Article admin edit', () => {
 
                             cy.get('span')
                                 .eq(9 + 11 * index)
-                                .should('have.text', authorAffs[index] + ' (' + authorUsernames[index] + ')');
+                                .should(
+                                    'have.text',
+                                    `${authorAffs[index]} (${authorUsernames[index]} - ${authorIDs[index]})`,
+                                );
                         });
                     });
             });

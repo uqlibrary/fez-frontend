@@ -90,7 +90,7 @@ context('Request correction form', () => {
         // Preselected item in multiselect modal should be unclickable
         cy.get('#menu-')
             .contains('Scholarship of Teaching and Learning')
-            .should('not.be.above');
+            .should('have.css', 'pointer-events', 'none');
         // Click outside the multiselect
         cy.get('#menu-')
             .click(10, 10);

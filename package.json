@@ -73,7 +73,7 @@
         "chromedriver": "^2.38.2",
         "cross-env": "^5.2.0",
         "css-loader": "^2.1.1",
-        "cypress": "^3.8.2",
+        "cypress": "^4.0.0",
         "cypress-file-upload": "^3.2.0",
         "cypress-plugin-tab": "^1.0.1",
         "cypress-wait-until": "^1.6.1",
@@ -215,7 +215,7 @@
         "start:mock": "cross-env USE_MOCK=true NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "start:url": "cross-env URL=dev-espace.library.uq.edu.au NODE_OPTIONS='--max-old-space-size=2048' webpack-dev-server",
         "test": "npm run test:unit",
-        "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs",
+        "test:all": "npm run test:unit && npm run test:e2e && npm run test:cs -s",
         "test:cs": "echo \"Running code style checks...\" && FILES=$(npm run codestyles:files -s) && echo \"No code style issues found.\" || echo \"File(s) failed code style checks!:\" && echo $FILES",
         "pretest:e2e": "rm -rf .nyc_output",
         "test:e2e": "start-server-and-test 'npm run start:mock' http-get://localhost:3000 'cypress run --record false'",
@@ -236,10 +236,16 @@
         "node": "11.10.1"
     },
     "babel": {
-        "presets": ["@babel/env", "@babel/react"],
+        "presets": [
+            "@babel/env",
+            "@babel/react"
+        ],
         "env": {
             "development": {
-                "presets": ["@babel/env", "@babel/react"]
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ]
             },
             "production": {
                 "presets": [
@@ -272,7 +278,10 @@
                 ]
             },
             "test": {
-                "presets": ["@babel/env", "@babel/react"],
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -294,7 +303,10 @@
                 ]
             },
             "cc": {
-                "presets": ["@babel/env", "@babel/react"],
+                "presets": [
+                    "@babel/env",
+                    "@babel/react"
+                ],
                 "plugins": [
                     [
                         "dynamic-import-node",
@@ -322,9 +334,20 @@
         "transform": {
             ".*": "<rootDir>/node_modules/babel-jest"
         },
-        "testMatch": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(test).[jt]s?(x)", "**/?(*.)+(integration).[jt]s?(x)"],
-        "moduleFileExtensions": ["js", "json", "es6"],
-        "unmockedModulePathPatterns": ["react", "enzyme"],
+        "testMatch": [
+            "**/__tests__/**/*.[jt]s?(x)",
+            "**/?(*.)+(test).[jt]s?(x)",
+            "**/?(*.)+(integration).[jt]s?(x)"
+        ],
+        "moduleFileExtensions": [
+            "js",
+            "json",
+            "es6"
+        ],
+        "unmockedModulePathPatterns": [
+            "react",
+            "enzyme"
+        ],
         "collectCoverage": true,
         "collectCoverageFrom": [
             "src/modules/**/*.{js,jsx}",
@@ -340,7 +363,11 @@
             "src/repositories/routes.js"
         ],
         "coverageDirectory": "coverage/jest",
-        "coverageReporters": ["html", "text", "json"],
+        "coverageReporters": [
+            "html",
+            "text",
+            "json"
+        ],
         "coverageThreshold": {
             "global": {
                 "statements": 100,
@@ -349,18 +376,33 @@
                 "lines": 100
             }
         },
-        "modulePaths": ["<rootDir>/src", "<rootDir>/eslint-plugin-uqlibrary", "<rootDir>/utils"],
+        "modulePaths": [
+            "<rootDir>/src",
+            "<rootDir>/eslint-plugin-uqlibrary",
+            "<rootDir>/utils"
+        ],
         "moduleNameMapper": {
             "\\.(css|scss|sass)$": "<rootDir>/__mocks__/styles.js",
             "\\.(jpg|jpeg|svg)$": "<rootDir>/__mocks__/images.js"
         },
-        "transformIgnorePatterns": ["<rootDir>/node_modules/"],
-        "setupFiles": ["./src/test.setup.js", "jest-localstorage-mock"],
-        "setupFilesAfterEnv": ["<rootDir>/src/jest.setup.js"],
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ],
+        "setupFiles": [
+            "./src/test.setup.js",
+            "jest-localstorage-mock"
+        ],
+        "setupFilesAfterEnv": [
+            "<rootDir>/src/jest.setup.js"
+        ],
         "testURL": "http://fez-staging.library.uq.edu.au"
     },
     "nyc": {
-        "reporter": ["html", "text-summary", "json"],
+        "reporter": [
+            "html",
+            "text-summary",
+            "json"
+        ],
         "report-dir": "coverage/cypress",
         "temp-dir": "coverage/temp",
         "include": [
