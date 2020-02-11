@@ -147,20 +147,17 @@ export const AdminContainer = ({
                         }}
                     >
                         <AdminInterface
-                            {...{
-                                authorDetails,
-                                classes,
-                                createMode,
-                                destroy,
-                                disableSubmit,
-                                handleSubmit,
-                                history,
-                                loadingRecordToView,
-                                location,
-                                submitSucceeded,
-                                submitting,
-                            }}
+                            authorDetails={authorDetails}
+                            classes={classes}
+                            handleSubmit={handleSubmit}
+                            submitting={submitting}
+                            submitSucceeded={submitSucceeded}
+                            disableSubmit={disableSubmit}
+                            location={location}
+                            history={history}
+                            createMode={createMode}
                             formErrors={reducedFormErrors(formErrors)}
+                            destroy={destroy}
                             tabs={{
                                 admin: {
                                     component: AdminSection,
