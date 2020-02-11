@@ -4,7 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import { ExternalLink } from 'modules/SharedComponents/ExternalLink';
 import { default as globalLocale } from 'locale/global';
 
-export const IssnUlrichLinkTemplate = ({ item }) => {
+export const IssnRowItemTemplate = ({ item }) => {
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
@@ -19,6 +19,6 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
     );
 };
 
-IssnUlrichLinkTemplate.propTypes = {
+IssnRowItemTemplate.propTypes = {
     item: PropTypes.object,
 };

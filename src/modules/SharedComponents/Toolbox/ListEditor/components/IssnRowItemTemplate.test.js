@@ -1,14 +1,14 @@
-import { IssnUlrichLinkTemplate } from './IssnUlrichLinkTemplate';
+import { IssnRowItemTemplate } from './IssnRowItemTemplate';
 
 function setup(testProps = {}, args = { isShallow: true }) {
     const props = {
         item: {},
         ...testProps,
     };
-    return getElement(IssnUlrichLinkTemplate, props, args);
+    return getElement(IssnRowItemTemplate, props, args);
 }
 
-describe('IssnUlrichLinkTemplate component', () => {
+describe('IssnRowItemTemplate component', () => {
     it('should render default view', () => {
         const wrapper = setup({});
         expect(toJson(wrapper)).toMatchSnapshot();

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
+exports[`IssnRowItemTemplate component should render a value 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -24,7 +24,7 @@ exports[`IssnUlrichLinkTemplate component should render a value 1`] = `
 </Fragment>
 `;
 
-exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
+exports[`IssnRowItemTemplate component should render default view 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
@@ -36,7 +36,7 @@ exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
 </Fragment>
 `;
 
-exports[`IssnUlrichLinkTemplate component should skip a missing ulrichs 1`] = `
+exports[`IssnRowItemTemplate component should skip a missing ulrichs 1`] = `
 <Fragment>
   <WithStyles(Typography)
     component="span"
