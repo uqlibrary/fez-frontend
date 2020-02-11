@@ -32,6 +32,7 @@ export default class ListEditor extends Component {
         scrollList: PropTypes.bool,
         scrollListHeight: PropTypes.number,
         canEdit: PropTypes.bool,
+        getItemSelectedToEdit: PropTypes.func,
     };
 
     static defaultProps = {
@@ -59,6 +60,7 @@ export default class ListEditor extends Component {
         required: false,
         scrollList: false,
         scrollListHeight: 250,
+        getItemSelectedToEdit: (list, index) => list[index] || null,
     };
 
     constructor(props) {
@@ -235,7 +237,10 @@ export default class ListEditor extends Component {
                     normalize={this.props.inputNormalizer}
                     category={this.props.category}
                     required={this.props.required}
-                    itemSelectedToEdit={this.state.itemList[this.state.itemIndexSelectedToEdit] || null}
+                    itemSelectedToEdit={this.props.getItemSelectedToEdit(
+                        this.state.itemList,
+                        this.state.itemIndexSelectedToEdit,
+                    )}
                     itemIndexSelectedToEdit={this.state.itemIndexSelectedToEdit}
                 />
                 {this.state.itemList.length > 0 && (
