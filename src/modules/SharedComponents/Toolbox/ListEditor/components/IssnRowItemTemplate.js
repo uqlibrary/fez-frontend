@@ -9,6 +9,19 @@ export const IssnRowItemTemplate = ({ item }) => {
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
                 <span>{item.key}</span>{' '}
+                {!!item.value && !!item.value.sherpaRomeo && !!item.value.sherpaRomeo.link && (
+                    <ExternalLink
+                        href={item.value.sherpaRomeo.link}
+                        aria-label={globalLocale.global.sherpaRomeoLink.ariaLabel}
+                    >
+                        {globalLocale.global.sherpaRomeoLink.externalLinktext}
+                    </ExternalLink>
+                )}
+                {!!item.value &&
+                    !!item.value.sherpaRomeo &&
+                    !!item.value.sherpaRomeo.link &&
+                    !!item.value.ulrichs &&
+                    !!item.value.ulrichs.link && <span> or </span>}
                 {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
                     <ExternalLink href={item.value.ulrichs.link} aria-label={globalLocale.global.ulrichsLink.ariaLabel}>
                         <i>{item.value.ulrichs.linkText}</i> {globalLocale.global.ulrichsLink.labelSuffix}

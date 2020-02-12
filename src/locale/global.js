@@ -177,6 +177,7 @@ export default {
             ariaLabel: "View publisher's open access policy in an new window",
             prefix: 'http://www.sherpa.ac.uk/romeo/',
             externalUrl: 'http://www.sherpa.ac.uk/romeo/search.php?issn=[issn]',
+            externalLinktext: "Check publisher's open access policy",
         },
         ulrichsLink: {
             ariaLabel: 'View Ulrichs information in a new window',

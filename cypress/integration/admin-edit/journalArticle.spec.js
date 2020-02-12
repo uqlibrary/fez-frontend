@@ -175,10 +175,18 @@ context('Journal Article admin edit', () => {
                             .within(() => {
                                 issns.forEach((issn, index) => {
                                     cy.get('.ListRow-ISSNvalue span>span')
-                                        .eq(index)
+                                        .eq(2 * index)
                                         .should('contain.text', issn);
                                     cy.get('.ListRow-ISSNvalue a')
-                                        .eq(index)
+                                        .eq(2 * index)
+                                        .should('contain.text', "Check publisher's open access policy")
+                                        .should(
+                                            'have.attr',
+                                            'href',
+                                            'http://www.sherpa.ac.uk/romeo/search.php?issn=' + issn,
+                                        );
+                                    cy.get('.ListRow-ISSNvalue a')
+                                        .eq(2 * index + 1)
                                         .should('contain.text', ulrichsTitle[index] + '  on Ulrichs')
                                         .should(
                                             'have.attr',

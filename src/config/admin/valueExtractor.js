@@ -178,6 +178,14 @@ export default {
                     '';
                 const ulrichsLinkText =
                     (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title && issn.fez_ulrichs.ulr_title) || '';
+                const sherpaRomeoLink =
+                    (!!issn.fez_sherpa_romeo &&
+                        !!issn.fez_sherpa_romeo.srm_issn &&
+                        globalLocale.global.sherpaRomeoLink.externalUrl.replace(
+                            '[issn]',
+                            issn.fez_sherpa_romeo.srm_issn,
+                        )) ||
+                    '';
                 return {
                     rek_order: issn.rek_issn_order,
                     rek_value: {
@@ -186,6 +194,9 @@ export default {
                             ulrichs: {
                                 link: ulrichsLink,
                                 linkText: ulrichsLinkText,
+                            },
+                            sherpaRomeo: {
+                                link: sherpaRomeoLink,
                             },
                         },
                     },

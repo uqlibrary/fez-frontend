@@ -23,13 +23,16 @@ describe('IssnRowItemTemplate component', () => {
                         link: 'http://example.com/ulrichs?id=1234',
                         linkText: 'Architectural Journal',
                     },
+                    sherpaRomeo: {
+                        link: 'http://example.com/sherpa?issn=1234-1234',
+                    },
                 },
             },
         });
         expect(toJson(wrapper)).toMatchSnapshot();
     });
 
-    it('should skip a missing ulrichs', () => {
+    it('should skip missing ulrichs or sherparomeo', () => {
         const wrapper = setup({
             item: {
                 key: '1235-1235',
@@ -37,6 +40,9 @@ describe('IssnRowItemTemplate component', () => {
                     ulrichs: {
                         link: '',
                         linkText: '',
+                    },
+                    sherpaRomeo: {
+                        link: '',
                     },
                 },
             },
