@@ -129,18 +129,22 @@ exports[`AdminInterface component should disabled button and render alert for fo
         tabbed={true}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={true}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={true}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -382,18 +386,22 @@ exports[`AdminInterface component should display successful alert 1`] = `
         tabbed={true}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -605,18 +613,22 @@ exports[`AdminInterface component should display successful alert 2`] = `
         tabbed={true}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -809,18 +821,22 @@ exports[`AdminInterface component should render a title with html correctly 1`] 
         tabbed={false}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={true}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -990,18 +1006,22 @@ exports[`AdminInterface component should render default view as a full form view
         tabbed={false}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={true}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
       <TabContainer
         currentTab="bibliographic"
@@ -1009,18 +1029,22 @@ exports[`AdminInterface component should render default view as a full form view
         tabbed={false}
         value="files"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Files"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="filesSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Files"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="filesSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
       <TabContainer
         currentTab="bibliographic"
@@ -1028,18 +1052,22 @@ exports[`AdminInterface component should render default view as a full form view
         tabbed={false}
         value="security"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Security"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="securitySection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Security"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="securitySection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1238,18 +1266,22 @@ exports[`AdminInterface component should render default view as a tabbed form vi
         tabbed={true}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
@@ -1453,18 +1485,22 @@ exports[`AdminInterface component should render in create mode 1`] = `
         tabbed={true}
         value="bibliographic"
       >
-        <StandardCard
-          primaryHeader={true}
-          smallTitle={true}
-          squareTop={true}
-          title="Bibliographic"
+        <ScrollToSection
+          scrollToSection={false}
         >
-          <Field
-            component={[Function]}
-            disabled={false}
-            name="bibliographicSection"
-          />
-        </StandardCard>
+          <StandardCard
+            primaryHeader={true}
+            smallTitle={true}
+            squareTop={true}
+            title="Bibliographic"
+          >
+            <Field
+              component={[Function]}
+              disabled={false}
+              name="bibliographicSection"
+            />
+          </StandardCard>
+        </ScrollToSection>
       </TabContainer>
     </WithStyles(Grid)>
     <WithStyles(Grid)
