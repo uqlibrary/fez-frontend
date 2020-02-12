@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
-// import CardContent from '@material-ui/core/CardContent';
-// import CardHeader from '@material-ui/core/CardHeader';
-// import { HelpIcon } from 'modules/SharedComponents/Toolbox/HelpDrawer';
 import { withStyles } from '@material-ui/core/styles';
 
 export const styles = theme => ({
@@ -27,18 +24,8 @@ export const styles = theme => ({
 export class Cards extends Component {
     static propTypes = {
         title: PropTypes.any,
-        primaryHeader: PropTypes.bool,
-        accentHeader: PropTypes.bool,
-        fullHeight: PropTypes.bool,
-        noPadding: PropTypes.bool,
-        noHeader: PropTypes.bool,
         children: PropTypes.any,
         classes: PropTypes.object.isRequired,
-        help: PropTypes.object,
-        customBackgroundColor: PropTypes.any,
-        customTitleColor: PropTypes.any,
-        customTitleBgColor: PropTypes.any,
-        squareTop: PropTypes.bool,
     };
     render() {
         const { classes, title, children } = this.props;
