@@ -19,7 +19,8 @@ import { StandardCard } from 'modules/SharedComponents/Toolbox/StandardCard';
 
 import FormViewToggler from './FormViewToggler';
 import TabContainer from './TabContainer';
-import { useTabbedContext, useRecordContext } from 'context';
+import ScrollToSection from './ScrollToSection';
+import { useTabbedContext, useRecordContext /* , ScrollToSectionContext */ } from 'context';
 
 import pageLocale from 'locale/pages';
 import queryString from 'query-string';
@@ -31,7 +32,7 @@ import { routes } from 'config';
 
 export const useQueryStringTabValueState = (location, initialValue) => {
     const queryStringObject = queryString.parse(location.search, { ignoreQueryPrefix: true });
-    const tabValue = queryStringObject && queryStringObject.tab === 'security' ? 'security' : initialValue;
+    const tabValue = (queryStringObject && queryStringObject.tab) || initialValue;
     return useState(tabValue);
 };
 
@@ -140,9 +141,11 @@ export const AdminInterface = ({
 
     const renderTabContainer = tab => (
         <TabContainer key={tab} value={tab} currentTab={currentTabValue} tabbed={tabbed}>
-            <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
-                <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
-            </StandardCard>
+            <ScrollToSection scrollToSection={!tabbed && tab === currentTabValue}>
+                <StandardCard title={txt.current.sections[tab].title} primaryHeader squareTop smallTitle>
+                    <Field component={tabs[tab].component} disabled={submitting} name={`${tab}Section`} />
+                </StandardCard>
+            </ScrollToSection>
         </TabContainer>
     );
 
