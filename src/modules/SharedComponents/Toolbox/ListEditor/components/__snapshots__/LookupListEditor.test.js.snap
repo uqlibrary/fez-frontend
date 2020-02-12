@@ -2,8 +2,10 @@
 
 exports[`LookupListEditor should render default component 1`] = `
 <ListEditor
+  canEdit={false}
   distinctOnly={false}
   formComponent={[Function]}
+  getItemSelectedToEdit={[Function]}
   hideReorder={false}
   input={
     Object {

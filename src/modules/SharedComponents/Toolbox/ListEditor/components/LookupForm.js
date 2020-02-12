@@ -10,6 +10,7 @@ export default class LookupForm extends Component {
         errorText: PropTypes.string,
         category: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
         required: PropTypes.bool,
+        itemSelectedToEdit: PropTypes.object,
     };
 
     static defaultProps = {
@@ -22,6 +23,13 @@ export default class LookupForm extends Component {
 
     constructor(props) {
         super(props);
+        this.state = {
+            defaultValue: '',
+        };
+    }
+
+    componentWillReceiveProps(nextProps) {
+        nextProps.itemSelectedToEdit && this.setState({ defaultValue: nextProps.itemSelectedToEdit.value });
     }
 
     addKeyValueItem = item => {
@@ -33,7 +41,8 @@ export default class LookupForm extends Component {
             <React.Fragment>
                 {this.props.inputField && (
                     <this.props.inputField
-                        input={{ onChange: this.props.onAdd }}
+                        key={this.state.defaultValue}
+                        input={{ onChange: this.props.onAdd, value: this.state.defaultValue }}
                         floatingLabelText={this.props.locale.inputFieldLabel}
                         hintText={this.props.locale.inputFieldHint}
                         disabled={this.props.disabled}

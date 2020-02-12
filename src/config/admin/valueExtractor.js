@@ -1,6 +1,7 @@
 import moment from 'moment';
 import { validation, viewRecordsConfig } from 'config';
 import { AFFILIATION_TYPE_NOT_UQ, AFFILIATION_TYPE_UQ, ORG_TYPE_NOT_SET } from 'config/general';
+import { default as globalLocale } from 'locale/global';
 
 const authorsGetValue = record => {
     const authors = (record.fez_record_search_key_author || []).reduce(
@@ -47,7 +48,8 @@ const authorsGetValue = record => {
         creatorRole: (authorRoles[order] || {}).rek_author_role || '',
         uqIdentifier: `${(authorIds[order] || {}).rek_author_id || 0}`,
         uqUsername: `${((authorIds[order] || {}).author || {}).aut_org_username ||
-            ((authorIds[order] || {}).author || {}).aut_student_username}`,
+            ((authorIds[order] || {}).author || {}).aut_student_username ||
+            ''} - ${(authorIds[order] || {}).rek_author_id || 0}`,
         aut_id: (authorIds[order] || {}).rek_author_id || 0,
         orgaff: (authorAffiliationNames[order] || {}).rek_author_affiliation_name || 'Missing',
         orgtype: `${(authorAffiliationTypes[order] || {}).rek_author_affiliation_type || ''}`,
@@ -166,8 +168,29 @@ export default {
                 value: collection.rek_ismemberof_lookup,
             })),
     },
-    fez_record_search_key_issn: {
-        getValue: record => [...record.fez_record_search_key_issn],
+    issnField: {
+        getValue: record =>
+            (record.fez_record_search_key_issn || []).map(issn => {
+                const ulrichsLink =
+                    (!!issn.fez_ulrichs &&
+                        !!issn.fez_ulrichs.ulr_title_id &&
+                        globalLocale.global.ulrichsLink.externalUrl.replace('[id]', issn.fez_ulrichs.ulr_title_id)) ||
+                    '';
+                const ulrichsLinkText =
+                    (!!issn.fez_ulrichs && !!issn.fez_ulrichs.ulr_title && issn.fez_ulrichs.ulr_title) || '';
+                return {
+                    rek_order: issn.rek_issn_order,
+                    rek_value: {
+                        key: issn.rek_issn,
+                        value: {
+                            ulrichs: {
+                                link: ulrichsLink,
+                                linkText: ulrichsLinkText,
+                            },
+                        },
+                    },
+                };
+            }),
     },
     fez_record_search_key_isbn: {
         getValue: record => [...record.fez_record_search_key_isbn],
@@ -493,7 +516,10 @@ export default {
     fez_record_search_key_length: {
         getValue: record => ({ ...record.fez_record_search_key_length }),
     },
-    fez_record_search_key_license: {
+    fez_record_search_key_license_biblio: {
+        getValue: record => ({ ...record.fez_record_search_key_license }),
+    },
+    fez_record_search_key_license_additional: {
         getValue: record => ({ ...record.fez_record_search_key_license }),
     },
     fez_record_search_key_original_format: {

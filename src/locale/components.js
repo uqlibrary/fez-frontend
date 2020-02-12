@@ -180,6 +180,7 @@ export default {
                         inputFieldLabel: 'Keywords',
                         inputFieldHint: 'Type keywords',
                         addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
                         id: 'keywords-input',
                     },
                 },
@@ -198,6 +199,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this item',
                         moveUpHint: 'Move keyword up the order',
                         moveDownHint: 'Move keyword down the order',
                         deleteHint: 'Remove this keyword',
@@ -446,6 +448,7 @@ export default {
                         inputFieldLabel: 'Type of data',
                         inputFieldHint: 'Type type of data',
                         addButtonLabel: 'Add',
+                        editButtonLabel: 'Update',
                         id: 'type-of-data-input',
                     },
                 },
@@ -467,6 +470,7 @@ export default {
                         moveUpHint: 'Move type of data up the order',
                         moveDownHint: 'Move type of data down the order',
                         deleteHint: 'Remove this type of data',
+                        editHint: 'Edit this type of data',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete type of data',
                             confirmationMessage: 'Are you sure you want to delete this type of data?',
@@ -483,7 +487,8 @@ export default {
                     locale: {
                         inputFieldLabel: 'Software required',
                         inputFieldHint: 'Type software required',
-                        addButtonLabel: 'Add',
+                        addButtonLabel: 'Add software',
+                        editButtonLabel: 'Update software',
                         id: 'software-required-input',
                     },
                 },
@@ -502,6 +507,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this software required',
                         moveUpHint: 'Move software required up the order',
                         moveDownHint: 'Move software required down the order',
                         deleteHint: 'Remove this software required',
@@ -529,7 +535,8 @@ export default {
                         inputFieldLabel: 'ISBN value',
                         inputFieldHint: 'Enter ISBN, e.g. 13 digit: 9780815375296 or 10 digit: 1861972717',
                         addButtonLabel: <span>Add&nbsp;ISBN</span>,
-                        remindToAdd: (
+                        editButtonLabel: <span>Update&nbsp;ISBN</span>,
+                        remindToAddText: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
                             </span>
@@ -551,6 +558,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this item',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
@@ -578,7 +586,8 @@ export default {
                         inputFieldLabel: 'ISSN value',
                         inputFieldHint: 'Enter ISSN, e.g. 1838-9414',
                         addButtonLabel: <span>Add&nbsp;ISSN</span>,
-                        remindToAdd: (
+                        editButtonLabel: <span>Update&nbsp;ISSN</span>,
+                        remindToAddText: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
                             </span>
@@ -600,6 +609,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this item',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
@@ -627,7 +637,8 @@ export default {
                         inputFieldLabel: 'ISMN value',
                         inputFieldHint: 'Enter ISMN, e.g. 9790720208015',
                         addButtonLabel: <span>Add&nbsp;ISMN</span>,
-                        remindToAdd: (
+                        editButtonLabel: <span>Update&nbsp;ISMN</span>,
+                        remindToAddText: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
                             </span>
@@ -649,6 +660,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this item',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
@@ -676,7 +688,8 @@ export default {
                         inputFieldLabel: 'ISRC value',
                         inputFieldHint: 'Enter ISRC, e.g. US6R21320619',
                         addButtonLabel: <span>Add&nbsp;ISRC</span>,
-                        remindToAdd: (
+                        editButtonLabel: <span>Update&nbsp;ISRC</span>,
+                        remindToAddText: (
                             <span>
                                 Please press <b>ENTER</b> or click <b>ADD</b> button to add this value to the list
                             </span>
@@ -698,6 +711,7 @@ export default {
                 },
                 row: {
                     locale: {
+                        editHint: 'Edit this item',
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
@@ -721,6 +735,7 @@ export default {
                         descriptionInputFieldLabel: 'Description',
                         descriptionFieldHint: 'Enter description',
                         addButtonLabel: <span>Add&nbsp;link</span>,
+                        editButtonLabel: <span>Update&nbsp;link</span>,
                     },
                 },
                 header: {
@@ -741,6 +756,7 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',
@@ -1484,6 +1500,7 @@ export default {
                         inputFieldLabel: 'Begin typing to select and add subject(s)',
                         inputFieldHint: 'Start typing code or field name and select from list',
                         addButtonLabel: <span>Add&nbsp;Subject</span>,
+                        editButtonLabel: <span>Edit&nbsp;Subject</span>,
                     },
                 },
                 header: {
@@ -1503,6 +1520,7 @@ export default {
                         moveUpHint: 'Move item up the order',
                         moveDownHint: 'Move item down the order',
                         deleteHint: 'Remove this item',
+                        editHint: 'Edit this item',
                         deleteRecordConfirmation: {
                             confirmationTitle: 'Delete item',
                             confirmationMessage: 'Are you sure you want to delete this item?',

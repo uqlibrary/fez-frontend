@@ -75,7 +75,7 @@ export const ContributorRowText = ({
                     {getListItemTypography(
                         `${contributor.aut_title} ${contributor.aut_display_name}`,
                         `${locale.global.orgTitle} (${contributor.aut_org_username ||
-                            contributor.aut_student_username})`,
+                            contributor.aut_student_username} - ${contributor.aut_id})`,
                         `${width === 'xs' ? classes.identifierName : classes.primary} ${selectedClass}`,
                         `${width === 'xs' ? classes.identifierSubtitle : ''} ${selectedClass}`,
                     )}

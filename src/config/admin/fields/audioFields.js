@@ -18,7 +18,7 @@ export default {
         },
         {
             title: 'ISSN',
-            groups: [['fez_record_search_key_issn']],
+            groups: [['issnField']],
         },
         {
             title: 'Bibliographic',
@@ -30,7 +30,7 @@ export default {
                 ['fez_record_search_key_acknowledgements'],
                 ['fez_record_search_key_length', 'rek_genre'],
                 ['fez_record_search_key_original_format'],
-                ['fez_record_search_key_license'],
+                ['fez_record_search_key_license_biblio'],
                 ['fez_record_search_key_source'],
                 ['fez_record_search_key_rights'],
                 ['fez_record_search_key_transcript'],

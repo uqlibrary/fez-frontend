@@ -67,6 +67,7 @@ import { RichEditorField } from 'modules/SharedComponents/RichEditor';
 import { ScopusDocTypesField } from 'modules/SharedComponents/Toolbox/ScopusDocTypesField';
 import { TextField as GenericTextField } from 'modules/SharedComponents/Toolbox/TextField';
 import { WoSDocTypesField } from 'modules/SharedComponents/Toolbox/WoSDocTypesField';
+import { IssnUlrichLinkTemplate } from 'modules/SharedComponents/Toolbox/ListEditor';
 
 export default {
     default: {
@@ -185,6 +186,7 @@ export default {
                 label: 'Link',
                 placeholder: '',
                 locale: locale.components.linkListForm.field,
+                canEdit: true,
             },
         },
         rek_description: {
@@ -486,23 +488,23 @@ export default {
                     order: 'rek_keywords_order',
                 },
                 locale: locale.components.keywordsForm.field,
+                canEdit: true,
             },
         },
-        fez_record_search_key_issn: {
+        issnField: {
             component: ListEditorField,
             componentProps: {
                 remindToAdd: true,
-                name: 'bibliographicSection.fez_record_search_key_issn',
+                name: 'bibliographicSection.issnField',
                 isValid: validation.isValidIssn,
-                searchKey: {
-                    value: 'rek_issn',
-                    order: 'rek_issn_order',
-                },
                 locale: locale.components.issnForm.field,
                 inputNormalizer: value => {
                     const newValue = value.replace('-', '');
                     return newValue.length >= 4 ? [newValue.slice(0, 4), '-', newValue.slice(4)].join('') : newValue;
                 },
+                canEdit: true,
+                rowItemTemplate: IssnUlrichLinkTemplate,
+                getItemSelectedToEdit: (list, index) => (!!list[index] && list[index].key) || null,
             },
         },
         fez_record_search_key_isbn: {
@@ -516,6 +518,7 @@ export default {
                     order: 'rek_isbn_order',
                 },
                 locale: locale.components.isbnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_ismn: {
@@ -529,6 +532,7 @@ export default {
                     order: 'rek_ismn_order',
                 },
                 locale: locale.components.ismnForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_edition: {
@@ -576,6 +580,7 @@ export default {
                 locale: locale.components.subjectForm.field,
                 distinctOnly: true,
                 category: [FIELD_OF_RESEARCH_VOCAB_ID, AIATSIS_CODES_VOCAB_ID].join(','),
+                canEdit: true,
             },
         },
         fez_record_search_key_refereed_source: {
@@ -839,6 +844,7 @@ export default {
             component: GrantListEditorField,
             componentProps: {
                 name: 'grantInformationSection.grants',
+                canEdit: true,
             },
         },
         fez_datastream_info: {
@@ -887,6 +893,7 @@ export default {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
                 height: 50,
+                canEdit: true,
             },
         },
         fez_record_search_key_location: {
@@ -954,11 +961,20 @@ export default {
                 placeholder: '',
             },
         },
-        fez_record_search_key_license: {
+        fez_record_search_key_license_biblio: {
             component: LicenseSelectorField,
             componentProps: {
-                name: 'bibliographicSection.fez_record_search_key_license.rek_license',
+                name: 'bibliographicSection.fez_record_search_key_license_biblio.rek_license',
                 label: 'License',
+                isAdmin: true,
+            },
+        },
+        fez_record_search_key_license_additional: {
+            component: LicenseSelectorField,
+            componentProps: {
+                name: 'additionalInformationSection.fez_record_search_key_license_additional.rek_license',
+                label: 'License',
+                isAdmin: true,
             },
         },
         fez_record_search_key_original_format: {
@@ -1025,6 +1041,7 @@ export default {
                     order: 'rek_type_of_data_order',
                 },
                 locale: locale.components.typeOfDataForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_data_volume: {
@@ -1044,6 +1061,7 @@ export default {
                     order: 'rek_software_required_order',
                 },
                 locale: locale.components.softwareRequiredForm.field,
+                canEdit: true,
             },
         },
         fez_record_search_key_related_datasets: {
@@ -1082,6 +1100,7 @@ export default {
                 locale: {
                     form: formLocale.addDataset.information.optionalDatasetDetails.fieldLabels.relatedDatasets,
                 },
+                canEdit: true,
             },
             height: 50,
         },

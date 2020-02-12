@@ -1956,6 +1956,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                       }
                                     }
                                     disabled={true}
+                                    label=""
                                     onChange={[Function]}
                                     value=""
                                   >
@@ -1977,6 +1978,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         }
                                       }
                                       disabled={true}
+                                      label=""
                                       onChange={[Function]}
                                       value=""
                                     >
@@ -2002,6 +2004,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                         disabled={true}
                                         displayEmpty={false}
                                         input={<WithStyles(Input) />}
+                                        label=""
                                         muiFormControl={
                                           Object {
                                             "adornedStart": false,
@@ -2102,6 +2105,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                               "variant": "standard",
                                             }
                                           }
+                                          label=""
                                           onChange={[Function]}
                                           value=""
                                         >
@@ -2201,6 +2205,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 "variant": "standard",
                                               }
                                             }
+                                            label=""
                                             onChange={[Function]}
                                             value=""
                                           >
@@ -2301,6 +2306,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                   "variant": "standard",
                                                 }
                                               }
+                                              label=""
                                               multiline={false}
                                               onChange={[Function]}
                                               type="text"
@@ -2407,6 +2413,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                     "variant": "standard",
                                                   }
                                                 }
+                                                label=""
                                                 multiline={false}
                                                 onChange={[Function]}
                                                 type="text"
@@ -2513,6 +2520,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                       "variant": "standard",
                                                     }
                                                   }
+                                                  label=""
                                                   muiFormControl={
                                                     Object {
                                                       "adornedStart": false,
@@ -2536,6 +2544,7 @@ exports[`GrantListEditorForm should render default view 1`] = `
                                                 >
                                                   <div
                                                     className="MuiInputBase-root-116 MuiInput-root-103 MuiInput-underline-107 MuiInputBase-disabled-119 MuiInput-disabled-106 MuiInputBase-formControl-117 MuiInput-formControl-104"
+                                                    label=""
                                                     onClick={[Function]}
                                                   >
                                                     <SelectInput
@@ -5376,6 +5385,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                   }
                                 }
                                 disabled={true}
+                                label=""
                                 onChange={[Function]}
                                 value=""
                               >
@@ -5397,6 +5407,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     }
                                   }
                                   disabled={true}
+                                  label=""
                                   onChange={[Function]}
                                   value=""
                                 >
@@ -5422,6 +5433,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                     disabled={true}
                                     displayEmpty={false}
                                     input={<WithStyles(Input) />}
+                                    label=""
                                     muiFormControl={
                                       Object {
                                         "adornedStart": false,
@@ -5522,6 +5534,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                           "variant": "standard",
                                         }
                                       }
+                                      label=""
                                       onChange={[Function]}
                                       value=""
                                     >
@@ -5621,6 +5634,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             "variant": "standard",
                                           }
                                         }
+                                        label=""
                                         onChange={[Function]}
                                         value=""
                                       >
@@ -5721,6 +5735,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                               "variant": "standard",
                                             }
                                           }
+                                          label=""
                                           multiline={false}
                                           onChange={[Function]}
                                           type="text"
@@ -5827,6 +5842,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                 "variant": "standard",
                                               }
                                             }
+                                            label=""
                                             multiline={false}
                                             onChange={[Function]}
                                             type="text"
@@ -5933,6 +5949,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                                   "variant": "standard",
                                                 }
                                               }
+                                              label=""
                                               muiFormControl={
                                                 Object {
                                                   "adornedStart": false,
@@ -5956,6 +5973,7 @@ exports[`GrantListEditorForm should render default view 2`] = `
                                             >
                                               <div
                                                 className="MuiInputBase-root-116 MuiInput-root-103 MuiInput-underline-107 MuiInputBase-disabled-119 MuiInput-disabled-106 MuiInputBase-formControl-117 MuiInput-formControl-104"
+                                                label=""
                                                 onClick={[Function]}
                                               >
                                                 <SelectInput
@@ -6986,6 +7004,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             }
           }
           disabled={true}
+          label=""
           onChange={[Function]}
           value=""
         >
@@ -7126,6 +7145,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             }
           }
           disabled={false}
+          label=""
           onChange={[Function]}
           value=""
         >
@@ -7271,6 +7291,7 @@ exports[`GrantListEditorForm should set grant agency type as a required input if
             }
           }
           disabled={false}
+          label=""
           onChange={[Function]}
           value=""
         >

@@ -127,26 +127,22 @@ describe('Component ContributorForm', () => {
         expect(onAddFn).not.toBeCalled();
     });
 
-    it(
-        'should not add contributor if key is Enter, affiliation is not UQ, ' +
-            'and orgaff and orgtype props are empty strings',
-        () => {
-            const onAddFn = jest.fn();
-            const wrapper = setup({
-                onAdd: onAddFn,
-            });
-            wrapper.setState({
-                contributor: {
-                    nameAsPublished: 'test',
-                    affiliation: AFFILIATION_TYPE_NOT_UQ,
-                    orgaff: '',
-                    orgtype: '',
-                },
-            });
-            wrapper.instance()._onSubmit({ key: 'Enter' });
-            expect(onAddFn).not.toBeCalled();
-        },
-    );
+    it('should not add contributor if key is Enter, affiliation is not UQ, and orgaff and orgtype props are empty strings', () => {
+        const onAddFn = jest.fn();
+        const wrapper = setup({
+            onAdd: onAddFn,
+        });
+        wrapper.setState({
+            contributor: {
+                nameAsPublished: 'test',
+                affiliation: AFFILIATION_TYPE_NOT_UQ,
+                orgaff: '',
+                orgtype: '',
+            },
+        });
+        wrapper.instance()._onSubmit({ key: 'Enter' });
+        expect(onAddFn).not.toBeCalled();
+    });
 
     it('should set creator role', () => {
         const wrapper = setup({
@@ -375,7 +371,7 @@ describe('Component ContributorForm', () => {
             uqIdentifier: '111',
             aut_id: 111,
             aut_org_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
@@ -401,7 +397,7 @@ describe('Component ContributorForm', () => {
             aut_lname: 'Test',
             aut_fname: 'Testing',
             aut_org_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
@@ -427,7 +423,7 @@ describe('Component ContributorForm', () => {
             aut_lname: 'Test',
             aut_fname: 'Testing',
             aut_student_username: 'uqtest',
-            uqUsername: 'uqtest',
+            uqUsername: 'uqtest - 111',
         });
     });
 
