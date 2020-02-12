@@ -1627,6 +1627,7 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
+            authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_THESIS]: {
             fez_record_search_key_org_unit_name: () => ({
