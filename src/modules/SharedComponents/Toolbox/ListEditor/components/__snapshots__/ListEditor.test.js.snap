@@ -1060,6 +1060,81 @@ exports[`ListEditor tests should render input value as itemList for List 1`] = `
 </div>
 `;
 
+exports[`ListEditor tests should update an issn with selected index 1`] = `
+<div
+  className="testClass NoLabel"
+>
+  <mockConstructor
+    disabled={false}
+    errorText=""
+    inputField={[MockFunction]}
+    isValid={[MockFunction]}
+    itemIndexSelectedToEdit={null}
+    itemSelectedToEdit={null}
+    key="1"
+    locale={
+      Object {
+        "inputFieldLabel": "NoLabel",
+      }
+    }
+    normalize={[Function]}
+    onAdd={[Function]}
+    required={false}
+  />
+  <WithStyles(ListRowHeader)
+    disabled={false}
+    hideReorder={false}
+    onDeleteAll={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={true}
+    canMoveUp={false}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={0}
+    item={
+      Object {
+        "key": "1234-1234",
+        "value": Object {
+          "ulrichs": Object {},
+        },
+      }
+    }
+    itemTemplate={[Function]}
+    key="0"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+  <WithStyles(ListRow)
+    canEdit={false}
+    canMoveDown={false}
+    canMoveUp={true}
+    disabled={false}
+    form="NoLabel"
+    hideReorder={false}
+    index={1}
+    item={
+      Object {
+        "key": "1234-2222",
+        "value": Object {
+          "ulrichs": Object {},
+        },
+      }
+    }
+    itemTemplate={[Function]}
+    key="1"
+    onDelete={[Function]}
+    onEdit={[Function]}
+    onMoveDown={[Function]}
+    onMoveUp={[Function]}
+  />
+</div>
+`;
+
 exports[`ListEditor tests should update an item with selected index 1`] = `
 <div
   className="testClass NoLabel"
