@@ -148,6 +148,8 @@ describe('AdminContainer component', () => {
     });
 
     it('should full mount the component', () => {
+        const scrollIntoViewMock = jest.fn();
+        window.HTMLElement.prototype.scrollIntoView = scrollIntoViewMock;
         Cookies.get = jest.fn(() => 'tabbed');
         const wrapper = setup({}, { isShallow: false });
         expect(toJson(wrapper)).toMatchSnapshot();

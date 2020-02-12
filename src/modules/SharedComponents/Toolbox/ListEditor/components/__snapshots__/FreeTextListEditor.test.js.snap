@@ -11,6 +11,7 @@ exports[`FreeTextListEditor component should render default view 1`] = `
       "type": [Function],
     }
   }
+  getItemSelectedToEdit={[Function]}
   hideReorder={false}
   inputNormalizer={[Function]}
   locale={
