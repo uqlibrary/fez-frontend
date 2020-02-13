@@ -56,6 +56,7 @@ export default {
             title: 'Journal name',
             groups: [
                 ['fez_record_search_key_journal_name'],
+                ['fez_record_search_key_series'],
                 ...(isLote
                     ? [
                         ['languageOfJournalName'],
@@ -78,14 +79,14 @@ export default {
             title: 'Bibliographic',
             groups: [
                 ['fez_record_search_key_place_of_publication', 'fez_record_search_key_publisher'],
+                ['fez_record_search_key_chapter_number'],
+                ['fez_record_search_key_article_number'],
                 ['fez_record_search_key_volume_number', 'fez_record_search_key_issue_number'],
-                ['fez_record_search_key_series'],
                 [
                     'fez_record_search_key_start_page',
                     'fez_record_search_key_end_page',
                     'fez_record_search_key_total_pages',
                 ],
-                ['fez_record_search_key_article_number', 'fez_record_search_key_chapter_number'],
                 ['rek_date', 'fez_record_search_key_date_available'],
                 ['rek_description'],
                 ['fez_record_search_key_refereed_source'],
