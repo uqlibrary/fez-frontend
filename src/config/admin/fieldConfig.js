@@ -936,7 +936,7 @@ export default {
             componentProps: {
                 name: 'bibliographicSection.fez_record_search_key_rights.rek_rights',
                 fullWidth: true,
-                label: 'Rights',
+                label: 'Copyright notice',
                 placeholder: '',
                 multiline: true,
                 required: true,
