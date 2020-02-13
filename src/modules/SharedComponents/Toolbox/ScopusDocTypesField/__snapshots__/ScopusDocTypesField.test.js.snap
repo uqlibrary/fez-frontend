@@ -24,6 +24,10 @@ exports[`ScopusDocTypesField component should render default view 1`] = `
         "value": "bk",
       },
       Object {
+        "text": "ch - Book Chapter",
+        "value": "ch",
+      },
+      Object {
         "text": "bz - Business Article",
         "value": "bz",
       },
@@ -109,6 +113,10 @@ exports[`ScopusDocTypesField component should render immutable list as selected 
       Object {
         "text": "bk - Book",
         "value": "bk",
+      },
+      Object {
+        "text": "ch - Book Chapter",
+        "value": "ch",
       },
       Object {
         "text": "bz - Business Article",
@@ -203,6 +211,10 @@ exports[`ScopusDocTypesField component should render when given a default value 
         "value": "bk",
       },
       Object {
+        "text": "ch - Book Chapter",
+        "value": "ch",
+      },
+      Object {
         "text": "bz - Business Article",
         "value": "bz",
       },
@@ -294,6 +306,10 @@ exports[`ScopusDocTypesField component should render with given field props 1`] 
       Object {
         "text": "bk - Book",
         "value": "bk",
+      },
+      Object {
+        "text": "ch - Book Chapter",
+        "value": "ch",
       },
       Object {
         "text": "bz - Business Article",

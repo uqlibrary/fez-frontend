@@ -1241,6 +1241,7 @@ export const SCOPUS_DOC_TYPES = [
     { value: 'ar', text: 'ar - Article' },
     { value: 'ip', text: 'ip - Article in Press' },
     { value: 'bk', text: 'bk - Book' },
+    { value: 'ch', text: 'ch - Book Chapter' },
     { value: 'bz', text: 'bz - Business Article' },
     { value: 'cp', text: 'cp - Conference Paper' },
     { value: 'cr', text: 'cr - Conference Review' },
