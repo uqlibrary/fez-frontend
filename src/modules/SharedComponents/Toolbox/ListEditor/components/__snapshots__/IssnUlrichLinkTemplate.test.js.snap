@@ -30,7 +30,9 @@ exports[`IssnUlrichLinkTemplate component should render default view 1`] = `
     component="span"
     variant="body2"
   >
-    <span />
+    <span>
+      <Component />
+    </span>
      
   </WithStyles(Typography)>
 </Fragment>

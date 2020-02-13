@@ -127,10 +127,17 @@ export default class ListEditor extends Component {
                 });
             } else {
                 if (this.state.itemIndexSelectedToEdit !== null && this.state.itemIndexSelectedToEdit > -1) {
+                    const itemSelected = !!this.state.itemList[this.state.itemIndexSelectedToEdit].key
+                        ? {
+                            ...this.state.itemList[this.state.itemIndexSelectedToEdit],
+                            key: item,
+                        }
+                        : item;
+
                     this.setState({
                         itemList: [
                             ...this.state.itemList.slice(0, this.state.itemIndexSelectedToEdit),
-                            item,
+                            itemSelected,
                             ...this.state.itemList.slice(this.state.itemIndexSelectedToEdit + 1),
                         ],
                         itemIndexSelectedToEdit: null,

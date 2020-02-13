@@ -8,7 +8,7 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
     return (
         <React.Fragment>
             <Typography variant="body2" component={'span'}>
-                <span>{item.key}</span>{' '}
+                <span>{!!item.key ? item.key : item}</span>{' '}
                 {!!item.value && !!item.value.ulrichs.link && !!item.value.ulrichs.linkText && (
                     <ExternalLink href={item.value.ulrichs.link} aria-label={globalLocale.global.ulrichsLink.ariaLabel}>
                         <i>{item.value.ulrichs.linkText}</i> {globalLocale.global.ulrichsLink.labelSuffix}
@@ -20,5 +20,5 @@ export const IssnUlrichLinkTemplate = ({ item }) => {
 };
 
 IssnUlrichLinkTemplate.propTypes = {
-    item: PropTypes.object,
+    item: PropTypes.oneOfType([PropTypes.object, PropTypes.string]),
 };

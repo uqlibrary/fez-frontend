@@ -504,7 +504,8 @@ export default {
                 },
                 canEdit: true,
                 rowItemTemplate: IssnUlrichLinkTemplate,
-                getItemSelectedToEdit: (list, index) => (!!list[index] && list[index].key) || null,
+                getItemSelectedToEdit: (list, index) =>
+                    (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
             },
         },
         fez_record_search_key_isbn: {
@@ -1578,6 +1579,7 @@ export default {
             fez_record_search_key_project_name: () => ({
                 name: 'bibliographicSection.fez_record_search_key_project_name.rek_project_name',
             }),
+            authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_DIGILIB_IMAGE]: {
             authors: () => ({
@@ -1626,6 +1628,7 @@ export default {
                 required: true,
                 validate: [validation.required],
             }),
+            authors: ({ isNtro }) => ({ isNtro }),
         },
         [PUBLICATION_TYPE_THESIS]: {
             fez_record_search_key_org_unit_name: () => ({

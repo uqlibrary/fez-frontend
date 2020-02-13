@@ -27,6 +27,8 @@ export default {
                 ['fez_record_search_key_publisher'],
                 ['rek_date'],
                 ['rek_description'],
+                ['fez_record_search_key_type_of_data'],
+                ['fez_record_search_key_isdatasetof'],
                 ['fez_record_search_key_related_publications'],
                 ['fez_record_search_key_related_datasets'],
             ],
@@ -49,11 +51,7 @@ export default {
         },
         {
             title: 'Type(s) of data',
-            groups: [['fez_record_search_key_type_of_data'], ['fez_record_search_key_data_volume']],
-        },
-        {
-            title: 'Related datasets/work',
-            groups: [['fez_record_search_key_isdatasetof']],
+            groups: [['fez_record_search_key_data_volume']],
         },
     ],
     authors: () => [
