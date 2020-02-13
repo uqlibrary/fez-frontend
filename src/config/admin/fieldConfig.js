@@ -504,7 +504,8 @@ export default {
                 },
                 canEdit: true,
                 rowItemTemplate: IssnUlrichLinkTemplate,
-                getItemSelectedToEdit: (list, index) => (!!list[index] && list[index].key) || null,
+                getItemSelectedToEdit: (list, index) =>
+                    (!!list[index] && !!list[index].key && list[index].key) || list[index] || null,
             },
         },
         fez_record_search_key_isbn: {

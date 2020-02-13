@@ -79,7 +79,7 @@ export const FreeTextForm = ({
                     value={item}
                     onChange={onItemChange}
                     onKeyDown={addItem}
-                    error={!!errorText || isValid(item) || !!inputLengthText}
+                    error={!!errorText || !!isValid(item) || !!inputLengthText}
                     helperText={
                         validationErrorText || inputLengthText
                             ? `${!!validationErrorText ? validationErrorText : ''}${
