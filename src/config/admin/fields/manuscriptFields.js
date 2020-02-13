@@ -55,7 +55,7 @@ export default {
         },
         {
             title: 'Additional information',
-            groups: [['rek_subtype'], ['fez_record_search_key_oa_status']],
+            groups: [['fez_record_search_key_oa_status']],
         },
     ],
     ntro: () => [],
