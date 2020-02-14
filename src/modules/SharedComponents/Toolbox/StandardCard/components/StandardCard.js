@@ -72,29 +72,17 @@ export class Cards extends Component {
         const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
         const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
         const squareTop = !!this.props.squareTop ? { borderTopLeftRadius: 0, borderTopRightRadius: 0 } : null;
-        let titleTypographyProps = {
-            variant: 'h5',
-            component: 'h3',
-            color: 'inherit',
-        };
-        if (!!subCard) {
-            titleTypographyProps = {
-                ...titleTypographyProps,
-                component: 'h4',
-            };
-        } else if (!!smallTitle) {
-            titleTypographyProps = {
-                ...titleTypographyProps,
-                variant: 'h6',
-            };
-        }
         return (
             <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
                 {!this.props.noHeader && (
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
                         title={title}
-                        titleTypographyProps={titleTypographyProps}
+                        titleTypographyProps={{
+                            variant: smallTitle ? 'h6' : 'h5',
+                            component: subCard ? 'h4' : 'h3',
+                            color: 'inherit',
+                        }}
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
                             root:
