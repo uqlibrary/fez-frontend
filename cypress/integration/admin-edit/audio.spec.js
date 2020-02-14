@@ -71,7 +71,7 @@ context('Audio admin edit', () => {
                     .should('have.value', record.fez_record_search_key_length.rek_length);
                 cy.get('#Type')
                     .should('have.value', record.rek_genre);
-                cy.get('label[id="License-label"]')
+                cy.get('label[id="Licence-label"]')
                     .parent()
                     .find('input[type=hidden]')
                     .should('have.value', record.fez_record_search_key_license.rek_license.toString())

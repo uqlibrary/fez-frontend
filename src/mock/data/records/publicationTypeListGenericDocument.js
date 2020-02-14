@@ -78,6 +78,32 @@ export default {
             "fez_record_search_key_issn": [],
             "fez_record_search_key_doi": null,
             "fez_record_search_key_isi_loc": null,
+            "fez_record_search_key_keywords": [{
+                "rek_keywords_id": 30800253,
+                "rek_keywords_pid": "UQ:732833",
+                "rek_keywords_xsdmf_id": 7954,
+                "rek_keywords": "University of Queensland. Library",
+                "rek_keywords_order": 1
+            }, {
+                "rek_keywords_id": 30800256,
+                "rek_keywords_pid": "UQ:732833",
+                "rek_keywords_xsdmf_id": 7954,
+                "rek_keywords": "University of Queensland. Library -- Exhibitions",
+                "rek_keywords_order": 2
+            }],
+            "fez_record_search_key_oa_status": {
+                "rek_oa_status_id": 694142,
+                "rek_oa_status_pid": "UQ:6de77b0",
+                "rek_oa_status_xsdmf_id": null,
+                "rek_oa_status": 453698,
+                "rek_oa_status_lookup": "Not Open Access"
+            },
+            "fez_record_search_key_notes": {
+                "rek_notes_id": 1185841,
+                "rek_notes_pid": "UQ:692945",
+                "rek_notes_xsdmf_id": 12441,
+                "rek_notes": "https://brisbanepowerhouse.org/events/2017/07/07/joh-for-pm/"
+            },
             "fez_record_search_key_scopus_id": null,
             "fez_datastream_info": [
                 {
