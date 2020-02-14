@@ -91,7 +91,7 @@ export default {
         rek_access_conditions: 'Access condition is required',
         rek_copyright: 'You are required to accept deposit agreement',
         depositAgreement: 'You are required to accept deposit agreement',
-        rek_license: 'Licensing and terms of access is required',
+        rek_license: 'Licence and terms of access is required',
         rek_project_name: 'Project name is required',
         rek_project_description: 'Project description is required',
         fez_record_search_key_grant_id: 'Grant information is required',
