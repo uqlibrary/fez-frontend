@@ -49,10 +49,20 @@ export class Cards extends Component {
         customTitleBgColor: PropTypes.any,
         squareTop: PropTypes.bool,
         smallTitle: PropTypes.bool,
+        subCard: PropTypes.bool,
     };
 
     render() {
-        const { classes, title, help, children, primaryHeader, accentHeader, smallTitle = false } = this.props;
+        const {
+            classes,
+            title,
+            help,
+            children,
+            primaryHeader,
+            accentHeader,
+            smallTitle = false,
+            subCard = false,
+        } = this.props;
         const customBG = !!this.props.customBackgroundColor
             ? { backgroundColor: this.props.customBackgroundColor }
             : null;
@@ -62,25 +72,29 @@ export class Cards extends Component {
         const customTitle = !!this.props.customTitleColor ? { color: this.props.customTitleColor } : null;
         const fullHeight = !!this.props.fullHeight ? { height: '100%' } : null;
         const squareTop = !!this.props.squareTop ? { borderTopLeftRadius: 0, borderTopRightRadius: 0 } : null;
+        let titleTypographyProps = {
+            variant: 'h5',
+            component: 'h3',
+            color: 'inherit',
+        };
+        if (!!subCard) {
+            titleTypographyProps = {
+                ...titleTypographyProps,
+                component: 'h4',
+            };
+        } else if (!!smallTitle) {
+            titleTypographyProps = {
+                ...titleTypographyProps,
+                variant: 'h6',
+            };
+        }
         return (
             <Card className={`${classes.card} StandardCard`} style={{ ...customBG, ...customTitle, ...fullHeight }}>
                 {!this.props.noHeader && (
                     <CardHeader
                         style={{ ...squareTop, ...customTitleBG }}
                         title={title}
-                        titleTypographyProps={
-                            !smallTitle
-                                ? {
-                                    variant: 'h5',
-                                    component: 'h3',
-                                    color: 'inherit',
-                                }
-                                : {
-                                    variant: 'h6',
-                                    component: 'h3',
-                                    color: 'inherit',
-                                }
-                        }
+                        titleTypographyProps={titleTypographyProps}
                         action={!!help && !!help.text && <HelpIcon {...help} />}
                         classes={{
                             root:

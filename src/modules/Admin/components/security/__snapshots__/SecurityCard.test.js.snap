@@ -11,6 +11,7 @@ exports[`SecurityCard component should not render data stream security selector 
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -80,6 +81,7 @@ exports[`SecurityCard component should render security card correctly for collec
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -175,6 +177,7 @@ exports[`SecurityCard component should render security card correctly for commun
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -226,6 +229,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -287,6 +291,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -372,6 +377,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -468,6 +474,7 @@ exports[`SecurityCard component should render security card correctly for record
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -553,6 +560,7 @@ exports[`SecurityCard component should render security card with disabled inputs
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>
@@ -649,6 +657,7 @@ exports[`SecurityCard component should render security card with disabled inputs
   >
     <StandardCard
       accentHeader={true}
+      subCard={true}
       title={
         <span>
           <strong>

@@ -44,7 +44,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
     return (
         <Grid container spacing={16}>
             <Grid item xs={12}>
-                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader>
+                <StandardCard title={text.cardTitle(record.rek_pid)} accentHeader subCard>
                     <Grid container spacing={16}>
                         {recordType === RECORD_TYPE_RECORD && (
                             <React.Fragment>
@@ -100,7 +100,7 @@ export const SecurityCard = ({ disabled, isSuperAdmin }) => {
             {!!dataStreams && dataStreams.length > 0 && (
                 <React.Fragment>
                     <Grid item xs={12}>
-                        <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader>
+                        <StandardCard title={text.dataStream.cardTitle(record.rek_pid)} accentHeader subCard>
                             <Grid container spacing={8}>
                                 <Grid item xs={12}>
                                     <InheritedSecurityDetails

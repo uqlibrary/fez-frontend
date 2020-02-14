@@ -2,7 +2,7 @@
  * Common commands for admin edit tests
  */
 
-const tabHeadingSelector = '.StandardPage form > div > div > div.StandardCard > div > div > h3';
+const tabHeadingSelector = '.StandardPage form > div > div div.StandardCard > div > div > h3';
 
 Cypress.Commands.add('loadRecordForAdminEdit', pid => {
     cy.visit(`/admin/edit/${pid}?user=uqstaff`);
