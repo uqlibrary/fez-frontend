@@ -828,6 +828,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                           >
                             <StandardCard
                               accentHeader={true}
+                              subCard={true}
                               title={
                                 <span>
                                   <strong>
@@ -840,6 +841,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                subCard={true}
                                 title={
                                   <span>
                                     <strong>
@@ -861,6 +863,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                       "fullHeight": "Cards-fullHeight-102",
                                     }
                                   }
+                                  subCard={true}
                                   theme={
                                     Object {
                                       "breakpoints": Object {
@@ -1386,7 +1389,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                               titleTypographyProps={
                                                 Object {
                                                   "color": "inherit",
-                                                  "component": "h3",
+                                                  "component": "h4",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -1418,7 +1421,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                 titleTypographyProps={
                                                   Object {
                                                     "color": "inherit",
-                                                    "component": "h3",
+                                                    "component": "h4",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -1433,7 +1436,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                     <WithStyles(Typography)
                                                       className="MuiCardHeader-title-135"
                                                       color="inherit"
-                                                      component="h3"
+                                                      component="h4"
                                                       internalDeprecatedVariant={true}
                                                       variant="h5"
                                                     >
@@ -1481,7 +1484,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                           }
                                                         }
                                                         color="inherit"
-                                                        component="h3"
+                                                        component="h4"
                                                         gutterBottom={false}
                                                         headlineMapping={
                                                           Object {
@@ -1944,7 +1947,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                         }
                                                         variant="h5"
                                                       >
-                                                        <h3
+                                                        <h4
                                                           className="MuiTypography-root-137 MuiTypography-h5-153 MuiTypography-colorInherit-166 MuiCardHeader-title-135"
                                                         >
                                                           <span>
@@ -1954,7 +1957,7 @@ exports[`SecuritySectionContainer should fallback to default form values 1`] = `
                                                              level security - 
                                                             UQ:123457
                                                           </span>
-                                                        </h3>
+                                                        </h4>
                                                       </Typography>
                                                     </WithStyles(Typography)>
                                                   </div>
@@ -6021,6 +6024,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                           >
                             <StandardCard
                               accentHeader={true}
+                              subCard={true}
                               title={
                                 <span>
                                   <strong>
@@ -6033,6 +6037,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                subCard={true}
                                 title={
                                   <span>
                                     <strong>
@@ -6054,6 +6059,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                       "fullHeight": "Cards-fullHeight-102",
                                     }
                                   }
+                                  subCard={true}
                                   theme={
                                     Object {
                                       "breakpoints": Object {
@@ -6579,7 +6585,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                               titleTypographyProps={
                                                 Object {
                                                   "color": "inherit",
-                                                  "component": "h3",
+                                                  "component": "h4",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -6611,7 +6617,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                 titleTypographyProps={
                                                   Object {
                                                     "color": "inherit",
-                                                    "component": "h3",
+                                                    "component": "h4",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -6626,7 +6632,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                     <WithStyles(Typography)
                                                       className="MuiCardHeader-title-135"
                                                       color="inherit"
-                                                      component="h3"
+                                                      component="h4"
                                                       internalDeprecatedVariant={true}
                                                       variant="h5"
                                                     >
@@ -6674,7 +6680,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                           }
                                                         }
                                                         color="inherit"
-                                                        component="h3"
+                                                        component="h4"
                                                         gutterBottom={false}
                                                         headlineMapping={
                                                           Object {
@@ -7137,7 +7143,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                         }
                                                         variant="h5"
                                                       >
-                                                        <h3
+                                                        <h4
                                                           className="MuiTypography-root-137 MuiTypography-h5-153 MuiTypography-colorInherit-166 MuiCardHeader-title-135"
                                                         >
                                                           <span>
@@ -7147,7 +7153,7 @@ exports[`SecuritySectionContainer should mount with default props for a collecti
                                                              level security - 
                                                             UQ:123458
                                                           </span>
-                                                        </h3>
+                                                        </h4>
                                                       </Typography>
                                                     </WithStyles(Typography)>
                                                   </div>
@@ -11198,6 +11204,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                           >
                             <StandardCard
                               accentHeader={true}
+                              subCard={true}
                               title={
                                 <span>
                                   <strong>
@@ -11210,6 +11217,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                subCard={true}
                                 title={
                                   <span>
                                     <strong>
@@ -11231,6 +11239,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       "fullHeight": "Cards-fullHeight-102",
                                     }
                                   }
+                                  subCard={true}
                                   theme={
                                     Object {
                                       "breakpoints": Object {
@@ -11756,7 +11765,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               titleTypographyProps={
                                                 Object {
                                                   "color": "inherit",
-                                                  "component": "h3",
+                                                  "component": "h4",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -11788,7 +11797,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 titleTypographyProps={
                                                   Object {
                                                     "color": "inherit",
-                                                    "component": "h3",
+                                                    "component": "h4",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -11803,7 +11812,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     <WithStyles(Typography)
                                                       className="MuiCardHeader-title-135"
                                                       color="inherit"
-                                                      component="h3"
+                                                      component="h4"
                                                       internalDeprecatedVariant={true}
                                                       variant="h5"
                                                     >
@@ -11851,7 +11860,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                           }
                                                         }
                                                         color="inherit"
-                                                        component="h3"
+                                                        component="h4"
                                                         gutterBottom={false}
                                                         headlineMapping={
                                                           Object {
@@ -12314,7 +12323,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                         }
                                                         variant="h5"
                                                       >
-                                                        <h3
+                                                        <h4
                                                           className="MuiTypography-root-137 MuiTypography-h5-153 MuiTypography-colorInherit-166 MuiCardHeader-title-135"
                                                         >
                                                           <span>
@@ -12324,7 +12333,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                              level security - 
                                                             UQ:123456
                                                           </span>
-                                                        </h3>
+                                                        </h4>
                                                       </Typography>
                                                     </WithStyles(Typography)>
                                                   </div>
@@ -15651,6 +15660,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                           >
                             <StandardCard
                               accentHeader={true}
+                              subCard={true}
                               title={
                                 <span>
                                   <strong>
@@ -15663,6 +15673,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                             >
                               <WithStyles(Cards)
                                 accentHeader={true}
+                                subCard={true}
                                 title={
                                   <span>
                                     <strong>
@@ -15684,6 +15695,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                       "fullHeight": "Cards-fullHeight-102",
                                     }
                                   }
+                                  subCard={true}
                                   theme={
                                     Object {
                                       "breakpoints": Object {
@@ -16209,7 +16221,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                               titleTypographyProps={
                                                 Object {
                                                   "color": "inherit",
-                                                  "component": "h3",
+                                                  "component": "h4",
                                                   "variant": "h5",
                                                 }
                                               }
@@ -16241,7 +16253,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                 titleTypographyProps={
                                                   Object {
                                                     "color": "inherit",
-                                                    "component": "h3",
+                                                    "component": "h4",
                                                     "variant": "h5",
                                                   }
                                                 }
@@ -16256,7 +16268,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                     <WithStyles(Typography)
                                                       className="MuiCardHeader-title-135"
                                                       color="inherit"
-                                                      component="h3"
+                                                      component="h4"
                                                       internalDeprecatedVariant={true}
                                                       variant="h5"
                                                     >
@@ -16304,7 +16316,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                           }
                                                         }
                                                         color="inherit"
-                                                        component="h3"
+                                                        component="h4"
                                                         gutterBottom={false}
                                                         headlineMapping={
                                                           Object {
@@ -16767,7 +16779,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                         }
                                                         variant="h5"
                                                       >
-                                                        <h3
+                                                        <h4
                                                           className="MuiTypography-root-137 MuiTypography-h5-153 MuiTypography-colorInherit-166 MuiCardHeader-title-135"
                                                         >
                                                           <span>
@@ -16777,7 +16789,7 @@ exports[`SecuritySectionContainer should mount with default props for a record 1
                                                              level security - 
                                                             UQ:123456
                                                           </span>
-                                                        </h3>
+                                                        </h4>
                                                       </Typography>
                                                     </WithStyles(Typography)>
                                                   </div>

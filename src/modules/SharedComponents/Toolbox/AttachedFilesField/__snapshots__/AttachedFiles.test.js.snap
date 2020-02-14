@@ -6,6 +6,7 @@ exports[`AttachedFiles component should render admin edit view 1`] = `
   xs={12}
 >
   <StandardCard
+    subCard={true}
     title="Files"
   >
     <div
@@ -321,6 +322,7 @@ exports[`AttachedFiles component should render default view 1`] = `
   xs={12}
 >
   <StandardCard
+    subCard={true}
     title="Files"
   >
     <div
