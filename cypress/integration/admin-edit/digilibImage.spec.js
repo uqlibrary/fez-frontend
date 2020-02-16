@@ -37,7 +37,7 @@ context('Digilib Image admin edit', () => {
                         cy.get('h4')
                             .should('contain', 'Bibliographic');
 
-                        cy.get('#Rights')
+                        cy.get('#Copyrightnotice')
                             .should('have.value', record.fez_record_search_key_rights.rek_rights);
                         cy.get('label[id="Refereed source-label"]')
                             .parent()

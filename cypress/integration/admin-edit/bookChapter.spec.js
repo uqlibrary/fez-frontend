@@ -28,7 +28,7 @@ context('Book Chapter admin edit', () => {
                 cy.get('.AdminCard')
                     .eq(2)
                     .within(() => {
-                        cy.get('h4')
+                        cy.get('label')
                             .should('contain', 'Book title');
                         cy.get('#Booktitle')
                             .should(

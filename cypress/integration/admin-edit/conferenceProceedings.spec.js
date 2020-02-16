@@ -63,7 +63,7 @@ context('Conference Proceedings admin edit', () => {
             .within(() => {
                 cy.get('div:nth-child(1) > .StandardCard')
                     .within(() => {
-                        cy.get('h3')
+                        cy.get('h4')
                             .should('have.text', 'Attached files');
 
                         cy.get('[class*=MuiCardContent-root] > div')
@@ -85,7 +85,7 @@ context('Conference Proceedings admin edit', () => {
         cy.log('Security tab');
         cy.get('.StandardPage form > div > div:nth-child(8) > .StandardCard')
             .within(() => {
-                cy.get('.StandardCard h3')
+                cy.get('.StandardCard h4')
                     .eq(1)
                     .should('have.text', `Datastream level security - ${record.rek_pid}`);
 
