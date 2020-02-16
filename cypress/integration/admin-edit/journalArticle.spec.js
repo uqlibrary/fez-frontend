@@ -508,7 +508,7 @@ context('Journal Article admin edit', () => {
 
                 cy.get('.StandardCard')
                     .within(() => {
-                        cy.get('h3')
+                        cy.get('h4')
                             .eq(0)
                             .should('have.text', `${record.rek_object_type_lookup} level security - ${record.rek_pid}`);
                         cy.get('h6')
@@ -556,7 +556,7 @@ context('Journal Article admin edit', () => {
                         const fileSizeInMB = Math.round(
                             record.fez_datastream_info[1].dsi_size / 1024 / 1024 * 100
                         ) / 100;
-                        cy.get('h3')
+                        cy.get('h4')
                             .should('have.text', 'Attached files');
                         cy.get('p')
                             .eq(1)
